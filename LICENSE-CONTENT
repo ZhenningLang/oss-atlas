@@ -1,0 +1,26 @@
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+The CONTENT of this repository — the prose project profiles under categories/,
+the routing pages (INDEX.md), and the documentation — is licensed under the
+Creative Commons Attribution 4.0 International License.
+
+You are free to share and adapt this material for any purpose, even commercially,
+provided you give appropriate credit.
+
+The canonical, legally binding text of this license is published at:
+
+    https://creativecommons.org/licenses/by/4.0/legalcode
+
+A human-readable summary (not a substitute for the license) is at:
+
+    https://creativecommons.org/licenses/by/4.0/
+
+Attribution: "oss-atlas contributors", with a link back to the source repository.
+
+NOTE: The profiles in this repository describe THIRD-PARTY open-source projects.
+Those projects are owned by their respective authors and governed by their own
+licenses; this CC BY 4.0 grant applies only to the original prose/analysis here,
+not to the described software.
+
+The TOOLING (code) in this repository is licensed separately under the MIT
+License; see LICENSE.

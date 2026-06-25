@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.pyc
+
+# OS / editor
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# Node (only used transiently by markdownlint in CI)
+node_modules/

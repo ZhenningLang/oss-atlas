@@ -1,0 +1,25 @@
+name: lint
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  structural-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Structural lint (the gate — schema conformance, routing, dead links)
+        run: python3 tools/lint.py
+
+  markdown-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: markdownlint (formatting only, non-blocking)
+        continue-on-error: true
+        run: npx --yes markdownlint-cli2 "**/*.md" "#node_modules"
