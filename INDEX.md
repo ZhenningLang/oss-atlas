@@ -22,6 +22,12 @@
 | **agent-dev-methodology** | Frameworks and methodologies that shape *how* an agent builds software — spec-driven, context-engineering, persona/command systems. | [→](categories/agent-dev-methodology/INDEX.md) |
 | **ai-design-generation** | Agent-driven generation of UI/design, slide decks, social cards, and HTML artifacts. | [→](categories/ai-design-generation/INDEX.md) |
 | **dev-utilities** | Standalone devtools, data-wrangling swiss-army-knives, and self-hostable infrastructure. | [→](categories/dev-utilities/INDEX.md) |
+| **frontend-animation** | JavaScript animation engines and motion libraries for the web. | [→](categories/frontend-animation/INDEX.md) |
+| **api-gateway** | API / AI gateways that route, secure, rate-limit, and govern service and LLM traffic. | [→](categories/api-gateway/INDEX.md) |
+| **geospatial** | Geographic information systems (GIS) — view, edit, and analyze spatial data. | [→](categories/geospatial/INDEX.md) |
+| **team-chat** | Self-hostable team chat / multi-LLM chatbot applications. | [→](categories/team-chat/INDEX.md) |
+| **captcha** | CAPTCHA / bot-detection challenges (proof-of-work, click, behavioral). | [→](categories/captcha/INDEX.md) |
+| **ml-research** | Small, self-contained ML research demos and reference implementations. | [→](categories/ml-research/INDEX.md) |
 
 ## How to add a category
 
