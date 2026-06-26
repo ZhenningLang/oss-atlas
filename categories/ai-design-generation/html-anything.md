@@ -38,8 +38,8 @@ The defining trait is that it ships **no model and no API key of its own**: it s
 | [guizang-ppt-skill](guizang-ppt.md) | ✅ | A single agent skill for polished HTML decks (vendored into HTML Anything as `deck-guizang-editorial`). It's a skill you drop into any agent; HTML Anything is the surrounding app + picker + export + 75 skills. |
 | [guizang-social-card-skill](guizang-social-card.md) | ✅ | Skill for Xiaohongshu/WeChat cover cards. Narrow + portable vs HTML Anything's broad multi-surface app. |
 | [Impeccable](impeccable.md) | ✅ | A design *language* / harness-quality layer (makes any agent better at design), not a generation app. Complementary, not a substitute. |
-| markdown-nice (mdnice) | not indexed | Web editor for Markdown→WeChat/Zhihu paste-ready styling; mature, no agent, theme-based not prompt-driven. HTML Anything reuses its `juice` inlining idea but adds agent generation + 9 surfaces. |
-| markdown-to-image (gcui-art) | not indexed | Markdown→social-card-PNG generator; narrower output, also no local-agent model. |
+| markdown-nice (mdnice) | 未收录 | Web editor for Markdown→WeChat/Zhihu paste-ready styling; mature, no agent, theme-based not prompt-driven. HTML Anything reuses its `juice` inlining idea but adds agent generation + 9 surfaces. |
+| markdown-to-image (gcui-art) | 未收录 | Markdown→social-card-PNG generator; narrower output, also no local-agent model. |
 
 ## Tech stack
 

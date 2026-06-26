@@ -38,9 +38,9 @@ It also fits when you want one design surface that plugs into *whatever* agent y
 | [Impeccable](impeccable.md) | ✅ | Sibling aimed at high-polish UI generation; Open Design is broader (slides, images, video, MP4) and ships as a local app rather than a narrower generator. |
 | [guizang-ppt-skill](guizang-ppt.md) | ✅ | A single-purpose deck-generation Skill; Open Design includes deck generation as one of several artifact types plus its own runtime/export. |
 | [guizang-social-card-skill](guizang-social-card.md) | ✅ | A focused social-card Skill; Open Design covers cards/images among many artifact types inside a packaged app. |
-| Claude Design (Anthropic, hosted) | not indexed | The proprietary hosted product this clones; managed cloud + polish vs Open Design's local-first, BYOK, open-format stance. |
-| v0 (Vercel) | not indexed | Hosted prompt-to-UI generator; cloud SaaS, narrower to web UI, vs Open Design's local multi-artifact studio. |
-| Figma / Penpot | not indexed | True vector design editors with multiplayer; Open Design generates code-rendered artifacts, not editable vector docs. |
+| Claude Design (Anthropic, hosted) | 未收录 | The proprietary hosted product this clones; managed cloud + polish vs Open Design's local-first, BYOK, open-format stance. |
+| v0 (Vercel) | 未收录 | Hosted prompt-to-UI generator; cloud SaaS, narrower to web UI, vs Open Design's local multi-artifact studio. |
+| Figma / Penpot | 未收录 | True vector design editors with multiplayer; Open Design generates code-rendered artifacts, not editable vector docs. |
 
 ## Tech stack
 

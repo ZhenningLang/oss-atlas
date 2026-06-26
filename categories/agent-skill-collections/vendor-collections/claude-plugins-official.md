@@ -34,9 +34,9 @@ You reach for this specifically when you want the *first-party* baseline: plugin
 | Alternative | In index | Tradeoff |
 |---|---|---|
 | [Anthropic Skills](anthropic-skills.md) | ✅ | Anthropic's standalone *skills* repo (self-contained `SKILL.md` folders, not the `/plugin`-installable marketplace format). Use it when you want the raw skill content for Claude Code / Claude.ai / the API; use this repo when you want one-command marketplace install into Claude Code. |
-| awslabs/agent-plugins | not indexed | Another vendor (AWS) plugin/skill collection; compare on whose tooling matches your stack and which harness each targets. |
-| MiniMax-AI/skills | not indexed | Vendor skill collection from MiniMax; different provider, likely different harness assumptions — compare target-agent compatibility before mixing. |
-| Third-party Claude Code marketplaces / community plugin lists | not indexed | Larger surface and faster-moving, but no Anthropic curation or provenance guarantee. This repo is the first-party baseline; community marketplaces extend it at higher trust cost. |
+| awslabs/agent-plugins | 未收录 | Another vendor (AWS) plugin/skill collection; compare on whose tooling matches your stack and which harness each targets. |
+| MiniMax-AI/skills | 未收录 | Vendor skill collection from MiniMax; different provider, likely different harness assumptions — compare target-agent compatibility before mixing. |
+| Third-party Claude Code marketplaces / community plugin lists | 未收录 | Larger surface and faster-moving, but no Anthropic curation or provenance guarantee. This repo is the first-party baseline; community marketplaces extend it at higher trust cost. |
 
 ## Caveats (unverified)
 

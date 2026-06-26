@@ -36,9 +36,9 @@ You also reach for it when you want that same logic *repeatable*. A recipe seria
 |---|---|---|
 | [DevToys](devtoys.md) | ✅ | Native cross-platform desktop devtools palette (formatters, converters, generators); a fixed tool list rather than CyberChef's chainable recipe pipeline + "Magic" auto-detection. |
 | [Cockpit](cockpit.md) | ✅ | Web UI for *server administration*, not data transformation — different problem entirely; listed only to disambiguate "web tool" overlap. |
-| CyberChef-server | not indexed | Official Node wrapper exposing CyberChef recipes over HTTP for batch/automation; complements rather than replaces the app. |
-| Custom scripts (`openssl`/`xxd`/Python) | not indexed | Maximum control, scriptable, no UI; but you rewrite per-task and lose the live visual recipe + Magic detection. |
-| dCode / online decoders | not indexed | Browser convenience for single transforms; data leaves your machine and no offline/self-host story — the privacy gap CyberChef closes. |
+| CyberChef-server | 未收录 | Official Node wrapper exposing CyberChef recipes over HTTP for batch/automation; complements rather than replaces the app. |
+| Custom scripts (`openssl`/`xxd`/Python) | 未收录 | Maximum control, scriptable, no UI; but you rewrite per-task and lose the live visual recipe + Magic detection. |
+| dCode / online decoders | 未收录 | Browser convenience for single transforms; data leaves your machine and no offline/self-host story — the privacy gap CyberChef closes. |
 
 ## Tech stack
 

@@ -34,12 +34,12 @@ type: library
 
 | 替代方案 | 已收录 | 取舍 |
 |---|---|---|
-| GSAP (GreenSock) | not indexed | 生态更大、更成熟（ScrollTrigger、MorphSVG、物理插件）并有商业支持，心智占有率高。Anime.js 更小、MIT 许可、零依赖，且 v4 已完全模块化。 |
-| Motion / Framer Motion | not indexed | 声明式、React 优先（也有 vanilla `motion` 核心），在组件驱动的应用里更地道。Anime.js 是命令式、框架无关——当你不活在 React 渲染模型里时更合适。 |
-| Motion One | not indexed | 极小、基于 WAAPI 的动画器，体积非常小。Anime.js 内置更多能力（时间线、拖拽、SVG 形变、滚动、文本），代价是体积更大但仍属轻量。 |
-| Web Animations API (WAAPI) | not indexed | 浏览器原生 API，无需打包任何库；更底层，没有时间线/stagger/SVG-morph 的语法糖。Anime.js v4 内含 WAAPI 适配器并在其上叠加易用层。 |
-| CSS `@keyframes` / transitions | not indexed | 零 JS，简单场景对 GPU 友好；但无法做序列、动态数值或运行时控制。Anime.js 用于需要 JS 驱动编排的场景。 |
-| Velocity.js | not indexed | jQuery 时代的老牌 JS 动画器，如今基本停止维护。Anime.js 是其活跃维护的现代等价物。 |
+| GSAP (GreenSock) | 未收录 | 生态更大、更成熟（ScrollTrigger、MorphSVG、物理插件）并有商业支持，心智占有率高。Anime.js 更小、MIT 许可、零依赖，且 v4 已完全模块化。 |
+| Motion / Framer Motion | 未收录 | 声明式、React 优先（也有 vanilla `motion` 核心），在组件驱动的应用里更地道。Anime.js 是命令式、框架无关——当你不活在 React 渲染模型里时更合适。 |
+| Motion One | 未收录 | 极小、基于 WAAPI 的动画器，体积非常小。Anime.js 内置更多能力（时间线、拖拽、SVG 形变、滚动、文本），代价是体积更大但仍属轻量。 |
+| Web Animations API (WAAPI) | 未收录 | 浏览器原生 API，无需打包任何库；更底层，没有时间线/stagger/SVG-morph 的语法糖。Anime.js v4 内含 WAAPI 适配器并在其上叠加易用层。 |
+| CSS `@keyframes` / transitions | 未收录 | 零 JS，简单场景对 GPU 友好；但无法做序列、动态数值或运行时控制。Anime.js 用于需要 JS 驱动编排的场景。 |
+| Velocity.js | 未收录 | jQuery 时代的老牌 JS 动画器，如今基本停止维护。Anime.js 是其活跃维护的现代等价物。 |
 
 ## 技术栈
 

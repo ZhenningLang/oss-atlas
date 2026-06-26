@@ -39,7 +39,7 @@ Reach for it specifically when consistency of *one* visual voice matters across 
 | [html-anything](html-anything.md) | ✅ | Produces HTML/CSS artifacts you can edit and host; this produces flat PNGs in one fixed art style. |
 | [open-design](open-design.md) | ✅ | Toward reusable UI/design-system artifacts; orthogonal to a hand-drawn article-illustration persona. |
 | [impeccable](impeccable.md) | ✅ | Different generation target (design artifacts) rather than a fixed-IP Chinese illustration voice. |
-| nano-banana / gpt-image prompt packs | not indexed | Generic image-prompt collections give you raw model access with no article-analysis, shot-list, or consistent-IP layer this skill adds. |
+| nano-banana / gpt-image prompt packs | 未收录 | Generic image-prompt collections give you raw model access with no article-analysis, shot-list, or consistent-IP layer this skill adds. |
 
 ## Caveats (unverified)
 

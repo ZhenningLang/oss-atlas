@@ -37,8 +37,8 @@ You reach for it when you want *breadth* — one install that covers research �
 | [ui-ux-pro-max](ui-ux-pro-max.md) | ✅ | Another UI/UX skill pack; overlaps heavily on the "polished interface" surface. Pick by which one's UI/interaction guidance matches your taste and which install path fits your harness. |
 | [taste-skill](taste-skill.md) | ✅ | Centers visual *taste*/judgment; narrower than this multi-discipline suite. Use it for critique-flavored taste calls; use Designer Skills when you also need research/systems/ops. |
 | [make-interfaces-feel-better](make-interfaces-feel-better.md) | ✅ | Aimed at interaction polish / "feel"; overlaps Designer Skills' `interaction-design` plugin. The narrow pack is sharper on micro-interaction; Designer Skills covers the rest of the lifecycle too. |
-| Anthropic's official / built-in skills | not indexed | The platform's own skill ecosystem; Designer Skills is a third-party bundle layered on top, so it can duplicate or conflict with native skills. |
-| Companion collections (AI product design, UX program mgmt, design leadership, inclusive design) | not indexed | Same author's sibling repos in the family; this entry covers only the "design practice" collection. Reach for the others for adjacent disciplines. |
+| Anthropic's official / built-in skills | 未收录 | The platform's own skill ecosystem; Designer Skills is a third-party bundle layered on top, so it can duplicate or conflict with native skills. |
+| Companion collections (AI product design, UX program mgmt, design leadership, inclusive design) | 未收录 | Same author's sibling repos in the family; this entry covers only the "design practice" collection. Reach for the others for adjacent disciplines. |
 
 ## Caveats (unverified)
 

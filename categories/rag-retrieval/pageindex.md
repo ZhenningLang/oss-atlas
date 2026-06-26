@@ -23,7 +23,7 @@ It's a strong fit when "similarity ≠ relevance" is your actual pain and your c
 
 ## When NOT to use
 
-- **Large-corpus / web-scale retrieval over millions of short docs.** Per-query LLM tree traversal costs tokens and latency on every lookup; for breadth-first search over a huge flat collection, an embedding + ANN vector store (Qdrant / pgvector, not indexed) is far cheaper and faster. The OSS repo targets per-document trees; "million-document scale" is a hosted **PageIndex File System** feature, not the open library. [推断]
+- **Large-corpus / web-scale retrieval over millions of short docs.** Per-query LLM tree traversal costs tokens and latency on every lookup; for breadth-first search over a huge flat collection, an embedding + ANN vector store (Qdrant / pgvector, 未收录) is far cheaper and faster. The OSS repo targets per-document trees; "million-document scale" is a hosted **PageIndex File System** feature, not the open library. [推断]
 - **You need a turnkey, self-contained system with no LLM bill.** Indexing *and* retrieval both call an LLM (OpenAI by default, others via LiteLLM). Every build and every query spends API tokens; there is no local-embedding-only mode.
 - **Short, unstructured, or flat documents.** The whole value is the table-of-contents tree. A document with no meaningful section hierarchy (a chat log, a flat CSV, a one-page memo) gives the reasoner nothing to navigate; ordinary chunking is fine.
 - **You want the production "Cloud / MCP / API" pipeline, not the repo.** Vectify markets a hosted PageIndex platform (Chat, MCP, managed API, VPC/on-prem). The OSS repo is the indexing core, not that service — don't assume the repo gives you the managed product. [未验证]
@@ -37,9 +37,9 @@ It's a strong fit when "similarity ≠ relevance" is your actual pain and your c
 | [FalkorDB](falkordb.md) | ✅ | Property-graph DB for GraphRAG (vector + multi-hop traversal); PageIndex is a per-document reasoning tree, not a graph store — different retrieval primitive. |
 | [graphify](graphify.md) | ✅ | Builds a knowledge graph from code/docs; PageIndex builds a hierarchical ToC tree of one document and reasons over it — no entity graph. |
 | [code-review-graph](code-review-graph.md) | ✅ | Domain-specific code-review graph; orthogonal to document tree retrieval. |
-| LlamaIndex | not indexed | General RAG framework with many indices incl. a tree/summary index; far broader and embedding-centric, where PageIndex is a focused vectorless reasoning index. |
-| RAPTOR | not indexed | Recursive clustering + summarization tree for retrieval, but still embedding-retrieved at query time; PageIndex navigates the tree by LLM reasoning instead of vector search. |
-| pgvector / Qdrant | not indexed | Classic embedding + ANN vector retrieval; cheaper at scale and breadth, but exactly the "similarity ≠ relevance" failure mode PageIndex is built to avoid. |
+| LlamaIndex | 未收录 | General RAG framework with many indices incl. a tree/summary index; far broader and embedding-centric, where PageIndex is a focused vectorless reasoning index. |
+| RAPTOR | 未收录 | Recursive clustering + summarization tree for retrieval, but still embedding-retrieved at query time; PageIndex navigates the tree by LLM reasoning instead of vector search. |
+| pgvector / Qdrant | 未收录 | Classic embedding + ANN vector retrieval; cheaper at scale and breadth, but exactly the "similarity ≠ relevance" failure mode PageIndex is built to avoid. |
 
 ## Tech stack
 

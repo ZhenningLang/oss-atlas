@@ -35,9 +35,9 @@ type: tool
 | 替代方案 | 已收录 | 取舍 |
 |---|---|---|
 | [Agent Skills for Context Engineering](context-engineering-skills.zh.md) | ✅ | 一个更宽泛的 context-engineering *skill 包*（多份用于上下文管道的 prompt/skill 文件）；本仓库是面向单一外部服务（NotebookLM）的单个可运行取回桥，而非方法论捆绑。 |
-| notebooklm-mcp（同作者） | not indexed | MCP server 同门：持久聊天会话、TypeScript/npm、多工具支持（Claude Code、Codex、Cursor）。要跨工具的有状态研究选它；要零服务器、Python、仅 Claude Code 的 clone 即用安装选本 skill。 |
-| 本地 RAG 栈（LlamaIndex / LangChain retrievers 等） | not indexed | 你端到端自托管的 embedding + 向量库；搭建成本更高（切块、embedding、基础设施），但无第三方账号、无公开共享要求、无浏览器自动化。本 skill 用那份掌控权换 NotebookLM 现成的 Gemini 来源依据。 |
-| 内置文件读取 / grep 取回 | not indexed | Claude Code 的默认行为——token 成本高、关键词式取回、空白处会幻觉。本 skill 正是为在文档密集任务里替换它而存在。 |
+| notebooklm-mcp（同作者） | 未收录 | MCP server 同门：持久聊天会话、TypeScript/npm、多工具支持（Claude Code、Codex、Cursor）。要跨工具的有状态研究选它；要零服务器、Python、仅 Claude Code 的 clone 即用安装选本 skill。 |
+| 本地 RAG 栈（LlamaIndex / LangChain retrievers 等） | 未收录 | 你端到端自托管的 embedding + 向量库；搭建成本更高（切块、embedding、基础设施），但无第三方账号、无公开共享要求、无浏览器自动化。本 skill 用那份掌控权换 NotebookLM 现成的 Gemini 来源依据。 |
+| 内置文件读取 / grep 取回 | 未收录 | Claude Code 的默认行为——token 成本高、关键词式取回、空白处会幻觉。本 skill 正是为在文档密集任务里替换它而存在。 |
 
 ## 技术栈
 

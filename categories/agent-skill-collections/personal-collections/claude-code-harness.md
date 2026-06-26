@@ -36,8 +36,8 @@ You reach for it specifically when you want the *whole* plan-to-release spine to
 | [gstack](gstack.md) | ✅ | Garry Tan's personal Claude Code setup driving a similar plan → build → review → ship loop, but via ~23 role-playing persona commands (CEO/designer/QA/security). claude-code-harness is fewer, named verbs with explicit `spec.md`/`Plans.md` contracts and a Go `doctor` utility; gstack leans on personas over a contract artifact. |
 | [shaping-skills](shaping-skills.md) | ✅ | Ryan Singer's Shape Up "shaping" pack covers only the *define-what-to-build* front end. This harness covers the full define→implement→review→release spine, so they're complementary rather than substitutes. |
 | [Superpowers](../../agent-dev-methodology/superpowers.md) | ✅ | Cross-harness skills library with the same brainstorm/plan→TDD→verify spine, packaged for many agents (Claude, Codex, Cursor, Kimi, OpenCode, Pi). claude-code-harness centers Claude Code, adds explicit spec/plan contract files and a Go diagnostic CLI; Superpowers is leaner methodology, broader harness reach. |
-| harness-mem (optional companion) | not indexed | An optional cross-session memory add-on referenced by this project; separate concern (agent memory), not a workflow substitute. |
-| Claude Code's native skills / built-in slash commands | not indexed | The platform's own skill ecosystem; this is a third-party bundle layered on top, so it can duplicate or conflict with native commands. |
+| harness-mem (optional companion) | 未收录 | An optional cross-session memory add-on referenced by this project; separate concern (agent memory), not a workflow substitute. |
+| Claude Code's native skills / built-in slash commands | 未收录 | The platform's own skill ecosystem; this is a third-party bundle layered on top, so it can duplicate or conflict with native commands. |
 
 ## Caveats (unverified)
 

@@ -36,10 +36,10 @@ The payoff is two-fold: you can get materially better ratio-at-speed than a gene
 |---|---|---|
 | [CyberChef](cyberchef.md) | ✅ | Browser-based ad-hoc encode/decode/compress recipes for analysts; interactive and general, not a production library for ratio-tuned structured-data compression. |
 | [DevToys](devtoys.md) | ✅ | Desktop developer-utility hub with built-in compress/format tools; convenience for one-off tasks, not a programmable format-aware compressor. |
-| zstd | not indexed | The general-purpose baseline (also Meta/BSD). Excellent ratio-at-speed on arbitrary bytes; OpenZL targets *beating* it on specific structured formats via format awareness, at the cost of having to describe the data. |
-| Parquet + zstd/snappy | not indexed | The mainstream columnar-at-rest path: schema-aware encodings (dictionary/RLE) plus a block codec. Mature and ubiquitous; OpenZL is a lower-level framework letting you build custom codec graphs, not a file format with an ecosystem. |
-| BLOSC / blosc2 | not indexed | Blocking + shuffle/bitshuffle meta-compressor aimed at numeric arrays; conceptually similar "transform then compress" idea, narrower scope and more mature than OpenZL. |
-| Brotli | not indexed | Strong general-purpose (esp. text/web) compressor; not format-aware for structured numeric data. |
+| zstd | 未收录 | The general-purpose baseline (also Meta/BSD). Excellent ratio-at-speed on arbitrary bytes; OpenZL targets *beating* it on specific structured formats via format awareness, at the cost of having to describe the data. |
+| Parquet + zstd/snappy | 未收录 | The mainstream columnar-at-rest path: schema-aware encodings (dictionary/RLE) plus a block codec. Mature and ubiquitous; OpenZL is a lower-level framework letting you build custom codec graphs, not a file format with an ecosystem. |
+| BLOSC / blosc2 | 未收录 | Blocking + shuffle/bitshuffle meta-compressor aimed at numeric arrays; conceptually similar "transform then compress" idea, narrower scope and more mature than OpenZL. |
+| Brotli | 未收录 | Strong general-purpose (esp. text/web) compressor; not format-aware for structured numeric data. |
 
 ## Tech stack
 

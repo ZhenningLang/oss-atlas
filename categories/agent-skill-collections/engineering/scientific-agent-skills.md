@@ -37,7 +37,7 @@ You reach for this pack to drop in a domain library: install once (`npx skills a
 | [web-quality-skills](addyosmani-web-quality.md) | ✅ | Web-performance / quality-focused skills; orthogonal domain. Choose by whether your task is frontend quality vs. wet-lab/computational science. |
 | [Waza](waza.md) | ✅ | Engineering-workflow skill pack; overlapping "install skills into your agent" shape, different (non-science) subject matter. |
 | [vercel-labs/agent-skills](vercel-agent-skills.md) | ✅ | Vendor/web-platform engineering skills; useful for app/deploy workflows, not for bioinformatics or drug discovery. |
-| Bespoke per-library prompting (write your own SKILL.md) | not indexed | Maximum control and zero unused surface, but you rebuild and maintain curated docs for every library yourself instead of installing a vetted bundle. |
+| Bespoke per-library prompting (write your own SKILL.md) | 未收录 | Maximum control and zero unused surface, but you rebuild and maintain curated docs for every library yourself instead of installing a vetted bundle. |
 
 ## Caveats (unverified)
 

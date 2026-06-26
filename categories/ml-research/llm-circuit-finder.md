@@ -32,10 +32,10 @@ You're a hobbyist or independent researcher with a couple of consumer GPUs and a
 
 | Alternative | In index | Tradeoff |
 |---|---|---|
-| RYS / `mergekit` passthrough (layer-stacking model merges) | not indexed | mergekit's `passthrough` method also duplicates/stacks layers, but it's a general model-merging toolkit aimed at producing a finished merged model; llm-circuit-finder adds the *search* loop (sweep + probes) to discover *which* block to duplicate and validate it. |
-| lm-evaluation-harness | not indexed | The standard benchmark runner this repo calls out to for validation; it measures models but doesn't perform or search layer surgery. |
-| Mechanistic-interpretability circuit tooling (e.g. TransformerLens) | not indexed | Studies circuits via activation patching/ablation on HF models for *understanding*; this repo is a coarse, capability-oriented "duplicate whole layer blocks in GGUF and measure" demo, not feature-level interp. |
-| Fine-tuning / LoRA stacks | not indexed | Change weights to improve a capability; this is orthogonal (no training) and the author notes you can stack both. Different cost/benefit and reproducibility profile. |
+| RYS / `mergekit` passthrough (layer-stacking model merges) | 未收录 | mergekit's `passthrough` method also duplicates/stacks layers, but it's a general model-merging toolkit aimed at producing a finished merged model; llm-circuit-finder adds the *search* loop (sweep + probes) to discover *which* block to duplicate and validate it. |
+| lm-evaluation-harness | 未收录 | The standard benchmark runner this repo calls out to for validation; it measures models but doesn't perform or search layer surgery. |
+| Mechanistic-interpretability circuit tooling (e.g. TransformerLens) | 未收录 | Studies circuits via activation patching/ablation on HF models for *understanding*; this repo is a coarse, capability-oriented "duplicate whole layer blocks in GGUF and measure" demo, not feature-level interp. |
+| Fine-tuning / LoRA stacks | 未收录 | Change weights to improve a capability; this is orthogonal (no training) and the author notes you can stack both. Different cost/benefit and reproducibility profile. |
 
 ## Tech stack
 

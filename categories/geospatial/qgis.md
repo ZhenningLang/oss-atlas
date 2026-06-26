@@ -34,13 +34,13 @@ It also fits when you need to *script and operationalize* GIS work, not just cli
 
 | Alternative | In index | Tradeoff |
 |---|---|---|
-| GRASS GIS | not indexed | Deep raster/geospatial-analysis engine and topology model; steeper UI, often used *through* QGIS as a Processing provider rather than standalone. |
-| SAGA GIS | not indexed | Strong terrain/raster analysis library and modules; weaker cartography and general-purpose editing; also wrapped inside QGIS Processing. |
-| GDAL/OGR | not indexed | The underlying I/O + raster/vector translation library QGIS itself depends on; a CLI/library, not a desktop app — choose it for scripted ETL, not interactive mapping. |
-| GeoServer | not indexed | Java OGC server focused on publishing (WMS/WFS/WCS); overlaps QGIS Server on the publishing side but has no desktop authoring/analysis GUI. |
-| MapServer | not indexed | Fast, mature C OGC map server; publishing-only, mapfile-configured; comparable to QGIS Server, not to the desktop. |
-| GeoPandas / Shapely | not indexed | Python-native vector analysis for code-first/reproducible pipelines; no GUI, no cartographic print layout, no raster-first workflow. |
-| ArcGIS Pro (Esri) | not indexed | Proprietary commercial desktop GIS; broader vendor support/ecosystem and licensing cost — the main commercial alternative QGIS substitutes for. |
+| GRASS GIS | 未收录 | Deep raster/geospatial-analysis engine and topology model; steeper UI, often used *through* QGIS as a Processing provider rather than standalone. |
+| SAGA GIS | 未收录 | Strong terrain/raster analysis library and modules; weaker cartography and general-purpose editing; also wrapped inside QGIS Processing. |
+| GDAL/OGR | 未收录 | The underlying I/O + raster/vector translation library QGIS itself depends on; a CLI/library, not a desktop app — choose it for scripted ETL, not interactive mapping. |
+| GeoServer | 未收录 | Java OGC server focused on publishing (WMS/WFS/WCS); overlaps QGIS Server on the publishing side but has no desktop authoring/analysis GUI. |
+| MapServer | 未收录 | Fast, mature C OGC map server; publishing-only, mapfile-configured; comparable to QGIS Server, not to the desktop. |
+| GeoPandas / Shapely | 未收录 | Python-native vector analysis for code-first/reproducible pipelines; no GUI, no cartographic print layout, no raster-first workflow. |
+| ArcGIS Pro (Esri) | 未收录 | Proprietary commercial desktop GIS; broader vendor support/ecosystem and licensing cost — the main commercial alternative QGIS substitutes for. |
 
 ## Tech stack
 

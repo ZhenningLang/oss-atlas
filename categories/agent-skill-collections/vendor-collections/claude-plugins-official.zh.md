@@ -34,9 +34,9 @@ Anthropic 官方的 Claude Code 插件市场：一个精选的可安装插件目
 | 替代品 | 是否收录 | 取舍 |
 |---|---|---|
 | [Anthropic Skills](anthropic-skills.zh.md) | ✅ | Anthropic 独立的 *skills* 仓库（自包含的 `SKILL.md` 目录，不是 `/plugin` 可装的市场格式）。想要原始 skill 内容（用于 Claude Code / Claude.ai / API）用它；想要一条命令装进 Claude Code 用本仓库。 |
-| awslabs/agent-plugins | not indexed | 另一家厂商（AWS）的插件/skill 集合；按谁的工具贴你的技术栈、各自面向哪个 harness 来比较。 |
-| MiniMax-AI/skills | not indexed | MiniMax 的厂商 skill 集合；不同 provider，harness 假设可能不同——混用前先比对目标 agent 兼容性。 |
-| 第三方 Claude Code 市场 / 社区插件清单 | not indexed | 面更广、迭代更快，但没有 Anthropic 的策展和来源担保。本仓库是第一方基线；社区市场以更高信任成本来扩展它。 |
+| awslabs/agent-plugins | 未收录 | 另一家厂商（AWS）的插件/skill 集合；按谁的工具贴你的技术栈、各自面向哪个 harness 来比较。 |
+| MiniMax-AI/skills | 未收录 | MiniMax 的厂商 skill 集合；不同 provider，harness 假设可能不同——混用前先比对目标 agent 兼容性。 |
+| 第三方 Claude Code 市场 / 社区插件清单 | 未收录 | 面更广、迭代更快，但没有 Anthropic 的策展和来源担保。本仓库是第一方基线；社区市场以更高信任成本来扩展它。 |
 
 ## 存疑（未验证）
 

@@ -38,9 +38,9 @@ It fits best when you want a strong personal aesthetic baked in: Style A (electr
 | [html-anything](html-anything.md) | ✅ | General agent-driven HTML artifact generation; broader and unopinionated, so it lacks the locked deck layouts, Swiss validator, and cover/image workflow this skill ships. |
 | [open-design](open-design.md) | ✅ | Aimed at broader UI/design generation; not a presentation-deck specialist with horizontal-swipe runtime and named slide layouts. |
 | [Impeccable](impeccable.md) | ✅ | Design-quality oriented generation; different surface — not a single-file HTML deck workflow. |
-| Slidev | not indexed | Developer-grade Markdown→HTML deck framework with build tooling, themes, and a dev server; more powerful/long-stable but not agent-driven and not opinionated about Swiss/editorial aesthetics. |
-| Marp | not indexed | Markdown→slides (HTML/PDF/PPTX) with a clean ecosystem and exports this skill lacks; far less visual flexibility per slide. |
-| Gamma / Tome | not indexed | Hosted AI deck SaaS, not a repo — easier for non-agents, but closed, no single-file HTML artifact, no local agent control. |
+| Slidev | 未收录 | Developer-grade Markdown→HTML deck framework with build tooling, themes, and a dev server; more powerful/long-stable but not agent-driven and not opinionated about Swiss/editorial aesthetics. |
+| Marp | 未收录 | Markdown→slides (HTML/PDF/PPTX) with a clean ecosystem and exports this skill lacks; far less visual flexibility per slide. |
+| Gamma / Tome | 未收录 | Hosted AI deck SaaS, not a repo — easier for non-agents, but closed, no single-file HTML artifact, no local agent control. |
 
 ## Caveats (unverified)
 

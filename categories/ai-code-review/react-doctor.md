@@ -36,9 +36,9 @@ The bigger win is closing the loop with the agent itself. After the first audit 
 |---|---|---|
 | [open-code-review](open-code-review.md) | ✅ | LLM-driven, language-agnostic PR review (Alibaba); reasons about logic in prose. React Doctor is deterministic, React-only, rule-based — repeatable but no semantic judgment. |
 | [claude-code-security-review](claude-code-security-review.md) | ✅ | Claude-based security-focused review (Anthropic); deep, language-agnostic vuln reasoning. React Doctor is a broad React linter, not a dedicated security analyzer. |
-| eslint-plugin-react-hooks / react | not indexed | The canonical React lint rules; React Doctor overlaps but adds an agent-skill workflow, an oxlint plugin, and curated agent-error rules beyond the official sets. |
-| oxlint | not indexed | The fast Rust linter React Doctor ships a plugin for; oxlint is the engine/host, React Doctor supplies the React-specific agent-facing rule pack. |
-| Biome | not indexed | All-in-one Rust formatter+linter; broad JS/TS lint coverage but not focused on catching agent-written React anti-patterns specifically. |
+| eslint-plugin-react-hooks / react | 未收录 | The canonical React lint rules; React Doctor overlaps but adds an agent-skill workflow, an oxlint plugin, and curated agent-error rules beyond the official sets. |
+| oxlint | 未收录 | The fast Rust linter React Doctor ships a plugin for; oxlint is the engine/host, React Doctor supplies the React-specific agent-facing rule pack. |
+| Biome | 未收录 | All-in-one Rust formatter+linter; broad JS/TS lint coverage but not focused on catching agent-written React anti-patterns specifically. |
 
 ## Tech stack
 

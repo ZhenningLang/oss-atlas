@@ -36,10 +36,10 @@ It also shines as the *ingest and transport* layer in front of something heavier
 |---|---|---|
 | [paperless-ngx](paperless-ngx.md) | ✅ | A real DMS: OCR + full-text content search + auto-tagging of scanned paperwork, but a multi-container Django/Postgres/Redis stack. copyparty has zero of that OCR/FTS pipeline; it's a far lighter file server, not a document archive. |
 | [Twake Drive](twake-drive.md) | ✅ | Collaborative drive with document editing, sharing, and a richer permission model; heavier to run. copyparty is single-file file-transfer/serving with no co-editing or per-document ACLs. |
-| Nextcloud | not indexed | Full self-hosted "cloud" (files, sync clients, apps, sharing, optional OCR via add-ons) but a heavy PHP/DB/Redis stack. copyparty is dramatically lighter and faster to stand up, with no two-way sync and no app ecosystem. |
-| Seafile | not indexed | Block-based sync-and-share with strong delta sync and client apps. copyparty wins on portability/zero-deps and protocol breadth (WebDAV/FTP/SFTP/TFTP/SMB) but has no real sync. |
-| Filebrowser | not indexed | Comparable lightweight single-binary web file manager (Go). Narrower protocol set and no `up2k`-style resumable accelerated uploads or media indexer; simpler to reason about. |
-| MinIO | not indexed | S3-compatible object storage for programmatic/app access. Different shape entirely — copyparty is a human-facing multi-protocol file server, not an object store. |
+| Nextcloud | 未收录 | Full self-hosted "cloud" (files, sync clients, apps, sharing, optional OCR via add-ons) but a heavy PHP/DB/Redis stack. copyparty is dramatically lighter and faster to stand up, with no two-way sync and no app ecosystem. |
+| Seafile | 未收录 | Block-based sync-and-share with strong delta sync and client apps. copyparty wins on portability/zero-deps and protocol breadth (WebDAV/FTP/SFTP/TFTP/SMB) but has no real sync. |
+| Filebrowser | 未收录 | Comparable lightweight single-binary web file manager (Go). Narrower protocol set and no `up2k`-style resumable accelerated uploads or media indexer; simpler to reason about. |
+| MinIO | 未收录 | S3-compatible object storage for programmatic/app access. Different shape entirely — copyparty is a human-facing multi-protocol file server, not an object store. |
 
 ## Tech stack
 

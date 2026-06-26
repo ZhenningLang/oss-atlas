@@ -38,8 +38,8 @@ You reach for this pack when you want that engineering discipline to fire on dem
 | [scientific-agent-skills](scientific-agent-skills.md) ✅ | indexed | Skill pack for scientific/research engineering workflows; different domain. Pick by whether your work is general software engineering vs. scientific computing. |
 | [Waza](waza.md) ✅ | indexed | Another engineering-oriented skill collection in this leaf; compare on which lifecycle stages each actually defines and how prescriptive the workflows are. |
 | [vercel-labs/agent-skills](vercel-agent-skills.md) ✅ | indexed | Vendor-curated skill set; compare breadth (full SDLC here vs. vendor-scoped), harness coverage, and maintenance cadence. |
-| Superpowers | not indexed (other leaf) | Methodology-first pack centered on brainstorm→plan→TDD→verify discipline; this one leads with concrete engineering practice areas (quality/security/perf/API/ship) and lifecycle slash commands rather than a TDD/subagent spine. Overlapping goal, different center of gravity. |
-| Each agent's built-in skills / slash commands | not indexed | The platform's own skill ecosystem; this is a third-party bundle layered on top, so it can duplicate or conflict with native skills. |
+| Superpowers | 未收录 (other leaf) | Methodology-first pack centered on brainstorm→plan→TDD→verify discipline; this one leads with concrete engineering practice areas (quality/security/perf/API/ship) and lifecycle slash commands rather than a TDD/subagent spine. Overlapping goal, different center of gravity. |
+| Each agent's built-in skills / slash commands | 未收录 | The platform's own skill ecosystem; this is a third-party bundle layered on top, so it can duplicate or conflict with native skills. |
 
 ## Caveats (unverified)
 

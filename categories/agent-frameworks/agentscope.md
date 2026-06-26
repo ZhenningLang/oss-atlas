@@ -38,9 +38,9 @@ The other moment AgentScope fits is when you want a composable, event-driven age
 | [openfang](openfang.md) | ✅ | Sibling agent framework in this index; different design point — compare scope/maturity before choosing. [未验证] |
 | [Symphony](symphony.md) | ✅ | Sibling multi-agent framework in this index; overlapping "orchestrate multiple agents" goal, different ergonomics. [未验证] |
 | [claude-octopus](claude-octopus.md) | ✅ | Sibling in this index, oriented around Claude-style multi-agent workflows; narrower model focus than AgentScope's multi-provider serving. |
-| LangGraph | not indexed | Graph/state-machine orchestration with a large ecosystem and explicit control flow; heavier, more opinionated than AgentScope's "trust the model" loop. |
-| AutoGen | not indexed | Mature conversation-driven multi-agent framework; comparable multi-agent scope, different abstractions and a larger community footprint. |
-| CrewAI | not indexed | Role/crew-based agent orchestration with strong DX; less emphasis on the service/permission/sandbox/observability stack AgentScope ships. |
+| LangGraph | 未收录 | Graph/state-machine orchestration with a large ecosystem and explicit control flow; heavier, more opinionated than AgentScope's "trust the model" loop. |
+| AutoGen | 未收录 | Mature conversation-driven multi-agent framework; comparable multi-agent scope, different abstractions and a larger community footprint. |
+| CrewAI | 未收录 | Role/crew-based agent orchestration with strong DX; less emphasis on the service/permission/sandbox/observability stack AgentScope ships. |
 
 ## Tech stack
 

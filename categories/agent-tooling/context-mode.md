@@ -37,9 +37,9 @@ So you install Context Mode as an MCP server (a `/plugin` install on Claude Code
 | [beads](beads.md) | ✅ | A dependency-aware, version-controlled task/issue *graph* for agents (Dolt-backed). Solves "what work is ready & remembered across sessions," not "keep raw tool output out of context." Complementary, not a substitute. |
 | [CCPM](ccpm.md) | ✅ | A Claude-Code spec→issue PM workflow (GitHub Issues as the backend). Manages *what to build*; Context Mode manages *how much data hits the window*. Different layer. |
 | [Planning with Files](planning-with-files.md) | ✅ | A file-based planning/state convention (markdown plans on disk). Lightweight and tool-agnostic; no sandboxing, FTS5 retrieval, or hook-enforced routing. |
-| Token-Saver-MCP / MCP output-truncation servers | not indexed | Other MCP servers that shrink tool payloads; narrower (truncate/summarize) and typically single-platform vs Context Mode's execute-sandbox + session-continuity + 17-platform routing. |
-| Built-in agent compaction (`/compact`, auto-summarize) | not indexed | Free and zero-install, but lossy summarization with no structured event ledger, no FTS5 retrieval, and no tool-output sandboxing — exactly the gaps Context Mode targets. |
-| RAG / vector memory stores (e.g. Mem0, Letta) | not indexed | Durable cross-session *semantic* memory with embeddings; heavier, server/DB-backed, and aimed at long-term knowledge — Context Mode's FTS5 store is per-project, local-first, and tuned to in-session resume. |
+| Token-Saver-MCP / MCP output-truncation servers | 未收录 | Other MCP servers that shrink tool payloads; narrower (truncate/summarize) and typically single-platform vs Context Mode's execute-sandbox + session-continuity + 17-platform routing. |
+| Built-in agent compaction (`/compact`, auto-summarize) | 未收录 | Free and zero-install, but lossy summarization with no structured event ledger, no FTS5 retrieval, and no tool-output sandboxing — exactly the gaps Context Mode targets. |
+| RAG / vector memory stores (e.g. Mem0, Letta) | 未收录 | Durable cross-session *semantic* memory with embeddings; heavier, server/DB-backed, and aimed at long-term knowledge — Context Mode's FTS5 store is per-project, local-first, and tuned to in-session resume. |
 
 ## Tech stack
 

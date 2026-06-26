@@ -36,8 +36,8 @@ This repo is the vendor source: each of the nine plugins (`aws-serverless`, `aws
 |---|---|---|
 | [Anthropic Skills](anthropic-skills.md) | ✅ | Anthropic's first-party general-purpose skills (document gen, frontend, authoring spec). Cloud-neutral and task-generic; this AWS repo is narrower and ecosystem-locked but far deeper on AWS architecture/deploy/ops. Different unit of value. |
 | [Claude Plugins (official)](claude-plugins-official.md) | ✅ | Anthropic's broad official plugin/marketplace catalog; general-purpose. This repo is a single-vendor (AWS) domain collection layered on the same plugin mechanism — pick by whether you need AWS depth or a general plugin set. |
-| MiniMax skills | not indexed | Another vendor's skill collection tied to that vendor's models/harness; overlapping "official starter skills" goal but no AWS domain content. Cross-check format/loader compatibility before mixing. |
-| AWS official MCP servers (standalone) | not indexed | The underlying AWS MCP servers (docs, pricing, IaC) can be wired up without these plugins; you get the data sources but not the packaged skills, trigger phrases, and guardrails. More assembly, less opinion. |
+| MiniMax skills | 未收录 | Another vendor's skill collection tied to that vendor's models/harness; overlapping "official starter skills" goal but no AWS domain content. Cross-check format/loader compatibility before mixing. |
+| AWS official MCP servers (standalone) | 未收录 | The underlying AWS MCP servers (docs, pricing, IaC) can be wired up without these plugins; you get the data sources but not the packaged skills, trigger phrases, and guardrails. More assembly, less opinion. |
 | Roll your own AWS skills | n/a | Maximum fit and no marketplace dependency, but you forgo AWS's maintained playbooks and MCP wiring and must keep service best-practices current yourself. |
 
 ## Caveats (unverified)

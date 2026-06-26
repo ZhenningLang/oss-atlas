@@ -38,9 +38,9 @@ So you point your harness at CCPM's skill and say "let's plan the payments featu
 | [beads](beads.md) | ✅ | A versioned-SQL task **graph** giving agents persistent memory; richer dependency/ready-detection backend, but no PRD→epic→GitHub-Issues spec pipeline and no worktree-based parallel orchestration. CCPM is process+GitHub-native; beads is a storage-native task engine. |
 | [Planning with Files](planning-with-files.md) | ✅ | Lighter file-based planning pattern (plans live as markdown the agent reads/writes); overlaps on "state in files, not chat", but no GitHub-Issues sync, no enforced PRD/epic phases, no parallel-worktree fan-out. |
 | [Entire](entire-cli.md) | ✅ | Another agent work-tracking approach in this category; different mechanism — compare directly if you've shortlisted both. |
-| GitHub Projects / Issues + `gh` by hand | not indexed | The same backend CCPM drives, without the opinionated PRD→epic→task decomposition, worktree setup, or bash status scripts — you'd hand-roll the spec discipline and parallel conventions yourself. |
-| Taskmaster (claude-task-master) | not indexed | Popular PRD-to-tasks agent workflow; parses a spec into tasks too, but is its own task store/CLI rather than syncing to GitHub Issues + git worktrees as the shared truth. |
-| Plain `MEMORY.md` / `TODO.md` | not indexed | Zero-dependency and human-readable, but no dependency metadata, no GitHub sync, no parallel-stream isolation — the unstructured baseline CCPM replaces. |
+| GitHub Projects / Issues + `gh` by hand | 未收录 | The same backend CCPM drives, without the opinionated PRD→epic→task decomposition, worktree setup, or bash status scripts — you'd hand-roll the spec discipline and parallel conventions yourself. |
+| Taskmaster (claude-task-master) | 未收录 | Popular PRD-to-tasks agent workflow; parses a spec into tasks too, but is its own task store/CLI rather than syncing to GitHub Issues + git worktrees as the shared truth. |
+| Plain `MEMORY.md` / `TODO.md` | 未收录 | Zero-dependency and human-readable, but no dependency metadata, no GitHub sync, no parallel-stream isolation — the unstructured baseline CCPM replaces. |
 
 ## Caveats (unverified)
 

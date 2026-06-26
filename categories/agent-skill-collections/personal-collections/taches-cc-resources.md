@@ -38,7 +38,7 @@ You reach for TÂCHES CC Resources because it's a curated, batteries-included st
 | [wshobson/agents](../subagent-collections/wshobson-agents.md) | ✅ | Large library of ready-made domain subagents; TÂCHES ships only 3 auditor subagents plus generators to *make* your own. Pick wshobson for breadth of personas, TÂCHES to author extensions. |
 | [awesome-claude-code-subagents](../subagent-collections/awesome-claude-code-subagents.md) | ✅ | Big curated subagent catalog (consumption-oriented); TÂCHES is a small personal mixed bundle (commands + skills + auditors), generation-oriented. |
 | [shaping-skills](shaping-skills.md) | ✅ | Methodology-shaped skill pack; TÂCHES is less a single methodology and more a grab-bag of authoring tools and thinking frames. |
-| Anthropic's official Claude Code skills / built-in commands | not indexed | The platform's native ecosystem; TÂCHES is a third-party personal bundle layered on top and can duplicate or conflict with native commands. |
+| Anthropic's official Claude Code skills / built-in commands | 未收录 | The platform's native ecosystem; TÂCHES is a third-party personal bundle layered on top and can duplicate or conflict with native commands. |
 
 ## Caveats (unverified)
 

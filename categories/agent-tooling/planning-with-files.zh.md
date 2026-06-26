@@ -37,9 +37,9 @@ type: skill-pack
 | [beads](beads.zh.md) | ✅ | 依赖感知、版本化的任务*图*（Dolt 后端、`bd` 二进制），带 merge 安全 ID 和 ready 检测；相比这三个 agent 直接编辑的纯 markdown 文件，它更重、是个真正的数据存储。 |
 | [Context Mode](context-mode.zh.md) | ✅ | 同类别的 agent 上下文方案；目标（让 agent 保持定向）有重叠，机制不同——按你的 IDE 直接对照两页选。 |
 | [Ralph](ralph-claude-code.zh.md) | ✅ | 面向 Claude Code 的长时自主循环 harness；它编排「跑」这件事，而 Planning with Files 提供这个循环要读写的持久计划/状态。 |
-| 你手工维护的 `task_plan.md` / `TODO.md` | not indexed | 零安装、完全归你，但没有生命周期 hook、没有 `/clear` 后自动重注入、没有完成闸、没有 session 续接——正是这个 skill 要自动化掉的手工流程。 |
-| 原生 agent 记忆（`CLAUDE.md`、Cursor rules、Codex `AGENTS.md`） | not indexed | 内置、总是被加载、无需额外安装——但那是一个静态指令文件，不是带进度日志和 stop 闸、逐任务演进的计划。 |
-| Manus / 托管自主 agent 产品 | not indexed | 这个 skill 模仿的商业范式（「work like Manus」）；托管且更丰富，但是托管产品，不是开源、IDE 本地、可随仓库提交的 skill。 |
+| 你手工维护的 `task_plan.md` / `TODO.md` | 未收录 | 零安装、完全归你，但没有生命周期 hook、没有 `/clear` 后自动重注入、没有完成闸、没有 session 续接——正是这个 skill 要自动化掉的手工流程。 |
+| 原生 agent 记忆（`CLAUDE.md`、Cursor rules、Codex `AGENTS.md`） | 未收录 | 内置、总是被加载、无需额外安装——但那是一个静态指令文件，不是带进度日志和 stop 闸、逐任务演进的计划。 |
+| Manus / 托管自主 agent 产品 | 未收录 | 这个 skill 模仿的商业范式（「work like Manus」）；托管且更丰富，但是托管产品，不是开源、IDE 本地、可随仓库提交的 skill。 |
 
 ## 存疑（未验证）
 

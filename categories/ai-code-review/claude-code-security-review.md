@@ -36,10 +36,10 @@ You're also a developer using Claude Code day-to-day who wants the same check be
 |---|---|---|
 | [open-code-review](open-code-review.md) | ✅ | Alibaba LLM-based code reviewer for GitLab/coding-style + quality; this one is security-specific and Claude/GitHub-Actions-native. |
 | [react-doctor](react-doctor.md) | ✅ | React-specific perf/correctness diagnostics, not a security reviewer; different problem entirely. |
-| Semgrep | not indexed | Deterministic, rule-based SAST with SARIF and a huge community ruleset; fast, free, reproducible — but pattern-bound, weaker on logic/contextual bugs. |
-| GitHub CodeQL | not indexed | Deep dataflow/taint analysis, native code-scanning UI, free for public repos; per-language, heavier setup, no LLM remediation prose. |
-| Claude Code GitHub Action (general) | not indexed | Anthropic's general-purpose Claude Action for PRs/coding; not specialized for security audit or finding-filtering. |
-| Snyk Code | not indexed | Commercial ML/SAST with a managed dashboard and dependency scanning; hosted SaaS, not a single-repo OSS Action. |
+| Semgrep | 未收录 | Deterministic, rule-based SAST with SARIF and a huge community ruleset; fast, free, reproducible — but pattern-bound, weaker on logic/contextual bugs. |
+| GitHub CodeQL | 未收录 | Deep dataflow/taint analysis, native code-scanning UI, free for public repos; per-language, heavier setup, no LLM remediation prose. |
+| Claude Code GitHub Action (general) | 未收录 | Anthropic's general-purpose Claude Action for PRs/coding; not specialized for security audit or finding-filtering. |
+| Snyk Code | 未收录 | Commercial ML/SAST with a managed dashboard and dependency scanning; hosted SaaS, not a single-repo OSS Action. |
 
 ## Tech stack
 

@@ -39,7 +39,7 @@ You reach for this pack when you'd rather install one author's battle-tested, re
 | [ljg-skills](ljg-skills.md) | ✅ | Sibling personal collection in this leaf; compare by which specific chores each author automates and whether the trigger language matches yours. |
 | [qiushi-skill](qiushi-skill.md) | ✅ | Another Chinese-language personal skill set; pick by overlap with your actual tasks. |
 | [Superpowers](../../agent-dev-methodology/superpowers.md) | ✅ | An opinionated SDLC *methodology* pack (TDD/subagent discipline) — different unit of consumption. Khazix's is independent utility skills, not a workflow framework. |
-| Anthropic's official / built-in Agent Skills | not indexed | The platform's first-party skill ecosystem; Khazix's is a third-party personal bundle layered on top and can duplicate or conflict with native skills. |
+| Anthropic's official / built-in Agent Skills | 未收录 | The platform's first-party skill ecosystem; Khazix's is a third-party personal bundle layered on top and can duplicate or conflict with native skills. |
 
 ## Caveats (unverified)
 

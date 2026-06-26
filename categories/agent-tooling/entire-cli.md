@@ -36,9 +36,9 @@ So you `entire enable` in the repo and point it at your agent. Now every session
 |---|---|---|
 | [beads](beads.md) | ✅ | Solves the adjacent problem: a dependency-aware *task graph* / structured agent memory (what to do next, what's blocked), backed by versioned SQL. Entire captures *what already happened* (transcripts/checkpoints) for provenance & rewind — complementary, not substitutes. |
 | [CCPM](ccpm.md) | ✅ | A Claude-Code project-management workflow (specs/issues/parallel agents via GitHub Issues). Process/coordination layer, not a session-transcript capture-and-rewind layer. |
-| Plain Git + agent's own session logs | not indexed | Zero extra tooling, but agent logs are scattered per-tool, not indexed to commits, not uniformly rewindable, and clutter or never reach the repo. Entire is the unifying capture/index layer. |
-| Specstory / agent transcript exporters | not indexed | Other tools also persist agent chat transcripts, but typically as exported files/markdown rather than Git-checkpoint provenance tied to commits with a rewind mechanism. Verify feature parity before substituting. |
-| Reflog / `git stash` + manual snapshots | not indexed | Native recovery primitives you already have, but they capture tree state only — no prompts/responses/tool-call context, no per-session indexing, no agent-aware redaction. |
+| Plain Git + agent's own session logs | 未收录 | Zero extra tooling, but agent logs are scattered per-tool, 未收录 to commits, not uniformly rewindable, and clutter or never reach the repo. Entire is the unifying capture/index layer. |
+| Specstory / agent transcript exporters | 未收录 | Other tools also persist agent chat transcripts, but typically as exported files/markdown rather than Git-checkpoint provenance tied to commits with a rewind mechanism. Verify feature parity before substituting. |
+| Reflog / `git stash` + manual snapshots | 未收录 | Native recovery primitives you already have, but they capture tree state only — no prompts/responses/tool-call context, no per-session indexing, no agent-aware redaction. |
 
 ## Tech stack
 

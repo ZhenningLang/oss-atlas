@@ -34,11 +34,11 @@ HiveChat is built for exactly this shape. You deploy it once (Docker Compose wit
 
 | Alternative | In index | Tradeoff |
 |---|---|---|
-| LibreChat | not indexed | Far more mature, larger feature surface (RAG, assistants, code interpreter, many auth backends), MIT-licensed; heavier to operate and not as opinionated toward the small-team admin-quota flow. |
-| Open WebUI | not indexed | Popular self-hosted UI strong on Ollama/local models with RBAC and pipelines; broader and more active, but its sweet spot is local-model serving rather than HiveChat's multi-cloud-provider + per-group quota framing. |
-| Lobe Chat | not indexed | Polished UI, plugins, multi-provider, can self-host; oriented to personal/prosumer use more than centralized admin-managed team governance with token quotas. |
-| Chatbox / Cherry Studio | not indexed | Desktop, single-user clients that bring-your-own-key per person; no central admin, groups, quotas, or shared server. |
-| ChatGPT Team / Claude Team (SaaS) | not indexed | Managed, zero-ops, vendor-locked to one model family; HiveChat trades that convenience for self-hosting, multi-provider choice, and key/data control. |
+| LibreChat | 未收录 | Far more mature, larger feature surface (RAG, assistants, code interpreter, many auth backends), MIT-licensed; heavier to operate and not as opinionated toward the small-team admin-quota flow. |
+| Open WebUI | 未收录 | Popular self-hosted UI strong on Ollama/local models with RBAC and pipelines; broader and more active, but its sweet spot is local-model serving rather than HiveChat's multi-cloud-provider + per-group quota framing. |
+| Lobe Chat | 未收录 | Polished UI, plugins, multi-provider, can self-host; oriented to personal/prosumer use more than centralized admin-managed team governance with token quotas. |
+| Chatbox / Cherry Studio | 未收录 | Desktop, single-user clients that bring-your-own-key per person; no central admin, groups, quotas, or shared server. |
+| ChatGPT Team / Claude Team (SaaS) | 未收录 | Managed, zero-ops, vendor-locked to one model family; HiveChat trades that convenience for self-hosting, multi-provider choice, and key/data control. |
 
 ## Tech stack
 

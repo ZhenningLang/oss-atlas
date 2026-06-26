@@ -38,8 +38,8 @@ The core bet is structural: each atomic plan is small enough to run in its own c
 | [Compound Engineering](compound-engineering.md) | ✅ | Plugin encoding a compounding "agents improve the system" philosophy; overlapping spec-driven goals, lighter surface than GSD's full toolchain. |
 | [12-Factor Agents](12-factor-agents.md) | ✅ | Principles/methodology doc for building reliable agents, not an installable command set; read it for the *why*, use GSD for an executable *how*. |
 | [ECC](ecc.md) | ✅ | Sibling agent-dev methodology with a different orchestration model; compare phase/context handling directly. |
-| GitHub Spec Kit | not indexed | Vendor-backed spec-driven toolkit (`/specify`, `/plan`, `/tasks`); GSD positions itself as lighter and more context-engineering-focused, less ceremony. |
-| BMAD-METHOD | not indexed | Agile-agent framework with explicit roles (PM/architect/dev/QA); heavier "run a software org" framing GSD deliberately rejects. |
+| GitHub Spec Kit | 未收录 | Vendor-backed spec-driven toolkit (`/specify`, `/plan`, `/tasks`); GSD positions itself as lighter and more context-engineering-focused, less ceremony. |
+| BMAD-METHOD | 未收录 | Agile-agent framework with explicit roles (PM/architect/dev/QA); heavier "run a software org" framing GSD deliberately rejects. |
 
 ## Tech stack
 

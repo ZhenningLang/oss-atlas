@@ -38,7 +38,7 @@ You run `npx skills add lijigang/ljg-skills -g --all` (append `#md` for the Mark
 | [qiushi-skill](qiushi-skill.md) ✅ | indexed | Single-maintainer Chinese skill set; sibling personal collection with its own task coverage. ljg-skills centers reading/knowledge-distillation and visual cards. |
 | [antfu/skills](antfu-skills.md) ✅ | indexed | Maintainer's personal pack too, but for the Vue/Vite frontend *engineering* stack — opposite domain. Pick by whether you need code conventions or knowledge-work methods. |
 | [Dimillian/Skills](dimillian-skills.md) ✅ | indexed | Personal collection skewed toward Swift/Apple development. Same "one person's skills" genre, different (code) domain. |
-| Anthropic's official skills / built-in slash commands | not indexed | The platform's own skill ecosystem; ljg-skills is a third-party curated bundle layered on top, so it can duplicate or conflict with native skills. |
+| Anthropic's official skills / built-in slash commands | 未收录 | The platform's own skill ecosystem; ljg-skills is a third-party curated bundle layered on top, so it can duplicate or conflict with native skills. |
 
 ## Caveats (unverified)
 

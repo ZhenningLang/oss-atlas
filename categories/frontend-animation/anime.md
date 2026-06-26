@@ -23,7 +23,7 @@ It also fits when you're animating things the CSS engine can't reach cleanly: tw
 
 ## When NOT to use
 
-- **You're already in a React-first declarative motion world.** If your app composes animation as JSX state (mount/unmount transitions, layout animations, gesture springs), a React-native library like Framer Motion or `react-spring` will feel more idiomatic than imperatively calling `animate()` on refs. (both `not indexed` here)
+- **You're already in a React-first declarative motion world.** If your app composes animation as JSX state (mount/unmount transitions, layout animations, gesture springs), a React-native library like Framer Motion or `react-spring` will feel more idiomatic than imperatively calling `animate()` on refs. (both `未收录` here)
 - **You need full 3D / WebGL scene animation.** Anime.js ships a Three.js adapter to *drive* values, but it is not a 3D engine; for scene graphs, materials, and cameras you want Three.js / GSAP-with-WebGL, not this.
 - **You want the broadest battle-tested plugin ecosystem and commercial support.** GSAP has a deeper plugin catalog (MorphSVG, ScrollTrigger, SplitText, physics) and long industry track record; if you need that breadth or paid support, Anime.js's lighter surface may fall short.
 - **Pure CSS keyframes already do the job.** For simple hovers, loaders, and one-shot transitions, a CSS `@keyframes` / `transition` has zero JS cost and no library to ship — reach for JS animation only when you need sequencing, dynamic values, or runtime control.
@@ -34,12 +34,12 @@ It also fits when you're animating things the CSS engine can't reach cleanly: tw
 
 | Alternative | In index | Tradeoff |
 |---|---|---|
-| GSAP (GreenSock) | not indexed | Larger, more mature ecosystem (ScrollTrigger, MorphSVG, physics plugins) and commercial support; heavier mindshare. Anime.js is smaller, MIT-licensed, dependency-free, and now fully modular in v4. |
-| Motion / Framer Motion | not indexed | Declarative, React-first (also a vanilla `motion` core); idiomatic for component-driven apps. Anime.js is imperative and framework-agnostic — better when you're not living inside React's render model. |
-| Motion One | not indexed | Tiny WAAPI-based animator; very small footprint. Anime.js offers more built-ins (timeline, draggable, SVG morph, scroll, text) at a larger but still light cost. |
-| Web Animations API (WAAPI) | not indexed | Native browser API, no library to ship; lower-level, no timeline/stagger/SVG-morph sugar. Anime.js v4 includes a WAAPI adapter and adds the ergonomic layer on top. |
-| CSS `@keyframes` / transitions | not indexed | Zero JS, GPU-friendly for simple cases; no sequencing, dynamic values, or runtime control. Anime.js is for when you need JS-driven orchestration. |
-| Velocity.js | not indexed | Older jQuery-era JS animator, now largely unmaintained. Anime.js is the actively maintained modern equivalent. |
+| GSAP (GreenSock) | 未收录 | Larger, more mature ecosystem (ScrollTrigger, MorphSVG, physics plugins) and commercial support; heavier mindshare. Anime.js is smaller, MIT-licensed, dependency-free, and now fully modular in v4. |
+| Motion / Framer Motion | 未收录 | Declarative, React-first (also a vanilla `motion` core); idiomatic for component-driven apps. Anime.js is imperative and framework-agnostic — better when you're not living inside React's render model. |
+| Motion One | 未收录 | Tiny WAAPI-based animator; very small footprint. Anime.js offers more built-ins (timeline, draggable, SVG morph, scroll, text) at a larger but still light cost. |
+| Web Animations API (WAAPI) | 未收录 | Native browser API, no library to ship; lower-level, no timeline/stagger/SVG-morph sugar. Anime.js v4 includes a WAAPI adapter and adds the ergonomic layer on top. |
+| CSS `@keyframes` / transitions | 未收录 | Zero JS, GPU-friendly for simple cases; no sequencing, dynamic values, or runtime control. Anime.js is for when you need JS-driven orchestration. |
+| Velocity.js | 未收录 | Older jQuery-era JS animator, now largely unmaintained. Anime.js is the actively maintained modern equivalent. |
 
 ## Tech stack
 

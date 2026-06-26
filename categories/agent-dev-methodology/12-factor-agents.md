@@ -38,8 +38,8 @@ You reach for it when you want principles to guide a hand-rolled or thinly-frame
 | [Superpowers](superpowers.md) | ✅ | An installable skills/prompt pack for a coding agent — concrete commands, not upstream design principles. |
 | [SuperClaude Framework](superclaude.md) | ✅ | A configuration framework that injects personas/commands into Claude; operational, not a methodology essay. |
 | [get-shit-done](get-shit-done.md) | ✅ | A spec-driven workflow pack you install; prescribes a process, where 12-factor prescribes agent architecture. |
-| Anthropic "Building effective agents" guide | not indexed | A vendor essay arguing for simple, composable patterns over frameworks; similar spirit, different (and shorter) taxonomy. Hosted article, not a repo. |
-| Heroku 12-Factor App | not indexed | The original SaaS-app methodology this borrows its name/format from; about apps, not agents. |
+| Anthropic "Building effective agents" guide | 未收录 | A vendor essay arguing for simple, composable patterns over frameworks; similar spirit, different (and shorter) taxonomy. Hosted article, not a repo. |
+| Heroku 12-Factor App | 未收录 | The original SaaS-app methodology this borrows its name/format from; about apps, not agents. |
 
 ## Caveats (unverified)
 

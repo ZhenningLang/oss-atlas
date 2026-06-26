@@ -37,7 +37,7 @@ type: skill-pack
 | [Scientific Agent Skills](scientific-agent-skills.zh.md) | ✅ | 面向科研 / 工程工作流的姊妹技能包，与 web 质量无关 —— 互补，不同领域。 |
 | [Waza](waza.zh.md) | ✅ | 本 leaf 下另一个工程技能集；按各自实际覆盖的生命周期阶段比较。 |
 | [Vercel Agent Skills](vercel-agent-skills.zh.md) | ✅ | Vercel 的 agent-skills 集，偏部署 / Next.js；在 web 性能上有重叠，但围绕其平台组织。 |
-| Lighthouse CI / WebPageTest | not indexed | 真正的测量 + CI 卡门工具（不是技能包）。需要数字和卡构建的预算时用它们；本包是解释并修复的建议层，不是仪表。 |
+| Lighthouse CI / WebPageTest | 未收录 | 真正的测量 + CI 卡门工具（不是技能包）。需要数字和卡构建的预算时用它们；本包是解释并修复的建议层，不是仪表。 |
 | 自己把规则粘进上下文 | n/a | 零安装、完全可控，但很烦且会过期；这个包的全部价值就是把清单打包成可即时加载。 |
 
 ## 存疑（未验证）

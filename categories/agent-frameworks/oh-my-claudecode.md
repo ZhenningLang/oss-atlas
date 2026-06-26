@@ -39,8 +39,8 @@ You reach for it specifically when you want orchestration *inside the Claude Cod
 | [claude-octopus](claude-octopus.md) | ✅ | Also Claude-Code-centric parallel/multi-agent tooling; closest sibling. Differs in surface and orchestration model — compare the two directly if you're already on Claude Code. |
 | [Symphony](symphony.md) | ✅ | OpenAI-authored orchestration; tied to a different vendor ecosystem than Claude Code. |
 | [openfang](openfang.md) | ✅ | Separate agent-framework take; see its page for its model. |
-| claude-flow | not indexed | Another popular Claude-Code multi-agent / swarm orchestration layer; overlapping problem space, different abstractions and maturity. |
-| Claude Code subagents (built-in) | not indexed | Anthropic's native subagent/parallel features cover part of OMC's value without a third-party dependency; OMC adds team pipelines, routing, modes, and HUD on top. |
+| claude-flow | 未收录 | Another popular Claude-Code multi-agent / swarm orchestration layer; overlapping problem space, different abstractions and maturity. |
+| Claude Code subagents (built-in) | 未收录 | Anthropic's native subagent/parallel features cover part of OMC's value without a third-party dependency; OMC adds team pipelines, routing, modes, and HUD on top. |
 
 ## Tech stack
 

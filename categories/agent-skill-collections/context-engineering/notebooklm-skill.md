@@ -35,9 +35,9 @@ You install this skill (`git clone` into `~/.claude/skills/notebooklm/`) so Clau
 | Alternative | In index | Tradeoff |
 |---|---|---|
 | [Agent Skills for Context Engineering](context-engineering-skills.md) | ✅ | A broader context-engineering *skill pack* (multiple prompt/skill files for context plumbing); this repo is a single, runnable retrieval bridge to one external service (NotebookLM) rather than a methodology bundle. |
-| notebooklm-mcp (same author) | not indexed | The MCP-server sibling: persistent chat sessions, TypeScript/npm, and multi-tool support (Claude Code, Codex, Cursor). Choose it for stateful research across tools; choose this skill for a zero-server, Python, Claude-Code-only clone-and-go install. |
-| Local RAG stacks (LlamaIndex / LangChain retrievers, etc.) | not indexed | Self-hosted embeddings + vector DB you own end-to-end; higher setup cost (chunking, embeddings, infra) but no third-party account, no public-share requirement, no browser automation. This skill trades that control for NotebookLM's pre-built Gemini grounding. |
-| Built-in file reading / grep retrieval | not indexed | What Claude Code does by default — high token cost, keyword-shaped retrieval, hallucination on gaps. This skill exists specifically to replace that for doc-heavy tasks. |
+| notebooklm-mcp (same author) | 未收录 | The MCP-server sibling: persistent chat sessions, TypeScript/npm, and multi-tool support (Claude Code, Codex, Cursor). Choose it for stateful research across tools; choose this skill for a zero-server, Python, Claude-Code-only clone-and-go install. |
+| Local RAG stacks (LlamaIndex / LangChain retrievers, etc.) | 未收录 | Self-hosted embeddings + vector DB you own end-to-end; higher setup cost (chunking, embeddings, infra) but no third-party account, no public-share requirement, no browser automation. This skill trades that control for NotebookLM's pre-built Gemini grounding. |
+| Built-in file reading / grep retrieval | 未收录 | What Claude Code does by default — high token cost, keyword-shaped retrieval, hallucination on gaps. This skill exists specifically to replace that for doc-heavy tasks. |
 
 ## Tech stack
 

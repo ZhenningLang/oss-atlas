@@ -33,10 +33,10 @@ You reach for this pack to drop in a security playbook: install once (`npx skill
 
 | Alternative | In index | Tradeoff |
 |---|---|---|
-| `/guard-secure`, `/guard-threat-model` style security skills in a personal/team skill stack | not indexed | Hand-curated, harness-native security gates you already trust and can enforce in hooks; far narrower coverage. This pack trades enforceability and curation for 800+ ready-made domain workflows. |
-| MITRE ATT&CK Navigator / framework docs (read the source mappings yourself) | not indexed | Authoritative, always-current technique data, but no agent-executable workflow — you wire ATT&CK to procedure manually. This pack pre-binds workflows to (a snapshot of) those frameworks. |
-| Security MCP servers (e.g. tool-wrapping SIEM/scanner MCPs) | not indexed | Give the agent live *tool access* with structured I/O; this pack gives *procedural knowledge*, not connectivity. Complementary, not substitutes — one knows the steps, the other can execute against a system. |
-| Bespoke per-task prompting (write your own `SKILL.md`) | not indexed | Maximum control and zero unused surface, but you rebuild and maintain curated, framework-mapped runbooks for every domain yourself instead of installing a vetted bundle. |
+| `/guard-secure`, `/guard-threat-model` style security skills in a personal/team skill stack | 未收录 | Hand-curated, harness-native security gates you already trust and can enforce in hooks; far narrower coverage. This pack trades enforceability and curation for 800+ ready-made domain workflows. |
+| MITRE ATT&CK Navigator / framework docs (read the source mappings yourself) | 未收录 | Authoritative, always-current technique data, but no agent-executable workflow — you wire ATT&CK to procedure manually. This pack pre-binds workflows to (a snapshot of) those frameworks. |
+| Security MCP servers (e.g. tool-wrapping SIEM/scanner MCPs) | 未收录 | Give the agent live *tool access* with structured I/O; this pack gives *procedural knowledge*, not connectivity. Complementary, not substitutes — one knows the steps, the other can execute against a system. |
+| Bespoke per-task prompting (write your own `SKILL.md`) | 未收录 | Maximum control and zero unused surface, but you rebuild and maintain curated, framework-mapped runbooks for every domain yourself instead of installing a vetted bundle. |
 
 ## Caveats (unverified)
 

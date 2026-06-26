@@ -34,12 +34,12 @@ type: framework
 
 | 替代品 | 已收录 | 取舍 |
 |---|---|---|
-| llama.cpp | not indexed | BitNet 所派生的通用 CPU/GPU GGUF 运行时；能跑*任意*量化模型且远更成熟，但它的通用 1.5/2-bit 量化比不上 BitNet 为原生 1.58-bit 模型专门写的三值内核。 |
+| llama.cpp | 未收录 | BitNet 所派生的通用 CPU/GPU GGUF 运行时；能跑*任意*量化模型且远更成熟，但它的通用 1.5/2-bit 量化比不上 BitNet 为原生 1.58-bit 模型专门写的三值内核。 |
 | [LiteRT-LM](litert-lm.zh.md) | ✅ | 谷歌移动优先的端侧 LLM 运行时（以 Gemma 为主，Android/iOS/NPU）。移动 SDK 与加速器生态更好；但不像 BitNet 那样专攻三值 1-bit 模型与 CPU 能效。 |
 | [Google AI Edge Gallery](ai-edge-gallery.zh.md) | ✅ | 一个在 Android 上试玩端侧模型的演示应用/目录，不是 CPU 推理引擎——层次完全不同；与 BitNet 互补而非替代。 |
-| Microsoft T-MAC | not indexed | BitNet 所借鉴查表方法的底层低 bit CPU 内核库；它是内核/库层，而 BitNet 是封装好的端到端三值推理框架。 |
-| MLX / mlx-lm（Apple） | not indexed | Apple 芯片上快速推理，Python/Swift 体验干净、模型覆盖广，但仅限 Apple，且不专门针对三值 1-bit 权重。 |
-| Unsloth / GPTQ-AWQ 系 | not indexed | 把普通模型事后量化到 4-bit；适用面广，但达不到 1.58-bit 原生的效率——量化哲学不同（事后压缩 vs 训练即三值）。 |
+| Microsoft T-MAC | 未收录 | BitNet 所借鉴查表方法的底层低 bit CPU 内核库；它是内核/库层，而 BitNet 是封装好的端到端三值推理框架。 |
+| MLX / mlx-lm（Apple） | 未收录 | Apple 芯片上快速推理，Python/Swift 体验干净、模型覆盖广，但仅限 Apple，且不专门针对三值 1-bit 权重。 |
+| Unsloth / GPTQ-AWQ 系 | 未收录 | 把普通模型事后量化到 4-bit；适用面广，但达不到 1.58-bit 原生的效率——量化哲学不同（事后压缩 vs 训练即三值）。 |
 
 ## 技术栈
 

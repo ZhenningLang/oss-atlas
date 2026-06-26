@@ -33,12 +33,12 @@ UI UX Pro Max installs that judgment into the agent. You run `npm install -g ui-
 
 | Alternative | In index | Tradeoff |
 |---|---|---|
-| designer-skills | not indexed | Sibling UI/UX design skill pack in this leaf; compare on whether it ships a retrieval engine + rule database vs. pure prompt guidance. |
-| stitch-skills | not indexed | Sibling design skill pack; different generation surface — weigh which targets your stack (HTML/Tailwind/React) and harness. |
-| taste-skill | not indexed | Sibling skill focused on visual *taste*/critique; pairs with rather than replaces a generation-oriented pack like this one. |
-| make-interfaces-feel-better | not indexed | Sibling skill aimed at polish/feel of existing interfaces; narrower scope than this pack's product-type-to-design-system pipeline. |
-| Anthropic / built-in agent skills and slash commands | not indexed | The platform's native skill ecosystem; this is a third-party bundle layered on top, so it can duplicate or conflict with native design helpers. |
-| Hand-written project `DESIGN.md` design system | not indexed | A bespoke per-project design contract you maintain; more tailored and stable, but you build and enforce it yourself instead of getting a 161-rule starter. |
+| designer-skills | 未收录 | Sibling UI/UX design skill pack in this leaf; compare on whether it ships a retrieval engine + rule database vs. pure prompt guidance. |
+| stitch-skills | 未收录 | Sibling design skill pack; different generation surface — weigh which targets your stack (HTML/Tailwind/React) and harness. |
+| taste-skill | 未收录 | Sibling skill focused on visual *taste*/critique; pairs with rather than replaces a generation-oriented pack like this one. |
+| make-interfaces-feel-better | 未收录 | Sibling skill aimed at polish/feel of existing interfaces; narrower scope than this pack's product-type-to-design-system pipeline. |
+| Anthropic / built-in agent skills and slash commands | 未收录 | The platform's native skill ecosystem; this is a third-party bundle layered on top, so it can duplicate or conflict with native design helpers. |
+| Hand-written project `DESIGN.md` design system | 未收录 | A bespoke per-project design contract you maintain; more tailored and stable, but you build and enforce it yourself instead of getting a 161-rule starter. |
 
 ## Caveats (unverified)
 

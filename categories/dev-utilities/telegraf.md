@@ -34,11 +34,11 @@ You also reach for it when your sources are heterogeneous and you want collectio
 
 | Alternative | In index | Tradeoff |
 |---|---|---|
-| Prometheus + node_exporter | not indexed | Pull-based scraping with its own TSDB and query language; great for cloud-native metrics, but exporters are per-concern and it isn't a general push collector for logs/industrial protocols. |
-| OpenTelemetry Collector | not indexed | Vendor-neutral, CNCF-governed router for metrics **and** traces/logs with broad receiver/exporter set; heavier config model, stronger tracing story, overlapping metrics scope. |
-| Fluent Bit / Fluentd | not indexed | Log-and-event shippers first (Fluent Bit is also a tiny C binary); narrower metrics surface than Telegraf's 300+ plugins. |
-| Vector (Datadog) | not indexed | Rust observability pipeline (logs/metrics) with strong transform DSL (VRL); comparable single-binary routing, smaller plugin catalog for exotic inputs. |
-| collectd | not indexed | Old, lightweight C metrics daemon; mature but a smaller, aging plugin ecosystem and weaker modern integrations. |
+| Prometheus + node_exporter | 未收录 | Pull-based scraping with its own TSDB and query language; great for cloud-native metrics, but exporters are per-concern and it isn't a general push collector for logs/industrial protocols. |
+| OpenTelemetry Collector | 未收录 | Vendor-neutral, CNCF-governed router for metrics **and** traces/logs with broad receiver/exporter set; heavier config model, stronger tracing story, overlapping metrics scope. |
+| Fluent Bit / Fluentd | 未收录 | Log-and-event shippers first (Fluent Bit is also a tiny C binary); narrower metrics surface than Telegraf's 300+ plugins. |
+| Vector (Datadog) | 未收录 | Rust observability pipeline (logs/metrics) with strong transform DSL (VRL); comparable single-binary routing, smaller plugin catalog for exotic inputs. |
+| collectd | 未收录 | Old, lightweight C metrics daemon; mature but a smaller, aging plugin ecosystem and weaker modern integrations. |
 | [CyberChef](cyberchef.md) | ✅ | Browser-based one-off data transformation toolkit; not a long-running collection agent — different job entirely. |
 
 ## Tech stack

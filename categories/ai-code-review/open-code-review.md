@@ -34,11 +34,11 @@ It also fits when you've inherited an unfamiliar codebase and there's no meaning
 
 | Alternative | In index | Tradeoff |
 |---|---|---|
-| [claude-code-security-review](claude-code-security-review.md) | not indexed | Anthropic's GitHub Action focused on *security* findings via Claude; narrower (security) but PR-native. Open Code Review is broader (general quality + a few security rules) and CLI-first, not auto-posting. |
-| [react-doctor](react-doctor.md) | not indexed | React-specific health/diagnostics for a single framework; Open Code Review is language-agnostic across ~10+ languages, not framework-tuned. |
-| CodeRabbit | not indexed | Hosted SaaS that auto-comments on PRs with broad recall; Open Code Review is self-hosted/CLI, precision-biased, and you own the LLM key and posting glue. |
-| PR-Agent (Qodo) | not indexed | OSS PR assistant that posts to GitHub/GitLab MRs directly and does summaries/Q&A; Open Code Review prints structured findings and leans on a deterministic positioning layer rather than MR integration. |
-| Semgrep | not indexed | Deterministic rule/AST scanner (no LLM) with a large security ruleset; faster and free per run but no agent reasoning or natural-language line comments. |
+| [claude-code-security-review](claude-code-security-review.md) | 未收录 | Anthropic's GitHub Action focused on *security* findings via Claude; narrower (security) but PR-native. Open Code Review is broader (general quality + a few security rules) and CLI-first, not auto-posting. |
+| [react-doctor](react-doctor.md) | 未收录 | React-specific health/diagnostics for a single framework; Open Code Review is language-agnostic across ~10+ languages, not framework-tuned. |
+| CodeRabbit | 未收录 | Hosted SaaS that auto-comments on PRs with broad recall; Open Code Review is self-hosted/CLI, precision-biased, and you own the LLM key and posting glue. |
+| PR-Agent (Qodo) | 未收录 | OSS PR assistant that posts to GitHub/GitLab MRs directly and does summaries/Q&A; Open Code Review prints structured findings and leans on a deterministic positioning layer rather than MR integration. |
+| Semgrep | 未收录 | Deterministic rule/AST scanner (no LLM) with a large security ruleset; faster and free per run but no agent reasoning or natural-language line comments. |
 
 ## Tech stack
 

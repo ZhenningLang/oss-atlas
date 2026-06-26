@@ -38,8 +38,8 @@ It fits best when you want a strong, opinionated aesthetic baked in and an artif
 | [html-anything](html-anything.md) | ✅ | General agent-driven HTML artifact generation; broader and unopinionated, so it lacks the locked card layouts, Swiss validator, platform canvas sizes, and image-sourcing workflow this skill ships. |
 | [open-design](open-design.md) | ✅ | Aimed at broader UI/design generation; not a social-card specialist with platform-exact poster sizes and a render-to-PNG pipeline. |
 | [Impeccable](impeccable.md) | ✅ | Design-quality oriented generation; different surface — not a single-file-HTML card workflow with a Playwright validator. |
-| Canva / 稿定设计 | not indexed | Hosted template SaaS, not a repo — easier for non-agents and richer asset libraries, but closed, no local agent control, no single-file HTML artifact, and far less opinionated visual rigor. |
-| Figma + plugins | not indexed | Full design control and collaboration, but manual; no agent-driven 7-step flow, no auto image sourcing, and not a repo you can vendor. |
+| Canva / 稿定设计 | 未收录 | Hosted template SaaS, not a repo — easier for non-agents and richer asset libraries, but closed, no local agent control, no single-file HTML artifact, and far less opinionated visual rigor. |
+| Figma + plugins | 未收录 | Full design control and collaboration, but manual; no agent-driven 7-step flow, no auto image sourcing, and not a repo you can vendor. |
 
 ## Caveats (unverified)
 

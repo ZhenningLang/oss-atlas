@@ -39,7 +39,7 @@ You reach for it when you want a ready-made *thinking discipline* rather than bu
 | [gstack](gstack.md) | ✅ | Personal harness-config collection; same leaf, different intent — config/tooling vs. a cognitive-method spine. |
 | [wshobson/agents](../subagent-collections/wshobson-agents.md) | ✅ | Large subagent persona library (role specialists). Qiushi is a small set of *thinking methods*, not a roster of domain agents — combine rather than choose. |
 | [awesome-claude-code-subagents](../subagent-collections/awesome-claude-code-subagents.md) | ✅ | Breadth-first subagent catalog; Qiushi is depth-first on one methodology. Pick by whether you need many personas or one disciplined loop. |
-| Superpowers / general SDLC methodology packs | not indexed | Brainstorm→plan→TDD→verify methodology plugins occupy the same "discipline as skills" niche; Qiushi differs by leading with contradiction-analysis and prioritization rather than a test-first lifecycle. |
+| Superpowers / general SDLC methodology packs | 未收录 | Brainstorm→plan→TDD→verify methodology plugins occupy the same "discipline as skills" niche; Qiushi differs by leading with contradiction-analysis and prioritization rather than a test-first lifecycle. |
 
 ## Caveats (unverified)
 

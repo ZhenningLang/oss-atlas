@@ -38,7 +38,7 @@ You reach for it when you want an opinionated, battle-tested workflow rather tha
 | [Compound Engineering](compound-engineering.md) | ✅ | Methodology plugin built around compounding/automation patterns; sibling philosophy, different primitives. Pick by which workflow spine matches your team. |
 | [ECC](ecc.md) | ✅ | Another agent-dev methodology in this category; compare on which lifecycle stages each actually enforces vs. suggests. |
 | [12-Factor Agents](12-factor-agents.md) | ✅ | Principles/methodology doc for building agent *applications*, not a plug-in skill pack you install into a coding agent — different unit of consumption. |
-| Anthropic's official skills / built-in slash commands | not indexed | The platform's own skill ecosystem; Superpowers is a third-party curated bundle layered on top, so it can conflict with or duplicate native skills. |
+| Anthropic's official skills / built-in slash commands | 未收录 | The platform's own skill ecosystem; Superpowers is a third-party curated bundle layered on top, so it can conflict with or duplicate native skills. |
 
 ## Caveats (unverified)
 

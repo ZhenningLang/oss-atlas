@@ -37,9 +37,9 @@ You're also a good fit if you came from RedisGraph and need somewhere to land af
 | [graphify](graphify.md) | ✅ | Lightweight code/document-to-graph builder; FalkorDB is the storage+query engine, graphify is upstream graph construction — complementary, not a substitute. |
 | [code-review-graph](code-review-graph.md) | ✅ | Domain-specific (code-review) graph tool; FalkorDB is a general graph DB you'd build such a tool on. |
 | [PageIndex](pageindex.md) | ✅ | Reasoning-based document tree / retrieval index, not a graph database — different retrieval primitive (hierarchical index vs. property graph). |
-| Neo4j | not indexed | Industry-standard property graph with the largest ecosystem (Bolt, GDS, APOC); heavier, GPLv3/commercial. FalkorDB is faster on sparse-matrix traversals and Redis-embedded but younger and SSPL. |
-| Memgraph | not indexed | In-memory, Cypher-compatible, streaming-focused graph DB; BSL-licensed. Overlaps FalkorDB's in-memory niche without the Redis-module model. |
-| Neptune (AWS) | not indexed | Managed, multi-model (Gremlin/openCypher/SPARQL) graph service; no self-host, AWS lock-in. FalkorDB is self-hostable OSS-adjacent. |
+| Neo4j | 未收录 | Industry-standard property graph with the largest ecosystem (Bolt, GDS, APOC); heavier, GPLv3/commercial. FalkorDB is faster on sparse-matrix traversals and Redis-embedded but younger and SSPL. |
+| Memgraph | 未收录 | In-memory, Cypher-compatible, streaming-focused graph DB; BSL-licensed. Overlaps FalkorDB's in-memory niche without the Redis-module model. |
+| Neptune (AWS) | 未收录 | Managed, multi-model (Gremlin/openCypher/SPARQL) graph service; no self-host, AWS lock-in. FalkorDB is self-hostable OSS-adjacent. |
 
 ## Tech stack
 

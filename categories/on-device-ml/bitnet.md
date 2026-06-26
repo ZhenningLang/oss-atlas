@@ -34,12 +34,12 @@ So you reach for BitNet. You pick a **ternary** model that was actually trained 
 
 | Alternative | In index | Tradeoff |
 |---|---|---|
-| llama.cpp | not indexed | The general-purpose CPU/GPU GGUF runtime BitNet forks; runs *any* quantized model and is far more mature, but its generic 1.5/2-bit quant doesn't match BitNet's purpose-built ternary kernels for natively-1.58-bit models. |
+| llama.cpp | 未收录 | The general-purpose CPU/GPU GGUF runtime BitNet forks; runs *any* quantized model and is far more mature, but its generic 1.5/2-bit quant doesn't match BitNet's purpose-built ternary kernels for natively-1.58-bit models. |
 | [LiteRT-LM](litert-lm.md) | ✅ | Google's mobile-first on-device LLM runtime (Gemma-centric, Android/iOS/NPU). Better mobile SDK and accelerator story; not specialized for ternary 1-bit models and CPU energy efficiency the way BitNet is. |
 | [Google AI Edge Gallery](ai-edge-gallery.md) | ✅ | A demo app / catalog for trying on-device models on Android, not a CPU inference engine — different layer entirely; complementary, not a substitute for a runtime. |
-| Microsoft T-MAC | not indexed | The low-bit CPU kernel library whose lookup-table method BitNet builds on; a kernel/library layer, whereas BitNet is the packaged end-to-end ternary inference framework. |
-| MLX / mlx-lm (Apple) | not indexed | Fast Apple-silicon inference with clean Python/Swift ergonomics and broad model support, but Apple-only and not specialized for ternary 1-bit weights. |
-| Unsloth / GPTQ-AWQ stacks | not indexed | Post-hoc quantize normal models to 4-bit; broadly applicable but can't reach 1.58-bit-native efficiency — different quantization philosophy (compress-after vs train-ternary). |
+| Microsoft T-MAC | 未收录 | The low-bit CPU kernel library whose lookup-table method BitNet builds on; a kernel/library layer, whereas BitNet is the packaged end-to-end ternary inference framework. |
+| MLX / mlx-lm (Apple) | 未收录 | Fast Apple-silicon inference with clean Python/Swift ergonomics and broad model support, but Apple-only and not specialized for ternary 1-bit weights. |
+| Unsloth / GPTQ-AWQ stacks | 未收录 | Post-hoc quantize normal models to 4-bit; broadly applicable but can't reach 1.58-bit-native efficiency — different quantization philosophy (compress-after vs train-ternary). |
 
 ## Tech stack
 

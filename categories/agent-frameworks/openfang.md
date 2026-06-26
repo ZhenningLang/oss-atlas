@@ -38,9 +38,9 @@ It also fits when you care about footprint and self-hosting. The whole thing is 
 | [AgentScope](agentscope.md) | ✅ | Developer framework for building/orchestrating multi-agent apps with explicit control; OpenFang trades that control for a batteries-included, schedule-driven OS with channels and guardrails built in. |
 | [Symphony](symphony.md) | ✅ | Sibling in this category; different orchestration philosophy — compare directly if you're choosing an agent framework. |
 | [claude-octopus](claude-octopus.md) | ✅ | Sibling; narrower Claude-centric tooling vs. OpenFang's broad 27-provider, OS-shaped scope. |
-| LangGraph | not indexed | The default Python choice for stateful, interactive agent graphs inside your own service; no built-in scheduler/channels/binary distribution. OpenFang inverts this as a standalone OS. |
-| OpenClaw | not indexed | The project OpenFang positions itself against and offers a migration path from; OpenFang claims smaller footprint and the OS framing. Verify the comparison yourself. |
-| CrewAI / AutoGen | not indexed | Role/conversation-oriented multi-agent Python frameworks for in-app workflows; not single-binary autonomous runtimes. |
+| LangGraph | 未收录 | The default Python choice for stateful, interactive agent graphs inside your own service; no built-in scheduler/channels/binary distribution. OpenFang inverts this as a standalone OS. |
+| OpenClaw | 未收录 | The project OpenFang positions itself against and offers a migration path from; OpenFang claims smaller footprint and the OS framing. Verify the comparison yourself. |
+| CrewAI / AutoGen | 未收录 | Role/conversation-oriented multi-agent Python frameworks for in-app workflows; not single-binary autonomous runtimes. |
 
 ## Tech stack
 

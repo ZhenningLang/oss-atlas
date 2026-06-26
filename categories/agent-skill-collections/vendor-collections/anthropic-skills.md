@@ -33,10 +33,10 @@ You reach for it specifically when you want (a) the document skills (`docx`, `pd
 
 | Alternative | In index | Tradeoff |
 |---|---|---|
-| Claude plugins (official) | not indexed | Anthropic's broader official plugin/marketplace surface; this `skills` repo is specifically the Agent Skills collection (document + example skills), not the full plugin catalog. Compare on whether you want skills only or the wider plugin set. |
-| AWS Labs agent plugins | not indexed | Another vendor-published collection, AWS-ecosystem-flavored; pick by which cloud/tooling bias matches your stack. Format/loader compatibility differs. |
-| MiniMax skills | not indexed | A different vendor's skill collection; overlapping "official starter skills" goal but tied to that vendor's models/harness. Cross-check format compatibility before mixing. |
-| Third-party community skill packs (e.g. Superpowers) | not indexed | Opinionated SDLC/methodology bundles layered on top of an agent. This repo is narrower and first-party: reference task skills + the authoring spec, not a full workflow methodology. |
+| Claude plugins (official) | 未收录 | Anthropic's broader official plugin/marketplace surface; this `skills` repo is specifically the Agent Skills collection (document + example skills), not the full plugin catalog. Compare on whether you want skills only or the wider plugin set. |
+| AWS Labs agent plugins | 未收录 | Another vendor-published collection, AWS-ecosystem-flavored; pick by which cloud/tooling bias matches your stack. Format/loader compatibility differs. |
+| MiniMax skills | 未收录 | A different vendor's skill collection; overlapping "official starter skills" goal but tied to that vendor's models/harness. Cross-check format compatibility before mixing. |
+| Third-party community skill packs (e.g. Superpowers) | 未收录 | Opinionated SDLC/methodology bundles layered on top of an agent. This repo is narrower and first-party: reference task skills + the authoring spec, not a full workflow methodology. |
 | Roll your own `SKILL.md` skills | n/a | Maximum fit and zero external dependency, but you forgo the vendor's tested document-generation skills and the canonical spec/template. Many users fork from here as the baseline. |
 
 ## Caveats (unverified)

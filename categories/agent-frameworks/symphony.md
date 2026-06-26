@@ -38,8 +38,8 @@ Because the orchestration contract is published as a language-agnostic spec ("Dr
 | [claude-octopus](claude-octopus.md) | ✅ | Orchestrates multiple Claude Code agents in parallel; Symphony is Codex-centric and tracker-driven (Linear), so the choice often follows which agent CLI you've standardized on. |
 | [AgentScope](agentscope.md) | ✅ | General multi-agent runtime/framework for building agent apps; Symphony is narrower — a queue→workspace→agent-run orchestrator, not a framework to compose agents. |
 | [DSPy](dspy.md) | ✅ | Programs/optimizes LLM pipelines; orthogonal problem — DSPy builds the agent's reasoning, Symphony schedules and isolates whole implementation runs. |
-| Devin / Cognition (hosted) | not indexed | Hosted "autonomous engineer" SaaS covering a similar manage-the-work pitch; closed, no self-host, no fork. Symphony is OSS and self-hosted but preview-stage. |
-| GitHub Actions + agent CLI (DIY) | not indexed | Roll-your-own: CI triggers an agent on issues. More control and durable infra (CI runners), but you build the dispatch/reconciliation/isolation that Symphony gives you. |
+| Devin / Cognition (hosted) | 未收录 | Hosted "autonomous engineer" SaaS covering a similar manage-the-work pitch; closed, no self-host, no fork. Symphony is OSS and self-hosted but preview-stage. |
+| GitHub Actions + agent CLI (DIY) | 未收录 | Roll-your-own: CI triggers an agent on issues. More control and durable infra (CI runners), but you build the dispatch/reconciliation/isolation that Symphony gives you. |
 
 ## Tech stack
 

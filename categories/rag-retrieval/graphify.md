@@ -35,10 +35,10 @@ It fits especially well when the graph spans more than just app code — graphif
 | Alternative | In index | Tradeoff |
 |---|---|---|
 | [FalkorDB](falkordb.md) | ✅ | A real persistent graph database (Redis-based, Cypher); graphify can *push* to it. Use FalkorDB when you need a live multi-query graph store, graphify when you want one-shot extraction + agent-facing query. |
-| [PageIndex](pageindex.md) | not indexed | Reasoning-based document-structure indexing for RAG over long docs/PDFs; no code AST or call-graph. Different problem: prose retrieval vs code/entity graph. |
+| [PageIndex](pageindex.md) | 未收录 | Reasoning-based document-structure indexing for RAG over long docs/PDFs; no code AST or call-graph. Different problem: prose retrieval vs code/entity graph. |
 | [code-review-graph](code-review-graph.md) | ✅ | Narrow PR/code-review graph workflow; graphify is whole-repo + multi-language + multi-modal and broader in scope. |
-| Sourcegraph / SCIP | not indexed | Industrial-grade precise code intelligence (cross-repo, language servers); heavier infra and not agent-skill-shaped. graphify is lighter, LLM-augmented, drops into an agent loop. |
-| GitHub `code2graph` / tree-sitter scripts | not indexed | Roll-your-own AST graphs; more control, but you build query, clustering, viz, and agent integration yourself. |
+| Sourcegraph / SCIP | 未收录 | Industrial-grade precise code intelligence (cross-repo, language servers); heavier infra and not agent-skill-shaped. graphify is lighter, LLM-augmented, drops into an agent loop. |
+| GitHub `code2graph` / tree-sitter scripts | 未收录 | Roll-your-own AST graphs; more control, but you build query, clustering, viz, and agent integration yourself. |
 
 ## Tech stack
 

@@ -37,9 +37,9 @@ You reach for **Cua**. You spin up an ephemeral sandbox with one async call — 
 | [page-agent](page-agent.md) | ✅ | In-page JS GUI agent driving the DOM as text inside the user's own browser — no VM, no vision, far cheaper/faster, but web-only and can't touch native desktop apps. |
 | [Chrome DevTools MCP](chrome-devtools-mcp.md) | ✅ | Exposes a real Chrome via DevTools Protocol over MCP — strong for browser debugging/automation, but Chrome-scoped, not a full-desktop sandbox. |
 | [Agent Browser](agent-browser.md) | ✅ | Headless browser automation CLI for agents — lightweight web-task runner; no OS-level control or VM isolation. |
-| OpenAI Operator / Anthropic computer use | not indexed | Hosted vision computer-use agents — turnkey but proprietary, tied to one model vendor; Cua is the open self-hostable infra layer (and can *run* such models via liteLLM). |
-| OSWorld / WebArena (benchmarks) | not indexed | Evaluation environments Cua-Bench targets — they grade agents; Cua provides the runnable sandbox + agent that gets graded. |
-| E2B / Daytona (dev sandboxes) | not indexed | Code-execution sandboxes for agents — overlap on VM isolation, but oriented at running code, not screenshot-driving a GUI desktop. |
+| OpenAI Operator / Anthropic computer use | 未收录 | Hosted vision computer-use agents — turnkey but proprietary, tied to one model vendor; Cua is the open self-hostable infra layer (and can *run* such models via liteLLM). |
+| OSWorld / WebArena (benchmarks) | 未收录 | Evaluation environments Cua-Bench targets — they grade agents; Cua provides the runnable sandbox + agent that gets graded. |
+| E2B / Daytona (dev sandboxes) | 未收录 | Code-execution sandboxes for agents — overlap on VM isolation, but oriented at running code, not screenshot-driving a GUI desktop. |
 
 ## Tech stack
 

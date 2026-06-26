@@ -37,9 +37,9 @@ It also fits when you want the same conveniences in automation: DevToys ships a 
 | [CyberChef](cyberchef.md) | ✅ | Browser-based, chainable "recipe" pipelines and crypto/forensics depth; runs anywhere with a browser. DevToys is a native desktop app with OS integration, a CLI companion, and an offline-by-default install, but mostly one-shot tools (no recipe graph). |
 | [Cockpit](cockpit.md) | ✅ | Web server-administration UI for Linux hosts (services, logs, storage); a different job — remote host management vs local dev string-wrangling. |
 | [Telegraf](telegraf.md) | ✅ | Metrics/event collection agent for observability pipelines; not an interactive devtools box. |
-| It-Tools | not indexed | Self-hostable web app with a very similar grab-bag of dev utilities; runs in any browser / Docker. DevToys is native desktop + offline + a CLI; It-Tools is zero-install over HTTP. |
-| DevUtils (macOS) | not indexed | Polished native macOS-only equivalent (paid); DevToys is free, MIT, and cross-platform. |
-| `jq` / `xxd` / `openssl` (CLI) | not indexed | Scriptable Unix primitives, no GUI; better for pipelines, worse for "I just need to eyeball this once." |
+| It-Tools | 未收录 | Self-hostable web app with a very similar grab-bag of dev utilities; runs in any browser / Docker. DevToys is native desktop + offline + a CLI; It-Tools is zero-install over HTTP. |
+| DevUtils (macOS) | 未收录 | Polished native macOS-only equivalent (paid); DevToys is free, MIT, and cross-platform. |
+| `jq` / `xxd` / `openssl` (CLI) | 未收录 | Scriptable Unix primitives, no GUI; better for pipelines, worse for "I just need to eyeball this once." |
 
 ## Tech stack
 

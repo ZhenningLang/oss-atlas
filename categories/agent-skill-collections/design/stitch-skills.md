@@ -36,10 +36,10 @@ You install Stitch Skills so the agent itself can run the loop. With the Stitch 
 |---|---|---|
 | [designer-skills](designer-skills.md) | ✅ | Generic designer-persona skill pack for UI/UX taste; no required backend. Stitch Skills is heavier (needs the MCP server) but actually *generates and converts* designs rather than only advising. |
 | [ui-ux-pro-max](ui-ux-pro-max.md) | ✅ | Broad UI/UX skill collection focused on guidance and critique; vendor-neutral. Choose it when you want portable taste, Stitch Skills when you're committed to the Stitch generation loop. |
-| taste-skill | not indexed | Pure "taste"/anti-generic critique pack; overlaps only with Stitch's `taste-design` slice, with none of the code↔design plumbing or lock-in. |
-| make-interfaces-feel-better | not indexed | Interaction/polish-focused skills; advisory micro-improvements. Stitch Skills operates at the screen-generation and component-export layer instead. |
-| Stitch MCP server itself (`stitch.withgoogle.com`) | not indexed (hosted, not a repo) | The actual engine these skills call; it's a hosted product, not an indexable repo. This repo is just the agent-facing skill wrappers around it. |
-| v0 / Lovable / other AI UI generators | not indexed | Competing AI design-to-code products, mostly hosted SaaS rather than agent-skill repos; different unit of consumption (you drive their UI, not your agent). |
+| taste-skill | 未收录 | Pure "taste"/anti-generic critique pack; overlaps only with Stitch's `taste-design` slice, with none of the code↔design plumbing or lock-in. |
+| make-interfaces-feel-better | 未收录 | Interaction/polish-focused skills; advisory micro-improvements. Stitch Skills operates at the screen-generation and component-export layer instead. |
+| Stitch MCP server itself (`stitch.withgoogle.com`) | 未收录 (hosted, not a repo) | The actual engine these skills call; it's a hosted product, not an indexable repo. This repo is just the agent-facing skill wrappers around it. |
+| v0 / Lovable / other AI UI generators | 未收录 | Competing AI design-to-code products, mostly hosted SaaS rather than agent-skill repos; different unit of consumption (you drive their UI, not your agent). |
 
 ## Caveats (unverified)
 

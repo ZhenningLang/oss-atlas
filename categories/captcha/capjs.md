@@ -24,7 +24,7 @@ Cap fits here. You drop the `<cap-widget>` on the protected form (or call it pro
 ## When NOT to use
 
 - **You need to stop a determined, well-funded attacker or CAPTCHA-farm.** Proof-of-work raises the *cost* of abuse; it does not *defeat* a solver willing to spend CPU or pay humans. It is friction, not a wall — high-value targets still need rate limits, fraud scoring, and server-side checks.
-- **You want a site-wide / reverse-proxy bot wall.** Cap guards *specific actions* (forms, endpoints) and lets normal browsing through. To gate an entire site against scrapers at the proxy layer, Anubis (`not indexed`) is the shaped tool; Cap is per-action.
+- **You want a site-wide / reverse-proxy bot wall.** Cap guards *specific actions* (forms, endpoints) and lets normal browsing through. To gate an entire site against scrapers at the proxy layer, Anubis (`未收录`) is the shaped tool; Cap is per-action.
 - **Proof-of-work is a dealbreaker for your users' devices.** PoW spends client CPU/battery; on low-end phones or with high difficulty it adds latency and drains battery. If you can't accept any client compute, an invisible behavioral/risk-scoring service (Turnstile) is a different trade.
 - **You need a fully managed, SLA-backed, zero-ops service.** Self-hosting means *you* run the server (or the Standalone container + Redis), rotate keys, and own uptime. There is no vendor to page.
 - **You want CAPTCHA as a legal/compliance accessibility checkbox with audited support.** This is a young open-source project (`capjs-core` v0.1.1), not an enterprise vendor with a support contract.
@@ -34,13 +34,13 @@ Cap fits here. You drop the `<cap-widget>` on the protected form (or call it pro
 
 | Alternative | In index | Tradeoff |
 |---|---|---|
-| reCAPTCHA (Google) | not indexed | Managed, free, strong risk scoring — but sends user data to Google, ships visual puzzles, and is a third-party dependency. Cap is self-hosted and privacy-first; you operate it and get no Google-scale risk model. |
-| hCaptcha | not indexed | Managed alternative to reCAPTCHA, can pay publishers; still third-party and image-based. Cap is ~250x smaller widget and fully self-hostable, with no external calls. |
-| Cloudflare Turnstile | not indexed | Managed, invisible, no PoW on the client, strong behavioral signals via Cloudflare's network — but it's a hosted dependency on Cloudflare. Cap keeps everything on your infra at the cost of running it yourself. |
-| Altcha | not indexed | Closest in spirit: open-source client-side proof-of-work, no fingerprinting, MIT widget. Altcha's OSS is PoW-only (ML detection is a paid Sentinel product) and leaves server/dashboard wiring to you; Cap bundles instrumentation + a Standalone server with dashboard, Apache-2.0. |
-| mCaptcha | not indexed | Self-hosted Rust proof-of-work CAPTCHA with its own rate-limited difficulty model; overlapping goal, different stack and ergonomics. |
-| FriendlyCaptcha | not indexed | Privacy-focused PoW CAPTCHA, but the maintained product is a hosted commercial service; Cap is fully open-source and self-hosted. |
-| Anubis | not indexed | Reverse-proxy / site-wide PoW gate against scrapers and AI crawlers — different scope (entry gate vs per-action). The two are complementary, not substitutes. |
+| reCAPTCHA (Google) | 未收录 | Managed, free, strong risk scoring — but sends user data to Google, ships visual puzzles, and is a third-party dependency. Cap is self-hosted and privacy-first; you operate it and get no Google-scale risk model. |
+| hCaptcha | 未收录 | Managed alternative to reCAPTCHA, can pay publishers; still third-party and image-based. Cap is ~250x smaller widget and fully self-hostable, with no external calls. |
+| Cloudflare Turnstile | 未收录 | Managed, invisible, no PoW on the client, strong behavioral signals via Cloudflare's network — but it's a hosted dependency on Cloudflare. Cap keeps everything on your infra at the cost of running it yourself. |
+| Altcha | 未收录 | Closest in spirit: open-source client-side proof-of-work, no fingerprinting, MIT widget. Altcha's OSS is PoW-only (ML detection is a paid Sentinel product) and leaves server/dashboard wiring to you; Cap bundles instrumentation + a Standalone server with dashboard, Apache-2.0. |
+| mCaptcha | 未收录 | Self-hosted Rust proof-of-work CAPTCHA with its own rate-limited difficulty model; overlapping goal, different stack and ergonomics. |
+| FriendlyCaptcha | 未收录 | Privacy-focused PoW CAPTCHA, but the maintained product is a hosted commercial service; Cap is fully open-source and self-hosted. |
+| Anubis | 未收录 | Reverse-proxy / site-wide PoW gate against scrapers and AI crawlers — different scope (entry gate vs per-action). The two are complementary, not substitutes. |
 
 ## Tech stack
 

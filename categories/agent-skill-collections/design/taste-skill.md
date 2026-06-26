@@ -37,8 +37,8 @@ It also ships tunable dials — `DESIGN_VARIANCE`, `MOTION_INTENSITY`, `VISUAL_D
 | [designer-skills](designer-skills.md) | ✅ | Sibling design-taste pack; compare on which aesthetic variants and harnesses each covers and which one's protocol matches your output style. |
 | [stitch-skills](stitch-skills.md) | ✅ | Sibling skill pack in the same design leaf; overlapping "improve agent UI output" goal, different skill primitives — pick by install target and variant coverage. |
 | [ui-ux-pro-max](ui-ux-pro-max.md) | ✅ | Sibling pack leaning toward broader UI/UX guidance; Taste-Skill is narrower and centers anti-slop frontend generation with tunable variance/motion/density dials. |
-| make-interfaces-feel-better | not indexed | Listed as a leaf sibling but no page exists yet; compare on whether it enforces interaction polish vs. Taste-Skill's generation-time aesthetics. |
-| Anthropic / built-in agent skills | not indexed | Native skill ecosystem of the host harness; Taste-Skill is a third-party bundle layered on top and can duplicate or conflict with native design skills. |
+| make-interfaces-feel-better | 未收录 | Listed as a leaf sibling but no page exists yet; compare on whether it enforces interaction polish vs. Taste-Skill's generation-time aesthetics. |
+| Anthropic / built-in agent skills | 未收录 | Native skill ecosystem of the host harness; Taste-Skill is a third-party bundle layered on top and can duplicate or conflict with native design skills. |
 
 ## Caveats (unverified)
 

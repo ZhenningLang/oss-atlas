@@ -38,9 +38,9 @@ So you reach for TimesFM. You `pip install timesfm[torch]`, pull `google/timesfm
 | [BitNet](bitnet.md) | ✅ | An on-device **LLM** runtime (1-bit text models), a different modality entirely — TimesFM forecasts numbers, BitNet generates text. Listed here only to disambiguate "local model": pick by task, not by both being "small + local". |
 | [LiteRT-LM](litert-lm.md) | ✅ | Google's on-device **LLM** orchestration runtime (text gen on phones). Not a forecaster; you would not use it for demand forecasting. Same disambiguation note. |
 | [Google AI Edge Gallery](ai-edge-gallery.md) | ✅ | A demo app/catalog for running on-device **generative** models, not time-series forecasting. Different task. |
-| Chronos (Amazon) | not indexed | Tokenizes series into a language-model vocabulary; strong zero-shot forecaster and a direct substitute. TimesFM is decoder-only with native quantile head and (2.5) 16k context. |
-| TimGPT / Nixtla `nixtla` | not indexed | Hosted/managed forecasting API and OSS libs (statsforecast/neuralforecast). Nixtla's classical/neural libs are great when per-series training is fine; TimesFM trades that for zero-shot. |
-| Moirai (Salesforce) | not indexed | Another open time-series foundation model with multivariate framing; overlapping use case, different architecture and license terms. |
+| Chronos (Amazon) | 未收录 | Tokenizes series into a language-model vocabulary; strong zero-shot forecaster and a direct substitute. TimesFM is decoder-only with native quantile head and (2.5) 16k context. |
+| TimGPT / Nixtla `nixtla` | 未收录 | Hosted/managed forecasting API and OSS libs (statsforecast/neuralforecast). Nixtla's classical/neural libs are great when per-series training is fine; TimesFM trades that for zero-shot. |
+| Moirai (Salesforce) | 未收录 | Another open time-series foundation model with multivariate framing; overlapping use case, different architecture and license terms. |
 
 ## Tech stack
 

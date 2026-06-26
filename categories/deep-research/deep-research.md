@@ -37,8 +37,8 @@ You're also a good fit if you already have a Firecrawl key and an OpenAI-compati
 | [Vane](vane.md) | ✅ | TypeScript AI answering engine aimed at being a usable product/UI; deep-research is a bare ~500-LOC agent you fork, not run as a service. |
 | [local-deep-research](local-deep-research.md) | ✅ | Python, local-first & encrypted, 10+ search backends incl. local docs, runs fully on local LLMs; deep-research is cloud-LLM + Firecrawl by default and far smaller in scope. |
 | [Agent-Reach](agent-reach.md) | ✅ | Python CLI focused on *reading* social/web platforms (Twitter/Reddit/YouTube/GitHub) with "zero API fees"; not an iterative-synthesis research agent. |
-| GPT Researcher | not indexed | Python, much larger feature surface (multiple retrievers, report types, web UI); deep-research trades all that breadth for a readable minimal core. |
-| Open Deep Research (LangChain / HF) | not indexed | Framework-backed reference agents with bigger ecosystems and tooling; heavier to read and adapt than this single-file-ish implementation. |
+| GPT Researcher | 未收录 | Python, much larger feature surface (multiple retrievers, report types, web UI); deep-research trades all that breadth for a readable minimal core. |
+| Open Deep Research (LangChain / HF) | 未收录 | Framework-backed reference agents with bigger ecosystems and tooling; heavier to read and adapt than this single-file-ish implementation. |
 
 ## Tech stack
 

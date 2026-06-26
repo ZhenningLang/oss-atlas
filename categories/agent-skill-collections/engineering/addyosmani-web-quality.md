@@ -37,7 +37,7 @@ You install this pack (`npx skills add addyosmani/web-quality-skills`, or via th
 | [Scientific Agent Skills](scientific-agent-skills.md) | ✅ | Sibling skill-pack for scientific/eng workflows, not web quality — complementary, different domain. |
 | [Waza](waza.md) | ✅ | Another engineering skill collection in this leaf; compare on which lifecycle stages each actually covers. |
 | [Vercel Agent Skills](vercel-agent-skills.md) | ✅ | Vercel's agent-skills set, deploy/Next.js-leaning; overlaps on web perf but framed around their platform. |
-| Lighthouse CI / WebPageTest | not indexed | Real measurement + CI gating tools (not skill packs). Use these when you need numbers and build-blocking budgets; this pack is the advisory layer that interprets and fixes, not the meter. |
+| Lighthouse CI / WebPageTest | 未收录 | Real measurement + CI gating tools (not skill packs). Use these when you need numbers and build-blocking budgets; this pack is the advisory layer that interprets and fixes, not the meter. |
 | Pasting the rules into context yourself | n/a | Zero install, full control, but tedious and goes stale; the pack's whole value is packaging the checklist for just-in-time loading. |
 
 ## Caveats (unverified)

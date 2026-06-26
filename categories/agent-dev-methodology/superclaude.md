@@ -39,7 +39,7 @@ It also fits when you want behavioral *modes* layered on top of the raw model: a
 | [Compound Engineering](compound-engineering.md) | ✅ | Methodology-plus-plugin for compounding agent work; a development *philosophy* with tooling, vs SuperClaude's config-injection framework. |
 | [ECC](ecc.md) | ✅ | Context-engineering methodology for agents; conceptual/process framing rather than an installable command suite. |
 | [12-Factor Agents](12-factor-agents.md) | ✅ | Principles for building reliable LLM agents — a spec/manifesto you read, not software you install into Claude Code. |
-| claude-code-templates / awesome-claude-code | not indexed | Community config/template collections for Claude Code; lighter, à-la-carte copy-paste vs SuperClaude's installed, coordinated framework. |
+| claude-code-templates / awesome-claude-code | 未收录 | Community config/template collections for Claude Code; lighter, à-la-carte copy-paste vs SuperClaude's installed, coordinated framework. |
 
 ## Tech stack
 

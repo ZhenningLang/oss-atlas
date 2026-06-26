@@ -37,9 +37,9 @@ You install Planning with Files (`npx skills add OthmanAdi/planning-with-files -
 | [beads](beads.md) | ✅ | Dependency-aware, version-controlled task *graph* (Dolt-backed, `bd` binary) with merge-safe IDs and ready-detection; heavier and a real datastore vs. these three plain markdown files an agent edits. |
 | [Context Mode](context-mode.md) | ✅ | Sibling agent-context approach; overlapping "keep the agent oriented" goal, different mechanism — compare the two pages directly for your IDE. |
 | [Ralph](ralph-claude-code.md) | ✅ | Long-running autonomous-loop harness for Claude Code; orchestrates the run, whereas Planning with Files supplies the persistent plan/state the loop reads and writes. |
-| Plain `task_plan.md` / `TODO.md` you maintain by hand | not indexed | Zero install and fully yours, but no lifecycle hooks, no auto re-injection after `/clear`, no completion gate, no session catchup — exactly the manual workflow this skill automates. |
-| Native agent memory (`CLAUDE.md`, Cursor rules, Codex `AGENTS.md`) | not indexed | Built-in, always loaded, no extra install — but a static instruction file, not a per-task evolving plan with progress logging and a stop gate. |
-| Manus / hosted autonomous-agent products | not indexed | The commercial pattern this skill imitates ("work like Manus"); managed and richer, but a hosted product, not an open, IDE-local, repo-committable skill. |
+| Plain `task_plan.md` / `TODO.md` you maintain by hand | 未收录 | Zero install and fully yours, but no lifecycle hooks, no auto re-injection after `/clear`, no completion gate, no session catchup — exactly the manual workflow this skill automates. |
+| Native agent memory (`CLAUDE.md`, Cursor rules, Codex `AGENTS.md`) | 未收录 | Built-in, always loaded, no extra install — but a static instruction file, not a per-task evolving plan with progress logging and a stop gate. |
+| Manus / hosted autonomous-agent products | 未收录 | The commercial pattern this skill imitates ("work like Manus"); managed and richer, but a hosted product, not an open, IDE-local, repo-committable skill. |
 
 ## Caveats (unverified)
 

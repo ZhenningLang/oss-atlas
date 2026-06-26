@@ -33,10 +33,10 @@ You reach for it specifically when your output language is Chinese and you'd rat
 
 | Alternative | In index | Tradeoff |
 |---|---|---|
-| `blader/humanizer` (upstream) | not indexed | The English original this repo translates. Pick upstream for English copy; pick Humanizer-zh for Chinese-language tells and examples. |
+| `blader/humanizer` (upstream) | 未收录 | The English original this repo translates. Pick upstream for English copy; pick Humanizer-zh for Chinese-language tells and examples. |
 | [Baoyu Skills](baoyu-skills.md) | ✅ | A broader Chinese-author skill collection (translation / markdown / content-gen helpers) rather than a single de-slop rubric. Compare on whether you want one focused humanize skill or a multi-skill writing bundle. |
-| Hand-written de-slop prompt in `CLAUDE.md` | not indexed | A few inline rules you maintain yourself: zero install and fully yours, but you re-derive and re-tune the pattern list instead of inheriting a vetted ~24-item checklist. |
-| Wikipedia "Signs of AI writing" guide | not indexed | The reference source behind the rubric — a human-readable guide, not an installable skill. Use it to audit or extend the checklist, not to run edits. |
+| Hand-written de-slop prompt in `CLAUDE.md` | 未收录 | A few inline rules you maintain yourself: zero install and fully yours, but you re-derive and re-tune the pattern list instead of inheriting a vetted ~24-item checklist. |
+| Wikipedia "Signs of AI writing" guide | 未收录 | The reference source behind the rubric — a human-readable guide, not an installable skill. Use it to audit or extend the checklist, not to run edits. |
 
 ## Caveats (unverified)
 

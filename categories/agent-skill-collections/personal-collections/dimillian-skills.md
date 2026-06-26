@@ -35,9 +35,9 @@ You reach for this pack specifically when your work is Apple-flavored: it ships 
 |---|---|---|
 | [antfu/skills](antfu-skills.md) | ✅ | Another single-author personal skill collection (web/TS-leaning). Different domain center of gravity — Dimillian's is uniquely deep on Swift/SwiftUI/Apple platforms. |
 | [wshobson/agents](../subagent-collections/wshobson-agents.md) | ✅ | Large subagent-persona collection; broad role coverage but generalist, no Apple-platform specialization. |
-| awesome-claude-code-subagents | not indexed | Curated Claude Code subagent directory; targets a different harness and is broader/shallower than this pack's Swift depth. |
-| karpathy-skills | not indexed | Personal skill collection from a different author/domain; compare on whether your work is Apple-flavored — if not, neither pack's specialty applies. |
-| Your harness's built-in review / simplify commands | not indexed | Codex/Claude already ship generic diff-review and simplify flows; the generic skills here (`review-swarm`, `review-and-simplify-changes`) overlap with those — the unique value is the SwiftUI/iOS skills, not the generic ones. |
+| awesome-claude-code-subagents | 未收录 | Curated Claude Code subagent directory; targets a different harness and is broader/shallower than this pack's Swift depth. |
+| karpathy-skills | 未收录 | Personal skill collection from a different author/domain; compare on whether your work is Apple-flavored — if not, neither pack's specialty applies. |
+| Your harness's built-in review / simplify commands | 未收录 | Codex/Claude already ship generic diff-review and simplify flows; the generic skills here (`review-swarm`, `review-and-simplify-changes`) overlap with those — the unique value is the SwiftUI/iOS skills, not the generic ones. |
 
 ## Caveats (unverified)
 

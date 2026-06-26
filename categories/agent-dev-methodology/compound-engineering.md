@@ -38,7 +38,7 @@ Compound Engineering installs as a plugin via your agent's marketplace (`/plugin
 | [get-shit-done](get-shit-done.md) | ✅ | Another opinionated agent workflow/skill-pack; overlapping plan-execute spirit — compare command granularity and whether it persists learnings like CE's `/ce-compound`. |
 | [ECC](ecc.md) | ✅ | Sibling methodology in this category; different framing of the build loop — pick by which workflow vocabulary and persistence model fits you. |
 | [12-Factor Agents](12-factor-agents.md) | ✅ | A set of design *principles* for building agents (a document/manifesto), not an installable per-session loop; CE is the runnable plugin you invoke during work. |
-| Spec Kit (GitHub) | not indexed | Spec-driven dev toolkit (spec→plan→tasks) with its own CLI; comparable planning-first ethos, less about per-loop learning capture across many host agents. |
+| Spec Kit (GitHub) | 未收录 | Spec-driven dev toolkit (spec→plan→tasks) with its own CLI; comparable planning-first ethos, less about per-loop learning capture across many host agents. |
 
 ## Caveats (unverified)
 

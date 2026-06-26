@@ -38,9 +38,9 @@ When you want the agent itself to improve the design rather than just lint it, y
 | [open-design](open-design.md) | ✅ | A design-language / generation layer in the same category; overlaps on "make agent design better" but differs on whether it lints existing output vs drives generation. Compare the two pages directly. |
 | [guizang-ppt](guizang-ppt.md) | ✅ | A skill-pack for slide-deck generation; narrow output type, no deterministic detector or CLI. Impeccable is broader frontend-quality tooling. |
 | [guizang-social-card](guizang-social-card.md) | ✅ | Skill-pack for social-card generation; single artifact type vs Impeccable's general UI linting. |
-| ESLint + a11y plugins (eslint-plugin-jsx-a11y) | not indexed | Mature, AST-based linting for accessibility/code, fully offline; but no notion of "AI-design slop" patterns or aesthetic critique, and no agent-skill layer. |
-| Stylelint | not indexed | Deterministic CSS linting with a huge rule ecosystem; targets CSS correctness/conventions, not aesthetic AI-pattern detection or agent design coaching. |
-| Lighthouse / axe-core | not indexed | Audits performance/accessibility on rendered pages; overlaps on URL scanning but not on AI-design-pattern detection or the skill-driven "polish/bolder/quieter" workflow. |
+| ESLint + a11y plugins (eslint-plugin-jsx-a11y) | 未收录 | Mature, AST-based linting for accessibility/code, fully offline; but no notion of "AI-design slop" patterns or aesthetic critique, and no agent-skill layer. |
+| Stylelint | 未收录 | Deterministic CSS linting with a huge rule ecosystem; targets CSS correctness/conventions, not aesthetic AI-pattern detection or agent design coaching. |
+| Lighthouse / axe-core | 未收录 | Audits performance/accessibility on rendered pages; overlaps on URL scanning but not on AI-design-pattern detection or the skill-driven "polish/bolder/quieter" workflow. |
 
 ## Tech stack
 

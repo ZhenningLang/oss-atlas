@@ -38,9 +38,9 @@ You add `chrome-devtools-mcp` to your MCP client config (`npx chrome-devtools-mc
 | [page-agent](page-agent.md) | ✅ | In-page JS GUI agent (DOM-as-text, no headless browser, no backend); great for NL form/workflow automation but **can't** record traces, inspect network at the CDP level, or take heap snapshots. |
 | [Agent Browser](agent-browser.md) | ✅ | Vercel-labs browser-automation for agents; overlapping "drive a browser for an agent" goal — different stack/ergonomics, less of a full DevTools-protocol surface. |
 | [Cua](cua.md) | ✅ | Computer-use / sandboxed-VM agent that drives a whole desktop, not just Chrome; broader (any app, pixel UIs) but heavier and not DevTools-grade for web perf/network. |
-| Playwright (+ MCP) | not indexed | Cross-browser (Chromium/Firefox/WebKit), deterministic, code-or-MCP driven, headless-capable; the go-to for portable automation/CI. Chrome DevTools MCP trades breadth for Chrome-native DevTools depth (traces, Lighthouse, heap, CrUX). |
-| Puppeteer | not indexed | The lower-level Chrome/CDP automation library this server is built on; you write the script, no MCP/agent layer or curated performance-insight tools. |
-| browser-use | not indexed | Python, vision-capable autonomous browser agent; more "agent decides what to do" than "give the agent precise DevTools tools", and not DevTools-protocol-grade for perf/network inspection. |
+| Playwright (+ MCP) | 未收录 | Cross-browser (Chromium/Firefox/WebKit), deterministic, code-or-MCP driven, headless-capable; the go-to for portable automation/CI. Chrome DevTools MCP trades breadth for Chrome-native DevTools depth (traces, Lighthouse, heap, CrUX). |
+| Puppeteer | 未收录 | The lower-level Chrome/CDP automation library this server is built on; you write the script, no MCP/agent layer or curated performance-insight tools. |
+| browser-use | 未收录 | Python, vision-capable autonomous browser agent; more "agent decides what to do" than "give the agent precise DevTools tools", and not DevTools-protocol-grade for perf/network inspection. |
 
 ## Tech stack
 

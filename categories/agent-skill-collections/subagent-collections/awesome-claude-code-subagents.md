@@ -34,9 +34,9 @@ This repo gives you that starting set: 154+ subagent markdown files organized in
 | Alternative | In index | Tradeoff |
 |---|---|---|
 | [wshobson/agents](wshobson-agents.md) | ✅ | The other large Claude Code subagent collection. Compare on which roles each covers, frontmatter conventions, and how opinionated each persona's prompt is — both are "drop into `~/.claude/agents/`" packs, so pick by coverage and prompt quality, not format. |
-| antfu/skills, Dimillian/Skills, gstack, khazix-skills, … | not indexed / [dimillian-skills](../personal-collections/dimillian-skills.md) ✅ | Personal *skill* collections (the `Skill`-tool format), not subagent personas. Different unit of consumption — skills are on-demand procedures, subagents are delegated sub-conversations. Use those when you want behaviors loaded into the main agent, this when you want separate delegated experts. |
-| Anthropic's built-in subagent docs / hand-rolled agents | not indexed | The native way to author subagents yourself. This repo is a third-party starter set layered on that same mechanism, so it can duplicate or collide with agents you've already written. |
-| Superpowers / SDLC methodology packs | not indexed | Those install a *workflow discipline* (brainstorm→plan→TDD→verify) into one agent; this installs a *roster of role experts*. Orthogonal — you can run both, but they solve different problems. |
+| antfu/skills, Dimillian/Skills, gstack, khazix-skills, … | 未收录 / [dimillian-skills](../personal-collections/dimillian-skills.md) ✅ | Personal *skill* collections (the `Skill`-tool format), not subagent personas. Different unit of consumption — skills are on-demand procedures, subagents are delegated sub-conversations. Use those when you want behaviors loaded into the main agent, this when you want separate delegated experts. |
+| Anthropic's built-in subagent docs / hand-rolled agents | 未收录 | The native way to author subagents yourself. This repo is a third-party starter set layered on that same mechanism, so it can duplicate or collide with agents you've already written. |
+| Superpowers / SDLC methodology packs | 未收录 | Those install a *workflow discipline* (brainstorm→plan→TDD→verify) into one agent; this installs a *roster of role experts*. Orthogonal — you can run both, but they solve different problems. |
 
 ## Caveats (unverified)
 

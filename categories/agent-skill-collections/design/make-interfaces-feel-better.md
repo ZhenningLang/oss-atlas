@@ -37,7 +37,7 @@ You reach for it specifically when the gap is *craft-level detail*, not directio
 | [designer-skills](designer-skills.md) | ✅ | Full design *lifecycle* bundle (97 skills: research, IA, design systems, critique). Heavyweight and process-oriented; this one is a single craft-detail checklist with near-zero ceremony. |
 | [ui-ux-pro-max](ui-ux-pro-max.md) | ✅ | Larger UI/UX skill bundle aimed at end-to-end interface quality. Compare on surface area: this skill is one tight article-derived rule set, not a multi-skill system. |
 | [stitch-skills](stitch-skills.md) | ✅ | Sibling design skill pack; compare on which stages each enforces vs. suggests and whether the motion/typography guidance overlaps. |
-| Hand-written design checklist in your own `CLAUDE.md` / prompt | not indexed | The DIY alternative; same advisory nature, but you maintain it. This skill packages a known-good detail list so you don't re-derive it per project. |
+| Hand-written design checklist in your own `CLAUDE.md` / prompt | 未收录 | The DIY alternative; same advisory nature, but you maintain it. This skill packages a known-good detail list so you don't re-derive it per project. |
 
 ## Caveats (unverified)
 

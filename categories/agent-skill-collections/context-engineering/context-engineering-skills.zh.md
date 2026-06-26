@@ -33,10 +33,10 @@ type: skill-pack
 
 | 替代项 | 已收录 | 取舍 |
 |---|---|---|
-| notebooklm-skill | not indexed | 同 leaf 的兄弟项，但它是单个窄 skill（NotebookLM 式的文档接地），而非广义的上下文工程语料。要单一能力选它；要整套上下文管理方法论选本包。 |
+| notebooklm-skill | 未收录 | 同 leaf 的兄弟项，但它是单个窄 skill（NotebookLM 式的文档接地），而非广义的上下文工程语料。要单一能力选它；要整套上下文管理方法论选本包。 |
 | [Superpowers](../../agent-dev-methodology/superpowers.md) | ✅ | 把完整 SDLC 方法论（brainstorm→plan→TDD→verify）做成 skill 插件；在「安装一套精选 skill 包」这一形态上重叠，但它针对的是*软件开发循环*，不是上下文窗口工程。互补而非替代。 |
-| Anthropic 自家的上下文工程指南 / 内置 skill | not indexed | 平台第一方文档与原生 skill；本包是叠在其上的第三方语料，可能与原生指导重复或冲突，需要自行调和。 |
-| 自己仓库里手写的上下文 / 记忆 skill | not indexed | 贴合度最高、零锁定，但一切都得你自己写自己维护。本包以一定贴合度换一套现成、跑过 benchmark 的语料。 |
+| Anthropic 自家的上下文工程指南 / 内置 skill | 未收录 | 平台第一方文档与原生 skill；本包是叠在其上的第三方语料，可能与原生指导重复或冲突，需要自行调和。 |
+| 自己仓库里手写的上下文 / 记忆 skill | 未收录 | 贴合度最高、零锁定，但一切都得你自己写自己维护。本包以一定贴合度换一套现成、跑过 benchmark 的语料。 |
 
 ## 存疑（未验证）
 

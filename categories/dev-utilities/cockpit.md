@@ -34,11 +34,11 @@ It shines when you have a handful of servers and want a low-ceremony pane of gla
 
 | Alternative | In index | Tradeoff |
 |---|---|---|
-| Webmin | not indexed | Older, broader Perl-based control panel covering many services (mail, DNS, Apache, BIND) on multiple init systems; heavier and less "live session" — Cockpit is leaner, systemd-native, and reflects real-time OS state. |
-| cPanel / Plesk | not indexed | Commercial web-hosting control panels (vhosts, mail, billing, reseller accounts); different problem — managed hosting, not bare OS administration. Proprietary and paid. |
-| Ansible / Salt / Puppet | not indexed | Declarative, agentless (Ansible) or agent-based config management for fleets with version control and idempotency; the right tool at scale, but no live interactive UI for ad-hoc one-host triage. |
-| Portainer | not indexed | Web UI focused specifically on Docker/Kubernetes container management; Cockpit's container view (Podman) is one tab among many, not the whole product. |
-| Grafana + Prometheus | not indexed | Observability dashboards for metrics/alerting across a fleet; read-mostly monitoring, whereas Cockpit is hands-on administration of a single host. |
+| Webmin | 未收录 | Older, broader Perl-based control panel covering many services (mail, DNS, Apache, BIND) on multiple init systems; heavier and less "live session" — Cockpit is leaner, systemd-native, and reflects real-time OS state. |
+| cPanel / Plesk | 未收录 | Commercial web-hosting control panels (vhosts, mail, billing, reseller accounts); different problem — managed hosting, not bare OS administration. Proprietary and paid. |
+| Ansible / Salt / Puppet | 未收录 | Declarative, agentless (Ansible) or agent-based config management for fleets with version control and idempotency; the right tool at scale, but no live interactive UI for ad-hoc one-host triage. |
+| Portainer | 未收录 | Web UI focused specifically on Docker/Kubernetes container management; Cockpit's container view (Podman) is one tab among many, not the whole product. |
+| Grafana + Prometheus | 未收录 | Observability dashboards for metrics/alerting across a fleet; read-mostly monitoring, whereas Cockpit is hands-on administration of a single host. |
 | [DevToys](devtoys.md) | ✅ | A developer's offline format/encode/convert toolbox on the desktop — unrelated problem; listed only because it shares this category, not a substitute. |
 
 ## Tech stack

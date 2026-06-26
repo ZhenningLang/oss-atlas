@@ -39,7 +39,7 @@ It fits best when you treat the extra models as a *review/research panel* layere
 | [AgentScope](agentscope.md) | ✅ | General multi-agent runtime/library you build apps on; not a Claude-Code-bound plugin and not opinionated about "blindspot consensus." |
 | [Symphony](symphony.md) | ✅ | OpenAI's multi-agent orchestration; vendor-anchored on OpenAI rather than Claude, framework not plugin. |
 | [openfang](openfang.md) | ✅ | Sibling agent framework with a different orchestration model; compare scope before picking. |
-| crystal / claude-squad | not indexed | Run multiple parallel Claude Code *sessions/worktrees*; parallelism is across Claude instances, not across *different vendors' models* reviewing one task. |
+| crystal / claude-squad | 未收录 | Run multiple parallel Claude Code *sessions/worktrees*; parallelism is across Claude instances, not across *different vendors' models* reviewing one task. |
 
 ## Tech stack
 

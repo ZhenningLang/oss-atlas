@@ -37,8 +37,8 @@ You run `pnpx skills add antfu/skills --skill='*'` (add `-g` for global) and you
 | [Vercel Agent Skills](../engineering/vercel-agent-skills.md) ✅ | indexed | Vercel's official pack for the *React/Next.js/Vercel* ecosystem, distributed through the same `skills` CLI/format. Mirror image of antfu's: pick by which framework world (Vue vs. React) is yours; both are opinionated vendor/maintainer rule sets, not vendor-neutral. |
 | [Agent Skills (addyosmani)](../engineering/addyosmani-agent-skills.md) ✅ | indexed | Addy Osmani's personal full-SDLC engineering pack (spec→build→review→ship, web-perf, security). Broader lifecycle scope and framework-agnostic; antfu's is narrower and stack-specific (Vue toolchain conventions) rather than a methodology spine. |
 | [web-quality-skills (addyosmani)](../engineering/addyosmani-web-quality.md) ✅ | indexed | Focused web performance/accessibility/quality auditing, vendor-neutral. Overlaps antfu's `web-design-guidelines` vendored skill but is dedicated and travels off the Vue stack. |
-| Dimillian/Skills, gstack, ljg-skills, khazix-skills, taches-cc-resources (other personal collections) | not indexed | Same genre — individual maintainers' curated skill/harness bundles — but each reflects a different person's stack and conventions; compare on whose toolchain and opinions you actually share. |
-| Each agent's built-in skills / slash commands | not indexed | The platform's own skill ecosystem; antfu/skills is a third-party bundle layered on top, so it can duplicate or conflict with native skills. |
+| Dimillian/Skills, gstack, ljg-skills, khazix-skills, taches-cc-resources (other personal collections) | 未收录 | Same genre — individual maintainers' curated skill/harness bundles — but each reflects a different person's stack and conventions; compare on whose toolchain and opinions you actually share. |
+| Each agent's built-in skills / slash commands | 未收录 | The platform's own skill ecosystem; antfu/skills is a third-party bundle layered on top, so it can duplicate or conflict with native skills. |
 
 ## Caveats (unverified)
 

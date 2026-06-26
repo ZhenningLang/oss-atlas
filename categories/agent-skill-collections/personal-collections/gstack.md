@@ -35,10 +35,10 @@ You reach for it when you'd rather adopt one person's battle-tested, end-to-end 
 | Alternative | In index | Tradeoff |
 |---|---|---|
 | [Superpowers](../../agent-dev-methodology/superpowers.md) | ✅ | Composable SDLC skills library (brainstorm → plan → TDD → verify) shipped as a cross-harness plugin. More TDD/test-first discipline and a marketplace install; gstack is one founder's *role-based* command set (CEO/designer/QA personas) tuned to his daily factory rather than a generic methodology. |
-| antfu/skills | not indexed | Another personal Claude Code skill collection; compare on which workflow each author bakes in and how much it assumes about your setup. |
-| Dimillian/Skills | not indexed | Personal skill collection; pick by author taste and how their commands route. |
-| wshobson/agents | not indexed | Large subagent/persona collection; broader catalog of agents vs. gstack's tighter founder-opinionated factory loop. |
-| Building your own commands from scratch | not indexed | Maximum fit, zero lock-in, but you author and maintain every persona and the sequencing yourself. |
+| antfu/skills | 未收录 | Another personal Claude Code skill collection; compare on which workflow each author bakes in and how much it assumes about your setup. |
+| Dimillian/Skills | 未收录 | Personal skill collection; pick by author taste and how their commands route. |
+| wshobson/agents | 未收录 | Large subagent/persona collection; broader catalog of agents vs. gstack's tighter founder-opinionated factory loop. |
+| Building your own commands from scratch | 未收录 | Maximum fit, zero lock-in, but you author and maintain every persona and the sequencing yourself. |
 
 ## Caveats (unverified)
 

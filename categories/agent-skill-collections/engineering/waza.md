@@ -35,10 +35,10 @@ You reach for it when you want a curated, ready-made habit pack that follows you
 |---|---|---|
 | [Superpowers](../../agent-dev-methodology/superpowers.md) | ✅ | Larger, methodology-first skills library (brainstorm→plan→TDD→subagent→verify) targeting many harnesses; Waza is a smaller, habit-oriented bag of eight named commands, lighter to adopt but less of a full SDLC spine. |
 | [SuperClaude Framework](../../agent-dev-methodology/superclaude.md) | ✅ | Persona/command/MCP configuration framework with a much larger surface and heavier install; Waza is leaner and centers concrete engineering routines rather than a persona system. |
-| addyosmani/agent-skills | not indexed | Sibling skill collection in this leaf; compare on which engineering habits each actually ships and harness coverage. |
-| web-quality-skills (addyosmani) | not indexed | Web-performance/quality-focused skills; narrower domain than Waza's general engineering habits. |
-| vercel-labs/agent-skills | not indexed | Vendor-curated skill collection; compare provenance and which agents it targets. |
-| Anthropic's built-in skills / slash commands | not indexed | The platform's native skill ecosystem; Waza is a third-party bundle layered on top and can duplicate or conflict with native commands. |
+| addyosmani/agent-skills | 未收录 | Sibling skill collection in this leaf; compare on which engineering habits each actually ships and harness coverage. |
+| web-quality-skills (addyosmani) | 未收录 | Web-performance/quality-focused skills; narrower domain than Waza's general engineering habits. |
+| vercel-labs/agent-skills | 未收录 | Vendor-curated skill collection; compare provenance and which agents it targets. |
+| Anthropic's built-in skills / slash commands | 未收录 | The platform's native skill ecosystem; Waza is a third-party bundle layered on top and can duplicate or conflict with native commands. |
 
 ## Caveats (unverified)
 

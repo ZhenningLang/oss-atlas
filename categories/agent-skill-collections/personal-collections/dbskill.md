@@ -37,7 +37,7 @@ You reach for it when you want this *specific author's* methodology — the fram
 | [antfu/skills](antfu-skills.md) | ✅ | A maintainer's personal coding/devtools skills; engineering-flavored, English-first. dbskill is a domain pack for business diagnosis, not code workflow. |
 | [Dimillian/Skills](dimillian-skills.md) | ✅ | Personal skills from an iOS/Swift developer; software-focused. Disjoint domain — pick by whether you want coding help or business coaching. |
 | [awesome-claude-code-subagents](../subagent-collections/awesome-claude-code-subagents.md) | ✅ | A large broad subagent collection across many technical roles; breadth over a single opinionated voice. dbskill is one author's deep, narrow business methodology. |
-| Generic LLM business-coaching prompts | not indexed | Ad-hoc prompts have no curated framework, case library, or persistence; dbskill ships ~4k knowledge atoms and state commands behind a coherent author voice. |
+| Generic LLM business-coaching prompts | 未收录 | Ad-hoc prompts have no curated framework, case library, or persistence; dbskill ships ~4k knowledge atoms and state commands behind a coherent author voice. |
 
 ## Caveats (unverified)
 

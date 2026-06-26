@@ -37,7 +37,7 @@ You reach for it as a drop-in base layer rather than a big multi-skill collectio
 | [TÂCHES CC Resources](taches-cc-resources.md) | ✅ | A full personal extension bundle (commands, meta-skills, subagents, hooks). Karpathy-skills is the opposite end: one tiny principles file, no commands or generators. Pick TÂCHES for breadth, this for a minimal base layer. |
 | [antfu/skills](antfu-skills.md) | ✅ | Stack-specific (Vue/Vite/Nuxt) auto-applied skills via a CLI. This pack is stack-agnostic behavioral guidance, not framework knowledge. |
 | [Superpowers](../../agent-dev-methodology/superpowers.md) | ✅ | A full SDLC methodology library (brainstorm→plan→TDD→verify) with many composable skills and per-harness manifests. Karpathy-skills covers a similar "make the agent disciplined" goal in four lines instead of a skill graph — far lighter, far less prescriptive. |
-| Your own global `CLAUDE.md` / Anthropic built-in guidance | not indexed | If you already maintain opinionated global agent instructions, that's the same surface; this would be additive prose competing for the same context. |
+| Your own global `CLAUDE.md` / Anthropic built-in guidance | 未收录 | If you already maintain opinionated global agent instructions, that's the same surface; this would be additive prose competing for the same context. |
 
 ## Caveats (unverified)
 

@@ -39,7 +39,7 @@ You're also a fit if you work across more than one agent runtime and want *one* 
 | [Compound Engineering](compound-engineering.md) | ✅ | A plugin encoding a specific compounding-workflow methodology; far more opinionated-and-small vs ECC's broad OS-style bundle. |
 | [get-shit-done](get-shit-done.md) | ✅ | Lightweight task-execution workflow pack; single-philosophy vs ECC's everything-included surface. |
 | [12-Factor Agents](12-factor-agents.md) | ✅ | Provider-neutral *principles* for building agents (docs, not installed config); different layer than ECC's concrete Claude-Code harness. |
-| dotfiles / hand-rolled `~/.claude` | not indexed | Full control and minimal surface; you maintain every skill/hook/rule yourself instead of inheriting and updating a curated stack. |
+| dotfiles / hand-rolled `~/.claude` | 未收录 | Full control and minimal surface; you maintain every skill/hook/rule yourself instead of inheriting and updating a curated stack. |
 
 ## Tech stack
 

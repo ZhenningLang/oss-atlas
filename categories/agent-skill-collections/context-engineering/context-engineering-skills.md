@@ -33,10 +33,10 @@ You reach for it when you want an opinionated, pre-built corpus rather than auth
 
 | Alternative | In index | Tradeoff |
 |---|---|---|
-| notebooklm-skill | not indexed | Sibling in this leaf, but a single narrow skill (NotebookLM-style document grounding) rather than a broad context-engineering corpus. Pick it for one capability; pick this pack for a whole context-management methodology. |
+| notebooklm-skill | 未收录 | Sibling in this leaf, but a single narrow skill (NotebookLM-style document grounding) rather than a broad context-engineering corpus. Pick it for one capability; pick this pack for a whole context-management methodology. |
 | [Superpowers](../../agent-dev-methodology/superpowers.md) | ✅ | Full SDLC methodology (brainstorm→plan→TDD→verify) as a skill plugin; overlaps on the "install a curated skill bundle" form but targets the *software-development loop*, not context-window engineering. Complementary, not a substitute. |
-| Anthropic's own context-engineering guidance / built-in skills | not indexed | The platform's first-party docs and native skills; this is a third-party corpus layered on top, so it can duplicate or conflict with native guidance and must be reconciled. |
-| Hand-rolled context/memory skills in your own repo | not indexed | Maximum fit and zero lock-in, but you author and maintain everything. This pack trades some fit for a ready-made, benchmarked corpus. |
+| Anthropic's own context-engineering guidance / built-in skills | 未收录 | The platform's first-party docs and native skills; this is a third-party corpus layered on top, so it can duplicate or conflict with native guidance and must be reconciled. |
+| Hand-rolled context/memory skills in your own repo | 未收录 | Maximum fit and zero lock-in, but you author and maintain everything. This pack trades some fit for a ready-made, benchmarked corpus. |
 
 ## Caveats (unverified)
 
