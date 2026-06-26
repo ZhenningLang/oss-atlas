@@ -1,0 +1,63 @@
+---
+name: page-agent
+slug: page-agent
+repo: https://github.com/alibaba/page-agent
+category: web-automation
+tags: [browser-automation, gui-agent, in-page, natural-language, dom, llm-agnostic, typescript, no-backend, web-copilot, byo-llm]
+language: TypeScript (runs as browser JS; npm + CDN)
+license: MIT
+maturity: v1.10.0 (2026-06-15); ~33 releases, ~1061 commits, active; Alibaba-maintained
+last_verified: 2026-06-26
+---
+
+# page-agent
+
+page-agent 是阿里开源的「页内 GUI agent」JS 库：把 AI agent 直接塞进网页，用自然语言命令读取并操作 DOM，复用浏览器已有登录态，无需后端改造、无需 headless 浏览器或截图。
+
+## 何时使用
+
+你已经有一个复杂的 Web 应用——ERP、CRM、后台管理面板——想用几行 JavaScript、且无需后端改造，就给它加一个**能真正操作 UI 的 AI copilot**（填表单、点击走完多步流程）。它复用用户已有的登录/会话；而且因为它把可见页面当作文本来读取，所以像「点击提交订单按钮」这样的指令意图是在 HTML 重构后依然有效（不依赖脆弱的选择器）。LLM 无关（自带任意 OpenAI 兼容模型）。适合做产品内置 copilot、复杂表单/工作流自动化，以及在 Web UI 之上加一层自然语言 / 语音的无障碍能力。
+
+## 何时不用
+
+- **没有视觉 / 多模态** —— 它只把 DOM 当作文本读取。canvas/WebGL/图像密集型 UI、像素级精确交互，或任何不在 DOM 里表达的内容都无法工作。`[推断]` shadow DOM 和跨域 iframe 很可能是薄弱环节。
+- **不是服务端自动化** —— 它活在浏览器里。headless/批量爬取、抓取或 CI 自动化请改用 Playwright 或 browser-use。
+- **不适合高并发** —— 客户端运行，受浏览器限制；它不是「一群 agent」式的后端。
+- **没有闭环视觉验证** —— 它无法「看到」某个操作在视觉上是否成功；验证必须来自 DOM。
+- **外部 LLM 依赖与数据外发** —— `[未验证]` 你自带 LLM，所以质量/成本/延迟都继承自该模型，并且页面 DOM 文本会被发送给该模型——对敏感应用来说有必要做一次隐私/合规评审。
+- **成熟度** —— 活跃且处于 v1.x，但 `[未验证]` 其长期 API 稳定性以及在各类网站上的真实覆盖情况；「能在 HTML 变化后依然有效」这一健壮性是项目自己的说法，未经独立基准验证。
+
+## 横向对比
+
+| 替代方案 | 是否收录 | 取舍 |
+|---|---|---|
+| browser-use | 未收录 | Python、服务端、具备视觉能力（截图）的浏览器 agent —— 基础设施更重（需要真实/headless 浏览器），但能超越 DOM 文本工作、且不依赖客户端；page-agent 称其为灵感来源。 |
+| Playwright / Puppeteer | 未收录 | 更底层、代码驱动、支持 headless 的自动化 —— 确定性强且强大，但你要自己写选择器/脚本（不是自然语言），且在 DOM 变化时会失效。 |
+| Selenium | 未收录 | 成熟、普及的跨浏览器自动化 —— 但纯手工、冗长、基于选择器，没有自然语言层。 |
+| UiPath / Automation Anywhere (RPA) | 未收录 | 带治理能力的企业级桌面+Web RPA —— 但闭源、昂贵、有厂商锁定，相比一段 JS 片段过于笨重。 |
+| Computer-use agents (Anthropic computer use / OpenAI Operator) | 未收录 | 基于视觉、驱动真实屏幕/浏览器的 agent —— 能处理任意像素 UI，但更慢、更贵，且需要一个受控的浏览器/VM，而非页内片段。 |
+
+## 技术栈
+
+- TypeScript / 浏览器 JavaScript —— 在页内运行；无需 Node.js / Python / headless 浏览器
+- LLM 无关 —— 通过 OpenAI 兼容 API 自带模型（示例：Qwen / Dashscope）
+- 可选的 Chrome 扩展 —— 多标签页 / 跨页面任务
+- 可选的 MCP server —— 外部控制 / 编排
+- 分发方式 —— npm 包 + CDN（jsDelivr、npmmirror）
+
+## 依赖
+
+- 一个现代**浏览器**（它在客户端、页面内部运行）
+- 一个**你自己提供的 LLM 端点**（OpenAI 兼容 API + key）
+- **可选** —— Chrome 扩展（多标签页）；MCP server（外部编排）
+
+## 运维难度
+
+**低。** 即插即用的浏览器库（npm/CDN，几行代码），无后端、无 headless 浏览器、无需单独运维的基础设施。真正的运维成本在于**自带的 LLM 端点** —— API-key 管理、每次调用的成本与延迟 —— 以及把页面 DOM 文本发送给该模型的**数据治理**问题。`[推断]` token 成本随 DOM 大小增长，所以大型/复杂页面在单次操作上可能变得昂贵。
+
+## 存疑（未验证）
+
+- **Star 数** —— 来自单一快照（约 2026-06-15）的约 19.9k，未与 API 交叉核对。`[未验证]`
+- **替代清单** —— 把 browser-use 列为所引用的「基础」，外加 RPA 和 computer-use agents，部分是从仓库页面 + 二手文章推断而来，并非全部经过确认。`[未验证]`
+- **定位说法** —— 「能在 HTML 结构变化后依然有效」和「无需后端」是项目自己的表述；在各类网站上的真实健壮性未经独立验证。`[未验证]`
+- **Qwen/Dashscope** —— 它们究竟只是示例还是推荐默认项，属于推断。`[推断]`

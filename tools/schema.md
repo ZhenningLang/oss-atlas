@@ -36,21 +36,33 @@ Rules enforced by the linter:
 - `last_verified` parses as `YYYY-MM-DD`.
 - **Staleness**: if `today - last_verified > STALE_DAYS` (default 90), the linter prints a **WARNING** (not an error). Run the `sync-entry` skill to re-verify and bump the date.
 
-## 2. Body — required sections (exact H2 headings)
+## 2. Files — a bilingual pair
 
-Every page MUST contain these seven `##` headings, in this order:
+Each project is **two files** in the same category dir:
 
-| Heading | What goes here | 中文 |
+- `<slug>.md` — the **English** page (canonical; what an agent reads by default)
+- `<slug>.zh.md` — the **Chinese** page (same content, monolingual)
+
+The linter requires both to exist (parity). Frontmatter is byte-identical across the pair
+(facts are language-neutral); only the body language differs. `slug` in frontmatter is the
+project slug for **both** files (e.g. `beads`), even though the Chinese file is `beads.zh.md`.
+
+### Required body sections (exact H2 headings)
+
+Both pages start with `# <name>` and a one-line TL;DR (in that page's language). Then six
+required `##` sections, in this order:
+
+| English page (`<slug>.md`) | Chinese page (`<slug>.zh.md`) | What goes here |
 |---|---|---|
-| `## 中文摘要` | One paragraph, Simplified Chinese: 是什么 / 最适合 / 何时别用 | 中文速览 |
-| `## When to use` | User stories / positive scenarios — concrete, not marketing | 正面场景 |
-| `## When NOT to use` | Anti-patterns, scale ceilings, lock-in, maintenance risk — **the most valuable section** | 反面场景 |
-| `## Comparison` | Horizontal table vs real substitutes (see below) | 横向对比 |
-| `## Tech stack` | Languages, frameworks, datastores it is built on | 技术栈 |
-| `## Dependencies` | Runtime/infra a user must run (db, services, hardware) | 依赖 |
-| `## Ops difficulty` | low / medium / high + why; deploy + maintain burden | 运维难度 |
+| `## When to use` | `## 何时使用` | positive scenarios — concrete, not marketing |
+| `## When NOT to use` | `## 何时不用` | anti-patterns, scale ceilings, lock-in, maintenance risk — **the most valuable section** |
+| `## Comparison` | `## 横向对比` | horizontal table vs real substitutes (see below) |
+| `## Tech stack` | `## 技术栈` | languages, frameworks, datastores it is built on |
+| `## Dependencies` | `## 依赖` | runtime/infra a user must run (db, services, hardware) |
+| `## Ops difficulty` | `## 运维难度` | low / medium / high + why; deploy + maintain burden |
 
-The page starts with `# <name>` and a one-line English TL;DR before `## 中文摘要`.
+An optional final `## Caveats (unverified)` / `## 存疑（未验证）` section is encouraged to collect
+`[未验证]` facts.
 
 ### Comparison rules
 

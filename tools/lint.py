@@ -5,14 +5,20 @@ This repo has no runtime logic, so it has no unit tests. THIS LINTER IS THE TEST
 it enforces the entry schema (tools/schema.md) so that every project page stays
 machine-navigable for the coding agents that read this index.
 
+Bilingual model: each project is TWO files in the same category dir —
+  <slug>.md     English page  (canonical; what the agent reads by default)
+  <slug>.zh.md  Chinese page  (monolingual sibling)
+Routing is split too: INDEX.md (English) + INDEX.zh.md (Chinese), at the root
+and per category.
+
 Checks (ERROR = non-zero exit; WARNING = printed, exit still 0):
-  - project pages: frontmatter required keys + types
-  - slug == filename, category == parent dir
-  - all 7 required H2 sections present
+  - each page: frontmatter required keys + types, slug==base filename, category==dir
+  - English pages carry the 6 English sections; Chinese pages carry the 6 Chinese sections
+  - every page has its sibling in the other language (bilingual parity)
   - last_verified parses; staleness > STALE_DAYS -> WARNING
-  - every category dir has INDEX.md
-  - root INDEX.md links every category and vice versa
-  - every project page is linked from its category INDEX (no orphans)
+  - every category dir has BOTH INDEX.md and INDEX.zh.md
+  - English pages linked from INDEX.md; Chinese pages from INDEX.zh.md (no orphans)
+  - root INDEX.md links every category's INDEX.md; root INDEX.zh.md every INDEX.zh.md
   - internal relative links resolve
 
 Pure stdlib. Usage:  python3 tools/lint.py [--root .]
@@ -28,8 +34,7 @@ import sys
 from pathlib import Path
 
 REQUIRED_KEYS = ["name", "slug", "repo", "category", "tags", "language", "license", "maturity", "last_verified"]
-REQUIRED_SECTIONS = [
-    "## 中文摘要",
+REQUIRED_SECTIONS_EN = [
     "## When to use",
     "## When NOT to use",
     "## Comparison",
@@ -37,6 +42,17 @@ REQUIRED_SECTIONS = [
     "## Dependencies",
     "## Ops difficulty",
 ]
+REQUIRED_SECTIONS_ZH = [
+    "## 何时使用",
+    "## 何时不用",
+    "## 横向对比",
+    "## 技术栈",
+    "## 依赖",
+    "## 运维难度",
+]
+INDEX_EN = "INDEX.md"
+INDEX_ZH = "INDEX.zh.md"
+ZH_SUFFIX = ".zh.md"
 STALE_DAYS = int(os.environ.get("OSS_ATLAS_STALE_DAYS", "90"))
 
 LINK_RE = re.compile(r"\[[^\]]+\]\(([^)]+)\)")
@@ -84,8 +100,20 @@ def md_links(text: str) -> list[str]:
     return LINK_RE.findall(text)
 
 
-def check_project_page(path: Path, category_dir: Path, rep: Report, today: dt.date) -> None:
+def is_page(name: str) -> bool:
+    return name.endswith(".md") and name not in (INDEX_EN, INDEX_ZH)
+
+
+def base_slug(name: str) -> str:
+    return name[: -len(ZH_SUFFIX)] if name.endswith(ZH_SUFFIX) else name[: -len(".md")]
+
+
+def check_page(path: Path, category_dir: Path, rep: Report, today: dt.date) -> None:
+    name = path.name
+    zh = name.endswith(ZH_SUFFIX)
+    base = base_slug(name)
     text = path.read_text(encoding="utf-8")
+
     fm = parse_frontmatter(text)
     if fm is None:
         rep.error(path, "missing or malformed YAML frontmatter (must start with '---')")
@@ -95,9 +123,8 @@ def check_project_page(path: Path, category_dir: Path, rep: Report, today: dt.da
         if key not in fm or fm[key] in ("", None, []):
             rep.error(path, f"frontmatter missing required key: {key}")
 
-    expected_slug = path.stem
-    if fm.get("slug") and fm["slug"] != expected_slug:
-        rep.error(path, f"slug '{fm['slug']}' != filename '{expected_slug}'")
+    if fm.get("slug") and fm["slug"] != base:
+        rep.error(path, f"slug '{fm['slug']}' != base filename '{base}'")
 
     if fm.get("category") and fm["category"] != category_dir.name:
         rep.error(path, f"category '{fm['category']}' != parent dir '{category_dir.name}'")
@@ -117,11 +144,16 @@ def check_project_page(path: Path, category_dir: Path, rep: Report, today: dt.da
         except ValueError:
             rep.error(path, f"last_verified '{lv}' is not a valid YYYY-MM-DD date")
 
-    for section in REQUIRED_SECTIONS:
+    sections = REQUIRED_SECTIONS_ZH if zh else REQUIRED_SECTIONS_EN
+    for section in sections:
         if not re.search(r"(?m)^" + re.escape(section) + r"\s*$", text):
             rep.error(path, f"missing required section: {section}")
 
-    # internal relative links resolve
+    # bilingual parity: the sibling in the other language must exist
+    sibling = category_dir / (base + (".md" if zh else ZH_SUFFIX))
+    if not sibling.exists():
+        rep.error(path, f"missing {'English' if zh else 'Chinese'} sibling: {sibling.name}")
+
     for link in md_links(text):
         if link.startswith(("http://", "https://", "#", "mailto:")):
             continue
@@ -130,24 +162,53 @@ def check_project_page(path: Path, category_dir: Path, rep: Report, today: dt.da
             rep.error(path, f"broken internal link: {link}")
 
 
-def check_category(category_dir: Path, rep: Report, today: dt.date) -> set[str]:
-    index = category_dir / "INDEX.md"
-    if not index.exists():
-        rep.error(category_dir, "category directory has no INDEX.md")
-        linked = set()
-    else:
-        linked = {
-            (category_dir / l.split("#", 1)[0]).resolve()
-            for l in md_links(index.read_text(encoding="utf-8"))
-            if not l.startswith(("http://", "https://", "#", "mailto:"))
-        }
+def linked_targets(index_path: Path) -> set[Path]:
+    if not index_path.exists():
+        return set()
+    return {
+        (index_path.parent / l.split("#", 1)[0]).resolve()
+        for l in md_links(index_path.read_text(encoding="utf-8"))
+        if not l.startswith(("http://", "https://", "#", "mailto:"))
+    }
 
-    pages = sorted(p for p in category_dir.glob("*.md") if p.name != "INDEX.md")
-    for page in pages:
-        check_project_page(page, category_dir, rep, today)
-        if index.exists() and page.resolve() not in linked:
-            rep.error(page, f"orphan: not linked from {index.name}")
-    return {category_dir.name for _ in pages} if pages else set()
+
+def check_category(category_dir: Path, rep: Report, today: dt.date) -> None:
+    en_index = category_dir / INDEX_EN
+    zh_index = category_dir / INDEX_ZH
+    if not en_index.exists():
+        rep.error(category_dir, f"category directory has no {INDEX_EN}")
+    if not zh_index.exists():
+        rep.error(category_dir, f"category directory has no {INDEX_ZH}")
+    en_linked = linked_targets(en_index)
+    zh_linked = linked_targets(zh_index)
+
+    for page in sorted(p for p in category_dir.glob("*.md") if is_page(p.name)):
+        check_page(page, category_dir, rep, today)
+        if page.name.endswith(ZH_SUFFIX):
+            if zh_index.exists() and page.resolve() not in zh_linked:
+                rep.error(page, f"orphan: not linked from {INDEX_ZH}")
+        else:
+            if en_index.exists() and page.resolve() not in en_linked:
+                rep.error(page, f"orphan: not linked from {INDEX_EN}")
+
+
+def check_root_index(root: Path, index_name: str, cat_index_name: str,
+                     category_dirs: list[Path], rep: Report) -> None:
+    root_index = root / index_name
+    if not root_index.exists():
+        rep.error(root, f"missing root {index_name}")
+        return
+    idx_text = root_index.read_text(encoding="utf-8")
+    linked = linked_targets(root_index)
+    for cat in category_dirs:
+        cat_index = (cat / cat_index_name).resolve()
+        if cat_index not in linked and cat.resolve() not in linked:
+            rep.error(root_index, f"category '{cat.name}' not linked (expected {cat.name}/{cat_index_name})")
+    for link in md_links(idx_text):
+        if link.startswith(("http://", "https://", "#", "mailto:")):
+            continue
+        if not (root / link.split("#", 1)[0]).resolve().exists():
+            rep.error(root_index, f"broken internal link: {link}")
 
 
 def main() -> int:
@@ -168,34 +229,17 @@ def main() -> int:
     for cat in category_dirs:
         check_category(cat, rep, today)
 
-    # root INDEX.md <-> categories consistency
-    root_index = root / "INDEX.md"
-    if not root_index.exists():
-        rep.error(root, "missing root INDEX.md (level-1 category route)")
-    else:
-        idx_text = root_index.read_text(encoding="utf-8")
-        linked = {
-            (root / l.split("#", 1)[0]).resolve()
-            for l in md_links(idx_text)
-            if not l.startswith(("http://", "https://", "#", "mailto:"))
-        }
-        for cat in category_dirs:
-            cat_index = (cat / "INDEX.md").resolve()
-            if cat_index not in linked and cat.resolve() not in linked:
-                rep.error(root_index, f"category '{cat.name}' not linked from root INDEX.md")
-        for link in md_links(idx_text):
-            if link.startswith(("http://", "https://", "#", "mailto:")):
-                continue
-            if not (root / link.split("#", 1)[0]).resolve().exists():
-                rep.error(root_index, f"broken internal link: {link}")
+    check_root_index(root, INDEX_EN, INDEX_EN, category_dirs, rep)
+    check_root_index(root, INDEX_ZH, INDEX_ZH, category_dirs, rep)
 
     for w in rep.warnings:
         print(w)
     for e in rep.errors:
         print(e)
 
-    n_pages = sum(len(list(c.glob("*.md"))) - (1 if (c / "INDEX.md").exists() else 0) for c in category_dirs)
-    print(f"\n{len(category_dirs)} categories, {n_pages} project pages, "
+    n_en = sum(len([p for p in c.glob("*.md") if is_page(p.name) and not p.name.endswith(ZH_SUFFIX)]) for c in category_dirs)
+    n_zh = sum(len([p for p in c.glob("*.md") if is_page(p.name) and p.name.endswith(ZH_SUFFIX)]) for c in category_dirs)
+    print(f"\n{len(category_dirs)} categories, {n_en} EN + {n_zh} ZH pages, "
           f"{len(rep.errors)} errors, {len(rep.warnings)} warnings.")
     return 1 if rep.errors else 0
 

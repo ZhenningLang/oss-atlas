@@ -19,21 +19,24 @@ Author one conformant selection page. The contract is `tools/schema.md`; read it
 
 3. **Classify.** Pick the single best **primary** category (= directory under `categories/`).
    Cross-cutting traits go in `tags`, not extra categories. Only create a new category if it
-   genuinely doesn't fit — then also add a row to root `INDEX.md`.
+   genuinely doesn't fit — then also add a row to root `INDEX.md` **and** `INDEX.zh.md`.
 
-4. **Write `categories/<category>/<slug>.md`** per schema:
-   - Frontmatter: `name, slug(==filename), repo, category(==dir), tags, language, license,
-     maturity(dated), last_verified(today)`.
-   - `# <name>` + one-line English TL;DR.
-   - The seven sections: `中文摘要 / When to use / When NOT to use / Comparison / Tech stack /
-     Dependencies / Ops difficulty`.
-   - Make `## When NOT to use` the strongest section: concrete anti-patterns, scale ceilings,
+4. **Write the bilingual pair** `categories/<category>/<slug>.md` (English) **and**
+   `categories/<category>/<slug>.zh.md` (Chinese) per schema:
+   - Frontmatter (identical in both): `name, slug(==base filename), repo, category(==dir), tags,
+     language, license, maturity(dated), last_verified(today)`.
+   - `# <name>` + one-line TL;DR in that file's language.
+   - English page sections: `When to use / When NOT to use / Comparison / Tech stack /
+     Dependencies / Ops difficulty`. Chinese page sections: `何时使用 / 何时不用 / 横向对比 /
+     技术栈 / 依赖 / 运维难度`. Each file is monolingual — no language mixing.
+   - Make the "when NOT to use" section the strongest: concrete anti-patterns, scale ceilings,
      lock-in, maintenance/abandonment risk. This is the section agents most need.
-   - In `## Comparison`, name 3–5 real substitutes; `未收录` for ones not in the index, relative
-     link for ones that are.
+   - In Comparison, name 3–5 real substitutes; `未收录` for ones not in the index, relative link
+     for ones that are.
 
-5. **Wire it in.** Add the project to its `categories/<category>/INDEX.md` (one-liner +
-   comparison-matrix row). If new category, add it to root `INDEX.md`.
+5. **Wire it in.** Add the project to its `categories/<category>/INDEX.md` **and** `INDEX.zh.md`
+   (one-liner + comparison-matrix row in each). If new category, add it to root `INDEX.md` +
+   `INDEX.zh.md`.
 
 6. **Lint.** `python3 tools/lint.py` — fix every ERROR before finishing.
 

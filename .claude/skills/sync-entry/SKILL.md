@@ -27,6 +27,10 @@ delta-gated** refresh: it only spends effort re-verifying entries that are actua
 
 ## Re-verify procedure (per stale entry)
 
+> **Bilingual:** each entry is a pair (`<slug>.md` + `<slug>.zh.md`) with **identical
+> frontmatter**. Apply every fact/frontmatter change to both files, and update both bodies if a
+> material fact moved. `last_verified` must match across the pair.
+
 1. **Refetch the source of truth**: GitHub repo page, latest release, README, last-commit date.
 2. **Diff the facts** against frontmatter + body:
    - license, primary language, latest version / `maturity`, dependencies, tech stack.

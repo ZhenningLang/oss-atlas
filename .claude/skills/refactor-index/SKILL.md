@@ -43,6 +43,10 @@ only what a signal justifies.
 
 Moving/renaming breaks links — do it in THIS order so `tools/lint.py` is your safety net at the end.
 
+> **Bilingual:** every page is a pair (`<slug>.md` + `<slug>.zh.md`) and every category has both
+> `INDEX.md` and `INDEX.zh.md`. Move/update **both** halves together, and keep the English INDEX
+> linking `.md` pages and the Chinese INDEX linking `.zh.md` pages. The linter enforces parity.
+
 For each justified move:
 
 1. **`git mv`** the page to the new category dir (preserves history). Create the dir + a new

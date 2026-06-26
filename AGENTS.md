@@ -21,10 +21,14 @@
 Always descend in this order; do not grep blindly.
 
 ```
-1. INDEX.md                          ← level 1: category route (the master map)
+1. INDEX.md                          ← level 1: category route (English; 中文: INDEX.zh.md)
 2. categories/<category>/INDEX.md    ← level 2: projects in that category + comparison matrix
-3. categories/<category>/<slug>.md   ← level 3: the full selection page for one project
+3. categories/<category>/<slug>.md   ← level 3: the English selection page (canonical)
+                                       Chinese sibling: <slug>.zh.md (same content, 中文)
 ```
+
+English (`*.md` / `INDEX.md`) is the **canonical path you read by default**. The `.zh.md` /
+`INDEX.zh.md` files are the monolingual Chinese mirror for human / Chinese-preference readers.
 
 Procedure when you have a task and need to pick a project:
 
@@ -42,16 +46,18 @@ There is a skill for this: `.claude/skills/select-oss/`.
 
 The schema is the contract: **`tools/schema.md`**. In short:
 
-- A page is `categories/<category>/<slug>.md` = YAML frontmatter (**facts**) + Markdown body
-  (**judgment**). Keep facts and judgment separate.
-- Required frontmatter: `name, slug, repo, category, tags, language, license, maturity, last_verified`.
-- Required body sections (exact H2): `中文摘要`, `When to use`, `When NOT to use`, `Comparison`,
-  `Tech stack`, `Dependencies`, `Ops difficulty`.
-- **Bilingual**: body prose is English; every page carries a Simplified-Chinese `## 中文摘要`.
+- A project is a **bilingual pair** in the same dir: `categories/<category>/<slug>.md` (English,
+  canonical) + `categories/<category>/<slug>.zh.md` (Chinese). Both = YAML frontmatter (**facts**)
+  + Markdown body (**judgment**). Keep facts and judgment separate.
+- Required frontmatter (identical in both files): `name, slug, repo, category, tags, language, license, maturity, last_verified`.
+- Required body sections — English page (exact H2): `When to use`, `When NOT to use`, `Comparison`,
+  `Tech stack`, `Dependencies`, `Ops difficulty`. The Chinese page uses the Chinese headings:
+  `何时使用`, `何时不用`, `横向对比`, `技术栈`, `依赖`, `运维难度`.
+- **Bilingual**: the two files are monolingual mirrors — do NOT mix languages inside one file.
 - **Truth labeling**: anything not confirmed from a source is `[未验证]` / `[推断]`. Date your
   facts (`maturity`, `last_verified`). Never assert opinion as fact — an agent will act on it.
-- After writing, update the category `INDEX.md` (and `INDEX.md` if it's a new category), then
-  run the linter.
+- After writing, update the category `INDEX.md` + `INDEX.zh.md` (and the root `INDEX.md` +
+  `INDEX.zh.md` if it's a new category), then run the linter.
 
 Skills: `.claude/skills/add-project/` (author a new entry), `.claude/skills/sync-entry/`
 (re-verify a stale entry), `.claude/skills/refactor-index/` (reorganize the taxonomy when the
@@ -81,7 +87,8 @@ committing. CI runs it on every PR (`.github/workflows/lint.yml`).
 
 ## Conventions
 
-- Slugs are kebab-case; `slug` in frontmatter MUST equal the filename.
+- Slugs are kebab-case; `slug` in frontmatter MUST equal the **base** filename (`beads` for both
+  `beads.md` and `beads.zh.md`).
 - `category` in frontmatter MUST equal the parent directory name.
 - Internal links are relative and must resolve (the linter checks this).
-- One project = one page = one primary category. Cross-cutting belongs in `tags`.
+- One project = one bilingual page pair = one primary category. Cross-cutting belongs in `tags`.

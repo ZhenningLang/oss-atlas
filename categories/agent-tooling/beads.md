@@ -14,10 +14,6 @@ last_verified: 2026-06-26
 
 A dependency-aware, version-controlled task/issue graph that gives AI coding agents persistent structured memory — backed by Dolt (versioned SQL), shipped as a single Go binary (`bd`). Started by Steve Yegge; repo moved from `steveyegge/beads` to the `gastownhall` org.
 
-## 中文摘要
-
-beads(命令 `bd`)是 Steve Yegge 发起的开源项目(仓库已从 `steveyegge/beads` 迁到 `gastownhall` 组织),把 AI 编码 agent 的“待办/记忆”从散乱的 markdown 计划升级为一张带依赖关系的图,底层用 Dolt(带版本控制的 SQL,支持单元级 merge、分支、远端 sync)。核心卖点:`bd ready`(自动列出无阻塞可做的任务)、`bd remember`/`bd prime`(跨会话注入持久记忆,并明确要求 agent 不要再建 MEMORY.md)、以及语义压缩(“memory decay”汇总旧的已关闭任务以省 context)。哈希 ID(`bd-a1b2`)用于避免多 agent/多分支并发下的 merge 冲突。**最适合**长周期、跨会话、多 agent 协作、离线优先、任务状态想随代码一起版本化的 agent 主导编码工作流。**何时别用**见下。星数/版本日期等具体数字未能跨源一致确认,按 `[未验证]` 处理。
-
 ## When to use
 
 Use it when an AI coding agent (or a small fleet of them) needs durable, structured, dependency-aware task memory **across sessions and branches** — long-horizon work where the agent otherwise loses task context across sessions/compactions, silently drops discovered bugs to save context, or takes token-budget shortcuts.

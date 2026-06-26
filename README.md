@@ -4,9 +4,21 @@
 When a coding agent gets a task, it reads this index to pick the right OSS project —
 weighing *when NOT to use* each option, not just what it does.
 
-> 一个面向 coding agent 的开源项目**选型**知识库。每个项目页是「反 README」：先讲正面场景、
-> 反面场景、横向对比、技术栈、依赖、运维难度——帮 agent 在收到任务时快速选型。人也能看，但
-> **主要读者是 agent**。
+> 中文版 README：[README.zh.md](README.zh.md)
+
+## Projects
+
+The complete index. Each project has a clean English page (`<slug>.md`) and a Chinese page
+(`<slug>.zh.md`). Click straight through:
+
+| Category | Project | What it is | Don't reach for it when | License | Page |
+|---|---|---|---|---|---|
+| `agent-tooling` | **beads** | Dependency-aware, version-controlled task/issue graph giving AI agents persistent structured memory (Dolt-backed Go binary). | You need a human web UI, cross-repo views, or production-grade stability (it's alpha, single-writer embedded). | MIT | [EN](categories/agent-tooling/beads.md) · [中](categories/agent-tooling/beads.zh.md) |
+| `document-management` | **paperless-ngx** | Self-hosted DMS: OCR + tag + full-text-search for scanned paperwork (Django/Angular + Postgres). | You need encryption at rest, strict multi-tenant permissions, or an enterprise approval / EDMS workflow. | GPL-3.0 | [EN](categories/document-management/paperless-ngx.md) · [中](categories/document-management/paperless-ngx.zh.md) |
+| `on-device-ml` | **LiteRT-LM** | Google's on-device LLM runtime atop LiteRT — run Gemma/etc on phone/laptop/edge via CPU/GPU/NPU. | You need many non-Gemma models, cloud-grade latency, a frozen API, or tiny-RAM devices. | Apache-2.0 | [EN](categories/on-device-ml/litert-lm.md) · [中](categories/on-device-ml/litert-lm.zh.md) |
+| `web-automation` | **page-agent** | In-page GUI agent: control a web UI with natural language via direct DOM read/write, no backend. | You need vision/multimodal, server-side automation, high concurrency, or can't send DOM to an external LLM. | MIT | [EN](categories/web-automation/page-agent.md) · [中](categories/web-automation/page-agent.zh.md) |
+
+Browse by category from [INDEX.md](INDEX.md); agents should start at [AGENTS.md](AGENTS.md).
 
 ## Why this exists
 
@@ -18,26 +30,25 @@ README genre into a **decision-support** genre.
 The index is deliberately **weak** — no database, no search, no embeddings. Just Markdown that
 an agent reads and reasons over. The directory structure *is* the query API.
 
-## Structure (3 levels)
+## Structure (3 levels, bilingual)
 
 ```
-INDEX.md                          # level 1: category route
-categories/<category>/INDEX.md    # level 2: projects in a category + comparison matrix
-categories/<category>/<slug>.md   # level 3: one project's selection page
+INDEX.md / INDEX.zh.md                       # level 1: category route (EN / 中)
+categories/<category>/INDEX.md / INDEX.zh.md # level 2: projects + comparison matrix
+categories/<category>/<slug>.md              # level 3: English selection page (canonical)
+categories/<category>/<slug>.zh.md           # level 3: Chinese selection page
 ```
 
-Each project page = YAML frontmatter (**facts**, dated) + Markdown body (**judgment**) with
-seven required sections: `中文摘要 / When to use / When NOT to use / Comparison / Tech stack /
-Dependencies / Ops difficulty`.
-
-- **For agents**: start at [AGENTS.md](AGENTS.md) — it has the read route and the write contract.
-- **For humans**: browse from [INDEX.md](INDEX.md).
+Each project page = YAML frontmatter (**facts**, dated) + Markdown body (**judgment**) with six
+required sections: `When to use / When NOT to use / Comparison / Tech stack / Dependencies /
+Ops difficulty` (Chinese pages use the Chinese headings). English is the agent-canonical path;
+the `.zh.md` sibling is the same content in Chinese.
 
 ## Freshness
 
 Facts go stale. Every page records `last_verified`. The linter warns when an entry is older
 than 90 days; the `sync-entry` skill re-verifies it against the live repo. Treat any fact as a
-**point-in-time** snapshot, labeled per the project's truth discipline (`[未验证]` / `[推断]`).
+**point-in-time** snapshot, labeled per the truth discipline (`[未验证]` / `[推断]`).
 
 ## Contributing
 

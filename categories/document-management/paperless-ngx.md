@@ -14,10 +14,6 @@ last_verified: 2026-06-26
 
 A self-hosted document management system (DMS) that OCRs, tags, indexes, and full-text-searches scanned paperwork — bills, invoices, letters — built on Django + Angular with PostgreSQL/Redis.
 
-## 中文摘要
-
-paperless-ngx 是一套自托管的文档管理系统(DMS),核心是把纸质/扫描件「扫描-归档-忘掉」:自动 OCR、规则化打标签、全文检索。后端 Django、前端 Angular,依赖 PostgreSQL(或 SQLite/MariaDB)+ Redis,Office 格式还需挂 Tika/Gotenberg。**最适合**个人或小团队的家用 NAS/homelab,把发票、账单、信件数字化成可搜索档案。**不建议**用于:需要静态加密/合规级隔离(它不加密、全文明文存数据库,`[未验证]` 官方似乎无意加入加密)、强多租户/逐文档严格权限(权限模型有已知缺口)、企业级审批工作流与生命周期管理(那是 Mayan EDMS 的领域)、低配硬件上的大批量 OCR(CPU/内存吃紧)。运维上是 docker-compose 多容器栈,日常不重,但大版本升级有破坏性变更(v3),且明确不可跑在不可信主机上。`[未验证]` 部分版本/星标见下。
-
 ## When to use
 
 A self-hoster or small office wants to digitize physical paperwork (invoices, bills, letters, receipts) into a **single searchable archive** on a home server / NAS / homelab. You drop scans into a consume folder, paperless OCRs them, auto-applies tags/correspondents/document-types via matching rules, and exposes full-text search + a web UI.

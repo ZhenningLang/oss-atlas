@@ -14,10 +14,6 @@ last_verified: 2026-06-26
 
 A JavaScript **in-page GUI agent** from Alibaba: control a web interface with natural-language commands by reading and manipulating the DOM directly inside the user's existing browser session — no screenshots, no headless browser, no backend rewrite.
 
-## 中文摘要
-
-page-agent(PageAgent)是阿里开源的「页内 GUI agent」JS 库:把 AI agent 直接塞进网页,用自然语言命令读取并操作 DOM(读**可见页面**而非 CSS/XPath 选择器),复用浏览器**已有登录态**,无需后端改造、无需 headless/截图。BYO LLM(任意 OpenAI 兼容模型,示例用 Qwen/Dashscope)。**最适合**:给已有复杂 Web 应用(ERP/CRM/后台)几行代码加一个能真正操作 UI 的 AI copilot。**何时别用**:需要视觉/多模态推理(只读 DOM 文本,canvas/图像类页面不行)、服务端批量自动化(它活在浏览器里,服务端该用 Playwright/browser-use)、高并发 agent(客户端受浏览器限制)、或对把页面 DOM 文本发给外部 LLM 有数据合规顾虑时。`[未验证]` 星数等单源数据见 Caveats。
-
 ## When to use
 
 You have an existing complex web app — ERP, CRM, admin dashboard — and want to add an **AI copilot that actually operates the UI** (fills forms, clicks through multi-step flows) with a few lines of JavaScript and no backend rewrite. It reuses the user's existing login/session, and because it reads the visible page as text, instructions like "click the submit-order button" are meant to survive HTML refactors (no brittle selectors). LLM-agnostic (bring your own OpenAI-compatible model). Good for in-product copilots, complex form/workflow automation, and natural-language / voice accessibility layers over web UIs.

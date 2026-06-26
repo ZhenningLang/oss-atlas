@@ -14,10 +14,6 @@ last_verified: 2026-06-26
 
 Google's C++ orchestration/runtime layer on top of LiteRT (the TensorFlow Lite successor) for running LLMs fully **on-device** — Gemma first-class (Llama/Phi/Qwen nominally supported but less optimized) on Android, iOS, desktop and edge hardware via CPU/GPU/NPU. Python/Kotlin/C++ bindings are marked *Stable* by Google, but the project itself is pre-1.0 — expect breaking changes; Swift/JS are preview.
 
-## 中文摘要
-
-LiteRT-LM 是 Google 推出的端侧大模型推理编排层,构建在 LiteRT(原 TensorFlow Lite 的继任者)之上,核心用 C++ 写成,提供 Python/Kotlin/C++ 三套稳定 API(Swift、JS/Web 为早期预览,Flutter 为社区维护)。它把模型权重打包成 `.litertlm` 格式,在手机/笔记本/树莓派等设备上用 CPU/GPU/NPU **离线**跑 Gemma、Llama、Phi-4、Qwen 等模型,主打隐私、零网络依赖和成本。**最适合**:Android/跨平台 App 需要离线小模型(尤其 Gemma 系列),且团队能接受 Google 生态与 Bazel 构建。**何时别用**:需要大量第三方/任意 HF 模型(其优化最好的 `.litertlm` 资产以 Gemma 为主);需要云级吞吐或低延迟(端侧比云慢 10-100 倍);设备 RAM 紧张(2-4B 模型常需 6-8GB RAM,内存压力下 Android 可能杀进程);或追求成熟稳定的多模型生态(此时 llama.cpp/MLX 通用性更强)。`[未验证]` 具体 tokens/s 与内存数字来自第三方博客,随机型/量化而变,不保证。
-
 ## When to use
 
 Use it when you are shipping a **mobile or cross-platform app** (especially Android, where Kotlin support is stable and first-class) that needs offline/on-device LLM inference for privacy, zero-network operation, or to avoid per-call cloud costs — and your model choice is **Gemma** (or another model already published in `.litertlm` format).
