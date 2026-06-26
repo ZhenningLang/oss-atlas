@@ -29,6 +29,9 @@ Author one conformant selection page. The contract is `tools/schema.md`; read it
    - English page sections: `When to use / When NOT to use / Comparison / Tech stack /
      Dependencies / Ops difficulty`. Chinese page sections: `何时使用 / 何时不用 / 横向对比 /
      技术栈 / 依赖 / 运维难度`. Each file is monolingual — no language mixing.
+   - Write "When to use" / "何时使用" as a **User Story** (second-person scenario: who you are,
+     what you're doing, the problem you hit, how this tool resolves it) — not a feature list.
+     See `tools/schema.md`.
    - Make the "when NOT to use" section the strongest: concrete anti-patterns, scale ceilings,
      lock-in, maintenance/abandonment risk. This is the section agents most need.
    - In Comparison, name 3–5 real substitutes; `未收录` for ones not in the index, relative link

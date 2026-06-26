@@ -16,9 +16,9 @@ A dependency-aware, version-controlled task/issue graph that gives AI coding age
 
 ## When to use
 
-Use it when an AI coding agent (or a small fleet of them) needs durable, structured, dependency-aware task memory **across sessions and branches** — long-horizon work where the agent otherwise loses task context across sessions/compactions, silently drops discovered bugs to save context, or takes token-budget shortcuts.
+You're a solo developer babysitting a coding agent through a multi-day refactor of a single repo. Every time the session compacts or you start a fresh one, the agent forgets half of what it was doing: the bug it spotted in the auth layer two hours ago is gone, the "do this after the migration lands" note never made it anywhere durable, and it quietly reorders work to whatever fits the token budget rather than what's actually unblocked. You've been patching over this with a hand-rolled `MEMORY.md`, but it has no notion of which tasks block which, and the moment you let the agent work on two branches it scribbles conflicting IDs all over it.
 
-It fits agent-native, offline-first workflows where you want task state version-controlled and merge-able alongside the code (hash IDs avoid collisions across parallel branches/agents), `bd ready` to auto-surface unblocked work, and `bd remember`/`bd prime` as a replacement for ad-hoc `MEMORY.md` scratch files. Good for solo developers or single-repo teams supervising agents who prefer a git-style, branchable task graph over a hosted tracker.
+So you `bd init` in the repo and hand the agent the `bd` binary. Now its task state lives in a version-controlled, dependency-aware graph that commits and merges right alongside the code — hash IDs keep parallel branches and agents from colliding, `bd ready` surfaces exactly the work that isn't blocked, and `bd remember`/`bd prime` replace that ad-hoc scratch file with memory the agent can actually carry across sessions. It's offline-first and git-style branchable, which is the point: you wanted a task graph that travels with the repo, not a hosted tracker you have to log into.
 
 ## When NOT to use
 

@@ -16,9 +16,9 @@ A self-hosted document management system (DMS) that OCRs, tags, indexes, and ful
 
 ## When to use
 
-A self-hoster or small office wants to digitize physical paperwork (invoices, bills, letters, receipts) into a **single searchable archive** on a home server / NAS / homelab. You drop scans into a consume folder, paperless OCRs them, auto-applies tags/correspondents/document-types via matching rules, and exposes full-text search + a web UI.
+You're the one unofficial "IT person" for a two-person accounting practice run out of a spare room, and the filing cabinet has finally won: years of invoices, utility bills, client letters, and receipts in paper folders, and every time a client asks "did you ever get my March statement?" you're flipping through binders for twenty minutes. You already have a little Linux box / NAS humming in the corner on the office network, and you want every scan to land in one place you can actually search.
 
-Ideal when the deployment is on a **trusted internal network**, the corpus is personal-to-small-team scale, and "scan, archive, and forget" is the goal — not collaborative editing or formal approval workflows. The Docker-first install makes it accessible without deep ops skill.
+So you stand up paperless-ngx with its Docker-first compose stack and point your scanner at the consume folder. Now you drop a batch of scans in, paperless OCRs them, and its matching rules auto-apply tags, the correspondent, and a document type — so that March statement is one full-text search away in the web UI instead of a cabinet dive. Because the box lives on your trusted internal office network and the corpus is personal-to-small-team scale, this is squarely the "scan, archive, and forget" job paperless is built for — you're not editing these documents or routing them for approval, just making a pile of finished paperwork findable.
 
 ## When NOT to use
 

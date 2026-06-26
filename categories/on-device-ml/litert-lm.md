@@ -16,9 +16,9 @@ Google's C++ orchestration/runtime layer on top of LiteRT (the TensorFlow Lite s
 
 ## When to use
 
-Use it when you are shipping a **mobile or cross-platform app** (especially Android, where Kotlin support is stable and first-class) that needs offline/on-device LLM inference for privacy, zero-network operation, or to avoid per-call cloud costs — and your model choice is **Gemma** (or another model already published in `.litertlm` format).
+You're a mobile engineer at a small startup shipping a private journaling app, and Android is your lead platform. Your product promise is that a user's notes never leave their phone, so the "summarize my week" and "pull out action items" features you've been asked to build can't call a cloud LLM — that would break the privacy story, and at your scale the per-call API bill for every summary would quietly bleed the runway. You need the model to run locally, work on a plane with no signal, and slot into your existing Kotlin codebase without you hand-rolling a C++ inference engine.
 
-Strong fit when you want one runtime spanning Android/iOS/desktop/Raspberry Pi with CPU plus optional GPU/NPU acceleration, prefer Google-maintained tooling over community glue, and can live with small-model quality limits (short, structured tasks: classification, extraction, summarization, on-device assistants). Third-party benchmarks show it competitive-to-fastest specifically on Gemma-class models on iPhone, so Gemma-centric latency-sensitive on-device apps are its sweet spot.
+So you reach for LiteRT-LM. You package a **Gemma** model into the `.litertlm` format, wire it in through the stable Kotlin bindings, and let the runtime drive CPU with optional GPU/NPU acceleration on-device. The tasks you actually need — summarization and structured extraction — sit squarely in the short, structured workloads a small model handles well, and because you've standardized on Gemma you're in the runtime's sweet spot, with third-party iPhone benchmarks suggesting Gemma-class latency holds up if you later add an iOS build. You accept the tradeoff of living inside Google's tooling and a Bazel-based build in exchange for one Google-maintained runtime instead of stitching together community glue across platforms.
 
 ## When NOT to use
 

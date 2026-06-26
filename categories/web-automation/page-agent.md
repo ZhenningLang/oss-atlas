@@ -16,7 +16,9 @@ A JavaScript **in-page GUI agent** from Alibaba: control a web interface with na
 
 ## When to use
 
-You have an existing complex web app — ERP, CRM, admin dashboard — and want to add an **AI copilot that actually operates the UI** (fills forms, clicks through multi-step flows) with a few lines of JavaScript and no backend rewrite. It reuses the user's existing login/session, and because it reads the visible page as text, instructions like "click the submit-order button" are meant to survive HTML refactors (no brittle selectors). LLM-agnostic (bring your own OpenAI-compatible model). Good for in-product copilots, complex form/workflow automation, and natural-language / voice accessibility layers over web UIs.
+You're a frontend engineer maintaining a sprawling internal order-management ERP at a logistics company. Warehouse staff hate it: creating a single shipment means clicking through five tabs, filling a dozen fields, and remembering which dropdown comes first — and your team gets a steady trickle of "where do I click?" tickets. Your manager wants an assistant where someone can just type "create a shipment for order 88231 to the Shenzhen depot" and have the form filled and submitted, but the backend is a legacy monolith nobody wants to touch, and rebuilding the UI is off the table.
+
+You drop in **page-agent** — a few lines of JavaScript via npm or CDN, no backend changes. It runs inside the same page the warehouse worker is already logged into, so it reuses their session and operates the real UI: reading the DOM as text, filling the fields, and clicking through the multi-step flow exactly as a person would. Because it works from the visible page rather than hardcoded selectors, an instruction like "click the submit-order button" is meant to keep working after your team refactors the markup. You point it at your own OpenAI-compatible model (it's LLM-agnostic), and the same snippet doubles as a natural-language / voice accessibility layer over the app — a fit for in-product copilots and complex form/workflow automation.
 
 ## When NOT to use
 
