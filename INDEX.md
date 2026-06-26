@@ -28,6 +28,7 @@
 | **team-chat** | Self-hostable team chat / multi-LLM chatbot applications. | [→](categories/team-chat/INDEX.md) |
 | **captcha** | CAPTCHA / bot-detection challenges (proof-of-work, click, behavioral). | [→](categories/captcha/INDEX.md) |
 | **ml-research** | Small, self-contained ML research demos and reference implementations. | [→](categories/ml-research/INDEX.md) |
+| **agent-skill-collections** | Curated collections of agent skills, prompts, subagent personas, and harness configs — split by domain. | [→](categories/agent-skill-collections/INDEX.md) |
 
 ## How to add a category
 

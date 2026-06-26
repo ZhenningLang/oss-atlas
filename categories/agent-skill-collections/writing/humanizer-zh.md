@@ -1,0 +1,48 @@
+---
+name: Humanizer-zh
+slug: humanizer-zh
+repo: https://github.com/op7418/Humanizer-zh
+category: writing
+tags: [claude-code, skill, humanize, ai-text-removal, chinese-writing, editorial]
+language: Markdown
+license: MIT
+maturity: no tagged release, last pushed 2026-01, not archived (as of 2026-06)
+last_verified: 2026-06-26
+type: skill-pack
+---
+
+# Humanizer-zh
+
+A single Claude Code skill (`SKILL.md`, in Simplified Chinese) that rewrites text to strip out tell-tale AI-writing patterns — a Chinese localization of `blader/humanizer`, driven by a checklist of ~24 patterns across content, language, style, and filler.
+
+## When to use
+
+You're a Chinese-language writer, editor, or marketer who drafts with an LLM and keeps shipping copy that *reads* like a machine wrote it: every section ends with a "挑战与展望" wrap-up, the prose leans on "此外 / 至关重要 / 展示", every list is forced into three items, headers carry emoji, and the whole thing closes with "希望这对您有帮助". You want the agent to act as a real editor — find those tells and rewrite them into plain, human-sounding Chinese — without you re-explaining the rubric each time. Install Humanizer-zh into `~/.claude/skills/` and the agent loads a curated checklist of ~24 patterns (grouped into content / language-grammar / style / communication-filler) and applies them on demand, preserving meaning and tone while removing the AI signature.
+
+You reach for it specifically when your output language is Chinese and you'd rather adopt a vetted, community-translated rubric than hand-write your own de-slop prompt. Install is a drop-in: `npx skills add https://github.com/op7418/Humanizer-zh.git`, or clone/copy the folder into your Claude Code skills directory; the skill then fires through Claude Code's native skill-loading.
+
+## When NOT to use
+
+- **You already run an AI-text-removal / voice skill you trust.** This overlaps directly with any existing "去 AI 腔 / humanize" routine (and with the original `blader/humanizer`). Stacking two de-slop rubrics invites contradictory edits — keep one source of truth.
+- **You're not on Claude Code (or a harness that loads `SKILL.md`).** It's prompt-only markdown with no runner; on an unsupported agent there's nothing to invoke and the file won't auto-fire. [推断]
+- **Your target language isn't Chinese.** The rubric and example patterns are written in Simplified Chinese and tuned to Chinese AI-writing tells; for English use the upstream `blader/humanizer` instead.
+- **You need enforcement / scoring, not suggestions.** It rewrites by advisory instruction — the agent can still miss a pattern or over-edit; there's no lint pass or measurable "AI score" gate.
+- **Low maintenance signal.** Single-author localization with no tagged release and no recent pushes; the upstream pattern list can drift away from this snapshot. Re-check before relying on it for current tells.
+
+## Comparison
+
+| Alternative | In index | Tradeoff |
+|---|---|---|
+| `blader/humanizer` (upstream) | not indexed | The English original this repo translates. Pick upstream for English copy; pick Humanizer-zh for Chinese-language tells and examples. |
+| [Baoyu Skills](baoyu-skills.md) | ✅ | A broader Chinese-author skill collection (translation / markdown / content-gen helpers) rather than a single de-slop rubric. Compare on whether you want one focused humanize skill or a multi-skill writing bundle. |
+| Hand-written de-slop prompt in `CLAUDE.md` | not indexed | A few inline rules you maintain yourself: zero install and fully yours, but you re-derive and re-tune the pattern list instead of inheriting a vetted ~24-item checklist. |
+| Wikipedia "Signs of AI writing" guide | not indexed | The reference source behind the rubric — a human-readable guide, not an installable skill. Use it to audit or extend the checklist, not to run edits. |
+
+## Caveats (unverified)
+
+- [未验证] License is MIT and the repo is not archived per GitHub metadata as of 2026-06-26; `latestRelease` is null (no tagged version) and last push was 2026-01-19 — re-verify maturity before depending on it.
+- [未验证] GitHub reports `primaryLanguage` as null (the repo is markdown/skill content); `language: Markdown` in frontmatter is an inference about content type, not a detected code language.
+- [未验证] Star count (~11.6k per GitHub on 2026-06-26) is unreliable and date-sensitive; treat as indicative only, not a quality signal.
+- [未验证] The "~24 patterns across 4 categories" figure and the example tells (此外 / 至关重要 / "挑战与展望" / emoji headers / "希望这对您有帮助") are read from the README/SKILL.md; the exact count and grouping may change with edits — read the current `SKILL.md` rather than trusting this summary.
+- [未验证] Install commands (`npx skills add …`, clone into `~/.claude/skills/humanizer-zh`) and the claim that it activates via Claude Code's native skill loader are from the README; activation fidelity on other harnesses is not independently confirmed.
+- [推断] Because behavior lives entirely in a prompt/markdown skill, rewriting is advisory — coverage of any given AI tell is best-effort, not guaranteed, and the agent may introduce its own edits.

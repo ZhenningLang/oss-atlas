@@ -28,6 +28,7 @@
 | **team-chat** | 可自托管的团队聊天 / 多 LLM 聊天机器人应用。 | [→](categories/team-chat/INDEX.zh.md) |
 | **captcha** | CAPTCHA / 机器人检测挑战(工作量证明、点击、行为式)。 | [→](categories/captcha/INDEX.zh.md) |
 | **ml-research** | 小而自洽的 ML 研究 demo 与参考实现。 | [→](categories/ml-research/INDEX.zh.md) |
+| **agent-skill-collections** | 成体系的 agent 技能、提示词、subagent 人设与 harness 配置合集——按用途领域拆分。 | [→](categories/agent-skill-collections/INDEX.zh.md) |
 
 ## 如何新增分类
 

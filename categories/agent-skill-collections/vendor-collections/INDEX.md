@@ -1,0 +1,26 @@
+# vendor-collections
+
+> Leaf of [agent-skill-collections](../INDEX.md). Official / vendor-published first-party skill & plugin bundles.
+> ← up to [agent-skill-collections](../INDEX.md) · root [route](../../../INDEX.md) · 中文：[INDEX.zh.md](INDEX.zh.md)
+
+## Collections in this leaf
+
+| Collection | Use when | Page |
+|---|---|---|
+| **Anthropic Skills** | Anthropic's official public collection of Agent Skills — self-contained SKILL.md folders (document editing, design, MCP/skill authoring, comms) installable into Claude Code, Claude.ai, or the Claude API. | [→](anthropic-skills.md) |
+| **Agent Plugins for AWS** | AWS Labs' official collection of nine agent plugins (serverless, Amplify, SageMaker, migration, databases, deploy/cost-estimate, etc.) that teach Claude Code / Cursor / Codex to architect, deploy, and operate on AWS via marketplace-installed, trigger-phrase skills wired to AWS MCP servers. | [→](aws-agent-plugins.md) |
+| **Claude Plugins (Official)** | Anthropic's first-party Claude Code plugin marketplace: a curated directory of installable plugins (commands, agents, skills, MCP servers) installed by name via the native /plugin system. | [→](claude-plugins-official.md) |
+| **MiniMax Skills** | MiniMax's official ~16-skill Agent Skills bundle (frontend/mobile/shader dev plus pdf/docx/xlsx/pptx, music & multimodal generation), installable into Claude Code and other coding agents via plugin marketplace. | [→](minimax-skills.md) |
+
+## Comparison matrix
+
+| Option | Indexed | One-line tradeoff |
+|---|---|---|
+| [Anthropic Skills](anthropic-skills.md) | ✅ | Anthropic's official public collection of Agent Skills — self-contained SKILL.md folders (document editing, design, MCP/skill authoring, comms) installable into Claude Code, Claude.ai, or the Claude API. |
+| [Agent Plugins for AWS](aws-agent-plugins.md) | ✅ | AWS Labs' official collection of nine agent plugins (serverless, Amplify, SageMaker, migration, databases, deploy/cost-estimate, etc.) that teach Claude Code / Cursor / Codex to architect, deploy, and operate on AWS via marketplace-installed, trigger-phrase skills wired to AWS MCP servers. |
+| [Claude Plugins (Official)](claude-plugins-official.md) | ✅ | Anthropic's first-party Claude Code plugin marketplace: a curated directory of installable plugins (commands, agents, skills, MCP servers) installed by name via the native /plugin system. |
+| [MiniMax Skills](minimax-skills.md) | ✅ | MiniMax's official ~16-skill Agent Skills bundle (frontend/mobile/shader dev plus pdf/docx/xlsx/pptx, music & multimodal generation), installable into Claude Code and other coding agents via plugin marketplace. |
+
+## What belongs here
+
+**Official or vendor-published** skill/plugin collections (Anthropic, AWS, MiniMax, …) — first-party bundles.

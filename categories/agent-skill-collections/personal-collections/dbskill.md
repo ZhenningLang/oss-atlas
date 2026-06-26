@@ -1,0 +1,49 @@
+---
+name: dbskill
+slug: dbskill
+repo: https://github.com/dontbesilent2025/dbskill
+category: personal-collections
+tags: [agent-skills, business-diagnosis, claude-code, chinese, content-creation]
+language: JavaScript
+license: CC-BY-NC-4.0
+maturity: v2.14.2, active (2026-06)
+last_verified: 2026-06-26
+type: skill-pack
+---
+
+# dbskill
+
+A personal, curated pack of ~21 Chinese-language agent skills (`/dbs-*`) for business-model diagnosis, content creation, and personal decision-making, installable into Claude Code and other harnesses via a plugin marketplace or a `skills` CLI.
+
+## When to use
+
+You're a solo founder, indie creator, or operator who runs a one-person business in Chinese-speaking markets, and you use Claude Code (or Codex / Cursor / Trae Solo) as a thinking partner. You keep asking the agent things like "is my business model actually viable", "why isn't this content getting traction", "what should my next 90-day goal be" — and you keep getting generic, slop-flavored advice because the agent has no opinionated framework to anchor on. dbskill drops in a coherent set of business-diagnosis skills: `/dbs-diagnosis` (business-model teardown), `/dbs-benchmark` (competitor analysis), `/dbs-content` and `/dbs-content-system` (content diagnosis and a structured content-engineering system), `/dbs-hook` and `/dbs-xhs-title` (short-video openings, Xiaohongshu title formulas), `/dbs-action` (execution-power diagnosis), `/dbs-decision` (a personal decision system), plus state-management commands (`/dbs-save`, `/dbs-restore`, `/dbs-report`) so a diagnosis session can persist and resume.
+
+You reach for it when you want this *specific author's* methodology — the frameworks, case library, and ~4k+ knowledge atoms behind the commands — rather than building your own prompt stack. Install once (`claude plugin marketplace add dontbesilent2025/dbskill`, or `npx -y skills add dontbesilent2025/dbskill -g --all`), and the skills load on demand through your harness's native skill mechanism.
+
+## When NOT to use
+
+- **You don't operate in Chinese-language business contexts.** The skills, knowledge atoms, and case material are primarily Chinese; the frameworks lean on China-specific channels (Xiaohongshu titles, short-video hooks). Outside that context most of the value evaporates.
+- **You want generic SDLC / coding discipline, not business coaching.** This is a domain pack about commerce, content, and decisions — not TDD, refactoring, or agent engineering. Pair it with a coding methodology pack instead of expecting overlap.
+- **You already trust your own diagnosis frameworks.** dbskill is opinionated (Adlerian execution model, "slow is fast" friction-asset thesis, fixed title templates). Layering it over an existing coaching prompt stack invites conflicting advice — pick one source of truth.
+- **You're on an unsupported / bespoke harness.** It activates through Claude Code / Codex / Cursor / Trae Solo skill-loading; with no loader the markdown won't auto-fire.
+- **Commercial / productized use.** Licensed CC BY-NC 4.0 — commercial use requires the author's separate permission, so you can't freely bake it into a paid product. [未验证]
+- **You need stability.** Single-maintainer pack at v2.x with frequent releases; framework wording and command routing can shift release-to-release. Pin a version if you depend on specific behavior. [推断]
+
+## Comparison
+
+| Alternative | In index | Tradeoff |
+|---|---|---|
+| [antfu/skills](antfu-skills.md) | ✅ | A maintainer's personal coding/devtools skills; engineering-flavored, English-first. dbskill is a domain pack for business diagnosis, not code workflow. |
+| [Dimillian/Skills](dimillian-skills.md) | ✅ | Personal skills from an iOS/Swift developer; software-focused. Disjoint domain — pick by whether you want coding help or business coaching. |
+| [awesome-claude-code-subagents](../subagent-collections/awesome-claude-code-subagents.md) | ✅ | A large broad subagent collection across many technical roles; breadth over a single opinionated voice. dbskill is one author's deep, narrow business methodology. |
+| Generic LLM business-coaching prompts | not indexed | Ad-hoc prompts have no curated framework, case library, or persistence; dbskill ships ~4k knowledge atoms and state commands behind a coherent author voice. |
+
+## Caveats (unverified)
+
+- [未验证] License stated as CC BY-NC 4.0 in the README ("本项目采用 CC BY-NC 4.0 许可证"); GitHub's API reports the license as `Other` / `NOASSERTION` because CC licenses aren't in its SPDX detection set — verify the LICENSE/README before any commercial use.
+- [未验证] Latest release reported as v2.14.2 (published 2026-06-05) with the repo last pushed 2026-06-05 per GitHub metadata as of 2026-06-26; re-verify before relying on a specific version's skills or behavior.
+- [未验证] Star count (~6,969 per GitHub on 2026-06-26) is unreliable and date-sensitive; treat as indicative only, not a quality signal.
+- [未验证] Skill inventory (~21 `/dbs-*` commands), the "4,176 knowledge atoms" and "12 methodology documents" counts, and the supported-harness list (Claude Code, Codex, Cursor, Trae Solo, Grok Build) are from the project README; not independently confirmed here, and they change release-to-release.
+- [未验证] GitHub reports the primary language as JavaScript, but the README describes the deliverables as skill markdown / JSONL knowledge files with build/packaging scripts rather than a runnable application; treat it as a skill-pack, not a CLI.
+- [推断] Because behavior lives in prompt/markdown skills loaded by the agent, the frameworks are advisory — the agent can still deviate; outputs are coaching prompts, not guaranteed business outcomes.

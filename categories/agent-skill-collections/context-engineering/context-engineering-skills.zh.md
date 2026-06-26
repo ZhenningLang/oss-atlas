@@ -1,0 +1,48 @@
+---
+name: Agent Skills for Context Engineering
+slug: context-engineering-skills
+repo: https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering
+category: context-engineering
+tags: [skills, context-engineering, multi-agent, memory, evaluation, harness-engineering, claude-code, plugin]
+language: Python
+license: MIT
+maturity: v2.3.0, active (2026-05)
+last_verified: 2026-06-26
+type: skill-pack
+---
+
+# Agent Skills for Context Engineering
+
+一个 15 个 skill 的插件包，给 coding agent 灌输「上下文工程」（context engineering，管理进入上下文窗口的内容）的纪律，覆盖基础原理、退化、压缩、多 agent 协同、记忆、工具设计、评估与 harness 工程。
+
+## 何时使用
+
+你是搭多 agent 或长跑 agent 系统的工程师，而你的 run 总因为上下文问题崩掉：窗口被陈旧的工具输出塞满、agent 在任务中途「忘掉」早先的决策、子 agent 拿到了错误的状态切片、或者检索把太多内容灌进 prompt 反而拉低了质量。你大致知道这*是*个上下文问题，但没有一套词汇或清单来判断自己落在哪种 failure mode、该怎么修。这个包给你的 agent 一组按需加载的 skill —— `context-fundamentals`、`context-degradation`、`context-compression`、`context-optimization`、`multi-agent-patterns`、`memory-systems`、`tool-design`、`filesystem-context`、`hosted-agents`、`evaluation`、`advanced-evaluation`、`harness-engineering`、`latent-briefing`、`project-development`、`bdi-mental-states` —— 每个都带一份 `SKILL.md` 外加可运行脚本和参考文档，任务触及哪个领域，agent 就加载对应那个。
+
+当你想要一套现成、有主见的语料，而不是从零自己写上下文管理 skill 时，你会选它；尤其当你主要在 Claude Code 里工作（本包通过自带的 marketplace 清单以插件方式安装：`/plugin marketplace add … && /plugin install context-engineering@context-engineering-marketplace`）。单个 skill 文件夹也可以手动拷进 `.claude/skills/`；README 还声称通过 Open Plugins 标准支持 Cursor，所以同一套语料能跨这些 harness 跟着你走。[推断]
+
+## 何时不用
+
+- **你已经在维护自己的上下文 / 记忆 skill 栈。** 这个包又广又有主见（15 个 skill 各有自己的路由）。把它叠在既有的精选体系上，会在压缩、记忆、多 agent 模式上引入重叠、冲突的指导 —— 选一个事实源，别双路由。
+- **你不在受支持的 harness 上。** 激活依赖插件 / skill 加载器。它首先是为 Claude Code 构建的（插件 marketplace 清单）；Cursor 支持是 README 声称的 Open Plugins 路径。在自研或不受支持的 agent 上没有加载器来触发这些 skill，光有 markdown 不会自动激活。
+- **你要的是可运行的库 / CLI。** 这是塑造行为的 skill 语料，不是你能 `import` 的包。自带脚本是演示和 benchmark，不是产品 API；脱离支持它的 agent，这些 skill 什么都不做。
+- **是建议，不是强制。** 行为都活在 agent 自行选择加载并遵循的 prompt / markdown skill 里。没有运行时去强制正确的上下文处理 —— agent 仍可能忽略某个 skill 或路由错。
+- **你需要一份稳定、冻结的规范。** 单人维护、迭代快（v2.x，版本间有 router benchmark 和「语料硬化」）。skill 名称、数量、路由会随版本变化；若依赖某个 skill 的具体行为，请 pin 到某个 tag。
+
+## 横向对比
+
+| 替代项 | 已收录 | 取舍 |
+|---|---|---|
+| notebooklm-skill | not indexed | 同 leaf 的兄弟项，但它是单个窄 skill（NotebookLM 式的文档接地），而非广义的上下文工程语料。要单一能力选它；要整套上下文管理方法论选本包。 |
+| [Superpowers](../../agent-dev-methodology/superpowers.md) | ✅ | 把完整 SDLC 方法论（brainstorm→plan→TDD→verify）做成 skill 插件；在「安装一套精选 skill 包」这一形态上重叠，但它针对的是*软件开发循环*，不是上下文窗口工程。互补而非替代。 |
+| Anthropic 自家的上下文工程指南 / 内置 skill | not indexed | 平台第一方文档与原生 skill；本包是叠在其上的第三方语料，可能与原生指导重复或冲突，需要自行调和。 |
+| 自己仓库里手写的上下文 / 记忆 skill | not indexed | 贴合度最高、零锁定，但一切都得你自己写自己维护。本包以一定贴合度换一套现成、跑过 benchmark 的语料。 |
+
+## 存疑（未验证）
+
+- [未验证] 元数据（GitHub，截至 2026-06-26）：最新 release v2.3.0（发布于 2026-05-22）、最后 push 2026-05-26、license MIT、主语言 Python、未归档。依赖某个具体版本行为前请重新核验。
+- [未验证] star 数（GitHub 2026-06-26 约 16.8k）不可靠且对日期敏感；仅作参考，不作质量信号。
+- [未验证] 本次核查时仓库实树为 `skills/` 下 15 个 skill（每个含 `SKILL.md` + `scripts/` + `references/`）；名称和数量随版本变化，请读当前 `skills/` 目录而非信这份清单。
+- [未验证] Cursor / Open-Plugins 支持及跨 harness 激活声明来自 README；在 Claude Code 之外的实际激活保真度此处未独立确认。
+- [未验证] router benchmark 数据（多前沿模型上的 skill 激活准确率、「skill health 0.9117」）是 README/CHANGELOG 中项目自报的数字，未经独立复现。
+- [推断] 因为行为是 agent 加载的 prompt / markdown，强制力是建议性的 ——「模式」是指令而非硬运行时保证；agent 仍可能偏离。
