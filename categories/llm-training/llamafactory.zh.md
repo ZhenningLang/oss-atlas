@@ -61,7 +61,7 @@ type: framework
 
 **低到中。** 走顺路径时——单卡、受支持模型、通过 LlamaBoard 或一行 CLI 跑 LoRA/QLoRA——它是把微调跑起来最简单的方式之一,Docker 镜像也消除了大部分环境痛点。难度升到**中**的场景:多卡/分布式(DeepSpeed ZeRO stage / FSDP / Ray 配置会和库版本、显存交互,是常见的不兼容来源)、自定义对话模板或非标准数据格式,以及 PyTorch 训练生态固有的 CUDA/flash-attn/bitsandbytes 版本匹配摩擦。
 
-## 存疑(未验证)
+## 存疑（未验证）
 
 - [未验证] 据称 v0.9.5 发布于 2026-05-30;截至 2026-06 star 约 72.5k——本生态的 GitHub star 不可靠且对时间敏感,仅供参考。
 - [未验证] 与 Unsloth/axolotl/torchtune 的具体吞吐/显存对比来自第三方博客跑分,随配置、模型、硬件差异极大;无一方官方保证。

@@ -57,10 +57,13 @@ The schema is the contract: **`tools/schema.md`**. In short:
 - Required body sections — **all types**: `When to use`, `When NOT to use`, `Comparison` (Chinese:
   `何时使用`, `何时不用`, `横向对比`). **Non-`skill-pack` types also require**: `Tech stack`,
   `Dependencies`, `Ops difficulty` (`技术栈`, `依赖`, `运维难度`). A `skill-pack` (prompt/skill
-  collection) omits those three — don't pad them with "N/A".
+  collection) omits those three — don't pad them with "N/A". **Every page also ends with a**
+  `Caveats (unverified)` / `存疑（未验证）` **ledger** (all types) — the page's uncertainty list.
 - **Bilingual**: the two files are monolingual mirrors — do NOT mix languages inside one file.
 - **Truth labeling**: anything not confirmed from a source is `[未验证]` / `[推断]`. Date your
-  facts (`maturity`, `last_verified`). Never assert opinion as fact — an agent will act on it.
+  facts (`maturity`, `last_verified`). Never assert opinion as fact — an agent will act on it. Keep
+  inline labels in the prose to the load-bearing/contested few (≤3 before the Caveats ledger — the
+  linter WARNs above that); every unverified fact still gets a bullet in the Caveats ledger.
 - After writing, update its category `INDEX.md` + `INDEX.zh.md` (and parent/root `INDEX` files for a
   new category), then run the linter. If a category overflows (lint WARNs), run `refactor-index`.
 

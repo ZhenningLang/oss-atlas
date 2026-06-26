@@ -23,11 +23,14 @@ The fastest path is the `add-project` skill (`.claude/skills/add-project/`). By 
    `INDEX.md` + `INDEX.zh.md`.
 2. Create the **bilingual pair** `<slug>.md` (English) + `<slug>.zh.md` (Chinese) following
    [tools/schema.md](tools/schema.md): identical frontmatter (facts, dated, incl. `type`) + the
-   required sections for that `type` (skill-packs omit `Tech stack / Dependencies / Ops difficulty`).
+   required sections for that `type` (skill-packs omit `Tech stack / Dependencies / Ops difficulty`),
+   plus a `Caveats (unverified)` / `存疑（未验证）` ledger on every page.
 3. Each file is **monolingual** — English page uses the English headings, Chinese page the Chinese
    ones. The `When to use` section is a **User Story** (second-person scenario).
-4. **Separate facts from judgment.** Label anything unverified `[未验证]` / `[推断]`. The most
-   valuable section is `When NOT to use` — be concrete and honest, not nice.
+4. **Separate facts from judgment.** Label anything unverified `[未验证]` / `[推断]` — but keep inline
+   labels to the load-bearing few (≤3 before the Caveats ledger; the linter WARNs above that) and
+   collect every unverified fact as a bullet in the page's final `Caveats (unverified)` ledger. The
+   most valuable section is `When NOT to use` — be concrete and honest, not nice.
 5. In `Comparison`, name real substitutes. Mark ones not in the index `未收录`; link ones that are.
 6. Add the project to its category `INDEX.md` **and** `INDEX.zh.md` (one-liner + comparison row).
 7. Set `last_verified` to today; run `tools/lint.py`.

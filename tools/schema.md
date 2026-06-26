@@ -62,6 +62,7 @@ required `##` sections below — **which ones are required depends on `type`** (
 | `## Tech stack` | `## 技术栈` | non-`skill-pack` | languages, frameworks, datastores it is built on |
 | `## Dependencies` | `## 依赖` | non-`skill-pack` | runtime/infra a user must run (db, services, hardware) |
 | `## Ops difficulty` | `## 运维难度` | non-`skill-pack` | low / medium / high + why; deploy + maintain burden |
+| `## Caveats (unverified)` | `## 存疑（未验证）` | **all types** | a bulleted **ledger**: one `[未验证]`/`[推断]` bullet per unverified fact — the page's single uncertainty list |
 
 **Type-adaptive sections.** `skill-pack` entries (prompt/skill collections, harness configs) require
 only the first three (`When to use / When NOT to use / Comparison`) — a bag of prompts has no
@@ -69,8 +70,10 @@ meaningful tech-stack / dependencies / ops, so those three are omitted rather th
 "N/A". All other types (`tool/library/app/framework/service/model`) require all six. The linter
 enforces the right set per `type`.
 
-An optional final `## Caveats (unverified)` / `## 存疑（未验证）` section is encouraged to collect
-`[未验证]` facts.
+**Caveats is required — it is the uncertainty ledger.** Every page ends with
+`## Caveats (unverified)` (EN) / `## 存疑（未验证）` (ZH): a bulleted list where each unverified or
+inferred fact gets one `[未验证]` / `[推断]` bullet. This is the single place uncertainty is collected;
+the linter ERRORs if it is missing. See §3 for how it interacts with inline labels.
 
 ### "When to use" is a User Story
 
@@ -95,6 +98,14 @@ filter); only "When to use" is narrative.
 ## 3. Truth labeling (inherited discipline)
 
 In the body, any claim you could not verify from a source must carry `[未验证]` (unverified) or `[推断]` (inferred). Facts in frontmatter must be dated via `maturity` / `last_verified`. Never present opinion as fact — an agent reading this will act on it.
+
+**Inline density.** Don't sprinkle `[未验证]` on every claim in the prose. In the body sections
+(When to use / NOT / Comparison / Tech stack / Dependencies / Ops difficulty), label inline only the
+**load-bearing or contested** points — e.g. a contradiction the reader must weigh in context — aiming
+for **≤ `PROSE_LABEL_MAX` (default 3)** inline labels before the Caveats heading. Every unverified
+fact, *including the ones you left unlabeled in prose*, still gets its own bullet in the
+`## Caveats (unverified)` ledger. The linter WARNs when prose density exceeds the threshold; the ledger
+is where the full uncertainty list lives.
 
 ## 4. Inclusion criteria (what earns a page)
 

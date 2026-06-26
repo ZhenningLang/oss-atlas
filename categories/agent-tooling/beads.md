@@ -23,13 +23,13 @@ So you `bd init` in the repo and hand the agent the `bd` binary. Now its task st
 
 ## When NOT to use
 
-- **Stability / maturity signal** — despite a v1.x release line, the author's launch post described it as "alpha" software and the FAQ admits "command flags and data formats can evolve" `[未验证]` (whether maintainers still consider 1.x alpha as of 2026-06 is unconfirmed). It explicitly says *not* for "mission-critical production systems without a tested backup/restore plan" or "large enterprise deployments that need formal compatibility guarantees."
+- **Stability / maturity signal** — despite a v1.x release line, the author's launch post described it as "alpha" software and the FAQ admits "command flags and data formats can evolve" (whether maintainers still consider 1.x alpha as of 2026-06 is unconfirmed). It explicitly says *not* for "mission-critical production systems without a tested backup/restore plan" or "large enterprise deployments that need formal compatibility guarantees."
 - **Human-team trackers** — no web UI, cross-repo dashboards, notifications, or non-engineer access. By design (it trades those for agent-native APIs).
 - **Cross-project work** — each database is isolated; issues cannot reference issues in another project. A monorepo-of-services or portfolio view needs multiple DBs + custom glue.
 - **Multi-writer at scale** — embedded mode is single-writer (file lock); concurrent agents require an external Dolt server plus a "claim work" convention (a user-defined "who's working on what" protocol so two agents don't race the same task) — real ops overhead.
-- **Very large backlogs** — `[未验证]` the project's own FAQ reportedly suggests filtering exports or splitting into multiple databases past ~100k issues (its guidance, not independently benchmarked).
-- **Migration / lock-in** — `[未验证]` export appears to be JSONL-only with no built-in importers from GitHub Issues/Jira/Linear found, so migrating *out* would need custom scripting; either way you inherit Dolt as the storage format.
-- **Backend churn** — `[未验证]` documented SQLite→Dolt and 0.x→1.0 migrations with schema-repair steps; upgrades are not always painless.
+- **Very large backlogs** — the project's own FAQ reportedly suggests filtering exports or splitting into multiple databases past ~100k issues (its guidance, not independently benchmarked).
+- **Migration / lock-in** — export appears to be JSONL-only with no built-in importers from GitHub Issues/Jira/Linear found, so migrating *out* would need custom scripting; either way you inherit Dolt as the storage format.
+- **Backend churn** — documented SQLite→Dolt and 0.x→1.0 migrations with schema-repair steps; upgrades are not always painless.
 - **DB fragility** — `[未验证]` per the project's own docs/warnings, agents have at times run destructive operations on the DB (e.g. `DROP TABLE`); treat it as not "set and forget" and keep backups.
 - **Bus-factor** — `[未验证]` young, reportedly largely AI-built ("a tool that AI has built for itself"), under an org renamed from `steveyegge` to `gastownhall`; treat single-maintainer / abandonment risk as non-trivial, especially for mission-critical agent workflows you can't afford to re-tool.
 
@@ -68,4 +68,5 @@ So you `bd init` in the repo and hand the agent the `bd` binary. Now its task st
 - **Distribution** — whether Dolt is bundled in *every* installer (brew/npm/script) vs only the CGO-enabled prebuilt binary is inferred, not confirmed. `[未验证]`
 - **"Alpha" label** — comes from the author's launch blog post; whether maintainers still consider 1.0.x alpha as of 2026-06 is unconfirmed. `[未验证]`
 - **Performance / scale claims** — sub-100ms for thousands of issues and 100k+ guidance are the project's own FAQ claims, not independently benchmarked. `[未验证]`
+- **Migration / backend specifics** — JSONL-only export, the absence of built-in GitHub/Jira/Linear importers, and the documented SQLite→Dolt and 0.x→1.0 migration/repair steps are from the project's own docs, not independently verified. `[未验证]`
 - An independent third-party critique (starlog.is) could not be fetched (HTTP 403), so the tradeoffs above lean on the project's own README/FAQ/blog plus secondary summaries. `[未验证]`

@@ -17,13 +17,16 @@ Checks (ERROR = non-zero exit; WARNING = printed, exit still 0):
   - each page: required frontmatter keys + types, slug==base filename, category==parent dir,
     type in the allowed set, required body sections for its type+language, sibling parity
   - last_verified parses; staleness > STALE_DAYS -> WARNING
+  - every page: a Caveats ledger section (## Caveats (unverified) / ## 存疑（未验证）) -> ERROR if absent
+  - prose-region [未验证]/[推断] density > PROSE_LABEL_MAX -> WARNING (converge into the Caveats section)
   - every category node has INDEX.md + INDEX.zh.md; pages/sub-categories linked from them
   - recursive: sub-categories validated to any depth; root INDEX links the top categories
   - leaf category with > MAX_FANOUT pages -> WARNING (self-balancing: split via refactor-index)
   - internal relative links resolve
 
 Pure stdlib. Usage:  python3 tools/lint.py [--root .]
-Env: OSS_ATLAS_STALE_DAYS (default 90), OSS_ATLAS_MAX_FANOUT (default 12)
+Env: OSS_ATLAS_STALE_DAYS (default 90), OSS_ATLAS_MAX_FANOUT (default 12),
+     OSS_ATLAS_PROSE_LABEL_MAX (default 3)
 """
 from __future__ import annotations
 
@@ -47,8 +50,13 @@ INDEX_ZH = "INDEX.zh.md"
 ZH_SUFFIX = ".zh.md"
 STALE_DAYS = int(os.environ.get("OSS_ATLAS_STALE_DAYS", "90"))
 MAX_FANOUT = int(os.environ.get("OSS_ATLAS_MAX_FANOUT", "12"))
+PROSE_LABEL_MAX = int(os.environ.get("OSS_ATLAS_PROSE_LABEL_MAX", "3"))
 
 LINK_RE = re.compile(r"\[[^\]]+\]\(([^)]+)\)")
+# Caveats ledger heading — tolerant prefix match (the parenthetical varies: (unverified)/（未验证）).
+CAVEATS_RE_EN = re.compile(r"(?m)^##\s+Caveats\b")
+CAVEATS_RE_ZH = re.compile(r"(?m)^##\s+存疑")
+LABEL_RE = re.compile(r"\[未验证\]|\[推断\]")
 
 
 class Report:
@@ -156,6 +164,18 @@ def check_page(path: Path, category_dir: Path, rep: Report, today: dt.date) -> N
     for section in required_sections(ptype if ptype in ALLOWED_TYPES else "tool", zh):
         if not re.search(r"(?m)^" + re.escape(section) + r"\s*$", text):
             rep.error(path, f"missing required section: {section}")
+
+    # Caveats ledger (all types): the uncertainty list lives here, not sprinkled across the prose.
+    cav_re = CAVEATS_RE_ZH if zh else CAVEATS_RE_EN
+    cav = cav_re.search(text)
+    if cav is None:
+        rep.error(path, "missing required section: ## 存疑（未验证） / ## Caveats (unverified)")
+    # Prose-region label density: keep only load-bearing [未验证]/[推断] inline; converge the rest.
+    prose = text[: cav.start()] if cav else text
+    n_inline = len(LABEL_RE.findall(prose))
+    if n_inline > PROSE_LABEL_MAX:
+        rep.warn(path, f"{n_inline} inline [未验证]/[推断] before the Caveats section (> {PROSE_LABEL_MAX}); "
+                       f"keep load-bearing ones, move the rest into the Caveats ledger")
 
     sibling = category_dir / (base + (".md" if zh else ZH_SUFFIX))
     if not sibling.exists():

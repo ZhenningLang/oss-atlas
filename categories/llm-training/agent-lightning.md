@@ -24,9 +24,9 @@ Agent Lightning is built for exactly this. It models agent execution as a Markov
 ## When NOT to use
 
 - **You just want to fine-tune a single model on a dataset.** If there's no multi-step agent/tool-use loop, a plain SFT/LoRA trainer ([LLaMA-Factory](llamafactory.md), [Unsloth](unsloth.md), HF TRL) is simpler and lighter.
-- **No GPU / no RL infra.** RL training leans on VERL + vLLM/SGLang and meaningful GPU capacity; this is heavyweight compared to single-GPU LoRA SFT. [未验证] exact GPU/VRAM minimums vary by model and backend.
+- **No GPU / no RL infra.** RL training leans on VERL + vLLM/SGLang and meaningful GPU capacity; this is heavyweight compared to single-GPU LoRA SFT. Exact GPU/VRAM minimums vary by model and backend.
 - **You want a managed, hosted RL training service.** This is a self-hosted framework, not a SaaS; [ART](art.md) leans more toward an ergonomic batteries-included loop, and Tinker (a supported backend) is the managed option.
-- **Early-stage maturity / churn risk.** It's at v0.x with rapidly changing APIs, a preview dashboard, and multiple swappable backends (VERL/Tinker, AgentOps/Weave tracers, MongoDB store). Expect breaking changes and pin versions. [推断]
+- **Early-stage maturity / churn risk.** It's at v0.x with rapidly changing APIs, a preview dashboard, and multiple swappable backends (VERL/Tinker, AgentOps/Weave tracers, MongoDB store). Expect breaking changes and pin versions.
 - **You need a single-vendor, fully-integrated path.** The framework-agnostic, multi-backend design means you assemble pieces (tracer + store + training backend + serving) yourself.
 
 ## Comparison
@@ -42,7 +42,7 @@ Agent Lightning is built for exactly this. It models agent execution as a Markov
 
 ## Tech stack
 
-- **Language:** Python (with a TypeScript/JS dashboard frontend). [未验证] exact Python version floor.
+- **Language:** Python (with a TypeScript/JS dashboard frontend).
 - **Training backends:** VERL (default, distributed RL); Tinker (managed RL backend, added in v0.3.0); Azure OpenAI for inference/SFT.
 - **Serving:** vLLM and SGLang, wrapped behind an async LLM-server abstraction and instrumented for token-level signals.
 - **Algorithms:** RL (GRPO/PPO-style via the backend), LightningRL credit assignment, automatic prompt optimization (APO), SFT.
@@ -51,7 +51,7 @@ Agent Lightning is built for exactly this. It models agent execution as a Markov
 
 ## Dependencies
 
-- `pip install agentlightning` (nightly builds via Test PyPI). [未验证] precise transitive pins.
+- `pip install agentlightning` (nightly builds via Test PyPI).
 - For RL training: a training backend (VERL or Tinker), a serving engine (vLLM/SGLang), and GPU(s).
 - Optional: MongoDB (Lightning Store), AgentOps/Weave (tracing), Azure OpenAI (inference/SFT path).
 - The client side (your agent) only needs to talk to an OpenAI-compatible endpoint, so the heavy training deps stay on the server side.

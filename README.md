@@ -42,8 +42,9 @@ categories/<cat>/<subcat>/INDEX.md …          # deeper nodes — the tree self
 `categories/` is a **recursive, self-balancing tree**: when a category gets too many projects it
 splits into sub-categories (the linter WARNs; `refactor-index` does the split). Each project page =
 YAML frontmatter (**facts**, dated) + Markdown body (**judgment**). Required sections depend on
-`type`: all entries have `When to use / When NOT to use / Comparison`; software (non-`skill-pack`)
-entries also have `Tech stack / Dependencies / Ops difficulty`. English is the agent-canonical path;
+`type`: all entries have `When to use / When NOT to use / Comparison` and close with a
+`Caveats (unverified)` uncertainty ledger; software (non-`skill-pack`) entries also have
+`Tech stack / Dependencies / Ops difficulty`. English is the agent-canonical path;
 the `.zh.md` sibling is the same content in Chinese.
 
 ## Freshness

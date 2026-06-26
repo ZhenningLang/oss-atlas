@@ -23,13 +23,13 @@ beads(命令 `bd`)是一张带依赖关系、可版本控制的任务/issue 图,
 
 ## 何时不用
 
-- **稳定性/成熟度信号** —— 尽管有 v1.x 发布线,作者的发布博文将其描述为 "alpha" 软件,FAQ 也承认 "command flags and data formats can evolve" `[未验证]`(截至 2026-06 维护者是否仍把 1.x 视为 alpha 未能确认)。它明确表示*不*适用于 "mission-critical production systems without a tested backup/restore plan",也不适用于 "large enterprise deployments that need formal compatibility guarantees"。
+- **稳定性/成熟度信号** —— 尽管有 v1.x 发布线,作者的发布博文将其描述为 "alpha" 软件,FAQ 也承认 "command flags and data formats can evolve"(截至 2026-06 维护者是否仍把 1.x 视为 alpha 未能确认)。它明确表示*不*适用于 "mission-critical production systems without a tested backup/restore plan",也不适用于 "large enterprise deployments that need formal compatibility guarantees"。
 - **人类团队 tracker** —— 没有 web UI、跨仓 dashboard、通知,也没有面向非工程人员的访问入口。这是有意为之(以此换取 agent 原生 API)。
 - **跨项目工作** —— 每个数据库都是隔离的;issue 无法引用另一项目里的 issue。服务型 monorepo 或组合视图需要多个 DB 加自定义粘合代码。
 - **大规模多写入** —— 嵌入模式是单写入(文件锁);并发 agent 需要外部 Dolt server 加一套 "claim work" 约定(一种用户自定义的"谁在做什么"协议,以免两个 agent 抢同一任务)—— 这是实打实的运维开销。
-- **超大 backlog** —— `[未验证]` 据称项目自己的 FAQ 建议在超过约 10 万个 issue 后过滤导出或拆分为多个数据库(这是它的指引,未经独立基准测试)。
-- **迁移/锁定** —— `[未验证]` 导出似乎仅支持 JSONL,且未发现内置的 GitHub Issues/Jira/Linear 导入器,所以*迁出*需要自定义脚本;无论如何,你都会继承 Dolt 作为存储格式。
-- **后端变动** —— `[未验证]` 有记录的 SQLite→Dolt 以及 0.x→1.0 迁移都带 schema 修复步骤;升级并不总是无痛。
+- **超大 backlog** —— 据称项目自己的 FAQ 建议在超过约 10 万个 issue 后过滤导出或拆分为多个数据库(这是它的指引,未经独立基准测试)。
+- **迁移/锁定** —— 导出似乎仅支持 JSONL,且未发现内置的 GitHub Issues/Jira/Linear 导入器,所以*迁出*需要自定义脚本;无论如何,你都会继承 Dolt 作为存储格式。
+- **后端变动** —— 有记录的 SQLite→Dolt 以及 0.x→1.0 迁移都带 schema 修复步骤;升级并不总是无痛。
 - **DB 脆弱性** —— `[未验证]` 据项目自己的文档/警告,agent 曾对 DB 执行破坏性操作(例如 `DROP TABLE`);把它当作并非"设好就不管",务必保留备份。
 - **巴士因子** —— `[未验证]` 项目年轻,据称很大程度上由 AI 构建("a tool that AI has built for itself"),处于一个从 `steveyegge` 改名为 `gastownhall` 的组织之下;应把单一维护者/弃坑风险视为不可忽视,尤其对于那些你无法承受重新选型成本的 mission-critical agent 工作流。
 
@@ -68,4 +68,5 @@ beads(命令 `bd`)是一张带依赖关系、可版本控制的任务/issue 图,
 - **分发** —— Dolt 是否被打包进*每一个*安装器(brew/npm/脚本),还是仅限启用 CGO 的预编译二进制,属于推断而非确认。`[未验证]`
 - **"Alpha" 标签** —— 来自作者的发布博文;截至 2026-06 维护者是否仍把 1.0.x 视为 alpha 未能确认。`[未验证]`
 - **性能/规模声明** —— 数千个 issue 下亚 100ms,以及 10 万+ 的指引,都是项目自己 FAQ 的声明,未经独立基准测试。`[未验证]`
+- **迁移/后端细节** —— 仅 JSONL 导出、缺少内置 GitHub/Jira/Linear 导入器,以及有记录的 SQLite→Dolt、0.x→1.0 迁移/修复步骤,均来自项目自己的文档,未经独立验证。`[未验证]`
 - 一篇独立的第三方评述(starlog.is)无法抓取(HTTP 403),所以以上取舍主要依赖项目自己的 README/FAQ/博客加二手摘要。`[未验证]`

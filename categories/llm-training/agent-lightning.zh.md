@@ -24,9 +24,9 @@ Agent Lightning 正是为此而生。它把 agent 执行建模为马尔可夫决
 ## 何时不用
 
 - **你只是想在一个数据集上微调单个模型。** 如果没有多步 agent / 工具调用循环，用普通的 SFT/LoRA 训练器（[LLaMA-Factory](llamafactory.zh.md)、[Unsloth](unsloth.zh.md)、HF TRL）更简单更轻。
-- **没有 GPU / 没有 RL 基础设施。** RL 训练依赖 VERL + vLLM/SGLang 和可观的 GPU 算力；相比单卡 LoRA SFT 这是重型方案。[未验证] 具体 GPU/显存下限随模型和后端而变。
+- **没有 GPU / 没有 RL 基础设施。** RL 训练依赖 VERL + vLLM/SGLang 和可观的 GPU 算力；相比单卡 LoRA SFT 这是重型方案。具体 GPU/显存下限随模型和后端而变。
 - **你想要托管的、云端 RL 训练服务。** 这是自托管框架，不是 SaaS；[ART](art.zh.md) 更偏向开箱即用的顺手循环，而 Tinker（受支持的后端之一）才是托管选项。
-- **早期成熟度 / 变动风险。** 它处于 v0.x，API 变化快、dashboard 仍是预览版、后端可插拔（VERL/Tinker、AgentOps/Weave tracer、MongoDB store）。预期会有破坏性变更，请锁版本。[推断]
+- **早期成熟度 / 变动风险。** 它处于 v0.x，API 变化快、dashboard 仍是预览版、后端可插拔（VERL/Tinker、AgentOps/Weave tracer、MongoDB store）。预期会有破坏性变更，请锁版本。
 - **你需要单一厂商、完全集成的一条龙路径。** 框架无关 + 多后端的设计意味着 tracer + store + 训练后端 + serving 这些零件要你自己拼。
 
 ## 横向对比
@@ -42,7 +42,7 @@ Agent Lightning 正是为此而生。它把 agent 执行建模为马尔可夫决
 
 ## 技术栈
 
-- **语言：** Python（dashboard 前端用 TypeScript/JS）。[未验证] 具体 Python 版本下限。
+- **语言：** Python（dashboard 前端用 TypeScript/JS）。
 - **训练后端：** VERL（默认，分布式 RL）；Tinker（托管 RL 后端，v0.3.0 新增）；Azure OpenAI 用于推理/SFT。
 - **Serving：** vLLM 和 SGLang，封装在异步 LLM-server 抽象后并插桩以拿到 token 级信号。
 - **算法：** RL（经后端做 GRPO/PPO 系）、LightningRL 信用分配、自动提示优化（APO）、SFT。
@@ -51,7 +51,7 @@ Agent Lightning 正是为此而生。它把 agent 执行建模为马尔可夫决
 
 ## 依赖
 
-- `pip install agentlightning`（nightly 构建走 Test PyPI）。[未验证] 精确的传递依赖锁定。
+- `pip install agentlightning`（nightly 构建走 Test PyPI）。
 - RL 训练所需：训练后端（VERL 或 Tinker）、serving 引擎（vLLM/SGLang）、GPU。
 - 可选：MongoDB（Lightning Store）、AgentOps/Weave（追踪）、Azure OpenAI（推理/SFT 路径）。
 - 客户端（你的 agent）只需对接一个 OpenAI 兼容端点，因此重型训练依赖都留在服务端。

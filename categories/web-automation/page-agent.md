@@ -27,8 +27,8 @@ You drop in **page-agent** — a few lines of JavaScript via npm or CDN, no back
 - **Not server-side automation** — it lives in the browser. For headless/batch crawling, scraping, or CI automation use Playwright or browser-use instead.
 - **Not for high concurrency** — client-side and bound by browser limits; it is not a fleet-of-agents backend.
 - **No closed-loop visual verification** — it cannot "see" whether an action visually succeeded; verification must come from the DOM.
-- **External-LLM dependency & data egress** — `[未验证]` you bring your own LLM, so quality/cost/latency are inherited, and page DOM text is sent to that model — a privacy/compliance review is warranted for sensitive apps.
-- **Maturity** — active and at v1.x, but `[未验证]` long-term API stability and real-world coverage across arbitrary sites; the "survives HTML changes" robustness is the project's own claim, not independently benchmarked.
+- **External-LLM dependency & data egress** — you bring your own LLM, so quality/cost/latency are inherited, and page DOM text is sent to that model — a privacy/compliance review is warranted for sensitive apps.
+- **Maturity** — active and at v1.x, but long-term API stability and real-world coverage across arbitrary sites are unproven; the "survives HTML changes" robustness is the project's own claim, not independently benchmarked.
 
 ## Comparison
 

@@ -17,9 +17,9 @@ type: tool
 
 ## 何时使用
 
-你是一名开发者或独立研究者，手头只有一张消费级或工作站 GPU（比如 RTX 4090，或免费的 Colab/Kaggle T4），想在自己的数据集上微调 Llama、Qwen、Mistral、Gemma 或 gpt-oss。用原生 Hugging Face + PEFT 时，你的 QLoRA 任务总是撞上 CUDA 显存不足，或者跑一个 epoch 慢到让迭代变得痛苦。Unsloth 在近乎 drop-in 的 `FastLanguageModel` API 背后换上自家 Triton kernel（RoPE、MLP、attention、padding-free packing）和动态 4-bit 量化，于是同一个 QLoRA 任务占用更少显存、速度大约快一倍——官方宣称「最高 2x 提速、最高省 70% 显存」，GRPO 强化学习「省 80% 显存」[未验证]。
+你是一名开发者或独立研究者，手头只有一张消费级或工作站 GPU（比如 RTX 4090，或免费的 Colab/Kaggle T4），想在自己的数据集上微调 Llama、Qwen、Mistral、Gemma 或 gpt-oss。用原生 Hugging Face + PEFT 时，你的 QLoRA 任务总是撞上 CUDA 显存不足，或者跑一个 epoch 慢到让迭代变得痛苦。Unsloth 在近乎 drop-in 的 `FastLanguageModel` API 背后换上自家 Triton kernel（RoPE、MLP、attention、padding-free packing）和动态 4-bit 量化，于是同一个 QLoRA 任务占用更少显存、速度大约快一倍——官方宣称「最高 2x 提速、最高省 70% 显存」，GRPO 强化学习「省 80% 显存」。
 
-当你的瓶颈是「只有一张卡」、目标是「快速、低成本迭代」时它最合适：指令微调、领域适配，或对推理类模型做 RL（GRPO/DPO）——文档称最低可在约 5GB 显存内跑 GRPO [未验证]。由于它构建在 `transformers`/`trl` 之上，你的训练脚本、数据集和导出的 adapter 仍留在熟悉的 Hugging Face 生态里，并可导出为 GGUF/safetensors 供下游推理。
+当你的瓶颈是「只有一张卡」、目标是「快速、低成本迭代」时它最合适：指令微调、领域适配，或对推理类模型做 RL（GRPO/DPO）——文档称最低可在约 5GB 显存内跑 GRPO。由于它构建在 `transformers`/`trl` 之上，你的训练脚本、数据集和导出的 adapter 仍留在熟悉的 Hugging Face 生态里，并可导出为 GGUF/safetensors 供下游推理。
 
 ## 何时不用
 

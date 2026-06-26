@@ -1,6 +1,6 @@
 ---
 name: add-project
-description: 当要把一个新开源项目加进本选型索引时使用；联网调研该项目，按 tools/schema.md 产出合规的选型页(frontmatter 事实 + 7 个必需小节)，归类、更新分类 INDEX、跑 lint。不用于选型(用 select-oss)或刷新已有过期条目(用 sync-entry)。
+description: 当要把一个新开源项目加进本选型索引时使用；联网调研该项目，按 tools/schema.md 产出合规的选型页(frontmatter 事实 + type 自适应小节 + Caveats 存疑账本)，归类、更新分类 INDEX、跑 lint。不用于选型(用 select-oss)或刷新已有过期条目(用 sync-entry)。
 argument-hint: <项目名 或 GitHub URL>
 ---
 
@@ -39,6 +39,10 @@ Author one conformant selection page. The contract is `tools/schema.md`; read it
      lock-in, maintenance/abandonment risk. This is the section agents most need.
    - In Comparison, name 3–5 real substitutes; `未收录` for ones not in the index, relative link
      for ones that are.
+   - **Caveats ledger (all types):** end every page with `## Caveats (unverified)` /
+     `## 存疑（未验证）` — one `[未验证]`/`[推断]` bullet per unverified fact. In the prose above,
+     keep inline labels to the **load-bearing/contested few** (≤3; the linter WARNs above that);
+     the full uncertainty list lives in this ledger, not sprinkled across the body.
 
 5. **Wire it in.** Add the project to its `categories/<category>/INDEX.md` **and** `INDEX.zh.md`
    (one-liner + comparison-matrix row in each). If new category, add it to root `INDEX.md` +
