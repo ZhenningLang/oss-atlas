@@ -2,7 +2,7 @@
 
 > 中文：本文件是**项目选型页的契约**。`tools/lint.py` 按本文件校验，所有 `categories/<cat>/<slug>.md` 必须遵守。改这里 = 改契约，必须同步改 linter。
 
-A project page lives at `categories/<category-slug>/<project-slug>.md`. It has two parts:
+A project page lives in the **category tree** under `categories/…/<project-slug>.md` (the tree is recursive and self-balancing — see §5). It has two parts:
 
 1. **YAML frontmatter** — the *facts* (verifiable, dated). Machine-checkable.
 2. **Markdown body** — the *judgment* (when to use, when not, comparison). Agent-readable prose.
@@ -22,6 +22,7 @@ language: Go                        # primary implementation language
 license: Apache-2.0                 # SPDX id where possible
 maturity: v0.x, active, NN.Nk stars (as of YYYY-MM)   # one line, DATED
 last_verified: 2026-06-26           # ISO date YYYY-MM-DD — when facts were last checked
+type: tool                          # tool | library | app | framework | service | model | skill-pack
 ---
 ```
 
@@ -30,9 +31,10 @@ Optional keys: `homepage`, `stars`, `aka` (alternate names).
 Rules enforced by the linter:
 
 - All required keys present.
-- `slug` == filename (without `.md`).
-- `category` == parent directory name.
+- `slug` == filename (without `.md` / `.zh.md`).
+- `category` == the **immediate** parent directory name (the leaf category), at any tree depth.
 - `tags` is a non-empty inline list.
+- `type` is one of `tool | library | app | framework | service | model | skill-pack`. It decides which body sections are required (§2).
 - `last_verified` parses as `YYYY-MM-DD`.
 - **Staleness**: if `today - last_verified > STALE_DAYS` (default 90), the linter prints a **WARNING** (not an error). Run the `sync-entry` skill to re-verify and bump the date.
 
@@ -49,17 +51,23 @@ project slug for **both** files (e.g. `beads`), even though the Chinese file is 
 
 ### Required body sections (exact H2 headings)
 
-Both pages start with `# <name>` and a one-line TL;DR (in that page's language). Then six
-required `##` sections, in this order:
+Both pages start with `# <name>` and a one-line TL;DR (in that page's language). Then the
+required `##` sections below — **which ones are required depends on `type`** (note after the table):
 
-| English page (`<slug>.md`) | Chinese page (`<slug>.zh.md`) | What goes here |
-|---|---|---|
-| `## When to use` | `## 何时使用` | a **User Story** (see below) — a concrete second-person scenario, not a feature list |
-| `## When NOT to use` | `## 何时不用` | anti-patterns, scale ceilings, lock-in, maintenance risk — **the most valuable section** |
-| `## Comparison` | `## 横向对比` | horizontal table vs real substitutes (see below) |
-| `## Tech stack` | `## 技术栈` | languages, frameworks, datastores it is built on |
-| `## Dependencies` | `## 依赖` | runtime/infra a user must run (db, services, hardware) |
-| `## Ops difficulty` | `## 运维难度` | low / medium / high + why; deploy + maintain burden |
+| English page (`<slug>.md`) | Chinese page (`<slug>.zh.md`) | Required for | What goes here |
+|---|---|---|---|
+| `## When to use` | `## 何时使用` | **all types** | a **User Story** (see below) — a concrete second-person scenario, not a feature list |
+| `## When NOT to use` | `## 何时不用` | **all types** | anti-patterns, scale ceilings, lock-in, maintenance risk — **the most valuable section** |
+| `## Comparison` | `## 横向对比` | **all types** | horizontal table vs real substitutes (see below) |
+| `## Tech stack` | `## 技术栈` | non-`skill-pack` | languages, frameworks, datastores it is built on |
+| `## Dependencies` | `## 依赖` | non-`skill-pack` | runtime/infra a user must run (db, services, hardware) |
+| `## Ops difficulty` | `## 运维难度` | non-`skill-pack` | low / medium / high + why; deploy + maintain burden |
+
+**Type-adaptive sections.** `skill-pack` entries (prompt/skill collections, harness configs) require
+only the first three (`When to use / When NOT to use / Comparison`) — a bag of prompts has no
+meaningful tech-stack / dependencies / ops, so those three are omitted rather than padded with
+"N/A". All other types (`tool/library/app/framework/service/model`) require all six. The linter
+enforces the right set per `type`.
 
 An optional final `## Caveats (unverified)` / `## 存疑（未验证）` section is encouraged to collect
 `[未验证]` facts.
@@ -90,9 +98,30 @@ In the body, any claim you could not verify from a source must carry `[未验证
 
 ## 4. Inclusion criteria (what earns a page)
 
-This is a **curated** index, not a complete directory. A project earns a page only if:
+**The unit of inclusion is a git repository.** This index collects and organizes open-source
+**repositories** across any domain — there is **no domain restriction**, and a project does **not**
+need an existing in-index substitute (comparisons may reference `未收录` alternatives). Breadth is
+the point: whatever task an agent gets, it should find selection guidance.
 
-- it was actually evaluated (not catalogued from a list), AND
-- a real selection question exists (there are substitutes worth comparing).
+Do **not** add:
 
-If those do not hold, do not add it. Preventing sprawl is a feature.
+- things that are **not a repository** — hosted SaaS, product landing pages, articles, docs sites, ads;
+- an **exact duplicate** of an already-indexed repo (e.g. a vendor landing page for a repo already listed);
+- an **empty / contentless** repo (no description, nothing to write a page from).
+
+That's the whole bar. (Homogeneous fields still get organized via the self-balancing tree in §5, not
+by dropping entries.)
+
+## 5. The category tree (recursive + self-balancing)
+
+`categories/` is a **recursive tree**, not a fixed 3 levels. A directory containing an `INDEX.md`
+(+ `INDEX.zh.md`) is a **category node**; it may hold project pages, child sub-categories, or both.
+Routing splits by language at every node: `INDEX.md` (EN) links `.md` pages and child `INDEX.md`;
+`INDEX.zh.md` (ZH) links `.zh.md` pages and child `INDEX.zh.md`. The root `INDEX.md` /`INDEX.zh.md`
+link the top-level categories.
+
+**Self-balancing.** When a leaf category exceeds `MAX_FANOUT` project pages (default 12, env
+`OSS_ATLAS_MAX_FANOUT`), the linter emits an **overflow WARNING** — the signal to split it into
+sub-categories. When categories become too thin/overlapping, they should be merged. The
+`refactor-index` skill performs these split/merge rebalances (`git mv`, additive-first, lint as the
+gate). Detection is automatic (lint); the restructure is run via the skill, not silently.

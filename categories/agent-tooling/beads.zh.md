@@ -8,6 +8,7 @@ language: Go
 license: MIT
 maturity: v1.x line, active as of 2026-06; author still self-describes as "alpha" (see caveats)
 last_verified: 2026-06-26
+type: tool
 ---
 
 # beads

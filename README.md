@@ -30,18 +30,20 @@ README genre into a **decision-support** genre.
 The index is deliberately **weak** — no database, no search, no embeddings. Just Markdown that
 an agent reads and reasons over. The directory structure *is* the query API.
 
-## Structure (3 levels, bilingual)
+## Structure (recursive tree, bilingual)
 
 ```
-INDEX.md / INDEX.zh.md                       # level 1: category route (EN / 中)
-categories/<category>/INDEX.md / INDEX.zh.md # level 2: projects + comparison matrix
-categories/<category>/<slug>.md              # level 3: English selection page (canonical)
-categories/<category>/<slug>.zh.md           # level 3: Chinese selection page
+INDEX.md / INDEX.zh.md                        # root: category route (EN / 中)
+categories/<cat>/INDEX.md / INDEX.zh.md       # a category node: pages + sub-categories
+categories/<cat>/<subcat>/INDEX.md …          # deeper nodes — the tree self-balances as it grows
+…/<slug>.md  +  …/<slug>.zh.md                # a leaf: the EN selection page + its 中文 sibling
 ```
 
-Each project page = YAML frontmatter (**facts**, dated) + Markdown body (**judgment**) with six
-required sections: `When to use / When NOT to use / Comparison / Tech stack / Dependencies /
-Ops difficulty` (Chinese pages use the Chinese headings). English is the agent-canonical path;
+`categories/` is a **recursive, self-balancing tree**: when a category gets too many projects it
+splits into sub-categories (the linter WARNs; `refactor-index` does the split). Each project page =
+YAML frontmatter (**facts**, dated) + Markdown body (**judgment**). Required sections depend on
+`type`: all entries have `When to use / When NOT to use / Comparison`; software (non-`skill-pack`)
+entries also have `Tech stack / Dependencies / Ops difficulty`. English is the agent-canonical path;
 the `.zh.md` sibling is the same content in Chinese.
 
 ## Freshness
@@ -52,8 +54,8 @@ than 90 days; the `sync-entry` skill re-verifies it against the live repo. Treat
 
 ## Contributing
 
-Curated, not comprehensive. A project earns a page only if it was actually evaluated **and** a
-real selection question exists (there are substitutes worth comparing). See
+The unit of inclusion is a **git repository** — any real open-source repo, across any domain. Not
+added: non-repos (hosted SaaS, landing pages, articles), exact duplicates, empty repos. See
 [CONTRIBUTING.md](CONTRIBUTING.md) and [tools/schema.md](tools/schema.md).
 
 ```bash

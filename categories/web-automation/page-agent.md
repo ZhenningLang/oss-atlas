@@ -8,6 +8,7 @@ language: TypeScript (runs as browser JS; npm + CDN)
 license: MIT
 maturity: v1.10.0 (2026-06-15); ~33 releases, ~1061 commits, active; Alibaba-maintained
 last_verified: 2026-06-26
+type: tool
 ---
 
 # page-agent

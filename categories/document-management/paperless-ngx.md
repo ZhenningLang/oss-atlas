@@ -8,6 +8,7 @@ language: Python (backend) + TypeScript/Angular (frontend)
 license: GPL-3.0
 maturity: Mature, active; stable v2.20.x (2026-04), v3.0 in beta as of 2026-06 (see caveats)
 last_verified: 2026-06-26
+type: tool
 ---
 
 # paperless-ngx

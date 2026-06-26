@@ -1,45 +1,49 @@
 # Contributing to oss-atlas
 
-This is a **curated, agent-first** selection index. Quality and honesty matter more than
-coverage. Read [AGENTS.md](AGENTS.md) and [tools/schema.md](tools/schema.md) first.
+This is an **agent-first** selection index. It collects open-source repositories broadly; honesty
+and accurate judgment matter more than polish. Read [AGENTS.md](AGENTS.md) and
+[tools/schema.md](tools/schema.md) first.
 
 ## Inclusion criteria
 
-Add a project **only if both** hold:
+**The unit of inclusion is a git repository.** Add any real open-source repo, across any domain —
+no domain restriction, and no requirement that a substitute already be in the index (comparisons may
+cite `未收录` alternatives).
 
-1. You actually evaluated it (not catalogued from a list).
-2. A real selection question exists — there are substitutes worth comparing.
-
-Keeping the index small is a feature. If a project has no credible alternative, or you haven't
-looked at it, don't add it.
+Do **not** add: things that aren't a repository (hosted SaaS, landing pages, articles, docs sites,
+ads); an exact duplicate of an already-indexed repo; or an empty/contentless repo. Crowded fields
+are handled by splitting categories (see "Keeping the tree balanced"), not by dropping entries.
 
 ## Adding a project
 
 The fastest path is the `add-project` skill (`.claude/skills/add-project/`). By hand:
 
-1. Pick the **primary** category (one project = one page = one category; cross-cutting goes in
-   `tags`). New category only if it genuinely doesn't fit — then add a row to `INDEX.md`.
-2. Create `categories/<category>/<slug>.md` following [tools/schema.md](tools/schema.md):
-   frontmatter (facts, dated) + the seven required sections.
-3. Write the body in **English**; include a Simplified-Chinese `## 中文摘要`.
+1. Pick the **leaf** category (one project = one bilingual pair = one leaf category; cross-cutting
+   goes in `tags`). New category only if it genuinely doesn't fit — add its row to the parent/root
+   `INDEX.md` + `INDEX.zh.md`.
+2. Create the **bilingual pair** `<slug>.md` (English) + `<slug>.zh.md` (Chinese) following
+   [tools/schema.md](tools/schema.md): identical frontmatter (facts, dated, incl. `type`) + the
+   required sections for that `type` (skill-packs omit `Tech stack / Dependencies / Ops difficulty`).
+3. Each file is **monolingual** — English page uses the English headings, Chinese page the Chinese
+   ones. The `When to use` section is a **User Story** (second-person scenario).
 4. **Separate facts from judgment.** Label anything unverified `[未验证]` / `[推断]`. The most
-   valuable section is `## When NOT to use` — be concrete and honest, not nice.
-5. In `## Comparison`, name real substitutes. Mark ones not in the index `未收录`; link ones
-   that are.
-6. Add the project to its category `INDEX.md` (one-liner + comparison-matrix row).
-7. Set `last_verified` to today.
+   valuable section is `When NOT to use` — be concrete and honest, not nice.
+5. In `Comparison`, name real substitutes. Mark ones not in the index `未收录`; link ones that are.
+6. Add the project to its category `INDEX.md` **and** `INDEX.zh.md` (one-liner + comparison row).
+7. Set `last_verified` to today; run `tools/lint.py`.
 
 ## Updating / de-staling
 
 Use the `sync-entry` skill (`.claude/skills/sync-entry/`): it re-verifies facts against the
 live repo when an entry is older than the staleness threshold, and flags abandoned projects.
 
-## Keeping the taxonomy tidy
+## Keeping the tree balanced
 
-As the index grows, categories can drift (imbalanced, overlapping, miscategorized pages, tag
-drift). Use the `refactor-index` skill (`.claude/skills/refactor-index/`) to reorganize safely:
-it is additive-first and minimal-churn (renaming/deleting a category is a one-way-door), uses
-`git mv` to preserve history, repairs links, and ends on a clean `tools/lint.py`.
+`categories/` is a recursive, self-balancing tree. When a leaf category exceeds `MAX_FANOUT`
+(default 12) the linter WARNs — that's the signal to **split** it into sub-categories; thin or
+overlapping categories should be **merged**. Use the `refactor-index` skill
+(`.claude/skills/refactor-index/`): additive-first, `git mv` to preserve history, repairs links,
+ends on a clean `tools/lint.py`.
 
 ## Before you commit
 

@@ -8,6 +8,7 @@ language: C++ core; bindings Python/Kotlin/C++ stable, Swift/JS preview
 license: Apache-2.0
 maturity: Pre-1.0, fast cadence; stable v0.13.1 (2026-06-03), v0.14.0-alpha (2026-06-18); Google-maintained
 last_verified: 2026-06-26
+type: tool
 ---
 
 # LiteRT-LM

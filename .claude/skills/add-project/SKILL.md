@@ -23,12 +23,15 @@ Author one conformant selection page. The contract is `tools/schema.md`; read it
 
 4. **Write the bilingual pair** `categories/<category>/<slug>.md` (English) **and**
    `categories/<category>/<slug>.zh.md` (Chinese) per schema:
-   - Frontmatter (identical in both): `name, slug(==base filename), repo, category(==dir), tags,
-     language, license, maturity(dated), last_verified(today)`.
+   - Frontmatter (identical in both): `name, slug(==base filename), repo, category(==leaf dir), tags,
+     language, license, maturity(dated), last_verified(today), type`.
+   - `type` ∈ `tool | library | app | framework | service | model | skill-pack` — it decides which
+     sections are required.
    - `# <name>` + one-line TL;DR in that file's language.
-   - English page sections: `When to use / When NOT to use / Comparison / Tech stack /
-     Dependencies / Ops difficulty`. Chinese page sections: `何时使用 / 何时不用 / 横向对比 /
-     技术栈 / 依赖 / 运维难度`. Each file is monolingual — no language mixing.
+   - Sections (all types): English `When to use / When NOT to use / Comparison`; Chinese
+     `何时使用 / 何时不用 / 横向对比`. **Non-`skill-pack` also add**: `Tech stack / Dependencies /
+     Ops difficulty` (`技术栈 / 依赖 / 运维难度`). A `skill-pack` omits those three. Each file is
+     monolingual — no language mixing.
    - Write "When to use" / "何时使用" as a **User Story** (second-person scenario: who you are,
      what you're doing, the problem you hit, how this tool resolves it) — not a feature list.
      See `tools/schema.md`.
