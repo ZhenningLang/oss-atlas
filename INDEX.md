@@ -14,6 +14,11 @@
 | **web-automation** | Drive or automate a web UI — browser automation, or an in-page natural-language GUI agent. | [→](categories/web-automation/INDEX.md) |
 | **llm-training** | Fine-tune or reinforcement-train LLMs and multi-step agents. | [→](categories/llm-training/INDEX.md) |
 | **agent-frameworks** | Build and run multi-step or multi-agent systems — agent frameworks and agent operating systems. | [→](categories/agent-frameworks/INDEX.md) |
+| **agent-memory** | Persistent, LLM-agnostic memory an agent reads/writes across sessions. | [→](categories/agent-memory/INDEX.md) |
+| **deep-research** | Iterative multi-source research agents that search, scrape, and synthesize. | [→](categories/deep-research/INDEX.md) |
+| **ai-code-review** | LLM-assisted code review that produces line-level findings on a diff or repo. | [→](categories/ai-code-review/INDEX.md) |
+| **rag-retrieval** | Document indexing, code-intelligence graphs, and graph DBs for retrieval-augmented generation. | [→](categories/rag-retrieval/INDEX.md) |
+| **llm-eval** | Test, benchmark, and security-scan (red-team) prompts, agents, and RAG systems. | [→](categories/llm-eval/INDEX.md) |
 
 ## How to add a category
 
