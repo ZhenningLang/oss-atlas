@@ -19,6 +19,9 @@
 | **ai-code-review** | LLM 辅助的代码评审:对 diff 或仓库产出行级问题。 | [→](categories/ai-code-review/INDEX.zh.md) |
 | **rag-retrieval** | 面向 RAG 的文档索引、代码智能图与图数据库。 | [→](categories/rag-retrieval/INDEX.zh.md) |
 | **llm-eval** | 对提示词、agent 与 RAG 做测试、基准与安全红队扫描。 | [→](categories/llm-eval/INDEX.zh.md) |
+| **agent-dev-methodology** | 塑造 agent **如何**构建软件的框架与方法论——spec 驱动、上下文工程、persona/命令体系。 | [→](categories/agent-dev-methodology/INDEX.zh.md) |
+| **ai-design-generation** | agent 驱动的 UI/设计、幻灯片、社交卡片与 HTML 产物生成。 | [→](categories/ai-design-generation/INDEX.zh.md) |
+| **dev-utilities** | 独立开发者工具、数据处理瑞士军刀与可自托管的基础设施。 | [→](categories/dev-utilities/INDEX.zh.md) |
 
 ## 如何新增分类
 

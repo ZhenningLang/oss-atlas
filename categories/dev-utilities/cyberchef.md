@@ -1,0 +1,67 @@
+---
+name: CyberChef
+slug: cyberchef
+repo: https://github.com/gchq/CyberChef
+category: dev-utilities
+tags: [encoding, encryption, hashing, compression, data-analysis, forensics, web-app, offline, self-hostable, node-library]
+language: JavaScript
+license: Apache-2.0
+maturity: v11.2.0, active (2026-06)
+last_verified: 2026-06-26
+type: app
+---
+
+# CyberChef
+
+A fully client-side "Cyber Swiss Army Knife" web app that chains 300+ encode/decode, crypto, compression, hashing and data-analysis operations into reusable visual "recipes" — runnable offline in the browser or as a Node library.
+
+## When to use
+
+You're a security analyst, CTF player, or backend engineer staring at a blob of data you don't recognize — maybe a doubly-URL-encoded then Base64'd token, a gzipped payload inside a hex dump, or a timestamp in some format you can't place. Writing a throwaway script for each transform is slow, and pasting sensitive data into a random online decoder is a non-starter. You open CyberChef (the public instance, or a copy you self-host), drag operations into a recipe — `From Base64` → `URL Decode` → `Gunzip` — and watch the output update live at each step. The "Magic" operation can even guess the chain for you when you have no idea what you're looking at. Because everything runs in your browser and nothing is sent to a server, you can safely throw real incident data, keys, or PCAP-extracted strings at it.
+
+You also reach for it when you want that same logic *repeatable*. A recipe serialises into the URL, so you can bookmark or share a deep link that reproduces an exact transform pipeline, drop file inputs up to ~2 GB, set breakpoints to inspect intermediate stages, and — when you've nailed the recipe interactively — call the very same operations programmatically from Node via the `cyberchef` npm package to bake it into a script or pipeline.
+
+## When NOT to use
+
+- **Bulk / high-throughput batch processing.** It's a browser app; for streaming gigabytes through a transform in a server pipeline, a purpose-built CLI or library (`xxd`, `openssl`, `zstd`, a Python script) is faster and scriptable without the SPA overhead. The Node API helps but is still a general-purpose toolbox, not an optimised data-plane.
+- **Production cryptography you must trust end-to-end.** CyberChef is for analysis, prototyping and learning — not a vetted crypto library for shipping. Use audited primitives (libsodium, the platform's crypto stdlib) in production code.
+- **Strict-egress / air-gapped policy without self-hosting.** The public gchq.github.io instance is convenient but still a third-party site; if policy forbids that, you must self-host the static build (which is fully offline-capable once served).
+- **You need a native desktop tool palette.** If you want a local, install-and-go GUI of inspectors/converters rather than a recipe-chaining canvas, a desktop devtools app fits better — see DevToys below.
+- **Very large binary forensics / memory analysis.** The ~2 GB input ceiling and in-browser memory model make it unsuitable for full disk images or memory dumps; reach for dedicated forensics suites.
+- **Custom operation lock-in.** Adding your own operation means writing it into CyberChef's module/operation framework and rebuilding the bundle; it's not a generic plugin you drop in at runtime.
+
+## Comparison
+
+| Alternative | In index | Tradeoff |
+|---|---|---|
+| [DevToys](devtoys.md) | ✅ | Native cross-platform desktop devtools palette (formatters, converters, generators); a fixed tool list rather than CyberChef's chainable recipe pipeline + "Magic" auto-detection. |
+| [Cockpit](cockpit.md) | ✅ | Web UI for *server administration*, not data transformation — different problem entirely; listed only to disambiguate "web tool" overlap. |
+| CyberChef-server | not indexed | Official Node wrapper exposing CyberChef recipes over HTTP for batch/automation; complements rather than replaces the app. |
+| Custom scripts (`openssl`/`xxd`/Python) | not indexed | Maximum control, scriptable, no UI; but you rewrite per-task and lose the live visual recipe + Magic detection. |
+| dCode / online decoders | not indexed | Browser convenience for single transforms; data leaves your machine and no offline/self-host story — the privacy gap CyberChef closes. |
+
+## Tech stack
+
+- **Language:** JavaScript (browser + Node). Webpack 5 bundles a single-page app; Babel (`@babel/preset-env`) transpiles; Grunt orchestrates the build.
+- **Crypto/encoding deps:** `crypto-js`, `@noble/hashes`, `node-forge`, `jsrsasign`, `bcryptjs`, `argon2-browser` for the hashing/encryption operations.
+- **Data/analysis deps:** `lodash`, `bignumber.js`, `protobufjs`, `cbor`, `bson`, `json5`; `d3`, `jimp`, `tesseract.js` (OCR), `highlight.js` for visualisation.
+- **Compression:** `lz-string`, `lz4js`, `browserify-zlib`.
+- **Dual distribution:** static web bundle (the SPA) **and** an npm library with ESM + CommonJS entry points (Node wrapper) — same operation set, two delivery modes.
+
+## Dependencies
+
+- **To use the public app:** just a modern browser (README states Chrome 50+ / Firefox 38+). No backend — all processing is client-side.
+- **To self-host:** serve the prebuilt static files behind any web server, or run the official Docker image `ghcr.io/gchq/cyberchef:latest`. No database, no server-side runtime required at request time.
+- **To build from source / use the Node library:** Node.js v24 (package declares `engines: ">=24 <25"`), then `npm install` and `npx grunt prod` (build) or `npm install cyberchef` to consume the library.
+
+## Ops difficulty
+
+**Low.** As a static single-page app there is nothing stateful to operate: the easiest self-host is dropping the built `assets`/`index.html` on any static host or CDN, or running the published Docker image. There is no database, queue, or background worker, and no inbound data handling to secure server-side because processing is in the client. The only real cost is rebuilding/upgrading the bundle on a new release and the strict Node v24 build requirement, which can bite CI pinned to other Node majors. Running the Node library inside your own service inherits that service's ops profile rather than adding its own.
+
+## Caveats (unverified)
+
+- [未验证] "300+ operations" is the project's commonly-cited framing; the exact operation count shifts release-to-release — verify against the current build before relying on a specific operation existing.
+- [未验证] Reported v11.2.0 published 2026-06-17; star count ~35.2k as of 2026-06 — GitHub stars are unreliable and date-sensitive, treat as indicative only.
+- [未验证] README states browser support as Chrome 50+ / Firefox 38+ and a ~2 GB file-input ceiling; actual behaviour at the limit depends on the host browser's memory and version.
+- [推断] The npm library exposing the operation set as a Node API is real (package `main` points at a Node wrapper), but the npm package's published version may lag the GitHub tag — confirm before pinning.
+- [推断] Self-hosted instances are "fully offline-capable once served" based on the client-side-only design; verify your specific build has no CDN/runtime fetches before treating it as air-gapped-safe.

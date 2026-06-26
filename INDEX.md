@@ -19,6 +19,9 @@
 | **ai-code-review** | LLM-assisted code review that produces line-level findings on a diff or repo. | [→](categories/ai-code-review/INDEX.md) |
 | **rag-retrieval** | Document indexing, code-intelligence graphs, and graph DBs for retrieval-augmented generation. | [→](categories/rag-retrieval/INDEX.md) |
 | **llm-eval** | Test, benchmark, and security-scan (red-team) prompts, agents, and RAG systems. | [→](categories/llm-eval/INDEX.md) |
+| **agent-dev-methodology** | Frameworks and methodologies that shape *how* an agent builds software — spec-driven, context-engineering, persona/command systems. | [→](categories/agent-dev-methodology/INDEX.md) |
+| **ai-design-generation** | Agent-driven generation of UI/design, slide decks, social cards, and HTML artifacts. | [→](categories/ai-design-generation/INDEX.md) |
+| **dev-utilities** | Standalone devtools, data-wrangling swiss-army-knives, and self-hostable infrastructure. | [→](categories/dev-utilities/INDEX.md) |
 
 ## How to add a category
 
