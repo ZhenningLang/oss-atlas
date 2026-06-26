@@ -2,6 +2,8 @@
 name: refactor-index
 description: 当索引目录随项目增多变乱(分类失衡/重叠、项目错位、tag 不一致、对比矩阵过期、命名漂移)、需要重新整理分类结构时使用;诊断混乱信号→最小化且可追溯地搬动/合并/拆分→修链接→跑 lint。不用于新增项目(用 add-project)或刷新单条事实(用 sync-entry)。
 argument-hint: <分类名 | --report | --all>
+metadata:
+  internal: true
 ---
 
 # refactor-index

@@ -6,6 +6,31 @@ weighing *when NOT to use* each option, not just what it does.
 
 > 中文版 README：[README.zh.md](README.zh.md)
 
+## Install
+
+Install the **`select-oss`** skill into your coding agent — one skill that teaches the agent to
+navigate this index and pick OSS for a task. It reads the public index over HTTP (no local copy
+needed) and works in a clone too.
+
+**Any agent, via [skills.sh](https://skills.sh)** (Claude Code, Codex, Cursor, OpenCode, Droid,
+Kilo, Gemini CLI, Copilot, and ~70 more — the CLI knows each agent's skills path):
+
+```bash
+# Global (all your projects); drop -g for project-local. Pick agents with -a, e.g. -a claude-code
+npx skills add ZhenningLang/oss-atlas -g
+```
+
+**Manual** (no Node) — copy the skill folder into your agent's skills dir, e.g. Claude Code:
+
+```bash
+git clone https://github.com/ZhenningLang/oss-atlas
+cp -r oss-atlas/skills/select-oss ~/.claude/skills/
+```
+
+The skill fetches pages from `raw.githubusercontent.com/ZhenningLang/oss-atlas/main/`; only the
+single `SKILL.md` is installed, so it stays tiny and always reads the latest index. For agents
+without web access, the skill falls back to a local clone.
+
 ## Projects
 
 The complete index, grouped by category. Each project has an English page (`<slug>.md`) and a Chinese sibling (`<slug>.zh.md`) — click straight through. Browse interactively from [INDEX.md](INDEX.md); agents start at [AGENTS.md](AGENTS.md).

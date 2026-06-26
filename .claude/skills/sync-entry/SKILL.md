@@ -2,6 +2,8 @@
 name: sync-entry
 description: 当要刷新已有选型条目、对抗事实过期时使用；手动触发，按 last_verified 与今天的 delta 门控(超过阈值才真去联网重核),重核事实、更新变化项、bump last_verified,并对疑似废弃项目显著标注。不用于新增条目(用 add-project)或选型(用 select-oss)。
 argument-hint: <项目 slug | 分类 | --all | --report>
+metadata:
+  internal: true
 ---
 
 # sync-entry

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://skills.sh/schemas/skills.sh.schema.json",
+  "notGrouped": "bottom",
+  "groupings": [
+    {
+      "title": "OSS Selection",
+      "description": "Navigate the oss-atlas index to pick the right open-source project for a task — weighing when NOT to use each option, not just what it does.",
+      "skills": [
+        "select-oss"
+      ]
+    }
+  ]
+}

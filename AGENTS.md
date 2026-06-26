@@ -42,7 +42,9 @@ Procedure when you have a task and need to pick a project:
 4. Recommend with the *tradeoff that decided it*. If the best fit is named in a `## Comparison`
    but is **not yet indexed** (`未收录`), say so — do not pretend the index is complete.
 
-There is a skill for this: `.claude/skills/select-oss/`.
+There is a skill for this: **`skills/select-oss/`** — a dual-mode navigator that reads the index
+locally when you're inside a clone, or fetches the public raw files otherwise. It installs into any
+coding agent via skills.sh (`npx skills add ZhenningLang/oss-atlas`); see the README "Install" section.
 
 ## WRITE CONTRACT — how to add or update an entry
 
@@ -69,7 +71,9 @@ The schema is the contract: **`tools/schema.md`**. In short:
 
 Skills: `.claude/skills/add-project/` (author a new entry), `.claude/skills/sync-entry/`
 (re-verify a stale entry), `.claude/skills/refactor-index/` (rebalance the tree — split overflowing
-categories into sub-categories, merge thin/overlapping ones).
+categories into sub-categories, merge thin/overlapping ones). These three are **maintainer** skills,
+marked `metadata.internal: true` so skills.sh hides them from the public install (only `select-oss`
+ships); to install one for contributing, set `INSTALL_INTERNAL_SKILLS=1`.
 
 ## Inclusion criteria
 

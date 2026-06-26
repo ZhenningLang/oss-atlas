@@ -2,6 +2,8 @@
 name: add-project
 description: 当要把一个新开源项目加进本选型索引时使用；联网调研该项目，按 tools/schema.md 产出合规的选型页(frontmatter 事实 + type 自适应小节 + Caveats 存疑账本)，归类、更新分类 INDEX、跑 lint。不用于选型(用 select-oss)或刷新已有过期条目(用 sync-entry)。
 argument-hint: <项目名 或 GitHub URL>
+metadata:
+  internal: true
 ---
 
 # add-project
