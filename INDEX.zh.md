@@ -13,6 +13,7 @@
 | **on-device-ml** | 选「在端侧/边缘设备（手机、笔记本、IoT）本地跑模型」的运行时。 | [→](categories/on-device-ml/INDEX.zh.md) |
 | **web-automation** | 选「驱动/自动化 Web 界面」的工具——浏览器自动化，或页内自然语言 GUI agent。 | [→](categories/web-automation/INDEX.zh.md) |
 | **llm-training** | 微调或强化训练 LLM 与多步 agent。 | [→](categories/llm-training/INDEX.zh.md) |
+| **agent-frameworks** | 构建与运行多步 / 多智能体系统——agent 框架与 agent 操作系统。 | [→](categories/agent-frameworks/INDEX.zh.md) |
 
 ## 如何新增分类
 

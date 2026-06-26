@@ -13,6 +13,7 @@
 | **on-device-ml** | Run ML / LLM inference locally on edge devices (phone, laptop, IoT) instead of in the cloud. | [→](categories/on-device-ml/INDEX.md) |
 | **web-automation** | Drive or automate a web UI — browser automation, or an in-page natural-language GUI agent. | [→](categories/web-automation/INDEX.md) |
 | **llm-training** | Fine-tune or reinforcement-train LLMs and multi-step agents. | [→](categories/llm-training/INDEX.md) |
+| **agent-frameworks** | Build and run multi-step or multi-agent systems — agent frameworks and agent operating systems. | [→](categories/agent-frameworks/INDEX.md) |
 
 ## How to add a category
 
