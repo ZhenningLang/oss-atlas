@@ -13,6 +13,7 @@ For the full reading procedure see [AGENTS.md](AGENTS.md).
 | **agent-tooling** | You need infrastructure for AI coding agents — task/work tracking, persistent memory, agent state. 为 AI agent 选「任务/记忆/状态」基建。 | [→](categories/agent-tooling/INDEX.md) |
 | **document-management** | You need to ingest, OCR, tag, and search scanned documents / paperwork. 选「文档归档/OCR/全文检索」系统。 | [→](categories/document-management/INDEX.md) |
 | **on-device-ml** | You need to run ML / LLM inference locally on edge devices (phone, laptop, IoT) instead of in the cloud. 选「端侧/边缘跑模型」的运行时。 | [→](categories/on-device-ml/INDEX.md) |
+| **web-automation** | You need to drive or automate a web UI — browser automation, or an in-page natural-language GUI agent. 选「驱动/自动化 Web 界面」的工具。 | [→](categories/web-automation/INDEX.md) |
 
 ## How to add a category
 
