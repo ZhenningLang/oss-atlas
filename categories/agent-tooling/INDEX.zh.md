@@ -1,28 +1,33 @@
 # agent-tooling
 
-> 三级路由的第 2 级。为 AI 编码 agent 选「任务/工作追踪、持久记忆、agent 状态」基建。
+> 分类节点。面向 AI 编码 agent 的基础设施——任务/工作追踪、持久记忆、agent 状态。
 > ← 返回[分类路由](../../INDEX.zh.md) · English: [INDEX.md](INDEX.md)
 
 ## 本分类项目
 
-| 项目 | 何时用 | 许可证 | 页面 |
-|---|---|---|---|
-| **beads** | agent（或一小队 agent）需要跨会话、跨分支、可随代码版本化的依赖式任务记忆。 | MIT | [→](beads.zh.md) |
+| 项目 | 何时用 | 页面 |
+|---|---|---|
+| **beads** | 当 AI agent 跨会话丢失任务状态、你想在仓库里要一张可版本化、感知依赖的任务图时用它。 | [→](beads.zh.md) |
+| **CCPM** | 当一个功能大到单次会话装不下、且你想要 PRD 转 GitHub Issues 的规格加上 git worktree 并行 agent 时使用。 | [→](ccpm.zh.md) |
+| **Entire** | 想把 AI agent 会话以 Git checkpoint 形式与 commit 并列捕获、可搜索可回滚时用它。 | [→](entire-cli.zh.md) |
+| **Ralph for Claude Code** | 想让 Claude Code 无人值守地啃完 fix_plan.md 清单、又要速率限制/熔断器/双条件退出闸门兜底时用它。 | [→](ralph-claude-code.zh.md) |
+| **Context Mode** | 当 coding agent 把上下文耗在原始工具输出上、你想要沙箱执行加熬过 compaction 的会话记忆时用它。 | [→](context-mode.zh.md) |
+| **Planning with Files** | 当长任务 agent 总在 /clear、上下文压缩或崩溃中丢失计划时用它把计划落到磁盘。 | [→](planning-with-files.zh.md) |
+| **Vercel Skills** | 当你想要一个 npm 风格的 CLI 来跨多个编码 agent 安装、查找、更新 SKILL.md 技能包时使用。 | [→](vercel-skills.zh.md) |
 
 ## 对比矩阵
 
-项目页里点到、但**尚未收录**（`未收录`）的替代方案，是未来候选条目——见
-[add-project](../../.claude/skills/add-project/SKILL.md)。
-
 | 选项 | 是否收录 | 一句话取舍 |
 |---|---|---|
-| [beads](beads.zh.md) | ✅ | 依赖感知、可版本控制（Dolt）的任务图；agent 原生、离线优先——但仍 alpha，嵌入模式单写入，无人类 web UI。 |
-| Plain `MEMORY.md` / `TODO.md` | 未收录 | 零依赖、人类可读——但非结构化（无图、无 ready 检测、无可安全合并的 ID）。 |
-| GitHub Issues (+ `gh`) | 未收录 | 成熟托管 tracker，带 UI/通知——但在线优先、不随代码版本控制、非 agent 原生。 |
-| Taskwarrior | 未收录 | 久经考验的离线 CLI 任务管理器——但无 SQL/版本控制后端，多 agent 合并较弱。 |
-| Linear / Jira | 未收录 | 面向人类团队最佳——但重量级、仅在线、非 agent 原生。 |
+| [beads](beads.zh.md) | ✅ | 当 AI agent 跨会话丢失任务状态、你想在仓库里要一张可版本化、感知依赖的任务图时用它。 |
+| [CCPM](ccpm.zh.md) | ✅ | 当一个功能大到单次会话装不下、且你想要 PRD 转 GitHub Issues 的规格加上 git worktree 并行 agent 时使用。 |
+| [Entire](entire-cli.zh.md) | ✅ | 想把 AI agent 会话以 Git checkpoint 形式与 commit 并列捕获、可搜索可回滚时用它。 |
+| [Ralph for Claude Code](ralph-claude-code.zh.md) | ✅ | 想让 Claude Code 无人值守地啃完 fix_plan.md 清单、又要速率限制/熔断器/双条件退出闸门兜底时用它。 |
+| [Context Mode](context-mode.zh.md) | ✅ | 当 coding agent 把上下文耗在原始工具输出上、你想要沙箱执行加熬过 compaction 的会话记忆时用它。 |
+| [Planning with Files](planning-with-files.zh.md) | ✅ | 当长任务 agent 总在 /clear、上下文压缩或崩溃中丢失计划时用它把计划落到磁盘。 |
+| [Vercel Skills](vercel-skills.zh.md) | ✅ | 当你想要一个 npm 风格的 CLI 来跨多个编码 agent 安装、查找、更新 SKILL.md 技能包时使用。 |
+| Taskmaster / GitHub Issues + gh / Linear | 未收录 | 各页对比里点到的其他 agent 任务/工作追踪后端。 |
 
 ## 什么该放这里
 
-主要职责是支撑 AI 编码 agent *运行*的工具：任务/工作图、持久记忆、agent 状态存储、多 agent 协调。
-不包括只是*调用* LLM 的终端用户应用。
+AI **编码 agent** 用来追踪工作、承载状态的基础设施——任务/issue 图、会话捕获、规划/上下文管线。不含与 LLM 无关的记忆库(见 `agent-memory`),不含 agent 运行时(见 `agent-frameworks`)。

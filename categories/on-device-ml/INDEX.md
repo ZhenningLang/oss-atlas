@@ -1,28 +1,27 @@
 # on-device-ml
 
-> Level 2 of 3. Run ML / LLM inference locally on edge devices (phone, laptop, IoT) instead of
-> in the cloud.
+> Category node. Run ML/LLM inference locally on edge devices (phone, laptop, IoT) instead of the cloud.
 > ← back to [category route](../../INDEX.md) · 中文：[INDEX.zh.md](INDEX.zh.md)
 
 ## Projects in this category
 
-| Project | Use when | License | Page |
-|---|---|---|---|
-| **LiteRT-LM** | Ship a mobile/cross-platform app that runs an LLM offline on-device (especially Gemma on Android) with CPU/GPU/NPU acceleration. | Apache-2.0 | [→](litert-lm.md) |
+| Project | Use when | Page |
+|---|---|---|
+| **LiteRT-LM** | Use it when you want to run Gemma-class LLMs on phone/laptop/edge via Google's LiteRT runtime (CPU/GPU/NPU). | [→](litert-lm.md) |
+| **BitNet** | Use it when you need fast, low-energy CPU inference of natively-trained 1.58-bit ternary LLMs on x86/ARM laptops, offline. | [→](bitnet.md) |
+| **Google AI Edge Gallery** | Use it when you need to demo and benchmark on-device Gemma LLMs on real phones before building. | [→](ai-edge-gallery.md) |
+| **TimesFM** | Use it when you need zero-shot time-series forecasts run locally on CPU/GPU without per-dataset training. | [→](timesfm.md) |
 
 ## Comparison matrix
 
-Substitutes named in the project page but **not yet indexed**.
-
 | Option | Indexed | One-line tradeoff |
 |---|---|---|
-| [LiteRT-LM](litert-lm.md) | ✅ | Google-maintained, one runtime across Android/iOS/desktop/edge, Gemma sweet spot, NPU support — but Gemma-centric catalog, pre-1.0 churn, Bazel/C++ build, `.litertlm` lock-in. |
-| llama.cpp | not indexed | Far broader model/quantization support (GGUF), ubiquitous — but more build complexity, no single blessed mobile SDK. |
-| MLX / mlx-lm (Apple) | not indexed | Fast on Apple silicon, clean ergonomics — but Apple-only, can't be cross-platform. |
-| MediaPipe LLM Inference API | not indexed | Easier higher-level drop-in (`.task` models) — but less low-level control, overlapping/superseded by LiteRT-LM. |
-| ONNX Runtime (+ GenAI/Mobile) | not indexed | Vendor-neutral, many formats/backends — but heavier, less tuned for the latest small mobile LLMs. |
+| [LiteRT-LM](litert-lm.md) | ✅ | Use it when you want to run Gemma-class LLMs on phone/laptop/edge via Google's LiteRT runtime (CPU/GPU/NPU). |
+| [BitNet](bitnet.md) | ✅ | Use it when you need fast, low-energy CPU inference of natively-trained 1.58-bit ternary LLMs on x86/ARM laptops, offline. |
+| [Google AI Edge Gallery](ai-edge-gallery.md) | ✅ | Use it when you need to demo and benchmark on-device Gemma LLMs on real phones before building. |
+| [TimesFM](timesfm.md) | ✅ | Use it when you need zero-shot time-series forecasts run locally on CPU/GPU without per-dataset training. |
+| llama.cpp / Ollama / MLC LLM / ONNX Runtime | 未收录 | Other on-device inference runtimes named across the pages. |
 
 ## What belongs here
 
-Runtimes and orchestration layers whose primary job is **local inference on edge/consumer
-hardware**. Not cloud-served inference (vLLM, TGI), not training frameworks.
+Runtimes and models meant to **run inference locally / on-device** — phone, laptop, edge, CPU. Not cloud training (see `llm-training`), not RAG retrieval (see `rag-retrieval`).

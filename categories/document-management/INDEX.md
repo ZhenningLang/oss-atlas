@@ -1,27 +1,25 @@
 # document-management
 
-> Level 2 of 3. Ingest, OCR, tag, and full-text-search scanned documents / paperwork.
+> Category node. Ingest, OCR, tag, and full-text-search scanned documents / paperwork.
 > ← back to [category route](../../INDEX.md) · 中文：[INDEX.zh.md](INDEX.zh.md)
 
 ## Projects in this category
 
-| Project | Use when | License | Page |
-|---|---|---|---|
-| **paperless-ngx** | Self-host a searchable archive of scanned paperwork (invoices, bills, letters) on a trusted home server / NAS, with OCR + auto-tagging. | GPL-3.0 | [→](paperless-ngx.md) |
+| Project | Use when | Page |
+|---|---|---|
+| **paperless-ngx** | Use it when you want to self-host OCR + tagging + full-text search over scanned paperwork. | [→](paperless-ngx.md) |
+| **copyparty** | Use it when you need a single-file portable file server with resumable uploads, dedup, and multi-protocol access — not OCR document search. | [→](copyparty.md) |
+| **Twake Drive** | Use it when you want a self-hosted Google-Drive-style file network drive inside the Twake/Cozy stack, not OCR archiving. | [→](twake-drive.md) |
 
 ## Comparison matrix
 
-Substitutes named in the project page but **not yet indexed**.
-
 | Option | Indexed | One-line tradeoff |
 |---|---|---|
-| [paperless-ngx](paperless-ngx.md) | ✅ | Best-momentum self-hosted DMS for personal/small-team scan archives; great OCR + auto-tagging — but no encryption at rest, weak multi-tenant permissions, not an enterprise EDMS. |
-| Mayan EDMS | not indexed | Heavier enterprise EDMS: real workflow engine, versioning, granular permissions (Apache-2.0) — but far steeper to operate, overkill for a personal archive. |
-| Docspell | not indexed | Strong email ingestion + metadata extraction — but Scala/JVM stack, heavier memory, smaller community. |
-| Teedy / sismics docs | not indexed | Lightweight Java DMS, clean UI, modest resources — but weaker OCR/auto-tagging, smaller momentum. |
-| Self-built (Tesseract + Meilisearch + object storage) | not indexed | Full control over encryption/schema — but you build and maintain the whole pipeline. |
+| [paperless-ngx](paperless-ngx.md) | ✅ | Use it when you want to self-host OCR + tagging + full-text search over scanned paperwork. |
+| [copyparty](copyparty.md) | ✅ | Use it when you need a single-file portable file server with resumable uploads, dedup, and multi-protocol access — not OCR document search. |
+| [Twake Drive](twake-drive.md) | ✅ | Use it when you want a self-hosted Google-Drive-style file network drive inside the Twake/Cozy stack, not OCR archiving. |
+| Mayan EDMS / Docspell / Nextcloud | 未收录 | Other self-hosted DMS / file servers named across the pages. |
 
 ## What belongs here
 
-Systems whose primary job is to **ingest, OCR, organize, and retrieve** documents. Not general
-file sync (Nextcloud), not note-taking, not collaborative authoring.
+Self-hosted systems to **store, OCR, organize, and search documents** — DMS, file servers, paperless workflows. Not RAG indexes for LLMs (see `rag-retrieval`).

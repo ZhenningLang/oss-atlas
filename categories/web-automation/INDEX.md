@@ -1,28 +1,27 @@
 # web-automation
 
-> Level 2 of 3. Drive or automate web UIs — programmatically or via natural language
-> (browser automation, in-page GUI agents).
+> Category node. Drive or automate a web UI — browser automation, or an in-page natural-language GUI agent.
 > ← back to [category route](../../INDEX.md) · 中文：[INDEX.zh.md](INDEX.zh.md)
 
 ## Projects in this category
 
-| Project | Use when | License | Page |
-|---|---|---|---|
-| **page-agent** | Add an AI copilot that operates an existing web UI (ERP/CRM/admin) via natural language, in-page, with no backend rewrite. | MIT | [→](page-agent.md) |
+| Project | Use when | Page |
+|---|---|---|
+| **page-agent** | Use it when you want to control a web UI with natural language in-page via direct DOM read/write, no backend. | [→](page-agent.md) |
+| **Chrome DevTools MCP** | Use it when an agent needs to drive and DevTools-inspect real Chrome — traces, network, console, heap. | [→](chrome-devtools-mcp.md) |
+| **Cua** | Use it when an agent must control a full desktop OS via vision in isolated VM sandboxes, not just web pages. | [→](cua.md) |
+| **Agent Browser** | Use it when an agent must shell-drive a real Chrome over CDP with stable element refs instead of CSS selectors. | [→](agent-browser.md) |
 
 ## Comparison matrix
 
-Substitutes named in the project page but **not yet indexed**.
-
 | Option | Indexed | One-line tradeoff |
 |---|---|---|
-| [page-agent](page-agent.md) | ✅ | In-page, DOM-as-text, reuses login session, no backend/headless, LLM-agnostic — but text-only (no vision), client-side only, sends DOM to an external LLM. |
-| browser-use | not indexed | Server-side, vision-capable Python browser agent — works beyond DOM text and off the client, but heavier infra (real/headless browser). |
-| Playwright / Puppeteer | not indexed | Lower-level, code-driven, headless-capable — deterministic and powerful, but selector/script-based (not NL) and brittle to DOM changes. |
-| Selenium | not indexed | Mature, ubiquitous cross-browser automation — but DIY, verbose, no NL layer. |
-| Computer-use agents (Anthropic / OpenAI Operator) | not indexed | Vision-based, drive any pixel UI — but slower, costlier, need a controlled browser/VM. |
+| [page-agent](page-agent.md) | ✅ | Use it when you want to control a web UI with natural language in-page via direct DOM read/write, no backend. |
+| [Chrome DevTools MCP](chrome-devtools-mcp.md) | ✅ | Use it when an agent needs to drive and DevTools-inspect real Chrome — traces, network, console, heap. |
+| [Cua](cua.md) | ✅ | Use it when an agent must control a full desktop OS via vision in isolated VM sandboxes, not just web pages. |
+| [Agent Browser](agent-browser.md) | ✅ | Use it when an agent must shell-drive a real Chrome over CDP with stable element refs instead of CSS selectors. |
+| Playwright / Puppeteer / Selenium | 未收录 | Lower-level browser automation libraries named across the pages. |
 
 ## What belongs here
 
-Tools whose primary job is to **drive a web UI** — browser automation frameworks and in-page/GUI
-agents. Not HTTP/API clients, not scrapers-without-interaction, not headless-render services.
+Tools that **drive or automate a web/browser (or computer) GUI** — headless browser automation, computer-use, or in-page GUI agents. Not server-side scraping frameworks; not enterprise desktop-only RPA.

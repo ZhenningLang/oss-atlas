@@ -1,26 +1,27 @@
 # on-device-ml
 
-> 三级路由的第 2 级。在端侧/边缘设备（手机、笔记本、IoT）本地跑 ML / LLM 推理，而非走云端。
+> 分类节点。在端侧/边缘设备(手机、笔记本、IoT)本地跑 ML/LLM 推理,而非云端。
 > ← 返回[分类路由](../../INDEX.zh.md) · English: [INDEX.md](INDEX.md)
 
 ## 本分类项目
 
-| 项目 | 何时用 | 许可证 | 页面 |
-|---|---|---|---|
-| **LiteRT-LM** | 交付一个在端侧离线跑 LLM 的移动端/跨平台 App（尤其 Android 上跑 Gemma），带 CPU/GPU/NPU 加速。 | Apache-2.0 | [→](litert-lm.zh.md) |
+| 项目 | 何时用 | 页面 |
+|---|---|---|
+| **LiteRT-LM** | 想用 Google LiteRT 运行时在手机/笔记本/边缘(CPU/GPU/NPU)上跑 Gemma 级 LLM 时用它。 | [→](litert-lm.zh.md) |
+| **BitNet** | 当你要在 x86/ARM 笔记本上离线、快速、低能耗地用 CPU 跑原生三值(1.58-bit) LLM 时使用。 | [→](bitnet.zh.md) |
+| **Google AI Edge Gallery** | 当你想在真机上先体验和基准测试端侧 Gemma LLM、为是否自建集成去风险时用它。 | [→](ai-edge-gallery.zh.md) |
+| **TimesFM** | 当你需要在本地 CPU/GPU 上对时间序列做零样本预测、又不想逐数据集训练时用它。 | [→](timesfm.zh.md) |
 
 ## 对比矩阵
 
-项目页里点到、但**尚未收录**的替代方案。
-
 | 选项 | 是否收录 | 一句话取舍 |
 |---|---|---|
-| [LiteRT-LM](litert-lm.zh.md) | ✅ | Google 维护，一套运行时横跨 Android/iOS/桌面/边缘，Gemma 甜点区，支持 NPU——但目录以 Gemma 为中心、pre-1.0 变动、Bazel/C++ 构建、`.litertlm` 锁定。 |
-| llama.cpp | 未收录 | 模型/量化支持（GGUF）广泛得多、无处不在——但构建更复杂，没有单一官方移动 SDK。 |
-| MLX / mlx-lm (Apple) | 未收录 | 在 Apple silicon 上快、体验干净——但仅限 Apple，无法跨平台。 |
-| MediaPipe LLM Inference API | 未收录 | 更高层、即插即用（`.task` 模型）更易上手——但底层控制更少，与 LiteRT-LM 重叠/被取代。 |
-| ONNX Runtime (+ GenAI/Mobile) | 未收录 | 厂商中立、众多格式/后端——但更重、对最新小型移动 LLM 调优不足。 |
+| [LiteRT-LM](litert-lm.zh.md) | ✅ | 想用 Google LiteRT 运行时在手机/笔记本/边缘(CPU/GPU/NPU)上跑 Gemma 级 LLM 时用它。 |
+| [BitNet](bitnet.zh.md) | ✅ | 当你要在 x86/ARM 笔记本上离线、快速、低能耗地用 CPU 跑原生三值(1.58-bit) LLM 时使用。 |
+| [Google AI Edge Gallery](ai-edge-gallery.zh.md) | ✅ | 当你想在真机上先体验和基准测试端侧 Gemma LLM、为是否自建集成去风险时用它。 |
+| [TimesFM](timesfm.zh.md) | ✅ | 当你需要在本地 CPU/GPU 上对时间序列做零样本预测、又不想逐数据集训练时用它。 |
+| llama.cpp / Ollama / MLC LLM / ONNX Runtime | 未收录 | 各页对比里点到的其他端侧推理运行时。 |
 
 ## 什么该放这里
 
-主要职责是在**边缘/消费级硬件上本地推理**的运行时与编排层。不包括云端推理（vLLM、TGI），不包括训练框架。
+面向**本地/端侧推理**(手机、笔记本、边缘、CPU)的运行时与模型。不含云端训练(见 `llm-training`),不含 RAG 检索(见 `rag-retrieval`)。

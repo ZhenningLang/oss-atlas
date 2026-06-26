@@ -1,0 +1,69 @@
+---
+name: copyparty
+slug: copyparty
+repo: https://github.com/9001/copyparty
+category: document-management
+tags: [file-server, file-sharing, webdav, ftp, sftp, resumable-upload, dedup, media-indexer, self-hosted, mit]
+language: Python
+license: MIT
+maturity: v1.20.16, active (2026-05); ~45k stars [未验证]
+last_verified: 2026-06-26
+type: app
+---
+
+# copyparty
+
+A single-file, zero-required-dependency portable file server with accelerated resumable uploads, dedup, and a media indexer — reachable over HTTP, WebDAV, FTP/FTPS, SFTP, TFTP, and SMB.
+
+## When to use
+
+You're the homelab person for a small team, and you keep needing a place to *drop files* — share a folder of scans with a colleague, let a non-technical client upload a 4 GB video that has to survive a flaky connection, expose an archive over WebDAV so a phone can browse it, and have FTP/SFTP available for the one legacy device that only speaks FTP. Spinning up a full DMS or an S3 stack for this is overkill, and you don't want to install a database and three services just to move bytes around. You copy one file — `copyparty-sfx.py` (or run the Docker image) — point it at a directory, define a couple of per-volume read/write users, and you have a browser-accessible server with a real upload UI, resumable multithreaded uploads (`up2k`/`u2c`) that shrug off dropped connections, and content-matching dedup so re-uploads don't bloat the disk. The built-in indexer makes the tree searchable by name, path, date, size, and audio tags, and renders thumbnails for images/video/audio — so for a pile of media and loose files it's "stand it up and forget it," with no Postgres, no Redis, no Angular build.
+
+It also shines as the *ingest and transport* layer in front of something heavier: copyparty's event hooks and file-parser plugins can fire a program on each upload (move it, transcode it, or hand it to a real DMS), so you can use it as the friendly upload front door while a downstream system does OCR and archival.
+
+## When NOT to use
+
+- **You actually need a document-management system (OCR + full-text content search).** copyparty searches *filenames, paths, dates, sizes, and audio (ID3) tags* — it does **not** OCR scanned paperwork and does **not** full-text-index document *contents*. For "find the invoice that mentions account 1234," use [paperless-ngx](paperless-ngx.md) or [Twake Drive](twake-drive.md), not copyparty.
+- **You want collaborative document editing / Office co-authoring.** It serves and (for Markdown) lightly edits files; it is not a Drive/Office-suite replacement.
+- **You want a hardened internet-facing service by default.** It's powerful and exposes many protocols; the SMB server is explicitly labeled unsafe/slow and "not recommended for wan," and a broad protocol surface on the public internet wants a reverse proxy, TLS, and care. It is not a turnkey secure cloud.
+- **You need folder *sync* (two-way, Dropbox-style).** The maintainer states full sync will never be supported — it's upload/download/serve, not a sync engine.
+- **You need lifecycle/retention, approvals, e-signatures, versioning, or audit trails.** None of that is the goal; the project's stated philosophy is "do all the things, and do an *okay* job," prioritizing breadth over depth.
+- **You need fine-grained, per-document multi-tenant privacy.** Permissions are per-volume / per-user (read/write/move/delete/admin/dotfiles), not per-document ACLs.
+
+## Comparison
+
+| Alternative | In index | Tradeoff |
+|---|---|---|
+| [paperless-ngx](paperless-ngx.md) | ✅ | A real DMS: OCR + full-text content search + auto-tagging of scanned paperwork, but a multi-container Django/Postgres/Redis stack. copyparty has zero of that OCR/FTS pipeline; it's a far lighter file server, not a document archive. |
+| [Twake Drive](twake-drive.md) | ✅ | Collaborative drive with document editing, sharing, and a richer permission model; heavier to run. copyparty is single-file file-transfer/serving with no co-editing or per-document ACLs. |
+| Nextcloud | not indexed | Full self-hosted "cloud" (files, sync clients, apps, sharing, optional OCR via add-ons) but a heavy PHP/DB/Redis stack. copyparty is dramatically lighter and faster to stand up, with no two-way sync and no app ecosystem. |
+| Seafile | not indexed | Block-based sync-and-share with strong delta sync and client apps. copyparty wins on portability/zero-deps and protocol breadth (WebDAV/FTP/SFTP/TFTP/SMB) but has no real sync. |
+| Filebrowser | not indexed | Comparable lightweight single-binary web file manager (Go). Narrower protocol set and no `up2k`-style resumable accelerated uploads or media indexer; simpler to reason about. |
+| MinIO | not indexed | S3-compatible object storage for programmatic/app access. Different shape entirely — copyparty is a human-facing multi-protocol file server, not an object store. |
+
+## Tech stack
+
+- **Language:** Python (server). Browser UI is vanilla JS/HTML/CSS (`up2k` client-side uploader).
+- **Storage/index:** plain filesystem; a per-volume SQLite database (`.hist/up2k.db`) for the file index / dedup / tags.
+- **Protocols:** HTTP(S), WebDAV, FTP(S), SFTP, TFTP, SMB/CIFS; zeroconf (mDNS/SSDP) discovery.
+- **Optional accelerators:** Pillow / pyvips / FFmpeg (thumbnails + transcode), Mutagen / FFprobe (audio tags), libraw/rawpy (RAW thumbnails). All optional — the core server runs on Python alone.
+- **Extensibility:** event hooks and file-parser plugins (run external programs on upload to add tags or trigger downstream processing).
+
+## Dependencies
+
+- **Required:** just a Python interpreter. The project states "server only needs Python (2 or 3), all dependencies optional." Modern Python 3 recommended; legacy Python 2 reportedly still runs `[未验证]`.
+- **Optional (feature-gated):** Pillow / pyvips / FFmpeg for thumbnails & media transcoding; Mutagen for audio metadata; pyvips/libvips, rawpy/libraw for extra image formats.
+- **Deployment artifacts:** `copyparty-sfx.py` (single self-contained file), Windows `copyparty.exe`, official Docker images, and packages on Arch / Homebrew / NixOS.
+- **Infra:** no external database, message broker, or other service required — it is genuinely self-contained.
+
+## Ops difficulty
+
+**Low** for the common case: copy one file (or `docker run`), pass a few flags or a small config to define volumes and users, and it's up — no DB to provision, no migrations, no extra services. Difficulty rises to **low-to-medium** when you (a) enable the optional media/thumbnail/transcode stack (now you're managing FFmpeg/Pillow versions), or (b) expose it to the internet, where the broad protocol surface (WebDAV/FTP/SFTP/TFTP/SMB) means you own TLS, a reverse proxy, real-IP handling, and locking down the riskier protocols (SMB is flagged unsafe for WAN). You own backups of the served directories and the `.hist` index.
+
+## Caveats (unverified)
+
+- [未验证] Star count ~45.4k from a single `gh repo view` fetch (2026-06-26); GitHub stars are unreliable and date-sensitive — treat as indicative only.
+- [未验证] Latest release v1.20.16 ("s6-ready") published 2026-05-26 per the GitHub API this session; repo last pushed 2026-06-16. Not archived, actively maintained.
+- [推断] "Single-file / zero required dependencies" reflects the project's own framing (`copyparty-sfx.py` + "all dependencies optional"); the exact minimum Python 3 version for the current release was not pinned in the fetched docs — verify against the running release before relying on a specific interpreter version.
+- [未验证] Search is filename/path/date/size + audio-tag based; no OCR and no document full-text-content indexing were found in the README — confirm against current docs if content search is a hard requirement.
+- [未验证] File-parser plugins / event hooks can run external programs to add custom tags or trigger downstream processing, but the breadth of out-of-the-box (non-audio) media tagging — e.g. EXIF, video resolution — was not clearly enumerated in the fetched docs.
