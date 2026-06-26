@@ -34,6 +34,13 @@ The fastest path is the `add-project` skill (`.claude/skills/add-project/`). By 
 Use the `sync-entry` skill (`.claude/skills/sync-entry/`): it re-verifies facts against the
 live repo when an entry is older than the staleness threshold, and flags abandoned projects.
 
+## Keeping the taxonomy tidy
+
+As the index grows, categories can drift (imbalanced, overlapping, miscategorized pages, tag
+drift). Use the `refactor-index` skill (`.claude/skills/refactor-index/`) to reorganize safely:
+it is additive-first and minimal-churn (renaming/deleting a category is a one-way-door), uses
+`git mv` to preserve history, repairs links, and ends on a clean `tools/lint.py`.
+
 ## Before you commit
 
 ```bash

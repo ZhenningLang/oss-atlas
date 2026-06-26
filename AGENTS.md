@@ -54,7 +54,8 @@ The schema is the contract: **`tools/schema.md`**. In short:
   run the linter.
 
 Skills: `.claude/skills/add-project/` (author a new entry), `.claude/skills/sync-entry/`
-(re-verify a stale entry).
+(re-verify a stale entry), `.claude/skills/refactor-index/` (reorganize the taxonomy when the
+directory gets chaotic — imbalanced/overlapping categories, miscategorized pages, tag drift).
 
 ## Inclusion criteria (anti-sprawl)
 
