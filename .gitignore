@@ -10,3 +10,4 @@ __pycache__/
 
 # Node (only used transiently by markdownlint in CI)
 node_modules/
+memory_telemetry.jsonl
