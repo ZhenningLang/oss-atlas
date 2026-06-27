@@ -12,8 +12,12 @@ Author one conformant selection page. The contract is `tools/schema.md`; read it
 
 ## Procedure
 
-1. **Gate on inclusion criteria** (AGENTS.md): only add if you actually evaluated it AND a real
-   selection question exists (substitutes worth comparing). If not, stop and say why.
+1. **Gate on inclusion criteria** (AGENTS.md / schema §4 — keep the bar wide). The unit is a
+   **git repository**. Add it if it is a real, non-empty open-source repo and not an exact
+   duplicate of one already indexed — **across any domain, with no requirement that a substitute
+   already exists in the index** (the `## Comparison` may cite `未收录` alternatives). Do not
+   reject a valid long-tail repo for lack of in-index peers. Only stop if it is a non-repo (hosted
+   SaaS, landing page, article, docs site), an exact duplicate, or contentless.
 
 2. **Research live.** Fetch the GitHub repo, README, releases, docs. Separate **facts**
    (stars, license, language, deps, latest version — each dated) from **judgment**. Anything you

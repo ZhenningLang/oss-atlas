@@ -6,7 +6,7 @@ category: llm-training
 tags: [fine-tuning, lora, qlora, triton-kernels, quantization, grpo, single-gpu, vram-efficient]
 language: Python
 license: Apache-2.0
-maturity: "Beta 发布（v0.1.x-beta 线，2026-06）；非常活跃"
+maturity: "Beta releases (v0.1.x-beta line, 2026-06); very active"
 last_verified: 2026-06-26
 type: tool
 ---

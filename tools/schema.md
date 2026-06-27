@@ -45,9 +45,11 @@ Each project is **two files** in the same category dir:
 - `<slug>.md` — the **English** page (canonical; what an agent reads by default)
 - `<slug>.zh.md` — the **Chinese** page (same content, monolingual)
 
-The linter requires both to exist (parity). Frontmatter is byte-identical across the pair
-(facts are language-neutral); only the body language differs. `slug` in frontmatter is the
-project slug for **both** files (e.g. `beads`), even though the Chinese file is `beads.zh.md`.
+The linter requires both to exist (parity) **and that their frontmatter is identical** — facts are
+language-neutral, so do not localize them (e.g. keep `maturity` in one language across the pair).
+The linter compares the parsed key/values and ERRORs on any drift. Only the body language differs.
+`slug` in frontmatter is the project slug for **both** files (e.g. `beads`), even though the Chinese
+file is `beads.zh.md`. The linter also requires each page to **open with an H1** (`# <name>`).
 
 ### Required body sections (exact H2 headings)
 
@@ -68,7 +70,8 @@ required `##` sections below — **which ones are required depends on `type`** (
 only the first three (`When to use / When NOT to use / Comparison`) — a bag of prompts has no
 meaningful tech-stack / dependencies / ops, so those three are omitted rather than padded with
 "N/A". All other types (`tool/library/app/framework/service/model`) require all six. The linter
-enforces the right set per `type`.
+enforces the right set per `type` — and for `skill-pack` it **ERRORs if any of the three forbidden
+sections is present** (omit, do not include them).
 
 **Caveats is required — it is the uncertainty ledger.** Every page ends with
 `## Caveats (unverified)` (EN) / `## 存疑（未验证）` (ZH): a bulleted list where each unverified or
@@ -94,6 +97,18 @@ filter); only "When to use" is narrative.
 - The `## Comparison` table compares against **real** substitute projects.
 - A row may reference a project **not yet indexed** — mark it `未收录` / `not indexed`. This is allowed and expected (the index grows over time); it keeps comparisons honest instead of dangling.
 - When a substitute *is* indexed, link it relatively: `[name](../<category>/<slug>.md)`.
+
+### Golden examples (reference these when writing a page)
+
+The linter checks shape, not quality. For the *negative-space* writing it can't enforce — a sharp
+`When NOT to use` and an honest `Comparison` — model new pages on these:
+
+- `categories/llm-training/unsloth.md` — `When NOT to use` covers single-GPU edge, multi-GPU
+  dispute, the commercial tier, workflow reproducibility, and version risk.
+- `categories/geospatial/qgis.md` — cleanly separates desktop GIS vs web map front-end vs server
+  SDI vs headless ETL vs proprietary formats vs plugin stability.
+- `categories/api-gateway/kong.md` — spells out PostgreSQL/DB-less, OSS vs Enterprise plugins,
+  service mesh, the Lua PDK, when it's not worth it at small scale, and the Cassandra removal.
 
 ## 3. Truth labeling (inherited discipline)
 
@@ -130,6 +145,10 @@ by dropping entries.)
 Routing splits by language at every node: `INDEX.md` (EN) links `.md` pages and child `INDEX.md`;
 `INDEX.zh.md` (ZH) links `.zh.md` pages and child `INDEX.zh.md`. The root `INDEX.md` /`INDEX.zh.md`
 link the top-level categories.
+
+**Every directory under `categories/` is a category node** and must contain both `INDEX.md` and
+`INDEX.zh.md`. The linter treats every dir as a node (it does **not** skip a dir that is missing its
+`INDEX`) — a dir with pages but no `INDEX` is an ERROR, not a silently-ignored subtree.
 
 **Self-balancing.** When a leaf category exceeds `MAX_FANOUT` project pages (default 12, env
 `OSS_ATLAS_MAX_FANOUT`), the linter emits an **overflow WARNING** — the signal to split it into

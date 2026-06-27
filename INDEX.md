@@ -1,7 +1,8 @@
 # oss-atlas — category route
 
-> Level 1 of 3. The master map an agent reads first. Pick a category by its "use when",
-> then open that category's `INDEX.md`, then a project page.
+> Recursive route root. The master map an agent reads first. Pick a category by its "use when",
+> then keep descending through each node's `INDEX.md` (the tree can be deep, not a fixed 3 levels)
+> until you reach a project page.
 > 中文索引：[INDEX.zh.md](INDEX.zh.md) · Full reading procedure: [AGENTS.md](AGENTS.md)
 
 ## Categories

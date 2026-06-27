@@ -321,8 +321,12 @@ added: non-repos (hosted SaaS, landing pages, articles), exact duplicates, empty
 [CONTRIBUTING.md](CONTRIBUTING.md) and [tools/schema.md](tools/schema.md).
 
 ```bash
-python3 tools/lint.py    # the only gate; no unit tests (it's a content repo)
+python3 tools/lint.py    # the structural gate; no unit tests (it's a content repo)
 ```
+
+Lint is a **structural** gate (frontmatter keys + bilingual parity, required/forbidden sections per
+`type`, H1, links, Caveats ledger, fanout) — not a **semantic** one. `lint clean` means the shape is
+right, not that the prose was reviewed for accuracy or selection quality.
 
 ## License
 

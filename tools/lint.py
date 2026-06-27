@@ -16,13 +16,22 @@ Model:
 Checks (ERROR = non-zero exit; WARNING = printed, exit still 0):
   - each page: required frontmatter keys + types, slug==base filename, category==parent dir,
     type in the allowed set, required body sections for its type+language, sibling parity
+  - each page starts with an H1 title (`# <name>`) -> ERROR if absent
+  - bilingual pair frontmatter is identical (facts are language-neutral) -> ERROR on any drift
+  - skill-pack pages must OMIT Tech stack / Dependencies / Ops difficulty (not pad them) -> ERROR if present
   - last_verified parses; staleness > STALE_DAYS -> WARNING
   - every page: a Caveats ledger section (## Caveats (unverified) / ## 存疑（未验证）) -> ERROR if absent
   - prose-region [未验证]/[推断] density > PROSE_LABEL_MAX -> WARNING (converge into the Caveats section)
-  - every category node has INDEX.md + INDEX.zh.md; pages/sub-categories linked from them
-  - recursive: sub-categories validated to any depth; root INDEX links the top categories
+  - every directory under categories/ is a category node: must have INDEX.md + INDEX.zh.md
+    (traversal is NOT gated on INDEX existence, so a dir missing its INDEX is reported, not skipped)
+  - pages/sub-categories linked from their node INDEX; root INDEX links the top categories
+  - recursive: sub-categories validated to any depth
   - leaf category with > MAX_FANOUT pages -> WARNING (self-balancing: split via refactor-index)
   - internal relative links resolve
+
+NOTE: this linter is a STRUCTURAL gate, not a semantic review. It cannot judge whether a
+"When to use" is a real User Story, whether a Comparison compares real substitutes, or whether
+prose is accurate — those stay human/agent judgment (see tools/schema.md).
 
 Pure stdlib. Usage:  python3 tools/lint.py [--root .]
 Env: OSS_ATLAS_STALE_DAYS (default 90), OSS_ATLAS_MAX_FANOUT (default 12),
@@ -161,9 +170,19 @@ def check_page(path: Path, category_dir: Path, rep: Report, today: dt.date) -> N
         except ValueError:
             rep.error(path, f"last_verified '{lv}' is not a valid YYYY-MM-DD date")
 
+    # H1 title: schema requires every page to open with `# <name>` (then a one-line TL;DR).
+    if not re.search(r"(?m)^#[ \t]+\S", text):
+        rep.error(path, "missing H1 title (`# <name>`) at the top of the page")
+
     for section in required_sections(ptype if ptype in ALLOWED_TYPES else "tool", zh):
         if not re.search(r"(?m)^" + re.escape(section) + r"\s*$", text):
             rep.error(path, f"missing required section: {section}")
+
+    # skill-pack pages must OMIT the extra sections, not pad them — forbid, don't just not-require.
+    if ptype in NO_EXTRA_TYPES:
+        for section in (EXTRA_ZH if zh else EXTRA_EN):
+            if re.search(r"(?m)^" + re.escape(section) + r"\s*$", text):
+                rep.error(path, f"skill-pack must omit (not include) section: {section}")
 
     # Caveats ledger (all types): the uncertainty list lives here, not sprinkled across the prose.
     cav_re = CAVEATS_RE_ZH if zh else CAVEATS_RE_EN
@@ -180,6 +199,14 @@ def check_page(path: Path, category_dir: Path, rep: Report, today: dt.date) -> N
     sibling = category_dir / (base + (".md" if zh else ZH_SUFFIX))
     if not sibling.exists():
         rep.error(path, f"missing {'English' if zh else 'Chinese'} sibling: {sibling.name}")
+    elif not zh:
+        # Frontmatter is facts (language-neutral) -> must be identical across the bilingual pair.
+        # Compare parsed key/value (tolerant of quoting/whitespace; catches real fact drift).
+        zh_fm = parse_frontmatter(sibling.read_text(encoding="utf-8"))
+        if zh_fm is not None and fm is not None:
+            drift = sorted(k for k in set(fm) | set(zh_fm) if fm.get(k) != zh_fm.get(k))
+            if drift:
+                rep.error(path, f"frontmatter drift vs {sibling.name} (must be identical): {drift}")
 
     for link in md_links(text):
         if link.startswith(("http://", "https://", "#", "mailto:")):
@@ -210,7 +237,10 @@ def walk_category(catdir: Path, rep: Report, today: dt.date) -> None:
     if n_en_pages > MAX_FANOUT:
         rep.warn(catdir, f"overflow: {n_en_pages} pages > MAX_FANOUT={MAX_FANOUT}; split into sub-categories (refactor-index)")
 
-    subcats = sorted(d for d in catdir.iterdir() if d.is_dir() and (d / INDEX_EN).exists())
+    # Treat EVERY non-hidden subdirectory as a category node — do NOT gate on INDEX.md existing,
+    # or a dir missing its INDEX (e.g. only INDEX.zh.md, or just pages) would be silently skipped.
+    # walk_category() reports the missing INDEX, so the subtree is inspected instead of dropped.
+    subcats = sorted(d for d in catdir.iterdir() if d.is_dir() and not d.name.startswith("."))
     for sub in subcats:
         if en_index.exists() and (sub / INDEX_EN).resolve() not in en_linked and sub.resolve() not in en_linked:
             rep.error(en_index, f"sub-category '{sub.name}' not linked from {INDEX_EN}")
@@ -272,7 +302,9 @@ def main() -> int:
         print("\n".join(rep.errors))
         return 1
 
-    top_categories = sorted(d for d in categories_dir.iterdir() if d.is_dir() and (d / INDEX_EN).exists())
+    # Every non-hidden dir under categories/ is a top-level category node (not gated on INDEX.md;
+    # see walk_category — a node missing its INDEX is reported, never skipped).
+    top_categories = sorted(d for d in categories_dir.iterdir() if d.is_dir() and not d.name.startswith("."))
     for cat in top_categories:
         walk_category(cat, rep, today)
 

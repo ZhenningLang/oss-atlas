@@ -19,8 +19,8 @@
 
 ## READ ROUTE — how an agent navigates (recursive tree)
 
-`categories/` is a **recursive tree** (≥3 levels; large categories split into sub-categories).
-Descend by `INDEX`; do not grep blindly.
+`categories/` is a **recursive tree** of arbitrary depth (not a fixed number of levels; large
+categories split into sub-categories). Descend by `INDEX`; do not grep blindly.
 
 ```
 INDEX.md                              ← root: top-level category route (中文: INDEX.zh.md)
@@ -86,7 +86,7 @@ ads); an exact duplicate of an already-indexed repo; or an empty/contentless rep
 bar — crowded fields are handled by the self-balancing tree (split into sub-categories), not by
 dropping entries.
 
-## Lint (the only gate — no tests)
+## Lint (the structural gate — no tests)
 
 This is a content repo with no runtime logic, so there are **no unit tests**. The structural
 linter is the quality gate:
@@ -97,6 +97,12 @@ python3 tools/lint.py
 
 ERROR = exit non-zero (CI fails). WARNING = printed (e.g. an entry is stale). Run it before
 committing. CI runs it on every PR (`.github/workflows/lint.yml`).
+
+**Lint is a *structural* gate, not a *semantic* review.** It enforces shape: frontmatter keys,
+bilingual pair + frontmatter parity, required/forbidden sections per `type`, H1, links, the Caveats
+ledger, fanout. It cannot judge whether `When to use` is a real User Story, whether `Comparison`
+compares real substitutes, or whether prose is accurate — `lint clean` ≠ content reviewed. Those
+remain agent/human judgment per `tools/schema.md`.
 
 ## Conventions
 

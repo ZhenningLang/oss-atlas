@@ -1,7 +1,7 @@
 # oss-atlas — 分类路由
 
-> 三级路由的第 1 级。Agent 先读这张总表，按「何时进这个分类」选分类，再进分类的 `INDEX.zh.md`，
-> 最后看项目页。
+> 递归路由根层。Agent 先读这张总表，按「何时进这个分类」选分类，再沿各节点的 `INDEX.zh.md`
+> 逐层下钻（树可以很深，不是固定三级），直到项目页。
 > English index: [INDEX.md](INDEX.md) · 完整读取流程见 [AGENTS.md](AGENTS.md)
 
 ## 分类

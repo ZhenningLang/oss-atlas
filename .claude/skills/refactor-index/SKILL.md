@@ -40,8 +40,8 @@ only what a signal justifies.
 - **Category overflow/imbalance** — `tools/lint.py` WARNs when a leaf exceeds `MAX_FANOUT` (the
   primary split signal); or a category has sat at 1 page for a long time (candidate to merge).
   ```bash
-  # pages per leaf category (recursive)
-  find categories -name '*.md' ! -name 'INDEX*' ! -name '*.zh.md' -printf '%h\n' | sort | uniq -c | sort -rn
+  # pages per leaf category (recursive; portable — BSD/macOS find has no -printf)
+  python3 -c "import collections,pathlib; c=collections.Counter(str(p.parent) for p in pathlib.Path('categories').rglob('*.md') if p.name not in ('INDEX.md','INDEX.zh.md') and not p.name.endswith('.zh.md')); [print(f'{n:4} {d}') for d,n in c.most_common()]"
   ```
 - **Overlapping / near-duplicate categories** — two categories whose "what belongs here" blurbs
   blur together; an agent wouldn't know which to pick. Read every `categories/*/INDEX.md` tail.
@@ -50,7 +50,8 @@ only what a signal justifies.
 - **Tag drift** — the same concept spelled differently across pages (`gplv3` vs `gpl-3`,
   `on-device-llm` vs `on-device`).
   ```bash
-  grep -h '^tags:' categories/*/*.md | sed 's/tags: *\[//; s/\]//' | tr ',' '\n' | sed 's/^ *//' | sort | uniq -c | sort -rn
+  # recursive over the whole tree (categories/*/*.md only sees one level deep)
+  grep -rh '^tags:' categories --include='*.md' | sed 's/tags: *\[//; s/\]//' | tr ',' '\n' | sed 's/^ *//' | sort | uniq -c | sort -rn
   ```
 - **Stale routing** — a category `INDEX.md` one-liner or comparison-matrix row that no longer
   matches the page (project moved, renamed, or its when-not changed).
