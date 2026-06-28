@@ -12,6 +12,7 @@
 | **code-review-graph** | Use it when an AI reviewer keeps burning context on a large repo and you want only the blast-radius files. | [→](code-review-graph.md) |
 | **PageIndex** | Use it when vector RAG returns similar-but-irrelevant chunks over a few long, structured documents needing auditable citations. | [→](pageindex.md) |
 | **Understand-Anything** | Use it when you want any codebase turned into an explorable, queryable knowledge graph for an agent — younger and less proven than graphify. | [→](understand-anything.md) |
+| **FAISS** | Use it when you need a fast in-process ANN vector index for embeddings — a library, not a managed vector DB. | [→](faiss.md) |
 
 ## Comparison matrix
 
@@ -22,6 +23,7 @@
 | [code-review-graph](code-review-graph.md) | ✅ | Use it when an AI reviewer keeps burning context on a large repo and you want only the blast-radius files. |
 | [PageIndex](pageindex.md) | ✅ | Use it when vector RAG returns similar-but-irrelevant chunks over a few long, structured documents needing auditable citations. |
 | [Understand-Anything](understand-anything.md) | ✅ | Code → explorable knowledge graph an agent can query; younger than graphify, with an unverified star count and egress boundary. |
+| [FAISS](faiss.md) | ✅ | Use it when you need a fast in-process ANN vector index for embeddings — a library, not a managed vector DB. |
 | Neo4j / LlamaIndex / LightRAG / Weaviate | 未收录 | Other graph/RAG retrieval stacks named across the pages. |
 
 ## What belongs here

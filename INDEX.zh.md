@@ -37,6 +37,9 @@
 | **media-download** | 通过 CLI 或库从流媒体站点下载音视频。 | [→](categories/media-download/INDEX.zh.md) |
 | **media-processing** | 解码/编码/转码/滤镜处理音视频(媒体框架与工具链)。 | [→](categories/media-processing/INDEX.zh.md) |
 | **llm-chat-ui** | 可自部署、跨多 LLM provider 的 AI 聊天客户端前端(单用户 / BYOK)。 | [→](categories/llm-chat-ui/INDEX.zh.md) |
+| **markdown-tools** | Markdown 解析、渲染与写作工具。 | [→](categories/markdown-tools/INDEX.zh.md) |
+| **pdf-tools** | 渲染、读取与处理 PDF 文件。 | [→](categories/pdf-tools/INDEX.zh.md) |
+| **workflow-orchestration** | 编写、调度并监控批处理数据/工作流管线（DAG 编排器）。 | [→](categories/workflow-orchestration/INDEX.zh.md) |
 
 ## 如何新增分类
 

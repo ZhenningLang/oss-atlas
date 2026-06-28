@@ -11,6 +11,7 @@
 | **Unsloth** | Triton-kernel-accelerated single-GPU LoRA/QLoRA/RL fine-tuning that trains 500+ open LLMs ~2x faster with large VRAM savings. | [→](unsloth.md) |
 | **ART (Agent Reinforcement Trainer)** | Train multi-step LLM agents on real tasks with GRPO reinforcement learning via a client-server loop, using RULER (LLM-as-judge) for zero-label reward generation. | [→](art.md) |
 | **Agent Lightning** | Microsoft RL/optimization trainer that improves agents built in any framework (LangChain, AutoGen, OpenAI SDK…) with near-zero code changes by decoupling agent execution from the training backend. | [→](agent-lightning.md) |
+| **Colossal-AI** | Use it when you must train/fine-tune large models across many GPUs with tensor/pipeline/ZeRO parallelism — overkill for single-GPU LoRA. | [→](colossalai.md) |
 
 ## Comparison matrix
 
@@ -20,6 +21,7 @@
 | [Unsloth](unsloth.md) | ✅ | Triton-kernel-accelerated single-GPU LoRA/QLoRA/RL fine-tuning that trains 500+ open LLMs ~2x faster with large VRAM savings. |
 | [ART (Agent Reinforcement Trainer)](art.md) | ✅ | Train multi-step LLM agents on real tasks with GRPO reinforcement learning via a client-server loop, using RULER (LLM-as-judge) for zero-label reward generation. |
 | [Agent Lightning](agent-lightning.md) | ✅ | Microsoft RL/optimization trainer that improves agents built in any framework (LangChain, AutoGen, OpenAI SDK…) with near-zero code changes by decoupling agent execution from the training backend. |
+| [Colossal-AI](colossalai.md) | ✅ | Use it when you must train/fine-tune large models across many GPUs with tensor/pipeline/ZeRO parallelism — overkill for single-GPU LoRA. |
 | axolotl / torchtune / HF TRL / verl | 未收录 | other fine-tuning / RL trainers named in the pages |
 
 ## What belongs here

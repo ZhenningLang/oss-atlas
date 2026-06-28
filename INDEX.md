@@ -38,6 +38,9 @@
 | **media-download** | Download video/audio from streaming sites via CLI or library. | [→](categories/media-download/INDEX.md) |
 | **media-processing** | Decode/encode/transcode/filter audio & video (media frameworks & toolchains). | [→](categories/media-processing/INDEX.md) |
 | **llm-chat-ui** | Self-deployable AI chat client front-ends over many LLM providers (single-user / BYOK). | [→](categories/llm-chat-ui/INDEX.md) |
+| **markdown-tools** | Markdown parsing, rendering, and authoring tools. | [→](categories/markdown-tools/INDEX.md) |
+| **pdf-tools** | Render, read, and manipulate PDF files. | [→](categories/pdf-tools/INDEX.md) |
+| **workflow-orchestration** | Author, schedule, and monitor batch data/workflow pipelines (DAG orchestrators). | [→](categories/workflow-orchestration/INDEX.md) |
 
 ## How to add a category
 

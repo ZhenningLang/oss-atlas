@@ -12,6 +12,7 @@
 | **code-review-graph** | 当 AI 评审在大仓库里反复烧上下文、你只想喂给它一次改动真正触及(blast-radius)的文件时用它。 | [→](code-review-graph.zh.md) |
 | **PageIndex** | 当向量 RAG 在少量长而有结构的文档上召回相似但不相关的块、且你需要可溯源引用时使用。 | [→](pageindex.zh.md) |
 | **Understand-Anything** | 当你想把任意代码库变成可探索、可提问的知识图谱给 agent 用时用它——比 graphify 更年轻、未经检验。 | [→](understand-anything.zh.md) |
+| **FAISS** | 当你需要一个快速的进程内 ANN 向量索引来检索 embedding 时用它——是库，不是托管向量数据库。 | [→](faiss.zh.md) |
 
 ## 对比矩阵
 
@@ -22,6 +23,7 @@
 | [code-review-graph](code-review-graph.zh.md) | ✅ | 当 AI 评审在大仓库里反复烧上下文、你只想喂给它一次改动真正触及(blast-radius)的文件时用它。 |
 | [PageIndex](pageindex.zh.md) | ✅ | 当向量 RAG 在少量长而有结构的文档上召回相似但不相关的块、且你需要可溯源引用时使用。 |
 | [Understand-Anything](understand-anything.zh.md) | ✅ | 把代码变成 agent 可查询的可探索知识图谱；比 graphify 年轻，star 数与数据外发边界均存疑。 |
+| [FAISS](faiss.zh.md) | ✅ | 当你需要一个快速的进程内 ANN 向量索引来检索 embedding 时用它——是库，不是托管向量数据库。 |
 | Neo4j / LlamaIndex / LightRAG / Weaviate | 未收录 | 各页对比里点到的其他图 / RAG 检索方案。 |
 
 ## 什么该放这里

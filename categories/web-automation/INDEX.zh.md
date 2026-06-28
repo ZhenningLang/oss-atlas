@@ -11,6 +11,7 @@
 | **Chrome DevTools MCP** | 当 agent 需要驱动并用 DevTools 检查真实 Chrome(性能 trace、网络、控制台、堆内存)时使用。 | [→](chrome-devtools-mcp.zh.md) |
 | **Cua** | 当 agent 需要在隔离 VM 沙箱里用视觉操作整台桌面系统(而非仅网页)时使用。 | [→](cua.zh.md) |
 | **Agent Browser** | 当 agent 需要靠 shell 命令通过 CDP 驱动真实 Chrome、用稳定元素引用而非 CSS 选择器操作网页时使用。 | [→](agent-browser.zh.md) |
+| **Selenium** | 当你需要跨浏览器、跨语言的 WebDriver 自动化时用它——现代单浏览器体验 Playwright/Cypress 更顺手。 | [→](selenium.zh.md) |
 
 ## 对比矩阵
 
@@ -20,7 +21,8 @@
 | [Chrome DevTools MCP](chrome-devtools-mcp.zh.md) | ✅ | 当 agent 需要驱动并用 DevTools 检查真实 Chrome(性能 trace、网络、控制台、堆内存)时使用。 |
 | [Cua](cua.zh.md) | ✅ | 当 agent 需要在隔离 VM 沙箱里用视觉操作整台桌面系统(而非仅网页)时使用。 |
 | [Agent Browser](agent-browser.zh.md) | ✅ | 当 agent 需要靠 shell 命令通过 CDP 驱动真实 Chrome、用稳定元素引用而非 CSS 选择器操作网页时使用。 |
-| Playwright / Puppeteer / Selenium | 未收录 | 各页对比里点到的更底层浏览器自动化库。 |
+| [Selenium](selenium.zh.md) | ✅ | 当你需要跨浏览器、跨语言的 WebDriver 自动化时用它——现代单浏览器体验 Playwright/Cypress 更顺手。 |
+| Playwright / Puppeteer | 未收录 | 各页对比里点到的更底层浏览器自动化库。 |
 
 ## 什么该放这里
 
