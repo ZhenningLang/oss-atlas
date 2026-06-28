@@ -1,0 +1,72 @@
+---
+name: Understand-Anything
+slug: understand-anything
+repo: https://github.com/Egonex-AI/Understand-Anything
+category: rag-retrieval
+tags: [knowledge-graph, code-intelligence, tree-sitter, agent-plugin, claude-code, semantic-search, codebase-onboarding]
+language: TypeScript
+license: MIT
+maturity: "v2.7.3 (2026-05), active (2026-06); ~68.8k stars claimed but unverified/suspicious for a young repo — flag, don't trust"
+last_verified: 2026-06-28
+type: tool
+---
+
+# Understand-Anything
+
+A TypeScript tool that turns any codebase (or knowledge base / docs folder) into an interactive, searchable knowledge graph an agent can query in plain English, installable as a plugin across Claude Code, Cursor, Copilot, Codex, Gemini CLI and more.
+
+## When to use
+
+You're a developer just dropped onto a large, unfamiliar repo — hundreds of thousands of lines, no architecture doc, the one person who knew it has left. Your AI assistant keeps grepping and re-reading half the tree to answer "where does request auth actually happen", "what would break if I change this model", "which service owns billing", and it still misses callers two hops away while burning your token budget. You want an *explorable* map you (and the agent) can interrogate, not another wall of raw file dumps. You run Understand-Anything's installer (or add it as a Claude Code plugin), point it at the repo, and it parses the tree with Tree-sitter into a navigable graph with plain-English node summaries and semantic search; from then on your agent asks the graph structural questions instead of blindly reading files, and you get a visual map to orient yourself during onboarding.
+
+It fits best when the same graph should serve *whatever agent you already use* — it ships as a native plugin/integration for Claude Code, Cursor, VS Code + Copilot, Codex, OpenCode, Gemini CLI and a long tail of others, so you wire it into an existing loop rather than building retrieval plumbing yourself. For privacy-sensitive or enterprise setups you can point the platform at a local model provider such as Ollama instead of a cloud API.
+
+## When NOT to use
+
+- **You want the more battle-tested code-graph sibling.** [graphify](graphify.md) does the same code→knowledge-graph job with a documented Python CLI + MCP server, 36 Tree-sitter grammars, Leiden community clustering, portable `graph.json`/`graph.html` outputs, and a Cypher export path — a more inspectable, more documented surface. Understand-Anything is younger and far less documented in the README; prefer graphify when you want a known quantity.
+- **You specifically need PR/diff-scoped review with blast-radius + CI.** [code-review-graph](code-review-graph.md) is purpose-built for "what does this change affect", risk-scored PR comments as a GitHub Action, and a local SQLite store with no code leaving your runner. Understand-Anything is a general explore/query tool, not a review-gate pipeline.
+- **Young, unproven, single-vendor.** Latest release v2.7.3 (2026-05), 7 releases, ~603 commits — a small history. The integration breadth is broad but the depth of each integration is unverified; treat it as early software and pin versions.
+- **Suspicious popularity / trust signal.** The claimed ~68.8k stars on a repo with ~603 commits is implausibly high for the history and should not be read as social proof — see Caveats. Do not pick this *because* of the star count.
+- **You need fully offline, deterministic, no-LLM extraction.** Plain-English summaries and "ask questions" imply an LLM backend; unless you run a local Ollama, that means API keys, cost, non-determinism, and sending code/doc contents to a model. The exact local-only boundary is unverified. [未验证]
+- **You're sending proprietary code you can't expose.** Confirm whether any step requires a hosted Egonex service or cloud model before pointing it at confidential repos; the README's `curl | bash` installer and integration model don't make the egress boundary obvious.
+- **Pure vector-RAG over prose/docs, no code graph.** If you want passage retrieval over long documents, [PageIndex](pageindex.md) (reasoning-over-ToC) is a better fit; if you want a real queryable graph DB to build on, use [FalkorDB](falkordb.md).
+
+## Comparison
+
+| Alternative | In index | Tradeoff |
+|---|---|---|
+| [graphify](graphify.md) | ✅ | Closest sibling: code/docs → queryable graph for agents, but a documented Python CLI + MCP server, 36 grammars, Leiden clustering, portable JSON/HTML/Cypher outputs. More inspectable and better-documented; Understand-Anything is TypeScript, plugin-first, and younger/thinner on docs. |
+| [code-review-graph](code-review-graph.md) | ✅ | Narrow code-review/blast-radius pipeline (AST→SQLite→MCP) with a risk-scoring CI Action and no-egress runner story. Understand-Anything is a general explore/query tool, not a PR-review gate. |
+| [PageIndex](pageindex.md) | ✅ | Reasoning-based hierarchical retrieval over *documents* (no code AST/call graph); different retrieval primitive — prose tree vs code/entity graph. |
+| [FalkorDB](falkordb.md) | ✅ | A real persistent property-graph DB (Redis module, OpenCypher, vector index) you build apps on; Understand-Anything is a turnkey extract-and-query tool, not a graph backend. |
+| Sourcegraph / SCIP | 未收录 | Industrial precise code intelligence (cross-repo, language servers, scale); heavier infra, not an agent-plugin-shaped drop-in. Understand-Anything is lighter and LLM-augmented but unproven. |
+
+## Tech stack
+
+- **Language:** TypeScript (~70.9%), with JavaScript (~15.8%), Python (~9.1%) and Astro (~2.5%) per GitHub language stats.
+- **Parsing:** Tree-sitter for static code parsing into a graph.
+- **Intelligence:** LLM integration for plain-English node summaries and natural-language querying; can target a local provider (Ollama) for privacy.
+- **Frontend:** a web/dashboard surface (Astro detected) for the interactive graph view.
+- **Build/test:** pnpm workspace; Vitest for tests.
+- **Distribution:** install script plus per-platform plugin integrations (Claude Code plugin marketplace, Cursor, Copilot, Codex, Gemini CLI, OpenCode, Copilot CLI, and others).
+
+## Dependencies
+
+- **Runtime:** a Node.js/TypeScript runtime (exact minimum version not confirmed from README).
+- **Install:** `curl -fsSL .../install.sh | bash` for most platforms; Claude Code via `/plugin marketplace add` — review the script before piping curl into bash, especially for confidential machines.
+- **LLM backend:** required for summaries and Q&A — a cloud model API (key + cost) or a local provider such as Ollama. The precise list of supported providers and whether any hosted Egonex service is required is unverified. [未验证]
+- **Host agent:** to use it in-loop you need one of the supported assistants (Claude Code, Cursor, Copilot, Codex, Gemini CLI, etc.) installed.
+
+## Ops difficulty
+
+**Low-to-medium, with unverified edges.** The advertised happy path is genuinely light: one install command (or a Claude Code plugin add), point it at a repo, get a graph and a query interface — no database or server described as mandatory for basic use. It rises to **medium** the moment you add an LLM backend (key management, per-query cost/latency, and code/doc contents leaving the machine unless you run Ollama locally), and the `curl | bash` install plus broad-but-shallow-documented integrations mean you should verify behavior on a throwaway repo first. The biggest *operational risk here is trust*, not infrastructure: an opaque install path, an unverified egress boundary, and a suspicious star signal mean treat this as unaudited early software, not a vetted dependency.
+
+## Caveats (unverified)
+
+- [未验证] **The ~68.8k star count is suspicious and unverified.** A repo with only ~603 commits, 7 releases, and a first-release history this short would not normally accumulate ~68.8k stars; the figure is implausible for the repo's age/activity and may be inflated or a data artifact. Do **not** treat it as social proof or a quality signal.
+- [未验证] v2.7.3 latest release dated 2026-05-19; ~5.7k forks, ~603 commits as of 2026-06 — metadata from the GitHub page at verification time, not independently audited.
+- [未验证] Whether a hosted Egonex-AI cloud service is required (vs. fully self-hosted with local Ollama) is **not confirmed** from the README; the privacy story ("point at Ollama") is stated but the default egress path and any mandatory backend are unverified. Confirm before sending proprietary code.
+- [未验证] Tech-stack details (Tree-sitter, pnpm, Vitest, Astro dashboard, language byte split) are read from the GitHub page/README and may shift release-to-release.
+- [未验证] The full list of "Claude Code, Cursor, Copilot, Codex, Gemini CLI, OpenCode, 10+ others" integrations is the project's own framing; depth/maturity of any single integration is unverified.
+- [推断] Being early (small commit/release history, single-vendor) implies churn in CLI surface, output format, and integration support between versions — pin versions and re-verify.
+- [推断] Classified as `tool` (an installable extract-and-query CLI/plugin with a real tech stack and ops surface), not a pure skill-pack.

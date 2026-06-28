@@ -1,0 +1,22 @@
+# observability
+
+> Category node. Dashboards, alerting, and visualization over metrics/logs/traces from many datasources.
+> ← back to [category route](../../INDEX.md) · 中文：[INDEX.zh.md](INDEX.zh.md)
+
+## Projects in this category
+
+| Project | Use when | Page |
+|---|---|---|
+| **Grafana** | Use it when you need one dashboard + alerting layer over Prometheus/Loki/Elasticsearch and other sources — it visualizes, it doesn't store. | [→](grafana.md) |
+
+## Comparison matrix
+
+| Option | Indexed | One-line tradeoff |
+|---|---|---|
+| [Grafana](grafana.md) | ✅ | Unified dashboard/alerting over many datasources; a visualization layer, not a datastore (AGPL-3.0). |
+| [Telegraf](../dev-utilities/telegraf.md) | ✅ | Plugin-driven collection/routing agent that feeds the backends Grafana reads — different job. |
+| Kibana / Datadog / Apache Superset | 未收录 | Other dashboard/observability/BI stacks named across the pages. |
+
+## What belongs here
+
+Tools whose primary job is **visualizing and alerting** on metrics/logs/traces from datasources you already run. Not collection agents (see `dev-utilities` → Telegraf), not SQL/BI analytics (see `data-visualization`).

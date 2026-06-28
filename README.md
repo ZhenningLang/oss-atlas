@@ -100,6 +100,7 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **Mem0** | Use it when your LLM agent must remember users across sessions without bloating the prompt context. | Apache-2.0 | [EN](categories/agent-memory/mem0.md) · [中](categories/agent-memory/mem0.zh.md) |
 | **Memori** | Use it when you want LLM-agnostic persistent agent memory captured by wrapping your existing client. | Apache-2.0 | [EN](categories/agent-memory/memori.md) · [中](categories/agent-memory/memori.zh.md) |
 | **Claude Subconscious** | Use it when you want a background Letta agent to give Claude Code cross-session memory via hooks. | MIT | [EN](categories/agent-memory/claude-subconscious.md) · [中](categories/agent-memory/claude-subconscious.zh.md) |
+| **claude-mem** | Use it when your coding agent loses context across sessions and you want local hook/MCP-captured memory compressed and injected back in. | Apache-2.0 | [EN](categories/agent-memory/claude-mem.md) · [中](categories/agent-memory/claude-mem.zh.md) |
 
 ### deep-research
 
@@ -126,6 +127,7 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **graphify** | Use it when an agent needs to query a whole repo's code, schemas and docs as a knowledge graph instead of grepping. | MIT | [EN](categories/rag-retrieval/graphify.md) · [中](categories/rag-retrieval/graphify.zh.md) |
 | **code-review-graph** | Use it when an AI reviewer keeps burning context on a large repo and you want only the blast-radius files. | MIT | [EN](categories/rag-retrieval/code-review-graph.md) · [中](categories/rag-retrieval/code-review-graph.zh.md) |
 | **PageIndex** | Use it when vector RAG returns similar-but-irrelevant chunks over a few long, structured documents needing auditable citations. | MIT | [EN](categories/rag-retrieval/pageindex.md) · [中](categories/rag-retrieval/pageindex.zh.md) |
+| **Understand-Anything** | Use it when you want any codebase turned into an explorable, queryable knowledge graph for an agent — younger and less proven than graphify. | MIT | [EN](categories/rag-retrieval/understand-anything.md) · [中](categories/rag-retrieval/understand-anything.zh.md) |
 
 ### llm-eval
 
@@ -277,6 +279,54 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **Qiushi-Skill** | A methodology skill pack arming a coding agent with "seek truth from facts" plus nine dialectical-materialist thinking tools (contradiction analysis, investigation-first, practice-cognition, etc.), installable across Claude Code/Cursor/Codex/OpenCode via an npx installer. | MIT | [EN](categories/agent-skill-collections/personal-collections/qiushi-skill.md) · [中](categories/agent-skill-collections/personal-collections/qiushi-skill.zh.md) |
 | **shaping-skills** | Ryan Singer's personal Claude Code skill pack that brings Shape Up "shaping" — problem framing, breadboarding, and framing/kickoff docs — into your coding agent so the AI helps define what to build before any code is written. | NOASSERTION | [EN](categories/agent-skill-collections/personal-collections/shaping-skills.md) · [中](categories/agent-skill-collections/personal-collections/shaping-skills.zh.md) |
 | **TÂCHES CC Resources** | A personal, opinionated Claude Code bundle from TÂCHES (glittercowboy): ~27 slash commands, 9 skills (mostly meta-generators for building new commands/skills/subagents/hooks/MCP servers), 3 auditor subagents, and hooks — installable as one marketplace plugin. | MIT | [EN](categories/agent-skill-collections/personal-collections/taches-cc-resources.md) · [中](categories/agent-skill-collections/personal-collections/taches-cc-resources.zh.md) |
+
+### observability
+
+| Project | Use when | License | Page |
+|---|---|---|---|
+| **Grafana** | Use it when you need one dashboard + alerting layer over Prometheus/Loki/Elasticsearch and other sources — it visualizes, it doesn't store. | AGPL-3.0 | [EN](categories/observability/grafana.md) · [中](categories/observability/grafana.zh.md) |
+
+### data-visualization
+
+| Project | Use when | License | Page |
+|---|---|---|---|
+| **Apache Superset** | Use it when you want self-hosted SQL BI dashboards and exploration over a warehouse — not infra metrics/observability. | Apache-2.0 | [EN](categories/data-visualization/superset.md) · [中](categories/data-visualization/superset.zh.md) |
+
+### ocr
+
+| Project | Use when | License | Page |
+|---|---|---|---|
+| **Tesseract** | Use it when you need offline, embeddable OCR over clean printed text in 100+ languages — not wild photos or handwriting. | Apache-2.0 | [EN](categories/ocr/tesseract.md) · [中](categories/ocr/tesseract.zh.md) |
+
+### document-parsing
+
+| Project | Use when | License | Page |
+|---|---|---|---|
+| **Docling** | Use it when you must parse messy PDF/DOCX/PPTX into clean structured Markdown/JSON for RAG ingestion — a parser, not a DMS. | MIT | [EN](categories/document-parsing/docling.md) · [中](categories/document-parsing/docling.zh.md) |
+
+### diagramming
+
+| Project | Use when | License | Page |
+|---|---|---|---|
+| **Mermaid** | Use it when you want diagrams as version-controlled plain text (flowchart/sequence/ER) rendered in Markdown and docs — not pixel-precise layouts. | MIT | [EN](categories/diagramming/mermaid.md) · [中](categories/diagramming/mermaid.zh.md) |
+
+### media-download
+
+| Project | Use when | License | Page |
+|---|---|---|---|
+| **youtube-dl** | Use it when you need a battle-tested CLI/library to download video & audio from YouTube and 1000+ sites — but prefer the active yt-dlp fork for hot sites. | Unlicense | [EN](categories/media-download/youtube-dl.md) · [中](categories/media-download/youtube-dl.zh.md) |
+
+### media-processing
+
+| Project | Use when | License | Page |
+|---|---|---|---|
+| **FFmpeg** | Use it when you must decode/encode/transcode/filter virtually any audio or video in a pipeline — mind the LGPL→GPL build trap. | LGPL-2.1-or-later | [EN](categories/media-processing/ffmpeg.md) · [中](categories/media-processing/ffmpeg.zh.md) |
+
+### llm-chat-ui
+
+| Project | Use when | License | Page |
+|---|---|---|---|
+| **NextChat** | Use it when you want a private, self-deployable multi-provider AI chat UI across web/desktop/mobile — not a multi-user RBAC team platform. | MIT | [EN](categories/llm-chat-ui/nextchat.md) · [中](categories/llm-chat-ui/nextchat.zh.md) |
 
 
 Categories follow the tree in [INDEX.md](INDEX.md).

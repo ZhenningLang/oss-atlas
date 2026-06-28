@@ -29,6 +29,14 @@
 | **captcha** | CAPTCHA / 机器人检测挑战(工作量证明、点击、行为式)。 | [→](categories/captcha/INDEX.zh.md) |
 | **ml-research** | 小而自洽的 ML 研究 demo 与参考实现。 | [→](categories/ml-research/INDEX.zh.md) |
 | **agent-skill-collections** | 成体系的 agent 技能、提示词、subagent 人设与 harness 配置合集——按用途领域拆分。 | [→](categories/agent-skill-collections/INDEX.zh.md) |
+| **observability** | 在多数据源的指标/日志/追踪之上做看板、告警与可视化。 | [→](categories/observability/INDEX.zh.md) |
+| **data-visualization** | 在 SQL 数据仓库之上自托管的 BI / 数据探索看板。 | [→](categories/data-visualization/INDEX.zh.md) |
+| **ocr** | 光学字符识别引擎——图像/扫描件转文本。 | [→](categories/ocr/INDEX.zh.md) |
+| **document-parsing** | 把文档(PDF/DOCX/…)解析成结构化 Markdown/JSON,供 gen-AI 消费。 | [→](categories/document-parsing/INDEX.zh.md) |
+| **diagramming** | 从文本生成图表(diagrams-as-code),用于 Markdown、文档和 Web。 | [→](categories/diagramming/INDEX.zh.md) |
+| **media-download** | 通过 CLI 或库从流媒体站点下载音视频。 | [→](categories/media-download/INDEX.zh.md) |
+| **media-processing** | 解码/编码/转码/滤镜处理音视频(媒体框架与工具链)。 | [→](categories/media-processing/INDEX.zh.md) |
+| **llm-chat-ui** | 可自部署、跨多 LLM provider 的 AI 聊天客户端前端(单用户 / BYOK)。 | [→](categories/llm-chat-ui/INDEX.zh.md) |
 
 ## 如何新增分类
 

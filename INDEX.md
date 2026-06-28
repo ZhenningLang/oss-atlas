@@ -30,6 +30,14 @@
 | **captcha** | CAPTCHA / bot-detection challenges (proof-of-work, click, behavioral). | [→](categories/captcha/INDEX.md) |
 | **ml-research** | Small, self-contained ML research demos and reference implementations. | [→](categories/ml-research/INDEX.md) |
 | **agent-skill-collections** | Curated collections of agent skills, prompts, subagent personas, and harness configs — split by domain. | [→](categories/agent-skill-collections/INDEX.md) |
+| **observability** | Dashboards, alerting, and visualization over metrics/logs/traces from many datasources. | [→](categories/observability/INDEX.md) |
+| **data-visualization** | Self-hosted BI / data-exploration dashboards over SQL warehouses. | [→](categories/data-visualization/INDEX.md) |
+| **ocr** | Optical character recognition engines — image/scan to text. | [→](categories/ocr/INDEX.md) |
+| **document-parsing** | Parse/convert documents (PDF/DOCX/…) into structured Markdown/JSON for gen-AI ingestion. | [→](categories/document-parsing/INDEX.md) |
+| **diagramming** | Generate diagrams from text (diagrams-as-code) for Markdown, docs, and the web. | [→](categories/diagramming/INDEX.md) |
+| **media-download** | Download video/audio from streaming sites via CLI or library. | [→](categories/media-download/INDEX.md) |
+| **media-processing** | Decode/encode/transcode/filter audio & video (media frameworks & toolchains). | [→](categories/media-processing/INDEX.md) |
+| **llm-chat-ui** | Self-deployable AI chat client front-ends over many LLM providers (single-user / BYOK). | [→](categories/llm-chat-ui/INDEX.md) |
 
 ## How to add a category
 
