@@ -14,6 +14,8 @@
 | **OpenZL** | Use it when you must squeeze terabytes of one highly structured/numeric format better than generic zstd. | [→](openzl.md) |
 | **Certbot** | Use it when a sysadmin must auto-provision & renew free Let's Encrypt TLS certs — though reverse proxies' built-in auto-TLS often makes it redundant. | [→](certbot.md) |
 | **tqdm** | Use it when you want a fast, low-overhead progress bar for Python loops/CLI/notebooks. | [→](tqdm.md) |
+| **SlimToolkit** | Use it when you want to auto-minify & harden a bloated container image without rewriting the Dockerfile — beware it can strip dynamically-loaded files. | [→](slim.md) |
+| **Faker (faker-js)** | Use it when you need realistic fake/mock data (names, addresses, finance…) for tests and seeding in JS/TS. | [→](faker-js.md) |
 
 ## Comparison matrix
 
@@ -26,6 +28,8 @@
 | [OpenZL](openzl.md) | ✅ | Use it when you must squeeze terabytes of one highly structured/numeric format better than generic zstd. |
 | [Certbot](certbot.md) | ✅ | Use it when a sysadmin must auto-provision & renew free Let's Encrypt TLS certs — though reverse proxies' built-in auto-TLS often makes it redundant. |
 | [tqdm](tqdm.md) | ✅ | Use it when you want a fast, low-overhead progress bar for Python loops/CLI/notebooks. |
+| [SlimToolkit](slim.md) | ✅ | Use it when you want to auto-minify & harden a bloated container image without rewriting the Dockerfile — beware it can strip dynamically-loaded files. |
+| [Faker (faker-js)](faker-js.md) | ✅ | Use it when you need realistic fake/mock data (names, addresses, finance…) for tests and seeding in JS/TS. |
 
 ## What belongs here
 

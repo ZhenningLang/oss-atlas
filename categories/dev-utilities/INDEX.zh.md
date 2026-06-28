@@ -14,6 +14,8 @@
 | **OpenZL** | 当你要把 TB 级的某种高度结构化/数值格式压得比通用 zstd 更狠时使用。 | [→](openzl.zh.md) |
 | **Certbot** | 当系统管理员要自动签发并续期免费 Let's Encrypt TLS 证书时用它——不过反向代理自带的自动 TLS 常让它显得多余。 | [→](certbot.zh.md) |
 | **tqdm** | 当你想给 Python 循环/CLI/notebook 加一个快速、低开销的进度条时用它。 | [→](tqdm.zh.md) |
+| **SlimToolkit** | 当你想在不重写 Dockerfile 的情况下自动瘦身并加固臃肿的容器镜像时用它——注意它可能删掉运行时动态加载的文件。 | [→](slim.zh.md) |
+| **Faker (faker-js)** | 当你需要在 JS/TS 里生成逼真的假/mock 数据(姓名、地址、金融…)用于测试和填充时用它。 | [→](faker-js.zh.md) |
 
 ## 对比矩阵
 
@@ -26,6 +28,8 @@
 | [OpenZL](openzl.zh.md) | ✅ | 当你要把 TB 级的某种高度结构化/数值格式压得比通用 zstd 更狠时使用。 |
 | [Certbot](certbot.zh.md) | ✅ | 当系统管理员要自动签发并续期免费 Let's Encrypt TLS 证书时用它——不过反向代理自带的自动 TLS 常让它显得多余。 |
 | [tqdm](tqdm.zh.md) | ✅ | 当你想给 Python 循环/CLI/notebook 加一个快速、低开销的进度条时用它。 |
+| [SlimToolkit](slim.zh.md) | ✅ | 当你想在不重写 Dockerfile 的情况下自动瘦身并加固臃肿的容器镜像时用它——注意它可能删掉运行时动态加载的文件。 |
+| [Faker (faker-js)](faker-js.zh.md) | ✅ | 当你需要在 JS/TS 里生成逼真的假/mock 数据(姓名、地址、金融…)用于测试和填充时用它。 |
 
 ## 什么该放这里
 

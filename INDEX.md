@@ -46,6 +46,8 @@
 | **im-automation** | Instant-messaging bots & automation (WeChat and other IM platforms). | [→](categories/im-automation/INDEX.md) |
 | **web-ui** | Front-end UI/UX libraries — product tours, onboarding, interface widgets. | [→](categories/web-ui/INDEX.md) |
 | **proxy-pool** | Self-hosted rotating proxy-IP pools for web scraping. | [→](categories/proxy-pool/INDEX.md) |
+| **debugging-proxy** | HTTP(S)/WebSocket debugging proxies — capture, inspect, rewrite, and mock traffic. | [→](categories/debugging-proxy/INDEX.md) |
+| **web-scraping** | Fetch and extract content/structure from web pages — article extraction and HTML parsing. | [→](categories/web-scraping/INDEX.md) |
 
 ## How to add a category
 

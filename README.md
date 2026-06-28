@@ -98,6 +98,7 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **oh-my-claudecode** | You live in Claude Code and need staged multi-agent teams with model routing and tmux parallelism. | MIT | [EN](categories/agent-frameworks/oh-my-claudecode.md) · [中](categories/agent-frameworks/oh-my-claudecode.zh.md) |
 | **smolagents** | Use it when you want a tiny, transparent code-acting agent loop from Hugging Face — not a heavy production agent OS. | Apache-2.0 | [EN](categories/agent-frameworks/smolagents.md) · [中](categories/agent-frameworks/smolagents.zh.md) |
 | **Kilo Code** | Use it when you want an open, BYOK in-IDE (VS Code) coding agent with planning and modes — an end-user tool, not a library to build agents. | MIT | [EN](categories/agent-frameworks/kilocode.md) · [中](categories/agent-frameworks/kilocode.zh.md) |
+| **Parlant** | Use it when you build a customer-facing agent that must stay on-rails via behavioral guidelines — overkill for simple or free-form agents. | Apache-2.0 | [EN](categories/agent-frameworks/parlant.md) · [中](categories/agent-frameworks/parlant.zh.md) |
 
 ### agent-memory
 
@@ -175,6 +176,8 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **OpenZL** | Use it when you must squeeze terabytes of one highly structured/numeric format better than generic zstd. | BSD-3-Clause | [EN](categories/dev-utilities/openzl.md) · [中](categories/dev-utilities/openzl.zh.md) |
 | **Certbot** | Use it when a sysadmin must auto-provision & renew free Let's Encrypt TLS certs — though reverse proxies' built-in auto-TLS often makes it redundant. | Apache-2.0 | [EN](categories/dev-utilities/certbot.md) · [中](categories/dev-utilities/certbot.zh.md) |
 | **tqdm** | Use it when you want a fast, low-overhead progress bar for Python loops/CLI/notebooks. | MPL-2.0 AND MIT | [EN](categories/dev-utilities/tqdm.md) · [中](categories/dev-utilities/tqdm.zh.md) |
+| **SlimToolkit** | Use it when you want to auto-minify & harden a bloated container image without rewriting the Dockerfile — beware it can strip dynamically-loaded files. | Apache-2.0 | [EN](categories/dev-utilities/slim.md) · [中](categories/dev-utilities/slim.zh.md) |
+| **Faker (faker-js)** | Use it when you need realistic fake/mock data (names, addresses, finance…) for tests and seeding in JS/TS. | MIT | [EN](categories/dev-utilities/faker-js.md) · [中](categories/dev-utilities/faker-js.zh.md) |
 
 ### frontend-animation
 
@@ -214,6 +217,7 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **llm-circuit-finder** | Python toolkit that searches a GGUF model for contiguous reasoning-circuit layer blocks and duplicates them in the forward pass (no training, no weight edits), validated with built-in probes. | MIT | [EN](categories/ml-research/llm-circuit-finder.md) · [中](categories/ml-research/llm-circuit-finder.zh.md) |
 | **CLIP** | Use it when you need zero-shot image classification or image↔text retrieval embeddings — the original frozen reference; OpenCLIP has more checkpoints. | MIT | [EN](categories/ml-research/clip.md) · [中](categories/ml-research/clip.zh.md) |
 | **TaskMatrix** | Use it only to study an early visual-tool-routing agent (Visual ChatGPT) — abandoned since ~2024, don't build on it. | MIT | [EN](categories/ml-research/taskmatrix.md) · [中](categories/ml-research/taskmatrix.zh.md) |
+| **PyTorch-GAN** | Read it to learn GAN architectures from clean reference implementations — idle since 2024 and superseded by diffusion; not production code. | MIT | [EN](categories/ml-research/pytorch-gan.md) · [中](categories/ml-research/pytorch-gan.zh.md) |
 
 ### agent-skill-collections
 
@@ -265,6 +269,7 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **Agent Plugins for AWS** | AWS Labs' official collection of nine agent plugins (serverless, Amplify, SageMaker, migration, databases, deploy/cost-estimate, etc.) that teach Claude Code / Cursor / Codex to architect, deploy, and operate on AWS via marketplace-installed, trigger-phrase skills wired to AWS MCP servers. | Apache-2.0 | [EN](categories/agent-skill-collections/vendor-collections/aws-agent-plugins.md) · [中](categories/agent-skill-collections/vendor-collections/aws-agent-plugins.zh.md) |
 | **Claude Plugins (Official)** | Anthropic's first-party Claude Code plugin marketplace: a curated directory of installable plugins (commands, agents, skills, MCP servers) installed by name via the native /plugin system. | Apache-2.0 | [EN](categories/agent-skill-collections/vendor-collections/claude-plugins-official.md) · [中](categories/agent-skill-collections/vendor-collections/claude-plugins-official.zh.md) |
 | **MiniMax Skills** | MiniMax's official ~16-skill Agent Skills bundle (frontend/mobile/shader dev plus pdf/docx/xlsx/pptx, music & multimodal generation), installable into Claude Code and other coding agents via plugin marketplace. | MIT | [EN](categories/agent-skill-collections/vendor-collections/minimax-skills.md) · [中](categories/agent-skill-collections/vendor-collections/minimax-skills.zh.md) |
+| **Anthropic Knowledge Work Plugins** | Use it when you want Anthropic's official open-source plugins aimed at knowledge work (docs, comms, research) for Claude — very young. | Apache-2.0 | [EN](categories/agent-skill-collections/vendor-collections/knowledge-work-plugins.md) · [中](categories/agent-skill-collections/vendor-collections/knowledge-work-plugins.zh.md) |
 
 #### agent-skill-collections / subagent-collections
 
@@ -308,6 +313,7 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | Project | Use when | License | Page |
 |---|---|---|---|
 | **Tesseract** | Use it when you need offline, embeddable OCR over clean printed text in 100+ languages — not wild photos or handwriting. | Apache-2.0 | [EN](categories/ocr/tesseract.md) · [中](categories/ocr/tesseract.zh.md) |
+| **LaTeX-OCR (pix2tex)** | Use it when you must convert images of math equations into LaTeX (pix2tex) — equations only, idle/coasting, and VLMs may beat it. | MIT | [EN](categories/ocr/latex-ocr.md) · [中](categories/ocr/latex-ocr.zh.md) |
 
 ### document-parsing
 
@@ -366,6 +372,7 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | Project | Use when | License | Page |
 |---|---|---|---|
 | **Modular Platform (MAX + Mojo)** | Use it when you want a high-performance GPU/CPU inference platform (MAX) plus the Mojo systems language — accepting single-vendor lock-in and partly non-production licensing. | Apache-2.0 (mixed) | [EN](categories/llm-inference/modular.md) · [中](categories/llm-inference/modular.zh.md) |
+| **omlx** | Use it when you want a Mac (Apple Silicon) local LLM inference server on MLX with SSD-tiered KV caching — a young single-maintainer repo with a suspicious star count. | Apache-2.0 | [EN](categories/llm-inference/omlx.md) · [中](categories/llm-inference/omlx.zh.md) |
 
 ### task-queue
 
@@ -379,6 +386,8 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | Project | Use when | License | Page |
 |---|---|---|---|
 | **ItChat** | Study it only as legacy WeChat-bot code — abandoned, and the web protocol it relies on is defunct, so it mostly doesn't work. | MIT | [EN](categories/im-automation/itchat.md) · [中](categories/im-automation/itchat.zh.md) |
+| **WeChatPlugin-MacOS** | Avoid for current WeChat — a macOS WeChat.app binary tweak that breaks on every WeChat update and is ~2y idle; account-ban & security risk. | MIT | [EN](categories/im-automation/wechatplugin-macos.md) · [中](categories/im-automation/wechatplugin-macos.zh.md) |
+| **wxpy** | Study it only as legacy WeChat-bot code — archived since 2019 and built on the now-defunct WeChat web protocol, so it mostly doesn't work. | MIT | [EN](categories/im-automation/wxpy.md) · [中](categories/im-automation/wxpy.zh.md) |
 
 ### web-ui
 
@@ -391,6 +400,19 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | Project | Use when | License | Page |
 |---|---|---|---|
 | **proxy_pool** | Use it when a scraper needs a rotating pool of free proxy IPs behind a simple API — accepting that free proxies are unreliable and insecure. | MIT | [EN](categories/proxy-pool/proxy-pool.md) · [中](categories/proxy-pool/proxy-pool.zh.md) |
+
+### debugging-proxy
+
+| Project | Use when | License | Page |
+|---|---|---|---|
+| **whistle** | Use it when a web/mobile dev must capture, inspect, rewrite, and mock HTTP(S)/WebSocket traffic via a rule-based web UI — a dev proxy, not a production gateway or scraping pool. | MIT | [EN](categories/debugging-proxy/whistle.md) · [中](categories/debugging-proxy/whistle.zh.md) |
+
+### web-scraping
+
+| Project | Use when | License | Page |
+|---|---|---|---|
+| **newspaper** | Use it to bulk-extract article text, authors, and metadata from news URLs — but the original (newspaper3k) is stale; the live path is the newspaper4k fork. | MIT | [EN](categories/web-scraping/newspaper.md) · [中](categories/web-scraping/newspaper.zh.md) |
+| **requests-html** | Study it for tiny requests + HTML-parsing scripts — effectively unmaintained (~2y idle), the JS-render path is fragile; prefer Playwright + parsel for new work. | MIT | [EN](categories/web-scraping/requests-html.md) · [中](categories/web-scraping/requests-html.zh.md) |
 
 
 Categories follow the tree in [INDEX.md](INDEX.md).

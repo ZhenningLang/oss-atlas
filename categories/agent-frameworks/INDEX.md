@@ -15,6 +15,7 @@
 | **oh-my-claudecode** | You live in Claude Code and need staged multi-agent teams with model routing and tmux parallelism. | [→](oh-my-claudecode.md) |
 | **smolagents** | Use it when you want a tiny, transparent code-acting agent loop from Hugging Face — not a heavy production agent OS. | [→](smolagents.md) |
 | **Kilo Code** | Use it when you want an open, BYOK in-IDE (VS Code) coding agent with planning and modes — an end-user tool, not a library to build agents. | [→](kilocode.md) |
+| **Parlant** | Use it when you build a customer-facing agent that must stay on-rails via behavioral guidelines — overkill for simple or free-form agents. | [→](parlant.md) |
 
 ## Comparison matrix
 
@@ -28,6 +29,7 @@
 | [oh-my-claudecode](oh-my-claudecode.md) | ✅ | Staged multi-agent teams with model routing + tmux parallelism for Claude Code. |
 | [smolagents](smolagents.md) | ✅ | Use it when you want a tiny, transparent code-acting agent loop from Hugging Face — not a heavy production agent OS. |
 | [Kilo Code](kilocode.md) | ✅ | Use it when you want an open, BYOK in-IDE (VS Code) coding agent with planning and modes — an end-user tool, not a library to build agents. |
+| [Parlant](parlant.md) | ✅ | Use it when you build a customer-facing agent that must stay on-rails via behavioral guidelines — overkill for simple or free-form agents. |
 | LangChain / LlamaIndex / CrewAI / AutoGen | 未收录 | Broader build/run agent ecosystems named across the pages' comparisons. |
 
 ## What belongs here

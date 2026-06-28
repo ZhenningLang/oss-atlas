@@ -11,6 +11,7 @@
 | **llm-circuit-finder** | Python toolkit that searches a GGUF model for contiguous reasoning-circuit layer blocks and duplicates them in the forward pass (no training, no weight edits), validated with built-in probes. | [→](llm-circuit-finder.md) |
 | **CLIP** | Use it when you need zero-shot image classification or image↔text retrieval embeddings — the original frozen reference; OpenCLIP has more checkpoints. | [→](clip.md) |
 | **TaskMatrix** | Use it only to study an early visual-tool-routing agent (Visual ChatGPT) — abandoned since ~2024, don't build on it. | [→](taskmatrix.md) |
+| **PyTorch-GAN** | Read it to learn GAN architectures from clean reference implementations — idle since 2024 and superseded by diffusion; not production code. | [→](pytorch-gan.md) |
 
 ## Comparison matrix
 
@@ -20,6 +21,7 @@
 | [llm-circuit-finder](llm-circuit-finder.md) | ✅ | Python toolkit that searches a GGUF model for contiguous reasoning-circuit layer blocks and duplicates them in the forward pass (no training, no weight edits), validated with built-in probes. |
 | [CLIP](clip.md) | ✅ | Use it when you need zero-shot image classification or image↔text retrieval embeddings — the original frozen reference; OpenCLIP has more checkpoints. |
 | [TaskMatrix](taskmatrix.md) | ✅ | Use it only to study an early visual-tool-routing agent (Visual ChatGPT) — abandoned since ~2024, don't build on it. |
+| [PyTorch-GAN](pytorch-gan.md) | ✅ | Read it to learn GAN architectures from clean reference implementations — idle since 2024 and superseded by diffusion; not production code. |
 | nanoGPT / TransformerLens / minGPT | 未收录 | Other research demos / interpretability libs named across the pages. |
 
 ## What belongs here

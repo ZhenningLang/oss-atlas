@@ -45,6 +45,8 @@
 | **im-automation** | 即时通讯机器人与自动化(微信等 IM 平台)。 | [→](categories/im-automation/INDEX.zh.md) |
 | **web-ui** | 前端 UI/UX 库——产品引导、新手上手、界面组件。 | [→](categories/web-ui/INDEX.zh.md) |
 | **proxy-pool** | 面向网络爬虫的自托管轮换代理 IP 池。 | [→](categories/proxy-pool/INDEX.zh.md) |
+| **debugging-proxy** | HTTP(S)/WebSocket 调试代理——抓取、检查、改写并 mock 流量。 | [→](categories/debugging-proxy/INDEX.zh.md) |
+| **web-scraping** | 从网页抓取并提取内容/结构——文章正文提取与 HTML 解析。 | [→](categories/web-scraping/INDEX.zh.md) |
 
 ## 如何新增分类
 

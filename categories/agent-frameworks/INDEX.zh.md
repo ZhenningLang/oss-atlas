@@ -15,6 +15,7 @@
 | **oh-my-claudecode** | 你常驻 Claude Code、需要多阶段 agent 团队加模型路由和 tmux 并行编排时。 | [→](oh-my-claudecode.zh.md) |
 | **smolagents** | 当你想要 Hugging Face 出的极简、透明、写代码行动的 agent 循环时用它——不是重型生产 agent 操作系统。 | [→](smolagents.zh.md) |
 | **Kilo Code** | 当你想要一个开源、BYOK、在 VS Code 内的编码 agent(带规划与模式)时用它——是终端用户工具，不是构建 agent 的库。 | [→](kilocode.zh.md) |
+| **Parlant** | 当你要构建一个必须靠行为准则严格守规的对客 agent 时用它——简单或自由式 agent 用它过重。 | [→](parlant.zh.md) |
 
 ## 对比矩阵
 
@@ -28,6 +29,7 @@
 | [oh-my-claudecode](oh-my-claudecode.zh.md) | ✅ | Claude Code 的多阶段 agent 团队 + 模型路由 + tmux 并行。 |
 | [smolagents](smolagents.zh.md) | ✅ | 当你想要 Hugging Face 出的极简、透明、写代码行动的 agent 循环时用它——不是重型生产 agent 操作系统。 |
 | [Kilo Code](kilocode.zh.md) | ✅ | 当你想要一个开源、BYOK、在 VS Code 内的编码 agent(带规划与模式)时用它——是终端用户工具，不是构建 agent 的库。 |
+| [Parlant](parlant.zh.md) | ✅ | 当你要构建一个必须靠行为准则严格守规的对客 agent 时用它——简单或自由式 agent 用它过重。 |
 | LangChain / LlamaIndex / CrewAI / AutoGen | 未收录 | 各页对比里点到的更广义 agent 构建/运行生态。 |
 
 ## 什么该放这里
