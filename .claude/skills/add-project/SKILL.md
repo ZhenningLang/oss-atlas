@@ -19,9 +19,12 @@ Author one conformant selection page. The contract is `tools/schema.md`; read it
    reject a valid long-tail repo for lack of in-index peers. Only stop if it is a non-repo (hosted
    SaaS, landing page, article, docs site), an exact duplicate, or contentless.
 
-2. **Research live.** Fetch the GitHub repo, README, releases, docs. Separate **facts**
-   (stars, license, language, deps, latest version — each dated) from **judgment**. Anything you
-   can't confirm from a source → label `[未验证]` / `[推断]`, never assert it.
+2. **Research live** — follow the `read-repo` skill's methodology (read order, how deep, how to mine
+   the negative space). Fetch repo metadata (`gh api repos/<o>/<r>`: `created_at` for age/Lindy,
+   `pushed_at`, `archived`, releases cadence, contributors for bus factor, `owner.type`), README,
+   docs, the dependency manifest, and governance/LICENSE files. Separate **facts** (stars, license,
+   language, deps, latest version, age — each dated) from **judgment**. Anything you can't confirm
+   from a source → label `[未验证]` / `[推断]`, never assert it.
 
 3. **Classify.** Pick the single best **primary** category (= directory under `categories/`).
    Cross-cutting traits go in `tags`, not extra categories. Only create a new category if it
@@ -43,6 +46,11 @@ Author one conformant selection page. The contract is `tools/schema.md`; read it
      See `tools/schema.md`.
    - Make the "when NOT to use" section the strongest: concrete anti-patterns, scale ceilings,
      lock-in, maintenance/abandonment risk. This is the section agents most need.
+   - **Health & viability** (`健康度与可持续性`) — required for **all types** (skill-pack included).
+     A short dated, labeled verdict on whether it's worth betting on: maintenance/cadence,
+     governance & bus factor, backing org, **age as a Lindy prior (age × still-active)**, adoption/
+     ecosystem, risk flags (relicense/open-core/CVE). See `tools/schema.md` §7. Judgment, not a
+     number dump — volatile numbers stay in `maturity`/Caveats.
    - In Comparison, name 3–5 real substitutes; `未收录` for ones not in the index, relative link
      for ones that are.
    - **Caveats ledger (all types):** end every page with `## Caveats (unverified)` /

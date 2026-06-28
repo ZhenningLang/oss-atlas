@@ -64,14 +64,17 @@ required `##` sections below — **which ones are required depends on `type`** (
 | `## Tech stack` | `## 技术栈` | non-`skill-pack` | languages, frameworks, datastores it is built on |
 | `## Dependencies` | `## 依赖` | non-`skill-pack` | runtime/infra a user must run (db, services, hardware) |
 | `## Ops difficulty` | `## 运维难度` | non-`skill-pack` | low / medium / high + why; deploy + maintain burden |
+| `## Health & viability` | `## 健康度与可持续性` | **all types** | dated, labeled judgment of whether it's worth betting on — maintenance, governance/bus-factor, backing, age/**Lindy**, adoption, risk flags (see §7) |
 | `## Caveats (unverified)` | `## 存疑（未验证）` | **all types** | a bulleted **ledger**: one `[未验证]`/`[推断]` bullet per unverified fact — the page's single uncertainty list |
 
 **Type-adaptive sections.** `skill-pack` entries (prompt/skill collections, harness configs) require
-only the first three (`When to use / When NOT to use / Comparison`) — a bag of prompts has no
+`When to use / When NOT to use / Comparison` **+ `Health & viability`** — a bag of prompts has no
 meaningful tech-stack / dependencies / ops, so those three are omitted rather than padded with
-"N/A". All other types (`tool/library/app/framework/service/model`) require all six. The linter
-enforces the right set per `type` — and for `skill-pack` it **ERRORs if any of the three forbidden
-sections is present** (omit, do not include them).
+"N/A", but viability (is it maintained? backed? Lindy?) still matters. All other types
+(`tool/library/app/framework/service/model`) require **all seven** content sections.
+`Health & viability` and `Caveats` are required for **every** type. The linter enforces the right set
+per `type` — and for `skill-pack` it **ERRORs if any of the three forbidden sections
+(`Tech stack / Dependencies / Ops difficulty`) is present** (omit, do not include them).
 
 **Caveats is required — it is the uncertainty ledger.** Every page ends with
 `## Caveats (unverified)` (EN) / `## 存疑（未验证）` (ZH): a bulleted list where each unverified or
@@ -174,3 +177,27 @@ Two more machine-checkable rules the linter enforces:
   from its README. This makes the human-facing master listing impossible to silently drift out of
   sync with the `categories/` tree — when you add a page, add its row to both READMEs (and both
   `INDEX` files) or lint fails.
+
+## 7. `Health & viability` — the signal checklist (required section)
+
+Selection isn't just "what does it do" — it's "is this worth betting on, and for how long?" Every
+page carries a `## Health & viability` / `## 健康度与可持续性` section: a short (2–6 bullet),
+**dated, labeled** judgment. Facts you can date go here or in `maturity`; anything unconfirmed is
+`[未验证]`/`[推断]` and also gets a Caveats bullet. Cover the signals that apply (don't pad ones you
+can't assess):
+
+- **Maintenance** — last release + cadence, commit recency; active vs coasting vs abandoned.
+- **Governance / bus factor** — single maintainer vs team vs foundation (Apache/CNCF/LF) vs a single
+  vendor; who actually owns the roadmap.
+- **Backing & longevity** — the backing org and its track record (does it kill projects?), funding
+  model, and the project's **age** as a **Lindy prior**: a long-lived *still-active* project is a
+  safer bet than a young hyped one; a long-*abandoned* one is not. Use **age × still-active**, never
+  age alone. (See README "Selection heuristics".)
+- **Adoption & ecosystem** — production users / notable dependents, plugin/integration ecosystem,
+  docs quality, semver discipline.
+- **Risk flags** — relicense history (Grafana→AGPL, Redis→SSPL…), open-core/feature-gating, CLA,
+  deprecation notices, notable CVEs.
+
+This is **judgment, not a fact dump** — keep precise volatile numbers in `maturity`/Caveats (they go
+stale and `sync-entry` re-verifies them); the section reads as a viability verdict an agent can act
+on. The `read-repo` skill is the methodology for gathering these signals.

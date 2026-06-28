@@ -367,6 +367,21 @@ README genre into a **decision-support** genre.
 The index is deliberately **weak** — no database, no search, no embeddings. Just Markdown that
 an agent reads and reasons over. The directory structure *is* the query API.
 
+## Selection signals & heuristics
+
+Choosing OSS is a bet on the future, not just a feature match. Every page carries a
+**`Health & viability`** section — a dated, labeled verdict on whether the project is worth betting
+on: maintenance cadence, governance & bus factor, backing org, adoption/ecosystem, and risk flags
+(relicense history, open-core gating, CVEs). Read it alongside `When NOT to use`.
+
+One prior deserves a name — the **Lindy effect**: for non-perishable things (software, formats,
+tools), expected *remaining* life grows with current age. A project **actively maintained** for 12
+years is a safer long-term bet than one that exploded in 6 months. Treat it as a prior, not a law,
+and always as **age × still-active**: it discounts young-but-hyped repos (suspicious stars, unproven)
+and does **not** rescue old **abandoned** ones (age alone ≠ alive); it can also mislead across
+paradigm shifts. Pages record the project's **age** so the prior is checkable. [推断: the Lindy
+framing is a heuristic, not a guarantee of any specific project's survival.]
+
 ## Structure (recursive tree, bilingual)
 
 ```

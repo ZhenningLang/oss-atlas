@@ -38,13 +38,35 @@ Procedure when you have a task and need to pick a project:
 2. Keep **descending** through sub-category `INDEX.md` files (the tree can be deep) until you reach
    project pages; scan their one-liners + the comparison matrix to shortlist 1–3.
 3. Read each shortlisted `<slug>.md`. The decisive section is usually **`## When NOT to use`**:
-   check it against the task's hard constraints (scale, deps, ops budget, license).
+   check it against the task's hard constraints (scale, deps, ops budget, license). Then weigh
+   **`## Health & viability`** — is it maintained, well-backed, and likely to last? Apply the
+   **Lindy** prior: a long-lived *still-active* project is a safer bet than a young hyped one
+   (high stars on a young/stale repo is a risk flag, not proof). See "Selection heuristics" below.
 4. Recommend with the *tradeoff that decided it*. If the best fit is named in a `## Comparison`
    but is **not yet indexed** (`未收录`), say so — do not pretend the index is complete.
 
 There is a skill for this: **`skills/select-oss/`** — a dual-mode navigator that reads the index
 locally when you're inside a clone, or fetches the public raw files otherwise. It installs into any
 coding agent via skills.sh (`npx skills add ZhenningLang/oss-atlas`); see the README "Install" section.
+
+## Selection heuristics (beyond "what it does")
+
+Picking OSS is a bet on the future, not just a feature match. Beyond `When NOT to use`, weigh each
+page's `Health & viability` section:
+
+- **The Lindy prior.** For non-perishable things (software, formats, tools), expected remaining
+  life rises with current age: a project that has been *actively maintained* for 12 years is a
+  safer long-term bet than one that exploded in 6 months. Use it as a **prior**, not a law —
+  **age × still-active together**. It cuts both ways: it discounts a young hyped repo (suspicious
+  stars, unproven) *and* it does **not** rescue an old **abandoned** one (age alone ≠ alive). It can
+  also mislead across paradigm shifts (an old tool displaced by a new approach). [推断]
+- **Backing & bus factor.** A foundation (Apache/CNCF/LF) or a committed vendor outlasts a single
+  maintainer's free time. Note who owns the roadmap and that org's track record.
+- **Risk flags over hype.** Relicense history (Grafana→AGPL, Redis→SSPL), open-core feature-gating,
+  CLA, deprecation/CVEs — these decide more than star count.
+
+Surface the *signal that decided it* in your recommendation, the same way you surface the deciding
+tradeoff.
 
 ## WRITE CONTRACT — how to add or update an entry
 
@@ -59,8 +81,10 @@ The schema is the contract: **`tools/schema.md`**. In short:
 - Required body sections — **all types**: `When to use`, `When NOT to use`, `Comparison` (Chinese:
   `何时使用`, `何时不用`, `横向对比`). **Non-`skill-pack` types also require**: `Tech stack`,
   `Dependencies`, `Ops difficulty` (`技术栈`, `依赖`, `运维难度`). A `skill-pack` (prompt/skill
-  collection) omits those three — don't pad them with "N/A". **Every page also ends with a**
-  `Caveats (unverified)` / `存疑（未验证）` **ledger** (all types) — the page's uncertainty list.
+  collection) omits those three — don't pad them with "N/A". **Every page (all types) also has a**
+  `Health & viability` / `健康度与可持续性` **section** — a dated, labeled viability verdict
+  (maintenance, governance/bus-factor, backing, **age/Lindy**, adoption, risk flags; see schema §7)
+  — **and ends with a** `Caveats (unverified)` / `存疑（未验证）` **ledger** — the uncertainty list.
 - **Bilingual**: the two files are monolingual mirrors — do NOT mix languages inside one file.
 - **Truth labeling**: anything not confirmed from a source is `[未验证]` / `[推断]`. Date your
   facts (`maturity`, `last_verified`). Never assert opinion as fact — an agent will act on it. Keep
