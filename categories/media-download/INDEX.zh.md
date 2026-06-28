@@ -13,9 +13,9 @@
 
 | 选项 | 是否收录 | 一句话取舍 |
 |---|---|---|
-| [youtube-dl](youtube-dl.zh.md) | ✅ | 覆盖 1000+ 站点的老牌提取器;上游已放缓,YouTube 实际请用活跃分叉 yt-dlp。 |
+| [youtube-dl](youtube-dl.zh.md) | ✅ | 覆盖 1000+ 站点的老牌提取器；上游已放缓，YouTube 实际请用活跃分叉 yt-dlp。 |
 | yt-dlp / you-get / lux / gallery-dl | 未收录 | 各页对比里点到的更活跃分叉与其他下载器。 |
 
 ## 什么该放这里
 
-主要职责是**从流媒体/托管站点抓取媒体**的工具(提取器、下载器)。不含媒体转码/编码(见 `media-processing`),不含通用文件服务器(见 `document-management`)。
+主要职责是**从流媒体/托管站点抓取媒体**的工具(提取器、下载器)。不含媒体转码/编码(见 `media-processing`)，不含通用文件服务器(见 `document-management`)。

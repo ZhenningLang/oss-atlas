@@ -41,10 +41,10 @@ type: skill-pack
 ## 存疑（未验证）
 
 - [未验证] License 为 MIT，主语言 Python，未归档，最近一次 push 在 2026-06-25，topics 含 `claude-code`/`agent-skills`/`opencode`/`codex-cli`/`mcp`，以上为 2026-06-26 GitHub 元数据——依赖细节前请复核。
-- [未验证] 不存在 tag release（本次检查 `latestRelease` 为 null）；安装跟随 `main`,行为可能在没有版本号变化的情况下改变。
+- [未验证] 不存在 tag release（本次检查 `latestRelease` 为 null）；安装跟随 `main`，行为可能在没有版本号变化的情况下改变。
 - [未验证] star 数（2026-06-26 GitHub 约 37.2k）不可靠且对日期敏感，只作参考、不作质量信号。
-- [未验证] 清单数字（约 88 plugin、约 194 agent、约 158 skill、约 106 command、约 16 orchestrator）取自 2026-06-26 的 README,会漂移；请枚举当前 `plugins/` 树而非依赖这些计数。
-- [未验证] 支持的 harness 列表（Claude Code 为 source-of-truth,外加 Codex CLI、Cursor、OpenCode、Gemini CLI、Copilot）与各 harness 安装机制（原生 registry 还是 clone + `make generate`）取自 README；各 harness 的生成/激活保真度未在此独立确认。
-- [未验证] `plugin-eval` 质量框架（静态分析、用 Haiku/Sonnet 做 LLM 语义打分、Monte Carlo 验证；`uv run plugin-eval score`/`certify`）取自 README 描述,未在此独立运行验证。
-- [推断] 单人维护项目;维护节奏与长期支持无保证,且一个庞大的无版本面在 push 之间可能回退。
-- [推断] 因为 persona/skill 通过各 harness 的原生 loader 激活，约束是建议性的——agent 可以偏离,且跨 harness 可移植性依赖 generator 而非运行时合同。
+- [未验证] 清单数字（约 88 plugin、约 194 agent、约 158 skill、约 106 command、约 16 orchestrator）取自 2026-06-26 的 README，会漂移；请枚举当前 `plugins/` 树而非依赖这些计数。
+- [未验证] 支持的 harness 列表（Claude Code 为 source-of-truth，外加 Codex CLI、Cursor、OpenCode、Gemini CLI、Copilot）与各 harness 安装机制（原生 registry 还是 clone + `make generate`）取自 README；各 harness 的生成/激活保真度未在此独立确认。
+- [未验证] `plugin-eval` 质量框架（静态分析、用 Haiku/Sonnet 做 LLM 语义打分、Monte Carlo 验证；`uv run plugin-eval score`/`certify`）取自 README 描述，未在此独立运行验证。
+- [推断] 单人维护项目；维护节奏与长期支持无保证，且一个庞大的无版本面在 push 之间可能回退。
+- [推断] 因为 persona/skill 通过各 harness 的原生 loader 激活，约束是建议性的——agent 可以偏离，且跨 harness 可移植性依赖 generator 而非运行时合同。

@@ -13,8 +13,8 @@
 
 | 选项 | 是否收录 | 一句话取舍 |
 |---|---|---|
-| [NextChat](nextchat.zh.md) | ✅ | 轻量、跨平台、一键部署的聊天前端;偏单用户,不做 RBAC/配额团队管理。 |
-| [HiveChat](../team-chat/hivechat.zh.md) | ✅ | 管理员统管的多用户团队聊天,带分组模型权限和 token 配额。 |
+| [NextChat](nextchat.zh.md) | ✅ | 轻量、跨平台、一键部署的聊天前端；偏单用户，不做 RBAC/配额团队管理。 |
+| [HiveChat](../team-chat/hivechat.zh.md) | ✅ | 管理员统管的多用户团队聊天，带分组模型权限和 token 配额。 |
 | LibreChat / Lobe Chat / open-webui | 未收录 | 各页对比里点到的其他自托管聊天前端(部分带多用户/RBAC)。 |
 
 ## 什么该放这里

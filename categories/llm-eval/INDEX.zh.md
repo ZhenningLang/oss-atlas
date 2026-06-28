@@ -18,4 +18,4 @@
 
 ## 什么该放这里
 
-主要职责是对 LLM 提示词/agent/RAG 做**评测、基准或红队**的工具。不含代码评审(见 `ai-code-review`),不含训练(见 `llm-training`)。
+主要职责是对 LLM 提示词/agent/RAG 做**评测、基准或红队**的工具。不含代码评审(见 `ai-code-review`)，不含训练(见 `llm-training`)。

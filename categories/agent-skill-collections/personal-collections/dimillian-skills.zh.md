@@ -41,9 +41,9 @@ type: skill-pack
 
 ## 存疑（未验证）
 
-- [未验证] License MIT、主语言 Shell（GitHub 显示 Shell 84.6% / Python 12.8% / Swift 2.6%）、未归档、无打 tag 的 release、最后 push 于 2026-03-29——均为 GitHub 元数据，截至 2026-06-26;依赖某个具体 commit 的行为前请重新核对。
+- [未验证] License MIT、主语言 Shell（GitHub 显示 Shell 84.6% / Python 12.8% / Swift 2.6%）、未归档、无打 tag 的 release、最后 push 于 2026-03-29——均为 GitHub 元数据，截至 2026-06-26；依赖某个具体 commit 的行为前请重新核对。
 - [未验证] star 数（2026-06-26 GitHub 上约 3.7k）不可靠且对日期敏感，仅作参考，不作质量信号。
-- [未验证] 这 16 个 skill 的清单与文件夹名取自本次核对时的 README;实际 `skills/` 内容与 `SKILL.md` 触发条件会随 push 变化——请直接读仓库，别只信此清单。
-- [推断] 安装目标是 OpenAI Codex（`$CODEX_HOME/skills`）;在其他 harness（Claude Code、Cursor）上的激活未经确认，需要移植。
-- [推断] 依赖 MCP / swarm 的 skill（`ios-debugger-agent` 走 XcodeBuildMCP，`review-swarm`、`bug-hunt-swarm` 多 agent）默认了你环境里可能不存在的工具 / 运行时;其效果取决于环境，此处未独立验证。
-- [未验证] 横向对比中引用的 leaf 同级页里,wshobson/agents 的中文页在撰写时已存在（已链接）;antfu/skills、awesome-claude-code-subagents、karpathy-skills 尚未收录（或中文页未就绪），故不附链接——索引状态为并发产出,可能变化。
+- [未验证] 这 16 个 skill 的清单与文件夹名取自本次核对时的 README；实际 `skills/` 内容与 `SKILL.md` 触发条件会随 push 变化——请直接读仓库，别只信此清单。
+- [推断] 安装目标是 OpenAI Codex（`$CODEX_HOME/skills`）；在其他 harness（Claude Code、Cursor）上的激活未经确认，需要移植。
+- [推断] 依赖 MCP / swarm 的 skill（`ios-debugger-agent` 走 XcodeBuildMCP，`review-swarm`、`bug-hunt-swarm` 多 agent）默认了你环境里可能不存在的工具 / 运行时；其效果取决于环境，此处未独立验证。
+- [未验证] 横向对比中引用的 leaf 同级页里，wshobson/agents 的中文页在撰写时已存在（已链接）;antfu/skills、awesome-claude-code-subagents、karpathy-skills 尚未收录（或中文页未就绪），故不附链接——索引状态为并发产出，可能变化。

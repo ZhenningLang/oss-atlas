@@ -13,9 +13,9 @@
 
 | 选项 | 是否收录 | 一句话取舍 |
 |---|---|---|
-| [Tesseract](tesseract.zh.md) | ✅ | 面向清晰印刷文本的成熟离线 OCR 引擎;对版面、手写、野外照片较弱。 |
+| [Tesseract](tesseract.zh.md) | ✅ | 面向清晰印刷文本的成熟离线 OCR 引擎；对版面、手写、野外照片较弱。 |
 | PaddleOCR / EasyOCR / TrOCR / Cloud Vision / Textract | 未收录 | 各页对比里点到的深度学习/云端 OCR(对杂乱输入更强)。 |
 
 ## 什么该放这里
 
-主要职责是**识别图像/扫描件中文字**的引擎/库。不含面向 gen-AI 的文档版面与表格解析(见 `document-parsing`),不含文档归档/检索(见 `document-management`)。
+主要职责是**识别图像/扫描件中文字**的引擎/库。不含面向 gen-AI 的文档版面与表格解析(见 `document-parsing`)，不含文档归档/检索(见 `document-management`)。

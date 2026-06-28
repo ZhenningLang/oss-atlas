@@ -21,9 +21,9 @@
 | [graphify](graphify.zh.md) | ✅ | 当 agent 需要把整个仓库的代码、schema 和文档当成知识图谱来查询、而非反复 grep 时用它。 |
 | [code-review-graph](code-review-graph.zh.md) | ✅ | 当 AI 评审在大仓库里反复烧上下文、你只想喂给它一次改动真正触及(blast-radius)的文件时用它。 |
 | [PageIndex](pageindex.zh.md) | ✅ | 当向量 RAG 在少量长而有结构的文档上召回相似但不相关的块、且你需要可溯源引用时使用。 |
-| [Understand-Anything](understand-anything.zh.md) | ✅ | 把代码变成 agent 可查询的可探索知识图谱;比 graphify 年轻,star 数与数据外发边界均存疑。 |
+| [Understand-Anything](understand-anything.zh.md) | ✅ | 把代码变成 agent 可查询的可探索知识图谱；比 graphify 年轻，star 数与数据外发边界均存疑。 |
 | Neo4j / LlamaIndex / LightRAG / Weaviate | 未收录 | 各页对比里点到的其他图 / RAG 检索方案。 |
 
 ## 什么该放这里
 
-主要职责是为 RAG **索引与检索**上下文的基础设施——文档索引、代码图、图数据库。不含 agent 记忆(见 `agent-memory`),不含研究 agent(见 `deep-research`)。
+主要职责是为 RAG **索引与检索**上下文的基础设施——文档索引、代码图、图数据库。不含 agent 记忆(见 `agent-memory`)，不含研究 agent(见 `deep-research`)。

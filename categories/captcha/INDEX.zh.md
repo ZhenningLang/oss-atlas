@@ -7,13 +7,13 @@
 
 | 项目 | 何时用 | 页面 |
 |---|---|---|
-| **Cap** | 轻量、可自托管的 CAPTCHA 替代:无感工作量证明(Rust→WASM worker 做 SHA-256 nonce 搜索)发放服务端可校验 token——无图片、不调第三方。 | [→](capjs.zh.md) |
+| **Cap** | 轻量、可自托管的 CAPTCHA 替代：无感工作量证明(Rust→WASM worker 做 SHA-256 nonce 搜索)发放服务端可校验 token——无图片、不调第三方。 | [→](capjs.zh.md) |
 
 ## 对比矩阵
 
 | 选项 | 是否收录 | 一句话取舍 |
 |---|---|---|
-| [Cap](capjs.zh.md) | ✅ | 轻量、可自托管的 CAPTCHA 替代:无感工作量证明(Rust→WASM worker 做 SHA-256 nonce 搜索)发放服务端可校验 token——无图片、不调第三方。 |
+| [Cap](capjs.zh.md) | ✅ | 轻量、可自托管的 CAPTCHA 替代：无感工作量证明(Rust→WASM worker 做 SHA-256 nonce 搜索)发放服务端可校验 token——无图片、不调第三方。 |
 | hCaptcha / Cloudflare Turnstile / Friendly Captcha / Altcha | 未收录 | 页面里点到的其他 CAPTCHA / 机器人检测服务。 |
 
 ## 什么该放这里

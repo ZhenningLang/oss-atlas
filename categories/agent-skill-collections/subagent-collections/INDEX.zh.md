@@ -1,6 +1,6 @@
 # subagent-collections
 
-> [agent-skill-collections](../INDEX.zh.md) 的叶子。成套现成的 subagent 定义 / 人设,直接塞进 harness。
+> [agent-skill-collections](../INDEX.zh.md) 的叶子。成套现成的 subagent 定义 / 人设，直接塞进 harness。
 > ← 上层 [agent-skill-collections](../INDEX.zh.md) · 根 [路由](../../../INDEX.zh.md) · English: [INDEX.md](INDEX.md)
 
 ## 本叶子的合集
@@ -21,4 +21,4 @@
 
 ## 什么该放这里
 
-成套现成的 **subagent 定义 / agent 人设**,装进 harness——按你需要的角色覆盖挑。
+成套现成的 **subagent 定义 / agent 人设**，装进 harness——按你需要的角色覆盖挑。

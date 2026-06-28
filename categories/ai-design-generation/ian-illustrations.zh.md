@@ -46,5 +46,5 @@ type: skill-pack
 - [未验证] release v1.0.0 日期 2026-05-27，最后 push 2026-06-03，license MIT——据 2026-06-26 的 `gh repo view`。
 - [未验证] star 数约 6.2k（截至 2026-06）；GitHub star 不可靠且对时间敏感，仅供参考。
 - [推断] skill 按 Codex 打包（安装路径 `${CODEX_HOME:-$HOME/.codex}/skills/`，有 frontmatter + `agents/openai.yaml`）；但 README 又松散地称其为「Claude Code Skill」，因此兼容宿主的确切集合并不明确——依赖前请对照你自己的 agent 核实。
-- [推断] 实际渲染依赖宿主 agent 内置的 `image_gen` 工具；仓库本身不带模型、API key 或渲染代码,因此出图保真度由模型决定、不受 skill 控制。
+- [推断] 实际渲染依赖宿主 agent 内置的 `image_gen` 工具；仓库本身不带模型、API key 或渲染代码，因此出图保真度由模型决定、不受 skill 控制。
 - [未验证] 「每篇 4–8 张」和被拒绝的输出清单（PPTX/SVG 等）来自 SKILL.md 自身的指令，并非独立测试结论。

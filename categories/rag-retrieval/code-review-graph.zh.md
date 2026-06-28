@@ -13,60 +13,60 @@ type: tool
 
 # code-review-graph
 
-一张本地优先的代码智能图:Tree-sitter 把仓库解析成由函数/类/边构成的 SQLite 图,再通过 MCP 把最小的 blast-radius 上下文喂给你的 AI 编码工具,让它只读要紧的部分。
+一张本地优先的代码智能图：Tree-sitter 把仓库解析成由函数/类/边构成的 SQLite 图，再通过 MCP 把最小的 blast-radius 上下文喂给你的 AI 编码工具，让它只读要紧的部分。
 
 ## 何时使用
 
-你是一名开发者,在一个中到大型仓库里和 AI 编码助手(Claude Code、Cursor、Codex 等)结对,而你总是眼睁睁看着它为了回答"这个改动影响什么?"或"这里 auth 怎么走?"而反复重读半棵代码树烧上下文。每个评审任务都让 token 账单膨胀,agent 却仍然漏掉两跳之外的某个调用方。你想让 agent 读*那对的约 15 个文件*,而不是在 28000 个文件里盲目 grep。你装上 code-review-graph,跑一次 `build`(500 文件约 10 秒),从此 agent 调用 `get_impact_radius`、`get_review_context` 这类 MCP 工具:图会追踪某个变更文件的每个调用方、依赖方和测试,回交一片紧凑的结构切片,而不是原始源码。在它自己基准里的那些仓库上,它自报每问题 token 缩减中位数约 82 倍,且文件保存时增量更新能在 2 秒内对一个 2900 文件的项目重建索引。
+你是一名开发者，在一个中到大型仓库里和 AI 编码助手(Claude Code、Cursor、Codex 等)结对，而你总是眼睁睁看着它为了回答"这个改动影响什么？"或"这里 auth 怎么走？"而反复重读半棵代码树烧上下文。每个评审任务都让 token 账单膨胀，agent 却仍然漏掉两跳之外的某个调用方。你想让 agent 读*那对的约 15 个文件*，而不是在 28000 个文件里盲目 grep。你装上 code-review-graph，跑一次 `build`(500 文件约 10 秒)，从此 agent 调用 `get_impact_radius`、`get_review_context` 这类 MCP 工具：图会追踪某个变更文件的每个调用方、依赖方和测试，回交一片紧凑的结构切片，而不是原始源码。在它自己基准里的那些仓库上，它自报每问题 token 缩减中位数约 82 倍，且文件保存时增量更新能在 2 秒内对一个 2900 文件的项目重建索引。
 
-当你想在 *CI 里做风险评分的 PR 评审、且不把代码发往任何地方*时,它同样合适:同一套分析作为复合 GitHub Action 运行,完全在你的 runner 上构建并查询图,贴出带风险评分函数和测试缺口的 sticky 评论,并能通过 `fail-on-risk` 卡合并。如果你住在 monorepo 里、想要一个后台守护进程(`crg-daemon`)持续保持多个仓库的图新鲜,这也开箱自带。
+当你想在 *CI 里做风险评分的 PR 评审、且不把代码发往任何地方*时，它同样合适：同一套分析作为复合 GitHub Action 运行，完全在你的 runner 上构建并查询图，贴出带风险评分函数和测试缺口的 sticky 评论，并能通过 `fail-on-risk` 卡合并。如果你住在 monorepo 里、想要一个后台守护进程(`crg-daemon`)持续保持多个仓库的图新鲜，这也开箱自带。
 
 ## 何时不用
 
-- **你想要一个通用图数据库,而非代码上下文层。** 这是一条固定的代码智能流水线(AST → SQLite → blast-radius),不是可让你在其上构建应用的可查询图存储。要真正的属性/Cypher 图数据库,用 [FalkorDB](falkordb.zh.md)。
-- **琐碎 / 单文件改动。** 维护者自己的限制说明指出,对小改动,图上下文可能*超过*直接读文件——结构元数据是开销,直到改动跨多个文件才赚回来。
-- **你今天就需要可信的 recall 数字。** 标语式的 "recall 1.0" 被明确指为**循环**——ground truth 来自预测器所走的同一张图。诚实的 co-change 模式被承认"明显更低"且**尚未发布**。[推断] 把影响准确率当作方向性参考,而非保证。
-- **超出 Python 的跨文件调用解析。** 流程检测文档记为约 33% recall,且只在 Python 框架模式(FastAPI/httpx)上可靠;JS/Go 流程与搜索排序(MRR 0.35)是明述的弱点。
-- **巴士因子 / 成熟度风险。** 这是一个单一维护者、Beta 分级、v2.3.x 的项目(首次 commit 2026-02)。把 GitHub Action pin 到某个 tag、以及快速的发版节奏是缓解手段,但对其 `.code-review-graph/` SQLite 格式和 MCP 工具面的锁定是真实的。
+- **你想要一个通用图数据库，而非代码上下文层。** 这是一条固定的代码智能流水线(AST → SQLite → blast-radius)，不是可让你在其上构建应用的可查询图存储。要真正的属性/Cypher 图数据库，用 [FalkorDB](falkordb.zh.md)。
+- **琐碎 / 单文件改动。** 维护者自己的限制说明指出，对小改动，图上下文可能*超过*直接读文件——结构元数据是开销，直到改动跨多个文件才赚回来。
+- **你今天就需要可信的 recall 数字。** 标语式的 "recall 1.0" 被明确指为**循环**——ground truth 来自预测器所走的同一张图。诚实的 co-change 模式被承认"明显更低"且**尚未发布**。[推断] 把影响准确率当作方向性参考，而非保证。
+- **超出 Python 的跨文件调用解析。** 流程检测文档记为约 33% recall，且只在 Python 框架模式(FastAPI/httpx)上可靠；JS/Go 流程与搜索排序(MRR 0.35)是明述的弱点。
+- **巴士因子 / 成熟度风险。** 这是一个单一维护者、Beta 分级、v2.3.x 的项目(首次 commit 2026-02)。把 GitHub Action pin 到某个 tag、以及快速的发版节奏是缓解手段，但对其 `.code-review-graph/` SQLite 格式和 MCP 工具面的锁定是真实的。
 - **你需要对散文做纯文档/段落 RAG。** 它索引的是代码结构而非任意文档——要层级文档检索看 [PageIndex](pageindex.zh.md)。
 
 ## 横向对比
 
 | 替代品 | 是否收录 | 取舍 |
 |---|---|---|
-| [FalkorDB](falkordb.zh.md) | ✅ | 一个真正基于 Redis 的属性图数据库,带 Cypher + 向量搜索,你直接查询它;是*底座*而非开箱即用的代码上下文工具。code-review-graph 给你整条 AST→图→MCP 流水线,但建在它自己固定的 SQLite 存储上。 |
-| [graphify](graphify.zh.md) | ✅ | 同样把代码库变成图供 agent 检索;意图有重叠。code-review-graph 重压在 blast-radius/评审 + 一个 MCP server、宽语言覆盖和一个 CI Action 上。请直接对比 scope/成熟度。 |
-| [PageIndex](pageindex.zh.md) | ✅ | 面向*文档*(PDF、长文本)的、基于推理的层级检索,无向量库;输入领域不同——散文而非源码 AST。 |
-| Sourcegraph / SCIP | 未收录 | 成熟、规模化的多仓库代码智能与索引;基础设施更重,不是面向 agent token 预算的本地单二进制 MCP 上下文压缩器。 |
-| Serena (MCP) | 未收录 | 面向 agent 的、基于 LSP 的语义代码 MCP server;以符号/LSP 驱动,而非带 blast-radius + 社区/风险分析的持久化 Tree-sitter 图。 |
-| GraphRAG (Microsoft) | 未收录 | LLM 构建的实体/社区图,用于文档 RAG;面向非结构化语料,而非确定性的 AST 派生代码图。 |
+| [FalkorDB](falkordb.zh.md) | ✅ | 一个真正基于 Redis 的属性图数据库，带 Cypher + 向量搜索，你直接查询它；是*底座*而非开箱即用的代码上下文工具。code-review-graph 给你整条 AST→图→MCP 流水线，但建在它自己固定的 SQLite 存储上。 |
+| [graphify](graphify.zh.md) | ✅ | 同样把代码库变成图供 agent 检索；意图有重叠。code-review-graph 重压在 blast-radius/评审 + 一个 MCP server、宽语言覆盖和一个 CI Action 上。请直接对比 scope/成熟度。 |
+| [PageIndex](pageindex.zh.md) | ✅ | 面向*文档*(PDF、长文本)的、基于推理的层级检索，无向量库；输入领域不同——散文而非源码 AST。 |
+| Sourcegraph / SCIP | 未收录 | 成熟、规模化的多仓库代码智能与索引；基础设施更重，不是面向 agent token 预算的本地单二进制 MCP 上下文压缩器。 |
+| Serena (MCP) | 未收录 | 面向 agent 的、基于 LSP 的语义代码 MCP server；以符号/LSP 驱动，而非带 blast-radius + 社区/风险分析的持久化 Tree-sitter 图。 |
+| GraphRAG (Microsoft) | 未收录 | LLM 构建的实体/社区图，用于文档 RAG；面向非结构化语料，而非确定性的 AST 派生代码图。 |
 
 ## 技术栈
 
-- **语言:** Python(≥ 3.10,测试至 3.13)。
-- **解析:** Tree-sitter,经 `tree-sitter` + `tree-sitter-language-pack`;宽语言覆盖(Python、JS/TS/TSX、Go、Rust、Java、C/C++、C#、Ruby、Kotlin、Swift、PHP、Scala、Solidity、Dart 等)加 Jupyter/Databricks `.ipynb`。自定义语言可经 `.code-review-graph/languages.toml` 添加,无需 fork。
-- **图/存储:** `.code-review-graph/` 下的本地 SQLite,带 FTS5 全文搜索;`networkx` 跑图算法;社区检测经 Leiden(可选 `igraph`)。
-- **服务:** MCP server(`mcp` + `fastmcp`)暴露约 30 个工具和 5 个 prompt 模板;CLI(`code-review-graph`)与守护进程(`crg-daemon`)。
-- **可选:** 向量 embedding,经 sentence-transformers / Google Gemini / MiniMax / 任意 OpenAI 兼容端点;Python 调用解析增强经 Jedi;D3.js 交互可视化;导出到 GraphML / Neo4j Cypher / Obsidian / SVG。
-- **CI:** 复合 GitHub Action,做风险评分的 PR 评论。
+- **语言：** Python(≥ 3.10，测试至 3.13)。
+- **解析：** Tree-sitter，经 `tree-sitter` + `tree-sitter-language-pack`；宽语言覆盖(Python、JS/TS/TSX、Go、Rust、Java、C/C++、C#、Ruby、Kotlin、Swift、PHP、Scala、Solidity、Dart 等)加 Jupyter/Databricks `.ipynb`。自定义语言可经 `.code-review-graph/languages.toml` 添加，无需 fork。
+- **图/存储：** `.code-review-graph/` 下的本地 SQLite，带 FTS5 全文搜索；`networkx` 跑图算法；社区检测经 Leiden(可选 `igraph`)。
+- **服务：** MCP server(`mcp` + `fastmcp`)暴露约 30 个工具和 5 个 prompt 模板；CLI(`code-review-graph`)与守护进程(`crg-daemon`)。
+- **可选：** 向量 embedding，经 sentence-transformers / Google Gemini / MiniMax / 任意 OpenAI 兼容端点；Python 调用解析增强经 Jedi;D3.js 交互可视化；导出到 GraphML / Neo4j Cypher / Obsidian / SVG。
+- **CI:** 复合 GitHub Action，做风险评分的 PR 评论。
 
 ## 依赖
 
-- **运行时:** Python ≥ 3.10。经 `pip install code-review-graph`(或 `pipx`/`uvx`)安装。
+- **运行时：** Python ≥ 3.10。经 `pip install code-review-graph`(或 `pipx`/`uvx`)安装。
 - **必需 Python 依赖(v2.3.6):** `mcp` ≥ 1.0、`fastmcp` ≥ 3.2.4(<4)、`tree-sitter` ≥ 0.23、`tree-sitter-language-pack` ≥ 0.3、`networkx` ≥ 3.2、`watchdog` ≥ 4.0(Python < 3.11 加 `tomli`)。
-- **核心存储:** 本地 SQLite 文件——核心图**不需要外部数据库或云服务**。
-- **可选分组:** `[embeddings]`(sentence-transformers、numpy)、`[google-embeddings]`、`[communities]`(igraph)、`[enrichment]`(jedi)、`[eval]`(matplotlib)、`[wiki]`(ollama),或 `[all]`。
-- **外部服务仅 opt-in:** 云端 embedding 需要显式出网确认;CI Action 完全在你自己的 runner 上运行,不外发源码。
+- **核心存储：** 本地 SQLite 文件——核心图**不需要外部数据库或云服务**。
+- **可选分组：** `[embeddings]`(sentence-transformers、numpy)、`[google-embeddings]`、`[communities]`(igraph)、`[enrichment]`(jedi)、`[eval]`(matplotlib)、`[wiki]`(ollama)，或 `[all]`。
+- **外部服务仅 opt-in:** 云端 embedding 需要显式出网确认；CI Action 完全在你自己的 runner 上运行，不外发源码。
 
 ## 运维难度
 
-**低。** 单条 `pip`/`pipx`/`uvx` 安装,加一条 `install` 命令自动探测受支持的 AI 工具并写入其 MCP 配置;`build` 一次,之后 hooks/watch/daemon 保持新鲜。没有数据库要跑,没有云账号,状态住在本地 SQLite 文件里。升到**低到中**的场景:开启语义 embedding(模型下载、可选云出网和 API key)、跑多仓库守护进程、或把 GitHub Action 用 `fail-on-risk` 接成合并门。可选依赖矩阵(embeddings/communities/enrichment)是版本摩擦最可能冒头的地方。
+**低。** 单条 `pip`/`pipx`/`uvx` 安装，加一条 `install` 命令自动探测受支持的 AI 工具并写入其 MCP 配置；`build` 一次，之后 hooks/watch/daemon 保持新鲜。没有数据库要跑，没有云账号，状态住在本地 SQLite 文件里。升到**低到中**的场景：开启语义 embedding(模型下载、可选云出网和 API key)、跑多仓库守护进程、或把 GitHub Action 用 `fail-on-risk` 接成合并门。可选依赖矩阵(embeddings/communities/enrichment)是版本摩擦最可能冒头的地方。
 
 ## 存疑（未验证）
 
-- [未验证] 最新 release v2.3.6 发布于 2026-06-10;仓库创建于 2026-02-26;最后 push 2026-06-14(据 `gh` 元数据 2026-06-26)。版本节奏很快;pin 前请重新核实。
-- [未验证] star 数约 18.9k(据 `gh` 2026-06-26)——GitHub star 不可靠且对时间敏感,仅供参考。
-- [未验证] 所有 token 缩减数字(中位数约 82 倍、最大 528 倍、"<2 秒"重建索引、build/延迟表)都是项目自己在 6 个自选仓库上的基准;本页未独立复现。
-- [推断] 影响 "recall 1.0" 被自述为循环(图派生的 ground truth);诚实的 co-change 准确率未发布,故真实世界的影响 precision/recall 未知。
-- [未验证] 所述语言覆盖、约 30 个 MCP 工具、受支持编辑器平台均来自 README;确切工作集可能随版本变动。
-- [未验证] 许可为 MIT(据 `gh licenseInfo` 与 `pyproject.toml`);单一维护者("Tirth"),打包 classifier 标注为 Beta 开发状态。
+- [未验证] 最新 release v2.3.6 发布于 2026-06-10；仓库创建于 2026-02-26；最后 push 2026-06-14(据 `gh` 元数据 2026-06-26)。版本节奏很快；pin 前请重新核实。
+- [未验证] star 数约 18.9k(据 `gh` 2026-06-26)——GitHub star 不可靠且对时间敏感，仅供参考。
+- [未验证] 所有 token 缩减数字(中位数约 82 倍、最大 528 倍、"<2 秒"重建索引、build/延迟表)都是项目自己在 6 个自选仓库上的基准；本页未独立复现。
+- [推断] 影响 "recall 1.0" 被自述为循环(图派生的 ground truth)；诚实的 co-change 准确率未发布，故真实世界的影响 precision/recall 未知。
+- [未验证] 所述语言覆盖、约 30 个 MCP 工具、受支持编辑器平台均来自 README；确切工作集可能随版本变动。
+- [未验证] 许可为 MIT(据 `gh licenseInfo` 与 `pyproject.toml`)；单一维护者("Tirth")，打包 classifier 标注为 Beta 开发状态。

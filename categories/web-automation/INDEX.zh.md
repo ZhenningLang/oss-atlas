@@ -1,6 +1,6 @@
 # web-automation
 
-> 分类节点。驱动或自动化 Web 界面——浏览器自动化,或页内自然语言 GUI agent。
+> 分类节点。驱动或自动化 Web 界面——浏览器自动化，或页内自然语言 GUI agent。
 > ← 返回[分类路由](../../INDEX.zh.md) · English: [INDEX.md](INDEX.md)
 
 ## 本分类项目
@@ -24,4 +24,4 @@
 
 ## 什么该放这里
 
-**驱动或自动化 Web/浏览器(乃至计算机)GUI** 的工具——headless 浏览器自动化、computer-use,或页内 GUI agent。不含服务端爬虫框架,不含企业级纯桌面 RPA。
+**驱动或自动化 Web/浏览器(乃至计算机)GUI** 的工具——headless 浏览器自动化、computer-use，或页内 GUI agent。不含服务端爬虫框架，不含企业级纯桌面 RPA。

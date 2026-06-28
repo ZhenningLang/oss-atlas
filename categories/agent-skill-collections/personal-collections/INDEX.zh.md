@@ -1,6 +1,6 @@
 # personal-collections
 
-> [agent-skill-collections](../INDEX.zh.md) 的叶子。长尾:某个作者策展的技能、subagent 或 harness 配置。
+> [agent-skill-collections](../INDEX.zh.md) 的叶子。长尾：某个作者策展的技能、subagent 或 harness 配置。
 > ← 上层 [agent-skill-collections](../INDEX.zh.md) · 根 [路由](../../../INDEX.zh.md) · English: [INDEX.md](INDEX.md)
 
 ## 本叶子的合集
@@ -12,7 +12,7 @@
 | **dbskill** | 一套个人精选的中文 agent 技能包（约 21 个 /dbs-* 命令），聚焦商业模式诊断、内容创作与个人决策，可安装进 Claude Code 等 harness。 | [→](dbskill.zh.md) |
 | **Dimillian Skills** | 某开发者个人精选的 16 个自包含 Codex skill，重心压在 Apple 平台（SwiftUI/iOS/macOS），外加几个通用评审/重构 swarm。 | [→](dimillian-skills.zh.md) |
 | **gstack** | Garry Tan 的私人 Claude Code 配置：约 23 个带强烈主张的 slash-command 技能，扮演一支虚拟工程团队（CEO 复盘、设计师、工程经理、QA、安全官），驱动「规划→构建→评审→发布→复盘」闭环。 | [→](gstack.zh.md) |
-| **andrej-karpathy-skills** | 一个行为准则包——单个 CLAUDE.md(加 Cursor 变体和一层薄技能包装),把 Karpathy 关于 LLM 编码陷阱的四条原则(先想后写、简单优先、外科式改动、目标驱动执行)注入 Claude Code / Cursor。 | [→](karpathy-skills.zh.md) |
+| **andrej-karpathy-skills** | 一个行为准则包——单个 CLAUDE.md(加 Cursor 变体和一层薄技能包装)，把 Karpathy 关于 LLM 编码陷阱的四条原则(先想后写、简单优先、外科式改动、目标驱动执行)注入 Claude Code / Cursor。 | [→](karpathy-skills.zh.md) |
 | **Khazix Skills** | 数字生命卡兹克（Khazix）的个人精选合集，含五个 SKILL.md 标准格式、以中文为主的 Agent Skill：磁盘清理、AI 资讯查询、文档/记忆同步、长文研究报告、公众号风格写作。 | [→](khazix-skills.zh.md) |
 | **ljg-skills** | 李继刚的个人 Claude Code 技能合集（20+ 个 skill），面向中文知识工作——读论文/拆书、概念分析、大白话改写、把内容渲染成 PNG 卡片，通过 skills CLI 安装。 | [→](ljg-skills.zh.md) |
 | **PUA** | 一个高能动性人设 skill 包：把 coding agent 设定成「被放进 30 天 PIP 的 P8 工程师」，用职场 PUA/PIP 话术逼它穷尽排查手段而非早早放弃。 | [→](pua.zh.md) |
@@ -29,7 +29,7 @@
 | [dbskill](dbskill.zh.md) | ✅ | 一套个人精选的中文 agent 技能包（约 21 个 /dbs-* 命令），聚焦商业模式诊断、内容创作与个人决策，可安装进 Claude Code 等 harness。 |
 | [Dimillian Skills](dimillian-skills.zh.md) | ✅ | 某开发者个人精选的 16 个自包含 Codex skill，重心压在 Apple 平台（SwiftUI/iOS/macOS），外加几个通用评审/重构 swarm。 |
 | [gstack](gstack.zh.md) | ✅ | Garry Tan 的私人 Claude Code 配置：约 23 个带强烈主张的 slash-command 技能，扮演一支虚拟工程团队（CEO 复盘、设计师、工程经理、QA、安全官），驱动「规划→构建→评审→发布→复盘」闭环。 |
-| [andrej-karpathy-skills](karpathy-skills.zh.md) | ✅ | 一个行为准则包——单个 CLAUDE.md(加 Cursor 变体和一层薄技能包装),把 Karpathy 关于 LLM 编码陷阱的四条原则(先想后写、简单优先、外科式改动、目标驱动执行)注入 Claude Code / Cursor。 |
+| [andrej-karpathy-skills](karpathy-skills.zh.md) | ✅ | 一个行为准则包——单个 CLAUDE.md(加 Cursor 变体和一层薄技能包装)，把 Karpathy 关于 LLM 编码陷阱的四条原则(先想后写、简单优先、外科式改动、目标驱动执行)注入 Claude Code / Cursor。 |
 | [Khazix Skills](khazix-skills.zh.md) | ✅ | 数字生命卡兹克（Khazix）的个人精选合集，含五个 SKILL.md 标准格式、以中文为主的 Agent Skill：磁盘清理、AI 资讯查询、文档/记忆同步、长文研究报告、公众号风格写作。 |
 | [ljg-skills](ljg-skills.zh.md) | ✅ | 李继刚的个人 Claude Code 技能合集（20+ 个 skill），面向中文知识工作——读论文/拆书、概念分析、大白话改写、把内容渲染成 PNG 卡片，通过 skills CLI 安装。 |
 | [PUA](pua.zh.md) | ✅ | 一个高能动性人设 skill 包：把 coding agent 设定成「被放进 30 天 PIP 的 P8 工程师」，用职场 PUA/PIP 话术逼它穷尽排查手段而非早早放弃。 |

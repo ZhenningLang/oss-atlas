@@ -155,3 +155,22 @@ link the top-level categories.
 sub-categories. When categories become too thin/overlapping, they should be merged. The
 `refactor-index` skill performs these split/merge rebalances (`git mv`, additive-first, lint as the
 gate). Detection is automatic (lint); the restructure is run via the skill, not silently.
+
+## 6. Chinese punctuation & README parity (lint-enforced)
+
+Two more machine-checkable rules the linter enforces:
+
+- **Chinese punctuation in `.zh.md`.** Chinese-language bodies use **fullwidth** punctuation
+  (`，；：！？（）……`), not the Western ASCII forms. The most common mistake is a half-width comma
+  `,` between two Chinese characters where it must be `，`. The linter **ERRORs** when an ASCII
+  `, ; ! ? :` is adjacent to a CJK character in a `.zh.md` body. **Exempt** (kept ASCII): the YAML
+  frontmatter (facts are language-neutral and must stay identical to the EN sibling), fenced/inline
+  code, markdown link targets `](...)`, and URLs. English words and code inside Chinese prose keep
+  their own punctuation — only punctuation *touching Chinese characters* is normalized. (English
+  pages are unaffected.)
+
+- **README master listing parity.** `README.md` lists every indexed **English** page and
+  `README.zh.md` lists every **Chinese** page; the linter **ERRORs** if any indexed page is missing
+  from its README. This makes the human-facing master listing impossible to silently drift out of
+  sync with the `categories/` tree — when you add a page, add its row to both READMEs (and both
+  `INDEX` files) or lint fails.

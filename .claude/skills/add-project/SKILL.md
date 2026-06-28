@@ -50,9 +50,14 @@ Author one conformant selection page. The contract is `tools/schema.md`; read it
      keep inline labels to the **load-bearing/contested few** (≤3; the linter WARNs above that);
      the full uncertainty list lives in this ledger, not sprinkled across the body.
 
+   - **Chinese punctuation (`.zh.md`)**: use fullwidth `，；：！？（）`, never the ASCII forms next
+     to Chinese characters (the classic slip is `,` between two 汉字 where it must be `，`). Code,
+     link targets, URLs, and frontmatter stay ASCII. The linter ERRORs on violations.
+
 5. **Wire it in.** Add the project to its `categories/<category>/INDEX.md` **and** `INDEX.zh.md`
-   (one-liner + comparison-matrix row in each). If new category, add it to root `INDEX.md` +
-   `INDEX.zh.md`.
+   (one-liner + comparison-matrix row in each) **and to the README master listing** (`README.md` +
+   `README.zh.md`). If new category, also add it to root `INDEX.md` + `INDEX.zh.md`. The linter
+   ERRORs if a page is missing from its INDEX or from either README, so nothing drifts silently.
 
 6. **Lint.** `python3 tools/lint.py` — fix every ERROR before finishing.
 

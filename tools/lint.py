@@ -28,6 +28,10 @@ Checks (ERROR = non-zero exit; WARNING = printed, exit still 0):
   - recursive: sub-categories validated to any depth
   - leaf category with > MAX_FANOUT pages -> WARNING (self-balancing: split via refactor-index)
   - internal relative links resolve
+  - .zh.md bodies use fullwidth Chinese punctuation: ASCII , ; ! ? : adjacent to a CJK char
+    -> ERROR (frontmatter / code / links / URLs are exempt; facts stay language-neutral)
+  - README.md / README.zh.md master listing stays in parity with the indexed pages
+    (every EN page listed in README.md, every ZH page in README.zh.md) -> ERROR on drift
 
 NOTE: this linter is a STRUCTURAL gate, not a semantic review. It cannot judge whether a
 "When to use" is a real User Story, whether a Comparison compares real substitutes, or whether
@@ -66,6 +70,12 @@ LINK_RE = re.compile(r"\[[^\]]+\]\(([^)]+)\)")
 CAVEATS_RE_EN = re.compile(r"(?m)^##\s+Caveats\b")
 CAVEATS_RE_ZH = re.compile(r"(?m)^##\s+存疑")
 LABEL_RE = re.compile(r"\[未验证\]|\[推断\]")
+# Chinese punctuation: ASCII , ; ! ? : adjacent to a CJK char in a .zh.md body should be the
+# fullwidth form (，；！？：). Detection mirrors the normalizer: skip frontmatter, fenced/inline
+# code, link targets, and URLs; flag only ASCII punctuation touching a CJK ideograph.
+CJK_RANGE = "㐀-䶿一-鿿"
+ZH_PUNCT_PROTECT = re.compile(r"`[^`]*`|\]\([^)]*\)|https?://\S+")
+ZH_PUNCT_HIT = re.compile(r"[" + CJK_RANGE + r"][,;!?:]|[,;!?:][" + CJK_RANGE + r"]")
 
 
 class Report:
@@ -106,6 +116,31 @@ def parse_frontmatter(text: str) -> dict | None:
 
 def md_links(text: str) -> list[str]:
     return LINK_RE.findall(text)
+
+
+def zh_punct_violations(text: str) -> int:
+    """Count ASCII , ; ! ? : adjacent to a CJK char in a .zh.md body.
+
+    Skips YAML frontmatter (facts, kept identical to the EN sibling), fenced code blocks,
+    inline code, link targets, and URLs — the same regions the normalizer protects.
+    """
+    n = 0
+    in_front = in_fence = False
+    for i, line in enumerate(text.split("\n")):
+        if i == 0 and line.strip() == "---":
+            in_front = True
+            continue
+        if in_front:
+            if line.strip() == "---":
+                in_front = False
+            continue
+        if line.lstrip().startswith("```"):
+            in_fence = not in_fence
+            continue
+        if in_fence:
+            continue
+        n += len(ZH_PUNCT_HIT.findall(ZH_PUNCT_PROTECT.sub("", line)))
+    return n
 
 
 def linked_targets(index_path: Path) -> set[Path]:
@@ -310,6 +345,30 @@ def main() -> int:
 
     check_root_index(root, INDEX_EN, INDEX_EN, top_categories, rep)
     check_root_index(root, INDEX_ZH, INDEX_ZH, top_categories, rep)
+
+    # Chinese punctuation: fullwidth in CJK context across every .zh.md (pages, INDEX, README).
+    for zh in sorted(root.rglob("*.zh.md")):
+        if any(part.startswith(".") for part in zh.relative_to(root).parts):
+            continue
+        v = zh_punct_violations(zh.read_text(encoding="utf-8"))
+        if v:
+            rep.error(zh, f"{v} ASCII , ; ! ? : adjacent to CJK — use fullwidth 中文标点 （，；！？：）")
+
+    # README master listing must stay in parity with the indexed pages (guards silent drift):
+    # README.md lists every EN page, README.zh.md lists every ZH page.
+    en_pages = [p for p in categories_dir.rglob("*.md")
+                if is_page(p.name) and not p.name.endswith(ZH_SUFFIX)]
+    for readme_name, want_zh in (("README.md", False), ("README.zh.md", True)):
+        rp = root / readme_name
+        if not rp.exists():
+            rep.error(root, f"missing {readme_name}")
+            continue
+        body = rp.read_text(encoding="utf-8")
+        for en in sorted(en_pages):
+            rel = en.relative_to(root).as_posix()
+            target = (rel[: -len(".md")] + ZH_SUFFIX) if want_zh else rel
+            if target not in body:
+                rep.error(rp, f"indexed page not listed in {readme_name}: {target}")
 
     for w in rep.warnings:
         print(w)

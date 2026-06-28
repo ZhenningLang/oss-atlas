@@ -1,6 +1,6 @@
 # on-device-ml
 
-> 分类节点。在端侧/边缘设备(手机、笔记本、IoT)本地跑 ML/LLM 推理,而非云端。
+> 分类节点。在端侧/边缘设备(手机、笔记本、IoT)本地跑 ML/LLM 推理，而非云端。
 > ← 返回[分类路由](../../INDEX.zh.md) · English: [INDEX.md](INDEX.md)
 
 ## 本分类项目
@@ -24,4 +24,4 @@
 
 ## 什么该放这里
 
-面向**本地/端侧推理**(手机、笔记本、边缘、CPU)的运行时与模型。不含云端训练(见 `llm-training`),不含 RAG 检索(见 `rag-retrieval`)。
+面向**本地/端侧推理**(手机、笔记本、边缘、CPU)的运行时与模型。不含云端训练(见 `llm-training`)，不含 RAG 检索(见 `rag-retrieval`)。
