@@ -6,7 +6,7 @@ category: agent-memory
 tags: [agent-memory, cross-session-memory, claude-code, hooks, mcp, context-injection, sqlite, vector-store]
 language: JavaScript
 license: Apache-2.0
-maturity: v13.8.0, active (2026-06); ~84.8k stars claimed (as of 2026-06) — star count unverified
+maturity: v13.8.0, active (2026-06); ~84.8k stars (API-verified count, as of 2026-06) — production-adoption/vetting meaning unverified and suspicious for a young single-maintainer hook tool
 last_verified: 2026-06-28
 type: tool
 ---
@@ -27,7 +27,7 @@ It fits when you want this *across* tools, not bound to one agent: the same memo
 - **Single-developer maintenance / abandonment risk.** The project is authored by one developer (`@thedotmack`). It moves fast (v13.x in 2026), but a hook tool sitting in your every-session critical path from a single maintainer is a bus-factor-of-one dependency — weigh that before making it load-bearing.
 - **You want a hosted, multi-tenant memory service.** It is self-hosted and local-only (install via `npx`, data in local SQLite, HTTP API on `localhost:37777`). There's no managed multi-tenant backend to share memory across a team or fleet; it's per-developer-machine.
 - **Privacy of captured session data.** By design it captures *everything the agent does* — file contents, commands, outputs — and an LLM compresses it. Data stays local and `<private>` tags can exclude content from storage, but you're standing up a process that records your work; on a sensitive repo, audit what lands in the store and whether the compression step calls an external model.
-- **You distrust the popularity signal.** The ~84.8k star figure is extreme for a young, single-developer tool and does not match its maturity profile `[未验证]`; do not adopt it *because* it looks widely vetted — evaluate the code and your own constraints, not the star count.
+- **You distrust the popularity signal.** The ~84.8k star count is API-verified, but it is extreme for a young, single-developer tool and its production-adoption/vetting meaning is unverified and suspicious `[未验证]`; do not adopt it *because* it looks widely vetted — evaluate the code and your own constraints, not the star count.
 
 ## Comparison
 
@@ -64,13 +64,13 @@ It fits when you want this *across* tools, not bound to one agent: the same memo
 ## Health & viability
 
 - **Maintenance — very active (as of 2026-06).** Last push 2026-06; latest release v13.8.0 (2026-06-21); not archived. Fast-moving with a high major version on a young project — actively maintained, but the unusual versioning is itself a thing to verify against the live repo.
-- **Governance & bus factor — single developer, star/maturity mismatch ⇒ strong red flag.** A `User`-owned repo (`@thedotmack`) sitting in your every-session critical path is a bus-factor-of-one dependency. The ~84.8k star figure is wildly disproportionate for a young single-developer hook tool and does *not* match its maturity — treat popularity as decoupled from vetting, not as adoption evidence. [未验证]
+- **Governance & bus factor — single developer, star/maturity mismatch ⇒ strong red flag.** A `User`-owned repo (`@thedotmack`) sitting in your every-session critical path is a bus-factor-of-one dependency. The ~84.8k star count is API-verified, but it is wildly disproportionate for a young single-developer hook tool and its production-adoption/vetting meaning is unverified and suspicious — treat popularity as decoupled from vetting, not as adoption evidence. [未验证]
 - **Age & Lindy — young, unproven.** Created 2025-08, ~10 months old (as of 2026-06). Active but no track record; young-and-hyped, not Lindy-safe — do not adopt *because* it looks widely vetted.
 - **Risk flags — data capture + local-stack ownership.** Apache-2.0 (no relicense risk), but by design it records everything the agent does and runs an LLM compression step whose model/egress is under-documented; you also own the local SQLite+Chroma stack. Privacy and bus-factor are the dominant risks, not licensing.
 
 ## Caveats (unverified)
 
-- `[未验证]` **~84.8k GitHub stars as of 2026-06 is suspicious** — that figure is wildly disproportionate for a young, single-developer hook tool and doesn't match its maturity. Treat the star count as unverified and *not* as evidence of adoption or vetting; GitHub stars are unreliable and date-sensitive regardless.
+- `[未验证]` **~84.8k GitHub stars as of 2026-06: the count is API-verified, but its production-adoption/vetting meaning is unverified and suspicious** — that figure is wildly disproportionate for a young, single-developer hook tool. Treat the count's adoption/vetting meaning as unverified and *not* as evidence of adoption or vetting; GitHub stars are unreliable and date-sensitive regardless.
 - `[未验证]` v13.8.0 released 2026-06-21 (per the repo). The very high major version on a young project is itself unusual — verify the release cadence against the live repo.
 - `[未验证]` Supported-agent list (Claude Code, Codex, Gemini, Copilot, OpenCode, OpenClaw, Hermes) is the README's own framing; depth/parity of support per agent is not independently confirmed.
 - `[未验证]` The LLM used for the compression step, and whether any data leaves the box during compression, is not clearly documented — confirm before pointing it at sensitive repos.

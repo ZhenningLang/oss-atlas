@@ -3,10 +3,10 @@ name: fuck-login
 slug: fuck-login
 repo: https://github.com/xchaoinfo/fuck-login
 category: web-scraping
-tags: [scraping, login-automation, requests, captcha, python, education, abandoned]
+tags: [scraping, login-automation, requests, captcha, python, education, abandoned, archived]
 language: Python
 license: NONE
-maturity: no tagged releases, abandoned since 2018, 5.8k stars (as of 2026-06)
+maturity: no tagged releases, archived on GitHub (abandoned since 2018), 5.8k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
 ---
@@ -58,7 +58,7 @@ type: library
 
 ## 健康度与可持续性
 
-- **维护（2026-06）。** **已废弃。** README 直说“本项目不在继续维护了”；最后 push 在 2018-06-08，已停滞约 8 年。GitHub 上未归档，但功能上已死。
+- **维护（2026-06）。** **已废弃。** README 直说“本项目不在继续维护了”；最后 push 在 2018-06-08，已停滞约 8 年。已在 GitHub 归档（且实质上已废弃）。
 - **治理 / bus factor。** 单一维护者（`xchaoinfo`）的个人/教学仓库，挂在 `User` 账号下却有 5.8k star——废弃的单作者仓库上的高 star 是**风险标记**，不是社会证明：这些 star 反映的是 2016 年的热度，而非当前健康度。
 - **年龄与 Lindy 判断。** 2016-02 创建，约 10 岁，但**已不再活跃**⇒ Lindy **不成立**：这里年龄缺了持续活动就是负面信号，而非正面。长期废弃的仓库正是 Lindy 先验*不*适用的教科书案例。
 - **背书。** 无——个人项目，最初配套一套视频教程（“Python 模拟登录那些事儿”）和一个微信公众号。没有组织，没有资金。
@@ -66,6 +66,7 @@ type: library
 
 ## 存疑（未验证）
 
+- 已在 GitHub 归档（截至 2026-06-28 经 GitHub API 确认 `archived: true`），且自 2018 年起已废弃；仓库为只读，不会再有新提交。
 - [未验证] 截至 2026-06 仓库内没有 LICENSE 文件；默认版权意味着没有复用授权。视为未授权；`license` 字段填 `NONE` 以如实反映。
 - [推断] “今天大多数脚本已失效”是从 2018 年冻结加上目标站已知的鉴权/验证码改版推断而来，并非逐个跑过。
 - [未验证] 截至 2026-06 约 5.8k star / 1.97k fork；star 数对时间敏感，这里反映的是历史相关性而非当前。

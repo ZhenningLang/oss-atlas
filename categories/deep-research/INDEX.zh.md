@@ -11,7 +11,7 @@
 | **Vane** | 想要一个自托管、注重隐私的「Perplexity 式」带引用应答引擎，接你自己的 SearxNG 和自选 LLM 时用它。 | [→](vane.zh.md) |
 | **Local Deep Research** | 当你需要一个自托管、可纯本地运行的深度研究 agent、把敏感查询留在自己机器上时用它。 | [→](local-deep-research.zh.md) |
 | **Agent-Reach** | 当你的 agent 需要免付费 API 地读取和搜索网页与社交平台内容时用它。 | [→](agent-reach.zh.md) |
-| **MiroThinker** | 一个开源 deep-research agent：微调过的 LLM 加上一套 MCP 工具环境（网络搜索、抓取、代码执行），由 MiroFlow 框架编排，用来回答复杂的多步研究与预测问题。 | [→](mirothinker.zh.md) |
+| **MiroThinker** | 当你想要一个把微调研究模型与 MCP 工具结合的深度研究 agent 参考、并接受年轻项目风险时用它。 | [→](mirothinker.zh.md) |
 
 ## 对比矩阵
 
@@ -21,7 +21,7 @@
 | [Vane](vane.zh.md) | ✅ | 想要一个自托管、注重隐私的「Perplexity 式」带引用应答引擎，接你自己的 SearxNG 和自选 LLM 时用它。 |
 | [Local Deep Research](local-deep-research.zh.md) | ✅ | 当你需要一个自托管、可纯本地运行的深度研究 agent、把敏感查询留在自己机器上时用它。 |
 | [Agent-Reach](agent-reach.zh.md) | ✅ | 当你的 agent 需要免付费 API 地读取和搜索网页与社交平台内容时用它。 |
-| [MiroThinker](mirothinker.zh.md) | ✅ | 一个开源 deep-research agent：微调过的 LLM 加上一套 MCP 工具环境（网络搜索、抓取、代码执行），由 MiroFlow 框架编排，用来回答复杂的多步研究与预测问题。 |
+| [MiroThinker](mirothinker.zh.md) | ✅ | 当你想要一个把微调研究模型与 MCP 工具结合的深度研究 agent 参考、并接受年轻项目风险时用它。 |
 | GPT Researcher / Perplexity / OpenAI Deep Research | 未收录 | 各页对比里点到的其他深度研究 agent / 服务。 |
 
 ## 什么该放这里

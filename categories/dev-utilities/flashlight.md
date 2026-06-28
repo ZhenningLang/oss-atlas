@@ -5,7 +5,7 @@ repo: https://github.com/w0lfschild/Flashlight
 category: dev-utilities
 tags: [macos, spotlight, plugins, productivity, launcher, python]
 language: Python
-license: MIT-and-GPL (dual; see LICENSE)
+license: MIT AND GPL-2.0-only (component split)
 maturity: no releases, abandoned (last push 2020-11)
 last_verified: 2026-06-28
 type: tool
@@ -62,11 +62,11 @@ Realistically, in 2026 this is a **retro / legacy-machine** use case: a vintage 
 - **Governance / bus factor.** Owner is a **User** account (w0lfschild); this is itself a fork in a succession of community maintainers (original by nate-parrott, then several forks). Effectively no current owner — worst-case bus factor. [推断]
 - **Age & Lindy.** Created 2016; ~10 years old but **abandoned for ~6 of them** ⇒ Lindy **fails** — age without ongoing activity is not a durability signal, it's a tombstone. The underlying OS-injection approach has also been obsoleted by macOS itself. [推断]
 - **Adoption.** ~1.1k stars reflect historical interest in the original idea, not current usage; the modern audience has moved to Alfred/Raycast. [未验证]
-- **Risk flags.** Requires disabling SIP and injecting into a system process (security risk); dual MIT/GPL licensing (GitHub reports `NOASSERTION`, the repo's LICENSE clarifies app/agent = GPL, rest = MIT); tied to deprecated macOS internals. [推断]
+- **Risk flags.** Requires disabling SIP and injecting into a system process (security risk); mixed / component-level licensing (MIT for most, GPL-2.0 for the app + SIMBL agent) (GitHub reports `NOASSERTION`, the repo's LICENSE clarifies app/agent = GPL, rest = MIT); tied to deprecated macOS internals. [推断]
 
 ## Caveats (unverified)
 
-- [未验证] GitHub license shows `NOASSERTION`; the repo LICENSE states the project is MIT **except** `Flashlight.app` and the SIMBL Agent (GPL). The `license` field here encodes that dual arrangement, not a single SPDX id.
+- [未验证] GitHub license shows `NOASSERTION`; the repo LICENSE states the project is MIT **except** `Flashlight.app` and the SIMBL Agent (GPL). The `license` field here encodes that mixed / component-level arrangement (MIT for most, GPL-2.0 for the app + SIMBL agent), not a single SPDX id.
 - [未验证] Supported macOS range (~10.10–10.15) and the Big Sur-breakage reason come from the README/maintainer notes; not independently re-verified against each OS version.
 - [推断] "Abandoned" is inferred from no releases + last push 2020-11 + the maintainer's stated discontinuation — GitHub does not mark it archived.
 - [未验证] Plugin language (Python), the MacForge/MacEnhance injection requirement, and SIP-disable steps are taken from the README/install docs and not tested on a live machine here.

@@ -46,8 +46,8 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **Context Mode** | Use it when a coding agent burns context on raw tool output and you want sandboxed execution plus compaction-surviving session memory. | Elastic-2.0 | [EN](categories/agent-tooling/context-mode.md) · [中](categories/agent-tooling/context-mode.zh.md) |
 | **Planning with Files** | Use it when a long agent run keeps losing its plan to /clear, compaction, or crashes. | MIT | [EN](categories/agent-tooling/planning-with-files.md) · [中](categories/agent-tooling/planning-with-files.zh.md) |
 | **Vercel Skills** | Use it when you want an npm-style CLI to install, find, and update SKILL.md packs across many coding agents. | MIT | [EN](categories/agent-tooling/vercel-skills.md) · [中](categories/agent-tooling/vercel-skills.zh.md) |
-| **OpenSandbox** | A general-purpose, secure sandbox runtime and platform for AI agents — multi-language SDKs, a unified sandbox protocol, and Docker/Kubernetes backends for running untrusted agent-generated code, GUI/browser automation, and RL/eval workloads in isolated environments. | Apache-2.0 | [EN](categories/agent-tooling/opensandbox.md) · [中](categories/agent-tooling/opensandbox.zh.md) |
-| **AgentsView** | A local-first desktop/CLI app that discovers, searches, and analyzes your coding-agent sessions across 40+ agents (Claude Code, Codex, Cursor, Gemini, and more) — full-text search, token-usage analytics, and cost tracking, all on your machine without an account. | MIT | [EN](categories/agent-tooling/agentsview.md) · [中](categories/agent-tooling/agentsview.zh.md) |
+| **OpenSandbox** | Use it when an agent must run untrusted, generated code in isolated Docker/K8s sandboxes — a very young high-star project, so weigh adoption claims with caution. | Apache-2.0 | [EN](categories/agent-tooling/opensandbox.md) · [中](categories/agent-tooling/opensandbox.zh.md) |
+| **AgentsView** | Use it when you want local-first search, analytics, and token-cost insight across your coding-agent sessions. | MIT | [EN](categories/agent-tooling/agentsview.md) · [中](categories/agent-tooling/agentsview.zh.md) |
 ### document-management
 
 | Project | Use when | License | Page |
@@ -100,7 +100,7 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **smolagents** | Use it when you want a tiny, transparent code-acting agent loop from Hugging Face — not a heavy production agent OS. | Apache-2.0 | [EN](categories/agent-frameworks/smolagents.md) · [中](categories/agent-frameworks/smolagents.zh.md) |
 | **Kilo Code** | Use it when you want an open, BYOK in-IDE (VS Code) coding agent with planning and modes — an end-user tool, not a library to build agents. | MIT | [EN](categories/agent-frameworks/kilocode.md) · [中](categories/agent-frameworks/kilocode.zh.md) |
 | **Parlant** | Use it when you build a customer-facing agent that must stay on-rails via behavioral guidelines — overkill for simple or free-form agents. | Apache-2.0 | [EN](categories/agent-frameworks/parlant.md) · [中](categories/agent-frameworks/parlant.zh.md) |
-| **SkillOpt** | A text-space optimizer that "trains" reusable natural-language skill documents for a frozen LLM agent — applying validation-gated, trajectory-driven edits to produce a compact, deployable `best_skill.md`. | MIT | [EN](categories/agent-frameworks/skillopt.md) · [中](categories/agent-frameworks/skillopt.zh.md) |
+| **SkillOpt** | Use it when you have a scorable benchmark and want to optimize a reusable natural-language skill/prompt for a frozen LLM agent. | MIT | [EN](categories/agent-frameworks/skillopt.md) · [中](categories/agent-frameworks/skillopt.zh.md) |
 ### agent-memory
 
 | Project | Use when | License | Page |
@@ -118,7 +118,7 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **Vane** | Use it when you want a self-hosted, privacy-focused Perplexity-style cited answer engine over your own SearxNG and chosen LLM. | MIT | [EN](categories/deep-research/vane.md) · [中](categories/deep-research/vane.zh.md) |
 | **Local Deep Research** | Use it when you need a self-hosted, fully-local deep-research agent that keeps sensitive queries on your own machine. | MIT | [EN](categories/deep-research/local-deep-research.md) · [中](categories/deep-research/local-deep-research.zh.md) |
 | **Agent-Reach** | Use it when your agent needs to read and search web plus social platforms without paid APIs. | MIT | [EN](categories/deep-research/agent-reach.md) · [中](categories/deep-research/agent-reach.zh.md) |
-| **MiroThinker** | An open-source deep-research agent: fine-tuned LLMs plus an MCP-tool environment (web search, scraping, code execution) orchestrated by the MiroFlow framework to answer complex, multi-step research and prediction questions. | Apache-2.0 | [EN](categories/deep-research/mirothinker.md) · [中](categories/deep-research/mirothinker.zh.md) |
+| **MiroThinker** | Use it when you want a deep-research agent reference that combines fine-tuned research models with MCP tools, accepting young-project risk. | Apache-2.0 | [EN](categories/deep-research/mirothinker.md) · [中](categories/deep-research/mirothinker.zh.md) |
 ### ai-code-review
 
 | Project | Use when | License | Page |
@@ -180,7 +180,7 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **SlimToolkit** | Use it when you want to auto-minify & harden a bloated container image without rewriting the Dockerfile — beware it can strip dynamically-loaded files. | Apache-2.0 | [EN](categories/dev-utilities/slim.md) · [中](categories/dev-utilities/slim.zh.md) |
 | **Faker (faker-js)** | Use it when you need realistic fake/mock data (names, addresses, finance…) for tests and seeding in JS/TS. | MIT | [EN](categories/dev-utilities/faker-js.md) · [中](categories/dev-utilities/faker-js.zh.md) |
 | **fontTools** | A Python library (plus a set of command-line tools) to read, write, and manipulate font files — TrueType/OpenType, WOFF/WOFF2, AFM, and more — the de-facto foundation of the open-source font tooling stack. | MIT | [EN](categories/dev-utilities/fonttools.md) · [中](categories/dev-utilities/fonttools.zh.md) |
-| **Flashlight** | An "unofficial Spotlight API" for older macOS — a plugin system that injects into Spotlight so you can type `weather`, `define`, currency conversions, etc. and get custom results inline. This `w0lfschild` repo is one fork in a chain descending from nate-parrott's original. | MIT-and-GPL (dual; see LICENSE) | [EN](categories/dev-utilities/flashlight.md) · [中](categories/dev-utilities/flashlight.zh.md) |
+| **Flashlight** | An "unofficial Spotlight API" for older macOS — a plugin system that injects into Spotlight so you can type `weather`, `define`, currency conversions, etc. and get custom results inline. This `w0lfschild` repo is one fork in a chain descending from nate-parrott's original. | MIT AND GPL-2.0-only (component split) | [EN](categories/dev-utilities/flashlight.md) · [中](categories/dev-utilities/flashlight.zh.md) |
 | **IdeaVim** | A Vim emulation plugin for JetBrains IDEs (IntelliJ IDEA, PyCharm, GoLand, WebStorm, Rider, etc.) — Vim motions, modes, registers, macros, and a `.ideavimrc` inside the IDE, maintained by JetBrains itself. | MIT | [EN](categories/dev-utilities/ideavim.md) · [中](categories/dev-utilities/ideavim.zh.md) |
 ### frontend-animation
 
@@ -336,7 +336,7 @@ The complete index, grouped by category. Each project has an English page (`<slu
 |---|---|---|---|
 | **Mermaid** | Use it when you want diagrams as version-controlled plain text (flowchart/sequence/ER) rendered in Markdown and docs — not pixel-precise layouts. | MIT | [EN](categories/diagramming/mermaid.md) · [中](categories/diagramming/mermaid.zh.md) |
 | **flowchart.js** | A tiny JavaScript library that turns a small textual DSL into an SVG flowchart in the browser — define nodes and connections as text, get a rendered diagram. | MIT | [EN](categories/diagramming/flowchart-js.md) · [中](categories/diagramming/flowchart-js.zh.md) |
-| **bpmn-js** | A BPMN 2.0 rendering and modeling toolkit for the browser — import BPMN XML, display it as an interactive diagram, and edit it, built by the bpmn.io team at Camunda. | NOASSERTION | [EN](categories/diagramming/bpmn-js.md) · [中](categories/diagramming/bpmn-js.zh.md) |
+| **bpmn-js** | A BPMN 2.0 rendering and modeling toolkit for the browser — import BPMN XML, display it as an interactive diagram, and edit it, built by the bpmn.io team at Camunda. | MIT + bpmn.io watermark clause | [EN](categories/diagramming/bpmn-js.md) · [中](categories/diagramming/bpmn-js.zh.md) |
 ### media-download
 
 | Project | Use when | License | Page |

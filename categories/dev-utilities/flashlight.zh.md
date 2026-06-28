@@ -5,7 +5,7 @@ repo: https://github.com/w0lfschild/Flashlight
 category: dev-utilities
 tags: [macos, spotlight, plugins, productivity, launcher, python]
 language: Python
-license: MIT-and-GPL (dual; see LICENSE)
+license: MIT AND GPL-2.0-only (component split)
 maturity: no releases, abandoned (last push 2020-11)
 last_verified: 2026-06-28
 type: tool
@@ -62,11 +62,11 @@ type: tool
 - **治理 / bus factor。** owner 是 **User** 账号（w0lfschild）；它本身就是一连串社区维护者接力中的一个分叉（原版 nate-parrott，之后数个分叉）。实际上已无当前 owner——最坏的 bus factor。[推断]
 - **年龄与 Lindy。** 2016 年创建，约 10 岁但**其中约 6 年处于废弃**⇒ Lindy **不成立**——没有持续活跃的年龄不是耐久信号，而是一块墓碑。其底层的系统注入路子也已被 macOS 本身淘汰。[推断]
 - **采用度。** 约 1.1k star 反映的是当年对这个点子的兴趣，而非当前使用；现代受众已转向 Alfred/Raycast。[未验证]
-- **风险标记。** 需要关闭 SIP 并注入系统进程（安全风险）；MIT/GPL 双许可（GitHub 报 `NOASSERTION`，仓库 LICENSE 澄清 app/agent = GPL、其余 = MIT）；绑定已弃用的 macOS 内部机制。[推断]
+- **风险标记。** 需要关闭 SIP 并注入系统进程（安全风险）；混合/组件级许可（大部分为 MIT，app 与 SIMBL agent 为 GPL-2.0）（GitHub 报 `NOASSERTION`，仓库 LICENSE 澄清 app/agent = GPL、其余 = MIT）；绑定已弃用的 macOS 内部机制。[推断]
 
 ## 存疑（未验证）
 
-- [未验证] GitHub 许可显示 `NOASSERTION`；仓库 LICENSE 写明项目为 MIT，**但** `Flashlight.app` 与 SIMBL Agent 例外（GPL）。这里的 `license` 字段编码的是这种双许可安排，而非单一 SPDX id。
+- [未验证] GitHub 许可显示 `NOASSERTION`；仓库 LICENSE 写明项目为 MIT，**但** `Flashlight.app` 与 SIMBL Agent 例外（GPL）。这里的 `license` 字段编码的是这种混合/组件级安排（大部分为 MIT，app 与 SIMBL agent 为 GPL-2.0），而非单一 SPDX id。
 - [未验证] 支持的 macOS 范围（约 10.10–10.15）与 Big Sur 弄坏它的原因来自 README/维护者说明；未对每个系统版本独立复核。
 - [推断]「已废弃」是从无 release ＋最后 push 2020-11 ＋维护者明示停手推断——GitHub 并未将其标为 archived。
 - [未验证] 插件语言（Python）、MacForge/MacEnhance 注入要求与关闭 SIP 的步骤取自 README/安装文档，未在真机上测试。

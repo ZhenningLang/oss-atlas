@@ -69,7 +69,7 @@ It fits especially well when the graph spans more than just app code — graphif
 
 ## Caveats (unverified)
 
-- [未验证] Latest release v0.8.49 published 2026-06-25; star count ~72.2k as of 2026-06 — GitHub stars are unreliable and date-sensitive, treat as indicative only.
+- [未验证] Latest release v0.8.49 published 2026-06-25; ~73.1k stars (as of 2026-06-28, via GitHub API) — the count is API-verified, but its adoption meaning is unverified, and GitHub stars are unreliable and date-sensitive; treat as indicative only.
 - [未验证] Minimum Python 3.10 and the "36 tree-sitter grammars" / supported-file-type list come from the README; verify against the installed version before relying on a specific language/format.
 - [未验证] The ~5000-node HTML practical limit and 512 MiB default graph cap are documented defaults; real ceilings depend on machine memory and graph density.
 - [未验证] Security CVE fixes (starlette) cited from release notes; not independently confirmed against an advisory database.

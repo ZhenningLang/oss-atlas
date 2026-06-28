@@ -3,10 +3,10 @@ name: fuck-login
 slug: fuck-login
 repo: https://github.com/xchaoinfo/fuck-login
 category: web-scraping
-tags: [scraping, login-automation, requests, captcha, python, education, abandoned]
+tags: [scraping, login-automation, requests, captcha, python, education, abandoned, archived]
 language: Python
 license: NONE
-maturity: no tagged releases, abandoned since 2018, 5.8k stars (as of 2026-06)
+maturity: no tagged releases, archived on GitHub (abandoned since 2018), 5.8k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
 ---
@@ -58,7 +58,7 @@ Realistically that's the only safe use today. The login flows these scripts targ
 
 ## Health & viability
 
-- **Maintenance (2026-06).** **Abandoned.** README states outright "本项目不在继续维护了 (This project is not maintained)"; last push 2018-06-08, ~8 years stale. Not archived on GitHub, but functionally dead.
+- **Maintenance (2026-06).** **Abandoned.** README states outright "本项目不在继续维护了 (This project is not maintained)"; last push 2018-06-08, ~8 years stale. Archived on GitHub (and functionally abandoned).
 - **Governance / bus factor.** Single-maintainer (`xchaoinfo`) personal/teaching repo on a `User` account with 5.8k stars — high stars on an abandoned single-author repo is a **risk flag**, not social proof: the stars reflect 2016-era popularity, not current health.
 - **Age & Lindy verdict.** Created 2016-02, ~10 years old but **not still active** ⇒ Lindy **fails**: age without ongoing activity is a negative signal here, not a positive one. A long-abandoned repo is the textbook case where the Lindy prior does *not* apply.
 - **Backing.** None — personal project, originally tied to a video tutorial series ("Python 模拟登录那些事儿") and a WeChat public account. No org, no funding.
@@ -66,6 +66,7 @@ Realistically that's the only safe use today. The login flows these scripts targ
 
 ## Caveats (unverified)
 
+- Archived on GitHub (`archived: true` via the GitHub API as of 2026-06-28) and abandoned since 2018; the repo is read-only and will receive no further commits.
 - [未验证] No LICENSE file present in the repo as of 2026-06; default copyright means no reuse grant. Treat as unlicensed; the `license` field is set to `NONE` to reflect this.
 - [推断] "Most scripts are broken today" is inferred from the 2018 freeze plus known auth/captcha changes on the target sites, not from running each script.
 - [未验证] ~5.8k stars / 1.97k forks as of 2026-06; star counts are date-sensitive and here reflect historical, not current, relevance.

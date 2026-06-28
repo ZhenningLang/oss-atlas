@@ -14,8 +14,8 @@
 | **Context Mode** | 当 coding agent 把上下文耗在原始工具输出上、你想要沙箱执行加熬过 compaction 的会话记忆时用它。 | [→](context-mode.zh.md) |
 | **Planning with Files** | 当长任务 agent 总在 /clear、上下文压缩或崩溃中丢失计划时用它把计划落到磁盘。 | [→](planning-with-files.zh.md) |
 | **Vercel Skills** | 当你想要一个 npm 风格的 CLI 来跨多个编码 agent 安装、查找、更新 SKILL.md 技能包时使用。 | [→](vercel-skills.zh.md) |
-| **OpenSandbox** | 面向 AI agent 的通用、安全沙箱运行时与平台——多语言 SDK、一套统一的沙箱协议，以及 Docker/Kubernetes 后端，用于在隔离环境里运行不可信的 agent 生成代码、GUI/浏览器自动化，以及 RL/评测负载。 | [→](opensandbox.zh.md) |
-| **AgentsView** | 一个 local-first 的桌面/CLI 应用，在 40+ 个 agent（Claude Code、Codex、Cursor、Gemini 等）之间发现、搜索并分析你的编码 agent 会话——全文搜索、token 用量分析、成本追踪，全在你本机完成，无需账号。 | [→](agentsview.zh.md) |
+| **OpenSandbox** | 当 agent 需要在隔离的 Docker/K8s 沙箱里运行不可信的生成代码时用它——非常年轻的高星项目，采用度宜谨慎看待。 | [→](opensandbox.zh.md) |
+| **AgentsView** | 当你想对自己的编码 agent 会话做本地优先的搜索、分析与 token 成本洞察时用它。 | [→](agentsview.zh.md) |
 
 ## 对比矩阵
 
@@ -28,8 +28,8 @@
 | [Context Mode](context-mode.zh.md) | ✅ | 当 coding agent 把上下文耗在原始工具输出上、你想要沙箱执行加熬过 compaction 的会话记忆时用它。 |
 | [Planning with Files](planning-with-files.zh.md) | ✅ | 当长任务 agent 总在 /clear、上下文压缩或崩溃中丢失计划时用它把计划落到磁盘。 |
 | [Vercel Skills](vercel-skills.zh.md) | ✅ | 当你想要一个 npm 风格的 CLI 来跨多个编码 agent 安装、查找、更新 SKILL.md 技能包时使用。 |
-| [OpenSandbox](opensandbox.zh.md) | ✅ | 面向 AI agent 的通用、安全沙箱运行时与平台——多语言 SDK、一套统一的沙箱协议，以及 Docker/Kubernetes 后端，用于在隔离环境里运行不可信的 agent 生成代码、GUI/浏览器自动化，以及 RL/评测负载。 |
-| [AgentsView](agentsview.zh.md) | ✅ | 一个 local-first 的桌面/CLI 应用，在 40+ 个 agent（Claude Code、Codex、Cursor、Gemini 等）之间发现、搜索并分析你的编码 agent 会话——全文搜索、token 用量分析、成本追踪，全在你本机完成，无需账号。 |
+| [OpenSandbox](opensandbox.zh.md) | ✅ | 当 agent 需要在隔离的 Docker/K8s 沙箱里运行不可信的生成代码时用它——非常年轻的高星项目，采用度宜谨慎看待。 |
+| [AgentsView](agentsview.zh.md) | ✅ | 当你想对自己的编码 agent 会话做本地优先的搜索、分析与 token 成本洞察时用它。 |
 | Taskmaster / GitHub Issues + gh / Linear | 未收录 | 各页对比里点到的其他 agent 任务/工作追踪后端。 |
 
 ## 什么该放这里

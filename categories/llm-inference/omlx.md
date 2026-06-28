@@ -6,7 +6,7 @@ category: llm-inference
 tags: [llm-serving, inference-server, apple-silicon, mlx, kv-cache, openai-api, macos]
 language: Python
 license: Apache-2.0
-maturity: "v0.4.4, active (2026-06); ~17.2k stars [未验证 — anomalous for a ~4-month single-maintainer repo], created 2026-02 (very young), owner=User"
+maturity: "v0.4.4, active (2026-06); ~17.2k stars (API-verified count; adoption meaning unverified/suspicious — anomalous for a ~4-month single-maintainer repo), created 2026-02 (very young), owner=User"
 last_verified: 2026-06-28
 type: framework
 ---
@@ -27,7 +27,7 @@ You also reach for it when you want one Mac-local server that handles text LLMs,
 - **You're not on Apple Silicon.** oMLX is **macOS-only** and **Apple-Silicon-only** (requires macOS 15.0+ and an M-series chip), built on Apple's MLX. There is no Linux/NVIDIA/AMD path — for server GPUs use vLLM / TGI / TensorRT-LLM / MAX.
 - **You're serving at cluster / multi-node scale.** This is a single-machine, single-Mac server with LRU model eviction and a RAM cap — not a horizontally-scaled, multi-GPU fleet engine with autoscaling.
 - **SSD-offload caching has tradeoffs you can't accept.** Restoring KV blocks from disk is faster than recompute *on a cache hit*, but it adds I/O latency and SSD wear, and the win depends on prefix-hit rates; on a cold/novel prompt you pay normal prefill. Don't assume the cache is free.
-- **You can't independently confirm the claims.** The benchmarks, the "tiered cache survives restart," and especially the **~17k-star signal on a ~4-month repo** are the project's own framing and an anomalous popularity number; verify it delivers for your models before betting a workflow on it. [未验证]
+- **You can't independently confirm the claims.** The benchmarks and the "tiered cache survives restart" are the project's own framing, and the **~17k-star count on a ~4-month repo** — while API-verified as a number — is an anomalous popularity signal whose adoption meaning is unverified/suspicious; verify it delivers for your models before betting a workflow on it. [未验证]
 
 ## Comparison
 
@@ -66,12 +66,12 @@ You also reach for it when you want one Mac-local server that handles text LLMs,
 - **Maintenance (2026-06).** Last pushed 2026-06-28; v0.4.4 released 2026-06-16 with frequent rc/dev tags — **very active** development, not coasting. Not archived. [推断]
 - **Governance / bus factor (2026-06) — flag.** Owner is a **single User account** (`jundot`), and one author dominates commit history (~1.2k commits) with a long tail of small outside contributors. This is a **single-maintainer / high-bus-factor** project: if the author stops, it likely stalls. [推断]
 - **Age & Lindy (2026-06) — fails Lindy.** Created **2026-02** (~0.4 years old). Far **too young** to carry any Lindy prior; longevity is entirely unproven regardless of activity. Use age × still-active: active is good, but ~4 months is not a track record. [推断]
-- **Adoption — suspicious-popularity flag.** ~17.2k stars on a ~4-month-old single-maintainer repo is **anomalous**: that star velocity is wildly out of proportion to the project's age, contributor base, and ~624 open issues / ~91 watchers. Treat the star count as **[未验证]** social proof — possibly genuine viral interest in a Mac-local LLM server, possibly inflated — and do **not** read it as production-readiness. [未验证]
+- **Adoption — suspicious-popularity flag.** ~17.2k stars on a ~4-month-old single-maintainer repo: the count is API-verified, but its adoption meaning is **anomalous** — that star velocity is wildly out of proportion to the project's age, contributor base, and ~624 open issues / ~91 watchers. Treat the count's **[未验证]** adoption/vetting meaning as suspicious — possibly genuine viral interest in a Mac-local LLM server, possibly a visibility spike — and do **not** read it as production-readiness. [未验证]
 - **License & backing.** Apache-2.0 (confirmed via repo badge and GitHub API). No backing org or foundation; funded informally (a "Buy Me a Coffee" link), which compounds the bus-factor risk. No relicense history yet (too young to have one). [推断]
 
 ## Caveats (unverified)
 
-- [未验证] ~17.2k stars / ~1.46k forks / ~624 open issues / ~91 watchers as of 2026-06-28 (via GitHub API). The star count is **anomalously high for a ~4-month single-maintainer repo** and is flagged as a possibly-inflated / unexplained popularity signal — treat as indicative only, not as adoption or quality evidence.
+- [未验证] ~17.2k stars / ~1.46k forks / ~624 open issues / ~91 watchers as of 2026-06-28 (via GitHub API). The star count itself is API-verified, but its adoption meaning is **anomalous for a ~4-month single-maintainer repo** and flagged as an unverified/suspicious popularity signal — treat as indicative only, not as adoption or quality evidence.
 - [未验证] Core claims — continuous batching, the tiered hot-RAM/cold-SSD KV cache "surviving server restarts," prefix-cache hit benefits, "inspired by vLLM" block management, and the published benchmarks — are the project's own README/site framing and were **not independently verified or benchmarked** here.
 - [未验证] "Claude Code optimization" (token-count scaling, SSE keep-alive) and the one-click agent integrations are described in the README but not validated against those tools here.
 - [推断] SSD-offload latency/wear tradeoffs and the RAM-cap default (system RAM − 8 GB) are inferred from the README's description, not measured.

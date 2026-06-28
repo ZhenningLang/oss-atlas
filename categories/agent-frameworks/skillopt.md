@@ -65,7 +65,7 @@ You're an applied-AI engineer who's hit a wall hand-tuning a long skill/prompt d
 
 ## Caveats (unverified)
 
-- [未验证] ~9.6k stars / ~912 forks as of 2026-06 on a ~1-month-old repo — these counts are implausibly high for the age and almost certainly reflect a launch spike, not sustained adoption; treat with strong skepticism.
+- [未验证] ~9.6k stars / ~912 forks as of 2026-06 on a ~1-month-old repo — the star count is API-verified, but it is unusually high for the age and may reflect launch/Microsoft-org visibility, not evidence of production adoption; treat with strong skepticism.
 - [未验证] The "52 model-benchmark-harness combinations" and skill-doc size range (~300–2,000 tokens) are the project's own claims from the README — not independently reproduced.
 - [推断] Python 3.10+ and GPU-optional are inferred from the README; not verified against the manifest here.
 - [推断] Cost/runtime of an optimization run is unbounded in the docs ("doesn't detail … computational cost thresholds") — the "budget before committing" warning is an inference from the trajectory-driven method, not a measured figure.

@@ -5,7 +5,7 @@ repo: https://github.com/bpmn-io/bpmn-js
 category: diagramming
 tags: [bpmn, process-modeling, diagram, svg, web-modeler, javascript, camunda]
 language: JavaScript
-license: NOASSERTION
+license: MIT + bpmn.io watermark clause
 maturity: v18.19.0, active, ~9.6k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library

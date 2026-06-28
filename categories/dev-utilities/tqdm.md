@@ -61,7 +61,7 @@ You also reach for it when you want the same progress feedback everywhere withou
 - **Governance / bus factor.** Owned by the `tqdm` **organization** (not a personal account) with a broad contributor base over its lifetime; historically associated with a primary maintainer (Casper da Costa-Luis), so concentration of core knowledge is a mild bus-factor consideration, partly offset by org ownership and many contributors. [推断]
 - **Age & Lindy verdict.** Created 2015-06, ~11 years old and **still actively shipping** ⇒ a **strong Lindy** signal — a stable, ubiquitous primitive, not a hyped newcomer; the wrap-an-iterable API has been backward-compatible for years. [推断]
 - **Adoption & ecosystem.** Extremely widely adopted — ~31.2k stars and an enormous dependent footprint (it's a transitive dependency of a large share of the Python data/ML ecosystem); docs are thorough and the integration surface (pandas/notebook/CLI/async) is broad. [未验证]
-- **License / risk flags.** Permissive: MPL-2.0 (maintainer's contributions) plus MIT (original and other contributions) — GitHub reports NOASSERTION because of the mixed file-level licensing, but both halves are permissive and pose no copyleft-on-your-code concern for normal use. No relicense history or open-core gating found. [推断]
+- **License / risk flags.** Mixed MIT + MPL-2.0: MIT (original and other contributions) plus MPL-2.0 (maintainer's contributions) — GitHub reports NOASSERTION because of the mixed file-level licensing. MPL-2.0 carries file-level copyleft obligations — normal dependency use is low-risk, but modifying/redistributing MPL-covered files has obligations. No relicense history or open-core gating found. [推断]
 
 ## Caveats (unverified)
 

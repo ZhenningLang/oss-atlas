@@ -16,7 +16,7 @@
 | **smolagents** | 当你想要 Hugging Face 出的极简、透明、写代码行动的 agent 循环时用它——不是重型生产 agent 操作系统。 | [→](smolagents.zh.md) |
 | **Kilo Code** | 当你想要一个开源、BYOK、在 VS Code 内的编码 agent(带规划与模式)时用它——是终端用户工具，不是构建 agent 的库。 | [→](kilocode.zh.md) |
 | **Parlant** | 当你要构建一个必须靠行为准则严格守规的对客 agent 时用它——简单或自由式 agent 用它过重。 | [→](parlant.zh.md) |
-| **SkillOpt** | 一个文本空间优化器，为一个冻结的 LLM agent"训练"可复用的自然语言 skill 文档——施加经验证门控、由轨迹驱动的编辑，产出一份紧凑、可部署的 `best_skill.md`。 | [→](skillopt.zh.md) |
+| **SkillOpt** | 当你有可打分的基准、想为冻结的 LLM agent 优化可复用的自然语言 skill/prompt 时用它。 | [→](skillopt.zh.md) |
 
 ## 对比矩阵
 
@@ -31,7 +31,7 @@
 | [smolagents](smolagents.zh.md) | ✅ | 当你想要 Hugging Face 出的极简、透明、写代码行动的 agent 循环时用它——不是重型生产 agent 操作系统。 |
 | [Kilo Code](kilocode.zh.md) | ✅ | 当你想要一个开源、BYOK、在 VS Code 内的编码 agent(带规划与模式)时用它——是终端用户工具，不是构建 agent 的库。 |
 | [Parlant](parlant.zh.md) | ✅ | 当你要构建一个必须靠行为准则严格守规的对客 agent 时用它——简单或自由式 agent 用它过重。 |
-| [SkillOpt](skillopt.zh.md) | ✅ | 一个文本空间优化器，为一个冻结的 LLM agent"训练"可复用的自然语言 skill 文档——施加经验证门控、由轨迹驱动的编辑，产出一份紧凑、可部署的 `best_skill.md`。 |
+| [SkillOpt](skillopt.zh.md) | ✅ | 当你有可打分的基准、想为冻结的 LLM agent 优化可复用的自然语言 skill/prompt 时用它。 |
 | LangChain / LlamaIndex / CrewAI / AutoGen | 未收录 | 各页对比里点到的更广义 agent 构建/运行生态。 |
 
 ## 什么该放这里

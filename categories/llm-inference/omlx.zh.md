@@ -6,7 +6,7 @@ category: llm-inference
 tags: [llm-serving, inference-server, apple-silicon, mlx, kv-cache, openai-api, macos]
 language: Python
 license: Apache-2.0
-maturity: "v0.4.4, active (2026-06); ~17.2k stars [未验证 — anomalous for a ~4-month single-maintainer repo], created 2026-02 (very young), owner=User"
+maturity: "v0.4.4, active (2026-06); ~17.2k stars (API-verified count; adoption meaning unverified/suspicious — anomalous for a ~4-month single-maintainer repo), created 2026-02 (very young), owner=User"
 last_verified: 2026-06-28
 type: framework
 ---
@@ -27,7 +27,7 @@ type: framework
 - **你不在 Apple Silicon 上。** oMLX **仅限 macOS**、**仅限 Apple Silicon**（要求 macOS 15.0+ 和 M 系列芯片），基于 Apple 的 MLX。没有 Linux/NVIDIA/AMD 路径——服务器 GPU 请用 vLLM / TGI / TensorRT-LLM / MAX。
 - **你要在集群 / 多节点规模上服务。** 这是单机、单 Mac 的服务器，带 LRU 模型淘汰和内存上限——不是横向扩展、多 GPU 机群、带自动扩缩的引擎。
 - **SSD 卸载缓存的取舍你接受不了。** 从磁盘恢复 KV 块**在命中时**比重算快，但它带来 I/O 延迟和 SSD 磨损，且收益取决于前缀命中率；遇到冷的/全新的 prompt 你照样付正常 prefill。别把这个缓存当成免费的。
-- **你无法独立核实它的宣称。** benchmark、「分层缓存能扛重启」，尤其是**一个约 4 个月仓库上的约 17k star 信号**，都是项目自己的表述加一个反常的人气数字；在把工作流押上去之前，先验证它对你的模型确实有效。[未验证]
+- **你无法独立核实它的宣称。** benchmark 和「分层缓存能扛重启」是项目自己的表述，而**一个约 4 个月仓库上的约 17k star 计数**——这个数字本身经 API 核实——是一个反常的人气信号，其采用度含义未经核实、可疑；在把工作流押上去之前，先验证它对你的模型确实有效。[未验证]
 
 ## 横向对比
 
@@ -66,12 +66,12 @@ type: framework
 - **维护（2026-06）。** 最后 push 于 2026-06-28；v0.4.4 于 2026-06-16 发布，rc/dev tag 频繁——**非常活跃**，不是吃老本。未归档。[推断]
 - **治理 / bus factor（2026-06）——标记。** owner 是**单个 User 账号**（`jundot`），且提交历史由一位作者主导（约 1.2k commit），外部小贡献者是长尾。这是一个**单一维护者 / 高 bus-factor** 项目：作者一旦停手，项目很可能停滞。[推断]
 - **年龄与 Lindy（2026-06）——Lindy 不通过。** 2026-02 创建（约 0.4 年）。**太年轻**，扛不起任何 Lindy 先验；不论多活跃，长期存活完全未经证明。用年龄 × 仍活跃来看：活跃是好事，但约 4 个月不算 track record。[推断]
-- **采用度——可疑人气标记。** 一个约 4 个月、单一维护者的仓库上有约 17.2k star 是**反常的**：这种 star 增速与项目年龄、贡献者基数、约 624 个 open issue / 约 91 个 watcher 严重不成比例。把 star 数当作 **[未验证]** 的社会证明——可能是对 Mac 本地 LLM 服务器的真实爆火兴趣，也可能被灌水——且**不要**把它读成生产就绪。[未验证]
+- **采用度——可疑人气标记。** 一个约 4 个月、单一维护者的仓库上有约 17.2k star：这个计数经 API 核实，但其采用度含义是**反常的**——这种 star 增速与项目年龄、贡献者基数、约 624 个 open issue / 约 91 个 watcher 严重不成比例。把这个计数对采用/检验程度的含义当作 **[未验证]** 且可疑——可能是对 Mac 本地 LLM 服务器的真实爆火兴趣，也可能是可见度高峰——且**不要**把它读成生产就绪。[未验证]
 - **许可证与背书。** Apache-2.0（经仓库 badge 和 GitHub API 确认）。没有背书组织或基金会；非正式资助（一个「Buy Me a Coffee」链接），这进一步放大 bus-factor 风险。尚无 relicense 历史（太年轻，还来不及有）。[推断]
 
 ## 存疑（未验证）
 
-- [未验证] 截至 2026-06-28（经 GitHub API），约 17.2k star / 约 1.46k fork / 约 624 open issue / 约 91 watcher。star 数对一个**约 4 个月的单一维护者仓库而言反常地高**，被标记为可能灌水 / 无法解释的人气信号——仅供参考，不作为采用度或质量证据。
+- [未验证] 截至 2026-06-28（经 GitHub API），约 17.2k star / 约 1.46k fork / 约 624 open issue / 约 91 watcher。star 计数本身经 API 核实，但其采用度含义对一个**约 4 个月的单一维护者仓库而言反常**，被标记为未经核实/可疑的人气信号——仅供参考，不作为采用度或质量证据。
 - [未验证] 核心宣称——continuous batching、「热 RAM/冷 SSD 分层 KV 缓存能扛服务器重启」、前缀缓存命中收益、「受 vLLM 启发」的块管理，以及公开的 benchmark——都是项目自己的 README/官网表述，本页**未独立验证或跑 benchmark**。
 - [未验证]「Claude Code 优化」（token 计数缩放、SSE keep-alive）和一键 agent 集成在 README 里有描述，但本页未对这些工具实测验证。
 - [推断] SSD 卸载的延迟/磨损取舍和 RAM 上限默认值（系统 RAM − 8 GB）是从 README 描述推断的，非实测。
