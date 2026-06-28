@@ -12,6 +12,8 @@
 | **Cockpit** | Use it when you need a browser-based, systemd-native admin UI for a few Linux servers. | [→](cockpit.md) |
 | **Telegraf** | Use it when you need one plugin-driven agent to collect and route heterogeneous metrics/logs to many backends. | [→](telegraf.md) |
 | **OpenZL** | Use it when you must squeeze terabytes of one highly structured/numeric format better than generic zstd. | [→](openzl.md) |
+| **Certbot** | Use it when a sysadmin must auto-provision & renew free Let's Encrypt TLS certs — though reverse proxies' built-in auto-TLS often makes it redundant. | [→](certbot.md) |
+| **tqdm** | Use it when you want a fast, low-overhead progress bar for Python loops/CLI/notebooks. | [→](tqdm.md) |
 
 ## Comparison matrix
 
@@ -22,6 +24,8 @@
 | [Cockpit](cockpit.md) | ✅ | Use it when you need a browser-based, systemd-native admin UI for a few Linux servers. |
 | [Telegraf](telegraf.md) | ✅ | Use it when you need one plugin-driven agent to collect and route heterogeneous metrics/logs to many backends. |
 | [OpenZL](openzl.md) | ✅ | Use it when you must squeeze terabytes of one highly structured/numeric format better than generic zstd. |
+| [Certbot](certbot.md) | ✅ | Use it when a sysadmin must auto-provision & renew free Let's Encrypt TLS certs — though reverse proxies' built-in auto-TLS often makes it redundant. |
+| [tqdm](tqdm.md) | ✅ | Use it when you want a fast, low-overhead progress bar for Python loops/CLI/notebooks. |
 
 ## What belongs here
 

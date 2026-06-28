@@ -11,6 +11,7 @@
 | **BitNet** | Use it when you need fast, low-energy CPU inference of natively-trained 1.58-bit ternary LLMs on x86/ARM laptops, offline. | [→](bitnet.md) |
 | **Google AI Edge Gallery** | Use it when you need to demo and benchmark on-device Gemma LLMs on real phones before building. | [→](ai-edge-gallery.md) |
 | **TimesFM** | Use it when you need zero-shot time-series forecasts run locally on CPU/GPU without per-dataset training. | [→](timesfm.md) |
+| **MiniCPM-V** | Use it when you need efficient on-device/edge multimodal (image+video) understanding with a small footprint — verify the per-weight license. | [→](minicpm-v.md) |
 
 ## Comparison matrix
 
@@ -20,6 +21,7 @@
 | [BitNet](bitnet.md) | ✅ | Use it when you need fast, low-energy CPU inference of natively-trained 1.58-bit ternary LLMs on x86/ARM laptops, offline. |
 | [Google AI Edge Gallery](ai-edge-gallery.md) | ✅ | Use it when you need to demo and benchmark on-device Gemma LLMs on real phones before building. |
 | [TimesFM](timesfm.md) | ✅ | Use it when you need zero-shot time-series forecasts run locally on CPU/GPU without per-dataset training. |
+| [MiniCPM-V](minicpm-v.md) | ✅ | Use it when you need efficient on-device/edge multimodal (image+video) understanding with a small footprint — verify the per-weight license. |
 | llama.cpp / Ollama / MLC LLM / ONNX Runtime | 未收录 | Other on-device inference runtimes named across the pages. |
 
 ## What belongs here

@@ -12,6 +12,7 @@
 | **Cua** | Use it when an agent must control a full desktop OS via vision in isolated VM sandboxes, not just web pages. | [→](cua.md) |
 | **Agent Browser** | Use it when an agent must shell-drive a real Chrome over CDP with stable element refs instead of CSS selectors. | [→](agent-browser.md) |
 | **Selenium** | Use it when you need cross-browser WebDriver automation across a browser/language matrix — Playwright/Cypress are nicer for modern single-browser DX. | [→](selenium.md) |
+| **PhantomJS** | Avoid for new work — an archived, abandoned scriptable headless browser; use headless Chrome (Puppeteer/Playwright) or Selenium instead. | [→](phantomjs.md) |
 
 ## Comparison matrix
 
@@ -22,6 +23,7 @@
 | [Cua](cua.md) | ✅ | Use it when an agent must control a full desktop OS via vision in isolated VM sandboxes, not just web pages. |
 | [Agent Browser](agent-browser.md) | ✅ | Use it when an agent must shell-drive a real Chrome over CDP with stable element refs instead of CSS selectors. |
 | [Selenium](selenium.md) | ✅ | Use it when you need cross-browser WebDriver automation across a browser/language matrix — Playwright/Cypress are nicer for modern single-browser DX. |
+| [PhantomJS](phantomjs.md) | ✅ | Avoid for new work — an archived, abandoned scriptable headless browser; use headless Chrome (Puppeteer/Playwright) or Selenium instead. |
 | Playwright / Puppeteer | 未收录 | Lower-level browser automation libraries named across the pages. |
 
 ## What belongs here

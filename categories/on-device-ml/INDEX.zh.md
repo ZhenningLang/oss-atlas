@@ -11,6 +11,7 @@
 | **BitNet** | 当你要在 x86/ARM 笔记本上离线、快速、低能耗地用 CPU 跑原生三值(1.58-bit) LLM 时使用。 | [→](bitnet.zh.md) |
 | **Google AI Edge Gallery** | 当你想在真机上先体验和基准测试端侧 Gemma LLM、为是否自建集成去风险时用它。 | [→](ai-edge-gallery.zh.md) |
 | **TimesFM** | 当你需要在本地 CPU/GPU 上对时间序列做零样本预测、又不想逐数据集训练时用它。 | [→](timesfm.zh.md) |
+| **MiniCPM-V** | 当你需要小体积、可在端侧/边缘运行的多模态(图像+视频)理解时用它——注意逐权重许可。 | [→](minicpm-v.zh.md) |
 
 ## 对比矩阵
 
@@ -20,6 +21,7 @@
 | [BitNet](bitnet.zh.md) | ✅ | 当你要在 x86/ARM 笔记本上离线、快速、低能耗地用 CPU 跑原生三值(1.58-bit) LLM 时使用。 |
 | [Google AI Edge Gallery](ai-edge-gallery.zh.md) | ✅ | 当你想在真机上先体验和基准测试端侧 Gemma LLM、为是否自建集成去风险时用它。 |
 | [TimesFM](timesfm.zh.md) | ✅ | 当你需要在本地 CPU/GPU 上对时间序列做零样本预测、又不想逐数据集训练时用它。 |
+| [MiniCPM-V](minicpm-v.zh.md) | ✅ | 当你需要小体积、可在端侧/边缘运行的多模态(图像+视频)理解时用它——注意逐权重许可。 |
 | llama.cpp / Ollama / MLC LLM / ONNX Runtime | 未收录 | 各页对比里点到的其他端侧推理运行时。 |
 
 ## 什么该放这里

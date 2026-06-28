@@ -13,6 +13,8 @@
 | **Symphony** | 你的 Linear 待办和 Codex agent 需要一个自托管编排器、按 issue 跑隔离自治实现运行时。 | [→](symphony.zh.md) |
 | **Claude Octopus** | 你以 Claude Code 为主力、想让其他 AI 模型在交付前交叉评审任务、揭出盲点时。 | [→](claude-octopus.zh.md) |
 | **oh-my-claudecode** | 你常驻 Claude Code、需要多阶段 agent 团队加模型路由和 tmux 并行编排时。 | [→](oh-my-claudecode.zh.md) |
+| **smolagents** | 当你想要 Hugging Face 出的极简、透明、写代码行动的 agent 循环时用它——不是重型生产 agent 操作系统。 | [→](smolagents.zh.md) |
+| **Kilo Code** | 当你想要一个开源、BYOK、在 VS Code 内的编码 agent(带规划与模式)时用它——是终端用户工具，不是构建 agent 的库。 | [→](kilocode.zh.md) |
 
 ## 对比矩阵
 
@@ -24,6 +26,8 @@
 | [Symphony](symphony.zh.md) | ✅ | 自托管编排器，按 issue 跑隔离自治实现运行(Linear + Codex)。 |
 | [Claude Octopus](claude-octopus.zh.md) | ✅ | Claude Code 内的跨模型盲点评审层。 |
 | [oh-my-claudecode](oh-my-claudecode.zh.md) | ✅ | Claude Code 的多阶段 agent 团队 + 模型路由 + tmux 并行。 |
+| [smolagents](smolagents.zh.md) | ✅ | 当你想要 Hugging Face 出的极简、透明、写代码行动的 agent 循环时用它——不是重型生产 agent 操作系统。 |
+| [Kilo Code](kilocode.zh.md) | ✅ | 当你想要一个开源、BYOK、在 VS Code 内的编码 agent(带规划与模式)时用它——是终端用户工具，不是构建 agent 的库。 |
 | LangChain / LlamaIndex / CrewAI / AutoGen | 未收录 | 各页对比里点到的更广义 agent 构建/运行生态。 |
 
 ## 什么该放这里

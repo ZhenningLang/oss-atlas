@@ -1,0 +1,23 @@
+# task-queue
+
+> 分类节点。分布式后台任务执行——任务队列与作业调度器。
+> ← 返回[分类路由](../../INDEX.zh.md) · English: [INDEX.md](INDEX.md)
+
+## 本分类项目
+
+| 项目 | 何时用 | 页面 |
+|---|---|---|
+| **XXL-JOB** | 当 Java/Spring 团队需要中心化、可视化、分片的定时作业调度时用它——注意 GPL-3.0 与中心调度器单点。 | [→](xxl-job.zh.md) |
+| **Celery** | 当 Python 应用需要把异步/后台任务规模化外包时用它——代价是要跑 broker + worker。 | [→](celery.zh.md) |
+
+## 对比矩阵
+
+| 选项 | 是否收录 | 一句话取舍 |
+|---|---|---|
+| [XXL-JOB](xxl-job.zh.md) | ✅ | 当 Java/Spring 团队需要中心化、可视化、分片的定时作业调度时用它——注意 GPL-3.0 与中心调度器单点。 |
+| [Celery](celery.zh.md) | ✅ | 当 Python 应用需要把异步/后台任务规模化外包时用它——代价是要跑 broker + worker。 |
+| RQ / Dramatiq / arq / Quartz / PowerJob | 未收录 | 各页对比里点到的其他任务队列与调度器。 |
+
+## 什么该放这里
+
+主要职责是**分布式后台任务执行**的系统——任务队列与作业调度器。不含工作流/DAG 编排器(见 `workflow-orchestration`)，不含 agent 运行时(见 `agent-frameworks`)。

@@ -40,6 +40,11 @@
 | **markdown-tools** | Markdown 解析、渲染与写作工具。 | [→](categories/markdown-tools/INDEX.zh.md) |
 | **pdf-tools** | 渲染、读取与处理 PDF 文件。 | [→](categories/pdf-tools/INDEX.zh.md) |
 | **workflow-orchestration** | 编写、调度并监控批处理数据/工作流管线（DAG 编排器）。 | [→](categories/workflow-orchestration/INDEX.zh.md) |
+| **llm-inference** | 高性能 LLM/模型推理与服务引擎，以及 AI 系统语言。 | [→](categories/llm-inference/INDEX.zh.md) |
+| **task-queue** | 分布式后台任务执行——任务队列与作业调度器。 | [→](categories/task-queue/INDEX.zh.md) |
+| **im-automation** | 即时通讯机器人与自动化(微信等 IM 平台)。 | [→](categories/im-automation/INDEX.zh.md) |
+| **web-ui** | 前端 UI/UX 库——产品引导、新手上手、界面组件。 | [→](categories/web-ui/INDEX.zh.md) |
+| **proxy-pool** | 面向网络爬虫的自托管轮换代理 IP 池。 | [→](categories/proxy-pool/INDEX.zh.md) |
 
 ## 如何新增分类
 

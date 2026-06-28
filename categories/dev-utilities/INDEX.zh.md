@@ -12,6 +12,8 @@
 | **Cockpit** | 当你需要为少数几台 Linux 服务器用浏览器做 systemd 原生的图形化管理时用它。 | [→](cockpit.zh.md) |
 | **Telegraf** | 当你需要一个插件驱动的 agent 把异构指标/日志统一采集并路由到多种后端时用它。 | [→](telegraf.zh.md) |
 | **OpenZL** | 当你要把 TB 级的某种高度结构化/数值格式压得比通用 zstd 更狠时使用。 | [→](openzl.zh.md) |
+| **Certbot** | 当系统管理员要自动签发并续期免费 Let's Encrypt TLS 证书时用它——不过反向代理自带的自动 TLS 常让它显得多余。 | [→](certbot.zh.md) |
+| **tqdm** | 当你想给 Python 循环/CLI/notebook 加一个快速、低开销的进度条时用它。 | [→](tqdm.zh.md) |
 
 ## 对比矩阵
 
@@ -22,6 +24,8 @@
 | [Cockpit](cockpit.zh.md) | ✅ | 当你需要为少数几台 Linux 服务器用浏览器做 systemd 原生的图形化管理时用它。 |
 | [Telegraf](telegraf.zh.md) | ✅ | 当你需要一个插件驱动的 agent 把异构指标/日志统一采集并路由到多种后端时用它。 |
 | [OpenZL](openzl.zh.md) | ✅ | 当你要把 TB 级的某种高度结构化/数值格式压得比通用 zstd 更狠时使用。 |
+| [Certbot](certbot.zh.md) | ✅ | 当系统管理员要自动签发并续期免费 Let's Encrypt TLS 证书时用它——不过反向代理自带的自动 TLS 常让它显得多余。 |
+| [tqdm](tqdm.zh.md) | ✅ | 当你想给 Python 循环/CLI/notebook 加一个快速、低开销的进度条时用它。 |
 
 ## 什么该放这里
 

@@ -41,6 +41,11 @@
 | **markdown-tools** | Markdown parsing, rendering, and authoring tools. | [→](categories/markdown-tools/INDEX.md) |
 | **pdf-tools** | Render, read, and manipulate PDF files. | [→](categories/pdf-tools/INDEX.md) |
 | **workflow-orchestration** | Author, schedule, and monitor batch data/workflow pipelines (DAG orchestrators). | [→](categories/workflow-orchestration/INDEX.md) |
+| **llm-inference** | High-performance LLM/model inference & serving engines, and AI systems languages. | [→](categories/llm-inference/INDEX.md) |
+| **task-queue** | Distributed background job execution — task queues and job schedulers. | [→](categories/task-queue/INDEX.md) |
+| **im-automation** | Instant-messaging bots & automation (WeChat and other IM platforms). | [→](categories/im-automation/INDEX.md) |
+| **web-ui** | Front-end UI/UX libraries — product tours, onboarding, interface widgets. | [→](categories/web-ui/INDEX.md) |
+| **proxy-pool** | Self-hosted rotating proxy-IP pools for web scraping. | [→](categories/proxy-pool/INDEX.md) |
 
 ## How to add a category
 

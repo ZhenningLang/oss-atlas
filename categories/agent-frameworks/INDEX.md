@@ -13,6 +13,8 @@
 | **Symphony** | Your Linear backlog and Codex agent need a self-hosted orchestrator running isolated per-issue autonomous implementation runs. | [→](symphony.md) |
 | **Claude Octopus** | You live in Claude Code and want other AI models to cross-review tasks for blindspots before shipping. | [→](claude-octopus.md) |
 | **oh-my-claudecode** | You live in Claude Code and need staged multi-agent teams with model routing and tmux parallelism. | [→](oh-my-claudecode.md) |
+| **smolagents** | Use it when you want a tiny, transparent code-acting agent loop from Hugging Face — not a heavy production agent OS. | [→](smolagents.md) |
+| **Kilo Code** | Use it when you want an open, BYOK in-IDE (VS Code) coding agent with planning and modes — an end-user tool, not a library to build agents. | [→](kilocode.md) |
 
 ## Comparison matrix
 
@@ -24,6 +26,8 @@
 | [Symphony](symphony.md) | ✅ | Self-hosted orchestrator running isolated per-issue autonomous implementation runs (Linear + Codex). |
 | [Claude Octopus](claude-octopus.md) | ✅ | Cross-model blindspot-review layer that lives inside Claude Code. |
 | [oh-my-claudecode](oh-my-claudecode.md) | ✅ | Staged multi-agent teams with model routing + tmux parallelism for Claude Code. |
+| [smolagents](smolagents.md) | ✅ | Use it when you want a tiny, transparent code-acting agent loop from Hugging Face — not a heavy production agent OS. |
+| [Kilo Code](kilocode.md) | ✅ | Use it when you want an open, BYOK in-IDE (VS Code) coding agent with planning and modes — an end-user tool, not a library to build agents. |
 | LangChain / LlamaIndex / CrewAI / AutoGen | 未收录 | Broader build/run agent ecosystems named across the pages' comparisons. |
 
 ## What belongs here

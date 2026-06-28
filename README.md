@@ -63,6 +63,7 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **BitNet** | Use it when you need fast, low-energy CPU inference of natively-trained 1.58-bit ternary LLMs on x86/ARM laptops, offline. | MIT | [EN](categories/on-device-ml/bitnet.md) · [中](categories/on-device-ml/bitnet.zh.md) |
 | **Google AI Edge Gallery** | Use it when you need to demo and benchmark on-device Gemma LLMs on real phones before building. | Apache-2.0 | [EN](categories/on-device-ml/ai-edge-gallery.md) · [中](categories/on-device-ml/ai-edge-gallery.zh.md) |
 | **TimesFM** | Use it when you need zero-shot time-series forecasts run locally on CPU/GPU without per-dataset training. | Apache-2.0 | [EN](categories/on-device-ml/timesfm.md) · [中](categories/on-device-ml/timesfm.zh.md) |
+| **MiniCPM-V** | Use it when you need efficient on-device/edge multimodal (image+video) understanding with a small footprint — verify the per-weight license. | Apache-2.0 | [EN](categories/on-device-ml/minicpm-v.md) · [中](categories/on-device-ml/minicpm-v.zh.md) |
 
 ### web-automation
 
@@ -73,6 +74,7 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **Cua** | Use it when an agent must control a full desktop OS via vision in isolated VM sandboxes, not just web pages. | MIT | [EN](categories/web-automation/cua.md) · [中](categories/web-automation/cua.zh.md) |
 | **Agent Browser** | Use it when an agent must shell-drive a real Chrome over CDP with stable element refs instead of CSS selectors. | Apache-2.0 | [EN](categories/web-automation/agent-browser.md) · [中](categories/web-automation/agent-browser.zh.md) |
 | **Selenium** | Use it when you need cross-browser WebDriver automation across a browser/language matrix — Playwright/Cypress are nicer for modern single-browser DX. | Apache-2.0 | [EN](categories/web-automation/selenium.md) · [中](categories/web-automation/selenium.zh.md) |
+| **PhantomJS** | Avoid for new work — an archived, abandoned scriptable headless browser; use headless Chrome (Puppeteer/Playwright) or Selenium instead. | BSD-3-Clause | [EN](categories/web-automation/phantomjs.md) · [中](categories/web-automation/phantomjs.zh.md) |
 
 ### llm-training
 
@@ -94,6 +96,8 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **Symphony** | Your Linear backlog and Codex agent need a self-hosted orchestrator running isolated per-issue autonomous implementation runs. | Apache-2.0 | [EN](categories/agent-frameworks/symphony.md) · [中](categories/agent-frameworks/symphony.zh.md) |
 | **Claude Octopus** | You live in Claude Code and want other AI models to cross-review tasks for blindspots before shipping. | MIT | [EN](categories/agent-frameworks/claude-octopus.md) · [中](categories/agent-frameworks/claude-octopus.zh.md) |
 | **oh-my-claudecode** | You live in Claude Code and need staged multi-agent teams with model routing and tmux parallelism. | MIT | [EN](categories/agent-frameworks/oh-my-claudecode.md) · [中](categories/agent-frameworks/oh-my-claudecode.zh.md) |
+| **smolagents** | Use it when you want a tiny, transparent code-acting agent loop from Hugging Face — not a heavy production agent OS. | Apache-2.0 | [EN](categories/agent-frameworks/smolagents.md) · [中](categories/agent-frameworks/smolagents.zh.md) |
+| **Kilo Code** | Use it when you want an open, BYOK in-IDE (VS Code) coding agent with planning and modes — an end-user tool, not a library to build agents. | MIT | [EN](categories/agent-frameworks/kilocode.md) · [中](categories/agent-frameworks/kilocode.zh.md) |
 
 ### agent-memory
 
@@ -169,6 +173,8 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **Cockpit** | Use it when you need a browser-based, systemd-native admin UI for a few Linux servers. | LGPL-2.1-or-later | [EN](categories/dev-utilities/cockpit.md) · [中](categories/dev-utilities/cockpit.zh.md) |
 | **Telegraf** | Use it when you need one plugin-driven agent to collect and route heterogeneous metrics/logs to many backends. | MIT | [EN](categories/dev-utilities/telegraf.md) · [中](categories/dev-utilities/telegraf.zh.md) |
 | **OpenZL** | Use it when you must squeeze terabytes of one highly structured/numeric format better than generic zstd. | BSD-3-Clause | [EN](categories/dev-utilities/openzl.md) · [中](categories/dev-utilities/openzl.zh.md) |
+| **Certbot** | Use it when a sysadmin must auto-provision & renew free Let's Encrypt TLS certs — though reverse proxies' built-in auto-TLS often makes it redundant. | Apache-2.0 | [EN](categories/dev-utilities/certbot.md) · [中](categories/dev-utilities/certbot.zh.md) |
+| **tqdm** | Use it when you want a fast, low-overhead progress bar for Python loops/CLI/notebooks. | MPL-2.0 AND MIT | [EN](categories/dev-utilities/tqdm.md) · [中](categories/dev-utilities/tqdm.zh.md) |
 
 ### frontend-animation
 
@@ -322,6 +328,7 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **youtube-dl** | Use it when you need a battle-tested CLI/library to download video & audio from YouTube and 1000+ sites — but prefer the active yt-dlp fork for hot sites. | Unlicense | [EN](categories/media-download/youtube-dl.md) · [中](categories/media-download/youtube-dl.zh.md) |
 | **you-get** | Use it when you want a tiny Python CLI to grab video/audio from YouTube and many Chinese sites (Bilibili/Youku) — lighter than yt-dlp. | MIT | [EN](categories/media-download/you-get.md) · [中](categories/media-download/you-get.zh.md) |
 | **cobalt** | Use it when you want a clean self-hostable web-UI + API media saver with no ads/trackers — not a scriptable CLI. | AGPL-3.0 | [EN](categories/media-download/cobalt.md) · [中](categories/media-download/cobalt.zh.md) |
+| **lux** | Use it when you want a fast single-binary Go downloader, strong on Chinese video sites — smaller coverage and slower updates than yt-dlp. | MIT | [EN](categories/media-download/lux.md) · [中](categories/media-download/lux.zh.md) |
 
 ### media-processing
 
@@ -353,6 +360,37 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | Project | Use when | License | Page |
 |---|---|---|---|
 | **Apache Airflow** | Use it when you orchestrate scheduled batch data pipelines as Python DAGs with a UI — not low-latency or event-driven flows. | Apache-2.0 | [EN](categories/workflow-orchestration/airflow.md) · [中](categories/workflow-orchestration/airflow.zh.md) |
+
+### llm-inference
+
+| Project | Use when | License | Page |
+|---|---|---|---|
+| **Modular Platform (MAX + Mojo)** | Use it when you want a high-performance GPU/CPU inference platform (MAX) plus the Mojo systems language — accepting single-vendor lock-in and partly non-production licensing. | Apache-2.0 (mixed) | [EN](categories/llm-inference/modular.md) · [中](categories/llm-inference/modular.zh.md) |
+
+### task-queue
+
+| Project | Use when | License | Page |
+|---|---|---|---|
+| **XXL-JOB** | Use it when a Java/Spring shop needs centrally-managed, visual, sharded scheduled jobs — mind GPL-3.0 and the central-scheduler SPOF. | GPL-3.0 | [EN](categories/task-queue/xxl-job.md) · [中](categories/task-queue/xxl-job.zh.md) |
+| **Celery** | Use it when a Python app must offload async/background jobs at scale — at the cost of running a broker + workers. | BSD-3-Clause | [EN](categories/task-queue/celery.md) · [中](categories/task-queue/celery.zh.md) |
+
+### im-automation
+
+| Project | Use when | License | Page |
+|---|---|---|---|
+| **ItChat** | Study it only as legacy WeChat-bot code — abandoned, and the web protocol it relies on is defunct, so it mostly doesn't work. | MIT | [EN](categories/im-automation/itchat.md) · [中](categories/im-automation/itchat.zh.md) |
+
+### web-ui
+
+| Project | Use when | License | Page |
+|---|---|---|---|
+| **Driver.js** | Use it when you want a tiny, dependency-free product tour / feature-spotlight on a web page — not a full onboarding platform. | MIT | [EN](categories/web-ui/driver-js.md) · [中](categories/web-ui/driver-js.zh.md) |
+
+### proxy-pool
+
+| Project | Use when | License | Page |
+|---|---|---|---|
+| **proxy_pool** | Use it when a scraper needs a rotating pool of free proxy IPs behind a simple API — accepting that free proxies are unreliable and insecure. | MIT | [EN](categories/proxy-pool/proxy-pool.md) · [中](categories/proxy-pool/proxy-pool.zh.md) |
 
 
 Categories follow the tree in [INDEX.md](INDEX.md).
