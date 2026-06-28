@@ -40,6 +40,13 @@ type: skill-pack
 | vercel-labs/agent-skills | 未收录 | 厂商策划的 skill 集合；比较来源与所面向的 agent。 |
 | Anthropic 内置 skill / 斜杠命令 | 未收录 | 平台原生 skill 生态；Waza 是叠在上面的第三方包，可能与原生命令重复或冲突。 |
 
+## 健康度与可持续性
+
+- **维护（2026-06）：** 活跃——最后 push 于 2026-06，最新 release v3.29.0，v3.x 发版频繁，未归档。有版本号，但快节奏意味着某个 skill 的路由／检查可能逐版本变化。
+- **治理与 bus factor：** 单维护者 `User` 仓库（`tw93`）；约 6k stars。采用量中等，项目压在一个维护者身上，无组织或 foundation 背书。[推断]
+- **年龄与 Lindy：** 创建于 2026-03，截至 2026-06 仅几个月——是 engineering leaf 里同类中最年轻的；Lindy 维度未经检验。
+- **风险标记：** 「习惯」仅建议性（prompt/skill markdown，而非硬闸门）；单维护者＋快节奏 ⇒ 升级后请锁版并重新核验。[推断]
+
 ## 存疑（未验证）
 
 - [未验证] 最新发布标记为 v3.29.0（「Bridge」，2026-06-19 发布），仓库最后 push 于 2026-06-24；license MIT、主语言 Python（另含 Shell/Makefile），均据 2026-06-26 的 GitHub 元数据——依赖某具体版本行为前请重新核验。

@@ -40,6 +40,13 @@ You install this pack (`npx skills add addyosmani/web-quality-skills`, or via th
 | Lighthouse CI / WebPageTest | 未收录 | Real measurement + CI gating tools (not skill packs). Use these when you need numbers and build-blocking budgets; this pack is the advisory layer that interprets and fixes, not the meter. |
 | Pasting the rules into context yourself | n/a | Zero install, full control, but tedious and goes stale; the pack's whole value is packaging the checklist for just-in-time loading. |
 
+## Health & viability
+
+- **Maintenance (2026-06):** active — last push 2026-06, not archived, but only a `plugin.json` v1.0.0 with no tagged GitHub releases, so versioning is light. Best-effort, not a supported product.
+- **Governance & bus factor:** single-author `User` repo (Addy Osmani); modest ~2k stars, so adoption is low and the whole thing rests on one maintainer — no foundation/vendor backing.
+- **Age & Lindy:** created 2026-01, so under a year old as of 2026-06 — young; unproven on Lindy. Unlike the author's larger pack, it doesn't even carry star-hype to lean on.
+- **Risk flags:** advisory-only (encodes a point-in-time Lighthouse snapshot, not a live meter); upstream Lighthouse already moved Performance to Insight Audits, so the encoded audit names can drift — re-verify against current Lighthouse. [推断]
+
 ## Caveats (unverified)
 
 - [未验证] GitHub metadata as of 2026-06-26: license MIT, primary language Shell, last pushed 2026-06-14, not archived, `latestRelease` null (no tagged GitHub release) though `.claude-plugin/plugin.json` declares version 1.0.0 — re-verify before relying on a specific version's behavior.

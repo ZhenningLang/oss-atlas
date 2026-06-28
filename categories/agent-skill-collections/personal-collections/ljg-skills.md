@@ -40,6 +40,13 @@ You run `npx skills add lijigang/ljg-skills -g --all` (append `#md` for the Mark
 | [Dimillian/Skills](dimillian-skills.md) ✅ | indexed | Personal collection skewed toward Swift/Apple development. Same "one person's skills" genre, different (code) domain. |
 | Anthropic's official skills / built-in slash commands | 未收录 | The platform's own skill ecosystem; ljg-skills is a third-party curated bundle layered on top, so it can duplicate or conflict with native skills. |
 
+## Health & viability
+
+- **Maintenance** — actively maintained: last pushed 2026-06, not archived (as of 2026-06). The cadence reads active rather than coasting, but there are no tagged releases — you track a moving branch.
+- **Governance & bus factor** — single-maintainer personal repo (`User`-owned). One author's curated method; if Li Jigang stops, the pack stops. ~6k stars don't change that — it's a one-person bus factor, normal for a personal collection but plan for fork-and-own.
+- **Age & Lindy** — created 2026-03, so ~0 years old as of 2026-06: young, unproven by Lindy. It's active, but too new to have a track record across model/CLI churn — adopt for the method, not for longevity.
+- **Risk flags** — no detected license (`NOASSERTION`) as of 2026-06: reuse/redistribution rights are unclear, confirm with the author before depending on it. Content (skill inventory, dual org-mode/markdown branches) can shift pull-to-pull.
+
 ## Caveats (unverified)
 
 - [未验证] No license file detected via GitHub metadata on 2026-06-26 (`licenseInfo` is null) — frontmatter records `NOASSERTION`; without an explicit license, reuse/redistribution rights are unclear, confirm with the author before depending on it.

@@ -38,6 +38,13 @@ type: skill-pack
 | Superpowers | 未收录 | 完整的 brainstorm→plan→TDD→verify SDLC 方法论包；其 `verification-before-completion` / `systematic-debugging` 与 PUA 的红线重叠，但交付的是整套生命周期，而 PUA 只是带人设外皮的「坚持 / 反放弃」层。 |
 | Anthropic 自带 skills / 原生 slash 命令 | 未收录 | 平台自身的 skill 面；PUA 是叠在上面的第三方人设包，可能与原生行为重复或冲突。 |
 
+## 健康度与可持续性
+
+- **维护** —— 非常活跃且迭代快：最新发布 v3.5.0（2026-06），最后推送 2026-06，未归档（截至 2026-06）。频繁的 v3.x 发版意味着加压逻辑和「味道」可能在版本间变动——锁版本，升级后复查。
+- **治理与 bus factor** —— 单维护者的个人仓库（`User` 所有）；约 18k stars，但路线图和整套人设主题都由一个作者把控。厚重主题 + 单人维护 = 实打实的关键人风险。
+- **年龄与 Lindy** —— 创建于 2026-03，截至 2026-06 约 0 年：年轻且明显被热捧（短期内 star 数高），因此 Lindy 上未经验证。Star 反映关注度而非耐久度——当作押注一个趋势，而非已沉淀的工具。
+- **风险旗标** —— 「PUA / PIP」心理施压框架就是产品本体，无法干净剥离；对中性语气或共享 agent 的场景是劝退点。License 按 README 记为 MIT，但 2026-06 时 `licenseInfo` 为 null——依赖前请核实。
+
 ## 存疑（未验证）
 
 - [未验证] 2026-06-26 的 `gh` 元数据报告 `licenseInfo: null`（未检测到 LICENSE 文件），但 README 页脚声明 MIT；frontmatter 按 README 记为 MIT——依赖前请核实真实许可证。

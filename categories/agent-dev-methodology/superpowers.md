@@ -40,6 +40,13 @@ You reach for it when you want an opinionated, battle-tested workflow rather tha
 | [12-Factor Agents](12-factor-agents.md) | ✅ | Principles/methodology doc for building agent *applications*, not a plug-in skill pack you install into a coding agent — different unit of consumption. |
 | Anthropic's official skills / built-in slash commands | 未收录 | The platform's own skill ecosystem; Superpowers is a third-party curated bundle layered on top, so it can conflict with or duplicate native skills. |
 
+## Health & viability
+
+- **Maintenance (2026-06):** actively maintained — last pushed 2026-06-25, latest release v6.0.3 (2026-06-18), not archived. Frequent releases on a v6.x line = a live, fast-iterating project (the page already flags "fast-moving, opinionated upstream").
+- **Governance & bus factor:** the repo is **User-owned** (obra / Jesse Vincent) — a single-maintainer project. The ~240k-star headline against one-person stewardship is a **bus-factor flag**, not a durability signal; the roadmap and "mandatory" prompt-level rules are one author's opinionated line. [未验证] No co-maintainer/foundation governance published.
+- **Age & Lindy (2026-06):** created 2025-10, ~8 months old, already at v6.x — frequent major bumps imply the skill set and routing churn release-to-release. Lindy verdict: **unproven by age** — high mindshare is not longevity; adopt for current value, pin versions, re-check skill routing after upgrades.
+- **Risk flags:** MIT (no relicense). Enforcement is **advisory** — behavior lives in prompt/markdown skills the agent can still deviate from, so "mandatory failing-test-first" is a prompt instruction, not a hard gate. Single-maintainer abandonment is the main long-term exposure. [未验证] No CVEs reviewed.
+
 ## Caveats (unverified)
 
 - [未验证] Latest release reported as v6.0.3 (published 2026-06-18) with the repo last pushed 2026-06-25; license MIT and primary language Shell per GitHub metadata as of 2026-06-26 — re-verify before relying on a specific version's behavior.

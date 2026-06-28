@@ -39,6 +39,14 @@ type: skill-pack
 | [Superpowers](../../agent-dev-methodology/superpowers.md) | ✅ | 一整套 SDLC 方法论库(brainstorm→plan→TDD→verify)，含众多可组合技能与各 harness 的清单。Karpathy-skills 用四行覆盖类似的"让 agent 更有纪律"目标，而非一张技能图——轻得多，也克制得多。 |
 | 你自己的全局 `CLAUDE.md` / Anthropic 内置指引 | 未收录 | 如果你已经维护着有主见的全局 agent 指令，那就是同一块表面；本包只是争夺同一段上下文的附加散文。 |
 
+## 健康度与可持续性
+
+- **维护（2026-06）：** 维护偏轻 / 近乎半荒废——最后 push 于 2026-04，截至 2026-06 停滞约 2 个月，约 126 个 open issue，且无打 tag 的 release。对一份约 65 行的原则文件而言本就没多少要维护，但停滞加 open issue 显示投入在减弱。
+- **治理与 bus factor：** 由 `Organization`（multica-ai）所有，而非单一个人账号，对延续性而言比本叶子里 User 所有的 pack 略好——但它仍是个小 org、薄薄一份单文件 pack。内容是第三方对 Karpathy 公开言论的提炼，**并非 Karpathy 本人撰写或背书**；这个名字是灵感来源的署名，而非作者署名。
+- **年龄与 Lindy 判断：** 创建于 2026-01，截至 2026-06 约 5 个月——年轻，而其约 183k star 反映的远多是名人效应，而非任何经验证的存续。star 数不等于 Lindy：没有履历，实质只是四条通用原则。未经验证。
+- **采用度提示：** 约 183k star 是一个小仓库上由名气驱动的人气信号，而非成熟度或正确性信号——请审慎看待。
+- **风险标记：** 注入上下文的建议性散文（无 hook/闸门）；与大多数团队已有的全局 `CLAUDE.md` 高度重叠。尽管声称 MIT，许可证自动识别却返回 `null`——依赖前请确认。
+
 ## 存疑(未验证)
 
 - [未验证] README 页脚报告 license 为 MIT，仓库也列出了 LICENSE 文件，但 GitHub 仓库元数据 API 在 2026-06-26 返回 `licenseInfo: null`(未自动识别出 SPDX)——依赖 MIT 前请确认 LICENSE 文件内容。

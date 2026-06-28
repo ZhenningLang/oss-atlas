@@ -40,6 +40,13 @@ You reach for it when you want *breadth* — one install that covers research �
 | Anthropic's official / built-in skills | 未收录 | The platform's own skill ecosystem; Designer Skills is a third-party bundle layered on top, so it can duplicate or conflict with native skills. |
 | Companion collections (AI product design, UX program mgmt, design leadership, inclusive design) | 未收录 | Same author's sibling repos in the family; this entry covers only the "design practice" collection. Reach for the others for adjacent disciplines. |
 
+## Health & viability
+
+- **Maintenance (2026-06):** active on `main` — last pushed 2026-06, not archived — but with **no tagged release** at all, so there's no stable, versioned surface to pin to; the skill/command set evolves continuously and the maintainer closes PRs lacking a matching issue.
+- **Governance / bus factor:** single-maintainer, `User`-owned repo (`Owl-Listener`) at ~1.7k stars, part of a larger personal family of design collections. One person's roadmap; no org or foundation backing.
+- **Age & Lindy verdict:** very young (created 2026-03, ~3 months old) — **unproven**. Brand-new and unversioned means no track record and no reproducibility anchor; pin a commit if you need stability.
+- **Risk flags:** advisory-only prompt/markdown (no runtime enforcement), Claude-Code-first with README-claimed Gemini CLI support, and self-reported skill counts. No relicense/CVE concerns for a skill bundle, but the no-release + single-author + breadth combination is the real fragility.
+
 ## Caveats (unverified)
 
 - [未验证] License MIT, primary language Markdown, not archived, last pushed 2026-06-14, and no tagged release (latestRelease null) per GitHub metadata as of 2026-06-26 — re-verify before relying on a specific commit's behavior.

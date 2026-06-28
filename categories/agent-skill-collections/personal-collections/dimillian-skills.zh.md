@@ -39,6 +39,13 @@ type: skill-pack
 | karpathy-skills | 未收录 | 来自另一位作者 / 领域的个人 skill 集；按你的活儿是否「Apple 味」来选——若不是，两份各自的专长都用不上。 |
 | 你 harness 自带的 review / simplify 命令 | 未收录 | Codex / Claude 本就内置通用 diff 评审与 simplify 流程；本包里的通用 skill（`review-swarm`、`review-and-simplify-changes`）与之重叠——独有价值在 SwiftUI / iOS skill，不在通用那几个。 |
 
+## 健康度与可持续性
+
+- **维护（2026-06）：** 半荒废——最后 push 于 2026-03，截至 2026-06 已停滞约 3 个月，约 9 个 open issue，且无打 tag 的 release。这种停滞在*这里*是实打实的风险，因为 SwiftUI/Swift-6.2/Liquid-Glass 这些 skill 跟着快速变动的 Apple beta 走，两次 push 之间就会快速过时。应视为一份快照，而非被维护的产品。
+- **治理与 bus factor：** 单作者的 `User` 个人合集（Dimillian，一位知名 iOS 开发者）。无团队、基金会或厂商；一人 pack 约 3k star，是 bus-factor 风险信号。路线图完全由作者决定。
+- **年龄与 Lindy 判断：** 创建于 2025-12，截至 2026-06 约半岁——既年轻*又*已半荒废。年轻 + 当前不活跃属于弱象限：既无存续可依，近期活动又已停滞。别指望它持续跟上最新。
+- **风险标记：** 安装目标仅限 Codex（`$CODEX_HOME/skills`）；其它 harness 需移植。MCP/swarm 类 skill 默认了你环境里可能不存在的工具。仅为建议性，无强制。
+
 ## 存疑（未验证）
 
 - [未验证] License MIT、主语言 Shell（GitHub 显示 Shell 84.6% / Python 12.8% / Swift 2.6%）、未归档、无打 tag 的 release、最后 push 于 2026-03-29——均为 GitHub 元数据，截至 2026-06-26；依赖某个具体 commit 的行为前请重新核对。

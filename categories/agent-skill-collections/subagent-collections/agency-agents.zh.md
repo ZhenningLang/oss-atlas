@@ -38,6 +38,13 @@ type: skill-pack
 | [antfu/skills](../personal-collections/antfu-skills.zh.md) | ✅ | 个人 *skills* 集合（任务工作流），不是角色人格——消费单位不同。skills 解决「怎么做 X」，人格解决「扮演 Y」。 |
 | Anthropic 官方/内置 agent 示例 | 未收录 | 平台自带的 subagent 示例；Agency-Agents 是第三方批量目录叠在其上，名称与角色可能与原生重叠或重复。 |
 
+## 健康度与可持续性
+
+- **维护** —— 活跃：最后推送 2026-06，未归档（截至 2026-06），但没有可 pin 的 tagged release——你跟的是一条移动的分支。节奏看上去活跃；232 个人格的面意味着各文件维护程度不一。
+- **治理与 bus factor** —— 单维护者的个人仓库（`User` 所有，`msitarzewski`），star 数极高（截至 2026-06 约 11.6 万）。一个 `User` 所有、star 数如此之大的仓库本身就是 **bus-factor 旗标**：路线图和多工具转换器都由一个人把控，背后没有团队或组织——关注度与单点故障并存。
+- **年龄与 Lindy** —— 创建于 2025-10，截至 2026-06 约 0.7 年：相对其热度还很年轻，Lindy 上未经验证。高 star 反映覆盖面而非耐久度——把长寿当作尚未确立。
+- **采用与风险旗标** —— MIT 许可（复用清晰）。「battle-tested / production-ready」是宣传话术，仓库内无测试或 QA 证据；人格质量不均（事故响应与「Whimsy Injector」并存），对约 11 个非 Claude harness 的跨工具转换保真度未经核实。建议选择性安装，而非一次性把 232 个全丢进去。
+
 ## 存疑（未验证）
 
 - [未验证] License 为 MIT、主语言为 Shell（install/convert 脚本），据 GitHub 元数据（2026-06-26）；仓库最后 push 于 2026-06-22，未报告 tagged release——固定行为前请重新核实。

@@ -58,6 +58,13 @@ type: library
 
 **cloud 路径低，自托管中到高。** 托管 cloud 的 quickstart 是"零配置"：设个 API key、注册客户端、完事，运维极少。一旦你想避开 SaaS 依赖，就进入 BYODB 领域：你要自己供给并运维数据库(文档为 TiDB)，还要承担那些被 cloud 门控或在无账号时被限速的 augmentation 功能。由于开源代码和商业 cloud 是耦合的，真正的运维问题不是"我能不能把容器跑起来"，而是"离开 cloud 后哪些能力还活着"——在投入前请留出时间为你的用例验证这一点。
 
+## 健康度与可持续性
+
+- **维护（2026-06）：** 活跃且迭代快——最新 release v3.3.6（2026-05），最后 push 于 2026-06，未归档，open issue 很少（约 20）。发版很快，既表明有活力，也意味着接口面不稳定。
+- **治理 / bus factor：** 归 `MemoriLabs` 组织所有（即商业 Memori Cloud 背后的公司）。这是单厂商、open-core 的治理——路线图跟着 SaaS 走，不是基金会或社区。`[推断]`
+- **年龄与 Lindy 判断：** 约 1 岁（创建于 2025-07）——在 Lindy 维度上年轻且未经验证。没有长期记录可依靠；把存续性当作未决问题，并锁定版本。
+- **风险旗标：** open-core / SaaS 耦合是头号风险——最有价值的行为（"Advanced Augmentation"）在无账号时受速率限制，文档里唯一记录的自托管后端是 TiDB，所以离开 cloud 可能让能力降级。在押注纯本地之前先验证 BYODB 路径。
+
 ## 存疑（未验证）
 
 - [未验证] 仓库 `LICENSE` 文件为 Apache-2.0(标准文本，无 Commons Clause)；注意 `gh repo view` 报 `license: other`，很可能是附录版权行造成的识别误差——若 license 重要，请对照线上 `LICENSE` 核实。

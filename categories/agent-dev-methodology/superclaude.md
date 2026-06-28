@@ -60,6 +60,13 @@ It also fits when you want behavioral *modes* layered on top of the raw model: a
 
 **Low.** This is a client-side dev-tool config, not a deployed service: `pipx install` + `superclaude install` writes files into `~/.claude/` and you're done — no server, no datastore, no orchestration to keep alive. Maintenance burden comes from (a) re-running `superclaude install` after upgrades and reconciling changes to your `~/.claude/` config, (b) optional MCP servers, which add their own runtimes/keys and are the most likely thing to break, and (c) coupling to a fast-moving project mid-way through a v4→v5 (TypeScript) transition, which can change the install layout. There's nothing to scale or monitor in production.
 
+## Health & viability
+
+- **Maintenance (2026-06):** actively maintained — repo pushed 2026-06-13, latest release v4.3.0 (2026-03-22), not archived. v4 is a recent rewrite and a v5 (TypeScript plugin) is announced, so it's moving fast, not coasting — but the install layout can shift across the v4→v5 transition.
+- **Governance & backing:** Organization-owned (SuperClaude-Org) — a community/org structure rather than a lone account, which is a modestly better bus-factor signal than a single-user repo. No foundation or commercial vendor backing is published; effectively a community-maintained framework.
+- **Age & Lindy (2026-06):** created 2025-06, ~1 year old, ~23k stars. Young, and mid-rewrite (v4 fresh, v5 announced) means the contract you adopt today may not survive the next major. Lindy verdict: **unproven by age** — usable now, but pin versions and expect command/agent-roster and install-model churn.
+- **Risk flags:** MIT (no relicense). Lock-in is **Claude-Code-only** [推断] — almost nothing transfers to other harnesses. Optional MCP servers are the most likely breakage surface (own runtimes/keys). No CVEs were reviewed.
+
 ## Caveats (unverified)
 
 - [未验证] Counts "30 commands / 20 agents / 7 modes / 8 MCP servers" come from the project's README/release notes; the exact rosters shift release-to-release — verify against the installed files for your version.

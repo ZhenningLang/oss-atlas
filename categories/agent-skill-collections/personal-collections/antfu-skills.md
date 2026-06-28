@@ -40,6 +40,13 @@ You run `pnpx skills add antfu/skills --skill='*'` (add `-g` for global) and you
 | Dimillian/Skills, gstack, ljg-skills, khazix-skills, taches-cc-resources (other personal collections) | 未收录 | Same genre — individual maintainers' curated skill/harness bundles — but each reflects a different person's stack and conventions; compare on whose toolchain and opinions you actually share. |
 | Each agent's built-in skills / slash commands | 未收录 | The platform's own skill ecosystem; antfu/skills is a third-party bundle layered on top, so it can duplicate or conflict with native skills. |
 
+## Health & viability
+
+- **Maintenance (2026-06):** active — last pushed 2026-06, only ~9 open issues. No tagged releases, so you track a moving `main` with no semver checkpoints. Active, not coasting.
+- **Governance & bus factor:** a single high-profile maintainer's personal repo (antfu), `User`-owned, no foundation or vendor backing. ~5k stars on a one-person collection is a classic bus-factor flag — direction and continuity depend entirely on one person's continued interest.
+- **Age & Lindy verdict:** created 2026-01, so ~6 months old as of 2026-06 — young and currently hyped, not yet Lindy-proven. Antfu's long track record across the Vue/Vite ecosystem is reassuring, but *this pack* has no longevity history; don't treat its age as a safety signal.
+- **Risk flags:** generated/vendored skills are regenerated from upstream docs, so rule sets can shift between pulls; no release pinning. Advisory-only (no enforcement gate). Vendored skills retain their own upstream licenses despite the MIT repo license.
+
 ## Caveats (unverified)
 
 - [未验证] License is MIT per GitHub metadata on 2026-06-26 (the README also notes vendored skills retain their original upstream licenses); primary language reported as TypeScript — that reflects the generation/automation tooling and `meta.ts`, not a runnable app, since the substance is markdown `SKILL.md` files.

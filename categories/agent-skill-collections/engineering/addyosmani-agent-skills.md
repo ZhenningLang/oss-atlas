@@ -41,6 +41,13 @@ You reach for this pack when you want that engineering discipline to fire on dem
 | Superpowers | 未收录 (other leaf) | Methodology-first pack centered on brainstorm→plan→TDD→verify discipline; this one leads with concrete engineering practice areas (quality/security/perf/API/ship) and lifecycle slash commands rather than a TDD/subagent spine. Overlapping goal, different center of gravity. |
 | Each agent's built-in skills / slash commands | 未收录 | The platform's own skill ecosystem; this is a third-party bundle layered on top, so it can duplicate or conflict with native skills. |
 
+## Health & viability
+
+- **Maintenance (2026-06):** active — last push 2026-06, latest release v0.6.2, frequent pre-1.0 releases, not archived. Versioned, but still v0.x so routing and slash-command mapping can shift between bumps.
+- **Governance & bus factor:** single-maintainer `User` repo (Addy Osmani) carrying ~67k stars — strong individual reputation, but a real bus-factor concentration with no org/foundation backing the roadmap. [推断]
+- **Age & Lindy:** created 2026-02, so only a few months old as of 2026-06 — young and star-hyped; unproven on Lindy. The author's standing is the main signal, not track record of this repo.
+- **Risk flags:** advisory-only "quality gates" (prompt/markdown, not a merge/CI block) + pre-1.0 churn ⇒ pin a tag for stable routing. [推断]
+
 ## Caveats (unverified)
 
 - [未验证] Latest release reported as v0.6.2 (published 2026-06-11) with the repo last pushed 2026-06-25; license MIT and primary language Shell per GitHub metadata as of 2026-06-26 — re-verify before relying on a specific version's behavior.

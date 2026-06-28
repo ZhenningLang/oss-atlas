@@ -40,6 +40,13 @@ Vercel 官方的 agent skill 集合——按需安装的 React、Next.js、Verce
 | [Scientific Agent Skills](scientific-agent-skills.md) | ✅ | 科学/工程工作流 skill——领域不同(研究/数据)，与 web/前端工程互补而非替代。 |
 | Anthropic / 社区官方 skill(如 superpowers) | 未收录 | 通用 SDLC/方法论 skill 包塑造 agent *怎么干活*(TDD、规划);Vercel 这套提供 React/Vercel 的*领域*规则。通常一起用，不是二选一。 |
 
+## 健康度与可持续性
+
+- **维护（2026-06）：** 活跃——最后 push 于 2026-06，未归档，但没有 tagged release，你跟的是移动的 `main`，规则集可能在两次拉取间变化。
+- **治理与背书：** 仓库归 `vercel-labs` 这个 `Organization` 所有——由 Vercel 厂商背书，是耐久性的加分项（真实公司、真实工程团队掌控路线图），但它是单厂商的 `labs` 仓库，可能被厂商按自己的判断降优先级或归档。[推断]
+- **年龄与 Lindy：** 创建于 2025-12，截至 2026-06 仅几个月——年轻；尽管约 28k stars，Lindy 维度未经检验。这里更强的耐久性信号是厂商背书，而非年龄。
+- **风险标记：** 仅建议性（prompt/markdown，不会让构建失败）；部署／优化 skill 与 Vercel 平台耦合，离开 React + Vercel 价值骤降；许可证仅凭 README 声明（2026-06-26 无 LICENSE 文件／license API 返回空）。[未验证]
+
 ## 存疑(未验证)
 
 - [未验证] 许可证按仓库 README 的 `## License` 一节写的是 MIT；但 GitHub license API 和顶层 `LICENSE` 文件在 2026-06-26 都返回空，所以 SPDX id 仅依据 README 声明——使用前请确认。

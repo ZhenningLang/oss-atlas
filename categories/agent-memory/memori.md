@@ -58,6 +58,13 @@ It's a fit when you want memory that's keyed on *what agents do*, not just chat 
 
 **Low for the cloud path, medium-to-high for self-host.** The managed-cloud quickstart is "zero config": set an API key, register your client, done — minimal ops. The moment you want to avoid the SaaS dependency, you cross into BYODB territory, where you provision and operate your own database (TiDB per the docs) and absorb whatever augmentation features are cloud-gated or rate-limited off-account. Because the open-source code and the commercial cloud are coupled, the real ops question isn't "can I run the container" but "which capabilities survive when I leave the cloud" — budget time to validate that for your use case before committing.
 
+## Health & viability
+
+- **Maintenance (2026-06):** active and fast-moving — latest release v3.3.6 (2026-05), last pushed 2026-06, not archived, low open-issue count (~20). Releases are coming quickly, which signals energy but also an unstable surface.
+- **Governance / bus factor:** owned by the `MemoriLabs` org (the company behind the commercial Memori Cloud). This is single-vendor, open-core governance — the roadmap follows the SaaS, not a foundation or community. `[推断]`
+- **Age & Lindy verdict:** ~1 year old (created 2025-07) — young and unproven on the Lindy axis. There's no long track record to lean on; treat longevity as an open question and pin versions.
+- **Risk flags:** open-core / SaaS coupling is the headline risk — the most valuable behavior ("Advanced Augmentation") is rate-limited off-account and the only documented self-host backend is TiDB, so leaving the cloud may degrade capability. Validate the BYODB path before betting on local-only.
+
 ## Caveats (unverified)
 
 - [未验证] License is Apache-2.0 per the repo's `LICENSE` file (standard text, no Commons Clause); note `gh repo view` reports `license: other`, likely a detection artifact of the appendix copyright line — verify against the live `LICENSE` if license matters.

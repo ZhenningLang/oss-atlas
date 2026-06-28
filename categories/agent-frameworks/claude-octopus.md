@@ -60,6 +60,13 @@ It fits best when you treat the extra models as a *review/research panel* layere
 
 **Low to install, medium-to-high to run well.** Getting the plugin in is one marketplace command plus a setup wizard, and with only Claude it works out of the box. Difficulty rises with each provider you actually want contributing: installing and authenticating multiple vendor CLIs, managing several API keys/subscriptions, and reasoning about cost and latency when one command fans out to many models. The large Shell-based surface and fast release cadence (242 releases, last push 2026-06-25) mean you're maintaining against a moving target, and debugging a misfiring dispatch or hook means reading through plugin internals. Data-egress review is on you, since prompts/code leave to third-party providers.
 
+## Health & viability
+
+- **Maintenance — very active (as of 2026-06).** Last push 2026-06-25 with a high release cadence (242 releases, currently v9.45.0); not archived. This reads as actively, even frantically, maintained — the flip side is the churn called out under "When NOT to use."
+- **Governance & bus factor — single-maintainer / personal repo.** Owned by an individual GitHub account (`nyldn`), not an org or foundation; the roadmap is one person's. For a tool you wire into every session, that is a bus-factor-of-one risk. [推断]
+- **Age & Lindy — young, unproven.** Created 2026-01, ~6 months old (as of 2026-06). High activity but no track record; by the age × still-active heuristic it is "active but unproven," not a Lindy-safe bet — its longevity is undemonstrated.
+- **Risk flags — fan-out surface + data egress.** The value depends on routing prompts/code to third-party providers (OpenAI/Google/Perplexity/OpenRouter), and behavior spans a large fast-moving Shell/TS surface; relicense risk is low (MIT) but operational/coupling risk is real.
+
 ## Caveats (unverified)
 
 - [未验证] Star count ~3.7k and ~344 forks as of 2026-06 — GitHub stars in this ecosystem are unreliable and date-sensitive; indicative only.

@@ -61,6 +61,13 @@ It fits when you want this *across* tools, not bound to one agent: the same memo
 
 **Low-to-medium, on a single workstation.** The install is one `npx` command and a hook wiring; there's no server fleet, no multi-tenant backend, no clustering — everything is local. The medium part is the moving-parts count for a *memory* tool: a long-running HTTP service on a fixed port (37777 — collisions and stale processes are a real failure mode), a Bun runtime, a `uv`-managed Python side for Chroma, and a SQLite + vector store you now own (size growth, corruption, backups are yours). Failures in async capture at session boundaries can be silent to the foreground, and an LLM compression step on capture adds latency and a token cost per session. It's "install and forget" until the local stack drifts — then you're debugging a port, a runtime, and two datastores on your own machine.
 
+## Health & viability
+
+- **Maintenance — very active (as of 2026-06).** Last push 2026-06; latest release v13.8.0 (2026-06-21); not archived. Fast-moving with a high major version on a young project — actively maintained, but the unusual versioning is itself a thing to verify against the live repo.
+- **Governance & bus factor — single developer, star/maturity mismatch ⇒ strong red flag.** A `User`-owned repo (`@thedotmack`) sitting in your every-session critical path is a bus-factor-of-one dependency. The ~84.8k star figure is wildly disproportionate for a young single-developer hook tool and does *not* match its maturity — treat popularity as decoupled from vetting, not as adoption evidence. [未验证]
+- **Age & Lindy — young, unproven.** Created 2025-08, ~10 months old (as of 2026-06). Active but no track record; young-and-hyped, not Lindy-safe — do not adopt *because* it looks widely vetted.
+- **Risk flags — data capture + local-stack ownership.** Apache-2.0 (no relicense risk), but by design it records everything the agent does and runs an LLM compression step whose model/egress is under-documented; you also own the local SQLite+Chroma stack. Privacy and bus-factor are the dominant risks, not licensing.
+
 ## Caveats (unverified)
 
 - `[未验证]` **~84.8k GitHub stars as of 2026-06 is suspicious** — that figure is wildly disproportionate for a young, single-developer hook tool and doesn't match its maturity. Treat the star count as unverified and *not* as evidence of adoption or vetting; GitHub stars are unreliable and date-sensitive regardless.

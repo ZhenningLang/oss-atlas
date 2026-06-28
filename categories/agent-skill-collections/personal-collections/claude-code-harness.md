@@ -39,6 +39,13 @@ You reach for it specifically when you want the *whole* plan-to-release spine to
 | harness-mem (optional companion) | 未收录 | An optional cross-session memory add-on referenced by this project; separate concern (agent memory), not a workflow substitute. |
 | Claude Code's native skills / built-in slash commands | 未收录 | The platform's own skill ecosystem; this is a third-party bundle layered on top, so it can duplicate or conflict with native commands. |
 
+## Health & viability
+
+- **Maintenance (2026-06):** active and fast-moving — last pushed 2026-06, at v4.16.3 with frequent releases, only ~2 open issues. Unlike most personal packs here it actually cuts tagged releases, so you *can* pin a version. Active, not coasting.
+- **Governance & bus factor:** single-maintainer `User`-owned repo (Chachamaru127), no foundation or vendor. ~2k stars is modest, which lowers the bus-factor exposure relative to the headline packs, but the project still rests entirely on one person; roadmap and continuity are theirs alone.
+- **Age & Lindy verdict:** created 2025-12, so ~6 months old as of 2026-06 — young and unproven on longevity. The rapid v4.x release churn signals energy but also instability; behavior baked into prompts/skill routing can shift across version bumps. Not yet a Lindy-safe bet.
+- **Risk flags:** governance is advisory (spec/plan contracts + prompt guidance), not a hard CI gate — the Go `doctor` binary is diagnostic only. Cross-harness support (Codex/Cursor/OpenCode) is via setup scripts and unconfirmed; fidelity off Claude Code is lower. Pin and re-check after upgrades.
+
 ## Caveats (unverified)
 
 - [未验证] Latest release reported as v4.16.3 (published 2026-06-24), repo last pushed 2026-06-24, created 2025-12-12; license MIT, primary language Shell per GitHub metadata as of 2026-06-26 — re-verify before relying on a specific version's behavior.

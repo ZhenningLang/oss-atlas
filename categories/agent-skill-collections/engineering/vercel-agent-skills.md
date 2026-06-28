@@ -40,6 +40,13 @@ You run `npx skills add vercel-labs/agent-skills` and the agent gains a menu of 
 | [Scientific Agent Skills](scientific-agent-skills.md) | ✅ | Scientific/eng-workflow skills — different domain (research/data) than web/frontend engineering; complementary, not a substitute. |
 | Anthropic / community official skills (e.g. superpowers) | 未收录 | General SDLC/methodology skill packs shape *how* the agent works (TDD, planning); Vercel's pack supplies *domain* rules for React/Vercel. Often run together, not either/or. |
 
+## Health & viability
+
+- **Maintenance (2026-06):** active — last push 2026-06, not archived, but no tagged releases, so you track a moving `main` and rule sets can shift between pulls.
+- **Governance & backing:** `Organization`-owned under `vercel-labs` — vendor-backed by Vercel, which is a longevity plus (real company, real eng team owns the roadmap), but it's a single-vendor `labs` repo, so it can be deprioritized or archived at the vendor's discretion. [推断]
+- **Age & Lindy:** created 2025-12, so only months old as of 2026-06 — young; unproven on Lindy despite ~28k stars. Vendor backing is the stronger durability signal here, not age.
+- **Risk flags:** advisory-only (prompt/markdown, nothing fails the build); Vercel-platform coupling in the deploy/optimize skills means value drops sharply off React + Vercel; license rests on a README declaration only (no LICENSE file / empty license API on 2026-06-26). [未验证]
+
 ## Caveats (unverified)
 
 - [未验证] License is MIT per the repo README's `## License` section; the GitHub license API and a top-level `LICENSE` file both returned empty on 2026-06-26, so the SPDX id rests on the README declaration alone — confirm before relying on it.

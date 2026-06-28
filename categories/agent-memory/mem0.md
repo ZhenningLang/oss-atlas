@@ -60,6 +60,14 @@ Mem0 is built for exactly this. You call `m.add(messages, user_id=...)` after a 
 
 **Low-to-medium.** As an in-process library pointed at a managed LLM and a single Qdrant instance, it's a few lines and minimal ops — close to "just a dependency". It rises to **medium** when you self-host the server stack (Docker Compose, auth, a vector DB you now operate and back up) and when you account for the LLM call on every write: that's added latency, a per-write token cost, and a new failure mode (LLM/embedder downtime stalls memory writes). Because extraction is ADD-only (see When NOT to use), you also inherit an ongoing *data-hygiene* burden — pruning stale/contradictory memories — that pure storage layers don't impose. The hosted Platform trades this ops for a bill and vendor dependency.
 
+## Health & viability
+
+- **Maintenance (2026-06):** actively maintained — last pushed 2026-06, not archived, two SDKs (Python `v2.0.8`, Node `ts-v3.0.10`) shipping on independent release trains. ~440 open issues is high in absolute terms but typical of a hot project at this star level, not a stall signal on its own.
+- **Governance / bus factor:** owned by the `mem0ai` org (a commercial company), not a foundation. Roadmap is vendor-controlled and steered by the paid **Mem0 Platform** business — a single-vendor open-core structure, not community governance. `[推断]`
+- **Age & Lindy verdict:** ~3 years old (created 2023-06) and still active — long enough to have shed at least one major extraction-algorithm rewrite (UPDATE/DELETE → ADD-only), so it clears the basic Lindy bar (old + active), but the churn means *API* longevity is weaker than the project's.
+- **Adoption:** the most-cited open-source agent-memory layer; large star base and broad LLM/vector-store integration surface signal real adoption, though stars are a weak proxy.
+- **Risk flags:** open-core — an Apache-2.0 library with a paid managed Platform on top; expect some capabilities to be platform-gated and the OSS roadmap to serve the commercial product. ADD-only accumulation is a *data-hygiene* liability, not a licensing one.
+
 ## Caveats (unverified)
 
 - `[未验证]` "Single-pass ADD-only extraction — one LLM call, no UPDATE/DELETE; memories accumulate, nothing is overwritten" is taken from the README (dated April 2026 in-doc); confirm against the exact release you install, as extraction logic has changed before.

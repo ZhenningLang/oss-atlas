@@ -39,6 +39,13 @@ You reach for it when you want this *specific author's* methodology — the fram
 | [awesome-claude-code-subagents](../subagent-collections/awesome-claude-code-subagents.md) | ✅ | A large broad subagent collection across many technical roles; breadth over a single opinionated voice. dbskill is one author's deep, narrow business methodology. |
 | Generic LLM business-coaching prompts | 未收录 | Ad-hoc prompts have no curated framework, case library, or persistence; dbskill ships ~4k knowledge atoms and state commands behind a coherent author voice. |
 
+## Health & viability
+
+- **Maintenance (2026-06):** active — last pushed 2026-06, at v2.14.2 with frequent releases and only ~10 open issues. It does cut tagged releases, so a version is pinnable. Active, not coasting.
+- **Governance & bus factor:** single-author `User`-owned pack (dontbesilent2025); the entire value — frameworks, case library, ~4k knowledge atoms — is one creator's methodology, with no foundation or team behind it. ~7k stars on a one-person pack is a bus-factor flag; continuity is tied to that author.
+- **Age & Lindy verdict:** created 2026-03, so only ~3 months old as of 2026-06 — very young and hyped, with no longevity track record. Treat as unproven; its frameworks are the author's opinions, not time-tested standards. Fails the Lindy test purely on age.
+- **Risk flags:** licensed **CC BY-NC 4.0** — non-commercial only, so you cannot bake it into a paid product without separate permission (GitHub reports the license as `Other`/`NOASSERTION`). Chinese-market-specific and advisory-only (prompt-level coaching, no enforcement).
+
 ## Caveats (unverified)
 
 - [未验证] License stated as CC BY-NC 4.0 in the README ("本项目采用 CC BY-NC 4.0 许可证"); GitHub's API reports the license as `Other` / `NOASSERTION` because CC licenses aren't in its SPDX detection set — verify the LICENSE/README before any commercial use.

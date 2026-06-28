@@ -40,6 +40,13 @@ type: skill-pack
 | Lighthouse CI / WebPageTest | 未收录 | 真正的测量 + CI 卡门工具（不是技能包）。需要数字和卡构建的预算时用它们；本包是解释并修复的建议层，不是仪表。 |
 | 自己把规则粘进上下文 | n/a | 零安装、完全可控，但很烦且会过期；这个包的全部价值就是把清单打包成可即时加载。 |
 
+## 健康度与可持续性
+
+- **维护（2026-06）：** 活跃——最后 push 于 2026-06，未归档，但只有 `plugin.json` 的 v1.0.0、无 GitHub tagged release，版本标注很轻。尽力而为，而非有支持承诺的产品。
+- **治理与 bus factor：** 单作者 `User` 仓库（Addy Osmani）；约 2k stars，采用量低，整体压在一个维护者身上，无 foundation 或厂商背书。
+- **年龄与 Lindy：** 创建于 2026-01，截至 2026-06 不足一年——年轻；Lindy 维度未经检验。与作者那个更大的包不同，它连可倚仗的 star 热度都没有。
+- **风险标记：** 仅建议性（编码的是某一时点的 Lighthouse 快照，不是实时仪表）；上游 Lighthouse 已把性能迁到 Insight Audits，所编码的审计名可能漂移——请对照当前 Lighthouse 复核。[推断]
+
 ## 存疑（未验证）
 
 - [未验证] 2026-06-26 GitHub 元数据：license MIT，主语言 Shell，最后 push 于 2026-06-14，未归档，`latestRelease` 为 null（无 GitHub tagged release），但 `.claude-plugin/plugin.json` 声明版本 1.0.0 —— 依赖某个具体版本行为前请复核。

@@ -39,6 +39,13 @@ type: skill-pack
 | [stitch-skills](stitch-skills.md) | ✅ | 同叶目录的设计 skill 包；比较各自「强制 vs 建议」的阶段，以及动效/排版指引是否重叠。 |
 | 写在自己 `CLAUDE.md` / prompt 里的手写设计清单 | 未收录 | DIY 方案；同样是建议性的，但由你维护。本 skill 把一份已知好用的细节清单打包，省得你每个项目重新推导。 |
 
+## 健康度与可持续性
+
+- **维护（2026-06）：** 节奏低、可能已沉寂——最后 push 于 2026-04（截至 2026-06 约停 2 个月），无打 tag 的 release。对一份薄、绑定单篇文章、本就「做完了」的产物，这尚可接受，但别指望持续迭代。
+- **治理 / bus factor：** 单作者、`User` 所有的仓库（`jakubkrehel`），约 1.9k stars。它是一个人从自己「Details that make interfaces feel better」一文里结晶出的主张——无团队、无组织。
+- **年龄与 Lindy 判断：** 非常年轻（创建于 2026-03）——在 Lindy 维度上**未经验证**，但赌注很低：它是一份静态的、机械的 CSS/UX 细节清单，所谓「过时」多半是设计主张变旧，而非会失效。窄而冻结的产物对 Lindy 的敏感度低于运行时依赖。
+- **风险旗标：** 仅建议性（agent 可跳过的 markdown；要硬保证请配真正的 CSS/UI linter）；license 是 README 声称的 MIT，仓库无 `LICENSE` 文件、GitHub license API 返回 404——依赖前请确认 license。
+
 ## 存疑（未验证）
 
 - [未验证] README 称 license 为 MIT，但仓库根目录没有 `LICENSE` 文件、GitHub license API 返回 404——这里的 SPDX id 来自 README 声明，而非检测到的 license 文件；依赖前请确认。

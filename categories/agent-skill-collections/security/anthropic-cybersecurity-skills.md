@@ -38,6 +38,13 @@ You reach for this pack to drop in a security playbook: install once (`npx skill
 | Security MCP servers (e.g. tool-wrapping SIEM/scanner MCPs) | 未收录 | Give the agent live *tool access* with structured I/O; this pack gives *procedural knowledge*, not connectivity. Complementary, not substitutes — one knows the steps, the other can execute against a system. |
 | Bespoke per-task prompting (write your own `SKILL.md`) | 未收录 | Maximum control and zero unused surface, but you rebuild and maintain curated, framework-mapped runbooks for every domain yourself instead of installing a vetted bundle. |
 
+## Health & viability
+
+- **Maintenance** — very active and fast-moving: latest release v1.3.0 (2026-06), last pushed 2026-06, not archived (as of 2026-06). Skill count grew 734 → ~817 across recent releases, so content and framework versions shift release-to-release — pin a version and review the specific skills you depend on.
+- **Governance & bus factor** — single-author community repo (`User`-owned, `mukul975`), ~22k stars. One maintainer owns 800+ security skills of uneven depth; that's a heavy single-author bus factor for safety-relevant content. The "Anthropic" in the name is **not** an endorsement — it's a community project, not an official release.
+- **Age & Lindy** — created 2026-02, ~0 years old as of 2026-06: young and hyped (high stars fast), Lindy-unproven. For *security* runbooks, newness compounds the review burden — none of these workflows have a long track record.
+- **Risk flags** — Apache-2.0 (clear reuse), but skills are advisory prompt context, **not** a sandbox, validated detections, or a policy engine; offensive/red-team skills carry real legal and operational risk and need explicit authorization regardless of what a skill says. Framework-version and skill-count claims are README-sourced.
+
 ## Caveats (unverified)
 
 - [未验证] Metadata as of 2026-06-26 (GitHub): latest release v1.3.0 (published 2026-06-22), repo last pushed 2026-06-22, license Apache-2.0, primary language Python (PowerShell minority), not archived — re-verify before relying on a specific version's behavior or skill list.

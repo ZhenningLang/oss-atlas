@@ -58,6 +58,13 @@ You install this skill (`git clone` into `~/.claude/skills/notebooklm/`) so Clau
 
 **Low-to-medium for an individual; medium once you count the account risk.** Install is a single `git clone`, and the venv/Chrome bootstrap is automatic — there's no server to run, no DB, no deploy. The ongoing burden is the auth and the fragility: you do a one-time interactive Google login (and re-login when the session expires), you must keep notebooks uploaded and link-shared, and the whole thing rides on browser automation against a third-party UI plus anti-detection heuristics — both of which can break without warning when Google changes things. The recommendation to use a throwaway Google account, and the "can't guarantee Google won't detect or flag automated usage" disclaimer, push this above a trivial dev-tool in real-world operational risk. [未验证]
 
+## Health & viability
+
+- **Maintenance (2026-06):** likely **coasting / quiet** — latest release v1.3.0 and last push both 2025-11, i.e. ~7 months without a commit as of 2026-06. Not archived, but the gap is a yellow flag for a tool whose whole job is automating a third-party UI (Google NotebookLM) that drifts.
+- **Governance / bus factor:** single-maintainer, `User`-owned repo (`PleasePrompto`) at ~7k stars — popular but thin on continuity. The author also ships a separate MCP-server sibling, so attention may be split across the two.
+- **Age & Lindy verdict:** young (created 2025-10) *and* apparently dormant — the worst Lindy quadrant for a fragility-prone tool: too new to have a track record, and not actively maintained against the moving target it automates.
+- **Risk flags:** the core dependency is browser automation against Google's live UI plus anti-detection heuristics — it can break with no warning when Google changes things, and the author warns of ToS/account-flagging risk. A maintenance gap amplifies that fragility; verify it still works before relying on it.
+
 ## Caveats (unverified)
 
 - [未验证] Latest release reported as v1.3.0 ("Timeout Fix & Thinking Detection", published 2025-11-21) with the repo last pushed the same day; license MIT and primary language Python per GitHub metadata as of 2026-06-26. The pace suggests the project may be quiet since late 2025 — re-verify maintenance status and pin behavior before relying on it.

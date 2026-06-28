@@ -38,6 +38,13 @@ You reach for it especially when you want breadth across many domains at once (n
 | [antfu/skills](../personal-collections/antfu-skills.md) | ✅ | A personal *skills* collection (task workflows), not role personas — different unit of consumption. Use skills for "how to do X", personas for "act as Y". |
 | Anthropic's example/built-in agents | 未收录 | The platform's own subagent examples; Agency-Agents is a third-party bulk catalog layered on top, so names and roles can overlap or duplicate native ones. |
 
+## Health & viability
+
+- **Maintenance** — active: last pushed 2026-06, not archived (as of 2026-06), but no tagged release to pin — you track a moving branch. Cadence reads active; the 232-persona surface means individual files vary in upkeep.
+- **Governance & bus factor** — single-maintainer personal repo (`User`-owned, `msitarzewski`) with a very high star count (~116k as of 2026-06). A `User`-owned repo with stars that large is a **bus-factor flag**: one person owns the roadmap and the multi-tool converters, with no team or org behind it — outsized attention, single point of failure.
+- **Age & Lindy** — created 2025-10, ~0.7 years old as of 2026-06: young relative to its hype, Lindy-unproven. High stars signal reach, not durability — treat the longevity as unestablished.
+- **Adoption & risk flags** — MIT-licensed (clear reuse). "Battle-tested / production-ready" is a marketing claim with no in-repo test or QA evidence; persona quality is uneven (incident-response next to a whimsy injector), and cross-tool conversion fidelity for ~11 non-Claude harnesses is unverified. Install selectively rather than dropping all 232 in.
+
 ## Caveats (unverified)
 
 - [未验证] License MIT and primary language Shell (the install/convert scripts) per GitHub metadata as of 2026-06-26; repo last pushed 2026-06-22, no tagged release reported — re-verify before pinning behavior.

@@ -40,6 +40,13 @@ type: skill-pack
 | [Dimillian/Skills](dimillian-skills.zh.md) ✅ | 已收录 | 偏 Swift/Apple 开发的个人合集。同为「一个人的技能」类型，领域（代码）不同。 |
 | Anthropic 官方技能 / 内置 slash 命令 | 未收录 | 平台自带的技能生态；ljg-skills 是叠在上面的第三方精选包，可能与原生技能重复或冲突。 |
 
+## 健康度与可持续性
+
+- **维护** —— 活跃维护：最后推送 2026-06，未归档（截至 2026-06）。节奏看上去是活跃而非「吃老本」，但没有打 tag 的 release——你跟的是一条移动的分支。
+- **治理与 bus factor** —— 单维护者的个人仓库（`User` 所有）。是一个人精选的方法；李继刚一旦停更，包就停。约 6k stars 也改变不了这点——这是一人 bus factor，对个人合集来说正常，但要按「fork 自管」来规划。
+- **年龄与 Lindy** —— 创建于 2026-03，截至 2026-06 约 0 年：年轻，Lindy 上未经验证。它确实活跃，但太新，跨越模型/CLI 更迭还没有 track record——为方法而采用，不为长寿。
+- **风险旗标** —— 截至 2026-06 未检测到 license（`NOASSERTION`）：复用/再分发权利不清，依赖前请与作者确认。内容（技能清单、org-mode/markdown 双分支）可能在每次拉取间变化。
+
 ## 存疑（未验证）
 
 - [未验证] 2026-06-26 通过 GitHub 元数据未检测到 license 文件（`licenseInfo` 为 null）——frontmatter 记为 `NOASSERTION`；没有明确许可证，复用/再分发权利不清，依赖前请与作者确认。

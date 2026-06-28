@@ -38,6 +38,13 @@ You reach for it when you'd rather adopt an opinionated, theatrical persistence 
 | Superpowers | 未收录 | Full brainstorm→plan→TDD→verify SDLC methodology pack; its `verification-before-completion` / `systematic-debugging` skills overlap PUA's Red Lines but ship a whole lifecycle, where PUA is just the persistence/anti-quit layer with a persona skin. |
 | Anthropic's built-in skills / native slash commands | 未收录 | The platform's own skill surface; PUA is a third-party persona bundle layered on top and can duplicate or conflict with native behavior. |
 
+## Health & viability
+
+- **Maintenance** — very active and fast-moving: latest release v3.5.0 (2026-06), last pushed 2026-06, not archived (as of 2026-06). Frequent v3.x releases mean escalation logic and "flavors" can shift between versions — pin and re-check after upgrades.
+- **Governance & bus factor** — single-maintainer personal repo (`User`-owned); ~18k stars but one author owns the roadmap and the whole persona theme. Heavy theme + one maintainer = real key-person risk.
+- **Age & Lindy** — created 2026-03, ~0 years old as of 2026-06: young and visibly hyped (high stars fast), so Lindy-unproven. Stars signal interest, not durability — treat as a bet on a trend, not a settled tool.
+- **Risk flags** — the "PUA / PIP" psychological-pressure framing is the product and can't be cleanly stripped; a non-starter for neutral-tone or shared-agent setups. License recorded MIT per README but `licenseInfo` was null on 2026-06 — verify before relying on it.
+
 ## Caveats (unverified)
 
 - [未验证] `gh` metadata on 2026-06-26 reports `licenseInfo: null` (no detected LICENSE file), but the README footer states MIT; frontmatter records MIT per the README — verify the actual license before relying on it.

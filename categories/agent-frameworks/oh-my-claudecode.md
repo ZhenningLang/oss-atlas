@@ -61,6 +61,13 @@ You reach for it specifically when you want orchestration *inside the Claude Cod
 
 **Low to medium.** The happy path is genuinely easy: install the plugin, run `/setup`, and drive it in natural language — "zero configuration" with intelligent defaults is a stated design goal. Difficulty rises to **medium** once you depend on the tmux-backed parallel workers (shell/terminal environment matters, and Windows/tmux support is still being hardened release-to-release), wire up external CLIs or notification channels, or try to pin behavior across the project's fast release cadence. Because it's a thin-ish layer over Claude Code, most "ops" is really Claude Code's auth/rate-limit reality plus keeping the plugin/npm version current.
 
+## Health & viability
+
+- **Maintenance — very active (as of 2026-06).** Last push 2026-06 with an aggressive release cadence (multiple releases a month, currently v4.15.0); not archived. Actively maintained, but the velocity is itself the churn flagged under "When NOT to use."
+- **Governance & bus factor — single-maintainer + huge-star mismatch ⇒ red flag.** A `User`-owned repo (`Yeachan-Heo`) carrying ~37k stars is a classic bus-factor flag: one person owns the roadmap of something with disproportionate visibility. Treat the popularity as decoupled from maintenance depth before making it load-bearing. [推断]
+- **Age & Lindy — young, unproven.** Created 2026-01, ~6 months old (as of 2026-06). High activity but no track record; active-but-unproven, not Lindy-safe — longevity and single-author continuity are undemonstrated.
+- **Risk flags — fast-moving surface + thin layer.** MIT-licensed, low relicense risk, but it's a thin, fast-evolving layer over Claude Code (19 roles, multiple execution modes); upgrades and cross-platform (Windows/tmux) paths are still settling.
+
 ## Caveats (unverified)
 
 - [未验证] Star count ~37k as of 2026-06-26 — GitHub stars in the Claude-Code tooling ecosystem are unreliable and date-sensitive; treat as indicative only.

@@ -39,6 +39,13 @@ You reach for this pack specifically when your work is Apple-flavored: it ships 
 | karpathy-skills | 未收录 | Personal skill collection from a different author/domain; compare on whether your work is Apple-flavored — if not, neither pack's specialty applies. |
 | Your harness's built-in review / simplify commands | 未收录 | Codex/Claude already ship generic diff-review and simplify flows; the generic skills here (`review-swarm`, `review-and-simplify-changes`) overlap with those — the unique value is the SwiftUI/iOS skills, not the generic ones. |
 
+## Health & viability
+
+- **Maintenance (2026-06):** coasting — last pushed 2026-03, i.e. ~3 months stale as of 2026-06, with ~9 open issues and no tagged releases. That staleness is a real risk *here* because the SwiftUI/Swift-6.2/Liquid-Glass skills track fast-moving Apple betas and rot quickly between pushes. Treat as a snapshot, not a maintained product.
+- **Governance & bus factor:** single-author `User`-owned personal collection (Dimillian, a known iOS developer). No team, foundation, or vendor; ~3k stars on a one-person pack is a bus-factor flag. Roadmap is entirely the author's.
+- **Age & Lindy verdict:** created 2025-12, ~6 months old as of 2026-06 — young *and* already coasting. Young + not-currently-active is the weak quadrant: no longevity to lean on and recent activity has stalled. Don't bank on it staying current.
+- **Risk flags:** Codex-only install target (`$CODEX_HOME/skills`); other harnesses need porting. MCP/swarm skills assume tooling that may be absent. Advisory-only, no enforcement.
+
 ## Caveats (unverified)
 
 - [未验证] License MIT, primary language Shell (84.6% Shell / 12.8% Python / 2.6% Swift per GitHub), not archived, no tagged releases, last pushed 2026-03-29 — all per GitHub metadata as of 2026-06-26; re-verify before relying on a specific commit's behavior.

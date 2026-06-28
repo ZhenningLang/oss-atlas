@@ -39,6 +39,13 @@ You reach for it specifically when the gap is *craft-level detail*, not directio
 | [stitch-skills](stitch-skills.md) | ✅ | Sibling design skill pack; compare on which stages each enforces vs. suggests and whether the motion/typography guidance overlaps. |
 | Hand-written design checklist in your own `CLAUDE.md` / prompt | 未收录 | The DIY alternative; same advisory nature, but you maintain it. This skill packages a known-good detail list so you don't re-derive it per project. |
 
+## Health & viability
+
+- **Maintenance (2026-06):** low cadence and possibly quiet — last pushed 2026-04 (~2 months stale as of 2026-06), no tagged releases. That's tolerable for a thin, "finished" artifact pinned to one article, but don't expect ongoing iteration.
+- **Governance / bus factor:** single-author, `User`-owned repo (`jakubkrehel`) at ~1.9k stars. It's one person's opinion crystallized from their "Details that make interfaces feel better" article — no team, no org.
+- **Age & Lindy verdict:** very young (created 2026-03) — **unproven** on the Lindy axis, but the stakes are low: it's a static checklist of mechanical CSS/UX details, so "staleness" mostly means the design opinions age, not that it breaks. A narrow, frozen artifact is less Lindy-sensitive than a runtime dependency.
+- **Risk flags:** advisory-only (markdown the agent may skip; pair with a real CSS/UI linter for hard guarantees); license is README-claimed MIT with no `LICENSE` file in the repo and a 404 from GitHub's license API — confirm the license before relying on it.
+
 ## Caveats (unverified)
 
 - [未验证] License is MIT per the README, but there is no `LICENSE` file at the repo root and the GitHub license API returns 404 — the SPDX id here is from the README claim, not a detected license file; confirm before relying on it.

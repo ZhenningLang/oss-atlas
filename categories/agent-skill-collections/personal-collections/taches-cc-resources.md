@@ -40,6 +40,13 @@ You reach for TÂCHES CC Resources because it's a curated, batteries-included st
 | [shaping-skills](shaping-skills.md) | ✅ | Methodology-shaped skill pack; TÂCHES is less a single methodology and more a grab-bag of authoring tools and thinking frames. |
 | Anthropic's official Claude Code skills / built-in commands | 未收录 | The platform's native ecosystem; TÂCHES is a third-party personal bundle layered on top and can duplicate or conflict with native commands. |
 
+## Health & viability
+
+- **Maintenance** — last pushed 2026-04, not archived (as of 2026-06): a couple of months quiet, no tagged releases. Reads as a recently-touched personal collection rather than abandoned, but cadence is low and there's no semver to pin.
+- **Governance & bus factor** — single-maintainer personal repo (`User`-owned, glittercowboy/TÂCHES), ~1.9k stars. One author's house style for authoring extensions; no team backstop — treat as a snapshot to fork and own.
+- **Age & Lindy** — created 2025-11, ~0.5 years old as of 2026-06: young, Lindy-unproven. Too new to have weathered Claude Code's loader/marketplace changes — adopt for the scaffolding, not for stability.
+- **Risk flags** — MIT-licensed (as of 2026-06), so reuse is clear, but "Setup Ralph" wires an autonomous coding loop whose safety envelope is undocumented — review before running unattended. Enforcement is advisory only.
+
 ## Caveats (unverified)
 
 - [未验证] GitHub metadata (license MIT, primary language TypeScript ~57% / Shell ~36% / Python ~6%, not archived, no tagged release, last pushed 2026-04-01) read on 2026-06-26 — re-verify before relying on specifics.

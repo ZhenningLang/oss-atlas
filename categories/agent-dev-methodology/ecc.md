@@ -59,6 +59,13 @@ You're also a fit if you work across more than one agent runtime and want *one* 
 
 **Low to medium.** The plugin install path is one command and the system is purely client-side (no server to run), so getting started is easy. Difficulty rises because what you've installed is large and *active*: hundreds of skills/agents/rules plus Node hooks that fire on session events and mutate local memory. You inherit its update cadence, env-var tuning (`ECC_HOOK_PROFILE`, `ECC_SESSION_START_MAX_CHARS`, `ECC_AGENT_DATA_HOME`), Node-version sensitivity (the v2.0.0 Node 21+ hook fix), and cross-harness adapter quirks. Debugging an unexpected behavior means tracing through hook scripts and a big config tree rather than a few files you wrote.
 
+## Health & viability
+
+- **Maintenance (2026-06):** actively (fast) maintained — last pushed 2026-06, on a v2.0.0 line, not archived. The high open-issue count (~100) plus a self-disclosed "hooks were silent no-ops on Node 21+" regression in the v2.0.0 notes signals real velocity but also that behavior-bearing automation is still stabilizing.
+- **Governance & bus factor:** the repo is **User-owned** (affaan-m), i.e. a single-maintainer project — and the ~222k-star headline against a one-person backing is a **bus-factor red flag**, not a safety signal. The "When NOT to use" section already calls out "single-author velocity / lock-in risk"; you are betting your whole agent harness on one person's release rhythm. [未验证] No foundation, company, or co-maintainer governance published.
+- **Age & Lindy (2026-06):** created 2026-01, ~5 months old. Extremely young for something positioning itself as an "agent operating system" you install into `~/.claude`. Lindy verdict: **fails the longevity prior** — no track record, breaking change cadence likely; treat as early-adopter tooling, pin versions, expect churn.
+- **Risk flags:** MIT-licensed (no relicense seen). Real risks are **Node-version sensitivity** (the shipped Node 21+ hook bug), **auto-loaded hooks that mutate local state**, and abandonment exposure from the single-maintainer structure. The bundled `/security-scan` (AgentShield) audits *your* config, but does not de-risk ECC's own surface.
+
 ## Caveats (unverified)
 
 - [未验证] v2.0.0 publish date per GitHub release API is 2026-06-10; one secondary source rendered it as 2024 — treat the 2026-06 maturity line as the authoritative one and re-verify on the release page.

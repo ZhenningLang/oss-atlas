@@ -61,6 +61,13 @@ It fits best when you already live inside the Letta ecosystem (or want an excuse
 
 **Low to install, but with an external-service tail.** Install is a two-line plugin command (`/plugin marketplace add …` then `/plugin install …`) plus setting `LETTA_API_KEY`. The catch is operational dependency, not setup complexity: you're now coupled to a Letta server's availability, quotas, and latency on every session boundary, and a detached background worker (120s timeout) does the transcript sync out of band — failures there are silent to the foreground. Self-hosting Letta to remove the cloud dependency raises ops difficulty to **medium**. A Linux `TMPDIR` workaround is noted for tmpfs cross-device errors during install.
 
+## Health & viability
+
+- **Maintenance — slowing, demo-stage (as of 2026-06).** Latest release v2.1.1 (2026-03-30, "Bug fixes"); last push 2026-05-13 — a couple of months stale by 2026-06, no recent activity. Not archived, but the cadence reads as coasting on a demo rather than active product development.
+- **Governance & backing — vendor demo (Letta).** Owned by `letta-ai`, the same team behind the Letta platform; backing is real, but this repo is explicitly a *demo* and the team points you to Letta Code for production. The org won't vanish, but it has no incentive to harden the demo. [推断]
+- **Age & Lindy — young and explicitly not-for-production.** Created 2026-01, ~5 months old (as of 2026-06). No track record and the authors disclaim production use; Lindy does not apply — this is a reference implementation, not a durable bet.
+- **Risk flags — external-brain dependency + transcript egress.** MIT (no relicense risk), but every session boundary touches a Letta backend (cloud or self-host), the Stop hook ships your full transcript off-box, and memory lives in a third-party agent, not a store you own. The dominant risks are the explicit demo status, the hard network dependency, and data egress.
+
 ## Caveats (unverified)
 
 - [未验证] Latest release v2.1.1 ("Bug fixes"), published 2026-03-30; repo pushed 2026-05-13 — dates per `gh repo view` on 2026-06-26.

@@ -39,6 +39,14 @@ You reach for this pack to drop in a domain library: install once (`npx skills a
 | [vercel-labs/agent-skills](vercel-agent-skills.md) | ✅ | Vendor/web-platform engineering skills; useful for app/deploy workflows, not for bioinformatics or drug discovery. |
 | Bespoke per-library prompting (write your own SKILL.md) | 未收录 | Maximum control and zero unused surface, but you rebuild and maintain curated docs for every library yourself instead of installing a vetted bundle. |
 
+## Health & viability
+
+- **Maintenance (2026-06):** very active — last push 2026-06, latest release v2.53.0, high release cadence, not archived. The version churn implies the skill set shifts often (skill count already drifts 140↔147).
+- **Governance & backing:** `Organization`-owned (`K-Dense-AI`), so a team/vendor rather than a lone maintainer, but a single company owns the roadmap; no foundation. The README's "160,000+ scientists / #1" framing is marketing, not a governance signal. [推断]
+- **Age & Lindy:** created 2025-10, so under a year old as of 2026-06 — young; unproven on Lindy despite ~29k stars.
+- **Adoption/ecosystem:** broad surface (~147 skills across omics/cheminformatics/ML/labs) is the draw, but breadth ≠ depth — each skill is advisory markdown, not a validated pipeline.
+- **Risk flags:** individual skills "may carry different licenses" than the repo's MIT, and a referenced Cisco AI Defense scan is not a security guarantee — verify the license/safety of any specific skill you depend on. [推断]
+
 ## Caveats (unverified)
 
 - [未验证] Metadata as of 2026-06-26 (GitHub): latest release v2.53.0 (published 2026-06-23), repo last pushed 2026-06-23, license MIT, primary language Python, not archived — re-verify before relying on a specific version's behavior or skill list.

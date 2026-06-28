@@ -39,6 +39,14 @@ You reach for it as a drop-in base layer rather than a big multi-skill collectio
 | [Superpowers](../../agent-dev-methodology/superpowers.md) | ✅ | A full SDLC methodology library (brainstorm→plan→TDD→verify) with many composable skills and per-harness manifests. Karpathy-skills covers a similar "make the agent disciplined" goal in four lines instead of a skill graph — far lighter, far less prescriptive. |
 | Your own global `CLAUDE.md` / Anthropic built-in guidance | 未收录 | If you already maintain opinionated global agent instructions, that's the same surface; this would be additive prose competing for the same context. |
 
+## Health & viability
+
+- **Maintenance (2026-06):** lightly maintained / near-coasting — last pushed 2026-04, ~2 months stale as of 2026-06, with ~126 open issues and no tagged releases. For a ~65-line principles file there's little to maintain, but staleness + open issues suggest attention has tapered.
+- **Governance & bus factor:** `Organization`-owned (multica-ai), not a single personal account, which is marginally better for continuity than the User-owned packs here — but it's still a small org and a thin single-file pack. The content is a third party's distillation of Karpathy's public remarks, **not authored or endorsed by Karpathy**; the name is attribution of inspiration, not authorship.
+- **Age & Lindy verdict:** created 2026-01, ~5 months old as of 2026-06 — young, and its ~183k stars reflect the famous name far more than any proven longevity. Star count ≠ Lindy: there's no track record, and the substance is four generic principles. Unproven.
+- **Adoption note:** ~183k stars is a name-driven popularity signal on a tiny repo, not a maturity or correctness signal — read it skeptically.
+- **Risk flags:** advisory prose injected into context (no hook/gate); overlaps heavily with most teams' existing global `CLAUDE.md`. License auto-detect returned `null` despite a stated MIT — confirm before relying on it.
+
 ## Caveats (unverified)
 
 - [未验证] License reported as MIT by the README footer and a LICENSE file is listed in the repo, but the GitHub repo-metadata API returned `licenseInfo: null` (no auto-detected SPDX) as of 2026-06-26 — confirm the LICENSE file contents before relying on MIT.

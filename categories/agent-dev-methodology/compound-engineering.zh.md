@@ -40,6 +40,13 @@ Compound Engineering 通过你 agent 的插件市场安装(Claude Code 用 `/plu
 | [12-Factor Agents](12-factor-agents.zh.md) | ✅ | 一套构建 agent 的设计*原则*(文档/宣言)，不是可安装的逐会话循环；CE 是你在干活时调用的、可运行的插件。 |
 | Spec Kit(GitHub) | 未收录 | spec 驱动开发工具包(spec→plan→tasks)，自带 CLI；规划优先的气质相近，但较少涉及 CE 那种跨众多宿主的逐循环经验沉淀。 |
 
+## 健康度与可持续性
+
+- **维护（2026-06）：** 活跃维护——最后 push 在 2026-06，最新 release `v3.14.3`（2026-06-24），未归档。较高的发版节奏（v3.x 线上的 semantic-release）说明这是个活项目，而非 coasting。
+- **治理与背书：** Organization 持有（EveryInc / 「Every」），即一家媒体+软件公司的编辑型产品，而非基金会或单干爱好者。路线图是 Every 的强主张（「opinionated by design」，会拒绝不合愿景的贡献）——背后有真实组织的厂商型治理，但你得继承他们的节奏。
+- **年龄与 Lindy（2026-06）：** 创建于 2025-10，约 8 个月。非常年轻；已经到 v3 大版本，说明迭代飞快，也意味着安装模型/命令集仍在抖动。Lindy 裁决：**按年龄看属未经验证**——为当下价值采用，预期 API/命令漂移，别假定长期稳定。
+- **风险标记：** MIT 许可，未见 open-core 闸门或 relicense 历史。复利收益与把 `docs/solutions/` 知识目录 commit 进仓库绑定——是对其约定的软锁定，可逆但真实。[未验证] 所审材料中未发现 CVE 或弃用通知。
+
 ## 存疑（未验证）
 
 - [未验证] gh 元数据(2026-06-26):license MIT，主语言 TypeScript，最新 release `compound-engineering-v3.14.3` 发布于 2026-06-24，未归档。star 约 22.0k——GitHub star 不可靠且对时间敏感，仅供参考。

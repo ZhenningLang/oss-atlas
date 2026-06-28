@@ -40,6 +40,13 @@ It also ships tunable dials — `DESIGN_VARIANCE`, `MOTION_INTENSITY`, `VISUAL_D
 | make-interfaces-feel-better | 未收录 | Listed as a leaf sibling but no page exists yet; compare on whether it enforces interaction polish vs. Taste-Skill's generation-time aesthetics. |
 | Anthropic / built-in agent skills | 未收录 | Native skill ecosystem of the host harness; Taste-Skill is a third-party bundle layered on top and can duplicate or conflict with native design skills. |
 
+## Health & viability
+
+- **Maintenance (2026-06):** active — last push 2026-06, not archived, but no tagged releases at all, so "version" means a moving commit. Treat it as best-effort, not a versioned product.
+- **Governance & bus factor:** single-author `User` repo (`Leonxlnx`) carrying ~52k stars — a textbook bus-factor flag: outsized adoption resting on one maintainer with no foundation/vendor backing.
+- **Age & Lindy:** created 2026-02, so <1 year old as of 2026-06 — young and star-hyped, with a v2 default still flagged experimental and skills renamed/reorganized between pushes. Unproven on the Lindy axis; the star count says nothing about longevity.
+- **Risk flags:** advisory-only enforcement (prompt/markdown, not a lint gate) + no semver + single maintainer ⇒ pin a commit if you need stable behavior.
+
 ## Caveats (unverified)
 
 - [未验证] License MIT and primary language JavaScript per GitHub metadata as of 2026-06-26; repo last pushed 2026-06-20 with no tagged release (`latestRelease` null) — re-verify before relying on a specific version's behavior.

@@ -41,6 +41,13 @@ You reach for this pack when you'd rather install one author's battle-tested, re
 | [Superpowers](../../agent-dev-methodology/superpowers.md) | ✅ | An opinionated SDLC *methodology* pack (TDD/subagent discipline) — different unit of consumption. Khazix's is independent utility skills, not a workflow framework. |
 | Anthropic's official / built-in Agent Skills | 未收录 | The platform's first-party skill ecosystem; Khazix's is a third-party personal bundle layered on top and can duplicate or conflict with native skills. |
 
+## Health & viability
+
+- **Maintenance (2026-06):** active — last pushed 2026-06, ~31 open issues, no tagged releases, so you install from `main` with no version to pin. Active, not coasting.
+- **Governance & bus factor:** single-author `User`-owned pack (KKKKhazix / 数字生命卡兹克, a content creator). No team or foundation; ~16k stars on a one-person grab-bag is a bus-factor flag, and the writing skills emulate this one author's voice specifically.
+- **Age & Lindy verdict:** created 2026-04, only ~2 months old as of 2026-06 — the youngest in this batch, hyped, with essentially no track record. Fails the Lindy test on age alone; treat every skill as a fresh snapshot that can change on any push.
+- **Risk flags:** the `aihot` skill depends on a **third-party hosted service** (`aihot.virxact.com`, the author's own site) — if it changes, rate-limits, or disappears, that skill breaks. Chinese-first content; advisory-only ("read-only scan"/routing are prompt instructions, not gates).
+
 ## Caveats (unverified)
 
 - [未验证] License MIT and primary language Python per GitHub metadata; repo description "数字生命卡兹克开源的 AI Skills 合集", last pushed 2026-06-14, not archived (as of 2026-06-26). Python is GitHub's detected primary language (likely from the bundled `scripts/`); the skills themselves are SKILL.md markdown — re-verify before relying on this.

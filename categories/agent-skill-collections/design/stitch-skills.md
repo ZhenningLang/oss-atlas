@@ -41,6 +41,13 @@ You install Stitch Skills so the agent itself can run the loop. With the Stitch 
 | Stitch MCP server itself (`stitch.withgoogle.com`) | 未收录 (hosted, not a repo) | The actual engine these skills call; it's a hosted product, not an indexable repo. This repo is just the agent-facing skill wrappers around it. |
 | v0 / Lovable / other AI UI generators | 未收录 | Competing AI design-to-code products, mostly hosted SaaS rather than agent-skill repos; different unit of consumption (you drive their UI, not your agent). |
 
+## Health & viability
+
+- **Maintenance (2026-06):** active and early — v1.0 release (2026-05), last pushed 2026-06, not archived. First stable tag just landed; expect the skill set and the underlying Stitch MCP API to move together for a while.
+- **Governance / bus factor:** `Organization`-owned by **`google-labs-code`** — org backing, not a lone maintainer, which lifts the bus factor. The flip side is **vendor risk**: Google Labs is an experimental arm with a documented history of sunsetting projects, so org backing here is not a longevity guarantee. `[推断]`
+- **Age & Lindy verdict:** young (created 2026-01, ~5 months old) — **unproven**. Worse, its viability is *tethered to a hosted product* (`stitch.withgoogle.com`): if Stitch is deprecated, these skills are inert regardless of repo health. Lindy here is the product's, not the repo's.
+- **Risk flags:** hard coupling to one vendor's hosted MCP server (skills are inert without it and its credentials), advisory-only enforcement, and a stated inter-skill dependency graph that selective installs can break. The deprecation risk of a Google Labs product is the dominant flag.
+
 ## Caveats (unverified)
 
 - [未验证] Latest release tagged v1.0 (published 2026-05-18) with the repo last pushed 2026-06-17; license Apache-2.0 and primary language TypeScript per GitHub metadata as of 2026-06-26 — re-verify before relying on a specific version's behavior or skill set.

@@ -63,6 +63,13 @@ Because the orchestration contract is published as a language-agnostic spec ("Dr
 
 **Medium.** The dependency surface is modest — no database to run, a single Elixir service plus an external Codex CLI and a Linear key — and a small team comfortable with the BEAM toolchain (`mise` + `mix`) can stand it up from the Elixir README. The difficulty is operational rather than installational: because state is in-memory, you own restart/recovery semantics, and because it's a preview with no releases, expect to read source and track `main` rather than pin a version. Running real implementation runs safely (sandbox policy, what `danger-full-access` is allowed to touch, secret handling for Codex/Linear) is where the actual ops burden lives.
 
+## Health & viability
+
+- **Maintenance — active, preview-stage (as of 2026-06).** Last push 2026-06; not archived. But there is **no tagged release / semver** — it's self-described as a "low-key engineering preview," so you track `main` rather than pin a version, and config keys can change without notice. Few open issues (~8), consistent with low external usage rather than a settled API.
+- **Governance & backing — strong vendor (OpenAI), weak product commitment.** Owned by `openai`, so the backing org's resources and longevity are not in doubt — but a "low-key preview" carries no product/SLA commitment, and large vendors do shelve experiments. Backing strength does not equal roadmap guarantee here.
+- **Age & Lindy — young, unproven.** Created 2026-02, ~4 months old (as of 2026-06). No track record and preview-stage; strong-backer but young-and-unproven — the OpenAI name raises the floor, but Lindy does not yet apply.
+- **Risk flags — no durability, preview API.** Apache-2.0 (no relicense risk), but in-memory-only state (a restart loses dispatch/blocked state), Codex+Linear hard coupling, and no releases mean the risk is product-maturity, not licensing.
+
 ## Caveats (unverified)
 
 - [未验证] Star count ~25.6k as of 2026-06 — GitHub stars in this ecosystem are unreliable and date-sensitive; treat as indicative only.

@@ -61,6 +61,14 @@ It's also a good fit when you expect to swap models often. Because DSPy routes c
 
 **Low-to-medium.** As a library it's `pip install` and run — no servers, no datastore, no cluster to operate; the framework just makes LM calls through LiteLLM. The medium-tier friction is conceptual and economic rather than infrastructural: you must build an eval set and metric to get value, optimizer runs can be slow and token-costly so you'll want LM caching and budget controls, and the fast-moving API means upgrades can require migration. Production *serving* of a compiled DSPy program is light (it's just code + saved prompts/state); the cost and care concentrate in the compile/optimize loop and in keeping pinned versions stable.
 
+## Health & viability
+
+- **Maintenance — active (as of 2026-06).** Last push 2026-06; latest release 3.2.1 (2026-05). Steady release flow on a v3.x line; not archived. Reads as healthily maintained, with 540+ open issues reflecting a large active user base rather than neglect.
+- **Governance & backing — org/academic-anchored.** Lives under `stanfordnlp` (Stanford NLP), a research-org owner rather than a single vendor or lone maintainer; provenance (the original DSP/DSPy papers) gives it academic credibility. Not foundation-governed, but the bus factor is broader than a personal repo. [推断]
+- **Age & Lindy — old(ish) and still active ⇒ strong prior.** Created 2023-01, ~3 years old (as of 2026-06) and still shipping. By age × still-active it clears the Lindy bar that the younger agent frameworks in this category do not — a comparatively safe long-term bet for the *paradigm*, even though the API churns within it.
+- **Adoption & ecosystem — widely referenced.** A well-known framework with substantial mindshare in the prompt-optimization space and a LiteLLM-based provider-agnostic core; the main friction is fast-moving APIs (see "When NOT to use"), not adoption.
+- **Risk flags — API instability, not licensing.** MIT-licensed with no relicense history; the real risk is migration cost across major versions (teleprompter→optimizer renames), so pin a version.
+
 ## Caveats (unverified)
 
 - [未验证] Star count ~35.4k as of 2026-06 (from `gh repo view`) — GitHub stars in this ecosystem are unreliable and date-sensitive; indicative only.

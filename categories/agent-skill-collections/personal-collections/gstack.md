@@ -40,6 +40,14 @@ You reach for it when you'd rather adopt one person's battle-tested, end-to-end 
 | wshobson/agents | 未收录 | Large subagent/persona collection; broader catalog of agents vs. gstack's tighter founder-opinionated factory loop. |
 | Building your own commands from scratch | 未收录 | Maximum fit, zero lock-in, but you author and maintain every persona and the sequencing yourself. |
 
+## Health & viability
+
+- **Maintenance (2026-06):** active — last pushed 2026-06, but with ~743 open issues and **no tagged releases**, so there's no version to pin and you track a moving `main`. High activity, but the open-issue backlog is large for a personal config.
+- **Governance & bus factor:** this is the standout flag — a `User`-owned personal repo (Garry Tan) carrying ~117k stars and ~743 open issues, with one maintainer and no foundation/team behind it. That is an extreme bus-factor concentration: enormous adoption resting on one person's taste and availability. The workflow encodes his preferences, not a community standard.
+- **Age & Lindy verdict:** created 2026-03, only ~3 months old as of 2026-06 — very young and intensely hyped (the star count outruns the project's history). Hype ≠ Lindy: there's no longevity track record, and breaking changes can land on any push. Unproven.
+- **Adoption note:** the ~117k stars signal viral attention more than battle-tested stability; with no releases and a heavy issue backlog, treat adoption as a popularity signal, not a maturity one.
+- **Risk flags:** heavy install footprint (clones into `~/.claude/skills/`, symlinks, `.gstack/` state, auto-starting browse daemon; team mode commits `.claude/`+`CLAUDE.md`). Advisory-only — "reviews"/"locks" are prompt-level, not CI gates.
+
 ## Caveats (unverified)
 
 - [未验证] License MIT and primary language TypeScript per GitHub metadata as of 2026-06-26; repo last pushed 2026-06-25; no GitHub release/tag was reported (`latestRelease: null`), so there is no stable version to pin — re-verify before relying on specific command behavior.

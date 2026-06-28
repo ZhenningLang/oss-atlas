@@ -40,6 +40,13 @@ You reach for it when you want a curated, ready-made habit pack that follows you
 | vercel-labs/agent-skills | 未收录 | Vendor-curated skill collection; compare provenance and which agents it targets. |
 | Anthropic's built-in skills / slash commands | 未收录 | The platform's native skill ecosystem; Waza is a third-party bundle layered on top and can duplicate or conflict with native commands. |
 
+## Health & viability
+
+- **Maintenance (2026-06):** active — last push 2026-06, latest release v3.29.0, frequent v3.x cadence, not archived. Versioned, but the fast cadence means a skill's routing/checks can change release-to-release.
+- **Governance & bus factor:** single-maintainer `User` repo (`tw93`); modest ~6k stars. Adoption is moderate and the project rests on one maintainer with no org/foundation backing. [推断]
+- **Age & Lindy:** created 2026-03, so only a few months old as of 2026-06 — the youngest of its engineering-leaf siblings; unproven on Lindy.
+- **Risk flags:** advisory-only "habits" (prompt/skill markdown, not hard gates); single-maintainer + fast cadence ⇒ pin and re-verify after upgrades. [推断]
+
 ## Caveats (unverified)
 
 - [未验证] Latest release reported as v3.29.0 ("Bridge", published 2026-06-19) with the repo last pushed 2026-06-24; license MIT and primary language Python (with Shell/Makefile) per GitHub metadata as of 2026-06-26 — re-verify before relying on a specific version's behavior.

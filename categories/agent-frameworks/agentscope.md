@@ -63,6 +63,13 @@ The other moment AgentScope fits is when you want a composable, event-driven age
 
 **Medium.** A bare in-process agent is easy — install, set a model key, run. Difficulty climbs as you turn on the parts that justify picking AgentScope: standing up the FastAPI service with multi-tenant/multi-session isolation, running the Docker/E2B sandbox backends (you now operate a container runtime), wiring an OTLP collector to actually consume the traces, and adding Redis for durable sessions. None of these are exotic, but each is a real moving piece to deploy and monitor, and a fast-evolving 2.x line means you should pin versions and budget for upgrade churn.
 
+## Health & viability
+
+- **Maintenance (2026-06):** actively maintained — default branch pushed 2026-06-25, latest release v2.0.2 (2026-06-16), not archived. A healthy open-issue count (~262) against steady releases reads as a live, engaged project rather than a stalled one.
+- **Governance & backing:** Organization-owned (`agentscope-ai`), with DashScope (Alibaba's model platform) as the default/first-class backend — i.e. a real org with vendor adjacency behind it rather than a lone maintainer, a better bus-factor position than single-user repos. It is not under a neutral foundation (Apache/LF/CNCF), so treat governance as vendor-adjacent stewardship (see Caveats for what is unconfirmed).
+- **Age & Lindy (2026-06):** created 2024-01, ~2.5 years old — the **oldest and most established** project in this chunk, and still actively shipping. Lindy verdict: **age × still-active is favorable** (a multi-year, maintained framework). The caveat is the recent **v2.0 rewrite**: the *project* is Lindy-strong, but the *2.x API surface* is young, so community recipes and third-party integrations are still thinner than the project's age suggests.
+- **Risk flags:** Apache-2.0 (permissive, no relicense/CLA concerns observed). Main risk is **2.x API churn** — v2.0 broke `Msg`/tool/middleware vs v1.x and the line keeps moving, so pin versions and budget upgrade work. No CVEs were reviewed.
+
 ## Caveats (unverified)
 
 - [未验证] Star count ~27.2k as of 2026-06 (from `gh repo view`). GitHub stars in this ecosystem are unreliable and date-sensitive — treat as indicative only.

@@ -41,6 +41,13 @@ type: skill-pack
 | [Superpowers](../../agent-dev-methodology/superpowers.zh.md) | ✅ | 一个有主张的 SDLC*方法论*包（TDD/subagent 纪律）——消费单元不同。卡兹克的是各自独立的实用 skill，不是工作流框架。 |
 | Anthropic 官方 / 内置 Agent Skills | 未收录 | 平台自带的一方 skill 生态；卡兹克的是叠在其上的第三方个人合集，可能与原生 skill 重复或冲突。 |
 
+## 健康度与可持续性
+
+- **维护（2026-06）：** 活跃——最后 push 于 2026-06，约 31 个 open issue，无打 tag 的 release，因此你从 `main` 安装，没有可 pin 的版本。是活跃而非半荒废。
+- **治理与 bus factor：** 单作者的 `User` 合集（KKKKhazix / 数字生命卡兹克，一位内容创作者）。无团队或基金会；一人大杂烩却有约 16k star，是 bus-factor 风险信号，且写作类 skill 专门模仿这一位作者的声音。
+- **年龄与 Lindy 判断：** 创建于 2026-04，截至 2026-06 仅约 2 个月——本批次里最年轻，热度高，几乎没有履历。仅凭年龄即未通过 Lindy 检验；应把每个 skill 都当作可能在任意一次 push 改变的全新快照。
+- **风险标记：** `aihot` skill 依赖**第三方托管服务**（`aihot.virxact.com`，作者自己的站点）——一旦它变更、限流或下线，该 skill 即失效。内容以中文为先；仅为建议性（「只读扫描」/路由是 prompt 指令，而非闸门）。
+
 ## 存疑（未验证）
 
 - [未验证] License 为 MIT、主语言 Python 来自 GitHub 元数据；仓库描述"数字生命卡兹克开源的 AI Skills 合集"，最后 push 于 2026-06-14，未归档（截至 2026-06-26）。Python 是 GitHub 检测出的主语言（多半来自附带的 `scripts/`），skill 本身是 SKILL.md markdown——依赖前请复核。

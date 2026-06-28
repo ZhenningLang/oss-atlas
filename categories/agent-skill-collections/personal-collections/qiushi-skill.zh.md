@@ -41,6 +41,13 @@ type: skill-pack
 | [awesome-claude-code-subagents](../subagent-collections/awesome-claude-code-subagents.zh.md) | ✅ | 广度优先的 subagent 目录；Qiushi 在单一方法论上做深度。按你需要「多人格」还是「一条有纪律的循环」来选。 |
 | Superpowers / 通用 SDLC 方法论包 | 未收录 | brainstorm→plan→TDD→verify 类方法论插件占据同一个「把纪律做成 skill」的位置；Qiushi 的不同在于以矛盾分析与优先级排序打头，而非测试先行的生命周期。 |
 
+## 健康度与可持续性
+
+- **维护** —— 活跃：最后推送 2026-05，未归档（截至 2026-06），但没有可 pin 的 tagged release——你跟的是一条移动的分支。看上去是活跃而非废弃，但没有 semver 就锁不住一个已知良好状态。
+- **治理与 bus factor** —— 单维护者的个人仓库（`User` 所有），约 3.3k stars。方法论和多 harness manifest 都由一个作者把控；star 数一般、框架小众，意味着维护者一旦离场，社区兜底有限。
+- **年龄与 Lindy** —— 创建于 2026-03，截至 2026-06 约 0 年：年轻，Lindy 上未经验证。其*底层*方法（唯物辩证法分析）很老，但这套封装是新的，跨 CLI 更迭尚未验证——为这套纪律而采用，不为长寿。
+- **风险旗标** —— 唯物辩证法/历史词汇的框架（尽管声明「是方法论不是宣传」）对某些团队或受众可能直接是劝退点；无强制（仅建议性 prompt）。License 截至 2026-06 记为 MIT。
+
 ## 存疑（未验证）
 
 - [未验证] 截至 2026-06-26 的 GitHub 元数据：license MIT、主语言 JavaScript、最后 push 于 2026-05-01、无 tagged release（`latestRelease` 为 null）、topics 为 `ai-agents/methodology/skills/workflow`、未归档——依赖任一项前请重新核验。

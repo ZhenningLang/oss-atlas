@@ -40,6 +40,13 @@ UI UX Pro Max installs that judgment into the agent. You run `npm install -g ui-
 | Anthropic / built-in agent skills and slash commands | 未收录 | The platform's native skill ecosystem; this is a third-party bundle layered on top, so it can duplicate or conflict with native design helpers. |
 | Hand-written project `DESIGN.md` design system | 未收录 | A bespoke per-project design contract you maintain; more tailored and stable, but you build and enforce it yourself instead of getting a 161-rule starter. |
 
+## Health & viability
+
+- **Maintenance (2026-06):** active and fast-moving — last push 2026-06, latest release v2.8.8, frequent v2.8.x cadence, not archived. Disciplined semver is a plus, but the rapid cadence means a bump can shift which styles/rules/checklist items apply.
+- **Governance & backing:** `Organization`-owned (`nextlevelbuilder`), but functionally a single-vendor project — one org owns the roadmap, styles, and the CSV rule data; no foundation. [推断]
+- **Age & Lindy:** created 2025-11, so well under a year old as of 2026-06 — young and heavily star-hyped (~97k). Unproven on Lindy; the star count is not a durability signal.
+- **Risk flags:** advisory enforcement (prompt/markdown + a local CSV search step, not a hard gate); behavior baked into prompts/CSV ⇒ pin a version for reproducible design output.
+
 ## Caveats (unverified)
 
 - [未验证] Latest release reported as v2.8.8 (published 2026-06-26) with the repo last pushed 2026-06-26; license MIT and primary language Python per GitHub metadata as of 2026-06-26 — re-verify before relying on a specific version's behavior.

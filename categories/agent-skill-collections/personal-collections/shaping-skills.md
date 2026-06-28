@@ -40,6 +40,13 @@ This pack gives you that as a handful of on-demand skills. `/framing-doc` and `/
 | Superpowers (`brainstorming` / `writing-plans`) | 未收录 (in agent-dev-methodology) | A full SDLC skill library whose front end (interrogate the idea, write the plan) overlaps shaping's intent, but framed as generic software brainstorming rather than Shape Up's problem/solution/breadboard vocabulary. |
 | Shape Up book / BaseCamp's own materials | 未收录 | The source methodology as prose, not an installable agent skill — this pack is one person's operationalization of it inside Claude Code. |
 
+## Health & viability
+
+- **Maintenance** — last pushed 2026-04, not archived (as of 2026-06): a couple of months quiet, no tagged releases. Reads as one person's working setup that's been touched recently, not a coasting or abandoned project — but cadence is low and the author flags the solo skills as experimental.
+- **Governance & bus factor** — single-maintainer personal repo (`User`-owned, Ryan Singer), ~1.4k stars. One author's operationalization of Shape Up; no team or org backstop. Treat as fork-and-own, not a maintained product.
+- **Age & Lindy** — created 2026-01, ~0 years old as of 2026-06: young, Lindy-unproven. The Shape Up *methodology* is well-established, but this skill packaging is new and lightly battle-tested — adopt for the method, knowing the wrapper is fresh.
+- **Risk flags** — no detected license (`NOASSERTION`) as of 2026-06: reuse/redistribution rights unclear, confirm with the author. Skill inventory and SKILL.md casing can change; enforcement is advisory only.
+
 ## Caveats (unverified)
 
 - [未验证] No license file or `licenseInfo` is exposed via GitHub metadata as of 2026-06-26 (recorded here as SPDX `NOASSERTION`); absent an explicit license, reuse/redistribution rights are unclear — verify with the author before depending on it.

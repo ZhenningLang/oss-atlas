@@ -40,6 +40,13 @@ type: skill-pack
 | Anthropic 官方 / 内置 skills | 未收录 | 平台自带的 skill 生态；Designer Skills 是叠在上面的第三方 bundle，可能与原生 skill 重复或冲突。 |
 | 家族里的姊妹合集（AI 产品设计、UX 项目管理、设计领导力、包容性设计） | 未收录 | 同作者家族里的姊妹 repo；本条目只覆盖「设计实践」这一合集。相邻学科去用其它几个。 |
 
+## 健康度与可持续性
+
+- **维护（2026-06）：** 在 `main` 上活跃——最后 push 于 2026-06，未归档——但**完全没有打 tag 的 release**，所以没有稳定、带版本的接口面可 pin；skill/command 集合持续演进，维护者会关闭没有对应 issue 的 PR。
+- **治理 / bus factor：** 单人维护、`User` 所有的仓库（`Owl-Listener`），约 1.7k stars，是一个更大的个人设计合集家族的一部分。路线图由一个人定；无组织或基金会背书。
+- **年龄与 Lindy 判断：** 非常年轻（创建于 2026-03，约 3 个月）——**未经验证**。全新且无版本意味着没有记录、也没有可复现的锚点；需要稳定就 pin 一个 commit。
+- **风险旗标：** 仅建议性的 prompt/markdown（无运行时强制）、以 Claude Code 优先且 Gemini CLI 支持是 README 声称的、skill 数量为自报。skill 包无 relicense/CVE 之忧，但「无 release + 单作者 + 大而全」这一组合才是真正的脆弱点。
+
 ## 存疑（未验证）
 
 - [未验证] 截至 2026-06-26，GitHub 元数据显示 license MIT、主语言 Markdown、未归档、最后 push 于 2026-06-14、且无打 tag 的 release（latestRelease 为 null）——在依赖某个具体 commit 的行为前请重新核实。

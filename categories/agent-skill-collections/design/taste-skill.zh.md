@@ -40,6 +40,13 @@ type: skill-pack
 | make-interfaces-feel-better | 未收录 | 被列为 leaf 姊妹但尚无页面；按它强调交互打磨、还是 Taste-Skill 的生成期美学来对比。 |
 | Anthropic / 内置 agent skills | 未收录 | 宿主 harness 自带的 skill 生态；Taste-Skill 是叠加其上的第三方包，可能与原生设计 skill 重复或冲突。 |
 
+## 健康度与可持续性
+
+- **维护（2026-06）：** 活跃——最后 push 于 2026-06，未归档，但完全没有 tagged release，所谓「版本」只是一个移动的 commit。当作尽力而为，而非有版本承诺的产品。
+- **治理与 bus factor：** 单作者 `User` 仓库（`Leonxlnx`）背着约 52k stars——典型的 bus-factor 警讯：超额采用全压在一个维护者身上，没有 foundation 或厂商背书。
+- **年龄与 Lindy：** 创建于 2026-02，截至 2026-06 不足一年——年轻且被 star 炒热，v2 默认项仍被标为实验性、skill 在不同 push 间被改名重组。Lindy 维度上未经检验；star 数说明不了寿命。
+- **风险标记：** 仅建议性约束（prompt/markdown，而非 lint 闸门）＋无 semver ＋单维护者 ⇒ 需要稳定行为就钉一个 commit。
+
 ## 存疑（未验证）
 
 - [未验证] 截至 2026-06-26，GitHub 元数据显示 license 为 MIT、主语言为 JavaScript；仓库最后 push 于 2026-06-20，无 tagged release（`latestRelease` 为 null）——依赖某具体版本行为前请复核。

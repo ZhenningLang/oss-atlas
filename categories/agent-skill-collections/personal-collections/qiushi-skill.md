@@ -41,6 +41,13 @@ You reach for it when you want a ready-made *thinking discipline* rather than bu
 | [awesome-claude-code-subagents](../subagent-collections/awesome-claude-code-subagents.md) | ✅ | Breadth-first subagent catalog; Qiushi is depth-first on one methodology. Pick by whether you need many personas or one disciplined loop. |
 | Superpowers / general SDLC methodology packs | 未收录 | Brainstorm→plan→TDD→verify methodology plugins occupy the same "discipline as skills" niche; Qiushi differs by leading with contradiction-analysis and prioritization rather than a test-first lifecycle. |
 
+## Health & viability
+
+- **Maintenance** — active: last pushed 2026-05, not archived (as of 2026-06), but no tagged release to pin — you track a moving branch. Reads active rather than abandoned, but without semver you can't lock a known-good state.
+- **Governance & bus factor** — single-maintainer personal repo (`User`-owned), ~3.3k stars. One author owns the methodology and the multi-harness manifests; modest stars and a niche framing mean limited community backstop if the maintainer steps away.
+- **Age & Lindy** — created 2026-03, ~0 years old as of 2026-06: young, Lindy-unproven. The *underlying* method (dialectical-materialist analysis) is old, but this packaging is new and untested across CLI churn — adopt for the discipline, not for longevity.
+- **Risk flags** — the dialectical-materialism / historical-vocabulary framing (despite a "methodology, not propaganda" disclaimer) can be a non-starter for some teams or audiences; no enforcement (advisory prompts only). License recorded MIT as of 2026-06.
+
 ## Caveats (unverified)
 
 - [未验证] GitHub metadata as of 2026-06-26: license MIT, primary language JavaScript, last pushed 2026-05-01, no tagged release (`latestRelease` null), topics `ai-agents/methodology/skills/workflow`, not archived — re-verify before relying on any of these.

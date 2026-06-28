@@ -39,6 +39,13 @@ type: skill-pack
 | [awesome-claude-code-subagents](../subagent-collections/awesome-claude-code-subagents.zh.md) | ✅ | 一个覆盖众多技术角色的大型 subagent 合集；重广度而非单一鲜明声音。dbskill 是单作者、窄而深的商业方法论。 |
 | 通用 LLM 商业教练 prompt | 未收录 | 临时 prompt 没有精选框架、案例库或持久化；dbskill 在连贯的作者声音背后带了约 4000 条知识原子和状态命令。 |
 
+## 健康度与可持续性
+
+- **维护（2026-06）：** 活跃——最后 push 于 2026-06，处于 v2.14.2，发版频繁，仅约 10 个 open issue。它确实打 tag 发版，因此版本可 pin。是活跃而非半荒废。
+- **治理与 bus factor：** 单作者的 `User` 仓库（dontbesilent2025）；全部价值——框架、案例库、约 4000 条知识原子——都是一位创作者的方法论，背后无基金会或团队。一人 pack 却有约 7k star，是 bus-factor 风险信号；延续性系于该作者。
+- **年龄与 Lindy 判断：** 创建于 2026-03，截至 2026-06 仅约 3 个月——非常年轻且热度高，没有存续记录。应视为未经验证；其框架是作者的观点，而非经时间检验的标准。仅凭年龄即未通过 Lindy 检验。
+- **风险标记：** 采用 **CC BY-NC 4.0** 许可——仅限非商用，未经另行授权不能打包进付费产品（GitHub 把许可证报告为 `Other`/`NOASSERTION`）。绑定中文市场，且仅为建议性（prompt 级教练，无强制）。
+
 ## 存疑（未验证）
 
 - [未验证] 许可证在 README 中声明为 CC BY-NC 4.0（"本项目采用 CC BY-NC 4.0 许可证"）；GitHub API 把许可证报告为 `Other` / `NOASSERTION`，因为 CC 许可不在其 SPDX 识别集内——商用前请核对 LICENSE/README。

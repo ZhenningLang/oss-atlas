@@ -40,6 +40,13 @@ Compound Engineering installs as a plugin via your agent's marketplace (`/plugin
 | [12-Factor Agents](12-factor-agents.md) | ✅ | A set of design *principles* for building agents (a document/manifesto), not an installable per-session loop; CE is the runnable plugin you invoke during work. |
 | Spec Kit (GitHub) | 未收录 | Spec-driven dev toolkit (spec→plan→tasks) with its own CLI; comparable planning-first ethos, less about per-loop learning capture across many host agents. |
 
+## Health & viability
+
+- **Maintenance (2026-06):** actively maintained — last pushed 2026-06, latest release `v3.14.3` (2026-06-24), not archived. A high release cadence (semantic-release on a v3.x line) signals a live project, not a coasting one.
+- **Governance & backing:** Organization-owned (EveryInc / "Every"), i.e. a media-and-software company's editorial product, not a foundation or a lone hobbyist. The roadmap is Every's opinionated line ("opinionated by design," declines off-vision contributions) — vendor-shaped governance with a real org behind it, but you inherit their cadence.
+- **Age & Lindy (2026-06):** created 2025-10, ~8 months old. Very young; already on a v3 major implies fast iteration but also that the install model/command set is still churning. Lindy verdict: **unproven by age** — adopt for current value, expect API/command drift; don't assume long-term stability yet.
+- **Risk flags:** MIT-licensed, no open-core gating or relicense history observed. The compounding payoff is coupled to committing a `docs/solutions/` knowledge folder — a soft lock-in to its convention, reversible but real. [未验证] No CVEs or deprecation notices found in the material reviewed.
+
 ## Caveats (unverified)
 
 - [未验证] gh metadata (2026-06-26): license MIT, primary language TypeScript, latest release `compound-engineering-v3.14.3` published 2026-06-24, not archived. Star count ~22.0k — GitHub stars are unreliable and date-sensitive; treat as indicative only.

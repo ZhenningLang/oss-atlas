@@ -40,6 +40,14 @@ Garry Tan 的私人 Claude Code 配置：约 23 个带强烈个人主张的 slas
 | wshobson/agents | 未收录 | 体量较大的 subagent/persona 集合；目录更广，对比 gstack 更聚焦的创始人主张工厂闭环。 |
 | 自己从零写命令 | 未收录 | 贴合度最高、零 lock-in，但每个 persona 和编排顺序都得你自己写、自己维护。 |
 
+## 健康度与可持续性
+
+- **维护（2026-06）：** 活跃——最后 push 于 2026-06，但有约 743 个 open issue 且**没有打 tag 的 release**，因此没有可 pin 的版本，你跟的是移动的 `main`。活跃度高，但对一份个人配置而言 open issue 积压偏大。
+- **治理与 bus factor：** 这是最突出的风险信号——一个 `User` 所有的个人仓库（Garry Tan），却背着约 117k star 和约 743 个 open issue，单一维护者，背后无基金会/团队。这是极端的 bus-factor 集中：巨大的采用量全压在一个人的品味与可用性上。工作流编码的是他的偏好，而非社区标准。
+- **年龄与 Lindy 判断：** 创建于 2026-03，截至 2026-06 仅约 3 个月——非常年轻且热度极高（star 数远超项目历史）。热度不等于 Lindy：没有存续记录，破坏性变更可能在任意一次 push 落地。未经验证。
+- **采用度提示：** 约 117k star 更多反映病毒式关注，而非久经实战的稳定性；在无 release、issue 积压沉重的情况下，应把采用量当作人气信号，而非成熟度信号。
+- **风险标记：** 安装足迹重（克隆进 `~/.claude/skills/`、建符号链接、写 `.gstack/` 状态、自启 browse 守护进程；team 模式会提交 `.claude/`+`CLAUDE.md`）。仅为建议性——「评审」「锁定」都是 prompt 级，而非 CI 闸门。
+
 ## 存疑（未验证）
 
 - [未验证] 截至 2026-06-26，GitHub 元数据显示 license 为 MIT、主语言 TypeScript；仓库最近一次 push 在 2026-06-25；未报告任何 GitHub release/tag（`latestRelease: null`），因此没有可固定的稳定版本——依赖具体命令行为前请重新核验。

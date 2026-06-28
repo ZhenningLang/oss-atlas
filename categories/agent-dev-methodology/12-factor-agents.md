@@ -41,6 +41,13 @@ You reach for it when you want principles to guide a hand-rolled or thinly-frame
 | Anthropic "Building effective agents" guide | 未收录 | A vendor essay arguing for simple, composable patterns over frameworks; similar spirit, different (and shorter) taxonomy. Hosted article, not a repo. |
 | Heroku 12-Factor App | 未收录 | The original SaaS-app methodology this borrows its name/format from; about apps, not agents. |
 
+## Health & viability
+
+- **Maintenance (2026-06):** last pushed 2025-09 with no tagged releases — ~9 months idle. For a living API this would read as coasting, but it's an essay set; [推断] the content is "done/stable" by nature, not abandoned. Treat staleness as low-risk for principles, higher-risk for any model-/tooling-specific specifics it cites.
+- **Governance & backing:** an Organization-owned repo (HumanLayer / Dex Horthy), maintained alongside a commercial product. Effectively a small-vendor / single-author voice, not a foundation — the roadmap is one team's editorial line, though the factors read vendor-neutral.
+- **Age & Lindy (2026-06):** created 2025-03, ~1 year old. Young and idea-driven, not a battle-tested codebase — its ~23k stars reflect mindshare, not longevity. Lindy verdict: **unproven by age**, but it's a methodology doc whose value is conceptual rather than maintenance-dependent, so the usual young-and-hyped risk applies more to specifics than to the core principles.
+- **Risk flags:** no installable artifact = no relicense/CVE/supply-chain surface; the real risk is **content drift** (the agent landscape moving past a frozen essay). No governance/funding model is published beyond the HumanLayer association.
+
 ## Caveats (unverified)
 
 - [未验证] Stated dual license: content under CC BY-SA 4.0, code examples under Apache-2.0 (GitHub reports the repo license as "Other"); confirm exact terms per file before reuse.

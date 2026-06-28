@@ -62,6 +62,13 @@ It also fits when you care about footprint and self-hosting. The whole thing is 
 
 **Low to run, medium to operate seriously.** The happy path is genuinely light: one binary, `openfang init` / `openfang start`, a local dashboard — closer to running a CLI daemon than deploying a Python ML stack, and the small footprint suits a VPS or homelab. Difficulty rises once it's doing real autonomous work: you're now responsible for an agent acting unattended against live accounts and the open web, so you must configure approval gates, scope capabilities, manage secrets/API keys, watch the audit log, and — given the pre-1.0 status — pin to a known-good commit and budget for breaking changes on upgrade. Building from source or authoring new Rust tools/Hands moves it toward **high** for non-Rust teams.
 
+## Health & viability
+
+- **Maintenance — active, pre-1.0 (as of 2026-06).** Last push 2026-06; latest release v0.6.9 (2026-05, security patches for RUSTSEC advisories); not archived. Actively developed but explicitly pre-1.0, so expect breaking changes between minor versions.
+- **Governance & backing — single vendor.** Driven by one company (RightNow / `RightNow-AI`), not a foundation or multi-org community; the roadmap and continuity ride on that vendor. A single-vendor pre-1.0 project carries direction-change and abandonment risk a foundation project does not.
+- **Age & Lindy — very young, unproven.** Created 2026-02, ~4 months old (as of 2026-06). No track record; firmly "young and hyped," not Lindy-safe — do not bet a business-critical pipeline on it without absorbing churn.
+- **Risk flags — first-party benchmarks + young single-vendor.** All headline numbers (cold start, memory, "27 providers / 40 channels", LOC) are unaudited README figures; license is dual MIT OR Apache-2.0 (no relicense history). The dominant risk is youth + single-vendor concentration, not licensing.
+
 ## Caveats (unverified)
 
 - [未验证] Star count ~17.9k as of 2026-06 — GitHub stars in the agent-framework space are unreliable and time-sensitive; treat as indicative only.

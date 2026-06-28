@@ -62,6 +62,13 @@ The core bet is structural: each atomic plan is small enough to run in its own c
 
 **Low to medium.** Day-one install is a single `npx` command and the artifacts are just files dropped into your agent's config dir — no servers, no datastore. The medium comes from operating it well: running an agent in skip-permissions mode (a real blast-radius decision), the per-phase discipline (you must actually fill `CONTEXT.md` to get good output, not just defaults), keeping up with a fast release cadence, and — most acutely right now — tracking the repo relocation so you're installing from the maintained source. [未验证] Token/system-prompt overhead and exact runtime behavior vary by agent and version.
 
+## Health & viability
+
+- **Maintenance (2026-06):** facts row reports the `gsd-build/get-shit-done` repo as **archived (true)** as of this verification, with last push 2026-05 — and the `main` README is now a redirect to a *different* org (`open-gsd/gsd-core`). Read this repo as **frozen/relocated**: development appears to have moved (or forked) elsewhere, so the live source of truth is likely no longer this URL — confirm before installing.
+- **Governance & continuity:** Organization-owned (gsd-build), but the redirect-plus-archive split signals an in-flight org migration/fork rather than stable stewardship. This is a **continuity red flag**: who owns the roadmap and where releases land is currently ambiguous.
+- **Age & Lindy (2026-06):** created 2025-12, ~6 months old — and the canonical repo is already archived. Lindy verdict: **fails the prior on this URL** — young *and* abandoned-here is the worst quadrant; any viability now lives entirely in the successor repo (`open-gsd/gsd-core`), which must be assessed on its own.
+- **Risk flags:** the archived/redirect split-brain is the dominant risk (install from a dead source). Secondary: the README's `$GSD` Solana token branding — MIT software is usable without it, but the memecoin association is a governance/optics flag for some orgs. No CVEs were reviewed.
+
 ## Caveats (unverified)
 
 - [未验证] GitHub stargazer count (~64.5k as of 2026-06) — star counts are unreliable and date-sensitive; treat as indicative only.
