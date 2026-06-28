@@ -69,6 +69,10 @@ LINK_RE = re.compile(r"\[[^\]]+\]\(([^)]+)\)")
 # Caveats ledger heading — tolerant prefix match (the parenthetical varies: (unverified)/（未验证）).
 CAVEATS_RE_EN = re.compile(r"(?m)^##\s+Caveats\b")
 CAVEATS_RE_ZH = re.compile(r"(?m)^##\s+存疑")
+# Health & viability is a labeled-judgment section (like Caveats) — exempt from the inline
+# label-density count, so the density boundary ends at whichever of Health/Caveats comes first.
+HEALTH_RE_EN = re.compile(r"(?m)^##\s+Health\s*&\s*viability\b")
+HEALTH_RE_ZH = re.compile(r"(?m)^##\s+健康度与可持续性")
 LABEL_RE = re.compile(r"\[未验证\]|\[推断\]")
 # Chinese punctuation: ASCII , ; ! ? : adjacent to a CJK char in a .zh.md body should be the
 # fullwidth form (，；！？：). Detection mirrors the normalizer: skip frontmatter, fenced/inline
@@ -225,10 +229,14 @@ def check_page(path: Path, category_dir: Path, rep: Report, today: dt.date) -> N
     if cav is None:
         rep.error(path, "missing required section: ## 存疑（未验证） / ## Caveats (unverified)")
     # Prose-region label density: keep only load-bearing [未验证]/[推断] inline; converge the rest.
-    prose = text[: cav.start()] if cav else text
+    # The "narrative prose" region ends at Health & viability OR Caveats (whichever comes first) —
+    # both are labeled-judgment/ledger sections where labels are expected, not sprinkled prose.
+    health = (HEALTH_RE_ZH if zh else HEALTH_RE_EN).search(text)
+    bounds = [m.start() for m in (health, cav) if m]
+    prose = text[: min(bounds)] if bounds else text
     n_inline = len(LABEL_RE.findall(prose))
     if n_inline > PROSE_LABEL_MAX:
-        rep.warn(path, f"{n_inline} inline [未验证]/[推断] before the Caveats section (> {PROSE_LABEL_MAX}); "
+        rep.warn(path, f"{n_inline} inline [未验证]/[推断] before the Health/Caveats sections (> {PROSE_LABEL_MAX}); "
                        f"keep load-bearing ones, move the rest into the Caveats ledger")
 
     sibling = category_dir / (base + (".md" if zh else ZH_SUFFIX))
