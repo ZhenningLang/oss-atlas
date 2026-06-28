@@ -11,6 +11,8 @@
 | **you-get** | Use it when you want a tiny Python CLI to grab video/audio from YouTube and many Chinese sites (Bilibili/Youku) — lighter than yt-dlp. | [→](you-get.md) |
 | **cobalt** | Use it when you want a clean self-hostable web-UI + API media saver with no ads/trackers — not a scriptable CLI. | [→](cobalt.md) |
 | **lux** | Use it when you want a fast single-binary Go downloader, strong on Chinese video sites — smaller coverage and slower updates than yt-dlp. | [→](lux.md) |
+| **youtube-transcript-api** | A Python library that fetches the transcript/subtitles (including auto-generated ones) for a YouTube video — no API key, no headless browser — by calling the same undocumented endpoint the YouTube web client uses. | [→](youtube-transcript-api.md) |
+| **bulk-downloader-for-reddit** | A command-line tool (BDFR) that downloads media and/or archives metadata from Reddit — subreddits, multireddits, users, saved/upvoted posts, or direct links — via the official Reddit OAuth API. | [→](bulk-downloader-for-reddit.md) |
 
 ## Comparison matrix
 
@@ -20,6 +22,8 @@
 | [you-get](you-get.md) | ✅ | Use it when you want a tiny Python CLI to grab video/audio from YouTube and many Chinese sites (Bilibili/Youku) — lighter than yt-dlp. |
 | [cobalt](cobalt.md) | ✅ | Use it when you want a clean self-hostable web-UI + API media saver with no ads/trackers — not a scriptable CLI. |
 | [lux](lux.md) | ✅ | Use it when you want a fast single-binary Go downloader, strong on Chinese video sites — smaller coverage and slower updates than yt-dlp. |
+| [youtube-transcript-api](youtube-transcript-api.md) | ✅ | A Python library that fetches the transcript/subtitles (including auto-generated ones) for a YouTube video — no API key, no headless browser — by calling the same undocumented endpoint the YouTube web client uses. |
+| [bulk-downloader-for-reddit](bulk-downloader-for-reddit.md) | ✅ | A command-line tool (BDFR) that downloads media and/or archives metadata from Reddit — subreddits, multireddits, users, saved/upvoted posts, or direct links — via the official Reddit OAuth API. |
 | yt-dlp / gallery-dl | 未收录 | More-active forks and alternative downloaders named across the pages. |
 
 ## What belongs here

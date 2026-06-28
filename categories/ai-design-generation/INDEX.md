@@ -13,6 +13,7 @@
 | **ian-xiaohei-illustrations** | Use it when you need consistent hand-drawn 16:9 Chinese article illustrations with a fixed IP. | [→](ian-illustrations.md) |
 | **Guizang PPT Skill** | Use it when you want an agent to turn an article into a designed single-file HTML swipe deck. | [→](guizang-ppt.md) |
 | **Guizang Social Card Skill** | Use it when a coding agent needs art-directed Xiaohongshu carousels or WeChat cover pairs as single-file HTML rendered to PNG. | [→](guizang-social-card.md) |
+| **SdPaint** | A real-time sketch-to-image painting app: you draw on a pygame canvas and each stroke is sent to a running Stable Diffusion (AUTOMATIC1111 + ControlNet) backend, so a rough scribble becomes a generated image live as you draw. | [→](sdpaint.md) |
 
 ## Comparison matrix
 
@@ -24,6 +25,7 @@
 | [ian-xiaohei-illustrations](ian-illustrations.md) | ✅ | Use it when you need consistent hand-drawn 16:9 Chinese article illustrations with a fixed IP. |
 | [Guizang PPT Skill](guizang-ppt.md) | ✅ | Use it when you want an agent to turn an article into a designed single-file HTML swipe deck. |
 | [Guizang Social Card Skill](guizang-social-card.md) | ✅ | Use it when a coding agent needs art-directed Xiaohongshu carousels or WeChat cover pairs as single-file HTML rendered to PNG. |
+| [SdPaint](sdpaint.md) | ✅ | A real-time sketch-to-image painting app: you draw on a pygame canvas and each stroke is sent to a running Stable Diffusion (AUTOMATIC1111 + ControlNet) backend, so a rough scribble becomes a generated image live as you draw. |
 | v0 / Lovable / tldraw make-real | 未收录 | Other agentic UI/design generators named across the pages. |
 
 ## What belongs here

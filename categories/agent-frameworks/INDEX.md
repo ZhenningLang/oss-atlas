@@ -16,6 +16,7 @@
 | **smolagents** | Use it when you want a tiny, transparent code-acting agent loop from Hugging Face — not a heavy production agent OS. | [→](smolagents.md) |
 | **Kilo Code** | Use it when you want an open, BYOK in-IDE (VS Code) coding agent with planning and modes — an end-user tool, not a library to build agents. | [→](kilocode.md) |
 | **Parlant** | Use it when you build a customer-facing agent that must stay on-rails via behavioral guidelines — overkill for simple or free-form agents. | [→](parlant.md) |
+| **SkillOpt** | A text-space optimizer that "trains" reusable natural-language skill documents for a frozen LLM agent — applying validation-gated, trajectory-driven edits to produce a compact, deployable `best_skill.md`. | [→](skillopt.md) |
 
 ## Comparison matrix
 
@@ -30,6 +31,7 @@
 | [smolagents](smolagents.md) | ✅ | Use it when you want a tiny, transparent code-acting agent loop from Hugging Face — not a heavy production agent OS. |
 | [Kilo Code](kilocode.md) | ✅ | Use it when you want an open, BYOK in-IDE (VS Code) coding agent with planning and modes — an end-user tool, not a library to build agents. |
 | [Parlant](parlant.md) | ✅ | Use it when you build a customer-facing agent that must stay on-rails via behavioral guidelines — overkill for simple or free-form agents. |
+| [SkillOpt](skillopt.md) | ✅ | A text-space optimizer that "trains" reusable natural-language skill documents for a frozen LLM agent — applying validation-gated, trajectory-driven edits to produce a compact, deployable `best_skill.md`. |
 | LangChain / LlamaIndex / CrewAI / AutoGen | 未收录 | Broader build/run agent ecosystems named across the pages' comparisons. |
 
 ## What belongs here

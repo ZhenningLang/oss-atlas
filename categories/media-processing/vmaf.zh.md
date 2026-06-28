@@ -1,0 +1,75 @@
+---
+name: VMAF
+slug: vmaf
+repo: https://github.com/Netflix/vmaf
+category: media-processing
+tags: [video-quality, perceptual-metric, libvmaf, ffmpeg, encoding, c, python]
+language: C
+license: BSD-2-Clause-Patent
+maturity: libvmaf v3.2.0, active (2026-06), 5.4k stars (as of 2026-06)
+last_verified: 2026-06-28
+type: library
+---
+
+# VMAF
+
+Netflix 的、获 Emmy 奖的感知视频质量指标——一个 C 库 `libvmaf`（外加一个 `vmaf` CLI 和一个 Python wrapper），用来评估失真/编码后的视频相对参考在人眼看来有多好，同时还实现了 PSNR、SSIM、MS-SSIM、PSNR-HVS、CIEDE2000 以及 CAMBI 色带检测器。
+
+## 何时使用
+
+你是视频工程师，在调编码阶梯，而你真正在意的问题不是“码率掉了”，而是“画质是不是以观众会察觉的方式掉了”。裸 PSNR/SSIM 与人眼所见相关性差，于是你转向 VMAF：拿一个参考片段和一个编码后片段，跑 `vmaf` CLI（或把 `libvmaf` 接进你的管线，或用 FFmpeg 内建的 `libvmaf` 滤镜），得到一个 0–100 的感知分数，用它在不同 codec、preset、分辨率间比较以选定工作点。它是 codec/编码器评测的事实标准指标——AOM 在其通用测试条件（CTC）里指定了它——所以报告 VMAF 能让你的结果与更广社区可比。
+
+当你想从一份单一、优化过的实现里拿到*不止一个*指标时也会用它：`libvmaf` 把 PSNR/SSIM/MS-SSIM/CIEDE2000 和 CAMBI（色带）收在一个接口背后，并支持在你自己的内容上训练/验证自定义 VMAF 模型。
+
+## 何时不用
+
+- **无参考 / 在线质量监控。** VMAF 是**全参考**的——它需要原始无损源与失真视频并排。对于你拿不到参考的实际线上流，它不适用（无参考指标是另一族）。
+- **你想要一个绝对的“好/坏”阈值。** VMAF 是个*相对*比较工具；分数取决于模型、内容和观看假设——Netflix 自己就发多个模型（v0、新的 v1）并警告 enhancement-gain 作弊（故有 NEG 模式）。当作比较用，而非绝对的通过/不通过。[推断]
+- **你在给静态图像 / 音频打分。** 它专门针对视频质量。
+- **你需要零编译、纯 Python 的安装。** 核心是用 Meson/Ninja 构建的 C 库；Python wrapper 驱动它，但你是在编译（或用预编译二进制/Docker），而非只 `pip install` 纯 Python。[未验证]
+- **你无法接受带专利条款的许可。** 它是 BSD+Patent（2020 年从 Apache-2.0 重新授权）——宽松且*带明确专利授予*；对多数人没问题，但若你所在组织对专利条款有特定政策请通读。
+- **你在不对自己内容做验证的情况下优化某个指标。** VMAF 在特定数据集上训练；对非典型内容（屏幕内容、HDR 边角情况）请先验证或训练一个模型再信那个数字。[推断]
+
+## 横向对比
+
+| 替代品 | 是否收录 | 取舍 |
+|---|---|---|
+| PSNR / SSIM（独立） | 未收录 | 经典的信号保真指标；便宜、无处不在，但与感知质量相关性差——VMAF 正因它们不够用而存在（而 libvmaf 也照样内含它们）。 |
+| [FFmpeg](ffmpeg.zh.md) | ✅ | 把 `libvmaf` 作为滤镜集成——对多数用户而言这才是你在管线里真正跑 VMAF 的方式；FFmpeg 是宿主，VMAF 是其中的指标引擎。 |
+| SSIMULACRA2 | 未收录 | 一个更新的开源感知指标（出自 JPEG XL 生态），在图像/视频质量上渐获关注；另一种感知打分器，模型谱系不同。 |
+| Netflix VMAF 云/SaaS 打分 | 未收录 | 托管的质量打分服务；不是仓库——比自跑 libvmaf 省事，但有厂商依赖。 |
+| AVQT / 专有指标 | 未收录 | 厂商感知指标（如 Apple 的 AVQT）；目标相近，实现与生态封闭。 |
+
+## 技术栈
+
+- **语言：** 核心是 **C**（`libvmaf`），用 **Meson + Ninja** 构建；x86 SIMD 优化（AVX2/AVX-512）的定点实现以提速。
+- **接口：** 独立的 `vmaf` 命令行工具、`libvmaf` C API，以及一个用于训练/测试/验证及数据集/绘图工具的 **Python** 库。
+- **集成：** 作为 FFmpeg 滤镜随发（`--enable-libvmaf`）；提供 Dockerfile；支持 Windows 构建。
+- **模型：** 可替换的模型文件（v0 旧版、截至 2026-06 的新 **v1**），外加一个 NEG（No Enhancement Gain）模式以抵抗增强作弊。
+
+## 依赖
+
+- **构建：** 一套 C 工具链加 **Meson 和 Ninja** 来构建 `libvmaf`/CLI；或用预编译二进制 / 提供的 Docker 镜像。
+- **Python 工具：** Python wrapper 需要 Python 及其自身依赖（numpy/scipy 一类的科学栈）来做模型训练/验证/绘图。
+- **运行时：** 参考帧 + 失真视频帧（通常经 FFmpeg）和一个模型文件；没有要跑的数据库或网络服务。
+- **可选宿主：** FFmpeg，若你把 VMAF 当 FFmpeg 滤镜跑而非用独立工具。
+
+## 运维难度
+
+**中。** 概念上的用法很简单（喂参考 + 失真，拿分数），但*工程*有真实的棱角：构建 C 库（Meson/Ninja）或找对预编译二进制、为你的内容与报告语境选定并锁住正确的**模型**（v0 vs v1、NEG vs 默认）、确保帧对齐/同分辨率，以及给大目录打分的算力成本。多数团队靠经 FFmpeg 或 Docker 跑来绕开构建。微妙的运维风险是*方法论上的*——选错模型或跨模型版本比较分数，会悄无声息地让结论失效。
+
+## 健康度与可持续性
+
+- **维护（2026-06）。** **活跃。** libvmaf v3.2.0 于 2026-06-20 发布，v3.1.0 在 2026-04，最后 push 在 2026-06-23；2026-06 公布了一套新的 **v1 模型**——显然在持续开发，而非吃老本。未归档。
+- **治理 / 背书。** 由 **Netflix** 拥有（`Organization` 账号），有多工程师贡献历史（`li-zhi`、`christosbampis` 等）；机构背书强、路线图清晰。反面是单一厂商主导——方向跟随 Netflix 的优先级。[推断]
+- **年龄与 Lindy 判断。** 2016-02 创建，约 10 岁且**仍在活跃发布**⇒ **强 Lindy**；它是成熟的标准感知指标而非新秀，而在 AOM CTC 中的标准化又进一步把它固化下来。
+- **采用与生态。** codec 评测的行业标准（AOM CTC），已集成进 FFmpeg，被整个编码社区使用；获 Emmy 认可。采用广且黏。[推断]
+- **风险标记。** 2020 年的一次**重新授权**（Apache-2.0 → BSD+Patent）——是更宽松、带明确专利授予的举动，但属于需记录的许可历史事实。单一厂商（Netflix）治理是主要 bus-factor 考量，被强机构背书所缓解。[推断]
+
+## 存疑（未验证）
+
+- [未验证] 截至 2026-06 约 5.4k star / 822 fork；star 数对时间敏感，不是维护信号。
+- [推断] 许可为 BSD-2-Clause-Patent：仓库 LICENSE 文件写明“BSD+Patent / SPDX BSD-2-Clause-Patent”，README 记录了 2020-02 从 Apache-2.0 的重新授权——GitHub API 报 `NOASSERTION`，故 SPDX id 取自读文件。
+- [未验证] 确切的构建工具与 Python 依赖集合（Meson/Ninja 版本、科学栈）取自 README/推断，本轮未重读 manifest。
+- [推断] “选错模型会悄悄让比较失效”和“非典型内容要先验证”是从多模型/NEG 设计与 README 自身告诫做出的方法论推断，而非测得的失败。
+- [未验证] 对 SSIMULACRA2 / AVQT / SaaS 打分器的描述取自对生态的一般认知，本轮未再核验。

@@ -49,6 +49,18 @@
 | **debugging-proxy** | HTTP(S)/WebSocket debugging proxies — capture, inspect, rewrite, and mock traffic. | [→](categories/debugging-proxy/INDEX.md) |
 | **web-scraping** | Fetch and extract content/structure from web pages — article extraction and HTML parsing. | [→](categories/web-scraping/INDEX.md) |
 
+| **auth** | Authentication & authorization libraries — login providers and permission rules. | [→](categories/auth/INDEX.md) |
+| **databases** | Databases and database tooling — clients, GUIs, sync, and Redis/ES-compatible stores. | [→](categories/databases/INDEX.md) |
+| **desktop-automation** | Programmatic desktop GUI automation (mouse/keyboard/screen). | [→](categories/desktop-automation/INDEX.md) |
+| **game-dev** | Game development libraries and engines. | [→](categories/game-dev/INDEX.md) |
+| **kafka-tools** | Apache Kafka clients and management UIs. | [→](categories/kafka-tools/INDEX.md) |
+| **networking** | Networking libraries — SSH, DNS, tunnels, RPC, and traffic shaping. | [→](categories/networking/INDEX.md) |
+| **nginx-modules** | NGINX / OpenResty extension modules (Lua, upload, etc.). | [→](categories/nginx-modules/INDEX.md) |
+| **python-tooling** | Python developer tooling — compilers, process injection, notebooks, async HTTP. | [→](categories/python-tooling/INDEX.md) |
+| **reading-tools** | Reading tools — reader-mode extensions and RSS readers. | [→](categories/reading-tools/INDEX.md) |
+| **speech** | Speech processing toolkits (ASR, TTS, speaker tasks). | [→](categories/speech/INDEX.md) |
+| **terminal-ui** | Terminal/CLI UI libraries — colors, TUIs, ASCII art, terminal rendering. | [→](categories/terminal-ui/INDEX.md) |
+
 ## How to add a category
 
 A new category = a new directory under `categories/` with its own `INDEX.md` **and** `INDEX.zh.md`,

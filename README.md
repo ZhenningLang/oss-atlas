@@ -46,7 +46,8 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **Context Mode** | Use it when a coding agent burns context on raw tool output and you want sandboxed execution plus compaction-surviving session memory. | Elastic-2.0 | [EN](categories/agent-tooling/context-mode.md) · [中](categories/agent-tooling/context-mode.zh.md) |
 | **Planning with Files** | Use it when a long agent run keeps losing its plan to /clear, compaction, or crashes. | MIT | [EN](categories/agent-tooling/planning-with-files.md) · [中](categories/agent-tooling/planning-with-files.zh.md) |
 | **Vercel Skills** | Use it when you want an npm-style CLI to install, find, and update SKILL.md packs across many coding agents. | MIT | [EN](categories/agent-tooling/vercel-skills.md) · [中](categories/agent-tooling/vercel-skills.zh.md) |
-
+| **OpenSandbox** | A general-purpose, secure sandbox runtime and platform for AI agents — multi-language SDKs, a unified sandbox protocol, and Docker/Kubernetes backends for running untrusted agent-generated code, GUI/browser automation, and RL/eval workloads in isolated environments. | Apache-2.0 | [EN](categories/agent-tooling/opensandbox.md) · [中](categories/agent-tooling/opensandbox.zh.md) |
+| **AgentsView** | A local-first desktop/CLI app that discovers, searches, and analyzes your coding-agent sessions across 40+ agents (Claude Code, Codex, Cursor, Gemini, and more) — full-text search, token-usage analytics, and cost tracking, all on your machine without an account. | MIT | [EN](categories/agent-tooling/agentsview.md) · [中](categories/agent-tooling/agentsview.zh.md) |
 ### document-management
 
 | Project | Use when | License | Page |
@@ -75,7 +76,7 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **Agent Browser** | Use it when an agent must shell-drive a real Chrome over CDP with stable element refs instead of CSS selectors. | Apache-2.0 | [EN](categories/web-automation/agent-browser.md) · [中](categories/web-automation/agent-browser.zh.md) |
 | **Selenium** | Use it when you need cross-browser WebDriver automation across a browser/language matrix — Playwright/Cypress are nicer for modern single-browser DX. | Apache-2.0 | [EN](categories/web-automation/selenium.md) · [中](categories/web-automation/selenium.zh.md) |
 | **PhantomJS** | Avoid for new work — an archived, abandoned scriptable headless browser; use headless Chrome (Puppeteer/Playwright) or Selenium instead. | BSD-3-Clause | [EN](categories/web-automation/phantomjs.md) · [中](categories/web-automation/phantomjs.zh.md) |
-
+| **Selenium Wire** | Extends Selenium's Python bindings so you can inspect and modify the browser's underlying HTTP/HTTPS traffic — by routing the browser through an internal MITM proxy. **The project is archived and explicitly no longer maintained.** | MIT | [EN](categories/web-automation/selenium-wire.md) · [中](categories/web-automation/selenium-wire.zh.md) |
 ### llm-training
 
 | Project | Use when | License | Page |
@@ -99,7 +100,7 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **smolagents** | Use it when you want a tiny, transparent code-acting agent loop from Hugging Face — not a heavy production agent OS. | Apache-2.0 | [EN](categories/agent-frameworks/smolagents.md) · [中](categories/agent-frameworks/smolagents.zh.md) |
 | **Kilo Code** | Use it when you want an open, BYOK in-IDE (VS Code) coding agent with planning and modes — an end-user tool, not a library to build agents. | MIT | [EN](categories/agent-frameworks/kilocode.md) · [中](categories/agent-frameworks/kilocode.zh.md) |
 | **Parlant** | Use it when you build a customer-facing agent that must stay on-rails via behavioral guidelines — overkill for simple or free-form agents. | Apache-2.0 | [EN](categories/agent-frameworks/parlant.md) · [中](categories/agent-frameworks/parlant.zh.md) |
-
+| **SkillOpt** | A text-space optimizer that "trains" reusable natural-language skill documents for a frozen LLM agent — applying validation-gated, trajectory-driven edits to produce a compact, deployable `best_skill.md`. | MIT | [EN](categories/agent-frameworks/skillopt.md) · [中](categories/agent-frameworks/skillopt.zh.md) |
 ### agent-memory
 
 | Project | Use when | License | Page |
@@ -117,7 +118,7 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **Vane** | Use it when you want a self-hosted, privacy-focused Perplexity-style cited answer engine over your own SearxNG and chosen LLM. | MIT | [EN](categories/deep-research/vane.md) · [中](categories/deep-research/vane.zh.md) |
 | **Local Deep Research** | Use it when you need a self-hosted, fully-local deep-research agent that keeps sensitive queries on your own machine. | MIT | [EN](categories/deep-research/local-deep-research.md) · [中](categories/deep-research/local-deep-research.zh.md) |
 | **Agent-Reach** | Use it when your agent needs to read and search web plus social platforms without paid APIs. | MIT | [EN](categories/deep-research/agent-reach.md) · [中](categories/deep-research/agent-reach.zh.md) |
-
+| **MiroThinker** | An open-source deep-research agent: fine-tuned LLMs plus an MCP-tool environment (web search, scraping, code execution) orchestrated by the MiroFlow framework to answer complex, multi-step research and prediction questions. | Apache-2.0 | [EN](categories/deep-research/mirothinker.md) · [中](categories/deep-research/mirothinker.zh.md) |
 ### ai-code-review
 
 | Project | Use when | License | Page |
@@ -136,13 +137,13 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **PageIndex** | Use it when vector RAG returns similar-but-irrelevant chunks over a few long, structured documents needing auditable citations. | MIT | [EN](categories/rag-retrieval/pageindex.md) · [中](categories/rag-retrieval/pageindex.zh.md) |
 | **Understand-Anything** | Use it when you want any codebase turned into an explorable, queryable knowledge graph for an agent — younger and less proven than graphify. | MIT | [EN](categories/rag-retrieval/understand-anything.md) · [中](categories/rag-retrieval/understand-anything.zh.md) |
 | **FAISS** | Use it when you need a fast in-process ANN vector index for embeddings — a library, not a managed vector DB. | MIT | [EN](categories/rag-retrieval/faiss.md) · [中](categories/rag-retrieval/faiss.zh.md) |
-
+| **text2vec** | A Python library that turns text into vectors for semantic similarity and retrieval — bundling Word2Vec, BM25, Sentence-BERT, CoSENT and BGE-style methods behind one `pip install`, with a strong Chinese-language focus. | Apache-2.0 | [EN](categories/rag-retrieval/text2vec.md) · [中](categories/rag-retrieval/text2vec.zh.md) |
 ### llm-eval
 
 | Project | Use when | License | Page |
 |---|---|---|---|
 | **promptfoo** | Use it when you need declarative YAML evals plus red-teaming for your LLM app in CI. | MIT | [EN](categories/llm-eval/promptfoo.md) · [中](categories/llm-eval/promptfoo.zh.md) |
-
+| **Pezzo** | An open-source, self-hostable LLMOps platform for prompt management, versioning, observability and cost/latency monitoring — a central place to author prompts and watch how they behave in production. | Apache-2.0 | [EN](categories/llm-eval/pezzo.md) · [中](categories/llm-eval/pezzo.zh.md) |
 ### agent-dev-methodology
 
 | Project | Use when | License | Page |
@@ -164,7 +165,7 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **ian-xiaohei-illustrations** | Use it when you need consistent hand-drawn 16:9 Chinese article illustrations with a fixed IP. | MIT | [EN](categories/ai-design-generation/ian-illustrations.md) · [中](categories/ai-design-generation/ian-illustrations.zh.md) |
 | **Guizang PPT Skill** | Use it when you want an agent to turn an article into a designed single-file HTML swipe deck. | AGPL-3.0-only | [EN](categories/ai-design-generation/guizang-ppt.md) · [中](categories/ai-design-generation/guizang-ppt.zh.md) |
 | **Guizang Social Card Skill** | Use it when a coding agent needs art-directed Xiaohongshu carousels or WeChat cover pairs as single-file HTML rendered to PNG. | AGPL-3.0-only | [EN](categories/ai-design-generation/guizang-social-card.md) · [中](categories/ai-design-generation/guizang-social-card.zh.md) |
-
+| **SdPaint** | A real-time sketch-to-image painting app: you draw on a pygame canvas and each stroke is sent to a running Stable Diffusion (AUTOMATIC1111 + ControlNet) backend, so a rough scribble becomes a generated image live as you draw. | MIT | [EN](categories/ai-design-generation/sdpaint.md) · [中](categories/ai-design-generation/sdpaint.zh.md) |
 ### dev-utilities
 
 | Project | Use when | License | Page |
@@ -178,7 +179,9 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **tqdm** | Use it when you want a fast, low-overhead progress bar for Python loops/CLI/notebooks. | MPL-2.0 AND MIT | [EN](categories/dev-utilities/tqdm.md) · [中](categories/dev-utilities/tqdm.zh.md) |
 | **SlimToolkit** | Use it when you want to auto-minify & harden a bloated container image without rewriting the Dockerfile — beware it can strip dynamically-loaded files. | Apache-2.0 | [EN](categories/dev-utilities/slim.md) · [中](categories/dev-utilities/slim.zh.md) |
 | **Faker (faker-js)** | Use it when you need realistic fake/mock data (names, addresses, finance…) for tests and seeding in JS/TS. | MIT | [EN](categories/dev-utilities/faker-js.md) · [中](categories/dev-utilities/faker-js.zh.md) |
-
+| **fontTools** | A Python library (plus a set of command-line tools) to read, write, and manipulate font files — TrueType/OpenType, WOFF/WOFF2, AFM, and more — the de-facto foundation of the open-source font tooling stack. | MIT | [EN](categories/dev-utilities/fonttools.md) · [中](categories/dev-utilities/fonttools.zh.md) |
+| **Flashlight** | An "unofficial Spotlight API" for older macOS — a plugin system that injects into Spotlight so you can type `weather`, `define`, currency conversions, etc. and get custom results inline. This `w0lfschild` repo is one fork in a chain descending from nate-parrott's original. | MIT-and-GPL (dual; see LICENSE) | [EN](categories/dev-utilities/flashlight.md) · [中](categories/dev-utilities/flashlight.zh.md) |
+| **IdeaVim** | A Vim emulation plugin for JetBrains IDEs (IntelliJ IDEA, PyCharm, GoLand, WebStorm, Rider, etc.) — Vim motions, modes, registers, macros, and a `.ideavimrc` inside the IDE, maintained by JetBrains itself. | MIT | [EN](categories/dev-utilities/ideavim.md) · [中](categories/dev-utilities/ideavim.zh.md) |
 ### frontend-animation
 
 | Project | Use when | License | Page |
@@ -208,7 +211,9 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | Project | Use when | License | Page |
 |---|---|---|---|
 | **Cap** | Lightweight self-hosted CAPTCHA alternative: an invisible proof-of-work challenge (SHA-256 nonce in a Rust→WASM worker) issuing a server-verifiable token — no images, no third-party calls. | Apache-2.0 | [EN](categories/captcha/capjs.md) · [中](categories/captcha/capjs.zh.md) |
-
+| **Text_select_captcha** | A Chinese deep-learning library for **click/text-select CAPTCHA** recognition — given an image that asks "click these characters in order", it detects the candidate glyphs (YOLO) and matches them to the prompt (Siamese network), returning the click coordinates. | NONE (no LICENSE file — all rights reserved) | [EN](categories/captcha/text-select-captcha.md) · [中](categories/captcha/text-select-captcha.zh.md) |
+| **pytorch-captcha-recognition** | A small PyTorch example that trains an "end-to-end" CNN to read **fixed-length image CAPTCHAs** (e.g. 4-character digit/alphanumeric codes), classifying all characters at once — a learning/reference project, last updated 2020. | Apache-2.0 | [EN](categories/captcha/pytorch-captcha-recognition.md) · [中](categories/captcha/pytorch-captcha-recognition.zh.md) |
+| **captcha (lepture)** | A small Python library that renders distorted image CAPTCHAs and synthesizes audio CAPTCHAs from a string you supply — you own the challenge text, storage, and verification; it only draws and speaks. | BSD-3-Clause | [EN](categories/captcha/lepture-captcha.md) · [中](categories/captcha/lepture-captcha.zh.md) |
 ### ml-research
 
 | Project | Use when | License | Page |
@@ -218,7 +223,11 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **CLIP** | Use it when you need zero-shot image classification or image↔text retrieval embeddings — the original frozen reference; OpenCLIP has more checkpoints. | MIT | [EN](categories/ml-research/clip.md) · [中](categories/ml-research/clip.zh.md) |
 | **TaskMatrix** | Use it only to study an early visual-tool-routing agent (Visual ChatGPT) — abandoned since ~2024, don't build on it. | MIT | [EN](categories/ml-research/taskmatrix.md) · [中](categories/ml-research/taskmatrix.zh.md) |
 | **PyTorch-GAN** | Read it to learn GAN architectures from clean reference implementations — idle since 2024 and superseded by diffusion; not production code. | MIT | [EN](categories/ml-research/pytorch-gan.md) · [中](categories/ml-research/pytorch-gan.zh.md) |
-
+| **LSTM Neural Network for Time Series Prediction** | A compact, article-companion codebase showing how to build a Keras LSTM to predict time-series sequences — demoed on a sine wave and S&P 500 data — built to teach the technique, not to ship as a forecasting library. | AGPL-3.0 | [EN](categories/ml-research/lstm-time-series.md) · [中](categories/ml-research/lstm-time-series.zh.md) |
+| **Agriculture Knowledge Graph (AgriKG)** | A Chinese-language research project (ECNU) that builds an agricultural knowledge graph end-to-end — crawlers, entity recognition, relation extraction, a Neo4j store, and a Django demo with retrieval and Q&A — published as a reference, and explicitly no longer maintained. | GPL-3.0 | [EN](categories/ml-research/agriculture-knowledge-graph.md) · [中](categories/ml-research/agriculture-knowledge-graph.zh.md) |
+| **Senta (SKEP)** | Baidu's open-source sentiment-analysis toolkit built on SKEP — a sentiment-knowledge-enhanced pretraining method (ACL 2020) — shipping Chinese/English pretrained models and a one-line prediction tool, all on the PaddlePaddle 1.x framework. | Apache-2.0 | [EN](categories/ml-research/senta.md) · [中](categories/ml-research/senta.zh.md) |
+| **Depth Anything V2** | A foundation model for monocular depth estimation (NeurIPS 2024): one image in, a dense depth map out — four ViT-based model sizes, faster and sharper than V1 and SD-based depth models, with a small PyTorch inference repo around the released checkpoints. | Apache-2.0 | [EN](categories/ml-research/depth-anything-v2.md) · [中](categories/ml-research/depth-anything-v2.zh.md) |
+| **pymoo** | A Python framework for single- and multi-objective optimization: NSGA-II/III, MOEA/D, GA, DE, CMA-ES, PSO and more, plus test problems, constraint handling, visualization, and decision-making tools — built on NumPy/SciPy with optional compiled speedups. | Apache-2.0 | [EN](categories/ml-research/pymoo.md) · [中](categories/ml-research/pymoo.zh.md) |
 ### agent-skill-collections
 
 #### agent-skill-collections / engineering
@@ -326,7 +335,8 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | Project | Use when | License | Page |
 |---|---|---|---|
 | **Mermaid** | Use it when you want diagrams as version-controlled plain text (flowchart/sequence/ER) rendered in Markdown and docs — not pixel-precise layouts. | MIT | [EN](categories/diagramming/mermaid.md) · [中](categories/diagramming/mermaid.zh.md) |
-
+| **flowchart.js** | A tiny JavaScript library that turns a small textual DSL into an SVG flowchart in the browser — define nodes and connections as text, get a rendered diagram. | MIT | [EN](categories/diagramming/flowchart-js.md) · [中](categories/diagramming/flowchart-js.zh.md) |
+| **bpmn-js** | A BPMN 2.0 rendering and modeling toolkit for the browser — import BPMN XML, display it as an interactive diagram, and edit it, built by the bpmn.io team at Camunda. | NOASSERTION | [EN](categories/diagramming/bpmn-js.md) · [中](categories/diagramming/bpmn-js.zh.md) |
 ### media-download
 
 | Project | Use when | License | Page |
@@ -335,13 +345,17 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **you-get** | Use it when you want a tiny Python CLI to grab video/audio from YouTube and many Chinese sites (Bilibili/Youku) — lighter than yt-dlp. | MIT | [EN](categories/media-download/you-get.md) · [中](categories/media-download/you-get.zh.md) |
 | **cobalt** | Use it when you want a clean self-hostable web-UI + API media saver with no ads/trackers — not a scriptable CLI. | AGPL-3.0 | [EN](categories/media-download/cobalt.md) · [中](categories/media-download/cobalt.zh.md) |
 | **lux** | Use it when you want a fast single-binary Go downloader, strong on Chinese video sites — smaller coverage and slower updates than yt-dlp. | MIT | [EN](categories/media-download/lux.md) · [中](categories/media-download/lux.zh.md) |
-
+| **youtube-transcript-api** | A Python library that fetches the transcript/subtitles (including auto-generated ones) for a YouTube video — no API key, no headless browser — by calling the same undocumented endpoint the YouTube web client uses. | MIT | [EN](categories/media-download/youtube-transcript-api.md) · [中](categories/media-download/youtube-transcript-api.zh.md) |
+| **bulk-downloader-for-reddit** | A command-line tool (BDFR) that downloads media and/or archives metadata from Reddit — subreddits, multireddits, users, saved/upvoted posts, or direct links — via the official Reddit OAuth API. | GPL-3.0 | [EN](categories/media-download/bulk-downloader-for-reddit.md) · [中](categories/media-download/bulk-downloader-for-reddit.zh.md) |
 ### media-processing
 
 | Project | Use when | License | Page |
 |---|---|---|---|
 | **FFmpeg** | Use it when you must decode/encode/transcode/filter virtually any audio or video in a pipeline — mind the LGPL→GPL build trap. | LGPL-2.1-or-later | [EN](categories/media-processing/ffmpeg.md) · [中](categories/media-processing/ffmpeg.zh.md) |
-
+| **ffmpeg-python** | Python bindings for FFmpeg that let you build complex filter graphs as chained Python expressions instead of hand-writing `-filter_complex` strings — it constructs the FFmpeg command line for you and shells out to the `ffmpeg` binary. | Apache-2.0 | [EN](categories/media-processing/ffmpeg-python.md) · [中](categories/media-processing/ffmpeg-python.zh.md) |
+| **VMAF** | Netflix's Emmy-winning perceptual video-quality metric — a C library `libvmaf` (plus a `vmaf` CLI and a Python wrapper) that scores how good a distorted/encoded video looks to a human vs a reference, and also implements PSNR, SSIM, MS-SSIM, PSNR-HVS, CIEDE2000 and the CAMBI banding detector. | BSD-2-Clause-Patent | [EN](categories/media-processing/vmaf.md) · [中](categories/media-processing/vmaf.zh.md) |
+| **m3u8** | A Python parser and serializer for HLS (HTTP Live Streaming) `.m3u8` playlists — load a playlist from a URL, file, or string into a typed object model, inspect/modify segments and variants, and dump it back out (RFC 8216). | MIT | [EN](categories/media-processing/m3u8.md) · [中](categories/media-processing/m3u8.zh.md) |
+| **ffsubsync** | A language-agnostic CLI that automatically re-times an out-of-sync subtitle file against the video (or a reference subtitle), aligning speech segments via FFT cross-correlation. | MIT | [EN](categories/media-processing/ffsubsync.md) · [中](categories/media-processing/ffsubsync.zh.md) |
 ### llm-chat-ui
 
 | Project | Use when | License | Page |
@@ -366,7 +380,8 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | Project | Use when | License | Page |
 |---|---|---|---|
 | **Apache Airflow** | Use it when you orchestrate scheduled batch data pipelines as Python DAGs with a UI — not low-latency or event-driven flows. | Apache-2.0 | [EN](categories/workflow-orchestration/airflow.md) · [中](categories/workflow-orchestration/airflow.zh.md) |
-
+| **Gaia** | An automation/pipeline platform that lets you build pipelines in any programming language (Go, Python, Java, C++, …) by compiling your code into plugins it executes — **now archived and no longer maintained**. | Apache-2.0 | [EN](categories/workflow-orchestration/gaia.md) · [中](categories/workflow-orchestration/gaia.zh.md) |
+| **Airflow Maintenance DAGs** | A small collection of ready-made Apache Airflow DAGs that keep an Airflow deployment healthy — clearing old metadata-DB rows, deleting stale task logs, killing zombie tasks, and similar housekeeping you'd otherwise script yourself. | Apache-2.0 | [EN](categories/workflow-orchestration/airflow-maintenance-dags.md) · [中](categories/workflow-orchestration/airflow-maintenance-dags.zh.md) |
 ### llm-inference
 
 | Project | Use when | License | Page |
@@ -380,7 +395,8 @@ The complete index, grouped by category. Each project has an English page (`<slu
 |---|---|---|---|
 | **XXL-JOB** | Use it when a Java/Spring shop needs centrally-managed, visual, sharded scheduled jobs — mind GPL-3.0 and the central-scheduler SPOF. | GPL-3.0 | [EN](categories/task-queue/xxl-job.md) · [中](categories/task-queue/xxl-job.zh.md) |
 | **Celery** | Use it when a Python app must offload async/background jobs at scale — at the cost of running a broker + workers. | BSD-3-Clause | [EN](categories/task-queue/celery.md) · [中](categories/task-queue/celery.zh.md) |
-
+| **Kombu** | A Python messaging library that gives one idiomatic high-level API over many message brokers — AMQP/RabbitMQ plus pluggable "virtual" transports (Redis, Amazon SQS, MongoDB, ZooKeeper, in-memory) — and is the transport layer Celery is built on. | BSD-3-Clause | [EN](categories/task-queue/kombu.md) · [中](categories/task-queue/kombu.zh.md) |
+| **Flower** | A real-time web dashboard and admin tool for Celery — it shows live task/worker state, lets you inspect and control workers, and exposes a REST API and Prometheus metrics for a running Celery cluster. | BSD-3-Clause | [EN](categories/task-queue/flower.md) · [中](categories/task-queue/flower.zh.md) |
 ### im-automation
 
 | Project | Use when | License | Page |
@@ -388,7 +404,8 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **ItChat** | Study it only as legacy WeChat-bot code — abandoned, and the web protocol it relies on is defunct, so it mostly doesn't work. | MIT | [EN](categories/im-automation/itchat.md) · [中](categories/im-automation/itchat.zh.md) |
 | **WeChatPlugin-MacOS** | Avoid for current WeChat — a macOS WeChat.app binary tweak that breaks on every WeChat update and is ~2y idle; account-ban & security risk. | MIT | [EN](categories/im-automation/wechatplugin-macos.md) · [中](categories/im-automation/wechatplugin-macos.zh.md) |
 | **wxpy** | Study it only as legacy WeChat-bot code — archived since 2019 and built on the now-defunct WeChat web protocol, so it mostly doesn't work. | MIT | [EN](categories/im-automation/wxpy.md) · [中](categories/im-automation/wxpy.zh.md) |
-
+| **wxappUnpacker** | A WeChat mini-program (微信小程序) `.wxapkg` decompiler/unpacker — except *this particular fork* has been gutted: the `xdmjun/wxappUnpacker` repo now contains a single `README.md` whose entire content is the literal string `del`. It is a tombstone for a tool that lives on only in forks. | GPL-3.0-or-later | [EN](categories/im-automation/wxappunpacker.md) · [中](categories/im-automation/wxappunpacker.zh.md) |
+| **Douyin-Bot** | A 2018 Python toy/demo that drives a physical Android phone over ADB to auto-swipe Douyin (抖音), scores faces with a cloud API, and auto-likes "pretty" videos. Famous, ~9.6k stars — and effectively dead since 2020. | MIT | [EN](categories/im-automation/douyin-bot.md) · [中](categories/im-automation/douyin-bot.zh.md) |
 ### web-ui
 
 | Project | Use when | License | Page |
@@ -400,13 +417,15 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | Project | Use when | License | Page |
 |---|---|---|---|
 | **proxy_pool** | Use it when a scraper needs a rotating pool of free proxy IPs behind a simple API — accepting that free proxies are unreliable and insecure. | MIT | [EN](categories/proxy-pool/proxy-pool.md) · [中](categories/proxy-pool/proxy-pool.zh.md) |
-
+| **ProxyBroker** | An async Python tool that finds public proxies from ~50 sources, checks them (type, anonymity, latency, country, DNSBL), and can run as a self-rotating proxy server in front of your traffic. | Apache-2.0 | [EN](categories/proxy-pool/proxybroker.md) · [中](categories/proxy-pool/proxybroker.zh.md) |
+| **Scylla** | A self-hosted "intelligent proxy pool" app that continuously crawls public proxies, validates and scores them (latency, stability, anonymity), and exposes them via a web UI, a JSON API, and a built-in forward-proxy server. | Apache-2.0 | [EN](categories/proxy-pool/scylla.md) · [中](categories/proxy-pool/scylla.zh.md) |
+| **haipproxy** | A distributed, high-availability IP proxy pool built on Scrapy + Redis — crawlers harvest public proxies, validators score them, and consumers pull low-latency proxies via a Python client or a Squid integration. | MIT | [EN](categories/proxy-pool/haipproxy.md) · [中](categories/proxy-pool/haipproxy.zh.md) |
 ### debugging-proxy
 
 | Project | Use when | License | Page |
 |---|---|---|---|
 | **whistle** | Use it when a web/mobile dev must capture, inspect, rewrite, and mock HTTP(S)/WebSocket traffic via a rule-based web UI — a dev proxy, not a production gateway or scraping pool. | MIT | [EN](categories/debugging-proxy/whistle.md) · [中](categories/debugging-proxy/whistle.zh.md) |
-
+| **AnyProxy** | A fully configurable HTTP/HTTPS man-in-the-middle proxy in Node.js: route your machine's (or a mobile device's) traffic through it to inspect it in a web UI, record it, and rewrite requests/responses with JS rule files. Alibaba-backed — but the master branch hasn't moved since mid-2020. | Apache-2.0 | [EN](categories/debugging-proxy/anyproxy.md) · [中](categories/debugging-proxy/anyproxy.zh.md) |
 ### web-scraping
 
 | Project | Use when | License | Page |
@@ -415,8 +434,104 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **requests-html** | Study it for tiny requests + HTML-parsing scripts — effectively unmaintained (~2y idle), the JS-render path is fragile; prefer Playwright + parsel for new work. | MIT | [EN](categories/web-scraping/requests-html.md) · [中](categories/web-scraping/requests-html.zh.md) |
 
 
-Categories follow the tree in [INDEX.md](INDEX.md).
+### auth
 
+| Project | Use when | License | Page |
+|---|---|---|---|
+| **Authomatic** | A Python library for federated login / "sign in with X" — a framework-agnostic OAuth 1.0a, OAuth 2.0 and OpenID client that handles the provider handshake and hands you the authenticated user plus an API-call helper. | MIT | [EN](categories/auth/authomatic.md) · [中](categories/auth/authomatic.zh.md) |
+| **django-rules** | A tiny Django app that provides **object-level permissions without a database** — you express authorization as composable predicate functions ("rules") and plug them into Django's permission system, views, templates, and DRF. | MIT | [EN](categories/auth/django-rules.md) · [中](categories/auth/django-rules.zh.md) |
+
+### databases
+
+| Project | Use when | License | Page |
+|---|---|---|---|
+| **PikiwiDB** | A Redis-protocol-compatible, disk-backed KV store (RocksDB engine) built by Qihoo360's infra team — keeps hot data in memory and persists the full dataset to disk so a single node can hold hundreds of GB the way Redis can't. (This repo is the home of the project historically known as **Pika**.) | BSD-3-Clause | [EN](categories/databases/pikiwidb.md) · [中](categories/databases/pikiwidb.zh.md) |
+| **elasticsearch-dsl-py** | A high-level, Pythonic DSL over the low-level Elasticsearch client — query objects, a Document ORM-style mapping layer, and chainable search builders instead of hand-writing query JSON. **Archived: as of v8.18.0 it lives inside the official `elasticsearch` Python client as `elasticsearch.dsl`.** | Apache-2.0 | [EN](categories/databases/elasticsearch-dsl-py.md) · [中](categories/databases/elasticsearch-dsl-py.zh.md) |
+| **elasticsearch-sql** | Query Elasticsearch with SQL instead of its native JSON Query DSL — a community plugin (and library) that parses SQL and translates it into ES queries/aggregations, with version-matched releases tracking the ES major you run. | Apache-2.0 | [EN](categories/databases/elasticsearch-sql.md) · [中](categories/databases/elasticsearch-sql.zh.md) |
+| **go-mysql-elasticsearch** | A small Go service that syncs MySQL into Elasticsearch in real time: it does an initial dump, then tails the MySQL binlog as a fake replica and applies inserts/updates/deletes to ES indices per a mapping rule file. | MIT | [EN](categories/databases/go-mysql-elasticsearch.md) · [中](categories/databases/go-mysql-elasticsearch.zh.md) |
+| **python-mysql-replication** | A pure-Python implementation of the MySQL replication protocol (built on PyMySQL): connect as a fake replica, stream the binlog, and get parsed row/query/rotate events as Python objects — the building block under most Python CDC tooling for MySQL. | Apache-2.0 | [EN](categories/databases/python-mysql-replication.md) · [中](categories/databases/python-mysql-replication.zh.md) |
+| **PrettyZoo** | A cross-platform desktop GUI for Apache ZooKeeper (Win/Mac/Linux) — browse the znode tree, view/edit node data, manage ACLs and connections, without dropping into the `zkCli.sh` shell. **Archived: the author publicly announced in 2023 that maintenance has stopped.** | Apache-2.0 | [EN](categories/databases/prettyzoo.md) · [中](categories/databases/prettyzoo.zh.md) |
+| **RDR** | A fast, offline Redis RDB-file parser (written in Go despite the repo's reported language tag) that reveals which keys and key-prefixes are eating your memory — `rdr show` serves an HTML memory report on a local port, `rdr keys` dumps every key. | Apache-2.0 | [EN](categories/databases/rdr.md) · [中](categories/databases/rdr.zh.md) |
+
+### desktop-automation
+
+| Project | Use when | License | Page |
+|---|---|---|---|
+| **PyAutoGUI** | A cross-platform Python module that programmatically drives the mouse and keyboard and reads the screen — move/click, type/hotkey, screenshot, and locate-on-screen image matching, all from a tiny synchronous API. | BSD-3-Clause | [EN](categories/desktop-automation/pyautogui.md) · [中](categories/desktop-automation/pyautogui.zh.md) |
+
+### game-dev
+
+| Project | Use when | License | Page |
+|---|---|---|---|
+| **pygame** | A free, cross-platform Python library for writing 2D games and multimedia apps — a Pythonic wrapper over SDL that gives you a display surface, an event loop, image/sound/font loading, and sprite/collision helpers. | LGPL-2.1 | [EN](categories/game-dev/pygame.md) · [中](categories/game-dev/pygame.zh.md) |
+
+### kafka-tools
+
+| Project | Use when | License | Page |
+|---|---|---|---|
+| **UI for Apache Kafka (provectus/kafka-ui)** | A free, open-source web UI for managing and observing Apache Kafka clusters — browse brokers, topics, partitions, consumer groups and their lag, produce/inspect messages, and wire in Schema Registry and Kafka Connect, all from a browser. **Note:** active development has moved to the community fork `kafbat/kafka-ui` (see Health). | Apache-2.0 | [EN](categories/kafka-tools/kafka-ui.md) · [中](categories/kafka-tools/kafka-ui.zh.md) |
+| **kafka-python** | A pure-Python client library for Apache Kafka — high-level `KafkaConsumer`, `KafkaProducer`, and `KafkaAdminClient` classes plus CLI scripts, with no C/Cython/Rust core so installs are trivial across environments. | Apache-2.0 | [EN](categories/kafka-tools/kafka-python.md) · [中](categories/kafka-tools/kafka-python.zh.md) |
+
+### networking
+
+| Project | Use when | License | Page |
+|---|---|---|---|
+| **Paramiko** | The leading pure-Python implementation of the SSHv2 protocol — client and server, with SFTP — letting Python code open SSH connections, run remote commands, and transfer files without shelling out to the `ssh` binary. | LGPL-2.1 | [EN](categories/networking/paramiko.md) · [中](categories/networking/paramiko.zh.md) |
+| **sshtunnel** | A small Python library (and CLI) that wraps Paramiko to give you SSH port-forwarding tunnels as a context manager — `with SSHTunnelForwarder(...) as t:` opens a local port that bridges, through an SSH bastion, to a service you can't reach directly. | MIT | [EN](categories/networking/sshtunnel.md) · [中](categories/networking/sshtunnel.zh.md) |
+| **dnspython** | A powerful, pure-Python DNS toolkit — both high-level resolution (`dns.resolver`) and low-level message/record manipulation (queries, zone transfers, dynamic updates, TSIG, DNSSEC, and modern transports: UDP/TCP, DoH, DoT, DoQ). | ISC | [EN](categories/networking/dnspython.md) · [中](categories/networking/dnspython.zh.md) |
+| **wondershaper** | A single Bash script that wraps Linux `tc` (traffic control) to cap the up/download bandwidth of a network adapter with one command — `wondershaper -a eth0 -d 8192 -u 2048` instead of a wall of HTB queueing-discipline incantations. | GPL-2.0 | [EN](categories/networking/wondershaper.md) · [中](categories/networking/wondershaper.zh.md) |
+| **ThriftPy** | A pure-Python implementation of Apache Thrift that loads a `.thrift` file at runtime and generates the RPC client/server code on the fly — **deprecated and archived**, superseded by [thriftpy2](https://github.com/Thriftpy/thriftpy2). | MIT | [EN](categories/networking/thriftpy.md) · [中](categories/networking/thriftpy.zh.md) |
+
+### nginx-modules
+
+| Project | Use when | License | Page |
+|---|---|---|---|
+| **lua-nginx-module (ngx_lua)** | An NGINX module that embeds a LuaJIT (or Lua) VM into the server, letting you run Lua at every phase of request processing — rewrite, access, content, log — with a non-blocking cosocket API so your Lua can talk to upstream TCP/UDP services without stalling the worker. | BSD-2-Clause | [EN](categories/nginx-modules/lua-nginx-module.md) · [中](categories/nginx-modules/lua-nginx-module.zh.md) |
+| **lua-resty-redis** | A non-blocking Redis client driver for OpenResty / ngx_lua — pure Lua on top of the ngx_lua cosocket API, so your NGINX worker can talk to Redis mid-request without blocking the event loop, with connection pooling and pipelining built in. | BSD-2-Clause | [EN](categories/nginx-modules/lua-resty-redis.md) · [中](categories/nginx-modules/lua-resty-redis.zh.md) |
+| **nginx-upload-module** | An NGINX C module that handles `multipart/form-data` (RFC 1867) file uploads at the server edge — NGINX streams the upload to disk itself and passes only the file metadata (paths, names, sizes) to your backend, so your application never has to buffer the raw upload. | BSD-3-Clause | [EN](categories/nginx-modules/nginx-upload-module.md) · [中](categories/nginx-modules/nginx-upload-module.zh.md) |
+
+### python-tooling
+
+| Project | Use when | License | Page |
+|---|---|---|---|
+| **Cython** | A compiler that turns Python (and an annotated Python-superset) into C, producing native CPython extension modules — the standard way to make hot Python code fast or to wrap a C/C++ library. | Apache-2.0 | [EN](categories/python-tooling/cython.md) · [中](categories/python-tooling/cython.zh.md) |
+| **pyrasite** | A tool to inject arbitrary Python code into a **running** Python process — attach to a live PID via gdb, run diagnostic snippets, dump objects, or open a reverse shell, without restarting the target. | GPL-3.0 | [EN](categories/python-tooling/pyrasite.md) · [中](categories/python-tooling/pyrasite.zh.md) |
+| **gophernotes** | A Jupyter kernel for the **Go** language — write and run Go interactively in Jupyter notebooks (and nteract), cell by cell, with persistent state between cells. | MIT | [EN](categories/python-tooling/gophernotes.md) · [中](categories/python-tooling/gophernotes.zh.md) |
+| **GRequests** | Requests + Gevent: send many HTTP requests concurrently with the familiar `requests` API, gathered through `map()`/`imap()` instead of writing async code. | BSD-2-Clause | [EN](categories/python-tooling/grequests.md) · [中](categories/python-tooling/grequests.zh.md) |
+
+### reading-tools
+
+| Project | Use when | License | Page |
+|---|---|---|---|
+| **NetNewsWire** | A free, open-source, native RSS/Atom feed reader for macOS and iOS — fast, no telemetry, and built by the developer who originally created the category-defining Mac feed reader. | MIT | [EN](categories/reading-tools/netnewswire.md) · [中](categories/reading-tools/netnewswire.zh.md) |
+| **Just Read** | A customizable "read mode" browser extension that strips ads, modals, and navigation from article pages and reformats them into a clean, readable view — with optional editing, highlighting, and (premium) cross-device save and OpenAI summaries. | Unlicensed (EULA) | [EN](categories/reading-tools/just-read.md) · [中](categories/reading-tools/just-read.zh.md) |
+
+### speech
+
+| Project | Use when | License | Page |
+|---|---|---|---|
+| **SpeechBrain** | An all-in-one, PyTorch-based speech toolkit covering speech recognition, speaker recognition, enhancement, separation, language identification, text-to-speech and more — with hundreds of ready-to-run training "recipes" on standard datasets. | Apache-2.0 | [EN](categories/speech/speechbrain.md) · [中](categories/speech/speechbrain.zh.md) |
+
+### terminal-ui
+
+| Project | Use when | License | Page |
+|---|---|---|---|
+| **colorama** | A tiny pure-Python library that makes ANSI color/style escape codes work on Windows — call `colorama.init()` once and the same ANSI sequences that color your output on Linux/macOS now render correctly in legacy Windows terminals too. | BSD-3-Clause | [EN](categories/terminal-ui/colorama.md) · [中](categories/terminal-ui/colorama.zh.md) |
+| **asciimatics** | A cross-platform Python library for full-screen text UIs — a single curses-like API plus a widget/forms toolkit and an ASCII animation/effects engine, working the same on Linux, macOS and Windows. | Apache-2.0 | [EN](categories/terminal-ui/asciimatics.md) · [中](categories/terminal-ui/asciimatics.zh.md) |
+| **Terminal Markdown Viewer (mdv)** | A Python CLI (`mdv`) that renders Markdown into styled, colourised, terminal-friendly text — tables, code blocks with syntax highlighting, admonitions and themes — so you can read `.md` files in a plain terminal. | BSD-3-Clause | [EN](categories/terminal-ui/terminal-markdown-viewer.md) · [中](categories/terminal-ui/terminal-markdown-viewer.zh.md) |
+| **ART** | A pure-Python ASCII-art library: turn text into figlet-style large-font banners (`text2art`), insert single-character art pieces (`art`), and wrap output in decorative borders — hundreds of fonts and art pieces, no system dependencies. | MIT | [EN](categories/terminal-ui/art.md) · [中](categories/terminal-ui/art.zh.md) |
+| **asciify** | A small Python script that converts an image into ASCII art — it downsamples the picture, maps pixel brightness to a ramp of characters, and prints/saves the result as text. | NONE | [EN](categories/terminal-ui/asciify.md) · [中](categories/terminal-ui/asciify.zh.md) |
+
+Categories follow the tree in [INDEX.md](INDEX.md).
+| **Readability.js** | The standalone version of the readability library behind Firefox Reader View — give it a DOM document, get back the article's title, byline, and cleaned main content with the navigation, ads, and boilerplate stripped out. | Apache-2.0 | [EN](categories/web-scraping/readability-js.md) · [中](categories/web-scraping/readability-js.zh.md) |
+| **python-readability** | A fast, lxml-based Python port of arc90's Readability — hand it an HTML document and it returns the cleaned main body (`summary()`) and the title (`title()`), stripping nav, ads, and boilerplate. | Apache-2.0 | [EN](categories/web-scraping/python-readability.md) · [中](categories/web-scraping/python-readability.zh.md) |
+| **dragnet** | A machine-learning approach to web content extraction — trained models pull the main article (and optionally user comments) out of a page's HTML, using diverse text/markup features rather than hand-tuned heuristics. | MIT | [EN](categories/web-scraping/dragnet.md) · [中](categories/web-scraping/dragnet.zh.md) |
+| **boilerpipe** | A Java library for boilerplate removal and full-text extraction from HTML — the classic, algorithm-driven approach (shallow text features, link density, tag ratios) that pulls the article out and drops navigation, ads, and surrounding clutter. | Apache-2.0 | [EN](categories/web-scraping/boilerpipe.md) · [中](categories/web-scraping/boilerpipe.zh.md) |
+| **fuck-login** | A collection of ~20 Python scripts that script the login flow of well-known (mostly Chinese) websites — Zhihu, Weibo, Baidu, JD, Bilibili, GitHub, Douban — so you can carry the resulting session cookies into a scraper. A 2016-era teaching repo, explicitly **no longer maintained**. | NONE | [EN](categories/web-scraping/fuck-login.md) · [中](categories/web-scraping/fuck-login.zh.md) |
+| **gopup** | A Python library that wraps a grab-bag of (mostly Chinese) public data sources behind one-line calls returning pandas DataFrames — Baidu/Weibo/Google search indices, Chinese macro indicators (CPI/PPI/PMI, money supply, FX rates), Shibor/LPR rates, unicorn-company lists, box-office and epidemic data, and more. | NONE | [EN](categories/web-scraping/gopup.md) · [中](categories/web-scraping/gopup.zh.md) |
+| **PRAW** | The "Python Reddit API Wrapper" — a Python package that gives you typed, Pythonic objects (Submission, Comment, Subreddit, Redditor) over Reddit's official OAuth API, and handles rate-limit compliance so you don't have to sprinkle `sleep` calls in your code. | BSD-2-Clause | [EN](categories/web-scraping/praw.md) · [中](categories/web-scraping/praw.zh.md) |
+| **Scrapyd** | A service daemon for deploying and running Scrapy spiders over a JSON HTTP API — eggify a Scrapy project, upload it, and schedule/cancel/monitor crawl jobs remotely. The canonical "run Scrapy in production" daemon, from the Scrapy org itself. | BSD-3-Clause | [EN](categories/web-scraping/scrapyd.md) · [中](categories/web-scraping/scrapyd.zh.md) |
+| **SpiderKeeper** | A Flask-based admin web UI / dashboard for Scrapy spiders that sits on top of Scrapyd — deploy projects, schedule periodic jobs, and watch run stats from a browser. It crawls nothing itself; it's a management layer over one or more Scrapyd servers. Lightweight, popular, and largely stale. | MIT | [EN](categories/web-scraping/spiderkeeper.md) · [中](categories/web-scraping/spiderkeeper.zh.md) |
 ## Why this exists
 
 Most OSS READMEs are marketing: they tell you what a project does and why it's great. They do

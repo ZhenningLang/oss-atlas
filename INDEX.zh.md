@@ -48,6 +48,18 @@
 | **debugging-proxy** | HTTP(S)/WebSocket 调试代理——抓取、检查、改写并 mock 流量。 | [→](categories/debugging-proxy/INDEX.zh.md) |
 | **web-scraping** | 从网页抓取并提取内容/结构——文章正文提取与 HTML 解析。 | [→](categories/web-scraping/INDEX.zh.md) |
 
+| **auth** | 认证与授权库——登录提供方与权限规则。 | [→](categories/auth/INDEX.zh.md) |
+| **databases** | 数据库与数据库工具——客户端、GUI、同步，以及 Redis/ES 兼容存储。 | [→](categories/databases/INDEX.zh.md) |
+| **desktop-automation** | 程序化桌面 GUI 自动化(鼠标/键盘/屏幕)。 | [→](categories/desktop-automation/INDEX.zh.md) |
+| **game-dev** | 游戏开发库与引擎。 | [→](categories/game-dev/INDEX.zh.md) |
+| **kafka-tools** | Apache Kafka 客户端与管理界面。 | [→](categories/kafka-tools/INDEX.zh.md) |
+| **networking** | 网络库——SSH、DNS、隧道、RPC 与流量整形。 | [→](categories/networking/INDEX.zh.md) |
+| **nginx-modules** | NGINX / OpenResty 扩展模块(Lua、上传等)。 | [→](categories/nginx-modules/INDEX.zh.md) |
+| **python-tooling** | Python 开发者工具——编译器、进程注入、notebook、异步 HTTP。 | [→](categories/python-tooling/INDEX.zh.md) |
+| **reading-tools** | 阅读工具——阅读模式扩展与 RSS 阅读器。 | [→](categories/reading-tools/INDEX.zh.md) |
+| **speech** | 语音处理工具包(ASR、TTS、说话人任务)。 | [→](categories/speech/INDEX.zh.md) |
+| **terminal-ui** | 终端/CLI UI 库——着色、TUI、ASCII art、终端渲染。 | [→](categories/terminal-ui/INDEX.zh.md) |
+
 ## 如何新增分类
 
 新分类 = `categories/` 下一个新目录，自带 `INDEX.md` **和** `INDEX.zh.md`，并在本表和

@@ -13,6 +13,7 @@
 | **PageIndex** | Use it when vector RAG returns similar-but-irrelevant chunks over a few long, structured documents needing auditable citations. | [→](pageindex.md) |
 | **Understand-Anything** | Use it when you want any codebase turned into an explorable, queryable knowledge graph for an agent — younger and less proven than graphify. | [→](understand-anything.md) |
 | **FAISS** | Use it when you need a fast in-process ANN vector index for embeddings — a library, not a managed vector DB. | [→](faiss.md) |
+| **text2vec** | A Python library that turns text into vectors for semantic similarity and retrieval — bundling Word2Vec, BM25, Sentence-BERT, CoSENT and BGE-style methods behind one `pip install`, with a strong Chinese-language focus. | [→](text2vec.md) |
 
 ## Comparison matrix
 
@@ -24,6 +25,7 @@
 | [PageIndex](pageindex.md) | ✅ | Use it when vector RAG returns similar-but-irrelevant chunks over a few long, structured documents needing auditable citations. |
 | [Understand-Anything](understand-anything.md) | ✅ | Code → explorable knowledge graph an agent can query; younger than graphify, with an unverified star count and egress boundary. |
 | [FAISS](faiss.md) | ✅ | Use it when you need a fast in-process ANN vector index for embeddings — a library, not a managed vector DB. |
+| [text2vec](text2vec.md) | ✅ | A Python library that turns text into vectors for semantic similarity and retrieval — bundling Word2Vec, BM25, Sentence-BERT, CoSENT and BGE-style methods behind one `pip install`, with a strong Chinese-language focus. |
 | Neo4j / LlamaIndex / LightRAG / Weaviate | 未收录 | Other graph/RAG retrieval stacks named across the pages. |
 
 ## What belongs here

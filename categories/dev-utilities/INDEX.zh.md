@@ -16,6 +16,9 @@
 | **tqdm** | 当你想给 Python 循环/CLI/notebook 加一个快速、低开销的进度条时用它。 | [→](tqdm.zh.md) |
 | **SlimToolkit** | 当你想在不重写 Dockerfile 的情况下自动瘦身并加固臃肿的容器镜像时用它——注意它可能删掉运行时动态加载的文件。 | [→](slim.zh.md) |
 | **Faker (faker-js)** | 当你需要在 JS/TS 里生成逼真的假/mock 数据(姓名、地址、金融…)用于测试和填充时用它。 | [→](faker-js.zh.md) |
+| **fontTools** | 一个 Python 库（外加一组命令行工具），用来读取、写入、操纵字体文件——TrueType/OpenType、WOFF/WOFF2、AFM 等等——是开源字体工具栈事实上的基石。 | [→](fonttools.zh.md) |
+| **Flashlight** | 给老版 macOS 用的「非官方 Spotlight API」——一套注入 Spotlight 的插件系统，让你输入 `weather`、`define`、货币换算等就能在原生 Spotlight 里直接看到自定义结果。这个 `w0lfschild` 仓库是源自 nate-parrott 原项目的一连串分叉中的一个。 | [→](flashlight.zh.md) |
+| **IdeaVim** | JetBrains 系 IDE（IntelliJ IDEA、PyCharm、GoLand、WebStorm、Rider 等）的 Vim 模拟插件——在 IDE 内提供 Vim 的 motion、模式、寄存器、宏，以及 `.ideavimrc`，由 JetBrains 自己维护。 | [→](ideavim.zh.md) |
 
 ## 对比矩阵
 
@@ -30,6 +33,9 @@
 | [tqdm](tqdm.zh.md) | ✅ | 当你想给 Python 循环/CLI/notebook 加一个快速、低开销的进度条时用它。 |
 | [SlimToolkit](slim.zh.md) | ✅ | 当你想在不重写 Dockerfile 的情况下自动瘦身并加固臃肿的容器镜像时用它——注意它可能删掉运行时动态加载的文件。 |
 | [Faker (faker-js)](faker-js.zh.md) | ✅ | 当你需要在 JS/TS 里生成逼真的假/mock 数据(姓名、地址、金融…)用于测试和填充时用它。 |
+| [fontTools](fonttools.zh.md) | ✅ | 一个 Python 库（外加一组命令行工具），用来读取、写入、操纵字体文件——TrueType/OpenType、WOFF/WOFF2、AFM 等等——是开源字体工具栈事实上的基石。 |
+| [Flashlight](flashlight.zh.md) | ✅ | 给老版 macOS 用的「非官方 Spotlight API」——一套注入 Spotlight 的插件系统，让你输入 `weather`、`define`、货币换算等就能在原生 Spotlight 里直接看到自定义结果。这个 `w0lfschild` 仓库是源自 nate-parrott 原项目的一连串分叉中的一个。 |
+| [IdeaVim](ideavim.zh.md) | ✅ | JetBrains 系 IDE（IntelliJ IDEA、PyCharm、GoLand、WebStorm、Rider 等）的 Vim 模拟插件——在 IDE 内提供 Vim 的 motion、模式、寄存器、宏，以及 `.ideavimrc`，由 JetBrains 自己维护。 |
 
 ## 什么该放这里
 

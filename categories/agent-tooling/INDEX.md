@@ -14,6 +14,8 @@
 | **Context Mode** | Use it when a coding agent burns context on raw tool output and you want sandboxed execution plus compaction-surviving session memory. | [→](context-mode.md) |
 | **Planning with Files** | Use it when a long agent run keeps losing its plan to /clear, compaction, or crashes. | [→](planning-with-files.md) |
 | **Vercel Skills** | Use it when you want an npm-style CLI to install, find, and update SKILL.md packs across many coding agents. | [→](vercel-skills.md) |
+| **OpenSandbox** | A general-purpose, secure sandbox runtime and platform for AI agents — multi-language SDKs, a unified sandbox protocol, and Docker/Kubernetes backends for running untrusted agent-generated code, GUI/browser automation, and RL/eval workloads in isolated environments. | [→](opensandbox.md) |
+| **AgentsView** | A local-first desktop/CLI app that discovers, searches, and analyzes your coding-agent sessions across 40+ agents (Claude Code, Codex, Cursor, Gemini, and more) — full-text search, token-usage analytics, and cost tracking, all on your machine without an account. | [→](agentsview.md) |
 
 ## Comparison matrix
 
@@ -26,6 +28,8 @@
 | [Context Mode](context-mode.md) | ✅ | Use it when a coding agent burns context on raw tool output and you want sandboxed execution plus compaction-surviving session memory. |
 | [Planning with Files](planning-with-files.md) | ✅ | Use it when a long agent run keeps losing its plan to /clear, compaction, or crashes. |
 | [Vercel Skills](vercel-skills.md) | ✅ | Use it when you want an npm-style CLI to install, find, and update SKILL.md packs across many coding agents. |
+| [OpenSandbox](opensandbox.md) | ✅ | A general-purpose, secure sandbox runtime and platform for AI agents — multi-language SDKs, a unified sandbox protocol, and Docker/Kubernetes backends for running untrusted agent-generated code, GUI/browser automation, and RL/eval workloads in isolated environments. |
+| [AgentsView](agentsview.md) | ✅ | A local-first desktop/CLI app that discovers, searches, and analyzes your coding-agent sessions across 40+ agents (Claude Code, Codex, Cursor, Gemini, and more) — full-text search, token-usage analytics, and cost tracking, all on your machine without an account. |
 | Taskmaster / GitHub Issues + gh / Linear | 未收录 | Other task/work-tracking backends for agents named across the pages. |
 
 ## What belongs here

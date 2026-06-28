@@ -16,6 +16,9 @@
 | **tqdm** | Use it when you want a fast, low-overhead progress bar for Python loops/CLI/notebooks. | [→](tqdm.md) |
 | **SlimToolkit** | Use it when you want to auto-minify & harden a bloated container image without rewriting the Dockerfile — beware it can strip dynamically-loaded files. | [→](slim.md) |
 | **Faker (faker-js)** | Use it when you need realistic fake/mock data (names, addresses, finance…) for tests and seeding in JS/TS. | [→](faker-js.md) |
+| **fontTools** | A Python library (plus a set of command-line tools) to read, write, and manipulate font files — TrueType/OpenType, WOFF/WOFF2, AFM, and more — the de-facto foundation of the open-source font tooling stack. | [→](fonttools.md) |
+| **Flashlight** | An "unofficial Spotlight API" for older macOS — a plugin system that injects into Spotlight so you can type `weather`, `define`, currency conversions, etc. and get custom results inline. This `w0lfschild` repo is one fork in a chain descending from nate-parrott's original. | [→](flashlight.md) |
+| **IdeaVim** | A Vim emulation plugin for JetBrains IDEs (IntelliJ IDEA, PyCharm, GoLand, WebStorm, Rider, etc.) — Vim motions, modes, registers, macros, and a `.ideavimrc` inside the IDE, maintained by JetBrains itself. | [→](ideavim.md) |
 
 ## Comparison matrix
 
@@ -30,6 +33,9 @@
 | [tqdm](tqdm.md) | ✅ | Use it when you want a fast, low-overhead progress bar for Python loops/CLI/notebooks. |
 | [SlimToolkit](slim.md) | ✅ | Use it when you want to auto-minify & harden a bloated container image without rewriting the Dockerfile — beware it can strip dynamically-loaded files. |
 | [Faker (faker-js)](faker-js.md) | ✅ | Use it when you need realistic fake/mock data (names, addresses, finance…) for tests and seeding in JS/TS. |
+| [fontTools](fonttools.md) | ✅ | A Python library (plus a set of command-line tools) to read, write, and manipulate font files — TrueType/OpenType, WOFF/WOFF2, AFM, and more — the de-facto foundation of the open-source font tooling stack. |
+| [Flashlight](flashlight.md) | ✅ | An "unofficial Spotlight API" for older macOS — a plugin system that injects into Spotlight so you can type `weather`, `define`, currency conversions, etc. and get custom results inline. This `w0lfschild` repo is one fork in a chain descending from nate-parrott's original. |
+| [IdeaVim](ideavim.md) | ✅ | A Vim emulation plugin for JetBrains IDEs (IntelliJ IDEA, PyCharm, GoLand, WebStorm, Rider, etc.) — Vim motions, modes, registers, macros, and a `.ideavimrc` inside the IDE, maintained by JetBrains itself. |
 
 ## What belongs here
 
