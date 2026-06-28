@@ -430,12 +430,34 @@ categories/<cat>/<subcat>/INDEX.md …          # deeper nodes — the tree self
 ```
 
 `categories/` is a **recursive, self-balancing tree**: when a category gets too many projects it
-splits into sub-categories (the linter WARNs; `refactor-index` does the split). Each project page =
-YAML frontmatter (**facts**, dated) + Markdown body (**judgment**). Required sections depend on
-`type`: all entries have `When to use / When NOT to use / Comparison` and close with a
-`Caveats (unverified)` uncertainty ledger; software (non-`skill-pack`) entries also have
-`Tech stack / Dependencies / Ops difficulty`. English is the agent-canonical path;
-the `.zh.md` sibling is the same content in Chinese.
+splits into sub-categories (the linter WARNs; `refactor-index` does the split). English is the
+agent-canonical path; the `.zh.md` sibling is the same content in Chinese.
+
+### Anatomy of a project page
+
+Each page = **YAML frontmatter (facts, dated)** + **Markdown body (judgment)**. The two are kept
+apart on purpose: facts go stale and get re-verified (`last_verified`); judgment is opinion and is
+labeled (`[未验证]` / `[推断]`), never asserted as eternal truth.
+
+**Frontmatter** (identical across the EN/中 pair — facts are language-neutral):
+`name · slug · repo · category · tags · language · license · maturity` (dated) · `last_verified` · `type`
+(`tool | library | app | framework | service | model | skill-pack`).
+
+**Body sections** (the exact set depends on `type`):
+
+| Section (EN / 中) | Required for | What it carries |
+|---|---|---|
+| `When to use` / `何时使用` | all types | a **User Story** — a concrete second-person scenario, not a feature list |
+| `When NOT to use` / `何时不用` | all types | the decisive filter: anti-patterns, scale ceilings, lock-in, maintenance risk |
+| `Comparison` / `横向对比` | all types | a table vs real substitutes (`未收录` when an alternative isn't indexed yet) |
+| `Tech stack` / `技术栈` | non-`skill-pack` | languages, frameworks, datastores it's built on |
+| `Dependencies` / `依赖` | non-`skill-pack` | runtime/infra you must run (db, services, hardware) |
+| `Ops difficulty` / `运维难度` | non-`skill-pack` | low / medium / high + why |
+| `Health & viability` / `健康度与可持续性` | all types | dated viability verdict — maintenance, governance/bus-factor, backing, **age × Lindy**, adoption, risk flags |
+| `Caveats (unverified)` / `存疑（未验证）` | all types | the uncertainty ledger — one `[未验证]`/`[推断]` bullet per unverified fact |
+
+The full contract is [tools/schema.md](tools/schema.md); the linter ([tools/lint.py](tools/lint.py))
+enforces this shape (sections, bilingual parity, fullwidth Chinese punctuation, README parity).
 
 ## Freshness
 

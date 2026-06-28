@@ -422,10 +422,32 @@ categories/<分类>/<子类>/INDEX.md …           # 更深的节点 —— 树
 ```
 
 `categories/` 是一棵**递归、自平衡的树**：某个分类项目过多时会拆成子分类（linter 告警，
-`refactor-index` 执行拆分）。每个项目页 = YAML frontmatter（**事实**，带日期）+ 正文（**判断**）。
-必需小节随 `type` 而定：所有条目都有 `何时使用 / 何时不用 / 横向对比`，并以 `存疑（未验证）`
-不确定性账本收尾；软件类（非 `skill-pack`）还有 `技术栈 / 依赖 / 运维难度`（英文页用英文标题）。
-英文是 agent 默认读取的 canonical 路径，`.zh.md` 是同一内容的中文版。
+`refactor-index` 执行拆分）。英文是 agent 默认读取的 canonical 路径，`.zh.md` 是同一内容的中文版。
+
+### 一个项目页的结构
+
+每页 = **YAML frontmatter（事实，带日期）** + **正文（判断）**。两者刻意分开：事实会过期、需要
+重新核验（`last_verified`）；判断是观点，要带标注（`[未验证]` / `[推断]`），绝不当成永恒真理断言。
+
+**Frontmatter**（中英成对、逐字一致——事实与语言无关）：
+`name · slug · repo · category · tags · language · license · maturity`（带日期）· `last_verified` · `type`
+（`tool | library | app | framework | service | model | skill-pack`）。
+
+**正文小节**（确切集合随 `type` 而定）：
+
+| 小节（英 / 中） | 必需于 | 承载什么 |
+|---|---|---|
+| `When to use` / `何时使用` | 所有类型 | 一个 **User Story**——具体的第二人称场景，不是功能清单 |
+| `When NOT to use` / `何时不用` | 所有类型 | 决定性筛子：反模式、规模天花板、锁定、维护风险 |
+| `Comparison` / `横向对比` | 所有类型 | 与真实替代品的对比表（替代品尚未收录则标 `未收录`） |
+| `Tech stack` / `技术栈` | 非 `skill-pack` | 它构建于哪些语言、框架、数据存储 |
+| `Dependencies` / `依赖` | 非 `skill-pack` | 你必须自己跑的运行时/基建（数据库、服务、硬件） |
+| `Ops difficulty` / `运维难度` | 非 `skill-pack` | 低 / 中 / 高 + 原因 |
+| `Health & viability` / `健康度与可持续性` | 所有类型 | 带日期的可持续性判断——维护、治理与 bus factor、背书方、**年龄 × Lindy**、采用度、风险旗标 |
+| `Caveats (unverified)` / `存疑（未验证）` | 所有类型 | 不确定性账本——每条未验证事实一个 `[未验证]`/`[推断]` 条目 |
+
+完整契约见 [tools/schema.md](tools/schema.md)；linter（[tools/lint.py](tools/lint.py)）强制这套形状
+（小节、中英对齐、中文全角标点、README 对齐）。
 
 ## 新鲜度
 
