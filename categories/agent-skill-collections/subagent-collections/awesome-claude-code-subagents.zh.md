@@ -38,6 +38,13 @@ type: skill-pack
 | Anthropic 内置 subagent 文档 / 自己手写的 agent | 未收录 | 自己创作 subagent 的原生方式。本 repo 是叠在同一机制上的第三方起步集，因此可能与你已写的 agent 重复或冲突。 |
 | Superpowers / SDLC 方法论包 | 未收录 | 那类包给单个 agent 装的是*工作流纪律*（brainstorm→plan→TDD→verify）；本项目装的是一*组角色专家*。正交——可以同时用，但解决的是不同问题。 |
 
+## 健康度与可持续性
+
+- **维护** —— [未验证] 最近一次 push 在 2026-06，未归档，open issue 很少（约 2 个）；截至 2026-06 提交活动是当前的，因此读作**活跃维护**。没有 tag release 意味着你跟的是会动的 `main`，而非固定切片。
+- **治理与 bus factor** —— [推断] 组织所有（`VoltAgent`）；这类单仓 persona 合集通常靠一小撮维护者，约 22k star（2026-06）代表热度而非治理保证。无基金会背书。
+- **年龄与 Lindy** —— [推断] 创建于 2025-07，截至 2026-06 约 1 岁：年轻且被热捧，**还谈不上 Lindy 赌注**。它所针对的 `~/.claude/agents/` subagent 格式本身就很新；在把它定为标准前，把寿命当作未经证实。
+- **风险标记** —— [推断] 无版本的 `main` 是主要的变动风险——一次 push 可能改名或改写 persona、并改变自动委派的路由。未见 relicense/CVE 信号；全仓 MIT。
+
 ## 存疑（未验证）
 
 - [未验证] 2026-06-26 的 GitHub 元数据：license MIT，主语言 Shell（来自安装脚本），无 tagged release（`latestRelease` 为 null），最后 push 于 2026-06-24，未归档——依赖当前内容前请重新核验。

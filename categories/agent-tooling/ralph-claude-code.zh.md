@@ -60,6 +60,13 @@ type: tool
 
 **低到中。** 安装是 `git clone` + `./install.sh`，装好一批全局命令；单项目层面是 `ralph-enable` 向导或 PRD 导入，顺利时你跑 `ralph --monitor` 看着即可。难度上升的原因：你得保证 Unix 工具链齐全且正确(Bash 版本、`jq`、macOS 上的 coreutils `gtimeout`、tmux)；安全旋钮(`--calls`、`--timeout`、熔断阈值)要你自己按成本容忍度调；`.ralph/` 文件布局和 CLI flag 跨版本变过(v0.10 的破坏性迁移需要 `ralph-migrate`)；无人值守跑起来你仍要盯预算、沙箱成本告警和偶发卡死的循环。让它不进沙箱直接碰真仓库是主要风险——备份分支和 `--rollback` 存在，正是因为自治循环可能把现场弄乱。
 
+## 健康度与可持续性
+
+- **维护** —— 截至 2026-06 最后 push 在 2026-06，处于 v0.11.x 线，即活跃推进，但**没有任何 GitHub release tag**——版本号来自仓库内 README 文本，而非已发布制品。v0.10 已经把全部文件挪进 `.ralph/`（一次需要 `ralph-migrate` 的破坏性布局变更），所以预期 flag / 布局还会继续变。[推断]
+- **治理 / 巴士因子** —— `[推断]` 单维护者、`User` 所有的仓库（`frankbria`）；无 release，无团队或基金会。一人维护的套壳却有约 9.5k star，是巴士因子警示——对你无法重新改造的东西，弃坑与 flag / 布局漂移风险不可忽视。
+- **年龄与 Lindy** —— 创建于 2025-08，截至 2026-06 不足一年且仍在 1.0 之前：太年轻，给不出 Lindy 裁决。它封装的是一套已成型的*技法*（Geoffrey Huntley 的 Ralph 循环），但这个具体套壳在长寿上未经检验。
+- **风险旗标** —— `[未验证]` MIT，无重新授权历史。结构性风险是**供应商锁定**：它专门套在 Anthropic 的 `claude` CLI 上（多供应商是 1.0 前的*计划项*，尚未交付）。运维上它会无人值守地大量发起付费 API 调用，所以成本失控是真实风险——熔断器和速率限制是仅有的护栏。
+
 ## 存疑（未验证）
 
 - [未验证] **没有 GitHub release tag。** `gh repo view` 返回 `latestRelease: null`,Releases 页面写着「There aren't any releases here」。「v0.11.5」/「v0.11.x」版本及整份 changelog(784 个测试、双条件闸门修复等)都来自仓库内 README 文本，而非已发布的 release 制品——版本细节当作仓库自报。

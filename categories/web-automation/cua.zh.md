@@ -61,6 +61,14 @@ type: framework
 
 **中到高。** Cloud 路线（cua.ai）是轻松入口——托管沙箱，无需照看本地 VM。自托管更重：你要运维 VM/容器、computer-server 和驱动，在 Apple Silicon 上还要管理 Lume/Lumier 客户机镜像。跨多个 `v0.x` 包你得跟踪好几条独立版本线，视觉 agent 循环还带来持续的**每张截图的模型成本/延迟**，以及把桌面截图发给模型厂商的数据治理问题。Linux 驱动尚为 pre-release，意味着各平台覆盖仍不均衡。
 
+## 健康度与可持续性
+
+- **维护——多包并行、活跃。** 最后一次 push 在 2026-06，未归档；monorepo 的各包（cua-agent v0.8.4、cua-sandbox v0.1.17、cua-cloud、cua-driver-rs v0.6.8、cua-bench）均在 2026-06 更新。活跃，但你要跟踪**多条独立版本线**，且 `cua-driver-rs`/Linux 驱动标注为 pre-release。`[未验证]`
+- **治理 / 背书——单一创业公司（trycua）。** 仓库为 **Organization** 所有（`trycua/cua`），约 19k star[未验证]。背后是一家风投阶段公司（cua.ai 托管产品的母体）——比单个维护者好，但其寿命系于这家公司的存续与融资。`[推断]`
+- **年龄与 Lindy——年轻（创建于 2025-01，截至 2026-06 约 1.5 年）。** 够久到能展示真实的基准集成（OSWorld/ScreenSpot/Windows Arena），但众多 `v0.x` 包标志着 API 仍在稳定前；尚无 Lindy 先验。预期破坏性变更；按包 pin 版本。
+- **采用 / 生态——可信的小众。** 视觉 computer-use 基础设施，带基准+训练面和托管云入口；经 liteLLM 做到模型无关，而非锁定单一厂商——对一个早期项目而言是真实的生态信号。
+- **风险标志——open-core + AGPL 可选依赖。** MIT 内核，但托管的 Cua Cloud 是商业层（open-core 张力），且可选依赖 `ultralytics` 为 **AGPL-3.0**——在为部署假定"仅 MIT"许可前，确认你的使用路径是否会引入它。`[推断]` 桌面截图也会被发送到你的模型厂商（数据治理标志）。
+
 ## 存疑（未验证）
 
 - [未验证] star 数约 19.0k（gh 快照 2026-06-26）——GitHub star 不可靠且随时间变化，仅作参考。

@@ -62,6 +62,14 @@ ART is built for exactly this. You keep your agent code in Python and route its 
 
 **Medium → high.** The conceptual model (client records trajectories, server trains, adapter hot-reloads) is clean, and the managed/serverless W&B path can take infra off your plate. But self-hosting means operating a GPU training box plus a fast-moving vLLM/Unsloth/TRL stack, instrumenting your own agent and task environment, and managing RULER judge cost and reliability (small group sizes can give inconsistent rankings; `swallow_exceptions=True` is recommended in production). That's meaningfully more than a single-pass SFT job.
 
+## Health & viability
+
+- **Maintenance — active (as of 2026-06).** Repo pushed 2026-06; latest release v0.5.17 reported 2026-03-13, with frequent shipping on a fast-moving stack. Pre-1.0, so expect API movement and breakage from upstream (vLLM/Unsloth/TRL/torchtune) churn. Not archived. [未验证]
+- **Governance & backing — single vendor (OpenPipe).** Organization-owned by OpenPipe, a venture-style company whose managed/serverless RL offering (with W&B) is the monetized path. Roadmap and the RULER reward tooling are vendor-driven; longevity is tied to OpenPipe's commercial trajectory, and leaning on the managed path carries lock-in risk. [推断]
+- **Age & Lindy — young / unproven.** Created 2025-03, ~1 year old. No Lindy track record yet; this is an early bet on agent-RL becoming mainstream and on OpenPipe sustaining the project, not on durability.
+- **Adoption & ecosystem.** ~10k stars and integrations (LangGraph, MCP·RL, W&B, Langfuse); the headline ART·E "beats o3" and "40% cheaper / 28% faster" figures are OpenPipe's own benchmarks/marketing, not independently confirmed. Built on top of Unsloth/vLLM/TRL/torchtune, so it inherits that ecosystem's reach and its instability.
+- **Risk flags — vendor lock-in + fast-moving deps.** Apache-2.0, no relicense/CVE history asserted. Real flags: managed-path lock-in toward OpenPipe/W&B, breakage from a fast upstream stack, and v0.x API churn.
+
 ## Caveats (unverified)
 
 - ART·E "beats o3 on email retrieval" is an OpenPipe-published benchmark on their own task — treat as [未验证] vendor claim.

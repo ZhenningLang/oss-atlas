@@ -41,6 +41,13 @@ You install Planning with Files (`npx skills add OthmanAdi/planning-with-files -
 | Native agent memory (`CLAUDE.md`, Cursor rules, Codex `AGENTS.md`) | 未收录 | Built-in, always loaded, no extra install — but a static instruction file, not a per-task evolving plan with progress logging and a stop gate. |
 | Manus / hosted autonomous-agent products | 未收录 | The commercial pattern this skill imitates ("work like Manus"); managed and richer, but a hosted product, not an open, IDE-local, repo-committable skill. |
 
+## Health & viability
+
+- **Maintenance** — last push 2026-06 with a recent release (v3.1.3, 2026-06-16) as of 2026-06: actively maintained, even fast-moving (v2.x → v3.1.3 in a short window). The cadence is a double-edged sword: multiple hotfixes for broken YAML frontmatter and hook-flag drift mean the surface is volatile, and only ~8 open issues. [推断]
+- **Governance / bus factor** — `[推断]` single-author (`User`-owned, `OthmanAdi`); ~24k stars on a one-maintainer skill repo is a bus-factor flag, and the gated/autonomous modes are new (v3.0+). No team or foundation behind the roadmap — verify behavior before trusting it to babysit unattended runs.
+- **Age & Lindy** — created 2026-01, so only months old as of 2026-06 despite the v3 version number (which reflects rapid iteration, not maturity): too young for a Lindy verdict. Read the high stars as ecosystem hype, not durability.
+- **Risk flags** — `[未验证]` MIT, no relicense history. The real risk is *volatility on an unattended path*: a fast-churning single-author project whose completion gate is advisory-by-design (not a hard "won't stop until done" lock) and whose hook behavior degrades silently on IDEs that don't fire the events.
+
 ## Caveats (unverified)
 
 - [未验证] Star count surfaced ~23,968 as of 2026-06; GitHub stars in this ecosystem are unreliable and date-sensitive — treat as indicative only.

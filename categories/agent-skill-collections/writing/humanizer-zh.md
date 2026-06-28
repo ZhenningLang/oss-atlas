@@ -38,6 +38,13 @@ You reach for it specifically when your output language is Chinese and you'd rat
 | Hand-written de-slop prompt in `CLAUDE.md` | 未收录 | A few inline rules you maintain yourself: zero install and fully yours, but you re-derive and re-tune the pattern list instead of inheriting a vetted ~24-item checklist. |
 | Wikipedia "Signs of AI writing" guide | 未收录 | The reference source behind the rubric — a human-readable guide, not an installable skill. Use it to audit or extend the checklist, not to run edits. |
 
+## Health & viability
+
+- **Maintenance** — last push 2026-01 (as of 2026-06), so ~5 months idle with no tagged release; this is a small localization repo, not an evolving product. Treat it as coasting-toward-static rather than actively maintained. [推断]
+- **Governance / bus factor** — single-author (`User`-owned) localization of upstream `blader/humanizer`; ~11k stars on a one-person, single-purpose repo is a bus-factor flag — if the author stops, the Chinese pattern list freezes wherever it was. [推断]
+- **Age & Lindy** — created 2026-01, so under a year old as of 2026-06: too young to claim a Lindy track record, and being a translation it inherits upstream's direction rather than setting its own. [推断]
+- **Risk flags** — `[未验证]` no scoring/enforcement layer and no auto-fire runner; it's prompt-only markdown. The real durability risk is *drift*: the upstream rubric can evolve while this snapshot does not, so the value decays silently unless re-synced. MIT license, no relicense history.
+
 ## Caveats (unverified)
 
 - [未验证] License is MIT and the repo is not archived per GitHub metadata as of 2026-06-26; `latestRelease` is null (no tagged version) and last push was 2026-01-19 — re-verify maturity before depending on it.

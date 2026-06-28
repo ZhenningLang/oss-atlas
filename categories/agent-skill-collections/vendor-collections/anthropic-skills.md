@@ -39,6 +39,14 @@ You reach for it specifically when you want (a) the document skills (`docx`, `pd
 | Third-party community skill packs (e.g. Superpowers) | 未收录 | Opinionated SDLC/methodology bundles layered on top of an agent. This repo is narrower and first-party: reference task skills + the authoring spec, not a full workflow methodology. |
 | Roll your own `SKILL.md` skills | n/a | Maximum fit and zero external dependency, but you forgo the vendor's tested document-generation skills and the canonical spec/template. Many users fork from here as the baseline. |
 
+## Health & viability
+
+- **Maintenance** — [未验证] last pushed 2026-06, not archived; activity is current as of 2026-06, so **actively maintained**. Open-issue count is high (~990) — consistent with a very high-traffic first-party repo, not necessarily a maintenance-debt signal. No tagged releases; track `main`.
+- **Governance & backing** — [推断] org-owned and **vendor-backed by Anthropic itself** (the platform vendor that defines the Agent Skills format). Strongest possible provenance for this format, but roadmap is the vendor's to set or pivot; first-party does not equal stable API.
+- **Age & Lindy** — [推断] created 2025-09, so under ~1 year old as of 2026-06: young. Lindy is weak on age alone, but vendor backing + the canonical `spec/`/`template/` make it the **reference** others fork; betting risk is lower than a community pack of the same age.
+- **Adoption/ecosystem** — [推断] ~155k stars (2026-06) and the document skills (`docx`/`pdf`/`pptx`/`xlsx`) power Claude's own file generation — high adoption as the de-facto baseline.
+- **Risk flags** — [未验证] **mixed license**: example skills Apache-2.0, document skills are source-available (not open source), with no repo-wide LICENSE — read terms before redistributing.
+
 ## Caveats (unverified)
 
 - [未验证] No tagged releases and no repo-wide LICENSE file as of 2026-06-26; license is per-area — example skills Apache-2.0, document skills (`docx`/`pdf`/`pptx`/`xlsx`) source-available. The `Apache-2.0` in frontmatter reflects the example skills only; verify the specific skill's terms before redistribution.

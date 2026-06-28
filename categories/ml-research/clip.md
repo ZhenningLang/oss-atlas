@@ -57,6 +57,14 @@ You also reach for this specific repo when you want the canonical, minimal refer
 
 **Low.** There is no service to deploy and nothing to train — install the package, call `clip.load`, and run inference. The realistic operational work is around it, not in it: pulling and caching the weights (and handling that first-load download in air-gapped or CI environments), getting CUDA/PyTorch versions to line up, batching encodes for throughput, and engineering prompts/templates ("a photo of a {label}") since zero-shot accuracy is sensitive to wording. For serving at scale you'd typically precompute and store image embeddings in a vector index rather than re-encode per query, but that index is yours to run, not part of CLIP.
 
+## Health & viability
+
+- **Maintenance (as of 2026-06):** last pushed ~2026-03 but effectively a **frozen reference** — a fixed checkpoint set and infrequent commits, not an evolving codebase. [推断] Treat it as coasting-by-design: it still installs and runs, but don't expect new backbones, fixes, or a versioned PyPI release here.
+- **Governance / backing:** organization-owned by OpenAI — the original paper repo, not a community project. That gives provenance (these are *the* reference weights/preprocessing) but no commitment to ongoing maintenance; the live ecosystem moved to OpenCLIP and Hugging Face `transformers`.
+- **Age & Lindy verdict (created 2020-12, ~6 yr):** old *and still widely used*, which is a strong Lindy signal for the **CLIP idea and these weights** as a stable baseline. The verdict is split: the *concept/checkpoints* are Lindy-proven and safe to build on; *this specific repo as a maintained dependency* is not — its longevity is "famous and frozen," not "actively maintained."
+- **Adoption:** CLIP embeddings are foundational across retrieval, zero-shot classification, and as the text/image encoder in many downstream systems; the pattern is deeply entrenched even though most production users consume it via OpenCLIP/`transformers` rather than this repo.
+- **Risk flags:** install is `pip install git+...` (a git ref, not a release), so reproducibility hinges on pinning a commit; MIT-licensed, no relicense risk. [推断]
+
 ## Caveats (unverified)
 
 - [未验证] ~33.9k GitHub stars and last push around 2026-03 as of 2026-06; star counts are unreliable and date-sensitive — treat as indicative only.

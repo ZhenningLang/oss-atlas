@@ -60,6 +60,14 @@ It also shines as the *ingest and transport* layer in front of something heavier
 
 **Low** for the common case: copy one file (or `docker run`), pass a few flags or a small config to define volumes and users, and it's up — no DB to provision, no migrations, no extra services. Difficulty rises to **low-to-medium** when you (a) enable the optional media/thumbnail/transcode stack (now you're managing FFmpeg/Pillow versions), or (b) expose it to the internet, where the broad protocol surface (WebDAV/FTP/SFTP/TFTP/SMB) means you own TLS, a reverse proxy, real-IP handling, and locking down the riskier protocols (SMB is flagged unsafe for WAN). You own backups of the served directories and the `.hist` index.
 
+## Health & viability
+
+- **Maintenance (2026-06).** Frequent releases (v1.20.16, 2026-05-26) and last pushed 2026-06 — **active**, fast-moving, not archived. [推断]
+- **Governance / bus factor.** This is the standout flag: a **single-maintainer, `User`-owned repo** (`9001/copyparty`) with ~45k stars. Heavy adoption resting on one person is a real bus-factor risk — if the maintainer steps away, there is no foundation or vendor to carry it. The opinionated, single-author design (e.g. "sync will never be supported") is the flip side of that. [推断]
+- **Age & Lindy verdict.** ~7 years old (created 2019-05) and still actively maintained ⇒ a **moderate Lindy** signal — long enough to have proven durable, but it lives or dies with its maintainer rather than an institution. [推断]
+- **Adoption.** Strong for its niche (45k stars, packaged on Arch/Homebrew/NixOS, official Docker), which is exactly what makes the bus-factor concentration matter. [未验证]
+- **Risk flags.** MIT, no relicense or open-core found; the broad protocol surface (SMB flagged unsafe for WAN) is a *security* concern when internet-facing, separate from project viability. [推断]
+
 ## Caveats (unverified)
 
 - [未验证] Star count ~45.4k from a single `gh repo view` fetch (2026-06-26); GitHub stars are unreliable and date-sensitive — treat as indicative only.

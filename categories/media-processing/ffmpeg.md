@@ -58,6 +58,13 @@ You also reach for FFmpeg as a library, not just a CLI, when you're embedding me
 
 **Medium.** As a CLI invoked from a service it's operationally simple — a static binary, no daemon, no datastore. The real burden is elsewhere: (1) **build composition** — getting the right `--enable-*` set, codecs, and hardware backends compiled in, and keeping that build's license clean for your distribution; (2) **resource control** — transcoding is CPU/GPU- and memory-hungry, so you need concurrency limits, timeouts, and per-job caps or it will saturate a box; (3) **input hardening** — untrusted media should run sandboxed with a pinned, patched version because of the demuxer CVE surface; (4) **correctness debugging** — A/V sync, pixel formats, color/HDR metadata, and filtergraph ordering are subtle, and the same command can behave differently across FFmpeg major versions. Self-hosting the binary is easy; running a *safe, predictable, license-clean* transcode fleet is the medium-hard part.
 
+## Health & viability
+
+- **Maintenance — active and continuous (last push 2026-06).** Decades of uninterrupted development with regular releases; one of the most consistently maintained projects in any media stack [未验证]. The ~3 open issues on the GitHub mirror reflect that upstream tracking happens on its own mailing-list/bug-tracker, not that the project is idle.
+- **Governance & bus factor — broad, mature community.** `Org`-owned (`FFmpeg/`) — a long-standing multi-contributor project, not a single maintainer or a single vendor's roadmap; about as low a bus-factor risk as open source offers [推断]. (Note the historical 2011 libav fork, which merged back into irrelevance — FFmpeg is the surviving line.)
+- **Age & Lindy verdict — old and still active ⇒ as strong a Lindy bet as it gets.** Created 2011 on GitHub (roots to ~2000), still shipping in 2026, and the de-facto engine under most browsers, players, NLEs and cloud transcoders. This is the safest longevity bet in the media category — building on it is building on what the rest of the industry depends on.
+- **Risk flags — licensing is the trap, not viability.** LGPL-2.1+ core, but `--enable-gpl` (x264/x265) makes the build GPL and `--enable-nonfree` makes it **unredistributable**: a load-bearing flag for closed-source distribution you must control at build time [未验证]. Plus a large, historically CVE-heavy C parser attack surface — sandbox and patch untrusted-input pipelines.
+
 ## Caveats (unverified)
 
 - [未验证] ~61.5k GitHub stars and "active" status as of 2026-06; the README states the codebase is "mainly LGPL-licensed with optional components licensed under GPL." Star counts are time-sensitive — treat as indicative.

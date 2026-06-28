@@ -61,6 +61,13 @@ type: app
 
 **面向单操作者本地使用时低；若想托管则中到高。** 顺路径是 `git clone` → `pnpm install` → `pnpm dev` → 打开 localhost，价值完全在本地。摩擦来自：(1)登录态 agent CLI 这一硬前提——探测没命中你的二进制、或会话过期，就什么都生成不了；(2)它还 early、无 tag release，你跟的是 `main`;(3)安全姿态：路由用最宽松参数 spawn CLI、`/api/deploy` 把凭据写盘，只靠 Host 头白名单 middleware 兜。把它暴露到 loopback 之外(LAN/mDNS 走 `HTML_ANYTHING_ALLOWED_HOSTS`，或反代走 `HTML_ANYTHING_ALLOW_ANY_HOST=1`)就把真正的安全责任挪给了你。把它当个人工具，而非服务。
 
+## 健康度与可持续性
+
+- **维护（2026-06）：** [推断] 活跃但不成熟——最近 push 在 2026-06，但**没有打 tag 的 release**（自述「early but real」），所以你跟的是 `main`、没有版本线。未关闭 issue 约 53。近期活动健康；问题不在停滞的提交，而在缺少任何发版节奏。
+- **治理与背书：** [推断] 归属 `nexu-io` 组织——与 [open-design](open-design.zh.md) 同团队，后者是更大的桌面应用，本项目是其聚焦子集。所以背后有组织和同门产品，而非孤身作者，但它是一个年轻的单一厂商项目；agent 探测、`SKILL.md` 协议和设计系统模型都是从 `open-design` 逐字搬来的，因此你采纳的是那套生态的约定，而非中立标准。
+- **年龄与 Lindy：** [未验证] 仓库约创建于 2026-05，截至 2026-06 约一个月的公开历史——**全新；无 Lindy 先验。** README 数字（75 skill / 9 交付面 / 8 CLI，以及上游「40k★」之说）是宣传性的，可能随 `main` 漂移；依赖前请核实。
+- **风险标记：** [推断] **安全姿态是最突出的标记**——`/api/convert` 用最宽松参数 spawn 本地 CLI，`/api/deploy` 把凭据写盘，只靠 Host 头白名单兜。仅作为单操作者 loopback 工具才安全；把它暴露到网络会把真正的安全责任挪给你。Apache-2.0（宽松，无 relicense 历史）。它还依赖你单独安装的 agent CLI 保持兼容——自身可持续性部分受制于上游厂商 CLI。
+
 ## 存疑（未验证）
 
 - [未验证] 截至 2026-06 star 约 7.3k——GitHub star 不可靠且对时间敏感，仅供参考。

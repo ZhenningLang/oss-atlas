@@ -58,6 +58,14 @@ You reach for it when the bottleneck is *scale and cost*: fitting a model that d
 
 **High.** This is distributed-systems software, and the difficulty is inherent to the job, not the framework's fault. The happy path (single node, one parallelism plugin) is approachable, but real use means multi-node launch and networking, matching CUDA/PyTorch/NCCL versions (a perennial source of breakage), and choosing a parallelism configuration (ZeRO stage × TP × PP × offload) that fits both your model architecture and your interconnect — a wrong split silently tanks throughput or OOMs. Add checkpoint/restart at scale and the usual large-run reliability concerns, and Colossal-AI sits firmly in "you need a platform/infra owner" territory, similar to DeepSpeed and Megatron-LM.
 
+## Health & viability
+
+- **Maintenance — active (as of 2026-06).** Repo pushed 2026-05; ~41k stars and an ongoing release stream against a fast-moving training ecosystem. Not archived. The ~500 open issues are a normal load for a large distributed-systems framework. [未验证]
+- **Governance & backing — single vendor (HPC-AI Tech).** Organization-owned by HPC-AI Technology, the company commercializing the project (Colossal-AI was its flagship OSS). Roadmap is vendor-driven; this is a company-backed project, not a foundation one, so longevity tracks the company's commercial health. [推断]
+- **Age & Lindy — moderate-to-strong.** Created 2021-10, ~5 years old and still actively maintained (age × still-active) — old enough to have survived multiple LLM-training hype cycles, which is a meaningful Lindy signal for infrastructure. Not as entrenched as DeepSpeed/Megatron-LM, but well past the unproven stage.
+- **Adoption & ecosystem.** High star count and example recipes for popular open models; but the incumbents it competes with (DeepSpeed, Megatron-LM, PyTorch FSDP) have deeper production track records, and Colossal-AI's marginal convenience may not displace an already-running stack (see When NOT to use). Production-adoption depth is unverified.
+- **Risk flags — vendor dependency + churn.** Apache-2.0, no relicense/CVE history asserted. Real flags: roadmap concentration in one company, and fast-moving APIs / plugin behavior across releases (pin versions). [未验证]
+
 ## Caveats (unverified)
 
 - [未验证] ~41.4k GitHub stars and "active as of 2026-05" come from the GitHub page; star counts are unreliable and date-sensitive — treat as indicative only and re-check the repo.

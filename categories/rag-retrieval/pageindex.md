@@ -61,6 +61,13 @@ It's a strong fit when "similarity ≠ relevance" is your actual pain and your c
 
 **Low.** There is almost no infrastructure to run: clone the repo, set an API key, point the script at a PDF, and you get a tree you can query — no vector DB to provision, tune, or back up. The real operational concern is not servers but **LLM cost and latency**: every query reasons over the tree with model calls, so per-query token spend and response time are your scaling ceiling, and you must budget/observe API usage rather than memory or disk. Reproducibility and quality also hinge on the chosen model, which is a moving dependency. For the managed/MCP/VPC pipeline, ops shifts to the hosted product and is out of scope for the OSS repo.
 
+## Health & viability
+
+- **Maintenance — active.** Default branch last pushed 2026-06, not archived, but there is **no tagged release** at all — "version" is whatever `main` holds, so pin a commit for reproducibility. Active development without semver means you track a moving target. `[未验证]`
+- **Governance / backing — single vendor (Vectify AI).** **Organization**-owned (`VectifyAI/PageIndex`), ~33k stars [未验证]. The roadmap is vendor-driven, and the open repo is the *indexing core* of a larger commercial offering (hosted PageIndex Cloud/MCP/API/VPC) — so the OSS surface is a loss-leader for the product, with the usual open-core risk that the best features land in the hosted tier. `[推断]`
+- **Age & Lindy — young, ~1 year (created 2025-04).** Old enough to have shipped real benchmarks (98.7% FinanceBench, self-reported [未验证]) but not long enough to be a Lindy-safe bet; APIs/CLI flags can shift release-to-release. Treat as a promising young library, not a settled standard.
+- **Adoption / ecosystem — niche but real.** Slots into agentic stacks (OpenAI Agents SDK example), multi-provider via LiteLLM; the "vectorless RAG" framing has visible mindshare. MIT-licensed, no relicense observed — but verify the OSS-vs-hosted boundary before assuming a feature ships in the repo.
+
 ## Caveats (unverified)
 
 - [未验证] Stars ~33.4k as of 2026-06 — GitHub stars are unreliable and date-sensitive; indicative only.

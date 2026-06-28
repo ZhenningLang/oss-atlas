@@ -60,6 +60,13 @@ type: library
 
 **作为库：低到中；作为格式承诺：中。** 运维层面没什么要跑的——没有服务、没有数据库；你链接库或调用 CLI。但这份「低」被两项真实成本抵消：(1) 你得自己背一套原生 C11/C++17 构建(CMake/Make,Windows 上还要折腾 clang-cl);(2) *格式演进*负担——因为压缩格式在 pre-1.0 阶段仍在变，你必须 pin 到 release-tag 版本，并为长期的重压缩 / 版本错配做预案，尽管 release 产出的帧能「at least the next several years」保持可解压。前期的数据建模工作(写 SDDL / 选图)是每个数据集的设计任务，而不是部署任务。
 
+## 健康度与可持续性
+
+- **维护（2026-06）：** **活跃**——最近 push 在 2026-06；打 tag 的 release 在推进（v0.1.0 2025-10 → v0.2.0 2026-05），但明确仍是 **pre-1.0**，格式/API/codec 集被声明为仍在变动。[推断]
+- **治理与 bus factor:** `Organization` 名下，归 **Meta**（`facebook`）所有，与 zstd 同门——厂商背书强、有团队治理，bus-factor 风险低。Meta 声称核心「is used extensively in production at Meta」，说明有内部用户在维系它。[未验证]
+- **年龄与 Lindy（约 9 个月，2025-09 创建）：** **年轻、Lindy 上未经检验**——太新，不能仅凭耐久性押注。缓和因素不是年龄而是背书方的记录（Meta/zstd 血统）；但 pre-1.0 意味着格式本身仍是移动靶。
+- **风险标记：** **格式演进锁定**是首要风险——只有 release-tag 的帧带多年解压保证，`dev` 分支没有任何保证。请 pin 到 tag，并为重压缩/版本错配做预案。原生 C11/C++17 构建；Windows/MSVC 支持弱。[推断]
+
 ## 存疑（未验证）
 
 - [未验证] 许可证为 BSD;LICENSE 文件带三条条件(含非背书条款)，故 SPDX 取 `BSD-3-Clause`(Meta 标准许可，与 zstd 同族)——frontmatter 反映的是这一推断，而非仓库内声明的 SPDX 标记(`gh` 报告许可为「Other/NOASSERTION」)。

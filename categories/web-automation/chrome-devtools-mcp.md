@@ -61,6 +61,13 @@ You add `chrome-devtools-mcp` to your MCP client config (`npx chrome-devtools-mc
 
 **Low-to-medium.** The happy path is one JSON block in your MCP client config and `npx chrome-devtools-mcp@latest` pulling the package on first run — no infra to host. Cost rises with: getting a real Chrome available in headless/CI/container environments (the classic "Chrome won't launch in Docker" sandbox/`--no-sandbox` friction), the 30+ config flags and connection modes, and the security/telemetry posture you must consciously set (sandboxing untrusted pages, `--no-usage-statistics`, `--no-performance-crux`). Because each MCP client launches its own server process, there's no shared service to operate — but also no central place to govern access.
 
+## Health & viability
+
+- **Maintenance — active, official.** Last pushed 2026-06, not archived; latest v1.4.0 (2026-06-23). Released under the **ChromeDevTools (Google)** org, so maintenance is institutional rather than hobbyist — the strongest backing signal among the web-automation peers here. `[未验证]`
+- **Governance / backing — Google / Chrome DevTools team.** **Organization**-owned (`ChromeDevTools/chrome-devtools-mcp`), ~44.5k stars [未验证]. Bus factor is low (a team inside Google, not one maintainer) — but note Google's mixed track record of sunsetting side projects, so "official" reduces, not eliminates, abandonment risk. `[推断]`
+- **Age & Lindy — young (created 2025-09, ~9 months as of 2026-06).** Too new for a Lindy prior on its own; v1.x but the flag/tool surface still moves release-to-release, so pin a version for reproducibility. The Lindy strength comes less from this repo's age than from the durability of its foundation (Chrome + CDP + Puppeteer).
+- **Risk flags — telemetry-on-by-default + browser-content exposure.** Apache-2.0, no relicense observed. Google collects usage stats unless `--no-usage-statistics`; performance flows may call the CrUX API unless `--no-performance-crux`; the README warns it exposes all browser content (cookies/sessions/page contents) to the client and model — set the security/telemetry posture consciously. `[未验证]`
+
 ## Caveats (unverified)
 
 - [未验证] Star count ~44.5k as of 2026-06-26 (gh snapshot); GitHub stars are unreliable and date-sensitive — treat as indicative only.

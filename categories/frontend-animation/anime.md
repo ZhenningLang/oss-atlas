@@ -59,6 +59,14 @@ It also fits when you're animating things the CSS engine can't reach cleanly: tw
 
 **Low.** This is a client-side library with no server, no datastore, and no infrastructure to operate — "ops" reduces to shipping a JS bundle. Adoption cost is mostly in learning the v4 module API and, for existing users, migrating v3 code (a non-trivial refactor, not a version bump). Performance/maintenance burden is the usual front-end kind: keep heavy animations off the main thread where possible, mind layout thrash, and pin the major version to avoid surprise API drift.
 
+## Health & viability
+
+- **Maintenance (2026-06).** Last pushed 2026-06; v4.5.0 (2026-06-22) follows the major v4 rewrite — **active**, not archived. The low open-issue count (~110) is healthy for a library this widely used. [推断]
+- **Governance / bus factor.** A **single-author, `User`-owned repo** (`juliangarnier/anime`) with ~70k stars — the classic bus-factor flag: enormous adoption resting on one maintainer, with no foundation or vendor behind it. [推断]
+- **Age & Lindy verdict.** ~10 years old (created 2016-03) and **still actively shipping** (it just completed a full v4 rewrite) ⇒ a **strong Lindy** signal — a decade of survival plus a fresh major version is the opposite of a stalled project, which substantially tempers the single-maintainer concern. [推断]
+- **Adoption.** Very strong (~70k stars, MIT, dependency-free, framework-agnostic, on npm as `animejs`) — a default-tier choice for imperative web animation. [未验证]
+- **Risk flags.** No relicense or open-core found (MIT throughout). The concrete cost is the **v3→v4 migration** — a real API/module rewrite, not a drop-in bump; pin the major version. [推断]
+
 ## Caveats (unverified)
 
 - [未验证] Star count reported ~70.4k as of 2026-06; latest release v4.5.0 published 2026-06-22 per the GitHub API. GitHub stars are unreliable and date-sensitive — treat as indicative only, re-verify against the repo.

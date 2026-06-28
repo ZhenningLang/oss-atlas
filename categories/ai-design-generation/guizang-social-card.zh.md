@@ -41,6 +41,13 @@ type: skill-pack
 | Canva / 稿定设计 | 未收录 | 托管模板 SaaS，不是仓库——对非 agent 用户更易上手、素材库更丰富，但封闭、无本地 agent 控制、无单文件 HTML 产物，视觉严谨度也低得多。 |
 | Figma + 插件 | 未收录 | 完整设计控制与协作，但纯手动；没有 agent 驱动的 7 步流程、没有自动取材，也不是你能 vendor 的仓库。 |
 
+## 健康度与可持续性
+
+- **维护（2026-06）：** [推断] 活跃但单薄——最近 push 在 2026-05-27，**完全没有打 tag 的 release**（pin 的是移动的 `main`），未关闭 issue 约 5。对一个一人 skill 包而言，这意味着版式名、预设和问询流程可能在没有任何版本说明的情况下变动。
+- **治理与 bus factor：** [推断] **单人维护、`User` 个人仓库（`op7418`）、约 4k star**——一个 bus-factor 标记，不过比它的同门 `guizang-ppt`（约 19k）轻些，因为受众更小。没有组织或共同维护者兜底；它是同一作者 `guizang-ppt` 的同门，可持续性画像一致。缓解点：每套卡片都是你完全拥有的自包含 `.html`，因此废弃只会停掉后续更新。
+- **年龄与 Lindy：** [未验证] 仓库约创建于 2026-05，截至 2026-06 约一个月——**全新；Lindy 先验为零。** 无发版线、迭代快——把契约（28 个版式、10 个预设、画布尺寸）当作不稳定的，请对照当前仓库核实。
+- **风险标记：** [未验证] vendoring 时触发 **AGPL-3.0-only** copyleft（含网络服务形态的衍生）；渲染/校验脚本需要 Node + Playwright/Chromium；图片取材回退链依赖第三方 provider（Unsplash/Pexels/Flickr/Wallhaven），可能需要 key/网络。对静态 HTML 生成器而言无相关 CVE。
+
 ## 存疑（未验证）
 
 - [未验证] 许可证依 GitHub `licenseInfo` API 与 `LICENSE` 文件读为 AGPL-3.0-only(2026-06-26)；依赖 copyleft 范围前请对照仓库核实确切 SPDX/版本。

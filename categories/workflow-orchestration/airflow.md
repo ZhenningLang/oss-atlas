@@ -60,6 +60,14 @@ You reach for it specifically when you want pipelines as code in version control
 
 **Medium-to-high.** A single-machine LocalExecutor with a Postgres backend is approachable, but production Airflow is a distributed system you own: scheduler (and its parsing/loop health), web server, a relational metadata DB to size and back up, and a worker fleet — plus a broker if you run Celery, or a Kubernetes cluster if you run the K8s executor. Real operational work includes DAG-parse performance and scheduler tuning, database growth/cleanup, executor capacity and queue management, upgrades across the core plus dozens of provider packages, and chasing task failures down to the external service each operator talks to. Managed offerings exist if you'd rather not run the control plane yourself. The scheduling model and metadata DB are the hard parts; individual tasks are usually the easy part.
 
+## Health & viability
+
+- **Maintenance (2026-06)** — last pushed 2026-06, not archived, on the active v3.x line; one of the busiest data-infra repos, so clearly **active**, not coasting. The ~1.7k open issues read as scale-of-traffic, not neglect. `[推断]`
+- **Governance & bus factor** — an **Apache Software Foundation** top-level project (`Organization`-owned under `apache/`): foundation governance with a PMC and many corporate contributors is about the strongest bus-factor profile open source offers — no single vendor owns the roadmap. `[推断]`
+- **Age & Lindy** — created ~2015-04, so ~11 years old (2026-06) and still actively developed: a **strong-Lindy** bet (long-lived *and* active), and the default orchestration layer much of data engineering already runs on. `[推断]`
+- **Adoption & ecosystem** — huge production footprint, a large operator/provider catalog, managed offerings from multiple clouds, and ~46k stars; ecosystem depth is a real moat, not hype. `[未验证]`
+- **Risk flags** — Apache-2.0 under ASF (no relicense/open-core risk — foundation IP policy precludes a vendor rug-pull); the real cost is **operational weight** (multi-service distributed system), not licensing or abandonment. `[未验证]`
+
 ## Caveats (unverified)
 
 - [未验证] ~46k GitHub stars and "active (2026-06)" come from the repo page; star counts are date-sensitive and unreliable — treat as indicative only.

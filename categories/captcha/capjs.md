@@ -60,6 +60,13 @@ Cap fits here. You drop the `<cap-widget>` on the protected form (or call it pro
 
 **Low for the library path, low-to-medium for Standalone.** Using `capjs-core` inside an existing Node/Bun service is mostly a wiring exercise: implement (or reuse) a storage adapter, add a verify call before your handler runs, embed the widget. There's no separate service to babysit. The **Standalone** route adds a container plus a Redis/Valkey instance to run and back up, an `ADMIN_KEY` secret to manage, and key rotation across sites — standard small-service ops, but more than "drop in a script tag." The real operational judgment is *tuning difficulty*: too low and PoW barely deters bots; too high and you tax legitimate users' devices. Expect to tune per-endpoint and watch abuse metrics rather than set-and-forget.
 
+## Health & viability
+
+- **Maintenance (as of 2026-06):** last pushed 2026-06, not archived — active. The standalone server is at a mature-looking v3.1.5 while the library (`capjs-core`) is still v0.1.x, so the *library* API surface is the less-settled half. [推断]
+- **Governance & bus factor:** `User`-owned (tiagozip), single-maintainer. At ~7k stars the bus-factor exposure is real but more contained than a 40k-star one-person project — still, there is no foundation or vendor behind it, so continuity rides on one author. [推断]
+- **Age & Lindy verdict:** created 2025-01, so ~1.5 years old — **young; Lindy not yet established**. It is past the first-month vapor stage but not proven across years; the pre-1.0 `capjs-core` reinforces "expect API churn, pin versions." [推断]
+- **Risk flags:** Apache-2.0 but GitHub's API reports `NOASSERTION` on the LICENSE header (see Caveats), which an automated SPDX scanner may flag — a cosmetic licensing wrinkle, not a relicense. Security-wise this is friction (proof-of-work), not a hardened anti-abuse engine, and self-hosting means you own uptime and difficulty tuning. [推断]
+
 ## Caveats (unverified)
 
 - [未验证] Repo activity and reported popularity (~7k GitHub stars as of 2026-06) — GitHub stars are unreliable and date-sensitive; treat as indicative only.

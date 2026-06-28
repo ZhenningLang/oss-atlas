@@ -56,6 +56,13 @@ You're a hobbyist or independent researcher with a couple of consumer GPUs and a
 
 **Medium.** No service to deploy and no training infra, but you must build llama.cpp for your backend, have a GGUF model on disk, and wire `llama-server` ports/devices correctly; sweeps spawn/kill servers and write large temp GGUFs to tmpfs, so you need the RAM and disk headroom. Validation via lm-evaluation-harness adds its own setup. It's a run-it-yourself research script, so expect to read the code and tune flags rather than follow a turnkey path; no packaging, versioning, or CI to lean on.
 
+## Health & viability
+
+- **Maintenance (as of 2026-06):** last pushed 2026-03 (~2026-03-20), no tagged release, no test suite or CI visible. [推断] Recently active but with the shape of a one-off research drop, not a maintained tool — there's no cadence to track.
+- **Governance / bus factor:** a **single-author** repo under a personal account with only ~239 stars — minimal bus factor and no community process. If the author stops, it stops; you should expect to read and adapt the scripts yourself rather than file issues and wait.
+- **Age & Lindy verdict (created 2026-03, ~0 yr):** brand-new and tiny. [推断] **Unproven by Lindy** — neither old nor widely adopted; its credibility rests on the technique (RYS layer-duplication) and the author's own checked-in evals, not on survival or usage. Treat it as a learn-by-running demo.
+- **Risk flags:** README claims MIT but GitHub's API detected no license file as of 2026-06 — a real licensing ambiguity to resolve before depending on it. Results are directional (small probe suites, `--limit`-capped runs) and the headline gains are net-negative on some metrics, so don't read it as a validated capability boost. [未验证]
+
 ## Caveats (unverified)
 
 - [未验证] License is stated as "MIT" in the README, but GitHub's API reports no detected license file (no SPDX match) for the repo as of 2026-06 — verify a LICENSE file before relying on it.

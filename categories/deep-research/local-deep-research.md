@@ -60,6 +60,13 @@ You're also a good fit if your research is *academic or technical* rather than o
 
 **Medium.** The Docker/compose path makes a first run reasonable — it can spin up Ollama and SearXNG alongside the app. The burden is everything that follows: you own model downloads and GPU drivers, a SearXNG instance that search engines will rate-limit or block, an encrypted SQLCipher database (with zero-knowledge / no-password-recovery semantics — lose the key, lose the data), and version upgrades across a fast-moving pre-1.0 app where config and schema can change. Cloud-LLM-only mode is easier to stand up but trades away the privacy reason to choose LDR in the first place.
 
+## Health & viability
+
+- **Maintenance (2026-06):** **active** — last pushed 2026-06, shipping a versioned v1.x line (security hardening landed as recently as v1.7.0). Release cadence is real, unlike a one-off demo. [推断]
+- **Governance & bus factor:** `User`-owned (`LearningCircuit`) with ~8.6k stars — community-style project, no foundation or vendor backing. Lower bus-factor pressure than a viral solo repo, but still small-team. [推断]
+- **Age & Lindy (~1yr, created 2025-02):** young, so no long Lindy track record yet; the mitigating signal is that it's *young **and** actively releasing*, not young-and-hyped-then-quiet. Pin a version — it's pre-1.0-style and config/schema/API still churn release-to-release.
+- **Adoption/ecosystem:** broad surface (web UI + REST + CLI + MCP server, 20+ search connectors), but headline accuracy numbers are self-reported on chosen hardware — adoption breadth is real, the benchmarks are not independent. [未验证]
+
 ## Caveats (unverified)
 
 - [未验证] Star count ~8.6k as of 2026-06; GitHub stars are unreliable and time-sensitive — indicative only.

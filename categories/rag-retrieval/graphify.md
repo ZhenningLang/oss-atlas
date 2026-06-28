@@ -60,6 +60,13 @@ It fits especially well when the graph spans more than just app code — graphif
 
 **Low-to-medium.** The happy path is a single CLI install plus `graphify extract .` / `graphify query`, or a one-line skill install into an existing agent — no server to run for basic use, output is a portable JSON file. It rises to **medium** once you add an LLM backend (key management, per-file cost/latency, sending contents to a model), run the MCP server as a long-lived process, push to Neo4j/FalkorDB, or work past the HTML/node and 512 MiB graph ceilings on large repos. The very high release cadence also means version pinning is part of ops hygiene here.
 
+## Health & viability
+
+- **Maintenance — active.** Last pushed 2026-06, not archived, very high release cadence (143+ releases, multiple per week as of 2026-06) [未验证]. Activity is not the worry here; churn is — the velocity that signals "alive" also means CLI surface and output schema move between minor versions, so pin a version.
+- **Governance / bus factor — single-maintainer-scale, a real flag.** The repo is **User**-owned (`safishamsi/graphify`) with ~73k stars [未验证] — a high star-to-bus-factor ratio. No foundation or vendor backs the roadmap; one person's attention is the dependency. `[推断]` If that maintainer stops, the project stalls.
+- **Age & Lindy — young, unproven (created 2026-04, ~2 months old as of 2026-06).** Too new to have earned a Lindy prior: heavy stars on a months-old single-maintainer repo are hype, not a track record. Treat it as promising-but-unsettled, not a safe long-term bet.
+- **Risk flags — fast churn + LLM-dependency + CVE hygiene.** Frequent releases mean breaking changes; non-code extraction sends file contents to an LLM backend; v0.8.49 bumped `starlette` for CVE-2026-48818/54283 (per release notes, not independently confirmed) [未验证]. MIT license — no relicense/open-core flag observed.
+
 ## Caveats (unverified)
 
 - [未验证] Latest release v0.8.49 published 2026-06-25; star count ~72.2k as of 2026-06 — GitHub stars are unreliable and date-sensitive, treat as indicative only.

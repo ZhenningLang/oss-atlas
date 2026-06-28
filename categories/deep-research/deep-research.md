@@ -59,6 +59,13 @@ You're also a good fit if you already have a Firecrawl key and an OpenAI-compati
 
 **Low to run, low-to-medium to operate responsibly.** Getting a single research run going is trivial: clone, add two API keys, `npm start`. There's no infra to manage — no DB, no UI, no orchestration. The operational risk is *cost and reliability*, not deployment: high `breadth`×`depth` multiplies Firecrawl scrapes and reasoning-model calls with no built-in budget cap or robust retry/rate-limit handling, so you'll likely add your own guardrails before any unattended/batch use. As a fork base this is fine; as a standalone always-on service it's underbuilt. [推断]
 
+## Health & viability
+
+- **Maintenance (2026-06):** last pushed 2026-04; no GitHub releases/tags and `package.json` still at `0.0.1`. Activity is **bursty single-author** — coasting-to-active, not a steadily-maintained dependency. [推断]
+- **Governance & bus factor:** `User`-owned solo demo repo with ~19k stars — a classic **bus-factor flag**: high visibility, one person, no org or release cadence behind it. [推断]
+- **Age & Lindy (~1yr, created 2025-02):** young and popular. The stars buy it attention, not durability — too new to clear a Lindy bar, and by design it's a reference implementation to fork, not bet on long-term. [推断]
+- **Risk flags:** no semver/changelog discipline, minimal error handling, no cost-control story; treat as a fork base, not a maintained upstream you can pin and forget. [推断]
+
 ## Caveats (unverified)
 
 - [未验证] Star count ~19.2k as of 2026-06 — GitHub stars are unreliable and date-sensitive; treat as indicative only.

@@ -62,6 +62,14 @@ The newer reason to reach for Kong is the AI Gateway path. Your teams are callin
 
 **Medium.** DB-less mode plus a Docker image is an easy single-node start and the declarative file is git-friendly. Difficulty rises with a PostgreSQL-backed cluster (DB HA, migrations on upgrade), hybrid control-plane/data-plane topologies, plugin version/compatibility management across upgrades, and tuning the OpenResty/Nginx layer under load. The Kong Ingress Controller adds Kubernetes CRD and lifecycle concerns. Running Lua-based custom plugins in production is its own skill set.
 
+## Health & viability
+
+- **Maintenance (as of 2026-06):** last pushed 2026-06, not archived, latest release 3.9.x — a continuously released, actively maintained gateway, not a coasting one. [推断]
+- **Governance & backing:** `Organization`-owned and **vendor-backed** (Kong Inc., a funded commercial company), not a foundation project. That means a real roadmap and support exist, but the **open-core** model is the governance reality: the OSS gateway is one tier and the vendor controls what stays open vs. moves to Enterprise (Developer Portal, RBAC, advanced AI plugins). Roadmap is the vendor's, not a neutral foundation's. [推断]
+- **Age & Lindy verdict:** created 2014-11, so ~12 years old **and still active** — a strong **Lindy** signal: it has survived multiple architecture shifts (it even removed Cassandra as a config store in the 3.4 line) and is among the longest-lived OSS API gateways. Old + active ⇒ a safe durability bet for the core proxy. [推断]
+- **Adoption/ecosystem:** broad production adoption, a large plugin ecosystem, a Kubernetes Ingress Controller, decK for GitOps config, and mature docs — the ecosystem depth is itself a viability signal.
+- **Risk flags:** the watch item is **open-core feature-gating**, not a license rug-pull — the OSS core stays Apache-2.0, but advanced features may be enterprise-only and that split shifts release-to-release. Verify a specific plugin's OSS availability before depending on it. [推断]
+
 ## Caveats (unverified)
 
 - [未验证] Latest release observed as 3.9.3 (published 2026-06-17) with repo activity to 2026-06-17; star count ~43.7k as of 2026-06 — GitHub stars are unreliable and date-sensitive, treat as indicative only.

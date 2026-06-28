@@ -38,6 +38,13 @@ You reach for it when you want an opinionated, ready-made skill bundle covering 
 | aws-agent-plugins | 未收录 | Another vendor/official plugin collection; compare on which harnesses each targets and whether you need cloud-specific vs media/dev-generalist skills. |
 | Building your own `skills/` folder | 未收录 | Full control, zero lock-in, no maintenance bus-factor risk — but you write and curate every skill yourself. MiniMax trades that for a ready-made, vendor-maintained bundle. |
 
+## Health & viability
+
+- **Maintenance** — [未验证] last pushed **2026-04** with no tagged releases; against today (2026-06) that is ~2 months stale — reads as **coasting, not abandoned**: re-verify freshness before depending on a specific skill, since a stale skill in a domain you care about is worse than none.
+- **Governance & backing** — [推断] org-owned and **vendor-backed by MiniMax**; strong provenance but single-vendor and tied to MiniMax's models/harness assumptions. Roadmap follows the vendor.
+- **Age & Lindy** — [推断] created 2026-03, so only ~3 months old as of 2026-06: **brand new, no Lindy track record**, and already showing a 2-month activity gap — durability unproven.
+- **Risk flags** — [推断] the activity gap is the main flag; ~12.8k stars (2026-06) signal early traction but not maintenance commitment. MIT license, no relicense/CVE signals observed.
+
 ## Caveats (unverified)
 
 - [未验证] License MIT and primary language C# (≈68.5%, with Python ≈24.3%) per GitHub metadata as of 2026-06-26; C# dominance is attributed to .NET/OpenXML helper code behind the document skills (e.g. `minimax-docx`) — confirm against the repo before assuming a build toolchain.

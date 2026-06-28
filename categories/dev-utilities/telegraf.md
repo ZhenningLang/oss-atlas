@@ -59,6 +59,14 @@ You also reach for it when your sources are heterogeneous and you want collectio
 
 **Low-to-medium.** The happy path is genuinely easy: one binary, one TOML file, a systemd unit (or the official Docker image), and `telegraf --test` to dry-run a config before shipping it. There's no datastore or clustering to operate for the agent itself. Difficulty climbs with scale and breadth: managing config across a large fleet (you'll want a config-management or templating layer), tuning batching/buffering/flush intervals to avoid dropping metrics under backpressure, controlling tag cardinality before it overwhelms your backend, and debugging an individual flaky plugin against the real device/service it talks to. The agent is one piece — the *backend* you point it at is usually the harder thing to run.
 
+## Health & viability
+
+- **Maintenance (2026-06).** Last pushed 2026-06; v1.39.0 is recent and the project ships on a steady minor-release cadence — **active**, not coasting. Not archived. [推断]
+- **Governance / backing.** A single-vendor project: InfluxData drives the roadmap, with MIT licensing and vendor-neutral outputs. That's a bus-factor consideration — outputs stay open, but direction follows one company's priorities (contrast the CNCF-governed OTel Collector). [推断]
+- **Age & Lindy verdict.** ~11 years old (created 2015-04) and **still actively shipping** ⇒ a **strong Lindy** signal; this is a mature, long-proven collector, not a hyped newcomer. [推断]
+- **Adoption.** Broad real-world use across the InfluxData/observability ecosystem and a very large plugin catalog (300+) indicate healthy adoption; the ~385 open issues are consistent with a large surface, not a red flag on their own. [未验证]
+- **Risk flags.** Single-vendor stewardship is the main one — no relicense history found, but if InfluxData's roadmap concerns you, the OTel Collector is the governance-diversified alternative. [推断]
+
 ## Caveats (unverified)
 
 - [未验证] v1.39.0 released 2026-06-08; ~17.7k GitHub stars as of 2026-06 — star counts are unreliable and date-sensitive, treat as indicative only.

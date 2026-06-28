@@ -60,6 +60,13 @@ type: tool
 
 **低到中。** 单个本地 Chrome 时近乎开箱即用：一次全局安装、一次 `agent-browser install`，然后 shell 调用即可。守护进程模型意味着你要管理一个长生命周期进程（生命周期/恢复处理在近几个 release 里一直在改，升级时留意 daemon 兼容性）。一旦你要无头跑大规模（接入并付费给云厂商插件）、复用 Chrome profile（Windows 需先关掉 Chrome）、或依赖 Safari/WebDriver/iOS 路径（功能对齐是部分的），难度升到**中**。默认操作超时 25s，刚好低于 30s 的 CLI 读取超时——脚本化处理慢页面时要注意。
 
+## 健康度与可持续性
+
+- **维护——非常活跃。** 最后一次 push 在 2026-06，未归档，迭代很快（每周多个 release；最新 v0.31.0 于 2026-06-25）。守护进程的生命周期/恢复处理是个一直在改的区域——升级时留意 daemon 兼容性。`[未验证]`
+- **治理 / 背书——Vercel Labs。** 仓库为 **Organization** 所有（`vercel-labs/agent-browser`）；`-labs` 仓库标志的是实验/孵化性质，而非旗舰产品，所以背书是真实的，但寿命承诺比 Vercel 的核心产品要软。`[推断]` 约 37.2k star[未验证]；由组织（而非单个维护者）维护，相对单人所有的仓库降低了 bus-factor 风险。
+- **年龄与 Lindy——年轻、未经证明（创建于 2026-01，截至 2026-06 约 5 个月）。** 处于 1.0 之前，太新，拿不到 Lindy 先验；高发版节奏意味着 CLI 标志和配置 schema 会在版本间变动。若要脚本化依赖请 pin 版本。
+- **风险标志——1.0 前的 churn + 部分跨引擎对齐。** Apache-2.0，未观察到 relicense/open-core。真正的标志是 API churn，以及非 Chromium/Safari 覆盖落后于 Chrome-over-CDP 路径[推断]；云集群用法会引入需你自己运维的第三方厂商插件。
+
 ## 存疑（未验证）
 
 - `[未验证]` Star 数 ~37.2k（截至 2026-06-26，来自 `gh repo view`）；GitHub star 不可靠且对日期敏感——仅作参考。

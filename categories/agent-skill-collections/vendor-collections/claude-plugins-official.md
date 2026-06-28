@@ -38,6 +38,14 @@ You reach for this specifically when you want the *first-party* baseline: plugin
 | MiniMax-AI/skills | 未收录 | Vendor skill collection from MiniMax; different provider, likely different harness assumptions — compare target-agent compatibility before mixing. |
 | Third-party Claude Code marketplaces / community plugin lists | 未收录 | Larger surface and faster-moving, but no Anthropic curation or provenance guarantee. This repo is the first-party baseline; community marketplaces extend it at higher trust cost. |
 
+## Health & viability
+
+- **Maintenance** — [未验证] last pushed 2026-06, not archived; activity current as of 2026-06, so **actively maintained**. Open issues high (~783), consistent with a high-traffic official directory that also triages `external_plugins/` submissions. No tagged releases; track `main`.
+- **Governance & backing** — [推断] org-owned and **vendor-backed by Anthropic** — first-party marketplace with known provenance and Apache-2.0. Roadmap is the vendor's; "official/curated" describes Anthropic's hosting and listing, **not an audit guarantee** of every third-party `external_plugins/` entry.
+- **Age & Lindy** — [推断] created 2025-11, so ~7 months old as of 2026-06: young. Lindy weak on age, but vendor backing + first-party status make it the **default baseline** before third-party marketplaces; lower betting risk than a same-age community pack.
+- **Adoption/ecosystem** — [推断] ~31k stars (2026-06) and native `/plugin` install make it the canonical Claude Code plugin source.
+- **Risk flags** — [推断] Claude-Code-only (no cross-harness loader); `external_plugins/` curation is hosting, not a safety/maintenance audit of partner submissions.
+
 ## Caveats (unverified)
 
 - [未验证] Repository description recorded as "Official, Anthropic-managed directory of high quality Claude Code Plugins"; license Apache-2.0, primary language Python, not archived, topics `claude-code`/`mcp`/`skills`, last pushed 2026-06-26 per GitHub metadata as of 2026-06-26 — re-verify before relying on specifics.

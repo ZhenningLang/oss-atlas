@@ -38,6 +38,13 @@ type: skill-pack
 | Anthropic Claude Plugins（官方市场） | 未收录 | 第一方、Anthropic 精选的 `/plugin` 市场，provenance 清晰；范围更窄且仅限 Claude Code。wshobson/agents 是第三方且广得多、跨多个 harness，但 trust/审核成本更高。 |
 | 自己手写 subagent/skill | 未收录 | 贴合度最高、与既有栈零冲突，但一切都要你自己写和维护。本仓库用现成广度换取你仍需自行核验的贴合度。 |
 
+## 健康度与可持续性
+
+- **维护** —— [未验证] 最近一次 push 在 2026-06，未归档，open issue 很少（约 5 个）；截至 2026-06 活动是当前的，因此目录**活跃维护**。无 tag release——你装的就是 `main` 上的当前态。
+- **治理与 bus factor** —— [推断] **`User` 所有、单人维护、约 37k star（2026-06）——这是一个 bus-factor 风险标记。** 一个非常庞大且无版本的面（约 194 个 agent / 约 158 个 skill）压在一个人身上，意味着维护节奏与长期支持无保证；把你依赖的东西 vendor 下来。无基金会或厂商背书。
+- **年龄与 Lindy** —— [推断] 创建于 2025-07，截至 2026-06 约 1 岁：年轻且热门，**尽管 star 多也还谈不上 Lindy 赌注**。多 harness 生成（`make generate`）是很新的工具链；把耐久性当作未经证实。
+- **风险标记** —— [推断] 单人维护 + 无版本固定是首要风险——一次 push 可能让某个 subagent 的路由或某个 skill 的约束回退。未见 relicense/CVE 信号；全仓 MIT。
+
 ## 存疑（未验证）
 
 - [未验证] License 为 MIT，主语言 Python，未归档，最近一次 push 在 2026-06-25，topics 含 `claude-code`/`agent-skills`/`opencode`/`codex-cli`/`mcp`，以上为 2026-06-26 GitHub 元数据——依赖细节前请复核。

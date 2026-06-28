@@ -57,6 +57,14 @@ The same library is your tool when you need to *read* a PDF, not just show it: p
 
 **Low.** PDF.js is a client-side (or in-process Node) library — there is no service to deploy, no datastore, no clustering. The one real setup gotcha is wiring the worker: the `pdf.worker.js` file must be served from a reachable URL and `workerSrc` set to match, or rendering silently fails; bundlers (Webpack/Vite) often need a one-time config to emit the worker correctly. Beyond that, "ops" is really just keeping the dependency current (security and format-compatibility fixes land regularly) and budgeting CPU/memory on the client for large documents. Serving the prebuilt viewer is static-file hosting.
 
+## Health & viability
+
+- **Maintenance (2026-06):** last push 2026-06, latest release v6.1.200 dated 2026-06-27 — **active** with a steady release stream; security/format fixes land regularly. [推断]
+- **Governance / backing:** Mozilla-owned (`mozilla/pdf.js`, Organization) and the engine behind Firefox's built-in PDF viewer. [推断] That is unusually strong backing: it is load-bearing for a shipping browser, so it has a structural reason to stay maintained — not a hobby project at the mercy of one maintainer.
+- **Age & Lindy (created 2011-04, ~15yr):** old **and** still active — a textbook **strong Lindy** bet. A 15-year-old, browser-critical, continuously released library is about as safe a longevity prior as open source offers. [推断]
+- **Adoption:** ~53k stars (volatile, see Caveats) plus the de-facto status as *the* JS PDF renderer (shipped in every Firefox, wrapped by countless web viewers) — deep, real ecosystem adoption. [未验证]
+- **Risk flags:** Apache-2.0 (no relicense risk); no open-core/CLA gating. The only real watch-item is that it renders/reads but does not author PDFs — a scope boundary, not a viability risk.
+
 ## Caveats (unverified)
 
 - [未验证] ~53.5k GitHub stars and "active (2026-06)" reflect a point-in-time snapshot (latest release v6.1.200, 2026-06-27); star counts are noisy and date-sensitive — treat as indicative.

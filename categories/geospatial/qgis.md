@@ -63,6 +63,14 @@ It also fits when you need to *script and operationalize* GIS work, not just cli
 
 **Low for the desktop, medium-to-high for the server.** As a desktop application QGIS is install-and-run: the official installers handle the Qt/GDAL/PROJ/GEOS stack, and a single user needs no infrastructure. Friction rises with reproducibility (pinning a QGIS version + plugin set across a team), and with building from source or matching GDAL/PROJ versions on Linux. QGIS Server is a real ops surface — you deploy it behind a web server, manage the same native libraries, and tune it for concurrency — which is closer to running GeoServer/MapServer than to running the desktop.
 
+## Health & viability
+
+- **Maintenance — active (as of 2026-06).** Last push 2026-06; a 4.0.x stable line is shipping (4.0.3 reported 2026-05). Not archived; the high open-issue count (~5.4k) reads as a large, busy tracker for a 15-year desktop application, not as neglect. [推断]
+- **Governance & backing — foundation/community, low bus factor.** QGIS is an OSGeo project run by the QGIS.org association with a steering committee, a core-developer team, and sustaining/commercial-support members [推断] — a genuine multi-maintainer, multi-vendor structure rather than one person's repo. The GitHub repo is Organization-owned, consistent with that.
+- **Age & Lindy — strong.** Created 2011-05, ~15 years old and *still actively developed* (age × still-active). A long-lived, foundation-backed desktop GIS that keeps shipping LTR releases is about as safe a Lindy bet as open-source GIS offers; the only "fails Lindy" risk here is in third-party plugins, not the core.
+- **Adoption & ecosystem.** Widely used in government, academia, and as the open substitute for ArcGIS; large plugin repository and the PyQGIS/Processing ecosystem (GDAL/GRASS/SAGA providers). Plugin quality is uneven and can break across releases — the ecosystem risk, not a core-maintenance one (see When NOT to use).
+- **Risk flags — few.** GPL-2.0-or-later, no relicense or open-core history for the core app. The realistic risks are plugin churn and GDAL/PROJ version coupling, both already covered above and in Caveats.
+
 ## Caveats (unverified)
 
 - [未验证] Star count ~14.0k as of 2026-06; GitHub stars are unreliable and date-sensitive — treat as indicative only.

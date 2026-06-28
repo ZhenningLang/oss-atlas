@@ -59,6 +59,13 @@ So you `entire enable` in the repo and point it at your agent. Now every session
 
 **Low.** Install the single binary, run `entire enable`, and capture happens via Git hooks with no service to operate — `entire status` / `entire doctor` cover health, `entire disable` / `entire clean` back it out. The real operational burden isn't infrastructure, it's *governance*: because transcripts land on a branch inside the repo, you must decide branch-push/visibility policy, trust best-effort redaction, and avoid pushing the temporary shadow branches — i.e. the cost is data-handling discipline, not deployment.
 
+## Health & viability
+
+- **Maintenance** — last push 2026-06 with a recent release (v0.7.7, 2026-06-18) as of 2026-06: actively developed. Reportedly ~103 releases, so a real shipping cadence — but pre-1.0, and one command (`entire checkpoint rewind`) is already deprecated, so interfaces and on-disk formats can still shift. [推断]
+- **Governance / bus factor** — `Organization`-owned (`entireio`), which is a better signal than a personal repo, but it's a small vendor-led project (there's an `entire.io` install host and `entire login` device auth, hinting at a commercial backer); no foundation or formal governance. ~4.5k stars is modest, so adoption is early. [推断]
+- **Age & Lindy** — created 2026-01, so only months old as of 2026-06: too young for a Lindy verdict and still pre-1.0. Judge it on shipping cadence, not track record.
+- **Risk flags** — `[未验证]` MIT, no relicense history. The standout risk is **data exposure, not licensing**: transcripts (prompts/responses) live on a branch *inside your git repo*, secret redaction is the project's own "best-effort", and temporary shadow branches may hold unredacted data — a real exposure surface on public repos.
+
 ## Caveats (unverified)
 
 - [未验证] Star count ~4.55k as of 2026-06 — GitHub stars are unreliable and date-sensitive; treat as indicative only.

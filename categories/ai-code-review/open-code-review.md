@@ -59,6 +59,13 @@ It also fits when you've inherited an unfamiliar codebase and there's no meaning
 
 **Low.** There's no service, datastore, or daemon to operate — it's a binary you invoke on a diff in CI or locally. The real operational variables are the LLM dependency (endpoint reachability, API-key/secret management, per-PR token cost and latency) and tuning custom JSON rules + config to your repo. Because output goes to stdout, posting findings into PRs/MRs is glue you maintain, not a built-in. No scaling/HA concerns since each invocation is stateless. [推断]
 
+## Health & viability
+
+- **Maintenance (2026-06):** [推断] very actively maintained — last push 2026-06, v1.6.2 released 2026-06-26, on a fast release train (many versions). Low open-issue count (~43) relative to ~9.3k stars suggests issues are being closed, not piling up. Momentum is high *right now*.
+- **Governance & backing:** [推断] published under the `alibaba` GitHub org — a large vendor with a long open-source track record (Dubbo, Nacos, Arthas…), which lowers bus-factor risk versus a hobby project. But it's single-vendor, not foundation-governed; the custom-rule format and config surface are coupled to Alibaba's evolving CLI, and vendor-origin tools can be re-prioritized.
+- **Age & Lindy:** [未验证] the repo was created ~2026-05 (public OSS history is ~1 month old as of 2026-06) — **very young; no Lindy support yet.** The project claims "two years internal at Alibaba / tens of thousands of developers," which if true gives real maturity behind the public repo, but that framing is the project's own and unverified (see Caveats). Judge the public artifact as new.
+- **Risk flags:** [推断] precision-over-recall is a deliberate design choice (it will miss things by design); per-run LLM API cost on every review; Apache-2.0 (permissive, no relicense history found). No CVEs or open-core gating observed.
+
 ## Caveats (unverified)
 
 - [未验证] v1.6.2 published 2026-06-26; ~9.3k GitHub stars as of 2026-06 — star counts are unreliable and date-sensitive; treat as indicative only.

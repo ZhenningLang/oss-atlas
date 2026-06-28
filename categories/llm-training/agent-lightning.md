@@ -60,6 +60,14 @@ Agent Lightning is built for exactly this. It models agent execution as a Markov
 
 **High.** A full RL setup composes several moving parts — VERL/Tinker training backend, vLLM/SGLang serving, a tracer, a rollout store, and GPU orchestration — plus the client/server split. The decoupling is what makes adoption low-friction for *agent code*, but it shifts complexity into *infra assembly and tuning*. For the lighter APO/SFT paths or a single-node setup, effective difficulty is **medium**. [推断]
 
+## Health & viability
+
+- **Maintenance — active (as of 2026-06).** Repo pushed 2026-04; shipping v0.x with a recent v0.3.0 (reported late 2025). Pre-1.0 with fast API churn, a preview dashboard, and swappable backends — alive and moving, but expect breaking changes between minors. Not archived. [未验证]
+- **Governance & backing — Microsoft (corporate research).** Organization-owned under `microsoft`. Big-vendor backing means real engineering capacity and is a longevity positive; the offsetting risk is that corporate research repos can be deprioritized or archived once the research interest moves on — Microsoft has retired such projects before. Roadmap is vendor-controlled. [推断]
+- **Age & Lindy — young / unproven.** Created 2025-06, ~1 year old. Too new to have a Lindy track record; the bet rests on Microsoft's continued investment and the agent-RL space maturing, not on longevity. Pin versions and treat it as early-stage.
+- **Adoption & ecosystem.** ~17k stars quickly accrued and broad agent-framework integrations (LangChain, AutoGen, CrewAI, AgentScope, OpenAI Agents SDK); but the framework-agnostic, multi-backend design means you assemble tracer + store + training backend + serving yourself — adoption depth (production users) is unverified.
+- **Risk flags — v0.x churn + multi-backend assembly.** MIT, no relicense/CVE history asserted. The real flags are API instability at v0.x and dependency on a fast-moving RL stack (VERL/vLLM/SGLang), plus corporate-research abandonment risk noted above.
+
 ## Caveats (unverified)
 
 - [未验证] Star count: reported on the order of ~17k GitHub stars (2026-06); star figures in this ecosystem are unreliable and should not drive selection.

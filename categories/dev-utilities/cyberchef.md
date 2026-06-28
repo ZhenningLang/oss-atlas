@@ -58,6 +58,14 @@ You also reach for it when you want that same logic *repeatable*. A recipe seria
 
 **Low.** As a static single-page app there is nothing stateful to operate: the easiest self-host is dropping the built `assets`/`index.html` on any static host or CDN, or running the published Docker image. There is no database, queue, or background worker, and no inbound data handling to secure server-side because processing is in the client. The only real cost is rebuilding/upgrading the bundle on a new release and the strict Node v24 build requirement, which can bite CI pinned to other Node majors. Running the Node library inside your own service inherits that service's ops profile rather than adding its own.
 
+## Health & viability
+
+- **Maintenance (2026-06):** **active** — semver-tagged releases (latest v11.2.0, ~2026-06-17), last pushed 2026-06. A mature major-version line with ongoing releases, not coasting. [推断]
+- **Governance & bus factor:** `Organization`-owned by **GCHQ** (the UK signals-intelligence agency) — institutional backing rather than a solo maintainer, with a contributor community around it. Unusual but durable sponsor; low bus-factor risk. [推断]
+- **Age & Lindy (~10yr, created 2016-11):** **old and still active** — a strong Lindy verdict. A decade of continuous releases plus government backing makes it a safe long-term bet for an analysis tool.
+- **Adoption/ecosystem:** de-facto standard "cyber swiss army knife" in security/CTF/forensics circles, dual-distributed (hosted SPA + `cyberchef` npm library) with an official server wrapper; broad real-world use. [推断]
+- **Risk flags:** none structural (Apache-2.0, no relicense/open-core history). Practical gates are scope, not viability: not vetted production crypto, and a strict Node v24 build pin can bite CI. [推断]
+
 ## Caveats (unverified)
 
 - [未验证] "300+ operations" is the project's commonly-cited framing; the exact operation count shifts release-to-release — verify against the current build before relying on a specific operation existing.

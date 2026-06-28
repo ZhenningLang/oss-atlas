@@ -61,6 +61,13 @@ So you `bd init` in the repo and hand the agent the `bd` binary. Now its task st
 
 **Medium.** Single-binary embedded mode is genuinely low-friction (`bd init` and go; Dolt runs in-process; data in `.beads/embeddeddolt/`). Difficulty rises because: embedded mode is single-writer (file lock), so any real multi-agent/multi-writer setup means standing up and operating an external Dolt SQL server with credentials; the Dolt database must be backed up and synced deliberately (no managed service); there is documented schema-migration churn (SQLite-era and v0.63→v1.0 upgrades needing repair steps); and the author warns agents have historically been destructive toward the DB, so backup/restore hygiene is on you.
 
+## Health & viability
+
+- **Maintenance** — last push 2026-06 (as of 2026-06) on a v1.x release line: actively developed. But the author still self-describes it as "alpha" and the FAQ warns flags/data-formats can evolve, so treat it as active-but-volatile, not stabilized. [推断]
+- **Governance / bus factor** — `[未验证]` started by Steve Yegge; repo moved from `steveyegge/beads` to the `gastownhall` org. An org wrapper reduces the literal single-person bus factor on paper, but it's reportedly largely AI-built ("a tool AI built for itself") and the org appears purpose-made — treat real bus-factor / abandonment risk as non-trivial for anything you can't re-tool.
+- **Age & Lindy** — created 2025-10, so under a year old as of 2026-06: too young for a Lindy verdict. High star velocity (~24k) is hype-driven attention, not a longevity track record — don't read the stars as durability. [推断]
+- **Risk flags** — `[未验证]` MIT (no relicense history). Real flags are operational: the author warns agents have run destructive DB ops (`DROP TABLE`), Dolt is the locked-in storage format with JSONL-only export, and there's documented SQLite→Dolt / 0.x→1.0 migration churn. Keep backups; this is not "set and forget."
+
 ## Caveats (unverified)
 
 - **Stars** — repo page surfaced ~24.8k while a third-party article cited 18.7k; not reconciled. `[未验证]`

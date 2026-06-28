@@ -60,6 +60,13 @@ The bigger win is closing the loop with the agent itself. After the first audit 
 
 **Low.** For the common case it is a single `npx` command with nothing to deploy, host, or maintain — no server, no datastore, deterministic output that slots into CI. Difficulty rises only mildly: wiring it as a GitHub Actions gate, tuning `doctor.config.ts`, or adopting the oxlint/ESLint plugins into an existing lint setup means version-pinning and config reconciliation. The pre-1.0, multi-package nature means you should pin versions if a CI gate depends on exact findings.
 
+## Health & viability
+
+- **Maintenance (2026-06):** [推断] actively maintained — repo last pushed 2026-06-25, plugin `oxlint-plugin-react-doctor@0.5.8` released 2026-06-20, frequent multi-package releases via Changesets. Low open-issue count (~44) for ~13k stars. Momentum is healthy as of 2026-06.
+- **Governance & backing:** [推断] under the `millionco` org (the team behind Million.js, a known React-performance project), so there's an established React-tooling org and brand behind it rather than a lone hobbyist — lower bus-factor than a single-maintainer repo. Still single-vendor, not foundation-governed.
+- **Age & Lindy:** [推断] created 2026-02, ~4 months old as of 2026-06 — **very young; no Lindy track record.** It's pre-1.0 and moving fast across a multi-package monorepo, so the rule catalog and `doctor.config.ts` can shift between versions; pin if a CI gate depends on exact findings.
+- **Risk flags:** [推断] **license is the standout flag** — `LicenseRef-Modified-MIT` (gh reports "Other"), adding non-standard restrictions around AI training/fine-tuning and commercial hosting. Do **not** treat it as permissive MIT for redistribution or building a competing service; read the actual LICENSE. No CVEs observed.
+
 ## Caveats (unverified)
 
 - [未验证] Star count ~13.1k as of 2026-06 (GitHub stars are unreliable and date-sensitive; indicative only).

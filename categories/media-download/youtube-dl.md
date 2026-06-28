@@ -58,6 +58,13 @@ You also use it when the source isn't YouTube at all — the value is the extrac
 
 **Low to run, but high *fragility* to keep working.** Installing and invoking it is trivial: `pip install youtube-dl` (or a downloaded binary), one command, done — no infrastructure. The cost is upstream: because YouTube and other sites change their player and signature logic frequently, an outdated youtube-dl silently starts returning errors or wrong formats, and the slowed release cadence means fixes may lag for weeks or not come at all. The practical ops burden is *staying current* — pinning a version means accepting breakage, and tracking master/nightly or switching to yt-dlp is usually the real maintenance task. For one-off scripts this is fine; for anything long-lived against YouTube, budget for the breakage cycle.
 
+## Health & viability
+
+- **Maintenance — coasting; the active path is the fork (last push ~2026-02, last tagged release 2021.12.17, as of 2026-06).** Not archived and master still gets occasional commits, but the tagged-release gap of 4+ years against a fast-moving target (YouTube player/signature changes) is the decisive signal: upstream lags, and yt-dlp ships the fixes. Treat youtube-dl as legacy upstream [推断].
+- **Governance & succession.** `Org`-owned (`ytdl-org/`) — a community org, no vendor or foundation. Roadmap momentum has effectively migrated to the **yt-dlp** fork, which is now the de-facto successor for YouTube extraction; the project's longevity lives on through that fork, not the original tag line [推断].
+- **Age & Lindy verdict — old and historically vindicated, but for *durability* not *currency*.** Created 2010 (~16y old), ~140k stars: among the longest-Lindy tools in this index, and it survived a 2020 GitHub DMCA takedown (later reinstated). But age proves the *idea* endures, not that the upstream binary works on YouTube today — for currency, age × *still-active* points you to yt-dlp.
+- **Risk flags.** Unlicense (public-domain) — no copyleft/relicense friction. The real risks are the 2020 DMCA legal history, the general legal/ToS exposure of downloading, and above all extractor staleness on the upstream tags. For anything load-bearing against YouTube, default to yt-dlp.
+
 ## Caveats (unverified)
 
 - [未验证] ~140.6k GitHub stars as of 2026-06; star counts are date-sensitive and unreliable — indicative only.

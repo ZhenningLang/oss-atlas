@@ -60,6 +60,13 @@ The payoff is two-fold: you can get materially better ratio-at-speed than a gene
 
 **Low-to-medium as a library; medium as a format commitment.** Operationally there's nothing to run — no service, no DB; you link the library or invoke the CLI. The "low" friction is offset by two real costs: (1) a native C11/C++17 build you must own (CMake/Make, and clang-cl gymnastics on Windows), and (2) the *format-evolution* burden — because the compressed format is still changing pre-1.0, you must pin to release-tagged versions and plan for re-compression / version skew over time, even though release frames stay decompressible "for at least the next several years." The upfront data-modeling effort (writing SDDL / choosing a graph) is a per-dataset design task, not a deploy task.
 
+## Health & viability
+
+- **Maintenance (2026-06):** **active** — last pushed 2026-06; tagged releases moving (v0.1.0 2025-10 → v0.2.0 2026-05) but explicitly **pre-1.0**, with the format/API/codec set declared as still-changing. [推断]
+- **Governance & bus factor:** `Organization`-owned by **Meta** (`facebook`), same house as zstd — strong vendor backing and team governance, low bus-factor risk. Meta states the core "is used extensively in production at Meta," so there's an internal user keeping it alive. [未验证]
+- **Age & Lindy (~9mo, created 2025-09):** **young and unproven on Lindy** — too new to bet on durability alone. The mitigant isn't age but the backer's track record (Meta/zstd lineage); still, pre-1.0 means the format itself is a moving target.
+- **Risk flags:** **format-evolution lock-in** is the headline risk — only release-tagged frames carry the multi-year decompressibility guarantee; `dev` offers none. Pin to tags and plan for re-compression/version skew. Native C11/C++17 build; weak Windows/MSVC story. [推断]
+
 ## Caveats (unverified)
 
 - [未验证] License is BSD; the LICENSE file carries three conditions including the non-endorsement clause, so SPDX `BSD-3-Clause` (Meta's standard license, same family as zstd) — frontmatter reflects this inference, not an SPDX tag declared in-repo (`gh` reports the license as "Other/NOASSERTION").

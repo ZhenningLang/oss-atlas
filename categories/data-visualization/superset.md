@@ -61,6 +61,14 @@ You also reach for it when you need broad chart variety and dashboard interactiv
 
 **Medium-to-high.** A `docker compose` quickstart gets you a demo in minutes, but that is explicitly not a production topology. A real deployment means running and coordinating several moving parts: the web app, a metadata Postgres/MySQL, Redis, and Celery workers + Beat — each needing to be sized, secured, monitored, and upgraded together. Upgrades involve database migrations (Alembic) and occasionally breaking config/feature-flag changes, so version bumps need testing. You also own auth integration (LDAP/OAuth/OIDC via Flask App Builder), row-level security configuration, secret management for database connections, and tuning cache + async timeouts so heavy queries don't wedge the workers. The connector to each warehouse adds its own driver and credential management. None of it is exotic, but it is a genuine multi-service application to operate — closer to running a web platform than dropping in a single binary.
 
+## Health & viability
+
+- **Maintenance (as of 2026-06):** last pushed 2026-06, not archived, at v6.x — a continuously released, heavily maintained project; ~903 open issues reflects scale and breadth of use, not neglect. [推断]
+- **Governance & backing:** an **Apache Software Foundation** top-level project — foundation governance, a PMC rather than a single maintainer or vendor, and ASF's relicense/IP guardrails. This is about the strongest governance posture in the index: no one company can unilaterally rug-pull the license. [推断]
+- **Age & Lindy verdict:** created 2015-07, so ~11 years old **and still active** — a textbook **strong Lindy** bet: long-lived, foundation-backed, widely deployed. Old + active ⇒ durable. [推断]
+- **Adoption/ecosystem:** broad enterprise/production adoption, 50+ SQLAlchemy database connectors, a plugin-based viz framework, and mature docs — deep ecosystem and a wide dependent base. [未验证]
+- **Risk flags:** no relicense or open-core trap (Apache-2.0, ASF-governed). The real "risk" is operational, not viability: it is a genuine multi-service stack (metadata DB + Redis + Celery) to run and upgrade — see Ops difficulty, not a sustainability concern.
+
 ## Caveats (unverified)
 
 - [未验证] Latest release reported as v6.1.0 (2026-05); ~73.6k GitHub stars as of 2026-06 — star counts and version numbers are date-sensitive and shift release-to-release, treat as indicative.

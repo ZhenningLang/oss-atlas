@@ -61,6 +61,14 @@ It's also a strong fit when the people doing the tuning aren't full-time trainin
 
 **Low-to-medium.** For the happy path — a single GPU, a supported model, LoRA/QLoRA via LlamaBoard or one CLI command — it's among the easiest ways to get a fine-tune running, and the Docker image removes most environment pain. Difficulty rises to **medium** with multi-GPU/distributed setups (DeepSpeed ZeRO stage / FSDP / Ray config interacts with library versions and VRAM, a common source of incompatibility issues), custom chat templates or non-standard dataset formats, and the usual CUDA/flash-attn/bitsandbytes version-matching friction inherent to the PyTorch training ecosystem.
 
+## Health & viability
+
+- **Maintenance — very active (as of 2026-06).** Repo pushed 2026-06; latest release v0.9.5 reported 2026-05-30 with a busy tracker (~1k open issues — high, but proportional to ~72k stars and a fast-adding model matrix). Not archived. [未验证]
+- **Governance & bus factor — single maintainer, a real flag.** The repo is **User-owned** (`hiyouga`) yet carries ~72k stars — a classic bus-factor signal: enormous adoption concentrated on one person's account, without a foundation or company structure visible. There is a contributor community, but the named owner sets direction; if that maintainer steps back, continuity is uncertain. [推断]
+- **Age & Lindy — moderate, trending strong.** Created 2023-05, ~3 years old and continuously, heavily active — it has become a de-facto default for open-model fine-tuning, which is a strong adoption-driven Lindy signal even at a young absolute age. The durability question is governance (above), not activity.
+- **Adoption & ecosystem.** Among the most-used SFT/LoRA front-ends; broad model/method coverage, a web UI (LlamaBoard), Docker image, and reliance on the standard HF stack (transformers/peft/trl) keep it well-connected to the ecosystem rather than a silo.
+- **Risk flags — bus factor above all.** Apache-2.0, no relicense/CVE history asserted. The dominant risk is single-maintainer governance on a high-stakes, widely-depended-on repo; secondary risks are template/config lock-in and lag in day-one support for brand-new architectures (see When NOT to use).
+
 ## Caveats (unverified)
 
 - [未验证] Reported v0.9.5 release date May 30, 2026; star count ~72.5k as of 2026-06 — GitHub stars in this ecosystem are unreliable and date-sensitive; treat as indicative only.

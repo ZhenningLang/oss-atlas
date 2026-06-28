@@ -54,6 +54,13 @@ It earns its place precisely because it's *inline and on-demand* in fields you d
 
 **Low.** There is nothing to operate — no service, datastore, or deployment. For an end user it's an install-and-toggle extension. The real "ops" cost is *longevity*, not running it: because the original project moves slowly, the practical risk is that a future browser change (especially in the MV3 transition) breaks or delists it and no timely fix lands, at which point you'd migrate to a maintained fork or a different approach. Treat it as a convenience you can lose, not infrastructure you depend on.
 
+## Health & viability
+
+- **Maintenance — effectively stale (last push ~2025-08, as of 2026-06).** No archive flag, but the release cadence is low and the backlog long relative to popularity; treat as coasting-toward-abandoned, not actively maintained [推断]. The README does not declare it dead — but don't expect timely fixes.
+- **Governance & bus factor — single-maintainer flag.** `User`-owned (`adam-p/`) with ~60k stars: a classic bus-factor risk where huge adoption rests on one person's attention, which has clearly tapered. The community response is the "Markdown Here Revival" fork, signalling the original is no longer the maintained path [推断].
+- **Age & Lindy verdict — old but abandoned ⇒ fails Lindy.** Created 2012 (~14y old): age alone looks reassuring, but age × *still-active* is the test, and activity has stopped. A long-lived-then-stalled project is the case where the Lindy prior turns *negative* — bet on the maintained fork, not the original.
+- **Risk flags.** Browser-extension viability under Manifest V3: an unmaintained MV3 content-script extension can be delisted or broken by a browser update with no fix landing — an availability risk outside your control [未验证]. MIT-licensed, so forking is unencumbered (the Revival fork exists).
+
 ## Caveats (unverified)
 
 - [未验证] ~60.2k GitHub stars and v2.16.0 with a last push around 2025-08 (per the repo, 2026-06); star counts and dates are time-sensitive and indicative only — re-check against the current repo.

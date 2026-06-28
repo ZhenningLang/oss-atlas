@@ -60,6 +60,13 @@ You install `agent-browser` (npm, Homebrew, or cargo), run `agent-browser instal
 
 **Low-to-medium.** For a single local Chrome it's close to drop-in: one global install, one `agent-browser install`, then shell out. The daemon model means you manage a long-lived process (lifecycle/restore handling has been an active area across recent releases, so watch daemon-compatibility on upgrades). Difficulty rises to **medium** once you run headless at scale (wiring and paying for a cloud provider plugin), reuse Chrome profiles (Windows requires closing Chrome first), or depend on the Safari/WebDriver/iOS paths where feature parity is partial. Default operation timeout is 25s, just under the 30s CLI read timeout — relevant when scripting slow pages.
 
+## Health & viability
+
+- **Maintenance — very active.** Last pushed 2026-06, not archived, shipping fast (multiple releases per week; latest v0.31.0 on 2026-06-25). Daemon lifecycle/restore handling is an actively-moving area — watch daemon compatibility on upgrades. `[未验证]`
+- **Governance / backing — Vercel Labs.** **Organization**-owned (`vercel-labs/agent-browser`); a `-labs` repo signals an experiment/incubation surface rather than a flagship product, so backing is real but the longevity commitment is softer than a core Vercel product. `[推断]` ~37.2k stars [未验证]; the org (not a lone maintainer) reduces bus-factor risk relative to single-owner repos.
+- **Age & Lindy — young, unproven (created 2026-01, ~5 months as of 2026-06).** Pre-1.0 and too new for a Lindy prior; the heavy release cadence means CLI flags and config schema shift between versions. Pin a version if you script against it.
+- **Risk flags — pre-1.0 churn + partial cross-engine parity.** Apache-2.0, no relicense/open-core observed. The real flags are API churn and that non-Chromium/Safari coverage lags the Chrome-over-CDP path [推断]; cloud-fleet use pulls in third-party provider plugins you operate yourself.
+
 ## Caveats (unverified)
 
 - `[未验证]` Star count ~37.2k as of 2026-06-26 (from `gh repo view`); GitHub stars are unreliable and date-sensitive — treat as indicative only.

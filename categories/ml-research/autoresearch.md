@@ -57,6 +57,13 @@ It's also a clean reference implementation to read or fork when you want to *stu
 
 **Low to set up, but you own the agent loop.** Getting a manual experiment running is trivial — `uv sync && uv run prepare.py && uv run train.py` on one GPU. The real operational burden is everything *around* the scaffold: provisioning/holding an NVIDIA GPU (H100-class) for hours of overnight iteration, wiring a coding agent to the edit-run-evaluate loop, and watching cost and runaway-agent behavior. There's no service to deploy and nothing to maintain long-term, but it's not a turnkey "press start" autonomous researcher either.
 
+## Health & viability
+
+- **Maintenance (as of 2026-06):** last pushed 2026-03, ~36 commits on master, no tagged release. [推断] Active in the sense of recently touched, but this is a demo branch, not a maintained product — there is no release cadence to read, and it can change commit-to-commit.
+- **Governance / bus factor:** a single-maintainer repo under Karpathy's personal account (`User`-owned) carrying ~88k stars — a textbook **bus-factor flag**: the stars reflect the author's reach, not a team or sustained roadmap. [推断] No governance, no contributors process implied; if the author moves on, it freezes.
+- **Age & Lindy verdict (created 2026-03, ~0 yr):** brand-new and ridden on hype/star count, not survival. [推断] **Unproven by Lindy** — judge it as a reference artifact and a pattern to study, not a long-term dependency. Its value is the *idea* (agent-as-researcher under a fixed budget), which outlives any specific commit.
+- **Risk flags:** no versioning/API stability; the agent loop and LLM costs are BYO; "research demo" posture is explicit. MIT-licensed, so forking to pin a known-good state is the safe move. [推断]
+
 ## Caveats (unverified)
 
 - [未验证] Star/fork counts (~88.7k stars, ~12.8k forks) and "~36 commits on master" are from the GitHub page on 2026-03-26 / 2026-06-26; stars are unreliable and date-sensitive — treat as indicative only.

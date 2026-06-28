@@ -39,6 +39,13 @@ Baoyu Skills gives you exactly that for the writing/translation slice: `baoyu-tr
 | Single de-AI / translation prompt | 未收录 | A one-off prompt is the lightest possible option for one task, but it doesn't persist, version, or load by name across sessions the way an installed skill does. |
 | Built-in agent skill ecosystems | 未收录 | The harness's own marketplace skills; Baoyu is a third-party curated bundle layered on top, so it can overlap or conflict with native equivalents. |
 
+## Health & viability
+
+- **Maintenance** — [未验证] last pushed 2026-06, not archived, open issues ~1; v2.5.2 (2026-06) and a fast v2.x release cadence make it **actively, even rapidly maintained** — and it ships real version pins rather than only `main`.
+- **Governance & bus factor** — [推断] **`User`-owned, single-maintainer repo ("宝玉"/JimLiu) with ~22k stars (2026-06) — a bus-factor flag.** Personal project, no team or org backing; cadence and continuity ride on one author.
+- **Age & Lindy** — [推断] created 2026-01, so only ~5 months old as of 2026-06: **brand new, no Lindy track record**. Popular but unproven over time.
+- **Risk flags** — [推断] fast releases mean a version bump can change a skill's prompt, modes, or routing — pin and re-check after upgrades. [未验证] some `baoyu-danger-*` skills wrap unofficial/reverse-engineered backends (may break or violate third-party terms); the writing skills don't, but share the same repo and cadence. MIT license.
+
 ## Caveats (unverified)
 
 - [未验证] Latest release reported as v2.5.2 (published 2026-06-18) with the repo last pushed 2026-06-20; license MIT and primary language TypeScript per GitHub metadata as of 2026-06-26 — re-verify before relying on a specific version's behavior.

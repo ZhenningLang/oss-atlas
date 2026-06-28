@@ -57,6 +57,14 @@ You reach for **Selenium WebDriver**. You write the test once against the WebDri
 
 **Medium.** A single local WebDriver test is easy: add the binding dependency, let Selenium Manager fetch the driver, run. Cost climbs with everything that makes Selenium valuable: keeping **browser and driver versions in lockstep** (a frequent breakage source on browser auto-updates), writing and maintaining explicit waits to fight flakiness, and — above all — **operating Grid** at scale: distributor/router/session-map roles, node pools, Docker/Kubernetes deployment, queue tuning, and health monitoring. Many teams sidestep the Grid ops burden by renting a cloud grid, trading infra for per-minute cost.
 
+## Health & viability
+
+- **Maintenance (2026-06)** — last pushed 2026-06, not archived, shipping the v4.x line (v4.45.0); a continuously released project tracking evolving browser/WebDriver targets, i.e. **active**, not coasting. `[推断]`
+- **Governance & bus factor** — lives under the **SeleniumHQ** org (`Organization`-owned), a long-standing community/multi-contributor project rather than one person or a single vendor's product; the W3C-standard WebDriver protocol it anchors further de-risks any single-owner dependency. `[推断]`
+- **Age & Lindy** — created ~2013-01, so ~13 years old (2026-06) and still actively shipping: a textbook **strong-Lindy** bet — long-lived *and* still-active, with deep ecosystem inertia (cloud grids, CI integrations, years of Q&A) that makes it the safe default. `[推断]`
+- **Adoption & ecosystem** — the de-facto cross-browser automation standard: official driver implementations track it, hosted grids (BrowserStack/Sauce Labs/LambdaTest) build on it, and ~34k stars reflect entrenched adoption rather than hype. `[未验证]`
+- **Risk flags** — Apache-2.0, no relicense/open-core history seen; the practical risk is **flakiness without disciplined waits** and **Grid ops burden**, not project viability. `[未验证]`
+
 ## Caveats (unverified)
 
 - [未验证] ~34.2k GitHub stars and v4.45.0 (released ~2026-06-16) as of 2026-06; star counts and version numbers are date-sensitive and drift — treat as indicative and re-verify against the repo.

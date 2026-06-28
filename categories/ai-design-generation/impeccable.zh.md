@@ -62,6 +62,14 @@ type: tool
 
 **低。** detector 路径就是一行 `npx impeccable detect …`，无需托管服务、无需 API key，带 `--json` 输出供 CI 使用；最重的部分是 URL 扫描时 Puppeteer 的 Chromium 下载。面向 agent 的路径是 skill/hook 安装，属于按 harness 写 manifest 的接线工作，而非基础设施。日常负担主要是跟上 CLI/Skill/Extension 的频繁发版，以及对有意为之的风格调掉误报。
 
+## 健康度与可持续性
+
+- **维护（截至 2026-06）：** 最后 push 在 2026-06，未归档，且发版很快——2026 年 6 月内 CLI/Skill/Extension 多次发布。活跃且明显处于密集开发；同样的节奏也是 churn 风险（请锁版本）。[推断]
+- **治理与 bus factor：** `User` 所有的仓库（pbakaus）却背着约 41k star——单维护者项目上的高 star 是一个 **bus-factor 信号**：大量采用押在一个人持续投入上，看不到基金会或厂商兜底。[推断]
+- **年龄与 Lindy 判断：** 建于 2025-11，年龄不足 1 年——**年轻但已被广泛 star**。star 数说明有真实关注度，而非 Lindy 验证过的耐久；延续性视为未被证明，规则集仍在变动。[未验证]
+- **采用/生态：** 覆盖面广（Claude Code、Cursor、Copilot、Gemini CLI、Codex CLI、OpenCode，外加 Chrome/Firefox 扩展），加上无需 API key 的离线 detector，降低了试用门槛；这份广度是主要的采用信号。[推断]
+- **风险标记：** 宽松的 Apache-2.0（法务/锁定风险低），但 detector 编码了某团队的审美立场（对有意为之的风格会误报），且三个组件各自独立发版——不 pin 版本，行为会在版本间漂移。
+
 ## 存疑（未验证）
 
 - [未验证] 版本事实(CLI v3.1.0 发布于 2026-06-21;Skill v3.8.0;Extension v1.2.1)取自 GitHub releases，截至 2026-06；三个组件独立发版且更新频繁，任何 pin 都会很快过时。

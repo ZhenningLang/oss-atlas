@@ -60,6 +60,13 @@ HiveChat is built for exactly this shape. You deploy it once (Docker Compose wit
 
 **Low-to-medium.** The happy path — `docker compose up -d` (app + Postgres), set `ADMIN_CODE`, run `initdb`, visit `/setup` — is genuinely simple for a single small deployment, and the Vercel + Neon route removes server management entirely. It rises toward **medium** once you self-host the database for real: you own Postgres backups, migrations on each upgrade (`initdb` must be re-run, and there are no versioned releases to pin, so you track a moving `main`), TLS/reverse-proxy, secret storage for many provider keys, and the enterprise-login (Feishu/DingTalk/WeWork) callback configuration. As an early-stage `v0.1.0` single-vendor project, expect to read source and follow the repo for breaking changes.
 
+## Health & viability
+
+- **Maintenance — coasting, not clearly active.** Last pushed **2025-09**, ~9 months stale as of 2026-06; not archived, but a multi-quarter gap with no commits is a coasting/dormancy signal, not "active". There are **no git tags or GitHub releases** at all — version is `0.1.0` from `package.json`, so you track a moving (and idle) `main` with no semver to pin. `[未验证]`
+- **Governance / bus factor — single-vendor, tiny.** **Organization**-owned (`HiveNexus/HiveChat`) but ~1.2k stars [未验证] and early-stage single-vendor pace; the roadmap is one small team's. Low adoption + dormancy is a real abandonment-risk combination here.
+- **Age & Lindy — young (created 2025-02, ~1.3 years) and now quiet.** Not old enough for a Lindy prior, and the recent quiet erodes even that — a young project that stops pushing trends toward the "fails Lindy" quadrant, not the "strong Lindy" one. Verify the repo is still moving before betting a team deployment on it.
+- **Risk flags — non-vanilla license.** Stated Apache-2.0 **with added commercial conditions**: building/distributing a derivative requires a separate commercial license from the author [未验证]. This is *not* plain Apache-2.0 — read `LICENSE` before any commercial or fork/resell use. Self-hosting for internal use appears unaffected, but confirm.
+
 ## Caveats (unverified)
 
 - [未验证] Star count ~1.2k and `pushedAt` 2025-09-16 are from the GitHub API on 2026-06-26; GitHub stars are unreliable and dates drift — re-verify against the live repo.

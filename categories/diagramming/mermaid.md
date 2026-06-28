@@ -58,6 +58,14 @@ You also reach for it when you're an agent or a tool generating diagrams program
 
 **Low** for the common case: there is nothing to deploy or operate — you drop a fenced block into a platform that already renders Mermaid, or add the npm/CDN script to a page. "Ops" only appears when you render *yourself*: server-side/headless rendering via `mermaid-cli` drags in a Chromium/Puppeteer dependency, which is the usual source of CI breakage, sandbox/permission issues, and image size bloat. The other real concern is **security**, not uptime: if you ever render untrusted diagram text, getting `securityLevel` right (and keeping the library patched against XSS advisories) is the maintenance burden. As a pinned library dependency it's low-touch; auto-layout output occasionally shifts across versions, so visual regressions on upgrade are the thing to watch.
 
+## Health & viability
+
+- **Maintenance (2026-06).** Last pushed 2026-06 with recent releases (e.g. `@mermaid-js/tiny@11.16.0`, 2026-06-25) — **actively** maintained, not archived. [推断]
+- **Governance / bus factor.** Owned by the `mermaid-js` GitHub org (a multi-maintainer community project, not a lone-maintainer repo), which lowers bus-factor risk versus a single-author library. No single corporate owner. [推断]
+- **Age & Lindy verdict.** ~12 years old (created 2014-11) and still active ⇒ a **strong Lindy** signal; it's the de-facto text-to-diagram standard, embedded by GitHub/GitLab/Notion/Docusaurus/Obsidian. [推断]
+- **Adoption & ecosystem.** Very large adoption — ~89k stars and, more meaningfully, first-class rendering baked into major platforms — makes it the safe default for diagram-as-code. [未验证]
+- **Risk flags.** No relicense (MIT) and no commercial open-core split found; the standing concern is **security**, not viability — it runs JS in the renderer and has historically had XSS surface, so `securityLevel` must be set when rendering untrusted input. The ~1.6k open issues are typical for a project of this reach, not a health flag. [推断]
+
 ## Caveats (unverified)
 
 - [未验证] ~88.9k GitHub stars and "TypeScript primary language" as of 2026-06 per the repo page; star counts are date-sensitive and approximate.

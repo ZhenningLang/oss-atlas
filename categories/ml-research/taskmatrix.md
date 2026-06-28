@@ -57,6 +57,13 @@ It's also a useful teaching reference when you're building your *own* tool-routi
 
 **High, and not worth paying.** Even in 2023 this was a non-trivial stand-up: provision a large-VRAM GPU, download many GB of model weights, install a deep ML dependency tree, and supply an OpenAI key. In 2026 the difficulty is compounded by age — the pinned dependency versions predate current CUDA/PyTorch/`transformers` releases, so expect dependency-resolution breakage and patching just to boot it, with no maintainer to file issues against. There's no service-grade deployment story (no packaging, versioning, or CI to lean on); it was always a demo. Run a slice of it on a throwaway box to study the design, but do not operate it.
 
+## Health & viability
+
+- **Maintenance (as of 2026-06):** last pushed **2024-01-06**, no commits since — **abandoned in practice** (not formally `archived` on GitHub, but functionally dead). [推断] No releases, no fixes, no maintainer to file issues against.
+- **Governance / bus factor:** the repo lives under an individual `User` account (chenfei-wu) though the work originated at Microsoft Research as "Visual ChatGPT." [推断] Whatever institutional backing it once had is gone; there is no team or roadmap behind the current repo.
+- **Age & Lindy verdict (created 2023-03, ~3 yr):** this is the **fails-Lindy** case — old *enough to be stale* but no longer active. Age here is a negative, not a positive: the longer it sits unmaintained against a fast-moving stack (CUDA/PyTorch/`transformers`/`diffusers`), the less likely a clean install even runs. Read it as a historical artifact of the pre-multimodal tool-routing era; do not bet on it.
+- **Risk flags:** 2+ years unmaintained ⇒ pinned 2023-era deps accumulate known CVEs with no patches — a real supply-chain concern; do not expose it or trust it with secrets. License is MIT (file verified), though GitHub's API shows `NOASSERTION`. [未验证]
+
 ## Caveats (unverified)
 
 - [未验证] ~34.1k GitHub stars (34,070) and `pushed_at` 2024-01-06 as of 2026-06; stars are unreliable and date-sensitive — treat as indicative only.

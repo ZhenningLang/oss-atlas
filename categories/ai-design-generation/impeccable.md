@@ -62,6 +62,14 @@ When you want the agent itself to improve the design rather than just lint it, y
 
 **Low.** The detector path is a single `npx impeccable detect …` with no service to host, no API key, and `--json` output for CI; the heaviest piece is Puppeteer's Chromium download for URL scans. The agent-facing path is the skill/hook install, which is per-harness manifest wiring rather than infrastructure. Ongoing burden is mostly keeping up with frequent CLI/Skill/Extension releases and tuning out false positives on intentional styles.
 
+## Health & viability
+
+- **Maintenance (as of 2026-06):** last pushed 2026-06, not archived, and shipping fast — multiple CLI/Skill/Extension releases in June 2026. Active and clearly under heavy development; the same cadence is also a churn risk (pin versions). [推断]
+- **Governance & bus factor:** a `User`-owned repo (pbakaus) carrying ~41k stars — high stars on a single-maintainer project is a **bus-factor flag**: a lot of adoption rides on one person's continued involvement, with no foundation or vendor backstop visible. [推断]
+- **Age & Lindy verdict:** created 2025-11, so age < 1 year — **young but already widely starred**. The star count signals real interest, not Lindy-proven durability; treat longevity as unproven and the rule set as still-moving. [未验证]
+- **Adoption/ecosystem:** broad harness coverage (Claude Code, Cursor, Copilot, Gemini CLI, Codex CLI, OpenCode, plus a Chrome/Firefox extension) and a no-API-key offline detector lower the bar to try it; that breadth is the main adoption signal. [推断]
+- **Risk flags:** permissive Apache-2.0 (low legal/lock-in risk), but the detector encodes one team's aesthetic stance (false positives on intentional styles) and three components version independently — behavior moves between releases unless pinned.
+
 ## Caveats (unverified)
 
 - [未验证] Version facts (CLI v3.1.0 released 2026-06-21; Skill v3.8.0; Extension v1.2.1) are from GitHub releases as of 2026-06; the three components version independently and ship frequently, so any pin drifts quickly.

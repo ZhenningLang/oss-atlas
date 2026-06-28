@@ -42,6 +42,13 @@ So you point your harness at CCPM's skill and say "let's plan the payments featu
 | Taskmaster (claude-task-master) | 未收录 | Popular PRD-to-tasks agent workflow; parses a spec into tasks too, but is its own task store/CLI rather than syncing to GitHub Issues + git worktrees as the shared truth. |
 | Plain `MEMORY.md` / `TODO.md` | 未收录 | Zero-dependency and human-readable, but no dependency metadata, no GitHub sync, no parallel-stream isolation — the unstructured baseline CCPM replaces. |
 
+## Health & viability
+
+- **Maintenance** — last push 2026-03 (as of 2026-06), so ~3 months since the last commit and no tagged releases; the recent v1→v2 ("Agent Skills") restructure shows real upkeep, but a multi-month gap means it's coasting rather than rapidly iterating. Only ~4 open issues — low backlog, but read alongside the modest ~8k stars. [推断]
+- **Governance / bus factor** — `Organization`-owned (`automazeio`), which softens single-maintainer risk somewhat, but it's still a small vendor-led skill repo, not a foundation project; the roadmap is whoever runs automaze. No formal governance to point to. [推断]
+- **Age & Lindy** — created 2025-08, so under a year old as of 2026-06 and already through one breaking restructure (v1→v2): too young for a Lindy verdict, and the surface is still settling — pin a commit if you need stability.
+- **Risk flags** — `[未验证]` MIT, no relicense history. Hard dependency on GitHub Issues + `gh` is a lock-in surface (no GitLab/Jira backend), and the headline metrics ("89% less context-switching", "75% fewer bugs", "3× faster") are self-reported, not independently reproduced — adopt for the workflow, not the percentages.
+
 ## Caveats (unverified)
 
 - [未验证] Quantitative claims — "89% less context-switching time", "75% reduction in bug rates", "up to 3× faster delivery", "5–8 parallel tasks vs 1", and the 4/4-vs-0/4 / 4/4-vs-2/4 eval scores — are the project's own README figures, not independently reproduced.

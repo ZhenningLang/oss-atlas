@@ -61,6 +61,13 @@ The defining trait is that it ships **no model and no API key of its own**: it s
 
 **Low for the intended single-operator local use; medium-to-high if you try to host it.** The happy path is `git clone` → `pnpm install` → `pnpm dev` → open localhost, and the value is entirely local. Friction comes from (1) the hard precondition of a logged-in agent CLI — if detection misses your binary or your session expired, nothing generates; (2) it being early with no tagged release, so you're tracking `main`; and (3) the security posture: routes spawn the CLI with maximally permissive flags and `/api/deploy` writes credentials to disk, gated only by a Host-header allowlist middleware. Exposing it beyond loopback (LAN/mDNS via `HTML_ANYTHING_ALLOWED_HOSTS`, or reverse-proxy via `HTML_ANYTHING_ALLOW_ANY_HOST=1`) shifts real security responsibility onto you. Treat it as a personal tool, not a service.
 
+## Health & viability
+
+- **Maintenance (2026-06):** [推断] active but immature — last push 2026-06, but **no tagged release** (self-described "early but real"), so you track `main` with no version line. Open-issue count ~53. Recent activity is healthy; the absence of any release cadence is the concern, not stalled commits.
+- **Governance & backing:** [推断] under the `nexu-io` org — same team as [open-design](open-design.md), the larger desktop app this is the focused subset of. So there's an org and a sibling product behind it rather than a lone author, but it's a young single-vendor project; agent detection, the `SKILL.md` protocol and the design-system model are borrowed verbatim from `open-design`, so you're adopting that ecosystem's conventions, not a neutral standard.
+- **Age & Lindy:** [未验证] repo created ~2026-05, ~1 month of public history as of 2026-06 — **brand-new; no Lindy prior.** README figures (75 skills / 9 surfaces / 8 CLIs, and upstream "40k★" claims) are promotional and can drift on `main`; verify before depending.
+- **Risk flags:** [推断] **security posture is the standout flag** — `/api/convert` spawns the local CLI with maximally permissive flags and `/api/deploy` writes credentials to disk, gated only by a Host-header allowlist. Safe only as a single-operator loopback tool; exposing it to a network shifts real security responsibility onto you. Apache-2.0 (permissive, no relicense history). It is also dependent on your separately-installed agent CLI staying compatible — its own viability is partly hostage to upstream vendor CLIs.
+
 ## Caveats (unverified)
 
 - [未验证] Star count ~7.3k as of 2026-06 — GitHub stars are unreliable and date-sensitive; treat as indicative only.

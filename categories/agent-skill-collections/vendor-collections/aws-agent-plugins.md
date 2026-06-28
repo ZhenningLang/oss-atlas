@@ -40,6 +40,13 @@ This repo is the vendor source: each of the nine plugins (`aws-serverless`, `aws
 | AWS official MCP servers (standalone) | 未收录 | The underlying AWS MCP servers (docs, pricing, IaC) can be wired up without these plugins; you get the data sources but not the packaged skills, trigger phrases, and guardrails. More assembly, less opinion. |
 | Roll your own AWS skills | n/a | Maximum fit and no marketplace dependency, but you forgo AWS's maintained playbooks and MCP wiring and must keep service best-practices current yourself. |
 
+## Health & viability
+
+- **Maintenance** — [未验证] last pushed 2026-06, not archived, open issues low (~12); v1.0.0 tagged 2026-02 and activity current as of 2026-06, so **actively maintained** — and uniquely for this leaf, it ships a real versioned release rather than tracking `main`.
+- **Governance & backing** — [推断] org-owned and **vendor-backed by AWS Labs** — strong provenance, but single-vendor and AWS-ecosystem-locked; the roadmap follows AWS's priorities, not a neutral foundation.
+- **Age & Lindy** — [推断] created 2026-02, so only ~4 months old as of 2026-06: **brand new, no Lindy track record yet**. Unproven durability.
+- **Risk flags** — [未验证] **vendor steering**: the README points to a newer "Agent Toolkit for AWS" as the recommended production path while this repo "continues accepting contributions" — treat as a potentially superseded surface, not the long-term flagship. ~809 stars (2026-06) is modest, consistent with its newness.
+
 ## Caveats (unverified)
 
 - [未验证] Latest release tagged `1.0.0` (published 2026-02-18) with the repo last pushed 2026-06-25; license Apache-2.0 and primary language Shell per GitHub metadata as of 2026-06-26 — re-verify before relying on a specific version's behavior. Primary language "Shell" reflects tooling scripts; skill content is largely Markdown.

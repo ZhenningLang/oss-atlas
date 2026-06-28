@@ -61,6 +61,14 @@ It shines when you have a handful of servers and want a low-ceremony pane of gla
 
 **Low.** Installation is one package plus enabling a socket; it's socket-activated so there's no always-on daemon to tune, and it self-updates with the distro. There is essentially no state to back up — Cockpit stores almost nothing of its own and reads live OS state on demand, so removing it is clean. The main operational care is **security exposure**, not maintenance burden: it's a root-capable web surface on 9090, so you must keep it behind a firewall/VPN, front it with a real TLS certificate (it generates a self-signed one by default), and consider stronger auth than passwords. Difficulty rises only when you add many optional pages whose backends (`libvirt`, `podman`, `udisks`) each have their own quirks.
 
+## Health & viability
+
+- **Maintenance (2026-06):** **active and steady** — rolling integer releases (latest `364`, 2026-06-23) shipped on a frequent cadence; last pushed 2026-06. This is a continuously-released project, not a coasting one. [推断]
+- **Governance & bus factor:** `Organization`-owned under `cockpit-project`, effectively **Red Hat-backed** — a vendor with a long Linux-tooling track record and a multi-person team, so low bus-factor risk (org governance, not a solo maintainer). [推断]
+- **Age & Lindy (~12yr, created 2013-11):** **old and still active** — a strong Lindy verdict. A decade-plus of continuous releases plus distro-default shipping (Fedora/RHEL/Debian/Ubuntu) is about as safe a longevity bet as this category offers.
+- **Adoption/ecosystem:** ships in the default repos of major distros and integrates with standard system APIs (`systemd`/D-Bus/`podman`/`libvirt`); broad real-world deployment. ~14k stars understates reach since it's distributed via packages, not GitHub. [推断]
+- **Risk flags:** none structural; the live concern is operational security exposure (root-capable surface on port 9090), not project viability.
+
 ## Caveats (unverified)
 
 - [未验证] Latest release is `364`, published 2026-06-23 (per GitHub release metadata); Cockpit uses a rolling integer-version scheme rather than semver, so "364" is a build number, not a stability tier.

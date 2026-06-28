@@ -61,6 +61,14 @@ Google 把 Python/Kotlin/C++ 绑定标记为 *Stable*，但项目本身仍处于
 
 **高。** 从源码构建使用带固定版本的 Bazel 以及庞大的 C++/Rust 工具链——相比 pip 安装一个 wrapper 远非易事。除了构建，端侧 LLM 运维本身就难：设备分级的 RAM 门控(2–4B 模型常需 6–8GB RAM，否则 Android 会杀进程)、GPU 初始化后回退 CPU 的逻辑(GPU 可用性在各设备间不一致)、每隔几轮就做 KV-cache 会话轮换 `[未验证]` 以阻止质量退化，以及防御性输出解析，因为小模型会发出格式错误的 JSON / 错误语种的文本。模型必须转换/打包为 `.litertlm`。多个绑定(Swift、JS、Flutter)为预览/社区状态，因此在 pre-1.0 阶段 API 变动与缺口很可能存在。
 
+## 健康度与可持续性
+
+- **维护（2026-06）：** 最后 push 在 2026-06，发版节奏很快（稳定版 v0.13.1 → v0.14.0-alpha 在约 2 周内）——明显**活跃**，但处于 pre-1.0，变动正是这种活跃的代价。[推断]
+- **治理 / 背书：** 由 Google 在 `google-ai-edge`（Organization）下维护，属于 LiteRT / TensorFlow Lite 谱系。[推断] 这消除了单一维护者的巴士因子风险，但 Google 是出了名的项目杀手（参见 MediaPipe→LiteRT-LM 的重定位）——*运行时*的方向性延续比任何单个绑定或格式存活更可靠。
+- **年龄与 Lindy（创建于 2025-04，约 1 年）：** 年轻且被热捧；Lindy 先验很弱——它尚未证明多年存活。押它是为了 Google/LiteRT 的背书与 Gemma 路径，而非长寿记录。[推断]
+- **采用度：** 约 5k star（易波动，见存疑）；以 Gemma 为中心的 `.litertlm` 目录与 pre-1.0 绑定（Swift/JS/Flutter 预览）让可投产的面偏窄。[未验证]
+- **风险标记：** Apache-2.0（无重新许可风险）。活跃风险是 pre-1.0 的 API 变动，以及 `.litertlm` 格式 + Google 生态锁定。[推断]
+
 ## 存疑（未验证）
 
 - **计数** —— stars/forks/issues(5,703 / 596 / 383)取自 2026-06-26 的 GitHub API，会持续漂移；此前一份摘录只报告了约 3,157 stars，因此来源彼此不一致。`[未验证]`

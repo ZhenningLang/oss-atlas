@@ -60,6 +60,14 @@ So you reach for BitNet. You pick a **ternary** model that was actually trained 
 
 **Medium.** There's no pip-installable engine: you clone, set up a Conda env, install **Clang ≥ 18** and CMake ≥ 3.22 (the Clang version requirement and platform-specific kernel selection — TL1 on ARM vs TL2 on x86 vs I2_S — are the usual friction points), then run a setup script to convert/quantize the model and build with CMake. Once built, day-to-day inference via the CLI is straightforward and the small models are easy on resources. The bigger operational risks are *project* risks, not runtime ones: no tagged releases (pin a commit), a small/curated model list, and GPU/NPU paths that are still maturing — so treat upgrades and platform expansion as a moving target.
 
+## Health & viability
+
+- **Maintenance (2026-06):** last push 2026-03-10 — roughly 3 months idle at verification, so the runtime reads as **coasting**, not actively iterated week-to-week. [推断] No tagged releases means cadence is judged from commit recency, not a release stream.
+- **Governance / backing:** Microsoft-owned (`microsoft/BitNet`, Organization). [推断] That removes single-maintainer bus-factor risk, but Microsoft is also a serial project-archiver — vendor backing here signals "research reference implementation kept alive," not a productized, SLA-backed SDK.
+- **Age & Lindy (created 2024-08, ~2yr):** young and still-active enough to not fail Lindy, but too new to be a proven long-lived bet. [推断] The value rides on the BitNet-b1.58 research line continuing; treat it as **promising-but-unproven** infrastructure.
+- **Adoption:** ~39k stars (volatile, see Caveats) is strong attention, but the curated ternary-model list and CPU-first scope keep real production adoption narrow. [未验证]
+- **Risk flags:** MIT-licensed (no relicense risk). The live flags are commit-versioning churn (pin a commit), a small supported-model surface, and GPU/NPU paths still maturing. [推断]
+
 ## Caveats (unverified)
 
 - [未验证] Speedup and energy figures (ARM ~1.37–5.07x / ~55–70% energy; x86 ~2.37–6.17x / ~72–82% energy; "+1.15–2.1x" from later kernels; 100B model at "5–7 tok/s on a single CPU") are the project's own README claims against unspecified baselines — not independently reproduced here; vary by CPU, model, and kernel.

@@ -61,6 +61,13 @@ You're also a developer using Claude Code day-to-day who wants the same check be
 
 **Low.** The happy path is a ~15-line workflow file and one secret — no servers, no datastore, no model to host (inference is the remote Claude API). Ongoing maintenance is mostly two things: cost control (token spend scales with PR volume and `run-every-commit`; mind the 20-min `claudecode-timeout`) and the prompt-injection constraint (you must configure fork/external-contributor approval gating). Tuning the false-positive filter or custom scan instructions is optional file-based config. The main residual risk is operational, not infra: pinning `@main` means upstream changes can alter behavior without a version bump.
 
+## Health & viability
+
+- **Maintenance (2026-06):** [推断] **coasting, not abandoned.** Last push 2026-02 — roughly four months stale as of 2026-06 — and there has never been a tagged release (usage pins `@main`). For a security gate that means: no version line to anchor on, and behavior can change (or silently stop tracking the current Claude model default) without a signal. Not dead, but slower-moving than its peers here.
+- **Governance & backing:** [推断] owned by `anthropics` (the Anthropic org), a vendor with a direct interest in the Claude-Code ecosystem this drives. That cuts bus-factor risk versus a single maintainer, but it's a vendor showcase/companion tool, not a foundation-governed project — Anthropic can re-scope or quietly de-prioritize it.
+- **Age & Lindy:** [推断] created 2025-08, ~10 months old as of 2026-06 — **young-to-middling, weak Lindy prior.** The 4-month-stale push on top of a sub-1-year age means it has neither longevity nor strong recent momentum; treat it as a useful-but-unproven tool, not a long-term bet.
+- **Risk flags:** [推断] hard constraint, not a flag you can defer: README states it is **not hardened against prompt injection** and must only review trusted PRs — a structural limitation of an LLM reviewer, not a bug that gets patched. Plus per-run Claude API cost and non-determinism (see When NOT to use). MIT license, no relicense history found.
+
 ## Caveats (unverified)
 
 - [未验证] `gh` reports `latestRelease: null` and ~5.37k stars as of 2026-02 (last push 2026-02-11); GitHub stars are unreliable and date-sensitive — treat as indicative only.

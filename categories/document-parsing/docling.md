@@ -58,6 +58,14 @@ You also reach for it when you want one parser across heterogeneous formats inst
 
 **Low-to-medium as a library.** There's no service to deploy or datastore to run — it's `pip install docling` inside your existing ingestion job, and the happy path is a few lines (`DocumentConverter().convert(source)` → `.export_to_markdown()`). The medium part is environment and compute: the first run downloads model weights (size and offline/air-gapped setup need planning), OCR backends bring their own system-level dependencies, and batch-converting a large corpus is a GPU-vs-CPU and parallelism question, not a config flag. If you also run the optional API/MCP server, that's a service to operate on top of the library.
 
+## Health & viability
+
+- **Maintenance (2026-06).** Last pushed 2026-06 with very frequent releases (v2.107.0, 2026-06-24) — **highly active**, not archived. [推断]
+- **Governance / backing.** The strongest signal here: **IBM-originated and hosted under the LF AI & Data Foundation** — foundation governance plus a major-vendor origin is a much safer footing than a lone-maintainer repo, lowering bus-factor and abandonment risk. [推断]
+- **Age & Lindy verdict.** Only ~2 years old (created 2024-07) ⇒ **young**, so the Lindy prior is weak *on age alone* — but the rapid-fire release cadence, foundation backing, and ~62k stars are the offsetting signals. Treat it as a fast-rising, well-backed project rather than a battle-tested veteran. [推断]
+- **Adoption & ecosystem.** Strong and growing: ~62k stars and plug-and-play integrations with LangChain, LlamaIndex, Haystack, Crew AI make it a de-facto RAG document-loader. The ~937 open issues are consistent with rapid growth and a large surface, not a stall. [未验证]
+- **Risk flags.** MIT, no relicense or open-core split found. The practical caveat is **version churn** — formats, OCR backends, and defaults shift release-to-release, so pin and re-verify the features you depend on. [推断]
+
 ## Caveats (unverified)
 
 - [未验证] ~62.3k stars and v2.x as of 2026-06 (latest release observed v2.107.0, 2026-06-24); star counts and version numbers are date-sensitive — treat as indicative and re-verify against the repo.

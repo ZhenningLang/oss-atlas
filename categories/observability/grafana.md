@@ -58,6 +58,14 @@ You also reach for it when you want dashboards and alert rules to live in versio
 
 **Low for a single node, medium-to-high at scale.** Getting a Grafana up is genuinely easy: `docker run`, point it at a Prometheus, import a community dashboard, done — SQLite means there's no DB to provision for a quick start. The cost climbs when you make it production-grade: moving to external Postgres for HA, running multiple replicas behind a load balancer with shared session/state, wiring SSO/LDAP/SAML (some of which is Enterprise-gated), managing dashboards-as-code and provisioning across environments, keeping data-source plugins and the alerting config in order, and upgrading across releases that occasionally change dashboard/alerting schemas. The recurring truth: Grafana itself is rarely the hard part — the **backends** it queries (scaling Prometheus, sharding Loki, sizing Elasticsearch) are where the real operational weight lives.
 
+## Health & viability
+
+- **Maintenance (as of 2026-06):** last pushed 2026-06, latest release v13.0.2 (2026-06-09) — **actively maintained** on a steady major-version cadence. [推断] One of the most actively developed projects in observability; no abandonment risk.
+- **Governance / backing:** organization-owned and driven by **Grafana Labs**, a venture-funded company; this is a **single-vendor open-source** project, not a foundation-governed one. The roadmap and commercial Enterprise/Cloud tiers are controlled by one company — strong resourcing, but the vendor sets direction and gates features.
+- **Age & Lindy verdict (created 2013-12, ~13 yr):** old *and* still active — a **strong Lindy** signal. It is the de-facto dashboarding layer of the observability ecosystem and has survived more than a decade of stack churn; safe to bet on for longevity.
+- **Adoption / ecosystem:** ubiquitous in SRE/platform stacks, huge plugin/data-source ecosystem, dashboards-as-code, and a large community dashboard library — deep entrenchment and integration breadth.
+- **Risk flags:** **relicensed Apache-2.0 → AGPL-3.0 in 2021** — copyleft can reach a modified Grafana served over a network, so get legal review before embedding it in a SaaS. **Open-core feature-gating**: fine-grained RBAC, reporting, enterprise data-source plugins, and some SSO/SAML configs sit in the commercial tier, not the OSS build. [未验证]
+
 ## Caveats (unverified)
 
 - [未验证] ~75.1k GitHub stars and latest release v13.0.2 (2026-06-09) as of 2026-06; star counts and version numbers are date-sensitive and shift release-to-release — treat as indicative.

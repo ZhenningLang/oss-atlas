@@ -63,6 +63,13 @@ You're also a good fit if you previously ran Perplexica and want the maintained 
 
 **Low-to-medium.** The Docker happy path is genuinely one command, and pointing it at a cloud LLM API key gets you a working answer engine in minutes. Difficulty rises to **medium** when you self-host the full stack: you must stand up and maintain a SearxNG instance (engines get rate-limited/blocked, JSON output must be enabled), and if you go fully local you also run and resource Ollama models (RAM/VRAM, model pulls). Upgrades follow a single fast-moving image, so pin versions if you need stability, and back up the data volume since search history/chats live there.
 
+## Health & viability
+
+- **Maintenance (2026-06):** **active** — last release v1.12.2 ~2026-04, pushed ~2026-04, a mature double-digit-minor versioned line. Steady, not coasting. [推断]
+- **Governance & bus factor:** `User`-owned (`ItzCrazyKns`) with ~35k stars — a **bus-factor flag**: very high visibility riding on essentially **one maintainer**. This is a recently-renamed project, so API/UI churn under a single owner is a live risk. [推断]
+- **Age & Lindy (~2yr, counting Perplexica lineage from 2024-04):** the *codebase* carries Perplexica's ~2yr history and momentum even though "Vane" is a fresh name — that lineage is the Lindy signal here, not the rebrand date. Old-enough-and-active leans favorable, tempered by the solo-maintainer flag. [推断]
+- **Risk flags:** multi-user auth is roadmap-not-shipped (treat as single-tenant); a fast-moving single-image release means pin versions and back up the data volume. [未验证]
+
 ## Caveats (unverified)
 
 - [未验证] Latest release v1.12.2 (published ~2026-04-10) and `pushedAt` ~2026-04-11; star count ~35.5k as of 2026-06 — GitHub stars are unreliable and date-sensitive, treat as indicative only.

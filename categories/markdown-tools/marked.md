@@ -54,6 +54,13 @@ It's the right reach when *throughput and simplicity* matter more than strict sp
 
 **Low.** It's a library, not a service — there is nothing to deploy or operate beyond adding a dependency to your app. The only real operational concern is the security one: remember to sanitize output before injecting it into the DOM, and pin/track the major version since the API has changed across majors. No datastore, no runtime, no infra.
 
+## Health & viability
+
+- **Maintenance — active (last push 2026-06).** Regular releases through the v18.x line (v18.0.5 dated 2026-06-04); a healthy, low-issue-count repo (~16 open issues at ~36k stars) for a mature parser whose scope is deliberately small and settled [未验证].
+- **Governance & bus factor.** `Org`-owned (`markedjs/`) — a maintainer team / org rather than a single person, which de-risks the bus factor versus a one-author library [推断]. Long-running community project, not vendor-controlled; no commercial tier gating features.
+- **Age & Lindy verdict — old and still active ⇒ strong Lindy.** Created 2011 (~15y old) and still shipping in 2026: the textbook age × still-active signal. A 15-year-old parser still cutting releases is about as safe a longevity bet as this category offers; the API has moved across majors, so pin and track the major version.
+- **Risk flags — minimal, but security is on you.** MIT-licensed, no relicensing history, no open-core gating. The one standing caveat is by design: marked does **not** sanitize output, so untrusted input must be passed through DOMPurify yourself — a usage responsibility, not a project-health flag.
+
 ## Caveats (unverified)
 
 - [未验证] ~36.9k GitHub stars and latest release in the v18.x line (v18.0.5, dated 2026-06-04) as of 2026-06; star counts and versions drift release-to-release — treat as indicative.

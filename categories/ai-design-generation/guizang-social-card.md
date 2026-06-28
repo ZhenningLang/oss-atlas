@@ -41,6 +41,13 @@ It fits best when you want a strong, opinionated aesthetic baked in and an artif
 | Canva / 稿定设计 | 未收录 | Hosted template SaaS, not a repo — easier for non-agents and richer asset libraries, but closed, no local agent control, no single-file HTML artifact, and far less opinionated visual rigor. |
 | Figma + plugins | 未收录 | Full design control and collaboration, but manual; no agent-driven 7-step flow, no auto image sourcing, and not a repo you can vendor. |
 
+## Health & viability
+
+- **Maintenance (2026-06):** [推断] active but thin — last push 2026-05-27, **no tagged release at all** (pins to a moving `main`), open-issue count ~5. For a one-person skill pack that means layout names, presets, and the brief flow can shift without any versioned notice.
+- **Governance & bus factor:** [推断] **single-maintainer, `User`-owned (`op7418`), ~4k stars** — a bus-factor flag, though milder than its sibling `guizang-ppt` (~19k) since the audience is smaller. No org or co-maintainer backstop; this is the same author's sibling to `guizang-ppt` and shares its sustainability profile. Mitigant: each card is a self-contained `.html` you own outright, so abandonment only stops future updates.
+- **Age & Lindy:** [未验证] repo created ~2026-05, ~1 month old as of 2026-06 — **brand-new; zero Lindy prior.** No release line, fast-moving — treat the contract (28 layouts, 10 presets, canvas sizes) as unstable and verify against the current repo.
+- **Risk flags:** [未验证] **AGPL-3.0-only** copyleft (including network-served derivatives) if you vendor it; render/validator scripts need Node + Playwright/Chromium; the image-sourcing fallback chain depends on third-party providers (Unsplash/Pexels/Flickr/Wallhaven) that may need keys/network. No CVEs relevant to a static-HTML generator.
+
 ## Caveats (unverified)
 
 - [未验证] License read as AGPL-3.0-only from the GitHub `licenseInfo` API and the `LICENSE` file (2026-06-26); confirm the exact SPDX/edition against the repo before relying on copyleft scope.

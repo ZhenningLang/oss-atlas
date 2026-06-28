@@ -38,6 +38,14 @@ Anthropic 官方的 Claude Code 插件市场：一个精选的可安装插件目
 | MiniMax-AI/skills | 未收录 | MiniMax 的厂商 skill 集合；不同 provider，harness 假设可能不同——混用前先比对目标 agent 兼容性。 |
 | 第三方 Claude Code 市场 / 社区插件清单 | 未收录 | 面更广、迭代更快，但没有 Anthropic 的策展和来源担保。本仓库是第一方基线；社区市场以更高信任成本来扩展它。 |
 
+## 健康度与可持续性
+
+- **维护** —— [未验证] 最近一次 push 在 2026-06，未归档；活动截至 2026-06 是当前的，故**活跃维护**。open issue 数高（约 783），与一个同时分流 `external_plugins/` 提交的高流量官方目录相符。无 tag release；跟 `main`。
+- **治理与背书** —— [推断] 组织所有，由 **Anthropic** 背书——第一方市场，provenance 清晰、Apache-2.0。路线图归厂商；「官方/精选」说的是 Anthropic 的托管与上架，**不是对每个第三方 `external_plugins/` 条目的审计承诺**。
+- **年龄与 Lindy** —— [推断] 创建于 2025-11，截至 2026-06 约 7 个月：年轻。仅凭年龄 Lindy 弱，但厂商背书 + 第一方身份让它成为逛第三方市场前的**默认基线**；下注风险低于同龄社区合集。
+- **采用/生态** —— [推断] 约 31k star（2026-06），加上原生 `/plugin` 安装，使其成为 Claude Code 插件的权威源。
+- **风险标记** —— [推断] 仅限 Claude Code（无跨 harness loader）；`external_plugins/` 的策展是托管，不是对伙伴提交的安全/维护审计。
+
 ## 存疑（未验证）
 
 - [未验证] 仓库描述记录为 "Official, Anthropic-managed directory of high quality Claude Code Plugins"；许可 Apache-2.0、主语言 Python、未归档、topics 为 `claude-code`/`mcp`/`skills`、最近 push 于 2026-06-26，均为 2026-06-26 的 GitHub 元数据——依赖具体项前请复核。

@@ -66,6 +66,14 @@ So you stand up paperless-ngx with its Docker-first compose stack and point your
 
 **Medium.** Multi-container docker-compose stack (web + worker + Redis + DB, plus Tika/Gotenberg for Office docs). Day-to-day operation is low-touch once configured, but: OCR is CPU/RAM-heavy and slow on low-power hardware; you own backups of both the DB and the document/media volumes; and major upgrades carry breaking changes (v3 removes API v1, drops Python 3.10, recreates migrations, changes consume scripts), so upgrades require reading release notes. Must not be exposed on an untrusted host.
 
+## Health & viability
+
+- **Maintenance (2026-06).** Last pushed 2026-06; stable v2.20.x line plus a v3.0 beta in flight — **actively** developed, not archived. The strikingly low open-issue count (~6) suggests aggressive triage, not stagnation. [推断]
+- **Governance / bus factor.** Community-maintained under the `paperless-ngx` org — itself the community continuation after the original `paperless`/`paperless-ng` lineage stalled, which is reassuring (the project has *already* survived one maintainer handoff) but it has **no commercial backer**; longevity rests on volunteer continuity. [推断]
+- **Age & Lindy verdict.** ~4 years as `paperless-ngx` (created 2022-02), with deeper roots via its predecessors ⇒ a **moderate Lindy** signal — proven in the homelab/DMS niche, though younger than the underlying paperless idea. [推断]
+- **Adoption & ecosystem.** Strong (~42k stars, the default self-hosted DMS recommendation, packaged for Docker-first deployment) — a healthy, widely-deployed project. [未验证]
+- **Risk flags.** GPL-3.0 (no relicense found). The real flags are **upgrade lock-in / breaking changes** (v3 drops API v1, recreates migrations, changes consume scripts) and the security posture (cleartext at rest, permission-model gaps) — pin versions and read release notes before upgrading. [推断]
+
 ## Caveats (unverified)
 
 - **Stars** — 42.5k from a single fetch of the GitHub repo page (2026-06), not cross-checked against the API. `[未验证]`

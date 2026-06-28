@@ -61,6 +61,13 @@ So you run `npx skills add owner/repo` to drop a skill into the right agent dire
 
 **Low.** It is a stateless `npx` CLI: nothing to deploy, no server, no database, no background process. "Operating" it is running commands on demand; the only moving parts are Node `>=18` and network access to the source remotes / registry. The real operational consideration is governance, not infrastructure — because it installs third-party prompt content directly into agent context, treat *which* packs you add (and from where) as the thing to review, and pin/track them yourself since no lockfile mechanism was found.
 
+## Health & viability
+
+- **Maintenance (2026-06):** [推断] actively maintained — last push 2026-06, latest release v1.5.13 (2026-06-23), not archived, on a frequent point-release cadence. Open-issue count (~805 as of 2026-06) is high for a small CLI; read it as active usage churn rather than neglect, but expect a backlog.
+- **Governance & backing:** [推断] `vercel-labs` is Vercel's experimental/labs org, not a core Vercel product line. "Labs" repos carry a real deprecation/abandonment risk — Vercel ships many experiments and not all graduate or get long-term support. Single-vendor roadmap; no foundation neutrality.
+- **Age & Lindy:** [推断] created 2026-01, so ~0.5 yr old as of 2026-06 — **young, unproven by Lindy**. The install/update ergonomics are useful now, but a half-year-old pre-2.0 labs tool has no longevity track record; the command surface and `skills.sh` registry it depends on can still shift.
+- **Risk flags:** [未验证] no lockfile/manifest for pinned reproducible installs (see Caveats); MIT per `package.json` but no detected SPDX `LICENSE` file; it installs arbitrary third-party prompt content into agent context (supply-chain / prompt-injection surface is on the operator). It is an *installer*, so its own viability is somewhat decoupled from the skill content you actually run.
+
 ## Caveats (unverified)
 
 - [未验证] Star count ~23.6k (gh `stargazerCount`, 2026-06-26); GitHub stars are unreliable and date-sensitive — indicative only.

@@ -59,6 +59,14 @@ You also reach for it as a shareable team deployment in the cheap-and-cheerful s
 
 **Low.** This is the project's whole point — the Vercel one-click path gives you a running instance with no server to manage, and the Docker image is a single container with no database. Day-2 burden is mostly: rotating provider keys, setting a strong `CODE` password (and ideally fronting it with a gateway so keys aren't client-reachable), and tracking a fast-moving `main`/release cadence on a single-vendor project. Because state is browser-local, there's nothing to back up server-side — which is also why it doesn't scale into multi-user territory: there's no central data layer to govern. The hard part isn't running NextChat; it's recognizing when "shared password over my keys" has outgrown its limits and you need a real team platform instead.
 
+## Health & viability
+
+- **Maintenance — active but coasting on releases (as of 2026-06).** Repo pushed 2026-05, so the codebase is alive; but the latest tagged release (v2.16.1) is reported 2025-07-29 — roughly a year stale, so you'd be tracking a fast-moving `main` rather than cut releases. Not archived. [未验证]
+- **Governance & bus factor — single-vendor, open-core-adjacent.** Organization-owned (the ChatGPTNextWeb / NextChat org), so not literally a single User repo, but it is effectively one vendor's project, and that vendor monetizes a separate paid Enterprise Edition. The OSS community edition's roadmap is theirs to set; treat governance as vendor-controlled, not foundation-style. [推断]
+- **Age & Lindy — moderate.** Created 2023-03, ~3 years old and still maintained; old enough to have outlived the first wave of ChatGPT-clone UIs, young enough that this category churns fast. A reasonable but not blue-chip Lindy bet — its durability rests on the vendor's continued interest. [推断]
+- **Adoption & ecosystem.** Very high star count (~88k) and broad multi-provider support signal strong mindshare as the "deploy-in-five-minutes" floor of self-hosted chat UIs; but stars overstate active maintenance, and the feature surface is deliberately thin vs. LibreChat/Lobe/Open WebUI.
+- **Risk flags — open-core boundary.** The paid Enterprise Edition (permissions/RBAC) is the gated tier; capabilities you might expect (multi-user auth) live behind it, not in this MIT repo. No relicense or CVE history asserted here. The stale-release vs. live-`main` gap is itself a supply-chain/stability flag if you pin to releases.
+
 ## Caveats (unverified)
 
 - [未验证] ~88.3k stars, latest release v2.16.1 (2025-07-29), and recent activity (2026-05) are from the GitHub page on 2026-06-28; star counts and dates drift — re-verify against the live repo.

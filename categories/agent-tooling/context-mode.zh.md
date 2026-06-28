@@ -60,6 +60,13 @@ type: tool
 
 **低到中。** 在 Claude Code 上是两行 `/plugin` 安装，自动注册 hook，还有个 `ctx-doctor` 校验运行时/hooks/FTS5——确实低摩擦。换平台难度上升：多数平台要手工编辑 MCP + 多事件 hook 配置（各有各的坑——Codex 的 feature flag、OpenCode/Kilo 的 plugin-vs-MCP 重复坑、Cursor 被拒的 SessionStart、无 hook 的降级方案）。原生 SQLite 这块大体能自愈，但旧 glibc/Windows/Alpine 可能要 C++ 工具链。日常维护很轻（本地 SQLite、`ctx upgrade`），但跨版本升级时各平台 hook 配置的同步要你自己扛。
 
+## 健康度与可持续性
+
+- **维护** —— 截至 2026-06 最后 push 在 2026-06，1.0.x 节奏极快（最新 v1.0.166，2026-06-23）：明显活跃，甚至过度活跃。另一面是高 churn——频繁的 point release 和大量未关的平台集成 issue，意味着具体细节很快过时。[推断]
+- **治理 / 巴士因子** —— `[推断]` 单作者（`User` 所有）项目；一人维护的仓库却有约 1.8 万 star，是巴士因子警示。它在 context-mode.com 提供托管的「Insight」看板，暗示背后有商业意图，但没有可指认的基金会或团队治理——路线图由一个人定。
+- **年龄与 Lindy** —— 创建于 2026-02，截至 2026-06 仅数月，尽管挂着 v1.0.x 标号、还拿过一次 Hacker News 第一：在 Lindy 视角下未经检验。把 star / HN 热度当作关注度，而非持久性。
+- **风险旗标** —— **重新授权 / open-core 风险是头条**：它是 **Elastic License 2.0（源码可见，非 OSI 开源）**——不能作为托管服务对外提供、不能重新授权，若你需要宽松开源协议，这是硬性卡点。另需注意它在设计上允许任意代码执行（`ctx_execute`），且在「数据不出本机」的核心宣称之外又带一个托管分析面。[未验证]
+
 ## 存疑（未验证）
 
 - **stars / 采用度** — `[未验证]` `gh` 报告约 18.2k stars（2026-06-26）；GitHub stars 不可靠且对日期敏感。README 里「Used across teams at Microsoft/Google/Meta…」的徽章只有 logo、无引用来源——当作营销，而非已验证的部署。

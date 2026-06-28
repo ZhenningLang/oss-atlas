@@ -66,6 +66,14 @@ type: tool
 
 **中等。** 多容器 docker-compose 栈（web + worker + Redis + DB，处理 Office 文档还需加 Tika/Gotenberg）。配置完成后日常运维很轻，但是：OCR 吃 CPU/RAM，在低功耗硬件上很慢；数据库和文档/媒体卷的备份都得你自己负责；大版本升级带破坏性变更（v3 移除 API v1、放弃 Python 3.10、重建 migrations、改动 consume 脚本），因此升级需要阅读 release notes。绝不能暴露在不可信主机上。
 
+## 健康度与可持续性
+
+- **维护（2026-06）。** 最后 push 于 2026-06；稳定的 v2.20.x 线加上正在推进的 v3.0 beta——处于**活跃**开发，未归档。极低的 open issue 数（约 6）显示积极的 triage，而非停滞。[推断]
+- **治理 / bus factor。** 由 `paperless-ngx` 组织社区维护——它本身就是原 `paperless`/`paperless-ng` 谱系停滞后的社区延续，这点让人安心（项目**已经**挺过一次维护者交接），但它**没有商业方背书**；存续依赖志愿者的延续性。[推断]
+- **年龄与 Lindy 判断。** 作为 `paperless-ngx` 约 4 年（2022-02 创建），经由前身有更深的根基 ⇒ **中等 Lindy** 信号——在 homelab/DMS 细分领域已被验证，但比底层的 paperless 理念年轻。[推断]
+- **采用度与生态。** 很强（约 42k star，是自托管 DMS 的默认推荐，按 Docker 优先方式打包）——一个健康、被广泛部署的项目。[未验证]
+- **风险标记。** GPL-3.0（未发现 relicense）。真正的标记是**升级锁定 / 破坏性变更**（v3 移除 API v1、重建 migrations、改动 consume 脚本）以及安全姿态（静态明文、权限模型缺口）——升级前锁版本并阅读 release notes。[推断]
+
 ## 存疑（未验证）
 
 - **Star 数**——42.5k，来自单次抓取 GitHub 仓库页面（2026-06），未与 API 交叉核对。`[未验证]`

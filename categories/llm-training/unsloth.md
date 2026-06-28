@@ -61,6 +61,13 @@ It shines when your constraint is one GPU and your goal is fast, cheap iteration
 
 **Low to medium.** For the intended path — one GPU, a Colab/Kaggle/notebook or a single script — it's low: install, swap to `FastLanguageModel`, train. Difficulty rises to medium when you fight CUDA/Triton/PyTorch version matrices on bespoke hardware, or when you try to push past the single-GPU free-tier ceiling (multi-GPU/full fine-tune), where the open-source story is contested and you may need a paid tier.
 
+## Health & viability
+
+- **Maintenance — active (as of 2026-06).** Last repo push 2026-06; ships on a fast beta cadence tracking new model releases. Active, not coasting [未验证]. The flip side is churn: kernel/model support and APIs shift quickly, so pin versions.
+- **Governance & backing.** Org-owned (`unslothai/`) — a small VC-funded startup with a commercial Pro/Enterprise tier, not a foundation [推断]. The open-source single-GPU core and the gated multi-GPU/headline-perf tiers share one roadmap controlled by the vendor; viability tracks the company's runway, and the free-vs-paid line can move.
+- **Age & Lindy verdict — young but fast-proving (created 2023-11, ~2.5y).** Too young for a strong Lindy prior, but ~67k stars (2026-06) and heavy ecosystem use mean it has cleared the "is anyone using this" bar; treat as an established-but-still-young bet, not a decade-stable one [推断].
+- **Risk flags.** Open-core: the most-cited capabilities (multi-GPU, top perf multipliers) are tied to commercial tiers, and the OSS-multi-GPU claim is contested (see Caveats). Mixed licensing — Apache-2.0 core with AGPL-3.0 Studio components [未验证]. Budget for the paid tier before betting a production pipeline on it.
+
 ## Caveats (unverified)
 
 - [未验证] Specific speed/VRAM multipliers ("2x faster," "70% less VRAM," "80% less VRAM for GRPO," "~5GB GRPO") are vendor claims; real gains depend on model, sequence length, batch size and GPU. LLM-related performance claims are not guaranteed.

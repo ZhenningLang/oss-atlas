@@ -58,6 +58,13 @@ You drop in **page-agent** — a few lines of JavaScript via npm or CDN, no back
 
 **Low.** Drop-in browser library (npm/CDN, a few lines), no backend, no headless browser, no separate infra to operate. The real operational cost is the **BYO LLM endpoint** — API-key management, per-call cost and latency — plus the **data-governance** question of sending page DOM text to that model. `[推断]` token cost scales with DOM size, so large/complex pages can get expensive per action.
 
+## Health & viability
+
+- **Maintenance (2026-06)** — last pushed 2026-06, not archived; ~33 releases through v1.10.0 and active commit flow point to a maintained project, not a coasting one. `[推断]`
+- **Governance & backing** — an Alibaba-owned (`Organization`) repo, so it's **vendor-backed** rather than a single hobbyist: that's a bus-factor cushion, but the roadmap follows Alibaba's interest in it, and a big vendor can deprioritize a side project. `[推断]`
+- **Age & Lindy** — created ~2025-09, so ~1 year old (2026-06): **young and unproven** on the Lindy axis. Vendor backing offsets some of the abandonment risk, but it has no long track record and the "survives HTML changes" robustness claim is unbenchmarked. `[推断]`
+- **Risk flags** — MIT-licensed (no relicense/open-core flag seen). The structural risk is **external-LLM dependency + DOM-text egress**, not licensing — treat sensitive-app use as a compliance question. `[未验证]`
+
 ## Caveats (unverified)
 
 - **Stars** — ~19.9k from a single snapshot (~2026-06-15), not cross-checked against the API. `[未验证]`

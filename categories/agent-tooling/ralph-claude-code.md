@@ -60,6 +60,13 @@ So you `ralph-enable` (or `ralph-import requirements.md`) in your repo, drop you
 
 **Low-to-medium.** Install is a `git clone` + `./install.sh` that drops global commands; per-project it's a `ralph-enable` wizard or a PRD import, and on the happy path you run `ralph --monitor` and watch. Difficulty rises because: you must keep the Unix toolchain present and correct (Bash version, `jq`, coreutils `gtimeout` on macOS, tmux); you own tuning the safety knobs (`--calls`, `--timeout`, circuit-breaker thresholds) for your cost tolerance; the `.ralph/` file layout and CLI flags have churned across versions (a v0.10 breaking move required `ralph-migrate`); and unattended runs still need you to babysit budget, sandbox cost alerts, and the occasional stuck loop. Letting it touch a real repo unsandboxed is the main risk — backup branches and `--rollback` exist precisely because an autonomous loop can make a mess.
 
+## Health & viability
+
+- **Maintenance** — last push 2026-06 (as of 2026-06) on a v0.11.x line, so actively worked, but **no tagged GitHub releases** exist — the version comes from in-repo README text, not published artifacts. A v0.10 release already moved all files into `.ralph/` (a breaking layout change needing `ralph-migrate`), so expect flags/layout to keep shifting. [推断]
+- **Governance / bus factor** — `[推断]` single-maintainer, `User`-owned repo (`frankbria`); no releases, no team or foundation. ~9.5k stars on a one-person harness is a bus-factor flag — abandonment and flag/layout drift risk is non-trivial for anything you can't re-tool.
+- **Age & Lindy** — created 2025-08, so under a year old as of 2026-06 and still sub-1.0: too young for a Lindy verdict. It packages an established *technique* (Geoffrey Huntley's Ralph loop), but this particular harness is unproven on longevity.
+- **Risk flags** — `[未验证]` MIT, no relicense history. The structural risk is **provider lock-in**: it wraps Anthropic's `claude` CLI specifically (multi-provider is a *planned*, not shipped, pre-1.0 item). Operationally it makes many unattended paid API calls, so cost runaway is real — the circuit breaker and rate limit are the only guardrails.
+
 ## Caveats (unverified)
 
 - [未验证] **No tagged GitHub releases.** `gh repo view` returns `latestRelease: null` and the Releases page says "There aren't any releases here." The "v0.11.5" / "v0.11.x" version and the entire changelog (784 tests, dual-condition gate fixes, etc.) come from the in-repo README text, not a published release artifact — treat version specifics as repo-self-reported.

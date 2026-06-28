@@ -59,6 +59,14 @@ You also reach for it when you control the input quality. Tesseract rewards prep
 
 **Low-to-medium.** The engine itself is easy to operate: a static-ish CPU binary, no service to run, no GPU, no network, distributed as OS packages and Docker images. The cost is in two places. First, **input preprocessing** — to get usable accuracy you typically build a binarize/deskew/denoise/DPI-normalize stage in front of it, and that pipeline (not Tesseract) is where most engineering and tuning goes. Second, **model management** — you must fetch and version the right `tessdata` files for each language and decide between the `fast`/`best` variants, which is a deployment-artifact concern. Scaling is embarrassingly parallel across CPU workers, so throughput is a fan-out problem, not a clustering one. The hard part is rarely running Tesseract; it's getting the images clean enough that Tesseract does well.
 
+## Health & viability
+
+- **Maintenance (as of 2026-06):** last pushed 2026-06, latest release v5.5.2 (2025-12-26) — **actively maintained**, with regular point releases on the 5.x line. [推断] Cadence is steady but mature/incremental rather than fast-moving; it's a stable engine, not a churning one.
+- **Governance / bus factor:** organization-owned (`tesseract-ocr`) and **community-maintained** after a long institutional lineage — originally HP, then open-sourced and stewarded by Google for years, now a community org. [推断] Distributed enough that it isn't a single-maintainer bus-factor risk, but it is volunteer/community-driven, not vendor-resourced.
+- **Age & Lindy verdict (created 2014-08 on GitHub, ~12 yr there; codebase lineage to the 1980s):** old *and* still active and shipping releases — a **very strong Lindy** signal. This is one of the longest-lived OCR engines in existence; for clean printed text it is a safe, durable bet.
+- **Adoption / ecosystem:** the default offline OCR engine across countless pipelines, OS packages, and language bindings (`pytesseract` and many others); 100+ language models, multiple output formats, and trainable `tessdata` — deeply entrenched.
+- **Risk flags:** none of the usual ones — permissive Apache-2.0, no relicense history, no open-core gating. The real ceiling is *capability*, not viability: it trails modern deep-learning OCR on messy input. [推断]
+
 ## Caveats (unverified)
 
 - [未验证] ~75.0k GitHub stars and latest release v5.5.2 (2025-12-26) per the repo as of 2026-06 — star counts are date-sensitive and indicative only.

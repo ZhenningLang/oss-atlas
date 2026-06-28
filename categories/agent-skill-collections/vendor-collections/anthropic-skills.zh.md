@@ -39,6 +39,14 @@ Anthropic 官方公开的 Agent Skills 合集——一组自包含的 `SKILL.md`
 | 第三方社区 skill 包（如 Superpowers） | 未收录 | 偏方法论/SDLC 的强观点合集，叠在 agent 之上。本仓库更窄、且是第一方：参考任务 skill + 编写规范，而非完整工作流方法论。 |
 | 自己写 `SKILL.md` skill | 不适用 | 贴合度最高、零外部依赖，但放弃厂商经过验证的文档生成 skill 与权威 spec/template。很多人就是从这里 fork 当基线。 |
 
+## 健康度与可持续性
+
+- **维护** —— [未验证] 最近一次 push 在 2026-06，未归档；截至 2026-06 活动是当前的，故**活跃维护**。open issue 数高（约 990），与一个极高流量的第一方仓库相符，未必是维护欠债信号。无 tag release；跟 `main`。
+- **治理与背书** —— [推断] 组织所有，且由 **Anthropic 自己**（定义 Agent Skills 格式的平台厂商）背书。该格式可能的最强 provenance，但路线图由厂商定或转向；第一方不等于稳定 API。
+- **年龄与 Lindy** —— [推断] 创建于 2025-09，截至 2026-06 不足约 1 岁：年轻。仅凭年龄 Lindy 很弱，但厂商背书 + 权威的 `spec/`/`template/` 让它成为别人 fork 的**参考**；下注风险低于同龄的社区合集。
+- **采用/生态** —— [推断] 约 155k star（2026-06），且文档类 skill（`docx`/`pdf`/`pptx`/`xlsx`）驱动 Claude 自身的文件生成——作为事实基线被高度采用。
+- **风险标记** —— [未验证] **license 混合**：示例 skill 为 Apache-2.0，文档类 skill 为 source-available（非开源），且无仓库级 LICENSE——分发前先看清条款。
+
 ## 存疑（未验证）
 
 - [未验证] 截至 2026-06-26 无打 tag 的 release，也没有仓库级 LICENSE 文件；license 按区域划分——示例 skill 为 Apache-2.0，文档类 skill（`docx`/`pdf`/`pptx`/`xlsx`）为 source-available。frontmatter 里的 `Apache-2.0` 仅反映示例 skill；分发前请核对具体 skill 的条款。

@@ -62,6 +62,14 @@ It's also a fit when you want risk-scored PR review *in CI without sending code 
 
 **Low.** Single `pip`/`pipx`/`uvx` install plus one `install` command that auto-detects supported AI tools and writes their MCP config; `build` once, then hooks/watch/daemon keep it fresh. No database to run, no cloud account, state lives in a local SQLite file. It climbs to **low-to-medium** when you opt into semantic embeddings (model downloads, optional cloud egress and API keys), run the multi-repo daemon, or wire the GitHub Action with `fail-on-risk` as a merge gate. The optional dependency matrix (embeddings/communities/enrichment) is the main place version friction can surface.
 
+## Health & viability
+
+- **Maintenance (2026-06):** last push 2026-06-14, latest release v2.3.6 on 2026-06-10 — **active** with a fast release cadence. [推断] Cadence is the upside; for a project this young the same speed means an unstable API/format surface.
+- **Governance / bus factor:** **single-maintainer, `User`-owned** (`tirth8205/code-review-graph`), Beta-classified. This is a real **bus-factor flag**: ~18k stars on a personal repo created only months ago is hype far outrunning institutional backing — there is no team or foundation behind the roadmap. [推断]
+- **Age & Lindy (created 2026-02, ~0yr):** **young and hyped — fails the Lindy prior.** No track record, no proven multi-year survival; the star count says attention, not durability. Treat continuity as unproven and pin the GitHub Action to a tag. [推断]
+- **Adoption / ecosystem:** broad language coverage and an MCP + CI surface drive the stars, but lock-in to its `.code-review-graph/` SQLite format and MCP tool surface is real, and self-reported benchmarks (the ~82x figures, "recall 1.0") are circular/unreproduced. [未验证]
+- **Risk flags:** MIT (no relicense risk); the dominant risks are **abandonment / bus-factor** (single maintainer, ~0yr old) and format lock-in, not licensing. [推断]
+
 ## Caveats (unverified)
 
 - [未验证] Latest release v2.3.6 published 2026-06-10; repo created 2026-02-26; pushed 2026-06-14 (per `gh` metadata 2026-06-26). Version cadence is fast; re-verify before pinning.

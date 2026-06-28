@@ -58,6 +58,14 @@ You also reach for it when security review asks "is this agent jailbreakable / w
 
 **Low.** For the core loop there is effectively nothing to operate: install or `npx`, write a YAML, set provider env keys, run `eval` and `view`. State is a local file, the web UI is a bundled Express server you start on demand, and CI usage is just running the same CLI in a job. Difficulty rises to **low-to-medium** only when you self-host sharing for a team, manage many provider credentials/rate limits in CI, or maintain a large red-team configuration — and your eval costs become real provider API spend, which is the main thing to watch rather than infra.
 
+## Health & viability
+
+- **Maintenance — very active (as of 2026-06).** Repo pushed 2026-06; release cadence is fast (package ~0.121.x, observed 0.121.17 on 2026-06-16). Still pre-1.0 in version numbering, but shipping constantly, not coasting. Not archived. [未验证]
+- **Governance & backing — single vendor (Promptfoo).** Organization-owned by the company behind the commercial Promptfoo offering; roadmap is vendor-controlled, not foundation-governed. The OSS CLI is the funded core of a venture-style company, which is good for momentum but ties longevity to the company's commercial trajectory. [推断]
+- **Age & Lindy — moderate, but durable for its category.** Created 2023-04, ~3 years old and continuously active — among the earlier and most-adopted OSS LLM-eval tools, so it has outlasted the "weekend eval script" wave. Young in absolute terms, but a reasonable Lindy bet within a fast-moving niche. [推断]
+- **Adoption & ecosystem.** ~22k stars, broad provider coverage, CI integrations, and a code-scan action; the README's "used by OpenAI/Anthropic, 10M+ users" claims are vendor marketing, not independently confirmed. Decent docs and an active issue tracker (~361 open) for the project size.
+- **Risk flags — open-core.** Local-first OSS CLI under MIT, with the governed/SLA-backed platform (hosted dashboards, RBAC, trend history) reserved for the commercial tier — the usual open-core line to watch if your needs drift toward team governance. No relicense or notable CVE history asserted here.
+
 ## Caveats (unverified)
 
 - [未验证] Latest `promptfoo` package version observed as 0.121.17, published 2026-06-16 (separate `code-scan-action` releases version independently, e.g. 0.1.8). Version cadence is fast; re-verify before pinning.

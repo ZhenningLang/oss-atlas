@@ -62,6 +62,14 @@ So you reach for TimesFM. You `pip install timesfm[torch]`, pull `google/timesfm
 
 **Low-to-medium.** Zero-shot inference is a `pip install` plus a `from_pretrained` / `compile` / `forecast` call — no training job, no labeled data, no serving framework required, and the 200M model fits on commodity CPU. Difficulty rises if you (a) batch large fleets of series and need to size GPU/TPU throughput, (b) fine-tune via PEFT (then you own a training/eval loop), (c) add covariates through XReg, or (d) wrap it in a service with input validation, since the model assumes clean, regularly-sampled numeric input. The main lifecycle burden is version management: checkpoint and API changes across 1.0/2.0/2.5 mean you must pin and re-validate on upgrade.
 
+## Health & viability
+
+- **Maintenance (2026-06):** last push 2026-06, repo release v2.0.1 dated 2026-06-11, headline model line at 2.5 — **active** with a moving model lineage (1.0 → 2.0 → 2.5). [推断] Release-tag versioning lags the model naming, so cadence reads as ongoing research, not a frozen product.
+- **Governance / backing:** Google Research-maintained (`google-research`, Organization). [推断] No single-maintainer bus factor, but the README explicitly states "not an officially supported Google product" — there is **no SLA**, and Google Research code can stall when the team's focus shifts.
+- **Age & Lindy (created 2024-04, ~2yr):** young-ish but consistently active across three model generations — past the "abandoned-young" failure mode, not yet a long-lived Lindy bet. [推断] Treat as a credible-but-evolving foundation model.
+- **Adoption:** ~25k stars (volatile, see Caveats); a small (200M) CPU-runnable checkpoint plus HF/PEFT fine-tuning lowers the adoption barrier, and it sits among named peers (Chronos, Moirai, Nixtla) as a recognized TSFM option. [未验证]
+- **Risk flags:** code is Apache-2.0, but **per-checkpoint weight licenses on Hugging Face may differ** — verify before commercial use. Version churn (pin checkpoint + API) is the other live flag. [推断]
+
 ## Caveats (unverified)
 
 - [未验证] Star count ~25.6k (GitHub API, 2026-06-26); GitHub stars are unreliable and drift continuously — indicative only.

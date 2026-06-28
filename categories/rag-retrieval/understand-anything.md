@@ -61,6 +61,14 @@ It fits best when the same graph should serve *whatever agent you already use* �
 
 **Low-to-medium, with unverified edges.** The advertised happy path is genuinely light: one install command (or a Claude Code plugin add), point it at a repo, get a graph and a query interface — no database or server described as mandatory for basic use. It rises to **medium** the moment you add an LLM backend (key management, per-query cost/latency, and code/doc contents leaving the machine unless you run Ollama locally), and the `curl | bash` install plus broad-but-shallow-documented integrations mean you should verify behavior on a throwaway repo first. The biggest *operational risk here is trust*, not infrastructure: an opaque install path, an unverified egress boundary, and a suspicious star signal mean treat this as unaudited early software, not a vetted dependency.
 
+## Health & viability
+
+- **Maintenance — active but thin history.** Last pushed 2026-06, not archived; latest release v2.7.3 (2026-05), but only **7 releases and ~603 commits** total — a very short track record for the version number. Active, yet too little history to judge stability. `[未验证]`
+- **Governance / backing — single vendor (Egonex-AI), opaque.** **Organization**-owned (`Egonex-AI/Understand-Anything`), but it reads as an early single-vendor project; the README doesn't make the egress boundary or any mandatory hosted backend clear. `[未验证]` Roadmap and longevity hinge on one vendor with no visible track record.
+- **Age & Lindy — young, unproven (created 2026-03, ~3 months as of 2026-06).** Fails the Lindy prior on age alone: months old with a thin commit history. Do not read the version number (v2.x) as maturity.
+- **Trust signal — suspicious popularity, a hard flag.** ~68.8k claimed stars on a repo with ~603 commits is implausibly high for the history [未验证] — likely inflated or a data artifact. **Do not pick this *because* of the star count**; the star-to-history mismatch is itself the warning, not social proof.
+- **Risk flags — `curl | bash` install, unverified LLM/egress boundary.** MIT license (no relicense observed), but the opaque install path and unconfirmed local-only boundary mean treat it as unaudited early software, not a vetted dependency. Prefer the more documented sibling [graphify](graphify.md) when you want a known quantity.
+
 ## Caveats (unverified)
 
 - [未验证] **The ~68.8k star count is suspicious and unverified.** A repo with only ~603 commits, 7 releases, and a first-release history this short would not normally accumulate ~68.8k stars; the figure is implausible for the repo's age/activity and may be inflated or a data artifact. Do **not** treat it as social proof or a quality signal.

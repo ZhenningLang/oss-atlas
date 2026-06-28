@@ -60,6 +60,13 @@ So you install Context Mode as an MCP server (a `/plugin` install on Claude Code
 
 **Low-to-medium.** On Claude Code it's a two-line `/plugin` install with automatic hook registration and a `ctx-doctor` that validates runtimes/hooks/FTS5 — genuinely low-friction. Difficulty rises elsewhere: most platforms need hand-edited MCP + multi-event hook config (each with its own quirks — Codex feature flags, OpenCode/Kilo plugin-vs-MCP-duplicate gotcha, Cursor's rejected SessionStart, no-hook fallbacks). The native-SQLite story is mostly self-healing but older glibc/Windows/Alpine can require a C++ toolchain. Day-to-day maintenance is light (local SQLite, `ctx upgrade`), but you own keeping each platform's hook config in sync across version bumps.
 
+## Health & viability
+
+- **Maintenance** — last push 2026-06 with a very rapid 1.0.x cadence (latest v1.0.166, 2026-06-23, as of 2026-06): clearly active, even hyperactive. The flip side is churn — frequent point releases and many open platform-integration issues mean specifics go stale fast. [推断]
+- **Governance / bus factor** — `[推断]` single-author (`User`-owned) project; ~18k stars on a one-maintainer repo is a bus-factor flag. There's a hosted "Insight" dashboard at context-mode.com, hinting at a commercial intent behind it, but no foundation or team governance to point to — roadmap is one person's.
+- **Age & Lindy** — created 2026-02, so only months old as of 2026-06 despite the v1.0.x label and a #1 Hacker News moment: unproven on Lindy grounds. Treat the stars/HN buzz as attention, not durability.
+- **Risk flags** — **relicense/open-core risk is the headline**: it's **Elastic License 2.0 (source-available, not OSI open source)** — you can't offer it as a hosted service or relicense, a hard stop if you need permissive OSS. Also note arbitrary-code-execution by design (`ctx_execute`) and a hosted analytics surface alongside the "nothing leaves your machine" core claim. [未验证]
+
 ## Caveats (unverified)
 
 - **Stars / adoption** — `[未验证]` `gh` reported ~18.2k stars (2026-06-26); GitHub stars are unreliable and date-sensitive. The README's "Used across teams at Microsoft/Google/Meta…" badges are logo-only with no cited source — treat as marketing, not verified deployments.

@@ -59,6 +59,14 @@ So you reach for LiteRT-LM. You package a **Gemma** model into the `.litertlm` f
 
 **High.** Building from source uses Bazel with a pinned version and a large C++/Rust toolchain — non-trivial vs pip-installing a wrapper. Beyond the build, on-device LLM ops are inherently hard: device-tier RAM gating (2–4B models often need 6–8GB RAM or Android kills the process), GPU-init-then-CPU-fallback logic (GPU availability is inconsistent across devices), KV-cache session rotation every few turns `[未验证]` to stop quality decay, and defensive output parsing because small models emit malformed JSON / wrong-language text. Models must be converted/packaged to `.litertlm`. Several bindings (Swift, JS, Flutter) are preview/community, so API churn and gaps are likely pre-1.0.
 
+## Health & viability
+
+- **Maintenance (2026-06):** last push 2026-06 with a fast release cadence (stable v0.13.1 → v0.14.0-alpha within ~2 weeks) — clearly **active**, but pre-1.0, so churn is the cost of that activity. [推断]
+- **Governance / backing:** Google-maintained under `google-ai-edge` (Organization), part of the LiteRT / TensorFlow Lite lineage. [推断] Removes single-maintainer bus-factor risk, but Google is a notorious project-killer (cf. the MediaPipe→LiteRT-LM repositioning) — directional continuity of the *runtime* is safer than any one binding or format surviving.
+- **Age & Lindy (created 2025-04, ~1yr):** young and hyped; the Lindy prior is weak — it has not yet proven multi-year survival. Bet on it for the Google/LiteRT backing and Gemma path, not for longevity track record. [推断]
+- **Adoption:** ~5k stars (volatile, see Caveats); the Gemma-centric `.litertlm` catalog and pre-1.0 bindings (Swift/JS/Flutter preview) keep the production-ready surface narrow. [未验证]
+- **Risk flags:** Apache-2.0 (no relicense risk). Live flags are pre-1.0 API churn and `.litertlm` format + Google-ecosystem lock-in. [推断]
+
 ## Caveats (unverified)
 
 - **Counts** — stars/forks/issues (5,703 / 596 / 383) are from the GitHub API on 2026-06-26 and drift continuously; an earlier snippet reported only ~3,157 stars, so sources disagree. `[未验证]`

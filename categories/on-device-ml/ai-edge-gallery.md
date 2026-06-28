@@ -60,6 +60,13 @@ So you install Google AI Edge Gallery from the Play Store / App Store (or sidelo
 
 **Low to consume, N/A to operate.** As an end-user app there's nothing to deploy or run as a service — install from a store or sideload the APK and you're benchmarking in minutes; that's the whole point. "Difficulty" only appears if you (a) build from source, which is a standard Gradle Android build, or (b) try to read it as production architecture — at which point you're really evaluating LiteRT-LM / MediaPipe, where the on-device ops burden (RAM gating, GPU-init/CPU-fallback, KV-cache session limits) actually lives. There is no server, no scaling story, no uptime to maintain.
 
+## Health & viability
+
+- **Maintenance (as of 2026-06):** last pushed 2026-06, latest release v1.0.16 (2026-06-23) on a very rapid app cadence (v1.0.11 → v1.0.16 over weeks) — **very actively maintained**, but fast enough that features churn release-to-release and several are flagged "experimental."
+- **Governance / backing:** organization-owned under `google-ai-edge` and **Google-maintained** — strong backing and resourcing for the underlying LiteRT stack. [推断] Caveat: Google has a track record of sunsetting consumer-facing demo apps, so the *showcase* may be deprioritized even if the runtime endures; this is a showcase on top of the SDKs, not the SDK itself.
+- **Age & Lindy verdict (created 2025-03, ~1 yr):** young and riding the on-device-LLM wave — **Lindy-unproven** as a standalone app. But its purpose (de-risk an on-device decision *now*) doesn't require longevity, and it sits on the more durable LiteRT/Google AI Edge runtime, which is the part worth betting on long-term.
+- **Risk flags:** app-store-gated distribution and a Gemma-centric, closed-ish catalog (models via Google's Hugging Face LiteRT Community); experimental features may change or be removed. Apache-2.0, no relicense/open-core concern. [推断]
+
 ## Caveats (unverified)
 
 - [未验证] Star count ~23.9k is from the GitHub API on 2026-06-26; GitHub stars are unreliable and drift continuously — treat as indicative only.

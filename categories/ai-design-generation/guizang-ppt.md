@@ -42,6 +42,13 @@ It fits best when you want a strong personal aesthetic baked in: Style A (electr
 | Marp | 未收录 | Markdown→slides (HTML/PDF/PPTX) with a clean ecosystem and exports this skill lacks; far less visual flexibility per slide. |
 | Gamma / Tome | 未收录 | Hosted AI deck SaaS, not a repo — easier for non-agents, but closed, no single-file HTML artifact, no local agent control. |
 
+## Health & viability
+
+- **Maintenance (2026-06):** [推断] active — last push 2026-06-02, latest release v1.1.0 (2026-05-15), low open-issue count (~23). For a prompt/skill pack "maintenance" mostly means the author keeps tuning layouts and the brief flow; cadence looks healthy but is recent and could pause.
+- **Governance & bus factor:** [推断] **single-maintainer, `User`-owned repo (`op7418`) with ~19k stars — a classic bus-factor flag.** A skill-pack this popular but driven by one person inherits that person's availability; there's no org or co-maintainer backstop. Mitigant: the output is a self-contained `.html` file you fully own, so an abandoned upstream doesn't strand the decks you already generated — only future updates stop.
+- **Age & Lindy:** [推断] created 2026-04, ~2 months old as of 2026-06 — **young and hyped (high stars, low age); Lindy prior is essentially zero.** Layout names (`S01`–`S22`), theme presets, and the brief flow can shift release-to-release; don't treat the contract as stable.
+- **Risk flags:** [未验证] **AGPL-3.0-only** — if you vendor templates/scripts into a product or network service you ship, copyleft applies; read the terms before embedding. Optional image pipeline is tied to specific Codex/GPT-Image models (provider lock for that step). No CVEs relevant to a static-HTML generator.
+
 ## Caveats (unverified)
 
 - [未验证] License read as AGPL-3.0-only from the GitHub `licenseInfo` API and the `LICENSE` file (2026-06-26); confirm the exact SPDX/edition against the repo before relying on copyleft scope.

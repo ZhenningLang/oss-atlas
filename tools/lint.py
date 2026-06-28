@@ -11,7 +11,8 @@ Model:
     INDEX.md is a *category node*; it may hold project pages AND/OR child sub-categories.
     Routing splits by language: INDEX.md (EN) + INDEX.zh.md (ZH) at every node and the root.
   - type-adaptive sections: frontmatter `type` decides which body sections are required.
-    skill-pack pages omit Tech stack / Dependencies / Ops difficulty.
+    skill-pack pages omit Tech stack / Dependencies / Ops difficulty; `Health & viability` and
+    `Caveats` are required for EVERY type.
 
 Checks (ERROR = non-zero exit; WARNING = printed, exit still 0):
   - each page: required frontmatter keys + types, slug==base filename, category==parent dir,
@@ -54,8 +55,10 @@ REQUIRED_KEYS = ["name", "slug", "repo", "category", "tags", "language", "licens
 ALLOWED_TYPES = {"tool", "library", "app", "framework", "service", "model", "skill-pack"}
 CORE_EN = ["## When to use", "## When NOT to use", "## Comparison"]
 EXTRA_EN = ["## Tech stack", "## Dependencies", "## Ops difficulty"]
+HEALTH_EN = ["## Health & viability"]   # required for ALL types (incl. skill-pack)
 CORE_ZH = ["## 何时使用", "## 何时不用", "## 横向对比"]
 EXTRA_ZH = ["## 技术栈", "## 依赖", "## 运维难度"]
+HEALTH_ZH = ["## 健康度与可持续性"]
 NO_EXTRA_TYPES = {"skill-pack"}  # these omit Tech stack / Dependencies / Ops difficulty
 
 INDEX_EN = "INDEX.md"
@@ -168,7 +171,8 @@ def base_slug(name: str) -> str:
 def required_sections(ptype: str, zh: bool) -> list[str]:
     core = CORE_ZH if zh else CORE_EN
     extra = EXTRA_ZH if zh else EXTRA_EN
-    return core + ([] if ptype in NO_EXTRA_TYPES else extra)
+    health = HEALTH_ZH if zh else HEALTH_EN
+    return core + health + ([] if ptype in NO_EXTRA_TYPES else extra)
 
 
 def check_page(path: Path, category_dir: Path, rep: Report, today: dt.date) -> None:

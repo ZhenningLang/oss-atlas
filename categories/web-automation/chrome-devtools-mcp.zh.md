@@ -61,6 +61,13 @@ type: tool
 
 **低到中。** 顺利路径是在 MCP 客户端配置里写一段 JSON,`npx chrome-devtools-mcp@latest` 首次运行时拉包——没有要托管的基础设施。成本上升来自：在 headless/CI/容器环境里搞到一个可用的真实 Chrome(经典的"Chrome 在 Docker 里启不起来"沙箱/`--no-sandbox` 摩擦)、30+ 个配置 flag 与多种连接方式，以及你必须有意识设定的安全/遥测姿态(给不可信页面加沙箱、`--no-usage-statistics`、`--no-performance-crux`)。因为每个 MCP 客户端各自启动一个服务器进程，所以没有共享服务要运维——但也没有集中治理访问的地方。
 
+## 健康度与可持续性
+
+- **维护——活跃、官方。** 最后一次 push 在 2026-06，未归档；最新 v1.4.0（2026-06-23）。发布在 **ChromeDevTools（Google）** 组织名下，所以维护是机构级而非业余——是本处 web-automation 同类里最强的背书信号。`[未验证]`
+- **治理 / 背书——Google / Chrome DevTools 团队。** 仓库为 **Organization** 所有（`ChromeDevTools/chrome-devtools-mcp`），约 44.5k star[未验证]。bus factor 很低（是 Google 内部一个团队，而非单个维护者）——但要注意 Google 砍掉副项目的履历参差，所以"官方"是降低而非消除弃坑风险。`[推断]`
+- **年龄与 Lindy——年轻（创建于 2025-09，截至 2026-06 约 9 个月）。** 单看自身太新，拿不到 Lindy 先验；版本是 1.x 但 flag/工具面仍随版本变动，要可复现请 pin 版本。它的 Lindy 强度，更多来自其底座（Chrome + CDP + Puppeteer）的耐久性，而非这个仓库自身的年龄。
+- **风险标志——默认开启遥测 + 浏览器内容暴露。** Apache-2.0，未观察到 relicense。除非传 `--no-usage-statistics`，否则 Google 会收集使用统计；性能流程可能调用 CrUX API，除非传 `--no-performance-crux`；README 警告它会把全部浏览器内容（cookie/会话/页面内容）暴露给客户端和模型——请有意识地设定安全/遥测姿态。`[未验证]`
+
 ## 存疑(未验证)
 
 - [未验证] Star 数约 44.5k(2026-06-26 的 gh 快照);GitHub star 不可靠且对日期敏感——仅作参考。

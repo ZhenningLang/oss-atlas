@@ -60,6 +60,14 @@ This is the right pick when your real goal is *file storage and link-sharing ins
 
 **Medium-to-high — but mostly inherited from cozy-stack, not this app.** Building the web app itself is a routine Node/Yarn workflow. The real operational burden is standing up and maintaining the **cozy-stack** backend and the surrounding Twake Workplace/Cozy platform (auth, sharing, connectors, datastore), which this repo assumes already exists. If you only want "a place to put files," that platform requirement makes Twake Drive a heavy choice; if you already run Twake Workplace, the drive is just another served app and ops is low.
 
+## Health & viability
+
+- **Maintenance (2026-06).** Last pushed 2026-06 with a recent tag (1.103.0, 2026-06-23) and `main` ahead at 1.105.0 — **actively** developed, not archived. [推断]
+- **Governance / backing.** Owned by **Linagora**, a French open-source company, as part of its Twake Workplace suite — a vendor-backed project (not a lone maintainer), which is reassuring for continuity but ties the roadmap to one company's suite strategy. It is a fork/rebrand of upstream `cozy/cozy-drive`. [推断]
+- **Age & Lindy verdict.** The repo dates to ~2016 (created 2016-12) and the Cozy Drive lineage it descends from is older still ⇒ the *codebase* has a **moderate-to-strong Lindy** prior, but as a **Linagora rebrand its independent track record is shorter** and adoption (~960 stars) is modest — judge by the suite's traction, not raw age. [推断]
+- **Adoption.** Low star count (~960) signals a small standalone community; its real adoption is gated to teams already running Twake Workplace / Cozy, not a broad independent user base. [未验证]
+- **Risk flags.** **AGPL-3.0** is the headline flag — network-copyleft obligations bite if you offer a modified version as a service. Plus heavy **platform lock-in**: this repo is front-end only and requires the separate cozy-stack backend. [推断]
+
 ## Caveats (unverified)
 
 - [未验证] `gh` reports latest tagged release **1.103.0** (2026-06-23) while `package.json`/`manifest.webapp` on `main` show **1.105.0** — main is ahead of the latest tag; treat the exact "current version" as approximate.

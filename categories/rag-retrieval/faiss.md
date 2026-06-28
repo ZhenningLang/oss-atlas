@@ -60,6 +60,14 @@ You also reach for it when you outgrow CPU: the same library has a GPU path (`fa
 
 **Low as a library, but the system around it is yours.** Installing is a single `pip install faiss-cpu` (or `faiss-gpu`), and using it is in-process function calls — nothing to deploy, no daemon, no cluster for FAISS itself. The real cost is everything a vector *database* would otherwise hand you and that you now own: persisting/reloading indexes, sharding across RAM/GPU-memory limits, rebuilding on data changes (most index types don't cheaply delete/update in place), capacity-planning memory (PQ compression vs recall), and tuning index parameters per workload. So "ops" here is mostly *engineering* — you embed FAISS in a service and build the durability, scaling, and filtering layer yourself, which is exactly why managed vector DBs exist on top of indexes like this one.
 
+## Health & viability
+
+- **Maintenance (2026-06):** last push 2026-06, current release line v1.14.x — **active** and steadily released; a long-running, well-maintained library, not a stalled research drop. [推断]
+- **Governance / backing:** Meta FAIR-maintained (`facebookresearch/faiss`, Organization). [推断] Institutional backing removes single-maintainer bus-factor risk; it is core enough to Meta's own retrieval stack and the broader vector-DB ecosystem (many stores wrap it) that it has strong structural reasons to persist.
+- **Age & Lindy (created 2017-02, ~9yr):** old **and** still active — a **strong Lindy** bet. Nine years of continuous use and being the de-facto in-process ANN index under many vector databases is about as durable a longevity prior as this space offers. [推断]
+- **Adoption / ecosystem:** ~40k stars (volatile, see Caveats) understates it — FAISS is the *engine* embedded inside or benchmarked against by most vector stores; ecosystem dependence is deep and real. [未验证]
+- **Risk flags:** MIT (no relicense risk, no open-core gating). The only "risk" is scope: it is a bare library, so you own persistence/sharding/filtering — an engineering cost, not a viability flag.
+
 ## Caveats (unverified)
 
 - [未验证] ~40.4k GitHub stars and v1.14.x as the current release line as of 2026-06 — star counts and version are date-sensitive; treat as indicative and re-check the repo.

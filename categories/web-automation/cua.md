@@ -61,6 +61,14 @@ You reach for **Cua**. You spin up an ephemeral sandbox with one async call — 
 
 **Medium-to-high.** The Cloud path (cua.ai) is the easy on-ramp — managed sandboxes, no local VM to babysit. Self-hosting is heavier: you operate VMs/containers, a computer-server, and drivers, and on Apple Silicon you manage Lume/Lumier guest images. Across the many `v0.x` packages you'll track several independent version streams, and the vision agent loop adds ongoing **per-screenshot model cost/latency** plus the data-governance question of shipping desktop screenshots to a model provider. Linux drivers being pre-release means platform coverage is still uneven.
 
+## Health & viability
+
+- **Maintenance — active across many packages.** Last pushed 2026-06, not archived; the monorepo's packages (cua-agent v0.8.4, cua-sandbox v0.1.17, cua-cloud, cua-driver-rs v0.6.8, cua-bench) were all updated 2026-06. Active, but you track **several independent version streams**, and `cua-driver-rs`/Linux drivers are flagged pre-release. `[未验证]`
+- **Governance / backing — single startup (trycua).** **Organization**-owned (`trycua/cua`), ~19k stars [未验证]. Backed by one venture-stage company behind the cua.ai hosted product — better than a lone maintainer, but its longevity is tied to that company's survival and funding. `[推断]`
+- **Age & Lindy — young (created 2025-01, ~1.5 years as of 2026-06).** Old enough to show real benchmark integration (OSWorld/ScreenSpot/Windows Arena) but the many `v0.x` packages signal a pre-stable API; no Lindy prior yet. Expect breaking changes; pin per-package versions.
+- **Adoption / ecosystem — credible niche.** Vision computer-use infra with benchmark+training surface and a hosted cloud on-ramp; model-agnostic via liteLLM rather than locked to one vendor — a real ecosystem signal for an early project.
+- **Risk flags — open-core + AGPL optional dep.** MIT core, but the hosted Cua Cloud is the commercial layer (open-core tension), and the optional `ultralytics` dependency is **AGPL-3.0** — confirm whether your usage path pulls it in before assuming MIT-only licensing for a deployment. `[推断]` Desktop screenshots are also shipped to your model provider (data-governance flag).
+
 ## Caveats (unverified)
 
 - [未验证] Star count ~19.0k (gh snapshot 2026-06-26) — GitHub stars are unreliable and date-sensitive; indicative only.

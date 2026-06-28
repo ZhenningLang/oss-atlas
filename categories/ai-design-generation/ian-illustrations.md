@@ -41,6 +41,13 @@ Reach for it specifically when consistency of *one* visual voice matters across 
 | [impeccable](impeccable.md) | ✅ | Different generation target (design artifacts) rather than a fixed-IP Chinese illustration voice. |
 | nano-banana / gpt-image prompt packs | 未收录 | Generic image-prompt collections give you raw model access with no article-analysis, shot-list, or consistent-IP layer this skill adds. |
 
+## Health & viability
+
+- **Maintenance (as of 2026-06):** last pushed 2026-06, not archived — active in absolute terms, but the repo was *created in 2026-05*, so there is barely a month of history to judge cadence on. [推断]
+- **Governance & bus factor:** a `User`-owned, single-author skill (helloianneo) at v1.0.0; one person owns the 小黑 IP, the style DNA and the prompt templates. Classic single-maintainer bus-factor risk — if the author stops, nothing carries it. [推断]
+- **Age & Lindy verdict:** age < 1 year and ~6k stars on a fresh repo make this **young + lightly-hyped, longevity unproven**; it has not survived long enough for Lindy to say anything. Bet on the *idea* (a consistent illustration persona), not on this repo being here in two years. [未验证]
+- **Risk flags:** it is a thin prompt/style layer with no renderer of its own (depends on the host agent's `image_gen`), and the Codex-vs-Claude-Code packaging ambiguity (see Caveats) means host compatibility can shift under you. Low lock-in (MIT, plain markdown) offsets this — you can fork and keep the prompts. [推断]
+
 ## Caveats (unverified)
 
 - [未验证] Release v1.0.0 dated 2026-05-27, last pushed 2026-06-03, license MIT — per `gh repo view` on 2026-06-26.

@@ -59,6 +59,13 @@ It also fits when you want the same conveniences in automation: DevToys ships a 
 
 **Low.** For the end user it is a single desktop install with zero services to run, no config, and no network exposure — essentially "install and use," and uninstall is clean. The only ongoing burden is keeping up with prerelease 2.x builds if you want the cross-platform line, and vetting any third-party extension you add (an extension is arbitrary code from NuGet, so it inherits that trust/maintenance cost). There is no deployment, scaling, or backup story because there is no server.
 
+## Health & viability
+
+- **Maintenance (2026-06):** **active but in prerelease limbo** — repo pushed 2026-02; the cross-platform 2.x line ships only as **prerelease** builds (latest v2.0.9.0, 2026-01), and the last *stable* GitHub release is the Windows-only 1.0.13.0 (2023). Developing, but with no current stable tag. [未验证]
+- **Governance & bus factor:** `Organization`-owned (`DevToys-app`) with ~31k stars — community/org project, no large vendor behind it; a small maintainer team rather than a single person. [推断]
+- **Age & Lindy (~5yr, created 2021-09):** **mid-aged and active** — enough history to clear a basic Lindy bar, but the unfinished 2.x stabilization tempers the verdict: proven concept, not-yet-frozen current line.
+- **Risk flags:** if your org bars prerelease software, the cross-platform line is a real gate; third-party extensions are arbitrary NuGet code (trust/maintenance cost). MIT, no relicense/open-core history.
+
 ## Caveats (unverified)
 
 - [未验证] Latest release is v2.0.9.0 published 2026-01-08 and marked **prerelease**; the most recent non-prerelease GitHub release is v1.0.13.0 (2023-07-25, Windows-only 1.x). Repo `pushedAt` 2026-02-25, so development is ongoing — but "stable 2.0" status should be confirmed before relying on it.

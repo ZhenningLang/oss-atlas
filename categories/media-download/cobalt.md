@@ -56,6 +56,13 @@ You also reach for it when you want a *small JSON API* in front of media extract
 
 **Medium.** Unlike a CLI that executes and exits, cobalt is a *service you run and keep running*. The happy path is reasonable — Docker plus a handful of environment variables brings up the API and UI — but operating it long-term means the usual service burdens: a reverse proxy and TLS if it's public, monitoring and restarts, and crucially **abuse control**. A publicly reachable downloader is a magnet for scraping and bandwidth abuse, so you'll want rate-limiting and likely API tokens/auth so it isn't an open relay. You also inherit extractor fragility: when a target site changes, you update the instance to keep it working. For a private, localhost-only instance this is light; for a public one, budget for the operational and bandwidth cost.
 
+## Health & viability
+
+- **Maintenance — active (last push ~2026-04, as of 2026-06).** Not archived; ongoing development consistent with chasing site-player changes (an extractor-style downloader has to stay current to keep working) [未验证]. Treat continued activity as load-bearing for this tool class — a stale extractor silently breaks.
+- **Governance & backing.** `Org`-owned (`imputnet/cobalt`) — a small team/org behind a public-instance product, not a foundation and not a large vendor [推断]. Roadmap and the official public instance sit with that team; self-hosting insulates you from any single instance going away, which is the main resilience lever here.
+- **Age & Lindy verdict — mid-young (created 2022-07, ~4y).** Old enough to have proven the product and accumulated ~41k stars, young enough that there's no decade-long track record; a reasonable-but-not-bulletproof bet whose real fragility is per-site extractor breakage, not project death [推断].
+- **Risk flags — AGPL-3.0 network copyleft (load-bearing).** This is the sharpest flag: run a *modified* version as a network service and you owe users your source. Fine for internal/personal instances; a blocker if you want to fork it into a closed hosted product (see When NOT to use / Caveats) [推断]. Plus the legal/ToS exposure inherent to running a public downloader.
+
 ## Caveats (unverified)
 
 - [未验证] ~41.3k GitHub stars as of 2026-06 and "active (2026-04)" — star counts and activity dates are time-sensitive and unreliable; treat as indicative and re-check the repo.

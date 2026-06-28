@@ -63,6 +63,13 @@ It also fits when you want one design surface that plugs into *whatever* agent y
 
 **Low for desktop use, medium from source/web.** The fastest path is the pre-packaged desktop app: download, add a BYOK key, generate — close to zero ops, everything local. Running from source or self-hosting the web build is **medium**: you manage Node 24 / pnpm versions, the local daemon, and Docker/Vercel deployment, plus the usual Electron build friction across OSes. Because it's local-first and single-user there's no server fleet to maintain, but you do own model-key management, updates across fast minor releases, and any video/export toolchain on your machine.
 
+## Health & viability
+
+- **Maintenance (as of 2026-06):** last pushed 2026-06, not archived, with a rapid pre-1.0 release cadence (v0.11.0). Clearly **active**, but ~457 open issues against a young repo signals both heavy use and a fast-moving, not-yet-settled surface. [推断]
+- **Governance & bus factor:** `Organization`-owned (nexu-io) rather than a lone maintainer, which is a mild bus-factor improvement over a personal repo; but it is a small/unproven org, not a foundation or established vendor — roadmap ownership and funding model are unverified. [未验证]
+- **Age & Lindy verdict:** created 2026-04, so age < 1 year — **very young and heavily hyped** (~72k stars on a months-old repo). Stars here reflect a launch wave, not durability; this is the opposite of a Lindy-safe bet, so weigh it as "promising but unproven." [未验证]
+- **Risk flags / lock-in:** the upside is genuinely low lock-in — Apache-2.0, local-first, BYOK, and open export formats (HTML/PDF/PPTX/MP4) mean you keep your artifacts even if the project stalls. The main risk is breaking changes between minor versions while the plugin/Skill formats stabilize. [推断]
+
 ## Caveats (unverified)
 
 - [未验证] v0.11.0 ("The Bazaar") published 2026-06-17; repo last pushed 2026-06-26 — versions and dates per GitHub API/README and may move quickly given the rapid release cadence.
