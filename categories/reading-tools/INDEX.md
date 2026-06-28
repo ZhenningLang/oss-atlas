@@ -7,15 +7,15 @@
 
 | Project | Use when | Page |
 |---|---|---|
-| **NetNewsWire** | A free, open-source, native RSS/Atom feed reader for macOS and iOS — fast, no telemetry, and built by the developer who originally created the category-defining Mac feed reader. | [→](netnewswire.md) |
-| **Just Read** | A customizable "read mode" browser extension that strips ads, modals, and navigation from article pages and reformats them into a clean, readable view — with optional editing, highlighting, and (premium) cross-device save and OpenAI summaries. | [→](just-read.md) |
+| **NetNewsWire** | Use it when you read many feeds on Mac/iPhone and want a fast, ad-free native RSS client you own — but only on Apple platforms, never elsewhere. | [→](netnewswire.md) |
+| **Just Read** | Use it when you want to strip ads and clutter from an article in-browser, your way, with per-site selectors — but it's EULA-licensed source, not real OSS. | [→](just-read.md) |
 
 ## Comparison matrix
 
 | Option | Indexed | One-line tradeoff |
 |---|---|---|
-| [NetNewsWire](netnewswire.md) | ✅ | A free, open-source, native RSS/Atom feed reader for macOS and iOS — fast, no telemetry, and built by the developer who originally created the category-defining Mac feed reader. |
-| [Just Read](just-read.md) | ✅ | A customizable "read mode" browser extension that strips ads, modals, and navigation from article pages and reformats them into a clean, readable view — with optional editing, highlighting, and (premium) cross-device save and OpenAI summaries. |
+| [NetNewsWire](netnewswire.md) | ✅ | Use it when you read many feeds on Mac/iPhone and want a fast, ad-free native RSS client you own — but only on Apple platforms, never elsewhere. |
+| [Just Read](just-read.md) | ✅ | Use it when you want to strip ads and clutter from an article in-browser, your way, with per-site selectors — but it's EULA-licensed source, not real OSS. |
 | (alternatives named across the pages) | 未收录 | Substitutes referenced in each page's Comparison. |
 
 ## What belongs here

@@ -8,16 +8,16 @@
 | Project | Use when | Page |
 |---|---|---|
 | **Mermaid** | Use it when you want diagrams as version-controlled plain text (flowchart/sequence/ER) rendered in Markdown and docs — not pixel-precise layouts. | [→](mermaid.md) |
-| **flowchart.js** | A tiny JavaScript library that turns a small textual DSL into an SVG flowchart in the browser — define nodes and connections as text, get a rendered diagram. | [→](flowchart-js.md) |
-| **bpmn-js** | A BPMN 2.0 rendering and modeling toolkit for the browser — import BPMN XML, display it as an interactive diagram, and edit it, built by the bpmn.io team at Camunda. | [→](bpmn-js.md) |
+| **flowchart.js** | Use it when you want simple flowcharts authored as git-diffable text and rendered to SVG in the browser — but it only renders, depends on aging Raphael.js, and chokes on complex diagrams. | [→](flowchart-js.md) |
+| **bpmn-js** | Use it when business analysts must author or view standards-correct BPMN 2.0 diagrams inside your web app — but its license mandates a non-removable bpmn.io watermark, so confirm terms before white-labeling. | [→](bpmn-js.md) |
 
 ## Comparison matrix
 
 | Option | Indexed | One-line tradeoff |
 |---|---|---|
 | [Mermaid](mermaid.md) | ✅ | Plain-text diagrams rendered everywhere; trades layout control for portability. |
-| [flowchart.js](flowchart-js.md) | ✅ | A tiny JavaScript library that turns a small textual DSL into an SVG flowchart in the browser — define nodes and connections as text, get a rendered diagram. |
-| [bpmn-js](bpmn-js.md) | ✅ | A BPMN 2.0 rendering and modeling toolkit for the browser — import BPMN XML, display it as an interactive diagram, and edit it, built by the bpmn.io team at Camunda. |
+| [flowchart.js](flowchart-js.md) | ✅ | Use it when you want simple flowcharts authored as git-diffable text and rendered to SVG in the browser — but it only renders, depends on aging Raphael.js, and chokes on complex diagrams. |
+| [bpmn-js](bpmn-js.md) | ✅ | Use it when business analysts must author or view standards-correct BPMN 2.0 diagrams inside your web app — but its license mandates a non-removable bpmn.io watermark, so confirm terms before white-labeling. |
 | Graphviz / PlantUML / D2 / draw.io / Excalidraw | 未收录 | Other diagram engines / editors named across the pages (more layout control or WYSIWYG). |
 
 ## What belongs here

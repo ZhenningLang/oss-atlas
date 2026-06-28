@@ -7,13 +7,13 @@
 
 | Project | Use when | Page |
 |---|---|---|
-| **SpeechBrain** | An all-in-one, PyTorch-based speech toolkit covering speech recognition, speaker recognition, enhancement, separation, language identification, text-to-speech and more — with hundreds of ready-to-run training "recipes" on standard datasets. | [→](speechbrain.md) |
+| **SpeechBrain** | Use it when you need to train and adapt speech models (ASR, speaker ID, separation) on one coherent PyTorch recipe codebase — but it's research-and-training-first, so production serving and cross-version API stability are your job. | [→](speechbrain.md) |
 
 ## Comparison matrix
 
 | Option | Indexed | One-line tradeoff |
 |---|---|---|
-| [SpeechBrain](speechbrain.md) | ✅ | An all-in-one, PyTorch-based speech toolkit covering speech recognition, speaker recognition, enhancement, separation, language identification, text-to-speech and more — with hundreds of ready-to-run training "recipes" on standard datasets. |
+| [SpeechBrain](speechbrain.md) | ✅ | Use it when you need to train and adapt speech models (ASR, speaker ID, separation) on one coherent PyTorch recipe codebase — but it's research-and-training-first, so production serving and cross-version API stability are your job. |
 | (alternatives named across the pages) | 未收录 | Substitutes referenced in each page's Comparison. |
 
 ## What belongs here

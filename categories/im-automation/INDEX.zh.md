@@ -10,8 +10,8 @@
 | **ItChat** | 仅作为旧版微信机器人代码学习——已停更，且其依赖的网页协议已失效，基本不可用。 | [→](itchat.zh.md) |
 | **WeChatPlugin-MacOS** | 当前微信别用——一个 patch macOS 微信客户端二进制的小助手，每次微信更新就失效、已 ~2 年没动；有封号与安全风险。 | [→](wechatplugin-macos.zh.md) |
 | **wxpy** | 仅作为旧版微信机器人代码学习——2019 年起已归档，且基于已失效的微信网页协议，基本不可用。 | [→](wxpy.zh.md) |
-| **wxappUnpacker** | 一个微信小程序 `.wxapkg` 反编译/解包工具——只不过*这个具体的 fork* 已被清空：`xdmjun/wxappUnpacker` 仓库如今只剩一个 `README.md`，内容就是字符串 `del`。它是一座墓碑，真正能用的代码只活在各个 fork 里。 | [→](wxappunpacker.zh.md) |
-| **Douyin-Bot** | 一个 2018 年的 Python 玩具/demo，通过 ADB 驱动一部真实 Android 手机自动刷抖音，用云 API 给人脸打分，并自动给"漂亮"的视频点赞。很有名，约 9.6k star——但自 2020 年起实质已死。 | [→](douyin-bot.zh.md) |
+| **wxappUnpacker** | 当你需要把自有的微信小程序 .wxapkg 包反编译回可读源码时用它——但本仓库已被清空成墓碑，请改用仍存活的 fork。 | [→](wxappunpacker.zh.md) |
+| **Douyin-Bot** | 仅当你想要一份 ADB 屏幕坐标手机自动化的历史示例时用它——切勿部署，2018 年的硬编码坐标与失效的腾讯人脸 API 意味着它早已跑不通。 | [→](douyin-bot.zh.md) |
 
 ## 对比矩阵
 
@@ -20,8 +20,8 @@
 | [ItChat](itchat.zh.md) | ✅ | 仅作为旧版微信机器人代码学习——已停更，且其依赖的网页协议已失效，基本不可用。 |
 | [WeChatPlugin-MacOS](wechatplugin-macos.zh.md) | ✅ | 当前微信别用——一个 patch macOS 微信客户端二进制的小助手，每次微信更新就失效、已 ~2 年没动；有封号与安全风险。 |
 | [wxpy](wxpy.zh.md) | ✅ | 仅作为旧版微信机器人代码学习——2019 年起已归档，且基于已失效的微信网页协议，基本不可用。 |
-| [wxappUnpacker](wxappunpacker.zh.md) | ✅ | 一个微信小程序 `.wxapkg` 反编译/解包工具——只不过*这个具体的 fork* 已被清空：`xdmjun/wxappUnpacker` 仓库如今只剩一个 `README.md`，内容就是字符串 `del`。它是一座墓碑，真正能用的代码只活在各个 fork 里。 |
-| [Douyin-Bot](douyin-bot.zh.md) | ✅ | 一个 2018 年的 Python 玩具/demo，通过 ADB 驱动一部真实 Android 手机自动刷抖音，用云 API 给人脸打分，并自动给"漂亮"的视频点赞。很有名，约 9.6k star——但自 2020 年起实质已死。 |
+| [wxappUnpacker](wxappunpacker.zh.md) | ✅ | 当你需要把自有的微信小程序 .wxapkg 包反编译回可读源码时用它——但本仓库已被清空成墓碑，请改用仍存活的 fork。 |
+| [Douyin-Bot](douyin-bot.zh.md) | ✅ | 仅当你想要一份 ADB 屏幕坐标手机自动化的历史示例时用它——切勿部署，2018 年的硬编码坐标与失效的腾讯人脸 API 意味着它早已跑不通。 |
 | wechaty / WeCom official API | 未收录 | 各页对比里点到的仍在维护的 IM 自动化方案。 |
 
 ## 什么该放这里

@@ -7,15 +7,15 @@
 
 | Project | Use when | Page |
 |---|---|---|
-| **Authomatic** | A Python library for federated login / "sign in with X" — a framework-agnostic OAuth 1.0a, OAuth 2.0 and OpenID client that handles the provider handshake and hands you the authenticated user plus an API-call helper. | [→](authomatic.md) |
-| **django-rules** | A tiny Django app that provides **object-level permissions without a database** — you express authorization as composable predicate functions ("rules") and plug them into Django's permission system, views, templates, and DRF. | [→](django-rules.md) |
+| **Authomatic** | Use it when a framework-agnostic Python app needs thin "sign in with X" via OAuth1/OAuth2/OpenID, leaving session persistence to you — but it's low-velocity and an auth lib's slow fix cadence is a security risk. | [→](authomatic.md) |
+| **django-rules** | Use it when Django object-level permissions are computed from logic (predicates), not stored grants, with no DB tables — but if admins must assign per-object permissions at runtime you need django-guardian instead. | [→](django-rules.md) |
 
 ## Comparison matrix
 
 | Option | Indexed | One-line tradeoff |
 |---|---|---|
-| [Authomatic](authomatic.md) | ✅ | A Python library for federated login / "sign in with X" — a framework-agnostic OAuth 1.0a, OAuth 2.0 and OpenID client that handles the provider handshake and hands you the authenticated user plus an API-call helper. |
-| [django-rules](django-rules.md) | ✅ | A tiny Django app that provides **object-level permissions without a database** — you express authorization as composable predicate functions ("rules") and plug them into Django's permission system, views, templates, and DRF. |
+| [Authomatic](authomatic.md) | ✅ | Use it when a framework-agnostic Python app needs thin "sign in with X" via OAuth1/OAuth2/OpenID, leaving session persistence to you — but it's low-velocity and an auth lib's slow fix cadence is a security risk. |
+| [django-rules](django-rules.md) | ✅ | Use it when Django object-level permissions are computed from logic (predicates), not stored grants, with no DB tables — but if admins must assign per-object permissions at runtime you need django-guardian instead. |
 | (alternatives named across the pages) | 未收录 | Substitutes referenced in each page's Comparison. |
 
 ## What belongs here

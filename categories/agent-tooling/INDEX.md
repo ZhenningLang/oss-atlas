@@ -14,8 +14,8 @@
 | **Context Mode** | Use it when a coding agent burns context on raw tool output and you want sandboxed execution plus compaction-surviving session memory. | [→](context-mode.md) |
 | **Planning with Files** | Use it when a long agent run keeps losing its plan to /clear, compaction, or crashes. | [→](planning-with-files.md) |
 | **Vercel Skills** | Use it when you want an npm-style CLI to install, find, and update SKILL.md packs across many coding agents. | [→](vercel-skills.md) |
-| **OpenSandbox** | Use it when an agent must run untrusted, generated code in isolated Docker/K8s sandboxes — a very young high-star project, so weigh adoption claims with caution. | [→](opensandbox.md) |
-| **AgentsView** | Use it when you want local-first search, analytics, and token-cost insight across your coding-agent sessions. | [→](agentsview.md) |
+| **OpenSandbox** | Use it when you must self-host isolated sandboxes to run untrusted agent-generated code at K8s scale with egress controls and a credential vault — but the repo is only months old (created 2025-12), so its API and Lindy track record are unproven. | [→](opensandbox.md) |
+| **AgentsView** | Use it when you run several coding agents and want local-first cross-agent session search and token/cost analytics — but it's months-old and pre-1.0, expect churn. | [→](agentsview.md) |
 
 ## Comparison matrix
 
@@ -28,8 +28,8 @@
 | [Context Mode](context-mode.md) | ✅ | Use it when a coding agent burns context on raw tool output and you want sandboxed execution plus compaction-surviving session memory. |
 | [Planning with Files](planning-with-files.md) | ✅ | Use it when a long agent run keeps losing its plan to /clear, compaction, or crashes. |
 | [Vercel Skills](vercel-skills.md) | ✅ | Use it when you want an npm-style CLI to install, find, and update SKILL.md packs across many coding agents. |
-| [OpenSandbox](opensandbox.md) | ✅ | Use it when an agent must run untrusted, generated code in isolated Docker/K8s sandboxes — a very young high-star project, so weigh adoption claims with caution. |
-| [AgentsView](agentsview.md) | ✅ | Use it when you want local-first search, analytics, and token-cost insight across your coding-agent sessions. |
+| [OpenSandbox](opensandbox.md) | ✅ | Use it when you must self-host isolated sandboxes to run untrusted agent-generated code at K8s scale with egress controls and a credential vault — but the repo is only months old (created 2025-12), so its API and Lindy track record are unproven. |
+| [AgentsView](agentsview.md) | ✅ | Use it when you run several coding agents and want local-first cross-agent session search and token/cost analytics — but it's months-old and pre-1.0, expect churn. |
 | Taskmaster / GitHub Issues + gh / Linear | 未收录 | Other task/work-tracking backends for agents named across the pages. |
 
 ## What belongs here

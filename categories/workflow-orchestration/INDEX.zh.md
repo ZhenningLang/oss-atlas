@@ -8,16 +8,16 @@
 | 项目 | 何时用 | 页面 |
 |---|---|---|
 | **Apache Airflow** | 当你要用 Python DAG 加 Web UI 编排定时批处理数据管线时用它——不适合低延迟或事件驱动流。 | [→](airflow.zh.md) |
-| **Gaia** | 一个自动化/流水线平台，让你用任意编程语言（Go、Python、Java、C++……）构建流水线——把你的代码编译成插件来执行——**现已归档，不再维护**。 | [→](gaia.zh.md) |
-| **Airflow Maintenance DAGs** | 一组现成的 Apache Airflow DAG，用来让 Airflow 部署保持健康——清理元数据库的旧记录、删除陈旧任务日志、清掉僵尸任务，以及其它你本来要自己写脚本做的杂务。 | [→](airflow-maintenance-dags.zh.md) |
+| **Gaia** | 当作只读参考研究「流水线即编译插件」设计时用它——仓库已归档废弃，绝不可用于新的生产部署。 | [→](gaia.zh.md) |
+| **Airflow Maintenance DAGs** | 当自管 Airflow 需要现成 DAG 清理元数据库行和陈旧日志时用它——它执行依赖版本内部结构的破坏性删除，先 dry-run 并备份。 | [→](airflow-maintenance-dags.zh.md) |
 
 ## 对比矩阵
 
 | 选项 | 是否收录 | 一句话取舍 |
 |---|---|---|
 | [Apache Airflow](airflow.zh.md) | ✅ | 当你要用 Python DAG 加 Web UI 编排定时批处理数据管线时用它——不适合低延迟或事件驱动流。 |
-| [Gaia](gaia.zh.md) | ✅ | 一个自动化/流水线平台，让你用任意编程语言（Go、Python、Java、C++……）构建流水线——把你的代码编译成插件来执行——**现已归档，不再维护**。 |
-| [Airflow Maintenance DAGs](airflow-maintenance-dags.zh.md) | ✅ | 一组现成的 Apache Airflow DAG，用来让 Airflow 部署保持健康——清理元数据库的旧记录、删除陈旧任务日志、清掉僵尸任务，以及其它你本来要自己写脚本做的杂务。 |
+| [Gaia](gaia.zh.md) | ✅ | 当作只读参考研究「流水线即编译插件」设计时用它——仓库已归档废弃，绝不可用于新的生产部署。 |
+| [Airflow Maintenance DAGs](airflow-maintenance-dags.zh.md) | ✅ | 当自管 Airflow 需要现成 DAG 清理元数据库行和陈旧日志时用它——它执行依赖版本内部结构的破坏性删除，先 dry-run 并备份。 |
 | Prefect / Dagster / Argo Workflows / Temporal | 未收录 | 各页对比里点到的其他工作流编排器。 |
 
 ## 什么该放这里

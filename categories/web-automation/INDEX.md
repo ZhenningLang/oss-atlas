@@ -13,7 +13,7 @@
 | **Agent Browser** | Use it when an agent must shell-drive a real Chrome over CDP with stable element refs instead of CSS selectors. | [→](agent-browser.md) |
 | **Selenium** | Use it when you need cross-browser WebDriver automation across a browser/language matrix — Playwright/Cypress are nicer for modern single-browser DX. | [→](selenium.md) |
 | **PhantomJS** | Avoid for new work — an archived, abandoned scriptable headless browser; use headless Chrome (Puppeteer/Playwright) or Selenium instead. | [→](phantomjs.md) |
-| **Selenium Wire** | Extends Selenium's Python bindings so you can inspect and modify the browser's underlying HTTP/HTTPS traffic — by routing the browser through an internal MITM proxy. **The project is archived and explicitly no longer maintained.** | [→](selenium-wire.md) |
+| **Selenium Wire** | Use it when a legacy Selenium suite needs to read or modify the browser's background HTTP traffic — but it's archived, so new projects should use Selenium 4's native CDP/BiDi or Playwright. | [→](selenium-wire.md) |
 
 ## Comparison matrix
 
@@ -25,7 +25,7 @@
 | [Agent Browser](agent-browser.md) | ✅ | Use it when an agent must shell-drive a real Chrome over CDP with stable element refs instead of CSS selectors. |
 | [Selenium](selenium.md) | ✅ | Use it when you need cross-browser WebDriver automation across a browser/language matrix — Playwright/Cypress are nicer for modern single-browser DX. |
 | [PhantomJS](phantomjs.md) | ✅ | Avoid for new work — an archived, abandoned scriptable headless browser; use headless Chrome (Puppeteer/Playwright) or Selenium instead. |
-| [Selenium Wire](selenium-wire.md) | ✅ | Extends Selenium's Python bindings so you can inspect and modify the browser's underlying HTTP/HTTPS traffic — by routing the browser through an internal MITM proxy. **The project is archived and explicitly no longer maintained.** |
+| [Selenium Wire](selenium-wire.md) | ✅ | Use it when a legacy Selenium suite needs to read or modify the browser's background HTTP traffic — but it's archived, so new projects should use Selenium 4's native CDP/BiDi or Playwright. |
 | Playwright / Puppeteer | 未收录 | Lower-level browser automation libraries named across the pages. |
 
 ## What belongs here

@@ -16,9 +16,9 @@
 | **tqdm** | 当你想给 Python 循环/CLI/notebook 加一个快速、低开销的进度条时用它。 | [→](tqdm.zh.md) |
 | **SlimToolkit** | 当你想在不重写 Dockerfile 的情况下自动瘦身并加固臃肿的容器镜像时用它——注意它可能删掉运行时动态加载的文件。 | [→](slim.zh.md) |
 | **Faker (faker-js)** | 当你需要在 JS/TS 里生成逼真的假/mock 数据(姓名、地址、金融…)用于测试和填充时用它。 | [→](faker-js.zh.md) |
-| **fontTools** | 一个 Python 库（外加一组命令行工具），用来读取、写入、操纵字体文件——TrueType/OpenType、WOFF/WOFF2、AFM 等等——是开源字体工具栈事实上的基石。 | [→](fonttools.zh.md) |
-| **Flashlight** | 给老版 macOS 用的「非官方 Spotlight API」——一套注入 Spotlight 的插件系统，让你输入 `weather`、`define`、货币换算等就能在原生 Spotlight 里直接看到自定义结果。这个 `w0lfschild` 仓库是源自 nate-parrott 原项目的一连串分叉中的一个。 | [→](flashlight.zh.md) |
-| **IdeaVim** | JetBrains 系 IDE（IntelliJ IDEA、PyCharm、GoLand、WebStorm、Rider 等）的 Vim 模拟插件——在 IDE 内提供 Vim 的 motion、模式、寄存器、宏，以及 `.ideavimrc`，由 JetBrains 自己维护。 | [→](ideavim.zh.md) |
+| **fontTools** | 当你需要对字体做程序化处理——子集化网页字体、转格式、查改表——时用它——但它只编辑字体文件，不绘制字形也不做文字排版。 | [→](fonttools.zh.md) |
+| **Flashlight** | 当你在维护一台 10.10–10.15 的老 macOS、想给 Spotlight 加插件时用它——但它自 2020 年起已弃，且需关闭 SIP，日常机器上别碰。 | [→](flashlight.zh.md) |
+| **IdeaVim** | 当你离不开 JetBrains IDE、又想要 Vim 的动作、模式和 `.ideavimrc` 时用它——但它只是 Vim 子集的模拟，重度用户会撞上还原度的缺口。 | [→](ideavim.zh.md) |
 
 ## 对比矩阵
 
@@ -33,9 +33,9 @@
 | [tqdm](tqdm.zh.md) | ✅ | 当你想给 Python 循环/CLI/notebook 加一个快速、低开销的进度条时用它。 |
 | [SlimToolkit](slim.zh.md) | ✅ | 当你想在不重写 Dockerfile 的情况下自动瘦身并加固臃肿的容器镜像时用它——注意它可能删掉运行时动态加载的文件。 |
 | [Faker (faker-js)](faker-js.zh.md) | ✅ | 当你需要在 JS/TS 里生成逼真的假/mock 数据(姓名、地址、金融…)用于测试和填充时用它。 |
-| [fontTools](fonttools.zh.md) | ✅ | 一个 Python 库（外加一组命令行工具），用来读取、写入、操纵字体文件——TrueType/OpenType、WOFF/WOFF2、AFM 等等——是开源字体工具栈事实上的基石。 |
-| [Flashlight](flashlight.zh.md) | ✅ | 给老版 macOS 用的「非官方 Spotlight API」——一套注入 Spotlight 的插件系统，让你输入 `weather`、`define`、货币换算等就能在原生 Spotlight 里直接看到自定义结果。这个 `w0lfschild` 仓库是源自 nate-parrott 原项目的一连串分叉中的一个。 |
-| [IdeaVim](ideavim.zh.md) | ✅ | JetBrains 系 IDE（IntelliJ IDEA、PyCharm、GoLand、WebStorm、Rider 等）的 Vim 模拟插件——在 IDE 内提供 Vim 的 motion、模式、寄存器、宏，以及 `.ideavimrc`，由 JetBrains 自己维护。 |
+| [fontTools](fonttools.zh.md) | ✅ | 当你需要对字体做程序化处理——子集化网页字体、转格式、查改表——时用它——但它只编辑字体文件，不绘制字形也不做文字排版。 |
+| [Flashlight](flashlight.zh.md) | ✅ | 当你在维护一台 10.10–10.15 的老 macOS、想给 Spotlight 加插件时用它——但它自 2020 年起已弃，且需关闭 SIP，日常机器上别碰。 |
+| [IdeaVim](ideavim.zh.md) | ✅ | 当你离不开 JetBrains IDE、又想要 Vim 的动作、模式和 `.ideavimrc` 时用它——但它只是 Vim 子集的模拟，重度用户会撞上还原度的缺口。 |
 
 ## 什么该放这里
 

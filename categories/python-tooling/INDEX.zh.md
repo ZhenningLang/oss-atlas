@@ -7,19 +7,19 @@
 
 | 项目 | 何时用 | 页面 |
 |---|---|---|
-| **Cython** | 一个把 Python（以及带类型标注的 Python 超集）编译成 C、产出原生 CPython 扩展模块的编译器——是让热点 Python 代码变快、或封装 C/C++ 库的标准做法。 | [→](cython.zh.md) |
-| **pyrasite** | 一个把任意 Python 代码注入**正在运行**的 Python 进程的工具——通过 gdb 挂到一个活的 PID 上，跑诊断片段、dump 对象，或开一个反向 shell，全程不重启目标。 | [→](pyrasite.zh.md) |
-| **gophernotes** | **Go** 语言的一个 Jupyter 内核——在 Jupyter 笔记本（以及 nteract）里逐 cell 交互式地写和跑 Go，cell 之间状态持久。 | [→](gophernotes.zh.md) |
-| **GRequests** | Requests + Gevent：用熟悉的 `requests` API 并发发出大量 HTTP 请求，通过 `map()`/`imap()` 收集结果，而不必自己写异步代码。 | [→](grequests.zh.md) |
+| **Cython** | 当你已 profile 出的 Python 热点循环需要逼近 C 的速度、或要封装 C／C++ 库时用它——但它会引入 C 编译器和按平台构建 wheel 的流水线负担。 | [→](cython.zh.md) |
+| **pyrasite** | 当你必须向一个无法重启、卡死或泄漏的运行中 Python 进程注入诊断代码时用它——但注入可能让目标崩溃，只当救火工具用。 | [→](pyrasite.zh.md) |
+| **gophernotes** | 当你想在 Jupyter 笔记本里用交互式 Go 单元做探索或教程时用它——但它自 2023 年起停滞，且跑的是解释器而非标准 Go。 | [→](gophernotes.zh.md) |
+| **GRequests** | 当你想用 `map()` 以最小改动让现有同步 `requests` 代码并发时用它——但 gevent 会猴补丁标准库，可能与你的技术栈冲突。 | [→](grequests.zh.md) |
 
 ## 对比矩阵
 
 | 选项 | 是否收录 | 一句话取舍 |
 |---|---|---|
-| [Cython](cython.zh.md) | ✅ | 一个把 Python（以及带类型标注的 Python 超集）编译成 C、产出原生 CPython 扩展模块的编译器——是让热点 Python 代码变快、或封装 C/C++ 库的标准做法。 |
-| [pyrasite](pyrasite.zh.md) | ✅ | 一个把任意 Python 代码注入**正在运行**的 Python 进程的工具——通过 gdb 挂到一个活的 PID 上，跑诊断片段、dump 对象，或开一个反向 shell，全程不重启目标。 |
-| [gophernotes](gophernotes.zh.md) | ✅ | **Go** 语言的一个 Jupyter 内核——在 Jupyter 笔记本（以及 nteract）里逐 cell 交互式地写和跑 Go，cell 之间状态持久。 |
-| [GRequests](grequests.zh.md) | ✅ | Requests + Gevent：用熟悉的 `requests` API 并发发出大量 HTTP 请求，通过 `map()`/`imap()` 收集结果，而不必自己写异步代码。 |
+| [Cython](cython.zh.md) | ✅ | 当你已 profile 出的 Python 热点循环需要逼近 C 的速度、或要封装 C／C++ 库时用它——但它会引入 C 编译器和按平台构建 wheel 的流水线负担。 |
+| [pyrasite](pyrasite.zh.md) | ✅ | 当你必须向一个无法重启、卡死或泄漏的运行中 Python 进程注入诊断代码时用它——但注入可能让目标崩溃，只当救火工具用。 |
+| [gophernotes](gophernotes.zh.md) | ✅ | 当你想在 Jupyter 笔记本里用交互式 Go 单元做探索或教程时用它——但它自 2023 年起停滞，且跑的是解释器而非标准 Go。 |
+| [GRequests](grequests.zh.md) | ✅ | 当你想用 `map()` 以最小改动让现有同步 `requests` 代码并发时用它——但 gevent 会猴补丁标准库，可能与你的技术栈冲突。 |
 | (各页对比里点到的替代品) | 未收录 | 详见各页 Comparison。 |
 
 ## 什么该放这里

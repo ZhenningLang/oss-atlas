@@ -7,19 +7,19 @@
 
 | Project | Use when | Page |
 |---|---|---|
-| **Cython** | A compiler that turns Python (and an annotated Python-superset) into C, producing native CPython extension modules — the standard way to make hot Python code fast or to wrap a C/C++ library. | [→](cython.md) |
-| **pyrasite** | A tool to inject arbitrary Python code into a **running** Python process — attach to a live PID via gdb, run diagnostic snippets, dump objects, or open a reverse shell, without restarting the target. | [→](pyrasite.md) |
-| **gophernotes** | A Jupyter kernel for the **Go** language — write and run Go interactively in Jupyter notebooks (and nteract), cell by cell, with persistent state between cells. | [→](gophernotes.md) |
-| **GRequests** | Requests + Gevent: send many HTTP requests concurrently with the familiar `requests` API, gathered through `map()`/`imap()` instead of writing async code. | [→](grequests.md) |
+| **Cython** | Use it when a profiled hot Python loop needs near-C speed or you must wrap a C/C++ library — but it forces a C compiler and per-platform wheel build pipeline. | [→](cython.md) |
+| **pyrasite** | Use it when you must inject diagnostic code into a stuck or leaking live Python process you can't restart — but injection can crash the target, treat it as incident-only. | [→](pyrasite.md) |
+| **gophernotes** | Use it when you want interactive Go cells in a Jupyter notebook for exploration or tutorials — but it's stalled since 2023 and runs an interpreter, not standard Go. | [→](gophernotes.md) |
+| **GRequests** | Use it when you want to make existing synchronous `requests` code concurrent with minimal diff via `map()` — but gevent monkeypatches the stdlib and can collide with your stack. | [→](grequests.md) |
 
 ## Comparison matrix
 
 | Option | Indexed | One-line tradeoff |
 |---|---|---|
-| [Cython](cython.md) | ✅ | A compiler that turns Python (and an annotated Python-superset) into C, producing native CPython extension modules — the standard way to make hot Python code fast or to wrap a C/C++ library. |
-| [pyrasite](pyrasite.md) | ✅ | A tool to inject arbitrary Python code into a **running** Python process — attach to a live PID via gdb, run diagnostic snippets, dump objects, or open a reverse shell, without restarting the target. |
-| [gophernotes](gophernotes.md) | ✅ | A Jupyter kernel for the **Go** language — write and run Go interactively in Jupyter notebooks (and nteract), cell by cell, with persistent state between cells. |
-| [GRequests](grequests.md) | ✅ | Requests + Gevent: send many HTTP requests concurrently with the familiar `requests` API, gathered through `map()`/`imap()` instead of writing async code. |
+| [Cython](cython.md) | ✅ | Use it when a profiled hot Python loop needs near-C speed or you must wrap a C/C++ library — but it forces a C compiler and per-platform wheel build pipeline. |
+| [pyrasite](pyrasite.md) | ✅ | Use it when you must inject diagnostic code into a stuck or leaking live Python process you can't restart — but injection can crash the target, treat it as incident-only. |
+| [gophernotes](gophernotes.md) | ✅ | Use it when you want interactive Go cells in a Jupyter notebook for exploration or tutorials — but it's stalled since 2023 and runs an interpreter, not standard Go. |
+| [GRequests](grequests.md) | ✅ | Use it when you want to make existing synchronous `requests` code concurrent with minimal diff via `map()` — but gevent monkeypatches the stdlib and can collide with your stack. |
 | (alternatives named across the pages) | 未收录 | Substitutes referenced in each page's Comparison. |
 
 ## What belongs here

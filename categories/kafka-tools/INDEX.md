@@ -7,15 +7,15 @@
 
 | Project | Use when | Page |
 |---|---|---|
-| **UI for Apache Kafka (provectus/kafka-ui)** | A free, open-source web UI for managing and observing Apache Kafka clusters — browse brokers, topics, partitions, consumer groups and their lag, produce/inspect messages, and wire in Schema Registry and Kafka Connect, all from a browser. **Note:** active development has moved to the community fork `kafbat/kafka-ui` (see Health). | [→](kafka-ui.md) |
-| **kafka-python** | A pure-Python client library for Apache Kafka — high-level `KafkaConsumer`, `KafkaProducer`, and `KafkaAdminClient` classes plus CLI scripts, with no C/Cython/Rust core so installs are trivial across environments. | [→](kafka-python.md) |
+| **UI for Apache Kafka (provectus/kafka-ui)** | Use it when you want a one-`docker run` web dashboard to browse Kafka brokers, topics, and consumer-group lag — but this `provectus` upstream is stalled (last release 2024-04); deploy the maintained `kafbat/kafka-ui` fork instead. | [→](kafka-ui.md) |
+| **kafka-python** | Use it when you want a pure-Python Kafka client that just `pip install`s with no librdkafka to compile — but a pure-Python client can't match `confluent-kafka`'s throughput and may trail the newest broker features. | [→](kafka-python.md) |
 
 ## Comparison matrix
 
 | Option | Indexed | One-line tradeoff |
 |---|---|---|
-| [UI for Apache Kafka (provectus/kafka-ui)](kafka-ui.md) | ✅ | A free, open-source web UI for managing and observing Apache Kafka clusters — browse brokers, topics, partitions, consumer groups and their lag, produce/inspect messages, and wire in Schema Registry and Kafka Connect, all from a browser. **Note:** active development has moved to the community fork `kafbat/kafka-ui` (see Health). |
-| [kafka-python](kafka-python.md) | ✅ | A pure-Python client library for Apache Kafka — high-level `KafkaConsumer`, `KafkaProducer`, and `KafkaAdminClient` classes plus CLI scripts, with no C/Cython/Rust core so installs are trivial across environments. |
+| [UI for Apache Kafka (provectus/kafka-ui)](kafka-ui.md) | ✅ | Use it when you want a one-`docker run` web dashboard to browse Kafka brokers, topics, and consumer-group lag — but this `provectus` upstream is stalled (last release 2024-04); deploy the maintained `kafbat/kafka-ui` fork instead. |
+| [kafka-python](kafka-python.md) | ✅ | Use it when you want a pure-Python Kafka client that just `pip install`s with no librdkafka to compile — but a pure-Python client can't match `confluent-kafka`'s throughput and may trail the newest broker features. |
 | (alternatives named across the pages) | 未收录 | Substitutes referenced in each page's Comparison. |
 
 ## What belongs here

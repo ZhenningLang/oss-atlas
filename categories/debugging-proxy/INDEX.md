@@ -8,14 +8,14 @@
 | Project | Use when | Page |
 |---|---|---|
 | **whistle** | Use it when a web/mobile dev must capture, inspect, rewrite, and mock HTTP(S)/WebSocket traffic via a rule-based web UI — a dev proxy, not a production gateway or scraping pool. | [→](whistle.md) |
-| **AnyProxy** | A fully configurable HTTP/HTTPS man-in-the-middle proxy in Node.js: route your machine's (or a mobile device's) traffic through it to inspect it in a web UI, record it, and rewrite requests/responses with JS rule files. Alibaba-backed — but the master branch hasn't moved since mid-2020. | [→](anyproxy.md) |
+| **AnyProxy** | Use it when you want a scriptable Node.js MITM proxy to inspect and rewrite HTTP/HTTPS traffic in plain JS rules — but master is frozen since 2020, so prefer whistle for new work. | [→](anyproxy.md) |
 
 ## Comparison matrix
 
 | Option | Indexed | One-line tradeoff |
 |---|---|---|
 | [whistle](whistle.md) | ✅ | Use it when a web/mobile dev must capture, inspect, rewrite, and mock HTTP(S)/WebSocket traffic via a rule-based web UI — a dev proxy, not a production gateway or scraping pool. |
-| [AnyProxy](anyproxy.md) | ✅ | A fully configurable HTTP/HTTPS man-in-the-middle proxy in Node.js: route your machine's (or a mobile device's) traffic through it to inspect it in a web UI, record it, and rewrite requests/responses with JS rule files. Alibaba-backed — but the master branch hasn't moved since mid-2020. |
+| [AnyProxy](anyproxy.md) | ✅ | Use it when you want a scriptable Node.js MITM proxy to inspect and rewrite HTTP/HTTPS traffic in plain JS rules — but master is frozen since 2020, so prefer whistle for new work. |
 | Charles / Fiddler / mitmproxy / anyproxy | 未收录 | Other debugging proxies named across the pages. |
 
 ## What belongs here

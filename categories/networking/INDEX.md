@@ -7,21 +7,21 @@
 
 | Project | Use when | Page |
 |---|---|---|
-| **Paramiko** | The leading pure-Python implementation of the SSHv2 protocol — client and server, with SFTP — letting Python code open SSH connections, run remote commands, and transfer files without shelling out to the `ssh` binary. | [→](paramiko.md) |
-| **sshtunnel** | A small Python library (and CLI) that wraps Paramiko to give you SSH port-forwarding tunnels as a context manager — `with SSHTunnelForwarder(...) as t:` opens a local port that bridges, through an SSH bastion, to a service you can't reach directly. | [→](sshtunnel.md) |
-| **dnspython** | A powerful, pure-Python DNS toolkit — both high-level resolution (`dns.resolver`) and low-level message/record manipulation (queries, zone transfers, dynamic updates, TSIG, DNSSEC, and modern transports: UDP/TCP, DoH, DoT, DoQ). | [→](dnspython.md) |
-| **wondershaper** | A single Bash script that wraps Linux `tc` (traffic control) to cap the up/download bandwidth of a network adapter with one command — `wondershaper -a eth0 -d 8192 -u 2048` instead of a wall of HTB queueing-discipline incantations. | [→](wondershaper.md) |
-| **ThriftPy** | A pure-Python implementation of Apache Thrift that loads a `.thrift` file at runtime and generates the RPC client/server code on the fly — **deprecated and archived**, superseded by [thriftpy2](https://github.com/Thriftpy/thriftpy2). | [→](thriftpy.md) |
+| **Paramiko** | Use it when Python code must open SSH/SFTP connections and run remote commands programmatically — but it's pure-Python (slower than OpenSSH), threading-only, and LGPL-2.1. | [→](paramiko.md) |
+| **sshtunnel** | Use it when a Python script needs a clean context-managed SSH port-forward to a service behind a bastion — but it has no auto-reconnect and is low-activity (0.4.0, 2021). | [→](sshtunnel.md) |
+| **dnspython** | Use it when Python needs arbitrary record types, custom resolvers, zone transfers, DNSSEC, or DoH/DoT — but it bypasses /etc/hosts and the OS resolver, requires Python 3.10+, and is a library not a CLI. | [→](dnspython.md) |
+| **wondershaper** | Use it when one Linux NIC needs a quick up/down bandwidth ceiling without hand-writing tc rules — but it's HTB-era (not bufferbloat-aware like cake/fq_codel) and Linux-only, coasting since 2024-07. | [→](wondershaper.md) |
+| **ThriftPy** | Use it only to understand a legacy service still importing thriftpy before migrating — the repo is archived and deprecated, so all new Thrift work should go to the maintained thriftpy2. | [→](thriftpy.md) |
 
 ## Comparison matrix
 
 | Option | Indexed | One-line tradeoff |
 |---|---|---|
-| [Paramiko](paramiko.md) | ✅ | The leading pure-Python implementation of the SSHv2 protocol — client and server, with SFTP — letting Python code open SSH connections, run remote commands, and transfer files without shelling out to the `ssh` binary. |
-| [sshtunnel](sshtunnel.md) | ✅ | A small Python library (and CLI) that wraps Paramiko to give you SSH port-forwarding tunnels as a context manager — `with SSHTunnelForwarder(...) as t:` opens a local port that bridges, through an SSH bastion, to a service you can't reach directly. |
-| [dnspython](dnspython.md) | ✅ | A powerful, pure-Python DNS toolkit — both high-level resolution (`dns.resolver`) and low-level message/record manipulation (queries, zone transfers, dynamic updates, TSIG, DNSSEC, and modern transports: UDP/TCP, DoH, DoT, DoQ). |
-| [wondershaper](wondershaper.md) | ✅ | A single Bash script that wraps Linux `tc` (traffic control) to cap the up/download bandwidth of a network adapter with one command — `wondershaper -a eth0 -d 8192 -u 2048` instead of a wall of HTB queueing-discipline incantations. |
-| [ThriftPy](thriftpy.md) | ✅ | A pure-Python implementation of Apache Thrift that loads a `.thrift` file at runtime and generates the RPC client/server code on the fly — **deprecated and archived**, superseded by [thriftpy2](https://github.com/Thriftpy/thriftpy2). |
+| [Paramiko](paramiko.md) | ✅ | Use it when Python code must open SSH/SFTP connections and run remote commands programmatically — but it's pure-Python (slower than OpenSSH), threading-only, and LGPL-2.1. |
+| [sshtunnel](sshtunnel.md) | ✅ | Use it when a Python script needs a clean context-managed SSH port-forward to a service behind a bastion — but it has no auto-reconnect and is low-activity (0.4.0, 2021). |
+| [dnspython](dnspython.md) | ✅ | Use it when Python needs arbitrary record types, custom resolvers, zone transfers, DNSSEC, or DoH/DoT — but it bypasses /etc/hosts and the OS resolver, requires Python 3.10+, and is a library not a CLI. |
+| [wondershaper](wondershaper.md) | ✅ | Use it when one Linux NIC needs a quick up/down bandwidth ceiling without hand-writing tc rules — but it's HTB-era (not bufferbloat-aware like cake/fq_codel) and Linux-only, coasting since 2024-07. |
+| [ThriftPy](thriftpy.md) | ✅ | Use it only to understand a legacy service still importing thriftpy before migrating — the repo is archived and deprecated, so all new Thrift work should go to the maintained thriftpy2. |
 | (alternatives named across the pages) | 未收录 | Substitutes referenced in each page's Comparison. |
 
 ## What belongs here

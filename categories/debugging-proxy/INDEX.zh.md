@@ -8,14 +8,14 @@
 | 项目 | 何时用 | 页面 |
 |---|---|---|
 | **whistle** | 当 web/移动开发者要通过规则化 Web UI 抓取、检查、改写并 mock HTTP(S)/WebSocket 流量时用它——是开发调试代理，不是生产网关或爬虫代理池。 | [→](whistle.zh.md) |
-| **AnyProxy** | 一个用 Node.js 写的完全可配置 HTTP/HTTPS 中间人代理：把你机器（或移动设备）的流量路由穿过它，在 web UI 里检视、录制，并用 JS 规则文件改写请求/响应。阿里背书——但 master 分支自 2020 年中起就没动过。 | [→](anyproxy.zh.md) |
+| **AnyProxy** | 当你想用纯 JS 规则脚本化地拦截并改写 HTTP/HTTPS 流量、需要一个 Node.js MITM 代理时用它——但 master 自 2020 年已冻结，新项目请优先选 whistle。 | [→](anyproxy.zh.md) |
 
 ## 对比矩阵
 
 | 选项 | 是否收录 | 一句话取舍 |
 |---|---|---|
 | [whistle](whistle.zh.md) | ✅ | 当 web/移动开发者要通过规则化 Web UI 抓取、检查、改写并 mock HTTP(S)/WebSocket 流量时用它——是开发调试代理，不是生产网关或爬虫代理池。 |
-| [AnyProxy](anyproxy.zh.md) | ✅ | 一个用 Node.js 写的完全可配置 HTTP/HTTPS 中间人代理：把你机器（或移动设备）的流量路由穿过它，在 web UI 里检视、录制，并用 JS 规则文件改写请求/响应。阿里背书——但 master 分支自 2020 年中起就没动过。 |
+| [AnyProxy](anyproxy.zh.md) | ✅ | 当你想用纯 JS 规则脚本化地拦截并改写 HTTP/HTTPS 流量、需要一个 Node.js MITM 代理时用它——但 master 自 2020 年已冻结，新项目请优先选 whistle。 |
 | Charles / Fiddler / mitmproxy / anyproxy | 未收录 | 各页对比里点到的其他调试代理。 |
 
 ## 什么该放这里

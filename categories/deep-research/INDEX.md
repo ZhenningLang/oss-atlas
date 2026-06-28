@@ -11,7 +11,7 @@
 | **Vane** | Use it when you want a self-hosted, privacy-focused Perplexity-style cited answer engine over your own SearxNG and chosen LLM. | [→](vane.md) |
 | **Local Deep Research** | Use it when you need a self-hosted, fully-local deep-research agent that keeps sensitive queries on your own machine. | [→](local-deep-research.md) |
 | **Agent-Reach** | Use it when your agent needs to read and search web plus social platforms without paid APIs. | [→](agent-reach.md) |
-| **MiroThinker** | Use it when you want a deep-research agent reference that combines fine-tuned research models with MCP tools, accepting young-project risk. | [→](mirothinker.md) |
+| **MiroThinker** | Use it when you want a self-hosted, open-weights deep-research agent you can study and extend on your own GPUs — but it needs a GPU cluster plus paid external APIs and is under a year old with no Lindy. | [→](mirothinker.md) |
 
 ## Comparison matrix
 
@@ -21,7 +21,7 @@
 | [Vane](vane.md) | ✅ | Use it when you want a self-hosted, privacy-focused Perplexity-style cited answer engine over your own SearxNG and chosen LLM. |
 | [Local Deep Research](local-deep-research.md) | ✅ | Use it when you need a self-hosted, fully-local deep-research agent that keeps sensitive queries on your own machine. |
 | [Agent-Reach](agent-reach.md) | ✅ | Use it when your agent needs to read and search web plus social platforms without paid APIs. |
-| [MiroThinker](mirothinker.md) | ✅ | Use it when you want a deep-research agent reference that combines fine-tuned research models with MCP tools, accepting young-project risk. |
+| [MiroThinker](mirothinker.md) | ✅ | Use it when you want a self-hosted, open-weights deep-research agent you can study and extend on your own GPUs — but it needs a GPU cluster plus paid external APIs and is under a year old with no Lindy. |
 | GPT Researcher / Perplexity / OpenAI Deep Research | 未收录 | Other deep-research agents/services named across the pages. |
 
 ## What belongs here
