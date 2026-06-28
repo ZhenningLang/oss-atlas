@@ -18,4 +18,4 @@
 
 ## 什么该放这里
 
-挡在服务或 LLM 前面、做路由/鉴权/限流/可观测的 **API / AI 网关**。不含 agent 框架(见 `agent-frameworks`)。
+挡在服务或 LLM 前面、做路由/鉴权/限流/可观测的 **API / AI 网关**。不含 agent 框架（见 `agent-frameworks`）。

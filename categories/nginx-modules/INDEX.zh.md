@@ -1,6 +1,6 @@
 # nginx-modules
 
-> 分类节点。NGINX / OpenResty 扩展模块(Lua、上传等)。
+> 分类节点。NGINX / OpenResty 扩展模块（Lua、上传等）。
 > ← 返回[分类路由](../../INDEX.zh.md) · English: [INDEX.md](INDEX.md)
 
 ## 本分类项目
@@ -18,7 +18,7 @@
 | [lua-nginx-module (ngx_lua)](lua-nginx-module.zh.md) | ✅ | 当你需要在 NGINX 上用 LuaJIT cosocket 实现真正的逐请求可编程能力（鉴权、路由、限流）时用它——但一次阻塞调用就会卡死整个 worker，且你被绑定在 OpenResty 版本耦合、核心团队高度集中的生态上。 |
 | [lua-resty-redis](lua-resty-redis.zh.md) | ✅ | 当你的 OpenResty 边缘逻辑要在请求热路径上非阻塞访问 Redis（带连接池和 pipeline）时用它——但它只能在 ngx_lua 内运行，且不内置 Redis Cluster 的槽位路由。 |
 | [nginx-upload-module](nginx-upload-module.zh.md) | ✅ | 当你想让 NGINX 把大文件 multipart 上传直接落盘、只把文件元数据交给后端时用它——但你在编译一个老化、单人维护的 C 分叉（末次提交 2024-07），如今直传 S3 预签名上传往往更优。 |
-| (各页对比里点到的替代品) | 未收录 | 详见各页 Comparison。 |
+| （各页对比里点到的替代品） | 未收录 | 详见各页 Comparison。 |
 
 ## 什么该放这里
 

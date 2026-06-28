@@ -35,11 +35,11 @@ Google Research 出品的预训练**时间序列基础模型**（decoder-only）
 
 | 替代品 | 是否收录 | 取舍 |
 |---|---|---|
-| [BitNet](bitnet.zh.md) | ✅ | 一个端侧 **LLM** 运行时（1-bit 文本模型），完全是另一种模态——TimesFM 预测数字，BitNet 生成文本。列在这里只为消歧"本地模型"：按任务选，不要因为都"小+本地"就混为一谈。 |
+| [BitNet](bitnet.zh.md) | ✅ | 一个端侧 **LLM** 运行时（1-bit 文本模型），完全是另一种模态——TimesFM 预测数字，BitNet 生成文本。列在这里只为消歧“本地模型”：按任务选，不要因为都“小+本地”就混为一谈。 |
 | [LiteRT-LM](litert-lm.zh.md) | ✅ | Google 的端侧 **LLM** 编排运行时（手机上跑文本生成）。不是预测器；不会用它做需求预测。同样的消歧说明。 |
 | [Google AI Edge Gallery](ai-edge-gallery.zh.md) | ✅ | 一个运行端侧**生成式**模型的演示 app/目录，不做时间序列预测。任务不同。 |
 | Chronos (Amazon) | 未收录 | 把序列 token 化进语言模型词表；很强的零样本预测器，是直接替代品。TimesFM 是 decoder-only、自带分位数头、（2.5）16k 上下文。 |
-| TimGPT / Nixtla `nixtla` | 未收录 | 托管/受管的预测 API 加 OSS 库（statsforecast/neuralforecast）。Nixtla 的经典/神经库在"可逐序列训练"时很好用；TimesFM 用零样本换掉这一步。 |
+| TimGPT / Nixtla `nixtla` | 未收录 | 托管/受管的预测 API 加 OSS 库（statsforecast/neuralforecast）。Nixtla 的经典/神经库在“可逐序列训练”时很好用；TimesFM 用零样本换掉这一步。 |
 | Moirai (Salesforce) | 未收录 | 另一个开源时间序列基础模型，带多变量框架；用例重叠，但架构和许可条款不同。 |
 
 ## 技术栈
@@ -65,16 +65,16 @@ Google Research 出品的预训练**时间序列基础模型**（decoder-only）
 ## 健康度与可持续性
 
 - **维护（2026-06）：** 最后 push 在 2026-06，仓库 release v2.0.1 标注 2026-06-11，头牌模型线在 2.5——**活跃**，且模型谱系在持续推进（1.0 → 2.0 → 2.5）。[推断] release tag 版本号落后于模型命名，因此节奏读起来是持续的研究，而非冻结的产品。
-- **治理 / 背书：** 由 Google Research 维护（`google-research`，Organization）。[推断] 没有单一维护者的巴士因子，但 README 明确写"不是受官方支持的 Google 产品"——**没有 SLA**，且 Google Research 的代码会在团队重心转移时停滞。
-- **年龄与 Lindy（创建于 2024-04，约 2 年）：** 偏年轻，但跨三代模型持续活跃——已越过"年轻即废弃"的失败模式，但还不是经过长期验证的 Lindy 赌注。[推断] 当作可信但仍在演进的基础模型看待。
+- **治理 / 背书：** 由 Google Research 维护（`google-research`，Organization）。[推断] 没有单一维护者的巴士因子，但 README 明确写“不是受官方支持的 Google 产品”——**没有 SLA**，且 Google Research 的代码会在团队重心转移时停滞。
+- **年龄与 Lindy（创建于 2024-04，约 2 年）：** 偏年轻，但跨三代模型持续活跃——已越过“年轻即废弃”的失败模式，但还不是经过长期验证的 Lindy 赌注。[推断] 当作可信但仍在演进的基础模型看待。
 - **采用度：** 约 25k star（易波动，见存疑）；小（200M）、可在 CPU 上跑的 checkpoint 加上 HF/PEFT 微调降低了采用门槛，且它在一众同侪（Chronos、Moirai、Nixtla）中是被认可的 TSFM 选项。[未验证]
 - **风险标记：** 代码是 Apache-2.0，但 **Hugging Face 上各 checkpoint 的权重许可可能不同**——商用前请核实。版本变动（要 pin checkpoint + API）是另一个活跃风险。[推断]
 
 ## 存疑（未验证）
 
 - [未验证] Star 数约 25.6k（GitHub API，2026-06-26）；GitHub star 不可靠且持续漂移——仅作参考。
-- [未验证] 头牌模型 TimesFM 2.5 的发布日期（2025-09-15）以及"200M 参数 / 16k 上下文 / 1k horizon 分位数"等规格来自 README 和 HF 集合文本，本文未独立基准测试。
+- [未验证] 头牌模型 TimesFM 2.5 的发布日期（2025-09-15）以及“200M 参数 / 16k 上下文 / 1k horizon 分位数”等规格来自 README 和 HF 集合文本，本文未独立基准测试。
 - [未验证] 最新的 *GitHub release tag* 是 v2.0.1（2026-06-11），而*模型*线标的是 2.5——release tag 版本号和模型版本命名是分开追踪的；固定前请确认某个 tag 实际发布的是哪个 checkpoint。
-- [推断] 200M checkpoint 的 CPU 可行性是从其体量和"可跑 CPU/GPU/TPU"的文档推断的；实际延迟/吞吐取决于序列数量、horizon 和硬件——请针对你的负载实测。
+- [推断] 200M checkpoint 的 CPU 可行性是从其体量和“可跑 CPU/GPU/TPU”的文档推断的；实际延迟/吞吐取决于序列数量、horizon 和硬件——请针对你的负载实测。
 - [未验证] Hugging Face 上各 checkpoint 的权重许可可能与仓库代码的 Apache-2.0 不同；商用前请核实。
 - [推断] 相对 Chronos/Moirai/Nixtla 的精度依负载而定；本文不主张任何第一方正面对比——请在你自己的数据上评估。

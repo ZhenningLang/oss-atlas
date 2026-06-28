@@ -13,11 +13,11 @@ type: library
 
 # Authomatic
 
-一个用于联合登录 / "用 X 登录"的 Python 库——框架无关的 OAuth 1.0a、OAuth 2.0 和 OpenID 客户端，替你处理与 provider 的握手，并把认证后的用户和一个 API 调用 helper 交到你手上。
+一个用于联合登录 / “用 X 登录”的 Python 库——框架无关的 OAuth 1.0a、OAuth 2.0 和 OpenID 客户端，替你处理与 provider 的握手，并把认证后的用户和一个 API 调用 helper 交到你手上。
 
 ## 何时使用
 
-你在做一个 Python Web 应用（Flask、Django、WebOb、某个 WSGI 应用——Authomatic 刻意做成框架无关），需要"用 Google / GitHub / Facebook / Twitter 登录"，又不想为每个 provider 手搓那套 OAuth 舞步。你配一个 provider 和凭据的字典，在单个端点里放一行 Authomatic 的 `login()` 调用，它就为用户选中的那个 provider 跑完 redirect/callback 握手，然后返回一个规范化的 `user`（id、姓名、尽量含 email）和一个会话，供你继续向该 provider 发已授权的 API 请求。它把 OAuth 1.0a *和* OAuth 2.0 *和* OpenID 藏在一个接口后面，所以新增一个 provider 大多只是加一条配置，而非一次新集成。
+你在做一个 Python Web 应用（Flask、Django、WebOb、某个 WSGI 应用——Authomatic 刻意做成框架无关），需要“用 Google / GitHub / Facebook / Twitter 登录”，又不想为每个 provider 手搓那套 OAuth 舞步。你配一个 provider 和凭据的字典，在单个端点里放一行 Authomatic 的 `login()` 调用，它就为用户选中的那个 provider 跑完 redirect/callback 握手，然后返回一个规范化的 `user`（id、姓名、尽量含 email）和一个会话，供你继续向该 provider 发已授权的 API 请求。它把 OAuth 1.0a *和* OAuth 2.0 *和* OpenID 藏在一个接口后面，所以新增一个 provider 大多只是加一条配置，而非一次新集成。
 
 当你想要一个*轻、可嵌入*、不强加框架或用户模型的社交登录客户端时你会选它——它把认证身份给你后就让开，会话/用户持久化交回你的应用。它很适合中小型应用，以及那种用完整身份平台属于杀鸡用牛刀的胶水代码。
 
@@ -70,5 +70,5 @@ type: library
 - [未验证] 截至 2026-06 约 1k star、2025-12 最后 push；star 数和日期会漂移，仅供参考。
 - [未验证] 确切的 Python 最低版本、支持的框架 adapter 和运行时依赖清单由当前打包元数据决定且随版本变化。
 - [未验证] 预配置 OAuth provider 的集合及其当前可用状态取决于会变的第三方端点；请对照当前仓库核实你需要的那个 provider。
-- [推断] "有维护但低速"是从 2025-12 最后 push 和缓慢的 tag 节奏推断，而非实测的发布间隔数字。
+- [推断] “有维护但低速”是从 2025-12 最后 push 和缓慢的 tag 节奏推断，而非实测的发布间隔数字。
 - [推断] 安全节奏的提醒是认证库的一般属性加上观察到的低速，而非发现了某个具体未修补漏洞。

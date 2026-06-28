@@ -69,6 +69,6 @@ type: tool
 
 - [推断] 2023-03 的 `pushed_at` 反映的是非 master 的 feature 分支推送，不是 master 维护；master HEAD 是 2020-06 的 "release 4.1.3" 提交。
 - [推断] 现代 OS/Node 上的证书/Node 兼容性摩擦，是从 Node 6 底线 + 弃用的 `request` + 更严的现代证书/TLS 规则推理而来——未在当前系统上实测。
-- [推断] "在阿里内部被悄悄弃用"是从冻结的 master + release 落差推断，不是确认的说法。
+- [推断] “在阿里内部被悄悄弃用”是从冻结的 master + release 落差推断，不是确认的说法。
 - [未验证] npm `latest` 4.1.3 与 GitHub release v4.0.5（无 v4.1.3 tag）；已发布 4.1.x 线的来源未独立审计。
 - [未验证] 截至 2026-06 约 7.9k star；star 数对时间敏感，仅供参考。

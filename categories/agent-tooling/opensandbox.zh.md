@@ -69,7 +69,7 @@ type: framework
 ## 存疑（未验证）
 
 - [未验证] 截至 2026-06 约 11.7k star、python SDK v0.1.13——star 与版本号对时间敏感、随版本变动，仅供参考。
-- [未验证] "安全容器运行时"支持（gVisor/Kata/Firecracker）是 README 的声称；每种的确切成熟度、配置负担和隔离保证未对源码核实。
+- [未验证] “安全容器运行时”支持（gVisor/Kata/Firecracker）是 README 的声称；每种的确切成熟度、配置负担和隔离保证未对源码核实。
 - [推断] 阿里巴巴起源由 README 徽章/链接指向 `github.com/alibaba/OpenSandbox` 推断得出；规范仓库现位于 `opensandbox-group` 下。确切的归属/转移与治理实况未确认。
-- [推断] "几个月大 + 极高 star"按 read-repo 方法论被当作炒作/风险信号，而非质量定论；项目可能成熟，但其 Lindy 履历目前并不存在。
+- [推断] “几个月大 + 极高 star”按 read-repo 方法论被当作炒作/风险信号，而非质量定论；项目可能成熟，但其 Lindy 履历目前并不存在。
 - [未验证] 与 E2B/Daytona 的对比反映总体定位，而非逐项实测基准。

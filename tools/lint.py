@@ -29,7 +29,7 @@ Checks (ERROR = non-zero exit; WARNING = printed, exit still 0):
   - recursive: sub-categories validated to any depth
   - leaf category with > MAX_FANOUT pages -> WARNING (self-balancing: split via refactor-index)
   - internal relative links resolve
-  - .zh.md bodies use fullwidth Chinese punctuation: ASCII , ; ! ? : adjacent to a CJK char
+  - .zh.md bodies use fullwidth Chinese punctuation: ASCII , ; ! ? : ( ) " adjacent to a CJK char
     -> ERROR (frontmatter / code / links / URLs are exempt; facts stay language-neutral)
   - README.md / README.zh.md master listing stays in parity with the indexed pages
     (every EN page listed in README.md, every ZH page in README.zh.md) -> ERROR on drift
@@ -82,7 +82,9 @@ LABEL_RE = re.compile(r"\[未验证\]|\[推断\]")
 # code, link targets, and URLs; flag only ASCII punctuation touching a CJK ideograph.
 CJK_RANGE = "㐀-䶿一-鿿"
 ZH_PUNCT_PROTECT = re.compile(r"`[^`]*`|\]\([^)]*\)|https?://\S+")
-ZH_PUNCT_HIT = re.compile(r"[" + CJK_RANGE + r"][,;!?:]|[,;!?:][" + CJK_RANGE + r"]")
+# ASCII punctuation that must be fullwidth when touching a CJK char: , ; ! ? : ( ) and "
+_ZH_ASCII = r',;!?:()"'
+ZH_PUNCT_HIT = re.compile(r"[" + CJK_RANGE + r"][" + _ZH_ASCII + r"]|[" + _ZH_ASCII + r"][" + CJK_RANGE + r"]")
 
 
 class Report:
@@ -364,7 +366,7 @@ def main() -> int:
             continue
         v = zh_punct_violations(zh.read_text(encoding="utf-8"))
         if v:
-            rep.error(zh, f"{v} ASCII , ; ! ? : adjacent to CJK — use fullwidth 中文标点 （，；！？：）")
+            rep.error(zh, f"{v} ASCII , ; ! ? : ( ) \" adjacent to CJK — use fullwidth 中文标点 （，；：！？（）“”）")
 
     # README master listing must stay in parity with the indexed pages (guards silent drift):
     # README.md lists every EN page, README.zh.md lists every ZH page.

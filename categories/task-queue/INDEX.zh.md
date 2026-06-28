@@ -24,4 +24,4 @@
 
 ## 什么该放这里
 
-主要职责是**分布式后台任务执行**的系统——任务队列与作业调度器。不含工作流/DAG 编排器(见 `workflow-orchestration`)，不含 agent 运行时(见 `agent-frameworks`)。
+主要职责是**分布式后台任务执行**的系统——任务队列与作业调度器。不含工作流/DAG 编排器（见 `workflow-orchestration`），不含 agent 运行时（见 `agent-frameworks`）。

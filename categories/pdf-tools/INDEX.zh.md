@@ -18,4 +18,4 @@
 
 ## 什么该放这里
 
-主要职责是**渲染、读取或处理 PDF 文件**的工具——查看器、解析器、生成器与编辑器。不含把文档解析成结构化 Markdown/JSON 供 gen-AI 消费(见 `document-parsing`)，不含 OCR 引擎(见 `ocr`)。
+主要职责是**渲染、读取或处理 PDF 文件**的工具——查看器、解析器、生成器与编辑器。不含把文档解析成结构化 Markdown/JSON 供 gen-AI 消费（见 `document-parsing`），不含 OCR 引擎（见 `ocr`）。

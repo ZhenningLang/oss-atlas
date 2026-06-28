@@ -50,7 +50,7 @@ type: skill-pack
 - [未验证] 截至 2026-06-26 的元数据（GitHub）：最新发布 v1.3.0（2026-06-22 发布），仓库最后 push 于 2026-06-22，许可证 Apache-2.0，主语言 Python（少量 PowerShell），未归档——依赖某具体版本行为或技能清单前请重新核验。
 - [未验证] Star 数（GitHub 2026-06-26 约 21.5k）不可靠且随时间变化；仅作参考，不能当作质量或信任信号。
 - [未验证] 技能数（约 817）及各领域细分（如云安全 66、威胁狩猎 58、威胁情报 52）来自项目 README/描述，随版本漂移；据称 v1.0.0 发布时为 734 个技能。请查看当前 `skills/` 目录而非依赖此清单。
-- [未验证] 声称的框架版本（MITRE ATT&CK v19.1、NIST CSF 2.0、ATLAS v5.4、D3FEND v1.3、NIST AI RMF 1.0、MITRE F3 v1.1）以及"20+/26+ 平台"兼容声明均来自 README；实际映射准确度和各 harness 激活保真度此处未独立确认。
+- [未验证] 声称的框架版本（MITRE ATT&CK v19.1、NIST CSF 2.0、ATLAS v5.4、D3FEND v1.3、NIST AI RMF 1.0、MITRE F3 v1.1）以及“20+/26+ 平台”兼容声明均来自 README；实际映射准确度和各 harness 激活保真度此处未独立确认。
 - [未验证] 仓库提供辅助 Python 脚本和模板，但据称没有独立 CLI 或 MCP server；`agentskills.io` 标准与 `npx skills add` 安装器是外部依赖，其可用性 / 行为此处未验证。
 - [未验证] 仓库名带 "Anthropic" 字样，但这是 `mukul975` 的社区项目，并非 Anthropic 官方发布——不要把名字当作背书。
 - [推断] 由于技能是加载进 agent 的 markdown 文档，其指导是建议性的——agent 仍可能执行错误、破坏性或越界的安全操作；它们不是强制控制、已验证的检测规则，也不能替代授权和人工复核。

@@ -18,4 +18,4 @@
 
 ## 什么该放这里
 
-前端 **UI/UX 库**——产品引导、新手上手、界面组件。不含动画引擎(见 `frontend-animation`)，不含完整设计生成工具(见 `ai-design-generation`)。
+前端 **UI/UX 库**——产品引导、新手上手、界面组件。不含动画引擎（见 `frontend-animation`），不含完整设计生成工具（见 `ai-design-generation`）。

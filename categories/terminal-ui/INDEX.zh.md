@@ -22,7 +22,7 @@
 | [Terminal Markdown Viewer (mdv)](terminal-markdown-viewer.zh.md) | ✅ | 当你想在 SSH 下的纯终端里一次性、只读地渲染带彩色与语法高亮的 Markdown 时用它——但它活跃度低（0.x，2024 年 5 月），glow／mdcat 已是更现代的默认选择。 |
 | [ART](art.zh.md) | ✅ | 当 Python 命令行需要纯 Python 的 figlet 风格 ASCII 文字横幅、且不依赖系统二进制时用它——但它只做文字转艺术字（不做图片转 ASCII），也不与 figlet 字体完全一致。 |
 | [asciify](asciify.zh.md) | ✅ | 当你只想要一份极简易读、可复制粘贴的图片转 ASCII 算法参考时用它——但它没有任何许可证（默认保留所有权利），自 2022 年起无人维护，切勿将其并入产品。 |
-| (各页对比里点到的替代品) | 未收录 | 详见各页 Comparison。 |
+| （各页对比里点到的替代品） | 未收录 | 详见各页 Comparison。 |
 
 ## 什么该放这里
 

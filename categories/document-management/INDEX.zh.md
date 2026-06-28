@@ -9,7 +9,7 @@
 |---|---|---|
 | **paperless-ngx** | 想自托管对扫描纸质资料做 OCR + 打标签 + 全文检索时用它。 | [→](paperless-ngx.zh.md) |
 | **copyparty** | 需要单文件便携、带断点续传/去重/多协议访问的文件服务器时用它——但它不做 OCR 文档检索。 | [→](copyparty.zh.md) |
-| **Twake Drive** | 当你想在 Twake/Cozy 栈里要一个 Google-Drive 形态的自托管文件网盘(而非 OCR 归档)时用它。 | [→](twake-drive.zh.md) |
+| **Twake Drive** | 当你想在 Twake/Cozy 栈里要一个 Google-Drive 形态的自托管文件网盘（而非 OCR 归档）时用它。 | [→](twake-drive.zh.md) |
 
 ## 对比矩阵
 
@@ -17,9 +17,9 @@
 |---|---|---|
 | [paperless-ngx](paperless-ngx.zh.md) | ✅ | 想自托管对扫描纸质资料做 OCR + 打标签 + 全文检索时用它。 |
 | [copyparty](copyparty.zh.md) | ✅ | 需要单文件便携、带断点续传/去重/多协议访问的文件服务器时用它——但它不做 OCR 文档检索。 |
-| [Twake Drive](twake-drive.zh.md) | ✅ | 当你想在 Twake/Cozy 栈里要一个 Google-Drive 形态的自托管文件网盘(而非 OCR 归档)时用它。 |
+| [Twake Drive](twake-drive.zh.md) | ✅ | 当你想在 Twake/Cozy 栈里要一个 Google-Drive 形态的自托管文件网盘（而非 OCR 归档）时用它。 |
 | Mayan EDMS / Docspell / Nextcloud | 未收录 | 各页对比里点到的其他自托管 DMS / 文件服务器。 |
 
 ## 什么该放这里
 
-**存储、OCR、整理并检索文档**的自托管系统——DMS、文件服务器、无纸化流程。不含面向 LLM 的 RAG 索引(见 `rag-retrieval`)。
+**存储、OCR、整理并检索文档**的自托管系统——DMS、文件服务器、无纸化流程。不含面向 LLM 的 RAG 索引（见 `rag-retrieval`）。

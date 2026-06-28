@@ -23,7 +23,7 @@ type: library
 
 ## 何时不用
 
-- **它已 archived 且废弃——别在它上面起新项目。** README 写得很直白："Selenium Wire is no longer being maintained。"最后发布的 tag 是 5.1.0（2022-10）；仓库在最后一次提交（2024-01）后转为只读。171 个 open issue 永远不会被处理。
+- **它已 archived 且废弃——别在它上面起新项目。** README 写得很直白：“Selenium Wire is no longer being maintained。”最后发布的 tag 是 5.1.0（2022-10）；仓库在最后一次提交（2024-01）后转为只读。171 个 open issue 永远不会被处理。
 - **Selenium 4 已经原生给你网络访问能力。** Selenium 4.x 自带 Chrome DevTools Protocol 访问（`execute_cdp_cmd`、Network 域）和正在成形的 WebDriver BiDi 网络拦截——对 Chromium 系浏览器，无需内置 MITM 代理即可检视和修改请求/响应。这才是有人维护的路径。[推断——CDP/BiDi 提供网络拦截是已知能力；对本库具体场景的逐项 API 覆盖度未核验]
 - **MITM 代理的摩擦与腐烂。** 它把所有流量灌进一个内置代理并安装生成的 CA 证书。这带来 TLS 握手开销、证书信任配置、HTTP/2 边角问题，以及在现代反爬/证书固定面前的崩坏——这些现在都不会再修。
 - **依赖底线过时。** 钉在 `selenium>=4.0.0` / `pyOpenSSL>=22.0.0` 时代，classifier 封顶到 Python 3.10；跑在当前 Python/Selenium/OpenSSL 上可能要打补丁覆盖，且不受支持。
@@ -34,7 +34,7 @@ type: library
 | 替代品 | 是否收录 | 取舍 |
 |---|---|---|
 | [Selenium](selenium.zh.md)（4.x 原生 CDP/BiDi） | ✅ | 它封装的底座库；Selenium 4 现已提供原生 CDP/BiDi 网络拦截——是拿回 selenium-wire 大部分能力的有人维护方式，无需 MITM 代理。[推断] |
-| Playwright | 未收录 | 现代、活跃维护的浏览器自动化，内建一等的请求/响应拦截（`page.route`、响应体）；最强的"新项目"替代。 |
+| Playwright | 未收录 | 现代、活跃维护的浏览器自动化，内建一等的请求/响应拦截（`page.route`、响应体）；最强的“新项目”替代。 |
 | mitmproxy | 未收录 | 有人维护的独立 MITM 代理，带完整脚本 API；更重、不与 Selenium 耦合，但当你需要真正的代理级捕获时是对的工具。 |
 | Browser MITM Proxy / BrowserMob Proxy | 未收录 | 给 Selenium 做 HAR 捕获的更老的代理方案（BrowserMob 是 Java）；思路类似，同样在老化。 |
 
@@ -52,11 +52,11 @@ type: library
 
 ## 运维难度
 
-**作为库属于低到中，但要交"冻结软件"的税。** 作为代码就是 `pip install selenium-wire` 加一次导入替换——没有基础设施。摩擦在于软件腐烂的运维：钉住一组这个无人维护的库还能忍受的 Python + Selenium + pyOpenSSL 组合、处理 CA 证书信任，并接受任何对新浏览器/TLS 行为的崩坏都得你自己在 fork 里打补丁。没有数据存储或服务要跑——负担纯粹是让一个死掉的依赖活着。
+**作为库属于低到中，但要交“冻结软件”的税。** 作为代码就是 `pip install selenium-wire` 加一次导入替换——没有基础设施。摩擦在于软件腐烂的运维：钉住一组这个无人维护的库还能忍受的 Python + Selenium + pyOpenSSL 组合、处理 CA 证书信任，并接受任何对新浏览器/TLS 行为的崩坏都得你自己在 fork 里打补丁。没有数据存储或服务要跑——负担纯粹是让一个死掉的依赖活着。
 
 ## 健康度与可持续性
 
-- **维护（2026-06）。** 已 archived 且明确废弃——README 宣布不再维护；最后 tag 5.1.0（2022-10），仓库自约 2024-01 起只读。**已死。** 这对任何"是否维护"标准都是硬性停止。
+- **维护（2026-06）。** 已 archived 且明确废弃——README 宣布不再维护；最后 tag 5.1.0（2022-10），仓库自约 2024-01 起只读。**已死。** 这对任何“是否维护”标准都是硬性停止。
 - **治理 / bus factor。** bus factor 为 **1**：`wkeeling` 写了约 886 次提交，第二名贡献者只有 5 次，且该维护者已公开退出。watcher 数为 1 更印证了这点。单 User 项目，无组织延续性。
 - **年龄 × Lindy。** 活跃约 6 年（2018→2024），约 2.0k star——历史上确实流行且被验证过。但一旦废弃，Lindy 反向起作用：在快速演进的 Selenium/CDP/TLS 环境中，一个无人维护的 MITM 封装会腐烂，所以这里的年龄不是安全信号。[推断]
 - **采用度。** 当年用得确实广（PyPI 足迹可观），这也是为什么一个冻结的归档仍然重要——但采用是遗留，不是增长。

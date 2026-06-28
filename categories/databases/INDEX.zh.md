@@ -26,8 +26,8 @@
 | [python-mysql-replication](python-mysql-replication.zh.md) | ✅ | 当你想用纯 Python 原语把 MySQL binlog 流式解析成带类型的事件、自建可控 CDC 循环时用它——但 checkpoint、去重和精确一次投递全得你自己负责。 |
 | [PrettyZoo](prettyzoo.zh.md) | ✅ | 当你在开发或故障排查时想用友好的桌面 GUI 浏览并轻量编辑 ZooKeeper znode 树时用它——但它自 2023 年起已归档，新 JDK／macOS 可能跑不起来且无上游修复。 |
 | [RDR](rdr.zh.md) | ✅ | 当 Redis 触发 maxmemory 告警、需要离线快速按前缀分析 RDB 快照时用它——但内存数字是近似值，且项目已停滞（v0.0.1，2019 年）。 |
-| (各页对比里点到的替代品) | 未收录 | 详见各页 Comparison。 |
+| （各页对比里点到的替代品） | 未收录 | 详见各页 Comparison。 |
 
 ## 什么该放这里
 
-数据库及其**周边工具**——客户端、管理 GUI、同步/复制、RDB 分析。不含 RAG 向量库(见 `rag-retrieval`)。
+数据库及其**周边工具**——客户端、管理 GUI、同步/复制、RDB 分析。不含 RAG 向量库（见 `rag-retrieval`）。

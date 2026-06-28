@@ -26,4 +26,4 @@
 
 ## 什么该放这里
 
-主要职责是**迭代式 web / 多源研究**(搜索、抓取、综合)的 agent。不含一次性 RAG 索引(见 `rag-retrieval`)，不含通用 agent 框架(见 `agent-frameworks`)。
+主要职责是**迭代式 web / 多源研究**（搜索、抓取、综合）的 agent。不含一次性 RAG 索引（见 `rag-retrieval`），不含通用 agent 框架（见 `agent-frameworks`）。

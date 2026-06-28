@@ -68,7 +68,7 @@ type: library
 ## 存疑（未验证）
 
 - [未验证] 截至 2026-06 约 2.9k star；GitHub 最新 release tag 是 v0.8.1（2020），而 changelog 提到更晚的 0.8.x 版本——本页版本记法为近似（"v0.8.x"）；pin 前请确认当前确切的 PyPI 版本。
-- [推断] "有维护但低节奏/吃老本"由 2026-01 的 push 日期结合陈旧的 release tag 推断——代码活动与 tag 发布之间的落差。
+- [推断] “有维护但低节奏/吃老本”由 2026-01 的 push 日期结合陈旧的 release tag 推断——代码活动与 tag 发布之间的落差。
 - [推断] 单维护者 bus factor 由 `owner.type == User` 推断；实际贡献者广度/接班计划未核实。
 - [推断] lxml 的原生（libxml2）构建/wheel 考量是 lxml 通识，未对本仓库当前打包核实。
 - [未验证] 与 trafilatura/newspaper3k 的相对精度反映总体定位，而非实测基准。

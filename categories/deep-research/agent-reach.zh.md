@@ -13,11 +13,11 @@ type: tool
 
 # Agent-Reach
 
-一个「接入 / 触达」层(而非研究 agent)：一个 CLI，替你装好并路由一整套上游工具，让你的 agent 能读取和搜索 Twitter/X、Reddit、YouTube、GitHub、Bilibili、小红书、RSS 和开放网页——「零 API 费用」。
+一个「接入 / 触达」层（而非研究 agent）：一个 CLI，替你装好并路由一整套上游工具，让你的 agent 能读取和搜索 Twitter/X、Reddit、YouTube、GitHub、Bilibili、小红书、RSS 和开放网页——「零 API 费用」。
 
 ## 何时使用
 
-你在搭一套 coding-agent 或研究助手工作流(Claude Code、Cursor、或你自己的循环)，反复撞到同一堵墙：agent 推理没问题，但它对实时互联网是瞎的。你想让它拉一段 YouTube 字幕、干净地读一篇博客、上 Twitter/X 搜搜大家怎么评价某个库、抓一个 Reddit 帖、读一条 Bilibili / 小红书内容——而你**不想**为此注册一打付费 API、给每个平台手写爬虫、或者每周盯着哪个又挂了。Agent-Reach 用「眼睛」层解决这件事：你跑一次安装，它就按平台甄选并装好对应的上游工具(网页用 Jina Reader、YouTube 用 yt-dlp、GitHub 用 `gh`、社交平台用 twitter-cli/bili-cli/OpenCLI、语义搜索用经 MCP 的 Exa)，然后你的 agent 直接调这些工具。
+你在搭一套 coding-agent 或研究助手工作流（Claude Code、Cursor、或你自己的循环），反复撞到同一堵墙：agent 推理没问题，但它对实时互联网是瞎的。你想让它拉一段 YouTube 字幕、干净地读一篇博客、上 Twitter/X 搜搜大家怎么评价某个库、抓一个 Reddit 帖、读一条 Bilibili / 小红书内容——而你**不想**为此注册一打付费 API、给每个平台手写爬虫、或者每周盯着哪个又挂了。Agent-Reach 用「眼睛」层解决这件事：你跑一次安装，它就按平台甄选并装好对应的上游工具（网页用 Jina Reader、YouTube 用 yt-dlp、GitHub 用 `gh`、社交平台用 twitter-cli/bili-cli/OpenCLI、语义搜索用经 MCP 的 Exa），然后你的 agent 直接调这些工具。
 
 相比手搓工具箱，它真正值钱的地方是**多后端路由**：每个平台是「首选 + 备选的有序后端列表」,`agent-reach doctor` 会逐通道体检并报告当前生效的后端。当某个上游方法被限流或封锁——README 给的例子是 yt-dlp 在 Bilibili 被风控封死、栈自动回退到 bili-cli——你这边零改动就能继续工作。当「可触达源的广度」和「在反爬变动里活下来」比深度结构化分析更重要时，它很合适。
 
@@ -33,30 +33,30 @@ type: tool
 
 | 替代品 | 是否收录 | 取舍 |
 |---|---|---|
-| [deep-research](deep-research.zh.md) | ✅ | 真正的迭代式研究 *agent*(扇出搜索 → 阅读 → 递归深挖 → 出报告)。Agent-Reach 恰是它缺的接入层；是栈的不同层，不是替代关系。 |
+| [deep-research](deep-research.zh.md) | ✅ | 真正的迭代式研究 *agent*（扇出搜索 → 阅读 → 递归深挖 → 出报告）。Agent-Reach 恰是它缺的接入层；是栈的不同层，不是替代关系。 |
 | [local-deep-research](local-deep-research.zh.md) | ✅ | 隐私优先的本地研究助手，带综合 + 引用，支持本地 LLM。做的是 Agent-Reach 跳过的推理；配对用，而非二选一。 |
 | [Vane](vane.zh.md) | ✅ | 聚焦综合的研究 / 搜索 agent。同样是「负责思考」的对照——Agent-Reach 负责触达，不负责推理。 |
 | Firecrawl | 未收录 | 托管 / 开源的网页抓取转 markdown + 爬取 API；单源网页提取更干净、有真 API，但付费且仅限网页——没有 Twitter/Reddit/Bilibili/小红书的社交触达。 |
-| Exa / Tavily / SearXNG | 未收录 | 搜索后端(语义 / agent 搜索 / 自托管元搜索)。Agent-Reach 实际就经 MCP 包了 Exa；它们给你搜索，但没有逐平台的社交爬取栈。 |
+| Exa / Tavily / SearXNG | 未收录 | 搜索后端（语义 / agent 搜索 / 自托管元搜索）。Agent-Reach 实际就经 MCP 包了 Exa；它们给你搜索，但没有逐平台的社交爬取栈。 |
 
 ## 技术栈
 
 - **语言：** Python(3.10+)。
-- **编排的上游工具：** Jina Reader(网页转 markdown)、yt-dlp(YouTube 字幕/搜索)、feedparser(RSS/Atom)、`gh` CLI(GitHub)、twitter-cli(Twitter/X)、bili-cli(Bilibili)、OpenCLI + rdt-cli(Reddit)、OpenCLI / xiaohongshu-mcp(小红书)、linkedin-mcp、原生 V2EX / 雪球 API、Whisper(小宇宙播客转录)。
-- **搜索：** 经 `mcporter`(MCP)的 Exa 语义搜索，宣称免费 / 无需 key。
-- **集成模型：** 装好这些 CLI / MCP server，然后由 agent 直接调用——「实际的读取和搜索由 Agent 直接调用上游工具完成」(没有统一的单一抓取包装命令)。
+- **编排的上游工具：** Jina Reader（网页转 markdown）、yt-dlp（YouTube 字幕/搜索）、feedparser(RSS/Atom)、`gh` CLI(GitHub)、twitter-cli(Twitter/X)、bili-cli(Bilibili)、OpenCLI + rdt-cli(Reddit)、OpenCLI / xiaohongshu-mcp（小红书）、linkedin-mcp、原生 V2EX / 雪球 API、Whisper（小宇宙播客转录）。
+- **搜索：** 经 `mcporter`（MCP）的 Exa 语义搜索，宣称免费 / 无需 key。
+- **集成模型：** 装好这些 CLI / MCP server，然后由 agent 直接调用——「实际的读取和搜索由 Agent 直接调用上游工具完成」（没有统一的单一抓取包装命令）。
 - **路由/体检：** 每平台一个有序的首选+备选后端列表；`agent-reach doctor` 给出逐通道状态和修复指引。
 
 ## 依赖
 
-- **运行时：** Python ≥ 3.10；装好上游 CLI 的 shell。很多后端会 shell out 到外部二进制(`gh`、yt-dlp、twitter-cli、bili-cli、OpenCLI)，部分经 `mcporter` 走 MCP server。
-- **鉴权 / 状态：** 登录态平台(Twitter/X、Reddit、小红书)需要从浏览器导出的 cookie；本地存放于 `~/.agent-reach/config.yaml`(权限 600),「不上传不外传」(原文)。小红书播客小宇宙转录需要一个免费 API key。
+- **运行时：** Python ≥ 3.10；装好上游 CLI 的 shell。很多后端会 shell out 到外部二进制（`gh`、yt-dlp、twitter-cli、bili-cli、OpenCLI），部分经 `mcporter` 走 MCP server。
+- **鉴权 / 状态：** 登录态平台（Twitter/X、Reddit、小红书）需要从浏览器导出的 cookie；本地存放于 `~/.agent-reach/config.yaml`（权限 600）,「不上传不外传」（原文）。小红书播客小宇宙转录需要一个免费 API key。
 - **安装：** `pip install agent-reach`，然后由 agent 驱动、指向项目 `docs/install.md` 完成 setup。
-- **外部服务：** Exa(经 MCP)做语义搜索；其余即被读取的公开/社交站点，受其限流与反爬约束。
+- **外部服务：** Exa（经 MCP）做语义搜索；其余即被读取的公开/社交站点，受其限流与反爬约束。
 
 ## 运维难度
 
-**中。** 首次安装外加逐平台鉴权(为每个登录站点导 cookie)比单一托管 API 要折腾，而且零配置只覆盖公开通道(网页、YouTube、RSS、公开 GitHub、Exa 搜索)。真正的成本在持续维护：这是一层薄薄地盖在众多快速变动的第三方爬虫和消费级反爬系统之上的东西，单个通道**一定**会挂，需要重新鉴权或换后端。`agent-reach doctor` 和回退路由就是为了让这件事「能扛过去」，但你运维的终归是一套爬取栈，而非消费一个稳定 API。
+**中。** 首次安装外加逐平台鉴权（为每个登录站点导 cookie）比单一托管 API 要折腾，而且零配置只覆盖公开通道（网页、YouTube、RSS、公开 GitHub、Exa 搜索）。真正的成本在持续维护：这是一层薄薄地盖在众多快速变动的第三方爬虫和消费级反爬系统之上的东西，单个通道**一定**会挂，需要重新鉴权或换后端。`agent-reach doctor` 和回退路由就是为了让这件事「能扛过去」，但你运维的终归是一套爬取栈，而非消费一个稳定 API。
 
 ## 健康度与可持续性
 
@@ -70,5 +70,5 @@ type: tool
 - [未验证] v1.5.0 发布于 2026-06-11;`gh repo view` 显示约 41.6k stars、`pushedAt` 为 2026-06-23——GitHub star 不可靠且对时间敏感，仅供参考。
 - [未验证] 逐平台的后端列表、回退顺序和零配置矩阵取自 README，可能随版本漂移；依赖某具体通道前请对照 `agent-reach doctor` 和当前仓库核实。
 - [推断] 任一社交通道的可用性取决于上游工具健康度和目标站点的反爬姿态，二者持续变化；「零 API 费用」/「用户零操作」的故障切换是项目的表述，不是独立测得的保证。
-- [推断] cookie 爬取(Twitter/X、Reddit、小红书)的封号 / ToS 风险 README 已承认，但其严重程度因情境而异，此处未量化。
+- [推断] cookie 爬取（Twitter/X、Reddit、小红书）的封号 / ToS 风险 README 已承认，但其严重程度因情境而异，此处未量化。
 - [未验证] Exa-经-MCP「免费 / 无需 key」反映 README 写作时的说法；第三方服务条款可能变化。

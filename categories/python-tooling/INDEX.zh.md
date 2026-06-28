@@ -20,7 +20,7 @@
 | [pyrasite](pyrasite.zh.md) | ✅ | 当你必须向一个无法重启、卡死或泄漏的运行中 Python 进程注入诊断代码时用它——但注入可能让目标崩溃，只当救火工具用。 |
 | [gophernotes](gophernotes.zh.md) | ✅ | 当你想在 Jupyter 笔记本里用交互式 Go 单元做探索或教程时用它——但它自 2023 年起停滞，且跑的是解释器而非标准 Go。 |
 | [GRequests](grequests.zh.md) | ✅ | 当你想用 `map()` 以最小改动让现有同步 `requests` 代码并发时用它——但 gevent 会猴补丁标准库，可能与你的技术栈冲突。 |
-| (各页对比里点到的替代品) | 未收录 | 详见各页 Comparison。 |
+| （各页对比里点到的替代品） | 未收录 | 详见各页 Comparison。 |
 
 ## 什么该放这里
 

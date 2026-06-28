@@ -67,7 +67,7 @@ type: tool
 ## 存疑（未验证）
 
 - [未验证] 许可：GitHub API 返回 `NOASSERTION`，但仓库 LICENSE 文件是三条款 BSD 许可（Copyright Mher Movsisyan and contributors）——此处记为 BSD-3-Clause。
-- [未验证] 截至 2026-06 约 7.2k GitHub star；检查时仓库无 GitHub *Releases* 条目，采用滚动稳定模型，因此不断言精确的"最新版本/日期"。
+- [未验证] 截至 2026-06 约 7.2k GitHub star；检查时仓库无 GitHub *Releases* 条目，采用滚动稳定模型，因此不断言精确的“最新版本/日期”。
 - [推断] 任务历史默认在内存且有上限；持久性与上限取决于配置和版本——依赖 Flower 保存历史数据前请先核实。
-- [推断] worker 控制能力使未鉴权部署很危险；"必须鉴权"是从工具功能推断，而非实测安全结论。
+- [推断] worker 控制能力使未鉴权部署很危险；“必须鉴权”是从工具功能推断，而非实测安全结论。
 - [未验证] Tornado Web 服务器与 OAuth provider 支持取自项目文档/历史；确切支持的 provider 和 Python 版本随版本变动。

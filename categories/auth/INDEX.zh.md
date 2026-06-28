@@ -16,7 +16,7 @@
 |---|---|---|
 | [Authomatic](authomatic.zh.md) | ✅ | 当需要框架无关的 Python 应用通过 OAuth1／OAuth2／OpenID 实现轻量「用 X 登录」、且会话持久化自己负责时用它——但它迭代缓慢，而认证库修复迟缓本身就是安全风险。 |
 | [django-rules](django-rules.zh.md) | ✅ | 当 Django 的对象级权限是由逻辑（谓词）计算得出、而非存储授权、且不想加数据库表时用它——但若管理员需在运行时为单个对象分配权限，则应改用 django-guardian。 |
-| (各页对比里点到的替代品) | 未收录 | 详见各页 Comparison。 |
+| （各页对比里点到的替代品） | 未收录 | 详见各页 Comparison。 |
 
 ## 什么该放这里
 

@@ -34,4 +34,4 @@
 
 ## 什么该放这里
 
-AI **编码 agent** 用来追踪工作、承载状态的基础设施——任务/issue 图、会话捕获、规划/上下文管线。不含与 LLM 无关的记忆库(见 `agent-memory`)，不含 agent 运行时(见 `agent-frameworks`)。
+AI **编码 agent** 用来追踪工作、承载状态的基础设施——任务/issue 图、会话捕获、规划/上下文管线。不含与 LLM 无关的记忆库（见 `agent-memory`），不含 agent 运行时（见 `agent-frameworks`）。

@@ -1,13 +1,13 @@
 # captcha
 
-> 分类节点。CAPTCHA / 机器人检测挑战(工作量证明、点击、行为式)。
+> 分类节点。CAPTCHA / 机器人检测挑战（工作量证明、点击、行为式）。
 > ← 返回[分类路由](../../INDEX.zh.md) · English: [INDEX.md](INDEX.md)
 
 ## 本分类项目
 
 | 项目 | 何时用 | 页面 |
 |---|---|---|
-| **Cap** | 轻量、可自托管的 CAPTCHA 替代：无感工作量证明(Rust→WASM worker 做 SHA-256 nonce 搜索)发放服务端可校验 token——无图片、不调第三方。 | [→](capjs.zh.md) |
+| **Cap** | 轻量、可自托管的 CAPTCHA 替代：无感工作量证明（Rust→WASM worker 做 SHA-256 nonce 搜索）发放服务端可校验 token——无图片、不调第三方。 | [→](capjs.zh.md) |
 | **Text_select_captcha** | 当要自动识别中文文字点选验证码（YOLO＋孪生网络，纯 CPU）时用它——仓库无 LICENSE 文件，默认保留所有权利，合法性是决定性门槛。 | [→](text-select-captcha.zh.md) |
 | **pytorch-captcha-recognition** | 当需要定长图片验证码（多头 CNN）的可读教学基线时用它——这是 2020 年冻结的教程，要预期改造过时的 PyTorch API。 | [→](pytorch-captcha-recognition.zh.md) |
 | **captcha (lepture)** | 当 Python 表单需要自托管、无第三方调用的图片／音频验证码渲染器时用它——它只渲染且抵不住现代 OCR，只能当 UX 减速带，而非安全控制。 | [→](lepture-captcha.zh.md) |
@@ -16,7 +16,7 @@
 
 | 选项 | 是否收录 | 一句话取舍 |
 |---|---|---|
-| [Cap](capjs.zh.md) | ✅ | 轻量、可自托管的 CAPTCHA 替代：无感工作量证明(Rust→WASM worker 做 SHA-256 nonce 搜索)发放服务端可校验 token——无图片、不调第三方。 |
+| [Cap](capjs.zh.md) | ✅ | 轻量、可自托管的 CAPTCHA 替代：无感工作量证明（Rust→WASM worker 做 SHA-256 nonce 搜索）发放服务端可校验 token——无图片、不调第三方。 |
 | [Text_select_captcha](text-select-captcha.zh.md) | ✅ | 当要自动识别中文文字点选验证码（YOLO＋孪生网络，纯 CPU）时用它——仓库无 LICENSE 文件，默认保留所有权利，合法性是决定性门槛。 |
 | [pytorch-captcha-recognition](pytorch-captcha-recognition.zh.md) | ✅ | 当需要定长图片验证码（多头 CNN）的可读教学基线时用它——这是 2020 年冻结的教程，要预期改造过时的 PyTorch API。 |
 | [captcha (lepture)](lepture-captcha.zh.md) | ✅ | 当 Python 表单需要自托管、无第三方调用的图片／音频验证码渲染器时用它——它只渲染且抵不住现代 OCR，只能当 UX 减速带，而非安全控制。 |

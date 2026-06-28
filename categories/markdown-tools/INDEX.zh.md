@@ -20,4 +20,4 @@
 
 ## 什么该放这里
 
-主要职责是**解析、渲染或撰写 Markdown** 的工具——解析器、转换器与编辑器扩展。不含把文档解析成结构化数据供 gen-AI 消费(见 `document-parsing`)，不含从文本生成图表(见 `diagramming`)。
+主要职责是**解析、渲染或撰写 Markdown** 的工具——解析器、转换器与编辑器扩展。不含把文档解析成结构化数据供 gen-AI 消费（见 `document-parsing`），不含从文本生成图表（见 `diagramming`）。

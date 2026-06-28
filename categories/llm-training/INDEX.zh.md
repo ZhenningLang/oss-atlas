@@ -27,4 +27,4 @@
 ## 什么该放这里
 
 主要职责是**训练、微调或 RL 优化** LLM 或 agent 的工具与框架。
-不含推理运行时(见 `on-device-ml`)，不含 agent 构建/运行框架(见 `agent-frameworks`)。
+不含推理运行时（见 `on-device-ml`），不含 agent 构建/运行框架（见 `agent-frameworks`）。

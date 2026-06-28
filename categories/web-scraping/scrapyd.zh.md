@@ -13,7 +13,7 @@ type: service
 
 # Scrapyd
 
-一个通过 JSON HTTP API 部署并运行 Scrapy 爬虫的服务守护进程——把 Scrapy 项目打成 egg、上传，然后远程调度/取消/监控抓取作业。它是 Scrapy 官方组织出品、把"在生产里跑 Scrapy"这件事标准化的守护进程。
+一个通过 JSON HTTP API 部署并运行 Scrapy 爬虫的服务守护进程——把 Scrapy 项目打成 egg、上传，然后远程调度/取消/监控抓取作业。它是 Scrapy 官方组织出品、把“在生产里跑 Scrapy”这件事标准化的守护进程。
 
 ## 何时使用
 
@@ -23,7 +23,7 @@ type: service
 
 - **它只跑 Scrapy。** 它字面上就是拉起 `scrapy crawl`；不是通用作业调度器。要编排任意任务，用 Airflow、Celery 或 cron。
 - **默认单节点。** 没有内建集群或跨机分布——横向扩展意味着跑多个 Scrapyd 实例并自己协调它们（通常靠一个面向多个守护进程的 UI 层）。
-- **极简、需自行开启的安全。** JSON API 默认无鉴权；没有你自己的鉴权/反向代理层之前，别把 6800 端口暴露到公网。[推断——基于"minimal web interface"文档措辞与 Twisted auth 痕迹，未逐行核验默认配置]
+- **极简、需自行开启的安全。** JSON API 默认无鉴权；没有你自己的鉴权/反向代理层之前，别把 6800 端口暴露到公网。[推断——基于“minimal web interface”文档措辞与 Twisted auth 痕迹，未逐行核验默认配置]
 - **要真正好用，你会想在上面加个 UI。** 内建 web 页只能监控——日常管理需要在其上叠 [SpiderKeeper](spiderkeeper.zh.md)、ScrapydWeb 或 Gerapy。
 - **你想要托管、省心的 SaaS。** 如果你压根不想自己跑这个守护进程，Zyte Scrapy Cloud 替你卸掉 Scrapyd 留给你的运维负担。
 
@@ -57,7 +57,7 @@ type: service
 
 ## 健康度与可持续性
 
-- **维护（2026-06）。** 活跃——最后 push 于 2026-06-19，最新 release v1.6.0（2025-07-22），大致每年一个特性版本，状态"Production/Stable"，未 archived。仅约 6 个 open issue——小而被精心照料的范围。[推断——GitHub Releases API 只到 1.4.1，1.5.0/1.6.0 以 docs/news.rst changelog 为准]
+- **维护（2026-06）。** 活跃——最后 push 于 2026-06-19，最新 release v1.6.0（2025-07-22），大致每年一个特性版本，状态“Production/Stable”，未 archived。仅约 6 个 open issue——小而被精心照料的范围。[推断——GitHub Releases API 只到 1.4.1，1.5.0/1.6.0 以 docs/news.rst changelog 为准]
 - **治理 / bus factor。** 归在 **`scrapy` GitHub 组织**下（维护 Scrapy 框架的同一社区/团队），不是个人账号——`jpmckinney` 是当前的代表性维护者，还有几位 Scrapy 核心组成员贡献。bus-factor 风险低。
 - **年龄 × Lindy。** 创建于 2013（约 13 年）且本月仍有 push ⇒ **强 Lindy** 信号：成熟、慢节奏的基础设施，早已熬过炒作周期。
 - **采用度。** 约 3.1k star；它是事实上的 Scrapy 部署守护进程，周围有一整套面向其 API 构建的管理 UI（ScrapydWeb/Gerapy/SpiderKeeper）。

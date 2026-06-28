@@ -18,4 +18,4 @@
 
 ## 什么该放这里
 
-面向团队或个人的可自托管**聊天 / 聊天机器人应用**。不含 agent 运行时(见 `agent-frameworks`)，不含记忆基础设施(见 `agent-memory`)。
+面向团队或个人的可自托管**聊天 / 聊天机器人应用**。不含 agent 运行时（见 `agent-frameworks`），不含记忆基础设施（见 `agent-memory`）。

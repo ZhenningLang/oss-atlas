@@ -18,4 +18,4 @@
 
 ## 什么该放这里
 
-**给 Web UI 做动画**的库——JS 运动引擎、时间线/补间系统。不含 agent 驱动的设计生成(见 `ai-design-generation`)。
+**给 Web UI 做动画**的库——JS 运动引擎、时间线/补间系统。不含 agent 驱动的设计生成（见 `ai-design-generation`）。

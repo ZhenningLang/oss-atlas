@@ -16,7 +16,7 @@
 |---|---|---|
 | [UI for Apache Kafka (provectus/kafka-ui)](kafka-ui.zh.md) | ✅ | 当你想用一条 docker run 起一个浏览 Kafka broker、topic 和消费组 lag 的 Web 面板时用它——但 provectus 上游已停摆（末次发布 2024-04），应改用仍在维护的 kafbat/kafka-ui 分叉。 |
 | [kafka-python](kafka-python.zh.md) | ✅ | 当你想要一个纯 Python、pip install 即装、无需编译 librdkafka 的 Kafka 客户端时用它——但纯 Python 客户端的吞吐追不上 confluent-kafka，且对最新 broker 特性可能滞后支持。 |
-| (各页对比里点到的替代品) | 未收录 | 详见各页 Comparison。 |
+| （各页对比里点到的替代品） | 未收录 | 详见各页 Comparison。 |
 
 ## 什么该放这里
 

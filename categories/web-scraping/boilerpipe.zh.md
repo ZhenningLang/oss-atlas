@@ -17,13 +17,13 @@ type: library
 
 ## 何时使用
 
-你在 JVM 上，搭一个搜索索引器、语料构建器或文本挖掘管线，需要从原始 HTML 里剥出文章正文，又不想拖进一个 headless 浏览器或一个 Python 服务。于是你转向 boilerpipe：它实现了 Kohlschütter 等人"Boilerplate Detection using Shallow Text Features"里那些著名抽取器（如 `ArticleExtractor`、`DefaultExtractor`）——你传入 HTML，拿回清理过的正文。因为这些算法是与语言无关的统计启发式（而非站点专用规则），它能在许多页面间泛化，其思想影响力足够大，以至于后来的抽取器（包括 dragnet）都引它为灵感。
+你在 JVM 上，搭一个搜索索引器、语料构建器或文本挖掘管线，需要从原始 HTML 里剥出文章正文，又不想拖进一个 headless 浏览器或一个 Python 服务。于是你转向 boilerpipe：它实现了 Kohlschütter 等人“Boilerplate Detection using Shallow Text Features”里那些著名抽取器（如 `ArticleExtractor`、`DefaultExtractor`）——你传入 HTML，拿回清理过的正文。因为这些算法是与语言无关的统计启发式（而非站点专用规则），它能在许多页面间泛化，其思想影响力足够大，以至于后来的抽取器（包括 dragnet）都引它为灵感。
 
 如今你现实中会选它，只在你明确需要一个 **Java、依赖轻、经典算法**的抽取器、且愿意接受一个**无维护**的库时——把它 vendoring 进来、自己构建、自己接管任何修复。对一个新项目，它的主要价值在于概念/算法层面和 JVM 原生可用，而非活跃支持。
 
 ## 何时不用
 
-- **你想要一个有维护的库。** 这是决定性筛子：该仓库**实际已废弃**——最后 push 于 **2018-01**，它自己的 README 称之为"work-in-progress transmit from Google Code"，没有近期发布。别在不接管 fork 的情况下，把新的长寿管线建在一个无维护依赖上。[推断]
+- **你想要一个有维护的库。** 这是决定性筛子：该仓库**实际已废弃**——最后 push 于 **2018-01**，它自己的 README 称之为“work-in-progress transmit from Google Code”，没有近期发布。别在不接管 fork 的情况下，把新的长寿管线建在一个无维护依赖上。[推断]
 - **你不在 JVM 上。** 它是 Java；Python/JS 管线应改用 [python-readability](python-readability.zh.md)、[Readability.js](readability-js.zh.md) 或 trafilatura。
 - **你需要现代元数据、JSON-LD 或爬取支持。** 它用经典启发式抽正文；不是现代元数据/爬取框架。
 - **你需要当前的依赖卫生/安全补丁。** 一个陈旧 8 年的 Java 库可能携带过时的传递依赖（它 relocate/vendor 了一份 NekoHTML），且不会收到安全修复。
@@ -61,14 +61,14 @@ type: library
 
 - **维护（2026-06）。** 最后 push 于 **2018-01**——**陈旧约 8 年**。尽管 GitHub 的 `archived` 标记为 **false**，但其节奏和 README（"work-in-progress transmit from Google Code"）使它**实际已废弃**。无近期发布。[推断]
 - **治理 / bus factor。** 本质是单作者项目（Christian Kohlschütter / `kohlschutter`），有少数历史贡献者——bus factor 极小，且无活跃管护。[推断]
-- **年龄 × Lindy（2026-06）。** 在 GitHub 上 2014-12 创建（算法/代码库更老，原在 Google Code）——但**没有活跃的年龄不通过 Lindy**：在影响力上长寿，但一个长期*休眠*的仓库是风险而非安全信号。要用 年龄 × 仍活跃；这里"仍活跃"缺席。[推断]
+- **年龄 × Lindy（2026-06）。** 在 GitHub 上 2014-12 创建（算法/代码库更老，原在 Google Code）——但**没有活跃的年龄不通过 Lindy**：在影响力上长寿，但一个长期*休眠*的仓库是风险而非安全信号。要用 年龄 × 仍活跃；这里“仍活跃”缺席。[推断]
 - **采用度与生态。** 约 1.1k star 和很强的历史/学术影响力（其算法塑造了后来的抽取器），但生态已转向有维护的替代品（Tika、trafilatura、readability 移植）。[未验证]
-- **风险标记。** 废弃是头号风险：无修复、依赖老化，以及"transmit from Google Code"的来历。依 LICENSE/NOTICE 文件为 Apache-2.0。[推断]
+- **风险标记。** 废弃是头号风险：无修复、依赖老化，以及“transmit from Google Code”的来历。依 LICENSE/NOTICE 文件为 Apache-2.0。[推断]
 
 ## 存疑（未验证）
 
 - [未验证] GitHub API 把许可报为 `NOASSERTION`，但仓库的 `LICENSE`/`NOTICE` 写明 **Apache License 2.0**（版权 2009、2014 Christian Kohlschütter）——故本页记为 **Apache-2.0**；NOASSERTION 是 API 假象，并非另一种许可。
 - [未验证] 截至 2026-06 约 1.1k star；最后 push 2018-01——数字对时间敏感，而这段长间隔是主导信号。
-- [推断] "实际已废弃"由 2018 的 push 日期加上 README 自身"work-in-progress transmit from Google Code"的表述推断——GitHub 上 `archived` 为 false，但活动不是。
+- [推断] “实际已废弃”由 2018 的 push 日期加上 README 自身“work-in-progress transmit from Google Code”的表述推断——GitHub 上 `archived` 为 false，但活动不是。
 - [推断] 基于 NekoHTML 的解析和 vendor/relocate 的 NekoHTML，由仓库目录布局（`nekohtml`、`nekohtml-relocated`）推断，而非详读构建接线。
 - [未验证] 在现代网页上与 Tika/trafilatura 的相对抽取精度反映总体定位，而非实测基准；可用的已发布制品和确切可安装坐标未确认。

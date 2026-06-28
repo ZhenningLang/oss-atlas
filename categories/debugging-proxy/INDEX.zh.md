@@ -20,4 +20,4 @@
 
 ## 什么该放这里
 
-主要职责是为开发与调试**抓取、检查、改写并 mock** HTTP(S)/WebSocket 流量的代理。不含生产 API/AI 网关(见 `api-gateway`)，不含爬虫代理池(见 `proxy-pool`)。
+主要职责是为开发与调试**抓取、检查、改写并 mock** HTTP(S)/WebSocket 流量的代理。不含生产 API/AI 网关（见 `api-gateway`），不含爬虫代理池（见 `proxy-pool`）。

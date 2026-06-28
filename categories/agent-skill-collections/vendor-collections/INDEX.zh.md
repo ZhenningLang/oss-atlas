@@ -11,7 +11,7 @@
 | **Agent Plugins for AWS** | AWS Labs 官方出品的九个 agent 插件集合（serverless、Amplify、SageMaker、迁移、数据库、部署/成本估算等），通过 marketplace 安装、触发短语驱动并接好 AWS MCP server，教 Claude Code / Cursor / Codex 在 AWS 上做架构、部署和运维。 | [→](aws-agent-plugins.zh.md) |
 | **Claude Plugins (Official)** | Anthropic 官方的 Claude Code 插件市场：精选的可安装插件目录（命令、agent、skill、MCP server），通过原生 /plugin 系统按名安装。 | [→](claude-plugins-official.zh.md) |
 | **MiniMax Skills** | MiniMax 官方约 16 个 Agent Skill 成包（前端/移动端/shader 开发，外加 pdf/docx/xlsx/pptx、音乐与多模态生成），经插件市场装进 Claude Code 等编码 agent。 | [→](minimax-skills.zh.md) |
-| **Anthropic Knowledge Work Plugins** | 当你想要 Anthropic 官方面向知识工作(文档、沟通、研究)的开源插件集(用于 Claude)时用它——非常年轻。 | [→](knowledge-work-plugins.zh.md) |
+| **Anthropic Knowledge Work Plugins** | 当你想要 Anthropic 官方面向知识工作（文档、沟通、研究）的开源插件集（用于 Claude）时用它——非常年轻。 | [→](knowledge-work-plugins.zh.md) |
 
 ## 对比矩阵
 
@@ -21,8 +21,8 @@
 | [Agent Plugins for AWS](aws-agent-plugins.zh.md) | ✅ | AWS Labs 官方出品的九个 agent 插件集合（serverless、Amplify、SageMaker、迁移、数据库、部署/成本估算等），通过 marketplace 安装、触发短语驱动并接好 AWS MCP server，教 Claude Code / Cursor / Codex 在 AWS 上做架构、部署和运维。 |
 | [Claude Plugins (Official)](claude-plugins-official.zh.md) | ✅ | Anthropic 官方的 Claude Code 插件市场：精选的可安装插件目录（命令、agent、skill、MCP server），通过原生 /plugin 系统按名安装。 |
 | [MiniMax Skills](minimax-skills.zh.md) | ✅ | MiniMax 官方约 16 个 Agent Skill 成包（前端/移动端/shader 开发，外加 pdf/docx/xlsx/pptx、音乐与多模态生成），经插件市场装进 Claude Code 等编码 agent。 |
-| [Anthropic Knowledge Work Plugins](knowledge-work-plugins.zh.md) | ✅ | 当你想要 Anthropic 官方面向知识工作(文档、沟通、研究)的开源插件集(用于 Claude)时用它——非常年轻。 |
+| [Anthropic Knowledge Work Plugins](knowledge-work-plugins.zh.md) | ✅ | 当你想要 Anthropic 官方面向知识工作（文档、沟通、研究）的开源插件集（用于 Claude）时用它——非常年轻。 |
 
 ## 什么该放这里
 
-**官方或厂商发布**的技能/插件合集(Anthropic、AWS、MiniMax 等)——第一方捆绑包。
+**官方或厂商发布**的技能/插件合集（Anthropic、AWS、MiniMax 等）——第一方捆绑包。

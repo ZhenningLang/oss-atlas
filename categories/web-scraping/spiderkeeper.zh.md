@@ -54,7 +54,7 @@ type: app
 
 ## 运维难度
 
-**跑起来低，但要交"陈旧软件"的税。** 第一天很容易：`pip install spiderkeeper`、指向 Scrapyd、开 5000 端口——SQLite 意味着不用配数据库。摩擦在于让一个 2017 年钉死的 Flask 0.12 栈在当前解释器上还能装，以及安全姿态：默认 `admin`/`admin` 的 basic 鉴权、没有 TLS/RBAC，意味着别人能访问之前你必须把它放在带真实鉴权的反向代理后（或留在 localhost/VPN）。没有集群或 HA 方案——就是一个你看着的单一轻量 Flask 进程。
+**跑起来低，但要交“陈旧软件”的税。** 第一天很容易：`pip install spiderkeeper`、指向 Scrapyd、开 5000 端口——SQLite 意味着不用配数据库。摩擦在于让一个 2017 年钉死的 Flask 0.12 栈在当前解释器上还能装，以及安全姿态：默认 `admin`/`admin` 的 basic 鉴权、没有 TLS/RBAC，意味着别人能访问之前你必须把它放在带真实鉴权的反向代理后（或留在 localhost/VPN）。没有集群或 HA 方案——就是一个你看着的单一轻量 Flask 进程。
 
 ## 健康度与可持续性
 

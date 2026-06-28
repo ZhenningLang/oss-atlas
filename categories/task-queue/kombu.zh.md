@@ -13,7 +13,7 @@ type: library
 
 # Kombu
 
-一个 Python 消息库，用一套地道的高层 API 统一封装多种消息 broker——AMQP/RabbitMQ，外加可插拔的"虚拟"传输（Redis、Amazon SQS、MongoDB、ZooKeeper、内存）——它正是 Celery 所构建于其上的传输层。
+一个 Python 消息库，用一套地道的高层 API 统一封装多种消息 broker——AMQP/RabbitMQ，外加可插拔的“虚拟”传输（Redis、Amazon SQS、MongoDB、ZooKeeper、内存）——它正是 Celery 所构建于其上的传输层。
 
 ## 何时使用
 
@@ -23,17 +23,17 @@ type: library
 
 ## 何时不用
 
-- **你只是想跑后台任务。** 如果你的目标是"稍后调用某个函数，带重试和 worker 池"，请直接用 [Celery](celery.zh.md)（它就架在 Kombu 之上），而不是手工接生产者/消费者。Kombu 是管道，不是任务框架。
+- **你只是想跑后台任务。** 如果你的目标是“稍后调用某个函数，带重试和 worker 池”，请直接用 [Celery](celery.zh.md)（它就架在 Kombu 之上），而不是手工接生产者/消费者。Kombu 是管道，不是任务框架。
 - **你不在 Python 上。** Kombu 只支持 Python。要做跨语言消息，请用 broker 的原生客户端或跨语言协议（裸 AMQP、Kafka、NATS）。
 - **你想要完整的事件流平台。** Kombu 是 broker 的*客户端/抽象*，不是日志结构化的流存储。要做高吞吐、可重放、带 consumer-group 语义的事件流，Kafka/Redpanda/Pulsar 才是对的层级。
-- **你需要每个 broker 行为完全一致。** 虚拟传输（Redis、SQS……）对 AMQP 语义的模拟并不完美——exchange 类型、优先级、投递保证等特性因后端而异。可移植性是"换 URL"，不是"行为一致"。[推断]
+- **你需要每个 broker 行为完全一致。** 虚拟传输（Redis、SQS……）对 AMQP 语义的模拟并不完美——exchange 类型、优先级、投递保证等特性因后端而异。可移植性是“换 URL”，不是“行为一致”。[推断]
 - **你想要一等公民的 async/await。** Kombu 的核心消费模型是 Celery 风格的同步/事件循环驱动；若你的技术栈围绕 `asyncio`，async 原生的 AMQP 客户端（如 `aio-pika`）可能更合适。[未验证]
 
 ## 横向对比
 
 | 替代品 | 是否收录 | 取舍 |
 |---|---|---|
-| [Celery](celery.zh.md) | ✅ | 架在 Kombu *之上*的任务队列；"跑某个 job"用 Celery，需要裸 broker 抽象时用 Kombu。不是替代品——是更高的一层。 |
+| [Celery](celery.zh.md) | ✅ | 架在 Kombu *之上*的任务队列；“跑某个 job”用 Celery，需要裸 broker 抽象时用 Kombu。不是替代品——是更高的一层。 |
 | py-amqp / pika | 未收录 | 更底层的纯 AMQP 客户端；抽象更少、无多 broker 可移植性，但若你只会用 RabbitMQ，活动部件更少。 |
 | aio-pika | 未收录 | 面向 `asyncio` 的 async 原生 AMQP 客户端；async 体验更好，仅支持 RabbitMQ，范围比 Kombu 的多传输模型窄。 |
 | confluent-kafka-python / kafka-python | 未收录 | 面向日志结构化流的 Kafka 客户端；语义不同（重放、分区、consumer group）——你要的是流而非 broker 时才对。 |
@@ -42,7 +42,7 @@ type: library
 ## 技术栈
 
 - **语言：** Python（纯 Python 库；支持当前在维护的 CPython 版本）。[未验证]
-- **核心抽象：** 可插拔的**传输**接口——一个真正的 AMQP 传输（经 `py-amqp` 或 `qpid`），外加在其它后端上模拟 AMQP 语义的"虚拟"传输。
+- **核心抽象：** 可插拔的**传输**接口——一个真正的 AMQP 传输（经 `py-amqp` 或 `qpid`），外加在其它后端上模拟 AMQP 语义的“虚拟”传输。
 - **内置传输：** Redis、Amazon SQS、MongoDB、ZooKeeper、Pyro、SoftLayer MQ，以及用于单测的内存传输。
 - **序列化与封装：** 可插拔 serializer（JSON、pickle、msgpack、YAML）与压缩；连接池和自动故障切换/重连。
 
@@ -68,5 +68,5 @@ type: library
 
 - [未验证] 截至 2026-06 约 3.1k GitHub star、v5.6.2（2025-12）；star/版本号对时间敏感，仅供参考。
 - [未验证] 支持的 Python 版本及 broker extra 的确切集合随版本变化——固定依赖前请查当前 `pyproject.toml`/文档。
-- [推断] 虚拟传输（Redis、SQS、MongoDB……）对 AMQP 语义的模拟存在后端相关缺口；"换 URL"的可移植性并不等于跨 broker 行为一致。
+- [推断] 虚拟传输（Redis、SQS、MongoDB……）对 AMQP 语义的模拟存在后端相关缺口；“换 URL”的可移植性并不等于跨 broker 行为一致。
 - [未验证] 相对 async 原生 AMQP 客户端，其 async/await 体验有限；核心模型沿用 Celery 的事件循环/同步风格。

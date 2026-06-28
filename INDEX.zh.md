@@ -24,25 +24,25 @@
 | **dev-utilities** | 独立开发者工具、数据处理瑞士军刀与可自托管的基础设施。 | [→](categories/dev-utilities/INDEX.zh.md) |
 | **frontend-animation** | 面向 Web 的 JavaScript 动画引擎与运动库。 | [→](categories/frontend-animation/INDEX.zh.md) |
 | **api-gateway** | 路由、保护、限流并治理服务与 LLM 流量的 API / AI 网关。 | [→](categories/api-gateway/INDEX.zh.md) |
-| **geospatial** | 地理信息系统(GIS)——查看、编辑、分析空间数据。 | [→](categories/geospatial/INDEX.zh.md) |
+| **geospatial** | 地理信息系统（GIS）——查看、编辑、分析空间数据。 | [→](categories/geospatial/INDEX.zh.md) |
 | **team-chat** | 可自托管的团队聊天 / 多 LLM 聊天机器人应用。 | [→](categories/team-chat/INDEX.zh.md) |
-| **captcha** | CAPTCHA / 机器人检测挑战(工作量证明、点击、行为式)。 | [→](categories/captcha/INDEX.zh.md) |
+| **captcha** | CAPTCHA / 机器人检测挑战（工作量证明、点击、行为式）。 | [→](categories/captcha/INDEX.zh.md) |
 | **ml-research** | 小而自洽的 ML 研究 demo 与参考实现。 | [→](categories/ml-research/INDEX.zh.md) |
 | **agent-skill-collections** | 成体系的 agent 技能、提示词、subagent 人设与 harness 配置合集——按用途领域拆分。 | [→](categories/agent-skill-collections/INDEX.zh.md) |
 | **observability** | 在多数据源的指标/日志/追踪之上做看板、告警与可视化。 | [→](categories/observability/INDEX.zh.md) |
 | **data-visualization** | 在 SQL 数据仓库之上自托管的 BI / 数据探索看板。 | [→](categories/data-visualization/INDEX.zh.md) |
 | **ocr** | 光学字符识别引擎——图像/扫描件转文本。 | [→](categories/ocr/INDEX.zh.md) |
-| **document-parsing** | 把文档(PDF/DOCX/…)解析成结构化 Markdown/JSON，供 gen-AI 消费。 | [→](categories/document-parsing/INDEX.zh.md) |
-| **diagramming** | 从文本生成图表(diagrams-as-code)，用于 Markdown、文档和 Web。 | [→](categories/diagramming/INDEX.zh.md) |
+| **document-parsing** | 把文档（PDF/DOCX/…）解析成结构化 Markdown/JSON，供 gen-AI 消费。 | [→](categories/document-parsing/INDEX.zh.md) |
+| **diagramming** | 从文本生成图表（diagrams-as-code），用于 Markdown、文档和 Web。 | [→](categories/diagramming/INDEX.zh.md) |
 | **media-download** | 通过 CLI 或库从流媒体站点下载音视频。 | [→](categories/media-download/INDEX.zh.md) |
-| **media-processing** | 解码/编码/转码/滤镜处理音视频(媒体框架与工具链)。 | [→](categories/media-processing/INDEX.zh.md) |
-| **llm-chat-ui** | 可自部署、跨多 LLM provider 的 AI 聊天客户端前端(单用户 / BYOK)。 | [→](categories/llm-chat-ui/INDEX.zh.md) |
+| **media-processing** | 解码/编码/转码/滤镜处理音视频（媒体框架与工具链）。 | [→](categories/media-processing/INDEX.zh.md) |
+| **llm-chat-ui** | 可自部署、跨多 LLM provider 的 AI 聊天客户端前端（单用户 / BYOK）。 | [→](categories/llm-chat-ui/INDEX.zh.md) |
 | **markdown-tools** | Markdown 解析、渲染与写作工具。 | [→](categories/markdown-tools/INDEX.zh.md) |
 | **pdf-tools** | 渲染、读取与处理 PDF 文件。 | [→](categories/pdf-tools/INDEX.zh.md) |
 | **workflow-orchestration** | 编写、调度并监控批处理数据/工作流管线（DAG 编排器）。 | [→](categories/workflow-orchestration/INDEX.zh.md) |
 | **llm-inference** | 高性能 LLM/模型推理与服务引擎，以及 AI 系统语言。 | [→](categories/llm-inference/INDEX.zh.md) |
 | **task-queue** | 分布式后台任务执行——任务队列与作业调度器。 | [→](categories/task-queue/INDEX.zh.md) |
-| **im-automation** | 即时通讯机器人与自动化(微信等 IM 平台)。 | [→](categories/im-automation/INDEX.zh.md) |
+| **im-automation** | 即时通讯机器人与自动化（微信等 IM 平台）。 | [→](categories/im-automation/INDEX.zh.md) |
 | **web-ui** | 前端 UI/UX 库——产品引导、新手上手、界面组件。 | [→](categories/web-ui/INDEX.zh.md) |
 | **proxy-pool** | 面向网络爬虫的自托管轮换代理 IP 池。 | [→](categories/proxy-pool/INDEX.zh.md) |
 | **debugging-proxy** | HTTP(S)/WebSocket 调试代理——抓取、检查、改写并 mock 流量。 | [→](categories/debugging-proxy/INDEX.zh.md) |
@@ -50,14 +50,14 @@
 
 | **auth** | 认证与授权库——登录提供方与权限规则。 | [→](categories/auth/INDEX.zh.md) |
 | **databases** | 数据库与数据库工具——客户端、GUI、同步，以及 Redis/ES 兼容存储。 | [→](categories/databases/INDEX.zh.md) |
-| **desktop-automation** | 程序化桌面 GUI 自动化(鼠标/键盘/屏幕)。 | [→](categories/desktop-automation/INDEX.zh.md) |
+| **desktop-automation** | 程序化桌面 GUI 自动化（鼠标/键盘/屏幕）。 | [→](categories/desktop-automation/INDEX.zh.md) |
 | **game-dev** | 游戏开发库与引擎。 | [→](categories/game-dev/INDEX.zh.md) |
 | **kafka-tools** | Apache Kafka 客户端与管理界面。 | [→](categories/kafka-tools/INDEX.zh.md) |
 | **networking** | 网络库——SSH、DNS、隧道、RPC 与流量整形。 | [→](categories/networking/INDEX.zh.md) |
-| **nginx-modules** | NGINX / OpenResty 扩展模块(Lua、上传等)。 | [→](categories/nginx-modules/INDEX.zh.md) |
+| **nginx-modules** | NGINX / OpenResty 扩展模块（Lua、上传等）。 | [→](categories/nginx-modules/INDEX.zh.md) |
 | **python-tooling** | Python 开发者工具——编译器、进程注入、notebook、异步 HTTP。 | [→](categories/python-tooling/INDEX.zh.md) |
 | **reading-tools** | 阅读工具——阅读模式扩展与 RSS 阅读器。 | [→](categories/reading-tools/INDEX.zh.md) |
-| **speech** | 语音处理工具包(ASR、TTS、说话人任务)。 | [→](categories/speech/INDEX.zh.md) |
+| **speech** | 语音处理工具包（ASR、TTS、说话人任务）。 | [→](categories/speech/INDEX.zh.md) |
 | **terminal-ui** | 终端/CLI UI 库——着色、TUI、ASCII art、终端渲染。 | [→](categories/terminal-ui/INDEX.zh.md) |
 
 ## 如何新增分类

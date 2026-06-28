@@ -164,9 +164,10 @@ gate). Detection is automatic (lint); the restructure is run via the skill, not 
 Two more machine-checkable rules the linter enforces:
 
 - **Chinese punctuation in `.zh.md`.** Chinese-language bodies use **fullwidth** punctuation
-  (`，；：！？（）……`), not the Western ASCII forms. The most common mistake is a half-width comma
-  `,` between two Chinese characters where it must be `，`. The linter **ERRORs** when an ASCII
-  `, ; ! ? :` is adjacent to a CJK character in a `.zh.md` body. **Exempt** (kept ASCII): the YAML
+  (`，；：！？（）“”……`), not the Western ASCII forms. The most common mistake is a half-width comma
+  `,` between two Chinese characters where it must be `，`; likewise parentheses wrapping Chinese
+  content use `（）` and quotes use `“”`. The linter **ERRORs** when an ASCII `, ; ! ? : ( ) "` is
+  adjacent to a CJK character in a `.zh.md` body. **Exempt** (kept ASCII): the YAML
   frontmatter (facts are language-neutral and must stay identical to the EN sibling), fenced/inline
   code, markdown link targets `](...)`, and URLs. English words and code inside Chinese prose keep
   their own punctuation — only punctuation *touching Chinese characters* is normalized. (English

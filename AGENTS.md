@@ -90,11 +90,11 @@ The schema is the contract: **`tools/schema.md`**. In short:
   facts (`maturity`, `last_verified`). Never assert opinion as fact — an agent will act on it. Keep
   inline labels in the prose to the load-bearing/contested few (≤3 before the Caveats ledger — the
   linter WARNs above that); every unverified fact still gets a bullet in the Caveats ledger.
-- **Chinese punctuation**: in `.zh.md` bodies, use fullwidth Chinese punctuation (`，；：！？（）`),
+- **Chinese punctuation**: in `.zh.md` bodies, use fullwidth Chinese punctuation (`，；：！？（）“”`),
   not the Western ASCII forms — the most common slip is a half-width comma `,` between Chinese
-  characters where it must be `，`. Code spans, link targets, URLs, and the language-neutral
-  frontmatter keep their ASCII punctuation. The linter ERRORs on ASCII `, ; ! ? :` touching a CJK
-  character in a `.zh.md` body.
+  characters where it must be `，` (parens wrapping Chinese use `（）`, quotes use `“”`). Code spans,
+  link targets, URLs, and the language-neutral frontmatter keep their ASCII punctuation. The linter
+  ERRORs on ASCII `, ; ! ? : ( ) "` touching a CJK character in a `.zh.md` body.
 - After writing, update its category `INDEX.md` + `INDEX.zh.md` (and parent/root `INDEX` files for a
   new category) **and the README master listing** (`README.md` + `README.zh.md`), then run the
   linter. If a category overflows (lint WARNs), run `refactor-index`. The linter ERRORs if a page is

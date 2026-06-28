@@ -17,7 +17,7 @@ type: framework
 
 ## 何时使用
 
-你是研究工具团队的 ML 工程师，想要一个自托管、开权重的"deep research"agent 答案——能上网浏览、读页面、跑代码、综合出多步答案，但你可以在自己的 GPU 上跑，而不必为每次查询给一个闭源 API 付费。你克隆 MiroThinker，把它某个微调模型（基于 Qwen，v1.7 规模 30B–235B）托管在 SGLang 或 vLLM 上，给工具层设好 API key（Serper 搜索、Jina 抓取、E2B 代码沙箱），选一个预置 agent 配置，端到端跑一个研究任务。因为 agent 的工具是以 MCP server 接线的、编排逻辑（上下文保留、每个任务最多数百次工具调用）放在 MiroFlow 框架里，你可以研究、修改或扩展 agent 循环，而不必把它当黑盒。它面向那些想*复现并在其上构建*一个有竞争力的开源 deep-research agent 的人——包括它报告的 BrowseComp/GAIA 基准成绩——而不只是调一个产品。
+你是研究工具团队的 ML 工程师，想要一个自托管、开权重的“deep research”agent 答案——能上网浏览、读页面、跑代码、综合出多步答案，但你可以在自己的 GPU 上跑，而不必为每次查询给一个闭源 API 付费。你克隆 MiroThinker，把它某个微调模型（基于 Qwen，v1.7 规模 30B–235B）托管在 SGLang 或 vLLM 上，给工具层设好 API key（Serper 搜索、Jina 抓取、E2B 代码沙箱），选一个预置 agent 配置，端到端跑一个研究任务。因为 agent 的工具是以 MCP server 接线的、编排逻辑（上下文保留、每个任务最多数百次工具调用）放在 MiroFlow 框架里，你可以研究、修改或扩展 agent 循环，而不必把它当黑盒。它面向那些想*复现并在其上构建*一个有竞争力的开源 deep-research agent 的人——包括它报告的 BrowseComp/GAIA 基准成绩——而不只是调一个产品。
 
 ## 何时不用
 
@@ -69,4 +69,4 @@ type: framework
 - [未验证] 报告的基准数字（BrowseComp 约 74–88、BrowseComp-ZH 约 75、GAIA 约 83、HLE-Text 约 43）是项目自报，且在 README 自身陈述与各版本间存在差异——此处未独立复现；请对照当前 model card 核实。
 - [推断] GPU 集群 / 多卡需求与 30B–235B 规模是从 README 的模型尺寸和服务栈推断的，未实测。
 - [未验证] Python 版本、Hydra 配置、transformers 用法以及确切的工具/API 清单是某一时间点从 README 读取的，可能随版本变动。
-- [推断] "尚无 Lindy / 可持续性未经验证"直接源自 2025 年创建日期加单一公司背书。
+- [推断] “尚无 Lindy / 可持续性未经验证”直接源自 2025 年创建日期加单一公司背书。
