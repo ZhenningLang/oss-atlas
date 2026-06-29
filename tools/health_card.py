@@ -32,34 +32,33 @@ TIER = {
 }
 AXIS_KEYS = ["maintenance", "responsiveness", "adoption", "longevity", "governance", "risk_license"]
 
-# Per-language axis labels: (primary meaning, JoJo stat name). Order = top, then clockwise.
+# Per-language axis labels = the real axis meaning (order = top, then clockwise).
+# JoJo is the *visual* influence only — no Stand-stat vocabulary in the text.
 LANG = {
     "en": {
-        "axes": [("MAINTENANCE", "POWER"), ("RESPONSIVENESS", "SPEED"), ("ADOPTION", "RANGE"),
-                 ("LONGEVITY", "DURABILITY"), ("GOVERNANCE", "PRECISION"), ("RISK", "POTENTIAL")],
-        "tag": "STAND  STATS",
-        "sub": "PROJECT HEALTH",
+        "axes": ["Maintenance", "Responsiveness", "Adoption", "Longevity", "Governance", "Risk"],
+        "tag": "HEALTH RADAR",
         "overall": "OVERALL",
         "archived": "ARCHIVED",
         "ext": ".svg",
         "label_font": "'Arial Black','Helvetica Neue',Arial,sans-serif",
+        "axis_fs": 12,
     },
     "zh": {
-        "axes": [("维护", "破坏力"), ("响应", "速度"), ("采用", "射程"),
-                 ("寿命", "持续力"), ("治理", "精密度"), ("风险", "成长性")],
-        "tag": "替身能力",
-        "sub": "项目健康度",
+        "axes": ["维护", "响应", "采用", "寿命", "治理", "风险"],
+        "tag": "健康度雷达",
         "overall": "总评",
         "archived": "已归档",
         "ext": ".zh.svg",
         "label_font": "'PingFang SC','Hiragino Sans GB','Heiti SC','Microsoft YaHei',sans-serif",
+        "axis_fs": 16,
     },
 }
 DISP = "'Georgia','Times New Roman',serif"          # dramatic serif for name + overall
 LOUD = "'Arial Black','Helvetica Neue',Arial,sans-serif"
 
 W, H = 820, 500
-CX, CY, R = 264, 270, 140
+CX, CY, R = 244, 268, 128
 GOLD = "#E8C45A"
 GOLD_DK = "#9c7d2a"
 PARCH = "#f3e7c8"
@@ -192,11 +191,12 @@ def render(lang: str, name: str, grades: list[str], overall: str, note: str, fla
         else:
             s.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="5.5" fill="{TIER[g][1]}" stroke="#1a1306" stroke-width="1.2"/>')
 
-    # ---- axis labels: JoJo stat name (BIG, short — no clipping) + real meaning (small) ----
-    for i, (prim, stat) in enumerate(cfg["axes"]):
+    # ---- axis labels: the real axis name + grade (no JoJo vocabulary) ----
+    afs = cfg["axis_fs"]
+    for i, label in enumerate(cfg["axes"]):
         lx, ly = _v(i, 1.0)
         a = math.radians(-90 + 60 * i)
-        ox, oy = lx + 25 * math.cos(a), ly + 28 * math.sin(a)
+        ox, oy = lx + 22 * math.cos(a), ly + 24 * math.sin(a)
         anchor = "middle"
         if math.cos(a) > 0.3:
             anchor = "start"
@@ -204,19 +204,15 @@ def render(lang: str, name: str, grades: list[str], overall: str, note: str, fla
             anchor = "end"
         g = grades[i]
         col = TIER.get(g, TIER["?"])[1]
-        fs = 17 if lang == "zh" else 14
-        s.append(f'<text x="{ox:.1f}" y="{oy-4:.1f}" font-size="{fs}" font-weight="900" fill="{PARCH}" '
-                 f'text-anchor="{anchor}" font-family="{lf}" letter-spacing="0.5" filter="url(#soft)">{stat} '
-                 f'<tspan fill="{col}" font-family="{DISP}" font-style="italic" font-size="18">{g}</tspan></text>')
-        s.append(f'<text x="{ox:.1f}" y="{oy+9:.1f}" font-size="8" letter-spacing="1.2" fill="{GOLD}" '
-                 f'fill-opacity="0.66" text-anchor="{anchor}" font-family="{lf}">{prim}</text>')
+        s.append(f'<text x="{ox:.1f}" y="{oy+4:.1f}" font-size="{afs}" font-weight="900" fill="{PARCH}" '
+                 f'text-anchor="{anchor}" font-family="{lf}" letter-spacing="0.4" filter="url(#soft)">{label} '
+                 f'<tspan fill="{col}" font-family="{DISP}" font-style="italic" font-size="{afs+5}">{g}</tspan></text>')
 
     # ---- right panel ----
     px = 498
     # banner tag
-    s.append(f'<text x="{px}" y="58" font-size="13" letter-spacing="6" fill="{GOLD}" font-weight="900" '
+    s.append(f'<text x="{px}" y="60" font-size="13" letter-spacing="5" fill="{GOLD}" font-weight="900" '
              f'font-family="{lf}" filter="url(#soft)">◆ {cfg["tag"]}</text>')
-    s.append(f'<text x="{px}" y="74" font-size="9" letter-spacing="4" fill="{GOLD_DK}" font-family="{lf}">{cfg["sub"]}</text>')
     # name — bold italic, skewed (JoJo logo energy)
     s.append(f'<g transform="translate({px},112) skewX(-9)">'
              f'<text x="2" y="2" font-size="30" font-weight="900" font-style="italic" fill="#000" fill-opacity="0.6" '
@@ -240,12 +236,12 @@ def render(lang: str, name: str, grades: list[str], overall: str, note: str, fla
              f'{cfg["overall"]}{nt}</text>')
     # axis rows
     y0 = 288
-    for i, (prim, stat) in enumerate(cfg["axes"]):
+    for i, label in enumerate(cfg["axes"]):
         yy = y0 + i * 29
         g = grades[i]
         col = TIER.get(g, TIER["?"])[1]
         lfs = 14 if lang == "zh" else 11
-        s.append(f'<text x="{px}" y="{yy}" font-size="{lfs}" font-weight="900" fill="{PARCH}" font-family="{lf}" letter-spacing="0.4">{prim}</text>')
+        s.append(f'<text x="{px}" y="{yy}" font-size="{lfs}" font-weight="900" fill="{PARCH}" font-family="{lf}" letter-spacing="0.4">{label}</text>')
         bx, bw = px + 150, 118
         s.append(f'<rect x="{bx}" y="{yy-11}" width="{bw}" height="9" rx="2" fill="#241d0e" stroke="{GOLD_DK}" stroke-opacity="0.5"/>')
         if g != "?":
