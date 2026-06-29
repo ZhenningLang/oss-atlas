@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v4.x (npm 4.1.3), master frozen since 2020-06, coasting, ~7.9k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: tool
+upstream:
+  pushed_at: 2023-03-06T17:20:04Z
+  default_branch: master
+  default_branch_sha: b93f948107b956e07c7b68faeff0c777a1f50486
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:44:21Z
@@ -82,12 +87,12 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| [whistle](whistle.zh.md) | ✅ | 活跃维护的 Node.js MITM 调试代理；规则系统更丰富、持续发布——同细分里新工作的更优默认。 |
-| mitmproxy | 未收录 | Python，活跃维护，强脚本 + TUI/web UI；若你不绑死 Node.js，这是可编程 MITM 代理的首选。 |
-| Charles / Fiddler | 未收录 | 成熟的商业/免费 GUI 调试代理；UX 打磨好但闭源，不像 AnyProxy 规则文件那样能用 JS 脚本化。 |
-| Proxyman | 未收录 | 现代 macOS/跨平台 GUI 代理；UX 很好，freemium，不是你内嵌的 Node.js 库。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [whistle](whistle.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“活跃维护的 Node”，再选 whistle。 | 活跃维护的 Node.js MITM 调试代理；规则系统更丰富、持续发布——同细分里新工作的更优默认。 |
+| mitmproxy | 未收录 | 当前页用于它的主场景；如果更看重“Python，活跃维护，强脚本 + TUI/web UI”，再选 mitmproxy。 | Python，活跃维护，强脚本 + TUI/web UI；若你不绑死 Node.js，这是可编程 MITM 代理的首选。 |
+| Charles / Fiddler | 未收录 | 当前页用于它的主场景；如果更看重“成熟的商业/免费 GUI 调试代理”，再选 Charles / Fiddler。 | 成熟的商业/免费 GUI 调试代理；UX 打磨好但闭源，不像 AnyProxy 规则文件那样能用 JS 脚本化。 |
+| Proxyman | 未收录 | 当前页用于它的主场景；如果更看重“现代 macOS/跨平台 GUI 代理”，再选 Proxyman。 | 现代 macOS/跨平台 GUI 代理；UX 很好，freemium，不是你内嵌的 Node.js 库。 |
 
 ## 技术栈
 

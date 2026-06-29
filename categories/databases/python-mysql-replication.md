@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v1.0.15, active, 2.4k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2026-02-07T11:54:43Z
+  default_branch: main
+  default_branch_sha: 5d2692eff97be0e1f1dbee2b1bc1a5f5043aa918
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:43:49Z
@@ -86,13 +91,13 @@ You reach for it as a **library, not a turnkey tool** — it gives you the parse
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| Debezium | 未收录 | Full CDC platform (Kafka Connect) with connectors, schema history, exactly-once-ish delivery; far heavier — this library is the lightweight, code-it-yourself counterpart. |
-| Canal (Alibaba) | 未收录 | Mature Java binlog CDC server; robust and active, but a server to operate, not a Python library you embed in your app. |
-| Maxwell's Daemon | 未收录 | Reads MySQL binlog and emits JSON to Kafka/Kinesis/etc.; a ready daemon rather than a library, narrower output model. |
-| go-mysql (+ go-mysql-elasticsearch) | 未收录 | The Go-ecosystem equivalent binlog library/tooling; pick by language. |
-| Polling (SQLAlchemy / cron) | 未收录 | No binlog privileges needed and trivially simple, but misses deletes, adds query load, and lags — the limitation CDC removes. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| Debezium | 未收录 | Use this page for its stated niche; choose Debezium when you need full CDC platform (Kafka Connect) with connectors, schema history, exactly-once-ish delivery. | Full CDC platform (Kafka Connect) with connectors, schema history, exactly-once-ish delivery; far heavier — this library is the lightweight, code-it-yourself counterpart. |
+| Canal (Alibaba) | 未收录 | Use this page for its stated niche; choose Canal (Alibaba) when you need mature Java binlog CDC server. | Mature Java binlog CDC server; robust and active, but a server to operate, not a Python library you embed in your app. |
+| Maxwell's Daemon | 未收录 | Use this page for its stated niche; choose Maxwell's Daemon when you need reads MySQL binlog and emits JSON to Kafka/Kinesis/etc. | Reads MySQL binlog and emits JSON to Kafka/Kinesis/etc.; a ready daemon rather than a library, narrower output model. |
+| go-mysql (+ go-mysql-elasticsearch) | 未收录 | Use this page for its stated niche; choose go-mysql (+ go-mysql-elasticsearch) when you need the Go-ecosystem equivalent binlog library/tooling. | The Go-ecosystem equivalent binlog library/tooling; pick by language. |
+| Polling (SQLAlchemy / cron) | 未收录 | Use this page for its stated niche; choose Polling (SQLAlchemy / cron) when you need no binlog privileges needed and trivially simple, but misses deletes, adds query load, and lags. | No binlog privileges needed and trivially simple, but misses deletes, adds query load, and lags — the limitation CDC removes. |
 
 ## Tech stack
 

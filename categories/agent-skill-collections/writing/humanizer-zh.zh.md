@@ -9,6 +9,11 @@ license: MIT
 maturity: no tagged release, last pushed 2026-01, not archived (as of 2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+upstream:
+  pushed_at: 2026-01-19T07:46:35Z
+  default_branch: main
+  default_branch_sha: 91f3d394db8419c20d67ebe22a96cf8fee0a404b
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:34:40Z
@@ -80,12 +85,12 @@ health:
 
 ## 横向对比
 
-| 替代方案 | 是否已收录 | 取舍 |
-|---|---|---|
-| `blader/humanizer`（上游） | 未收录 | 本仓库翻译自的英文原版。英文文案选上游；中文特征与示例选 Humanizer-zh。 |
-| [Baoyu Skills](baoyu-skills.zh.md) | ✅ | 一个更宽的中文作者技能集（翻译 / markdown / 内容生成助手），而非单一去味规则。看你要一个专注的 humanize 技能，还是一整套写作技能包。 |
-| 写在 `CLAUDE.md` 里的自制去味提示词 | 未收录 | 你自己维护的几条内联规则：零安装、完全归你，但要自己推导和调参，而非继承一份经核校的约 24 条清单。 |
-| 维基百科「Signs of AI writing」指南 | 未收录 | 规则背后的参考来源——一份人读的指南，不是可安装技能。用它来审计或扩充清单，而非直接执行改写。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| `blader/humanizer`（上游） | 未收录 | 当前页用于它的主场景；如果更看重“本仓库翻译自的英文原版”，再选 blader/humanizer（上游）。 | 本仓库翻译自的英文原版。英文文案选上游；中文特征与示例选 Humanizer-zh。 |
+| [Baoyu Skills](baoyu-skills.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“一个更宽的中文作者技能集（翻译 / markdown / 内容生成助手），而非单一去味规则”，再选 Baoyu Skills。 | 一个更宽的中文作者技能集（翻译 / markdown / 内容生成助手），而非单一去味规则。看你要一个专注的 humanize 技能，还是一整套写作技能包。 |
+| 写在 `CLAUDE.md` 里的自制去味提示词 | 未收录 | 当前页用于它的主场景；如果更看重“你自己维护的几条内联规则：零安装、完全归你，但要自己推导和调参，而非继承一份经核校的约 24 条清单”，再选 写在 CLAUDE.md 里的自制去味提示词。 | 你自己维护的几条内联规则：零安装、完全归你，但要自己推导和调参，而非继承一份经核校的约 24 条清单。 |
+| 维基百科「Signs of AI writing」指南 | 未收录 | 当前页用于它的主场景；如果更看重“规则背后的参考来源”，再选 维基百科「Signs of AI writing」指南。 | 规则背后的参考来源——一份人读的指南，不是可安装技能。用它来审计或扩充清单，而非直接执行改写。 |
 
 ## 健康度与可持续性
 

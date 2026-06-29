@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v3.x line, active, ~46k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: framework
+upstream:
+  pushed_at: 2026-06-29T11:36:14Z
+  default_branch: main
+  default_branch_sha: 512a0445875c950ff50f9fbd890751da20e92a09
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:26:10Z
@@ -89,13 +94,13 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| Prefect | 未收录 | Pythonic、动态的 flow，本地开发体验更轻，带混合/托管控制面；operator 生态更小，模型（flow/task）也与 Airflow 的 DAG 文件不同。 |
-| Dagster | 未收录 | 面向资产的编排，带类型、数据血缘和强本地测试；更有主见也更新，集成目录比 Airflow 的 provider 小。 |
-| Argo Workflows | 未收录 | Kubernetes 原生、用 YAML/CRD 定义容器步骤 DAG；如果一切本就跑在 pod 上很合适，但没有丰富的 Python operator 库，数据工程 UX 也更薄。 |
-| Temporal | 未收录 | 面向长时运行、有状态、代码驱动工作流（信号、重试、定时器）的持久化执行引擎；不是带 DAG UI 的批处理*调度器*——是完全不同的编排形态。 |
-| Luigi | 未收录 | Spotify 早期的 Python 流水线库；更轻更简单，但基本已被 Airflow 取代，社区小得多、调度/UI 也更弱。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| Prefect | 未收录 | 当前页用于它的主场景；如果更看重“Pythonic、动态的 flow，本地开发体验更轻，带混合/托管控制面”，再选 Prefect。 | Pythonic、动态的 flow，本地开发体验更轻，带混合/托管控制面；operator 生态更小，模型（flow/task）也与 Airflow 的 DAG 文件不同。 |
+| Dagster | 未收录 | 当前页用于它的主场景；如果更看重“面向资产的编排，带类型、数据血缘和强本地测试”，再选 Dagster。 | 面向资产的编排，带类型、数据血缘和强本地测试；更有主见也更新，集成目录比 Airflow 的 provider 小。 |
+| Argo Workflows | 未收录 | 当前页用于它的主场景；如果更看重“Kubernetes 原生、用 YAML/CRD 定义容器步骤 DAG”，再选 Argo Workflows。 | Kubernetes 原生、用 YAML/CRD 定义容器步骤 DAG；如果一切本就跑在 pod 上很合适，但没有丰富的 Python operator 库，数据工程 UX 也更薄。 |
+| Temporal | 未收录 | 当前页用于它的主场景；如果更看重“面向长时运行、有状态、代码驱动工作流（信号、重试、定时器）的持久化执行引擎”，再选 Temporal。 | 面向长时运行、有状态、代码驱动工作流（信号、重试、定时器）的持久化执行引擎；不是带 DAG UI 的批处理*调度器*——是完全不同的编排形态。 |
+| Luigi | 未收录 | 当前页用于它的主场景；如果更看重“Spotify 早期的 Python 流水线库”，再选 Luigi。 | Spotify 早期的 Python 流水线库；更轻更简单，但基本已被 Airflow 取代，社区小得多、调度/UI 也更弱。 |
 
 ## 技术栈
 

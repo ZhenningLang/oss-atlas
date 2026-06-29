@@ -9,6 +9,11 @@ license: MIT
 maturity: v3.2.1, active (2026-06)
 last_verified: 2026-06-26
 type: framework
+upstream:
+  pushed_at: 2026-06-25T16:53:41Z
+  default_branch: main
+  default_branch_sha: 498760149b230f402c56bece2aa45df6e1ba946b
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:09:01Z
@@ -89,14 +94,14 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| [AgentScope](agentscope.zh.md) | ✅ | 多 agent 运行时/消息平台；聚焦 agent 编排与协作，而非把单个 LM 程序对照指标编译/优化。 |
-| [Symphony](symphony.zh.md) | ✅ | 编排模型不同的 agent 框架；DSPy 的标志特性是优化器层，这是多数 agent 框架所没有的。 |
-| LangChain | 未收录 | 集成/chain/agent 目录与生态广得多；提示词仍靠手写。DSPy 用广度换取系统化的提示词/权重优化。 |
-| LlamaIndex | 未收录 | RAG/数据框架重量级，连接器与索引丰富；DSPy 数据管线更轻，但优化的是推理程序本身。 |
-| TextGrad | 未收录 | 同样优化 LM 流水线，走“文本梯度”/对文本反向传播；模块模型比 DSPy 的 signatures+optimizers 更窄。 |
-| AdalFlow(LightRAG) | 未收录 | “类 PyTorch”的库，用来构建并自动优化 LM 应用；理念最接近（优化而非手写提示词），生态更小。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [AgentScope](agentscope.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“多 agent 运行时/消息平台”，再选 AgentScope。 | 多 agent 运行时/消息平台；聚焦 agent 编排与协作，而非把单个 LM 程序对照指标编译/优化。 |
+| [Symphony](symphony.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“编排模型不同的 agent 框架”，再选 Symphony。 | 编排模型不同的 agent 框架；DSPy 的标志特性是优化器层，这是多数 agent 框架所没有的。 |
+| LangChain | 未收录 | 当前页用于它的主场景；如果更看重“集成/chain/agent 目录与生态广得多”，再选 LangChain。 | 集成/chain/agent 目录与生态广得多；提示词仍靠手写。DSPy 用广度换取系统化的提示词/权重优化。 |
+| LlamaIndex | 未收录 | 当前页用于它的主场景；如果更看重“RAG/数据框架重量级，连接器与索引丰富”，再选 LlamaIndex。 | RAG/数据框架重量级，连接器与索引丰富；DSPy 数据管线更轻，但优化的是推理程序本身。 |
+| TextGrad | 未收录 | 当前页用于它的主场景；如果更看重“同样优化 LM 流水线，走“文本梯度”/对文本反向传播”，再选 TextGrad。 | 同样优化 LM 流水线，走“文本梯度”/对文本反向传播；模块模型比 DSPy 的 signatures+optimizers 更窄。 |
+| AdalFlow(LightRAG) | 未收录 | 当前页用于它的主场景；如果更看重““类 PyTorch”的库，用来构建并自动优化 LM 应用”，再选 AdalFlow(LightRAG)。 | “类 PyTorch”的库，用来构建并自动优化 LM 应用；理念最接近（优化而非手写提示词），生态更小。 |
 
 ## 技术栈
 

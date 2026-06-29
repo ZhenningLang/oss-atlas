@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v2.1.1 (2023-02), ARCHIVED — maintenance stopped, 3.2k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: app
+upstream:
+  pushed_at: 2024-01-09T14:17:44Z
+  default_branch: master
+  default_branch_sha: 03d08cadac2b2080a1e61585cb6a5e9b8ed78dbb
+  archived: true
 health:
   schema: 1
   computed_at: 2026-06-29T09:43:34Z
@@ -79,13 +84,13 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| `zkCli.sh`（内置） | 未收录 | 随 ZooKeeper 自带、可脚本化、永远可用——但是裸 CLI，无树可视化，浏览／带新人更慢。 |
-| ZooInspector | 未收录 | 经典的基于 Swing 的 ZK GUI；UI 更老更笨重，但历史上是参考级桌面查看器。 |
-| zkui / zk-web | 未收录 | 基于 Web 的 ZooKeeper UI（部署为服务、多用户），而非桌面应用；部署模型不同。 |
-| Apache Curator | 未收录 | 用于编程式访问 ZK 的 Java 客户端*库*（recipes、leader 选举）——用于构建，而非临时 GUI 查看。 |
-| Kafka KRaft / etcd | 未收录 | 战略替代：把 ZooKeeper 整个从你的技术栈里去掉，使 ZK GUI 失去意义。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| `zkCli.sh`（内置） | 未收录 | 当前页用于它的主场景；如果更看重“随 ZooKeeper 自带、可脚本化、永远可用”，再选 zkCli.sh（内置）。 | 随 ZooKeeper 自带、可脚本化、永远可用——但是裸 CLI，无树可视化，浏览／带新人更慢。 |
+| ZooInspector | 未收录 | 当前页用于它的主场景；如果更看重“经典的基于 Swing 的 ZK GUI”，再选 ZooInspector。 | 经典的基于 Swing 的 ZK GUI；UI 更老更笨重，但历史上是参考级桌面查看器。 |
+| zkui / zk-web | 未收录 | 当前页用于它的主场景；如果更看重“基于 Web 的 ZooKeeper UI（部署为服务、多用户），而非桌面应用”，再选 zkui / zk-web。 | 基于 Web 的 ZooKeeper UI（部署为服务、多用户），而非桌面应用；部署模型不同。 |
+| Apache Curator | 未收录 | 当前页用于它的主场景；如果更看重“用于编程式访问 ZK 的 Java 客户端*库*（recipes、leader 选举）”，再选 Apache Curator。 | 用于编程式访问 ZK 的 Java 客户端*库*（recipes、leader 选举）——用于构建，而非临时 GUI 查看。 |
+| Kafka KRaft / etcd | 未收录 | 当前页用于它的主场景；如果更看重“战略替代：把 ZooKeeper 整个从你的技术栈里去掉，使 ZK GUI 失去意义”，再选 Kafka KRaft / etcd。 | 战略替代：把 ZooKeeper 整个从你的技术栈里去掉，使 ZK GUI 失去意义。 |
 
 ## 技术栈
 

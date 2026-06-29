@@ -9,6 +9,11 @@ license: MIT
 maturity: v2.10.x, active, ~15.6k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: tool
+upstream:
+  pushed_at: 2026-06-21T15:35:58Z
+  default_branch: master
+  default_branch_sha: 6da6e6c174c4d308199b9512c1ce1a7a671893ba
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:44:38Z
@@ -89,13 +94,13 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| Charles | 未收录 | 付费原生桌面代理；抓包/改写/限速的 GUI 成熟、打磨度高，但需商业授权，且不像 whistle 那样由配置文件规则驱动。 |
-| Fiddler | 未收录 | 老牌、Windows 优先的调试代理（Fiddler Classic / Everywhere）；.NET 生态丰富、有 FiddlerScript，但更重，且部分商业/闭源。 |
-| mitmproxy | 未收录 | 开源 Python 代理，脚本/插件 API 强，带 CLI/TUI；更适合可编程拦截，少了点点即用的规则 UI。 |
-| anyproxy | 未收录 | 阿里的 Node.js HTTP/HTTPS 代理，用 JS 规则文件；气质上更接近 whistle，但社区更小，且规则写在 JS 里而非 whistle 的行语法。 |
-| Proxyman | 未收录 | 现代原生 macOS/跨平台调试代理，GUI 精致；freemium/商业，是应用形态而非 web-UI + npm 工具。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| Charles | 未收录 | 当前页用于它的主场景；如果更看重“付费原生桌面代理”，再选 Charles。 | 付费原生桌面代理；抓包/改写/限速的 GUI 成熟、打磨度高，但需商业授权，且不像 whistle 那样由配置文件规则驱动。 |
+| Fiddler | 未收录 | 当前页用于它的主场景；如果更看重“老牌、Windows 优先的调试代理（Fiddler Classic / Everywhere）”，再选 Fiddler。 | 老牌、Windows 优先的调试代理（Fiddler Classic / Everywhere）；.NET 生态丰富、有 FiddlerScript，但更重，且部分商业/闭源。 |
+| mitmproxy | 未收录 | 当前页用于它的主场景；如果更看重“开源 Python 代理，脚本/插件 API 强，带 CLI/TUI”，再选 mitmproxy。 | 开源 Python 代理，脚本/插件 API 强，带 CLI/TUI；更适合可编程拦截，少了点点即用的规则 UI。 |
+| anyproxy | 未收录 | 当前页用于它的主场景；如果更看重“阿里的 Node”，再选 anyproxy。 | 阿里的 Node.js HTTP/HTTPS 代理，用 JS 规则文件；气质上更接近 whistle，但社区更小，且规则写在 JS 里而非 whistle 的行语法。 |
+| Proxyman | 未收录 | 当前页用于它的主场景；如果更看重“现代原生 macOS/跨平台调试代理，GUI 精致”，再选 Proxyman。 | 现代原生 macOS/跨平台调试代理，GUI 精致；freemium/商业，是应用形态而非 web-UI + npm 工具。 |
 
 ## 技术栈
 

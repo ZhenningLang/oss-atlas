@@ -10,6 +10,11 @@ homepage: https://ao-agents.com
 maturity: pre-1.0 (latest v0.10.1, 2026-06-28), very active, nightly prereleases; ~7.7k stars (as of 2026-06)
 last_verified: 2026-06-29
 type: app
+upstream:
+  pushed_at: 2026-06-29T11:30:35Z
+  default_branch: main
+  default_branch_sha: 3535d12f2c594ea4549a00c64d9183a2a1bc1622
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T04:20:45Z
@@ -87,14 +92,14 @@ So you install Agent Orchestrator as a desktop app. It runs a local Go daemon th
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [CCPM](ccpm.md) | ✅ | Spec-driven: PRD → GitHub Issues → parallel git-worktree agents, driven from your existing harness as a skill-pack. CCPM is process + GitHub-native with no GUI; Agent Orchestrator is a desktop app + daemon that supervises live agents and auto-routes CI/review/conflict feedback. Different layers — you could plan with CCPM and run with this. |
-| [OpenSandbox](opensandbox.md) | ✅ | A sandbox *runtime* for safely executing untrusted agent code at K8s scale (isolation, egress, vault). Orthogonal: OpenSandbox isolates *execution*; Agent Orchestrator orchestrates *agents* across worktrees. You might run agents under a sandbox and supervise them here. |
-| [Planning with Files](planning-with-files.md) | ✅ | Lightweight file-based planning pattern (plans live as markdown the agent reads/writes); no parallel supervision, no GUI, no feedback-loop routing. The minimal baseline this replaces for state-keeping. |
-| Conductor / Crystal / Claude Squad | 未收录 | Other "run parallel Claude Code agents in git worktrees" tools (desktop or TUI). Directly comparable on the core idea; differ in agent breadth (Agent Orchestrator targets 23+ adapters), feedback-loop automation, and maturity — shortlist and compare if you've narrowed to this niche. |
-| Vibe Kanban | 未收录 | Kanban-style board for orchestrating multiple coding agents; overlapping "supervise many agents" goal with a board-first UX rather than a worktree-daemon + feedback-loop emphasis. |
-| Plain tmux + `git worktree` scripts | 未收录 | Zero-dependency and fully scriptable, but you hand-roll the worktree lifecycle, agent adapters, live state UI, and CI/review/conflict routing — exactly the glue Agent Orchestrator packages. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [CCPM](ccpm.md) | ✅ | Use this page for its stated niche; choose CCPM when you need spec-driven: PRD → GitHub Issues → parallel git-worktree agents, driven from your existing harness a. | Spec-driven: PRD → GitHub Issues → parallel git-worktree agents, driven from your existing harness as a skill-pack. CCPM is process + GitHub-native with no GUI; Agent Orchestrator is a desktop app + daemon that supervises live agents and auto-routes CI/review/conflict feedback. Different layers — you could plan with CCPM and run with this. |
+| [OpenSandbox](opensandbox.md) | ✅ | Use this page for its stated niche; choose OpenSandbox when you need a sandbox *runtime* for safely executing untrusted agent code at K8s scale (isolation, egress, vault. | A sandbox *runtime* for safely executing untrusted agent code at K8s scale (isolation, egress, vault). Orthogonal: OpenSandbox isolates *execution*; Agent Orchestrator orchestrates *agents* across worktrees. You might run agents under a sandbox and supervise them here. |
+| [Planning with Files](planning-with-files.md) | ✅ | Use this page for its stated niche; choose Planning with Files when you need lightweight file-based planning pattern (plans live as markdown the agent reads/writes). | Lightweight file-based planning pattern (plans live as markdown the agent reads/writes); no parallel supervision, no GUI, no feedback-loop routing. The minimal baseline this replaces for state-keeping. |
+| Conductor / Crystal / Claude Squad | 未收录 | Use this page for its stated niche; choose Conductor / Crystal / Claude Squad when you need other "run parallel Claude Code agents in git worktrees" tools (desktop or TUI). | Other "run parallel Claude Code agents in git worktrees" tools (desktop or TUI). Directly comparable on the core idea; differ in agent breadth (Agent Orchestrator targets 23+ adapters), feedback-loop automation, and maturity — shortlist and compare if you've narrowed to this niche. |
+| Vibe Kanban | 未收录 | Use this page for its stated niche; choose Vibe Kanban when you need kanban-style board for orchestrating multiple coding agents. | Kanban-style board for orchestrating multiple coding agents; overlapping "supervise many agents" goal with a board-first UX rather than a worktree-daemon + feedback-loop emphasis. |
+| Plain tmux + `git worktree` scripts | 未收录 | Use this page for its stated niche; choose Plain tmux + git worktree scripts when you need zero-dependency and fully scriptable, but you hand-roll the worktree lifecycle, agent adapters, live. | Zero-dependency and fully scriptable, but you hand-roll the worktree lifecycle, agent adapters, live state UI, and CI/review/conflict routing — exactly the glue Agent Orchestrator packages. |
 
 ## Tech stack
 

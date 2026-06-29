@@ -9,6 +9,11 @@ license: MIT
 maturity: v1.14.x, active (2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2026-06-25T22:18:04Z
+  default_branch: main
+  default_branch_sha: a6f97750aeaf760c72d0526c3a346513823c4a0c
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:13:47Z
@@ -89,15 +94,15 @@ You also reach for it when you outgrow CPU: the same library has a GPU path (`fa
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [FalkorDB](falkordb.md) | ✅ | Graph database (Redis module) with vector + full-text indexing for GraphRAG; a persistent multi-query *service* with traversal. FAISS is just the in-process ANN index — no graph, no server, no metadata store. |
-| [PageIndex](pageindex.md) | ✅ | "Vectorless" reasoning-tree retrieval over one document; a different retrieval primitive entirely (LLM navigates a ToC tree, no embeddings/ANN). FAISS is the embedding+ANN path PageIndex deliberately avoids. |
-| Qdrant | 未收录 | Rust vector *database* with payload filtering, persistence, gRPC/REST API, sharding/replication; turnkey ops where FAISS is a bare library you wrap and operate yourself. |
-| Milvus | 未收录 | Distributed vector database (often embedding FAISS/HNSW engines under the hood) with horizontal scale, metadata, and a control plane; heavier to run, but you don't build sharding/persistence. |
-| hnswlib | 未收录 | Tiny header-only C++/Python HNSW-only library; even lighter than FAISS and easy to embed, but single-algorithm and no GPU / PQ / clustering breadth. |
-| ScaNN (Google) | 未收录 | Google's anisotropic-quantization ANN library, very strong recall/latency on CPU; narrower index menu and ecosystem than FAISS, no first-class GPU build. |
-| pgvector | 未收录 | Vector search *inside Postgres* (IVFFlat/HNSW) with SQL, transactions, and metadata filtering for free; simpler if your data already lives in Postgres, slower/less flexible than a tuned FAISS index at large scale. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [FalkorDB](falkordb.md) | ✅ | Use this page for its stated niche; choose FalkorDB when you need graph database (Redis module) with vector + full-text indexing for GraphRAG. | Graph database (Redis module) with vector + full-text indexing for GraphRAG; a persistent multi-query *service* with traversal. FAISS is just the in-process ANN index — no graph, no server, no metadata store. |
+| [PageIndex](pageindex.md) | ✅ | Use this page for its stated niche; choose PageIndex when you need "Vectorless" reasoning-tree retrieval over one document. | "Vectorless" reasoning-tree retrieval over one document; a different retrieval primitive entirely (LLM navigates a ToC tree, no embeddings/ANN). FAISS is the embedding+ANN path PageIndex deliberately avoids. |
+| Qdrant | 未收录 | Use this page for its stated niche; choose Qdrant when you need rust vector *database* with payload filtering, persistence, gRPC/REST API, sharding/replication. | Rust vector *database* with payload filtering, persistence, gRPC/REST API, sharding/replication; turnkey ops where FAISS is a bare library you wrap and operate yourself. |
+| Milvus | 未收录 | Use this page for its stated niche; choose Milvus when you need distributed vector database (often embedding FAISS/HNSW engines under the hood) with horizontal scal. | Distributed vector database (often embedding FAISS/HNSW engines under the hood) with horizontal scale, metadata, and a control plane; heavier to run, but you don't build sharding/persistence. |
+| hnswlib | 未收录 | Use this page for its stated niche; choose hnswlib when you need tiny header-only C++/Python HNSW-only library. | Tiny header-only C++/Python HNSW-only library; even lighter than FAISS and easy to embed, but single-algorithm and no GPU / PQ / clustering breadth. |
+| ScaNN (Google) | 未收录 | Use this page for its stated niche; choose ScaNN (Google) when you need google's anisotropic-quantization ANN library, very strong recall/latency on CPU. | Google's anisotropic-quantization ANN library, very strong recall/latency on CPU; narrower index menu and ecosystem than FAISS, no first-class GPU build. |
+| pgvector | 未收录 | Use this page for its stated niche; choose pgvector when you need vector search *inside Postgres* (IVFFlat/HNSW) with SQL, transactions, and metadata filtering for fr. | Vector search *inside Postgres* (IVFFlat/HNSW) with SQL, transactions, and metadata filtering for free; simpler if your data already lives in Postgres, slower/less flexible than a tuned FAISS index at large scale. |
 
 ## Tech stack
 

@@ -9,6 +9,11 @@ license: MIT
 maturity: v18.x, active (2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2026-06-23T04:04:16Z
+  default_branch: master
+  default_branch_sha: f8f411256680bfc870a4faba729409be68fcef4b
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:59:23Z
@@ -85,12 +90,12 @@ It's the right reach when *throughput and simplicity* matter more than strict sp
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| markdown-it | 未收录 | CommonMark-strict, pluggable architecture with a rich plugin ecosystem; heavier API and a touch slower than marked, but the choice when spec conformance and plugins matter. |
-| remark / unified | 未收录 | Full mdast AST pipeline for parsing, transforming, linting, and serializing (Markdown, MDX); far more powerful and far heavier — a toolchain, not a one-call renderer. |
-| micromark | 未收录 | The low-level CommonMark/GFM tokenizer underneath remark; correct and streaming-oriented, but you build the rendering layer yourself. |
-| CommonMark reference (commonmark.js) | 未收录 | The spec's own reference implementation; the conformance yardstick, but fewer GFM niceties and not optimized as a production renderer. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| markdown-it | 未收录 | Use this page for its stated niche; choose markdown-it when you need commonMark-strict, pluggable architecture with a rich plugin ecosystem. | CommonMark-strict, pluggable architecture with a rich plugin ecosystem; heavier API and a touch slower than marked, but the choice when spec conformance and plugins matter. |
+| remark / unified | 未收录 | Use this page for its stated niche; choose remark / unified when you need full mdast AST pipeline for parsing, transforming, linting, and serializing (Markdown, MDX). | Full mdast AST pipeline for parsing, transforming, linting, and serializing (Markdown, MDX); far more powerful and far heavier — a toolchain, not a one-call renderer. |
+| micromark | 未收录 | Use this page for its stated niche; choose micromark when you need the low-level CommonMark/GFM tokenizer underneath remark. | The low-level CommonMark/GFM tokenizer underneath remark; correct and streaming-oriented, but you build the rendering layer yourself. |
+| CommonMark reference (commonmark.js) | 未收录 | Use this page for its stated niche; choose CommonMark reference (commonmark.js) when you need the spec's own reference implementation. | The spec's own reference implementation; the conformance yardstick, but fewer GFM niceties and not optimized as a production renderer. |
 
 ## Tech stack
 

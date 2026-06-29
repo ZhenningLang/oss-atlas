@@ -9,6 +9,11 @@ license: MIT
 maturity: no tagged release, active (2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+upstream:
+  pushed_at: 2026-06-25T16:42:45Z
+  default_branch: main
+  default_branch_sha: 11de390be1be6849eb9a15f91ff4922dd16c589a
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:31:06Z
@@ -81,13 +86,13 @@ You reach for it when you'd rather adopt one person's battle-tested, end-to-end 
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [Superpowers](../../agent-dev-methodology/superpowers.md) | ✅ | Composable SDLC skills library (brainstorm → plan → TDD → verify) shipped as a cross-harness plugin. More TDD/test-first discipline and a marketplace install; gstack is one founder's *role-based* command set (CEO/designer/QA personas) tuned to his daily factory rather than a generic methodology. |
-| antfu/skills | 未收录 | Another personal Claude Code skill collection; compare on which workflow each author bakes in and how much it assumes about your setup. |
-| Dimillian/Skills | 未收录 | Personal skill collection; pick by author taste and how their commands route. |
-| wshobson/agents | 未收录 | Large subagent/persona collection; broader catalog of agents vs. gstack's tighter founder-opinionated factory loop. |
-| Building your own commands from scratch | 未收录 | Maximum fit, zero lock-in, but you author and maintain every persona and the sequencing yourself. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [Superpowers](../../agent-dev-methodology/superpowers.md) | ✅ | Use this page for its stated niche; choose Superpowers when you need composable SDLC skills library (brainstorm → plan → TDD → verify) shipped as a cross-harness plugin. | Composable SDLC skills library (brainstorm → plan → TDD → verify) shipped as a cross-harness plugin. More TDD/test-first discipline and a marketplace install; gstack is one founder's *role-based* command set (CEO/designer/QA personas) tuned to his daily factory rather than a generic methodology. |
+| antfu/skills | 未收录 | Use this page for its stated niche; choose antfu/skills when you need another personal Claude Code skill collection. | Another personal Claude Code skill collection; compare on which workflow each author bakes in and how much it assumes about your setup. |
+| Dimillian/Skills | 未收录 | Use this page for its stated niche; choose Dimillian/Skills when you need personal skill collection. | Personal skill collection; pick by author taste and how their commands route. |
+| wshobson/agents | 未收录 | Use this page for its stated niche; choose wshobson/agents when you need large subagent/persona collection. | Large subagent/persona collection; broader catalog of agents vs. gstack's tighter founder-opinionated factory loop. |
+| Building your own commands from scratch | 未收录 | Use this page for its stated niche; choose Building your own commands from scratch when you need maximum fit, zero lock-in, but you author and maintain every persona and the sequencing yourself. | Maximum fit, zero lock-in, but you author and maintain every persona and the sequencing yourself. |
 
 ## Health & viability
 

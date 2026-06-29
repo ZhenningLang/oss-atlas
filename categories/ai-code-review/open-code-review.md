@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v1.6.2, active (2026-06)
 last_verified: 2026-06-26
 type: tool
+upstream:
+  pushed_at: 2026-06-29T09:21:58Z
+  default_branch: main
+  default_branch_sha: 403335ef5afe95fd14b0b31c9929a004f557c6c1
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:37:14Z
@@ -89,13 +94,13 @@ It also fits when you've inherited an unfamiliar codebase and there's no meaning
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [claude-code-security-review](claude-code-security-review.md) | 未收录 | Anthropic's GitHub Action focused on *security* findings via Claude; narrower (security) but PR-native. Open Code Review is broader (general quality + a few security rules) and CLI-first, not auto-posting. |
-| [react-doctor](react-doctor.md) | 未收录 | React-specific health/diagnostics for a single framework; Open Code Review is language-agnostic across ~10+ languages, not framework-tuned. |
-| CodeRabbit | 未收录 | Hosted SaaS that auto-comments on PRs with broad recall; Open Code Review is self-hosted/CLI, precision-biased, and you own the LLM key and posting glue. |
-| PR-Agent (Qodo) | 未收录 | OSS PR assistant that posts to GitHub/GitLab MRs directly and does summaries/Q&A; Open Code Review prints structured findings and leans on a deterministic positioning layer rather than MR integration. |
-| Semgrep | 未收录 | Deterministic rule/AST scanner (no LLM) with a large security ruleset; faster and free per run but no agent reasoning or natural-language line comments. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [claude-code-security-review](claude-code-security-review.md) | 未收录 | Use this page for its stated niche; choose claude-code-security-review when you need anthropic's GitHub Action focused on *security* findings via Claude. | Anthropic's GitHub Action focused on *security* findings via Claude; narrower (security) but PR-native. Open Code Review is broader (general quality + a few security rules) and CLI-first, not auto-posting. |
+| [react-doctor](react-doctor.md) | 未收录 | Use this page for its stated niche; choose react-doctor when you need react-specific health/diagnostics for a single framework. | React-specific health/diagnostics for a single framework; Open Code Review is language-agnostic across ~10+ languages, not framework-tuned. |
+| CodeRabbit | 未收录 | Use this page for its stated niche; choose CodeRabbit when you need hosted SaaS that auto-comments on PRs with broad recall. | Hosted SaaS that auto-comments on PRs with broad recall; Open Code Review is self-hosted/CLI, precision-biased, and you own the LLM key and posting glue. |
+| PR-Agent (Qodo) | 未收录 | Use this page for its stated niche; choose PR-Agent (Qodo) when you need OSS PR assistant that posts to GitHub/GitLab MRs directly and does summaries/Q&A. | OSS PR assistant that posts to GitHub/GitLab MRs directly and does summaries/Q&A; Open Code Review prints structured findings and leans on a deterministic positioning layer rather than MR integration. |
+| Semgrep | 未收录 | Use this page for its stated niche; choose Semgrep when you need deterministic rule/AST scanner (no LLM) with a large security ruleset. | Deterministic rule/AST scanner (no LLM) with a large security ruleset; faster and free per run but no agent reasoning or natural-language line comments. |
 
 ## Tech stack
 

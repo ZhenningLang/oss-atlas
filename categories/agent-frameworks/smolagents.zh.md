@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v1.x, active, ~28k stars (2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2026-06-23T18:34:53Z
+  default_branch: main
+  default_branch_sha: 526069c1ead958b36d9fd09a6b1ef37f68ed6ade
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:25:45Z
@@ -88,13 +93,13 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| LangGraph | 未收录 | 基于图的编排（节点/边、持久状态、检查点、人在环）；处理复杂有状态工作流强得多，但更重、要学的抽象也更多。smolagents 把这些全部换成一个极小可读的循环。 |
-| [AgentScope](agentscope.zh.md) | ✅ | 多 agent 运行时/平台（消息传递、可观测性、部署）；是一个生产级「agent OS」，而 smolagents 是你内嵌并据为己有的单循环库。 |
-| [DSPy](dspy.zh.md) | ✅ | *对照指标编译/优化* LM 程序；范式不同——smolagents 只跑一个「代码动作」循环，不优化提示词或权重。 |
-| CrewAI | 未收录 | 基于角色/crew 的多 agent 编排，走更高层的「一队 agent」模型；比 smolagents 单一透明循环更有结构、也更有主张。 |
-| Pydantic AI | 未收录 | 类型安全、以 Pydantic 为中心的 agent 框架，强调结构化/被校验的输出；smolagents 则倾向「代码即动作」，而非 schema 校验式的工具调用。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| LangGraph | 未收录 | 当前页用于它的主场景；如果更看重“基于图的编排（节点/边、持久状态、检查点、人在环）”，再选 LangGraph。 | 基于图的编排（节点/边、持久状态、检查点、人在环）；处理复杂有状态工作流强得多，但更重、要学的抽象也更多。smolagents 把这些全部换成一个极小可读的循环。 |
+| [AgentScope](agentscope.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“多 agent 运行时/平台（消息传递、可观测性、部署）”，再选 AgentScope。 | 多 agent 运行时/平台（消息传递、可观测性、部署）；是一个生产级「agent OS」，而 smolagents 是你内嵌并据为己有的单循环库。 |
+| [DSPy](dspy.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“*对照指标编译/优化* LM 程序”，再选 DSPy。 | *对照指标编译/优化* LM 程序；范式不同——smolagents 只跑一个「代码动作」循环，不优化提示词或权重。 |
+| CrewAI | 未收录 | 当前页用于它的主场景；如果更看重“基于角色/crew 的多 agent 编排，走更高层的「一队 agent」模型”，再选 CrewAI。 | 基于角色/crew 的多 agent 编排，走更高层的「一队 agent」模型；比 smolagents 单一透明循环更有结构、也更有主张。 |
+| Pydantic AI | 未收录 | 当前页用于它的主场景；如果更看重“类型安全、以 Pydantic 为中心的 agent 框架，强调结构化/被校验的输出”，再选 Pydantic AI。 | 类型安全、以 Pydantic 为中心的 agent 框架，强调结构化/被校验的输出；smolagents 则倾向「代码即动作」，而非 schema 校验式的工具调用。 |
 
 ## 技术栈
 

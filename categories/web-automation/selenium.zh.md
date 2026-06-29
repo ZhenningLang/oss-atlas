@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v4.45.0 (2026-06), active; ~34.2k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: framework
+upstream:
+  pushed_at: 2026-06-29T08:45:44Z
+  default_branch: trunk
+  default_branch_sha: ffb4528fe77b4bc0a054f79c462a665b425833c8
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:21:37Z
@@ -88,13 +93,13 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| Playwright | 未收录 | 现代跨浏览器（Chromium/Firefox/WebKit）自动化，带自动等待、网络拦截、tracing 和顺手的 API；单一代码库的开发体验好得多，但生态更新更窄，也不是 Selenium 所锚定的 W3C WebDriver 标准。 |
-| Cypress | 未收录 | 对开发者友好的浏览器内 E2E，带时间旅行调试和自动重试；Web 应用开发体验极佳，但历来偏 Chromium，运行在浏览器事件循环内（多标签/跨域有架构限制），且只支持 JS/TS。 |
-| Puppeteer | 未收录 | 更底层的 Chrome/CDP 自动化库（Node.js）；做 Chrome 脚本/抓取很好，但单引擎，不是跨浏览器、多语言的 WebDriver 框架。 |
-| [Agent Browser](agent-browser.zh.md) | ✅ | Rust 写的 CLI/守护进程，通过 CDP 驱动 Chrome 给 AI agent 用，带稳定的 a11y 树 ref；是 agent 原语，不是跨浏览器测试框架——活儿不同。 |
-| [Chrome DevTools MCP](chrome-devtools-mcp.zh.md) | ✅ | 把 Chrome DevTools（trace、网络、堆）通过 MCP 暴露给 agent 的服务器；调试/测量深度强但只在 Chrome 上，不是可移植的跨浏览器测试自动化。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| Playwright | 未收录 | 当前页用于它的主场景；如果更看重“现代跨浏览器（Chromium/Firefox/WebKit）自动化，带自动等待、网络拦截、tracing 和顺手的 API”，再选 Playwright。 | 现代跨浏览器（Chromium/Firefox/WebKit）自动化，带自动等待、网络拦截、tracing 和顺手的 API；单一代码库的开发体验好得多，但生态更新更窄，也不是 Selenium 所锚定的 W3C WebDriver 标准。 |
+| Cypress | 未收录 | 当前页用于它的主场景；如果更看重“对开发者友好的浏览器内 E2E，带时间旅行调试和自动重试”，再选 Cypress。 | 对开发者友好的浏览器内 E2E，带时间旅行调试和自动重试；Web 应用开发体验极佳，但历来偏 Chromium，运行在浏览器事件循环内（多标签/跨域有架构限制），且只支持 JS/TS。 |
+| Puppeteer | 未收录 | 当前页用于它的主场景；如果更看重“更底层的 Chrome/CDP 自动化库（Node”，再选 Puppeteer。 | 更底层的 Chrome/CDP 自动化库（Node.js）；做 Chrome 脚本/抓取很好，但单引擎，不是跨浏览器、多语言的 WebDriver 框架。 |
+| [Agent Browser](agent-browser.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“Rust 写的 CLI/守护进程，通过 CDP 驱动 Chrome 给 AI agent 用，带稳定的 a11y 树 ref”，再选 Agent Browser。 | Rust 写的 CLI/守护进程，通过 CDP 驱动 Chrome 给 AI agent 用，带稳定的 a11y 树 ref；是 agent 原语，不是跨浏览器测试框架——活儿不同。 |
+| [Chrome DevTools MCP](chrome-devtools-mcp.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“把 Chrome DevTools（trace、网络、堆）通过 MCP 暴露给 agent 的服务器”，再选 Chrome DevTools MCP。 | 把 Chrome DevTools（trace、网络、堆）通过 MCP 暴露给 agent 的服务器；调试/测量深度强但只在 Chrome 上，不是可移植的跨浏览器测试自动化。 |
 
 ## 技术栈
 

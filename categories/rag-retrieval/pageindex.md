@@ -9,6 +9,11 @@ license: MIT
 maturity: no tagged release, active (2026-06)
 last_verified: 2026-06-26
 type: library
+upstream:
+  pushed_at: 2026-06-29T06:58:57Z
+  default_branch: main
+  default_branch_sha: 293730afbd4319a683fe4aee439360a2b21b8c3c
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:14:37Z
@@ -84,14 +89,14 @@ It's a strong fit when "similarity ≠ relevance" is your actual pain and your c
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [FalkorDB](falkordb.md) | ✅ | Property-graph DB for GraphRAG (vector + multi-hop traversal); PageIndex is a per-document reasoning tree, not a graph store — different retrieval primitive. |
-| [graphify](graphify.md) | ✅ | Builds a knowledge graph from code/docs; PageIndex builds a hierarchical ToC tree of one document and reasons over it — no entity graph. |
-| [code-review-graph](code-review-graph.md) | ✅ | Domain-specific code-review graph; orthogonal to document tree retrieval. |
-| LlamaIndex | 未收录 | General RAG framework with many indices incl. a tree/summary index; far broader and embedding-centric, where PageIndex is a focused vectorless reasoning index. |
-| RAPTOR | 未收录 | Recursive clustering + summarization tree for retrieval, but still embedding-retrieved at query time; PageIndex navigates the tree by LLM reasoning instead of vector search. |
-| pgvector / Qdrant | 未收录 | Classic embedding + ANN vector retrieval; cheaper at scale and breadth, but exactly the "similarity ≠ relevance" failure mode PageIndex is built to avoid. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [FalkorDB](falkordb.md) | ✅ | Use this page for its stated niche; choose FalkorDB when you need property-graph DB for GraphRAG (vector + multi-hop traversal). | Property-graph DB for GraphRAG (vector + multi-hop traversal); PageIndex is a per-document reasoning tree, not a graph store — different retrieval primitive. |
+| [graphify](graphify.md) | ✅ | Use this page for its stated niche; choose graphify when you need builds a knowledge graph from code/docs. | Builds a knowledge graph from code/docs; PageIndex builds a hierarchical ToC tree of one document and reasons over it — no entity graph. |
+| [code-review-graph](code-review-graph.md) | ✅ | Use this page for its stated niche; choose code-review-graph when you need domain-specific code-review graph. | Domain-specific code-review graph; orthogonal to document tree retrieval. |
+| LlamaIndex | 未收录 | Use this page for its stated niche; choose LlamaIndex when you need general RAG framework with many indices incl. | General RAG framework with many indices incl. a tree/summary index; far broader and embedding-centric, where PageIndex is a focused vectorless reasoning index. |
+| RAPTOR | 未收录 | Use this page for its stated niche; choose RAPTOR when you need recursive clustering + summarization tree for retrieval, but still embedding-retrieved at query time. | Recursive clustering + summarization tree for retrieval, but still embedding-retrieved at query time; PageIndex navigates the tree by LLM reasoning instead of vector search. |
+| pgvector / Qdrant | 未收录 | Use this page for its stated niche; choose pgvector / Qdrant when you need classic embedding + ANN vector retrieval. | Classic embedding + ANN vector retrieval; cheaper at scale and breadth, but exactly the "similarity ≠ relevance" failure mode PageIndex is built to avoid. |
 
 ## Tech stack
 

@@ -9,6 +9,11 @@ license: MIT
 maturity: v1.5.0 (2026-06-11), active, ~41.6k stars (as of 2026-06)
 last_verified: 2026-06-26
 type: tool
+upstream:
+  pushed_at: 2026-06-29T03:34:57Z
+  default_branch: main
+  default_branch_sha: d1d2eda070221cf600e2517a5b028c8d4b0aa67a
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:44:57Z
@@ -83,13 +88,13 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| [deep-research](deep-research.zh.md) | ✅ | 真正的迭代式研究 *agent*（扇出搜索 → 阅读 → 递归深挖 → 出报告）。Agent-Reach 恰是它缺的接入层；是栈的不同层，不是替代关系。 |
-| [local-deep-research](local-deep-research.zh.md) | ✅ | 隐私优先的本地研究助手，带综合 + 引用，支持本地 LLM。做的是 Agent-Reach 跳过的推理；配对用，而非二选一。 |
-| [Vane](vane.zh.md) | ✅ | 聚焦综合的研究 / 搜索 agent。同样是「负责思考」的对照——Agent-Reach 负责触达，不负责推理。 |
-| Firecrawl | 未收录 | 托管 / 开源的网页抓取转 markdown + 爬取 API；单源网页提取更干净、有真 API，但付费且仅限网页——没有 Twitter/Reddit/Bilibili/小红书的社交触达。 |
-| Exa / Tavily / SearXNG | 未收录 | 搜索后端（语义 / agent 搜索 / 自托管元搜索）。Agent-Reach 实际就经 MCP 包了 Exa；它们给你搜索，但没有逐平台的社交爬取栈。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [deep-research](deep-research.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“真正的迭代式研究 *agent*（扇出搜索 → 阅读 → 递归深挖 → 出报告）”，再选 deep-research。 | 真正的迭代式研究 *agent*（扇出搜索 → 阅读 → 递归深挖 → 出报告）。Agent-Reach 恰是它缺的接入层；是栈的不同层，不是替代关系。 |
+| [local-deep-research](local-deep-research.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“隐私优先的本地研究助手，带综合 + 引用，支持本地 LLM”，再选 local-deep-research。 | 隐私优先的本地研究助手，带综合 + 引用，支持本地 LLM。做的是 Agent-Reach 跳过的推理；配对用，而非二选一。 |
+| [Vane](vane.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“聚焦综合的研究 / 搜索 agent”，再选 Vane。 | 聚焦综合的研究 / 搜索 agent。同样是「负责思考」的对照——Agent-Reach 负责触达，不负责推理。 |
+| Firecrawl | 未收录 | 当前页用于它的主场景；如果更看重“托管 / 开源的网页抓取转 markdown + 爬取 API”，再选 Firecrawl。 | 托管 / 开源的网页抓取转 markdown + 爬取 API；单源网页提取更干净、有真 API，但付费且仅限网页——没有 Twitter/Reddit/Bilibili/小红书的社交触达。 |
+| Exa / Tavily / SearXNG | 未收录 | 当前页用于它的主场景；如果更看重“搜索后端（语义 / agent 搜索 / 自托管元搜索）”，再选 Exa / Tavily / SearXNG。 | 搜索后端（语义 / agent 搜索 / 自托管元搜索）。Agent-Reach 实际就经 MCP 包了 Exa；它们给你搜索，但没有逐平台的社交爬取栈。 |
 
 ## 技术栈
 

@@ -9,6 +9,11 @@ license: MIT
 maturity: v1.18.0, active, ~8.7k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2026-01-15T10:51:12Z
+  default_branch: master
+  default_branch_sha: 0186b39a95f180fc735a60803c95eb1fb0d24083
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:50:53Z
@@ -86,12 +91,12 @@ It's a good fit when the diagrams are *simple and few* — onboarding flows, a s
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [Mermaid](mermaid.md) | 未收录 | Far broader (flowchart, sequence, class, state, gantt, ER…), Markdown-native, actively developed and themed; heavier and its own syntax, but the de-facto standard for text-to-diagram today. |
-| [bpmn-js](bpmn-js.md) | ✅ | Full BPMN 2.0 modeling + interactive editing in-browser; a standards-based process modeler, not a lightweight text-to-SVG renderer — much larger scope and footprint. |
-| Graphviz / Viz.js | 未收录 | DOT language with strong automatic graph layout for arbitrary node-link graphs; better layout engine, less flowchart-shaped semantics and styling. |
-| PlantUML | 未收录 | Text DSL covering many UML + flowchart types, usually server/Java-rendered; richer diagram catalog but not a browser-native JS library. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [Mermaid](mermaid.md) | 未收录 | Use this page for its stated niche; choose Mermaid when you need far broader (flowchart, sequence, class, state, gantt, ER…), Markdown-native, actively developed and. | Far broader (flowchart, sequence, class, state, gantt, ER…), Markdown-native, actively developed and themed; heavier and its own syntax, but the de-facto standard for text-to-diagram today. |
+| [bpmn-js](bpmn-js.md) | ✅ | Use this page for its stated niche; choose bpmn-js when you need full BPMN 2. | Full BPMN 2.0 modeling + interactive editing in-browser; a standards-based process modeler, not a lightweight text-to-SVG renderer — much larger scope and footprint. |
+| Graphviz / Viz.js | 未收录 | Use this page for its stated niche; choose Graphviz / Viz.js when you need DOT language with strong automatic graph layout for arbitrary node-link graphs. | DOT language with strong automatic graph layout for arbitrary node-link graphs; better layout engine, less flowchart-shaped semantics and styling. |
+| PlantUML | 未收录 | Use this page for its stated niche; choose PlantUML when you need text DSL covering many UML + flowchart types, usually server/Java-rendered. | Text DSL covering many UML + flowchart types, usually server/Java-rendered; richer diagram catalog but not a browser-native JS library. |
 
 ## Tech stack
 

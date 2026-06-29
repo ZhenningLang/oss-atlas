@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: "v0.4.4, active (2026-06); ~17.2k stars (API-verified count; adoption meaning unverified/suspicious — anomalous for a ~4-month single-maintainer repo), created 2026-02 (very young), owner=User"
 last_verified: 2026-06-28
 type: framework
+upstream:
+  pushed_at: 2026-06-29T07:11:17Z
+  default_branch: main
+  default_branch_sha: 60dcaf4ed6975fb1212f56744e234615f1d6f940
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:57:21Z
@@ -83,16 +88,16 @@ You also reach for it when you want one Mac-local server that handles text LLMs,
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| Ollama | 未收录 | The default Mac/cross-platform local-LLM runner (llama.cpp-based), huge ecosystem and model library; broader OS support but no Apple-MLX backend and a simpler caching story than oMLX's tiered hot/cold KV cache. |
-| LM Studio | 未收录 | Polished desktop app for local models on Mac/Win/Linux with an OpenAI-compatible server; closed-source GUI, not an Apple-MLX-native open-source server. |
-| mlx-lm (`mlx_lm.server`) | 未收录 | Apple's own MLX LLM toolkit with a minimal OpenAI-compatible server — oMLX is built **on** mlx-lm's BatchGenerator; mlx-lm is lower-level and lacks the menu-bar app, tiered SSD cache, multi-model LRU, and admin dashboard. |
-| llama.cpp | 未收录 | The portable C/C++ inference engine (GGUF) running everywhere incl. Macs via Metal; maximally portable and mature, but not MLX-native and no built-in macOS menu-bar/admin management layer. |
-| vLLM | 未收录 | The de-facto data-center LLM serving engine (PagedAttention, continuous batching), huge community; NVIDIA/Linux-first — not a Mac/Apple-Silicon local server. |
-| Text Generation Inference (TGI) | 未收录 | Hugging Face's production server, tight HF integration and battle-tested at scale; server-GPU oriented, not an on-Mac local stack. |
-| SGLang | 未收录 | High-throughput serving engine with RadixAttention prefix caching; server-GPU oriented and more complex to operate, not a single-Mac menu-bar app. |
-| [Modular Platform (MAX + Mojo)](modular.md) | ✅ | Vendor-built cross-vendor GPU/CPU serving engine + Mojo kernel language; a far larger, server-class, single-vendor platform — different layer and scale from a Mac-local server. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| Ollama | 未收录 | Use this page for its stated niche; choose Ollama when you need the default Mac/cross-platform local-LLM runner (llama. | The default Mac/cross-platform local-LLM runner (llama.cpp-based), huge ecosystem and model library; broader OS support but no Apple-MLX backend and a simpler caching story than oMLX's tiered hot/cold KV cache. |
+| LM Studio | 未收录 | Use this page for its stated niche; choose LM Studio when you need polished desktop app for local models on Mac/Win/Linux with an OpenAI-compatible server. | Polished desktop app for local models on Mac/Win/Linux with an OpenAI-compatible server; closed-source GUI, not an Apple-MLX-native open-source server. |
+| mlx-lm (`mlx_lm.server`) | 未收录 | Use this page for its stated niche; choose mlx-lm (mlxlm.server) when you need apple's own MLX LLM toolkit with a minimal OpenAI-compatible server. | Apple's own MLX LLM toolkit with a minimal OpenAI-compatible server — oMLX is built **on** mlx-lm's BatchGenerator; mlx-lm is lower-level and lacks the menu-bar app, tiered SSD cache, multi-model LRU, and admin dashboard. |
+| llama.cpp | 未收录 | Use this page for its stated niche; choose llama.cpp when you need the portable C/C++ inference engine (GGUF) running everywhere incl. | The portable C/C++ inference engine (GGUF) running everywhere incl. Macs via Metal; maximally portable and mature, but not MLX-native and no built-in macOS menu-bar/admin management layer. |
+| vLLM | 未收录 | Use this page for its stated niche; choose vLLM when you need the de-facto data-center LLM serving engine (PagedAttention, continuous batching), huge community. | The de-facto data-center LLM serving engine (PagedAttention, continuous batching), huge community; NVIDIA/Linux-first — not a Mac/Apple-Silicon local server. |
+| Text Generation Inference (TGI) | 未收录 | Use this page for its stated niche; choose Text Generation Inference (TGI) when you need hugging Face's production server, tight HF integration and battle-tested at scale. | Hugging Face's production server, tight HF integration and battle-tested at scale; server-GPU oriented, not an on-Mac local stack. |
+| SGLang | 未收录 | Use this page for its stated niche; choose SGLang when you need high-throughput serving engine with RadixAttention prefix caching. | High-throughput serving engine with RadixAttention prefix caching; server-GPU oriented and more complex to operate, not a single-Mac menu-bar app. |
+| [Modular Platform (MAX + Mojo)](modular.md) | ✅ | Use this page for its stated niche; choose Modular Platform (MAX + Mojo) when you need vendor-built cross-vendor GPU/CPU serving engine + Mojo kernel language. | Vendor-built cross-vendor GPU/CPU serving engine + Mojo kernel language; a far larger, server-class, single-vendor platform — different layer and scale from a Mac-local server. |
 
 ## Tech stack
 

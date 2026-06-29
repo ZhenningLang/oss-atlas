@@ -5,17 +5,17 @@
 
 ## 本分类项目
 
-| 项目 | 何时用 | 页面 |
-|---|---|---|
-| **Grafana** | 当你需要在 Prometheus/Loki/Elasticsearch 等多数据源之上加一层统一看板和告警时用它——它做可视化，不做存储。 | [→](grafana.zh.md) |
+| 项目 | 何时用 | 健康度 | 页面 |
+| --- | --- | --- | --- |
+| **Grafana** | 当你需要在 Prometheus/Loki/Elasticsearch 等多数据源之上加一层统一看板和告警时用它——它做可视化，不做存储。 | B（5/6） | [→](grafana.zh.md) |
 
 ## 对比矩阵
 
-| 选项 | 是否收录 | 一句话取舍 |
-|---|---|---|
-| [Grafana](grafana.zh.md) | ✅ | 多数据源之上的统一看板/告警；是可视化层而非存储（AGPL-3.0）。 |
-| [Telegraf](../dev-utilities/telegraf.zh.md) | ✅ | 插件驱动的采集/路由 agent，负责把数据喂给 Grafana 读取的后端——分工不同。 |
-| Kibana / Datadog / Apache Superset | 未收录 | 各页对比里点到的其他看板/可观测/BI 方案。 |
+| 选项 | 是否收录 | 健康度 | 一句话取舍 |
+| --- | --- | --- | --- |
+| [Grafana](grafana.zh.md) | ✅ | B（5/6） | 多数据源之上的统一看板/告警；是可视化层而非存储（AGPL-3.0）。 |
+| [Telegraf](../dev-utilities/telegraf.zh.md) | ✅ | A（5/6） | 插件驱动的采集/路由 agent，负责把数据喂给 Grafana 读取的后端——分工不同。 |
+| Kibana / Datadog / Apache Superset | 未收录 | — | 各页对比里点到的其他看板/可观测/BI 方案。 |
 
 ## 什么该放这里
 

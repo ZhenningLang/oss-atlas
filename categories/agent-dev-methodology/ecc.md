@@ -9,6 +9,11 @@ license: MIT
 maturity: v2.0.0, active (2026-06)
 last_verified: 2026-06-26
 type: framework
+upstream:
+  pushed_at: 2026-06-29T04:55:36Z
+  default_branch: main
+  default_branch_sha: 2bc924faf2f8e893bfe0af86b1931283693c30ae
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:07:35Z
@@ -89,14 +94,14 @@ You're also a fit if you work across more than one agent runtime and want *one* 
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [SuperClaude Framework](superclaude.md) | ✅ | Also a Claude-focused config framework (personas, commands, MCP); narrower and lighter than ECC's hundreds-of-skills + hooks + security-scan + cross-harness substrate. |
-| [Superpowers](superpowers.md) | ✅ | A curated skills/plugin collection for Claude Code; overlapping skill-library idea but without ECC's memory/instinct hooks, security scanner, and multi-harness adapters. |
-| [Compound Engineering](compound-engineering.md) | ✅ | A plugin encoding a specific compounding-workflow methodology; far more opinionated-and-small vs ECC's broad OS-style bundle. |
-| [get-shit-done](get-shit-done.md) | ✅ | Lightweight task-execution workflow pack; single-philosophy vs ECC's everything-included surface. |
-| [12-Factor Agents](12-factor-agents.md) | ✅ | Provider-neutral *principles* for building agents (docs, not installed config); different layer than ECC's concrete Claude-Code harness. |
-| dotfiles / hand-rolled `~/.claude` | 未收录 | Full control and minimal surface; you maintain every skill/hook/rule yourself instead of inheriting and updating a curated stack. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [SuperClaude Framework](superclaude.md) | ✅ | Use this page for its stated niche; choose SuperClaude Framework when you need also a Claude-focused config framework (personas, commands, MCP). | Also a Claude-focused config framework (personas, commands, MCP); narrower and lighter than ECC's hundreds-of-skills + hooks + security-scan + cross-harness substrate. |
+| [Superpowers](superpowers.md) | ✅ | Use this page for its stated niche; choose Superpowers when you need a curated skills/plugin collection for Claude Code. | A curated skills/plugin collection for Claude Code; overlapping skill-library idea but without ECC's memory/instinct hooks, security scanner, and multi-harness adapters. |
+| [Compound Engineering](compound-engineering.md) | ✅ | Use this page for its stated niche; choose Compound Engineering when you need a plugin encoding a specific compounding-workflow methodology. | A plugin encoding a specific compounding-workflow methodology; far more opinionated-and-small vs ECC's broad OS-style bundle. |
+| [get-shit-done](get-shit-done.md) | ✅ | Use this page for its stated niche; choose get-shit-done when you need lightweight task-execution workflow pack. | Lightweight task-execution workflow pack; single-philosophy vs ECC's everything-included surface. |
+| [12-Factor Agents](12-factor-agents.md) | ✅ | Use this page for its stated niche; choose 12-Factor Agents when you need provider-neutral *principles* for building agents (docs, not installed config). | Provider-neutral *principles* for building agents (docs, not installed config); different layer than ECC's concrete Claude-Code harness. |
+| dotfiles / hand-rolled `~/.claude` | 未收录 | Use this page for its stated niche; choose dotfiles / hand-rolled ~/.claude when you need full control and minimal surface. | Full control and minimal surface; you maintain every skill/hook/rule yourself instead of inheriting and updating a curated stack. |
 
 ## Tech stack
 

@@ -9,6 +9,11 @@ license: MIT
 maturity: v0.3.0, active (2026-06)
 last_verified: 2026-06-26
 type: framework
+upstream:
+  pushed_at: 2026-04-29T06:32:24Z
+  default_branch: main
+  default_branch_sha: 0b40cb724a0ad4f944810f8514884051777bb38b
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:57:39Z
@@ -83,14 +88,14 @@ Agent Lightning 正是为此而生。它把 agent 执行建模为马尔可夫决
 
 ## 横向对比
 
-| 替代方案 | 是否收录 | 取舍 |
-| --- | --- | --- |
-| [LLaMA-Factory](llamafactory.zh.md) | ✅ | 在数据集上做广覆盖的 SFT/DPO/PPO 微调，统一配置/UI；不是为把一个在线多步 agent 解耦成 RL transition 而设计。 |
-| [Unsloth](unsloth.zh.md) | ✅ | 快速、省显存的单卡 SFT/LoRA；是优化*内核/训练器*，不是 agent rollout 的 RL 编排器。 |
-| [ART](art.zh.md) | ✅ | 同样是面向 agent 的 RL，但是更有主张、更顺手的单循环体验；Agent Lightning 强调框架无关的解耦 + 可插拔后端。 |
-| verl | 未收录 | Agent Lightning 所依赖的底层分布式 RL 引擎；强大，但要你把训练表达成它的生成循环，而不是包住一个原生 agent。 |
-| HF TRL | 未收录 | 成熟的 PPO/GRPO/DPO 库；以数据集/循环为中心，开箱没有 agent 执行解耦或多步信用分配。 |
-| OpenAI Agents SDK / LangChain（单用） | 未收录 | 用来构建和运行 agent，但不会从 rollout 训练底层模型——Agent Lightning 叠在它们之上让它们变得可训练。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [LLaMA-Factory](llamafactory.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“在数据集上做广覆盖的 SFT/DPO/PPO 微调，统一配置/UI”，再选 LLaMA-Factory。 | 在数据集上做广覆盖的 SFT/DPO/PPO 微调，统一配置/UI；不是为把一个在线多步 agent 解耦成 RL transition 而设计。 |
+| [Unsloth](unsloth.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“快速、省显存的单卡 SFT/LoRA”，再选 Unsloth。 | 快速、省显存的单卡 SFT/LoRA；是优化*内核/训练器*，不是 agent rollout 的 RL 编排器。 |
+| [ART](art.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“同样是面向 agent 的 RL，但是更有主张、更顺手的单循环体验”，再选 ART。 | 同样是面向 agent 的 RL，但是更有主张、更顺手的单循环体验；Agent Lightning 强调框架无关的解耦 + 可插拔后端。 |
+| verl | 未收录 | 当前页用于它的主场景；如果更看重“Agent Lightning 所依赖的底层分布式 RL 引擎”，再选 verl。 | Agent Lightning 所依赖的底层分布式 RL 引擎；强大，但要你把训练表达成它的生成循环，而不是包住一个原生 agent。 |
+| HF TRL | 未收录 | 当前页用于它的主场景；如果更看重“成熟的 PPO/GRPO/DPO 库”，再选 HF TRL。 | 成熟的 PPO/GRPO/DPO 库；以数据集/循环为中心，开箱没有 agent 执行解耦或多步信用分配。 |
+| OpenAI Agents SDK / LangChain（单用） | 未收录 | 当前页用于它的主场景；如果更看重“用来构建和运行 agent，但不会从 rollout 训练底层模型”，再选 OpenAI Agents SDK / LangChain（单用）。 | 用来构建和运行 agent，但不会从 rollout 训练底层模型——Agent Lightning 叠在它们之上让它们变得可训练。 |
 
 ## 技术栈
 

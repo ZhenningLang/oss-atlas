@@ -9,6 +9,11 @@ license: GPL-3.0
 maturity: research project, maintenance stopped (per README), ~4.4k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: app
+upstream:
+  pushed_at: 2025-02-11T14:23:01Z
+  default_branch: master
+  default_branch_sha: ccda905b03cacc659ad3a3a65fbc08019bf08ea2
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:03:25Z
@@ -76,12 +81,12 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| Neo4j（直接用） | 未收录 | 本项目灌入的图数据库；生产级存储加 Cypher，但整条 NLP 入库流水线得你自己搭——AgriKG 恰恰就是把那条流水线做成了示例。 |
-| DeepKE | 未收录 | 维护中的中文知识抽取工具箱（NER/RE/属性），基于 transformer；是真正可用来搭建的库，而非 AgriKG 那样冻结的端到端 demo。 |
-| OpenKG / CN-DBpedia | 未收录 | 中文开放知识图谱数据/资源；是数据源，而非可运行的流水线加界面。 |
-| [TaskMatrix](taskmatrix.zh.md) | ✅ | 任务无关（多模态 agent / 工具编排），但同一货架——主要作为参考产物发布的研究仓库，而非维护中的产品。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| Neo4j（直接用） | 未收录 | 当前页用于它的主场景；如果更看重“本项目灌入的图数据库”，再选 Neo4j（直接用）。 | 本项目灌入的图数据库；生产级存储加 Cypher，但整条 NLP 入库流水线得你自己搭——AgriKG 恰恰就是把那条流水线做成了示例。 |
+| DeepKE | 未收录 | 当前页用于它的主场景；如果更看重“维护中的中文知识抽取工具箱（NER/RE/属性），基于 transformer”，再选 DeepKE。 | 维护中的中文知识抽取工具箱（NER/RE/属性），基于 transformer；是真正可用来搭建的库，而非 AgriKG 那样冻结的端到端 demo。 |
+| OpenKG / CN-DBpedia | 未收录 | 当前页用于它的主场景；如果更看重“中文开放知识图谱数据/资源”，再选 OpenKG / CN-DBpedia。 | 中文开放知识图谱数据/资源；是数据源，而非可运行的流水线加界面。 |
+| [TaskMatrix](taskmatrix.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“任务无关（多模态 agent / 工具编排），但同一货架”，再选 TaskMatrix。 | 任务无关（多模态 agent / 工具编排），但同一货架——主要作为参考产物发布的研究仓库，而非维护中的产品。 |
 
 ## 技术栈
 

@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: active (2026-05); ~41.4k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: framework
+upstream:
+  pushed_at: 2026-05-25T17:39:11Z
+  default_branch: main
+  default_branch_sha: 4f9953be335ef371b3848719ddafe596c01ecd37
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:58:15Z
@@ -86,13 +91,13 @@ You reach for it when the bottleneck is *scale and cost*: fitting a model that d
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-| --- | --- | --- |
-| DeepSpeed | 未收录 | The reference ZeRO / offload stack (Microsoft); deepest production track record and ecosystem. Colossal-AI overlaps heavily on ZeRO + offload and adds its own tensor/pipeline/sequence-parallel plugins and Booster API; DeepSpeed is the safer default where it already runs. |
-| Megatron-LM | 未收录 | NVIDIA's high-performance tensor + pipeline parallelism for very large transformer pretraining; top-end throughput at scale but lower-level and more bespoke. Colossal-AI aims for a friendlier, more composable plugin surface over similar ideas. |
-| PyTorch FSDP | 未收录 | Fully-sharded data parallel built into PyTorch — no extra framework, native, well-supported. Colossal-AI offers a broader parallelism menu (tensor/pipeline/sequence + Gemini offload) beyond FSDP's sharding, at the cost of an added dependency. |
-| [LlamaFactory](llamafactory.md) | ✅ | Config/UI-driven fine-tuning across 100+ models (it wraps DeepSpeed/FSDP for distribution). Higher-level and turnkey for SFT/LoRA; Colossal-AI is the lower-level distributed engine for large-scale / full training rather than a tuning front-end. |
-| [Unsloth](unsloth.md) | ✅ | Single-GPU LoRA/QLoRA speed and VRAM savings via custom kernels. Opposite end of the spectrum: one GPU vs. Colossal-AI's many-GPU cluster sharding — different problem entirely. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| DeepSpeed | 未收录 | Use this page for its stated niche; choose DeepSpeed when you need the reference ZeRO / offload stack (Microsoft). | The reference ZeRO / offload stack (Microsoft); deepest production track record and ecosystem. Colossal-AI overlaps heavily on ZeRO + offload and adds its own tensor/pipeline/sequence-parallel plugins and Booster API; DeepSpeed is the safer default where it already runs. |
+| Megatron-LM | 未收录 | Use this page for its stated niche; choose Megatron-LM when you need NVIDIA's high-performance tensor + pipeline parallelism for very large transformer pretraining. | NVIDIA's high-performance tensor + pipeline parallelism for very large transformer pretraining; top-end throughput at scale but lower-level and more bespoke. Colossal-AI aims for a friendlier, more composable plugin surface over similar ideas. |
+| PyTorch FSDP | 未收录 | Use this page for its stated niche; choose PyTorch FSDP when you need fully-sharded data parallel built into PyTorch. | Fully-sharded data parallel built into PyTorch — no extra framework, native, well-supported. Colossal-AI offers a broader parallelism menu (tensor/pipeline/sequence + Gemini offload) beyond FSDP's sharding, at the cost of an added dependency. |
+| [LlamaFactory](llamafactory.md) | ✅ | Use this page for its stated niche; choose LlamaFactory when you need config/UI-driven fine-tuning across 100+ models (it wraps DeepSpeed/FSDP for distribution). | Config/UI-driven fine-tuning across 100+ models (it wraps DeepSpeed/FSDP for distribution). Higher-level and turnkey for SFT/LoRA; Colossal-AI is the lower-level distributed engine for large-scale / full training rather than a tuning front-end. |
+| [Unsloth](unsloth.md) | ✅ | Use this page for its stated niche; choose Unsloth when you need single-GPU LoRA/QLoRA speed and VRAM savings via custom kernels. | Single-GPU LoRA/QLoRA speed and VRAM savings via custom kernels. Opposite end of the spectrum: one GPU vs. Colossal-AI's many-GPU cluster sharding — different problem entirely. |
 
 ## Tech stack
 

@@ -9,6 +9,11 @@ license: MIT
 maturity: no tagged releases, active (pushed 2026-06), ~28.3k stars (as of 2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+upstream:
+  pushed_at: 2026-06-10T21:21:47Z
+  default_branch: main
+  default_branch_sha: f8a72b9603728bb92a217a879b7e62e43ad76c81
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:30:03Z
@@ -81,13 +86,13 @@ Vercel 官方的 agent skill 集合——按需安装的 React、Next.js、Verce
 
 ## 横向对比
 
-| 替代品 | 是否已收录 | 取舍 |
-|---|---|---|
-| [Agent Skills (addyosmani)](addyosmani-agent-skills.md) | ✅ | Addy Osmani 个人的工程 skill 集；web 性能/质量焦点有重叠，但由个人维护、不绑定 Vercel 平台。按你信任哪套规则来源、以及你是否在 Vercel 上来选。 |
-| [web-quality-skills](addyosmani-web-quality.md) | ✅ | 专注 web 质量/性能/可访问性的 skill；比 Vercel 的大杂烩（部署 + 优化 + React 模式）更窄，但厂商中立，能脱离 Vercel 使用。 |
-| [Waza](waza.md) | ✅ | 本 leaf 下另一个工程 skill 包；按领域覆盖面和各自实际编码了哪些工作流来对比。 |
-| [Scientific Agent Skills](scientific-agent-skills.md) | ✅ | 科学/工程工作流 skill——领域不同（研究/数据），与 web/前端工程互补而非替代。 |
-| Anthropic / 社区官方 skill（如 superpowers） | 未收录 | 通用 SDLC/方法论 skill 包塑造 agent *怎么干活*（TDD、规划）;Vercel 这套提供 React/Vercel 的*领域*规则。通常一起用，不是二选一。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [Agent Skills (addyosmani)](addyosmani-agent-skills.md) | ✅ | 当前页用于它的主场景；如果更看重“Addy Osmani 个人的工程 skill 集”，再选 Agent Skills (addyosmani)。 | Addy Osmani 个人的工程 skill 集；web 性能/质量焦点有重叠，但由个人维护、不绑定 Vercel 平台。按你信任哪套规则来源、以及你是否在 Vercel 上来选。 |
+| [web-quality-skills](addyosmani-web-quality.md) | ✅ | 当前页用于它的主场景；如果更看重“专注 web 质量/性能/可访问性的 skill”，再选 web-quality-skills。 | 专注 web 质量/性能/可访问性的 skill；比 Vercel 的大杂烩（部署 + 优化 + React 模式）更窄，但厂商中立，能脱离 Vercel 使用。 |
+| [Waza](waza.md) | ✅ | 当前页用于它的主场景；如果更看重“本 leaf 下另一个工程 skill 包”，再选 Waza。 | 本 leaf 下另一个工程 skill 包；按领域覆盖面和各自实际编码了哪些工作流来对比。 |
+| [Scientific Agent Skills](scientific-agent-skills.md) | ✅ | 当前页用于它的主场景；如果更看重“科学/工程工作流 skill”，再选 Scientific Agent Skills。 | 科学/工程工作流 skill——领域不同（研究/数据），与 web/前端工程互补而非替代。 |
+| Anthropic / 社区官方 skill（如 superpowers） | 未收录 | 当前页用于它的主场景；如果更看重“通用 SDLC/方法论 skill 包塑造 agent *怎么干活*（TDD、规划）”，再选 Anthropic / 社区官方 skill（如 superpowers）。 | 通用 SDLC/方法论 skill 包塑造 agent *怎么干活*（TDD、规划）;Vercel 这套提供 React/Vercel 的*领域*规则。通常一起用，不是二选一。 |
 
 ## 健康度与可持续性
 

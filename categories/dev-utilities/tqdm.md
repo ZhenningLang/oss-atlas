@@ -9,6 +9,11 @@ license: MPL-2.0 AND MIT
 maturity: v4.x, active (2026-06), ~31.2k stars
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2026-06-17T08:10:21Z
+  default_branch: master
+  default_branch_sha: 9aff6090b6fa98c88a2dbff8bd9e2a68d9a99c1b
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:50:07Z
@@ -86,13 +91,13 @@ You also reach for it when you want the same progress feedback everywhere withou
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| rich.progress | 未收录 | Part of the `rich` library — far fancier (colors, columns, multiple bars, spinners, tables) and great for polished CLIs; heavier dependency and more API surface than tqdm's one-call wrap. |
-| alive-progress | 未收录 | Animated, visually richer single-bar UX with live spinners; smaller ecosystem and integration set than tqdm (no pandas/notebook/pipe story of the same breadth). |
-| progressbar2 | 未收录 | Older, configurable progress-bar library; widget-based API is more verbose than `tqdm(iterable)`, smaller modern adoption. |
-| plain logging / `print` | 未收录 | Zero dependency and trivially machine-parseable; no ETA/rate/in-place redraw, and noisy for interactive use — the right call for files/CI, the wrong one for a human watching a TTY. |
-| [Telegraf](telegraf.md) | ✅ | A metrics collection/routing agent, not a progress bar — different job; use it when you need real telemetry rather than a human-facing meter. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| rich.progress | 未收录 | Use this page for its stated niche; choose rich.progress when you need part of the `rich` library. | Part of the `rich` library — far fancier (colors, columns, multiple bars, spinners, tables) and great for polished CLIs; heavier dependency and more API surface than tqdm's one-call wrap. |
+| alive-progress | 未收录 | Use this page for its stated niche; choose alive-progress when you need animated, visually richer single-bar UX with live spinners. | Animated, visually richer single-bar UX with live spinners; smaller ecosystem and integration set than tqdm (no pandas/notebook/pipe story of the same breadth). |
+| progressbar2 | 未收录 | Use this page for its stated niche; choose progressbar2 when you need older, configurable progress-bar library. | Older, configurable progress-bar library; widget-based API is more verbose than `tqdm(iterable)`, smaller modern adoption. |
+| plain logging / `print` | 未收录 | Use this page for its stated niche; choose plain logging / print when you need zero dependency and trivially machine-parseable. | Zero dependency and trivially machine-parseable; no ETA/rate/in-place redraw, and noisy for interactive use — the right call for files/CI, the wrong one for a human watching a TTY. |
+| [Telegraf](telegraf.md) | ✅ | Use this page for its stated niche; choose Telegraf when you need a metrics collection/routing agent, not a progress bar. | A metrics collection/routing agent, not a progress bar — different job; use it when you need real telemetry rather than a human-facing meter. |
 
 ## Tech stack
 

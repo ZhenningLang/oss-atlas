@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: no tagged releases, last updated 2024-06 (verified 2026-06)
 last_verified: 2026-06-28
 type: tool
+upstream:
+  pushed_at: 2024-06-18T05:33:47Z
+  default_branch: master
+  default_branch_sha: fe592a5cb90508804b589652ef7fedc624bff595
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:25:51Z
@@ -83,12 +88,12 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| [Apache Airflow](airflow.zh.md) 内置 `db clean` | ✅ | 较新的 Airflow 自带官方 `airflow db clean` CLI 做元数据清理——一等公民且版本匹配；可用处优先用它，这些 DAG 用于它覆盖不到的场景（日志、僵尸任务）。 |
-| 手写清理 DAG/脚本 | 未收录 | 完全可控、精确贴合你的 schema；但破坏性 SQL 要你自己写、测、维护——这个仓库是经过验证的起点。 |
-| 平台保留策略（MWAA/Composer 设置） | 未收录 | 托管服务暴露自己的日志/元数据保留旋钮；不够灵活但有支持，比自定义 DELETE 更安全。 |
-| OS 级 logrotate / cron | 未收录 | 处理 Airflow 之外的日志文件，但无法像 Airflow 感知的 DAG 那样安全裁剪元数据库或清掉僵尸任务。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [Apache Airflow](airflow.zh.md) 内置 `db clean` | ✅ | 当前页用于它的主场景；如果更看重“较新的 Airflow 自带官方 `airflow db clean` CLI 做元数据清理”，再选 Apache Airflow 内置 db clean。 | 较新的 Airflow 自带官方 `airflow db clean` CLI 做元数据清理——一等公民且版本匹配；可用处优先用它，这些 DAG 用于它覆盖不到的场景（日志、僵尸任务）。 |
+| 手写清理 DAG/脚本 | 未收录 | 当前页用于它的主场景；如果更看重“完全可控、精确贴合你的 schema”，再选 手写清理 DAG/脚本。 | 完全可控、精确贴合你的 schema；但破坏性 SQL 要你自己写、测、维护——这个仓库是经过验证的起点。 |
+| 平台保留策略（MWAA/Composer 设置） | 未收录 | 当前页用于它的主场景；如果更看重“托管服务暴露自己的日志/元数据保留旋钮”，再选 平台保留策略（MWAA/Composer 设置）。 | 托管服务暴露自己的日志/元数据保留旋钮；不够灵活但有支持，比自定义 DELETE 更安全。 |
+| OS 级 logrotate / cron | 未收录 | 当前页用于它的主场景；如果更看重“处理 Airflow 之外的日志文件，但无法像 Airflow 感知的 DAG 那样安全裁剪元数据库或清掉僵尸任务”，再选 OS 级 logrotate / cron。 | 处理 Airflow 之外的日志文件，但无法像 Airflow 感知的 DAG 那样安全裁剪元数据库或清掉僵尸任务。 |
 
 ## 技术栈
 

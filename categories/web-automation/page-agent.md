@@ -9,6 +9,11 @@ license: MIT
 maturity: v1.10.0 (2026-06-15); ~33 releases, ~1061 commits, active; Alibaba-maintained
 last_verified: 2026-06-26
 type: tool
+upstream:
+  pushed_at: 2026-06-25T17:07:30Z
+  default_branch: main
+  default_branch_sha: 187d5deccb6bbb9eedb5c4dc15f9b0a85e1f3a32
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:20:46Z
@@ -89,13 +94,13 @@ You drop in **page-agent** — a few lines of JavaScript via npm or CDN, no back
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| browser-use | 未收录 | Python, server-side, vision-capable (screenshots) browser agent — heavier infra (a real/headless browser), but works beyond DOM text and off the client; page-agent cites it as inspiration. |
-| Playwright / Puppeteer | 未收录 | Lower-level, code-driven, headless-capable automation — deterministic and powerful, but you write selectors/scripts (not natural language), and it breaks when the DOM changes. |
-| Selenium | 未收录 | Mature, ubiquitous cross-browser automation — but DIY, verbose, selector-based, no NL layer. |
-| UiPath / Automation Anywhere (RPA) | 未收录 | Enterprise desktop+web RPA with governance — but proprietary, costly, vendor lock-in, heavyweight vs a JS snippet. |
-| Computer-use agents (Anthropic computer use / OpenAI Operator) | 未收录 | Vision-based agents that drive a real screen/browser — handle any pixel UI, but slower, costlier, and need a controlled browser/VM, not an in-page snippet. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| browser-use | 未收录 | Use this page for its stated niche; choose browser-use when you need python, server-side, vision-capable (screenshots) browser agent. | Python, server-side, vision-capable (screenshots) browser agent — heavier infra (a real/headless browser), but works beyond DOM text and off the client; page-agent cites it as inspiration. |
+| Playwright / Puppeteer | 未收录 | Use this page for its stated niche; choose Playwright / Puppeteer when you need lower-level, code-driven, headless-capable automation. | Lower-level, code-driven, headless-capable automation — deterministic and powerful, but you write selectors/scripts (not natural language), and it breaks when the DOM changes. |
+| Selenium | 未收录 | Use this page for its stated niche; choose Selenium when you need mature, ubiquitous cross-browser automation. | Mature, ubiquitous cross-browser automation — but DIY, verbose, selector-based, no NL layer. |
+| UiPath / Automation Anywhere (RPA) | 未收录 | Use this page for its stated niche; choose UiPath / Automation Anywhere (RPA) when you need enterprise desktop+web RPA with governance. | Enterprise desktop+web RPA with governance — but proprietary, costly, vendor lock-in, heavyweight vs a JS snippet. |
+| Computer-use agents (Anthropic computer use / OpenAI Operator) | 未收录 | Use this page for its stated niche; choose Computer-use agents (Anthropic computer use / OpenAI Operator) when you need vision-based agents that drive a real screen/browser. | Vision-based agents that drive a real screen/browser — handle any pixel UI, but slower, costlier, and need a controlled browser/VM, not an in-page snippet. |
 
 ## Tech stack
 

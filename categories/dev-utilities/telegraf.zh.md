@@ -9,6 +9,11 @@ license: MIT
 maturity: v1.39.0, active (2026-06)
 last_verified: 2026-06-26
 type: tool
+upstream:
+  pushed_at: 2026-06-26T07:08:27Z
+  default_branch: master
+  default_branch_sha: 56b98de33ba897ab9fe80d3791d8798cfb98fbcf
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:49:45Z
@@ -84,14 +89,14 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| Prometheus + node_exporter | 未收录 | 拉模式抓取，自带 TSDB 和查询语言；云原生指标极强，但 exporter 各管一摊，不是面向日志/工业协议的通用推送采集器。 |
-| OpenTelemetry Collector | 未收录 | 厂商中立、CNCF 治理，路由指标**与** traces/logs,receiver/exporter 生态广；配置模型更重，追踪能力更强，指标范围有重叠。 |
-| Fluent Bit / Fluentd | 未收录 | 首先是日志与事件 shipper（Fluent Bit 也是极小的 C 二进制）；指标面比 Telegraf 的 300+ 插件窄。 |
-| Vector(Datadog) | 未收录 | Rust 写的可观测性管线（日志/指标），变换 DSL（VRL）很强；同为单二进制路由，对冷门输入的插件目录更小。 |
-| collectd | 未收录 | 老牌轻量 C 指标守护进程；成熟但插件生态更小、偏老，现代集成较弱。 |
-| [CyberChef](cyberchef.zh.md) | ✅ | 浏览器里做一次性数据变换的工具箱；不是常驻采集 agent——完全不同的活。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| Prometheus + node_exporter | 未收录 | 当前页用于它的主场景；如果更看重“拉模式抓取，自带 TSDB 和查询语言”，再选 Prometheus + nodeexporter。 | 拉模式抓取，自带 TSDB 和查询语言；云原生指标极强，但 exporter 各管一摊，不是面向日志/工业协议的通用推送采集器。 |
+| OpenTelemetry Collector | 未收录 | 当前页用于它的主场景；如果更看重“厂商中立、CNCF 治理，路由指标**与** traces/logs,receiver/exporter 生态广”，再选 OpenTelemetry Collector。 | 厂商中立、CNCF 治理，路由指标**与** traces/logs,receiver/exporter 生态广；配置模型更重，追踪能力更强，指标范围有重叠。 |
+| Fluent Bit / Fluentd | 未收录 | 当前页用于它的主场景；如果更看重“首先是日志与事件 shipper（Fluent Bit 也是极小的 C 二进制）”，再选 Fluent Bit / Fluentd。 | 首先是日志与事件 shipper（Fluent Bit 也是极小的 C 二进制）；指标面比 Telegraf 的 300+ 插件窄。 |
+| Vector(Datadog) | 未收录 | 当前页用于它的主场景；如果更看重“Rust 写的可观测性管线（日志/指标），变换 DSL（VRL）很强”，再选 Vector(Datadog)。 | Rust 写的可观测性管线（日志/指标），变换 DSL（VRL）很强；同为单二进制路由，对冷门输入的插件目录更小。 |
+| collectd | 未收录 | 当前页用于它的主场景；如果更看重“老牌轻量 C 指标守护进程”，再选 collectd。 | 老牌轻量 C 指标守护进程；成熟但插件生态更小、偏老，现代集成较弱。 |
+| [CyberChef](cyberchef.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“浏览器里做一次性数据变换的工具箱”，再选 CyberChef。 | 浏览器里做一次性数据变换的工具箱；不是常驻采集 agent——完全不同的活。 |
 
 ## 技术栈
 

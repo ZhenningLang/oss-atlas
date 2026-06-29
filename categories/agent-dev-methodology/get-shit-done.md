@@ -9,6 +9,11 @@ license: MIT
 maturity: GitHub release v1.42.3 (2026-05); main README now redirects to open-gsd/gsd-core (as of 2026-06)
 last_verified: 2026-06-26
 type: framework
+upstream:
+  pushed_at: 2026-05-31T17:46:54Z
+  default_branch: main
+  default_branch_sha: bdcaab2c752d9a33a1a1ca9acf3a3c81fb991815
+  archived: true
 health:
   schema: 1
   computed_at: 2026-06-29T09:07:49Z
@@ -89,15 +94,15 @@ The core bet is structural: each atomic plan is small enough to run in its own c
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [SuperClaude Framework](superclaude.md) | ✅ | Persona/command/MCP framework that reshapes one agent's behavior; GSD is more of a linear phase pipeline (discuss→plan→execute→verify) with heavy subagent fan-out and persisted spec docs. |
-| [Superpowers](superpowers.md) | ✅ | A broad skills/plugin library you compose à la carte; GSD is an opinionated end-to-end project loop rather than a grab-bag of capabilities. |
-| [Compound Engineering](compound-engineering.md) | ✅ | Plugin encoding a compounding "agents improve the system" philosophy; overlapping spec-driven goals, lighter surface than GSD's full toolchain. |
-| [12-Factor Agents](12-factor-agents.md) | ✅ | Principles/methodology doc for building reliable agents, not an installable command set; read it for the *why*, use GSD for an executable *how*. |
-| [ECC](ecc.md) | ✅ | Sibling agent-dev methodology with a different orchestration model; compare phase/context handling directly. |
-| GitHub Spec Kit | 未收录 | Vendor-backed spec-driven toolkit (`/specify`, `/plan`, `/tasks`); GSD positions itself as lighter and more context-engineering-focused, less ceremony. |
-| BMAD-METHOD | 未收录 | Agile-agent framework with explicit roles (PM/architect/dev/QA); heavier "run a software org" framing GSD deliberately rejects. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [SuperClaude Framework](superclaude.md) | ✅ | Use this page for its stated niche; choose SuperClaude Framework when you need persona/command/MCP framework that reshapes one agent's behavior. | Persona/command/MCP framework that reshapes one agent's behavior; GSD is more of a linear phase pipeline (discuss→plan→execute→verify) with heavy subagent fan-out and persisted spec docs. |
+| [Superpowers](superpowers.md) | ✅ | Use this page for its stated niche; choose Superpowers when you need a broad skills/plugin library you compose à la carte. | A broad skills/plugin library you compose à la carte; GSD is an opinionated end-to-end project loop rather than a grab-bag of capabilities. |
+| [Compound Engineering](compound-engineering.md) | ✅ | Use this page for its stated niche; choose Compound Engineering when you need plugin encoding a compounding "agents improve the system" philosophy. | Plugin encoding a compounding "agents improve the system" philosophy; overlapping spec-driven goals, lighter surface than GSD's full toolchain. |
+| [12-Factor Agents](12-factor-agents.md) | ✅ | Use this page for its stated niche; choose 12-Factor Agents when you need principles/methodology doc for building reliable agents, not an installable command set. | Principles/methodology doc for building reliable agents, not an installable command set; read it for the *why*, use GSD for an executable *how*. |
+| [ECC](ecc.md) | ✅ | Use this page for its stated niche; choose ECC when you need sibling agent-dev methodology with a different orchestration model. | Sibling agent-dev methodology with a different orchestration model; compare phase/context handling directly. |
+| GitHub Spec Kit | 未收录 | Use this page for its stated niche; choose GitHub Spec Kit when you need vendor-backed spec-driven toolkit (`/specify`, `/plan`, `/tasks`). | Vendor-backed spec-driven toolkit (`/specify`, `/plan`, `/tasks`); GSD positions itself as lighter and more context-engineering-focused, less ceremony. |
+| BMAD-METHOD | 未收录 | Use this page for its stated niche; choose BMAD-METHOD when you need agile-agent framework with explicit roles (PM/architect/dev/QA). | Agile-agent framework with explicit roles (PM/architect/dev/QA); heavier "run a software org" framing GSD deliberately rejects. |
 
 ## Tech stack
 

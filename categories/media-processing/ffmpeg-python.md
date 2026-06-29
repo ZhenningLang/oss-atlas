@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v0.2.x, last commit 2024-08 (coasting), 11k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2024-08-04T00:07:08Z
+  default_branch: master
+  default_branch_sha: df129c7ba30aaa9ffffb81a48f53aa7253b0b4e6
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:01:58Z
@@ -83,13 +88,13 @@ Its sweet spot is exactly *complex* filter graphs — the README's whole pitch i
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [FFmpeg](ffmpeg.md) (the CLI itself) | ✅ | The underlying engine; maximal power and the canonical reference, but `-filter_complex` strings are unreadable for complex graphs — which is exactly what this wraps. |
-| PyAV | 未收录 | Pythonic bindings to the libav* libraries — in-process decode/encode and per-frame access, no shelling out; heavier to install, lower-level than a CLI graph builder. |
-| MoviePy | 未收录 | Higher-level Python video editing (effects, compositing, text) with a friendlier API; great for editing, less of a thin FFmpeg-graph mapping. |
-| subprocess + raw ffmpeg | 未收录 | Zero dependency and total control, but you hand-build and escape the `-filter_complex` strings yourself — the pain this library removes. |
-| imageio-ffmpeg / fluent-ffmpeg | 未收录 | Other-language or narrower-scope FFmpeg wrappers (Node's fluent-ffmpeg, Python imageio shim); similar shell-out model, different ergonomics. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [FFmpeg](ffmpeg.md) (the CLI itself) | ✅ | Use this page for its stated niche; choose FFmpeg (the CLI itself) when you need the underlying engine. | The underlying engine; maximal power and the canonical reference, but `-filter_complex` strings are unreadable for complex graphs — which is exactly what this wraps. |
+| PyAV | 未收录 | Use this page for its stated niche; choose PyAV when you need pythonic bindings to the libav* libraries. | Pythonic bindings to the libav* libraries — in-process decode/encode and per-frame access, no shelling out; heavier to install, lower-level than a CLI graph builder. |
+| MoviePy | 未收录 | Use this page for its stated niche; choose MoviePy when you need higher-level Python video editing (effects, compositing, text) with a friendlier API. | Higher-level Python video editing (effects, compositing, text) with a friendlier API; great for editing, less of a thin FFmpeg-graph mapping. |
+| subprocess + raw ffmpeg | 未收录 | Use this page for its stated niche; choose subprocess + raw ffmpeg when you need zero dependency and total control, but you hand-build and escape the `-filter_complex` strings yours. | Zero dependency and total control, but you hand-build and escape the `-filter_complex` strings yourself — the pain this library removes. |
+| imageio-ffmpeg / fluent-ffmpeg | 未收录 | Use this page for its stated niche; choose imageio-ffmpeg / fluent-ffmpeg when you need other-language or narrower-scope FFmpeg wrappers (Node's fluent-ffmpeg, Python imageio shim). | Other-language or narrower-scope FFmpeg wrappers (Node's fluent-ffmpeg, Python imageio shim); similar shell-out model, different ergonomics. |
 
 ## Tech stack
 

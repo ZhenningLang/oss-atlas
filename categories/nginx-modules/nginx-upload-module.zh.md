@@ -9,6 +9,11 @@ license: BSD-3-Clause
 maturity: v2.3.0 tag line, low activity (last push 2024-07), ~1.0k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2024-07-17T20:13:04Z
+  default_branch: master
+  default_branch_sha: 96e64603dc5a588a2d1ae59a62b0019d6b41070c
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:07:51Z
@@ -74,13 +79,13 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| NGINX `client_body_*` 缓冲 + 应用处理 | 未收录 | 第一方、无额外模块——NGINX 缓冲请求体、你的应用解析 multipart；更容易长期可用，但应用仍要处理上传（卸载不如本模块）。 |
-| 直传 S3 预签名上传 | 未收录 | 字节完全绕过你的服务器；扩展性/持久性最佳，但绑定对象存储和客户端上传逻辑。 |
-| tusd（tus 协议服务器） | 未收录 | 专门的断点续传服务器，生态活跃、有 SDK；是独立服务而非 NGINX 模块——更适合稳健续传流。 |
-| [lua-nginx-module](lua-nginx-module.zh.md) | ✅ | 你*可以*用 Lua/OpenResty 脚本化上传处理，但那是通用可编程性，而非专门的流式 multipart 接收器；不同工具。 |
-| 应用框架的上传处理 | 未收录 | Django/Rails/Express 内建上传——零基础设施，但应用服务器要吸收本模块本意要卸载的慢客户端成本。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| NGINX `client_body_*` 缓冲 + 应用处理 | 未收录 | 当前页用于它的主场景；如果更看重“第一方、无额外模块”，再选 NGINX clientbody 缓冲 + 应用处理。 | 第一方、无额外模块——NGINX 缓冲请求体、你的应用解析 multipart；更容易长期可用，但应用仍要处理上传（卸载不如本模块）。 |
+| 直传 S3 预签名上传 | 未收录 | 当前页用于它的主场景；如果更看重“字节完全绕过你的服务器”，再选 直传 S3 预签名上传。 | 字节完全绕过你的服务器；扩展性/持久性最佳，但绑定对象存储和客户端上传逻辑。 |
+| tusd（tus 协议服务器） | 未收录 | 当前页用于它的主场景；如果更看重“专门的断点续传服务器，生态活跃、有 SDK”，再选 tusd（tus 协议服务器）。 | 专门的断点续传服务器，生态活跃、有 SDK；是独立服务而非 NGINX 模块——更适合稳健续传流。 |
+| [lua-nginx-module](lua-nginx-module.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“你*可以*用 Lua/OpenResty 脚本化上传处理，但那是通用可编程性，而非专门的流式 multipart 接收器”，再选 lua-nginx-module。 | 你*可以*用 Lua/OpenResty 脚本化上传处理，但那是通用可编程性，而非专门的流式 multipart 接收器；不同工具。 |
+| 应用框架的上传处理 | 未收录 | 当前页用于它的主场景；如果更看重“Django/Rails/Express 内建上传”，再选 应用框架的上传处理。 | Django/Rails/Express 内建上传——零基础设施，但应用服务器要吸收本模块本意要卸载的慢客户端成本。 |
 
 ## 技术栈
 

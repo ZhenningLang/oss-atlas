@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v1.4.0 (2026-06-23); active, ChromeDevTools (Google) org, pushed 2026-06-25
 last_verified: 2026-06-26
 type: tool
+upstream:
+  pushed_at: 2026-06-28T00:04:33Z
+  default_branch: main
+  default_branch_sha: e5bd334c97b4f25207cad586684cca8208f1657e
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:20:04Z
@@ -90,14 +95,14 @@ health:
 
 ## 横向对比
 
-| 替代项 | 已收录 | 取舍 |
-|---|---|---|
-| [page-agent](page-agent.zh.md) | ✅ | 页内 JS GUI agent（DOM 即文本，无 headless 浏览器、无后端）；做 NL 表单/流程自动化很强，但**无法**录 trace、在 CDP 层检查网络、或抓堆快照。 |
-| [Agent Browser](agent-browser.zh.md) | ✅ | Vercel-labs 的面向 agent 的浏览器自动化；“为 agent 驱动浏览器”这一目标重叠——栈/手感不同，DevTools 协议面没这么全。 |
-| [Cua](cua.zh.md) | ✅ | computer-use / 沙箱 VM agent，驱动整个桌面而非仅 Chrome；更广（任意应用、像素 UI）但更重，且在 Web 性能/网络上不是 DevTools 级。 |
-| Playwright(+ MCP) | 未收录 | 跨浏览器（Chromium/Firefox/WebKit）、确定性、可代码或 MCP 驱动、支持 headless；做可移植自动化/CI 的首选。Chrome DevTools MCP 是用广度换 Chrome 原生 DevTools 深度（trace、Lighthouse、堆、CrUX）。 |
-| Puppeteer | 未收录 | 这台服务器所基于的更底层 Chrome/CDP 自动化库；脚本你自己写，没有 MCP/agent 层，也没有打磨过的性能洞察工具。 |
-| browser-use | 未收录 | Python、具视觉能力的自主浏览器 agent；更偏“agent 自己决定做什么”而非“给 agent 精确的 DevTools 工具”，且在性能/网络检查上不是 DevTools 协议级。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [page-agent](page-agent.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“页内 JS GUI agent（DOM 即文本，无 headless 浏览器、无后端）”，再选 page-agent。 | 页内 JS GUI agent（DOM 即文本，无 headless 浏览器、无后端）；做 NL 表单/流程自动化很强，但**无法**录 trace、在 CDP 层检查网络、或抓堆快照。 |
+| [Agent Browser](agent-browser.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“Vercel-labs 的面向 agent 的浏览器自动化”，再选 Agent Browser。 | Vercel-labs 的面向 agent 的浏览器自动化；“为 agent 驱动浏览器”这一目标重叠——栈/手感不同，DevTools 协议面没这么全。 |
+| [Cua](cua.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“computer-use / 沙箱 VM agent，驱动整个桌面而非仅 Chrome”，再选 Cua。 | computer-use / 沙箱 VM agent，驱动整个桌面而非仅 Chrome；更广（任意应用、像素 UI）但更重，且在 Web 性能/网络上不是 DevTools 级。 |
+| Playwright(+ MCP) | 未收录 | 当前页用于它的主场景；如果更看重“跨浏览器（Chromium/Firefox/WebKit）、确定性、可代码或 MCP 驱动、支持 headless”，再选 Playwright(+ MCP)。 | 跨浏览器（Chromium/Firefox/WebKit）、确定性、可代码或 MCP 驱动、支持 headless；做可移植自动化/CI 的首选。Chrome DevTools MCP 是用广度换 Chrome 原生 DevTools 深度（trace、Lighthouse、堆、CrUX）。 |
+| Puppeteer | 未收录 | 当前页用于它的主场景；如果更看重“这台服务器所基于的更底层 Chrome/CDP 自动化库”，再选 Puppeteer。 | 这台服务器所基于的更底层 Chrome/CDP 自动化库；脚本你自己写，没有 MCP/agent 层，也没有打磨过的性能洞察工具。 |
+| browser-use | 未收录 | 当前页用于它的主场景；如果更看重“Python、具视觉能力的自主浏览器 agent”，再选 browser-use。 | Python、具视觉能力的自主浏览器 agent；更偏“agent 自己决定做什么”而非“给 agent 精确的 DevTools 工具”，且在性能/网络检查上不是 DevTools 协议级。 |
 
 ## 技术栈
 

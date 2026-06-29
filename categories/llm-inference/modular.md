@@ -9,6 +9,11 @@ license: Apache-2.0 WITH LLVM-exception
 maturity: "MAX v26.4.0, active (2026-06); ~26.4k stars, single-vendor (Modular Inc.)"
 last_verified: 2026-06-28
 type: framework
+upstream:
+  pushed_at: 2026-06-29T07:43:28Z
+  default_branch: main
+  default_branch_sha: 83fadb2fad903d3c819766a1bc01740a893dc7bf
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:57:05Z
@@ -86,13 +91,13 @@ You also reach for this when you specifically want **Mojo** — you're writing c
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| vLLM | 未收录 | The de-facto open LLM serving engine (PagedAttention, continuous batching), huge community and model coverage; NVIDIA-first, less of a unified CPU/AMD story, and not its own kernel language. |
-| Text Generation Inference (TGI) | 未收录 | Hugging Face's production server, tight HF ecosystem integration; license history has wobbled (Apache→HFOIL→Apache), narrower than a full compiler+language platform. |
-| TensorRT-LLM | 未收录 | NVIDIA's own engine, top-tier performance on NVIDIA hardware; deeply NVIDIA-locked, heavier build/engine-compile workflow, no cross-vendor abstraction. |
-| Ray Serve | 未收录 | General Python model-serving/orchestration framework for scaling and composing services; not a hand-tuned single-model inference engine — different layer. |
-| plain PyTorch (+ Triton) | 未收录 | The default, maximally-portable, maximally-hireable stack for both serving and custom kernels; you assemble performance yourself rather than buying a vertically-integrated engine. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| vLLM | 未收录 | Use this page for its stated niche; choose vLLM when you need the de-facto open LLM serving engine (PagedAttention, continuous batching), huge community and model. | The de-facto open LLM serving engine (PagedAttention, continuous batching), huge community and model coverage; NVIDIA-first, less of a unified CPU/AMD story, and not its own kernel language. |
+| Text Generation Inference (TGI) | 未收录 | Use this page for its stated niche; choose Text Generation Inference (TGI) when you need hugging Face's production server, tight HF ecosystem integration. | Hugging Face's production server, tight HF ecosystem integration; license history has wobbled (Apache→HFOIL→Apache), narrower than a full compiler+language platform. |
+| TensorRT-LLM | 未收录 | Use this page for its stated niche; choose TensorRT-LLM when you need NVIDIA's own engine, top-tier performance on NVIDIA hardware. | NVIDIA's own engine, top-tier performance on NVIDIA hardware; deeply NVIDIA-locked, heavier build/engine-compile workflow, no cross-vendor abstraction. |
+| Ray Serve | 未收录 | Use this page for its stated niche; choose Ray Serve when you need general Python model-serving/orchestration framework for scaling and composing services. | General Python model-serving/orchestration framework for scaling and composing services; not a hand-tuned single-model inference engine — different layer. |
+| plain PyTorch (+ Triton) | 未收录 | Use this page for its stated niche; choose plain PyTorch (+ Triton) when you need the default, maximally-portable, maximally-hireable stack for both serving and custom kernels. | The default, maximally-portable, maximally-hireable stack for both serving and custom kernels; you assemble performance yourself rather than buying a vertically-integrated engine. |
 
 ## Tech stack
 

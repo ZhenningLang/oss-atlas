@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: CLI v3.1.0 / Skill v3.8.0, active (2026-06)
 last_verified: 2026-06-26
 type: tool
+upstream:
+  pushed_at: 2026-06-29T07:31:57Z
+  default_branch: main
+  default_branch_sha: c979ac37c361da564dcce100a4f2623d94ef54c8
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:38:45Z
@@ -89,15 +94,15 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| [html-anything](html-anything.zh.md) | ✅ | 由 agent 生成 HTML 产物；Impeccable 则是 critique/lint agent 已经产出的东西。互补而非替代。 |
-| [open-design](open-design.zh.md) | ✅ | 同类目下的设计语言 / 生成层；在“让 agent 设计更好”上有重叠，但分歧在于是 lint 现有产物还是驱动生成。建议直接对照两页。 |
-| [guizang-ppt](guizang-ppt.zh.md) | ✅ | 面向幻灯片生成的 skill-pack；产物类型窄，没有确定性 detector 或 CLI。Impeccable 是更宽的前端质量工具。 |
-| [guizang-social-card](guizang-social-card.zh.md) | ✅ | 社交卡片生成的 skill-pack；单一产物类型，对比 Impeccable 的通用 UI linting。 |
-| ESLint + a11y 插件（eslint-plugin-jsx-a11y） | 未收录 | 成熟、基于 AST 的可访问性/代码 linting，完全离线；但没有“AI 设计 slop”模式概念，也没有审美 critique 或 agent-skill 层。 |
-| Stylelint | 未收录 | 确定性 CSS linting，规则生态庞大；面向 CSS 正确性/约定，而非审美 AI 模式检测或 agent 设计辅导。 |
-| Lighthouse / axe-core | 未收录 | 在渲染后的页面上审计性能/可访问性；在 URL 扫描上有重叠，但不做 AI 设计模式检测，也没有 skill 驱动的 "polish/bolder/quieter" 工作流。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [html-anything](html-anything.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“由 agent 生成 HTML 产物”，再选 html-anything。 | 由 agent 生成 HTML 产物；Impeccable 则是 critique/lint agent 已经产出的东西。互补而非替代。 |
+| [open-design](open-design.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“同类目下的设计语言 / 生成层”，再选 open-design。 | 同类目下的设计语言 / 生成层；在“让 agent 设计更好”上有重叠，但分歧在于是 lint 现有产物还是驱动生成。建议直接对照两页。 |
+| [guizang-ppt](guizang-ppt.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“面向幻灯片生成的 skill-pack”，再选 guizang-ppt。 | 面向幻灯片生成的 skill-pack；产物类型窄，没有确定性 detector 或 CLI。Impeccable 是更宽的前端质量工具。 |
+| [guizang-social-card](guizang-social-card.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“社交卡片生成的 skill-pack”，再选 guizang-social-card。 | 社交卡片生成的 skill-pack；单一产物类型，对比 Impeccable 的通用 UI linting。 |
+| ESLint + a11y 插件（eslint-plugin-jsx-a11y） | 未收录 | 当前页用于它的主场景；如果更看重“成熟、基于 AST 的可访问性/代码 linting，完全离线”，再选 ESLint + a11y 插件（eslint-plugin-jsx-a11y）。 | 成熟、基于 AST 的可访问性/代码 linting，完全离线；但没有“AI 设计 slop”模式概念，也没有审美 critique 或 agent-skill 层。 |
+| Stylelint | 未收录 | 当前页用于它的主场景；如果更看重“确定性 CSS linting，规则生态庞大”，再选 Stylelint。 | 确定性 CSS linting，规则生态庞大；面向 CSS 正确性/约定，而非审美 AI 模式检测或 agent 设计辅导。 |
+| Lighthouse / axe-core | 未收录 | 当前页用于它的主场景；如果更看重“在渲染后的页面上审计性能/可访问性”，再选 Lighthouse / axe-core。 | 在渲染后的页面上审计性能/可访问性；在 URL 扫描上有重叠，但不做 AI 设计模式检测，也没有 skill 驱动的 "polish/bolder/quieter" 工作流。 |
 
 ## 技术栈
 

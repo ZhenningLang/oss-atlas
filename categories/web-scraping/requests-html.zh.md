@@ -9,6 +9,11 @@ license: MIT
 maturity: "v0.10.0, effectively unmaintained — last pushed 2024-04 (~2y idle as of 2026-06)"
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2024-04-16T18:50:38Z
+  default_branch: master
+  default_branch_sha: 075ac162dc62fc532037df0d98954ab840a97516
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:24:27Z
@@ -76,13 +81,13 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| httpx + BeautifulSoup / parsel | 未收录 | 主流的现代拆分：一个仍在活跃维护、支持异步的 HTTP 客户端，加一个专用 parser（bs4 容错解析 HTML，parsel 走 Scrapy 风格的 CSS/XPath）。是两个 import 而非一个，但两者都在维护、各块你都可控——纯 HTML 抓取的推荐替代。 |
-| Playwright（Python） | 未收录 | 真正在维护的无头浏览器自动化（Chromium/Firefox/WebKit），面向重 JS 页面；比 `requests-html` 的 pyppeteer `render()` 稳健得多，但更重、是另一套（驱动浏览器的）心智模型。配 selectolax/bs4 做解析。 |
-| Scrapy | 未收录 | 一个完整的异步爬虫框架——并发、调度、中间件、pipeline、重试；当你要规模化爬取时它才对，对一个 40 行的一次性脚本则杀鸡用牛刀。 |
-| selectolax | 未收录 | 很快的 C 后端（Modest/lexbor）HTML parser，带 CSS 选择器；只做解析（HTTP 客户端自带），但大文档场景的速度之选——恰是 `requests-html` 所不是的。 |
-| requests + BeautifulSoup | 未收录 | 经典、至今够用的同步抓取组合；`requests-html` 本质就是这套再加 PyQuery 选择器和一个可选的 JS 渲染外挂，只是没了活跃维护。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| httpx + BeautifulSoup / parsel | 未收录 | 当前页用于它的主场景；如果更看重“主流的现代拆分：一个仍在活跃维护、支持异步的 HTTP 客户端，加一个专用 parser（bs4 容错解析 HTML，parsel 走 Scrapy 风格的 CSS/XPath）”，再选 httpx + BeautifulSoup / parsel。 | 主流的现代拆分：一个仍在活跃维护、支持异步的 HTTP 客户端，加一个专用 parser（bs4 容错解析 HTML，parsel 走 Scrapy 风格的 CSS/XPath）。是两个 import 而非一个，但两者都在维护、各块你都可控——纯 HTML 抓取的推荐替代。 |
+| Playwright（Python） | 未收录 | 当前页用于它的主场景；如果更看重“真正在维护的无头浏览器自动化（Chromium/Firefox/WebKit），面向重 JS 页面”，再选 Playwright（Python）。 | 真正在维护的无头浏览器自动化（Chromium/Firefox/WebKit），面向重 JS 页面；比 `requests-html` 的 pyppeteer `render()` 稳健得多，但更重、是另一套（驱动浏览器的）心智模型。配 selectolax/bs4 做解析。 |
+| Scrapy | 未收录 | 当前页用于它的主场景；如果更看重“一个完整的异步爬虫框架”，再选 Scrapy。 | 一个完整的异步爬虫框架——并发、调度、中间件、pipeline、重试；当你要规模化爬取时它才对，对一个 40 行的一次性脚本则杀鸡用牛刀。 |
+| selectolax | 未收录 | 当前页用于它的主场景；如果更看重“很快的 C 后端（Modest/lexbor）HTML parser，带 CSS 选择器”，再选 selectolax。 | 很快的 C 后端（Modest/lexbor）HTML parser，带 CSS 选择器；只做解析（HTTP 客户端自带），但大文档场景的速度之选——恰是 `requests-html` 所不是的。 |
+| requests + BeautifulSoup | 未收录 | 当前页用于它的主场景；如果更看重“经典、至今够用的同步抓取组合”，再选 requests + BeautifulSoup。 | 经典、至今够用的同步抓取组合；`requests-html` 本质就是这套再加 PyQuery 选择器和一个可选的 JS 渲染外挂，只是没了活跃维护。 |
 
 ## 技术栈
 

@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v0.0.1 (only tagged release 2019), low activity, ~1.2k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: tool
+upstream:
+  pushed_at: 2024-04-03T02:31:46Z
+  default_branch: master
+  default_branch_sha: d2ec33ef69107a21148c29a3f609162a75f58854
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:44:05Z
@@ -76,12 +81,12 @@ You reach for it specifically when the analysis must be **offline and fast**: th
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| redis-rdb-tools (sripathikrishnan) | 未收录 | The original Python RDB parser/memory-profiler; broader output formats and CSV export, but much slower on large dumps and itself largely unmaintained. |
-| `redis-cli --bigkeys` / `--memkeys` | 未收录 | Built into Redis, runs live and needs no file, but only *samples* and adds load to the server; no per-prefix breakdown or report UI. |
-| RedisInsight (Redis Ltd.) | 未收录 | Full GUI with a live memory analysis tab; far richer but a heavyweight desktop app talking to a live instance, not an offline file parser. |
-| `MEMORY USAGE` / `MEMORY DOCTOR` | 未收录 | Native commands for per-key/instance memory introspection on a live server; precise per key but you must already know which keys to ask about. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| redis-rdb-tools (sripathikrishnan) | 未收录 | Use this page for its stated niche; choose redis-rdb-tools (sripathikrishnan) when you need the original Python RDB parser/memory-profiler. | The original Python RDB parser/memory-profiler; broader output formats and CSV export, but much slower on large dumps and itself largely unmaintained. |
+| `redis-cli --bigkeys` / `--memkeys` | 未收录 | Use this page for its stated niche; choose redis-cli --bigkeys / --memkeys when you need built into Redis, runs live and needs no file, but only *samples* and adds load to the server. | Built into Redis, runs live and needs no file, but only *samples* and adds load to the server; no per-prefix breakdown or report UI. |
+| RedisInsight (Redis Ltd.) | 未收录 | Use this page for its stated niche; choose RedisInsight (Redis Ltd.) when you need full GUI with a live memory analysis tab. | Full GUI with a live memory analysis tab; far richer but a heavyweight desktop app talking to a live instance, not an offline file parser. |
+| `MEMORY USAGE` / `MEMORY DOCTOR` | 未收录 | Use this page for its stated niche; choose MEMORY USAGE / MEMORY DOCTOR when you need native commands for per-key/instance memory introspection on a live server. | Native commands for per-key/instance memory introspection on a live server; precise per key but you must already know which keys to ask about. |
 
 ## Tech stack
 

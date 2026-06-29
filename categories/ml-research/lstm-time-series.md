@@ -9,6 +9,11 @@ license: AGPL-3.0
 maturity: educational article companion, idle since ~2023-03, ~5.2k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2023-03-24T21:54:57Z
+  default_branch: master
+  default_branch_sha: da44411c91135b64c02eb60da3c7f574c7c4c253
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:04:26Z
@@ -83,13 +88,13 @@ You reach for it as a **learning artifact** — a clean, readable reference impl
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| Darts | 未收录 | Modern, maintained Python forecasting library (many models incl. deep learning) with a unified API; production-oriented, far heavier than a teaching script. |
-| GluonTS | 未收录 | Probabilistic time-series toolkit (AWS); strong for real forecasting at scale, steeper learning curve, not an intro example. |
-| Prophet | 未收录 | Decomposition-based forecasting, trivial to use for business seasonality; not a deep-learning/LSTM demonstration. |
-| Keras official RNN tutorials | 未收录 | Up-to-date, maintained, TF2 examples of the same techniques; less narrative than the companion article but won't bit-rot the same way. |
-| [PyTorch-GAN](pytorch-gan.md) | ✅ | A different domain (generative images) but the same *genre* — a single-author reference-implementation collection meant to teach, not to be a maintained dependency. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| Darts | 未收录 | Use this page for its stated niche; choose Darts when you need modern, maintained Python forecasting library (many models incl. | Modern, maintained Python forecasting library (many models incl. deep learning) with a unified API; production-oriented, far heavier than a teaching script. |
+| GluonTS | 未收录 | Use this page for its stated niche; choose GluonTS when you need probabilistic time-series toolkit (AWS). | Probabilistic time-series toolkit (AWS); strong for real forecasting at scale, steeper learning curve, not an intro example. |
+| Prophet | 未收录 | Use this page for its stated niche; choose Prophet when you need decomposition-based forecasting, trivial to use for business seasonality. | Decomposition-based forecasting, trivial to use for business seasonality; not a deep-learning/LSTM demonstration. |
+| Keras official RNN tutorials | 未收录 | Use this page for its stated niche; choose Keras official RNN tutorials when you need up-to-date, maintained, TF2 examples of the same techniques. | Up-to-date, maintained, TF2 examples of the same techniques; less narrative than the companion article but won't bit-rot the same way. |
+| [PyTorch-GAN](pytorch-gan.md) | ✅ | Use this page for its stated niche; choose PyTorch-GAN when you need a different domain (generative images) but the same *genre*. | A different domain (generative images) but the same *genre* — a single-author reference-implementation collection meant to teach, not to be a maintained dependency. |
 
 ## Tech stack
 

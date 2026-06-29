@@ -5,34 +5,34 @@
 
 ## Projects in this category
 
-| Project | Use when | Page |
-|---|---|---|
-| **beads** | Use it when an AI agent loses task state across sessions and you want a versioned, dependency-aware task graph in the repo. | [→](beads.md) |
-| **CCPM** | Use it when a feature is too big for one session and you want PRD-to-GitHub-Issues specs plus parallel git-worktree agents. | [→](ccpm.md) |
-| **Entire** | Use it when you want AI agent sessions captured as Git checkpoints alongside commits, searchable and rewindable. | [→](entire-cli.md) |
-| **Ralph for Claude Code** | Use it when you want Claude Code to grind through a fix_plan.md checklist unattended with rate limits, a circuit breaker, and a dual-condition exit gate. | [→](ralph-claude-code.md) |
-| **Context Mode** | Use it when a coding agent burns context on raw tool output and you want sandboxed execution plus compaction-surviving session memory. | [→](context-mode.md) |
-| **Planning with Files** | Use it when a long agent run keeps losing its plan to /clear, compaction, or crashes. | [→](planning-with-files.md) |
-| **Vercel Skills** | Use it when you want an npm-style CLI to install, find, and update SKILL.md packs across many coding agents. | [→](vercel-skills.md) |
-| **OpenSandbox** | Use it when you must self-host isolated sandboxes to run untrusted agent-generated code at K8s scale with egress controls and a credential vault — but the repo is only months old (created 2025-12), so its API and Lindy track record are unproven. | [→](opensandbox.md) |
-| **AgentsView** | Use it when you run several coding agents and want local-first cross-agent session search and token/cost analytics — but it's months-old and pre-1.0, expect churn. | [→](agentsview.md) |
-| **Agent Orchestrator** | Use it when you supervise several parallel coding agents on real branches and want a desktop control plane that isolates each in a git worktree and auto-routes CI/review/conflict feedback — but it's ~4.5 months old, pre-1.0, single-User-owned, with a loopback-no-auth daemon. | [→](agent-orchestrator.md) |
+| Project | Use when | Health | Page |
+| --- | --- | --- | --- |
+| **beads** | Use it when an AI agent loses task state across sessions and you want a versioned, dependency-aware task graph in the repo. | B (6/6) | [→](beads.md) |
+| **CCPM** | Use it when a feature is too big for one session and you want PRD-to-GitHub-Issues specs plus parallel git-worktree agents. | B (4/6) | [→](ccpm.md) |
+| **Entire** | Use it when you want AI agent sessions captured as Git checkpoints alongside commits, searchable and rewindable. | B (5/6) | [→](entire-cli.md) |
+| **Ralph for Claude Code** | Use it when you want Claude Code to grind through a fix_plan.md checklist unattended with rate limits, a circuit breaker, and a dual-condition exit gate. | B (6/6) | [→](ralph-claude-code.md) |
+| **Context Mode** | Use it when a coding agent burns context on raw tool output and you want sandboxed execution plus compaction-surviving session memory. | D (6/6) | [→](context-mode.md) |
+| **Planning with Files** | Use it when a long agent run keeps losing its plan to /clear, compaction, or crashes. | B (4/6) | [→](planning-with-files.md) |
+| **Vercel Skills** | Use it when you want an npm-style CLI to install, find, and update SKILL.md packs across many coding agents. | D (6/6) | [→](vercel-skills.md) |
+| **OpenSandbox** | Use it when you must self-host isolated sandboxes to run untrusted agent-generated code at K8s scale with egress controls and a credential vault — but the repo is only months old (created 2025-12), so its API and Lindy track record are unproven. | B (5/6) | [→](opensandbox.md) |
+| **AgentsView** | Use it when you run several coding agents and want local-first cross-agent session search and token/cost analytics — but it's months-old and pre-1.0, expect churn. | B (6/6) | [→](agentsview.md) |
+| **Agent Orchestrator** | Use it when you supervise several parallel coding agents on real branches and want a desktop control plane that isolates each in a git worktree and auto-routes CI/review/conflict feedback — but it's ~4.5 months old, pre-1.0, single-User-owned, with a loopback-no-auth daemon. | B (5/6) | [→](agent-orchestrator.md) |
 
 ## Comparison matrix
 
-| Option | Indexed | One-line tradeoff |
-|---|---|---|
-| [beads](beads.md) | ✅ | Use it when an AI agent loses task state across sessions and you want a versioned, dependency-aware task graph in the repo. |
-| [CCPM](ccpm.md) | ✅ | Use it when a feature is too big for one session and you want PRD-to-GitHub-Issues specs plus parallel git-worktree agents. |
-| [Entire](entire-cli.md) | ✅ | Use it when you want AI agent sessions captured as Git checkpoints alongside commits, searchable and rewindable. |
-| [Ralph for Claude Code](ralph-claude-code.md) | ✅ | Use it when you want Claude Code to grind through a fix_plan.md checklist unattended with rate limits, a circuit breaker, and a dual-condition exit gate. |
-| [Context Mode](context-mode.md) | ✅ | Use it when a coding agent burns context on raw tool output and you want sandboxed execution plus compaction-surviving session memory. |
-| [Planning with Files](planning-with-files.md) | ✅ | Use it when a long agent run keeps losing its plan to /clear, compaction, or crashes. |
-| [Vercel Skills](vercel-skills.md) | ✅ | Use it when you want an npm-style CLI to install, find, and update SKILL.md packs across many coding agents. |
-| [OpenSandbox](opensandbox.md) | ✅ | Use it when you must self-host isolated sandboxes to run untrusted agent-generated code at K8s scale with egress controls and a credential vault — but the repo is only months old (created 2025-12), so its API and Lindy track record are unproven. |
-| [AgentsView](agentsview.md) | ✅ | Use it when you run several coding agents and want local-first cross-agent session search and token/cost analytics — but it's months-old and pre-1.0, expect churn. |
-| [Agent Orchestrator](agent-orchestrator.md) | ✅ | Use it when you supervise several parallel coding agents on real branches and want a desktop control plane that isolates each in a git worktree and auto-routes CI/review/conflict feedback — but it's ~4.5 months old, pre-1.0, single-User-owned, with a loopback-no-auth daemon. |
-| Taskmaster / GitHub Issues + gh / Linear | 未收录 | Other task/work-tracking backends for agents named across the pages. |
+| Option | Indexed | Health | One-line tradeoff |
+| --- | --- | --- | --- |
+| [beads](beads.md) | ✅ | B (6/6) | Use it when an AI agent loses task state across sessions and you want a versioned, dependency-aware task graph in the repo. |
+| [CCPM](ccpm.md) | ✅ | B (4/6) | Use it when a feature is too big for one session and you want PRD-to-GitHub-Issues specs plus parallel git-worktree agents. |
+| [Entire](entire-cli.md) | ✅ | B (5/6) | Use it when you want AI agent sessions captured as Git checkpoints alongside commits, searchable and rewindable. |
+| [Ralph for Claude Code](ralph-claude-code.md) | ✅ | B (6/6) | Use it when you want Claude Code to grind through a fix_plan.md checklist unattended with rate limits, a circuit breaker, and a dual-condition exit gate. |
+| [Context Mode](context-mode.md) | ✅ | D (6/6) | Use it when a coding agent burns context on raw tool output and you want sandboxed execution plus compaction-surviving session memory. |
+| [Planning with Files](planning-with-files.md) | ✅ | B (4/6) | Use it when a long agent run keeps losing its plan to /clear, compaction, or crashes. |
+| [Vercel Skills](vercel-skills.md) | ✅ | D (6/6) | Use it when you want an npm-style CLI to install, find, and update SKILL.md packs across many coding agents. |
+| [OpenSandbox](opensandbox.md) | ✅ | B (5/6) | Use it when you must self-host isolated sandboxes to run untrusted agent-generated code at K8s scale with egress controls and a credential vault — but the repo is only months old (created 2025-12), so its API and Lindy track record are unproven. |
+| [AgentsView](agentsview.md) | ✅ | B (6/6) | Use it when you run several coding agents and want local-first cross-agent session search and token/cost analytics — but it's months-old and pre-1.0, expect churn. |
+| [Agent Orchestrator](agent-orchestrator.md) | ✅ | B (5/6) | Use it when you supervise several parallel coding agents on real branches and want a desktop control plane that isolates each in a git worktree and auto-routes CI/review/conflict feedback — but it's ~4.5 months old, pre-1.0, single-User-owned, with a loopback-no-auth daemon. |
+| Taskmaster / GitHub Issues + gh / Linear | 未收录 | — | Other task/work-tracking backends for agents named across the pages. |
 
 ## What belongs here
 

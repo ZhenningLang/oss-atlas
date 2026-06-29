@@ -9,6 +9,11 @@ license: MIT
 maturity: v0.4.0 (last release 2021), low activity, ~1.3k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2025-08-27T14:29:08Z
+  default_branch: master
+  default_branch_sha: dc0732884379a19a21bf7a49650d0708519ec54f
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:06:24Z
@@ -86,12 +91,12 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| [Paramiko](paramiko.zh.md) | ✅ | sshtunnel 封装的引擎——完整的 SSH/SFTP/传输控制，但转发和上下文管理器的人体工学要你自己实现。 |
-| 原生 `ssh -L` / `autossh` | 未收录 | OpenSSH 客户端（可选自动重连）——稳、快、config 完全还原，但它是要管理的 subprocess，不是 Python 内的对象。 |
-| `subprocess` + `ssh` | 未收录 | 零额外依赖，但你得自己解析文本、管理子进程和就绪状态。 |
-| AsyncSSH（转发 API） | 未收录 | asyncio 原生 SSH，自带转发；更适合 async 代码库，API 不同，比一个薄封装更重。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [Paramiko](paramiko.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“sshtunnel 封装的引擎”，再选 Paramiko。 | sshtunnel 封装的引擎——完整的 SSH/SFTP/传输控制，但转发和上下文管理器的人体工学要你自己实现。 |
+| 原生 `ssh -L` / `autossh` | 未收录 | 当前页用于它的主场景；如果更看重“OpenSSH 客户端（可选自动重连）”，再选 原生 ssh -L / autossh。 | OpenSSH 客户端（可选自动重连）——稳、快、config 完全还原，但它是要管理的 subprocess，不是 Python 内的对象。 |
+| `subprocess` + `ssh` | 未收录 | 当前页用于它的主场景；如果更看重“零额外依赖，但你得自己解析文本、管理子进程和就绪状态”，再选 subprocess + ssh。 | 零额外依赖，但你得自己解析文本、管理子进程和就绪状态。 |
+| AsyncSSH（转发 API） | 未收录 | 当前页用于它的主场景；如果更看重“asyncio 原生 SSH，自带转发”，再选 AsyncSSH（转发 API）。 | asyncio 原生 SSH，自带转发；更适合 async 代码库，API 不同，比一个薄封装更重。 |
 
 ## 技术栈
 

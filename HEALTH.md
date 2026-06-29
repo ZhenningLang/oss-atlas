@@ -9,8 +9,8 @@
 >
 > 中文：[HEALTH.zh.md](HEALTH.zh.md)
 
-**Pilot — 3 projects.** Backfill of the full index is Phase 1. A `?` axis means the signal is
-unobtainable or not applicable (e.g. adoption for a desktop app that ships no package), not a low score.
+The full index is backfilled. A `?` axis means the signal is unobtainable or not applicable
+(e.g. adoption for a desktop app that ships no package), not a low score.
 
 ## Open Interpreter — overall A
 

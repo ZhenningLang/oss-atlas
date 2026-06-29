@@ -9,6 +9,11 @@ license: BSD-3-Clause
 maturity: v5.x, active (2026-06), ~28.6k stars
 last_verified: 2026-06-28
 type: framework
+upstream:
+  pushed_at: 2026-06-27T11:27:51Z
+  default_branch: main
+  default_branch_sha: d6131816f172750f7ba6204f903cd2fc243853ad
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:16:13Z
@@ -86,14 +91,14 @@ Python 事实标准的分布式任务队列：通过消息 broker（RabbitMQ/Red
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| RQ（Redis Queue） | 未收录 | 极简、仅 Redis 的 Python 队列；上手和读代码都简单，但 broker 不可选、调度/路由更弱、吞吐调优也不如 Celery。 |
-| Dramatiq | 未收录 | 现代 Python 任务队列（RabbitMQ/Redis），定位是更简单、更可靠的 Celery 替代；生态更小，canvas/工作流原语也更少。 |
-| arq | 未收录 | 原生 asyncio、基于 Redis、非常轻量；很适合 async 应用，但功能集相对 Celery 的路由/beat/canvas 偏少。 |
-| [Airflow](../workflow-orchestration/airflow.zh.md) | ✅ | 面向带依赖的多步 DAG **工作流**、带血缘与 UI 的调度器——是另一种活：数据管线编排，而非低延迟的后台任务卸载。 |
-| [XXL-JOB](xxl-job.zh.md) | ✅ | JVM 生态的分布式调度器，自带管理看板；是 Java 世界的答案，不适配 Python 代码库。 |
-| Sidekiq / BullMQ | 未收录 | Ruby（Sidekiq）和 Node（BullMQ）的对应物；问题形状相同，只是语言生态不同。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| RQ（Redis Queue） | 未收录 | 当前页用于它的主场景；如果更看重“极简、仅 Redis 的 Python 队列”，再选 RQ（Redis Queue）。 | 极简、仅 Redis 的 Python 队列；上手和读代码都简单，但 broker 不可选、调度/路由更弱、吞吐调优也不如 Celery。 |
+| Dramatiq | 未收录 | 当前页用于它的主场景；如果更看重“现代 Python 任务队列（RabbitMQ/Redis），定位是更简单、更可靠的 Celery 替代”，再选 Dramatiq。 | 现代 Python 任务队列（RabbitMQ/Redis），定位是更简单、更可靠的 Celery 替代；生态更小，canvas/工作流原语也更少。 |
+| arq | 未收录 | 当前页用于它的主场景；如果更看重“原生 asyncio、基于 Redis、非常轻量”，再选 arq。 | 原生 asyncio、基于 Redis、非常轻量；很适合 async 应用，但功能集相对 Celery 的路由/beat/canvas 偏少。 |
+| [Airflow](../workflow-orchestration/airflow.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“面向带依赖的多步 DAG **工作流**、带血缘与 UI 的调度器”，再选 Airflow。 | 面向带依赖的多步 DAG **工作流**、带血缘与 UI 的调度器——是另一种活：数据管线编排，而非低延迟的后台任务卸载。 |
+| [XXL-JOB](xxl-job.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“JVM 生态的分布式调度器，自带管理看板”，再选 XXL-JOB。 | JVM 生态的分布式调度器，自带管理看板；是 Java 世界的答案，不适配 Python 代码库。 |
+| Sidekiq / BullMQ | 未收录 | 当前页用于它的主场景；如果更看重“Ruby（Sidekiq）和 Node（BullMQ）的对应物”，再选 Sidekiq / BullMQ。 | Ruby（Sidekiq）和 Node（BullMQ）的对应物；问题形状相同，只是语言生态不同。 |
 
 ## 技术栈
 

@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: early, no tagged release, active (2026-06)
 last_verified: 2026-06-26
 type: app
+upstream:
+  pushed_at: 2026-06-16T10:22:48Z
+  default_branch: main
+  default_branch_sha: 8fd5227d6e5d826f856029372ef84359d9374eb6
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:38:16Z
@@ -84,14 +89,14 @@ The defining trait is that it ships **no model and no API key of its own**: it s
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [open-design](open-design.md) | ✅ | Same team's larger desktop app — far more skills/design-systems, native desktop, PPTX/MP4 export. HTML Anything is the focused, web-only, HTML-output subset built on top of it. |
-| [guizang-ppt-skill](guizang-ppt.md) | ✅ | A single agent skill for polished HTML decks (vendored into HTML Anything as `deck-guizang-editorial`). It's a skill you drop into any agent; HTML Anything is the surrounding app + picker + export + 75 skills. |
-| [guizang-social-card-skill](guizang-social-card.md) | ✅ | Skill for Xiaohongshu/WeChat cover cards. Narrow + portable vs HTML Anything's broad multi-surface app. |
-| [Impeccable](impeccable.md) | ✅ | A design *language* / harness-quality layer (makes any agent better at design), not a generation app. Complementary, not a substitute. |
-| markdown-nice (mdnice) | 未收录 | Web editor for Markdown→WeChat/Zhihu paste-ready styling; mature, no agent, theme-based not prompt-driven. HTML Anything reuses its `juice` inlining idea but adds agent generation + 9 surfaces. |
-| markdown-to-image (gcui-art) | 未收录 | Markdown→social-card-PNG generator; narrower output, also no local-agent model. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [open-design](open-design.md) | ✅ | Use this page for its stated niche; choose open-design when you need same team's larger desktop app. | Same team's larger desktop app — far more skills/design-systems, native desktop, PPTX/MP4 export. HTML Anything is the focused, web-only, HTML-output subset built on top of it. |
+| [guizang-ppt-skill](guizang-ppt.md) | ✅ | Use this page for its stated niche; choose guizang-ppt-skill when you need a single agent skill for polished HTML decks (vendored into HTML Anything as `deck-guizang-editorial. | A single agent skill for polished HTML decks (vendored into HTML Anything as `deck-guizang-editorial`). It's a skill you drop into any agent; HTML Anything is the surrounding app + picker + export + 75 skills. |
+| [guizang-social-card-skill](guizang-social-card.md) | ✅ | Use this page for its stated niche; choose guizang-social-card-skill when you need skill for Xiaohongshu/WeChat cover cards. | Skill for Xiaohongshu/WeChat cover cards. Narrow + portable vs HTML Anything's broad multi-surface app. |
+| [Impeccable](impeccable.md) | ✅ | Use this page for its stated niche; choose Impeccable when you need a design *language* / harness-quality layer (makes any agent better at design), not a generation app. | A design *language* / harness-quality layer (makes any agent better at design), not a generation app. Complementary, not a substitute. |
+| markdown-nice (mdnice) | 未收录 | Use this page for its stated niche; choose markdown-nice (mdnice) when you need web editor for Markdown→WeChat/Zhihu paste-ready styling. | Web editor for Markdown→WeChat/Zhihu paste-ready styling; mature, no agent, theme-based not prompt-driven. HTML Anything reuses its `juice` inlining idea but adds agent generation + 9 surfaces. |
+| markdown-to-image (gcui-art) | 未收录 | Use this page for its stated niche; choose markdown-to-image (gcui-art) when you need markdown→social-card-PNG generator. | Markdown→social-card-PNG generator; narrower output, also no local-agent model. |
 
 ## Tech stack
 

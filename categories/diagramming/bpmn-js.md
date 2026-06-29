@@ -9,6 +9,11 @@ license: MIT + bpmn.io watermark clause
 maturity: v18.19.0, active, ~9.6k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2026-06-26T07:11:27Z
+  default_branch: develop
+  default_branch_sha: 2067c99c8a807061ed78a7c0d6de9329610c3c44
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:50:32Z
@@ -86,13 +91,13 @@ You reach for the **viewer** build when you only need to render existing diagram
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [flowchart.js](flowchart-js.md) | ✅ | Tiny text-DSL-to-SVG flowchart renderer; great for simple non-standard flowcharts, but no BPMN semantics, no interactive editing, far smaller scope. |
-| [Mermaid](mermaid.md) | 未收录 | Broad text-to-diagram tool (incl. a basic BPMN-ish flow), Markdown-native; not a true BPMN 2.0 modeler and not interactive editing. |
-| dmn-js / form-js (bpmn.io) | 未收录 | Sibling libraries for DMN decision tables and forms; same team and architecture, but different notations — complementary, not substitutes. |
-| jBPM / Flowable web modelers | 未收录 | Engine-bundled BPMN modelers tied to a specific Java process engine; integrated execution but heavier and less embeddable as a standalone JS canvas. |
-| GoJS / mxGraph (draw.io) | 未收录 | General commercial/open diagramming canvases you'd build BPMN on top of yourself; more generic, but you implement BPMN correctness, which bpmn-js gives for free. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [flowchart.js](flowchart-js.md) | ✅ | Use this page for its stated niche; choose flowchart.js when you need tiny text-DSL-to-SVG flowchart renderer. | Tiny text-DSL-to-SVG flowchart renderer; great for simple non-standard flowcharts, but no BPMN semantics, no interactive editing, far smaller scope. |
+| [Mermaid](mermaid.md) | 未收录 | Use this page for its stated niche; choose Mermaid when you need broad text-to-diagram tool (incl. | Broad text-to-diagram tool (incl. a basic BPMN-ish flow), Markdown-native; not a true BPMN 2.0 modeler and not interactive editing. |
+| dmn-js / form-js (bpmn.io) | 未收录 | Use this page for its stated niche; choose dmn-js / form-js (bpmn.io) when you need sibling libraries for DMN decision tables and forms. | Sibling libraries for DMN decision tables and forms; same team and architecture, but different notations — complementary, not substitutes. |
+| jBPM / Flowable web modelers | 未收录 | Use this page for its stated niche; choose jBPM / Flowable web modelers when you need engine-bundled BPMN modelers tied to a specific Java process engine. | Engine-bundled BPMN modelers tied to a specific Java process engine; integrated execution but heavier and less embeddable as a standalone JS canvas. |
+| GoJS / mxGraph (draw.io) | 未收录 | Use this page for its stated niche; choose GoJS / mxGraph (draw.io) when you need general commercial/open diagramming canvases you'd build BPMN on top of yourself. | General commercial/open diagramming canvases you'd build BPMN on top of yourself; more generic, but you implement BPMN correctness, which bpmn-js gives for free. |
 
 ## Tech stack
 

@@ -9,6 +9,11 @@ license: MIT
 maturity: v0.1.2, ARCHIVED by Meta (read-only), last code push 2021-09 (2026-06)
 last_verified: 2026-06-29
 type: tool
+upstream:
+  pushed_at: 2021-09-15T20:30:34Z
+  default_branch: main
+  default_branch_sha: 9704810d994704761181eafcb816122751ef0fb7
+  archived: true
 health:
   schema: 1
   computed_at: 2026-06-29T04:21:21Z
@@ -87,14 +92,14 @@ The honest caveat is that this is the *legitimate* use case for a tool that is *
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [pyrasite](pyrasite.md) | ✅ | Also attaches to a live Python process via gdb, but *injects arbitrary code* (object dumps, thread stacks, reverse shell) rather than giving a packaged per-type memory report; broader and more dangerous, also low-cadence but **not archived**. |
-| tracemalloc (stdlib) | 未收录 | Built into CPython; tracks allocations and shows where memory is allocated *from within your own process* — maintained forever, no GDB, but requires you control/instrument the code (can't attach to an arbitrary running PID). |
-| memray (Bloomberg) | 未收录 | Actively maintained native memory profiler with flame graphs and live mode; the modern default for Python memory work, but you launch/attach with its tooling rather than reading an arbitrary PID's ncurses snapshot. |
-| Pympler | 未收录 | The object-introspection library memory-analyzer itself depends on; gives per-type object sizes/counts from inside your process — maintained, but a library you embed, not an attach-to-PID tool. |
-| objgraph | 未收录 | Also a dependency here; draws object reference graphs from inside the process to chase what keeps objects alive — maintained, but in-process, not an external attach. |
-| guppy3 / heapy, Scalene | 未收录 | guppy3 = heap analysis from within the process; Scalene = maintained CPU+GPU+memory profiler. Both are maintained substitutes for "where is my memory going," neither attaches to a foreign live PID the way memory-analyzer does. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [pyrasite](pyrasite.md) | ✅ | Use this page for its stated niche; choose pyrasite when you need also attaches to a live Python process via gdb, but *injects arbitrary code* (object dumps, thread s. | Also attaches to a live Python process via gdb, but *injects arbitrary code* (object dumps, thread stacks, reverse shell) rather than giving a packaged per-type memory report; broader and more dangerous, also low-cadence but **not archived**. |
+| tracemalloc (stdlib) | 未收录 | Use this page for its stated niche; choose tracemalloc (stdlib) when you need built into CPython. | Built into CPython; tracks allocations and shows where memory is allocated *from within your own process* — maintained forever, no GDB, but requires you control/instrument the code (can't attach to an arbitrary running PID). |
+| memray (Bloomberg) | 未收录 | Use this page for its stated niche; choose memray (Bloomberg) when you need actively maintained native memory profiler with flame graphs and live mode. | Actively maintained native memory profiler with flame graphs and live mode; the modern default for Python memory work, but you launch/attach with its tooling rather than reading an arbitrary PID's ncurses snapshot. |
+| Pympler | 未收录 | Use this page for its stated niche; choose Pympler when you need the object-introspection library memory-analyzer itself depends on. | The object-introspection library memory-analyzer itself depends on; gives per-type object sizes/counts from inside your process — maintained, but a library you embed, not an attach-to-PID tool. |
+| objgraph | 未收录 | Use this page for its stated niche; choose objgraph when you need also a dependency here. | Also a dependency here; draws object reference graphs from inside the process to chase what keeps objects alive — maintained, but in-process, not an external attach. |
+| guppy3 / heapy, Scalene | 未收录 | Use this page for its stated niche; choose guppy3 / heapy, Scalene when you need guppy3 = heap analysis from within the process. | guppy3 = heap analysis from within the process; Scalene = maintained CPU+GPU+memory profiler. Both are maintained substitutes for "where is my memory going," neither attaches to a foreign live PID the way memory-analyzer does. |
 
 ## Tech stack
 

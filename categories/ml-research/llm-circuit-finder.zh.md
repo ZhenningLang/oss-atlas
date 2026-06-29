@@ -9,6 +9,11 @@ license: MIT
 maturity: research demo, no tagged release, last pushed 2026-03 (as of 2026-06)
 last_verified: 2026-06-26
 type: tool
+upstream:
+  pushed_at: 2026-03-20T01:51:23Z
+  default_branch: main
+  default_branch_sha: 77263483cd51fffed9593ce580e8702130c34bec
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:04:17Z
@@ -86,12 +91,12 @@ health:
 
 ## 横向对比
 
-| 替代方案 | 是否已收录 | 取舍 |
-|---|---|---|
-| RYS / `mergekit` passthrough（层堆叠式模型合并） | 未收录 | mergekit 的 `passthrough` 方法同样会复制/堆叠层，但它是个通用模型合并工具、目标是产出一个合并好的成品模型；llm-circuit-finder 多了*搜索*循环（sweep + 探针）来发现*该复制哪个*层块并验证它。 |
-| lm-evaluation-harness | 未收录 | 本仓库调用的标准基准运行器；它度量模型，但不做、也不搜索层手术。 |
-| 机理可解释性电路工具（如 TransformerLens） | 未收录 | 通过在 HF 模型上做 activation patching/消融来*理解*电路；本仓库是个粗粒度、面向能力的「在 GGUF 里复制整段层块并测量」demo，不是 feature 级别的可解释性。 |
-| 微调 / LoRA 栈 | 未收录 | 改权重来提升某个能力；本工具与之正交（不训练），作者也指出两者可以叠加。成本/收益和可复现性画像不同。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| RYS / `mergekit` passthrough（层堆叠式模型合并） | 未收录 | 当前页用于它的主场景；如果更看重“mergekit 的 `passthrough` 方法同样会复制/堆叠层，但它是个通用模型合并工具、目标是产出一个合并好的成品模型”，再选 RYS / mergekit passthrough（层堆叠式模型合并）。 | mergekit 的 `passthrough` 方法同样会复制/堆叠层，但它是个通用模型合并工具、目标是产出一个合并好的成品模型；llm-circuit-finder 多了*搜索*循环（sweep + 探针）来发现*该复制哪个*层块并验证它。 |
+| lm-evaluation-harness | 未收录 | 当前页用于它的主场景；如果更看重“本仓库调用的标准基准运行器”，再选 lm-evaluation-harness。 | 本仓库调用的标准基准运行器；它度量模型，但不做、也不搜索层手术。 |
+| 机理可解释性电路工具（如 TransformerLens） | 未收录 | 当前页用于它的主场景；如果更看重“通过在 HF 模型上做 activation patching/消融来*理解*电路”，再选 机理可解释性电路工具（如 TransformerLens）。 | 通过在 HF 模型上做 activation patching/消融来*理解*电路；本仓库是个粗粒度、面向能力的「在 GGUF 里复制整段层块并测量」demo，不是 feature 级别的可解释性。 |
+| 微调 / LoRA 栈 | 未收录 | 当前页用于它的主场景；如果更看重“改权重来提升某个能力”，再选 微调 / LoRA 栈。 | 改权重来提升某个能力；本工具与之正交（不训练），作者也指出两者可以叠加。成本/收益和可复现性画像不同。 |
 
 ## 技术栈
 

@@ -9,6 +9,11 @@ license: LicenseRef-Modified-MIT
 maturity: oxlint-plugin-react-doctor@0.5.8, active (2026-06)
 last_verified: 2026-06-26
 type: tool
+upstream:
+  pushed_at: 2026-06-29T11:33:33Z
+  default_branch: main
+  default_branch_sha: e2393c4a6b842efc72d5c225273c0de918a13450
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:37:35Z
@@ -87,13 +92,13 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| [open-code-review](open-code-review.zh.md) | ✅ | LLM 驱动、语言无关的 PR 审查（阿里巴巴）；用自然语言推理逻辑。React Doctor 是确定性、仅限 React、基于规则——可重复但没有语义判断。 |
-| [claude-code-security-review](claude-code-security-review.zh.md) | ✅ | 基于 Claude、聚焦安全的审查（Anthropic）；深入、语言无关的漏洞推理。React Doctor 是覆盖面广的 React linter，不是专门的安全分析器。 |
-| eslint-plugin-react-hooks / react | 未收录 | React 官方 lint 规则；React Doctor 与之有重叠，但额外提供 agent-skill 工作流、oxlint 插件，以及超出官方集的「agent 易犯错」规则。 |
-| oxlint | 未收录 | React Doctor 为之提供插件的高速 Rust linter;oxlint 是引擎/宿主，React Doctor 供给面向 agent 的 React 专属规则包。 |
-| Biome | 未收录 | 一体化的 Rust 格式化+lint;JS/TS lint 覆盖广，但不专门针对「抓 agent 写的 React 反模式」。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [open-code-review](open-code-review.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“LLM 驱动、语言无关的 PR 审查（阿里巴巴）”，再选 open-code-review。 | LLM 驱动、语言无关的 PR 审查（阿里巴巴）；用自然语言推理逻辑。React Doctor 是确定性、仅限 React、基于规则——可重复但没有语义判断。 |
+| [claude-code-security-review](claude-code-security-review.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“基于 Claude、聚焦安全的审查（Anthropic）”，再选 claude-code-security-review。 | 基于 Claude、聚焦安全的审查（Anthropic）；深入、语言无关的漏洞推理。React Doctor 是覆盖面广的 React linter，不是专门的安全分析器。 |
+| eslint-plugin-react-hooks / react | 未收录 | 当前页用于它的主场景；如果更看重“React 官方 lint 规则”，再选 eslint-plugin-react-hooks / react。 | React 官方 lint 规则；React Doctor 与之有重叠，但额外提供 agent-skill 工作流、oxlint 插件，以及超出官方集的「agent 易犯错」规则。 |
+| oxlint | 未收录 | 当前页用于它的主场景；如果更看重“React Doctor 为之提供插件的高速 Rust linter”，再选 oxlint。 | React Doctor 为之提供插件的高速 Rust linter;oxlint 是引擎/宿主，React Doctor 供给面向 agent 的 React 专属规则包。 |
+| Biome | 未收录 | 当前页用于它的主场景；如果更看重“一体化的 Rust 格式化+lint”，再选 Biome。 | 一体化的 Rust 格式化+lint;JS/TS lint 覆盖广，但不专门针对「抓 agent 写的 React 反模式」。 |
 
 ## 技术栈
 

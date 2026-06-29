@@ -5,18 +5,18 @@
 
 ## 本分类项目
 
-| 项目 | 何时用 | 页面 |
-|---|---|---|
-| **Markdown Here** | 当你想用浏览器/Thunderbird 扩展把邮件用 Markdown 写好、发送前渲染成 HTML 时用它——注意维护已放缓。 | [→](markdown-here.zh.md) |
-| **marked** | 当你需要一个快速、底层的 JS Markdown→HTML 解析器时用它——但你得自己做 XSS 消毒，且不要求严格 CommonMark。 | [→](marked.zh.md) |
+| 项目 | 何时用 | 健康度 | 页面 |
+| --- | --- | --- | --- |
+| **Markdown Here** | 当你想用浏览器/Thunderbird 扩展把邮件用 Markdown 写好、发送前渲染成 HTML 时用它——注意维护已放缓。 | C（4/6） | [→](markdown-here.zh.md) |
+| **marked** | 当你需要一个快速、底层的 JS Markdown→HTML 解析器时用它——但你得自己做 XSS 消毒，且不要求严格 CommonMark。 | A（5/6） | [→](marked.zh.md) |
 
 ## 对比矩阵
 
-| 选项 | 是否收录 | 一句话取舍 |
-|---|---|---|
-| [Markdown Here](markdown-here.zh.md) | ✅ | 当你想用浏览器/Thunderbird 扩展把邮件用 Markdown 写好、发送前渲染成 HTML 时用它——注意维护已放缓。 |
-| [marked](marked.zh.md) | ✅ | 当你需要一个快速、底层的 JS Markdown→HTML 解析器时用它——但你得自己做 XSS 消毒，且不要求严格 CommonMark。 |
-| markdown-it / remark / micromark | 未收录 | 各页对比里点到的其他 Markdown 解析器与工具链。 |
+| 选项 | 是否收录 | 健康度 | 一句话取舍 |
+| --- | --- | --- | --- |
+| [Markdown Here](markdown-here.zh.md) | ✅ | C（4/6） | 当你想用浏览器/Thunderbird 扩展把邮件用 Markdown 写好、发送前渲染成 HTML 时用它——注意维护已放缓。 |
+| [marked](marked.zh.md) | ✅ | A（5/6） | 当你需要一个快速、底层的 JS Markdown→HTML 解析器时用它——但你得自己做 XSS 消毒，且不要求严格 CommonMark。 |
+| markdown-it / remark / micromark | 未收录 | — | 各页对比里点到的其他 Markdown 解析器与工具链。 |
 
 ## 什么该放这里
 

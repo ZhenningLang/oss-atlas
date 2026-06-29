@@ -9,6 +9,11 @@ license: MIT
 maturity: v1.0.0 release 2026-05-27, active (2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+upstream:
+  pushed_at: 2026-06-03T11:35:43Z
+  default_branch: main
+  default_branch_sha: 91b560849e8f883922cc2fa8a358a668caa94105
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:38:34Z
@@ -81,14 +86,14 @@ Reach for it specifically when consistency of *one* visual voice matters across 
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [guizang-social-card](guizang-social-card.md) | ✅ | Generates polished social/quote cards (often via editable templates), not hand-drawn in-article explanatory sketches; different visual register. |
-| [guizang-ppt](guizang-ppt.md) | ✅ | Builds slide decks (structured, multi-page); this skill makes single-concept inline illustrations and refuses decks. |
-| [html-anything](html-anything.md) | ✅ | Produces HTML/CSS artifacts you can edit and host; this produces flat PNGs in one fixed art style. |
-| [open-design](open-design.md) | ✅ | Toward reusable UI/design-system artifacts; orthogonal to a hand-drawn article-illustration persona. |
-| [impeccable](impeccable.md) | ✅ | Different generation target (design artifacts) rather than a fixed-IP Chinese illustration voice. |
-| nano-banana / gpt-image prompt packs | 未收录 | Generic image-prompt collections give you raw model access with no article-analysis, shot-list, or consistent-IP layer this skill adds. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [guizang-social-card](guizang-social-card.md) | ✅ | Use this page for its stated niche; choose guizang-social-card when you need generates polished social/quote cards (often via editable templates), not hand-drawn in-article expl. | Generates polished social/quote cards (often via editable templates), not hand-drawn in-article explanatory sketches; different visual register. |
+| [guizang-ppt](guizang-ppt.md) | ✅ | Use this page for its stated niche; choose guizang-ppt when you need builds slide decks (structured, multi-page). | Builds slide decks (structured, multi-page); this skill makes single-concept inline illustrations and refuses decks. |
+| [html-anything](html-anything.md) | ✅ | Use this page for its stated niche; choose html-anything when you need produces HTML/CSS artifacts you can edit and host. | Produces HTML/CSS artifacts you can edit and host; this produces flat PNGs in one fixed art style. |
+| [open-design](open-design.md) | ✅ | Use this page for its stated niche; choose open-design when you need toward reusable UI/design-system artifacts. | Toward reusable UI/design-system artifacts; orthogonal to a hand-drawn article-illustration persona. |
+| [impeccable](impeccable.md) | ✅ | Use this page for its stated niche; choose impeccable when you need different generation target (design artifacts) rather than a fixed-IP Chinese illustration voice. | Different generation target (design artifacts) rather than a fixed-IP Chinese illustration voice. |
+| nano-banana / gpt-image prompt packs | 未收录 | Use this page for its stated niche; choose nano-banana / gpt-image prompt packs when you need generic image-prompt collections give you raw model access with no article-analysis, shot-list, or c. | Generic image-prompt collections give you raw model access with no article-analysis, shot-list, or consistent-IP layer this skill adds. |
 
 ## Health & viability
 

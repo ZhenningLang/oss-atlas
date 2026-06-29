@@ -9,6 +9,11 @@ license: MIT
 maturity: ~v0.0.31, coasting — last pushed 2025-01 (~1.5 yr idle as of 2026-06), ~16.5k stars
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2025-01-18T15:23:58Z
+  default_branch: main
+  default_branch_sha: 5c1ac929bd19a7ecf86d5fb8d94771c8969fcb80
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:08:37Z
@@ -76,12 +81,12 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| [Tesseract](tesseract.zh.md) | ✅ | 通用印刷体文字 OCR——正相反的活：擅长散文/文档，但**完全不懂数学记号**，也不会吐 LaTeX。把它俩搭着用（Tesseract 管文字，pix2tex 管公式），别拿一个替另一个。 |
-| Mathpix | 未收录 | 商业数学 OCR 服务/API；在数学 + 手写 + 多行上通常是准确率领头羊，有移动端和文档导出——但它是付费 SaaS（按次计费、数据离开你的机器），不是 MIT 的可自托管仓库。 |
-| texify | 未收录 | 开源的公式转 LaTeX 模型（VikParuchuri）；瞄准同一任务、维护更近的直接替代——值得在你的数据和维护活跃度上做对比。 |
-| GPT-4o / Qwen-VL / Gemini（VLM） | 未收录 | 通用视觉语言模型，零样本把公式转 LaTeX；在脏/带上下文输入上更强、且在持续进步，但更重（API 费用或大体积本地权重），不是一个专门、轻量的公式工具。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [Tesseract](tesseract.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“通用印刷体文字 OCR”，再选 Tesseract。 | 通用印刷体文字 OCR——正相反的活：擅长散文/文档，但**完全不懂数学记号**，也不会吐 LaTeX。把它俩搭着用（Tesseract 管文字，pix2tex 管公式），别拿一个替另一个。 |
+| Mathpix | 未收录 | 当前页用于它的主场景；如果更看重“商业数学 OCR 服务/API”，再选 Mathpix。 | 商业数学 OCR 服务/API；在数学 + 手写 + 多行上通常是准确率领头羊，有移动端和文档导出——但它是付费 SaaS（按次计费、数据离开你的机器），不是 MIT 的可自托管仓库。 |
+| texify | 未收录 | 当前页用于它的主场景；如果更看重“开源的公式转 LaTeX 模型（VikParuchuri）”，再选 texify。 | 开源的公式转 LaTeX 模型（VikParuchuri）；瞄准同一任务、维护更近的直接替代——值得在你的数据和维护活跃度上做对比。 |
+| GPT-4o / Qwen-VL / Gemini（VLM） | 未收录 | 当前页用于它的主场景；如果更看重“通用视觉语言模型，零样本把公式转 LaTeX”，再选 GPT-4o / Qwen-VL / Gemini（VLM）。 | 通用视觉语言模型，零样本把公式转 LaTeX；在脏/带上下文输入上更强、且在持续进步，但更重（API 费用或大体积本地权重），不是一个专门、轻量的公式工具。 |
 
 ## 技术栈
 

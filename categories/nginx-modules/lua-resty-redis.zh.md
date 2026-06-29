@@ -9,6 +9,11 @@ license: BSD-2-Clause
 maturity: v0.33 line, active, ~2.0k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2026-05-14T04:38:19Z
+  default_branch: master
+  default_branch_sha: 4c1e3757998e53bf032bf3c9293ba31ced1ca85d
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:07:37Z
@@ -80,13 +85,13 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| [lua-nginx-module](lua-nginx-module.zh.md) | ✅ | 本驱动*跑在其上*的模块（提供 cosocket API）——基础，不是替代。 |
-| lua-resty-redis-cluster | 未收录 | 在本驱动之上加 Redis Cluster 槽位路由的社区库——单节点不够用时的去处。 |
-| OpenResty 套件里的 resty.redis | 未收录 | 与 OpenResty 内置的同一个库——通常你就是这么拿到它的，与 ngx_lua 版本匹配。 |
-| 阻塞式 Lua Redis 客户端（redis-lua） | 未收录 | 在普通 Lua 里能用但会**阻塞**——在 NGINX worker 里不可用；设计目标相反。 |
-| 网关原生 Redis 插件（Kong/APISIX） | 未收录 | 更高层的限流/缓存插件，底下常用本驱动；产品功能 vs 裸驱动。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [lua-nginx-module](lua-nginx-module.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“本驱动*跑在其上*的模块（提供 cosocket API）”，再选 lua-nginx-module。 | 本驱动*跑在其上*的模块（提供 cosocket API）——基础，不是替代。 |
+| lua-resty-redis-cluster | 未收录 | 当前页用于它的主场景；如果更看重“在本驱动之上加 Redis Cluster 槽位路由的社区库”，再选 lua-resty-redis-cluster。 | 在本驱动之上加 Redis Cluster 槽位路由的社区库——单节点不够用时的去处。 |
+| OpenResty 套件里的 resty.redis | 未收录 | 当前页用于它的主场景；如果更看重“与 OpenResty 内置的同一个库”，再选 OpenResty 套件里的 resty.redis。 | 与 OpenResty 内置的同一个库——通常你就是这么拿到它的，与 ngx_lua 版本匹配。 |
+| 阻塞式 Lua Redis 客户端（redis-lua） | 未收录 | 当前页用于它的主场景；如果更看重“在普通 Lua 里能用但会**阻塞**”，再选 阻塞式 Lua Redis 客户端（redis-lua）。 | 在普通 Lua 里能用但会**阻塞**——在 NGINX worker 里不可用；设计目标相反。 |
+| 网关原生 Redis 插件（Kong/APISIX） | 未收录 | 当前页用于它的主场景；如果更看重“更高层的限流/缓存插件，底下常用本驱动”，再选 网关原生 Redis 插件（Kong/APISIX）。 | 更高层的限流/缓存插件，底下常用本驱动；产品功能 vs 裸驱动。 |
 
 ## 技术栈
 

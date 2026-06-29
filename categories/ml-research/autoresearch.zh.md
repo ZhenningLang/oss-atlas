@@ -9,6 +9,11 @@ license: MIT
 maturity: no tagged release, active, master @ ~36 commits (as of 2026-03)
 last_verified: 2026-06-26
 type: app
+upstream:
+  pushed_at: 2026-03-26T00:07:37Z
+  default_branch: master
+  default_branch_sha: 228791fb499afffb54b46200aca536f79142f117
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:03:42Z
@@ -83,12 +88,12 @@ health:
 
 ## 横向对比
 
-| 替代方案 | 已收录 | 取舍 |
-|---|---|---|
-| [llm-circuit-finder](llm-circuit-finder.md) | ✅ | 同样是小巧、自包含的研究 demo，但它探索的是在既有大模型上做*推理期*的层复制 / circuit 路由——没有训练循环、没有 agent 驱动的迭代；研究问题完全不同。 |
-| nanochat | 未收录 | 本项目正是从这个完整单卡 GPT 训练项目简化而来；它面向人类端到端训练一个真正的小型 ChatGPT clone，而非让 agent 在时间预算下改写它。 |
-| nanoGPT | 未收录 | 极简 GPT 训练参考；教学型 baseline，靠手工编辑，没有 agentic-research 的框架，也没有固定预算的评测 harness。 |
-| AI-Scientist (Sakana) | 未收录 | 一条更重的端到端「agent 做科研」流水线（想法→实验→论文撰写）；范围更广、活动部件远多于这个单文件训练循环。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [llm-circuit-finder](llm-circuit-finder.md) | ✅ | 当前页用于它的主场景；如果更看重“同样是小巧、自包含的研究 demo，但它探索的是在既有大模型上做*推理期*的层复制 / circuit 路由”，再选 llm-circuit-finder。 | 同样是小巧、自包含的研究 demo，但它探索的是在既有大模型上做*推理期*的层复制 / circuit 路由——没有训练循环、没有 agent 驱动的迭代；研究问题完全不同。 |
+| nanochat | 未收录 | 当前页用于它的主场景；如果更看重“本项目正是从这个完整单卡 GPT 训练项目简化而来”，再选 nanochat。 | 本项目正是从这个完整单卡 GPT 训练项目简化而来；它面向人类端到端训练一个真正的小型 ChatGPT clone，而非让 agent 在时间预算下改写它。 |
+| nanoGPT | 未收录 | 当前页用于它的主场景；如果更看重“极简 GPT 训练参考”，再选 nanoGPT。 | 极简 GPT 训练参考；教学型 baseline，靠手工编辑，没有 agentic-research 的框架，也没有固定预算的评测 harness。 |
+| AI-Scientist (Sakana) | 未收录 | 当前页用于它的主场景；如果更看重“一条更重的端到端「agent 做科研」流水线（想法→实验→论文撰写）”，再选 AI-Scientist (Sakana)。 | 一条更重的端到端「agent 做科研」流水线（想法→实验→论文撰写）；范围更广、活动部件远多于这个单文件训练循环。 |
 
 ## 技术栈
 

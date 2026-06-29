@@ -9,6 +9,11 @@ license: MIT
 maturity: v7.1, active (2026-06)
 last_verified: 2026-06-28
 type: app
+upstream:
+  pushed_at: 2026-06-29T00:41:39Z
+  default_branch: main
+  default_branch_sha: 3b22efcdc97ece294c7dc746bc4f4917e04042ef
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:15:38Z
@@ -83,13 +88,13 @@ You also reach for it when you already keep your subscriptions in a sync service
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| Reeder | 未收录 | Polished commercial Apple-platform reader with broad sync support; closed-source and paid, where NetNewsWire is free/MIT and auditable. |
-| FreshRSS | 未收录 | Self-hosted PHP feed *server* + web UI; you run it, it syncs to many clients (including NetNewsWire) — a backend, not a native client. |
-| Miniflux | 未收录 | Minimalist self-hosted Go feed reader (server + web); single-binary backend, no native Apple app of its own. |
-| Feedly / Inoreader | 未收录 | Hosted SaaS readers with discovery and rules; cross-platform and feature-rich but proprietary and data-hungry — NetNewsWire can act as a native client to some of these. |
-| NewsBlur | 未收录 | Open-source hosted reader with training/intelligence features; a full service stack vs NetNewsWire's local-first native client. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| Reeder | 未收录 | Use this page for its stated niche; choose Reeder when you need polished commercial Apple-platform reader with broad sync support. | Polished commercial Apple-platform reader with broad sync support; closed-source and paid, where NetNewsWire is free/MIT and auditable. |
+| FreshRSS | 未收录 | Use this page for its stated niche; choose FreshRSS when you need self-hosted PHP feed *server* + web UI. | Self-hosted PHP feed *server* + web UI; you run it, it syncs to many clients (including NetNewsWire) — a backend, not a native client. |
+| Miniflux | 未收录 | Use this page for its stated niche; choose Miniflux when you need minimalist self-hosted Go feed reader (server + web). | Minimalist self-hosted Go feed reader (server + web); single-binary backend, no native Apple app of its own. |
+| Feedly / Inoreader | 未收录 | Use this page for its stated niche; choose Feedly / Inoreader when you need hosted SaaS readers with discovery and rules. | Hosted SaaS readers with discovery and rules; cross-platform and feature-rich but proprietary and data-hungry — NetNewsWire can act as a native client to some of these. |
+| NewsBlur | 未收录 | Use this page for its stated niche; choose NewsBlur when you need open-source hosted reader with training/intelligence features. | Open-source hosted reader with training/intelligence features; a full service stack vs NetNewsWire's local-first native client. |
 
 ## Tech stack
 

@@ -5,17 +5,17 @@
 
 ## Projects in this category
 
-| Project | Use when | Page |
-|---|---|---|
-| **Apache Superset** | Use it when you want self-hosted SQL BI dashboards and exploration over a warehouse — not infra metrics/observability. | [→](superset.md) |
+| Project | Use when | Health | Page |
+| --- | --- | --- | --- |
+| **Apache Superset** | Use it when you want self-hosted SQL BI dashboards and exploration over a warehouse — not infra metrics/observability. | A (6/6) | [→](superset.md) |
 
 ## Comparison matrix
 
-| Option | Indexed | One-line tradeoff |
-|---|---|---|
-| [Apache Superset](superset.md) | ✅ | Self-hosted SQL BI + exploration over warehouses; heavier multi-service deploy than Metabase. |
-| [Grafana](../observability/grafana.md) | ✅ | Metrics/logs/traces observability dashboards — not warehouse BI; different audience. |
-| Metabase / Redash / Tableau / Looker | 未收录 | Other BI/analytics tools named across the pages. |
+| Option | Indexed | Health | One-line tradeoff |
+| --- | --- | --- | --- |
+| [Apache Superset](superset.md) | ✅ | A (6/6) | Self-hosted SQL BI + exploration over warehouses; heavier multi-service deploy than Metabase. |
+| [Grafana](../observability/grafana.md) | ✅ | B (5/6) | Metrics/logs/traces observability dashboards — not warehouse BI; different audience. |
+| Metabase / Redash / Tableau / Looker | 未收录 | — | Other BI/analytics tools named across the pages. |
 
 ## What belongs here
 

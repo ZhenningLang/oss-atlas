@@ -9,6 +9,11 @@ license: MIT
 maturity: v0.0.1 demo, no commits since 2020-05, ~9.6k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: app
+upstream:
+  pushed_at: 2023-10-03T21:08:46Z
+  default_branch: master
+  default_branch_sha: 399c19b662ac4ef08fcb37bb16936add3ae1faa8
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:54:16Z
@@ -77,11 +82,11 @@ Realistically that is the *only* defensible use today: reading it as a historica
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| Appium | 未收录 | A maintained, general mobile-UI automation framework (Android/iOS) with element selectors instead of hardcoded pixels — the right tool if you actually need robust device automation. |
-| Plain ADB + a script | 未收录 | The underlying mechanism Douyin-Bot demonstrates; if you only want screencap + input events, raw `adb` is more transparent and isn't tied to a dead cloud API. |
-| airtest / Poco (NetEase) | 未收录 | Image-recognition-based game/app UI automation with an IDE; a maintained Chinese-ecosystem alternative for coordinate/image-driven device automation. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| Appium | 未收录 | Use this page for its stated niche; choose Appium when you need a maintained, general mobile-UI automation framework (Android/iOS) with element selectors instead of. | A maintained, general mobile-UI automation framework (Android/iOS) with element selectors instead of hardcoded pixels — the right tool if you actually need robust device automation. |
+| Plain ADB + a script | 未收录 | Use this page for its stated niche; choose Plain ADB + a script when you need the underlying mechanism Douyin-Bot demonstrates. | The underlying mechanism Douyin-Bot demonstrates; if you only want screencap + input events, raw `adb` is more transparent and isn't tied to a dead cloud API. |
+| airtest / Poco (NetEase) | 未收录 | Use this page for its stated niche; choose airtest / Poco (NetEase) when you need image-recognition-based game/app UI automation with an IDE. | Image-recognition-based game/app UI automation with an IDE; a maintained Chinese-ecosystem alternative for coordinate/image-driven device automation. |
 
 ## Tech stack
 

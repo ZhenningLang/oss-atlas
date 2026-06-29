@@ -9,6 +9,11 @@ license: MIT
 maturity: stable reference release, low ongoing maintenance, ~33.9k stars (last pushed 2026-03, as of 2026-06)
 last_verified: 2026-06-28
 type: model
+upstream:
+  pushed_at: 2026-03-25T18:46:40Z
+  default_branch: main
+  default_branch_sha: d05afc436d78f1c48dc0dbf8e5980a9d471f35f6
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:03:53Z
@@ -86,13 +91,13 @@ You also reach for this specific repo when you want the canonical, minimal refer
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| OpenCLIP | 未收录 | Open reproduction with training code and a large zoo of checkpoints (many trained on LAION/DataComp); the de-facto choice when you need more or stronger CLIP models or want to train your own — strictly broader than this reference repo. |
-| Hugging Face `transformers` CLIP | 未收录 | The same OpenAI weights wrapped in a maintained, batteries-included API (processors, `from_pretrained`, pipelines); easier to integrate and keep current, at the cost of the heavier `transformers` dependency. |
-| SigLIP | 未收录 | Newer image-text model trained with a sigmoid loss; typically stronger zero-shot accuracy and better at scale, but a different model family — usually consumed via OpenCLIP or `transformers`, not this repo. |
-| EVA-CLIP | 未收录 | Scaled CLIP with improved training recipe and larger backbones; higher accuracy ceiling, heavier weights and compute. |
-| BLIP / BLIP-2 | 未收录 | Vision-language models that *generate* text (captioning, VQA); solve a different problem than CLIP's contrastive embedding/retrieval — not a drop-in substitute. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| OpenCLIP | 未收录 | Use this page for its stated niche; choose OpenCLIP when you need open reproduction with training code and a large zoo of checkpoints (many trained on LAION/DataComp). | Open reproduction with training code and a large zoo of checkpoints (many trained on LAION/DataComp); the de-facto choice when you need more or stronger CLIP models or want to train your own — strictly broader than this reference repo. |
+| Hugging Face `transformers` CLIP | 未收录 | Use this page for its stated niche; choose Hugging Face transformers CLIP when you need the same OpenAI weights wrapped in a maintained, batteries-included API (processors, `from_pretraine. | The same OpenAI weights wrapped in a maintained, batteries-included API (processors, `from_pretrained`, pipelines); easier to integrate and keep current, at the cost of the heavier `transformers` dependency. |
+| SigLIP | 未收录 | Use this page for its stated niche; choose SigLIP when you need newer image-text model trained with a sigmoid loss. | Newer image-text model trained with a sigmoid loss; typically stronger zero-shot accuracy and better at scale, but a different model family — usually consumed via OpenCLIP or `transformers`, not this repo. |
+| EVA-CLIP | 未收录 | Use this page for its stated niche; choose EVA-CLIP when you need scaled CLIP with improved training recipe and larger backbones. | Scaled CLIP with improved training recipe and larger backbones; higher accuracy ceiling, heavier weights and compute. |
+| BLIP / BLIP-2 | 未收录 | Use this page for its stated niche; choose BLIP / BLIP-2 when you need vision-language models that *generate* text (captioning, VQA). | Vision-language models that *generate* text (captioning, VQA); solve a different problem than CLIP's contrastive embedding/retrieval — not a drop-in substitute. |
 
 ## Tech stack
 

@@ -9,6 +9,11 @@ license: MIT
 maturity: v0.0.1 demo, no commits since 2020-05, ~9.6k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: app
+upstream:
+  pushed_at: 2023-10-03T21:08:46Z
+  default_branch: master
+  default_branch_sha: 399c19b662ac4ef08fcb37bb16936add3ae1faa8
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:54:16Z
@@ -77,11 +82,11 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| Appium | 未收录 | 有人维护的通用移动 UI 自动化框架（Android/iOS），用元素选择器而非硬编码像素——若你真需要稳健的设备自动化，这才是对的工具。 |
-| 纯 ADB + 脚本 | 未收录 | Douyin-Bot 演示的底层机制；若你只想要 screencap + input 事件，原生 `adb` 更透明，也不绑死在一个已死的云 API 上。 |
-| airtest / Poco（网易） | 未收录 | 基于图像识别的游戏/app UI 自动化，带 IDE；坐标/图像驱动设备自动化的、有人维护的国内生态替代。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| Appium | 未收录 | 当前页用于它的主场景；如果更看重“有人维护的通用移动 UI 自动化框架（Android/iOS），用元素选择器而非硬编码像素”，再选 Appium。 | 有人维护的通用移动 UI 自动化框架（Android/iOS），用元素选择器而非硬编码像素——若你真需要稳健的设备自动化，这才是对的工具。 |
+| 纯 ADB + 脚本 | 未收录 | 当前页用于它的主场景；如果更看重“Douyin-Bot 演示的底层机制”，再选 纯 ADB + 脚本。 | Douyin-Bot 演示的底层机制；若你只想要 screencap + input 事件，原生 `adb` 更透明，也不绑死在一个已死的云 API 上。 |
+| airtest / Poco（网易） | 未收录 | 当前页用于它的主场景；如果更看重“基于图像识别的游戏/app UI 自动化，带 IDE”，再选 airtest / Poco（网易）。 | 基于图像识别的游戏/app UI 自动化，带 IDE；坐标/图像驱动设备自动化的、有人维护的国内生态替代。 |
 
 ## 技术栈
 

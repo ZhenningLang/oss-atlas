@@ -9,6 +9,11 @@ license: MIT
 maturity: no tagged release, active (pushed 2026-06-22)
 last_verified: 2026-06-26
 type: skill-pack
+upstream:
+  pushed_at: 2026-06-29T00:32:10Z
+  default_branch: main
+  default_branch_sha: a597cb6d9e41b3c117ca791538764c8ccbe52119
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:32:48Z
@@ -80,12 +85,12 @@ You reach for it especially when you want breadth across many domains at once (n
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [wshobson/agents](wshobson-agents.md) | ✅ | Another large Claude Code subagent collection, coding-focused. Agency-Agents is broader (16 non-coding divisions too) and ships multi-tool converters; wshobson stays closer to engineering roles. Pick by whether you need cross-domain breadth or a tighter dev-only set. |
-| [awesome-claude-code-subagents](awesome-claude-code-subagents.md) | ✅ | A large curated subagent directory in the same leaf. Compare on curation philosophy and how many personas you actually want installed vs. browsed. |
-| [antfu/skills](../personal-collections/antfu-skills.md) | ✅ | A personal *skills* collection (task workflows), not role personas — different unit of consumption. Use skills for "how to do X", personas for "act as Y". |
-| Anthropic's example/built-in agents | 未收录 | The platform's own subagent examples; Agency-Agents is a third-party bulk catalog layered on top, so names and roles can overlap or duplicate native ones. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [wshobson/agents](wshobson-agents.md) | ✅ | Use this page for its stated niche; choose wshobson/agents when you need another large Claude Code subagent collection, coding-focused. | Another large Claude Code subagent collection, coding-focused. Agency-Agents is broader (16 non-coding divisions too) and ships multi-tool converters; wshobson stays closer to engineering roles. Pick by whether you need cross-domain breadth or a tighter dev-only set. |
+| [awesome-claude-code-subagents](awesome-claude-code-subagents.md) | ✅ | Use this page for its stated niche; choose awesome-claude-code-subagents when you need a large curated subagent directory in the same leaf. | A large curated subagent directory in the same leaf. Compare on curation philosophy and how many personas you actually want installed vs. browsed. |
+| [antfu/skills](../personal-collections/antfu-skills.md) | ✅ | Use this page for its stated niche; choose antfu/skills when you need a personal *skills* collection (task workflows), not role personas. | A personal *skills* collection (task workflows), not role personas — different unit of consumption. Use skills for "how to do X", personas for "act as Y". |
+| Anthropic's example/built-in agents | 未收录 | Use this page for its stated niche; choose Anthropic's example/built-in agents when you need the platform's own subagent examples. | The platform's own subagent examples; Agency-Agents is a third-party bulk catalog layered on top, so names and roles can overlap or duplicate native ones. |
 
 ## Health & viability
 

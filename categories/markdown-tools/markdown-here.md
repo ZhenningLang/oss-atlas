@@ -9,6 +9,11 @@ license: MIT
 maturity: "v2.16.0, low-cadence/effectively stale, ~60.2k stars (last pushed 2025-08)"
 last_verified: 2026-06-28
 type: tool
+upstream:
+  pushed_at: 2025-08-22T00:21:50Z
+  default_branch: master
+  default_branch_sha: e00d005299922198aef968e0cd42b275525c20a6
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:59:09Z
@@ -80,12 +85,12 @@ It earns its place precisely because it's *inline and on-demand* in fields you d
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| marked | 未收录 | A Markdown→HTML *parsing library* you call from JavaScript; the right tool when you need rendering inside an app or pipeline — but it's not a browser UI, you wire up the editor/compose integration yourself. |
-| Browser-native rich-text compose (Gmail/Outlook toolbars) | 未收录 | Built into the mail client, nothing to install; but it's WYSIWYG-by-toolbar with no Markdown and weak code-block/table support — exactly the friction Markdown Here removes. |
-| Obsidian / editor Markdown plugins | 未收录 | First-class Markdown authoring with live preview, but inside a *document editor*, not your webmail compose box; you'd draft there and paste, losing the in-field, at-send-time conversion. |
-| Markdown Here Revival (fork/successor) | 未收录 | A community fork aimed at keeping the idea alive (notably for Thunderbird), as the original stalled; hosting and its own maintenance status should be verified before relying on it (see Caveats). |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| marked | 未收录 | Use this page for its stated niche; choose marked when you need a Markdown→HTML *parsing library* you call from JavaScript. | A Markdown→HTML *parsing library* you call from JavaScript; the right tool when you need rendering inside an app or pipeline — but it's not a browser UI, you wire up the editor/compose integration yourself. |
+| Browser-native rich-text compose (Gmail/Outlook toolbars) | 未收录 | Use this page for its stated niche; choose Browser-native rich-text compose (Gmail/Outlook toolbars) when you need built into the mail client, nothing to install. | Built into the mail client, nothing to install; but it's WYSIWYG-by-toolbar with no Markdown and weak code-block/table support — exactly the friction Markdown Here removes. |
+| Obsidian / editor Markdown plugins | 未收录 | Use this page for its stated niche; choose Obsidian / editor Markdown plugins when you need first-class Markdown authoring with live preview, but inside a *document editor*, not your webmail c. | First-class Markdown authoring with live preview, but inside a *document editor*, not your webmail compose box; you'd draft there and paste, losing the in-field, at-send-time conversion. |
+| Markdown Here Revival (fork/successor) | 未收录 | Use this page for its stated niche; choose Markdown Here Revival (fork/successor) when you need a community fork aimed at keeping the idea alive (notably for Thunderbird), as the original stalled. | A community fork aimed at keeping the idea alive (notably for Thunderbird), as the original stalled; hosting and its own maintenance status should be verified before relying on it (see Caveats). |
 
 ## Tech stack
 

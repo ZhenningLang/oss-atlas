@@ -9,6 +9,11 @@ license: MIT
 maturity: v2.8.8, active (2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+upstream:
+  pushed_at: 2026-06-28T02:27:08Z
+  default_branch: main
+  default_branch_sha: 8a81ed60272d21d4b8808f7308d49a0b1b000555
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:29:13Z
@@ -80,14 +85,14 @@ UI UX Pro Max installs that judgment into the agent. You run `npm install -g ui-
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| designer-skills | 未收录 | Sibling UI/UX design skill pack in this leaf; compare on whether it ships a retrieval engine + rule database vs. pure prompt guidance. |
-| stitch-skills | 未收录 | Sibling design skill pack; different generation surface — weigh which targets your stack (HTML/Tailwind/React) and harness. |
-| taste-skill | 未收录 | Sibling skill focused on visual *taste*/critique; pairs with rather than replaces a generation-oriented pack like this one. |
-| make-interfaces-feel-better | 未收录 | Sibling skill aimed at polish/feel of existing interfaces; narrower scope than this pack's product-type-to-design-system pipeline. |
-| Anthropic / built-in agent skills and slash commands | 未收录 | The platform's native skill ecosystem; this is a third-party bundle layered on top, so it can duplicate or conflict with native design helpers. |
-| Hand-written project `DESIGN.md` design system | 未收录 | A bespoke per-project design contract you maintain; more tailored and stable, but you build and enforce it yourself instead of getting a 161-rule starter. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| designer-skills | 未收录 | Use this page for its stated niche; choose designer-skills when you need sibling UI/UX design skill pack in this leaf. | Sibling UI/UX design skill pack in this leaf; compare on whether it ships a retrieval engine + rule database vs. pure prompt guidance. |
+| stitch-skills | 未收录 | Use this page for its stated niche; choose stitch-skills when you need sibling design skill pack. | Sibling design skill pack; different generation surface — weigh which targets your stack (HTML/Tailwind/React) and harness. |
+| taste-skill | 未收录 | Use this page for its stated niche; choose taste-skill when you need sibling skill focused on visual *taste*/critique. | Sibling skill focused on visual *taste*/critique; pairs with rather than replaces a generation-oriented pack like this one. |
+| make-interfaces-feel-better | 未收录 | Use this page for its stated niche; choose make-interfaces-feel-better when you need sibling skill aimed at polish/feel of existing interfaces. | Sibling skill aimed at polish/feel of existing interfaces; narrower scope than this pack's product-type-to-design-system pipeline. |
+| Anthropic / built-in agent skills and slash commands | 未收录 | Use this page for its stated niche; choose Anthropic / built-in agent skills and slash commands when you need the platform's native skill ecosystem. | The platform's native skill ecosystem; this is a third-party bundle layered on top, so it can duplicate or conflict with native design helpers. |
+| Hand-written project `DESIGN.md` design system | 未收录 | Use this page for its stated niche; choose Hand-written project DESIGN.md design system when you need a bespoke per-project design contract you maintain. | A bespoke per-project design contract you maintain; more tailored and stable, but you build and enforce it yourself instead of getting a 161-rule starter. |
 
 ## Health & viability
 

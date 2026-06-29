@@ -9,6 +9,11 @@ license: MIT
 maturity: v1.6.0, active (2026-06), single-maintainer personal repo
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2026-06-27T01:49:35Z
+  default_branch: master
+  default_branch_sha: ffbf6a41ad73d2ca6829a471750a42469a426fbc
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:25:33Z
@@ -88,12 +93,12 @@ You also reach for it for one-off "feature spotlight" moments — you shipped a 
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| Shepherd.js | 未收录 | Similar OSS tour library, more built-in step/positioning options and a richer API; heavier (uses Floating UI / popper-style positioning) and a larger bundle than Driver.js's dependency-free core. |
-| Intro.js | 未收录 | The original tour library; widely used but its modern usage is **dual-licensed** (free for non-commercial, paid commercial license) — a real lock-in/cost consideration Driver.js (MIT) avoids (license terms in Caveats). |
-| Reactour / react-joyride | 未收录 | React-specific tour components (hooks/JSX-native); nicer DX inside React, but framework-locked vs Driver.js's framework-agnostic vanilla core. |
-| Appcues / Userflow / Userpilot | 未收录 | Commercial no-code onboarding **platforms** — segmentation, analytics, targeting, checklists, surveys; not open-source repos, recurring SaaS cost, but solve product-led-growth, not just tour rendering. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| Shepherd.js | 未收录 | Use this page for its stated niche; choose Shepherd.js when you need similar OSS tour library, more built-in step/positioning options and a richer API. | Similar OSS tour library, more built-in step/positioning options and a richer API; heavier (uses Floating UI / popper-style positioning) and a larger bundle than Driver.js's dependency-free core. |
+| Intro.js | 未收录 | Use this page for its stated niche; choose Intro.js when you need the original tour library. | The original tour library; widely used but its modern usage is **dual-licensed** (free for non-commercial, paid commercial license) — a real lock-in/cost consideration Driver.js (MIT) avoids (license terms in Caveats). |
+| Reactour / react-joyride | 未收录 | Use this page for its stated niche; choose Reactour / react-joyride when you need react-specific tour components (hooks/JSX-native). | React-specific tour components (hooks/JSX-native); nicer DX inside React, but framework-locked vs Driver.js's framework-agnostic vanilla core. |
+| Appcues / Userflow / Userpilot | 未收录 | Use this page for its stated niche; choose Appcues / Userflow / Userpilot when you need commercial no-code onboarding **platforms**. | Commercial no-code onboarding **platforms** — segmentation, analytics, targeting, checklists, surveys; not open-source repos, recurring SaaS cost, but solve product-led-growth, not just tour rendering. |
 
 ## Tech stack
 

@@ -9,6 +9,11 @@ license: MIT
 maturity: v7.x, very active, ~24.9k stars (2026-06)
 last_verified: 2026-06-28
 type: app
+upstream:
+  pushed_at: 2026-06-29T11:37:52Z
+  default_branch: main
+  default_branch_sha: 727ded7c0d38f082c99aa545f8b89b473688650d
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:24:17Z
@@ -88,13 +93,13 @@ You reach for it specifically when you want an *open-source*, in-IDE coding agen
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| Cline | 未收录 | Open-source VS Code coding agent; part of Kilo Code's lineage [推断]. Similar in-IDE agent loop; Kilo layers on modes/orchestrator and its own model marketplace. Compare directly if you want the leaner upstream. |
-| Roo Code | 未收录 | Open-source VS Code agent that Kilo Code descends from [推断]; overlapping mode model. Kilo is the further-developed, org-backed continuation — but Roo Code is its own active project. |
-| Cursor | 未收录 | Closed-source AI-first *editor* (a VS Code fork), not an extension; deeply integrated, paid subscription, no BYOK-at-provider-cost openness. More polished, less open. |
-| GitHub Copilot | 未收录 | Closed, Microsoft-backed completion+chat+agent in VS Code/JetBrains; huge adoption and stability, vendor-managed pricing, no self-keyed multi-provider model. |
-| [oh-my-claudecode](oh-my-claudecode.md) | ✅ | Orchestration *layer on top of* Anthropic's Claude Code CLI (team pipelines, model routing, tmux). Kilo Code is a standalone in-IDE agent, not a wrapper around another agent CLI. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| Cline | 未收录 | Use this page for its stated niche; choose Cline when you need open-source VS Code coding agent. | Open-source VS Code coding agent; part of Kilo Code's lineage [推断]. Similar in-IDE agent loop; Kilo layers on modes/orchestrator and its own model marketplace. Compare directly if you want the leaner upstream. |
+| Roo Code | 未收录 | Use this page for its stated niche; choose Roo Code when you need open-source VS Code agent that Kilo Code descends from [推断]. | Open-source VS Code agent that Kilo Code descends from [推断]; overlapping mode model. Kilo is the further-developed, org-backed continuation — but Roo Code is its own active project. |
+| Cursor | 未收录 | Use this page for its stated niche; choose Cursor when you need closed-source AI-first *editor* (a VS Code fork), not an extension. | Closed-source AI-first *editor* (a VS Code fork), not an extension; deeply integrated, paid subscription, no BYOK-at-provider-cost openness. More polished, less open. |
+| GitHub Copilot | 未收录 | Use this page for its stated niche; choose GitHub Copilot when you need closed, Microsoft-backed completion+chat+agent in VS Code/JetBrains. | Closed, Microsoft-backed completion+chat+agent in VS Code/JetBrains; huge adoption and stability, vendor-managed pricing, no self-keyed multi-provider model. |
+| [oh-my-claudecode](oh-my-claudecode.md) | ✅ | Use this page for its stated niche; choose oh-my-claudecode when you need orchestration *layer on top of* Anthropic's Claude Code CLI (team pipelines, model routing, tmux). | Orchestration *layer on top of* Anthropic's Claude Code CLI (team pipelines, model routing, tmux). Kilo Code is a standalone in-IDE agent, not a wrapper around another agent CLI. |
 
 ## Tech stack
 

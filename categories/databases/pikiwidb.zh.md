@@ -9,6 +9,11 @@ license: BSD-3-Clause
 maturity: v4.0.3 / v3.5.7, active, 6.1k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: service
+upstream:
+  pushed_at: 2026-06-18T09:04:24Z
+  default_branch: unstable
+  default_branch_sha: d16db1eee9aadb1db42338269936deb7b584ddcc
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:43:17Z
@@ -83,13 +88,13 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| Redis | 未收录 | 内存原版；延迟最低、命令与模块生态最丰富，但受限于 RAM、大规模下每 GB 昂贵。PikiwiDB 是落盘的容量方案，不是延迟升级。 |
-| KeyDB | 未收录 | 多线程 Redis 分叉，仍常驻内存；提升吞吐而非 PikiwiDB 瞄准的容量对 RAM 成本问题。 |
-| Dragonfly | 未收录 | 现代多线程 Redis 兼容存储；吞吐很高但内存优先、BSL 许可——许可与容量模型都不同。 |
-| SSDB | 未收录 | 老牌 LevelDB 落盘的类 Redis 存储；思路相似，但社区更小更老、协议保真度弱于 PikiwiDB。 |
-| Kvrocks（Apache） | 未收录 | RocksDB 落盘、Redis 协议，现为 Apache 项目；最直接的竞品——权衡 Apache 治理 vs PikiwiDB 的 OpenAtom／Qihoo 背书。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| Redis | 未收录 | 当前页用于它的主场景；如果更看重“内存原版”，再选 Redis。 | 内存原版；延迟最低、命令与模块生态最丰富，但受限于 RAM、大规模下每 GB 昂贵。PikiwiDB 是落盘的容量方案，不是延迟升级。 |
+| KeyDB | 未收录 | 当前页用于它的主场景；如果更看重“多线程 Redis 分叉，仍常驻内存”，再选 KeyDB。 | 多线程 Redis 分叉，仍常驻内存；提升吞吐而非 PikiwiDB 瞄准的容量对 RAM 成本问题。 |
+| Dragonfly | 未收录 | 当前页用于它的主场景；如果更看重“现代多线程 Redis 兼容存储”，再选 Dragonfly。 | 现代多线程 Redis 兼容存储；吞吐很高但内存优先、BSL 许可——许可与容量模型都不同。 |
+| SSDB | 未收录 | 当前页用于它的主场景；如果更看重“老牌 LevelDB 落盘的类 Redis 存储”，再选 SSDB。 | 老牌 LevelDB 落盘的类 Redis 存储；思路相似，但社区更小更老、协议保真度弱于 PikiwiDB。 |
+| Kvrocks（Apache） | 未收录 | 当前页用于它的主场景；如果更看重“RocksDB 落盘、Redis 协议，现为 Apache 项目”，再选 Kvrocks（Apache）。 | RocksDB 落盘、Redis 协议，现为 Apache 项目；最直接的竞品——权衡 Apache 治理 vs PikiwiDB 的 OpenAtom／Qihoo 背书。 |
 
 ## 技术栈
 

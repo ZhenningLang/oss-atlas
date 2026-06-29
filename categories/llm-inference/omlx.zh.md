@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: "v0.4.4, active (2026-06); ~17.2k stars (API-verified count; adoption meaning unverified/suspicious — anomalous for a ~4-month single-maintainer repo), created 2026-02 (very young), owner=User"
 last_verified: 2026-06-28
 type: framework
+upstream:
+  pushed_at: 2026-06-29T07:11:17Z
+  default_branch: main
+  default_branch_sha: 60dcaf4ed6975fb1212f56744e234615f1d6f940
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:57:21Z
@@ -83,16 +88,16 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| Ollama | 未收录 | 默认的 Mac/跨平台本地 LLM 运行器（基于 llama.cpp），生态和模型库极大；OS 支持更广，但没有 Apple-MLX 后端，缓存机制也比 oMLX 的热/冷分层 KV 缓存简单。 |
-| LM Studio | 未收录 | 打磨精良的本地模型桌面应用（Mac/Win/Linux），带 OpenAI 兼容服务器；GUI 闭源，不是 Apple-MLX 原生的开源服务器。 |
-| mlx-lm（`mlx_lm.server`） | 未收录 | Apple 自家的 MLX LLM 工具包，带一个极简 OpenAI 兼容服务器——oMLX 正是**建在** mlx-lm 的 BatchGenerator 之上；mlx-lm 更底层，没有菜单栏应用、分层 SSD 缓存、多模型 LRU 和 admin 面板。 |
-| llama.cpp | 未收录 | 可移植的 C/C++ 推理引擎（GGUF），靠 Metal 也能在 Mac 上跑、到处都能跑；可移植性和成熟度都顶，但不是 MLX 原生，也没有内建的 macOS 菜单栏/admin 管理层。 |
-| vLLM | 未收录 | 事实标准的数据中心 LLM 服务引擎（PagedAttention、continuous batching），社区庞大；偏 NVIDIA/Linux——不是 Mac/Apple Silicon 本地服务器。 |
-| Text Generation Inference (TGI) | 未收录 | Hugging Face 的生产服务器，与 HF 贴合紧密、在规模上久经检验；面向服务器 GPU，不是 Mac 本地栈。 |
-| SGLang | 未收录 | 高吞吐服务引擎，带 RadixAttention 前缀缓存；面向服务器 GPU、运维更复杂，不是单 Mac 菜单栏应用。 |
-| [Modular Platform (MAX + Mojo)](modular.zh.md) | ✅ | 厂商自建的跨厂商 GPU/CPU 服务引擎 + Mojo kernel 语言；一个大得多、服务器级、单一厂商的平台——与 Mac 本地服务器是不同的层和量级。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| Ollama | 未收录 | 当前页用于它的主场景；如果更看重“默认的 Mac/跨平台本地 LLM 运行器（基于 llama”，再选 Ollama。 | 默认的 Mac/跨平台本地 LLM 运行器（基于 llama.cpp），生态和模型库极大；OS 支持更广，但没有 Apple-MLX 后端，缓存机制也比 oMLX 的热/冷分层 KV 缓存简单。 |
+| LM Studio | 未收录 | 当前页用于它的主场景；如果更看重“打磨精良的本地模型桌面应用（Mac/Win/Linux），带 OpenAI 兼容服务器”，再选 LM Studio。 | 打磨精良的本地模型桌面应用（Mac/Win/Linux），带 OpenAI 兼容服务器；GUI 闭源，不是 Apple-MLX 原生的开源服务器。 |
+| mlx-lm（`mlx_lm.server`） | 未收录 | 当前页用于它的主场景；如果更看重“Apple 自家的 MLX LLM 工具包，带一个极简 OpenAI 兼容服务器”，再选 mlx-lm（mlxlm.server）。 | Apple 自家的 MLX LLM 工具包，带一个极简 OpenAI 兼容服务器——oMLX 正是**建在** mlx-lm 的 BatchGenerator 之上；mlx-lm 更底层，没有菜单栏应用、分层 SSD 缓存、多模型 LRU 和 admin 面板。 |
+| llama.cpp | 未收录 | 当前页用于它的主场景；如果更看重“可移植的 C/C++ 推理引擎（GGUF），靠 Metal 也能在 Mac 上跑、到处都能跑”，再选 llama.cpp。 | 可移植的 C/C++ 推理引擎（GGUF），靠 Metal 也能在 Mac 上跑、到处都能跑；可移植性和成熟度都顶，但不是 MLX 原生，也没有内建的 macOS 菜单栏/admin 管理层。 |
+| vLLM | 未收录 | 当前页用于它的主场景；如果更看重“事实标准的数据中心 LLM 服务引擎（PagedAttention、continuous batching），社区庞大”，再选 vLLM。 | 事实标准的数据中心 LLM 服务引擎（PagedAttention、continuous batching），社区庞大；偏 NVIDIA/Linux——不是 Mac/Apple Silicon 本地服务器。 |
+| Text Generation Inference (TGI) | 未收录 | 当前页用于它的主场景；如果更看重“Hugging Face 的生产服务器，与 HF 贴合紧密、在规模上久经检验”，再选 Text Generation Inference (TGI)。 | Hugging Face 的生产服务器，与 HF 贴合紧密、在规模上久经检验；面向服务器 GPU，不是 Mac 本地栈。 |
+| SGLang | 未收录 | 当前页用于它的主场景；如果更看重“高吞吐服务引擎，带 RadixAttention 前缀缓存”，再选 SGLang。 | 高吞吐服务引擎，带 RadixAttention 前缀缓存；面向服务器 GPU、运维更复杂，不是单 Mac 菜单栏应用。 |
+| [Modular Platform (MAX + Mojo)](modular.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“厂商自建的跨厂商 GPU/CPU 服务引擎 + Mojo kernel 语言”，再选 Modular Platform (MAX + Mojo)。 | 厂商自建的跨厂商 GPU/CPU 服务引擎 + Mojo kernel 语言；一个大得多、服务器级、单一厂商的平台——与 Mac 本地服务器是不同的层和量级。 |
 
 ## 技术栈
 

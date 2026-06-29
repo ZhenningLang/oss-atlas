@@ -9,6 +9,11 @@ license: MIT
 maturity: v1.20.16, active (2026-05); ~45k stars [未验证]
 last_verified: 2026-06-26
 type: app
+upstream:
+  pushed_at: 2026-06-26T18:46:37Z
+  default_branch: hovudstraum
+  default_branch_sha: 4c8203016f089b38281ed922a78255146f099e7b
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:51:38Z
@@ -89,14 +94,14 @@ health:
 
 ## 横向对比
 
-| 替代品 | 已收录 | 取舍 |
-|---|---|---|
-| [paperless-ngx](paperless-ngx.zh.md) | ✅ | 真正的 DMS：对扫描件做 OCR + 全文内容检索 + 自动打标，但是一套多容器的 Django/Postgres/Redis 栈。copyparty 完全没有这套 OCR/全文检索流水线；它是轻得多的文件服务器，不是文档归档库。 |
-| [Twake Drive](twake-drive.zh.md) | ✅ | 协同云盘，带文档编辑、分享和更丰富的权限模型；运维更重。copyparty 是单文件的文件传输/分发，没有协同编辑，也没有按文档的 ACL。 |
-| Nextcloud | 未收录 | 完整自托管「云」（文件、同步客户端、应用、分享、可经插件加 OCR），但是很重的 PHP/DB/Redis 栈。copyparty 轻得多、起得快得多，但没有双向同步，也没有应用生态。 |
-| Seafile | 未收录 | 基于块的同步分享，增量同步强、客户端齐全。copyparty 胜在便携/零依赖和协议广度（WebDAV/FTP/SFTP/TFTP/SMB），但没有真正的同步。 |
-| Filebrowser | 未收录 | 同类的轻量单二进制 Web 文件管理器（Go）。协议面更窄，没有 `up2k` 式的加速断点续传，也没有媒体索引；但更易理解。 |
-| MinIO | 未收录 | S3 兼容对象存储，面向程序/应用访问。形态完全不同——copyparty 是面向人的多协议文件服务器，不是对象存储。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [paperless-ngx](paperless-ngx.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“真正的 DMS：对扫描件做 OCR + 全文内容检索 + 自动打标，但是一套多容器的 Django/Postgres/Redis 栈”，再选 paperless-ngx。 | 真正的 DMS：对扫描件做 OCR + 全文内容检索 + 自动打标，但是一套多容器的 Django/Postgres/Redis 栈。copyparty 完全没有这套 OCR/全文检索流水线；它是轻得多的文件服务器，不是文档归档库。 |
+| [Twake Drive](twake-drive.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“协同云盘，带文档编辑、分享和更丰富的权限模型”，再选 Twake Drive。 | 协同云盘，带文档编辑、分享和更丰富的权限模型；运维更重。copyparty 是单文件的文件传输/分发，没有协同编辑，也没有按文档的 ACL。 |
+| Nextcloud | 未收录 | 当前页用于它的主场景；如果更看重“完整自托管「云」（文件、同步客户端、应用、分享、可经插件加 OCR），但是很重的 PHP/DB/Redis 栈”，再选 Nextcloud。 | 完整自托管「云」（文件、同步客户端、应用、分享、可经插件加 OCR），但是很重的 PHP/DB/Redis 栈。copyparty 轻得多、起得快得多，但没有双向同步，也没有应用生态。 |
+| Seafile | 未收录 | 当前页用于它的主场景；如果更看重“基于块的同步分享，增量同步强、客户端齐全”，再选 Seafile。 | 基于块的同步分享，增量同步强、客户端齐全。copyparty 胜在便携/零依赖和协议广度（WebDAV/FTP/SFTP/TFTP/SMB），但没有真正的同步。 |
+| Filebrowser | 未收录 | 当前页用于它的主场景；如果更看重“同类的轻量单二进制 Web 文件管理器（Go）”，再选 Filebrowser。 | 同类的轻量单二进制 Web 文件管理器（Go）。协议面更窄，没有 `up2k` 式的加速断点续传，也没有媒体索引；但更易理解。 |
+| MinIO | 未收录 | 当前页用于它的主场景；如果更看重“S3 兼容对象存储，面向程序/应用访问”，再选 MinIO。 | S3 兼容对象存储，面向程序/应用访问。形态完全不同——copyparty 是面向人的多协议文件服务器，不是对象存储。 |
 
 ## 技术栈
 

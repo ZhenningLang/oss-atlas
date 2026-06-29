@@ -9,6 +9,11 @@ license: MIT
 maturity: no tagged release, active (2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+upstream:
+  pushed_at: 2026-06-24T06:28:05Z
+  default_branch: main
+  default_branch_sha: c193ad45419c13ceb49a43740186f680ad5ea264
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:32:59Z
@@ -80,12 +85,12 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| [wshobson/agents](wshobson-agents.md) | ✅ | 另一套大型 Claude Code subagent 合集。按各自覆盖的角色、frontmatter 约定、以及每个 persona 提示的主张强度来比——两者都是“丢进 `~/.claude/agents/`”的包，所以按覆盖面和提示质量选，而不是按格式。 |
-| antfu/skills、Dimillian/Skills、gstack、khazix-skills…… | 未收录 / [dimillian-skills](../personal-collections/dimillian-skills.zh.md) ✅ | 个人 *skill* 合集（`Skill` 工具格式），不是 subagent persona。消费单元不同——skill 是按需加载的流程，subagent 是被委派的子对话。想把行为加载进主 agent 用前者，想要独立的委派专家用本项目。 |
-| Anthropic 内置 subagent 文档 / 自己手写的 agent | 未收录 | 自己创作 subagent 的原生方式。本 repo 是叠在同一机制上的第三方起步集，因此可能与你已写的 agent 重复或冲突。 |
-| Superpowers / SDLC 方法论包 | 未收录 | 那类包给单个 agent 装的是*工作流纪律*（brainstorm→plan→TDD→verify）；本项目装的是一*组角色专家*。正交——可以同时用，但解决的是不同问题。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [wshobson/agents](wshobson-agents.md) | ✅ | 当前页用于它的主场景；如果更看重“另一套大型 Claude Code subagent 合集”，再选 wshobson/agents。 | 另一套大型 Claude Code subagent 合集。按各自覆盖的角色、frontmatter 约定、以及每个 persona 提示的主张强度来比——两者都是“丢进 `~/.claude/agents/`”的包，所以按覆盖面和提示质量选，而不是按格式。 |
+| antfu/skills、Dimillian/Skills、gstack、khazix-skills…… | 未收录 / [dimillian-skills](../personal-collections/dimillian-skills.zh.md) ✅ | 当前页用于它的主场景；如果更看重“个人 *skill* 合集（`Skill` 工具格式），不是 subagent persona”，再选 antfu/skills、Dimillian/Skills、gstack、khazix-skills……。 | 个人 *skill* 合集（`Skill` 工具格式），不是 subagent persona。消费单元不同——skill 是按需加载的流程，subagent 是被委派的子对话。想把行为加载进主 agent 用前者，想要独立的委派专家用本项目。 |
+| Anthropic 内置 subagent 文档 / 自己手写的 agent | 未收录 | 当前页用于它的主场景；如果更看重“自己创作 subagent 的原生方式”，再选 Anthropic 内置 subagent 文档 / 自己手写的 agent。 | 自己创作 subagent 的原生方式。本 repo 是叠在同一机制上的第三方起步集，因此可能与你已写的 agent 重复或冲突。 |
+| Superpowers / SDLC 方法论包 | 未收录 | 当前页用于它的主场景；如果更看重“那类包给单个 agent 装的是*工作流纪律*（brainstorm→plan→TDD→verify）”，再选 Superpowers / SDLC 方法论包。 | 那类包给单个 agent 装的是*工作流纪律*（brainstorm→plan→TDD→verify）；本项目装的是一*组角色专家*。正交——可以同时用，但解决的是不同问题。 |
 
 ## 健康度与可持续性
 

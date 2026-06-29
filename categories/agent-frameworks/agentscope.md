@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v2.0.2, active (2026-06)
 last_verified: 2026-06-26
 type: framework
+upstream:
+  pushed_at: 2026-06-29T06:35:40Z
+  default_branch: main
+  default_branch_sha: 3467754dc48c7ba12cfce79fae6e0fa39831074b
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:08:31Z
@@ -89,15 +94,15 @@ The other moment AgentScope fits is when you want a composable, event-driven age
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [DSPy](dspy.md) | ✅ | Declarative prompt/pipeline *optimization* (compile + tune programs); not a multi-agent serving runtime. Reach for it to tune quality, not to orchestrate/serve agents. |
-| [openfang](openfang.md) | ✅ | Sibling agent framework in this index; different design point — compare scope/maturity before choosing. [未验证] |
-| [Symphony](symphony.md) | ✅ | Sibling multi-agent framework in this index; overlapping "orchestrate multiple agents" goal, different ergonomics. [未验证] |
-| [claude-octopus](claude-octopus.md) | ✅ | Sibling in this index, oriented around Claude-style multi-agent workflows; narrower model focus than AgentScope's multi-provider serving. |
-| LangGraph | 未收录 | Graph/state-machine orchestration with a large ecosystem and explicit control flow; heavier, more opinionated than AgentScope's "trust the model" loop. |
-| AutoGen | 未收录 | Mature conversation-driven multi-agent framework; comparable multi-agent scope, different abstractions and a larger community footprint. |
-| CrewAI | 未收录 | Role/crew-based agent orchestration with strong DX; less emphasis on the service/permission/sandbox/observability stack AgentScope ships. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [DSPy](dspy.md) | ✅ | Use this page for its stated niche; choose DSPy when you need declarative prompt/pipeline *optimization* (compile + tune programs). | Declarative prompt/pipeline *optimization* (compile + tune programs); not a multi-agent serving runtime. Reach for it to tune quality, not to orchestrate/serve agents. |
+| [openfang](openfang.md) | ✅ | Use this page for its stated niche; choose openfang when you need sibling agent framework in this index. | Sibling agent framework in this index; different design point — compare scope/maturity before choosing. [未验证] |
+| [Symphony](symphony.md) | ✅ | Use this page for its stated niche; choose Symphony when you need sibling multi-agent framework in this index. | Sibling multi-agent framework in this index; overlapping "orchestrate multiple agents" goal, different ergonomics. [未验证] |
+| [claude-octopus](claude-octopus.md) | ✅ | Use this page for its stated niche; choose claude-octopus when you need sibling in this index, oriented around Claude-style multi-agent workflows. | Sibling in this index, oriented around Claude-style multi-agent workflows; narrower model focus than AgentScope's multi-provider serving. |
+| LangGraph | 未收录 | Use this page for its stated niche; choose LangGraph when you need graph/state-machine orchestration with a large ecosystem and explicit control flow. | Graph/state-machine orchestration with a large ecosystem and explicit control flow; heavier, more opinionated than AgentScope's "trust the model" loop. |
+| AutoGen | 未收录 | Use this page for its stated niche; choose AutoGen when you need mature conversation-driven multi-agent framework. | Mature conversation-driven multi-agent framework; comparable multi-agent scope, different abstractions and a larger community footprint. |
+| CrewAI | 未收录 | Use this page for its stated niche; choose CrewAI when you need role/crew-based agent orchestration with strong DX. | Role/crew-based agent orchestration with strong DX; less emphasis on the service/permission/sandbox/observability stack AgentScope ships. |
 
 ## Tech stack
 

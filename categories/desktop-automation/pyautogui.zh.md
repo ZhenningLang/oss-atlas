@@ -9,6 +9,11 @@ license: BSD-3-Clause
 maturity: stable, coasting, ~12.6k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2024-08-20T18:34:57Z
+  default_branch: master
+  default_branch_sha: b4255d0be42c377154c7d92337d7f8515fc63234
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:46:20Z
@@ -83,13 +88,13 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| pywinauto | 未收录 | 仅 Windows，驱动 UI Automation / Win32 无障碍树——元素感知，比点像素稳健得多，但不跨平台、API 更陡。 |
-| AutoHotkey | 未收录 | 仅 Windows 的脚本语言，专为热键/宏与 GUI 自动化打造；非常成熟，但是自家语言、没有原生跨平台/Python 路线。 |
-| SikuliX | 未收录 | 基于 Java 的图像识别自动化（OCR + 模板匹配）；和 PyAutoGUI 一样跨平台，但更重（JVM）、偏 IDE 中心。 |
-| Selenium / Playwright | 未收录 | DOM 级浏览器自动化——当目标是网页而非原生桌面程序时的正确工具。 |
-| pynput | 未收录 | 更底层的跨平台输入控制/监听（含全局热键监听）；没有截图/图像定位，范围比 PyAutoGUI 小。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| pywinauto | 未收录 | 当前页用于它的主场景；如果更看重“仅 Windows，驱动 UI Automation / Win32 无障碍树”，再选 pywinauto。 | 仅 Windows，驱动 UI Automation / Win32 无障碍树——元素感知，比点像素稳健得多，但不跨平台、API 更陡。 |
+| AutoHotkey | 未收录 | 当前页用于它的主场景；如果更看重“仅 Windows 的脚本语言，专为热键/宏与 GUI 自动化打造”，再选 AutoHotkey。 | 仅 Windows 的脚本语言，专为热键/宏与 GUI 自动化打造；非常成熟，但是自家语言、没有原生跨平台/Python 路线。 |
+| SikuliX | 未收录 | 当前页用于它的主场景；如果更看重“基于 Java 的图像识别自动化（OCR + 模板匹配）”，再选 SikuliX。 | 基于 Java 的图像识别自动化（OCR + 模板匹配）；和 PyAutoGUI 一样跨平台，但更重（JVM）、偏 IDE 中心。 |
+| Selenium / Playwright | 未收录 | 当前页用于它的主场景；如果更看重“DOM 级浏览器自动化”，再选 Selenium / Playwright。 | DOM 级浏览器自动化——当目标是网页而非原生桌面程序时的正确工具。 |
+| pynput | 未收录 | 当前页用于它的主场景；如果更看重“更底层的跨平台输入控制/监听（含全局热键监听）”，再选 pynput。 | 更底层的跨平台输入控制/监听（含全局热键监听）；没有截图/图像定位，范围比 PyAutoGUI 小。 |
 
 ## 技术栈
 

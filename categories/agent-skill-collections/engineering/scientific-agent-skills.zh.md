@@ -9,6 +9,11 @@ license: MIT
 maturity: v2.53.0, active (2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+upstream:
+  pushed_at: 2026-06-23T23:48:47Z
+  default_branch: main
+  default_branch_sha: 9c9bd2e92af12311ecd0c1a643e0931643f9ea04
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:29:50Z
@@ -80,13 +85,13 @@ health:
 
 ## 横向对比
 
-| 替代品 | 已收录 | 取舍 |
-|---|---|---|
-| [addyosmani/agent-skills](addyosmani-agent-skills.md) | ✅ | 通用/偏 Web 的工程 skill 集合；编码通用性广，但非领域科学。本包窄聚焦于科学（组学、化学信息、实验室）且规模大得多。 |
-| [web-quality-skills](addyosmani-web-quality.md) | ✅ | 偏 Web 性能/质量的 skill；领域正交。按任务是前端质量还是湿实验/计算科学来选。 |
-| [Waza](waza.md) | ✅ | 工程工作流 skill 包；同样是「把 skill 装进 agent」的形态，主题（非科学）不同。 |
-| [vercel-labs/agent-skills](vercel-agent-skills.md) | ✅ | 厂商/Web 平台向的工程 skill；适合 app/部署工作流，不适合生信或药物发现。 |
-| 自写逐库 prompt（自己写 SKILL.md） | 未收录 | 控制力最大、无冗余面，但你得为每个库自行重建并维护整理好的文档，而不是装一个经审查的成套包。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [addyosmani/agent-skills](addyosmani-agent-skills.md) | ✅ | 当前页用于它的主场景；如果更看重“通用/偏 Web 的工程 skill 集合”，再选 addyosmani/agent-skills。 | 通用/偏 Web 的工程 skill 集合；编码通用性广，但非领域科学。本包窄聚焦于科学（组学、化学信息、实验室）且规模大得多。 |
+| [web-quality-skills](addyosmani-web-quality.md) | ✅ | 当前页用于它的主场景；如果更看重“偏 Web 性能/质量的 skill”，再选 web-quality-skills。 | 偏 Web 性能/质量的 skill；领域正交。按任务是前端质量还是湿实验/计算科学来选。 |
+| [Waza](waza.md) | ✅ | 当前页用于它的主场景；如果更看重“工程工作流 skill 包”，再选 Waza。 | 工程工作流 skill 包；同样是「把 skill 装进 agent」的形态，主题（非科学）不同。 |
+| [vercel-labs/agent-skills](vercel-agent-skills.md) | ✅ | 当前页用于它的主场景；如果更看重“厂商/Web 平台向的工程 skill”，再选 vercel-labs/agent-skills。 | 厂商/Web 平台向的工程 skill；适合 app/部署工作流，不适合生信或药物发现。 |
+| 自写逐库 prompt（自己写 SKILL.md） | 未收录 | 当前页用于它的主场景；如果更看重“控制力最大、无冗余面，但你得为每个库自行重建并维护整理好的文档，而不是装一个经审查的成套包”，再选 自写逐库 prompt（自己写 SKILL.md）。 | 控制力最大、无冗余面，但你得为每个库自行重建并维护整理好的文档，而不是装一个经审查的成套包。 |
 
 ## 健康度与可持续性
 

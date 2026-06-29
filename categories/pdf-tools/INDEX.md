@@ -5,16 +5,16 @@
 
 ## Projects in this category
 
-| Project | Use when | Page |
-|---|---|---|
-| **PDF.js** | Use it when you need to render or read PDFs in the browser/Node (Firefox's engine) — it doesn't create or edit PDFs. | [→](pdfjs.md) |
+| Project | Use when | Health | Page |
+| --- | --- | --- | --- |
+| **PDF.js** | Use it when you need to render or read PDFs in the browser/Node (Firefox's engine) — it doesn't create or edit PDFs. | A (6/6) | [→](pdfjs.md) |
 
 ## Comparison matrix
 
-| Option | Indexed | One-line tradeoff |
-|---|---|---|
-| [PDF.js](pdfjs.md) | ✅ | Use it when you need to render or read PDFs in the browser/Node (Firefox's engine) — it doesn't create or edit PDFs. |
-| pdf-lib / jsPDF / PyMuPDF / pdfplumber | 未收录 | PDF generation/edit and server-side extraction tools named across the pages. |
+| Option | Indexed | Health | One-line tradeoff |
+| --- | --- | --- | --- |
+| [PDF.js](pdfjs.md) | ✅ | A (6/6) | Use it when you need to render or read PDFs in the browser/Node (Firefox's engine) — it doesn't create or edit PDFs. |
+| pdf-lib / jsPDF / PyMuPDF / pdfplumber | 未收录 | — | PDF generation/edit and server-side extraction tools named across the pages. |
 
 ## What belongs here
 

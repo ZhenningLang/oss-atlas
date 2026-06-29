@@ -9,6 +9,11 @@ license: MIT
 maturity: no tagged release, active (2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+upstream:
+  pushed_at: 2026-06-25T16:42:45Z
+  default_branch: main
+  default_branch_sha: 11de390be1be6849eb9a15f91ff4922dd16c589a
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:31:06Z
@@ -81,13 +86,13 @@ Garry Tan 的私人 Claude Code 配置：约 23 个带强烈个人主张的 slas
 
 ## 横向对比
 
-| 替代方案 | 是否已收录 | 取舍 |
-|---|---|---|
-| [Superpowers](../../agent-dev-methodology/superpowers.zh.md) | ✅ | 可组合的 SDLC 技能库（brainstorm → plan → TDD → verify），以跨 harness 插件形式分发。更偏 TDD/测试先行的纪律，且走 marketplace 安装；gstack 是某位创始人*基于角色*的命令集（CEO/设计师/QA 等 persona），为他每天的工厂量身调过，而非通用方法论。 |
-| antfu/skills | 未收录 | 另一份私人 Claude Code 技能集；按各自作者编排了什么工作流、对你环境假设多少来比较。 |
-| Dimillian/Skills | 未收录 | 私人技能集；按作者品味与命令的路由方式来选。 |
-| wshobson/agents | 未收录 | 体量较大的 subagent/persona 集合；目录更广，对比 gstack 更聚焦的创始人主张工厂闭环。 |
-| 自己从零写命令 | 未收录 | 贴合度最高、零 lock-in，但每个 persona 和编排顺序都得你自己写、自己维护。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [Superpowers](../../agent-dev-methodology/superpowers.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“可组合的 SDLC 技能库（brainstorm → plan → TDD → verify），以跨 harness 插件形式分发”，再选 Superpowers。 | 可组合的 SDLC 技能库（brainstorm → plan → TDD → verify），以跨 harness 插件形式分发。更偏 TDD/测试先行的纪律，且走 marketplace 安装；gstack 是某位创始人*基于角色*的命令集（CEO/设计师/QA 等 persona），为他每天的工厂量身调过，而非通用方法论。 |
+| antfu/skills | 未收录 | 当前页用于它的主场景；如果更看重“另一份私人 Claude Code 技能集”，再选 antfu/skills。 | 另一份私人 Claude Code 技能集；按各自作者编排了什么工作流、对你环境假设多少来比较。 |
+| Dimillian/Skills | 未收录 | 当前页用于它的主场景；如果更看重“私人技能集”，再选 Dimillian/Skills。 | 私人技能集；按作者品味与命令的路由方式来选。 |
+| wshobson/agents | 未收录 | 当前页用于它的主场景；如果更看重“体量较大的 subagent/persona 集合”，再选 wshobson/agents。 | 体量较大的 subagent/persona 集合；目录更广，对比 gstack 更聚焦的创始人主张工厂闭环。 |
+| 自己从零写命令 | 未收录 | 当前页用于它的主场景；如果更看重“贴合度最高、零 lock-in，但每个 persona 和编排顺序都得你自己写、自己维护”，再选 自己从零写命令。 | 贴合度最高、零 lock-in，但每个 persona 和编排顺序都得你自己写、自己维护。 |
 
 ## 健康度与可持续性
 

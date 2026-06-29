@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: no tagged releases, last push 2020-01, stale/abandoned (verified 2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2020-01-09T10:47:29Z
+  default_branch: master
+  default_branch_sha: b87f83cb7f00b3785c4fae54bc9f59b2ccd4e054
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:41:03Z
@@ -83,13 +88,13 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| [Cap](capjs.zh.md) | ✅ | 一个验证码*生成/挑战*系统，不是 solver——问题的另一面；列入只为消歧“captcha”工具。 |
-| [Text_select_captcha](text-select-captcha.zh.md) | ✅ | 解*点选/文字点选*验证码（YOLO + Siamese），是更难的交互式族；本仓库只做定长图中文字分类。 |
-| ddddocr | 未收录 | 有人维护、开箱即用的 OCR/验证码库，覆盖多种类型；今天远比一份 2020 教程实用——真实工作优先它。 |
-| CRNN + CTC 实现 | 未收录 | *变长*文字识别的标准做法；能力更强但比这个定长多头玩具更费学/费搭。 |
-| 你自己的现代 PyTorch 基线 | 未收录 | 同样的方法用当前 PyTorch 写；比复活弃用代码更干净，但要从零写（本仓库作参考）。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [Cap](capjs.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“一个验证码*生成/挑战*系统，不是 solver”，再选 Cap。 | 一个验证码*生成/挑战*系统，不是 solver——问题的另一面；列入只为消歧“captcha”工具。 |
+| [Text_select_captcha](text-select-captcha.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“解*点选/文字点选*验证码（YOLO + Siamese），是更难的交互式族”，再选 Textselectcaptcha。 | 解*点选/文字点选*验证码（YOLO + Siamese），是更难的交互式族；本仓库只做定长图中文字分类。 |
+| ddddocr | 未收录 | 当前页用于它的主场景；如果更看重“有人维护、开箱即用的 OCR/验证码库，覆盖多种类型”，再选 ddddocr。 | 有人维护、开箱即用的 OCR/验证码库，覆盖多种类型；今天远比一份 2020 教程实用——真实工作优先它。 |
+| CRNN + CTC 实现 | 未收录 | 当前页用于它的主场景；如果更看重“*变长*文字识别的标准做法”，再选 CRNN + CTC 实现。 | *变长*文字识别的标准做法；能力更强但比这个定长多头玩具更费学/费搭。 |
+| 你自己的现代 PyTorch 基线 | 未收录 | 当前页用于它的主场景；如果更看重“同样的方法用当前 PyTorch 写”，再选 你自己的现代 PyTorch 基线。 | 同样的方法用当前 PyTorch 写；比复活弃用代码更干净，但要从零写（本仓库作参考）。 |
 
 ## 技术栈
 

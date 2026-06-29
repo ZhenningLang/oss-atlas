@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v8.18.0, ARCHIVED — merged into elasticsearch-py, 3.9k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2025-04-18T13:50:16Z
+  default_branch: main
+  default_branch_sha: 05fae5ea1b8edb05c42aae2b4160e42467b21432
+  archived: true
 health:
   schema: 1
   computed_at: 2026-06-29T09:42:24Z
@@ -79,12 +84,12 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| `elasticsearch`（elasticsearch-py） | 未收录 | 官方底层客户端——如今也是**这个 DSL 的归宿**（`elasticsearch.dsl`）。对新代码这*就是*答案；独立仓库是它已归档的祖先。 |
-| `opensearch-py` / opensearch-dsl-py | 未收录 | OpenSearch 分叉的客户端；若你跑 OpenSearch 而非 Elastic 发行版，请用这些。 |
-| 裸查询 dict（无 DSL） | 未收录 | 零抽象、完全版本无关，但对复杂查询冗长且抗重构——正是 DSL 存在要消除的痛点。 |
-| Haystack / django-elasticsearch-dsl | 未收录 | 架在其上的更高层搜索框架／Django 集成；更有主张、比裸 DSL 更窄。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| `elasticsearch`（elasticsearch-py） | 未收录 | 当前页用于它的主场景；如果更看重“官方底层客户端”，再选 elasticsearch（elasticsearch-py）。 | 官方底层客户端——如今也是**这个 DSL 的归宿**（`elasticsearch.dsl`）。对新代码这*就是*答案；独立仓库是它已归档的祖先。 |
+| `opensearch-py` / opensearch-dsl-py | 未收录 | 当前页用于它的主场景；如果更看重“OpenSearch 分叉的客户端”，再选 opensearch-py / opensearch-dsl-py。 | OpenSearch 分叉的客户端；若你跑 OpenSearch 而非 Elastic 发行版，请用这些。 |
+| 裸查询 dict（无 DSL） | 未收录 | 当前页用于它的主场景；如果更看重“零抽象、完全版本无关，但对复杂查询冗长且抗重构”，再选 裸查询 dict（无 DSL）。 | 零抽象、完全版本无关，但对复杂查询冗长且抗重构——正是 DSL 存在要消除的痛点。 |
+| Haystack / django-elasticsearch-dsl | 未收录 | 当前页用于它的主场景；如果更看重“架在其上的更高层搜索框架／Django 集成”，再选 Haystack / django-elasticsearch-dsl。 | 架在其上的更高层搜索框架／Django 集成；更有主张、比裸 DSL 更窄。 |
 
 ## 技术栈
 

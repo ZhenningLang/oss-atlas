@@ -9,6 +9,11 @@ license: MIT
 maturity: no tagged releases, active, last pushed 2026-04 (as of 2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+upstream:
+  pushed_at: 2026-04-20T10:05:04Z
+  default_branch: main
+  default_branch_sha: 2c606141936f1eeef17fa3043a72095b4765b9c2
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:31:17Z
@@ -80,13 +85,13 @@ You reach for it as a drop-in base layer rather than a big multi-skill collectio
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [shaping-skills](shaping-skills.md) | ✅ | Also a single-author Claude Code discipline pack, but scoped to *shaping* (problem-framing before code) via Shape Up; this one is broader, generic coding-hygiene principles rather than a product-definition workflow. |
-| [TÂCHES CC Resources](taches-cc-resources.md) | ✅ | A full personal extension bundle (commands, meta-skills, subagents, hooks). Karpathy-skills is the opposite end: one tiny principles file, no commands or generators. Pick TÂCHES for breadth, this for a minimal base layer. |
-| [antfu/skills](antfu-skills.md) | ✅ | Stack-specific (Vue/Vite/Nuxt) auto-applied skills via a CLI. This pack is stack-agnostic behavioral guidance, not framework knowledge. |
-| [Superpowers](../../agent-dev-methodology/superpowers.md) | ✅ | A full SDLC methodology library (brainstorm→plan→TDD→verify) with many composable skills and per-harness manifests. Karpathy-skills covers a similar "make the agent disciplined" goal in four lines instead of a skill graph — far lighter, far less prescriptive. |
-| Your own global `CLAUDE.md` / Anthropic built-in guidance | 未收录 | If you already maintain opinionated global agent instructions, that's the same surface; this would be additive prose competing for the same context. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [shaping-skills](shaping-skills.md) | ✅ | Use this page for its stated niche; choose shaping-skills when you need also a single-author Claude Code discipline pack, but scoped to *shaping* (problem-framing before co. | Also a single-author Claude Code discipline pack, but scoped to *shaping* (problem-framing before code) via Shape Up; this one is broader, generic coding-hygiene principles rather than a product-definition workflow. |
+| [TÂCHES CC Resources](taches-cc-resources.md) | ✅ | Use this page for its stated niche; choose TÂCHES CC Resources when you need a full personal extension bundle (commands, meta-skills, subagents, hooks). | A full personal extension bundle (commands, meta-skills, subagents, hooks). Karpathy-skills is the opposite end: one tiny principles file, no commands or generators. Pick TÂCHES for breadth, this for a minimal base layer. |
+| [antfu/skills](antfu-skills.md) | ✅ | Use this page for its stated niche; choose antfu/skills when you need stack-specific (Vue/Vite/Nuxt) auto-applied skills via a CLI. | Stack-specific (Vue/Vite/Nuxt) auto-applied skills via a CLI. This pack is stack-agnostic behavioral guidance, not framework knowledge. |
+| [Superpowers](../../agent-dev-methodology/superpowers.md) | ✅ | Use this page for its stated niche; choose Superpowers when you need a full SDLC methodology library (brainstorm→plan→TDD→verify) with many composable skills and per-har. | A full SDLC methodology library (brainstorm→plan→TDD→verify) with many composable skills and per-harness manifests. Karpathy-skills covers a similar "make the agent disciplined" goal in four lines instead of a skill graph — far lighter, far less prescriptive. |
+| Your own global `CLAUDE.md` / Anthropic built-in guidance | 未收录 | Use this page for its stated niche; choose Your own global CLAUDE.md / Anthropic built-in guidance when you need if you already maintain opinionated global agent instructions, that's the same surface. | If you already maintain opinionated global agent instructions, that's the same surface; this would be additive prose competing for the same context. |
 
 ## Health & viability
 

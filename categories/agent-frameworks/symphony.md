@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: engineering preview (no tagged release), active (2026-06)
 last_verified: 2026-06-26
 type: framework
+upstream:
+  pushed_at: 2026-06-09T23:25:36Z
+  default_branch: main
+  default_branch_sha: 4cbe3a9699a73b862466c0b157ceca0c1985d6d7
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:26:02Z
@@ -88,14 +93,14 @@ Because the orchestration contract is published as a language-agnostic spec ("Dr
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [openfang](openfang.md) | ✅ | Same "fleet of autonomous coding agents" lane; different stack/integration assumptions — compare tracker, isolation model, and agent backend before choosing. |
-| [claude-octopus](claude-octopus.md) | ✅ | Orchestrates multiple Claude Code agents in parallel; Symphony is Codex-centric and tracker-driven (Linear), so the choice often follows which agent CLI you've standardized on. |
-| [AgentScope](agentscope.md) | ✅ | General multi-agent runtime/framework for building agent apps; Symphony is narrower — a queue→workspace→agent-run orchestrator, not a framework to compose agents. |
-| [DSPy](dspy.md) | ✅ | Programs/optimizes LLM pipelines; orthogonal problem — DSPy builds the agent's reasoning, Symphony schedules and isolates whole implementation runs. |
-| Devin / Cognition (hosted) | 未收录 | Hosted "autonomous engineer" SaaS covering a similar manage-the-work pitch; closed, no self-host, no fork. Symphony is OSS and self-hosted but preview-stage. |
-| GitHub Actions + agent CLI (DIY) | 未收录 | Roll-your-own: CI triggers an agent on issues. More control and durable infra (CI runners), but you build the dispatch/reconciliation/isolation that Symphony gives you. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [openfang](openfang.md) | ✅ | Use this page for its stated niche; choose openfang when you need same "fleet of autonomous coding agents" lane. | Same "fleet of autonomous coding agents" lane; different stack/integration assumptions — compare tracker, isolation model, and agent backend before choosing. |
+| [claude-octopus](claude-octopus.md) | ✅ | Use this page for its stated niche; choose claude-octopus when you need orchestrates multiple Claude Code agents in parallel. | Orchestrates multiple Claude Code agents in parallel; Symphony is Codex-centric and tracker-driven (Linear), so the choice often follows which agent CLI you've standardized on. |
+| [AgentScope](agentscope.md) | ✅ | Use this page for its stated niche; choose AgentScope when you need general multi-agent runtime/framework for building agent apps. | General multi-agent runtime/framework for building agent apps; Symphony is narrower — a queue→workspace→agent-run orchestrator, not a framework to compose agents. |
+| [DSPy](dspy.md) | ✅ | Use this page for its stated niche; choose DSPy when you need programs/optimizes LLM pipelines. | Programs/optimizes LLM pipelines; orthogonal problem — DSPy builds the agent's reasoning, Symphony schedules and isolates whole implementation runs. |
+| Devin / Cognition (hosted) | 未收录 | Use this page for its stated niche; choose Devin / Cognition (hosted) when you need hosted "autonomous engineer" SaaS covering a similar manage-the-work pitch. | Hosted "autonomous engineer" SaaS covering a similar manage-the-work pitch; closed, no self-host, no fork. Symphony is OSS and self-hosted but preview-stage. |
+| GitHub Actions + agent CLI (DIY) | 未收录 | Use this page for its stated niche; choose GitHub Actions + agent CLI (DIY) when you need roll-your-own: CI triggers an agent on issues. | Roll-your-own: CI triggers an agent on issues. More control and durable infra (CI runners), but you build the dispatch/reconciliation/isolation that Symphony gives you. |
 
 ## Tech stack
 

@@ -9,6 +9,11 @@ license: NOASSERTION
 maturity: no tagged releases, active (pushed 2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+upstream:
+  pushed_at: 2026-06-26T04:33:36Z
+  default_branch: master
+  default_branch_sha: 2e91dec43ed34dd926329c8cdf2f6b404de6abee
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:31:42Z
@@ -81,13 +86,13 @@ You run `npx skills add lijigang/ljg-skills -g --all` (append `#md` for the Mark
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [pua](pua.md) ✅ | indexed | Another single-maintainer Chinese skill collection; different focus and conventions. Same genre (one person's curated Chinese skills); compare on which author's method and domain match your work. |
-| [qiushi-skill](qiushi-skill.md) ✅ | indexed | Single-maintainer Chinese skill set; sibling personal collection with its own task coverage. ljg-skills centers reading/knowledge-distillation and visual cards. |
-| [antfu/skills](antfu-skills.md) ✅ | indexed | Maintainer's personal pack too, but for the Vue/Vite frontend *engineering* stack — opposite domain. Pick by whether you need code conventions or knowledge-work methods. |
-| [Dimillian/Skills](dimillian-skills.md) ✅ | indexed | Personal collection skewed toward Swift/Apple development. Same "one person's skills" genre, different (code) domain. |
-| Anthropic's official skills / built-in slash commands | 未收录 | The platform's own skill ecosystem; ljg-skills is a third-party curated bundle layered on top, so it can duplicate or conflict with native skills. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [pua](pua.md) ✅ | indexed | Use this page for its stated niche; choose pua ✅ when you need another single-maintainer Chinese skill collection. | Another single-maintainer Chinese skill collection; different focus and conventions. Same genre (one person's curated Chinese skills); compare on which author's method and domain match your work. |
+| [qiushi-skill](qiushi-skill.md) ✅ | indexed | Use this page for its stated niche; choose qiushi-skill ✅ when you need single-maintainer Chinese skill set. | Single-maintainer Chinese skill set; sibling personal collection with its own task coverage. ljg-skills centers reading/knowledge-distillation and visual cards. |
+| [antfu/skills](antfu-skills.md) ✅ | indexed | Use this page for its stated niche; choose antfu/skills ✅ when you need maintainer's personal pack too, but for the Vue/Vite frontend *engineering* stack. | Maintainer's personal pack too, but for the Vue/Vite frontend *engineering* stack — opposite domain. Pick by whether you need code conventions or knowledge-work methods. |
+| [Dimillian/Skills](dimillian-skills.md) ✅ | indexed | Use this page for its stated niche; choose Dimillian/Skills ✅ when you need personal collection skewed toward Swift/Apple development. | Personal collection skewed toward Swift/Apple development. Same "one person's skills" genre, different (code) domain. |
+| Anthropic's official skills / built-in slash commands | 未收录 | Use this page for its stated niche; choose Anthropic's official skills / built-in slash commands when you need the platform's own skill ecosystem. | The platform's own skill ecosystem; ljg-skills is a third-party curated bundle layered on top, so it can duplicate or conflict with native skills. |
 
 ## Health & viability
 

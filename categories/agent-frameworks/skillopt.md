@@ -9,6 +9,11 @@ license: MIT
 maturity: v0.1.0, active, ~9.6k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2026-06-26T03:04:24Z
+  default_branch: main
+  default_branch_sha: 9969a8f393f3b5ece29715e6e5b07deb5be90741
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:25:32Z
@@ -86,12 +91,12 @@ You're an applied-AI engineer who's hit a wall hand-tuning a long skill/prompt d
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| DSPy | 未收录 | Mature framework for programmatic prompt/pipeline optimization (compilers, teleprompters) over frozen LLMs; broader and battle-tested, but optimizes prompts/programs rather than a single deployable skill doc. |
-| TextGrad | 未收录 | "Backprop through text" — optimizes prompts/text via natural-language gradients; similar text-space spirit, different update mechanism, not skill-doc-artifact-centric. |
-| PromptBreeder / APE / OPRO | 未收录 | LLM-driven prompt-search/evolution methods; overlap on automated prompt improvement, but typically prompt strings, not validation-gated reusable skill artifacts. |
-| Manual prompt engineering | 未收录 | No tooling, full control, zero infra; but unmeasured, non-reproducible, and exactly the toil SkillOpt automates. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| DSPy | 未收录 | Use this page for its stated niche; choose DSPy when you need mature framework for programmatic prompt/pipeline optimization (compilers, teleprompters) over froze. | Mature framework for programmatic prompt/pipeline optimization (compilers, teleprompters) over frozen LLMs; broader and battle-tested, but optimizes prompts/programs rather than a single deployable skill doc. |
+| TextGrad | 未收录 | Use this page for its stated niche; choose TextGrad when you need "Backprop through text". | "Backprop through text" — optimizes prompts/text via natural-language gradients; similar text-space spirit, different update mechanism, not skill-doc-artifact-centric. |
+| PromptBreeder / APE / OPRO | 未收录 | Use this page for its stated niche; choose PromptBreeder / APE / OPRO when you need LLM-driven prompt-search/evolution methods. | LLM-driven prompt-search/evolution methods; overlap on automated prompt improvement, but typically prompt strings, not validation-gated reusable skill artifacts. |
+| Manual prompt engineering | 未收录 | Use this page for its stated niche; choose Manual prompt engineering when you need no tooling, full control, zero infra. | No tooling, full control, zero infra; but unmeasured, non-reproducible, and exactly the toil SkillOpt automates. |
 
 ## Tech stack
 

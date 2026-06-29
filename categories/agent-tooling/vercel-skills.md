@@ -9,6 +9,11 @@ license: MIT
 maturity: v1.5.13, active (2026-06)
 last_verified: 2026-06-26
 type: tool
+upstream:
+  pushed_at: 2026-06-25T17:36:54Z
+  default_branch: main
+  default_branch_sha: 9a7d8acfbf29f9cced7fb5a504da1d65b484aed3
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:36:46Z
@@ -89,14 +94,14 @@ So you run `npx skills add owner/repo` to drop a skill into the right agent dire
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [Planning with Files](planning-with-files.md) | ✅ | A skill-pack (content) — the *kind of thing* Skills installs, not a competitor. Use Skills to deliver packs like this into your agent. |
-| [Context Mode](context-mode.md) | ✅ | Also a skill-pack / workflow content, not an installer. Orthogonal: Skills is the delivery mechanism, this is the payload. |
-| [beads](beads.md) | ✅ | Different layer: persistent task/memory *state* for agents, not skill distribution. You might install both — they don't overlap. |
-| Claude Code plugin marketplaces (`.claude-plugin/marketplace.json`) | 未收录 | Native Claude Code plugin/marketplace mechanism; richer (commands, hooks, MCP) but Claude-Code-only. Skills targets `SKILL.md` packs across 70+ agents instead. |
-| git submodule / manual `cp` | 未收录 | Zero new dependency and fully transparent, but no cross-agent path resolution, no discovery registry, no bulk `update` — the manual flow Skills replaces. |
-| npm / pnpm packaging a skill dir | 未收录 | Reuses the JS package ecosystem (real versioning + lockfiles), but skills aren't npm-shaped and you'd hand-place files per agent; Skills is purpose-built for the `SKILL.md` layout. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [Planning with Files](planning-with-files.md) | ✅ | Use this page for its stated niche; choose Planning with Files when you need a skill-pack (content). | A skill-pack (content) — the *kind of thing* Skills installs, not a competitor. Use Skills to deliver packs like this into your agent. |
+| [Context Mode](context-mode.md) | ✅ | Use this page for its stated niche; choose Context Mode when you need also a skill-pack / workflow content, not an installer. | Also a skill-pack / workflow content, not an installer. Orthogonal: Skills is the delivery mechanism, this is the payload. |
+| [beads](beads.md) | ✅ | Use this page for its stated niche; choose beads when you need different layer: persistent task/memory *state* for agents, not skill distribution. | Different layer: persistent task/memory *state* for agents, not skill distribution. You might install both — they don't overlap. |
+| Claude Code plugin marketplaces (`.claude-plugin/marketplace.json`) | 未收录 | Use this page for its stated niche; choose Claude Code plugin marketplaces (.claude-plugin/marketplace.json) when you need native Claude Code plugin/marketplace mechanism. | Native Claude Code plugin/marketplace mechanism; richer (commands, hooks, MCP) but Claude-Code-only. Skills targets `SKILL.md` packs across 70+ agents instead. |
+| git submodule / manual `cp` | 未收录 | Use this page for its stated niche; choose git submodule / manual cp when you need zero new dependency and fully transparent, but no cross-agent path resolution, no discovery registry. | Zero new dependency and fully transparent, but no cross-agent path resolution, no discovery registry, no bulk `update` — the manual flow Skills replaces. |
+| npm / pnpm packaging a skill dir | 未收录 | Use this page for its stated niche; choose npm / pnpm packaging a skill dir when you need reuses the JS package ecosystem (real versioning + lockfiles), but skills aren't npm-shaped and you'. | Reuses the JS package ecosystem (real versioning + lockfiles), but skills aren't npm-shaped and you'd hand-place files per agent; Skills is purpose-built for the `SKILL.md` layout. |
 
 ## Tech stack
 

@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v9.3.4, active, 7.0k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: tool
+upstream:
+  pushed_at: 2026-05-04T10:59:18Z
+  default_branch: master
+  default_branch_sha: f55dbfe4fd4ad4bd20e7e0da8a68d48f569e9b1c
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:42:42Z
@@ -80,12 +85,12 @@ You reach for it specifically as a **translation/convenience layer**: SELECT/WHE
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| Elasticsearch SQL / ES\|QL (X-Pack) | 未收录 | Elastic's first-party SQL and the newer ES\|QL pipe language, with JDBC/ODBC; maintained with the engine — prefer it when it covers your needs. This plugin predates and overlaps it. |
-| OpenSearch SQL plugin | 未收录 | The OpenSearch fork's own SQL/PPL plugin; the analogous answer if you run OpenSearch instead of Elastic. |
-| Native Query DSL | 未收录 | Maximum power and control, version-native, but verbose JSON with a steep learning curve — the friction this project removes. |
-| Presto/Trino + ES connector | 未收录 | Full ANSI-SQL engine that can federate ES with other sources; far heavier to operate, but real SQL semantics and JOINs across stores. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| Elasticsearch SQL / ES\|QL (X-Pack) | 未收录 | Use this page only for the legacy plugin; prefer Elastic's first-party SQL/ES\|QL when it covers your needs. | Elastic's first-party SQL and the newer ES\|QL pipe language, with JDBC/ODBC; maintained with the engine. This plugin predates and overlaps it. |
+| OpenSearch SQL plugin | 未收录 | Use this page for its stated niche; choose OpenSearch SQL plugin when you need the OpenSearch fork's own SQL/PPL plugin. | The OpenSearch fork's own SQL/PPL plugin; the analogous answer if you run OpenSearch instead of Elastic. |
+| Native Query DSL | 未收录 | Use this page for its stated niche; choose Native Query DSL when you need maximum power and control, version-native, but verbose JSON with a steep learning curve. | Maximum power and control, version-native, but verbose JSON with a steep learning curve — the friction this project removes. |
+| Presto/Trino + ES connector | 未收录 | Use this page for its stated niche; choose Presto/Trino + ES connector when you need full ANSI-SQL engine that can federate ES with other sources. | Full ANSI-SQL engine that can federate ES with other sources; far heavier to operate, but real SQL semantics and JOINs across stores. |
 
 ## Tech stack
 

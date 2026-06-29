@@ -9,6 +9,11 @@ license: MIT
 maturity: PyPI v1.2.0 (2017-09), repo stale since 2023-05, ~2.8k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: app
+upstream:
+  pushed_at: 2023-05-04T20:44:05Z
+  default_branch: master
+  default_branch_sha: d6156d35a95ba8c3ac759a08367079619555b6dd
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:25:17Z
@@ -74,12 +79,12 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| [Scrapyd](scrapyd.zh.md) | ✅ | SpiderKeeper 封装的守护进程——活跃维护、组织背书。SpiderKeeper 是叠在*它之上*的 UI，不是它的替代。 |
-| Gerapy | 未收录 | 面向分布式 Scrapy 管理的 Django + Vue 看板；更现代，通常是这个细分今天推荐的后继。 |
-| ScrapydWeb | 未收录 | Scrapyd 之上更丰富的 web UI（多节点、日志解析、邮件告警），但它本身也相当陈旧。 |
-| Zyte Scrapy Cloud | 未收录 | 商业托管替代——无需自托管 scrapyd+UI 栈，代价是厂商锁定和计费。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [Scrapyd](scrapyd.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“SpiderKeeper 封装的守护进程”，再选 Scrapyd。 | SpiderKeeper 封装的守护进程——活跃维护、组织背书。SpiderKeeper 是叠在*它之上*的 UI，不是它的替代。 |
+| Gerapy | 未收录 | 当前页用于它的主场景；如果更看重“面向分布式 Scrapy 管理的 Django + Vue 看板”，再选 Gerapy。 | 面向分布式 Scrapy 管理的 Django + Vue 看板；更现代，通常是这个细分今天推荐的后继。 |
+| ScrapydWeb | 未收录 | 当前页用于它的主场景；如果更看重“Scrapyd 之上更丰富的 web UI（多节点、日志解析、邮件告警），但它本身也相当陈旧”，再选 ScrapydWeb。 | Scrapyd 之上更丰富的 web UI（多节点、日志解析、邮件告警），但它本身也相当陈旧。 |
+| Zyte Scrapy Cloud | 未收录 | 当前页用于它的主场景；如果更看重“商业托管替代”，再选 Zyte Scrapy Cloud。 | 商业托管替代——无需自托管 scrapyd+UI 栈，代价是厂商锁定和计费。 |
 
 ## 技术栈
 

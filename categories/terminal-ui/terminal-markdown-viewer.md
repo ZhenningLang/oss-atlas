@@ -9,6 +9,11 @@ license: BSD-3-Clause
 maturity: v0.x, low-activity (2026-06)
 last_verified: 2026-06-28
 type: tool
+upstream:
+  pushed_at: 2024-05-15T12:23:58Z
+  default_branch: master
+  default_branch_sha: 33d0cf3a1f9acac0c23d9382492ed2ab44fb8833
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:19:33Z
@@ -73,13 +78,13 @@ You reach for it when the job is specifically *one-shot, read-only rendering of 
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| glow | 未收录 | Go single-binary Markdown renderer with a TUI browser/pager and themes (Charm); actively maintained, no Python runtime — generally the modern default for terminal Markdown reading. |
-| bat | 未收录 | A `cat` clone with syntax highlighting and paging; shows Markdown *source* highlighted rather than rendering it, but ubiquitous and fast. |
-| rich (Markdown) | 未收录 | Python library that renders Markdown to styled terminal output as part of a larger toolkit; library-first, not a standalone CLI. |
-| mdcat | 未收录 | Rust CLI that renders Markdown to the terminal, including inline images on supporting terminals; single binary, active. |
-| pandoc + pager | 未收录 | Converts Markdown to many formats (heavyweight, general-purpose); overkill for "just show this .md in my terminal". |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| glow | 未收录 | Use this page for its stated niche; choose glow when you need go single-binary Markdown renderer with a TUI browser/pager and themes (Charm). | Go single-binary Markdown renderer with a TUI browser/pager and themes (Charm); actively maintained, no Python runtime — generally the modern default for terminal Markdown reading. |
+| bat | 未收录 | Use this page for its stated niche; choose bat when you need a `cat` clone with syntax highlighting and paging. | A `cat` clone with syntax highlighting and paging; shows Markdown *source* highlighted rather than rendering it, but ubiquitous and fast. |
+| rich (Markdown) | 未收录 | Use this page for its stated niche; choose rich (Markdown) when you need python library that renders Markdown to styled terminal output as part of a larger toolkit. | Python library that renders Markdown to styled terminal output as part of a larger toolkit; library-first, not a standalone CLI. |
+| mdcat | 未收录 | Use this page for its stated niche; choose mdcat when you need rust CLI that renders Markdown to the terminal, including inline images on supporting terminals. | Rust CLI that renders Markdown to the terminal, including inline images on supporting terminals; single binary, active. |
+| pandoc + pager | 未收录 | Use this page for its stated niche; choose pandoc + pager when you need converts Markdown to many formats (heavyweight, general-purpose). | Converts Markdown to many formats (heavyweight, general-purpose); overkill for "just show this .md in my terminal". |
 
 ## Tech stack
 

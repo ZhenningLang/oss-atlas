@@ -9,6 +9,11 @@ license: NONE
 maturity: no releases, unmaintained (2026-06)
 last_verified: 2026-06-28
 type: tool
+upstream:
+  pushed_at: 2022-10-14T03:32:34Z
+  default_branch: master
+  default_branch_sha: 33d697642baf04902e80ce5bc7c7f539e0a08613
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:18:15Z
@@ -83,13 +88,13 @@ You'd pick it specifically because it's *minimal and legible* — you can read t
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| ascii-magic | 未收录 | Maintained Python library for image→ASCII with colour/HTML/terminal output; properly licensed and far more featureful — the practical replacement. |
-| jp2a | 未收录 | Fast C CLI converting JPEG/PNG to ASCII with colour; a single binary, mature, but not a Python API. |
-| chafa | 未收录 | Powerful terminal graphics/ASCII/Unicode image renderer (C); handles colour, animation and many terminals — heavier, far more capable. |
-| [art](art.md) | ✅ | Generates ASCII art from *text* (figlet-style), not images — opposite input; not a substitute. |
-| Pillow + ~20 lines | 未收录 | The DIY route asciify itself embodies; with no license on asciify, rolling your own from Pillow is often the cleaner, legally-clear option. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| ascii-magic | 未收录 | Use this page for its stated niche; choose ascii-magic when you need maintained Python library for image→ASCII with colour/HTML/terminal output. | Maintained Python library for image→ASCII with colour/HTML/terminal output; properly licensed and far more featureful — the practical replacement. |
+| jp2a | 未收录 | Use this page for its stated niche; choose jp2a when you need fast C CLI converting JPEG/PNG to ASCII with colour. | Fast C CLI converting JPEG/PNG to ASCII with colour; a single binary, mature, but not a Python API. |
+| chafa | 未收录 | Use this page for its stated niche; choose chafa when you need powerful terminal graphics/ASCII/Unicode image renderer (C). | Powerful terminal graphics/ASCII/Unicode image renderer (C); handles colour, animation and many terminals — heavier, far more capable. |
+| [art](art.md) | ✅ | Use this page for its stated niche; choose art when you need generates ASCII art from *text* (figlet-style), not images. | Generates ASCII art from *text* (figlet-style), not images — opposite input; not a substitute. |
+| Pillow + ~20 lines | 未收录 | Use this page for its stated niche; choose Pillow + ~20 lines when you need the DIY route asciify itself embodies. | The DIY route asciify itself embodies; with no license on asciify, rolling your own from Pillow is often the cleaner, legally-clear option. |
 
 ## Tech stack
 

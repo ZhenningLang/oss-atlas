@@ -9,6 +9,11 @@ license: MIT
 maturity: v0.6.2, active (2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+upstream:
+  pushed_at: 2026-06-28T18:11:20Z
+  default_branch: main
+  default_branch_sha: aba7c4e9695c363e65cb59effe926c7f1d1abe3d
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:29:26Z
@@ -81,14 +86,14 @@ health:
 
 ## 横向对比
 
-| 替代项 | 是否已收录 | 取舍 |
-|---|---|---|
-| web-quality-skills (addyosmani) | 未收录 | 更聚焦的姊妹包，专攻 web 性能/无障碍/质量审计。本包已把该主题（`/webperf`、web-performance-auditor）纳入完整 SDLC；只需 web 质量审计时用那个聚焦的。 |
-| [scientific-agent-skills](scientific-agent-skills.zh.md) ✅ | 已收录 | 面向科研/科学计算工程工作流的技能包；领域不同。按你的工作是通用软件工程还是科学计算来选。 |
-| [Waza](waza.zh.md) ✅ | 已收录 | 本 leaf 内另一个面向工程的技能集合；对比各自实际定义了哪些生命周期阶段、工作流多强制。 |
-| vercel-labs/agent-skills | 未收录 | 厂商精选的技能集；对比覆盖广度（本包是完整 SDLC vs. 厂商范围）、harness 覆盖与维护节奏。 |
-| Superpowers | 未收录（其他 leaf） | 方法论优先的包，围绕 brainstorm→plan→TDD→verify 纪律；本包则以具体工程实践域（质量/安全/性能/API/发布）和生命周期斜杠命令为中心，而非 TDD/subagent 主脊。目标重叠，重心不同。 |
-| 各 agent 内置技能 / 斜杠命令 | 未收录 | 平台自带的技能生态；本包是叠加其上的第三方 bundle，可能与原生技能重复或冲突。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| web-quality-skills (addyosmani) | 未收录 | 当前页用于它的主场景；如果更看重“更聚焦的姊妹包，专攻 web 性能/无障碍/质量审计”，再选 web-quality-skills (addyosmani)。 | 更聚焦的姊妹包，专攻 web 性能/无障碍/质量审计。本包已把该主题（`/webperf`、web-performance-auditor）纳入完整 SDLC；只需 web 质量审计时用那个聚焦的。 |
+| [scientific-agent-skills](scientific-agent-skills.zh.md) ✅ | 已收录 | 当前页用于它的主场景；如果更看重“面向科研/科学计算工程工作流的技能包”，再选 scientific-agent-skills ✅。 | 面向科研/科学计算工程工作流的技能包；领域不同。按你的工作是通用软件工程还是科学计算来选。 |
+| [Waza](waza.zh.md) ✅ | 已收录 | 当前页用于它的主场景；如果更看重“本 leaf 内另一个面向工程的技能集合”，再选 Waza ✅。 | 本 leaf 内另一个面向工程的技能集合；对比各自实际定义了哪些生命周期阶段、工作流多强制。 |
+| vercel-labs/agent-skills | 未收录 | 当前页用于它的主场景；如果更看重“厂商精选的技能集”，再选 vercel-labs/agent-skills。 | 厂商精选的技能集；对比覆盖广度（本包是完整 SDLC vs. 厂商范围）、harness 覆盖与维护节奏。 |
+| Superpowers | 未收录（其他 leaf） | 当前页用于它的主场景；如果更看重“方法论优先的包，围绕 brainstorm→plan→TDD→verify 纪律”，再选 Superpowers。 | 方法论优先的包，围绕 brainstorm→plan→TDD→verify 纪律；本包则以具体工程实践域（质量/安全/性能/API/发布）和生命周期斜杠命令为中心，而非 TDD/subagent 主脊。目标重叠，重心不同。 |
+| 各 agent 内置技能 / 斜杠命令 | 未收录 | 当前页用于它的主场景；如果更看重“平台自带的技能生态”，再选 各 agent 内置技能 / 斜杠命令。 | 平台自带的技能生态；本包是叠加其上的第三方 bundle，可能与原生技能重复或冲突。 |
 
 ## 健康度与可持续性
 

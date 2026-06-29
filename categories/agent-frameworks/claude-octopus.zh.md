@@ -9,6 +9,11 @@ license: MIT
 maturity: v9.45.0, active (2026-06)
 last_verified: 2026-06-26
 type: framework
+upstream:
+  pushed_at: 2026-06-25T02:50:04Z
+  default_branch: main
+  default_branch_sha: 239263db9db25590b0386dbdbb38d0a6fface5c6
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:08:46Z
@@ -90,14 +95,14 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| [oh-my-claudecode](oh-my-claudecode.zh.md) | ✅ | 同样是 Claude Code 增强层（配置/skills/体验优化），但不围绕多模型扇出 + 共识构建；Octopus 的整个前提是让*其他*模型来评审 Claude。 |
-| [DSPy](dspy.zh.md) | ✅ | 程序化 prompt / pipeline 优化框架，模型无关、库形态；你写 Python 而非斜杠命令。层次完全不同——是编译，而非 harness 内的评审小组。 |
-| [AgentScope](agentscope.zh.md) | ✅ | 通用多 agent 运行时 / 库，你在其上构建应用；不绑 Claude Code，也不对“盲点共识”持立场。 |
-| [Symphony](symphony.zh.md) | ✅ | OpenAI 的多 agent 编排；锚定在 OpenAI 而非 Claude，是框架不是插件。 |
-| [openfang](openfang.zh.md) | ✅ | 同类 agent 框架，编排模型不同；选型前先比范围。 |
-| crystal / claude-squad | 未收录 | 并行跑多个 Claude Code *会话/worktree*；并行发生在多个 Claude 实例之间，而非*不同厂商模型*评审同一个任务。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [oh-my-claudecode](oh-my-claudecode.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“同样是 Claude Code 增强层（配置/skills/体验优化），但不围绕多模型扇出 + 共识构建”，再选 oh-my-claudecode。 | 同样是 Claude Code 增强层（配置/skills/体验优化），但不围绕多模型扇出 + 共识构建；Octopus 的整个前提是让*其他*模型来评审 Claude。 |
+| [DSPy](dspy.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“程序化 prompt / pipeline 优化框架，模型无关、库形态”，再选 DSPy。 | 程序化 prompt / pipeline 优化框架，模型无关、库形态；你写 Python 而非斜杠命令。层次完全不同——是编译，而非 harness 内的评审小组。 |
+| [AgentScope](agentscope.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“通用多 agent 运行时 / 库，你在其上构建应用”，再选 AgentScope。 | 通用多 agent 运行时 / 库，你在其上构建应用；不绑 Claude Code，也不对“盲点共识”持立场。 |
+| [Symphony](symphony.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“OpenAI 的多 agent 编排”，再选 Symphony。 | OpenAI 的多 agent 编排；锚定在 OpenAI 而非 Claude，是框架不是插件。 |
+| [openfang](openfang.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“同类 agent 框架，编排模型不同”，再选 openfang。 | 同类 agent 框架，编排模型不同；选型前先比范围。 |
+| crystal / claude-squad | 未收录 | 当前页用于它的主场景；如果更看重“并行跑多个 Claude Code *会话/worktree*”，再选 crystal / claude-squad。 | 并行跑多个 Claude Code *会话/worktree*；并行发生在多个 Claude 实例之间，而非*不同厂商模型*评审同一个任务。 |
 
 ## 技术栈
 

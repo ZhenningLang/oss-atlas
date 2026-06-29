@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v0.0.1 (only tagged release 2019), low activity, ~1.2k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: tool
+upstream:
+  pushed_at: 2024-04-03T02:31:46Z
+  default_branch: master
+  default_branch_sha: d2ec33ef69107a21148c29a3f609162a75f58854
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:44:05Z
@@ -76,12 +81,12 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| redis-rdb-tools（sripathikrishnan） | 未收录 | 最早的 Python RDB 解析/内存分析器；输出格式更多、支持 CSV 导出，但对大 dump 慢得多，且本身基本已无人维护。 |
-| `redis-cli --bigkeys` / `--memkeys` | 未收录 | Redis 内置，在线跑、无需文件，但只*采样*且会给服务器加负载；没有按前缀的拆分，也没有报告 UI。 |
-| RedisInsight（Redis Ltd.） | 未收录 | 带完整 GUI 和在线内存分析页；功能丰富得多，但它是连活实例的重型桌面应用，不是离线文件解析器。 |
-| `MEMORY USAGE` / `MEMORY DOCTOR` | 未收录 | 在线服务器上做按 key/实例内存自省的原生命令；单 key 精确，但你得先知道该问哪些 key。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| redis-rdb-tools（sripathikrishnan） | 未收录 | 当前页用于它的主场景；如果更看重“最早的 Python RDB 解析/内存分析器”，再选 redis-rdb-tools（sripathikrishnan）。 | 最早的 Python RDB 解析/内存分析器；输出格式更多、支持 CSV 导出，但对大 dump 慢得多，且本身基本已无人维护。 |
+| `redis-cli --bigkeys` / `--memkeys` | 未收录 | 当前页用于它的主场景；如果更看重“Redis 内置，在线跑、无需文件，但只*采样*且会给服务器加负载”，再选 redis-cli --bigkeys / --memkeys。 | Redis 内置，在线跑、无需文件，但只*采样*且会给服务器加负载；没有按前缀的拆分，也没有报告 UI。 |
+| RedisInsight（Redis Ltd.） | 未收录 | 当前页用于它的主场景；如果更看重“带完整 GUI 和在线内存分析页”，再选 RedisInsight（Redis Ltd.）。 | 带完整 GUI 和在线内存分析页；功能丰富得多，但它是连活实例的重型桌面应用，不是离线文件解析器。 |
+| `MEMORY USAGE` / `MEMORY DOCTOR` | 未收录 | 当前页用于它的主场景；如果更看重“在线服务器上做按 key/实例内存自省的原生命令”，再选 MEMORY USAGE / MEMORY DOCTOR。 | 在线服务器上做按 key/实例内存自省的原生命令；单 key 精确，但你得先知道该问哪些 key。 |
 
 ## 技术栈
 

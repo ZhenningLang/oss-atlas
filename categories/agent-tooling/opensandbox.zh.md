@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v0.x (python SDK v0.1.13), active, ~11.7k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: framework
+upstream:
+  pushed_at: 2026-06-29T11:31:31Z
+  default_branch: main
+  default_branch_sha: 032790072b3efb69a75a2917e26259df49cf7138
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:36:04Z
@@ -83,13 +88,13 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| E2B（firecracker 沙箱） | 未收录 | 流行的托管+开源沙箱 SDK，做 agent 代码执行；托管云开箱即用，但自托管与多运行时广度有别——OpenSandbox 更突出 K8s 规模 + 多种安全运行时。 |
-| Daytona | 未收录 | 面向 agent 的开发环境/沙箱运行时；用例重叠，编排和功能侧重不同。 |
-| gVisor / Kata / Firecracker（单用） | 未收录 | 隔离原语本身——OpenSandbox 在其之上做编排；直接用它们意味着沙箱生命周期/API/调度都得你自己搭。 |
-| 普通 Docker / containerd | 未收录 | 无处不在且可信，但给你的是一个容器，不是沙箱协议、凭据保险库、出口策略或多语言 SDK 面。 |
-| Jupyter Kernel Gateway / nsjail | 未收录 | 更窄、单一用途的代码执行/隔离工具；不太算面向 agent 的平台。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| E2B（firecracker 沙箱） | 未收录 | 当前页用于它的主场景；如果更看重“流行的托管+开源沙箱 SDK，做 agent 代码执行”，再选 E2B（firecracker 沙箱）。 | 流行的托管+开源沙箱 SDK，做 agent 代码执行；托管云开箱即用，但自托管与多运行时广度有别——OpenSandbox 更突出 K8s 规模 + 多种安全运行时。 |
+| Daytona | 未收录 | 当前页用于它的主场景；如果更看重“面向 agent 的开发环境/沙箱运行时”，再选 Daytona。 | 面向 agent 的开发环境/沙箱运行时；用例重叠，编排和功能侧重不同。 |
+| gVisor / Kata / Firecracker（单用） | 未收录 | 当前页用于它的主场景；如果更看重“隔离原语本身”，再选 gVisor / Kata / Firecracker（单用）。 | 隔离原语本身——OpenSandbox 在其之上做编排；直接用它们意味着沙箱生命周期/API/调度都得你自己搭。 |
+| 普通 Docker / containerd | 未收录 | 当前页用于它的主场景；如果更看重“无处不在且可信，但给你的是一个容器，不是沙箱协议、凭据保险库、出口策略或多语言 SDK 面”，再选 普通 Docker / containerd。 | 无处不在且可信，但给你的是一个容器，不是沙箱协议、凭据保险库、出口策略或多语言 SDK 面。 |
+| Jupyter Kernel Gateway / nsjail | 未收录 | 当前页用于它的主场景；如果更看重“更窄、单一用途的代码执行/隔离工具”，再选 Jupyter Kernel Gateway / nsjail。 | 更窄、单一用途的代码执行/隔离工具；不太算面向 agent 的平台。 |
 
 ## 技术栈
 

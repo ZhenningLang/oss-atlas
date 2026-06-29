@@ -9,6 +9,11 @@ license: MIT
 maturity: educational reference collection, idle since ~2024-06, ~17.5k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2024-06-18T07:08:31Z
+  default_branch: master
+  default_branch_sha: 36d3c77e5ff20ebe0aeefd322326a134a279b93e
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:04:59Z
@@ -83,12 +88,12 @@ You reach for this specific repo when you want *breadth of reference under one c
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| `diffusers` (Hugging Face) | 未收录 | Maintained library for **diffusion** models (the modern default for generation) with pretrained pipelines and a real API; solves today's generation problem, but a different model family and not a from-scratch reading aid. |
-| Official paper repos (StyleGAN, CycleGAN, …) | 未收录 | The authors' own implementations — paper-accurate weights and numbers, but each is its own codebase with its own style/quirks; not a single consistently-written collection for browsing many GANs side by side. |
-| lucidrains' implementations | 未收录 | Another prolific single-author body of clean PyTorch reimplementations spanning many architectures (incl. newer ones); often more actively updated, similar "read the code" value, broader/more current scope. |
-| torchgan | 未收录 | An actual GAN *library/framework* (modular trainers, losses, metrics) you import and configure; better if you want reusable building blocks, less suited to reading one paper's architecture end-to-end. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| `diffusers` (Hugging Face) | 未收录 | Use this page for its stated niche; choose diffusers (Hugging Face) when you need maintained library for **diffusion** models (the modern default for generation) with pretrained pipe. | Maintained library for **diffusion** models (the modern default for generation) with pretrained pipelines and a real API; solves today's generation problem, but a different model family and not a from-scratch reading aid. |
+| Official paper repos (StyleGAN, CycleGAN, …) | 未收录 | Use this page for its stated niche; choose Official paper repos (StyleGAN, CycleGAN, …) when you need the authors' own implementations. | The authors' own implementations — paper-accurate weights and numbers, but each is its own codebase with its own style/quirks; not a single consistently-written collection for browsing many GANs side by side. |
+| lucidrains' implementations | 未收录 | Use this page for its stated niche; choose lucidrains' implementations when you need another prolific single-author body of clean PyTorch reimplementations spanning many architectures (. | Another prolific single-author body of clean PyTorch reimplementations spanning many architectures (incl. newer ones); often more actively updated, similar "read the code" value, broader/more current scope. |
+| torchgan | 未收录 | Use this page for its stated niche; choose torchgan when you need an actual GAN *library/framework* (modular trainers, losses, metrics) you import and configure. | An actual GAN *library/framework* (modular trainers, losses, metrics) you import and configure; better if you want reusable building blocks, less suited to reading one paper's architecture end-to-end. |
 
 ## Tech stack
 

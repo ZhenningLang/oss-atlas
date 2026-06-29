@@ -9,6 +9,11 @@ license: MIT
 maturity: v2.8.8, active (2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+upstream:
+  pushed_at: 2026-06-28T02:27:08Z
+  default_branch: main
+  default_branch_sha: 8a81ed60272d21d4b8808f7308d49a0b1b000555
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:29:13Z
@@ -80,14 +85,14 @@ UI UX Pro Max 就是把这种判断力装进 agent。你跑 `npm install -g ui-u
 
 ## 横向对比
 
-| 替代方案 | 是否已收录 | 取舍 |
-|---|---|---|
-| designer-skills | 未收录 | 本 leaf 内的同类 UI/UX 设计 skill pack；对比点在于它是否带检索引擎 + 规则数据库，还是纯 prompt 指导。 |
-| stitch-skills | 未收录 | 同 leaf 的设计 skill pack；生成面不同——衡量哪个更贴合你的技术栈（HTML/Tailwind/React）和 harness。 |
-| taste-skill | 未收录 | 同 leaf 中聚焦视觉*品味*/评审的 skill；与本 pack 这类偏生成的 skill 是互补而非替代关系。 |
-| make-interfaces-feel-better | 未收录 | 同 leaf 中针对已有界面打磨/手感的 skill；范围比本 pack 的“产品类型→设计系统”流水线更窄。 |
-| Anthropic / 内置 agent skills 和 slash command | 未收录 | 平台原生的 skill 生态；本项目是叠在其上的第三方 bundle，可能与原生设计助手重复或冲突。 |
-| 手写的项目 `DESIGN.md` 设计系统 | 未收录 | 你自己维护的逐项目设计契约；更贴合、更稳定，但需要你自己搭建并强制执行，而不是直接拿到一套 161 条规则的起点。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| designer-skills | 未收录 | 当前页用于它的主场景；如果更看重“本 leaf 内的同类 UI/UX 设计 skill pack”，再选 designer-skills。 | 本 leaf 内的同类 UI/UX 设计 skill pack；对比点在于它是否带检索引擎 + 规则数据库，还是纯 prompt 指导。 |
+| stitch-skills | 未收录 | 当前页用于它的主场景；如果更看重“同 leaf 的设计 skill pack”，再选 stitch-skills。 | 同 leaf 的设计 skill pack；生成面不同——衡量哪个更贴合你的技术栈（HTML/Tailwind/React）和 harness。 |
+| taste-skill | 未收录 | 当前页用于它的主场景；如果更看重“同 leaf 中聚焦视觉*品味*/评审的 skill”，再选 taste-skill。 | 同 leaf 中聚焦视觉*品味*/评审的 skill；与本 pack 这类偏生成的 skill 是互补而非替代关系。 |
+| make-interfaces-feel-better | 未收录 | 当前页用于它的主场景；如果更看重“同 leaf 中针对已有界面打磨/手感的 skill”，再选 make-interfaces-feel-better。 | 同 leaf 中针对已有界面打磨/手感的 skill；范围比本 pack 的“产品类型→设计系统”流水线更窄。 |
+| Anthropic / 内置 agent skills 和 slash command | 未收录 | 当前页用于它的主场景；如果更看重“平台原生的 skill 生态”，再选 Anthropic / 内置 agent skills 和 slash command。 | 平台原生的 skill 生态；本项目是叠在其上的第三方 bundle，可能与原生设计助手重复或冲突。 |
+| 手写的项目 `DESIGN.md` 设计系统 | 未收录 | 当前页用于它的主场景；如果更看重“你自己维护的逐项目设计契约”，再选 手写的项目 DESIGN.md 设计系统。 | 你自己维护的逐项目设计契约；更贴合、更稳定，但需要你自己搭建并强制执行，而不是直接拿到一套 161 条规则的起点。 |
 
 ## 健康度与可持续性
 

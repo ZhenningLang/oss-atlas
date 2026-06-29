@@ -9,6 +9,11 @@ license: MIT
 maturity: v4.5.0, active (2026-06)
 last_verified: 2026-06-26
 type: library
+upstream:
+  pushed_at: 2026-06-22T15:28:21Z
+  default_branch: master
+  default_branch_sha: 2c9cf8ea00329f6768c7d7902252ed977d75ce42
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:53:18Z
@@ -89,14 +94,14 @@ It also fits when you're animating things the CSS engine can't reach cleanly: tw
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| GSAP (GreenSock) | 未收录 | Larger, more mature ecosystem (ScrollTrigger, MorphSVG, physics plugins) and commercial support; heavier mindshare. Anime.js is smaller, MIT-licensed, dependency-free, and now fully modular in v4. |
-| Motion / Framer Motion | 未收录 | Declarative, React-first (also a vanilla `motion` core); idiomatic for component-driven apps. Anime.js is imperative and framework-agnostic — better when you're not living inside React's render model. |
-| Motion One | 未收录 | Tiny WAAPI-based animator; very small footprint. Anime.js offers more built-ins (timeline, draggable, SVG morph, scroll, text) at a larger but still light cost. |
-| Web Animations API (WAAPI) | 未收录 | Native browser API, no library to ship; lower-level, no timeline/stagger/SVG-morph sugar. Anime.js v4 includes a WAAPI adapter and adds the ergonomic layer on top. |
-| CSS `@keyframes` / transitions | 未收录 | Zero JS, GPU-friendly for simple cases; no sequencing, dynamic values, or runtime control. Anime.js is for when you need JS-driven orchestration. |
-| Velocity.js | 未收录 | Older jQuery-era JS animator, now largely unmaintained. Anime.js is the actively maintained modern equivalent. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| GSAP (GreenSock) | 未收录 | Use this page for its stated niche; choose GSAP (GreenSock) when you need larger, more mature ecosystem (ScrollTrigger, MorphSVG, physics plugins) and commercial support. | Larger, more mature ecosystem (ScrollTrigger, MorphSVG, physics plugins) and commercial support; heavier mindshare. Anime.js is smaller, MIT-licensed, dependency-free, and now fully modular in v4. |
+| Motion / Framer Motion | 未收录 | Use this page for its stated niche; choose Motion / Framer Motion when you need declarative, React-first (also a vanilla `motion` core). | Declarative, React-first (also a vanilla `motion` core); idiomatic for component-driven apps. Anime.js is imperative and framework-agnostic — better when you're not living inside React's render model. |
+| Motion One | 未收录 | Use this page for its stated niche; choose Motion One when you need tiny WAAPI-based animator. | Tiny WAAPI-based animator; very small footprint. Anime.js offers more built-ins (timeline, draggable, SVG morph, scroll, text) at a larger but still light cost. |
+| Web Animations API (WAAPI) | 未收录 | Use this page for its stated niche; choose Web Animations API (WAAPI) when you need native browser API, no library to ship. | Native browser API, no library to ship; lower-level, no timeline/stagger/SVG-morph sugar. Anime.js v4 includes a WAAPI adapter and adds the ergonomic layer on top. |
+| CSS `@keyframes` / transitions | 未收录 | Use this page for its stated niche; choose CSS @keyframes / transitions when you need zero JS, GPU-friendly for simple cases. | Zero JS, GPU-friendly for simple cases; no sequencing, dynamic values, or runtime control. Anime.js is for when you need JS-driven orchestration. |
+| Velocity.js | 未收录 | Use this page for its stated niche; choose Velocity.js when you need older jQuery-era JS animator, now largely unmaintained. | Older jQuery-era JS animator, now largely unmaintained. Anime.js is the actively maintained modern equivalent. |
 
 ## Tech stack
 

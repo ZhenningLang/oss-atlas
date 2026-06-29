@@ -9,6 +9,11 @@ license: BSD-3-Clause
 maturity: stable, active (2026-06)
 last_verified: 2026-06-28
 type: tool
+upstream:
+  pushed_at: 2026-06-22T20:13:16Z
+  default_branch: master
+  default_branch_sha: 21c0c314711e9ee62d17b07103e8d516f48dc941
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:16:34Z
@@ -83,13 +88,13 @@ You reach for Flower specifically because it's the de-facto, purpose-built monit
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [Celery](celery.md) | ✅ | The task framework Flower monitors; Celery's own `inspect`/`control` CLI gives raw access but no UI. Flower is the dashboard *for* Celery, not a substitute. |
-| Prometheus + Grafana (celery-exporter) | 未收录 | Better for long-term metrics, alerting, and unified dashboards; more to operate and no live per-task drill-down or worker control. Often run *alongside* Flower. |
-| Celery `events`/`inspect` CLI | 未收录 | Built into Celery, zero extra process; terminal-only, no web UI, no REST API, no at-a-glance fleet view. |
-| [Apache Airflow](../workflow-orchestration/airflow.md) UI | ✅ | A DAG orchestrator's UI, not a Celery task monitor — different tool for a different model (scheduled workflows vs. ad-hoc tasks). |
-| Datadog / Sentry / commercial APM | 未收录 | Full observability with alerting and traces; paid, heavier, and not Celery-purpose-built the way Flower is. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [Celery](celery.md) | ✅ | Use this page for its stated niche; choose Celery when you need the task framework Flower monitors. | The task framework Flower monitors; Celery's own `inspect`/`control` CLI gives raw access but no UI. Flower is the dashboard *for* Celery, not a substitute. |
+| Prometheus + Grafana (celery-exporter) | 未收录 | Use this page for its stated niche; choose Prometheus + Grafana (celery-exporter) when you need better for long-term metrics, alerting, and unified dashboards. | Better for long-term metrics, alerting, and unified dashboards; more to operate and no live per-task drill-down or worker control. Often run *alongside* Flower. |
+| Celery `events`/`inspect` CLI | 未收录 | Use this page for its stated niche; choose Celery events/inspect CLI when you need built into Celery, zero extra process. | Built into Celery, zero extra process; terminal-only, no web UI, no REST API, no at-a-glance fleet view. |
+| [Apache Airflow](../workflow-orchestration/airflow.md) UI | ✅ | Use this page for its stated niche; choose Apache Airflow UI when you need a DAG orchestrator's UI, not a Celery task monitor. | A DAG orchestrator's UI, not a Celery task monitor — different tool for a different model (scheduled workflows vs. ad-hoc tasks). |
+| Datadog / Sentry / commercial APM | 未收录 | Use this page for its stated niche; choose Datadog / Sentry / commercial APM when you need full observability with alerting and traces. | Full observability with alerting and traces; paid, heavier, and not Celery-purpose-built the way Flower is. |
 
 ## Tech stack
 

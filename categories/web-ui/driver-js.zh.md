@@ -9,6 +9,11 @@ license: MIT
 maturity: v1.6.0, active (2026-06), single-maintainer personal repo
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2026-06-27T01:49:35Z
+  default_branch: master
+  default_branch_sha: ffbf6a41ad73d2ca6829a471750a42469a426fbc
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:25:33Z
@@ -88,12 +93,12 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| Shepherd.js | 未收录 | 类似的开源引导库，内置的步骤/定位选项更多、API 更丰富；但更重（用 Floating UI / popper 风格定位），bundle 比 Driver.js 零依赖的内核大。 |
-| Intro.js | 未收录 | 最早的引导库；用得很广，但其现代用法是**双协议授权**（非商用免费、商用需付费）——这是个实打实的锁定/成本考量，而 Driver.js（MIT）没有（授权条款见存疑）。 |
-| Reactour / react-joyride | 未收录 | React 专属的引导组件（hooks/JSX 原生）；在 React 内 DX 更好，但被框架锁定，对比 Driver.js 框架无关的原生内核。 |
-| Appcues / Userflow / Userpilot | 未收录 | 商业的无代码 onboarding **平台**——分层、分析、定向、checklist、问卷；不是开源仓库，有持续的 SaaS 订阅成本，但解决的是 product-led-growth，而不只是引导渲染。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| Shepherd.js | 未收录 | 当前页用于它的主场景；如果更看重“类似的开源引导库，内置的步骤/定位选项更多、API 更丰富”，再选 Shepherd.js。 | 类似的开源引导库，内置的步骤/定位选项更多、API 更丰富；但更重（用 Floating UI / popper 风格定位），bundle 比 Driver.js 零依赖的内核大。 |
+| Intro.js | 未收录 | 当前页用于它的主场景；如果更看重“最早的引导库”，再选 Intro.js。 | 最早的引导库；用得很广，但其现代用法是**双协议授权**（非商用免费、商用需付费）——这是个实打实的锁定/成本考量，而 Driver.js（MIT）没有（授权条款见存疑）。 |
+| Reactour / react-joyride | 未收录 | 当前页用于它的主场景；如果更看重“React 专属的引导组件（hooks/JSX 原生）”，再选 Reactour / react-joyride。 | React 专属的引导组件（hooks/JSX 原生）；在 React 内 DX 更好，但被框架锁定，对比 Driver.js 框架无关的原生内核。 |
+| Appcues / Userflow / Userpilot | 未收录 | 当前页用于它的主场景；如果更看重“商业的无代码 onboarding **平台**”，再选 Appcues / Userflow / Userpilot。 | 商业的无代码 onboarding **平台**——分层、分析、定向、checklist、问卷；不是开源仓库，有持续的 SaaS 订阅成本，但解决的是 product-led-growth，而不只是引导渲染。 |
 
 ## 技术栈
 

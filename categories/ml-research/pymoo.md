@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v0.6.x, active (last pushed 2026-06), ~2.9k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2026-06-28T22:14:17Z
+  default_branch: main
+  default_branch_sha: 04c77b4cbb01a51cd98be8ad74774d4ea588e35a
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:04:43Z
@@ -89,13 +94,13 @@ You reach for it as the **de-facto Python library for evolutionary multi-objecti
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| DEAP | 未收录 | Flexible evolutionary-computation toolkit; very general/low-level, but you assemble more yourself — pymoo gives higher-level, ready multi-objective algorithms and benchmarks. |
-| Platypus | 未收录 | Another Python multi-objective EA library; smaller scope/community than pymoo's algorithm + tooling breadth. [推断] |
-| Optuna / Ax (BoTorch) | 未收录 | Bayesian/surrogate optimization, ideal for expensive evaluations and HPO; different paradigm (sample-efficient, not population-based) — complementary, not a drop-in. |
-| jMetal (Java/Py) | 未收录 | Established multi-objective metaheuristics framework; jMetalPy mirrors it in Python — comparable goals, different ecosystem and API style. |
-| SciPy / OR-Tools / Gurobi | 未收录 | Exact/convex/MILP solvers; the right tool when your problem is structured (linear/convex/integer-programming), where EAs are the wrong hammer. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| DEAP | 未收录 | Use this page for its stated niche; choose DEAP when you need flexible evolutionary-computation toolkit. | Flexible evolutionary-computation toolkit; very general/low-level, but you assemble more yourself — pymoo gives higher-level, ready multi-objective algorithms and benchmarks. |
+| Platypus | 未收录 | Use this page for its stated niche; choose Platypus when you need another Python multi-objective EA library. | Another Python multi-objective EA library; smaller scope/community than pymoo's algorithm + tooling breadth. [推断] |
+| Optuna / Ax (BoTorch) | 未收录 | Use this page for its stated niche; choose Optuna / Ax (BoTorch) when you need bayesian/surrogate optimization, ideal for expensive evaluations and HPO. | Bayesian/surrogate optimization, ideal for expensive evaluations and HPO; different paradigm (sample-efficient, not population-based) — complementary, not a drop-in. |
+| jMetal (Java/Py) | 未收录 | Use this page for its stated niche; choose jMetal (Java/Py) when you need established multi-objective metaheuristics framework. | Established multi-objective metaheuristics framework; jMetalPy mirrors it in Python — comparable goals, different ecosystem and API style. |
+| SciPy / OR-Tools / Gurobi | 未收录 | Use this page for its stated niche; choose SciPy / OR-Tools / Gurobi when you need exact/convex/MILP solvers. | Exact/convex/MILP solvers; the right tool when your problem is structured (linear/convex/integer-programming), where EAs are the wrong hammer. |
 
 ## Tech stack
 

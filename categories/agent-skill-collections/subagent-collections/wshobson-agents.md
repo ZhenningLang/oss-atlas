@@ -9,6 +9,11 @@ license: MIT
 maturity: active, no tagged releases, ~37.2k stars (as of 2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+upstream:
+  pushed_at: 2026-06-29T01:08:41Z
+  default_branch: main
+  default_branch_sha: 5cc2549a50fc672230efd0a0307e2fd27ffba792
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:33:12Z
@@ -80,12 +85,12 @@ You reach for this specifically when you want *breadth* and *cross-harness porta
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [awesome-claude-code-subagents](awesome-claude-code-subagents.md) | ✅ | The other large Claude Code subagent collection in this leaf, but *subagents only* (drop into `~/.claude/agents/`). wshobson/agents bundles skills + commands + orchestrators too and generates per-harness; pick by whether you want persona breadth only vs. a multi-artifact, multi-harness catalog. |
-| [gstack](../personal-collections/gstack.md) | ✅ | One founder's *role-based* command set (CEO/designer/QA personas) tuned to his daily factory. Far narrower and personal; wshobson/agents is a generic domain catalog, not a single operator's workflow. |
-| Anthropic Claude Plugins (official marketplace) | 未收录 | First-party, Anthropic-curated `/plugin` marketplace with known provenance; narrower and Claude-Code-only. wshobson/agents is third-party and far broader, spanning multiple harnesses, at higher trust/vetting cost. |
-| Hand-rolling your own subagents/skills | 未收录 | Maximum fit and zero conflict with your existing stack, but you author and maintain everything. This repo trades bespoke fit for ready-made breadth you must still vet. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [awesome-claude-code-subagents](awesome-claude-code-subagents.md) | ✅ | Use this page for its stated niche; choose awesome-claude-code-subagents when you need the other large Claude Code subagent collection in this leaf, but *subagents only* (drop into `~/. | The other large Claude Code subagent collection in this leaf, but *subagents only* (drop into `~/.claude/agents/`). wshobson/agents bundles skills + commands + orchestrators too and generates per-harness; pick by whether you want persona breadth only vs. a multi-artifact, multi-harness catalog. |
+| [gstack](../personal-collections/gstack.md) | ✅ | Use this page for its stated niche; choose gstack when you need one founder's *role-based* command set (CEO/designer/QA personas) tuned to his daily factory. | One founder's *role-based* command set (CEO/designer/QA personas) tuned to his daily factory. Far narrower and personal; wshobson/agents is a generic domain catalog, not a single operator's workflow. |
+| Anthropic Claude Plugins (official marketplace) | 未收录 | Use this page for its stated niche; choose Anthropic Claude Plugins (official marketplace) when you need first-party, Anthropic-curated `/plugin` marketplace with known provenance. | First-party, Anthropic-curated `/plugin` marketplace with known provenance; narrower and Claude-Code-only. wshobson/agents is third-party and far broader, spanning multiple harnesses, at higher trust/vetting cost. |
+| Hand-rolling your own subagents/skills | 未收录 | Use this page for its stated niche; choose Hand-rolling your own subagents/skills when you need maximum fit and zero conflict with your existing stack, but you author and maintain everything. | Maximum fit and zero conflict with your existing stack, but you author and maintain everything. This repo trades bespoke fit for ready-made breadth you must still vet. |
 
 ## Health & viability
 

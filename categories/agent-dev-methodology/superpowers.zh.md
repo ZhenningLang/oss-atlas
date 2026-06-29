@@ -9,6 +9,11 @@ license: MIT
 maturity: v6.0.3, active (2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+upstream:
+  pushed_at: 2026-06-25T02:35:57Z
+  default_branch: main
+  default_branch_sha: 896224c4b1879920ab573417e68fd51d2ccc9072
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:08:18Z
@@ -80,14 +85,14 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| [SuperClaude Framework](superclaude.zh.md) | ✅ | 面向 persona/命令/MCP 的 Claude Code 配置框架；命令和 agent 面更丰富，安装更重。Superpowers 更精简，主轴是 TDD/SDLC 纪律而非 persona 体系。 |
-| [get-shit-done](get-shit-done.zh.md) | ✅ | 面向交付的工作流/命令包；“驱动 agent 走流程”的目标有重叠，但流程形态不同。Superpowers 以 brainstorm-then-TDD 加 subagent 分派为主线。 |
-| [Compound Engineering](compound-engineering.zh.md) | ✅ | 围绕复利/自动化模式构建的方法论插件；同源理念，基元不同。按哪条工作流主轴贴合你的团队来选。 |
-| [ECC](ecc.zh.md) | ✅ | 本类目下另一套 agent 开发方法论；对比点在于各自真正强制 vs 仅建议哪些生命周期阶段。 |
-| [12-Factor Agents](12-factor-agents.zh.md) | ✅ | 用于构建 agent *应用* 的原则/方法论文档，而非装进编程 agent 的插件式 skill 包——消费单位不同。 |
-| Anthropic 官方 skills / 内置 slash 命令 | 未收录 | 平台自带的 skill 生态；Superpowers 是叠在其上的第三方精选包，因此可能与原生 skill 冲突或重复。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [SuperClaude Framework](superclaude.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“面向 persona/命令/MCP 的 Claude Code 配置框架”，再选 SuperClaude Framework。 | 面向 persona/命令/MCP 的 Claude Code 配置框架；命令和 agent 面更丰富，安装更重。Superpowers 更精简，主轴是 TDD/SDLC 纪律而非 persona 体系。 |
+| [get-shit-done](get-shit-done.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“面向交付的工作流/命令包”，再选 get-shit-done。 | 面向交付的工作流/命令包；“驱动 agent 走流程”的目标有重叠，但流程形态不同。Superpowers 以 brainstorm-then-TDD 加 subagent 分派为主线。 |
+| [Compound Engineering](compound-engineering.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“围绕复利/自动化模式构建的方法论插件”，再选 Compound Engineering。 | 围绕复利/自动化模式构建的方法论插件；同源理念，基元不同。按哪条工作流主轴贴合你的团队来选。 |
+| [ECC](ecc.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“本类目下另一套 agent 开发方法论”，再选 ECC。 | 本类目下另一套 agent 开发方法论；对比点在于各自真正强制 vs 仅建议哪些生命周期阶段。 |
+| [12-Factor Agents](12-factor-agents.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“用于构建 agent *应用* 的原则/方法论文档，而非装进编程 agent 的插件式 skill 包”，再选 12-Factor Agents。 | 用于构建 agent *应用* 的原则/方法论文档，而非装进编程 agent 的插件式 skill 包——消费单位不同。 |
+| Anthropic 官方 skills / 内置 slash 命令 | 未收录 | 当前页用于它的主场景；如果更看重“平台自带的 skill 生态”，再选 Anthropic 官方 skills / 内置 slash 命令。 | 平台自带的 skill 生态；Superpowers 是叠在其上的第三方精选包，因此可能与原生 skill 冲突或重复。 |
 
 ## 健康度与可持续性
 

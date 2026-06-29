@@ -9,6 +9,11 @@ license: GPL-3.0
 maturity: v2.0 (old), low-cadence maintenance (2026-06)
 last_verified: 2026-06-28
 type: tool
+upstream:
+  pushed_at: 2025-04-07T02:52:38Z
+  default_branch: develop
+  default_branch_sha: 61229f0bc2b8356224247e427d7b85f5c8971266
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:13:09Z
@@ -82,13 +87,13 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| py-spy | 未收录 | 采样式 profiler，*不注入代码*就读取运行中的 Python 进程（无需 gdb、更安全）；对“时间在哪/为何卡住”很好，但它只观察——不能在目标里跑任意代码。 |
-| pyrasite 对 gdb + python-gdb | 未收录 | 裸 gdb 加 CPython helper 能 attach 并检查，但注入要你自己接线；pyrasite 把“注入并跑片段”这套工作流打包好了。 |
-| manhole / remote pdb | 未收录 | 你*事先*嵌入的库，往你的进程开一个调试 shell；更干净更安全，但要预先埋点——对已经卡死的进程没用。 |
-| Austin | 未收录 | Python 的帧栈采样 profiler；只观察、低开销、活跃维护——是 profiling 替代品，不是代码注入器。 |
-| 加日志后 reload/重启 | 未收录 | “干脆重启它”的基线；安全但丢掉活状态和当下的症状——这恰恰是 pyrasite 要避免的。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| py-spy | 未收录 | 当前页用于它的主场景；如果更看重“采样式 profiler，*不注入代码*就读取运行中的 Python 进程（无需 gdb、更安全）”，再选 py-spy。 | 采样式 profiler，*不注入代码*就读取运行中的 Python 进程（无需 gdb、更安全）；对“时间在哪/为何卡住”很好，但它只观察——不能在目标里跑任意代码。 |
+| pyrasite 对 gdb + python-gdb | 未收录 | 当前页用于它的主场景；如果更看重“裸 gdb 加 CPython helper 能 attach 并检查，但注入要你自己接线”，再选 pyrasite 对 gdb + python-gdb。 | 裸 gdb 加 CPython helper 能 attach 并检查，但注入要你自己接线；pyrasite 把“注入并跑片段”这套工作流打包好了。 |
+| manhole / remote pdb | 未收录 | 当前页用于它的主场景；如果更看重“你*事先*嵌入的库，往你的进程开一个调试 shell”，再选 manhole / remote pdb。 | 你*事先*嵌入的库，往你的进程开一个调试 shell；更干净更安全，但要预先埋点——对已经卡死的进程没用。 |
+| Austin | 未收录 | 当前页用于它的主场景；如果更看重“Python 的帧栈采样 profiler”，再选 Austin。 | Python 的帧栈采样 profiler；只观察、低开销、活跃维护——是 profiling 替代品，不是代码注入器。 |
+| 加日志后 reload/重启 | 未收录 | 当前页用于它的主场景；如果更看重““干脆重启它”的基线”，再选 加日志后 reload/重启。 | “干脆重启它”的基线；安全但丢掉活状态和当下的症状——这恰恰是 pyrasite 要避免的。 |
 
 ## 技术栈
 

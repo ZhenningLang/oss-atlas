@@ -9,6 +9,11 @@ license: GPL-3.0
 maturity: v2.0 (old), low-cadence maintenance (2026-06)
 last_verified: 2026-06-28
 type: tool
+upstream:
+  pushed_at: 2025-04-07T02:52:38Z
+  default_branch: develop
+  default_branch_sha: 61229f0bc2b8356224247e427d7b85f5c8971266
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:13:09Z
@@ -82,13 +87,13 @@ You reach for it specifically when the alternative — kill and restart with mor
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| py-spy | 未收录 | Sampling profiler that reads a running Python process *without injecting code* (no gdb, safer); great for "where's the time/why is it stuck," but it observes — it can't run arbitrary code in the target. |
-| pyrasite vs gdb + python-gdb | 未收录 | Raw gdb with the CPython helpers can attach and inspect, but you wire up the injection yourself; pyrasite packages the inject-and-run-snippet workflow. |
-| manhole / remote pdb | 未收录 | Libraries you embed *ahead of time* to open a debug shell into your process; cleaner and safer, but require pre-instrumentation — no good for a process already wedged. |
-| Austin | 未收录 | Frame-stack sampling profiler for Python; observe-only, low overhead, actively maintained — a profiling alternative, not a code-injector. |
-| reload/restart with logging | 未收录 | The "just restart it" baseline; safe but loses live state and the in-the-moment symptom — exactly what pyrasite exists to avoid. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| py-spy | 未收录 | Use this page for its stated niche; choose py-spy when you need sampling profiler that reads a running Python process *without injecting code* (no gdb, safer). | Sampling profiler that reads a running Python process *without injecting code* (no gdb, safer); great for "where's the time/why is it stuck," but it observes — it can't run arbitrary code in the target. |
+| pyrasite vs gdb + python-gdb | 未收录 | Use this page for its stated niche; choose pyrasite vs gdb + python-gdb when you need raw gdb with the CPython helpers can attach and inspect, but you wire up the injection yourself. | Raw gdb with the CPython helpers can attach and inspect, but you wire up the injection yourself; pyrasite packages the inject-and-run-snippet workflow. |
+| manhole / remote pdb | 未收录 | Use this page for its stated niche; choose manhole / remote pdb when you need libraries you embed *ahead of time* to open a debug shell into your process. | Libraries you embed *ahead of time* to open a debug shell into your process; cleaner and safer, but require pre-instrumentation — no good for a process already wedged. |
+| Austin | 未收录 | Use this page for its stated niche; choose Austin when you need frame-stack sampling profiler for Python. | Frame-stack sampling profiler for Python; observe-only, low overhead, actively maintained — a profiling alternative, not a code-injector. |
+| reload/restart with logging | 未收录 | Use this page for its stated niche; choose reload/restart with logging when you need the "just restart it" baseline. | The "just restart it" baseline; safe but loses live state and the in-the-moment symptom — exactly what pyrasite exists to avoid. |
 
 ## Tech stack
 

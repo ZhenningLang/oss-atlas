@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v0.9.5, active (2026-06)
 last_verified: 2026-06-26
 type: framework
+upstream:
+  pushed_at: 2026-06-26T07:32:10Z
+  default_branch: main
+  default_branch_sha: 9c0b4b38357262e53baca2b26f00499a5c243c56
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:58:35Z
@@ -89,15 +94,15 @@ It's also a strong fit when the people doing the tuning aren't full-time trainin
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [Unsloth](unsloth.md) | ✅ | Faster/lower-VRAM on a single GPU via custom kernels; narrower model/method coverage and weaker multi-GPU story than LlamaFactory's broad-but-heavier dispatch. |
-| [ART](art.md) | ✅ | Agentic RL (GRPO-style rollouts) for training agents; different problem than LlamaFactory's SFT/preference-tuning focus. |
-| [Agent Lightning](agent-lightning.md) | ✅ | Trains agents from their own execution traces / RL; not a general SFT/LoRA toolbox. |
-| axolotl | 未收录 | YAML-driven, multi-GPU-first with FSDP/DeepSpeed out of the box; favored for reproducible production runs. LlamaFactory adds a web UI and broader zero-code surface. |
-| torchtune | 未收录 | Lean, native-PyTorch recipes you own end-to-end; less batteries-included, no web UI. |
-| HF TRL | 未收录 | The lower-level SFT/DPO/PPO library LlamaFactory itself builds on; more control, more wiring. |
-| Swift (ModelScope) | 未收录 | Comparable broad-coverage tuning framework from the ModelScope ecosystem; overlapping scope. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [Unsloth](unsloth.md) | ✅ | Use this page for its stated niche; choose Unsloth when you need faster/lower-VRAM on a single GPU via custom kernels. | Faster/lower-VRAM on a single GPU via custom kernels; narrower model/method coverage and weaker multi-GPU story than LlamaFactory's broad-but-heavier dispatch. |
+| [ART](art.md) | ✅ | Use this page for its stated niche; choose ART when you need agentic RL (GRPO-style rollouts) for training agents. | Agentic RL (GRPO-style rollouts) for training agents; different problem than LlamaFactory's SFT/preference-tuning focus. |
+| [Agent Lightning](agent-lightning.md) | ✅ | Use this page for its stated niche; choose Agent Lightning when you need trains agents from their own execution traces / RL. | Trains agents from their own execution traces / RL; not a general SFT/LoRA toolbox. |
+| axolotl | 未收录 | Use this page for its stated niche; choose axolotl when you need YAML-driven, multi-GPU-first with FSDP/DeepSpeed out of the box. | YAML-driven, multi-GPU-first with FSDP/DeepSpeed out of the box; favored for reproducible production runs. LlamaFactory adds a web UI and broader zero-code surface. |
+| torchtune | 未收录 | Use this page for its stated niche; choose torchtune when you need lean, native-PyTorch recipes you own end-to-end. | Lean, native-PyTorch recipes you own end-to-end; less batteries-included, no web UI. |
+| HF TRL | 未收录 | Use this page for its stated niche; choose HF TRL when you need the lower-level SFT/DPO/PPO library LlamaFactory itself builds on. | The lower-level SFT/DPO/PPO library LlamaFactory itself builds on; more control, more wiring. |
+| Swift (ModelScope) | 未收录 | Use this page for its stated niche; choose Swift (ModelScope) when you need comparable broad-coverage tuning framework from the ModelScope ecosystem. | Comparable broad-coverage tuning framework from the ModelScope ecosystem; overlapping scope. |
 
 ## Tech stack
 

@@ -9,6 +9,11 @@ license: MIT
 maturity: "active, latest release v0.4.1743 (2025-01-04), ~56.8k stars (2026-06)"
 last_verified: 2026-06-28
 type: tool
+upstream:
+  pushed_at: 2026-04-30T05:24:16Z
+  default_branch: develop
+  default_branch_sha: 049548f3f3f35e67ba8d3181c71fdc71d11cf260
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:00:41Z
@@ -80,12 +85,12 @@ You also use it when you want the *smallest* thing that works for a given Chines
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [youtube-dl](youtube-dl.md) | ✅ | The classic Python downloader with a ~1000-site extractor catalog; far broader site coverage but slowed maintenance, and historically weaker/less-current on some Chinese hosts than you-get. |
-| yt-dlp | 未收录 | The actively-maintained youtube-dl fork; the broadest catalog and fastest YouTube fixes, more options (SponsorBlock, format sorting, aria2c). Pick it for breadth and YouTube-critical jobs; you-get stays appealing for its small footprint and Chinese-site focus. |
-| lux | 未收录 | Go single-binary downloader (formerly annie) with its own China-friendly site list; no Python runtime and fast, but a narrower, differently-curated catalog. |
-| cobalt | 未收录 | Web/API-first downloader (self-hostable service); clean browser UX, but it's a service to run rather than a pip-installable CLI for scripting. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [youtube-dl](youtube-dl.md) | ✅ | Use this page for its stated niche; choose youtube-dl when you need the classic Python downloader with a ~1000-site extractor catalog. | The classic Python downloader with a ~1000-site extractor catalog; far broader site coverage but slowed maintenance, and historically weaker/less-current on some Chinese hosts than you-get. |
+| yt-dlp | 未收录 | Use this page for its stated niche; choose yt-dlp when you need the actively-maintained youtube-dl fork. | The actively-maintained youtube-dl fork; the broadest catalog and fastest YouTube fixes, more options (SponsorBlock, format sorting, aria2c). Pick it for breadth and YouTube-critical jobs; you-get stays appealing for its small footprint and Chinese-site focus. |
+| lux | 未收录 | Use this page for its stated niche; choose lux when you need go single-binary downloader (formerly annie) with its own China-friendly site list. | Go single-binary downloader (formerly annie) with its own China-friendly site list; no Python runtime and fast, but a narrower, differently-curated catalog. |
+| cobalt | 未收录 | Use this page for its stated niche; choose cobalt when you need web/API-first downloader (self-hostable service). | Web/API-first downloader (self-hostable service); clean browser UX, but it's a service to run rather than a pip-installable CLI for scripting. |
 
 ## Tech stack
 

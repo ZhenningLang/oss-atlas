@@ -9,6 +9,11 @@ license: MIT
 maturity: v1.2.4, active, ~7.8k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2026-05-19T18:17:07Z
+  default_branch: master
+  default_branch_sha: 72d79711ec4db95262660029b4d63298b0820502
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:01:41Z
@@ -88,12 +93,12 @@ It shines as a *building block*: it's the transcript-fetch layer under a larger 
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| yt-dlp (`--write-auto-subs`) | 未收录 | The heavyweight downloader can also pull subtitle tracks; far broader (media + subs from many sites) but heavier and CLI-oriented — this library is a focused, in-process Python call for transcripts only. |
-| YouTube Data API v3 (Captions) | 未收录 | Official and contractual, but requires OAuth and (for caption *download*) channel ownership — you generally can't pull arbitrary third-party caption text, which is exactly this library's niche. |
-| Selenium / Playwright scraping | 未收录 | Drives a real browser, so it survives some changes the player itself survives, but it's slow, resource-heavy, and brittle — this library avoids the browser entirely. |
-| OpenAI Whisper (transcribe audio) | 未收录 | Generates a transcript from the audio when no caption track exists; far more compute and not timestamp-aligned to YouTube's own captions, but works on videos with captions disabled. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| yt-dlp (`--write-auto-subs`) | 未收录 | Use this page for its stated niche; choose yt-dlp (--write-auto-subs) when you need the heavyweight downloader can also pull subtitle tracks. | The heavyweight downloader can also pull subtitle tracks; far broader (media + subs from many sites) but heavier and CLI-oriented — this library is a focused, in-process Python call for transcripts only. |
+| YouTube Data API v3 (Captions) | 未收录 | Use this page for its stated niche; choose YouTube Data API v3 (Captions) when you need official and contractual, but requires OAuth and (for caption *download*) channel ownership. | Official and contractual, but requires OAuth and (for caption *download*) channel ownership — you generally can't pull arbitrary third-party caption text, which is exactly this library's niche. |
+| Selenium / Playwright scraping | 未收录 | Use this page for its stated niche; choose Selenium / Playwright scraping when you need drives a real browser, so it survives some changes the player itself survives, but it's slow, resour. | Drives a real browser, so it survives some changes the player itself survives, but it's slow, resource-heavy, and brittle — this library avoids the browser entirely. |
+| OpenAI Whisper (transcribe audio) | 未收录 | Use this page for its stated niche; choose OpenAI Whisper (transcribe audio) when you need generates a transcript from the audio when no caption track exists. | Generates a transcript from the audio when no caption track exists; far more compute and not timestamp-aligned to YouTube's own captions, but works on videos with captions disabled. |
 
 ## Tech stack
 

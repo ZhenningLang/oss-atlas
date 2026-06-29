@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v4.45.0 (2026-06), active; ~34.2k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: framework
+upstream:
+  pushed_at: 2026-06-29T08:45:44Z
+  default_branch: trunk
+  default_branch_sha: ffb4528fe77b4bc0a054f79c462a665b425833c8
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:21:37Z
@@ -88,13 +93,13 @@ You reach for **Selenium WebDriver**. You write the test once against the WebDri
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| Playwright | 未收录 | Modern cross-browser (Chromium/Firefox/WebKit) automation with auto-wait, network interception, tracing, and ergonomic APIs; far better single-codebase DX, but a newer/narrower ecosystem and not the W3C-WebDriver standard Selenium anchors. |
-| Cypress | 未收录 | Developer-friendly in-browser E2E with time-travel debugging and auto-retry; excellent DX for web apps, but historically Chromium-centric, runs inside the browser's event loop (architectural limits on multi-tab/cross-origin), JS/TS only. |
-| Puppeteer | 未收录 | Lower-level Chrome/CDP automation library (Node.js); great for Chrome scripting/scraping, but single-engine and not a cross-browser, multi-language WebDriver framework. |
-| [Agent Browser](agent-browser.md) | ✅ | Rust CLI/daemon that drives Chrome over CDP for AI agents with stable a11y-tree refs; an agent primitive, not a cross-browser test framework — different job. |
-| [Chrome DevTools MCP](chrome-devtools-mcp.md) | ✅ | MCP server exposing Chrome DevTools (traces, network, heap) to agents; debugging/measuring depth on Chrome only, not portable cross-browser test automation. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| Playwright | 未收录 | Use this page for its stated niche; choose Playwright when you need modern cross-browser (Chromium/Firefox/WebKit) automation with auto-wait, network interception, trac. | Modern cross-browser (Chromium/Firefox/WebKit) automation with auto-wait, network interception, tracing, and ergonomic APIs; far better single-codebase DX, but a newer/narrower ecosystem and not the W3C-WebDriver standard Selenium anchors. |
+| Cypress | 未收录 | Use this page for its stated niche; choose Cypress when you need developer-friendly in-browser E2E with time-travel debugging and auto-retry. | Developer-friendly in-browser E2E with time-travel debugging and auto-retry; excellent DX for web apps, but historically Chromium-centric, runs inside the browser's event loop (architectural limits on multi-tab/cross-origin), JS/TS only. |
+| Puppeteer | 未收录 | Use this page for its stated niche; choose Puppeteer when you need lower-level Chrome/CDP automation library (Node. | Lower-level Chrome/CDP automation library (Node.js); great for Chrome scripting/scraping, but single-engine and not a cross-browser, multi-language WebDriver framework. |
+| [Agent Browser](agent-browser.md) | ✅ | Use this page for its stated niche; choose Agent Browser when you need rust CLI/daemon that drives Chrome over CDP for AI agents with stable a11y-tree refs. | Rust CLI/daemon that drives Chrome over CDP for AI agents with stable a11y-tree refs; an agent primitive, not a cross-browser test framework — different job. |
+| [Chrome DevTools MCP](chrome-devtools-mcp.md) | ✅ | Use this page for its stated niche; choose Chrome DevTools MCP when you need MCP server exposing Chrome DevTools (traces, network, heap) to agents. | MCP server exposing Chrome DevTools (traces, network, heap) to agents; debugging/measuring depth on Chrome only, not portable cross-browser test automation. |
 
 ## Tech stack
 

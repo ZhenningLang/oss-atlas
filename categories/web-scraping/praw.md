@@ -9,6 +9,11 @@ license: BSD-2-Clause
 maturity: v8.0.x, active (2026-06), 4.2k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2026-06-24T00:05:35Z
+  default_branch: main
+  default_branch_sha: 154066316deee0749a68a130db32bb448562cb23
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:23:28Z
@@ -88,13 +93,13 @@ It's the default building block when your data source *is* Reddit specifically a
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| Async PRAW (asyncpraw) | 未收录 | The same project's asyncio variant; better for concurrent/streaming workloads, at the cost of async code. Same maintainers. |
-| Raw Reddit REST + requests | 未收录 | Maximum control and zero abstraction, but you reimplement OAuth refresh, pagination, and rate-limit compliance yourself. |
-| PSAW / Pushshift clients | 未收录 | Historical bulk Reddit data (when Pushshift access is available); complements rather than replaces the live-API wrapper. |
-| JRAW / snoowrap | 未收录 | Reddit API wrappers for other languages (Java / JS); same niche, different runtime. |
-| [requests-html](requests-html.md) | ✅ | Generic scraping lib — you'd parse Reddit HTML yourself and carry ToS risk; PRAW uses the sanctioned API instead. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| Async PRAW (asyncpraw) | 未收录 | Use this page for its stated niche; choose Async PRAW (asyncpraw) when you need the same project's asyncio variant. | The same project's asyncio variant; better for concurrent/streaming workloads, at the cost of async code. Same maintainers. |
+| Raw Reddit REST + requests | 未收录 | Use this page for its stated niche; choose Raw Reddit REST + requests when you need maximum control and zero abstraction, but you reimplement OAuth refresh, pagination, and rate-limit. | Maximum control and zero abstraction, but you reimplement OAuth refresh, pagination, and rate-limit compliance yourself. |
+| PSAW / Pushshift clients | 未收录 | Use this page for its stated niche; choose PSAW / Pushshift clients when you need historical bulk Reddit data (when Pushshift access is available). | Historical bulk Reddit data (when Pushshift access is available); complements rather than replaces the live-API wrapper. |
+| JRAW / snoowrap | 未收录 | Use this page for its stated niche; choose JRAW / snoowrap when you need reddit API wrappers for other languages (Java / JS). | Reddit API wrappers for other languages (Java / JS); same niche, different runtime. |
+| [requests-html](requests-html.md) | ✅ | Use this page for its stated niche; choose requests-html when you need generic scraping lib. | Generic scraping lib — you'd parse Reddit HTML yourself and carry ToS risk; PRAW uses the sanctioned API instead. |
 
 ## Tech stack
 

@@ -9,6 +9,11 @@ license: MIT
 maturity: v1.20.16, active (2026-05); ~45k stars [未验证]
 last_verified: 2026-06-26
 type: app
+upstream:
+  pushed_at: 2026-06-26T18:46:37Z
+  default_branch: hovudstraum
+  default_branch_sha: 4c8203016f089b38281ed922a78255146f099e7b
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:51:38Z
@@ -89,14 +94,14 @@ It also shines as the *ingest and transport* layer in front of something heavier
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [paperless-ngx](paperless-ngx.md) | ✅ | A real DMS: OCR + full-text content search + auto-tagging of scanned paperwork, but a multi-container Django/Postgres/Redis stack. copyparty has zero of that OCR/FTS pipeline; it's a far lighter file server, not a document archive. |
-| [Twake Drive](twake-drive.md) | ✅ | Collaborative drive with document editing, sharing, and a richer permission model; heavier to run. copyparty is single-file file-transfer/serving with no co-editing or per-document ACLs. |
-| Nextcloud | 未收录 | Full self-hosted "cloud" (files, sync clients, apps, sharing, optional OCR via add-ons) but a heavy PHP/DB/Redis stack. copyparty is dramatically lighter and faster to stand up, with no two-way sync and no app ecosystem. |
-| Seafile | 未收录 | Block-based sync-and-share with strong delta sync and client apps. copyparty wins on portability/zero-deps and protocol breadth (WebDAV/FTP/SFTP/TFTP/SMB) but has no real sync. |
-| Filebrowser | 未收录 | Comparable lightweight single-binary web file manager (Go). Narrower protocol set and no `up2k`-style resumable accelerated uploads or media indexer; simpler to reason about. |
-| MinIO | 未收录 | S3-compatible object storage for programmatic/app access. Different shape entirely — copyparty is a human-facing multi-protocol file server, not an object store. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [paperless-ngx](paperless-ngx.md) | ✅ | Use this page for its stated niche; choose paperless-ngx when you need a real DMS: OCR + full-text content search + auto-tagging of scanned paperwork, but a multi-containe. | A real DMS: OCR + full-text content search + auto-tagging of scanned paperwork, but a multi-container Django/Postgres/Redis stack. copyparty has zero of that OCR/FTS pipeline; it's a far lighter file server, not a document archive. |
+| [Twake Drive](twake-drive.md) | ✅ | Use this page for its stated niche; choose Twake Drive when you need collaborative drive with document editing, sharing, and a richer permission model. | Collaborative drive with document editing, sharing, and a richer permission model; heavier to run. copyparty is single-file file-transfer/serving with no co-editing or per-document ACLs. |
+| Nextcloud | 未收录 | Use this page for its stated niche; choose Nextcloud when you need full self-hosted "cloud" (files, sync clients, apps, sharing, optional OCR via add-ons) but a heavy. | Full self-hosted "cloud" (files, sync clients, apps, sharing, optional OCR via add-ons) but a heavy PHP/DB/Redis stack. copyparty is dramatically lighter and faster to stand up, with no two-way sync and no app ecosystem. |
+| Seafile | 未收录 | Use this page for its stated niche; choose Seafile when you need block-based sync-and-share with strong delta sync and client apps. | Block-based sync-and-share with strong delta sync and client apps. copyparty wins on portability/zero-deps and protocol breadth (WebDAV/FTP/SFTP/TFTP/SMB) but has no real sync. |
+| Filebrowser | 未收录 | Use this page for its stated niche; choose Filebrowser when you need comparable lightweight single-binary web file manager (Go). | Comparable lightweight single-binary web file manager (Go). Narrower protocol set and no `up2k`-style resumable accelerated uploads or media indexer; simpler to reason about. |
+| MinIO | 未收录 | Use this page for its stated niche; choose MinIO when you need S3-compatible object storage for programmatic/app access. | S3-compatible object storage for programmatic/app access. Different shape entirely — copyparty is a human-facing multi-protocol file server, not an object store. |
 
 ## Tech stack
 

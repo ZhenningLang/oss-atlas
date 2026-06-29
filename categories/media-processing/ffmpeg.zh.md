@@ -9,6 +9,11 @@ license: LGPL-2.1-or-later
 maturity: "active, LGPL-2.1+ core with optional GPL parts, ~61.5k stars (2026-06)"
 last_verified: 2026-06-28
 type: tool
+upstream:
+  pushed_at: 2026-06-29T11:25:33Z
+  default_branch: master
+  default_branch_sha: 3f6bf150cb018334809bec029325b28cff8a5a9a
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:02:15Z
@@ -78,13 +83,13 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| GStreamer | 未收录 | 管线/元件图框架，面向实时流和应用内嵌媒体；做实时应用和设备管线时更可组合，但编程模型比“调一个命令行”重得多——而且它底层往往照样用 FFmpeg/libav。 |
-| libav(avconv) | 未收录 | 2011 年从 FFmpeg 分出的历史分叉；后来合并回去、基本已死。老发行版带 `avconv`；任何新工作都用 FFmpeg，别用 libav。 |
-| HandBrake | 未收录 | 面向终端用户的转码应用（GUI + `HandBrakeCLI`），建在 FFmpeg/x264/x265 之上；预设驱动的“把这个转成 MP4/MKV”体验很好，但格式/滤镜面比裸 FFmpeg 窄得多，且不是库。 |
-| MLT / Shotcut | 未收录 | 带时间线模型、做编辑/合成的多媒体*框架*；真正的编解码活仍交给底下的 FFmpeg——当你要的是编辑器/NLE 而非转码器时才选它。 |
-| AWS Elemental MediaConvert / 云转码 | 未收录 | 托管、按分钟计费的转码服务（内部常源自 FFmpeg）；零运维、弹性扩展，但有厂商锁定、按分钟成本，且是 SaaS——不是你能自托管的仓库。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| GStreamer | 未收录 | 当前页用于它的主场景；如果更看重“管线/元件图框架，面向实时流和应用内嵌媒体”，再选 GStreamer。 | 管线/元件图框架，面向实时流和应用内嵌媒体；做实时应用和设备管线时更可组合，但编程模型比“调一个命令行”重得多——而且它底层往往照样用 FFmpeg/libav。 |
+| libav(avconv) | 未收录 | 当前页用于它的主场景；如果更看重“2011 年从 FFmpeg 分出的历史分叉”，再选 libav(avconv)。 | 2011 年从 FFmpeg 分出的历史分叉；后来合并回去、基本已死。老发行版带 `avconv`；任何新工作都用 FFmpeg，别用 libav。 |
+| HandBrake | 未收录 | 当前页用于它的主场景；如果更看重“面向终端用户的转码应用（GUI + `HandBrakeCLI`），建在 FFmpeg/x264/x265 之上”，再选 HandBrake。 | 面向终端用户的转码应用（GUI + `HandBrakeCLI`），建在 FFmpeg/x264/x265 之上；预设驱动的“把这个转成 MP4/MKV”体验很好，但格式/滤镜面比裸 FFmpeg 窄得多，且不是库。 |
+| MLT / Shotcut | 未收录 | 当前页用于它的主场景；如果更看重“带时间线模型、做编辑/合成的多媒体*框架*”，再选 MLT / Shotcut。 | 带时间线模型、做编辑/合成的多媒体*框架*；真正的编解码活仍交给底下的 FFmpeg——当你要的是编辑器/NLE 而非转码器时才选它。 |
+| AWS Elemental MediaConvert / 云转码 | 未收录 | 当前页用于它的主场景；如果更看重“托管、按分钟计费的转码服务（内部常源自 FFmpeg）”，再选 AWS Elemental MediaConvert / 云转码。 | 托管、按分钟计费的转码服务（内部常源自 FFmpeg）；零运维、弹性扩展，但有厂商锁定、按分钟成本，且是 SaaS——不是你能自托管的仓库。 |
 
 ## 技术栈
 

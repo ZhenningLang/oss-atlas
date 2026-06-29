@@ -9,6 +9,11 @@ license: MIT
 maturity: active, no tagged releases, ~37.2k stars (as of 2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+upstream:
+  pushed_at: 2026-06-29T01:08:41Z
+  default_branch: main
+  default_branch_sha: 5cc2549a50fc672230efd0a0307e2fd27ffba792
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:33:12Z
@@ -80,12 +85,12 @@ health:
 
 ## 横向对比
 
-| 替代方案 | 是否已收录 | 取舍 |
-|---|---|---|
-| awesome-claude-code-subagents | 未收录 | 同一 leaf 下另一个大型 Claude Code subagent 集合，但**只有 subagent**（丢进 `~/.claude/agents/`）。wshobson/agents 还打包 skill+command+orchestrator 并按 harness 生成；按你只要 persona 广度，还是要多产物、多 harness 的目录来选。 |
-| [gstack](../personal-collections/gstack.zh.md) | ✅ | 某创始人的**按角色**命令集（CEO/设计/QA persona），为他自己的日常工厂调过。窄得多且个人化；wshobson/agents 是通用领域目录，不是单一操作者的工作流。 |
-| Anthropic Claude Plugins（官方市场） | 未收录 | 第一方、Anthropic 精选的 `/plugin` 市场，provenance 清晰；范围更窄且仅限 Claude Code。wshobson/agents 是第三方且广得多、跨多个 harness，但 trust/审核成本更高。 |
-| 自己手写 subagent/skill | 未收录 | 贴合度最高、与既有栈零冲突，但一切都要你自己写和维护。本仓库用现成广度换取你仍需自行核验的贴合度。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| awesome-claude-code-subagents | 未收录 | 当前页用于它的主场景；如果更看重“同一 leaf 下另一个大型 Claude Code subagent 集合，但**只有 subagent**（丢进 `~/”，再选 awesome-claude-code-subagents。 | 同一 leaf 下另一个大型 Claude Code subagent 集合，但**只有 subagent**（丢进 `~/.claude/agents/`）。wshobson/agents 还打包 skill+command+orchestrator 并按 harness 生成；按你只要 persona 广度，还是要多产物、多 harness 的目录来选。 |
+| [gstack](../personal-collections/gstack.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“某创始人的**按角色**命令集（CEO/设计/QA persona），为他自己的日常工厂调过”，再选 gstack。 | 某创始人的**按角色**命令集（CEO/设计/QA persona），为他自己的日常工厂调过。窄得多且个人化；wshobson/agents 是通用领域目录，不是单一操作者的工作流。 |
+| Anthropic Claude Plugins（官方市场） | 未收录 | 当前页用于它的主场景；如果更看重“第一方、Anthropic 精选的 `/plugin` 市场，provenance 清晰”，再选 Anthropic Claude Plugins（官方市场）。 | 第一方、Anthropic 精选的 `/plugin` 市场，provenance 清晰；范围更窄且仅限 Claude Code。wshobson/agents 是第三方且广得多、跨多个 harness，但 trust/审核成本更高。 |
+| 自己手写 subagent/skill | 未收录 | 当前页用于它的主场景；如果更看重“贴合度最高、与既有栈零冲突，但一切都要你自己写和维护”，再选 自己手写 subagent/skill。 | 贴合度最高、与既有栈零冲突，但一切都要你自己写和维护。本仓库用现成广度换取你仍需自行核验的贴合度。 |
 
 ## 健康度与可持续性
 

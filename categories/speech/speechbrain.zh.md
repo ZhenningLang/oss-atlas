@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v1.1.0 (2026-03), active, ~11.7k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: framework
+upstream:
+  pushed_at: 2026-06-15T11:24:25Z
+  default_branch: develop
+  default_branch_sha: e5cb1f65b940634215650aa1171e0440d0808123
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:15:56Z
@@ -83,13 +88,13 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| NeMo（NVIDIA） | 未收录 | 更大、面向 GPU/规模的对话式 AI 工具箱，ASR/TTS 强且带 NVIDIA 工具链；比 SpeechBrain 更重、更以 NVIDIA 为中心。 |
-| ESPnet | 未收录 | 端到端语音处理工具箱，ASR/TTS recipe 覆盖很深、研究血统强；强大但历来学习曲线更陡、带 Kaldi 味。 |
-| Hugging Face Transformers（音频） | 未收录 | 用/微调预训练音频模型（Whisper、Wav2Vec2）很好；但不像 SpeechBrain 那样是横跨分离、增强、说话人分割的完整 recipe/训练框架。 |
-| Kaldi | 未收录 | 经典、高度优化的 ASR 工具箱；陡峭得多、C++/shell 为主、非 PyTorch 原生——为极致控制而非易用而选。 |
-| faster-whisper / Whisper | 未收录 | 聚焦推理的 ASR；只转写时极佳，但不是多任务训练工具箱。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| NeMo（NVIDIA） | 未收录 | 当前页用于它的主场景；如果更看重“更大、面向 GPU/规模的对话式 AI 工具箱，ASR/TTS 强且带 NVIDIA 工具链”，再选 NeMo（NVIDIA）。 | 更大、面向 GPU/规模的对话式 AI 工具箱，ASR/TTS 强且带 NVIDIA 工具链；比 SpeechBrain 更重、更以 NVIDIA 为中心。 |
+| ESPnet | 未收录 | 当前页用于它的主场景；如果更看重“端到端语音处理工具箱，ASR/TTS recipe 覆盖很深、研究血统强”，再选 ESPnet。 | 端到端语音处理工具箱，ASR/TTS recipe 覆盖很深、研究血统强；强大但历来学习曲线更陡、带 Kaldi 味。 |
+| Hugging Face Transformers（音频） | 未收录 | 当前页用于它的主场景；如果更看重“用/微调预训练音频模型（Whisper、Wav2Vec2）很好”，再选 Hugging Face Transformers（音频）。 | 用/微调预训练音频模型（Whisper、Wav2Vec2）很好；但不像 SpeechBrain 那样是横跨分离、增强、说话人分割的完整 recipe/训练框架。 |
+| Kaldi | 未收录 | 当前页用于它的主场景；如果更看重“经典、高度优化的 ASR 工具箱”，再选 Kaldi。 | 经典、高度优化的 ASR 工具箱；陡峭得多、C++/shell 为主、非 PyTorch 原生——为极致控制而非易用而选。 |
+| faster-whisper / Whisper | 未收录 | 当前页用于它的主场景；如果更看重“聚焦推理的 ASR”，再选 faster-whisper / Whisper。 | 聚焦推理的 ASR；只转写时极佳，但不是多任务训练工具箱。 |
 
 ## 技术栈
 

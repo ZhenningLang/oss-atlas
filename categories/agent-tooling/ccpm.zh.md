@@ -9,6 +9,11 @@ license: MIT
 maturity: v2 (Agent Skills compatible), active; last push 2026-03, no tagged GitHub releases (as of 2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+upstream:
+  pushed_at: 2026-03-18T12:15:24Z
+  default_branch: main
+  default_branch_sha: 7d7e4623bc6d4c0c9ba66ca6bfecd7e5261dc697
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:35:21Z
@@ -82,14 +87,14 @@ health:
 
 ## 横向对比
 
-| 替代项 | 是否收录 | 取舍 |
-|---|---|---|
-| [beads](beads.zh.md) | ✅ | 一个版本化 SQL 的任务**图**，给 agent 持久记忆；依赖/就绪检测后端更强，但没有 PRD→epic→GitHub-Issues 的规格流水线，也没有基于 worktree 的并行编排。CCPM 偏流程 + GitHub 原生；beads 偏存储原生的任务引擎。 |
-| [Planning with Files](planning-with-files.zh.md) | ✅ | 更轻的“用文件做规划”模式（计划以 agent 读写的 markdown 存在）；在“状态存文件、不存聊天”上重叠，但没有 GitHub-Issues 同步、没有强制的 PRD/epic 阶段、没有并行 worktree 扇出。 |
-| [Entire](entire-cli.zh.md) | ✅ | 本类目里另一种 agent 工作追踪思路；机制不同——若两者都进了候选名单，直接对比。 |
-| 手搓 GitHub Projects / Issues + `gh` | 未收录 | 就是 CCPM 在驱动的同一后端，只是没有那套带主见的 PRD→epic→任务拆解、worktree 准备或 bash 状态脚本——规格纪律和并行约定得你自己手搓。 |
-| Taskmaster（claude-task-master） | 未收录 | 同样流行的 PRD-转任务 agent 工作流；也把规格解析成任务，但它是自带的任务存储/CLI，而不是把 GitHub Issues + git worktree 当作共享事实源。 |
-| 纯 `MEMORY.md` / `TODO.md` | 未收录 | 零依赖、人可读，但没有依赖元数据、没有 GitHub 同步、没有并行流隔离——正是 CCPM 要替换的无结构基线。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [beads](beads.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“一个版本化 SQL 的任务**图**，给 agent 持久记忆”，再选 beads。 | 一个版本化 SQL 的任务**图**，给 agent 持久记忆；依赖/就绪检测后端更强，但没有 PRD→epic→GitHub-Issues 的规格流水线，也没有基于 worktree 的并行编排。CCPM 偏流程 + GitHub 原生；beads 偏存储原生的任务引擎。 |
+| [Planning with Files](planning-with-files.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“更轻的“用文件做规划”模式（计划以 agent 读写的 markdown 存在）”，再选 Planning with Files。 | 更轻的“用文件做规划”模式（计划以 agent 读写的 markdown 存在）；在“状态存文件、不存聊天”上重叠，但没有 GitHub-Issues 同步、没有强制的 PRD/epic 阶段、没有并行 worktree 扇出。 |
+| [Entire](entire-cli.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“本类目里另一种 agent 工作追踪思路”，再选 Entire。 | 本类目里另一种 agent 工作追踪思路；机制不同——若两者都进了候选名单，直接对比。 |
+| 手搓 GitHub Projects / Issues + `gh` | 未收录 | 当前页用于它的主场景；如果更看重“就是 CCPM 在驱动的同一后端，只是没有那套带主见的 PRD→epic→任务拆解、worktree 准备或 bash 状态脚本”，再选 手搓 GitHub Projects / Issues + gh。 | 就是 CCPM 在驱动的同一后端，只是没有那套带主见的 PRD→epic→任务拆解、worktree 准备或 bash 状态脚本——规格纪律和并行约定得你自己手搓。 |
+| Taskmaster（claude-task-master） | 未收录 | 当前页用于它的主场景；如果更看重“同样流行的 PRD-转任务 agent 工作流”，再选 Taskmaster（claude-task-master）。 | 同样流行的 PRD-转任务 agent 工作流；也把规格解析成任务，但它是自带的任务存储/CLI，而不是把 GitHub Issues + git worktree 当作共享事实源。 |
+| 纯 `MEMORY.md` / `TODO.md` | 未收录 | 当前页用于它的主场景；如果更看重“零依赖、人可读，但没有依赖元数据、没有 GitHub 同步、没有并行流隔离”，再选 纯 MEMORY.md / TODO.md。 | 零依赖、人可读，但没有依赖元数据、没有 GitHub 同步、没有并行流隔离——正是 CCPM 要替换的无结构基线。 |
 
 ## 健康度与可持续性
 

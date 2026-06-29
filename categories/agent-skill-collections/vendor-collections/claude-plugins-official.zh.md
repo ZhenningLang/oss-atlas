@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: active, no tagged releases, ~31.1k stars (as of 2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+upstream:
+  pushed_at: 2026-06-29T09:06:05Z
+  default_branch: main
+  default_branch_sha: 3dc50d51835dc85f7a3f77d593dd9a565a87276b
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:33:49Z
@@ -80,12 +85,12 @@ Anthropic 官方的 Claude Code 插件市场：一个精选的可安装插件目
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| [Anthropic Skills](anthropic-skills.zh.md) | ✅ | Anthropic 独立的 *skills* 仓库（自包含的 `SKILL.md` 目录，不是 `/plugin` 可装的市场格式）。想要原始 skill 内容（用于 Claude Code / Claude.ai / API）用它；想要一条命令装进 Claude Code 用本仓库。 |
-| awslabs/agent-plugins | 未收录 | 另一家厂商（AWS）的插件/skill 集合；按谁的工具贴你的技术栈、各自面向哪个 harness 来比较。 |
-| MiniMax-AI/skills | 未收录 | MiniMax 的厂商 skill 集合；不同 provider，harness 假设可能不同——混用前先比对目标 agent 兼容性。 |
-| 第三方 Claude Code 市场 / 社区插件清单 | 未收录 | 面更广、迭代更快，但没有 Anthropic 的策展和来源担保。本仓库是第一方基线；社区市场以更高信任成本来扩展它。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [Anthropic Skills](anthropic-skills.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“Anthropic 独立的 *skills* 仓库（自包含的 `SKILL”，再选 Anthropic Skills。 | Anthropic 独立的 *skills* 仓库（自包含的 `SKILL.md` 目录，不是 `/plugin` 可装的市场格式）。想要原始 skill 内容（用于 Claude Code / Claude.ai / API）用它；想要一条命令装进 Claude Code 用本仓库。 |
+| awslabs/agent-plugins | 未收录 | 当前页用于它的主场景；如果更看重“另一家厂商（AWS）的插件/skill 集合”，再选 awslabs/agent-plugins。 | 另一家厂商（AWS）的插件/skill 集合；按谁的工具贴你的技术栈、各自面向哪个 harness 来比较。 |
+| MiniMax-AI/skills | 未收录 | 当前页用于它的主场景；如果更看重“MiniMax 的厂商 skill 集合”，再选 MiniMax-AI/skills。 | MiniMax 的厂商 skill 集合；不同 provider，harness 假设可能不同——混用前先比对目标 agent 兼容性。 |
+| 第三方 Claude Code 市场 / 社区插件清单 | 未收录 | 当前页用于它的主场景；如果更看重“面更广、迭代更快，但没有 Anthropic 的策展和来源担保”，再选 第三方 Claude Code 市场 / 社区插件清单。 | 面更广、迭代更快，但没有 Anthropic 的策展和来源担保。本仓库是第一方基线；社区市场以更高信任成本来扩展它。 |
 
 ## 健康度与可持续性
 

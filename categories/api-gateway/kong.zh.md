@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v3.9.x, active (2026-06)
 last_verified: 2026-06-26
 type: service
+upstream:
+  pushed_at: 2026-06-29T09:48:26Z
+  default_branch: master
+  default_branch_sha: 1730282ec2f8ed097cf6ad6a3d69e55b7ba9ebb6
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:39:38Z
@@ -84,14 +89,14 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| Apache APISIX | 未收录 | 同样是 OpenResty/Lua，但用 etcd 配置（节点无状态、动态热加载快），OSS 自带插件更多；商业/门户生态不如 Kong。 |
-| Tyk | 未收录 | Go 实现，开源栈自带 dashboard + 开发者门户 + 多租户；原始代理吞吐和插件数量比 Kong 窄。 |
-| Envoy | 未收录 | CNCF 毕业的 C++ L4/L7 代理，是事实上的 service mesh 数据面（xDS）；层级低得多——你得自带控制面，而非开箱即用的 API 管理插件。 |
-| Traefik | 未收录 | Go 反向代理，容器/Kubernetes 自动发现强、配置走文件/CRD；跑起来更轻，但策略/AI 网关插件叙事更薄。 |
-| KrakenD | 未收录 | 无状态 Go 网关，聚焦单配置文件声明的 API 聚合/编排；无数据库，但不是插件丰富的可编程边界。 |
-| LiteLLM / portkey 式 LLM 代理 | 未收录 | 专门做 LLM 流量的多供应商路由器，只覆盖 LLM 这一段；比 Kong 的 HTTP+AI 双网关窄，但若你只要 LLM 路由则更轻。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| Apache APISIX | 未收录 | 当前页用于它的主场景；如果更看重“同样是 OpenResty/Lua，但用 etcd 配置（节点无状态、动态热加载快），OSS 自带插件更多”，再选 Apache APISIX。 | 同样是 OpenResty/Lua，但用 etcd 配置（节点无状态、动态热加载快），OSS 自带插件更多；商业/门户生态不如 Kong。 |
+| Tyk | 未收录 | 当前页用于它的主场景；如果更看重“Go 实现，开源栈自带 dashboard + 开发者门户 + 多租户”，再选 Tyk。 | Go 实现，开源栈自带 dashboard + 开发者门户 + 多租户；原始代理吞吐和插件数量比 Kong 窄。 |
+| Envoy | 未收录 | 当前页用于它的主场景；如果更看重“CNCF 毕业的 C++ L4/L7 代理，是事实上的 service mesh 数据面（xDS）”，再选 Envoy。 | CNCF 毕业的 C++ L4/L7 代理，是事实上的 service mesh 数据面（xDS）；层级低得多——你得自带控制面，而非开箱即用的 API 管理插件。 |
+| Traefik | 未收录 | 当前页用于它的主场景；如果更看重“Go 反向代理，容器/Kubernetes 自动发现强、配置走文件/CRD”，再选 Traefik。 | Go 反向代理，容器/Kubernetes 自动发现强、配置走文件/CRD；跑起来更轻，但策略/AI 网关插件叙事更薄。 |
+| KrakenD | 未收录 | 当前页用于它的主场景；如果更看重“无状态 Go 网关，聚焦单配置文件声明的 API 聚合/编排”，再选 KrakenD。 | 无状态 Go 网关，聚焦单配置文件声明的 API 聚合/编排；无数据库，但不是插件丰富的可编程边界。 |
+| LiteLLM / portkey 式 LLM 代理 | 未收录 | 当前页用于它的主场景；如果更看重“专门做 LLM 流量的多供应商路由器，只覆盖 LLM 这一段”，再选 LiteLLM / portkey 式 LLM 代理。 | 专门做 LLM 流量的多供应商路由器，只覆盖 LLM 这一段；比 Kong 的 HTTP+AI 双网关窄，但若你只要 LLM 路由则更轻。 |
 
 ## 技术栈
 

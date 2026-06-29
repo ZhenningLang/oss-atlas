@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v1.7 models, active, ~8.3k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: framework
+upstream:
+  pushed_at: 2026-04-25T05:23:54Z
+  default_branch: main
+  default_branch_sha: 370f98361553ddf787bedc5745760e04114cb161
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:45:45Z
@@ -87,12 +92,12 @@ You're an ML engineer at a research-tooling team and you want a self-hosted, ope
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| OpenAI / Gemini "Deep Research" | 未收录 | Hosted, turnkey, strong quality, no GPU to run; but closed, paid per use, no self-hosting or model control — the opposite tradeoff to MiroThinker. |
-| GPT-Researcher | 未收录 | Lightweight open research agent that orchestrates a frozen LLM API + web tools; far cheaper to run (no self-hosted weights) but not its own fine-tuned models or benchmark-tuned framework. |
-| smolagents / LangGraph + tools | 未收录 | General agent frameworks you'd assemble a research loop on; more flexible and model-agnostic, but you build the research pipeline and provide tuning yourself. |
-| Open Deep Research (HF) | 未收录 | Open reproduction of a deep-research agent over an API model; similar open spirit, different stack and (usually) no self-hosted fine-tuned weights. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| OpenAI / Gemini "Deep Research" | 未收录 | Use this page for its stated niche; choose OpenAI / Gemini "Deep Research" when you need hosted, turnkey, strong quality, no GPU to run. | Hosted, turnkey, strong quality, no GPU to run; but closed, paid per use, no self-hosting or model control — the opposite tradeoff to MiroThinker. |
+| GPT-Researcher | 未收录 | Use this page for its stated niche; choose GPT-Researcher when you need lightweight open research agent that orchestrates a frozen LLM API + web tools. | Lightweight open research agent that orchestrates a frozen LLM API + web tools; far cheaper to run (no self-hosted weights) but not its own fine-tuned models or benchmark-tuned framework. |
+| smolagents / LangGraph + tools | 未收录 | Use this page for its stated niche; choose smolagents / LangGraph + tools when you need general agent frameworks you'd assemble a research loop on. | General agent frameworks you'd assemble a research loop on; more flexible and model-agnostic, but you build the research pipeline and provide tuning yourself. |
+| Open Deep Research (HF) | 未收录 | Use this page for its stated niche; choose Open Deep Research (HF) when you need open reproduction of a deep-research agent over an API model. | Open reproduction of a deep-research agent over an API model; similar open spirit, different stack and (usually) no self-hosted fine-tuned weights. |
 
 ## Tech stack
 

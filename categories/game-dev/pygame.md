@@ -9,6 +9,11 @@ license: LGPL-2.1
 maturity: v2.6.x, active (2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2025-11-01T03:05:13Z
+  default_branch: main
+  default_branch_sha: 85fda3f719d437cf27106afae8c890e6b88ba5f5
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:53:38Z
@@ -88,13 +93,13 @@ You also reach for it when you want a *small* 2D game or interactive multimedia 
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| pygame-ce (community edition) | 未收录 | A community fork of this same library with a faster release cadence and newer SDL support; API-compatible enough that the choice is mostly about maintenance velocity and which one your tutorials target. [未验证] |
-| pyglet | 未收录 | Pure-Python, OpenGL-based windowing/multimedia library; no SDL dependency, supports 3D via OpenGL, but a smaller teaching community than pygame. |
-| Arcade | 未收录 | Modern Python 2D game library built on OpenGL with a cleaner OO API and built-in tilemap/physics helpers; younger and smaller ecosystem. |
-| Godot | 未收录 | A full open-source game *engine* (editor, scenes, 2D+3D, GDScript/C#); vastly more capable but a whole different tool to learn — overkill for "draw a rect and move it." |
-| Raylib (+ python bindings) | 未收录 | Simple C game library with bindings for many languages; very approachable, but a different ecosystem and less Python-tutorial gravity than pygame. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| pygame-ce (community edition) | 未收录 | Use this page for its stated niche; choose pygame-ce (community edition) when you need a community fork of this same library with a faster release cadence and newer SDL support. | A community fork of this same library with a faster release cadence and newer SDL support; API-compatible enough that the choice is mostly about maintenance velocity and which one your tutorials target. [未验证] |
+| pyglet | 未收录 | Use this page for its stated niche; choose pyglet when you need pure-Python, OpenGL-based windowing/multimedia library. | Pure-Python, OpenGL-based windowing/multimedia library; no SDL dependency, supports 3D via OpenGL, but a smaller teaching community than pygame. |
+| Arcade | 未收录 | Use this page for its stated niche; choose Arcade when you need modern Python 2D game library built on OpenGL with a cleaner OO API and built-in tilemap/physics hel. | Modern Python 2D game library built on OpenGL with a cleaner OO API and built-in tilemap/physics helpers; younger and smaller ecosystem. |
+| Godot | 未收录 | Use this page for its stated niche; choose Godot when you need a full open-source game *engine* (editor, scenes, 2D+3D, GDScript/C#). | A full open-source game *engine* (editor, scenes, 2D+3D, GDScript/C#); vastly more capable but a whole different tool to learn — overkill for "draw a rect and move it." |
+| Raylib (+ python bindings) | 未收录 | Use this page for its stated niche; choose Raylib (+ python bindings) when you need simple C game library with bindings for many languages. | Simple C game library with bindings for many languages; very approachable, but a different ecosystem and less Python-tutorial gravity than pygame. |
 
 ## Tech stack
 

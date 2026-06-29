@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: NeurIPS 2024 release, code active, ~8.3k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: model
+upstream:
+  pushed_at: 2026-03-24T10:59:06Z
+  default_branch: main
+  default_branch_sha: a561b849ebae10a6f5ef49e26c83cbbcd36c71bf
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:04:04Z
@@ -80,13 +85,13 @@ You reach for it as the **current default monocular-depth foundation model** whe
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| Depth Anything V1 | 未收录 | The predecessor; V2 is sharper on fine detail and more robust per the authors — use V2 unless you have a V1-pinned pipeline. |
-| MiDaS / DPT (Intel ISL) | 未收录 | Earlier widely-used monocular-depth models; mature and permissively usable, but generally surpassed by Depth Anything V2 on detail/robustness. [推断] |
-| Marigold (SD-based) | 未收录 | Diffusion-based depth; can be high quality but slower with more parameters — V2 explicitly targets faster inference / fewer params. |
-| ZoeDepth | 未收录 | Metric monocular depth; a direct alternative when you specifically need absolute scale rather than relative depth. |
-| [CLIP](clip.md) | ✅ | Different task (vision-language), but the same shelf — a widely-adopted released foundation model where the checkpoints are the product. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| Depth Anything V1 | 未收录 | Use this page for its stated niche; choose Depth Anything V1 when you need the predecessor. | The predecessor; V2 is sharper on fine detail and more robust per the authors — use V2 unless you have a V1-pinned pipeline. |
+| MiDaS / DPT (Intel ISL) | 未收录 | Use this page for its stated niche; choose MiDaS / DPT (Intel ISL) when you need earlier widely-used monocular-depth models. | Earlier widely-used monocular-depth models; mature and permissively usable, but generally surpassed by Depth Anything V2 on detail/robustness. [推断] |
+| Marigold (SD-based) | 未收录 | Use this page for its stated niche; choose Marigold (SD-based) when you need diffusion-based depth. | Diffusion-based depth; can be high quality but slower with more parameters — V2 explicitly targets faster inference / fewer params. |
+| ZoeDepth | 未收录 | Use this page for its stated niche; choose ZoeDepth when you need metric monocular depth. | Metric monocular depth; a direct alternative when you specifically need absolute scale rather than relative depth. |
+| [CLIP](clip.md) | ✅ | Use this page for its stated niche; choose CLIP when you need different task (vision-language), but the same shelf. | Different task (vision-language), but the same shelf — a widely-adopted released foundation model where the checkpoints are the product. |
 
 ## Tech stack
 

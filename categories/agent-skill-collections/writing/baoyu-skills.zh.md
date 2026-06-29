@@ -9,6 +9,11 @@ license: MIT
 maturity: v2.5.2, active (2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+upstream:
+  pushed_at: 2026-06-28T06:42:07Z
+  default_branch: main
+  default_branch_sha: c9a50cc908d0473f5d754efdbe08cbe387714f63
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:34:26Z
@@ -81,12 +86,12 @@ Baoyu Skills 正好覆盖了写作/翻译这一片：`baoyu-translate` 跑三档
 
 ## 横向对比
 
-| 替代方案 | 已收录 | 取舍 |
-|---|---|---|
-| [Humanizer-zh](humanizer-zh.zh.md) | ✅ | 一个聚焦的中文 AI 文本去机器味技能——窄而单一（去 AI / voice），而 Baoyu Skills 是宽口径的内容/发布套件，其翻译技能只是 20+ 之一。只想去机器味就选聚焦的那个；想要整条 翻译→排版→发布 流水线就选 Baoyu。 |
-| 手写项目技能 | 未收录 | 自己写 `SKILL.md` 做翻译/排版能拿到完全控制权、零第三方表面积，但三档工作流、术语表处理、HTML 主题都得你自建自维护。 |
-| 单条去 AI / 翻译 prompt | 未收录 | 一次性 prompt 是单任务下最轻的选择，但它不会像已安装技能那样跨会话持久化、版本化、按名加载。 |
-| harness 自带技能生态 | 未收录 | harness 自家市场里的技能；Baoyu 是叠在其上的第三方合集，可能与原生等价物重叠或冲突。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [Humanizer-zh](humanizer-zh.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“一个聚焦的中文 AI 文本去机器味技能”，再选 Humanizer-zh。 | 一个聚焦的中文 AI 文本去机器味技能——窄而单一（去 AI / voice），而 Baoyu Skills 是宽口径的内容/发布套件，其翻译技能只是 20+ 之一。只想去机器味就选聚焦的那个；想要整条 翻译→排版→发布 流水线就选 Baoyu。 |
+| 手写项目技能 | 未收录 | 当前页用于它的主场景；如果更看重“自己写 `SKILL”，再选 手写项目技能。 | 自己写 `SKILL.md` 做翻译/排版能拿到完全控制权、零第三方表面积，但三档工作流、术语表处理、HTML 主题都得你自建自维护。 |
+| 单条去 AI / 翻译 prompt | 未收录 | 当前页用于它的主场景；如果更看重“一次性 prompt 是单任务下最轻的选择，但它不会像已安装技能那样跨会话持久化、版本化、按名加载”，再选 单条去 AI / 翻译 prompt。 | 一次性 prompt 是单任务下最轻的选择，但它不会像已安装技能那样跨会话持久化、版本化、按名加载。 |
+| harness 自带技能生态 | 未收录 | 当前页用于它的主场景；如果更看重“harness 自家市场里的技能”，再选 harness 自带技能生态。 | harness 自家市场里的技能；Baoyu 是叠在其上的第三方合集，可能与原生等价物重叠或冲突。 |
 
 ## 健康度与可持续性
 

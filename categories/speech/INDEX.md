@@ -5,16 +5,16 @@
 
 ## Projects in this category
 
-| Project | Use when | Page |
-|---|---|---|
-| **SpeechBrain** | Use it when you need to train and adapt speech models (ASR, speaker ID, separation) on one coherent PyTorch recipe codebase — but it's research-and-training-first, so production serving and cross-version API stability are your job. | [→](speechbrain.md) |
+| Project | Use when | Health | Page |
+| --- | --- | --- | --- |
+| **SpeechBrain** | Use it when you need to train and adapt speech models (ASR, speaker ID, separation) on one coherent PyTorch recipe codebase — but it's research-and-training-first, so production serving and cross-version API stability are your job. | B (5/6) | [→](speechbrain.md) |
 
 ## Comparison matrix
 
-| Option | Indexed | One-line tradeoff |
-|---|---|---|
-| [SpeechBrain](speechbrain.md) | ✅ | Use it when you need to train and adapt speech models (ASR, speaker ID, separation) on one coherent PyTorch recipe codebase — but it's research-and-training-first, so production serving and cross-version API stability are your job. |
-| (alternatives named across the pages) | 未收录 | Substitutes referenced in each page's Comparison. |
+| Option | Indexed | Health | One-line tradeoff |
+| --- | --- | --- | --- |
+| [SpeechBrain](speechbrain.md) | ✅ | B (5/6) | Use it when you need to train and adapt speech models (ASR, speaker ID, separation) on one coherent PyTorch recipe codebase — but it's research-and-training-first, so production serving and cross-version API stability are your job. |
+| (alternatives named across the pages) | 未收录 | — | Substitutes referenced in each page's Comparison. |
 
 ## What belongs here
 

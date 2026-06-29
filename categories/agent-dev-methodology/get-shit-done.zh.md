@@ -9,6 +9,11 @@ license: MIT
 maturity: GitHub release v1.42.3 (2026-05); main README now redirects to open-gsd/gsd-core (as of 2026-06)
 last_verified: 2026-06-26
 type: framework
+upstream:
+  pushed_at: 2026-05-31T17:46:54Z
+  default_branch: main
+  default_branch_sha: bdcaab2c752d9a33a1a1ca9acf3a3c81fb991815
+  archived: true
 health:
   schema: 1
   computed_at: 2026-06-29T09:07:49Z
@@ -89,15 +94,15 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| [SuperClaude Framework](superclaude.zh.md) | ✅ | persona/命令/MCP 框架，重塑单个 agent 的行为；GSD 更像一条线性的阶段流水线（discuss→plan→execute→verify），配大量子代理 fan-out 和持久化的 spec 文档。 |
-| [Superpowers](superpowers.zh.md) | ✅ | 一个广覆盖、可按需组合的 skills/plugin 库；GSD 是一条有主见的端到端项目循环，而非能力大杂烩。 |
-| [Compound Engineering](compound-engineering.zh.md) | ✅ | 把“agent 反过来改进系统”这一复利理念编码进 plugin；规格驱动目标有重叠，面比 GSD 的整条工具链更轻。 |
-| [12-Factor Agents](12-factor-agents.zh.md) | ✅ | 关于如何构建可靠 agent 的原则/方法论文档，不是可安装的命令集；读它看*为什么*，用 GSD 拿可执行的*怎么做*。 |
-| [ECC](ecc.zh.md) | ✅ | 同类的 agent 开发方法论，编排模型不同；可直接对比阶段/上下文的处理方式。 |
-| GitHub Spec Kit | 未收录 | 厂商背书的规格驱动工具包（`/specify`、`/plan`、`/tasks`）;GSD 自我定位更轻、更聚焦上下文工程、仪式更少。 |
-| BMAD-METHOD | 未收录 | 带显式角色（PM/架构/开发/QA）的敏捷 agent 框架；那种“运营一家软件公司”的更重框架，正是 GSD 刻意拒绝的。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [SuperClaude Framework](superclaude.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“persona/命令/MCP 框架，重塑单个 agent 的行为”，再选 SuperClaude Framework。 | persona/命令/MCP 框架，重塑单个 agent 的行为；GSD 更像一条线性的阶段流水线（discuss→plan→execute→verify），配大量子代理 fan-out 和持久化的 spec 文档。 |
+| [Superpowers](superpowers.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“一个广覆盖、可按需组合的 skills/plugin 库”，再选 Superpowers。 | 一个广覆盖、可按需组合的 skills/plugin 库；GSD 是一条有主见的端到端项目循环，而非能力大杂烩。 |
+| [Compound Engineering](compound-engineering.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“把“agent 反过来改进系统”这一复利理念编码进 plugin”，再选 Compound Engineering。 | 把“agent 反过来改进系统”这一复利理念编码进 plugin；规格驱动目标有重叠，面比 GSD 的整条工具链更轻。 |
+| [12-Factor Agents](12-factor-agents.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“关于如何构建可靠 agent 的原则/方法论文档，不是可安装的命令集”，再选 12-Factor Agents。 | 关于如何构建可靠 agent 的原则/方法论文档，不是可安装的命令集；读它看*为什么*，用 GSD 拿可执行的*怎么做*。 |
+| [ECC](ecc.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“同类的 agent 开发方法论，编排模型不同”，再选 ECC。 | 同类的 agent 开发方法论，编排模型不同；可直接对比阶段/上下文的处理方式。 |
+| GitHub Spec Kit | 未收录 | 当前页用于它的主场景；如果更看重“厂商背书的规格驱动工具包（`/specify`、`/plan`、`/tasks`）”，再选 GitHub Spec Kit。 | 厂商背书的规格驱动工具包（`/specify`、`/plan`、`/tasks`）;GSD 自我定位更轻、更聚焦上下文工程、仪式更少。 |
+| BMAD-METHOD | 未收录 | 当前页用于它的主场景；如果更看重“带显式角色（PM/架构/开发/QA）的敏捷 agent 框架”，再选 BMAD-METHOD。 | 带显式角色（PM/架构/开发/QA）的敏捷 agent 框架；那种“运营一家软件公司”的更重框架，正是 GSD 刻意拒绝的。 |
 
 ## 技术栈
 

@@ -9,6 +9,11 @@ license: MIT
 maturity: v0.8.49, active (2026-06)
 last_verified: 2026-06-26
 type: tool
+upstream:
+  pushed_at: 2026-06-29T10:29:46Z
+  default_branch: v8
+  default_branch_sha: 36b5e5cb2907dd5ea4e96ec708772742ca98c1e9
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:14:22Z
@@ -89,13 +94,13 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| [FalkorDB](falkordb.zh.md) | ✅ | 真正的持久化图数据库（基于 Redis,Cypher）;graphify 可以往它 *推送*。需要常驻多查询图存储时用 FalkorDB，需要一次性抽取 + 面向 agent 查询时用 graphify。 |
-| [PageIndex](pageindex.zh.md) | 未收录 | 面向长文档/PDF 的、基于推理的文档结构索引做 RAG；没有代码 AST 或调用图。是不同的问题：散文检索 vs 代码/实体图。 |
-| [code-review-graph](code-review-graph.zh.md) | ✅ | 窄域的 PR/code-review 图工作流；graphify 是全仓库 + 多语言 + 多模态，范围更广。 |
-| Sourcegraph / SCIP | 未收录 | 工业级精确代码智能（跨仓库、language server）；基础设施更重，且不是 agent-skill 形态。graphify 更轻、由 LLM 增强、能直接嵌进 agent 循环。 |
-| GitHub `code2graph` / 自写 tree-sitter 脚本 | 未收录 | 自己搭 AST 图；更可控，但查询、聚类、可视化和 agent 集成都得自己写。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [FalkorDB](falkordb.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“真正的持久化图数据库（基于 Redis,Cypher）”，再选 FalkorDB。 | 真正的持久化图数据库（基于 Redis,Cypher）;graphify 可以往它 *推送*。需要常驻多查询图存储时用 FalkorDB，需要一次性抽取 + 面向 agent 查询时用 graphify。 |
+| [PageIndex](pageindex.zh.md) | 未收录 | 当前页用于它的主场景；如果更看重“面向长文档/PDF 的、基于推理的文档结构索引做 RAG”，再选 PageIndex。 | 面向长文档/PDF 的、基于推理的文档结构索引做 RAG；没有代码 AST 或调用图。是不同的问题：散文检索 vs 代码/实体图。 |
+| [code-review-graph](code-review-graph.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“窄域的 PR/code-review 图工作流”，再选 code-review-graph。 | 窄域的 PR/code-review 图工作流；graphify 是全仓库 + 多语言 + 多模态，范围更广。 |
+| Sourcegraph / SCIP | 未收录 | 当前页用于它的主场景；如果更看重“工业级精确代码智能（跨仓库、language server）”，再选 Sourcegraph / SCIP。 | 工业级精确代码智能（跨仓库、language server）；基础设施更重，且不是 agent-skill 形态。graphify 更轻、由 LLM 增强、能直接嵌进 agent 循环。 |
+| GitHub `code2graph` / 自写 tree-sitter 脚本 | 未收录 | 当前页用于它的主场景；如果更看重“自己搭 AST 图”，再选 GitHub code2graph / 自写 tree-sitter 脚本。 | 自己搭 AST 图；更可控，但查询、聚类、可视化和 agent 集成都得自己写。 |
 
 ## 技术栈
 

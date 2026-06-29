@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v1.1.0 (2026-03), active, ~11.7k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: framework
+upstream:
+  pushed_at: 2026-06-15T11:24:25Z
+  default_branch: develop
+  default_branch_sha: e5cb1f65b940634215650aa1171e0440d0808123
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:15:56Z
@@ -83,13 +88,13 @@ You also reach for it when you want pretrained models you can both *use* and *re
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| NeMo (NVIDIA) | 未收录 | Larger, GPU/scale-oriented conversational-AI toolkit with strong ASR/TTS and NVIDIA tooling; heavier and more NVIDIA-centric than SpeechBrain's lighter research framing. |
-| ESPnet | 未收录 | End-to-end speech-processing toolkit with deep ASR/TTS recipe coverage and a strong research lineage; powerful but historically a steeper, Kaldi-flavored learning curve. |
-| Hugging Face Transformers (audio) | 未收录 | Great for using/fine-tuning pretrained audio models (Whisper, Wav2Vec2); not a full recipe/training framework spanning separation, enhancement, diarization the way SpeechBrain is. |
-| Kaldi | 未收录 | The classic, highly optimized ASR toolkit; far steeper, C++/shell-heavy, not PyTorch-native — chosen for maximal control, not ergonomics. |
-| faster-whisper / Whisper | 未收录 | Inference-focused ASR; excellent if you only transcribe, but not a multi-task training toolkit. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| NeMo (NVIDIA) | 未收录 | Use this page for its stated niche; choose NeMo (NVIDIA) when you need larger, GPU/scale-oriented conversational-AI toolkit with strong ASR/TTS and NVIDIA tooling. | Larger, GPU/scale-oriented conversational-AI toolkit with strong ASR/TTS and NVIDIA tooling; heavier and more NVIDIA-centric than SpeechBrain's lighter research framing. |
+| ESPnet | 未收录 | Use this page for its stated niche; choose ESPnet when you need end-to-end speech-processing toolkit with deep ASR/TTS recipe coverage and a strong research lineage. | End-to-end speech-processing toolkit with deep ASR/TTS recipe coverage and a strong research lineage; powerful but historically a steeper, Kaldi-flavored learning curve. |
+| Hugging Face Transformers (audio) | 未收录 | Use this page for its stated niche; choose Hugging Face Transformers (audio) when you need great for using/fine-tuning pretrained audio models (Whisper, Wav2Vec2). | Great for using/fine-tuning pretrained audio models (Whisper, Wav2Vec2); not a full recipe/training framework spanning separation, enhancement, diarization the way SpeechBrain is. |
+| Kaldi | 未收录 | Use this page for its stated niche; choose Kaldi when you need the classic, highly optimized ASR toolkit. | The classic, highly optimized ASR toolkit; far steeper, C++/shell-heavy, not PyTorch-native — chosen for maximal control, not ergonomics. |
+| faster-whisper / Whisper | 未收录 | Use this page for its stated niche; choose faster-whisper / Whisper when you need inference-focused ASR. | Inference-focused ASR; excellent if you only transcribe, but not a multi-task training toolkit. |
 
 ## Tech stack
 

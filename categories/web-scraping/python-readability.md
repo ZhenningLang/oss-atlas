@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v0.8.x, maintained (low cadence), ~2.9k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2026-01-26T13:06:04Z
+  default_branch: master
+  default_branch_sha: 701833ccb24f9a15b463434f78229e4d6daf1c79
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:23:49Z
@@ -76,13 +81,13 @@ You also reach for it when you specifically want the *Python, lxml* implementati
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [Readability.js](readability-js.md) | ✅ | Mozilla's JS engine behind Firefox Reader View; choose by language (JS/Node) — different heuristics, needs a DOM. |
-| [dragnet](dragnet.md) | ✅ | ML-based extraction (Python); can win on some pages but is heavier, has aging pinned deps, and is less maintained. |
-| [boilerpipe](boilerpipe.md) | ✅ | Java boilerplate-removal algorithms; classic but the repo is effectively abandoned (last pushed 2018). |
-| trafilatura | 未收录 | Modern Python extraction library with strong benchmarks, metadata, and crawl features; often the current Python default — broader scope, heavier. |
-| newspaper3k / goose3 | 未收录 | Article-extraction libraries with built-in fetching and metadata; convenient but historically uneven maintenance. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [Readability.js](readability-js.md) | ✅ | Use this page for its stated niche; choose Readability.js when you need mozilla's JS engine behind Firefox Reader View. | Mozilla's JS engine behind Firefox Reader View; choose by language (JS/Node) — different heuristics, needs a DOM. |
+| [dragnet](dragnet.md) | ✅ | Use this page for its stated niche; choose dragnet when you need ML-based extraction (Python). | ML-based extraction (Python); can win on some pages but is heavier, has aging pinned deps, and is less maintained. |
+| [boilerpipe](boilerpipe.md) | ✅ | Use this page for its stated niche; choose boilerpipe when you need java boilerplate-removal algorithms. | Java boilerplate-removal algorithms; classic but the repo is effectively abandoned (last pushed 2018). |
+| trafilatura | 未收录 | Use this page for its stated niche; choose trafilatura when you need modern Python extraction library with strong benchmarks, metadata, and crawl features. | Modern Python extraction library with strong benchmarks, metadata, and crawl features; often the current Python default — broader scope, heavier. |
+| newspaper3k / goose3 | 未收录 | Use this page for its stated niche; choose newspaper3k / goose3 when you need article-extraction libraries with built-in fetching and metadata. | Article-extraction libraries with built-in fetching and metadata; convenient but historically uneven maintenance. |
 
 ## Tech stack
 

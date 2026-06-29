@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v5.5.2, active (2026-06), ~75.0k stars
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2026-06-27T16:23:38Z
+  default_branch: main
+  default_branch_sha: 7a5e5f39cc211eb8aecc2de9c700a864dc3e3baa
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:08:54Z
@@ -83,13 +88,13 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| PaddleOCR | 未收录 | 深度学习 OCR + 版式/表格/结构模型；在复杂版式、照片和中日韩上强得多，但依赖更重（PaddlePaddle）、Apache-2.0、有 GPU 更好——是完整管线，而非 Tesseract 的单一识别器。 |
-| EasyOCR | 未收录 | 基于 PyTorch,80+ 语言，安装简单，对场景/照片文字开箱即用效果不错；运行时更大、偏 GPU，在极端规模下不如 Tesseract 的 C++ 内核久经考验。 |
-| Google Cloud Vision / AWS Textract | 未收录 | 托管云 OCR；对脏输入准确率一流，Textract 还能抽表格/表单，但按页计费、数据出内网、不能离线/自托管——和 Tesseract 的部署模型正相反。 |
-| TrOCR | 未收录 | 微软的 Transformer（编码器-解码器）OCR；在手写和难行上很强，但模型重、偏 GPU，且是行级识别，没有 Tesseract 那套完整的页面/格式工具。 |
-| docTR | 未收录 | TF/PyTorch 的深度学习 OCR（检测+识别）,Python API 干净；对多样版式比 Tesseract 好，但依赖更重、语言覆盖更小。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| PaddleOCR | 未收录 | 当前页用于它的主场景；如果更看重“深度学习 OCR + 版式/表格/结构模型”，再选 PaddleOCR。 | 深度学习 OCR + 版式/表格/结构模型；在复杂版式、照片和中日韩上强得多，但依赖更重（PaddlePaddle）、Apache-2.0、有 GPU 更好——是完整管线，而非 Tesseract 的单一识别器。 |
+| EasyOCR | 未收录 | 当前页用于它的主场景；如果更看重“基于 PyTorch,80+ 语言，安装简单，对场景/照片文字开箱即用效果不错”，再选 EasyOCR。 | 基于 PyTorch,80+ 语言，安装简单，对场景/照片文字开箱即用效果不错；运行时更大、偏 GPU，在极端规模下不如 Tesseract 的 C++ 内核久经考验。 |
+| Google Cloud Vision / AWS Textract | 未收录 | 当前页用于它的主场景；如果更看重“托管云 OCR”，再选 Google Cloud Vision / AWS Textract。 | 托管云 OCR；对脏输入准确率一流，Textract 还能抽表格/表单，但按页计费、数据出内网、不能离线/自托管——和 Tesseract 的部署模型正相反。 |
+| TrOCR | 未收录 | 当前页用于它的主场景；如果更看重“微软的 Transformer（编码器-解码器）OCR”，再选 TrOCR。 | 微软的 Transformer（编码器-解码器）OCR；在手写和难行上很强，但模型重、偏 GPU，且是行级识别，没有 Tesseract 那套完整的页面/格式工具。 |
+| docTR | 未收录 | 当前页用于它的主场景；如果更看重“TF/PyTorch 的深度学习 OCR（检测+识别）,Python API 干净”，再选 docTR。 | TF/PyTorch 的深度学习 OCR（检测+识别）,Python API 干净；对多样版式比 Tesseract 好，但依赖更重、语言覆盖更小。 |
 
 ## 技术栈
 

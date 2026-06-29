@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v3.9.x, active (2026-06)
 last_verified: 2026-06-26
 type: service
+upstream:
+  pushed_at: 2026-06-29T09:48:26Z
+  default_branch: master
+  default_branch_sha: 1730282ec2f8ed097cf6ad6a3d69e55b7ba9ebb6
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:39:38Z
@@ -84,14 +89,14 @@ The newer reason to reach for Kong is the AI Gateway path. Your teams are callin
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| Apache APISIX | 未收录 | Also OpenResty/Lua but configures via etcd (stateless nodes, fast dynamic reload) and bundles more plugins in OSS; smaller commercial/portal ecosystem than Kong. |
-| Tyk | 未收录 | Go-based, ships a dashboard + developer portal + multi-tenancy in its open-source stack; narrower raw-proxy throughput and plugin count than Kong. |
-| Envoy | 未收录 | CNCF-graduated C++ L4/L7 proxy and the de-facto service-mesh data plane (xDS); far lower-level — you bring a control plane, not turnkey API-management plugins. |
-| Traefik | 未收录 | Go reverse proxy with strong container/Kubernetes auto-discovery and a file/CRD config model; lighter to run but a thinner policy/AI-gateway plugin story. |
-| KrakenD | 未收录 | Stateless Go gateway focused on API aggregation/composition declared in one config file; no database, but not a plugin-rich programmable edge. |
-| LiteLLM / portkey-style LLM proxy | 未收录 | Purpose-built LLM routers focused only on multi-provider LLM traffic; narrower than Kong's combined HTTP + AI gateway, but lighter if LLM routing is all you need. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| Apache APISIX | 未收录 | Use this page for its stated niche; choose Apache APISIX when you need also OpenResty/Lua but configures via etcd (stateless nodes, fast dynamic reload) and bundles more p. | Also OpenResty/Lua but configures via etcd (stateless nodes, fast dynamic reload) and bundles more plugins in OSS; smaller commercial/portal ecosystem than Kong. |
+| Tyk | 未收录 | Use this page for its stated niche; choose Tyk when you need go-based, ships a dashboard + developer portal + multi-tenancy in its open-source stack. | Go-based, ships a dashboard + developer portal + multi-tenancy in its open-source stack; narrower raw-proxy throughput and plugin count than Kong. |
+| Envoy | 未收录 | Use this page for its stated niche; choose Envoy when you need CNCF-graduated C++ L4/L7 proxy and the de-facto service-mesh data plane (xDS). | CNCF-graduated C++ L4/L7 proxy and the de-facto service-mesh data plane (xDS); far lower-level — you bring a control plane, not turnkey API-management plugins. |
+| Traefik | 未收录 | Use this page for its stated niche; choose Traefik when you need go reverse proxy with strong container/Kubernetes auto-discovery and a file/CRD config model. | Go reverse proxy with strong container/Kubernetes auto-discovery and a file/CRD config model; lighter to run but a thinner policy/AI-gateway plugin story. |
+| KrakenD | 未收录 | Use this page for its stated niche; choose KrakenD when you need stateless Go gateway focused on API aggregation/composition declared in one config file. | Stateless Go gateway focused on API aggregation/composition declared in one config file; no database, but not a plugin-rich programmable edge. |
+| LiteLLM / portkey-style LLM proxy | 未收录 | Use this page for its stated niche; choose LiteLLM / portkey-style LLM proxy when you need purpose-built LLM routers focused only on multi-provider LLM traffic. | Purpose-built LLM routers focused only on multi-provider LLM traffic; narrower than Kong's combined HTTP + AI gateway, but lighter if LLM routing is all you need. |
 
 ## Tech stack
 

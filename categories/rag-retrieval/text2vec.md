@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v1.2.9, active, ~5.0k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2026-02-14T14:59:10Z
+  default_branch: master
+  default_branch_sha: 073e29c2135bc7805202f69322beb02c358dbe7e
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:14:52Z
@@ -86,12 +91,12 @@ You also reach for it when you want to *fine-tune* a sentence embedder on your o
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| sentence-transformers (SBERT) | 未收录 | The upstream library text2vec builds on; broader model zoo and English/multilingual coverage, but less Chinese-curated out of the box and no bundled BM25/Word2Vec convenience. |
-| BGE / FlagEmbedding (BAAI) | 未收录 | State-of-the-art open embedding models (incl. strong Chinese); text2vec can load BGE, but FlagEmbedding is the canonical home for the latest checkpoints and rerankers. |
-| FAISS / Milvus | 未收录 | Vector indexes, not encoders — complementary, not substitutes; you still need an embedder like text2vec in front. |
-| OpenAI / Cohere embedding APIs | 未收录 | Hosted, no self-hosting or GPU, strong quality — but paid, network-dependent, and sends text to a third party; text2vec runs fully local. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| sentence-transformers (SBERT) | 未收录 | Use this page for its stated niche; choose sentence-transformers (SBERT) when you need the upstream library text2vec builds on. | The upstream library text2vec builds on; broader model zoo and English/multilingual coverage, but less Chinese-curated out of the box and no bundled BM25/Word2Vec convenience. |
+| BGE / FlagEmbedding (BAAI) | 未收录 | Use this page for its stated niche; choose BGE / FlagEmbedding (BAAI) when you need state-of-the-art open embedding models (incl. | State-of-the-art open embedding models (incl. strong Chinese); text2vec can load BGE, but FlagEmbedding is the canonical home for the latest checkpoints and rerankers. |
+| FAISS / Milvus | 未收录 | Use this page for its stated niche; choose FAISS / Milvus when you need vector indexes, not encoders. | Vector indexes, not encoders — complementary, not substitutes; you still need an embedder like text2vec in front. |
+| OpenAI / Cohere embedding APIs | 未收录 | Use this page for its stated niche; choose OpenAI / Cohere embedding APIs when you need hosted, no self-hosting or GPU, strong quality. | Hosted, no self-hosting or GPU, strong quality — but paid, network-dependent, and sends text to a third party; text2vec runs fully local. |
 
 ## Tech stack
 

@@ -9,6 +9,11 @@ license: Apache-2.0 WITH LLVM-exception
 maturity: "MAX v26.4.0, active (2026-06); ~26.4k stars, single-vendor (Modular Inc.)"
 last_verified: 2026-06-28
 type: framework
+upstream:
+  pushed_at: 2026-06-29T07:43:28Z
+  default_branch: main
+  default_branch_sha: 83fadb2fad903d3c819766a1bc01740a893dc7bf
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:57:05Z
@@ -86,13 +91,13 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| vLLM | 未收录 | 事实标准的开源 LLM 服务引擎（PagedAttention、continuous batching），社区与模型覆盖极大；偏 NVIDIA、跨 CPU/AMD 的统一叙事较弱，也没有自己的 kernel 语言。 |
-| Text Generation Inference (TGI) | 未收录 | Hugging Face 的生产服务器，与 HF 生态贴合紧密；许可证历史有过反复（Apache→HFOIL→Apache），范围比一整套编译器+语言平台窄。 |
-| TensorRT-LLM | 未收录 | NVIDIA 自家引擎，在 NVIDIA 硬件上性能顶级；深度锁定 NVIDIA，构建/引擎编译流程更重，无跨厂商抽象。 |
-| Ray Serve | 未收录 | 通用 Python 模型服务/编排框架，负责扩展与组合服务；不是手调的单模型推理引擎——是另一层。 |
-| 原生 PyTorch（配 Triton） | 未收录 | 服务与自定义 kernel 两头都最默认、最可移植、最好招人的栈；性能要你自己拼，而不是买一个垂直整合的引擎。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| vLLM | 未收录 | 当前页用于它的主场景；如果更看重“事实标准的开源 LLM 服务引擎（PagedAttention、continuous batching），社区与模型覆盖极大”，再选 vLLM。 | 事实标准的开源 LLM 服务引擎（PagedAttention、continuous batching），社区与模型覆盖极大；偏 NVIDIA、跨 CPU/AMD 的统一叙事较弱，也没有自己的 kernel 语言。 |
+| Text Generation Inference (TGI) | 未收录 | 当前页用于它的主场景；如果更看重“Hugging Face 的生产服务器，与 HF 生态贴合紧密”，再选 Text Generation Inference (TGI)。 | Hugging Face 的生产服务器，与 HF 生态贴合紧密；许可证历史有过反复（Apache→HFOIL→Apache），范围比一整套编译器+语言平台窄。 |
+| TensorRT-LLM | 未收录 | 当前页用于它的主场景；如果更看重“NVIDIA 自家引擎，在 NVIDIA 硬件上性能顶级”，再选 TensorRT-LLM。 | NVIDIA 自家引擎，在 NVIDIA 硬件上性能顶级；深度锁定 NVIDIA，构建/引擎编译流程更重，无跨厂商抽象。 |
+| Ray Serve | 未收录 | 当前页用于它的主场景；如果更看重“通用 Python 模型服务/编排框架，负责扩展与组合服务”，再选 Ray Serve。 | 通用 Python 模型服务/编排框架，负责扩展与组合服务；不是手调的单模型推理引擎——是另一层。 |
+| 原生 PyTorch（配 Triton） | 未收录 | 当前页用于它的主场景；如果更看重“服务与自定义 kernel 两头都最默认、最可移植、最好招人的栈”，再选 原生 PyTorch（配 Triton）。 | 服务与自定义 kernel 两头都最默认、最可移植、最好招人的栈；性能要你自己拼，而不是买一个垂直整合的引擎。 |
 
 ## 技术栈
 

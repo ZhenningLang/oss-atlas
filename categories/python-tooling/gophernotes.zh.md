@@ -9,6 +9,11 @@ license: MIT
 maturity: v0.7.5 (2022), stalled (2026-06)
 last_verified: 2026-06-28
 type: tool
+upstream:
+  pushed_at: 2023-11-03T18:02:49Z
+  default_branch: master
+  default_branch_sha: 55142043d19696ba037e3e93f9ec6c7f8436e82d
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:12:20Z
@@ -76,13 +81,13 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| Python（IPython）内核 | 未收录 | 默认的 Jupyter 体验，带完整数据科学生态；如果你不是非要 Go，这是阻力最小的路。 |
-| gomacro（REPL） | 未收录 | gophernotes 依托的 Go 解释器/REPL；适合终端里交互式 Go，但不是笔记本 UI。 |
-| Go Playground / `go run` | 未收录 | 快速一次性跑 Go；没有持久 cell 状态、没有笔记本散文交织——适合片段，不适合文学化文档。 |
-| Jupyter 多语言内核（如 Rust/JS 的） | 未收录 | 其他语言“在 Jupyter 里跑语言 X”的同一思路；各自维护度和完整度参差——gophernotes 是 Go 那一份，带停滞维护的告诫。 |
-| Tour of Go / 交互文档 | 未收录 | 精选的交互式 Go 学习，但内容固定——不是你跑自己代码的内核。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| Python（IPython）内核 | 未收录 | 当前页用于它的主场景；如果更看重“默认的 Jupyter 体验，带完整数据科学生态”，再选 Python（IPython）内核。 | 默认的 Jupyter 体验，带完整数据科学生态；如果你不是非要 Go，这是阻力最小的路。 |
+| gomacro（REPL） | 未收录 | 当前页用于它的主场景；如果更看重“gophernotes 依托的 Go 解释器/REPL”，再选 gomacro（REPL）。 | gophernotes 依托的 Go 解释器/REPL；适合终端里交互式 Go，但不是笔记本 UI。 |
+| Go Playground / `go run` | 未收录 | 当前页用于它的主场景；如果更看重“快速一次性跑 Go”，再选 Go Playground / go run。 | 快速一次性跑 Go；没有持久 cell 状态、没有笔记本散文交织——适合片段，不适合文学化文档。 |
+| Jupyter 多语言内核（如 Rust/JS 的） | 未收录 | 当前页用于它的主场景；如果更看重“其他语言“在 Jupyter 里跑语言 X”的同一思路”，再选 Jupyter 多语言内核（如 Rust/JS 的）。 | 其他语言“在 Jupyter 里跑语言 X”的同一思路；各自维护度和完整度参差——gophernotes 是 Go 那一份，带停滞维护的告诫。 |
+| Tour of Go / 交互文档 | 未收录 | 当前页用于它的主场景；如果更看重“精选的交互式 Go 学习，但内容固定”，再选 Tour of Go / 交互文档。 | 精选的交互式 Go 学习，但内容固定——不是你跑自己代码的内核。 |
 
 ## 技术栈
 

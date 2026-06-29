@@ -9,6 +9,11 @@ license: MIT
 maturity: no tagged release, active, last pushed 2026-06 (as of 2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+upstream:
+  pushed_at: 2026-06-14T17:12:08Z
+  default_branch: main
+  default_branch_sha: ff554365af3a57af5858749a57d7cc3230beec89
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:31:26Z
@@ -81,14 +86,14 @@ health:
 
 ## 横向对比
 
-| 替代项 | 已收录 | 取舍 |
-|---|---|---|
-| [antfu/skills](antfu-skills.md) | ✅ | 另一份单作者个人 skill 合集；antfu 的偏 web/JS 工具链且英文为先。卡兹克的中文为先，偏向内容/运维杂务（写作、AI 资讯、清理）。 |
-| [Dimillian/Skills](dimillian-skills.md) | ✅ | 个人合集偏 Apple/Swift 开发。和卡兹克的重叠很小——领域和语言都不同。 |
-| [ljg-skills](ljg-skills.md) | ✅ | 本叶子下的同类个人合集；按各作者自动化了哪些具体杂务、触发语言是否匹配你来选。 |
-| [qiushi-skill](qiushi-skill.md) | ✅ | 另一份中文个人 skill 集；按和你实际任务的重叠度来选。 |
-| [Superpowers](../../agent-dev-methodology/superpowers.zh.md) | ✅ | 一个有主张的 SDLC*方法论*包（TDD/subagent 纪律）——消费单元不同。卡兹克的是各自独立的实用 skill，不是工作流框架。 |
-| Anthropic 官方 / 内置 Agent Skills | 未收录 | 平台自带的一方 skill 生态；卡兹克的是叠在其上的第三方个人合集，可能与原生 skill 重复或冲突。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [antfu/skills](antfu-skills.md) | ✅ | 当前页用于它的主场景；如果更看重“另一份单作者个人 skill 合集”，再选 antfu/skills。 | 另一份单作者个人 skill 合集；antfu 的偏 web/JS 工具链且英文为先。卡兹克的中文为先，偏向内容/运维杂务（写作、AI 资讯、清理）。 |
+| [Dimillian/Skills](dimillian-skills.md) | ✅ | 当前页用于它的主场景；如果更看重“个人合集偏 Apple/Swift 开发”，再选 Dimillian/Skills。 | 个人合集偏 Apple/Swift 开发。和卡兹克的重叠很小——领域和语言都不同。 |
+| [ljg-skills](ljg-skills.md) | ✅ | 当前页用于它的主场景；如果更看重“本叶子下的同类个人合集”，再选 ljg-skills。 | 本叶子下的同类个人合集；按各作者自动化了哪些具体杂务、触发语言是否匹配你来选。 |
+| [qiushi-skill](qiushi-skill.md) | ✅ | 当前页用于它的主场景；如果更看重“另一份中文个人 skill 集”，再选 qiushi-skill。 | 另一份中文个人 skill 集；按和你实际任务的重叠度来选。 |
+| [Superpowers](../../agent-dev-methodology/superpowers.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“一个有主张的 SDLC*方法论*包（TDD/subagent 纪律）”，再选 Superpowers。 | 一个有主张的 SDLC*方法论*包（TDD/subagent 纪律）——消费单元不同。卡兹克的是各自独立的实用 skill，不是工作流框架。 |
+| Anthropic 官方 / 内置 Agent Skills | 未收录 | 当前页用于它的主场景；如果更看重“平台自带的一方 skill 生态”，再选 Anthropic 官方 / 内置 Agent Skills。 | 平台自带的一方 skill 生态；卡兹克的是叠在其上的第三方个人合集，可能与原生 skill 重复或冲突。 |
 
 ## 健康度与可持续性
 

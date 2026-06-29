@@ -9,6 +9,11 @@ license: ISC
 maturity: v2.8.0 (2025-09), active, ~2.7k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2026-06-28T01:01:37Z
+  default_branch: main
+  default_branch_sha: fa5e8ccc1df870b70ec514865f9d5e703917a234
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:05:41Z
@@ -86,12 +91,12 @@ It's also the substrate under much of the Python networking/security ecosystem: 
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| `socket.getaddrinfo` (stdlib) | 未收录 | Zero deps, uses OS resolver + `/etc/hosts`; but only basic A/AAAA forward/reverse lookups — no record types, custom servers, DNSSEC, or encrypted transports. |
-| `dig` / `drill` / `kdig` (CLI) | 未收录 | Interactive/debug DNS from the shell, full-featured; but a subprocess to parse, not a typed in-Python API. |
-| aiodns / pycares | 未收录 | Async DNS via the C-Ares library — fast async resolution, but a thin lookup layer, not the full message/zone/DNSSEC toolkit. |
-| `getdns` Python bindings | 未收录 | Bindings to the getdns C library with stub-resolver/DNSSEC features; native dep and smaller Python ecosystem than dnspython. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| `socket.getaddrinfo` (stdlib) | 未收录 | Use this page for its stated niche; choose socket.getaddrinfo (stdlib) when you need zero deps, uses OS resolver + `/etc/hosts`. | Zero deps, uses OS resolver + `/etc/hosts`; but only basic A/AAAA forward/reverse lookups — no record types, custom servers, DNSSEC, or encrypted transports. |
+| `dig` / `drill` / `kdig` (CLI) | 未收录 | Use this page for its stated niche; choose dig / drill / kdig (CLI) when you need interactive/debug DNS from the shell, full-featured. | Interactive/debug DNS from the shell, full-featured; but a subprocess to parse, not a typed in-Python API. |
+| aiodns / pycares | 未收录 | Use this page for its stated niche; choose aiodns / pycares when you need async DNS via the C-Ares library. | Async DNS via the C-Ares library — fast async resolution, but a thin lookup layer, not the full message/zone/DNSSEC toolkit. |
+| `getdns` Python bindings | 未收录 | Use this page for its stated niche; choose getdns Python bindings when you need bindings to the getdns C library with stub-resolver/DNSSEC features. | Bindings to the getdns C library with stub-resolver/DNSSEC features; native dep and smaller Python ecosystem than dnspython. |
 
 ## Tech stack
 

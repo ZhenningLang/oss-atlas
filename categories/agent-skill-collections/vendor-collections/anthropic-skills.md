@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: no tagged releases, active, last pushed 2026-06 (155k+ stars [未验证])
 last_verified: 2026-06-26
 type: skill-pack
+upstream:
+  pushed_at: 2026-06-27T16:07:58Z
+  default_branch: main
+  default_branch_sha: 35414756ca55738e050562e272a6bbc6273aa926
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:33:25Z
@@ -80,13 +85,13 @@ You reach for it specifically when you want (a) the document skills (`docx`, `pd
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| Claude plugins (official) | 未收录 | Anthropic's broader official plugin/marketplace surface; this `skills` repo is specifically the Agent Skills collection (document + example skills), not the full plugin catalog. Compare on whether you want skills only or the wider plugin set. |
-| AWS Labs agent plugins | 未收录 | Another vendor-published collection, AWS-ecosystem-flavored; pick by which cloud/tooling bias matches your stack. Format/loader compatibility differs. |
-| MiniMax skills | 未收录 | A different vendor's skill collection; overlapping "official starter skills" goal but tied to that vendor's models/harness. Cross-check format compatibility before mixing. |
-| Third-party community skill packs (e.g. Superpowers) | 未收录 | Opinionated SDLC/methodology bundles layered on top of an agent. This repo is narrower and first-party: reference task skills + the authoring spec, not a full workflow methodology. |
-| Roll your own `SKILL.md` skills | n/a | Maximum fit and zero external dependency, but you forgo the vendor's tested document-generation skills and the canonical spec/template. Many users fork from here as the baseline. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| Claude plugins (official) | 未收录 | Use this page for its stated niche; choose Claude plugins (official) when you need anthropic's broader official plugin/marketplace surface. | Anthropic's broader official plugin/marketplace surface; this `skills` repo is specifically the Agent Skills collection (document + example skills), not the full plugin catalog. Compare on whether you want skills only or the wider plugin set. |
+| AWS Labs agent plugins | 未收录 | Use this page for its stated niche; choose AWS Labs agent plugins when you need another vendor-published collection, AWS-ecosystem-flavored. | Another vendor-published collection, AWS-ecosystem-flavored; pick by which cloud/tooling bias matches your stack. Format/loader compatibility differs. |
+| MiniMax skills | 未收录 | Use this page for its stated niche; choose MiniMax skills when you need a different vendor's skill collection. | A different vendor's skill collection; overlapping "official starter skills" goal but tied to that vendor's models/harness. Cross-check format compatibility before mixing. |
+| Third-party community skill packs (e.g. Superpowers) | 未收录 | Use this page for its stated niche; choose Third-party community skill packs (e.g. Superpowers) when you need opinionated SDLC/methodology bundles layered on top of an agent. | Opinionated SDLC/methodology bundles layered on top of an agent. This repo is narrower and first-party: reference task skills + the authoring spec, not a full workflow methodology. |
+| Roll your own `SKILL.md` skills | n/a | Use this page for its stated niche; choose Roll your own SKILL.md skills when you need maximum fit and zero external dependency, but you forgo the vendor's tested document-generation skil. | Maximum fit and zero external dependency, but you forgo the vendor's tested document-generation skills and the canonical spec/template. Many users fork from here as the baseline. |
 
 ## Health & viability
 

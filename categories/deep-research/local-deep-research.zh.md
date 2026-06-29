@@ -9,6 +9,11 @@ license: MIT
 maturity: v1.7.0, active (2026-06)
 last_verified: 2026-06-26
 type: app
+upstream:
+  pushed_at: 2026-06-29T04:11:02Z
+  default_branch: main
+  default_branch_sha: b7e588a2e9810978d0b5c28a5a8f15873570dff6
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:45:26Z
@@ -89,13 +94,13 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| [deep-research](deep-research.zh.md) | ✅ | 极简 TypeScript 脚本，端到端自己嵌、自己掌控；LLM+搜索 key 你自己接。比 LDR 轻得多，但没有 UI、没有本地 LLM/隐私套件、没有学术源连接器或加密多用户存储。 |
-| [Vane](vane.zh.md) | ✅ | 另一个自托管研究/搜索 agent;“自己跑”的目标有重叠。按源连接器、本地 LLM 支持和报告质量在你的栈上比较。 |
-| [Agent-Reach](agent-reach.zh.md) | ✅ | 聚焦在面向 web 来源的 agent 触达/reach；相邻但交付物与 LDR 的带引用研究报告不同。 |
-| GPT Researcher | 未收录 | 流行的 Python 深度研究 agent，带 Web UI 和报告导出；默认云端 LLM 优先。LDR 更彻底地押注全本地 + 加密 + 学术源连接器。 |
-| Perplexity / OpenAI Deep Research | 未收录 | 托管 SaaS，质量强、零运维——但你的查询和上下文会离开你的机器，与 LDR 的前提正相反。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [deep-research](deep-research.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“极简 TypeScript 脚本，端到端自己嵌、自己掌控”，再选 deep-research。 | 极简 TypeScript 脚本，端到端自己嵌、自己掌控；LLM+搜索 key 你自己接。比 LDR 轻得多，但没有 UI、没有本地 LLM/隐私套件、没有学术源连接器或加密多用户存储。 |
+| [Vane](vane.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“另一个自托管研究/搜索 agent”，再选 Vane。 | 另一个自托管研究/搜索 agent;“自己跑”的目标有重叠。按源连接器、本地 LLM 支持和报告质量在你的栈上比较。 |
+| [Agent-Reach](agent-reach.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“聚焦在面向 web 来源的 agent 触达/reach”，再选 Agent-Reach。 | 聚焦在面向 web 来源的 agent 触达/reach；相邻但交付物与 LDR 的带引用研究报告不同。 |
+| GPT Researcher | 未收录 | 当前页用于它的主场景；如果更看重“流行的 Python 深度研究 agent，带 Web UI 和报告导出”，再选 GPT Researcher。 | 流行的 Python 深度研究 agent，带 Web UI 和报告导出；默认云端 LLM 优先。LDR 更彻底地押注全本地 + 加密 + 学术源连接器。 |
+| Perplexity / OpenAI Deep Research | 未收录 | 当前页用于它的主场景；如果更看重“托管 SaaS，质量强、零运维”，再选 Perplexity / OpenAI Deep Research。 | 托管 SaaS，质量强、零运维——但你的查询和上下文会离开你的机器，与 LDR 的前提正相反。 |
 
 ## 技术栈
 

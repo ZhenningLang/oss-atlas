@@ -9,6 +9,11 @@ license: MIT
 maturity: v0.7.x line, active as of 2026-06 (latest release v0.7.7, 2026-06-18); pre-1.0
 last_verified: 2026-06-26
 type: tool
+upstream:
+  pushed_at: 2026-06-29T10:53:54Z
+  default_branch: main
+  default_branch_sha: 1514b12a453ecf5eb8133735971aaac106556c31
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:35:49Z
@@ -84,13 +89,13 @@ health:
 
 ## 横向对比
 
-| 替代方案 | 是否已收录 | 取舍 |
-|---|---|---|
-| [beads](beads.zh.md) | ✅ | 解决的是相邻问题：依赖感知的*任务图* / 结构化 agent 记忆（接下来做什么、什么被阻塞），由版本化 SQL 支撑。Entire 捕获的是*已经发生了什么*（transcript/checkpoint）用于溯源与回滚——互补，而非替代。 |
-| [CCPM](ccpm.zh.md) | ✅ | 一套 Claude-Code 项目管理工作流（基于 GitHub Issues 的 spec/issue/多 agent 并行）。属于流程/协调层，不是会话 transcript 的捕获与回滚层。 |
-| 裸 Git + agent 自带的会话日志 | 未收录 | 零额外工具，但 agent 日志按工具各自分散、不与 commit 索引、不可统一回滚，要么乱要么根本进不了仓库。Entire 就是那个统一的捕获/索引层。 |
-| Specstory / agent transcript 导出工具 | 未收录 | 其它工具也能持久化 agent 聊天 transcript，但通常是导出成文件/markdown，而非绑定到 commit 的 Git-checkpoint 溯源、且带回滚机制。替换前先核对功能对齐度。 |
-| Reflog / `git stash` + 手动快照 | 未收录 | 你本来就有的原生恢复原语，但它们只捕获工作树状态——没有提示/回复/工具调用上下文、没有按会话索引、没有 agent 感知的脱敏。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [beads](beads.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“解决的是相邻问题：依赖感知的*任务图* / 结构化 agent 记忆（接下来做什么、什么被阻塞），由版本化 SQL 支撑”，再选 beads。 | 解决的是相邻问题：依赖感知的*任务图* / 结构化 agent 记忆（接下来做什么、什么被阻塞），由版本化 SQL 支撑。Entire 捕获的是*已经发生了什么*（transcript/checkpoint）用于溯源与回滚——互补，而非替代。 |
+| [CCPM](ccpm.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“一套 Claude-Code 项目管理工作流（基于 GitHub Issues 的 spec/issue/多 agent 并行）”，再选 CCPM。 | 一套 Claude-Code 项目管理工作流（基于 GitHub Issues 的 spec/issue/多 agent 并行）。属于流程/协调层，不是会话 transcript 的捕获与回滚层。 |
+| 裸 Git + agent 自带的会话日志 | 未收录 | 当前页用于它的主场景；如果更看重“零额外工具，但 agent 日志按工具各自分散、不与 commit 索引、不可统一回滚，要么乱要么根本进不了仓库”，再选 裸 Git + agent 自带的会话日志。 | 零额外工具，但 agent 日志按工具各自分散、不与 commit 索引、不可统一回滚，要么乱要么根本进不了仓库。Entire 就是那个统一的捕获/索引层。 |
+| Specstory / agent transcript 导出工具 | 未收录 | 当前页用于它的主场景；如果更看重“其它工具也能持久化 agent 聊天 transcript，但通常是导出成文件/markdown，而非绑定到 commit 的 Git-checkpoint 溯源、且带回滚机制”，再选 Specstory / agent transcript 导出工具。 | 其它工具也能持久化 agent 聊天 transcript，但通常是导出成文件/markdown，而非绑定到 commit 的 Git-checkpoint 溯源、且带回滚机制。替换前先核对功能对齐度。 |
+| Reflog / `git stash` + 手动快照 | 未收录 | 当前页用于它的主场景；如果更看重“你本来就有的原生恢复原语，但它们只捕获工作树状态”，再选 Reflog / git stash + 手动快照。 | 你本来就有的原生恢复原语，但它们只捕获工作树状态——没有提示/回复/工具调用上下文、没有按会话索引、没有 agent 感知的脱敏。 |
 
 ## 技术栈
 

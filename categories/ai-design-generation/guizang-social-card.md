@@ -9,6 +9,11 @@ license: AGPL-3.0-only
 maturity: no tagged release, active (last push 2026-05)
 last_verified: 2026-06-26
 type: skill-pack
+upstream:
+  pushed_at: 2026-05-27T16:58:08Z
+  default_branch: main
+  default_branch_sha: 032782ff67e0a20416bae8159f67000c1e4e7ae2
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:38:02Z
@@ -77,14 +82,14 @@ It fits best when you want a strong, opinionated aesthetic baked in and an artif
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [guizang-ppt](guizang-ppt.md) | ✅ | Same author's sibling skill, scoped to full multi-page horizontal-swipe decks rather than single cards/covers; overlapping visual rules, different output artifact. |
-| [html-anything](html-anything.md) | ✅ | General agent-driven HTML artifact generation; broader and unopinionated, so it lacks the locked card layouts, Swiss validator, platform canvas sizes, and image-sourcing workflow this skill ships. |
-| [open-design](open-design.md) | ✅ | Aimed at broader UI/design generation; not a social-card specialist with platform-exact poster sizes and a render-to-PNG pipeline. |
-| [Impeccable](impeccable.md) | ✅ | Design-quality oriented generation; different surface — not a single-file-HTML card workflow with a Playwright validator. |
-| Canva / 稿定设计 | 未收录 | Hosted template SaaS, not a repo — easier for non-agents and richer asset libraries, but closed, no local agent control, no single-file HTML artifact, and far less opinionated visual rigor. |
-| Figma + plugins | 未收录 | Full design control and collaboration, but manual; no agent-driven 7-step flow, no auto image sourcing, and not a repo you can vendor. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [guizang-ppt](guizang-ppt.md) | ✅ | Use this page for its stated niche; choose guizang-ppt when you need same author's sibling skill, scoped to full multi-page horizontal-swipe decks rather than single car. | Same author's sibling skill, scoped to full multi-page horizontal-swipe decks rather than single cards/covers; overlapping visual rules, different output artifact. |
+| [html-anything](html-anything.md) | ✅ | Use this page for its stated niche; choose html-anything when you need general agent-driven HTML artifact generation. | General agent-driven HTML artifact generation; broader and unopinionated, so it lacks the locked card layouts, Swiss validator, platform canvas sizes, and image-sourcing workflow this skill ships. |
+| [open-design](open-design.md) | ✅ | Use this page for its stated niche; choose open-design when you need aimed at broader UI/design generation. | Aimed at broader UI/design generation; not a social-card specialist with platform-exact poster sizes and a render-to-PNG pipeline. |
+| [Impeccable](impeccable.md) | ✅ | Use this page for its stated niche; choose Impeccable when you need design-quality oriented generation. | Design-quality oriented generation; different surface — not a single-file-HTML card workflow with a Playwright validator. |
+| Canva / 稿定设计 | 未收录 | Use this page for its stated niche; choose Canva / 稿定设计 when you need hosted template SaaS, not a repo. | Hosted template SaaS, not a repo — easier for non-agents and richer asset libraries, but closed, no local agent control, no single-file HTML artifact, and far less opinionated visual rigor. |
+| Figma + plugins | 未收录 | Use this page for its stated niche; choose Figma + plugins when you need full design control and collaboration, but manual. | Full design control and collaboration, but manual; no agent-driven 7-step flow, no auto image sourcing, and not a repo you can vendor. |
 
 ## Health & viability
 

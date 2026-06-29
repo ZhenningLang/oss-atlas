@@ -9,6 +9,11 @@ license: MIT
 maturity: last release 2.4.1 (2023-02), repo still pushed 2026-06, ~23.4k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: app
+upstream:
+  pushed_at: 2026-06-15T14:36:35Z
+  default_branch: master
+  default_branch_sha: 9cc0cad4c47e84e34aaec2eead099421960dcd07
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:11:02Z
@@ -81,13 +86,13 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| 付费代理服务（Bright Data / Decodo） | 未收录 | 商业住宅/数据中心/ISP 代理，带 SLA、大片干净 IP 段和支持——可靠又快，但收费（常按 GB 计量）且非开源。生产环境的正确选择。 |
-| ProxyBroker | 未收录 | Python 异步库/CLI，用来发现并检测公开代理；更像工具箱/库，而非打包好的带 API + 存储的服务。维护时断时续。[未验证] |
-| scylla | 未收录 | 自托管的智能免费代理池，带 Web UI 和 API（Python）；同一细分赛道，技术栈与功能侧重不同。[未验证] |
-| haipproxy | 未收录 | 基于 Scrapy/Redis 的高可用代理池，面向抓取；相比 proxy_pool 的小 Flask 服务，设计更重、更以 Scrapy 为中心。[未验证] |
-| scrapy-rotating-proxies | 未收录 | 一个 Scrapy *下载器中间件*，轮换你提供的列表并封掉失效项——它*消费*代理，并不去*获取/校验*代理；应当与本项目这类池子搭配，而非当成替代品。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| 付费代理服务（Bright Data / Decodo） | 未收录 | 当前页用于它的主场景；如果更看重“商业住宅/数据中心/ISP 代理，带 SLA、大片干净 IP 段和支持”，再选 付费代理服务（Bright Data / Decodo）。 | 商业住宅/数据中心/ISP 代理，带 SLA、大片干净 IP 段和支持——可靠又快，但收费（常按 GB 计量）且非开源。生产环境的正确选择。 |
+| ProxyBroker | 未收录 | 当前页用于它的主场景；如果更看重“Python 异步库/CLI，用来发现并检测公开代理”，再选 ProxyBroker。 | Python 异步库/CLI，用来发现并检测公开代理；更像工具箱/库，而非打包好的带 API + 存储的服务。维护时断时续。[未验证] |
+| scylla | 未收录 | 当前页用于它的主场景；如果更看重“自托管的智能免费代理池，带 Web UI 和 API（Python）”，再选 scylla。 | 自托管的智能免费代理池，带 Web UI 和 API（Python）；同一细分赛道，技术栈与功能侧重不同。[未验证] |
+| haipproxy | 未收录 | 当前页用于它的主场景；如果更看重“基于 Scrapy/Redis 的高可用代理池，面向抓取”，再选 haipproxy。 | 基于 Scrapy/Redis 的高可用代理池，面向抓取；相比 proxy_pool 的小 Flask 服务，设计更重、更以 Scrapy 为中心。[未验证] |
+| scrapy-rotating-proxies | 未收录 | 当前页用于它的主场景；如果更看重“一个 Scrapy *下载器中间件*，轮换你提供的列表并封掉失效项”，再选 scrapy-rotating-proxies。 | 一个 Scrapy *下载器中间件*，轮换你提供的列表并封掉失效项——它*消费*代理，并不去*获取/校验*代理；应当与本项目这类池子搭配，而非当成替代品。 |
 
 ## 技术栈
 

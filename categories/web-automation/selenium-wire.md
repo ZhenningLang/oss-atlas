@@ -9,6 +9,11 @@ license: MIT
 maturity: v5.1.0 (2022-10), archived & unmaintained, ~2.0k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2024-01-03T15:34:32Z
+  default_branch: master
+  default_branch_sha: da1b675fe2cc6dae2e3bb959c1ce95eb1c41830b
+  archived: true
 health:
   schema: 1
   computed_at: 2026-06-29T10:21:22Z
@@ -86,12 +91,12 @@ For an *existing* project already pinned to it, that's still a working pattern. 
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [Selenium](selenium.md) (4.x native CDP/BiDi) | ✅ | The base library this wraps; Selenium 4 now offers native CDP/BiDi network interception — the maintained way to get most of what selenium-wire added, no MITM proxy. [推断] |
-| Playwright | 未收录 | Modern, actively maintained browser automation with first-class request/response interception (`page.route`, response bodies) built in; the strongest "new project" replacement. |
-| mitmproxy | 未收录 | A maintained standalone MITM proxy with a full scripting API; heavier and not Selenium-coupled, but the right tool when you need real proxy-level capture. |
-| Browser MITM Proxy / BrowserMob Proxy | 未收录 | Older proxy-based HAR capture for Selenium (BrowserMob is Java); similar approach, similarly aging. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [Selenium](selenium.md) (4.x native CDP/BiDi) | ✅ | Use this page for its stated niche; choose Selenium (4.x native CDP/BiDi) when you need the base library this wraps. | The base library this wraps; Selenium 4 now offers native CDP/BiDi network interception — the maintained way to get most of what selenium-wire added, no MITM proxy. [推断] |
+| Playwright | 未收录 | Use this page for its stated niche; choose Playwright when you need modern, actively maintained browser automation with first-class request/response interception (`page. | Modern, actively maintained browser automation with first-class request/response interception (`page.route`, response bodies) built in; the strongest "new project" replacement. |
+| mitmproxy | 未收录 | Use this page for its stated niche; choose mitmproxy when you need a maintained standalone MITM proxy with a full scripting API. | A maintained standalone MITM proxy with a full scripting API; heavier and not Selenium-coupled, but the right tool when you need real proxy-level capture. |
+| Browser MITM Proxy / BrowserMob Proxy | 未收录 | Use this page for its stated niche; choose Browser MITM Proxy / BrowserMob Proxy when you need older proxy-based HAR capture for Selenium (BrowserMob is Java). | Older proxy-based HAR capture for Selenium (BrowserMob is Java); similar approach, similarly aging. |
 
 ## Tech stack
 

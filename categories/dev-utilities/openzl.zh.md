@@ -9,6 +9,11 @@ license: BSD-3-Clause
 maturity: v0.2.0, active, pre-1.0 (2026-05); format/API still changing
 last_verified: 2026-06-26
 type: library
+upstream:
+  pushed_at: 2026-06-26T17:29:05Z
+  default_branch: dev
+  default_branch_sha: a4d56c1af24b07799d76f0b390201545b33c2157
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:49:10Z
@@ -81,14 +86,14 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| [CyberChef](cyberchef.zh.md) | ✅ | 浏览器里给分析师做临时编解码/压缩 recipe；交互、通用，不是面向生产、为压缩比调优结构化数据的库。 |
-| [DevToys](devtoys.zh.md) | ✅ | 桌面开发者工具箱，内置压缩/格式化小工具；方便做一次性任务，而非可编程的格式感知压缩器。 |
-| zstd | 未收录 | 通用基线（同为 Meta/BSD）。在任意字节上「比率—速度」极佳；OpenZL 的目标是在特定结构化格式上靠格式感知*超过*它，代价是你得先描述数据。 |
-| Parquet + zstd/snappy | 未收录 | 主流的列式落盘路径：schema 感知编码（字典/RLE）加块级 codec。成熟且无处不在；OpenZL 是更底层的框架，让你构建自定义 codec 图，而非一种自带生态的文件格式。 |
-| BLOSC / blosc2 | 未收录 | 面向数值数组的分块 + shuffle/bitshuffle 元压缩器；「先变换再压缩」思路相近，范围更窄、比 OpenZL 更成熟。 |
-| Brotli | 未收录 | 强通用压缩器（尤擅文本/Web）；对结构化数值数据没有格式感知。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [CyberChef](cyberchef.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“浏览器里给分析师做临时编解码/压缩 recipe”，再选 CyberChef。 | 浏览器里给分析师做临时编解码/压缩 recipe；交互、通用，不是面向生产、为压缩比调优结构化数据的库。 |
+| [DevToys](devtoys.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“桌面开发者工具箱，内置压缩/格式化小工具”，再选 DevToys。 | 桌面开发者工具箱，内置压缩/格式化小工具；方便做一次性任务，而非可编程的格式感知压缩器。 |
+| zstd | 未收录 | 当前页用于它的主场景；如果更看重“通用基线（同为 Meta/BSD）”，再选 zstd。 | 通用基线（同为 Meta/BSD）。在任意字节上「比率—速度」极佳；OpenZL 的目标是在特定结构化格式上靠格式感知*超过*它，代价是你得先描述数据。 |
+| Parquet + zstd/snappy | 未收录 | 当前页用于它的主场景；如果更看重“主流的列式落盘路径：schema 感知编码（字典/RLE）加块级 codec”，再选 Parquet + zstd/snappy。 | 主流的列式落盘路径：schema 感知编码（字典/RLE）加块级 codec。成熟且无处不在；OpenZL 是更底层的框架，让你构建自定义 codec 图，而非一种自带生态的文件格式。 |
+| BLOSC / blosc2 | 未收录 | 当前页用于它的主场景；如果更看重“面向数值数组的分块 + shuffle/bitshuffle 元压缩器”，再选 BLOSC / blosc2。 | 面向数值数组的分块 + shuffle/bitshuffle 元压缩器；「先变换再压缩」思路相近，范围更窄、比 OpenZL 更成熟。 |
+| Brotli | 未收录 | 当前页用于它的主场景；如果更看重“强通用压缩器（尤擅文本/Web）”，再选 Brotli。 | 强通用压缩器（尤擅文本/Web）；对结构化数值数据没有格式感知。 |
 
 ## 技术栈
 

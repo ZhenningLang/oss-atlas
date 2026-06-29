@@ -9,6 +9,11 @@ license: MIT
 maturity: "v2.7.3 (2026-05), active (2026-06); ~68.8k stars (API-verified count), but adoption/vetting meaning unverified and suspicious for a young repo — flag, don't trust"
 last_verified: 2026-06-28
 type: tool
+upstream:
+  pushed_at: 2026-06-23T20:29:48Z
+  default_branch: main
+  default_branch_sha: 54754a6f97051d1d76c8758353d8ea41afe502a6
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:15:09Z
@@ -91,13 +96,13 @@ It fits best when the same graph should serve *whatever agent you already use* �
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [graphify](graphify.md) | ✅ | Closest sibling: code/docs → queryable graph for agents, but a documented Python CLI + MCP server, 36 grammars, Leiden clustering, portable JSON/HTML/Cypher outputs. More inspectable and better-documented; Understand-Anything is TypeScript, plugin-first, and younger/thinner on docs. |
-| [code-review-graph](code-review-graph.md) | ✅ | Narrow code-review/blast-radius pipeline (AST→SQLite→MCP) with a risk-scoring CI Action and no-egress runner story. Understand-Anything is a general explore/query tool, not a PR-review gate. |
-| [PageIndex](pageindex.md) | ✅ | Reasoning-based hierarchical retrieval over *documents* (no code AST/call graph); different retrieval primitive — prose tree vs code/entity graph. |
-| [FalkorDB](falkordb.md) | ✅ | A real persistent property-graph DB (Redis module, OpenCypher, vector index) you build apps on; Understand-Anything is a turnkey extract-and-query tool, not a graph backend. |
-| Sourcegraph / SCIP | 未收录 | Industrial precise code intelligence (cross-repo, language servers, scale); heavier infra, not an agent-plugin-shaped drop-in. Understand-Anything is lighter and LLM-augmented but unproven. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [graphify](graphify.md) | ✅ | Use this page for its stated niche; choose graphify when you need closest sibling: code/docs → queryable graph for agents, but a documented Python CLI + MCP server, 3. | Closest sibling: code/docs → queryable graph for agents, but a documented Python CLI + MCP server, 36 grammars, Leiden clustering, portable JSON/HTML/Cypher outputs. More inspectable and better-documented; Understand-Anything is TypeScript, plugin-first, and younger/thinner on docs. |
+| [code-review-graph](code-review-graph.md) | ✅ | Use this page for its stated niche; choose code-review-graph when you need narrow code-review/blast-radius pipeline (AST→SQLite→MCP) with a risk-scoring CI Action and no-egres. | Narrow code-review/blast-radius pipeline (AST→SQLite→MCP) with a risk-scoring CI Action and no-egress runner story. Understand-Anything is a general explore/query tool, not a PR-review gate. |
+| [PageIndex](pageindex.md) | ✅ | Use this page for its stated niche; choose PageIndex when you need reasoning-based hierarchical retrieval over *documents* (no code AST/call graph). | Reasoning-based hierarchical retrieval over *documents* (no code AST/call graph); different retrieval primitive — prose tree vs code/entity graph. |
+| [FalkorDB](falkordb.md) | ✅ | Use this page for its stated niche; choose FalkorDB when you need a real persistent property-graph DB (Redis module, OpenCypher, vector index) you build apps on. | A real persistent property-graph DB (Redis module, OpenCypher, vector index) you build apps on; Understand-Anything is a turnkey extract-and-query tool, not a graph backend. |
+| Sourcegraph / SCIP | 未收录 | Use this page for its stated niche; choose Sourcegraph / SCIP when you need industrial precise code intelligence (cross-repo, language servers, scale). | Industrial precise code intelligence (cross-repo, language servers, scale); heavier infra, not an agent-plugin-shaped drop-in. Understand-Anything is lighter and LLM-augmented but unproven. |
 
 ## Tech stack
 

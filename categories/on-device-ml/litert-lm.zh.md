@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: Pre-1.0, fast cadence; stable v0.13.1 (2026-06-03), v0.14.0-alpha (2026-06-18); Google-maintained
 last_verified: 2026-06-26
 type: tool
+upstream:
+  pushed_at: 2026-06-29T08:21:44Z
+  default_branch: main
+  default_branch_sha: 645fcac1d5b47d1077edb01bc8f104e04c1ae6dc
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:09:41Z
@@ -91,13 +96,13 @@ Google 把 Python/Kotlin/C++ 绑定标记为 *Stable*，但项目本身仍处于
 
 ## 横向对比
 
-| 替代方案 | 是否收录 | 取舍 |
-|---|---|---|
-| llama.cpp | 未收录 | 模型/量化支持（GGUF 生态）广泛得多、覆盖面无处不在，但跨平台构建更复杂，且没有单一的 Google 官方移动 SDK——你要自己拼装更多胶水。 |
-| MLX / mlx-lm (Apple) | 未收录 | 在许多非 Gemma 模型上比 LiteRT-LM 更快，在 Apple silicon 上有干净的 Swift/Python 体验，但仅限 Apple——无法作为你的跨平台答案。 |
-| MediaPipe LLM Inference API (Google) | 未收录 | 来自同一组织、更高层、用 `.task` 模型即插即用的端侧 LLM 更易上手，但作为底层编排层的成分更少，在方向上与 LiteRT-LM 重叠/被其取代——是更简单但更不灵活的兄弟方案。 |
-| ONNX Runtime (+ GenAI / Mobile) | 未收录 | 厂商中立、成熟，跨生态支持众多格式与后端，但更重、对最新小型移动 LLM 调优不足，且缺少 LiteRT-LM 在 Gemma 专属移动量化上的优势。 |
-| Apple Core ML / Foundation Models | 未收录 | 在较新 iPhone 上具备最佳的 Apple Neural Engine 集成与 OS 级模型，但锁定 Apple，转换可能很痛苦，没有通往 Android 或通用边缘硬件的路径。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| llama.cpp | 未收录 | 当前页用于它的主场景；如果更看重“模型/量化支持（GGUF 生态）广泛得多、覆盖面无处不在，但跨平台构建更复杂，且没有单一的 Google 官方移动 SDK”，再选 llama.cpp。 | 模型/量化支持（GGUF 生态）广泛得多、覆盖面无处不在，但跨平台构建更复杂，且没有单一的 Google 官方移动 SDK——你要自己拼装更多胶水。 |
+| MLX / mlx-lm (Apple) | 未收录 | 当前页用于它的主场景；如果更看重“在许多非 Gemma 模型上比 LiteRT-LM 更快，在 Apple silicon 上有干净的 Swift/Python 体验，但仅限 Apple”，再选 MLX / mlx-lm (Apple)。 | 在许多非 Gemma 模型上比 LiteRT-LM 更快，在 Apple silicon 上有干净的 Swift/Python 体验，但仅限 Apple——无法作为你的跨平台答案。 |
+| MediaPipe LLM Inference API (Google) | 未收录 | 当前页用于它的主场景；如果更看重“来自同一组织、更高层、用 `”，再选 MediaPipe LLM Inference API (Google)。 | 来自同一组织、更高层、用 `.task` 模型即插即用的端侧 LLM 更易上手，但作为底层编排层的成分更少，在方向上与 LiteRT-LM 重叠/被其取代——是更简单但更不灵活的兄弟方案。 |
+| ONNX Runtime (+ GenAI / Mobile) | 未收录 | 当前页用于它的主场景；如果更看重“厂商中立、成熟，跨生态支持众多格式与后端，但更重、对最新小型移动 LLM 调优不足，且缺少 LiteRT-LM 在 Gemma 专属移动量化上的优势”，再选 ONNX Runtime (+ GenAI / Mobile)。 | 厂商中立、成熟，跨生态支持众多格式与后端，但更重、对最新小型移动 LLM 调优不足，且缺少 LiteRT-LM 在 Gemma 专属移动量化上的优势。 |
+| Apple Core ML / Foundation Models | 未收录 | 当前页用于它的主场景；如果更看重“在较新 iPhone 上具备最佳的 Apple Neural Engine 集成与 OS 级模型，但锁定 Apple，转换可能很痛苦，没有通往 Android 或通用边缘硬件的路径”，再选 Apple Core ML / Foundation Models。 | 在较新 iPhone 上具备最佳的 Apple Neural Engine 集成与 OS 级模型，但锁定 Apple，转换可能很痛苦，没有通往 Android 或通用边缘硬件的路径。 |
 
 ## 技术栈
 

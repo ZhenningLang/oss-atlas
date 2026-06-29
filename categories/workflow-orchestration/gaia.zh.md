@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v0.2.9 (2022-01), archived/abandoned (2026-06)
 last_verified: 2026-06-28
 type: app
+upstream:
+  pushed_at: 2026-01-10T15:10:21Z
+  default_branch: master
+  default_branch_sha: 98a306bd4c7558f167bf076863dca38406d7eff9
+  archived: true
 health:
   schema: 1
   computed_at: 2026-06-29T10:27:01Z
@@ -83,13 +88,13 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| [Apache Airflow](airflow.zh.md) | ✅ | 成熟、仍在活跃维护的 DAG 调度器，生态庞大；是 Python-DAG 模型而非编译插件 job，且未归档——新工作的稳妥默认。 |
-| Argo Workflows | 未收录 | Kubernetes 原生、每步一容器的工作流；活跃维护、声明式 YAML，没有“用任意语言把 job 写成插件”的模型。 |
-| Dagster / Prefect | 未收录 | 现代 Python 优先的编排，开发活跃且有 SaaS 选项；编程模型不同但有人维护——优先于一个已归档项目。 |
-| Jenkins | 未收录 | 老牌但仍在维护的 CI/CD 服务器，插件生态庞大；用 Groovy/声明式 pipeline 而非编译代码插件。 |
-| GitHub Actions / GitLab CI | 未收录 | 托管、YAML 驱动、绑定你 VCS 的 CI/CD；比自托管一台流水线服务器的搭建摩擦低得多。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [Apache Airflow](airflow.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“成熟、仍在活跃维护的 DAG 调度器，生态庞大”，再选 Apache Airflow。 | 成熟、仍在活跃维护的 DAG 调度器，生态庞大；是 Python-DAG 模型而非编译插件 job，且未归档——新工作的稳妥默认。 |
+| Argo Workflows | 未收录 | 当前页用于它的主场景；如果更看重“Kubernetes 原生、每步一容器的工作流”，再选 Argo Workflows。 | Kubernetes 原生、每步一容器的工作流；活跃维护、声明式 YAML，没有“用任意语言把 job 写成插件”的模型。 |
+| Dagster / Prefect | 未收录 | 当前页用于它的主场景；如果更看重“现代 Python 优先的编排，开发活跃且有 SaaS 选项”，再选 Dagster / Prefect。 | 现代 Python 优先的编排，开发活跃且有 SaaS 选项；编程模型不同但有人维护——优先于一个已归档项目。 |
+| Jenkins | 未收录 | 当前页用于它的主场景；如果更看重“老牌但仍在维护的 CI/CD 服务器，插件生态庞大”，再选 Jenkins。 | 老牌但仍在维护的 CI/CD 服务器，插件生态庞大；用 Groovy/声明式 pipeline 而非编译代码插件。 |
+| GitHub Actions / GitLab CI | 未收录 | 当前页用于它的主场景；如果更看重“托管、YAML 驱动、绑定你 VCS 的 CI/CD”，再选 GitHub Actions / GitLab CI。 | 托管、YAML 驱动、绑定你 VCS 的 CI/CD；比自托管一台流水线服务器的搭建摩擦低得多。 |
 
 ## 技术栈
 

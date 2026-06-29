@@ -9,6 +9,11 @@ license: GPL-3.0
 maturity: research project, maintenance stopped (per README), ~4.4k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: app
+upstream:
+  pushed_at: 2025-02-11T14:23:01Z
+  default_branch: master
+  default_branch_sha: ccda905b03cacc659ad3a3a65fbc08019bf08ea2
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:03:25Z
@@ -76,12 +81,12 @@ You reach for it as a **complete, readable blueprint** of a Chinese KG system (a
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| Neo4j (direct) | 未收录 | The graph database this project stores into; production-grade storage + Cypher, but you build the entire NLP ingestion pipeline yourself — AgriKG is precisely that pipeline as an example. |
-| DeepKE | 未收录 | Maintained Chinese knowledge-extraction toolkit (NER/RE/attribute), transformer-based; a real library to build on, vs. AgriKG's frozen end-to-end demo. |
-| OpenKG / CN-DBpedia | 未收录 | Chinese open knowledge-graph data/resources; data sources rather than a runnable pipeline+UI. |
-| [TaskMatrix](taskmatrix.md) | ✅ | Unrelated task (multimodal agent / tool orchestration) but same shelf — a research repo published mainly as a reference artifact rather than a maintained product. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| Neo4j (direct) | 未收录 | Use this page for its stated niche; choose Neo4j (direct) when you need the graph database this project stores into. | The graph database this project stores into; production-grade storage + Cypher, but you build the entire NLP ingestion pipeline yourself — AgriKG is precisely that pipeline as an example. |
+| DeepKE | 未收录 | Use this page for its stated niche; choose DeepKE when you need maintained Chinese knowledge-extraction toolkit (NER/RE/attribute), transformer-based. | Maintained Chinese knowledge-extraction toolkit (NER/RE/attribute), transformer-based; a real library to build on, vs. AgriKG's frozen end-to-end demo. |
+| OpenKG / CN-DBpedia | 未收录 | Use this page for its stated niche; choose OpenKG / CN-DBpedia when you need chinese open knowledge-graph data/resources. | Chinese open knowledge-graph data/resources; data sources rather than a runnable pipeline+UI. |
+| [TaskMatrix](taskmatrix.md) | ✅ | Use this page for its stated niche; choose TaskMatrix when you need unrelated task (multimodal agent / tool orchestration) but same shelf. | Unrelated task (multimodal agent / tool orchestration) but same shelf — a research repo published mainly as a reference artifact rather than a maintained product. |
 
 ## Tech stack
 

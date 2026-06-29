@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v0.9.2, likely stalled (last real commit ~2025-06), ~3.2k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: app
+upstream:
+  pushed_at: 2026-03-31T02:03:01Z
+  default_branch: main
+  default_branch_sha: 886d38b50bd7d8af723eb12e7d815e1e2b625c87
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:56:32Z
@@ -80,12 +85,12 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| Langfuse | 未收录 | 开源的 LLM 可观测性 + prompt 管理 + eval，维护活跃、社区强；大体上是当下 Pezzo 这一生态位更健康的接棒者。 |
-| Helicone | 未收录 | 开源的 LLM 可观测性/代理，聚焦日志、成本和缓存；采用更轻（基于代理），prompt 管理叙事更窄。 |
-| LangSmith（LangChain） | 未收录 | 托管的追踪 + eval + prompt hub，深度集成 LangChain；托管且功能丰富，但闭源/SaaS，不能自托管 OSS。 |
-| PromptLayer | 未收录 | prompt 注册表 + 请求日志；prompt 管理范围有重叠，托管为先。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| Langfuse | 未收录 | 当前页用于它的主场景；如果更看重“开源的 LLM 可观测性 + prompt 管理 + eval，维护活跃、社区强”，再选 Langfuse。 | 开源的 LLM 可观测性 + prompt 管理 + eval，维护活跃、社区强；大体上是当下 Pezzo 这一生态位更健康的接棒者。 |
+| Helicone | 未收录 | 当前页用于它的主场景；如果更看重“开源的 LLM 可观测性/代理，聚焦日志、成本和缓存”，再选 Helicone。 | 开源的 LLM 可观测性/代理，聚焦日志、成本和缓存；采用更轻（基于代理），prompt 管理叙事更窄。 |
+| LangSmith（LangChain） | 未收录 | 当前页用于它的主场景；如果更看重“托管的追踪 + eval + prompt hub，深度集成 LangChain”，再选 LangSmith（LangChain）。 | 托管的追踪 + eval + prompt hub，深度集成 LangChain；托管且功能丰富，但闭源/SaaS，不能自托管 OSS。 |
+| PromptLayer | 未收录 | 当前页用于它的主场景；如果更看重“prompt 注册表 + 请求日志”，再选 PromptLayer。 | prompt 注册表 + 请求日志；prompt 管理范围有重叠，托管为先。 |
 
 ## 技术栈
 

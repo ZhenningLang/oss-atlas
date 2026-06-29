@@ -9,6 +9,11 @@ license: BSD-3-Clause
 maturity: v2.3.0 tag line, low activity (last push 2024-07), ~1.0k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2024-07-17T20:13:04Z
+  default_branch: master
+  default_branch_sha: 96e64603dc5a588a2d1ae59a62b0019d6b41070c
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:07:51Z
@@ -74,13 +79,13 @@ It also fits when you need **resumable uploads** (the module supports a resumabl
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| NGINX `client_body_*` buffering + app handling | 未收录 | First-party, no extra module — NGINX buffers the body and your app parses multipart; simpler to keep working, but the app still processes the upload (less offload than this module). |
-| Direct-to-S3 presigned uploads | 未收录 | Bypasses your servers entirely for the bytes; best scalability/durability, but ties you to object storage and client-side upload logic. |
-| tusd (tus protocol server) | 未收录 | Dedicated resumable-upload server with an active ecosystem and SDKs; a separate service rather than an NGINX module — better for robust resumable flows. |
-| [lua-nginx-module](lua-nginx-module.md) | ✅ | You *could* script upload handling in Lua/OpenResty, but that's general programmability, not a purpose-built streaming multipart receiver; different tool. |
-| Application framework upload handlers | 未收录 | Django/Rails/Express built-in upload handling — zero infra, but the app server absorbs the slow-client cost this module exists to offload. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| NGINX `client_body_*` buffering + app handling | 未收录 | Use this page for its stated niche; choose NGINX clientbody buffering + app handling when you need first-party, no extra module. | First-party, no extra module — NGINX buffers the body and your app parses multipart; simpler to keep working, but the app still processes the upload (less offload than this module). |
+| Direct-to-S3 presigned uploads | 未收录 | Use this page for its stated niche; choose Direct-to-S3 presigned uploads when you need bypasses your servers entirely for the bytes. | Bypasses your servers entirely for the bytes; best scalability/durability, but ties you to object storage and client-side upload logic. |
+| tusd (tus protocol server) | 未收录 | Use this page for its stated niche; choose tusd (tus protocol server) when you need dedicated resumable-upload server with an active ecosystem and SDKs. | Dedicated resumable-upload server with an active ecosystem and SDKs; a separate service rather than an NGINX module — better for robust resumable flows. |
+| [lua-nginx-module](lua-nginx-module.md) | ✅ | Use this page for its stated niche; choose lua-nginx-module when you need you *could* script upload handling in Lua/OpenResty, but that's general programmability, not a purpo. | You *could* script upload handling in Lua/OpenResty, but that's general programmability, not a purpose-built streaming multipart receiver; different tool. |
+| Application framework upload handlers | 未收录 | Use this page for its stated niche; choose Application framework upload handlers when you need django/Rails/Express built-in upload handling. | Django/Rails/Express built-in upload handling — zero infra, but the app server absorbs the slow-client cost this module exists to offload. |
 
 ## Tech stack
 

@@ -9,6 +9,11 @@ license: MIT
 maturity: v2.x, active (2026-06), ~62.3k stars; LF AI & Data project (IBM-originated)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2026-06-29T09:11:34Z
+  default_branch: main
+  default_branch_sha: 6395151e271277d4a154e7e7f01c71fd72829482
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:52:40Z
@@ -85,13 +90,13 @@ You also reach for it when you want one parser across heterogeneous formats inst
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| unstructured.io | 未收录 | Broad multi-format document loader popular for RAG ingestion with many partitioners; open-source core plus a commercial API/service tier — capability split and licensing differ from Docling's single MIT library. |
-| LlamaParse | 未收录 | Hosted parsing service (LlamaIndex) strong on complex PDFs/tables; SaaS with usage pricing and data leaving your boundary, vs Docling running fully local/in-process. |
-| Marker | 未收录 | PDF→Markdown converter also using deep-learning layout models; similar gen-AI target, narrower input-format range than Docling's PDF/Office/HTML/image spread. |
-| PyMuPDF / pdfplumber | 未收录 | Fast, lightweight low-level PDF text/geometry extraction with no heavy models; you build layout/table logic yourself — less fidelity out of the box, far lighter footprint. |
-| [PageIndex](../rag-retrieval/pageindex.md) | ✅ | A retrieval/reasoning layer over documents, not a parser — complementary, not a substitute; Docling produces the structured text it indexes. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| unstructured.io | 未收录 | Use this page for its stated niche; choose unstructured.io when you need broad multi-format document loader popular for RAG ingestion with many partitioners. | Broad multi-format document loader popular for RAG ingestion with many partitioners; open-source core plus a commercial API/service tier — capability split and licensing differ from Docling's single MIT library. |
+| LlamaParse | 未收录 | Use this page for its stated niche; choose LlamaParse when you need hosted parsing service (LlamaIndex) strong on complex PDFs/tables. | Hosted parsing service (LlamaIndex) strong on complex PDFs/tables; SaaS with usage pricing and data leaving your boundary, vs Docling running fully local/in-process. |
+| Marker | 未收录 | Use this page for its stated niche; choose Marker when you need PDF→Markdown converter also using deep-learning layout models. | PDF→Markdown converter also using deep-learning layout models; similar gen-AI target, narrower input-format range than Docling's PDF/Office/HTML/image spread. |
+| PyMuPDF / pdfplumber | 未收录 | Use this page for its stated niche; choose PyMuPDF / pdfplumber when you need fast, lightweight low-level PDF text/geometry extraction with no heavy models. | Fast, lightweight low-level PDF text/geometry extraction with no heavy models; you build layout/table logic yourself — less fidelity out of the box, far lighter footprint. |
+| [PageIndex](../rag-retrieval/pageindex.md) | ✅ | Use this page for its stated niche; choose PageIndex when you need a retrieval/reasoning layer over documents, not a parser. | A retrieval/reasoning layer over documents, not a parser — complementary, not a substitute; Docling produces the structured text it indexes. |
 
 ## Tech stack
 

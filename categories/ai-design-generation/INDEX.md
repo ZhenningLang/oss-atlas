@@ -5,28 +5,28 @@
 
 ## Projects in this category
 
-| Project | Use when | Page |
-|---|---|---|
-| **HTML Anything** | Use it when you already run a logged-in coding-agent CLI and want local-first, key-free Markdown-to-shippable-HTML generation with one-click WeChat/X/Zhihu export. | [→](html-anything.md) |
-| **Open Design** | Use it when you want a local-first, BYOK desktop studio that makes your coding agent generate HTML prototypes, decks, images and HTML→MP4. | [→](open-design.md) |
-| **Impeccable** | Use it when your AI agent keeps shipping same-looking frontend slop and you want deterministic detection plus design critique. | [→](impeccable.md) |
-| **ian-xiaohei-illustrations** | Use it when you need consistent hand-drawn 16:9 Chinese article illustrations with a fixed IP. | [→](ian-illustrations.md) |
-| **Guizang PPT Skill** | Use it when you want an agent to turn an article into a designed single-file HTML swipe deck. | [→](guizang-ppt.md) |
-| **Guizang Social Card Skill** | Use it when a coding agent needs art-directed Xiaohongshu carousels or WeChat cover pairs as single-file HTML rendered to PNG. | [→](guizang-social-card.md) |
-| **SdPaint** | Use it when you already run AUTOMATIC1111 + ControlNet and want a live sketch-to-image painting loop — but it's stalled since 2024 and provides no model of its own. | [→](sdpaint.md) |
+| Project | Use when | Health | Page |
+| --- | --- | --- | --- |
+| **HTML Anything** | Use it when you already run a logged-in coding-agent CLI and want local-first, key-free Markdown-to-shippable-HTML generation with one-click WeChat/X/Zhihu export. | B (5/6) | [→](html-anything.md) |
+| **Open Design** | Use it when you want a local-first, BYOK desktop studio that makes your coding agent generate HTML prototypes, decks, images and HTML→MP4. | B (4/6) | [→](open-design.md) |
+| **Impeccable** | Use it when your AI agent keeps shipping same-looking frontend slop and you want deterministic detection plus design critique. | B (6/6) | [→](impeccable.md) |
+| **ian-xiaohei-illustrations** | Use it when you need consistent hand-drawn 16:9 Chinese article illustrations with a fixed IP. | C (4/6) | [→](ian-illustrations.md) |
+| **Guizang PPT Skill** | Use it when you want an agent to turn an article into a designed single-file HTML swipe deck. | C (4/6) | [→](guizang-ppt.md) |
+| **Guizang Social Card Skill** | Use it when a coding agent needs art-directed Xiaohongshu carousels or WeChat cover pairs as single-file HTML rendered to PNG. | D (3/6) | [→](guizang-social-card.md) |
+| **SdPaint** | Use it when you already run AUTOMATIC1111 + ControlNet and want a live sketch-to-image painting loop — but it's stalled since 2024 and provides no model of its own. | D (3/6) | [→](sdpaint.md) |
 
 ## Comparison matrix
 
-| Option | Indexed | One-line tradeoff |
-|---|---|---|
-| [HTML Anything](html-anything.md) | ✅ | Use it when you already run a logged-in coding-agent CLI and want local-first, key-free Markdown-to-shippable-HTML generation with one-click WeChat/X/Zhihu export. |
-| [Open Design](open-design.md) | ✅ | Use it when you want a local-first, BYOK desktop studio that makes your coding agent generate HTML prototypes, decks, images and HTML→MP4. |
-| [Impeccable](impeccable.md) | ✅ | Use it when your AI agent keeps shipping same-looking frontend slop and you want deterministic detection plus design critique. |
-| [ian-xiaohei-illustrations](ian-illustrations.md) | ✅ | Use it when you need consistent hand-drawn 16:9 Chinese article illustrations with a fixed IP. |
-| [Guizang PPT Skill](guizang-ppt.md) | ✅ | Use it when you want an agent to turn an article into a designed single-file HTML swipe deck. |
-| [Guizang Social Card Skill](guizang-social-card.md) | ✅ | Use it when a coding agent needs art-directed Xiaohongshu carousels or WeChat cover pairs as single-file HTML rendered to PNG. |
-| [SdPaint](sdpaint.md) | ✅ | Use it when you already run AUTOMATIC1111 + ControlNet and want a live sketch-to-image painting loop — but it's stalled since 2024 and provides no model of its own. |
-| v0 / Lovable / tldraw make-real | 未收录 | Other agentic UI/design generators named across the pages. |
+| Option | Indexed | Health | One-line tradeoff |
+| --- | --- | --- | --- |
+| [HTML Anything](html-anything.md) | ✅ | B (5/6) | Use it when you already run a logged-in coding-agent CLI and want local-first, key-free Markdown-to-shippable-HTML generation with one-click WeChat/X/Zhihu export. |
+| [Open Design](open-design.md) | ✅ | B (4/6) | Use it when you want a local-first, BYOK desktop studio that makes your coding agent generate HTML prototypes, decks, images and HTML→MP4. |
+| [Impeccable](impeccable.md) | ✅ | B (6/6) | Use it when your AI agent keeps shipping same-looking frontend slop and you want deterministic detection plus design critique. |
+| [ian-xiaohei-illustrations](ian-illustrations.md) | ✅ | C (4/6) | Use it when you need consistent hand-drawn 16:9 Chinese article illustrations with a fixed IP. |
+| [Guizang PPT Skill](guizang-ppt.md) | ✅ | C (4/6) | Use it when you want an agent to turn an article into a designed single-file HTML swipe deck. |
+| [Guizang Social Card Skill](guizang-social-card.md) | ✅ | D (3/6) | Use it when a coding agent needs art-directed Xiaohongshu carousels or WeChat cover pairs as single-file HTML rendered to PNG. |
+| [SdPaint](sdpaint.md) | ✅ | D (3/6) | Use it when you already run AUTOMATIC1111 + ControlNet and want a live sketch-to-image painting loop — but it's stalled since 2024 and provides no model of its own. |
+| v0 / Lovable / tldraw make-real | 未收录 | — | Other agentic UI/design generators named across the pages. |
 
 ## What belongs here
 

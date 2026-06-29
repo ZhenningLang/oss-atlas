@@ -5,17 +5,17 @@
 
 ## Projects in this category
 
-| Project | Use when | Page |
-|---|---|---|
-| **Grafana** | Use it when you need one dashboard + alerting layer over Prometheus/Loki/Elasticsearch and other sources — it visualizes, it doesn't store. | [→](grafana.md) |
+| Project | Use when | Health | Page |
+| --- | --- | --- | --- |
+| **Grafana** | Use it when you need one dashboard + alerting layer over Prometheus/Loki/Elasticsearch and other sources — it visualizes, it doesn't store. | B (5/6) | [→](grafana.md) |
 
 ## Comparison matrix
 
-| Option | Indexed | One-line tradeoff |
-|---|---|---|
-| [Grafana](grafana.md) | ✅ | Unified dashboard/alerting over many datasources; a visualization layer, not a datastore (AGPL-3.0). |
-| [Telegraf](../dev-utilities/telegraf.md) | ✅ | Plugin-driven collection/routing agent that feeds the backends Grafana reads — different job. |
-| Kibana / Datadog / Apache Superset | 未收录 | Other dashboard/observability/BI stacks named across the pages. |
+| Option | Indexed | Health | One-line tradeoff |
+| --- | --- | --- | --- |
+| [Grafana](grafana.md) | ✅ | B (5/6) | Unified dashboard/alerting over many datasources; a visualization layer, not a datastore (AGPL-3.0). |
+| [Telegraf](../dev-utilities/telegraf.md) | ✅ | A (5/6) | Plugin-driven collection/routing agent that feeds the backends Grafana reads — different job. |
+| Kibana / Datadog / Apache Superset | 未收录 | — | Other dashboard/observability/BI stacks named across the pages. |
 
 ## What belongs here
 

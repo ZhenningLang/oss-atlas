@@ -9,6 +9,11 @@ license: MIT
 maturity: v6.x, active (2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2026-06-29T01:32:38Z
+  default_branch: master
+  default_branch_sha: 3917a898faeb7490d3043a1158b13a5d9b51e273
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:17:57Z
@@ -82,13 +87,13 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| pyfiglet | 未收录 | FIGlet 的纯 Python 移植，带标准 figlet 字体集；若你专门要 FIGlet 字体/兼容性这是标准选择，范围更窄（无装饰/艺术片段目录）。 |
-| figlet / toilet（CLI） | 未收录 | 经典 C 横幅生成器；需要系统二进制，不是 Python API——shell 用没问题，嵌入则别扭。 |
-| [asciify](asciify.zh.md) | ✅ | 把*图片*转成 ASCII——输入完全不同（位图而非文字）；互补而非替代。 |
-| rich（figlet/标记） | 未收录 | 样式库，可作为更大工具集的一部分渲染大字和带样式输出；更广但若只要艺术文字则更重。 |
-| ascii-magic / cowsay | 未收录 | 小众艺术生成器（图片 / 对话气泡字符）；更窄、风格特定。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| pyfiglet | 未收录 | 当前页用于它的主场景；如果更看重“FIGlet 的纯 Python 移植，带标准 figlet 字体集”，再选 pyfiglet。 | FIGlet 的纯 Python 移植，带标准 figlet 字体集；若你专门要 FIGlet 字体/兼容性这是标准选择，范围更窄（无装饰/艺术片段目录）。 |
+| figlet / toilet（CLI） | 未收录 | 当前页用于它的主场景；如果更看重“经典 C 横幅生成器”，再选 figlet / toilet（CLI）。 | 经典 C 横幅生成器；需要系统二进制，不是 Python API——shell 用没问题，嵌入则别扭。 |
+| [asciify](asciify.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“把*图片*转成 ASCII”，再选 asciify。 | 把*图片*转成 ASCII——输入完全不同（位图而非文字）；互补而非替代。 |
+| rich（figlet/标记） | 未收录 | 当前页用于它的主场景；如果更看重“样式库，可作为更大工具集的一部分渲染大字和带样式输出”，再选 rich（figlet/标记）。 | 样式库，可作为更大工具集的一部分渲染大字和带样式输出；更广但若只要艺术文字则更重。 |
+| ascii-magic / cowsay | 未收录 | 当前页用于它的主场景；如果更看重“小众艺术生成器（图片 / 对话气泡字符）”，再选 ascii-magic / cowsay。 | 小众艺术生成器（图片 / 对话气泡字符）；更窄、风格特定。 |
 
 ## 技术栈
 

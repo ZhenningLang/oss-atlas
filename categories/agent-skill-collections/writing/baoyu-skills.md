@@ -9,6 +9,11 @@ license: MIT
 maturity: v2.5.2, active (2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+upstream:
+  pushed_at: 2026-06-28T06:42:07Z
+  default_branch: main
+  default_branch_sha: c9a50cc908d0473f5d754efdbe08cbe387714f63
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:34:26Z
@@ -81,12 +86,12 @@ Baoyu Skills gives you exactly that for the writing/translation slice: `baoyu-tr
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [Humanizer-zh](humanizer-zh.md) | ✅ | A focused Chinese AI-text humanizing skill — narrow and single-purpose (de-AI / voice), where Baoyu Skills is a broad content/publishing bundle whose translation skill is one of 20+. Reach for the focused one if all you want is humanizing; reach for Baoyu if you want the whole translate→format→publish pipeline. |
-| Hand-written project skills | 未收录 | Writing your own `SKILL.md` for translate/format gives full control and zero third-party surface, but you rebuild and maintain the three-mode workflow, glossary handling, and HTML theming yourself. |
-| Single de-AI / translation prompt | 未收录 | A one-off prompt is the lightest possible option for one task, but it doesn't persist, version, or load by name across sessions the way an installed skill does. |
-| Built-in agent skill ecosystems | 未收录 | The harness's own marketplace skills; Baoyu is a third-party curated bundle layered on top, so it can overlap or conflict with native equivalents. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [Humanizer-zh](humanizer-zh.md) | ✅ | Use this page for its stated niche; choose Humanizer-zh when you need a focused Chinese AI-text humanizing skill. | A focused Chinese AI-text humanizing skill — narrow and single-purpose (de-AI / voice), where Baoyu Skills is a broad content/publishing bundle whose translation skill is one of 20+. Reach for the focused one if all you want is humanizing; reach for Baoyu if you want the whole translate→format→publish pipeline. |
+| Hand-written project skills | 未收录 | Use this page for its stated niche; choose Hand-written project skills when you need writing your own `SKILL. | Writing your own `SKILL.md` for translate/format gives full control and zero third-party surface, but you rebuild and maintain the three-mode workflow, glossary handling, and HTML theming yourself. |
+| Single de-AI / translation prompt | 未收录 | Use this page for its stated niche; choose Single de-AI / translation prompt when you need a one-off prompt is the lightest possible option for one task, but it doesn't persist, version, or l. | A one-off prompt is the lightest possible option for one task, but it doesn't persist, version, or load by name across sessions the way an installed skill does. |
+| Built-in agent skill ecosystems | 未收录 | Use this page for its stated niche; choose Built-in agent skill ecosystems when you need the harness's own marketplace skills. | The harness's own marketplace skills; Baoyu is a third-party curated bundle layered on top, so it can overlap or conflict with native equivalents. |
 
 ## Health & viability
 

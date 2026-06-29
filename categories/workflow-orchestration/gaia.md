@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v0.2.9 (2022-01), archived/abandoned (2026-06)
 last_verified: 2026-06-28
 type: app
+upstream:
+  pushed_at: 2026-01-10T15:10:21Z
+  default_branch: master
+  default_branch_sha: 98a306bd4c7558f167bf076863dca38406d7eff9
+  archived: true
 health:
   schema: 1
   computed_at: 2026-06-29T10:27:01Z
@@ -83,13 +88,13 @@ Today this is a *read-only reference*: study it if you're researching the "pipel
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [Apache Airflow](airflow.md) | ✅ | Mature, actively-maintained DAG scheduler with a huge ecosystem; Python-DAG model rather than compiled-plugin jobs, and not archived — the safe default for new work. |
-| Argo Workflows | 未收录 | Kubernetes-native, container-per-step workflows; actively maintained, declarative YAML, no "write jobs in any language as plugins" model. |
-| Dagster / Prefect | 未收录 | Modern Python-first orchestration with active development and SaaS options; different programming model, maintained — pick over an archived project. |
-| Jenkins | 未收录 | Old but still-maintained CI/CD server with vast plugin ecosystem; Groovy/declarative pipelines instead of compiled-code plugins. |
-| GitHub Actions / GitLab CI | 未收录 | Hosted, YAML-driven CI/CD tied to your VCS; far lower setup friction than self-hosting a pipeline server. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [Apache Airflow](airflow.md) | ✅ | Use this page for its stated niche; choose Apache Airflow when you need mature, actively-maintained DAG scheduler with a huge ecosystem. | Mature, actively-maintained DAG scheduler with a huge ecosystem; Python-DAG model rather than compiled-plugin jobs, and not archived — the safe default for new work. |
+| Argo Workflows | 未收录 | Use this page for its stated niche; choose Argo Workflows when you need kubernetes-native, container-per-step workflows. | Kubernetes-native, container-per-step workflows; actively maintained, declarative YAML, no "write jobs in any language as plugins" model. |
+| Dagster / Prefect | 未收录 | Use this page for its stated niche; choose Dagster / Prefect when you need modern Python-first orchestration with active development and SaaS options. | Modern Python-first orchestration with active development and SaaS options; different programming model, maintained — pick over an archived project. |
+| Jenkins | 未收录 | Use this page for its stated niche; choose Jenkins when you need old but still-maintained CI/CD server with vast plugin ecosystem. | Old but still-maintained CI/CD server with vast plugin ecosystem; Groovy/declarative pipelines instead of compiled-code plugins. |
+| GitHub Actions / GitLab CI | 未收录 | Use this page for its stated niche; choose GitHub Actions / GitLab CI when you need hosted, YAML-driven CI/CD tied to your VCS. | Hosted, YAML-driven CI/CD tied to your VCS; far lower setup friction than self-hosting a pipeline server. |
 
 ## Tech stack
 

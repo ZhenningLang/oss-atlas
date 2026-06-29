@@ -9,6 +9,11 @@ license: GPL-3.0
 maturity: Mature, active; stable v2.20.x (2026-04), v3.0 in beta as of 2026-06 (see caveats)
 last_verified: 2026-06-26
 type: tool
+upstream:
+  pushed_at: 2026-06-29T01:18:26Z
+  default_branch: dev
+  default_branch_sha: 67972a074070c7a7677b423c50a7627c5fbfd060
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:51:58Z
@@ -86,13 +91,13 @@ health:
 
 ## 横向对比
 
-| 替代方案 | 是否收录 | 取舍 |
-|---|---|---|
-| Mayan EDMS | 未收录 | 同样是 Python/Django，但属于更重的企业级 EDMS，带有真正的工作流引擎、版本管理和细粒度权限；运维陡峭得多，对个人扫描档案库而言是杀鸡用牛刀。Apache-2.0（比 paperless 的 GPLv3 更宽松）。 |
-| Docspell | 未收录 | 收件箱/元数据抽取模型，邮件导入能力强；Scala/JVM 技术栈意味着更重的内存占用，社区也比 paperless-ngx 小。 |
-| Teedy / sismics docs | 未收录 | 轻量级 Java DMS，带版本管理、界面干净、资源需求适中；自动 OCR/自动打标签较弱，势头也较小。 |
-| OpenDocMan | 未收录 | 面向企业文件管控和访问规则的 PHP/MySQL DMS；界面陈旧，没有一流的 OCR/自动打标签——仅当你需要在既有 PHP 栈上做简单 Web 访问控制时才考虑。 |
-| 自建（Tesseract + Meilisearch/Elasticsearch + 对象存储） | 未收录 | 灵活性最高，对加密/schema 完全掌控，但你得自行搭建并维护整条 ingest/OCR/index/UI 流水线——只有当 paperless 的数据模型或安全约束成为硬伤时才值得。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| Mayan EDMS | 未收录 | 当前页用于它的主场景；如果更看重“同样是 Python/Django，但属于更重的企业级 EDMS，带有真正的工作流引擎、版本管理和细粒度权限”，再选 Mayan EDMS。 | 同样是 Python/Django，但属于更重的企业级 EDMS，带有真正的工作流引擎、版本管理和细粒度权限；运维陡峭得多，对个人扫描档案库而言是杀鸡用牛刀。Apache-2.0（比 paperless 的 GPLv3 更宽松）。 |
+| Docspell | 未收录 | 当前页用于它的主场景；如果更看重“收件箱/元数据抽取模型，邮件导入能力强”，再选 Docspell。 | 收件箱/元数据抽取模型，邮件导入能力强；Scala/JVM 技术栈意味着更重的内存占用，社区也比 paperless-ngx 小。 |
+| Teedy / sismics docs | 未收录 | 当前页用于它的主场景；如果更看重“轻量级 Java DMS，带版本管理、界面干净、资源需求适中”，再选 Teedy / sismics docs。 | 轻量级 Java DMS，带版本管理、界面干净、资源需求适中；自动 OCR/自动打标签较弱，势头也较小。 |
+| OpenDocMan | 未收录 | 当前页用于它的主场景；如果更看重“面向企业文件管控和访问规则的 PHP/MySQL DMS”，再选 OpenDocMan。 | 面向企业文件管控和访问规则的 PHP/MySQL DMS；界面陈旧，没有一流的 OCR/自动打标签——仅当你需要在既有 PHP 栈上做简单 Web 访问控制时才考虑。 |
+| 自建（Tesseract + Meilisearch/Elasticsearch + 对象存储） | 未收录 | 当前页用于它的主场景；如果更看重“灵活性最高，对加密/schema 完全掌控，但你得自行搭建并维护整条 ingest/OCR/index/UI 流水线”，再选 自建（Tesseract + Meilisearch/Elasticsearch + 对象存储）。 | 灵活性最高，对加密/schema 完全掌控，但你得自行搭建并维护整条 ingest/OCR/index/UI 流水线——只有当 paperless 的数据模型或安全约束成为硬伤时才值得。 |
 
 ## 技术栈
 

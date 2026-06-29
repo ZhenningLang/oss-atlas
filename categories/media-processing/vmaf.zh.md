@@ -9,6 +9,11 @@ license: BSD-2-Clause-Patent
 maturity: libvmaf v3.2.0, active (2026-06), 5.4k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2026-06-23T17:29:19Z
+  default_branch: master
+  default_branch_sha: 60016fbd50671a68856701d8ad578e8bd0387dd4
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:03:09Z
@@ -87,13 +92,13 @@ Netflix 的、获 Emmy 奖的感知视频质量指标——一个 C 库 `libvmaf
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| PSNR / SSIM（独立） | 未收录 | 经典的信号保真指标；便宜、无处不在，但与感知质量相关性差——VMAF 正因它们不够用而存在（而 libvmaf 也照样内含它们）。 |
-| [FFmpeg](ffmpeg.zh.md) | ✅ | 把 `libvmaf` 作为滤镜集成——对多数用户而言这才是你在管线里真正跑 VMAF 的方式；FFmpeg 是宿主，VMAF 是其中的指标引擎。 |
-| SSIMULACRA2 | 未收录 | 一个更新的开源感知指标（出自 JPEG XL 生态），在图像/视频质量上渐获关注；另一种感知打分器，模型谱系不同。 |
-| Netflix VMAF 云/SaaS 打分 | 未收录 | 托管的质量打分服务；不是仓库——比自跑 libvmaf 省事，但有厂商依赖。 |
-| AVQT / 专有指标 | 未收录 | 厂商感知指标（如 Apple 的 AVQT）；目标相近，实现与生态封闭。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| PSNR / SSIM（独立） | 未收录 | 当前页用于它的主场景；如果更看重“经典的信号保真指标”，再选 PSNR / SSIM（独立）。 | 经典的信号保真指标；便宜、无处不在，但与感知质量相关性差——VMAF 正因它们不够用而存在（而 libvmaf 也照样内含它们）。 |
+| [FFmpeg](ffmpeg.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“把 `libvmaf` 作为滤镜集成”，再选 FFmpeg。 | 把 `libvmaf` 作为滤镜集成——对多数用户而言这才是你在管线里真正跑 VMAF 的方式；FFmpeg 是宿主，VMAF 是其中的指标引擎。 |
+| SSIMULACRA2 | 未收录 | 当前页用于它的主场景；如果更看重“一个更新的开源感知指标（出自 JPEG XL 生态），在图像/视频质量上渐获关注”，再选 SSIMULACRA2。 | 一个更新的开源感知指标（出自 JPEG XL 生态），在图像/视频质量上渐获关注；另一种感知打分器，模型谱系不同。 |
+| Netflix VMAF 云/SaaS 打分 | 未收录 | 当前页用于它的主场景；如果更看重“托管的质量打分服务”，再选 Netflix VMAF 云/SaaS 打分。 | 托管的质量打分服务；不是仓库——比自跑 libvmaf 省事，但有厂商依赖。 |
+| AVQT / 专有指标 | 未收录 | 当前页用于它的主场景；如果更看重“厂商感知指标（如 Apple 的 AVQT）”，再选 AVQT / 专有指标。 | 厂商感知指标（如 Apple 的 AVQT）；目标相近，实现与生态封闭。 |
 
 ## 技术栈
 

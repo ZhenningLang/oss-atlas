@@ -5,16 +5,16 @@
 
 ## Projects in this category
 
-| Project | Use when | Page |
-|---|---|---|
-| **Driver.js** | Use it when you want a tiny, dependency-free product tour / feature-spotlight on a web page — not a full onboarding platform. | [→](driver-js.md) |
+| Project | Use when | Health | Page |
+| --- | --- | --- | --- |
+| **Driver.js** | Use it when you want a tiny, dependency-free product tour / feature-spotlight on a web page — not a full onboarding platform. | B (6/6) | [→](driver-js.md) |
 
 ## Comparison matrix
 
-| Option | Indexed | One-line tradeoff |
-|---|---|---|
-| [Driver.js](driver-js.md) | ✅ | Use it when you want a tiny, dependency-free product tour / feature-spotlight on a web page — not a full onboarding platform. |
-| Shepherd.js / Intro.js / Reactour | 未收录 | Other tour/onboarding UI libraries named across the pages. |
+| Option | Indexed | Health | One-line tradeoff |
+| --- | --- | --- | --- |
+| [Driver.js](driver-js.md) | ✅ | B (6/6) | Use it when you want a tiny, dependency-free product tour / feature-spotlight on a web page — not a full onboarding platform. |
+| Shepherd.js / Intro.js / Reactour | 未收录 | — | Other tour/onboarding UI libraries named across the pages. |
 
 ## What belongs here
 

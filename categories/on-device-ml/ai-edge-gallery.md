@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v1.0.16 (2026-06-23), active, ~23.9k stars (2026-06-26); Google-maintained
 last_verified: 2026-06-26
 type: app
+upstream:
+  pushed_at: 2026-06-25T14:33:57Z
+  default_branch: main
+  default_branch_sha: fbf6926169bc0f0f01f168197d325488721089ba
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:09:11Z
@@ -84,14 +89,14 @@ So you install Google AI Edge Gallery from the Play Store / App Store (or sidelo
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [LiteRT-LM](litert-lm.md) | ✅ | The actual on-device **runtime layer** (C++/Kotlin bindings) the Gallery demos. Choose it to *build* an app; choose the Gallery to *evaluate* before you build. |
-| [BitNet](bitnet.md) | ✅ | A research **inference framework** for 1-bit/ternary LLMs (extreme CPU efficiency), not a polished demo app — different layer and far narrower model set. |
-| [TimesFM](timesfm.md) | ✅ | A time-series **foundation model**, not an LLM chat showcase — adjacent on-device ML but a different task entirely. |
-| Ollama | 未收录 | Desktop/server local-LLM runner with a huge GGUF catalog and an API; great on laptops/servers but not a mobile/Android-first on-device showcase. |
-| LM Studio | 未收录 | Polished desktop GUI for running local LLMs (closed-source app); broader model picker, but desktop-only and not mobile on-device. |
-| MediaPipe LLM Inference Studio (Google) | 未收录 | The older same-org demo/tooling path for on-device LLMs; overlapping intent, superseded in direction by the LiteRT-based Gallery. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [LiteRT-LM](litert-lm.md) | ✅ | Use this page for its stated niche; choose LiteRT-LM when you need the actual on-device **runtime layer** (C++/Kotlin bindings) the Gallery demos. | The actual on-device **runtime layer** (C++/Kotlin bindings) the Gallery demos. Choose it to *build* an app; choose the Gallery to *evaluate* before you build. |
+| [BitNet](bitnet.md) | ✅ | Use this page for its stated niche; choose BitNet when you need a research **inference framework** for 1-bit/ternary LLMs (extreme CPU efficiency), not a polished d. | A research **inference framework** for 1-bit/ternary LLMs (extreme CPU efficiency), not a polished demo app — different layer and far narrower model set. |
+| [TimesFM](timesfm.md) | ✅ | Use this page for its stated niche; choose TimesFM when you need a time-series **foundation model**, not an LLM chat showcase. | A time-series **foundation model**, not an LLM chat showcase — adjacent on-device ML but a different task entirely. |
+| Ollama | 未收录 | Use this page for its stated niche; choose Ollama when you need desktop/server local-LLM runner with a huge GGUF catalog and an API. | Desktop/server local-LLM runner with a huge GGUF catalog and an API; great on laptops/servers but not a mobile/Android-first on-device showcase. |
+| LM Studio | 未收录 | Use this page for its stated niche; choose LM Studio when you need polished desktop GUI for running local LLMs (closed-source app). | Polished desktop GUI for running local LLMs (closed-source app); broader model picker, but desktop-only and not mobile on-device. |
+| MediaPipe LLM Inference Studio (Google) | 未收录 | Use this page for its stated niche; choose MediaPipe LLM Inference Studio (Google) when you need the older same-org demo/tooling path for on-device LLMs. | The older same-org demo/tooling path for on-device LLMs; overlapping intent, superseded in direction by the LiteRT-based Gallery. |
 
 ## Tech stack
 

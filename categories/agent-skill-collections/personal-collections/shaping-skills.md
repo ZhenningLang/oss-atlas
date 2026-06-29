@@ -9,6 +9,11 @@ license: NOASSERTION
 maturity: no tagged releases, last pushed 2026-04 (as of 2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+upstream:
+  pushed_at: 2026-04-10T10:12:59Z
+  default_branch: main
+  default_branch_sha: d8b65d7733c71e9bf436f0c2e4da60e5214a96d9
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:32:12Z
@@ -81,13 +86,13 @@ This pack gives you that as a handful of on-demand skills. `/framing-doc` and `/
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [antfu/skills](antfu-skills.md) | ✅ | Personal curated Claude Code skill collection, but for the Vue/Vite frontend *build* stack (test idioms, ESLint, UnoCSS). Orthogonal: shaping-skills is upstream of code (problem/solution definition), antfu/skills is downstream (how to write the code). |
-| [Dimillian/Skills](dimillian-skills.md) | ✅ | Another individual developer's Claude Code skill set; compare on domain — Dimillian's lean toward implementation/platform conventions, shaping-skills toward product shaping and docs. |
-| [gstack](gstack.md) | ✅ | Personal harness/skill collection in this leaf; different focus. Cross-check which lifecycle stage each actually shapes vs. builds. |
-| Superpowers (`brainstorming` / `writing-plans`) | 未收录 (in agent-dev-methodology) | A full SDLC skill library whose front end (interrogate the idea, write the plan) overlaps shaping's intent, but framed as generic software brainstorming rather than Shape Up's problem/solution/breadboard vocabulary. |
-| Shape Up book / BaseCamp's own materials | 未收录 | The source methodology as prose, not an installable agent skill — this pack is one person's operationalization of it inside Claude Code. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [antfu/skills](antfu-skills.md) | ✅ | Use this page for its stated niche; choose antfu/skills when you need personal curated Claude Code skill collection, but for the Vue/Vite frontend *build* stack (test idi. | Personal curated Claude Code skill collection, but for the Vue/Vite frontend *build* stack (test idioms, ESLint, UnoCSS). Orthogonal: shaping-skills is upstream of code (problem/solution definition), antfu/skills is downstream (how to write the code). |
+| [Dimillian/Skills](dimillian-skills.md) | ✅ | Use this page for its stated niche; choose Dimillian/Skills when you need another individual developer's Claude Code skill set. | Another individual developer's Claude Code skill set; compare on domain — Dimillian's lean toward implementation/platform conventions, shaping-skills toward product shaping and docs. |
+| [gstack](gstack.md) | ✅ | Use this page for its stated niche; choose gstack when you need personal harness/skill collection in this leaf. | Personal harness/skill collection in this leaf; different focus. Cross-check which lifecycle stage each actually shapes vs. builds. |
+| Superpowers (`brainstorming` / `writing-plans`) | 未收录 (in agent-dev-methodology) | Use this page for its stated niche; choose Superpowers (brainstorming / writing-plans) when you need a full SDLC skill library whose front end (interrogate the idea, write the plan) overlaps shaping's. | A full SDLC skill library whose front end (interrogate the idea, write the plan) overlaps shaping's intent, but framed as generic software brainstorming rather than Shape Up's problem/solution/breadboard vocabulary. |
+| Shape Up book / BaseCamp's own materials | 未收录 | Use this page for its stated niche; choose Shape Up book / BaseCamp's own materials when you need the source methodology as prose, not an installable agent skill. | The source methodology as prose, not an installable agent skill — this pack is one person's operationalization of it inside Claude Code. |
 
 ## Health & viability
 

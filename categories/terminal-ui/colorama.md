@@ -9,6 +9,11 @@ license: BSD-3-Clause
 maturity: stable, active, ~3.8k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2026-05-13T18:21:46Z
+  default_branch: master
+  default_branch_sha: 841634ed2a0da5d5ac2d867db533da8131266cb2
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:18:49Z
@@ -80,13 +85,13 @@ It's the de-facto compatibility shim under a huge slice of Python CLIs and is bu
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| Rich (Textualize) | 未收录 | Full styled-output toolkit (color, tables, markdown, progress, traceback) — vastly more capable, but a large library; overkill if you only need cross-platform color. |
-| termcolor / colored | 未收录 | Tiny ANSI color helpers with friendly APIs, but don't translate ANSI on legacy Windows — often paired *with* colorama for that. |
-| click.style (Click) | 未收录 | Convenient styling within the Click CLI framework; Click itself historically depended on colorama for the Windows shim. |
-| blessed / blessings | 未收录 | Terminal capability + cursor/styling library (terminfo-based) — richer terminal control, heavier, less focused on the Windows-ANSI gap. |
-| raw ANSI escape codes | 未收录 | Zero deps and works on every ANSI-capable terminal, but breaks on legacy Windows consoles — exactly the gap colorama fills. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| Rich (Textualize) | 未收录 | Use this page for its stated niche; choose Rich (Textualize) when you need full styled-output toolkit (color, tables, markdown, progress, traceback). | Full styled-output toolkit (color, tables, markdown, progress, traceback) — vastly more capable, but a large library; overkill if you only need cross-platform color. |
+| termcolor / colored | 未收录 | Use this page for its stated niche; choose termcolor / colored when you need tiny ANSI color helpers with friendly APIs, but don't translate ANSI on legacy Windows. | Tiny ANSI color helpers with friendly APIs, but don't translate ANSI on legacy Windows — often paired *with* colorama for that. |
+| click.style (Click) | 未收录 | Use this page for its stated niche; choose click.style (Click) when you need convenient styling within the Click CLI framework. | Convenient styling within the Click CLI framework; Click itself historically depended on colorama for the Windows shim. |
+| blessed / blessings | 未收录 | Use this page for its stated niche; choose blessed / blessings when you need terminal capability + cursor/styling library (terminfo-based). | Terminal capability + cursor/styling library (terminfo-based) — richer terminal control, heavier, less focused on the Windows-ANSI gap. |
+| raw ANSI escape codes | 未收录 | Use this page for its stated niche; choose raw ANSI escape codes when you need zero deps and works on every ANSI-capable terminal, but breaks on legacy Windows consoles. | Zero deps and works on every ANSI-capable terminal, but breaks on legacy Windows consoles — exactly the gap colorama fills. |
 
 ## Tech stack
 

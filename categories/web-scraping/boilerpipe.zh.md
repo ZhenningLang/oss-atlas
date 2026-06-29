@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: effectively abandoned (last pushed 2018-01), ~1.1k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2018-01-03T21:47:34Z
+  default_branch: master
+  default_branch_sha: 2c78035a830282e2435c466f3f14d6d4104d0a94
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:22:07Z
@@ -73,13 +78,13 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| [dragnet](dragnet.zh.md) | ✅ | 引 boilerpipe 为灵感的 Python ML 抽取器；可训练、识评论，但同样低活跃、依赖老化。 |
-| [python-readability](python-readability.zh.md) | ✅ | lxml 启发式抽取器（Python）；更轻、仍算有维护——但非 JVM。 |
-| [Readability.js](readability-js.zh.md) | ✅ | Mozilla 的 JS reader-view 引擎；活跃维护，但是 JavaScript 且需要 DOM。 |
-| Apache Tika | 未收录 | JVM 内容检测/抽取框架（多种格式，不只 HTML 文章抽取）；活跃维护、宽广得多——更重、侧重不同。 |
-| trafilatura | 未收录 | 现代、有维护的 Python 抽取器，基准强、带元数据；如今通常是更好的默认——语言不同。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [dragnet](dragnet.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“引 boilerpipe 为灵感的 Python ML 抽取器”，再选 dragnet。 | 引 boilerpipe 为灵感的 Python ML 抽取器；可训练、识评论，但同样低活跃、依赖老化。 |
+| [python-readability](python-readability.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“lxml 启发式抽取器（Python）”，再选 python-readability。 | lxml 启发式抽取器（Python）；更轻、仍算有维护——但非 JVM。 |
+| [Readability.js](readability-js.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“Mozilla 的 JS reader-view 引擎”，再选 Readability.js。 | Mozilla 的 JS reader-view 引擎；活跃维护，但是 JavaScript 且需要 DOM。 |
+| Apache Tika | 未收录 | 当前页用于它的主场景；如果更看重“JVM 内容检测/抽取框架（多种格式，不只 HTML 文章抽取）”，再选 Apache Tika。 | JVM 内容检测/抽取框架（多种格式，不只 HTML 文章抽取）；活跃维护、宽广得多——更重、侧重不同。 |
+| trafilatura | 未收录 | 当前页用于它的主场景；如果更看重“现代、有维护的 Python 抽取器，基准强、带元数据”，再选 trafilatura。 | 现代、有维护的 Python 抽取器，基准强、带元数据；如今通常是更好的默认——语言不同。 |
 
 ## 技术栈
 

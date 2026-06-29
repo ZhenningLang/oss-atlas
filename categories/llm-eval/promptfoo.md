@@ -9,6 +9,11 @@ license: MIT
 maturity: v0.121.x, active (2026-06)
 last_verified: 2026-06-26
 type: tool
+upstream:
+  pushed_at: 2026-06-29T06:10:09Z
+  default_branch: main
+  default_branch_sha: 6ea8783c0802ed2e001e3d253a461e64602c2968
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:56:47Z
@@ -88,14 +93,14 @@ You also reach for it when security review asks "is this agent jailbreakable / w
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| DeepEval | 未收录 | Python-native eval framework (pytest-style, metrics like G-Eval/faithfulness); better fit for Python teams and RAG metric depth. promptfoo wins on language-agnostic YAML config, side-by-side model matrix, and integrated red-teaming. |
-| Langfuse | 未收录 | Tracing/observability + eval platform (self-hostable, with a UI and datasets backend); strong for production monitoring and trend history. promptfoo is lighter, CLI-first, and red-team-oriented rather than an observability backend. |
-| LangSmith | 未收录 | Hosted LangChain eval/observability SaaS; deep LangChain integration and managed dashboards, but proprietary and cloud-centric. promptfoo is OSS, local-first, framework-agnostic. |
-| Braintrust | 未收录 | Commercial eval/experiment platform with hosted scoring and logging; polished team UX. promptfoo trades the managed platform for an open, self-run CLI. |
-| Garak | 未收录 | Dedicated LLM vulnerability scanner (red-team only, Python). Overlaps promptfoo's `redteam` scope but isn't a general eval/assertion harness. |
-| Giskard | 未收录 | OSS testing/red-teaming for ML+LLM with a scan-and-report model; broader ML scope, Python-centric. promptfoo is more prompt/CI-workflow focused. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| DeepEval | 未收录 | Use this page for its stated niche; choose DeepEval when you need python-native eval framework (pytest-style, metrics like G-Eval/faithfulness). | Python-native eval framework (pytest-style, metrics like G-Eval/faithfulness); better fit for Python teams and RAG metric depth. promptfoo wins on language-agnostic YAML config, side-by-side model matrix, and integrated red-teaming. |
+| Langfuse | 未收录 | Use this page for its stated niche; choose Langfuse when you need tracing/observability + eval platform (self-hostable, with a UI and datasets backend). | Tracing/observability + eval platform (self-hostable, with a UI and datasets backend); strong for production monitoring and trend history. promptfoo is lighter, CLI-first, and red-team-oriented rather than an observability backend. |
+| LangSmith | 未收录 | Use this page for its stated niche; choose LangSmith when you need hosted LangChain eval/observability SaaS. | Hosted LangChain eval/observability SaaS; deep LangChain integration and managed dashboards, but proprietary and cloud-centric. promptfoo is OSS, local-first, framework-agnostic. |
+| Braintrust | 未收录 | Use this page for its stated niche; choose Braintrust when you need commercial eval/experiment platform with hosted scoring and logging. | Commercial eval/experiment platform with hosted scoring and logging; polished team UX. promptfoo trades the managed platform for an open, self-run CLI. |
+| Garak | 未收录 | Use this page for its stated niche; choose Garak when you need dedicated LLM vulnerability scanner (red-team only, Python). | Dedicated LLM vulnerability scanner (red-team only, Python). Overlaps promptfoo's `redteam` scope but isn't a general eval/assertion harness. |
+| Giskard | 未收录 | Use this page for its stated niche; choose Giskard when you need OSS testing/red-teaming for ML+LLM with a scan-and-report model. | OSS testing/red-teaming for ML+LLM with a scan-and-report model; broader ML scope, Python-centric. promptfoo is more prompt/CI-workflow focused. |
 
 ## Tech stack
 

@@ -9,6 +9,11 @@ license: MIT
 maturity: no tagged releases, active, last pushed 2026-03 (as of 2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+upstream:
+  pushed_at: 2026-03-29T15:28:02Z
+  default_branch: main
+  default_branch_sha: 05ba982bfeb0d77d3c97d4542b0ee15034d05f84
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:30:56Z
@@ -80,13 +85,13 @@ You reach for this pack specifically when your work is Apple-flavored: it ships 
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [antfu/skills](antfu-skills.md) | ✅ | Another single-author personal skill collection (web/TS-leaning). Different domain center of gravity — Dimillian's is uniquely deep on Swift/SwiftUI/Apple platforms. |
-| [wshobson/agents](../subagent-collections/wshobson-agents.md) | ✅ | Large subagent-persona collection; broad role coverage but generalist, no Apple-platform specialization. |
-| awesome-claude-code-subagents | 未收录 | Curated Claude Code subagent directory; targets a different harness and is broader/shallower than this pack's Swift depth. |
-| karpathy-skills | 未收录 | Personal skill collection from a different author/domain; compare on whether your work is Apple-flavored — if not, neither pack's specialty applies. |
-| Your harness's built-in review / simplify commands | 未收录 | Codex/Claude already ship generic diff-review and simplify flows; the generic skills here (`review-swarm`, `review-and-simplify-changes`) overlap with those — the unique value is the SwiftUI/iOS skills, not the generic ones. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [antfu/skills](antfu-skills.md) | ✅ | Use this page for its stated niche; choose antfu/skills when you need another single-author personal skill collection (web/TS-leaning). | Another single-author personal skill collection (web/TS-leaning). Different domain center of gravity — Dimillian's is uniquely deep on Swift/SwiftUI/Apple platforms. |
+| [wshobson/agents](../subagent-collections/wshobson-agents.md) | ✅ | Use this page for its stated niche; choose wshobson/agents when you need large subagent-persona collection. | Large subagent-persona collection; broad role coverage but generalist, no Apple-platform specialization. |
+| awesome-claude-code-subagents | 未收录 | Use this page for its stated niche; choose awesome-claude-code-subagents when you need curated Claude Code subagent directory. | Curated Claude Code subagent directory; targets a different harness and is broader/shallower than this pack's Swift depth. |
+| karpathy-skills | 未收录 | Use this page for its stated niche; choose karpathy-skills when you need personal skill collection from a different author/domain. | Personal skill collection from a different author/domain; compare on whether your work is Apple-flavored — if not, neither pack's specialty applies. |
+| Your harness's built-in review / simplify commands | 未收录 | Use this page for its stated niche; choose Your harness's built-in review / simplify commands when you need codex/Claude already ship generic diff-review and simplify flows. | Codex/Claude already ship generic diff-review and simplify flows; the generic skills here (`review-swarm`, `review-and-simplify-changes`) overlap with those — the unique value is the SwiftUI/iOS skills, not the generic ones. |
 
 ## Health & viability
 

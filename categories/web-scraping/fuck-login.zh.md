@@ -9,6 +9,11 @@ license: NONE
 maturity: no tagged releases, archived on GitHub (abandoned since 2018), 5.8k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2018-06-08T02:23:56Z
+  default_branch: master
+  default_branch_sha: c1388f0567704a3434b6e4620e29a94792bcba0f
+  archived: true
 health:
   schema: 1
   computed_at: 2026-06-29T10:22:38Z
@@ -87,13 +92,13 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| Playwright / Selenium | 未收录 | 驱动真实浏览器登录（能处理 JS、现代鉴权），而非重放裸 HTTP；更重，但在今天的站点上真能用。 |
-| Scrapy | 未收录 | 有维护的爬取框架，自带登录 middleware 范式；鉴权要自己写，但周边一切都是生产级。 |
-| [requests-html](requests-html.zh.md) | ✅ | requests + JS 渲染的爬取库，是真正的构件；而 fuck-login 只是示例脚本。 |
-| [newspaper](newspaper.zh.md) | ✅ | 做正文抽取，不是登录自动化——活儿不同；列在这里展示本分类里有维护的成员。 |
-| DrissionPage | 未收录 | 现代中文生态的浏览器自动化/爬取库；针对“登录某 CN 站再爬取”这同一目标的一个仍在世的替代品。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| Playwright / Selenium | 未收录 | 当前页用于它的主场景；如果更看重“驱动真实浏览器登录（能处理 JS、现代鉴权），而非重放裸 HTTP”，再选 Playwright / Selenium。 | 驱动真实浏览器登录（能处理 JS、现代鉴权），而非重放裸 HTTP；更重，但在今天的站点上真能用。 |
+| Scrapy | 未收录 | 当前页用于它的主场景；如果更看重“有维护的爬取框架，自带登录 middleware 范式”，再选 Scrapy。 | 有维护的爬取框架，自带登录 middleware 范式；鉴权要自己写，但周边一切都是生产级。 |
+| [requests-html](requests-html.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“requests + JS 渲染的爬取库，是真正的构件”，再选 requests-html。 | requests + JS 渲染的爬取库，是真正的构件；而 fuck-login 只是示例脚本。 |
+| [newspaper](newspaper.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“做正文抽取，不是登录自动化”，再选 newspaper。 | 做正文抽取，不是登录自动化——活儿不同；列在这里展示本分类里有维护的成员。 |
+| DrissionPage | 未收录 | 当前页用于它的主场景；如果更看重“现代中文生态的浏览器自动化/爬取库”，再选 DrissionPage。 | 现代中文生态的浏览器自动化/爬取库；针对“登录某 CN 站再爬取”这同一目标的一个仍在世的替代品。 |
 
 ## 技术栈
 

@@ -9,6 +9,11 @@ license: MIT
 maturity: v4.15.0, active (2026-06)
 last_verified: 2026-06-26
 type: framework
+upstream:
+  pushed_at: 2026-06-29T11:19:35Z
+  default_branch: main
+  default_branch_sha: 6c59219cced3ddd857334d2a7fb78099f2d67e71
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:24:44Z
@@ -84,15 +89,15 @@ You reach for it specifically when you want orchestration *inside the Claude Cod
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [DSPy](dspy.md) | ✅ | Provider-agnostic Python framework for programming/optimizing LLM pipelines; you build the app yourself. OMC is narrower: orchestration *inside Claude Code*, no model-program compilation. |
-| [AgentScope](agentscope.md) | ✅ | General multi-agent platform (any model, message-passing, visual studio); a full framework you host. OMC rides on Claude Code instead of being a standalone runtime. |
-| [claude-octopus](claude-octopus.md) | ✅ | Also Claude-Code-centric parallel/multi-agent tooling; closest sibling. Differs in surface and orchestration model — compare the two directly if you're already on Claude Code. |
-| [Symphony](symphony.md) | ✅ | OpenAI-authored orchestration; tied to a different vendor ecosystem than Claude Code. |
-| [openfang](openfang.md) | ✅ | Separate agent-framework take; see its page for its model. |
-| claude-flow | 未收录 | Another popular Claude-Code multi-agent / swarm orchestration layer; overlapping problem space, different abstractions and maturity. |
-| Claude Code subagents (built-in) | 未收录 | Anthropic's native subagent/parallel features cover part of OMC's value without a third-party dependency; OMC adds team pipelines, routing, modes, and HUD on top. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [DSPy](dspy.md) | ✅ | Use this page for its stated niche; choose DSPy when you need provider-agnostic Python framework for programming/optimizing LLM pipelines. | Provider-agnostic Python framework for programming/optimizing LLM pipelines; you build the app yourself. OMC is narrower: orchestration *inside Claude Code*, no model-program compilation. |
+| [AgentScope](agentscope.md) | ✅ | Use this page for its stated niche; choose AgentScope when you need general multi-agent platform (any model, message-passing, visual studio). | General multi-agent platform (any model, message-passing, visual studio); a full framework you host. OMC rides on Claude Code instead of being a standalone runtime. |
+| [claude-octopus](claude-octopus.md) | ✅ | Use this page for its stated niche; choose claude-octopus when you need also Claude-Code-centric parallel/multi-agent tooling. | Also Claude-Code-centric parallel/multi-agent tooling; closest sibling. Differs in surface and orchestration model — compare the two directly if you're already on Claude Code. |
+| [Symphony](symphony.md) | ✅ | Use this page for its stated niche; choose Symphony when you need openAI-authored orchestration. | OpenAI-authored orchestration; tied to a different vendor ecosystem than Claude Code. |
+| [openfang](openfang.md) | ✅ | Use this page for its stated niche; choose openfang when you need separate agent-framework take. | Separate agent-framework take; see its page for its model. |
+| claude-flow | 未收录 | Use this page for its stated niche; choose claude-flow when you need another popular Claude-Code multi-agent / swarm orchestration layer. | Another popular Claude-Code multi-agent / swarm orchestration layer; overlapping problem space, different abstractions and maturity. |
+| Claude Code subagents (built-in) | 未收录 | Use this page for its stated niche; choose Claude Code subagents (built-in) when you need anthropic's native subagent/parallel features cover part of OMC's value without a third-party depend. | Anthropic's native subagent/parallel features cover part of OMC's value without a third-party dependency; OMC adds team pipelines, routing, modes, and HUD on top. |
 
 ## Tech stack
 

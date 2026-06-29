@@ -9,6 +9,11 @@ license: NONE
 maturity: no releases, unmaintained (2026-06)
 last_verified: 2026-06-28
 type: tool
+upstream:
+  pushed_at: 2022-10-14T03:32:34Z
+  default_branch: master
+  default_branch_sha: 33d697642baf04902e80ce5bc7c7f539e0a08613
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:18:15Z
@@ -83,13 +88,13 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| ascii-magic | 未收录 | 有维护的 Python 库，做图片→ASCII，支持彩色/HTML/终端输出；许可清晰、功能丰富得多——实际的替代品。 |
-| jp2a | 未收录 | 快速的 C CLI，把 JPEG/PNG 转 ASCII 并支持彩色；单二进制、成熟，但不是 Python API。 |
-| chafa | 未收录 | 强大的终端图形/ASCII/Unicode 图像渲染器（C）；处理彩色、动画和众多终端——更重、能力强得多。 |
-| [art](art.zh.md) | ✅ | 从*文字*生成 ASCII 艺术（figlet 风格），不是图片——输入相反；不是替代品。 |
-| Pillow + ~20 行 | 未收录 | asciify 自身体现的 DIY 路线；既然 asciify 无许可，基于 Pillow 自己写往往是更干净、法律更清晰的选择。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| ascii-magic | 未收录 | 当前页用于它的主场景；如果更看重“有维护的 Python 库，做图片→ASCII，支持彩色/HTML/终端输出”，再选 ascii-magic。 | 有维护的 Python 库，做图片→ASCII，支持彩色/HTML/终端输出；许可清晰、功能丰富得多——实际的替代品。 |
+| jp2a | 未收录 | 当前页用于它的主场景；如果更看重“快速的 C CLI，把 JPEG/PNG 转 ASCII 并支持彩色”，再选 jp2a。 | 快速的 C CLI，把 JPEG/PNG 转 ASCII 并支持彩色；单二进制、成熟，但不是 Python API。 |
+| chafa | 未收录 | 当前页用于它的主场景；如果更看重“强大的终端图形/ASCII/Unicode 图像渲染器（C）”，再选 chafa。 | 强大的终端图形/ASCII/Unicode 图像渲染器（C）；处理彩色、动画和众多终端——更重、能力强得多。 |
+| [art](art.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“从*文字*生成 ASCII 艺术（figlet 风格），不是图片”，再选 art。 | 从*文字*生成 ASCII 艺术（figlet 风格），不是图片——输入相反；不是替代品。 |
+| Pillow + ~20 行 | 未收录 | 当前页用于它的主场景；如果更看重“asciify 自身体现的 DIY 路线”，再选 Pillow + ~20 行。 | asciify 自身体现的 DIY 路线；既然 asciify 无许可，基于 Pillow 自己写往往是更干净、法律更清晰的选择。 |
 
 ## 技术栈
 

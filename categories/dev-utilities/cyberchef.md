@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v11.2.0, active (2026-06)
 last_verified: 2026-06-26
 type: app
+upstream:
+  pushed_at: 2026-06-26T12:15:28Z
+  default_branch: master
+  default_branch_sha: 275b594f7c8b0e39880f55e7c1f67dc0a4e73f92
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:47:15Z
@@ -89,13 +94,13 @@ You also reach for it when you want that same logic *repeatable*. A recipe seria
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [DevToys](devtoys.md) | ✅ | Native cross-platform desktop devtools palette (formatters, converters, generators); a fixed tool list rather than CyberChef's chainable recipe pipeline + "Magic" auto-detection. |
-| [Cockpit](cockpit.md) | ✅ | Web UI for *server administration*, not data transformation — different problem entirely; listed only to disambiguate "web tool" overlap. |
-| CyberChef-server | 未收录 | Official Node wrapper exposing CyberChef recipes over HTTP for batch/automation; complements rather than replaces the app. |
-| Custom scripts (`openssl`/`xxd`/Python) | 未收录 | Maximum control, scriptable, no UI; but you rewrite per-task and lose the live visual recipe + Magic detection. |
-| dCode / online decoders | 未收录 | Browser convenience for single transforms; data leaves your machine and no offline/self-host story — the privacy gap CyberChef closes. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [DevToys](devtoys.md) | ✅ | Use this page for its stated niche; choose DevToys when you need native cross-platform desktop devtools palette (formatters, converters, generators). | Native cross-platform desktop devtools palette (formatters, converters, generators); a fixed tool list rather than CyberChef's chainable recipe pipeline + "Magic" auto-detection. |
+| [Cockpit](cockpit.md) | ✅ | Use this page for its stated niche; choose Cockpit when you need web UI for *server administration*, not data transformation. | Web UI for *server administration*, not data transformation — different problem entirely; listed only to disambiguate "web tool" overlap. |
+| CyberChef-server | 未收录 | Use this page for its stated niche; choose CyberChef-server when you need official Node wrapper exposing CyberChef recipes over HTTP for batch/automation. | Official Node wrapper exposing CyberChef recipes over HTTP for batch/automation; complements rather than replaces the app. |
+| Custom scripts (`openssl`/`xxd`/Python) | 未收录 | Use this page for its stated niche; choose Custom scripts (openssl/xxd/Python) when you need maximum control, scriptable, no UI. | Maximum control, scriptable, no UI; but you rewrite per-task and lose the live visual recipe + Magic detection. |
+| dCode / online decoders | 未收录 | Use this page for its stated niche; choose dCode / online decoders when you need browser convenience for single transforms. | Browser convenience for single transforms; data leaves your machine and no offline/self-host story — the privacy gap CyberChef closes. |
 
 ## Tech stack
 

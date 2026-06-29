@@ -9,6 +9,11 @@ license: MIT
 maturity: v1.x line, active as of 2026-06; author still self-describes as "alpha" (see caveats)
 last_verified: 2026-06-26
 type: tool
+upstream:
+  pushed_at: 2026-06-29T00:55:01Z
+  default_branch: main
+  default_branch_sha: fa4dce4548d8d15d5478b9ad7e4f6ee7cbfabaa1
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:35:06Z
@@ -92,13 +97,13 @@ beads（命令 `bd`）是一张带依赖关系、可版本控制的任务/issue 
 
 ## 横向对比
 
-| 替代方案 | 是否收录 | 取舍 |
-|---|---|---|
-| Plain markdown `MEMORY.md` / `TODO.md` | 未收录 | 零依赖且人类可读，但没有依赖关系图、没有 ready 检测、没有可安全合并的 ID —— 正是 beads 要取代的非结构化做法。 |
-| GitHub Issues (+ `gh` CLI) | 未收录 | 成熟的托管 tracker，带 web UI/通知/跨仓视图，但在线优先，不限定分支/不版本控制，缺乏面向 agent 的原生依赖图加自动 ready。 |
-| Taskwarrior | 未收录 | 久经考验的离线 CLI 任务管理器，过滤能力丰富，但没有 SQL/版本控制后端，多 agent 合并能力较弱，也不是围绕 agent JSON 工作流构建的。 |
-| Linear / Jira | 未收录 | 面向人类团队的同类最佳（工作流、dashboard、保证），但重量级、仅在线，不与代码一起版本控制，也非 agent 原生。 |
-| Dolt directly (raw versioned SQL) | 未收录 | 拥有同样的版本化 SQL 超能力且不带成见 schema，但你得自己搭建 issue schema、依赖逻辑、ready 检测和 agent 体验 —— beads 就是那一层有成见的封装。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| Plain markdown `MEMORY.md` / `TODO.md` | 未收录 | 当前页用于它的主场景；如果更看重“零依赖且人类可读，但没有依赖关系图、没有 ready 检测、没有可安全合并的 ID”，再选 Plain markdown MEMORY.md / TODO.md。 | 零依赖且人类可读，但没有依赖关系图、没有 ready 检测、没有可安全合并的 ID —— 正是 beads 要取代的非结构化做法。 |
+| GitHub Issues (+ `gh` CLI) | 未收录 | 当前页用于它的主场景；如果更看重“成熟的托管 tracker，带 web UI/通知/跨仓视图，但在线优先，不限定分支/不版本控制，缺乏面向 agent 的原生依赖图加自动 ready”，再选 GitHub Issues (+ gh CLI)。 | 成熟的托管 tracker，带 web UI/通知/跨仓视图，但在线优先，不限定分支/不版本控制，缺乏面向 agent 的原生依赖图加自动 ready。 |
+| Taskwarrior | 未收录 | 当前页用于它的主场景；如果更看重“久经考验的离线 CLI 任务管理器，过滤能力丰富，但没有 SQL/版本控制后端，多 agent 合并能力较弱，也不是围绕 agent JSON 工作流构建的”，再选 Taskwarrior。 | 久经考验的离线 CLI 任务管理器，过滤能力丰富，但没有 SQL/版本控制后端，多 agent 合并能力较弱，也不是围绕 agent JSON 工作流构建的。 |
+| Linear / Jira | 未收录 | 当前页用于它的主场景；如果更看重“面向人类团队的同类最佳（工作流、dashboard、保证），但重量级、仅在线，不与代码一起版本控制，也非 agent 原生”，再选 Linear / Jira。 | 面向人类团队的同类最佳（工作流、dashboard、保证），但重量级、仅在线，不与代码一起版本控制，也非 agent 原生。 |
+| Dolt directly (raw versioned SQL) | 未收录 | 当前页用于它的主场景；如果更看重“拥有同样的版本化 SQL 超能力且不带成见 schema，但你得自己搭建 issue schema、依赖逻辑、ready 检测和 agent 体验”，再选 Dolt directly (raw versioned SQL)。 | 拥有同样的版本化 SQL 超能力且不带成见 schema，但你得自己搭建 issue schema、依赖逻辑、ready 检测和 agent 体验 —— beads 就是那一层有成见的封装。 |
 
 ## 技术栈
 

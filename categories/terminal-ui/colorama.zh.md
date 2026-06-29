@@ -9,6 +9,11 @@ license: BSD-3-Clause
 maturity: stable, active, ~3.8k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2026-05-13T18:21:46Z
+  default_branch: master
+  default_branch_sha: 841634ed2a0da5d5ac2d867db533da8131266cb2
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:18:49Z
@@ -80,13 +85,13 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| Rich（Textualize） | 未收录 | 完整的带样式输出工具包（颜色、表格、markdown、进度、traceback）——能力强太多，但是个大库；只要跨平台颜色就是杀鸡用牛刀。 |
-| termcolor / colored | 未收录 | 极小的 ANSI 颜色助手，API 友好，但不在老式 Windows 上翻译 ANSI——常和 colorama *搭配*以补这点。 |
-| click.style（Click） | 未收录 | Click CLI 框架内方便的样式；Click 自身历史上为 Windows 垫片依赖 colorama。 |
-| blessed / blessings | 未收录 | 终端能力 + 光标/样式库（基于 terminfo）——终端控制更丰富、更重，对 Windows-ANSI 缺口不那么聚焦。 |
-| 裸 ANSI 转义码 | 未收录 | 零依赖，在每个支持 ANSI 的终端都能用，但在老式 Windows 控制台上崩——正是 colorama 补的缺口。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| Rich（Textualize） | 未收录 | 当前页用于它的主场景；如果更看重“完整的带样式输出工具包（颜色、表格、markdown、进度、traceback）”，再选 Rich（Textualize）。 | 完整的带样式输出工具包（颜色、表格、markdown、进度、traceback）——能力强太多，但是个大库；只要跨平台颜色就是杀鸡用牛刀。 |
+| termcolor / colored | 未收录 | 当前页用于它的主场景；如果更看重“极小的 ANSI 颜色助手，API 友好，但不在老式 Windows 上翻译 ANSI”，再选 termcolor / colored。 | 极小的 ANSI 颜色助手，API 友好，但不在老式 Windows 上翻译 ANSI——常和 colorama *搭配*以补这点。 |
+| click.style（Click） | 未收录 | 当前页用于它的主场景；如果更看重“Click CLI 框架内方便的样式”，再选 click.style（Click）。 | Click CLI 框架内方便的样式；Click 自身历史上为 Windows 垫片依赖 colorama。 |
+| blessed / blessings | 未收录 | 当前页用于它的主场景；如果更看重“终端能力 + 光标/样式库（基于 terminfo）”，再选 blessed / blessings。 | 终端能力 + 光标/样式库（基于 terminfo）——终端控制更丰富、更重，对 Windows-ANSI 缺口不那么聚焦。 |
+| 裸 ANSI 转义码 | 未收录 | 当前页用于它的主场景；如果更看重“零依赖，在每个支持 ANSI 的终端都能用，但在老式 Windows 控制台上崩”，再选 裸 ANSI 转义码。 | 零依赖，在每个支持 ANSI 的终端都能用，但在老式 Windows 控制台上崩——正是 colorama 补的缺口。 |
 
 ## 技术栈
 

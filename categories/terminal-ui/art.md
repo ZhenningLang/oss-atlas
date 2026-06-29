@@ -9,6 +9,11 @@ license: MIT
 maturity: v6.x, active (2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2026-06-29T01:32:38Z
+  default_branch: master
+  default_branch_sha: 3917a898faeb7490d3043a1158b13a5d9b51e273
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:17:57Z
@@ -82,13 +87,13 @@ You reach for it when ASCII-art *text* is the deliverable: banners, splash scree
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| pyfiglet | 未收录 | Pure-Python port of FIGlet with the canonical figlet font set; the standard if you specifically want FIGlet fonts/compatibility, narrower scope (no decor/art-piece catalog). |
-| figlet / toilet (CLI) | 未收录 | The classic C banner generators; require a system binary and aren't a Python API — fine for shell use, awkward to embed. |
-| [asciify](asciify.md) | ✅ | Converts *images* to ASCII — a different input entirely (raster, not text); complementary, not a substitute. |
-| rich (figlet/markup) | 未收录 | Styling library that can render large text and styled output as part of a bigger toolkit; broader but heavier if you only want art text. |
-| ascii-magic / cowsay | 未收录 | Niche art generators (images / speech-bubble characters); narrower and stylistically specific. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| pyfiglet | 未收录 | Use this page for its stated niche; choose pyfiglet when you need pure-Python port of FIGlet with the canonical figlet font set. | Pure-Python port of FIGlet with the canonical figlet font set; the standard if you specifically want FIGlet fonts/compatibility, narrower scope (no decor/art-piece catalog). |
+| figlet / toilet (CLI) | 未收录 | Use this page for its stated niche; choose figlet / toilet (CLI) when you need the classic C banner generators. | The classic C banner generators; require a system binary and aren't a Python API — fine for shell use, awkward to embed. |
+| [asciify](asciify.md) | ✅ | Use this page for its stated niche; choose asciify when you need converts *images* to ASCII. | Converts *images* to ASCII — a different input entirely (raster, not text); complementary, not a substitute. |
+| rich (figlet/markup) | 未收录 | Use this page for its stated niche; choose rich (figlet/markup) when you need styling library that can render large text and styled output as part of a bigger toolkit. | Styling library that can render large text and styled output as part of a bigger toolkit; broader but heavier if you only want art text. |
+| ascii-magic / cowsay | 未收录 | Use this page for its stated niche; choose ascii-magic / cowsay when you need niche art generators (images / speech-bubble characters). | Niche art generators (images / speech-bubble characters); narrower and stylistically specific. |
 
 ## Tech stack
 

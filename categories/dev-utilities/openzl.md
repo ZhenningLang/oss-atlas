@@ -9,6 +9,11 @@ license: BSD-3-Clause
 maturity: v0.2.0, active, pre-1.0 (2026-05); format/API still changing
 last_verified: 2026-06-26
 type: library
+upstream:
+  pushed_at: 2026-06-26T17:29:05Z
+  default_branch: dev
+  default_branch_sha: a4d56c1af24b07799d76f0b390201545b33c2157
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:49:10Z
@@ -81,14 +86,14 @@ The payoff is two-fold: you can get materially better ratio-at-speed than a gene
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [CyberChef](cyberchef.md) | ✅ | Browser-based ad-hoc encode/decode/compress recipes for analysts; interactive and general, not a production library for ratio-tuned structured-data compression. |
-| [DevToys](devtoys.md) | ✅ | Desktop developer-utility hub with built-in compress/format tools; convenience for one-off tasks, not a programmable format-aware compressor. |
-| zstd | 未收录 | The general-purpose baseline (also Meta/BSD). Excellent ratio-at-speed on arbitrary bytes; OpenZL targets *beating* it on specific structured formats via format awareness, at the cost of having to describe the data. |
-| Parquet + zstd/snappy | 未收录 | The mainstream columnar-at-rest path: schema-aware encodings (dictionary/RLE) plus a block codec. Mature and ubiquitous; OpenZL is a lower-level framework letting you build custom codec graphs, not a file format with an ecosystem. |
-| BLOSC / blosc2 | 未收录 | Blocking + shuffle/bitshuffle meta-compressor aimed at numeric arrays; conceptually similar "transform then compress" idea, narrower scope and more mature than OpenZL. |
-| Brotli | 未收录 | Strong general-purpose (esp. text/web) compressor; not format-aware for structured numeric data. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [CyberChef](cyberchef.md) | ✅ | Use this page for its stated niche; choose CyberChef when you need browser-based ad-hoc encode/decode/compress recipes for analysts. | Browser-based ad-hoc encode/decode/compress recipes for analysts; interactive and general, not a production library for ratio-tuned structured-data compression. |
+| [DevToys](devtoys.md) | ✅ | Use this page for its stated niche; choose DevToys when you need desktop developer-utility hub with built-in compress/format tools. | Desktop developer-utility hub with built-in compress/format tools; convenience for one-off tasks, not a programmable format-aware compressor. |
+| zstd | 未收录 | Use this page for its stated niche; choose zstd when you need the general-purpose baseline (also Meta/BSD). | The general-purpose baseline (also Meta/BSD). Excellent ratio-at-speed on arbitrary bytes; OpenZL targets *beating* it on specific structured formats via format awareness, at the cost of having to describe the data. |
+| Parquet + zstd/snappy | 未收录 | Use this page for its stated niche; choose Parquet + zstd/snappy when you need the mainstream columnar-at-rest path: schema-aware encodings (dictionary/RLE) plus a block codec. | The mainstream columnar-at-rest path: schema-aware encodings (dictionary/RLE) plus a block codec. Mature and ubiquitous; OpenZL is a lower-level framework letting you build custom codec graphs, not a file format with an ecosystem. |
+| BLOSC / blosc2 | 未收录 | Use this page for its stated niche; choose BLOSC / blosc2 when you need blocking + shuffle/bitshuffle meta-compressor aimed at numeric arrays. | Blocking + shuffle/bitshuffle meta-compressor aimed at numeric arrays; conceptually similar "transform then compress" idea, narrower scope and more mature than OpenZL. |
+| Brotli | 未收录 | Use this page for its stated niche; choose Brotli when you need strong general-purpose (esp. | Strong general-purpose (esp. text/web) compressor; not format-aware for structured numeric data. |
 
 ## Tech stack
 

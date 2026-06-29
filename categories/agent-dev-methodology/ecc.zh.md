@@ -9,6 +9,11 @@ license: MIT
 maturity: v2.0.0, active (2026-06)
 last_verified: 2026-06-26
 type: framework
+upstream:
+  pushed_at: 2026-06-29T04:55:36Z
+  default_branch: main
+  default_branch_sha: 2bc924faf2f8e893bfe0af86b1931283693c30ae
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:07:35Z
@@ -89,14 +94,14 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| [SuperClaude Framework](superclaude.zh.md) | ✅ | 同为聚焦 Claude 的配置框架（persona、command、MCP）；比 ECC 数百 skill + hook + 安全扫描 + 跨 harness 底座更窄、更轻。 |
-| [Superpowers](superpowers.zh.md) | ✅ | 面向 Claude Code 的精选 skill/插件集合；有重叠的 skill 库思路，但没有 ECC 的 memory/instinct hook、安全扫描器和多 harness 适配。 |
-| [Compound Engineering](compound-engineering.zh.md) | ✅ | 把一套特定「复利工作流」方法论编码成插件；相比 ECC 的 OS 式大捆绑，更有主张也更小。 |
-| [get-shit-done](get-shit-done.zh.md) | ✅ | 轻量的任务执行工作流包；单一哲学，而非 ECC 的全家桶面。 |
-| [12-Factor Agents](12-factor-agents.zh.md) | ✅ | provider 中立的 agent 构建*原则*（文档，而非装好的配置）；与 ECC 具体的 Claude Code harness 处于不同层。 |
-| dotfiles / 手搓 `~/.claude` | 未收录 | 完全可控、面最小；代价是每个 skill/hook/rule 都得自己维护，而不是继承并更新一套精选栈。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [SuperClaude Framework](superclaude.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“同为聚焦 Claude 的配置框架（persona、command、MCP）”，再选 SuperClaude Framework。 | 同为聚焦 Claude 的配置框架（persona、command、MCP）；比 ECC 数百 skill + hook + 安全扫描 + 跨 harness 底座更窄、更轻。 |
+| [Superpowers](superpowers.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“面向 Claude Code 的精选 skill/插件集合”，再选 Superpowers。 | 面向 Claude Code 的精选 skill/插件集合；有重叠的 skill 库思路，但没有 ECC 的 memory/instinct hook、安全扫描器和多 harness 适配。 |
+| [Compound Engineering](compound-engineering.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“把一套特定「复利工作流」方法论编码成插件”，再选 Compound Engineering。 | 把一套特定「复利工作流」方法论编码成插件；相比 ECC 的 OS 式大捆绑，更有主张也更小。 |
+| [get-shit-done](get-shit-done.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“轻量的任务执行工作流包”，再选 get-shit-done。 | 轻量的任务执行工作流包；单一哲学，而非 ECC 的全家桶面。 |
+| [12-Factor Agents](12-factor-agents.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“provider 中立的 agent 构建*原则*（文档，而非装好的配置）”，再选 12-Factor Agents。 | provider 中立的 agent 构建*原则*（文档，而非装好的配置）；与 ECC 具体的 Claude Code harness 处于不同层。 |
+| dotfiles / 手搓 `~/.claude` | 未收录 | 当前页用于它的主场景；如果更看重“完全可控、面最小”，再选 dotfiles / 手搓 ~/.claude。 | 完全可控、面最小；代价是每个 skill/hook/rule 都得自己维护，而不是继承并更新一套精选栈。 |
 
 ## 技术栈
 

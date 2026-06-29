@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v0.9.5, active (2026-06)
 last_verified: 2026-06-26
 type: framework
+upstream:
+  pushed_at: 2026-06-26T07:32:10Z
+  default_branch: main
+  default_branch_sha: 9c0b4b38357262e53baca2b26f00499a5c243c56
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:58:35Z
@@ -89,15 +94,15 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| [Unsloth](unsloth.zh.md) | ✅ | 自定义 kernel 让单卡更快、更省显存；模型/方法覆盖更窄，多卡能力弱于 LlamaFactory 那套覆盖广但更重的分发。 |
-| [ART](art.zh.md) | ✅ | 面向 agent 的 RL（GRPO 式 rollout）训练智能体；与 LlamaFactory 的 SFT/偏好微调定位是不同的问题。 |
-| [Agent Lightning](agent-lightning.zh.md) | ✅ | 从智能体自身执行轨迹 / RL 训练；不是通用的 SFT/LoRA 工具箱。 |
-| axolotl | 未收录 | YAML 驱动、天生多卡优先，开箱即带 FSDP/DeepSpeed；偏好可复现的生产训练。LlamaFactory 多了 Web UI 和更广的零代码面。 |
-| torchtune | 未收录 | 精简、原生 PyTorch、端到端自己掌控；开箱即用程度更低，无 Web UI。 |
-| HF TRL | 未收录 | LlamaFactory 自身构建其上的更底层 SFT/DPO/PPO 库；更可控、需更多接线。 |
-| Swift(ModelScope) | 未收录 | ModelScope 生态里覆盖同样很广的微调框架；定位有重叠。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [Unsloth](unsloth.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“自定义 kernel 让单卡更快、更省显存”，再选 Unsloth。 | 自定义 kernel 让单卡更快、更省显存；模型/方法覆盖更窄，多卡能力弱于 LlamaFactory 那套覆盖广但更重的分发。 |
+| [ART](art.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“面向 agent 的 RL（GRPO 式 rollout）训练智能体”，再选 ART。 | 面向 agent 的 RL（GRPO 式 rollout）训练智能体；与 LlamaFactory 的 SFT/偏好微调定位是不同的问题。 |
+| [Agent Lightning](agent-lightning.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“从智能体自身执行轨迹 / RL 训练”，再选 Agent Lightning。 | 从智能体自身执行轨迹 / RL 训练；不是通用的 SFT/LoRA 工具箱。 |
+| axolotl | 未收录 | 当前页用于它的主场景；如果更看重“YAML 驱动、天生多卡优先，开箱即带 FSDP/DeepSpeed”，再选 axolotl。 | YAML 驱动、天生多卡优先，开箱即带 FSDP/DeepSpeed；偏好可复现的生产训练。LlamaFactory 多了 Web UI 和更广的零代码面。 |
+| torchtune | 未收录 | 当前页用于它的主场景；如果更看重“精简、原生 PyTorch、端到端自己掌控”，再选 torchtune。 | 精简、原生 PyTorch、端到端自己掌控；开箱即用程度更低，无 Web UI。 |
+| HF TRL | 未收录 | 当前页用于它的主场景；如果更看重“LlamaFactory 自身构建其上的更底层 SFT/DPO/PPO 库”，再选 HF TRL。 | LlamaFactory 自身构建其上的更底层 SFT/DPO/PPO 库；更可控、需更多接线。 |
+| Swift(ModelScope) | 未收录 | 当前页用于它的主场景；如果更看重“ModelScope 生态里覆盖同样很广的微调框架”，再选 Swift(ModelScope)。 | ModelScope 生态里覆盖同样很广的微调框架；定位有重叠。 |
 
 ## 技术栈
 

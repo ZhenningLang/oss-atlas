@@ -9,6 +9,11 @@ license: MIT
 maturity: v1.39.0, active (2026-06)
 last_verified: 2026-06-26
 type: tool
+upstream:
+  pushed_at: 2026-06-26T07:08:27Z
+  default_branch: master
+  default_branch_sha: 56b98de33ba897ab9fe80d3791d8798cfb98fbcf
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:49:45Z
@@ -84,14 +89,14 @@ You also reach for it when your sources are heterogeneous and you want collectio
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| Prometheus + node_exporter | 未收录 | Pull-based scraping with its own TSDB and query language; great for cloud-native metrics, but exporters are per-concern and it isn't a general push collector for logs/industrial protocols. |
-| OpenTelemetry Collector | 未收录 | Vendor-neutral, CNCF-governed router for metrics **and** traces/logs with broad receiver/exporter set; heavier config model, stronger tracing story, overlapping metrics scope. |
-| Fluent Bit / Fluentd | 未收录 | Log-and-event shippers first (Fluent Bit is also a tiny C binary); narrower metrics surface than Telegraf's 300+ plugins. |
-| Vector (Datadog) | 未收录 | Rust observability pipeline (logs/metrics) with strong transform DSL (VRL); comparable single-binary routing, smaller plugin catalog for exotic inputs. |
-| collectd | 未收录 | Old, lightweight C metrics daemon; mature but a smaller, aging plugin ecosystem and weaker modern integrations. |
-| [CyberChef](cyberchef.md) | ✅ | Browser-based one-off data transformation toolkit; not a long-running collection agent — different job entirely. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| Prometheus + node_exporter | 未收录 | Use this page for its stated niche; choose Prometheus + nodeexporter when you need pull-based scraping with its own TSDB and query language. | Pull-based scraping with its own TSDB and query language; great for cloud-native metrics, but exporters are per-concern and it isn't a general push collector for logs/industrial protocols. |
+| OpenTelemetry Collector | 未收录 | Use this page for its stated niche; choose OpenTelemetry Collector when you need vendor-neutral, CNCF-governed router for metrics **and** traces/logs with broad receiver/exporter se. | Vendor-neutral, CNCF-governed router for metrics **and** traces/logs with broad receiver/exporter set; heavier config model, stronger tracing story, overlapping metrics scope. |
+| Fluent Bit / Fluentd | 未收录 | Use this page for its stated niche; choose Fluent Bit / Fluentd when you need log-and-event shippers first (Fluent Bit is also a tiny C binary). | Log-and-event shippers first (Fluent Bit is also a tiny C binary); narrower metrics surface than Telegraf's 300+ plugins. |
+| Vector (Datadog) | 未收录 | Use this page for its stated niche; choose Vector (Datadog) when you need rust observability pipeline (logs/metrics) with strong transform DSL (VRL). | Rust observability pipeline (logs/metrics) with strong transform DSL (VRL); comparable single-binary routing, smaller plugin catalog for exotic inputs. |
+| collectd | 未收录 | Use this page for its stated niche; choose collectd when you need old, lightweight C metrics daemon. | Old, lightweight C metrics daemon; mature but a smaller, aging plugin ecosystem and weaker modern integrations. |
+| [CyberChef](cyberchef.md) | ✅ | Use this page for its stated niche; choose CyberChef when you need browser-based one-off data transformation toolkit. | Browser-based one-off data transformation toolkit; not a long-running collection agent — different job entirely. |
 
 ## Tech stack
 

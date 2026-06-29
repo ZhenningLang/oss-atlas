@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: Python mem0ai v2.0.8, Node ts-v3.0.10; active (2026-06)
 last_verified: 2026-06-26
 type: library
+upstream:
+  pushed_at: 2026-06-29T10:19:26Z
+  default_branch: main
+  default_branch_sha: 31cec11a790868f88c9acafb8b70eb25071f2150
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:26:50Z
@@ -83,14 +88,14 @@ Mem0 正是为此而生。一轮对话后你调用 `m.add(messages, user_id=...)
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| [Memori](memori.zh.md) | ✅ | SQL-first / 数据库原生记忆（可查询、可审计、不强制向量库）;Mem0 偏向向量 + LLM 抽取，更“即插即用”但更不可审视。 |
-| [claude-subconscious](claude-subconscious.zh.md) | ✅ | Claude 专属的潜意识/反思记忆实验；Mem0 是通用、跨多家 provider 的 LLM 无关方案。 |
-| Zep / Graphiti | 未收录 | 时序知识图谱记忆，带双时态边和显式失效；在事实演化/相互矛盾的场景更强，而 Mem0 的 ADD-only 模型只会累积。 |
-| Letta (MemGPT) | 未收录 | 带自编辑记忆 + 有状态 server 的 agent 运行时，而不只是一个库；更重，接管 agent 循环而非塞在你的循环下面。 |
-| LangMem (LangChain) | 未收录 | 绑定 LangChain/LangGraph 生态的记忆工具；Mem0 与框架无关。 |
-| 自建 pgvector + 自写抽取 | 未收录 | 完全可控、无额外依赖或平台；但 Mem0 开箱即给你的抽取 prompt、schema 和检索，都要你自己搭和维护。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [Memori](memori.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“SQL-first / 数据库原生记忆（可查询、可审计、不强制向量库）”，再选 Memori。 | SQL-first / 数据库原生记忆（可查询、可审计、不强制向量库）;Mem0 偏向向量 + LLM 抽取，更“即插即用”但更不可审视。 |
+| [claude-subconscious](claude-subconscious.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“Claude 专属的潜意识/反思记忆实验”，再选 claude-subconscious。 | Claude 专属的潜意识/反思记忆实验；Mem0 是通用、跨多家 provider 的 LLM 无关方案。 |
+| Zep / Graphiti | 未收录 | 当前页用于它的主场景；如果更看重“时序知识图谱记忆，带双时态边和显式失效”，再选 Zep / Graphiti。 | 时序知识图谱记忆，带双时态边和显式失效；在事实演化/相互矛盾的场景更强，而 Mem0 的 ADD-only 模型只会累积。 |
+| Letta (MemGPT) | 未收录 | 当前页用于它的主场景；如果更看重“带自编辑记忆 + 有状态 server 的 agent 运行时，而不只是一个库”，再选 Letta (MemGPT)。 | 带自编辑记忆 + 有状态 server 的 agent 运行时，而不只是一个库；更重，接管 agent 循环而非塞在你的循环下面。 |
+| LangMem (LangChain) | 未收录 | 当前页用于它的主场景；如果更看重“绑定 LangChain/LangGraph 生态的记忆工具”，再选 LangMem (LangChain)。 | 绑定 LangChain/LangGraph 生态的记忆工具；Mem0 与框架无关。 |
+| 自建 pgvector + 自写抽取 | 未收录 | 当前页用于它的主场景；如果更看重“完全可控、无额外依赖或平台”，再选 自建 pgvector + 自写抽取。 | 完全可控、无额外依赖或平台；但 Mem0 开箱即给你的抽取 prompt、schema 和检索，都要你自己搭和维护。 |
 
 ## 技术栈
 

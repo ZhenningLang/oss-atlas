@@ -9,6 +9,11 @@ license: MIT
 maturity: v4.16.3, active (2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+upstream:
+  pushed_at: 2026-06-29T01:27:51Z
+  default_branch: main
+  default_branch_sha: c220671ec53e9bb298b6f2a473950024caee78a9
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:30:33Z
@@ -80,13 +85,13 @@ health:
 
 ## 横向对比
 
-| 替代项 | 已收录 | 取舍 |
-|---|---|---|
-| [gstack](gstack.md) | ✅ | Garry Tan 的个人 Claude Code 配置，驱动一个类似的 plan → build → review → ship 循环，但靠 ~23 个角色扮演 persona 命令（CEO/设计师/QA/安全官）。claude-code-harness 是更少、命名清晰的动词，带显式的 `spec.md`/`Plans.md` 契约和一个 Go `doctor` 工具；gstack 更依赖 persona 而非契约产物。 |
-| [shaping-skills](shaping-skills.md) | ✅ | Ryan Singer 的 Shape Up「shaping」包只覆盖*定义要造什么*这个前端环节。本 harness 覆盖完整的 定义→实现→review→发布 脊柱，因此二者互补而非互替。 |
-| [Superpowers](../../agent-dev-methodology/superpowers.md) | ✅ | 跨 harness 的 skills 库，具备相同的 brainstorm/plan→TDD→verify 脊柱，并打包给多种 agent（Claude、Codex、Cursor、Kimi、OpenCode、Pi）。claude-code-harness 以 Claude Code 为中心，加了显式的 spec/plan 契约文件和一个 Go 诊断 CLI；Superpowers 是更精简的方法论、更广的 harness 覆盖。 |
-| harness-mem（可选配套） | 未收录 | 本项目引用的一个可选跨会话记忆插件；属于另一关切（agent 记忆），不是工作流替代品。 |
-| Claude Code 原生 skills / 内置 slash 命令 | 未收录 | 平台自带的 skill 生态；本项目是叠在其上的第三方 bundle，可能与原生命令重复或冲突。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [gstack](gstack.md) | ✅ | 当前页用于它的主场景；如果更看重“Garry Tan 的个人 Claude Code 配置，驱动一个类似的 plan → build → review → ship 循环，但靠 ~23 个角色扮演 persona 命令（CEO/设计师”，再选 gstack。 | Garry Tan 的个人 Claude Code 配置，驱动一个类似的 plan → build → review → ship 循环，但靠 ~23 个角色扮演 persona 命令（CEO/设计师/QA/安全官）。claude-code-harness 是更少、命名清晰的动词，带显式的 `spec.md`/`Plans.md` 契约和一个 Go `doctor` 工具；gstack 更依赖 persona 而非契约产物。 |
+| [shaping-skills](shaping-skills.md) | ✅ | 当前页用于它的主场景；如果更看重“Ryan Singer 的 Shape Up「shaping」包只覆盖*定义要造什么*这个前端环节”，再选 shaping-skills。 | Ryan Singer 的 Shape Up「shaping」包只覆盖*定义要造什么*这个前端环节。本 harness 覆盖完整的 定义→实现→review→发布 脊柱，因此二者互补而非互替。 |
+| [Superpowers](../../agent-dev-methodology/superpowers.md) | ✅ | 当前页用于它的主场景；如果更看重“跨 harness 的 skills 库，具备相同的 brainstorm/plan→TDD→verify 脊柱，并打包给多种 agent（Claude、Codex、Cursor、Kimi、OpenC”，再选 Superpowers。 | 跨 harness 的 skills 库，具备相同的 brainstorm/plan→TDD→verify 脊柱，并打包给多种 agent（Claude、Codex、Cursor、Kimi、OpenCode、Pi）。claude-code-harness 以 Claude Code 为中心，加了显式的 spec/plan 契约文件和一个 Go 诊断 CLI；Superpowers 是更精简的方法论、更广的 harness 覆盖。 |
+| harness-mem（可选配套） | 未收录 | 当前页用于它的主场景；如果更看重“本项目引用的一个可选跨会话记忆插件”，再选 harness-mem（可选配套）。 | 本项目引用的一个可选跨会话记忆插件；属于另一关切（agent 记忆），不是工作流替代品。 |
+| Claude Code 原生 skills / 内置 slash 命令 | 未收录 | 当前页用于它的主场景；如果更看重“平台自带的 skill 生态”，再选 Claude Code 原生 skills / 内置 slash 命令。 | 平台自带的 skill 生态；本项目是叠在其上的第三方 bundle，可能与原生命令重复或冲突。 |
 
 ## 健康度与可持续性
 

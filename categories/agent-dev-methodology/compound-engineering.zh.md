@@ -9,6 +9,11 @@ license: MIT
 maturity: v3.14.3, active (2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+upstream:
+  pushed_at: 2026-06-29T07:48:58Z
+  default_branch: main
+  default_branch_sha: f8e90d11fe6c4f034ccb450f0f3302f3d33dc21a
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:07:24Z
@@ -80,14 +85,14 @@ Compound Engineering 通过你 agent 的插件市场安装（Claude Code 用 `/p
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| [Superpowers](superpowers.zh.md) | ✅ | 面向 Claude Code 的大型通用 skill 库（能力面广）;Compound Engineering 是更紧凑、有明确主张的六步*循环*，且带一个显式的知识沉淀步骤。 |
-| [SuperClaude Framework](superclaude.zh.md) | ✅ | persona/命令框架，配置和 slash 命令丰富，主要面向 Claude;CE 更精简、呈循环形态，且明确多宿主（Codex/Cursor/Kimi/Droid/……）。 |
-| get-shit-done | ✅ | 另一个有主张的 agent 工作流/skill-pack;plan-execute 精神有重叠——对比命令粒度，以及它是否像 CE 的 `/ce-compound` 一样持久化经验。 |
-| [ECC](ecc.zh.md) | ✅ | 本分类下的同类方法论；对构建循环的框定不同——按哪套工作流词汇和持久化模型适合你来选。 |
-| [12-Factor Agents](12-factor-agents.zh.md) | ✅ | 一套构建 agent 的设计*原则*（文档/宣言），不是可安装的逐会话循环；CE 是你在干活时调用的、可运行的插件。 |
-| Spec Kit(GitHub) | 未收录 | spec 驱动开发工具包（spec→plan→tasks），自带 CLI；规划优先的气质相近，但较少涉及 CE 那种跨众多宿主的逐循环经验沉淀。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [Superpowers](superpowers.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“面向 Claude Code 的大型通用 skill 库（能力面广）”，再选 Superpowers。 | 面向 Claude Code 的大型通用 skill 库（能力面广）;Compound Engineering 是更紧凑、有明确主张的六步*循环*，且带一个显式的知识沉淀步骤。 |
+| [SuperClaude Framework](superclaude.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“persona/命令框架，配置和 slash 命令丰富，主要面向 Claude”，再选 SuperClaude Framework。 | persona/命令框架，配置和 slash 命令丰富，主要面向 Claude;CE 更精简、呈循环形态，且明确多宿主（Codex/Cursor/Kimi/Droid/……）。 |
+| get-shit-done | ✅ | 当前页用于它的主场景；如果更看重“另一个有主张的 agent 工作流/skill-pack”，再选 get-shit-done。 | 另一个有主张的 agent 工作流/skill-pack;plan-execute 精神有重叠——对比命令粒度，以及它是否像 CE 的 `/ce-compound` 一样持久化经验。 |
+| [ECC](ecc.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“本分类下的同类方法论”，再选 ECC。 | 本分类下的同类方法论；对构建循环的框定不同——按哪套工作流词汇和持久化模型适合你来选。 |
+| [12-Factor Agents](12-factor-agents.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“一套构建 agent 的设计*原则*（文档/宣言），不是可安装的逐会话循环”，再选 12-Factor Agents。 | 一套构建 agent 的设计*原则*（文档/宣言），不是可安装的逐会话循环；CE 是你在干活时调用的、可运行的插件。 |
+| Spec Kit(GitHub) | 未收录 | 当前页用于它的主场景；如果更看重“spec 驱动开发工具包（spec→plan→tasks），自带 CLI”，再选 Spec Kit(GitHub)。 | spec 驱动开发工具包（spec→plan→tasks），自带 CLI；规划优先的气质相近，但较少涉及 CE 那种跨众多宿主的逐循环经验沉淀。 |
 
 ## 健康度与可持续性
 

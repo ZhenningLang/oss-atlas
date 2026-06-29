@@ -9,6 +9,11 @@ license: MIT
 maturity: abandoned — archived 2019-07 (last pushed 2019-07, ~7y frozen); built on the same now-defunct WeChat web protocol as ItChat, mostly non-functional for new accounts (2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2019-07-14T17:59:47Z
+  default_branch: master
+  default_branch_sha: ab63e12da822dc85615fa203e5be9fa28ae0b59f
+  archived: true
 health:
   schema: 1
   computed_at: 2026-06-29T09:55:17Z
@@ -86,12 +91,12 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| [ItChat](itchat.zh.md) | 已收录 | wxpy **自己的基座层**——wxpy 封装的那个更底层的网页版微信库。同样已废弃、同样在已死的网页协议上不可用；wxpy 在其上加了一套更好的对象 API，却继承了 ItChat 的*每一个*可持续性问题，外加它自己 2019 年的 archive。严格处于下游——新项目里没有理由用 wxpy 而不用其中任何一个。 |
-| wechaty | 未收录 | 维护活跃的多语言（TS/Python/Go/Java）对话机器人框架，采用可插拔的 "puppet"；是个人号风格微信机器人事实上的后继者，但仍依赖非官方 / 第三方接入通道，承担同样的 ToS / 封号风险——选 puppet 要谨慎。 |
-| 企业微信 / WeChat Work 官方 API | 未收录 | 腾讯**官方、受认可**的企业消息 API；稳定且有支持，但它自动化的是*企业微信*账号 / 通讯录，而非任意个人微信号——是另一套（合规的）面，并非平替。 |
-| 微信公众号 / 小程序服务端 API | 未收录 | 面向*公众号*和小程序的官方服务端 API；完全受支持，但属于另一种产品面（广播 / 服务号），不是个人号的 1:1 IM 自动化。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [ItChat](itchat.zh.md) | 已收录 | 当前页用于它的主场景；如果更看重“wxpy **自己的基座层**”，再选 ItChat。 | wxpy **自己的基座层**——wxpy 封装的那个更底层的网页版微信库。同样已废弃、同样在已死的网页协议上不可用；wxpy 在其上加了一套更好的对象 API，却继承了 ItChat 的*每一个*可持续性问题，外加它自己 2019 年的 archive。严格处于下游——新项目里没有理由用 wxpy 而不用其中任何一个。 |
+| wechaty | 未收录 | 当前页用于它的主场景；如果更看重“维护活跃的多语言（TS/Python/Go/Java）对话机器人框架，采用可插拔的 "puppet"”，再选 wechaty。 | 维护活跃的多语言（TS/Python/Go/Java）对话机器人框架，采用可插拔的 "puppet"；是个人号风格微信机器人事实上的后继者，但仍依赖非官方 / 第三方接入通道，承担同样的 ToS / 封号风险——选 puppet 要谨慎。 |
+| 企业微信 / WeChat Work 官方 API | 未收录 | 当前页用于它的主场景；如果更看重“腾讯**官方、受认可**的企业消息 API”，再选 企业微信 / WeChat Work 官方 API。 | 腾讯**官方、受认可**的企业消息 API；稳定且有支持，但它自动化的是*企业微信*账号 / 通讯录，而非任意个人微信号——是另一套（合规的）面，并非平替。 |
+| 微信公众号 / 小程序服务端 API | 未收录 | 当前页用于它的主场景；如果更看重“面向*公众号*和小程序的官方服务端 API”，再选 微信公众号 / 小程序服务端 API。 | 面向*公众号*和小程序的官方服务端 API；完全受支持，但属于另一种产品面（广播 / 服务号），不是个人号的 1:1 IM 自动化。 |
 
 ## 技术栈
 

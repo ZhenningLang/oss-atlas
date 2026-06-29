@@ -9,6 +9,11 @@ license: MIT
 maturity: v2.3.6, active, beta (2026-06)
 last_verified: 2026-06-26
 type: tool
+upstream:
+  pushed_at: 2026-06-14T17:20:41Z
+  default_branch: main
+  default_branch_sha: b72413cbd34a4ac08cc60dcdd42df1d02f3fc77d
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:13:29Z
@@ -89,14 +94,14 @@ It's also a fit when you want risk-scored PR review *in CI without sending code 
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [FalkorDB](falkordb.md) | ✅ | A real Redis-based property graph DB with Cypher + vector search you query directly; a *substrate*, not a turnkey code-context tool. code-review-graph gives you the whole AST→graph→MCP pipeline out of the box but on its own fixed SQLite store. |
-| [graphify](graphify.md) | ✅ | Also turns a codebase into a graph for agent retrieval; overlapping intent. code-review-graph leans hard into blast-radius/review + an MCP server, broad language coverage, and a CI Action. Compare scope/maturity directly. |
-| [PageIndex](pageindex.md) | ✅ | Reasoning-based hierarchical retrieval over *documents* (PDFs, long text), no vector DB; different input domain — prose, not source ASTs. |
-| Sourcegraph / SCIP | 未收录 | Mature, multi-repo code intelligence and indexing at scale; heavier infra, not a local single-binary MCP context-reducer aimed at agent token budgets. |
-| Serena (MCP) | 未收录 | LSP-backed semantic code MCP server for agents; symbol/LSP-driven rather than a persisted Tree-sitter graph with blast-radius + community/risk analysis. |
-| GraphRAG (Microsoft) | 未收录 | LLM-built entity/community graph for document RAG; aimed at unstructured corpora, not deterministic AST-derived code graphs. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [FalkorDB](falkordb.md) | ✅ | Use this page for its stated niche; choose FalkorDB when you need a real Redis-based property graph DB with Cypher + vector search you query directly. | A real Redis-based property graph DB with Cypher + vector search you query directly; a *substrate*, not a turnkey code-context tool. code-review-graph gives you the whole AST→graph→MCP pipeline out of the box but on its own fixed SQLite store. |
+| [graphify](graphify.md) | ✅ | Use this page for its stated niche; choose graphify when you need also turns a codebase into a graph for agent retrieval. | Also turns a codebase into a graph for agent retrieval; overlapping intent. code-review-graph leans hard into blast-radius/review + an MCP server, broad language coverage, and a CI Action. Compare scope/maturity directly. |
+| [PageIndex](pageindex.md) | ✅ | Use this page for its stated niche; choose PageIndex when you need reasoning-based hierarchical retrieval over *documents* (PDFs, long text), no vector DB. | Reasoning-based hierarchical retrieval over *documents* (PDFs, long text), no vector DB; different input domain — prose, not source ASTs. |
+| Sourcegraph / SCIP | 未收录 | Use this page for its stated niche; choose Sourcegraph / SCIP when you need mature, multi-repo code intelligence and indexing at scale. | Mature, multi-repo code intelligence and indexing at scale; heavier infra, not a local single-binary MCP context-reducer aimed at agent token budgets. |
+| Serena (MCP) | 未收录 | Use this page for its stated niche; choose Serena (MCP) when you need LSP-backed semantic code MCP server for agents. | LSP-backed semantic code MCP server for agents; symbol/LSP-driven rather than a persisted Tree-sitter graph with blast-radius + community/risk analysis. |
+| GraphRAG (Microsoft) | 未收录 | Use this page for its stated niche; choose GraphRAG (Microsoft) when you need LLM-built entity/community graph for document RAG. | LLM-built entity/community graph for document RAG; aimed at unstructured corpora, not deterministic AST-derived code graphs. |
 
 ## Tech stack
 

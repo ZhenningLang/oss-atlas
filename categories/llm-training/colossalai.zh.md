@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: active (2026-05); ~41.4k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: framework
+upstream:
+  pushed_at: 2026-05-25T17:39:11Z
+  default_branch: main
+  default_branch_sha: 4f9953be335ef371b3848719ddafe596c01ecd37
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:58:15Z
@@ -86,13 +91,13 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-| --- | --- | --- |
-| DeepSpeed | 未收录 | 参考级的 ZeRO / offload 栈（微软）；生产履历最深、生态最广。Colossal-AI 在 ZeRO + offload 上高度重叠，并加上自己的张量 / 流水线 / 序列并行 plugin 和 Booster API；在 DeepSpeed 已经跑起来的地方，它是更稳的默认。 |
-| Megatron-LM | 未收录 | NVIDIA 面向超大 transformer 预训练的高性能张量 + 流水线并行；规模化吞吐属顶级，但更底层、更定制。Colossal-AI 想在类似思路之上提供更友好、更可组合的 plugin 面。 |
-| PyTorch FSDP | 未收录 | 内置于 PyTorch 的全分片数据并行——不用额外框架、原生、支持良好。Colossal-AI 提供更宽的并行菜单（张量 / 流水线 / 序列 + Gemini offload），超出 FSDP 的纯切分，代价是多一个依赖。 |
-| [LlamaFactory](llamafactory.zh.md) | ✅ | 配置 / UI 驱动、覆盖 100+ 模型的微调（分布式靠包装 DeepSpeed/FSDP）。它更高层、对 SFT/LoRA 更开箱即用；Colossal-AI 是面向大规模 / 全参训练的更底层分布式引擎，而非微调前端。 |
-| [Unsloth](unsloth.zh.md) | ✅ | 靠自定义核在单卡上做 LoRA/QLoRA 提速、省显存。处在光谱另一端：一张卡 vs Colossal-AI 的多卡集群切分——完全是两个问题。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| DeepSpeed | 未收录 | 当前页用于它的主场景；如果更看重“参考级的 ZeRO / offload 栈（微软）”，再选 DeepSpeed。 | 参考级的 ZeRO / offload 栈（微软）；生产履历最深、生态最广。Colossal-AI 在 ZeRO + offload 上高度重叠，并加上自己的张量 / 流水线 / 序列并行 plugin 和 Booster API；在 DeepSpeed 已经跑起来的地方，它是更稳的默认。 |
+| Megatron-LM | 未收录 | 当前页用于它的主场景；如果更看重“NVIDIA 面向超大 transformer 预训练的高性能张量 + 流水线并行”，再选 Megatron-LM。 | NVIDIA 面向超大 transformer 预训练的高性能张量 + 流水线并行；规模化吞吐属顶级，但更底层、更定制。Colossal-AI 想在类似思路之上提供更友好、更可组合的 plugin 面。 |
+| PyTorch FSDP | 未收录 | 当前页用于它的主场景；如果更看重“内置于 PyTorch 的全分片数据并行”，再选 PyTorch FSDP。 | 内置于 PyTorch 的全分片数据并行——不用额外框架、原生、支持良好。Colossal-AI 提供更宽的并行菜单（张量 / 流水线 / 序列 + Gemini offload），超出 FSDP 的纯切分，代价是多一个依赖。 |
+| [LlamaFactory](llamafactory.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“配置 / UI 驱动、覆盖 100+ 模型的微调（分布式靠包装 DeepSpeed/FSDP）”，再选 LlamaFactory。 | 配置 / UI 驱动、覆盖 100+ 模型的微调（分布式靠包装 DeepSpeed/FSDP）。它更高层、对 SFT/LoRA 更开箱即用；Colossal-AI 是面向大规模 / 全参训练的更底层分布式引擎，而非微调前端。 |
+| [Unsloth](unsloth.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“靠自定义核在单卡上做 LoRA/QLoRA 提速、省显存”，再选 Unsloth。 | 靠自定义核在单卡上做 LoRA/QLoRA 提速、省显存。处在光谱另一端：一张卡 vs Colossal-AI 的多卡集群切分——完全是两个问题。 |
 
 ## 技术栈
 

@@ -9,6 +9,11 @@ license: NONE
 maturity: PyPI package, last commit 2023-09 (likely coasting), 2.5k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2023-09-15T04:10:37Z
+  default_branch: master
+  default_branch_sha: defae2e431751e28a78db1c68f83a5b9c1062c5d
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:22:53Z
@@ -77,13 +82,13 @@ It fits academic/research use specifically — the README is explicit that the d
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| AKShare | 未收录 | The dominant, actively maintained Chinese open financial/economic data library; far broader catalog and a much larger community — generally the better-maintained choice for the same job. |
-| Tushare | 未收录 | Long-standing Chinese financial-data library (much of it token/points-gated now); strong on markets data, more commercial gating than gopup. |
-| baostock | 未收录 | Free Chinese stock/market history data; narrower (markets-only) but stable interface. |
-| pandas-datareader | 未收录 | Maintained generic reader for (mostly Western) economic/market sources into DataFrames; same DataFrame ergonomics, different (global) source set. |
-| [requests-html](requests-html.md) | ✅ | Generic scraping building block — you'd reimplement each source yourself; gopup is the pre-built catalog over many sources. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| AKShare | 未收录 | Use this page for its stated niche; choose AKShare when you need the dominant, actively maintained Chinese open financial/economic data library. | The dominant, actively maintained Chinese open financial/economic data library; far broader catalog and a much larger community — generally the better-maintained choice for the same job. |
+| Tushare | 未收录 | Use this page for its stated niche; choose Tushare when you need long-standing Chinese financial-data library (much of it token/points-gated now). | Long-standing Chinese financial-data library (much of it token/points-gated now); strong on markets data, more commercial gating than gopup. |
+| baostock | 未收录 | Use this page for its stated niche; choose baostock when you need free Chinese stock/market history data. | Free Chinese stock/market history data; narrower (markets-only) but stable interface. |
+| pandas-datareader | 未收录 | Use this page for its stated niche; choose pandas-datareader when you need maintained generic reader for (mostly Western) economic/market sources into DataFrames. | Maintained generic reader for (mostly Western) economic/market sources into DataFrames; same DataFrame ergonomics, different (global) source set. |
+| [requests-html](requests-html.md) | ✅ | Use this page for its stated niche; choose requests-html when you need generic scraping building block. | Generic scraping building block — you'd reimplement each source yourself; gopup is the pre-built catalog over many sources. |
 
 ## Tech stack
 

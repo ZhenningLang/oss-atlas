@@ -9,6 +9,11 @@ license: MIT
 maturity: v1.2a, stalled (last push 2024-04)
 last_verified: 2026-06-28
 type: app
+upstream:
+  pushed_at: 2024-04-25T10:42:31Z
+  default_branch: main
+  default_branch_sha: 30aace450eb4a0b70ea68d322be93a9b2ad87647
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:39:23Z
@@ -76,12 +81,12 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| Krita ＋ AI Diffusion 插件 | 未收录 | 完整绘画应用，配 SD 插件，在真正的美术工具里实时生成；画布丰富得多、安装更重、开发更活跃。 |
-| ComfyUI | 未收录 | 节点图式 SD 前端，灵活度极高、生态活跃；强大但不是「边画边看」的涂鸦循环。 |
-| AUTOMATIC1111 WebUI（img2img / sketch 标签） | 未收录 | SdPaint 所依托的后端；浏览器内也能做草图→图像，但点 Generate 的循环不如逐笔流式那样即时。 |
-| 任意 SD UI 里的 ControlNet scribble | 未收录 | SdPaint 封装的底层技术；到处都有，但没有 SdPaint 的实时绘画前端。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| Krita ＋ AI Diffusion 插件 | 未收录 | 当前页用于它的主场景；如果更看重“完整绘画应用，配 SD 插件，在真正的美术工具里实时生成”，再选 Krita ＋ AI Diffusion 插件。 | 完整绘画应用，配 SD 插件，在真正的美术工具里实时生成；画布丰富得多、安装更重、开发更活跃。 |
+| ComfyUI | 未收录 | 当前页用于它的主场景；如果更看重“节点图式 SD 前端，灵活度极高、生态活跃”，再选 ComfyUI。 | 节点图式 SD 前端，灵活度极高、生态活跃；强大但不是「边画边看」的涂鸦循环。 |
+| AUTOMATIC1111 WebUI（img2img / sketch 标签） | 未收录 | 当前页用于它的主场景；如果更看重“SdPaint 所依托的后端”，再选 AUTOMATIC1111 WebUI（img2img / sketch 标签）。 | SdPaint 所依托的后端；浏览器内也能做草图→图像，但点 Generate 的循环不如逐笔流式那样即时。 |
+| 任意 SD UI 里的 ControlNet scribble | 未收录 | 当前页用于它的主场景；如果更看重“SdPaint 封装的底层技术”，再选 任意 SD UI 里的 ControlNet scribble。 | SdPaint 封装的底层技术；到处都有，但没有 SdPaint 的实时绘画前端。 |
 
 ## 技术栈
 

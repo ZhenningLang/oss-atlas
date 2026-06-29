@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v1.7 models, active, ~8.3k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: framework
+upstream:
+  pushed_at: 2026-04-25T05:23:54Z
+  default_branch: main
+  default_branch_sha: 370f98361553ddf787bedc5745760e04114cb161
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:45:45Z
@@ -87,12 +92,12 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| OpenAI / Gemini "Deep Research" | 未收录 | 托管、开箱即用、质量强、无需自己跑 GPU；但闭源、按用量付费、不能自托管或控制模型——与 MiroThinker 取舍相反。 |
-| GPT-Researcher | 未收录 | 轻量的开源研究 agent，编排一个冻结的 LLM API + 网络工具；跑起来便宜得多（无自托管权重），但没有自己的微调模型或基准调优框架。 |
-| smolagents / LangGraph + 工具 | 未收录 | 你在其上自行组装研究循环的通用 agent 框架；更灵活、模型无关，但研究管线和调优要你自己搭。 |
-| Open Deep Research（HF） | 未收录 | 在 API 模型上对 deep-research agent 的开源复现；开源精神相近，但栈不同，且（通常）没有自托管的微调权重。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| OpenAI / Gemini "Deep Research" | 未收录 | 当前页用于它的主场景；如果更看重“托管、开箱即用、质量强、无需自己跑 GPU”，再选 OpenAI / Gemini "Deep Research"。 | 托管、开箱即用、质量强、无需自己跑 GPU；但闭源、按用量付费、不能自托管或控制模型——与 MiroThinker 取舍相反。 |
+| GPT-Researcher | 未收录 | 当前页用于它的主场景；如果更看重“轻量的开源研究 agent，编排一个冻结的 LLM API + 网络工具”，再选 GPT-Researcher。 | 轻量的开源研究 agent，编排一个冻结的 LLM API + 网络工具；跑起来便宜得多（无自托管权重），但没有自己的微调模型或基准调优框架。 |
+| smolagents / LangGraph + 工具 | 未收录 | 当前页用于它的主场景；如果更看重“你在其上自行组装研究循环的通用 agent 框架”，再选 smolagents / LangGraph + 工具。 | 你在其上自行组装研究循环的通用 agent 框架；更灵活、模型无关，但研究管线和调优要你自己搭。 |
+| Open Deep Research（HF） | 未收录 | 当前页用于它的主场景；如果更看重“在 API 模型上对 deep-research agent 的开源复现”，再选 Open Deep Research（HF）。 | 在 API 模型上对 deep-research agent 的开源复现；开源精神相近，但栈不同，且（通常）没有自托管的微调权重。 |
 
 ## 技术栈
 

@@ -9,6 +9,11 @@ license: MIT
 maturity: v3.14.3, active (2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+upstream:
+  pushed_at: 2026-06-29T07:48:58Z
+  default_branch: main
+  default_branch_sha: f8e90d11fe6c4f034ccb450f0f3302f3d33dc21a
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:07:24Z
@@ -80,14 +85,14 @@ Compound Engineering installs as a plugin via your agent's marketplace (`/plugin
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [Superpowers](superpowers.md) | ✅ | Large general-purpose skill library for Claude Code (broad capability surface); Compound Engineering is a tighter, opinionated 6-step *loop* with an explicit knowledge-capture step. |
-| [SuperClaude Framework](superclaude.md) | ✅ | Persona/command framework with rich config and slash commands, primarily Claude-centric; CE is leaner, loop-shaped, and explicitly multi-host (Codex/Cursor/Kimi/Droid/…). |
-| [get-shit-done](get-shit-done.md) | ✅ | Another opinionated agent workflow/skill-pack; overlapping plan-execute spirit — compare command granularity and whether it persists learnings like CE's `/ce-compound`. |
-| [ECC](ecc.md) | ✅ | Sibling methodology in this category; different framing of the build loop — pick by which workflow vocabulary and persistence model fits you. |
-| [12-Factor Agents](12-factor-agents.md) | ✅ | A set of design *principles* for building agents (a document/manifesto), not an installable per-session loop; CE is the runnable plugin you invoke during work. |
-| Spec Kit (GitHub) | 未收录 | Spec-driven dev toolkit (spec→plan→tasks) with its own CLI; comparable planning-first ethos, less about per-loop learning capture across many host agents. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [Superpowers](superpowers.md) | ✅ | Use this page for its stated niche; choose Superpowers when you need large general-purpose skill library for Claude Code (broad capability surface). | Large general-purpose skill library for Claude Code (broad capability surface); Compound Engineering is a tighter, opinionated 6-step *loop* with an explicit knowledge-capture step. |
+| [SuperClaude Framework](superclaude.md) | ✅ | Use this page for its stated niche; choose SuperClaude Framework when you need persona/command framework with rich config and slash commands, primarily Claude-centric. | Persona/command framework with rich config and slash commands, primarily Claude-centric; CE is leaner, loop-shaped, and explicitly multi-host (Codex/Cursor/Kimi/Droid/…). |
+| [get-shit-done](get-shit-done.md) | ✅ | Use this page for its stated niche; choose get-shit-done when you need another opinionated agent workflow/skill-pack. | Another opinionated agent workflow/skill-pack; overlapping plan-execute spirit — compare command granularity and whether it persists learnings like CE's `/ce-compound`. |
+| [ECC](ecc.md) | ✅ | Use this page for its stated niche; choose ECC when you need sibling methodology in this category. | Sibling methodology in this category; different framing of the build loop — pick by which workflow vocabulary and persistence model fits you. |
+| [12-Factor Agents](12-factor-agents.md) | ✅ | Use this page for its stated niche; choose 12-Factor Agents when you need a set of design *principles* for building agents (a document/manifesto), not an installable per-sess. | A set of design *principles* for building agents (a document/manifesto), not an installable per-session loop; CE is the runnable plugin you invoke during work. |
+| Spec Kit (GitHub) | 未收录 | Use this page for its stated niche; choose Spec Kit (GitHub) when you need spec-driven dev toolkit (spec→plan→tasks) with its own CLI. | Spec-driven dev toolkit (spec→plan→tasks) with its own CLI; comparable planning-first ethos, less about per-loop learning capture across many host agents. |
 
 ## Health & viability
 

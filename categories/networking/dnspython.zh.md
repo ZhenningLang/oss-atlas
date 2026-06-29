@@ -9,6 +9,11 @@ license: ISC
 maturity: v2.8.0 (2025-09), active, ~2.7k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2026-06-28T01:01:37Z
+  default_branch: main
+  default_branch_sha: fa5e8ccc1df870b70ec514865f9d5e703917a234
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:05:41Z
@@ -86,12 +91,12 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| `socket.getaddrinfo`（标准库） | 未收录 | 零依赖，用 OS 解析器 + `/etc/hosts`；但只做基础 A/AAAA 正/反向查询——没有记录类型、自定义服务器、DNSSEC 或加密传输。 |
-| `dig` / `drill` / `kdig`（CLI） | 未收录 | 从 shell 做交互/调试 DNS，功能完整；但它是要解析的 subprocess，不是类型化的 Python 内 API。 |
-| aiodns / pycares | 未收录 | 经 C-Ares 库的异步 DNS——异步解析快，但只是薄查询层，不是完整的报文/zone/DNSSEC 工具包。 |
-| `getdns` Python 绑定 | 未收录 | 绑定 getdns C 库，带 stub-resolver/DNSSEC 特性；原生依赖，Python 生态比 dnspython 小。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| `socket.getaddrinfo`（标准库） | 未收录 | 当前页用于它的主场景；如果更看重“零依赖，用 OS 解析器 + `/etc/hosts`”，再选 socket.getaddrinfo（标准库）。 | 零依赖，用 OS 解析器 + `/etc/hosts`；但只做基础 A/AAAA 正/反向查询——没有记录类型、自定义服务器、DNSSEC 或加密传输。 |
+| `dig` / `drill` / `kdig`（CLI） | 未收录 | 当前页用于它的主场景；如果更看重“从 shell 做交互/调试 DNS，功能完整”，再选 dig / drill / kdig（CLI）。 | 从 shell 做交互/调试 DNS，功能完整；但它是要解析的 subprocess，不是类型化的 Python 内 API。 |
+| aiodns / pycares | 未收录 | 当前页用于它的主场景；如果更看重“经 C-Ares 库的异步 DNS”，再选 aiodns / pycares。 | 经 C-Ares 库的异步 DNS——异步解析快，但只是薄查询层，不是完整的报文/zone/DNSSEC 工具包。 |
+| `getdns` Python 绑定 | 未收录 | 当前页用于它的主场景；如果更看重“绑定 getdns C 库，带 stub-resolver/DNSSEC 特性”，再选 getdns Python 绑定。 | 绑定 getdns C 库，带 stub-resolver/DNSSEC 特性；原生依赖，Python 生态比 dnspython 小。 |
 
 ## 技术栈
 

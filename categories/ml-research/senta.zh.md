@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: research release (ACL 2020 SKEP), idle since ~2024-08, ~2.0k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2024-08-20T16:16:48Z
+  default_branch: master
+  default_branch_sha: e5294c00a6ffc4b1284f38000f0fbf24d6554c22
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:05:12Z
@@ -76,12 +81,12 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| Hugging Face 情感模型 | 未收录 | PyTorch/Transformers 上海量微调好的情感模型（含中文），安装极简；不是 SKEP 这个具体方法，但采用与维护都容易得多。 |
-| PaddleNLP / ERNIE | 未收录 | 百度在 Paddle 2.x 上积极维护的后继 NLP 栈；当下百度 NLP（含情感）开发实际发生的地方——Senta 是更老、已冻结的同门。 |
-| SnowNLP / cnsenti | 未收录 | 轻量中文情感库（词典/经典 ML）；跑起来极简，远弱于预训练 transformer——精度/成本权衡的另一端。 |
-| [CLIP](clip.zh.md) | ✅ | 模态无关（视觉语言）但同一货架——机构发布的参考模型，资产是*checkpoint 加论文*，而非活跃的库维护。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| Hugging Face 情感模型 | 未收录 | 当前页用于它的主场景；如果更看重“PyTorch/Transformers 上海量微调好的情感模型（含中文），安装极简”，再选 Hugging Face 情感模型。 | PyTorch/Transformers 上海量微调好的情感模型（含中文），安装极简；不是 SKEP 这个具体方法，但采用与维护都容易得多。 |
+| PaddleNLP / ERNIE | 未收录 | 当前页用于它的主场景；如果更看重“百度在 Paddle 2”，再选 PaddleNLP / ERNIE。 | 百度在 Paddle 2.x 上积极维护的后继 NLP 栈；当下百度 NLP（含情感）开发实际发生的地方——Senta 是更老、已冻结的同门。 |
+| SnowNLP / cnsenti | 未收录 | 当前页用于它的主场景；如果更看重“轻量中文情感库（词典/经典 ML）”，再选 SnowNLP / cnsenti。 | 轻量中文情感库（词典/经典 ML）；跑起来极简，远弱于预训练 transformer——精度/成本权衡的另一端。 |
+| [CLIP](clip.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“模态无关（视觉语言）但同一货架”，再选 CLIP。 | 模态无关（视觉语言）但同一货架——机构发布的参考模型，资产是*checkpoint 加论文*，而非活跃的库维护。 |
 
 ## 技术栈
 

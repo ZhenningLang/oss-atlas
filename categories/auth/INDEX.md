@@ -5,18 +5,18 @@
 
 ## Projects in this category
 
-| Project | Use when | Page |
-|---|---|---|
-| **Authomatic** | Use it when a framework-agnostic Python app needs thin "sign in with X" via OAuth1/OAuth2/OpenID, leaving session persistence to you — but it's low-velocity and an auth lib's slow fix cadence is a security risk. | [→](authomatic.md) |
-| **django-rules** | Use it when Django object-level permissions are computed from logic (predicates), not stored grants, with no DB tables — but if admins must assign per-object permissions at runtime you need django-guardian instead. | [→](django-rules.md) |
+| Project | Use when | Health | Page |
+| --- | --- | --- | --- |
+| **Authomatic** | Use it when a framework-agnostic Python app needs thin "sign in with X" via OAuth1/OAuth2/OpenID, leaving session persistence to you — but it's low-velocity and an auth lib's slow fix cadence is a security risk. | C (5/6) | [→](authomatic.md) |
+| **django-rules** | Use it when Django object-level permissions are computed from logic (predicates), not stored grants, with no DB tables — but if admins must assign per-object permissions at runtime you need django-guardian instead. | B (5/6) | [→](django-rules.md) |
 
 ## Comparison matrix
 
-| Option | Indexed | One-line tradeoff |
-|---|---|---|
-| [Authomatic](authomatic.md) | ✅ | Use it when a framework-agnostic Python app needs thin "sign in with X" via OAuth1/OAuth2/OpenID, leaving session persistence to you — but it's low-velocity and an auth lib's slow fix cadence is a security risk. |
-| [django-rules](django-rules.md) | ✅ | Use it when Django object-level permissions are computed from logic (predicates), not stored grants, with no DB tables — but if admins must assign per-object permissions at runtime you need django-guardian instead. |
-| (alternatives named across the pages) | 未收录 | Substitutes referenced in each page's Comparison. |
+| Option | Indexed | Health | One-line tradeoff |
+| --- | --- | --- | --- |
+| [Authomatic](authomatic.md) | ✅ | C (5/6) | Use it when a framework-agnostic Python app needs thin "sign in with X" via OAuth1/OAuth2/OpenID, leaving session persistence to you — but it's low-velocity and an auth lib's slow fix cadence is a security risk. |
+| [django-rules](django-rules.md) | ✅ | B (5/6) | Use it when Django object-level permissions are computed from logic (predicates), not stored grants, with no DB tables — but if admins must assign per-object permissions at runtime you need django-guardian instead. |
+| (alternatives named across the pages) | 未收录 | — | Substitutes referenced in each page's Comparison. |
 
 ## What belongs here
 

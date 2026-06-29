@@ -9,6 +9,11 @@ license: GPL-3.0
 maturity: v2.6.2 (2023-01), commits ongoing to 2026-04, ~2.6k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: tool
+upstream:
+  pushed_at: 2026-04-12T02:28:43Z
+  default_branch: master
+  default_branch_sha: 8c293a46843c818bea2c2013db38191867993a14
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:59:43Z
@@ -86,12 +91,12 @@ It's the right reach when you want a *scriptable, reproducible* Reddit archive �
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| gallery-dl | 未收录 | Broad multi-site media downloader (Reddit among many); strong for *files* across the web, but weaker at Reddit-specific metadata/comment archiving and the three-mode download/archive/clone model. |
-| redditdownloader (shadowmoose) | 未收录 | Another dedicated Reddit downloader with a web UI; more approachable for non-CLI users, but BDFR's scriptable CLI + YAML config suits automation better. [未验证] |
-| Pushshift dumps / PRAW scripts | 未收录 | Going straight to data dumps or the API yourself bypasses tooling and the ~1000 cap (dumps) but is roll-your-own — BDFR packages resolvers, dedup, naming, and logging for you. |
-| yt-dlp (directly) | 未收录 | BDFR *uses* yt-dlp under the hood for hosted media; calling yt-dlp directly works for individual links but lacks Reddit-source enumeration, metadata archiving, and dedup. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| gallery-dl | 未收录 | Use this page for its stated niche; choose gallery-dl when you need broad multi-site media downloader (Reddit among many). | Broad multi-site media downloader (Reddit among many); strong for *files* across the web, but weaker at Reddit-specific metadata/comment archiving and the three-mode download/archive/clone model. |
+| redditdownloader (shadowmoose) | 未收录 | Use this page for its stated niche; choose redditdownloader (shadowmoose) when you need another dedicated Reddit downloader with a web UI. | Another dedicated Reddit downloader with a web UI; more approachable for non-CLI users, but BDFR's scriptable CLI + YAML config suits automation better. [未验证] |
+| Pushshift dumps / PRAW scripts | 未收录 | Use this page for its stated niche; choose Pushshift dumps / PRAW scripts when you need going straight to data dumps or the API yourself bypasses tooling and the ~1000 cap (dumps) but is r. | Going straight to data dumps or the API yourself bypasses tooling and the ~1000 cap (dumps) but is roll-your-own — BDFR packages resolvers, dedup, naming, and logging for you. |
+| yt-dlp (directly) | 未收录 | Use this page for its stated niche; choose yt-dlp (directly) when you need BDFR *uses* yt-dlp under the hood for hosted media. | BDFR *uses* yt-dlp under the hood for hosted media; calling yt-dlp directly works for individual links but lacks Reddit-source enumeration, metadata archiving, and dedup. |
 
 ## Tech stack
 

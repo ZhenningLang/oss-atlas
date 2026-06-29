@@ -9,6 +9,11 @@ license: MIT
 maturity: No tagged releases; commit-versioned, last push 2026-03-10; created 2024-08; Microsoft-maintained (as of 2026-06-26)
 last_verified: 2026-06-26
 type: framework
+upstream:
+  pushed_at: 2026-03-10T07:49:47Z
+  default_branch: main
+  default_branch_sha: 01eb415772c342d9f20dc42772f1583ae1e5b102
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:09:26Z
@@ -90,14 +95,14 @@ health:
 
 ## 横向对比
 
-| 替代品 | 已收录 | 取舍 |
-|---|---|---|
-| llama.cpp | 未收录 | BitNet 所派生的通用 CPU/GPU GGUF 运行时；能跑*任意*量化模型且远更成熟，但它的通用 1.5/2-bit 量化比不上 BitNet 为原生 1.58-bit 模型专门写的三值内核。 |
-| [LiteRT-LM](litert-lm.zh.md) | ✅ | 谷歌移动优先的端侧 LLM 运行时（以 Gemma 为主，Android/iOS/NPU）。移动 SDK 与加速器生态更好；但不像 BitNet 那样专攻三值 1-bit 模型与 CPU 能效。 |
-| [Google AI Edge Gallery](ai-edge-gallery.zh.md) | ✅ | 一个在 Android 上试玩端侧模型的演示应用/目录，不是 CPU 推理引擎——层次完全不同；与 BitNet 互补而非替代。 |
-| Microsoft T-MAC | 未收录 | BitNet 所借鉴查表方法的底层低 bit CPU 内核库；它是内核/库层，而 BitNet 是封装好的端到端三值推理框架。 |
-| MLX / mlx-lm（Apple） | 未收录 | Apple 芯片上快速推理，Python/Swift 体验干净、模型覆盖广，但仅限 Apple，且不专门针对三值 1-bit 权重。 |
-| Unsloth / GPTQ-AWQ 系 | 未收录 | 把普通模型事后量化到 4-bit；适用面广，但达不到 1.58-bit 原生的效率——量化哲学不同（事后压缩 vs 训练即三值）。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| llama.cpp | 未收录 | 当前页用于它的主场景；如果更看重“BitNet 所派生的通用 CPU/GPU GGUF 运行时”，再选 llama.cpp。 | BitNet 所派生的通用 CPU/GPU GGUF 运行时；能跑*任意*量化模型且远更成熟，但它的通用 1.5/2-bit 量化比不上 BitNet 为原生 1.58-bit 模型专门写的三值内核。 |
+| [LiteRT-LM](litert-lm.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“谷歌移动优先的端侧 LLM 运行时（以 Gemma 为主，Android/iOS/NPU）”，再选 LiteRT-LM。 | 谷歌移动优先的端侧 LLM 运行时（以 Gemma 为主，Android/iOS/NPU）。移动 SDK 与加速器生态更好；但不像 BitNet 那样专攻三值 1-bit 模型与 CPU 能效。 |
+| [Google AI Edge Gallery](ai-edge-gallery.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“一个在 Android 上试玩端侧模型的演示应用/目录，不是 CPU 推理引擎”，再选 Google AI Edge Gallery。 | 一个在 Android 上试玩端侧模型的演示应用/目录，不是 CPU 推理引擎——层次完全不同；与 BitNet 互补而非替代。 |
+| Microsoft T-MAC | 未收录 | 当前页用于它的主场景；如果更看重“BitNet 所借鉴查表方法的底层低 bit CPU 内核库”，再选 Microsoft T-MAC。 | BitNet 所借鉴查表方法的底层低 bit CPU 内核库；它是内核/库层，而 BitNet 是封装好的端到端三值推理框架。 |
+| MLX / mlx-lm（Apple） | 未收录 | 当前页用于它的主场景；如果更看重“Apple 芯片上快速推理，Python/Swift 体验干净、模型覆盖广，但仅限 Apple，且不专门针对三值 1-bit 权重”，再选 MLX / mlx-lm（Apple）。 | Apple 芯片上快速推理，Python/Swift 体验干净、模型覆盖广，但仅限 Apple，且不专门针对三值 1-bit 权重。 |
+| Unsloth / GPTQ-AWQ 系 | 未收录 | 当前页用于它的主场景；如果更看重“把普通模型事后量化到 4-bit”，再选 Unsloth / GPTQ-AWQ 系。 | 把普通模型事后量化到 4-bit；适用面广，但达不到 1.58-bit 原生的效率——量化哲学不同（事后压缩 vs 训练即三值）。 |
 
 ## 技术栈
 

@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v3.0.6 (2026-06), active, ~5.9k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2026-06-28T22:11:41Z
+  default_branch: master
+  default_branch_sha: a5da13adece530043e3a789cd27ba6bb088b3317
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:55:31Z
@@ -88,13 +93,13 @@ It also fits when you want lightweight admin without a JVM on the box: `kafka-py
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| confluent-kafka-python | 未收录 | Official Confluent client wrapping `librdkafka` (C) — highest throughput/latency and quickest protocol coverage, but needs the native lib and is less trivially portable than pure Python. |
-| aiokafka | 未收录 | Native `asyncio` Kafka client (built on kafka-python's lineage); the right pick for async-first apps, narrower surface than the sync client. |
-| [kafka-ui](kafka-ui.md) | ✅ | A web UI for cluster management, not a client library — complements rather than competes; different job entirely. |
-| Java/Scala official client | 未收录 | The reference implementation with first-class feature support and Kafka Streams, but JVM-only — not an option for a Python service. |
-| Sarama (Go) | 未收录 | Mature pure-Go Kafka client; same "no native dep" appeal but for Go, not Python. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| confluent-kafka-python | 未收录 | Use this page for its stated niche; choose confluent-kafka-python when you need official Confluent client wrapping `librdkafka` (C). | Official Confluent client wrapping `librdkafka` (C) — highest throughput/latency and quickest protocol coverage, but needs the native lib and is less trivially portable than pure Python. |
+| aiokafka | 未收录 | Use this page for its stated niche; choose aiokafka when you need native `asyncio` Kafka client (built on kafka-python's lineage). | Native `asyncio` Kafka client (built on kafka-python's lineage); the right pick for async-first apps, narrower surface than the sync client. |
+| [kafka-ui](kafka-ui.md) | ✅ | Use this page for its stated niche; choose kafka-ui when you need a web UI for cluster management, not a client library. | A web UI for cluster management, not a client library — complements rather than competes; different job entirely. |
+| Java/Scala official client | 未收录 | Use this page for its stated niche; choose Java/Scala official client when you need the reference implementation with first-class feature support and Kafka Streams, but JVM-only. | The reference implementation with first-class feature support and Kafka Streams, but JVM-only — not an option for a Python service. |
+| Sarama (Go) | 未收录 | Use this page for its stated niche; choose Sarama (Go) when you need mature pure-Go Kafka client. | Mature pure-Go Kafka client; same "no native dep" appeal but for Go, not Python. |
 
 ## Tech stack
 

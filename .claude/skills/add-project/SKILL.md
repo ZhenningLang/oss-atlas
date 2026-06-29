@@ -32,8 +32,9 @@ Author one conformant selection page. The contract is `tools/schema.md`; read it
 
 4. **Write the bilingual pair** `categories/<category>/<slug>.md` (English) **and**
    `categories/<category>/<slug>.zh.md` (Chinese) per schema:
-   - Frontmatter (identical in both): `name, slug(==base filename), repo, category(==leaf dir), tags,
-     language, license, maturity(dated), last_verified(today), type`.
+    - Frontmatter (identical in both): `name, slug(==base filename), repo, category(==leaf dir), tags,
+      language, license, maturity(dated), last_verified(today), type`, plus the required
+      `upstream:` snapshot and `health:` radar block.
    - `type` ∈ `tool | library | app | framework | service | model | skill-pack` — it decides which
      sections are required.
    - `# <name>` + one-line TL;DR in that file's language.
@@ -63,23 +64,29 @@ Author one conformant selection page. The contract is `tools/schema.md`; read it
      link targets, URLs, and frontmatter stay ASCII. The linter ERRORs on violations.
 
 5. **Wire it in.** Add the project to its `categories/<category>/INDEX.md` **and** `INDEX.zh.md`
-   (one-liner + comparison-matrix row in each) **and to the README master listing** (`README.md` +
-   `README.zh.md`). If new category, also add it to root `INDEX.md` + `INDEX.zh.md`. The linter
-   ERRORs if a page is missing from its INDEX or from either README, so nothing drifts silently.
+   (one-liner + comparison-matrix row in each, including `Health` / `健康度`) **and to the README
+   master listing** (`README.md` + `README.zh.md`). If new category, also add it to root `INDEX.md` +
+   `INDEX.zh.md`. The linter ERRORs if a page is missing from its INDEX or from either README, so
+   nothing drifts silently.
 
-6. **Health radar (automated — do not hand-grade).** Compute the 6-axis viability radar and embed
+6. **Upstream snapshot.** Record the cheap stale-check snapshot before finishing:
+   `python3 tools/upstream_snapshot.py --page categories/<category>/<slug>.md --apply --yes`.
+   This writes the same `upstream:` block into both siblings; `sync-entry` uses it to skip full
+   rereads when a stale page's upstream default-branch state has not changed.
+
+7. **Health radar (automated — do not hand-grade).** Compute the 6-axis viability radar and embed
    its card:
    - `python3 tools/health.py --page categories/<category>/<slug>.md --write` — scores the repo from
      GitHub + package registries (via the authenticated `gh` CLI) and writes the identical `health:`
      block into **both** the `.md` and `.zh.md` frontmatter. Never hand-author the grades.
-   - `python3 tools/health_card.py categories/<category>/<slug>.md` — regenerates
-     `assets/health/<slug>.svg` from that block.
+    - `python3 tools/health_card.py categories/<category>/<slug>.md categories/<category>/<slug>.zh.md`
+      — regenerates both `assets/health/<slug>.svg` and `assets/health/<slug>.zh.svg` from that block.
    - Embed the card once in **each** page, right after the TL;DR line:
-     `![<name> — health radar](../../assets/health/<slug>.svg)` (EN) /
-     `![<name> — 健康度雷达](../../assets/health/<slug>.svg)` (ZH).
+      `![<name> — health radar](../../assets/health/<slug>.svg)` (EN) /
+      `![<name> — 健康度雷达](../../assets/health/<slug>.zh.svg)` (ZH).
    See `docs/health-rubric.md` for the rubric (A–E + `?`; `?` is first-class, never a low score).
 
-7. **Lint.** `python3 tools/lint.py` — fix every ERROR before finishing.
+8. **Lint.** `python3 tools/lint.py` — fix every ERROR before finishing.
 
 ## Quality bar
 

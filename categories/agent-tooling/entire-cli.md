@@ -9,6 +9,11 @@ license: MIT
 maturity: v0.7.x line, active as of 2026-06 (latest release v0.7.7, 2026-06-18); pre-1.0
 last_verified: 2026-06-26
 type: tool
+upstream:
+  pushed_at: 2026-06-29T10:53:54Z
+  default_branch: main
+  default_branch_sha: 1514b12a453ecf5eb8133735971aaac106556c31
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:35:49Z
@@ -84,13 +89,13 @@ So you `entire enable` in the repo and point it at your agent. Now every session
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [beads](beads.md) | ✅ | Solves the adjacent problem: a dependency-aware *task graph* / structured agent memory (what to do next, what's blocked), backed by versioned SQL. Entire captures *what already happened* (transcripts/checkpoints) for provenance & rewind — complementary, not substitutes. |
-| [CCPM](ccpm.md) | ✅ | A Claude-Code project-management workflow (specs/issues/parallel agents via GitHub Issues). Process/coordination layer, not a session-transcript capture-and-rewind layer. |
-| Plain Git + agent's own session logs | 未收录 | Zero extra tooling, but agent logs are scattered per-tool, 未收录 to commits, not uniformly rewindable, and clutter or never reach the repo. Entire is the unifying capture/index layer. |
-| Specstory / agent transcript exporters | 未收录 | Other tools also persist agent chat transcripts, but typically as exported files/markdown rather than Git-checkpoint provenance tied to commits with a rewind mechanism. Verify feature parity before substituting. |
-| Reflog / `git stash` + manual snapshots | 未收录 | Native recovery primitives you already have, but they capture tree state only — no prompts/responses/tool-call context, no per-session indexing, no agent-aware redaction. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [beads](beads.md) | ✅ | Use this page for its stated niche; choose beads when you need solves the adjacent problem: a dependency-aware *task graph* / structured agent memory (what to do n. | Solves the adjacent problem: a dependency-aware *task graph* / structured agent memory (what to do next, what's blocked), backed by versioned SQL. Entire captures *what already happened* (transcripts/checkpoints) for provenance & rewind — complementary, not substitutes. |
+| [CCPM](ccpm.md) | ✅ | Use this page for its stated niche; choose CCPM when you need a Claude-Code project-management workflow (specs/issues/parallel agents via GitHub Issues). | A Claude-Code project-management workflow (specs/issues/parallel agents via GitHub Issues). Process/coordination layer, not a session-transcript capture-and-rewind layer. |
+| Plain Git + agent's own session logs | 未收录 | Use this page for its stated niche; choose Plain Git + agent's own session logs when you need zero extra tooling, but agent logs are scattered per-tool, 未收录 to commits, not uniformly rewindable,. | Zero extra tooling, but agent logs are scattered per-tool, 未收录 to commits, not uniformly rewindable, and clutter or never reach the repo. Entire is the unifying capture/index layer. |
+| Specstory / agent transcript exporters | 未收录 | Use this page for its stated niche; choose Specstory / agent transcript exporters when you need other tools also persist agent chat transcripts, but typically as exported files/markdown rather tha. | Other tools also persist agent chat transcripts, but typically as exported files/markdown rather than Git-checkpoint provenance tied to commits with a rewind mechanism. Verify feature parity before substituting. |
+| Reflog / `git stash` + manual snapshots | 未收录 | Use this page for its stated niche; choose Reflog / git stash + manual snapshots when you need native recovery primitives you already have, but they capture tree state only. | Native recovery primitives you already have, but they capture tree state only — no prompts/responses/tool-call context, no per-session indexing, no agent-aware redaction. |
 
 ## Tech stack
 

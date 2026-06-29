@@ -9,6 +9,11 @@ license: BSD-2-Clause
 maturity: v0.10.31 line, active, ~11.8k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2026-06-28T15:38:03Z
+  default_branch: master
+  default_branch_sha: bbed32a6e500895b248df915a3b77b5a2d1b285e
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:07:17Z
@@ -84,14 +89,14 @@ The decisive feature is the **cosocket** API: your Lua can open non-blocking TCP
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| OpenResty (bundle) | 未收录 | The full distribution that *ships* this module plus LuaJIT, lua-resty-* libraries, and a matched NGINX — in practice how you actually consume ngx_lua; this repo is one component of it. |
-| njs (nginx JavaScript) | 未收录 | NGINX's official scripting module using a JS subset; first-party and simpler to install, but a smaller ecosystem and less mature than the Lua/OpenResty world. |
-| nginx C modules | 未收录 | Maximum performance/control, but you write C and recompile NGINX for every change — the friction ngx_lua exists to remove. |
-| Envoy + Lua/Wasm filters | 未收录 | A different proxy with its own Lua and WebAssembly filter model; richer xDS/observability story, heavier to operate than NGINX+Lua. |
-| Caddy + plugins (Go) | 未收录 | Go-based server with a plugin model and automatic TLS; different language/ecosystem, less raw edge-scripting depth than ngx_lua. |
-| [lua-resty-redis](lua-resty-redis.md) | ✅ | Not an alternative — a *library that runs on top of* this module's cosocket API to talk to Redis; complementary. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| OpenResty (bundle) | 未收录 | Use this page for its stated niche; choose OpenResty (bundle) when you need the full distribution that *ships* this module plus LuaJIT, lua-resty-* libraries, and a matched NGI. | The full distribution that *ships* this module plus LuaJIT, lua-resty-* libraries, and a matched NGINX — in practice how you actually consume ngx_lua; this repo is one component of it. |
+| njs (nginx JavaScript) | 未收录 | Use this page for its stated niche; choose njs (nginx JavaScript) when you need NGINX's official scripting module using a JS subset. | NGINX's official scripting module using a JS subset; first-party and simpler to install, but a smaller ecosystem and less mature than the Lua/OpenResty world. |
+| nginx C modules | 未收录 | Use this page for its stated niche; choose nginx C modules when you need maximum performance/control, but you write C and recompile NGINX for every change. | Maximum performance/control, but you write C and recompile NGINX for every change — the friction ngx_lua exists to remove. |
+| Envoy + Lua/Wasm filters | 未收录 | Use this page for its stated niche; choose Envoy + Lua/Wasm filters when you need a different proxy with its own Lua and WebAssembly filter model. | A different proxy with its own Lua and WebAssembly filter model; richer xDS/observability story, heavier to operate than NGINX+Lua. |
+| Caddy + plugins (Go) | 未收录 | Use this page for its stated niche; choose Caddy + plugins (Go) when you need go-based server with a plugin model and automatic TLS. | Go-based server with a plugin model and automatic TLS; different language/ecosystem, less raw edge-scripting depth than ngx_lua. |
+| [lua-resty-redis](lua-resty-redis.md) | ✅ | Use this page for its stated niche; choose lua-resty-redis when you need not an alternative. | Not an alternative — a *library that runs on top of* this module's cosocket API to talk to Redis; complementary. |
 
 ## Tech stack
 

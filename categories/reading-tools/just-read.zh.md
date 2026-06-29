@@ -9,6 +9,11 @@ license: Unlicensed (EULA)
 maturity: active, single-maintainer, ~1.3k stars (2026-06)
 last_verified: 2026-06-28
 type: tool
+upstream:
+  pushed_at: 2026-05-22T01:33:38Z
+  default_branch: master
+  default_branch_sha: 246c7b35a63ce27fb13a00f8a4b1f76f2c61618a
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:15:25Z
@@ -89,13 +94,13 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| 浏览器内置阅读模式（Firefox/Safari/Edge） | 未收录 | 零安装、内建于浏览器；可定制性差得多，没有按站点选择器，没有编辑/高亮/摘要。 |
-| Mozilla Readability（库） | 未收录 | 许多阅读模式背后那个开源 MPL 解析引擎；是用来构建的库，不是开箱即用的扩展。 |
-| Postlight Reader（前 Mercury） | 未收录 | 开源的可读性扩展/解析器；许可更清晰，但维护没那么活跃、编辑/高亮特性更少。 |
-| Pocket / Instapaper / Wallabag | 未收录 | 带持久跨设备库的稍后读服务；更重（账号加后端）且面向保存而非原地重排（Wallabag 可自建）。 |
-| 各类 Reader View 扩展 | 未收录 | 存在很多小克隆；解析质量、许可与可信度参差不齐——Just Read 的优势在于定制和选择器记忆。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| 浏览器内置阅读模式（Firefox/Safari/Edge） | 未收录 | 当前页用于它的主场景；如果更看重“零安装、内建于浏览器”，再选 浏览器内置阅读模式（Firefox/Safari/Edge）。 | 零安装、内建于浏览器；可定制性差得多，没有按站点选择器，没有编辑/高亮/摘要。 |
+| Mozilla Readability（库） | 未收录 | 当前页用于它的主场景；如果更看重“许多阅读模式背后那个开源 MPL 解析引擎”，再选 Mozilla Readability（库）。 | 许多阅读模式背后那个开源 MPL 解析引擎；是用来构建的库，不是开箱即用的扩展。 |
+| Postlight Reader（前 Mercury） | 未收录 | 当前页用于它的主场景；如果更看重“开源的可读性扩展/解析器”，再选 Postlight Reader（前 Mercury）。 | 开源的可读性扩展/解析器；许可更清晰，但维护没那么活跃、编辑/高亮特性更少。 |
+| Pocket / Instapaper / Wallabag | 未收录 | 当前页用于它的主场景；如果更看重“带持久跨设备库的稍后读服务”，再选 Pocket / Instapaper / Wallabag。 | 带持久跨设备库的稍后读服务；更重（账号加后端）且面向保存而非原地重排（Wallabag 可自建）。 |
+| 各类 Reader View 扩展 | 未收录 | 当前页用于它的主场景；如果更看重“存在很多小克隆”，再选 各类 Reader View 扩展。 | 存在很多小克隆；解析质量、许可与可信度参差不齐——Just Read 的优势在于定制和选择器记忆。 |
 
 ## 技术栈
 

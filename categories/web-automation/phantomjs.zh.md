@@ -9,6 +9,11 @@ license: BSD-3-Clause
 maturity: archived/abandoned — development suspended since 2018, repo archived (last pushed 2022-11); ~29.5k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: tool
+upstream:
+  pushed_at: 2022-11-26T19:43:12Z
+  default_branch: master
+  default_branch_sha: 0a0b0facb16acfbabb7804822ecaf4f4b9dce3d2
+  archived: true
 health:
   schema: 1
   computed_at: 2026-06-29T10:21:06Z
@@ -85,12 +90,12 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| Headless Chrome/Chromium + Puppeteer | 未收录 | 标准替代方案：一个有人维护的现代 Chromium 引擎，由 Node.js 库通过 CDP 驱动——渲染准确、安全持续打补丁、生态庞大；单引擎（Chromium）且偏 Node，但这正是新工作的合理默认。 |
-| Playwright | 未收录 | 现代跨引擎自动化（Chromium/Firefox/WebKit），带自动等待、网络拦截、tracing、多语言绑定；PhantomJS 做的它都做，还多得多，且在积极维护——推荐的现代选择。 |
-| [Selenium](selenium.zh.md) | ✅ | W3C WebDriver 跨浏览器框架，驱动*真实*浏览器（含 headless Chrome），支持多语言；更重、更底层，但在需要跨浏览器广度时，它是基于标准、仍然活跃的那个选项。 |
-| [Chrome DevTools MCP](chrome-devtools-mcp.zh.md) | ✅ | 把 Chrome DevTools（trace、网络、堆）通过 MCP 暴露给 agent，作用在一个活的 Chromium 上；一个有人维护、面向 agent 的 Chrome 工具——活儿不同（调试/测量），但建立在 PhantomJS 所缺的现代引擎之上。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| Headless Chrome/Chromium + Puppeteer | 未收录 | 当前页用于它的主场景；如果更看重“标准替代方案：一个有人维护的现代 Chromium 引擎，由 Node”，再选 Headless Chrome/Chromium + Puppeteer。 | 标准替代方案：一个有人维护的现代 Chromium 引擎，由 Node.js 库通过 CDP 驱动——渲染准确、安全持续打补丁、生态庞大；单引擎（Chromium）且偏 Node，但这正是新工作的合理默认。 |
+| Playwright | 未收录 | 当前页用于它的主场景；如果更看重“现代跨引擎自动化（Chromium/Firefox/WebKit），带自动等待、网络拦截、tracing、多语言绑定”，再选 Playwright。 | 现代跨引擎自动化（Chromium/Firefox/WebKit），带自动等待、网络拦截、tracing、多语言绑定；PhantomJS 做的它都做，还多得多，且在积极维护——推荐的现代选择。 |
+| [Selenium](selenium.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“W3C WebDriver 跨浏览器框架，驱动*真实*浏览器（含 headless Chrome），支持多语言”，再选 Selenium。 | W3C WebDriver 跨浏览器框架，驱动*真实*浏览器（含 headless Chrome），支持多语言；更重、更底层，但在需要跨浏览器广度时，它是基于标准、仍然活跃的那个选项。 |
+| [Chrome DevTools MCP](chrome-devtools-mcp.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“把 Chrome DevTools（trace、网络、堆）通过 MCP 暴露给 agent，作用在一个活的 Chromium 上”，再选 Chrome DevTools MCP。 | 把 Chrome DevTools（trace、网络、堆）通过 MCP 暴露给 agent，作用在一个活的 Chromium 上；一个有人维护、面向 agent 的 Chrome 工具——活儿不同（调试/测量），但建立在 PhantomJS 所缺的现代引擎之上。 |
 
 ## 技术栈
 

@@ -9,6 +9,11 @@ license: BSD-2-Clause
 maturity: v0.33 line, active, ~2.0k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2026-05-14T04:38:19Z
+  default_branch: master
+  default_branch_sha: 4c1e3757998e53bf032bf3c9293ba31ced1ca85d
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:07:37Z
@@ -80,13 +85,13 @@ It's the standard way to reach Redis from `access_by_lua`/`content_by_lua` handl
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [lua-nginx-module](lua-nginx-module.md) | ✅ | The module this driver *runs on* (provides the cosocket API) — foundation, not an alternative. |
-| lua-resty-redis-cluster | 未收录 | Community libraries adding Redis Cluster slot-routing on top of this driver — what you reach for when single-node isn't enough. |
-| resty.redis via OpenResty bundle | 未收录 | The same library as shipped inside OpenResty — usually how you actually get it, version-matched with ngx_lua. |
-| A blocking Lua Redis client (redis-lua) | 未收录 | Works in plain Lua but **blocks** — unusable inside an NGINX worker; opposite design goal. |
-| Gateway-native Redis plugins (Kong/APISIX) | 未收录 | Higher-level rate-limit/cache plugins that often use this driver underneath; product features vs raw driver. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [lua-nginx-module](lua-nginx-module.md) | ✅ | Use this page for its stated niche; choose lua-nginx-module when you need the module this driver *runs on* (provides the cosocket API). | The module this driver *runs on* (provides the cosocket API) — foundation, not an alternative. |
+| lua-resty-redis-cluster | 未收录 | Use this page for its stated niche; choose lua-resty-redis-cluster when you need community libraries adding Redis Cluster slot-routing on top of this driver. | Community libraries adding Redis Cluster slot-routing on top of this driver — what you reach for when single-node isn't enough. |
+| resty.redis via OpenResty bundle | 未收录 | Use this page for its stated niche; choose resty.redis via OpenResty bundle when you need the same library as shipped inside OpenResty. | The same library as shipped inside OpenResty — usually how you actually get it, version-matched with ngx_lua. |
+| A blocking Lua Redis client (redis-lua) | 未收录 | Use this page for its stated niche; choose A blocking Lua Redis client (redis-lua) when you need works in plain Lua but **blocks**. | Works in plain Lua but **blocks** — unusable inside an NGINX worker; opposite design goal. |
+| Gateway-native Redis plugins (Kong/APISIX) | 未收录 | Use this page for its stated niche; choose Gateway-native Redis plugins (Kong/APISIX) when you need higher-level rate-limit/cache plugins that often use this driver underneath. | Higher-level rate-limit/cache plugins that often use this driver underneath; product features vs raw driver. |
 
 ## Tech stack
 

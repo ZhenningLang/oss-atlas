@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v0.6.x, active (last pushed 2026-06), ~2.9k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2026-06-28T22:14:17Z
+  default_branch: main
+  default_branch_sha: 04c77b4cbb01a51cd98be8ad74774d4ea588e35a
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:04:43Z
@@ -89,13 +94,13 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| DEAP | 未收录 | 灵活的演化计算工具箱；非常通用/底层，但你要自己拼更多——pymoo 给的是更高层、现成的多目标算法和基准。 |
-| Platypus | 未收录 | 另一个 Python 多目标 EA 库；范围/社区比 pymoo 的算法加工具广度都小。[推断] |
-| Optuna / Ax（BoTorch） | 未收录 | 贝叶斯/代理优化，适合昂贵评估和 HPO；范式不同（样本高效，非种群式）——互补而非可直接替换。 |
-| jMetal（Java/Py） | 未收录 | 老牌多目标元启发式框架；jMetalPy 在 Python 里镜像它——目标相当，生态和 API 风格不同。 |
-| SciPy / OR-Tools / Gurobi | 未收录 | 精确/凸/MILP 求解器；当你的问题有结构（线性/凸/整数规划）时是对的工具，那里 EA 是错的锤子。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| DEAP | 未收录 | 当前页用于它的主场景；如果更看重“灵活的演化计算工具箱”，再选 DEAP。 | 灵活的演化计算工具箱；非常通用/底层，但你要自己拼更多——pymoo 给的是更高层、现成的多目标算法和基准。 |
+| Platypus | 未收录 | 当前页用于它的主场景；如果更看重“另一个 Python 多目标 EA 库”，再选 Platypus。 | 另一个 Python 多目标 EA 库；范围/社区比 pymoo 的算法加工具广度都小。[推断] |
+| Optuna / Ax（BoTorch） | 未收录 | 当前页用于它的主场景；如果更看重“贝叶斯/代理优化，适合昂贵评估和 HPO”，再选 Optuna / Ax（BoTorch）。 | 贝叶斯/代理优化，适合昂贵评估和 HPO；范式不同（样本高效，非种群式）——互补而非可直接替换。 |
+| jMetal（Java/Py） | 未收录 | 当前页用于它的主场景；如果更看重“老牌多目标元启发式框架”，再选 jMetal（Java/Py）。 | 老牌多目标元启发式框架；jMetalPy 在 Python 里镜像它——目标相当，生态和 API 风格不同。 |
+| SciPy / OR-Tools / Gurobi | 未收录 | 当前页用于它的主场景；如果更看重“精确/凸/MILP 求解器”，再选 SciPy / OR-Tools / Gurobi。 | 精确/凸/MILP 求解器；当你的问题有结构（线性/凸/整数规划）时是对的工具，那里 EA 是错的锤子。 |
 
 ## 技术栈
 

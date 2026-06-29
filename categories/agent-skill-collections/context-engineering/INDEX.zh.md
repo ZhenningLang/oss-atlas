@@ -5,17 +5,17 @@
 
 ## 本叶子的合集
 
-| 合集 | 何时用 | 页面 |
-|---|---|---|
-| **Agent Skills for Context Engineering** | 一个 15 个 skill 的 Claude Code 插件包，灌输上下文工程纪律：基础原理、退化、压缩、多 agent 协同、记忆、工具设计、评估与 harness 工程。 | [→](context-engineering-skills.zh.md) |
-| **NotebookLM Claude Code Skill** | 一个 Claude Code skill：用真实 Chrome 驱动查询你的 Google NotebookLM 笔记本，从你自己上传的文档取回有来源依据、带引用的答案，而非逐文件读取或凭空编造。 | [→](notebooklm-skill.zh.md) |
+| 合集 | 何时用 | 健康度 | 页面 |
+| --- | --- | --- | --- |
+| **Agent Skills for Context Engineering** | 一个 15 个 skill 的 Claude Code 插件包，灌输上下文工程纪律：基础原理、退化、压缩、多 agent 协同、记忆、工具设计、评估与 harness 工程。 | B（4/6） | [→](context-engineering-skills.zh.md) |
+| **NotebookLM Claude Code Skill** | 一个 Claude Code skill：用真实 Chrome 驱动查询你的 Google NotebookLM 笔记本，从你自己上传的文档取回有来源依据、带引用的答案，而非逐文件读取或凭空编造。 | C（4/6） | [→](notebooklm-skill.zh.md) |
 
 ## 对比矩阵
 
-| 选项 | 是否收录 | 一句话取舍 |
-|---|---|---|
-| [Agent Skills for Context Engineering](context-engineering-skills.zh.md) | ✅ | 一个 15 个 skill 的 Claude Code 插件包，灌输上下文工程纪律：基础原理、退化、压缩、多 agent 协同、记忆、工具设计、评估与 harness 工程。 |
-| [NotebookLM Claude Code Skill](notebooklm-skill.zh.md) | ✅ | 一个 Claude Code skill：用真实 Chrome 驱动查询你的 Google NotebookLM 笔记本，从你自己上传的文档取回有来源依据、带引用的答案，而非逐文件读取或凭空编造。 |
+| 选项 | 是否收录 | 健康度 | 一句话取舍 |
+| --- | --- | --- | --- |
+| [Agent Skills for Context Engineering](context-engineering-skills.zh.md) | ✅ | B（4/6） | 一个 15 个 skill 的 Claude Code 插件包，灌输上下文工程纪律：基础原理、退化、压缩、多 agent 协同、记忆、工具设计、评估与 harness 工程。 |
+| [NotebookLM Claude Code Skill](notebooklm-skill.zh.md) | ✅ | C（4/6） | 一个 Claude Code skill：用真实 Chrome 驱动查询你的 Google NotebookLM 笔记本，从你自己上传的文档取回有来源依据、带引用的答案，而非逐文件读取或凭空编造。 |
 
 ## 什么该放这里
 

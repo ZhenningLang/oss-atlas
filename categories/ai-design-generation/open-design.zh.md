@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v0.11.0 "The Bazaar", active (2026-06)
 last_verified: 2026-06-26
 type: app
+upstream:
+  pushed_at: 2026-06-29T11:25:26Z
+  default_branch: main
+  default_branch_sha: fc4e51871c65e66a7b4648a7a48565125536cedf
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:39:03Z
@@ -81,15 +86,15 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| [html-anything](html-anything.zh.md) | ✅ | 同类目下专注把 prompt 变成独立 HTML 产物的同胞；Open Design 是围绕这一想法更重的完整桌面 studio（deck/视频/设计系统/导出）。 |
-| [Impeccable](impeccable.zh.md) | ✅ | 同胞，主打高精度 UI 生成；Open Design 覆盖更广（幻灯片、图像、视频、MP4）且以本地应用而非更窄的生成器形态交付。 |
-| [guizang-ppt-skill](guizang-ppt.zh.md) | ✅ | 单一用途的 deck 生成 Skill;Open Design 把 deck 生成作为众多产物类型之一，并自带运行时/导出。 |
-| [guizang-social-card-skill](guizang-social-card.zh.md) | ✅ | 专注社交卡片的 Skill;Open Design 在一个打包应用里覆盖卡片/图像等多种产物类型。 |
-| Claude Design（Anthropic，托管） | 未收录 | 本项目克隆的专有托管产品；托管云 + 打磨度 vs Open Design 的 local-first、BYOK、开放格式立场。 |
-| v0(Vercel) | 未收录 | 托管的 prompt-to-UI 生成器；云 SaaS、范围更窄（偏 web UI）,vs Open Design 的本地多产物 studio。 |
-| Figma / Penpot | 未收录 | 真正的矢量设计编辑器，带多人协作；Open Design 生成代码渲染产物，而非可编辑矢量文档。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [html-anything](html-anything.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“同类目下专注把 prompt 变成独立 HTML 产物的同胞”，再选 html-anything。 | 同类目下专注把 prompt 变成独立 HTML 产物的同胞；Open Design 是围绕这一想法更重的完整桌面 studio（deck/视频/设计系统/导出）。 |
+| [Impeccable](impeccable.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“同胞，主打高精度 UI 生成”，再选 Impeccable。 | 同胞，主打高精度 UI 生成；Open Design 覆盖更广（幻灯片、图像、视频、MP4）且以本地应用而非更窄的生成器形态交付。 |
+| [guizang-ppt-skill](guizang-ppt.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“单一用途的 deck 生成 Skill”，再选 guizang-ppt-skill。 | 单一用途的 deck 生成 Skill;Open Design 把 deck 生成作为众多产物类型之一，并自带运行时/导出。 |
+| [guizang-social-card-skill](guizang-social-card.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“专注社交卡片的 Skill”，再选 guizang-social-card-skill。 | 专注社交卡片的 Skill;Open Design 在一个打包应用里覆盖卡片/图像等多种产物类型。 |
+| Claude Design（Anthropic，托管） | 未收录 | 当前页用于它的主场景；如果更看重“本项目克隆的专有托管产品”，再选 Claude Design（Anthropic，托管）。 | 本项目克隆的专有托管产品；托管云 + 打磨度 vs Open Design 的 local-first、BYOK、开放格式立场。 |
+| v0(Vercel) | 未收录 | 当前页用于它的主场景；如果更看重“托管的 prompt-to-UI 生成器”，再选 v0(Vercel)。 | 托管的 prompt-to-UI 生成器；云 SaaS、范围更窄（偏 web UI）,vs Open Design 的本地多产物 studio。 |
+| Figma / Penpot | 未收录 | 当前页用于它的主场景；如果更看重“真正的矢量设计编辑器，带多人协作”，再选 Figma / Penpot。 | 真正的矢量设计编辑器，带多人协作；Open Design 生成代码渲染产物，而非可编辑矢量文档。 |
 
 ## 技术栈
 

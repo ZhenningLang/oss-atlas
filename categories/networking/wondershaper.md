@@ -9,6 +9,11 @@ license: GPL-2.0
 maturity: stable, low activity (last push 2024-07), ~1.9k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: tool
+upstream:
+  pushed_at: 2024-07-25T02:46:32Z
+  default_branch: master
+  default_branch_sha: 98792b55c2ebf4ab4cafffb0780e0c4185fdc03d
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:07:01Z
@@ -83,13 +88,13 @@ It fits ad-hoc and lightweight-persistent QoS on a *single host's* adapter: thro
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| raw `tc` (iproute2) | 未收录 | Full control over qdiscs/classes/filters (HTB, HFSC, cake, fq_codel) — maximally flexible, but a steep DSL; wondershaper is just a friendly wrapper over it. |
-| `cake` / SQM (OpenWrt) | 未收录 | Modern bufferbloat-killing shaper; best latency-under-load, but typically lives on a router/OpenWrt, not a quick per-host script. |
-| `tcconfig` (Python) | 未收录 | Python CLI/lib over tc with richer rules (per-IP/port, netem loss/delay) — more featureful and scriptable, but a Python dependency vs one Bash file. |
-| `trickle` | 未收录 | Userspace per-process bandwidth limiter (LD_PRELOAD) — shapes a single command without root/tc, but per-process and not a NIC-wide cap. |
-| Linux `tc` + `fq_codel` by hand | 未收录 | Same engine, current qdiscs, no wrapper — more correct for bufferbloat but more to write. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| raw `tc` (iproute2) | 未收录 | Use this page for its stated niche; choose raw tc (iproute2) when you need full control over qdiscs/classes/filters (HTB, HFSC, cake, fq_codel). | Full control over qdiscs/classes/filters (HTB, HFSC, cake, fq_codel) — maximally flexible, but a steep DSL; wondershaper is just a friendly wrapper over it. |
+| `cake` / SQM (OpenWrt) | 未收录 | Use this page for its stated niche; choose cake / SQM (OpenWrt) when you need modern bufferbloat-killing shaper. | Modern bufferbloat-killing shaper; best latency-under-load, but typically lives on a router/OpenWrt, not a quick per-host script. |
+| `tcconfig` (Python) | 未收录 | Use this page for its stated niche; choose tcconfig (Python) when you need python CLI/lib over tc with richer rules (per-IP/port, netem loss/delay). | Python CLI/lib over tc with richer rules (per-IP/port, netem loss/delay) — more featureful and scriptable, but a Python dependency vs one Bash file. |
+| `trickle` | 未收录 | Use this page for its stated niche; choose trickle when you need userspace per-process bandwidth limiter (LD_PRELOAD). | Userspace per-process bandwidth limiter (LD_PRELOAD) — shapes a single command without root/tc, but per-process and not a NIC-wide cap. |
+| Linux `tc` + `fq_codel` by hand | 未收录 | Use this page for its stated niche; choose Linux tc + fqcodel by hand when you need same engine, current qdiscs, no wrapper. | Same engine, current qdiscs, no wrapper — more correct for bufferbloat but more to write. |
 
 ## Tech stack
 

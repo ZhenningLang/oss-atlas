@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v0.31.0 (2026-06-25); active, Vercel Labs; CDP-based Rust daemon + CLI
 last_verified: 2026-06-26
 type: tool
+upstream:
+  pushed_at: 2026-06-26T17:22:26Z
+  default_branch: main
+  default_branch_sha: ed2e10598c9064aecfaeb7cf21b540684db4be2c
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:19:47Z
@@ -89,13 +94,13 @@ You install `agent-browser` (npm, Homebrew, or cargo), run `agent-browser instal
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [page-agent](page-agent.md) | ✅ | In-page JS GUI agent that reuses the user's own browser session, no backend, NL commands. Agent Browser instead drives an external Chrome from a CLI/daemon — better for server-side/agent automation, worse for embedding in a live page. |
-| [Chrome DevTools MCP](chrome-devtools-mcp.md) | ✅ | Google's MCP server exposing Chrome DevTools to agents — MCP-only, official DevTools surface. Agent Browser is CLI-first *and* ships an MCP mode, with snapshot-ref ergonomics and a persistent Rust daemon. |
-| [Cua](cua.md) | ✅ | Computer-use agent framework driving a full desktop/VM (vision-based). Agent Browser is browser-only and a11y-tree-based — lighter and more deterministic, but can't operate native desktop apps. |
-| Playwright / Puppeteer | 未收录 | Mature Node.js automation libraries with cross-browser support and rich APIs — but you import them as code and write/maintain selectors; Agent Browser is a CLI with LLM-friendly refs and no per-command launch cost. |
-| browser-use | 未收录 | Python, vision+DOM browser agent with batteries-included LLM loop. Agent Browser is a lower-level Rust CLI primitive (you supply the agent loop), faster to shell out to and MCP-native. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [page-agent](page-agent.md) | ✅ | Use this page for its stated niche; choose page-agent when you need in-page JS GUI agent that reuses the user's own browser session, no backend, NL commands. | In-page JS GUI agent that reuses the user's own browser session, no backend, NL commands. Agent Browser instead drives an external Chrome from a CLI/daemon — better for server-side/agent automation, worse for embedding in a live page. |
+| [Chrome DevTools MCP](chrome-devtools-mcp.md) | ✅ | Use this page for its stated niche; choose Chrome DevTools MCP when you need google's MCP server exposing Chrome DevTools to agents. | Google's MCP server exposing Chrome DevTools to agents — MCP-only, official DevTools surface. Agent Browser is CLI-first *and* ships an MCP mode, with snapshot-ref ergonomics and a persistent Rust daemon. |
+| [Cua](cua.md) | ✅ | Use this page for its stated niche; choose Cua when you need computer-use agent framework driving a full desktop/VM (vision-based). | Computer-use agent framework driving a full desktop/VM (vision-based). Agent Browser is browser-only and a11y-tree-based — lighter and more deterministic, but can't operate native desktop apps. |
+| Playwright / Puppeteer | 未收录 | Use this page for its stated niche; choose Playwright / Puppeteer when you need mature Node. | Mature Node.js automation libraries with cross-browser support and rich APIs — but you import them as code and write/maintain selectors; Agent Browser is a CLI with LLM-friendly refs and no per-command launch cost. |
+| browser-use | 未收录 | Use this page for its stated niche; choose browser-use when you need python, vision+DOM browser agent with batteries-included LLM loop. | Python, vision+DOM browser agent with batteries-included LLM loop. Agent Browser is a lower-level Rust CLI primitive (you supply the agent loop), faster to shell out to and MCP-native. |
 
 ## Tech stack
 

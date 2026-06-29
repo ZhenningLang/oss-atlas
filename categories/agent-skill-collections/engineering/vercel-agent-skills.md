@@ -9,6 +9,11 @@ license: MIT
 maturity: no tagged releases, active (pushed 2026-06), ~28.3k stars (as of 2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+upstream:
+  pushed_at: 2026-06-10T21:21:47Z
+  default_branch: main
+  default_branch_sha: f8a72b9603728bb92a217a879b7e62e43ad76c81
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:30:03Z
@@ -81,13 +86,13 @@ You run `npx skills add vercel-labs/agent-skills` and the agent gains a menu of 
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [Agent Skills (addyosmani)](addyosmani-agent-skills.md) | ✅ | Addy Osmani's personal engineering skill set; overlapping web-perf/quality focus but maintained by an individual and not Vercel-platform-coupled. Compare on which rule sources you trust and whether you're on Vercel. |
-| [web-quality-skills](addyosmani-web-quality.md) | ✅ | Dedicated web-quality/perf/accessibility skills; narrower than Vercel's broader bundle (deploy + optimize + React patterns) but vendor-neutral, so it travels off Vercel. |
-| [Waza](waza.md) | ✅ | Another engineering skill pack in this leaf; compare on domain coverage and which workflows each actually encodes. |
-| [Scientific Agent Skills](scientific-agent-skills.md) | ✅ | Scientific/eng-workflow skills — different domain (research/data) than web/frontend engineering; complementary, not a substitute. |
-| Anthropic / community official skills (e.g. superpowers) | 未收录 | General SDLC/methodology skill packs shape *how* the agent works (TDD, planning); Vercel's pack supplies *domain* rules for React/Vercel. Often run together, not either/or. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [Agent Skills (addyosmani)](addyosmani-agent-skills.md) | ✅ | Use this page for its stated niche; choose Agent Skills (addyosmani) when you need addy Osmani's personal engineering skill set. | Addy Osmani's personal engineering skill set; overlapping web-perf/quality focus but maintained by an individual and not Vercel-platform-coupled. Compare on which rule sources you trust and whether you're on Vercel. |
+| [web-quality-skills](addyosmani-web-quality.md) | ✅ | Use this page for its stated niche; choose web-quality-skills when you need dedicated web-quality/perf/accessibility skills. | Dedicated web-quality/perf/accessibility skills; narrower than Vercel's broader bundle (deploy + optimize + React patterns) but vendor-neutral, so it travels off Vercel. |
+| [Waza](waza.md) | ✅ | Use this page for its stated niche; choose Waza when you need another engineering skill pack in this leaf. | Another engineering skill pack in this leaf; compare on domain coverage and which workflows each actually encodes. |
+| [Scientific Agent Skills](scientific-agent-skills.md) | ✅ | Use this page for its stated niche; choose Scientific Agent Skills when you need scientific/eng-workflow skills. | Scientific/eng-workflow skills — different domain (research/data) than web/frontend engineering; complementary, not a substitute. |
+| Anthropic / community official skills (e.g. superpowers) | 未收录 | Use this page for its stated niche; choose Anthropic / community official skills (e.g. superpowers) when you need general SDLC/methodology skill packs shape *how* the agent works (TDD, planning). | General SDLC/methodology skill packs shape *how* the agent works (TDD, planning); Vercel's pack supplies *domain* rules for React/Vercel. Often run together, not either/or. |
 
 ## Health & viability
 

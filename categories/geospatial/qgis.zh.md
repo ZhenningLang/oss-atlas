@@ -9,6 +9,11 @@ license: GPL-2.0-or-later
 maturity: v4.0.3, active (2026-06)
 last_verified: 2026-06-26
 type: app
+upstream:
+  pushed_at: 2026-06-29T09:12:35Z
+  default_branch: master
+  default_branch_sha: 0bbc7b6ed0b746fc33fea7a0422975c4177f7d43
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:53:53Z
@@ -84,15 +89,15 @@ health:
 
 ## 横向对比
 
-| 替代方案 | 是否收录 | 取舍 |
-|---|---|---|
-| GRASS GIS | 未收录 | 强大的栅格/地理分析引擎和拓扑模型；UI 更陡峭，常作为 Processing provider 在 QGIS 里**被调用**而非独立使用。 |
-| SAGA GIS | 未收录 | 地形/栅格分析库和模块很强；制图与通用编辑较弱；同样被封装进 QGIS Processing。 |
-| GDAL/OGR | 未收录 | QGIS 自身依赖的底层 I/O + 栅格/矢量转换库；是 CLI/库而非桌面应用——脚本化 ETL 选它，交互式制图不选它。 |
-| GeoServer | 未收录 | 面向发布的 Java OGC 服务端（WMS/WFS/WCS）；在发布侧与 QGIS Server 重叠，但没有桌面端的制作/分析 GUI。 |
-| MapServer | 未收录 | 快速、成熟的 C 语言 OGC 地图服务端；仅做发布、用 mapfile 配置；对标 QGIS Server，而非桌面端。 |
-| GeoPandas / Shapely | 未收录 | 面向代码优先/可复现流水线的 Python 原生矢量分析；没有 GUI、没有制图打印排版、不以栅格为先。 |
-| ArcGIS Pro (Esri) | 未收录 | 专有商业桌面 GIS；厂商支持/生态更广但有授权成本——QGIS 主要替代的就是这个商业方案。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| GRASS GIS | 未收录 | 当前页用于它的主场景；如果更看重“强大的栅格/地理分析引擎和拓扑模型”，再选 GRASS GIS。 | 强大的栅格/地理分析引擎和拓扑模型；UI 更陡峭，常作为 Processing provider 在 QGIS 里**被调用**而非独立使用。 |
+| SAGA GIS | 未收录 | 当前页用于它的主场景；如果更看重“地形/栅格分析库和模块很强”，再选 SAGA GIS。 | 地形/栅格分析库和模块很强；制图与通用编辑较弱；同样被封装进 QGIS Processing。 |
+| GDAL/OGR | 未收录 | 当前页用于它的主场景；如果更看重“QGIS 自身依赖的底层 I/O + 栅格/矢量转换库”，再选 GDAL/OGR。 | QGIS 自身依赖的底层 I/O + 栅格/矢量转换库；是 CLI/库而非桌面应用——脚本化 ETL 选它，交互式制图不选它。 |
+| GeoServer | 未收录 | 当前页用于它的主场景；如果更看重“面向发布的 Java OGC 服务端（WMS/WFS/WCS）”，再选 GeoServer。 | 面向发布的 Java OGC 服务端（WMS/WFS/WCS）；在发布侧与 QGIS Server 重叠，但没有桌面端的制作/分析 GUI。 |
+| MapServer | 未收录 | 当前页用于它的主场景；如果更看重“快速、成熟的 C 语言 OGC 地图服务端”，再选 MapServer。 | 快速、成熟的 C 语言 OGC 地图服务端；仅做发布、用 mapfile 配置；对标 QGIS Server，而非桌面端。 |
+| GeoPandas / Shapely | 未收录 | 当前页用于它的主场景；如果更看重“面向代码优先/可复现流水线的 Python 原生矢量分析”，再选 GeoPandas / Shapely。 | 面向代码优先/可复现流水线的 Python 原生矢量分析；没有 GUI、没有制图打印排版、不以栅格为先。 |
+| ArcGIS Pro (Esri) | 未收录 | 当前页用于它的主场景；如果更看重“专有商业桌面 GIS”，再选 ArcGIS Pro (Esri)。 | 专有商业桌面 GIS；厂商支持/生态更广但有授权成本——QGIS 主要替代的就是这个商业方案。 |
 
 ## 技术栈
 

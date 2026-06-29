@@ -9,6 +9,11 @@ license: MIT
 maturity: v0.6.2, active (2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+upstream:
+  pushed_at: 2026-06-28T18:11:20Z
+  default_branch: main
+  default_branch_sha: aba7c4e9695c363e65cb59effe926c7f1d1abe3d
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:29:26Z
@@ -81,14 +86,14 @@ You reach for this pack when you want that engineering discipline to fire on dem
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [web-quality-skills (addyosmani)](addyosmani-web-quality.md) ✅ | indexed | Narrower sibling focused specifically on web performance / accessibility / quality auditing. This pack subsumes that theme (`/webperf`, web-performance-auditor) inside a full SDLC; use the focused one if you only need web-quality auditing. |
-| [scientific-agent-skills](scientific-agent-skills.md) ✅ | indexed | Skill pack for scientific/research engineering workflows; different domain. Pick by whether your work is general software engineering vs. scientific computing. |
-| [Waza](waza.md) ✅ | indexed | Another engineering-oriented skill collection in this leaf; compare on which lifecycle stages each actually defines and how prescriptive the workflows are. |
-| [vercel-labs/agent-skills](vercel-agent-skills.md) ✅ | indexed | Vendor-curated skill set; compare breadth (full SDLC here vs. vendor-scoped), harness coverage, and maintenance cadence. |
-| Superpowers | 未收录 (other leaf) | Methodology-first pack centered on brainstorm→plan→TDD→verify discipline; this one leads with concrete engineering practice areas (quality/security/perf/API/ship) and lifecycle slash commands rather than a TDD/subagent spine. Overlapping goal, different center of gravity. |
-| Each agent's built-in skills / slash commands | 未收录 | The platform's own skill ecosystem; this is a third-party bundle layered on top, so it can duplicate or conflict with native skills. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [web-quality-skills (addyosmani)](addyosmani-web-quality.md) ✅ | indexed | Use this page for its stated niche; choose web-quality-skills (addyosmani) ✅ when you need narrower sibling focused specifically on web performance / accessibility / quality auditing. | Narrower sibling focused specifically on web performance / accessibility / quality auditing. This pack subsumes that theme (`/webperf`, web-performance-auditor) inside a full SDLC; use the focused one if you only need web-quality auditing. |
+| [scientific-agent-skills](scientific-agent-skills.md) ✅ | indexed | Use this page for its stated niche; choose scientific-agent-skills ✅ when you need skill pack for scientific/research engineering workflows. | Skill pack for scientific/research engineering workflows; different domain. Pick by whether your work is general software engineering vs. scientific computing. |
+| [Waza](waza.md) ✅ | indexed | Use this page for its stated niche; choose Waza ✅ when you need another engineering-oriented skill collection in this leaf. | Another engineering-oriented skill collection in this leaf; compare on which lifecycle stages each actually defines and how prescriptive the workflows are. |
+| [vercel-labs/agent-skills](vercel-agent-skills.md) ✅ | indexed | Use this page for its stated niche; choose vercel-labs/agent-skills ✅ when you need vendor-curated skill set. | Vendor-curated skill set; compare breadth (full SDLC here vs. vendor-scoped), harness coverage, and maintenance cadence. |
+| Superpowers | 未收录 (other leaf) | Use this page for its stated niche; choose Superpowers when you need methodology-first pack centered on brainstorm→plan→TDD→verify discipline. | Methodology-first pack centered on brainstorm→plan→TDD→verify discipline; this one leads with concrete engineering practice areas (quality/security/perf/API/ship) and lifecycle slash commands rather than a TDD/subagent spine. Overlapping goal, different center of gravity. |
+| Each agent's built-in skills / slash commands | 未收录 | Use this page for its stated niche; choose Each agent's built-in skills / slash commands when you need the platform's own skill ecosystem. | The platform's own skill ecosystem; this is a third-party bundle layered on top, so it can duplicate or conflict with native skills. |
 
 ## Health & viability
 

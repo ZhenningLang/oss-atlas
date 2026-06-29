@@ -9,6 +9,11 @@ license: MIT
 maturity: untagged (no GitHub releases), active, last pushed 2026-04 (as of 2026-06)
 last_verified: 2026-06-26
 type: app
+upstream:
+  pushed_at: 2026-04-11T23:58:25Z
+  default_branch: main
+  default_branch_sha: 1f8f3e285bbc23e80b98a66a64effab9069f3ad4
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:45:11Z
@@ -81,13 +86,13 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| [Vane](vane.zh.md) | ✅ | 同为 TypeScript 的 AI 问答引擎，目标是做成可用的产品/UI;deep-research 是约 500 行、供你 fork 的裸 agent，而非可直接当服务跑。 |
-| [local-deep-research](local-deep-research.zh.md) | ✅ | Python，本地优先且加密，10+ 搜索后端（含本地文档），可完全跑在本地 LLM 上；deep-research 默认是云 LLM + Firecrawl，范围也小得多。 |
-| [Agent-Reach](agent-reach.zh.md) | ✅ | Python CLI，专注「读」社交/网络平台（Twitter/Reddit/YouTube/GitHub）且号称「零 API 费」；不是做迭代式综合的研究 agent。 |
-| GPT Researcher | 未收录 | Python，功能面大得多（多检索器、多报告类型、Web UI）;deep-research 用全部这些广度换来一个可读的极简内核。 |
-| Open Deep Research(LangChain / HF) | 未收录 | 有框架背书的参考 agent，生态与工具链更大；比这个近乎单文件的实现更难读、更难改造。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [Vane](vane.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“同为 TypeScript 的 AI 问答引擎，目标是做成可用的产品/UI”，再选 Vane。 | 同为 TypeScript 的 AI 问答引擎，目标是做成可用的产品/UI;deep-research 是约 500 行、供你 fork 的裸 agent，而非可直接当服务跑。 |
+| [local-deep-research](local-deep-research.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“Python，本地优先且加密，10+ 搜索后端（含本地文档），可完全跑在本地 LLM 上”，再选 local-deep-research。 | Python，本地优先且加密，10+ 搜索后端（含本地文档），可完全跑在本地 LLM 上；deep-research 默认是云 LLM + Firecrawl，范围也小得多。 |
+| [Agent-Reach](agent-reach.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“Python CLI，专注「读」社交/网络平台（Twitter/Reddit/YouTube/GitHub）且号称「零 API 费」”，再选 Agent-Reach。 | Python CLI，专注「读」社交/网络平台（Twitter/Reddit/YouTube/GitHub）且号称「零 API 费」；不是做迭代式综合的研究 agent。 |
+| GPT Researcher | 未收录 | 当前页用于它的主场景；如果更看重“Python，功能面大得多（多检索器、多报告类型、Web UI）”，再选 GPT Researcher。 | Python，功能面大得多（多检索器、多报告类型、Web UI）;deep-research 用全部这些广度换来一个可读的极简内核。 |
+| Open Deep Research(LangChain / HF) | 未收录 | 当前页用于它的主场景；如果更看重“有框架背书的参考 agent，生态与工具链更大”，再选 Open Deep Research(LangChain / HF)。 | 有框架背书的参考 agent，生态与工具链更大；比这个近乎单文件的实现更难读、更难改造。 |
 
 ## 技术栈
 

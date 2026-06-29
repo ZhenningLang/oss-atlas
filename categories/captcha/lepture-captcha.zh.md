@@ -9,6 +9,11 @@ license: BSD-3-Clause
 maturity: v0.7.1, low-volume but maintained, ~1.1k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2025-10-21T06:24:16Z
+  default_branch: main
+  default_branch_sha: 087b30be72640802fddc097472ef35a88020387a
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:40:48Z
@@ -86,12 +91,12 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| [Cap](capjs.zh.md) | ✅ | 工作量证明 / 隐形挑战，保护隐私，真正面向机器人防护；是另一种范式（无字可读）且以 JS 为主，不是 Python 图片渲染器。 |
-| Google reCAPTCHA / hCaptcha | 未收录 | 托管、机器人信号强得多；但有第三方网络调用、隐私/数据共享顾虑，且非自托管。 |
-| django-simple-captcha | 未收录 | 与 Django 集成的验证码字段，自带存储与校验；在 Django 之外灵活性差，比纯渲染器更重。 |
-| Pillow（手搓） | 未收录 | 你完全可以用裸 Pillow 自己画文字加噪点；这个库本质就是把那件事预先打好包，并补上语音支持和合理默认值。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [Cap](capjs.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“工作量证明 / 隐形挑战，保护隐私，真正面向机器人防护”，再选 Cap。 | 工作量证明 / 隐形挑战，保护隐私，真正面向机器人防护；是另一种范式（无字可读）且以 JS 为主，不是 Python 图片渲染器。 |
+| Google reCAPTCHA / hCaptcha | 未收录 | 当前页用于它的主场景；如果更看重“托管、机器人信号强得多”，再选 Google reCAPTCHA / hCaptcha。 | 托管、机器人信号强得多；但有第三方网络调用、隐私/数据共享顾虑，且非自托管。 |
+| django-simple-captcha | 未收录 | 当前页用于它的主场景；如果更看重“与 Django 集成的验证码字段，自带存储与校验”，再选 django-simple-captcha。 | 与 Django 集成的验证码字段，自带存储与校验；在 Django 之外灵活性差，比纯渲染器更重。 |
+| Pillow（手搓） | 未收录 | 当前页用于它的主场景；如果更看重“你完全可以用裸 Pillow 自己画文字加噪点”，再选 Pillow（手搓）。 | 你完全可以用裸 Pillow 自己画文字加噪点；这个库本质就是把那件事预先打好包，并补上语音支持和合理默认值。 |
 
 ## 技术栈
 

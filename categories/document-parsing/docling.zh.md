@@ -9,6 +9,11 @@ license: MIT
 maturity: v2.x, active (2026-06), ~62.3k stars; LF AI & Data project (IBM-originated)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2026-06-29T09:11:34Z
+  default_branch: main
+  default_branch_sha: 6395151e271277d4a154e7e7f01c71fd72829482
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:52:40Z
@@ -85,13 +90,13 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| unstructured.io | 未收录 | 面向 RAG 摄取、广受欢迎的多格式文档加载器，partitioner 众多；开源核心 + 商用 API/服务层——能力切分与授权方式都和 Docling 的单一 MIT 库不同。 |
-| LlamaParse | 未收录 | 托管解析服务（LlamaIndex），在复杂 PDF/表格上很强；但它是按量计费的 SaaS、数据会出你的边界，而 Docling 完全本地/进程内运行。 |
-| Marker | 未收录 | 同样用深度学习版面模型的 PDF→Markdown 转换器；gen-AI 目标相近，但输入格式范围比 Docling 的 PDF/Office/HTML/图片更窄。 |
-| PyMuPDF / pdfplumber | 未收录 | 快、轻、无重模型的底层 PDF 文本/几何抽取；版面/表格逻辑得你自己写——开箱保真度更低，但体积小得多。 |
-| [PageIndex](../rag-retrieval/pageindex.zh.md) | ✅ | 是文档之上的检索/推理层，不是解析器——互补而非替代；Docling 产出的正是它建索引的结构化文本。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| unstructured.io | 未收录 | 当前页用于它的主场景；如果更看重“面向 RAG 摄取、广受欢迎的多格式文档加载器，partitioner 众多”，再选 unstructured.io。 | 面向 RAG 摄取、广受欢迎的多格式文档加载器，partitioner 众多；开源核心 + 商用 API/服务层——能力切分与授权方式都和 Docling 的单一 MIT 库不同。 |
+| LlamaParse | 未收录 | 当前页用于它的主场景；如果更看重“托管解析服务（LlamaIndex），在复杂 PDF/表格上很强”，再选 LlamaParse。 | 托管解析服务（LlamaIndex），在复杂 PDF/表格上很强；但它是按量计费的 SaaS、数据会出你的边界，而 Docling 完全本地/进程内运行。 |
+| Marker | 未收录 | 当前页用于它的主场景；如果更看重“同样用深度学习版面模型的 PDF→Markdown 转换器”，再选 Marker。 | 同样用深度学习版面模型的 PDF→Markdown 转换器；gen-AI 目标相近，但输入格式范围比 Docling 的 PDF/Office/HTML/图片更窄。 |
+| PyMuPDF / pdfplumber | 未收录 | 当前页用于它的主场景；如果更看重“快、轻、无重模型的底层 PDF 文本/几何抽取”，再选 PyMuPDF / pdfplumber。 | 快、轻、无重模型的底层 PDF 文本/几何抽取；版面/表格逻辑得你自己写——开箱保真度更低，但体积小得多。 |
+| [PageIndex](../rag-retrieval/pageindex.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“是文档之上的检索/推理层，不是解析器”，再选 PageIndex。 | 是文档之上的检索/推理层，不是解析器——互补而非替代；Docling 产出的正是它建索引的结构化文本。 |
 
 ## 技术栈
 

@@ -5,15 +5,15 @@
 
 ## Collections in this leaf
 
-| Collection | Use when | Page |
-|---|---|---|
-| **Anthropic Cybersecurity Skills** | A large (~817 skill) cybersecurity skill pack of SKILL.md runbooks cross-mapped to MITRE ATT&CK, NIST CSF, ATLAS, D3FEND, NIST AI RMF and MITRE F3, loaded on demand into a coding agent. | [→](anthropic-cybersecurity-skills.md) |
+| Collection | Use when | Health | Page |
+| --- | --- | --- | --- |
+| **Anthropic Cybersecurity Skills** | A large (~817 skill) cybersecurity skill pack of SKILL.md runbooks cross-mapped to MITRE ATT&CK, NIST CSF, ATLAS, D3FEND, NIST AI RMF and MITRE F3, loaded on demand into a coding agent. | B (4/6) | [→](anthropic-cybersecurity-skills.md) |
 
 ## Comparison matrix
 
-| Option | Indexed | One-line tradeoff |
-|---|---|---|
-| [Anthropic Cybersecurity Skills](anthropic-cybersecurity-skills.md) | ✅ | A large (~817 skill) cybersecurity skill pack of SKILL.md runbooks cross-mapped to MITRE ATT&CK, NIST CSF, ATLAS, D3FEND, NIST AI RMF and MITRE F3, loaded on demand into a coding agent. |
+| Option | Indexed | Health | One-line tradeoff |
+| --- | --- | --- | --- |
+| [Anthropic Cybersecurity Skills](anthropic-cybersecurity-skills.md) | ✅ | B (4/6) | A large (~817 skill) cybersecurity skill pack of SKILL.md runbooks cross-mapped to MITRE ATT&CK, NIST CSF, ATLAS, D3FEND, NIST AI RMF and MITRE F3, loaded on demand into a coding agent. |
 
 ## What belongs here
 

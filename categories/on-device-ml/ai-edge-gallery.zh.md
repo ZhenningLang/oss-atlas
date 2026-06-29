@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v1.0.16 (2026-06-23), active, ~23.9k stars (2026-06-26); Google-maintained
 last_verified: 2026-06-26
 type: app
+upstream:
+  pushed_at: 2026-06-25T14:33:57Z
+  default_branch: main
+  default_branch_sha: fbf6926169bc0f0f01f168197d325488721089ba
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:09:11Z
@@ -84,14 +89,14 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| [LiteRT-LM](litert-lm.zh.md) | ✅ | Gallery 所展示的真正端侧**运行时层**（C++/Kotlin 绑定）。要*构建* App 选它；要在构建前*评估*选 Gallery。 |
-| [BitNet](bitnet.zh.md) | ✅ | 面向 1-bit/三值 LLM 的研究型**推理框架**（极致 CPU 效率），不是打磨过的 demo App——所处层次不同、模型集窄得多。 |
-| [TimesFM](timesfm.zh.md) | ✅ | 一个时间序列**基础模型**，不是 LLM 聊天展示——同属端侧 ML 但任务完全不同。 |
-| Ollama | 未收录 | 桌面/服务器本地 LLM 运行器，GGUF 目录巨大且带 API；在笔记本/服务器上很棒，但不是移动/Android 优先的端侧展示。 |
-| LM Studio | 未收录 | 打磨精良的桌面 GUI 本地 LLM（闭源 App）；模型选择更广，但仅桌面、非移动端侧。 |
-| MediaPipe LLM Inference Studio(Google) | 未收录 | 同一团队更早的端侧 LLM demo/工具路径；意图重叠，方向上已被基于 LiteRT 的 Gallery 取代。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [LiteRT-LM](litert-lm.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“Gallery 所展示的真正端侧**运行时层**（C++/Kotlin 绑定）”，再选 LiteRT-LM。 | Gallery 所展示的真正端侧**运行时层**（C++/Kotlin 绑定）。要*构建* App 选它；要在构建前*评估*选 Gallery。 |
+| [BitNet](bitnet.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“面向 1-bit/三值 LLM 的研究型**推理框架**（极致 CPU 效率），不是打磨过的 demo App”，再选 BitNet。 | 面向 1-bit/三值 LLM 的研究型**推理框架**（极致 CPU 效率），不是打磨过的 demo App——所处层次不同、模型集窄得多。 |
+| [TimesFM](timesfm.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“一个时间序列**基础模型**，不是 LLM 聊天展示”，再选 TimesFM。 | 一个时间序列**基础模型**，不是 LLM 聊天展示——同属端侧 ML 但任务完全不同。 |
+| Ollama | 未收录 | 当前页用于它的主场景；如果更看重“桌面/服务器本地 LLM 运行器，GGUF 目录巨大且带 API”，再选 Ollama。 | 桌面/服务器本地 LLM 运行器，GGUF 目录巨大且带 API；在笔记本/服务器上很棒，但不是移动/Android 优先的端侧展示。 |
+| LM Studio | 未收录 | 当前页用于它的主场景；如果更看重“打磨精良的桌面 GUI 本地 LLM（闭源 App）”，再选 LM Studio。 | 打磨精良的桌面 GUI 本地 LLM（闭源 App）；模型选择更广，但仅桌面、非移动端侧。 |
+| MediaPipe LLM Inference Studio(Google) | 未收录 | 当前页用于它的主场景；如果更看重“同一团队更早的端侧 LLM demo/工具路径”，再选 MediaPipe LLM Inference Studio(Google)。 | 同一团队更早的端侧 LLM demo/工具路径；意图重叠，方向上已被基于 LiteRT 的 Gallery 取代。 |
 
 ## 技术栈
 

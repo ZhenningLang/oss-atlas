@@ -9,6 +9,11 @@ license: MIT
 maturity: v5.1.0 (2022-10), archived & unmaintained, ~2.0k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2024-01-03T15:34:32Z
+  default_branch: master
+  default_branch_sha: da1b675fe2cc6dae2e3bb959c1ce95eb1c41830b
+  archived: true
 health:
   schema: 1
   computed_at: 2026-06-29T10:21:22Z
@@ -86,12 +91,12 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| [Selenium](selenium.zh.md)（4.x 原生 CDP/BiDi） | ✅ | 它封装的底座库；Selenium 4 现已提供原生 CDP/BiDi 网络拦截——是拿回 selenium-wire 大部分能力的有人维护方式，无需 MITM 代理。[推断] |
-| Playwright | 未收录 | 现代、活跃维护的浏览器自动化，内建一等的请求/响应拦截（`page.route`、响应体）；最强的“新项目”替代。 |
-| mitmproxy | 未收录 | 有人维护的独立 MITM 代理，带完整脚本 API；更重、不与 Selenium 耦合，但当你需要真正的代理级捕获时是对的工具。 |
-| Browser MITM Proxy / BrowserMob Proxy | 未收录 | 给 Selenium 做 HAR 捕获的更老的代理方案（BrowserMob 是 Java）；思路类似，同样在老化。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [Selenium](selenium.zh.md)（4.x 原生 CDP/BiDi） | ✅ | 当前页用于它的主场景；如果更看重“它封装的底座库”，再选 Selenium（4.x 原生 CDP/BiDi）。 | 它封装的底座库；Selenium 4 现已提供原生 CDP/BiDi 网络拦截——是拿回 selenium-wire 大部分能力的有人维护方式，无需 MITM 代理。[推断] |
+| Playwright | 未收录 | 当前页用于它的主场景；如果更看重“现代、活跃维护的浏览器自动化，内建一等的请求/响应拦截（`page”，再选 Playwright。 | 现代、活跃维护的浏览器自动化，内建一等的请求/响应拦截（`page.route`、响应体）；最强的“新项目”替代。 |
+| mitmproxy | 未收录 | 当前页用于它的主场景；如果更看重“有人维护的独立 MITM 代理，带完整脚本 API”，再选 mitmproxy。 | 有人维护的独立 MITM 代理，带完整脚本 API；更重、不与 Selenium 耦合，但当你需要真正的代理级捕获时是对的工具。 |
+| Browser MITM Proxy / BrowserMob Proxy | 未收录 | 当前页用于它的主场景；如果更看重“给 Selenium 做 HAR 捕获的更老的代理方案（BrowserMob 是 Java）”，再选 Browser MITM Proxy / BrowserMob Proxy。 | 给 Selenium 做 HAR 捕获的更老的代理方案（BrowserMob 是 Java）；思路类似，同样在老化。 |
 
 ## 技术栈
 

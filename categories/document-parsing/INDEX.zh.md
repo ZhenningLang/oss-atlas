@@ -5,17 +5,17 @@
 
 ## 本分类项目
 
-| 项目 | 何时用 | 页面 |
-|---|---|---|
-| **Docling** | 当你需要把杂乱的 PDF/DOCX/PPTX 解析成干净的结构化 Markdown/JSON 以喂给 RAG 时用它——是解析器，不是文档管理系统。 | [→](docling.zh.md) |
+| 项目 | 何时用 | 健康度 | 页面 |
+| --- | --- | --- | --- |
+| **Docling** | 当你需要把杂乱的 PDF/DOCX/PPTX 解析成干净的结构化 Markdown/JSON 以喂给 RAG 时用它——是解析器，不是文档管理系统。 | A（5/6） | [→](docling.zh.md) |
 
 ## 对比矩阵
 
-| 选项 | 是否收录 | 一句话取舍 |
-|---|---|---|
-| [Docling](docling.zh.md) | ✅ | 富文档解析（版面 + 表格）成结构化 Markdown/JSON；模型依赖比纯文本提取更重。 |
-| [PageIndex](../rag-retrieval/pageindex.zh.md) | ✅ | 在长结构化文档上建检索索引——位于解析之后，本身不是解析器。 |
-| unstructured.io / LlamaParse / Marker / PyMuPDF | 未收录 | 各页对比里点到的其他文档解析/提取器。 |
+| 选项 | 是否收录 | 健康度 | 一句话取舍 |
+| --- | --- | --- | --- |
+| [Docling](docling.zh.md) | ✅ | A（5/6） | 富文档解析（版面 + 表格）成结构化 Markdown/JSON；模型依赖比纯文本提取更重。 |
+| [PageIndex](../rag-retrieval/pageindex.zh.md) | ✅ | B（5/6） | 在长结构化文档上建检索索引——位于解析之后，本身不是解析器。 |
+| unstructured.io / LlamaParse / Marker / PyMuPDF | 未收录 | — | 各页对比里点到的其他文档解析/提取器。 |
 
 ## 什么该放这里
 

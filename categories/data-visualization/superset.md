@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v6.1.0, active, ~73.6k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: app
+upstream:
+  pushed_at: 2026-06-29T07:10:08Z
+  default_branch: master
+  default_branch_sha: 90fe1f5b7c49d9980afb4fb54ac92d789b294490
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:41:45Z
@@ -89,13 +94,13 @@ You also reach for it when you need broad chart variety and dashboard interactiv
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| Metabase | 未收录 | Open-source BI with a far simpler deploy (single jar/container) and a friendlier no-SQL question builder; easier for non-technical users, but a lighter semantic/customization story and less raw-SQL/chart depth than Superset. |
-| [Grafana](../observability/grafana.md) | ✅ | Observability-first dashboards over time-series/metrics/logs (Prometheus, Loki, InfluxDB) with strong alerting; can query SQL too, but it is built for monitoring panels, not warehouse-style ad-hoc BI exploration. |
-| Redash | 未收录 | Query-centric: write SQL, save queries, build dashboards from them; simpler model and lighter than Superset, but a narrower visualization set and a weaker semantic/governance layer. |
-| Tableau / Power BI | 未收录 | Proprietary, commercial BI with mature visuals, data prep, and enterprise support; richer polish and ecosystem, but licensing cost, vendor lock-in, and (for Power BI) Microsoft-stack gravity — not self-hosted open source. |
-| Looker | 未收录 | Proprietary (Google) BI built around LookML, a real modeling language and governed semantic layer; stronger modeling/governance than Superset's lightweight layer, but commercial, locked-in, and priced for the enterprise. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| Metabase | 未收录 | Use this page for its stated niche; choose Metabase when you need open-source BI with a far simpler deploy (single jar/container) and a friendlier no-SQL question bui. | Open-source BI with a far simpler deploy (single jar/container) and a friendlier no-SQL question builder; easier for non-technical users, but a lighter semantic/customization story and less raw-SQL/chart depth than Superset. |
+| [Grafana](../observability/grafana.md) | ✅ | Use this page for its stated niche; choose Grafana when you need observability-first dashboards over time-series/metrics/logs (Prometheus, Loki, InfluxDB) with stron. | Observability-first dashboards over time-series/metrics/logs (Prometheus, Loki, InfluxDB) with strong alerting; can query SQL too, but it is built for monitoring panels, not warehouse-style ad-hoc BI exploration. |
+| Redash | 未收录 | Use this page for its stated niche; choose Redash when you need query-centric: write SQL, save queries, build dashboards from them. | Query-centric: write SQL, save queries, build dashboards from them; simpler model and lighter than Superset, but a narrower visualization set and a weaker semantic/governance layer. |
+| Tableau / Power BI | 未收录 | Use this page for its stated niche; choose Tableau / Power BI when you need proprietary, commercial BI with mature visuals, data prep, and enterprise support. | Proprietary, commercial BI with mature visuals, data prep, and enterprise support; richer polish and ecosystem, but licensing cost, vendor lock-in, and (for Power BI) Microsoft-stack gravity — not self-hosted open source. |
+| Looker | 未收录 | Use this page for its stated niche; choose Looker when you need proprietary (Google) BI built around LookML, a real modeling language and governed semantic layer. | Proprietary (Google) BI built around LookML, a real modeling language and governed semantic layer; stronger modeling/governance than Superset's lightweight layer, but commercial, locked-in, and priced for the enterprise. |
 
 ## Tech stack
 

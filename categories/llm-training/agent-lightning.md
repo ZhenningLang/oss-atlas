@@ -9,6 +9,11 @@ license: MIT
 maturity: v0.3.0, active (2026-06)
 last_verified: 2026-06-26
 type: framework
+upstream:
+  pushed_at: 2026-04-29T06:32:24Z
+  default_branch: main
+  default_branch_sha: 0b40cb724a0ad4f944810f8514884051777bb38b
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:57:39Z
@@ -83,14 +88,14 @@ Agent Lightning is built for exactly this. It models agent execution as a Markov
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-| --- | --- | --- |
-| [LLaMA-Factory](llamafactory.md) | ✅ | Broad SFT/DPO/PPO fine-tuning over datasets with a unified config/UI; not built for decoupling a live multi-step agent into RL transitions. |
-| [Unsloth](unsloth.md) | ✅ | Fast, memory-efficient single-GPU SFT/LoRA; an optimization *kernel/trainer*, not an agent-rollout RL orchestrator. |
-| [ART](art.md) | ✅ | Also RL for agents, but a more opinionated, ergonomic single-loop experience; Agent Lightning emphasizes framework-agnostic decoupling + pluggable backends. |
-| verl | 未收录 | The underlying distributed RL engine Agent Lightning builds on; powerful but expects you to express training as its generation loop rather than wrap a native agent. |
-| HF TRL | 未收录 | Mature PPO/GRPO/DPO library; dataset/loop-centric, no agent-execution decoupling or multi-step credit assignment out of the box. |
-| OpenAI Agents SDK / LangChain (alone) | 未收录 | Build and run agents, but don't train the underlying model from rollouts — Agent Lightning sits on top to make them trainable. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [LLaMA-Factory](llamafactory.md) | ✅ | Use this page for its stated niche; choose LLaMA-Factory when you need broad SFT/DPO/PPO fine-tuning over datasets with a unified config/UI. | Broad SFT/DPO/PPO fine-tuning over datasets with a unified config/UI; not built for decoupling a live multi-step agent into RL transitions. |
+| [Unsloth](unsloth.md) | ✅ | Use this page for its stated niche; choose Unsloth when you need fast, memory-efficient single-GPU SFT/LoRA. | Fast, memory-efficient single-GPU SFT/LoRA; an optimization *kernel/trainer*, not an agent-rollout RL orchestrator. |
+| [ART](art.md) | ✅ | Use this page for its stated niche; choose ART when you need also RL for agents, but a more opinionated, ergonomic single-loop experience. | Also RL for agents, but a more opinionated, ergonomic single-loop experience; Agent Lightning emphasizes framework-agnostic decoupling + pluggable backends. |
+| verl | 未收录 | Use this page for its stated niche; choose verl when you need the underlying distributed RL engine Agent Lightning builds on. | The underlying distributed RL engine Agent Lightning builds on; powerful but expects you to express training as its generation loop rather than wrap a native agent. |
+| HF TRL | 未收录 | Use this page for its stated niche; choose HF TRL when you need mature PPO/GRPO/DPO library. | Mature PPO/GRPO/DPO library; dataset/loop-centric, no agent-execution decoupling or multi-step credit assignment out of the box. |
+| OpenAI Agents SDK / LangChain (alone) | 未收录 | Use this page for its stated niche; choose OpenAI Agents SDK / LangChain (alone) when you need build and run agents, but don't train the underlying model from rollouts. | Build and run agents, but don't train the underlying model from rollouts — Agent Lightning sits on top to make them trainable. |
 
 ## Tech stack
 

@@ -9,6 +9,11 @@ license: MIT
 maturity: ~v0.0.31, coasting — last pushed 2025-01 (~1.5 yr idle as of 2026-06), ~16.5k stars
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2025-01-18T15:23:58Z
+  default_branch: main
+  default_branch_sha: 5c1ac929bd19a7ecf86d5fb8d94771c8969fcb80
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:08:37Z
@@ -76,12 +81,12 @@ You reach for it specifically when the unit of work is *a math equation, already
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [Tesseract](tesseract.md) | ✅ | General-purpose printed-text OCR — the opposite job: great for prose/documents, but has **no math notation understanding** and won't emit LaTeX. Pair them (Tesseract for text, pix2tex for the equations), don't substitute one for the other. |
-| Mathpix | 未收录 | Commercial math-OCR service/API; generally the accuracy leader for math + handwriting + multiline, with mobile apps and document export — but it's a paid SaaS (per-call cost, data leaves your machine), not an MIT self-hostable repo. |
-| texify | 未收录 | Open-source equation-to-LaTeX model (VikParuchuri); a more recently-maintained direct alternative aimed at the same task — worth comparing on your data and on maintenance recency. |
-| GPT-4o / Qwen-VL / Gemini (VLMs) | 未收录 | General vision-language models that transcribe equations to LaTeX zero-shot; stronger on messy/contextual input and actively improving, but heavier (API cost or large local weights) and not a purpose-built, lightweight equation tool. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [Tesseract](tesseract.md) | ✅ | Use this page for its stated niche; choose Tesseract when you need general-purpose printed-text OCR. | General-purpose printed-text OCR — the opposite job: great for prose/documents, but has **no math notation understanding** and won't emit LaTeX. Pair them (Tesseract for text, pix2tex for the equations), don't substitute one for the other. |
+| Mathpix | 未收录 | Use this page for its stated niche; choose Mathpix when you need commercial math-OCR service/API. | Commercial math-OCR service/API; generally the accuracy leader for math + handwriting + multiline, with mobile apps and document export — but it's a paid SaaS (per-call cost, data leaves your machine), not an MIT self-hostable repo. |
+| texify | 未收录 | Use this page for its stated niche; choose texify when you need open-source equation-to-LaTeX model (VikParuchuri). | Open-source equation-to-LaTeX model (VikParuchuri); a more recently-maintained direct alternative aimed at the same task — worth comparing on your data and on maintenance recency. |
+| GPT-4o / Qwen-VL / Gemini (VLMs) | 未收录 | Use this page for its stated niche; choose GPT-4o / Qwen-VL / Gemini (VLMs) when you need general vision-language models that transcribe equations to LaTeX zero-shot. | General vision-language models that transcribe equations to LaTeX zero-shot; stronger on messy/contextual input and actively improving, but heavier (API cost or large local weights) and not a purpose-built, lightweight equation tool. |
 
 ## Tech stack
 

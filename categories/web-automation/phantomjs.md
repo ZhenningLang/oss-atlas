@@ -9,6 +9,11 @@ license: BSD-3-Clause
 maturity: archived/abandoned — development suspended since 2018, repo archived (last pushed 2022-11); ~29.5k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: tool
+upstream:
+  pushed_at: 2022-11-26T19:43:12Z
+  default_branch: master
+  default_branch_sha: 0a0b0facb16acfbabb7804822ecaf4f4b9dce3d2
+  archived: true
 health:
   schema: 1
   computed_at: 2026-06-29T10:21:06Z
@@ -85,12 +90,12 @@ That is the *only* realistic reason to touch it in 2026. For any new testing, sc
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| Headless Chrome/Chromium + Puppeteer | 未收录 | The standard replacement: a maintained, modern Chromium engine driven by a Node.js library over CDP — accurate rendering, active security patching, huge ecosystem; single-engine (Chromium) and Node-centric, but that's the right default for new work. |
-| Playwright | 未收录 | Modern cross-engine automation (Chromium/Firefox/WebKit) with auto-wait, network interception, tracing, multi-language bindings; everything PhantomJS did and far more, actively maintained — the recommended modern choice. |
-| [Selenium](selenium.md) | ✅ | W3C-WebDriver cross-browser framework driving *real* browsers (incl. headless Chrome) across many languages; heavier and lower-level, but the standards-based, still-active option where cross-browser breadth matters. |
-| [Chrome DevTools MCP](chrome-devtools-mcp.md) | ✅ | MCP server exposing Chrome DevTools (traces, network, heap) to agents on a live Chromium; a maintained, agent-oriented Chrome tool — different (debugging/measuring) job, but built on the modern engine PhantomJS lacks. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| Headless Chrome/Chromium + Puppeteer | 未收录 | Use this page for its stated niche; choose Headless Chrome/Chromium + Puppeteer when you need the standard replacement: a maintained, modern Chromium engine driven by a Node. | The standard replacement: a maintained, modern Chromium engine driven by a Node.js library over CDP — accurate rendering, active security patching, huge ecosystem; single-engine (Chromium) and Node-centric, but that's the right default for new work. |
+| Playwright | 未收录 | Use this page for its stated niche; choose Playwright when you need modern cross-engine automation (Chromium/Firefox/WebKit) with auto-wait, network interception, traci. | Modern cross-engine automation (Chromium/Firefox/WebKit) with auto-wait, network interception, tracing, multi-language bindings; everything PhantomJS did and far more, actively maintained — the recommended modern choice. |
+| [Selenium](selenium.md) | ✅ | Use this page for its stated niche; choose Selenium when you need W3C-WebDriver cross-browser framework driving *real* browsers (incl. | W3C-WebDriver cross-browser framework driving *real* browsers (incl. headless Chrome) across many languages; heavier and lower-level, but the standards-based, still-active option where cross-browser breadth matters. |
+| [Chrome DevTools MCP](chrome-devtools-mcp.md) | ✅ | Use this page for its stated niche; choose Chrome DevTools MCP when you need MCP server exposing Chrome DevTools (traces, network, heap) to agents on a live Chromium. | MCP server exposing Chrome DevTools (traces, network, heap) to agents on a live Chromium; a maintained, agent-oriented Chrome tool — different (debugging/measuring) job, but built on the modern engine PhantomJS lacks. |
 
 ## Tech stack
 

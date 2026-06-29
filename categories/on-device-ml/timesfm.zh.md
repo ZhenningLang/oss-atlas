@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: Headline model TimesFM 2.5 (200M, released 2025-09-15); repo release v2.0.1 (2026-06-11); active, Google Research (as of 2026-06)
 last_verified: 2026-06-26
 type: model
+upstream:
+  pushed_at: 2026-06-23T18:50:53Z
+  default_branch: master
+  default_branch_sha: 8a22ca28a0239d34c095b1eba7fea92d22198e0c
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:10:09Z
@@ -88,14 +93,14 @@ Google Research 出品的预训练**时间序列基础模型**（decoder-only）
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| [BitNet](bitnet.zh.md) | ✅ | 一个端侧 **LLM** 运行时（1-bit 文本模型），完全是另一种模态——TimesFM 预测数字，BitNet 生成文本。列在这里只为消歧“本地模型”：按任务选，不要因为都“小+本地”就混为一谈。 |
-| [LiteRT-LM](litert-lm.zh.md) | ✅ | Google 的端侧 **LLM** 编排运行时（手机上跑文本生成）。不是预测器；不会用它做需求预测。同样的消歧说明。 |
-| [Google AI Edge Gallery](ai-edge-gallery.zh.md) | ✅ | 一个运行端侧**生成式**模型的演示 app/目录，不做时间序列预测。任务不同。 |
-| Chronos (Amazon) | 未收录 | 把序列 token 化进语言模型词表；很强的零样本预测器，是直接替代品。TimesFM 是 decoder-only、自带分位数头、（2.5）16k 上下文。 |
-| TimGPT / Nixtla `nixtla` | 未收录 | 托管/受管的预测 API 加 OSS 库（statsforecast/neuralforecast）。Nixtla 的经典/神经库在“可逐序列训练”时很好用；TimesFM 用零样本换掉这一步。 |
-| Moirai (Salesforce) | 未收录 | 另一个开源时间序列基础模型，带多变量框架；用例重叠，但架构和许可条款不同。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [BitNet](bitnet.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“一个端侧 **LLM** 运行时（1-bit 文本模型），完全是另一种模态”，再选 BitNet。 | 一个端侧 **LLM** 运行时（1-bit 文本模型），完全是另一种模态——TimesFM 预测数字，BitNet 生成文本。列在这里只为消歧“本地模型”：按任务选，不要因为都“小+本地”就混为一谈。 |
+| [LiteRT-LM](litert-lm.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“Google 的端侧 **LLM** 编排运行时（手机上跑文本生成）”，再选 LiteRT-LM。 | Google 的端侧 **LLM** 编排运行时（手机上跑文本生成）。不是预测器；不会用它做需求预测。同样的消歧说明。 |
+| [Google AI Edge Gallery](ai-edge-gallery.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“一个运行端侧**生成式**模型的演示 app/目录，不做时间序列预测”，再选 Google AI Edge Gallery。 | 一个运行端侧**生成式**模型的演示 app/目录，不做时间序列预测。任务不同。 |
+| Chronos (Amazon) | 未收录 | 当前页用于它的主场景；如果更看重“把序列 token 化进语言模型词表”，再选 Chronos (Amazon)。 | 把序列 token 化进语言模型词表；很强的零样本预测器，是直接替代品。TimesFM 是 decoder-only、自带分位数头、（2.5）16k 上下文。 |
+| TimGPT / Nixtla `nixtla` | 未收录 | 当前页用于它的主场景；如果更看重“托管/受管的预测 API 加 OSS 库（statsforecast/neuralforecast）”，再选 TimGPT / Nixtla nixtla。 | 托管/受管的预测 API 加 OSS 库（statsforecast/neuralforecast）。Nixtla 的经典/神经库在“可逐序列训练”时很好用；TimesFM 用零样本换掉这一步。 |
+| Moirai (Salesforce) | 未收录 | 当前页用于它的主场景；如果更看重“另一个开源时间序列基础模型，带多变量框架”，再选 Moirai (Salesforce)。 | 另一个开源时间序列基础模型，带多变量框架；用例重叠，但架构和许可条款不同。 |
 
 ## 技术栈
 

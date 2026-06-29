@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: no tagged releases, active, last pushed 2026-06 (155k+ stars [未验证])
 last_verified: 2026-06-26
 type: skill-pack
+upstream:
+  pushed_at: 2026-06-27T16:07:58Z
+  default_branch: main
+  default_branch_sha: 35414756ca55738e050562e272a6bbc6273aa926
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:33:25Z
@@ -80,13 +85,13 @@ Anthropic 官方公开的 Agent Skills 合集——一组自包含的 `SKILL.md`
 
 ## 横向对比
 
-| 替代方案 | 已收录 | 取舍 |
-|---|---|---|
-| Claude plugins（官方） | 未收录 | Anthropic 更大的官方插件/市场面；本 `skills` 仓库专指 Agent Skills 合集（文档 + 示例 skill），而非完整插件目录。按“只要 skill 还是要更广的插件集”来选。 |
-| AWS Labs agent plugins | 未收录 | 另一家厂商发布的合集，带 AWS 生态色彩；按你的云/工具栈倾向来选。格式与 loader 兼容性各异。 |
-| MiniMax skills | 未收录 | 另一家厂商的 skill 合集；同样是“官方起步 skill”目标，但绑定其模型/harness。混用前先核对格式兼容性。 |
-| 第三方社区 skill 包（如 Superpowers） | 未收录 | 偏方法论/SDLC 的强观点合集，叠在 agent 之上。本仓库更窄、且是第一方：参考任务 skill + 编写规范，而非完整工作流方法论。 |
-| 自己写 `SKILL.md` skill | 不适用 | 贴合度最高、零外部依赖，但放弃厂商经过验证的文档生成 skill 与权威 spec/template。很多人就是从这里 fork 当基线。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| Claude plugins（官方） | 未收录 | 当前页用于它的主场景；如果更看重“Anthropic 更大的官方插件/市场面”，再选 Claude plugins（官方）。 | Anthropic 更大的官方插件/市场面；本 `skills` 仓库专指 Agent Skills 合集（文档 + 示例 skill），而非完整插件目录。按“只要 skill 还是要更广的插件集”来选。 |
+| AWS Labs agent plugins | 未收录 | 当前页用于它的主场景；如果更看重“另一家厂商发布的合集，带 AWS 生态色彩”，再选 AWS Labs agent plugins。 | 另一家厂商发布的合集，带 AWS 生态色彩；按你的云/工具栈倾向来选。格式与 loader 兼容性各异。 |
+| MiniMax skills | 未收录 | 当前页用于它的主场景；如果更看重“另一家厂商的 skill 合集”，再选 MiniMax skills。 | 另一家厂商的 skill 合集；同样是“官方起步 skill”目标，但绑定其模型/harness。混用前先核对格式兼容性。 |
+| 第三方社区 skill 包（如 Superpowers） | 未收录 | 当前页用于它的主场景；如果更看重“偏方法论/SDLC 的强观点合集，叠在 agent 之上”，再选 第三方社区 skill 包（如 Superpowers）。 | 偏方法论/SDLC 的强观点合集，叠在 agent 之上。本仓库更窄、且是第一方：参考任务 skill + 编写规范，而非完整工作流方法论。 |
+| 自己写 `SKILL.md` skill | 不适用 | 当前页用于它的主场景；如果更看重“贴合度最高、零外部依赖，但放弃厂商经过验证的文档生成 skill 与权威 spec/template”，再选 自己写 SKILL.md skill。 | 贴合度最高、零外部依赖，但放弃厂商经过验证的文档生成 skill 与权威 spec/template。很多人就是从这里 fork 当基线。 |
 
 ## 健康度与可持续性
 

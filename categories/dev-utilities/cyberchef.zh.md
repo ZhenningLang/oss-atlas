@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v11.2.0, active (2026-06)
 last_verified: 2026-06-26
 type: app
+upstream:
+  pushed_at: 2026-06-26T12:15:28Z
+  default_branch: master
+  default_branch_sha: 275b594f7c8b0e39880f55e7c1f67dc0a4e73f92
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:47:15Z
@@ -89,13 +94,13 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| [DevToys](devtoys.zh.md) | ✅ | 原生跨平台桌面 devtools 工具面板（格式化、转换、生成器）；是固定工具清单，而非 CyberChef 那种可串联的 recipe 流水线 +「Magic」自动识别。 |
-| [Cockpit](cockpit.zh.md) | ✅ | 面向*服务器管理*的 Web UI，不做数据变换——完全是另一个问题；列出仅为消解「Web 工具」这一名词上的重叠。 |
-| CyberChef-server | 未收录 | 官方 Node 封装，把 CyberChef recipe 经 HTTP 暴露出来做批处理/自动化；是补充而非替代本应用。 |
-| 自写脚本（`openssl`/`xxd`/Python） | 未收录 | 控制力最强、可脚本化、无 UI；但每个任务都要重写，且失去实时可视 recipe 和 Magic 识别。 |
-| dCode / 在线解码器 | 未收录 | 浏览器里单次变换很方便；但数据会离开你的机器，也没有离线/自托管方案——正是 CyberChef 补上的隐私缺口。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [DevToys](devtoys.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“原生跨平台桌面 devtools 工具面板（格式化、转换、生成器）”，再选 DevToys。 | 原生跨平台桌面 devtools 工具面板（格式化、转换、生成器）；是固定工具清单，而非 CyberChef 那种可串联的 recipe 流水线 +「Magic」自动识别。 |
+| [Cockpit](cockpit.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“面向*服务器管理*的 Web UI，不做数据变换”，再选 Cockpit。 | 面向*服务器管理*的 Web UI，不做数据变换——完全是另一个问题；列出仅为消解「Web 工具」这一名词上的重叠。 |
+| CyberChef-server | 未收录 | 当前页用于它的主场景；如果更看重“官方 Node 封装，把 CyberChef recipe 经 HTTP 暴露出来做批处理/自动化”，再选 CyberChef-server。 | 官方 Node 封装，把 CyberChef recipe 经 HTTP 暴露出来做批处理/自动化；是补充而非替代本应用。 |
+| 自写脚本（`openssl`/`xxd`/Python） | 未收录 | 当前页用于它的主场景；如果更看重“控制力最强、可脚本化、无 UI”，再选 自写脚本（openssl/xxd/Python）。 | 控制力最强、可脚本化、无 UI；但每个任务都要重写，且失去实时可视 recipe 和 Magic 识别。 |
+| dCode / 在线解码器 | 未收录 | 当前页用于它的主场景；如果更看重“浏览器里单次变换很方便”，再选 dCode / 在线解码器。 | 浏览器里单次变换很方便；但数据会离开你的机器，也没有离线/自托管方案——正是 CyberChef 补上的隐私缺口。 |
 
 ## 技术栈
 

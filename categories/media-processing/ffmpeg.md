@@ -9,6 +9,11 @@ license: LGPL-2.1-or-later
 maturity: "active, LGPL-2.1+ core with optional GPL parts, ~61.5k stars (2026-06)"
 last_verified: 2026-06-28
 type: tool
+upstream:
+  pushed_at: 2026-06-29T11:25:33Z
+  default_branch: master
+  default_branch_sha: 3f6bf150cb018334809bec029325b28cff8a5a9a
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:02:15Z
@@ -78,13 +83,13 @@ You also reach for FFmpeg as a library, not just a CLI, when you're embedding me
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| GStreamer | 未收录 | Pipeline/element graph framework for live/streaming and app-embedded media; more composable for real-time apps and device pipelines, but a heavier programming model than shelling out to one CLI — and it often uses FFmpeg/libav under the hood anyway. |
-| libav (avconv) | 未收录 | Historical 2011 fork of FFmpeg; merged back into irrelevance and effectively dead. Old distros shipped `avconv`; for any new work use FFmpeg, not libav. |
-| HandBrake | 未收录 | End-user transcoding app (GUI + `HandBrakeCLI`) built on top of FFmpeg/x264/x265; great preset-driven "rip this to MP4/MKV" UX, far narrower than raw FFmpeg's format/filter surface and not a library. |
-| MLT / Shotcut | 未收录 | Multimedia *framework* for editing/compositing with a timeline model; sits above FFmpeg for the actual codec work — reach for it when you need an editor/NLE, not a transcoder. |
-| AWS Elemental MediaConvert / cloud transcoders | 未收录 | Managed, pay-per-minute transcoding services (often FFmpeg-derived internally); zero ops and elastic scale, but vendor lock-in, per-minute cost, and a SaaS — not a repository you self-host. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| GStreamer | 未收录 | Use this page for its stated niche; choose GStreamer when you need pipeline/element graph framework for live/streaming and app-embedded media. | Pipeline/element graph framework for live/streaming and app-embedded media; more composable for real-time apps and device pipelines, but a heavier programming model than shelling out to one CLI — and it often uses FFmpeg/libav under the hood anyway. |
+| libav (avconv) | 未收录 | Use this page for its stated niche; choose libav (avconv) when you need historical 2011 fork of FFmpeg. | Historical 2011 fork of FFmpeg; merged back into irrelevance and effectively dead. Old distros shipped `avconv`; for any new work use FFmpeg, not libav. |
+| HandBrake | 未收录 | Use this page for its stated niche; choose HandBrake when you need end-user transcoding app (GUI + `HandBrakeCLI`) built on top of FFmpeg/x264/x265. | End-user transcoding app (GUI + `HandBrakeCLI`) built on top of FFmpeg/x264/x265; great preset-driven "rip this to MP4/MKV" UX, far narrower than raw FFmpeg's format/filter surface and not a library. |
+| MLT / Shotcut | 未收录 | Use this page for its stated niche; choose MLT / Shotcut when you need multimedia *framework* for editing/compositing with a timeline model. | Multimedia *framework* for editing/compositing with a timeline model; sits above FFmpeg for the actual codec work — reach for it when you need an editor/NLE, not a transcoder. |
+| AWS Elemental MediaConvert / cloud transcoders | 未收录 | Use this page for its stated niche; choose AWS Elemental MediaConvert / cloud transcoders when you need managed, pay-per-minute transcoding services (often FFmpeg-derived internally). | Managed, pay-per-minute transcoding services (often FFmpeg-derived internally); zero ops and elastic scale, but vendor lock-in, per-minute cost, and a SaaS — not a repository you self-host. |
 
 ## Tech stack
 

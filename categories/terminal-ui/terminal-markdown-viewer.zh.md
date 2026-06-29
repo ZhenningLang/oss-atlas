@@ -9,6 +9,11 @@ license: BSD-3-Clause
 maturity: v0.x, low-activity (2026-06)
 last_verified: 2026-06-28
 type: tool
+upstream:
+  pushed_at: 2024-05-15T12:23:58Z
+  default_branch: master
+  default_branch_sha: 33d0cf3a1f9acac0c23d9382492ed2ab44fb8833
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:19:33Z
@@ -73,13 +78,13 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| glow | 未收录 | Go 单二进制 Markdown 渲染器，带 TUI 浏览器/pager 和主题（Charm）；维护活跃、无 Python 运行时——通常是终端读 Markdown 的现代默认选择。 |
-| bat | 未收录 | 带语法高亮和分页的 `cat` 替代；显示的是高亮后的 Markdown *源码*而非渲染结果，但无处不在且快。 |
-| rich（Markdown） | 未收录 | Python 库，作为更大工具集的一部分把 Markdown 渲染成带样式的终端输出；库优先，不是独立 CLI。 |
-| mdcat | 未收录 | Rust CLI，把 Markdown 渲染到终端，在支持的终端上还能内联显示图片；单二进制、活跃。 |
-| pandoc + pager | 未收录 | 把 Markdown 转成多种格式（重量级、通用）；对“只想在终端里看这份 .md”来说是杀鸡用牛刀。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| glow | 未收录 | 当前页用于它的主场景；如果更看重“Go 单二进制 Markdown 渲染器，带 TUI 浏览器/pager 和主题（Charm）”，再选 glow。 | Go 单二进制 Markdown 渲染器，带 TUI 浏览器/pager 和主题（Charm）；维护活跃、无 Python 运行时——通常是终端读 Markdown 的现代默认选择。 |
+| bat | 未收录 | 当前页用于它的主场景；如果更看重“带语法高亮和分页的 `cat` 替代”，再选 bat。 | 带语法高亮和分页的 `cat` 替代；显示的是高亮后的 Markdown *源码*而非渲染结果，但无处不在且快。 |
+| rich（Markdown） | 未收录 | 当前页用于它的主场景；如果更看重“Python 库，作为更大工具集的一部分把 Markdown 渲染成带样式的终端输出”，再选 rich（Markdown）。 | Python 库，作为更大工具集的一部分把 Markdown 渲染成带样式的终端输出；库优先，不是独立 CLI。 |
+| mdcat | 未收录 | 当前页用于它的主场景；如果更看重“Rust CLI，把 Markdown 渲染到终端，在支持的终端上还能内联显示图片”，再选 mdcat。 | Rust CLI，把 Markdown 渲染到终端，在支持的终端上还能内联显示图片；单二进制、活跃。 |
+| pandoc + pager | 未收录 | 当前页用于它的主场景；如果更看重“把 Markdown 转成多种格式（重量级、通用）”，再选 pandoc + pager。 | 把 Markdown 转成多种格式（重量级、通用）；对“只想在终端里看这份 .md”来说是杀鸡用牛刀。 |
 
 ## 技术栈
 

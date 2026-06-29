@@ -9,6 +9,11 @@ license: Unlicense
 maturity: "active-but-slowing, last tagged release 2021.12.17, master still pushed ~2026-02, ~140.6k stars (2026-06)"
 last_verified: 2026-06-28
 type: tool
+upstream:
+  pushed_at: 2026-02-19T16:45:25Z
+  default_branch: master
+  default_branch_sha: 956b8c585591b401a543e409accb163eeaaa1193
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:00:54Z
@@ -84,13 +89,13 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| yt-dlp | 未收录 | youtube-dl 的活跃维护分叉；extractor 修复更快、选项更多（SponsorBlock、更好的格式排序、aria2c 集成）,CLI 基本可直接替换。就 YouTube 而言它是事实上的继任者——除非你有理由钉死上游，否则选它。 |
-| you-get | 未收录 | Python 下载器，自带站点列表；UX 更简单，但 extractor 目录比 youtube-dl/yt-dlp 更小、跟进更不积极。 |
-| lux | 未收录 | Go 写的单二进制下载器（原名 annie）；无需 Python 运行时、速度快，但站点列表更窄、收录取向不同。 |
-| cobalt | 未收录 | 以 Web/API 为先的下载器（可自托管的服务）；浏览器友好、UX 干净，但它是一个要跑的服务，不是可 pip 安装、便于脚本化的 CLI。 |
-| gallery-dl | 未收录 | 专攻*图片/图集*站点（booru、社交媒体图集），而非视频；与视频抽取互补，不是替代。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| yt-dlp | 未收录 | 当前页用于它的主场景；如果更看重“youtube-dl 的活跃维护分叉”，再选 yt-dlp。 | youtube-dl 的活跃维护分叉；extractor 修复更快、选项更多（SponsorBlock、更好的格式排序、aria2c 集成）,CLI 基本可直接替换。就 YouTube 而言它是事实上的继任者——除非你有理由钉死上游，否则选它。 |
+| you-get | 未收录 | 当前页用于它的主场景；如果更看重“Python 下载器，自带站点列表”，再选 you-get。 | Python 下载器，自带站点列表；UX 更简单，但 extractor 目录比 youtube-dl/yt-dlp 更小、跟进更不积极。 |
+| lux | 未收录 | 当前页用于它的主场景；如果更看重“Go 写的单二进制下载器（原名 annie）”，再选 lux。 | Go 写的单二进制下载器（原名 annie）；无需 Python 运行时、速度快，但站点列表更窄、收录取向不同。 |
+| cobalt | 未收录 | 当前页用于它的主场景；如果更看重“以 Web/API 为先的下载器（可自托管的服务）”，再选 cobalt。 | 以 Web/API 为先的下载器（可自托管的服务）；浏览器友好、UX 干净，但它是一个要跑的服务，不是可 pip 安装、便于脚本化的 CLI。 |
+| gallery-dl | 未收录 | 当前页用于它的主场景；如果更看重“专攻*图片/图集*站点（booru、社交媒体图集），而非视频”，再选 gallery-dl。 | 专攻*图片/图集*站点（booru、社交媒体图集），而非视频；与视频抽取互补，不是替代。 |
 
 ## 技术栈
 

@@ -9,6 +9,11 @@ license: MIT
 maturity: last release v0.1 (2018), repo dormant (pushed 2022-12), ~5.5k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: app
+upstream:
+  pushed_at: 2022-12-26T11:50:58Z
+  default_branch: master
+  default_branch_sha: ab30ccf4b1d78e9304c27830006cc5800fe41bb3
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:10:43Z
@@ -76,12 +81,12 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| [Scylla](scylla.zh.md) | ✅ | 单服务池，带网页 UI + JSON API，不需 Redis——跑起来简单得多，但不像 haipproxy 那样为分布式/HA 爬虫规模而建。 |
-| [ProxyBroker](proxybroker.zh.md) | ✅ | 一个轻量 CLI finder/checker/server，无基建——调用最容易，但无分布、无 HA，且自身休眠/Python 易碎。 |
-| proxy_pool（jhao104） | 未收录 | 流行的 Redis 支撑自托管池，比 haipproxy 的分布式 Scrapy 架构更简单的单进程设计；免费代理生态位相近。[未验证] |
-| 付费代理供应商（Bright Data、Oxylabs……） | 未收录 | 带 SLA 和轮换的商业住宅/数据中心池——生产答案；只有当你确实需要一个自托管的*分布式*免费池时，haipproxy 才合适。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [Scylla](scylla.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“单服务池，带网页 UI + JSON API，不需 Redis”，再选 Scylla。 | 单服务池，带网页 UI + JSON API，不需 Redis——跑起来简单得多，但不像 haipproxy 那样为分布式/HA 爬虫规模而建。 |
+| [ProxyBroker](proxybroker.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“一个轻量 CLI finder/checker/server，无基建”，再选 ProxyBroker。 | 一个轻量 CLI finder/checker/server，无基建——调用最容易，但无分布、无 HA，且自身休眠/Python 易碎。 |
+| proxy_pool（jhao104） | 未收录 | 当前页用于它的主场景；如果更看重“流行的 Redis 支撑自托管池，比 haipproxy 的分布式 Scrapy 架构更简单的单进程设计”，再选 proxypool（jhao104）。 | 流行的 Redis 支撑自托管池，比 haipproxy 的分布式 Scrapy 架构更简单的单进程设计；免费代理生态位相近。[未验证] |
+| 付费代理供应商（Bright Data、Oxylabs……） | 未收录 | 当前页用于它的主场景；如果更看重“带 SLA 和轮换的商业住宅/数据中心池”，再选 付费代理供应商（Bright Data、Oxylabs……）。 | 带 SLA 和轮换的商业住宅/数据中心池——生产答案；只有当你确实需要一个自托管的*分布式*免费池时，haipproxy 才合适。 |
 
 ## 技术栈
 

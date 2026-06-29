@@ -9,6 +9,11 @@ license: AGPL-3.0-only
 maturity: v1.1.0, active (2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+upstream:
+  pushed_at: 2026-06-02T09:53:57Z
+  default_branch: main
+  default_branch_sha: 82fe5ae129e8c2a12e1155fcabed6703342749d6
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:37:49Z
@@ -81,15 +86,15 @@ It fits best when you want a strong personal aesthetic baked in: Style A (electr
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [guizang-social-card](guizang-social-card.md) | ✅ | Same author's sibling skill, but scoped to single social cards / covers rather than full multi-page decks; overlapping visual rules, narrower output. |
-| [html-anything](html-anything.md) | ✅ | General agent-driven HTML artifact generation; broader and unopinionated, so it lacks the locked deck layouts, Swiss validator, and cover/image workflow this skill ships. |
-| [open-design](open-design.md) | ✅ | Aimed at broader UI/design generation; not a presentation-deck specialist with horizontal-swipe runtime and named slide layouts. |
-| [Impeccable](impeccable.md) | ✅ | Design-quality oriented generation; different surface — not a single-file HTML deck workflow. |
-| Slidev | 未收录 | Developer-grade Markdown→HTML deck framework with build tooling, themes, and a dev server; more powerful/long-stable but not agent-driven and not opinionated about Swiss/editorial aesthetics. |
-| Marp | 未收录 | Markdown→slides (HTML/PDF/PPTX) with a clean ecosystem and exports this skill lacks; far less visual flexibility per slide. |
-| Gamma / Tome | 未收录 | Hosted AI deck SaaS, not a repo — easier for non-agents, but closed, no single-file HTML artifact, no local agent control. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [guizang-social-card](guizang-social-card.md) | ✅ | Use this page for its stated niche; choose guizang-social-card when you need same author's sibling skill, but scoped to single social cards / covers rather than full multi-page. | Same author's sibling skill, but scoped to single social cards / covers rather than full multi-page decks; overlapping visual rules, narrower output. |
+| [html-anything](html-anything.md) | ✅ | Use this page for its stated niche; choose html-anything when you need general agent-driven HTML artifact generation. | General agent-driven HTML artifact generation; broader and unopinionated, so it lacks the locked deck layouts, Swiss validator, and cover/image workflow this skill ships. |
+| [open-design](open-design.md) | ✅ | Use this page for its stated niche; choose open-design when you need aimed at broader UI/design generation. | Aimed at broader UI/design generation; not a presentation-deck specialist with horizontal-swipe runtime and named slide layouts. |
+| [Impeccable](impeccable.md) | ✅ | Use this page for its stated niche; choose Impeccable when you need design-quality oriented generation. | Design-quality oriented generation; different surface — not a single-file HTML deck workflow. |
+| Slidev | 未收录 | Use this page for its stated niche; choose Slidev when you need developer-grade Markdown→HTML deck framework with build tooling, themes, and a dev server. | Developer-grade Markdown→HTML deck framework with build tooling, themes, and a dev server; more powerful/long-stable but not agent-driven and not opinionated about Swiss/editorial aesthetics. |
+| Marp | 未收录 | Use this page for its stated niche; choose Marp when you need markdown→slides (HTML/PDF/PPTX) with a clean ecosystem and exports this skill lacks. | Markdown→slides (HTML/PDF/PPTX) with a clean ecosystem and exports this skill lacks; far less visual flexibility per slide. |
+| Gamma / Tome | 未收录 | Use this page for its stated niche; choose Gamma / Tome when you need hosted AI deck SaaS, not a repo. | Hosted AI deck SaaS, not a repo — easier for non-agents, but closed, no single-file HTML artifact, no local agent control. |
 
 ## Health & viability
 

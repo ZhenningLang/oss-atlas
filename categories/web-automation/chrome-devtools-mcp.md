@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v1.4.0 (2026-06-23); active, ChromeDevTools (Google) org, pushed 2026-06-25
 last_verified: 2026-06-26
 type: tool
+upstream:
+  pushed_at: 2026-06-28T00:04:33Z
+  default_branch: main
+  default_branch_sha: e5bd334c97b4f25207cad586684cca8208f1657e
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:20:04Z
@@ -90,14 +95,14 @@ You add `chrome-devtools-mcp` to your MCP client config (`npx chrome-devtools-mc
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [page-agent](page-agent.md) | ✅ | In-page JS GUI agent (DOM-as-text, no headless browser, no backend); great for NL form/workflow automation but **can't** record traces, inspect network at the CDP level, or take heap snapshots. |
-| [Agent Browser](agent-browser.md) | ✅ | Vercel-labs browser-automation for agents; overlapping "drive a browser for an agent" goal — different stack/ergonomics, less of a full DevTools-protocol surface. |
-| [Cua](cua.md) | ✅ | Computer-use / sandboxed-VM agent that drives a whole desktop, not just Chrome; broader (any app, pixel UIs) but heavier and not DevTools-grade for web perf/network. |
-| Playwright (+ MCP) | 未收录 | Cross-browser (Chromium/Firefox/WebKit), deterministic, code-or-MCP driven, headless-capable; the go-to for portable automation/CI. Chrome DevTools MCP trades breadth for Chrome-native DevTools depth (traces, Lighthouse, heap, CrUX). |
-| Puppeteer | 未收录 | The lower-level Chrome/CDP automation library this server is built on; you write the script, no MCP/agent layer or curated performance-insight tools. |
-| browser-use | 未收录 | Python, vision-capable autonomous browser agent; more "agent decides what to do" than "give the agent precise DevTools tools", and not DevTools-protocol-grade for perf/network inspection. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [page-agent](page-agent.md) | ✅ | Use this page for its stated niche; choose page-agent when you need in-page JS GUI agent (DOM-as-text, no headless browser, no backend). | In-page JS GUI agent (DOM-as-text, no headless browser, no backend); great for NL form/workflow automation but **can't** record traces, inspect network at the CDP level, or take heap snapshots. |
+| [Agent Browser](agent-browser.md) | ✅ | Use this page for its stated niche; choose Agent Browser when you need vercel-labs browser-automation for agents. | Vercel-labs browser-automation for agents; overlapping "drive a browser for an agent" goal — different stack/ergonomics, less of a full DevTools-protocol surface. |
+| [Cua](cua.md) | ✅ | Use this page for its stated niche; choose Cua when you need computer-use / sandboxed-VM agent that drives a whole desktop, not just Chrome. | Computer-use / sandboxed-VM agent that drives a whole desktop, not just Chrome; broader (any app, pixel UIs) but heavier and not DevTools-grade for web perf/network. |
+| Playwright (+ MCP) | 未收录 | Use this page for its stated niche; choose Playwright (+ MCP) when you need cross-browser (Chromium/Firefox/WebKit), deterministic, code-or-MCP driven, headless-capable. | Cross-browser (Chromium/Firefox/WebKit), deterministic, code-or-MCP driven, headless-capable; the go-to for portable automation/CI. Chrome DevTools MCP trades breadth for Chrome-native DevTools depth (traces, Lighthouse, heap, CrUX). |
+| Puppeteer | 未收录 | Use this page for its stated niche; choose Puppeteer when you need the lower-level Chrome/CDP automation library this server is built on. | The lower-level Chrome/CDP automation library this server is built on; you write the script, no MCP/agent layer or curated performance-insight tools. |
+| browser-use | 未收录 | Use this page for its stated niche; choose browser-use when you need python, vision-capable autonomous browser agent. | Python, vision-capable autonomous browser agent; more "agent decides what to do" than "give the agent precise DevTools tools", and not DevTools-protocol-grade for perf/network inspection. |
 
 ## Tech stack
 

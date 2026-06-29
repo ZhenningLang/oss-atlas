@@ -11,6 +11,11 @@ maturity: rust-v0.0.17 (2026-06), active rewrite; ~64k stars (2026-06)
 last_verified: 2026-06-29
 type: framework
 aka: [oi, interpreter]
+upstream:
+  pushed_at: 2026-06-20T01:29:50Z
+  default_branch: main
+  default_branch_sha: ac1b565c729e7a6192865e03301d81fa7c924025
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T04:20:56Z
@@ -94,13 +99,13 @@ It fits when the harness *is* the point: you're benchmarking or productionizing 
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| OpenAI Codex CLI | 未收录 | The **upstream** Open Interpreter forks. Canonical, larger team, faster mainline; tuned for OpenAI models. Open Interpreter adds the swappable low-cost-model harness layer on top and tracks Codex's `main`. |
-| Claude Code / similar vendor coding-CLI | 未收录 | Polished, vendor-backed terminal coding agents tied to a specific model family; more turnkey but not built around emulating harnesses for arbitrary cheap/open models. |
-| aider | 未收录 | Mature, model-agnostic terminal pair-programmer focused on git-aware edits across many providers; lighter and longer-lived, but not a Codex-derived sandboxed harness-switching runtime. |
-| [smolagents](smolagents.md) | ✅ | A tiny *library* for building code-acting agents you embed and own — the opposite end: you write the loop, vs. Open Interpreter being a full end-user coding-agent app. |
-| endolith/open-interpreter (the old Python OI) | 未收录 | The **original** Python "natural-language interface for computers" REPL, now community-maintained. Choose this if you actually wanted the legacy Python tool; expect community-pace maintenance. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| OpenAI Codex CLI | 未收录 | Use this page for its stated niche; choose OpenAI Codex CLI when you need the **upstream** Open Interpreter forks. | The **upstream** Open Interpreter forks. Canonical, larger team, faster mainline; tuned for OpenAI models. Open Interpreter adds the swappable low-cost-model harness layer on top and tracks Codex's `main`. |
+| Claude Code / similar vendor coding-CLI | 未收录 | Use this page for its stated niche; choose Claude Code / similar vendor coding-CLI when you need polished, vendor-backed terminal coding agents tied to a specific model family. | Polished, vendor-backed terminal coding agents tied to a specific model family; more turnkey but not built around emulating harnesses for arbitrary cheap/open models. |
+| aider | 未收录 | Use this page for its stated niche; choose aider when you need mature, model-agnostic terminal pair-programmer focused on git-aware edits across many providers. | Mature, model-agnostic terminal pair-programmer focused on git-aware edits across many providers; lighter and longer-lived, but not a Codex-derived sandboxed harness-switching runtime. |
+| [smolagents](smolagents.md) | ✅ | Use this page for its stated niche; choose smolagents when you need a tiny *library* for building code-acting agents you embed and own. | A tiny *library* for building code-acting agents you embed and own — the opposite end: you write the loop, vs. Open Interpreter being a full end-user coding-agent app. |
+| endolith/open-interpreter (the old Python OI) | 未收录 | Use this page for its stated niche; choose endolith/open-interpreter (the old Python OI) when you need the **original** Python "natural-language interface for computers" REPL, now community-maintained. | The **original** Python "natural-language interface for computers" REPL, now community-maintained. Choose this if you actually wanted the legacy Python tool; expect community-pace maintenance. |
 
 ## Tech stack
 

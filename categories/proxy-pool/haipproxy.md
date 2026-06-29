@@ -9,6 +9,11 @@ license: MIT
 maturity: last release v0.1 (2018), repo dormant (pushed 2022-12), ~5.5k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: app
+upstream:
+  pushed_at: 2022-12-26T11:50:58Z
+  default_branch: master
+  default_branch_sha: ab30ccf4b1d78e9304c27830006cc5800fe41bb3
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:10:43Z
@@ -76,12 +81,12 @@ This is the right reach when scale and availability are the actual problem — R
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [Scylla](scylla.md) | ✅ | Single-service pool with a web UI + JSON API, no Redis required — far simpler to run, but not built for distributed/HA crawler scale the way haipproxy is. |
-| [ProxyBroker](proxybroker.md) | ✅ | A lightweight CLI finder/checker/server with no infra — easiest to invoke, but no distribution, no HA, and itself dormant/Python-fragile. |
-| proxy_pool (jhao104) | 未收录 | Popular Redis-backed self-hosted pool, simpler single-process design than haipproxy's distributed Scrapy architecture; comparable free-proxy niche. [未验证] |
-| Paid proxy providers (Bright Data, Oxylabs, …) | 未收录 | Commercial residential/datacenter pools with SLAs and rotation — the production answer; haipproxy only fits when you specifically need a self-hosted *distributed* free pool. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [Scylla](scylla.md) | ✅ | Use this page for its stated niche; choose Scylla when you need single-service pool with a web UI + JSON API, no Redis required. | Single-service pool with a web UI + JSON API, no Redis required — far simpler to run, but not built for distributed/HA crawler scale the way haipproxy is. |
+| [ProxyBroker](proxybroker.md) | ✅ | Use this page for its stated niche; choose ProxyBroker when you need a lightweight CLI finder/checker/server with no infra. | A lightweight CLI finder/checker/server with no infra — easiest to invoke, but no distribution, no HA, and itself dormant/Python-fragile. |
+| proxy_pool (jhao104) | 未收录 | Use this page for its stated niche; choose proxypool (jhao104) when you need popular Redis-backed self-hosted pool, simpler single-process design than haipproxy's distributed Sc. | Popular Redis-backed self-hosted pool, simpler single-process design than haipproxy's distributed Scrapy architecture; comparable free-proxy niche. [未验证] |
+| Paid proxy providers (Bright Data, Oxylabs, …) | 未收录 | Use this page for its stated niche; choose Paid proxy providers (Bright Data, Oxylabs, …) when you need commercial residential/datacenter pools with SLAs and rotation. | Commercial residential/datacenter pools with SLAs and rotation — the production answer; haipproxy only fits when you specifically need a self-hosted *distributed* free pool. |
 
 ## Tech stack
 

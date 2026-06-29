@@ -9,6 +9,11 @@ license: MIT
 maturity: no tagged releases, active, last pushed 2026-04, ~1.9k stars (as of 2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+upstream:
+  pushed_at: 2026-04-01T15:10:58Z
+  default_branch: main
+  default_branch_sha: 1757615b99ab789a72ff2d02e9f6112af2a15c04
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:32:24Z
@@ -80,14 +85,14 @@ You reach for TÂCHES CC Resources because it's a curated, batteries-included st
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [antfu/skills](antfu-skills.md) | ✅ | Another personal Claude Code skill collection; centers concrete authoring/dev skills rather than meta-generators for building new extensions. |
-| [Dimillian/Skills](dimillian-skills.md) | ✅ | Personal skill set skewed to a specific stack/workflow; TÂCHES is broader-but-shallower, focused on scaffolding Claude Code extensions themselves. |
-| [wshobson/agents](../subagent-collections/wshobson-agents.md) | ✅ | Large library of ready-made domain subagents; TÂCHES ships only 3 auditor subagents plus generators to *make* your own. Pick wshobson for breadth of personas, TÂCHES to author extensions. |
-| [awesome-claude-code-subagents](../subagent-collections/awesome-claude-code-subagents.md) | ✅ | Big curated subagent catalog (consumption-oriented); TÂCHES is a small personal mixed bundle (commands + skills + auditors), generation-oriented. |
-| [shaping-skills](shaping-skills.md) | ✅ | Methodology-shaped skill pack; TÂCHES is less a single methodology and more a grab-bag of authoring tools and thinking frames. |
-| Anthropic's official Claude Code skills / built-in commands | 未收录 | The platform's native ecosystem; TÂCHES is a third-party personal bundle layered on top and can duplicate or conflict with native commands. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [antfu/skills](antfu-skills.md) | ✅ | Use this page for its stated niche; choose antfu/skills when you need another personal Claude Code skill collection. | Another personal Claude Code skill collection; centers concrete authoring/dev skills rather than meta-generators for building new extensions. |
+| [Dimillian/Skills](dimillian-skills.md) | ✅ | Use this page for its stated niche; choose Dimillian/Skills when you need personal skill set skewed to a specific stack/workflow. | Personal skill set skewed to a specific stack/workflow; TÂCHES is broader-but-shallower, focused on scaffolding Claude Code extensions themselves. |
+| [wshobson/agents](../subagent-collections/wshobson-agents.md) | ✅ | Use this page for its stated niche; choose wshobson/agents when you need large library of ready-made domain subagents. | Large library of ready-made domain subagents; TÂCHES ships only 3 auditor subagents plus generators to *make* your own. Pick wshobson for breadth of personas, TÂCHES to author extensions. |
+| [awesome-claude-code-subagents](../subagent-collections/awesome-claude-code-subagents.md) | ✅ | Use this page for its stated niche; choose awesome-claude-code-subagents when you need big curated subagent catalog (consumption-oriented). | Big curated subagent catalog (consumption-oriented); TÂCHES is a small personal mixed bundle (commands + skills + auditors), generation-oriented. |
+| [shaping-skills](shaping-skills.md) | ✅ | Use this page for its stated niche; choose shaping-skills when you need methodology-shaped skill pack. | Methodology-shaped skill pack; TÂCHES is less a single methodology and more a grab-bag of authoring tools and thinking frames. |
+| Anthropic's official Claude Code skills / built-in commands | 未收录 | Use this page for its stated niche; choose Anthropic's official Claude Code skills / built-in commands when you need the platform's native ecosystem. | The platform's native ecosystem; TÂCHES is a third-party personal bundle layered on top and can duplicate or conflict with native commands. |
 
 ## Health & viability
 

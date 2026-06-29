@@ -9,6 +9,11 @@ license: MIT
 maturity: v4.15.0, active (2026-06)
 last_verified: 2026-06-26
 type: framework
+upstream:
+  pushed_at: 2026-06-29T11:19:35Z
+  default_branch: main
+  default_branch_sha: 6c59219cced3ddd857334d2a7fb78099f2d67e71
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:24:44Z
@@ -84,15 +89,15 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| [DSPy](dspy.zh.md) | ✅ | 供应商无关的 Python 框架，用于编程/优化 LLM 流水线；应用得你自己搭。OMC 更窄：编排发生在 *Claude Code 内部*，没有模型程序编译。 |
-| [AgentScope](agentscope.zh.md) | ✅ | 通用多智能体平台（任意模型、消息传递、可视化 studio）；是你自己托管的完整框架。OMC 则骑在 Claude Code 上，不是独立运行时。 |
-| [claude-octopus](claude-octopus.zh.md) | ✅ | 同样以 Claude Code 为中心的并行/多 agent 工具；最接近的同类。在暴露面和编排模型上有别——已经在 Claude Code 上的话，直接两者对比。 |
-| [Symphony](symphony.zh.md) | ✅ | OpenAI 出品的编排；绑定在与 Claude Code 不同的供应商生态。 |
-| [openfang](openfang.zh.md) | ✅ | 另一种 agent 框架取向；其模型见其页面。 |
-| claude-flow | 未收录 | 另一个流行的 Claude-Code 多 agent / swarm 编排层；问题域重叠，抽象和成熟度不同。 |
-| Claude Code 原生 subagent | 未收录 | Anthropic 原生的 subagent/并行能力已覆盖 OMC 的部分价值，且无第三方依赖；OMC 在其上叠加了 team 流水线、路由、模式和 HUD。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [DSPy](dspy.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“供应商无关的 Python 框架，用于编程/优化 LLM 流水线”，再选 DSPy。 | 供应商无关的 Python 框架，用于编程/优化 LLM 流水线；应用得你自己搭。OMC 更窄：编排发生在 *Claude Code 内部*，没有模型程序编译。 |
+| [AgentScope](agentscope.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“通用多智能体平台（任意模型、消息传递、可视化 studio）”，再选 AgentScope。 | 通用多智能体平台（任意模型、消息传递、可视化 studio）；是你自己托管的完整框架。OMC 则骑在 Claude Code 上，不是独立运行时。 |
+| [claude-octopus](claude-octopus.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“同样以 Claude Code 为中心的并行/多 agent 工具”，再选 claude-octopus。 | 同样以 Claude Code 为中心的并行/多 agent 工具；最接近的同类。在暴露面和编排模型上有别——已经在 Claude Code 上的话，直接两者对比。 |
+| [Symphony](symphony.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“OpenAI 出品的编排”，再选 Symphony。 | OpenAI 出品的编排；绑定在与 Claude Code 不同的供应商生态。 |
+| [openfang](openfang.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“另一种 agent 框架取向”，再选 openfang。 | 另一种 agent 框架取向；其模型见其页面。 |
+| claude-flow | 未收录 | 当前页用于它的主场景；如果更看重“另一个流行的 Claude-Code 多 agent / swarm 编排层”，再选 claude-flow。 | 另一个流行的 Claude-Code 多 agent / swarm 编排层；问题域重叠，抽象和成熟度不同。 |
+| Claude Code 原生 subagent | 未收录 | 当前页用于它的主场景；如果更看重“Anthropic 原生的 subagent/并行能力已覆盖 OMC 的部分价值，且无第三方依赖”，再选 Claude Code 原生 subagent。 | Anthropic 原生的 subagent/并行能力已覆盖 OMC 的部分价值，且无第三方依赖；OMC 在其上叠加了 team 流水线、路由、模式和 HUD。 |
 
 ## 技术栈
 

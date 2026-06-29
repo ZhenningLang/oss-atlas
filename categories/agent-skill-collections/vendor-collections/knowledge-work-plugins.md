@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: active, no tagged releases, ~22.1k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: skill-pack
+upstream:
+  pushed_at: 2026-06-29T09:02:53Z
+  default_branch: main
+  default_branch_sha: fe25f964fdfdcfe347d444b2d7cfb33a5b2cfaa5
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:34:01Z
@@ -80,12 +85,12 @@ You reach for it specifically when you want the *knowledge-work* slice of Anthro
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [Anthropic Skills](anthropic-skills.md) | ✅ | Anthropic's standalone *skills* repo (self-contained `SKILL.md` folders), broader and not knowledge-work-scoped — includes document skills but also frontend/canvas/MCP-authoring. Use it for the general skill baseline; use this repo when you specifically want the knowledge-work slice. |
-| [Claude Plugins (Official)](claude-plugins-official.md) | ✅ | Anthropic's first-party *Claude Code* plugin marketplace, coding-centric (LSPs, code-review, PR/commit packs). This repo targets knowledge work instead; compare on whether your tasks are office/comms/research vs developer workflows. |
-| Third-party / community knowledge-work packs | 未收录 | Larger, faster-moving office/comms bundles, but no Anthropic curation or provenance guarantee. This repo is the first-party baseline; community packs extend it at higher trust cost. |
-| Roll your own skills/plugins | n/a | Maximum fit and zero external dependency, but you forgo the vendor's maintained knowledge-work building blocks and known provenance. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [Anthropic Skills](anthropic-skills.md) | ✅ | Use this page for its stated niche; choose Anthropic Skills when you need anthropic's standalone *skills* repo (self-contained `SKILL. | Anthropic's standalone *skills* repo (self-contained `SKILL.md` folders), broader and not knowledge-work-scoped — includes document skills but also frontend/canvas/MCP-authoring. Use it for the general skill baseline; use this repo when you specifically want the knowledge-work slice. |
+| [Claude Plugins (Official)](claude-plugins-official.md) | ✅ | Use this page for its stated niche; choose Claude Plugins (Official) when you need anthropic's first-party *Claude Code* plugin marketplace, coding-centric (LSPs, code-review, PR/comm. | Anthropic's first-party *Claude Code* plugin marketplace, coding-centric (LSPs, code-review, PR/commit packs). This repo targets knowledge work instead; compare on whether your tasks are office/comms/research vs developer workflows. |
+| Third-party / community knowledge-work packs | 未收录 | Use this page for its stated niche; choose Third-party / community knowledge-work packs when you need larger, faster-moving office/comms bundles, but no Anthropic curation or provenance guarantee. | Larger, faster-moving office/comms bundles, but no Anthropic curation or provenance guarantee. This repo is the first-party baseline; community packs extend it at higher trust cost. |
+| Roll your own skills/plugins | n/a | Use this page for its stated niche; choose Roll your own skills/plugins when you need maximum fit and zero external dependency, but you forgo the vendor's maintained knowledge-work build. | Maximum fit and zero external dependency, but you forgo the vendor's maintained knowledge-work building blocks and known provenance. |
 
 ## Health & viability
 

@@ -9,6 +9,11 @@ license: GPL-3.0
 maturity: ~30.3k stars, active (2026-06); single-lead-author project, created 2015-11
 last_verified: 2026-06-28
 type: framework
+upstream:
+  pushed_at: 2026-06-21T08:40:20Z
+  default_branch: master
+  default_branch_sha: 128dd678962b8918b9abf2e82928818b0072ac50
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:17:23Z
@@ -84,13 +89,13 @@ You drop the XXL-JOB **admin** in (one Spring Boot web app backed by a database)
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [Airflow](../workflow-orchestration/airflow.md) | ✅ | Python DAG orchestrator for data pipelines: dependencies, backfills, lineage, huge operator ecosystem. Far heavier to run, and overkill if you just need cron-triggered jobs across services. |
-| Quartz | 未收录 | The classic embeddable Java scheduler library; powerful cron/trigger model but **no out-of-the-box admin UI, no distributed dispatcher, no run console** — XXL-JOB is essentially "Quartz + a management platform" in spirit. |
-| Elastic-Job (ShardingSphere ElasticJob) | 未收录 | Java distributed scheduler with strong **sharding** built on ZooKeeper coordination; decentralized (no central admin) but heavier infra dependency and a steeper setup than XXL-JOB's DB-backed admin. |
-| Spring Batch | 未收录 | A batch-processing *framework* (chunked read/process/write, restartability), not a scheduler — you still need something to trigger it. Complementary, not a substitute. |
-| PowerJob | 未收录 | Newer Java distributed scheduler/compute platform; richer workflow/DAG and map-reduce-style execution, often pitched as a more modern XXL-JOB alternative — smaller install base. [未验证] |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [Airflow](../workflow-orchestration/airflow.md) | ✅ | Use this page for its stated niche; choose Airflow when you need python DAG orchestrator for data pipelines: dependencies, backfills, lineage, huge operator ecosyste. | Python DAG orchestrator for data pipelines: dependencies, backfills, lineage, huge operator ecosystem. Far heavier to run, and overkill if you just need cron-triggered jobs across services. |
+| Quartz | 未收录 | Use this page for its stated niche; choose Quartz when you need the classic embeddable Java scheduler library. | The classic embeddable Java scheduler library; powerful cron/trigger model but **no out-of-the-box admin UI, no distributed dispatcher, no run console** — XXL-JOB is essentially "Quartz + a management platform" in spirit. |
+| Elastic-Job (ShardingSphere ElasticJob) | 未收录 | Use this page for its stated niche; choose Elastic-Job (ShardingSphere ElasticJob) when you need java distributed scheduler with strong **sharding** built on ZooKeeper coordination. | Java distributed scheduler with strong **sharding** built on ZooKeeper coordination; decentralized (no central admin) but heavier infra dependency and a steeper setup than XXL-JOB's DB-backed admin. |
+| Spring Batch | 未收录 | Use this page for its stated niche; choose Spring Batch when you need a batch-processing *framework* (chunked read/process/write, restartability), not a scheduler. | A batch-processing *framework* (chunked read/process/write, restartability), not a scheduler — you still need something to trigger it. Complementary, not a substitute. |
+| PowerJob | 未收录 | Use this page for its stated niche; choose PowerJob when you need newer Java distributed scheduler/compute platform. | Newer Java distributed scheduler/compute platform; richer workflow/DAG and map-reduce-style execution, often pitched as a more modern XXL-JOB alternative — smaller install base. [未验证] |
 
 ## Tech stack
 

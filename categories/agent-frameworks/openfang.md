@@ -9,6 +9,11 @@ license: Apache-2.0 OR MIT
 maturity: v0.6.9, pre-1.0, active (2026-06)
 last_verified: 2026-06-26
 type: framework
+upstream:
+  pushed_at: 2026-06-25T08:13:28Z
+  default_branch: main
+  default_branch_sha: acf2587e46be174c10200489c9a2d23a39a98aeb
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:25:00Z
@@ -84,15 +89,15 @@ It also fits when you care about footprint and self-hosting. The whole thing is 
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [DSPy](dspy.md) | ✅ | A Python framework for *programming* (and optimizing) LLM pipelines; you embed it in your app. OpenFang is the opposite: an autonomous runtime/OS that owns scheduling and execution, not a library you call. |
-| [AgentScope](agentscope.md) | ✅ | Developer framework for building/orchestrating multi-agent apps with explicit control; OpenFang trades that control for a batteries-included, schedule-driven OS with channels and guardrails built in. |
-| [Symphony](symphony.md) | ✅ | Sibling in this category; different orchestration philosophy — compare directly if you're choosing an agent framework. |
-| [claude-octopus](claude-octopus.md) | ✅ | Sibling; narrower Claude-centric tooling vs. OpenFang's broad 27-provider, OS-shaped scope. |
-| LangGraph | 未收录 | The default Python choice for stateful, interactive agent graphs inside your own service; no built-in scheduler/channels/binary distribution. OpenFang inverts this as a standalone OS. |
-| OpenClaw | 未收录 | The project OpenFang positions itself against and offers a migration path from; OpenFang claims smaller footprint and the OS framing. Verify the comparison yourself. |
-| CrewAI / AutoGen | 未收录 | Role/conversation-oriented multi-agent Python frameworks for in-app workflows; not single-binary autonomous runtimes. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [DSPy](dspy.md) | ✅ | Use this page for its stated niche; choose DSPy when you need a Python framework for *programming* (and optimizing) LLM pipelines. | A Python framework for *programming* (and optimizing) LLM pipelines; you embed it in your app. OpenFang is the opposite: an autonomous runtime/OS that owns scheduling and execution, not a library you call. |
+| [AgentScope](agentscope.md) | ✅ | Use this page for its stated niche; choose AgentScope when you need developer framework for building/orchestrating multi-agent apps with explicit control. | Developer framework for building/orchestrating multi-agent apps with explicit control; OpenFang trades that control for a batteries-included, schedule-driven OS with channels and guardrails built in. |
+| [Symphony](symphony.md) | ✅ | Use this page for its stated niche; choose Symphony when you need sibling in this category. | Sibling in this category; different orchestration philosophy — compare directly if you're choosing an agent framework. |
+| [claude-octopus](claude-octopus.md) | ✅ | Use this page for its stated niche; choose claude-octopus when you need sibling. | Sibling; narrower Claude-centric tooling vs. OpenFang's broad 27-provider, OS-shaped scope. |
+| LangGraph | 未收录 | Use this page for its stated niche; choose LangGraph when you need the default Python choice for stateful, interactive agent graphs inside your own service. | The default Python choice for stateful, interactive agent graphs inside your own service; no built-in scheduler/channels/binary distribution. OpenFang inverts this as a standalone OS. |
+| OpenClaw | 未收录 | Use this page for its stated niche; choose OpenClaw when you need the project OpenFang positions itself against and offers a migration path from. | The project OpenFang positions itself against and offers a migration path from; OpenFang claims smaller footprint and the OS framing. Verify the comparison yourself. |
+| CrewAI / AutoGen | 未收录 | Use this page for its stated niche; choose CrewAI / AutoGen when you need role/conversation-oriented multi-agent Python frameworks for in-app workflows. | Role/conversation-oriented multi-agent Python frameworks for in-app workflows; not single-binary autonomous runtimes. |
 
 ## Tech stack
 

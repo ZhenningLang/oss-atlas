@@ -9,6 +9,11 @@ license: MIT
 maturity: v0.121.x, active (2026-06)
 last_verified: 2026-06-26
 type: tool
+upstream:
+  pushed_at: 2026-06-29T06:10:09Z
+  default_branch: main
+  default_branch_sha: 6ea8783c0802ed2e001e3d253a461e64602c2968
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:56:47Z
@@ -88,14 +93,14 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| DeepEval | 未收录 | Python 原生评测框架（pytest 风格，G-Eval/faithfulness 等指标）；更适合 Python 团队和 RAG 指标深度。promptfoo 胜在语言无关的 YAML 配置、并排模型矩阵和集成红队。 |
-| Langfuse | 未收录 | 追踪/可观测性 + 评测平台（可自托管，带 UI 和数据集后端）；强在生产监控和趋势历史。promptfoo 更轻、CLI 优先、偏红队，而非可观测性后端。 |
-| LangSmith | 未收录 | 托管的 LangChain 评测/可观测性 SaaS;LangChain 集成深、看板托管，但闭源、以云为中心。promptfoo 开源、local-first、框架无关。 |
-| Braintrust | 未收录 | 商业评测/实验平台，托管打分与日志；团队 UX 打磨好。promptfoo 用开放、自跑的 CLI 换掉这套托管平台。 |
-| Garak | 未收录 | 专门的 LLM 漏洞扫描器（只做红队，Python）。与 promptfoo 的 `redteam` 范围重叠，但不是通用评测/断言 harness。 |
-| Giskard | 未收录 | 面向 ML+LLM 的开源测试/红队，扫描-报告模式；ML 范围更广、以 Python 为中心。promptfoo 更聚焦 prompt/CI 工作流。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| DeepEval | 未收录 | 当前页用于它的主场景；如果更看重“Python 原生评测框架（pytest 风格，G-Eval/faithfulness 等指标）”，再选 DeepEval。 | Python 原生评测框架（pytest 风格，G-Eval/faithfulness 等指标）；更适合 Python 团队和 RAG 指标深度。promptfoo 胜在语言无关的 YAML 配置、并排模型矩阵和集成红队。 |
+| Langfuse | 未收录 | 当前页用于它的主场景；如果更看重“追踪/可观测性 + 评测平台（可自托管，带 UI 和数据集后端）”，再选 Langfuse。 | 追踪/可观测性 + 评测平台（可自托管，带 UI 和数据集后端）；强在生产监控和趋势历史。promptfoo 更轻、CLI 优先、偏红队，而非可观测性后端。 |
+| LangSmith | 未收录 | 当前页用于它的主场景；如果更看重“托管的 LangChain 评测/可观测性 SaaS”，再选 LangSmith。 | 托管的 LangChain 评测/可观测性 SaaS;LangChain 集成深、看板托管，但闭源、以云为中心。promptfoo 开源、local-first、框架无关。 |
+| Braintrust | 未收录 | 当前页用于它的主场景；如果更看重“商业评测/实验平台，托管打分与日志”，再选 Braintrust。 | 商业评测/实验平台，托管打分与日志；团队 UX 打磨好。promptfoo 用开放、自跑的 CLI 换掉这套托管平台。 |
+| Garak | 未收录 | 当前页用于它的主场景；如果更看重“专门的 LLM 漏洞扫描器（只做红队，Python）”，再选 Garak。 | 专门的 LLM 漏洞扫描器（只做红队，Python）。与 promptfoo 的 `redteam` 范围重叠，但不是通用评测/断言 harness。 |
+| Giskard | 未收录 | 当前页用于它的主场景；如果更看重“面向 ML+LLM 的开源测试/红队，扫描-报告模式”，再选 Giskard。 | 面向 ML+LLM 的开源测试/红队，扫描-报告模式；ML 范围更广、以 Python 为中心。promptfoo 更聚焦 prompt/CI 工作流。 |
 
 ## 技术栈
 

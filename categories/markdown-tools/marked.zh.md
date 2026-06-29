@@ -9,6 +9,11 @@ license: MIT
 maturity: v18.x, active (2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2026-06-23T04:04:16Z
+  default_branch: master
+  default_branch_sha: f8f411256680bfc870a4faba729409be68fcef4b
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:59:23Z
@@ -85,12 +90,12 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| markdown-it | 未收录 | CommonMark 严格、可插拔架构，插件生态丰富；API 更重、比 marked 略慢，但当规范一致和插件重要时它是首选。 |
-| remark / unified | 未收录 | 完整的 mdast AST 管线，能解析、变换、lint、序列化（Markdown、MDX）；强大得多也重得多——是工具链，不是一次调用的渲染器。 |
-| micromark | 未收录 | remark 底下那个低层 CommonMark/GFM 分词器；正确、面向流式，但渲染层要你自己搭。 |
-| CommonMark 参考实现（commonmark.js） | 未收录 | 规范自己的参考实现；是一致性标尺，但 GFM 便利特性更少，也未针对生产渲染做优化。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| markdown-it | 未收录 | 当前页用于它的主场景；如果更看重“CommonMark 严格、可插拔架构，插件生态丰富”，再选 markdown-it。 | CommonMark 严格、可插拔架构，插件生态丰富；API 更重、比 marked 略慢，但当规范一致和插件重要时它是首选。 |
+| remark / unified | 未收录 | 当前页用于它的主场景；如果更看重“完整的 mdast AST 管线，能解析、变换、lint、序列化（Markdown、MDX）”，再选 remark / unified。 | 完整的 mdast AST 管线，能解析、变换、lint、序列化（Markdown、MDX）；强大得多也重得多——是工具链，不是一次调用的渲染器。 |
+| micromark | 未收录 | 当前页用于它的主场景；如果更看重“remark 底下那个低层 CommonMark/GFM 分词器”，再选 micromark。 | remark 底下那个低层 CommonMark/GFM 分词器；正确、面向流式，但渲染层要你自己搭。 |
+| CommonMark 参考实现（commonmark.js） | 未收录 | 当前页用于它的主场景；如果更看重“规范自己的参考实现”，再选 CommonMark 参考实现（commonmark.js）。 | 规范自己的参考实现；是一致性标尺，但 GFM 便利特性更少，也未针对生产渲染做优化。 |
 
 ## 技术栈
 

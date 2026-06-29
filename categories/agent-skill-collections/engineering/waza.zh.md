@@ -9,6 +9,11 @@ license: MIT
 maturity: v3.29.0, active (2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+upstream:
+  pushed_at: 2026-06-27T04:23:07Z
+  default_branch: main
+  default_branch_sha: ac1cc9d685718996df081d70e677d527c3ff981f
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:30:13Z
@@ -80,14 +85,14 @@ health:
 
 ## 横向对比
 
-| 替代项 | 是否收录 | 取舍 |
-|---|---|---|
-| [Superpowers](../../agent-dev-methodology/superpowers.md) | ✅ | 更大、方法论优先的 skills 库（brainstorm→plan→TDD→subagent→verify），面向多 harness；Waza 是更小、面向习惯的八个具名命令的集合，更轻便上手，但不构成完整的 SDLC 主干。 |
-| [SuperClaude Framework](../../agent-dev-methodology/superclaude.md) | ✅ | persona/命令/MCP 配置框架，面更大、安装更重；Waza 更精简，围绕具体工程套路而非 persona 体系。 |
-| addyosmani/agent-skills | 未收录 | 本叶子里的同类 skill 集合；按各自实际提供的工程习惯与 harness 覆盖度比较。 |
-| web-quality-skills（addyosmani） | 未收录 | 聚焦 web 性能/质量的 skill；领域比 Waza 的通用工程习惯更窄。 |
-| vercel-labs/agent-skills | 未收录 | 厂商策划的 skill 集合；比较来源与所面向的 agent。 |
-| Anthropic 内置 skill / 斜杠命令 | 未收录 | 平台原生 skill 生态；Waza 是叠在上面的第三方包，可能与原生命令重复或冲突。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [Superpowers](../../agent-dev-methodology/superpowers.md) | ✅ | 当前页用于它的主场景；如果更看重“更大、方法论优先的 skills 库（brainstorm→plan→TDD→subagent→verify），面向多 harness”，再选 Superpowers。 | 更大、方法论优先的 skills 库（brainstorm→plan→TDD→subagent→verify），面向多 harness；Waza 是更小、面向习惯的八个具名命令的集合，更轻便上手，但不构成完整的 SDLC 主干。 |
+| [SuperClaude Framework](../../agent-dev-methodology/superclaude.md) | ✅ | 当前页用于它的主场景；如果更看重“persona/命令/MCP 配置框架，面更大、安装更重”，再选 SuperClaude Framework。 | persona/命令/MCP 配置框架，面更大、安装更重；Waza 更精简，围绕具体工程套路而非 persona 体系。 |
+| addyosmani/agent-skills | 未收录 | 当前页用于它的主场景；如果更看重“本叶子里的同类 skill 集合”，再选 addyosmani/agent-skills。 | 本叶子里的同类 skill 集合；按各自实际提供的工程习惯与 harness 覆盖度比较。 |
+| web-quality-skills（addyosmani） | 未收录 | 当前页用于它的主场景；如果更看重“聚焦 web 性能/质量的 skill”，再选 web-quality-skills（addyosmani）。 | 聚焦 web 性能/质量的 skill；领域比 Waza 的通用工程习惯更窄。 |
+| vercel-labs/agent-skills | 未收录 | 当前页用于它的主场景；如果更看重“厂商策划的 skill 集合”，再选 vercel-labs/agent-skills。 | 厂商策划的 skill 集合；比较来源与所面向的 agent。 |
+| Anthropic 内置 skill / 斜杠命令 | 未收录 | 当前页用于它的主场景；如果更看重“平台原生 skill 生态”，再选 Anthropic 内置 skill / 斜杠命令。 | 平台原生 skill 生态；Waza 是叠在上面的第三方包，可能与原生命令重复或冲突。 |
 
 ## 健康度与可持续性
 

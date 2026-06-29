@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: effectively abandoned (last pushed 2018-01), ~1.1k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2018-01-03T21:47:34Z
+  default_branch: master
+  default_branch_sha: 2c78035a830282e2435c466f3f14d6d4104d0a94
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:22:07Z
@@ -73,13 +78,13 @@ You'd realistically reach for it today only if you specifically need a **Java, d
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [dragnet](dragnet.md) | ✅ | Python ML extractor that cites boilerpipe as inspiration; trainable and comment-aware, but also low-activity with aging deps. |
-| [python-readability](python-readability.md) | ✅ | lxml heuristic extractor (Python); lighter, still maintained-ish — but not JVM. |
-| [Readability.js](readability-js.md) | ✅ | Mozilla's JS reader-view engine; actively maintained, but JavaScript and needs a DOM. |
-| Apache Tika | 未收录 | JVM content-detection/extraction framework (many formats, not just HTML article extraction); actively maintained and far broader — heavier, different focus. |
-| trafilatura | 未收录 | Modern, maintained Python extractor with strong benchmarks and metadata; usually the better default now — different language. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [dragnet](dragnet.md) | ✅ | Use this page for its stated niche; choose dragnet when you need python ML extractor that cites boilerpipe as inspiration. | Python ML extractor that cites boilerpipe as inspiration; trainable and comment-aware, but also low-activity with aging deps. |
+| [python-readability](python-readability.md) | ✅ | Use this page for its stated niche; choose python-readability when you need lxml heuristic extractor (Python). | lxml heuristic extractor (Python); lighter, still maintained-ish — but not JVM. |
+| [Readability.js](readability-js.md) | ✅ | Use this page for its stated niche; choose Readability.js when you need mozilla's JS reader-view engine. | Mozilla's JS reader-view engine; actively maintained, but JavaScript and needs a DOM. |
+| Apache Tika | 未收录 | Use this page for its stated niche; choose Apache Tika when you need JVM content-detection/extraction framework (many formats, not just HTML article extraction). | JVM content-detection/extraction framework (many formats, not just HTML article extraction); actively maintained and far broader — heavier, different focus. |
+| trafilatura | 未收录 | Use this page for its stated niche; choose trafilatura when you need modern, maintained Python extractor with strong benchmarks and metadata. | Modern, maintained Python extractor with strong benchmarks and metadata; usually the better default now — different language. |
 
 ## Tech stack
 

@@ -9,6 +9,11 @@ license: BSD-2-Clause
 maturity: v8.0.x, active (2026-06), 4.2k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2026-06-24T00:05:35Z
+  default_branch: main
+  default_branch_sha: 154066316deee0749a68a130db32bb448562cb23
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:23:28Z
@@ -88,13 +93,13 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| Async PRAW（asyncpraw） | 未收录 | 同一项目的 asyncio 变体；更适合并发/流式负载，代价是异步代码。同一批维护者。 |
-| 裸 Reddit REST + requests | 未收录 | 控制最大、零抽象，但 OAuth 刷新、分页、限速合规都得自己重写。 |
-| PSAW / Pushshift 客户端 | 未收录 | Reddit 历史批量数据（在 Pushshift 可用时）；是对实时 API wrapper 的补充而非替代。 |
-| JRAW / snoowrap | 未收录 | 其他语言（Java / JS）的 Reddit API wrapper；同一生态位，不同运行时。 |
-| [requests-html](requests-html.zh.md) | ✅ | 通用爬取库——你得自己解析 Reddit HTML 并承担 ToS 风险；PRAW 改用受认可的 API。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| Async PRAW（asyncpraw） | 未收录 | 当前页用于它的主场景；如果更看重“同一项目的 asyncio 变体”，再选 Async PRAW（asyncpraw）。 | 同一项目的 asyncio 变体；更适合并发/流式负载，代价是异步代码。同一批维护者。 |
+| 裸 Reddit REST + requests | 未收录 | 当前页用于它的主场景；如果更看重“控制最大、零抽象，但 OAuth 刷新、分页、限速合规都得自己重写”，再选 裸 Reddit REST + requests。 | 控制最大、零抽象，但 OAuth 刷新、分页、限速合规都得自己重写。 |
+| PSAW / Pushshift 客户端 | 未收录 | 当前页用于它的主场景；如果更看重“Reddit 历史批量数据（在 Pushshift 可用时）”，再选 PSAW / Pushshift 客户端。 | Reddit 历史批量数据（在 Pushshift 可用时）；是对实时 API wrapper 的补充而非替代。 |
+| JRAW / snoowrap | 未收录 | 当前页用于它的主场景；如果更看重“其他语言（Java / JS）的 Reddit API wrapper”，再选 JRAW / snoowrap。 | 其他语言（Java / JS）的 Reddit API wrapper；同一生态位，不同运行时。 |
+| [requests-html](requests-html.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“通用爬取库”，再选 requests-html。 | 通用爬取库——你得自己解析 Reddit HTML 并承担 ToS 风险；PRAW 改用受认可的 API。 |
 
 ## 技术栈
 

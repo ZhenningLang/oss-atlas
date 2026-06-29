@@ -9,6 +9,11 @@ license: MIT
 maturity: v1.18.0, active, ~8.7k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2026-01-15T10:51:12Z
+  default_branch: master
+  default_branch_sha: 0186b39a95f180fc735a60803c95eb1fb0d24083
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:50:53Z
@@ -86,12 +91,12 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| [Mermaid](mermaid.zh.md) | 未收录 | 范围广得多（flowchart、sequence、class、state、gantt、ER……），Markdown 原生，开发与主题化都活跃；更重、有自己的语法，但已是当下文本转图的事实标准。 |
-| [bpmn-js](bpmn-js.zh.md) | ✅ | 浏览器内完整的 BPMN 2.0 建模 + 交互式编辑；一个基于标准的流程建模器，而非轻量文本转 SVG 渲染器——范围与体积都大得多。 |
-| Graphviz / Viz.js | 未收录 | DOT 语言，对任意节点-连线图有强自动布局；布局引擎更好，但流程图语义和样式更弱。 |
-| PlantUML | 未收录 | 覆盖多种 UML + 流程图类型的文本 DSL，通常服务端/Java 渲染；图目录更丰富，但不是浏览器原生的 JS 库。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [Mermaid](mermaid.zh.md) | 未收录 | 当前页用于它的主场景；如果更看重“范围广得多（flowchart、sequence、class、state、gantt、ER……），Markdown 原生，开发与主题化都活跃”，再选 Mermaid。 | 范围广得多（flowchart、sequence、class、state、gantt、ER……），Markdown 原生，开发与主题化都活跃；更重、有自己的语法，但已是当下文本转图的事实标准。 |
+| [bpmn-js](bpmn-js.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“浏览器内完整的 BPMN 2”，再选 bpmn-js。 | 浏览器内完整的 BPMN 2.0 建模 + 交互式编辑；一个基于标准的流程建模器，而非轻量文本转 SVG 渲染器——范围与体积都大得多。 |
+| Graphviz / Viz.js | 未收录 | 当前页用于它的主场景；如果更看重“DOT 语言，对任意节点-连线图有强自动布局”，再选 Graphviz / Viz.js。 | DOT 语言，对任意节点-连线图有强自动布局；布局引擎更好，但流程图语义和样式更弱。 |
+| PlantUML | 未收录 | 当前页用于它的主场景；如果更看重“覆盖多种 UML + 流程图类型的文本 DSL，通常服务端/Java 渲染”，再选 PlantUML。 | 覆盖多种 UML + 流程图类型的文本 DSL，通常服务端/Java 渲染；图目录更丰富，但不是浏览器原生的 JS 库。 |
 
 ## 技术栈
 

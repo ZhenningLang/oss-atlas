@@ -9,6 +9,11 @@ license: MIT
 maturity: v0.1.0, active, ~9.6k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2026-06-26T03:04:24Z
+  default_branch: main
+  default_branch_sha: 9969a8f393f3b5ece29715e6e5b07deb5be90741
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:25:32Z
@@ -86,12 +91,12 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| DSPy | 未收录 | 在冻结 LLM 上做程序化 prompt/管线优化的成熟框架（compiler、teleprompter）；更广、久经考验，但优化的是 prompt/程序而非单份可部署的 skill 文档。 |
-| TextGrad | 未收录 | “对文本反向传播”——用自然语言梯度优化 prompt/文本；文本空间精神相近，更新机制不同，不以 skill 文档产物为中心。 |
-| PromptBreeder / APE / OPRO | 未收录 | LLM 驱动的 prompt 搜索/演化方法；在自动改进 prompt 上有重叠，但通常产出 prompt 字符串，而非经验证门控的可复用 skill 产物。 |
-| 手工提示工程 | 未收录 | 无工具、完全掌控、零基础设施；但不可度量、不可复现，而且正是 SkillOpt 要自动化掉的那种苦工。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| DSPy | 未收录 | 当前页用于它的主场景；如果更看重“在冻结 LLM 上做程序化 prompt/管线优化的成熟框架（compiler、teleprompter）”，再选 DSPy。 | 在冻结 LLM 上做程序化 prompt/管线优化的成熟框架（compiler、teleprompter）；更广、久经考验，但优化的是 prompt/程序而非单份可部署的 skill 文档。 |
+| TextGrad | 未收录 | 当前页用于它的主场景；如果更看重““对文本反向传播””，再选 TextGrad。 | “对文本反向传播”——用自然语言梯度优化 prompt/文本；文本空间精神相近，更新机制不同，不以 skill 文档产物为中心。 |
+| PromptBreeder / APE / OPRO | 未收录 | 当前页用于它的主场景；如果更看重“LLM 驱动的 prompt 搜索/演化方法”，再选 PromptBreeder / APE / OPRO。 | LLM 驱动的 prompt 搜索/演化方法；在自动改进 prompt 上有重叠，但通常产出 prompt 字符串，而非经验证门控的可复用 skill 产物。 |
+| 手工提示工程 | 未收录 | 当前页用于它的主场景；如果更看重“无工具、完全掌控、零基础设施”，再选 手工提示工程。 | 无工具、完全掌控、零基础设施；但不可度量、不可复现，而且正是 SkillOpt 要自动化掉的那种苦工。 |
 
 ## 技术栈
 

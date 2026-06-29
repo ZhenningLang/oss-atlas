@@ -9,6 +9,11 @@ license: MIT
 maturity: v2.3.0, active (2026-05)
 last_verified: 2026-06-26
 type: skill-pack
+upstream:
+  pushed_at: 2026-05-26T05:36:56Z
+  default_branch: main
+  default_branch_sha: 25e1fa79a33f0985793bcab3c64dde8d020c5132
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:27:53Z
@@ -80,12 +85,12 @@ You reach for it when you want an opinionated, pre-built corpus rather than auth
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| notebooklm-skill | 未收录 | Sibling in this leaf, but a single narrow skill (NotebookLM-style document grounding) rather than a broad context-engineering corpus. Pick it for one capability; pick this pack for a whole context-management methodology. |
-| [Superpowers](../../agent-dev-methodology/superpowers.md) | ✅ | Full SDLC methodology (brainstorm→plan→TDD→verify) as a skill plugin; overlaps on the "install a curated skill bundle" form but targets the *software-development loop*, not context-window engineering. Complementary, not a substitute. |
-| Anthropic's own context-engineering guidance / built-in skills | 未收录 | The platform's first-party docs and native skills; this is a third-party corpus layered on top, so it can duplicate or conflict with native guidance and must be reconciled. |
-| Hand-rolled context/memory skills in your own repo | 未收录 | Maximum fit and zero lock-in, but you author and maintain everything. This pack trades some fit for a ready-made, benchmarked corpus. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| notebooklm-skill | 未收录 | Use this page for its stated niche; choose notebooklm-skill when you need sibling in this leaf, but a single narrow skill (NotebookLM-style document grounding) rather than a. | Sibling in this leaf, but a single narrow skill (NotebookLM-style document grounding) rather than a broad context-engineering corpus. Pick it for one capability; pick this pack for a whole context-management methodology. |
+| [Superpowers](../../agent-dev-methodology/superpowers.md) | ✅ | Use this page for its stated niche; choose Superpowers when you need full SDLC methodology (brainstorm→plan→TDD→verify) as a skill plugin. | Full SDLC methodology (brainstorm→plan→TDD→verify) as a skill plugin; overlaps on the "install a curated skill bundle" form but targets the *software-development loop*, not context-window engineering. Complementary, not a substitute. |
+| Anthropic's own context-engineering guidance / built-in skills | 未收录 | Use this page for its stated niche; choose Anthropic's own context-engineering guidance / built-in skills when you need the platform's first-party docs and native skills. | The platform's first-party docs and native skills; this is a third-party corpus layered on top, so it can duplicate or conflict with native guidance and must be reconciled. |
+| Hand-rolled context/memory skills in your own repo | 未收录 | Use this page for its stated niche; choose Hand-rolled context/memory skills in your own repo when you need maximum fit and zero lock-in, but you author and maintain everything. | Maximum fit and zero lock-in, but you author and maintain everything. This pack trades some fit for a ready-made, benchmarked corpus. |
 
 ## Health & viability
 

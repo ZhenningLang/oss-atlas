@@ -9,6 +9,11 @@ license: AGPL-3.0
 maturity: Active, mature codebase; latest release 1.103.0 (2026-06-23), main at 1.105.0 (see caveats)
 last_verified: 2026-06-26
 type: app
+upstream:
+  pushed_at: 2026-06-29T09:34:45Z
+  default_branch: master
+  default_branch_sha: 63e2513dea9dc46910018208b0efce6014bcbd98
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:52:20Z
@@ -84,13 +89,13 @@ health:
 
 ## 横向对比
 
-| 替代品 | 已收录 | 取舍 |
-|---|---|---|
-| [paperless-ngx](paperless-ngx.zh.md) | ✅ | 真正的 OCR/DMS：摄入、OCR、自动打标签并全文检索扫描件。当“文档”意味着可检索的扫描件时，它才是对的工具。Twake Drive 完全不做这些——它是文件网盘，不是归档器。 |
-| [copyparty](copyparty.zh.md) | ✅ | 单二进制文件服务器，带上传 UI、WebDAV、分享和（可选）媒体索引；运行起来比依赖 cozy-stack 的 Twake Drive 轻得多，但没有套件/认证/连接器生态。 |
-| Nextcloud | 未收录 | 主流的自托管网盘+协作平台——文件、分享、协同办公、庞大的应用生态；栈更重（PHP/DB），但独立运行、不绑定 cozy-stack。 |
-| Seafile | 未收录 | 同步优先的自托管网盘，增量同步、版本化、（Pro 版）加密都很强；独立服务器，套件/协作集成弱于 Twake/Cozy。 |
-| Cozy Drive（上游） | 未收录 | 这*就是*上游——Twake Drive 是 Linagora/Twake Workplace 对 `cozy/cozy-drive` 的 fork/换牌。架构相同；按你跑哪个生态（Cozy Cloud vs Twake Workplace）来选。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [paperless-ngx](paperless-ngx.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“真正的 OCR/DMS：摄入、OCR、自动打标签并全文检索扫描件”，再选 paperless-ngx。 | 真正的 OCR/DMS：摄入、OCR、自动打标签并全文检索扫描件。当“文档”意味着可检索的扫描件时，它才是对的工具。Twake Drive 完全不做这些——它是文件网盘，不是归档器。 |
+| [copyparty](copyparty.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“单二进制文件服务器，带上传 UI、WebDAV、分享和（可选）媒体索引”，再选 copyparty。 | 单二进制文件服务器，带上传 UI、WebDAV、分享和（可选）媒体索引；运行起来比依赖 cozy-stack 的 Twake Drive 轻得多，但没有套件/认证/连接器生态。 |
+| Nextcloud | 未收录 | 当前页用于它的主场景；如果更看重“主流的自托管网盘+协作平台”，再选 Nextcloud。 | 主流的自托管网盘+协作平台——文件、分享、协同办公、庞大的应用生态；栈更重（PHP/DB），但独立运行、不绑定 cozy-stack。 |
+| Seafile | 未收录 | 当前页用于它的主场景；如果更看重“同步优先的自托管网盘，增量同步、版本化、（Pro 版）加密都很强”，再选 Seafile。 | 同步优先的自托管网盘，增量同步、版本化、（Pro 版）加密都很强；独立服务器，套件/协作集成弱于 Twake/Cozy。 |
+| Cozy Drive（上游） | 未收录 | 当前页用于它的主场景；如果更看重“这*就是*上游”，再选 Cozy Drive（上游）。 | 这*就是*上游——Twake Drive 是 Linagora/Twake Workplace 对 `cozy/cozy-drive` 的 fork/换牌。架构相同；按你跑哪个生态（Cozy Cloud vs Twake Workplace）来选。 |
 
 ## 技术栈
 

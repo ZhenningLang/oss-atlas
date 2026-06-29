@@ -9,6 +9,11 @@ license: MIT
 maturity: "v0.10.0, effectively unmaintained — last pushed 2024-04 (~2y idle as of 2026-06)"
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2024-04-16T18:50:38Z
+  default_branch: master
+  default_branch_sha: 075ac162dc62fc532037df0d98954ab840a97516
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:24:27Z
@@ -76,13 +81,13 @@ Occasionally a page you scrape needs a little JavaScript to populate content, an
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| httpx + BeautifulSoup / parsel | 未收录 | The mainstream modern split: an actively-maintained async-capable HTTP client plus a dedicated parser (bs4 for forgiving HTML, parsel for Scrapy-style CSS/XPath). Two imports instead of one, but both are maintained and you control each piece — the recommended replacement for plain HTML scraping. |
-| Playwright (Python) | 未收录 | Real, maintained headless-browser automation (Chromium/Firefox/WebKit) for JS-heavy pages; far more robust than `requests-html`'s pyppeteer `render()`, but heavier and a different (browser-driving) mental model. Pair with selectolax/bs4 for parsing. |
-| Scrapy | 未收录 | A full async crawling framework — concurrency, scheduling, middleware, pipelines, retries; the right tool when you're crawling at scale, overkill for a 40-line one-off. |
-| selectolax | 未收录 | Very fast C-backed (Modest/lexbor) HTML parser with CSS selectors; parsing only (bring your own HTTP client), but the speed choice for large documents — what `requests-html` is not. |
-| requests + BeautifulSoup | 未收录 | The classic, still-fine combo for simple synchronous scraping; `requests-html` is essentially this plus PyQuery selectors and an optional JS-render bolt-on, but without active maintenance. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| httpx + BeautifulSoup / parsel | 未收录 | Use this page for its stated niche; choose httpx + BeautifulSoup / parsel when you need the mainstream modern split: an actively-maintained async-capable HTTP client plus a dedicated parse. | The mainstream modern split: an actively-maintained async-capable HTTP client plus a dedicated parser (bs4 for forgiving HTML, parsel for Scrapy-style CSS/XPath). Two imports instead of one, but both are maintained and you control each piece — the recommended replacement for plain HTML scraping. |
+| Playwright (Python) | 未收录 | Use this page for its stated niche; choose Playwright (Python) when you need real, maintained headless-browser automation (Chromium/Firefox/WebKit) for JS-heavy pages. | Real, maintained headless-browser automation (Chromium/Firefox/WebKit) for JS-heavy pages; far more robust than `requests-html`'s pyppeteer `render()`, but heavier and a different (browser-driving) mental model. Pair with selectolax/bs4 for parsing. |
+| Scrapy | 未收录 | Use this page for its stated niche; choose Scrapy when you need a full async crawling framework. | A full async crawling framework — concurrency, scheduling, middleware, pipelines, retries; the right tool when you're crawling at scale, overkill for a 40-line one-off. |
+| selectolax | 未收录 | Use this page for its stated niche; choose selectolax when you need very fast C-backed (Modest/lexbor) HTML parser with CSS selectors. | Very fast C-backed (Modest/lexbor) HTML parser with CSS selectors; parsing only (bring your own HTTP client), but the speed choice for large documents — what `requests-html` is not. |
+| requests + BeautifulSoup | 未收录 | Use this page for its stated niche; choose requests + BeautifulSoup when you need the classic, still-fine combo for simple synchronous scraping. | The classic, still-fine combo for simple synchronous scraping; `requests-html` is essentially this plus PyQuery selectors and an optional JS-render bolt-on, but without active maintenance. |
 
 ## Tech stack
 

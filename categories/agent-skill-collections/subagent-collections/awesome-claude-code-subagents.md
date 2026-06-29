@@ -9,6 +9,11 @@ license: MIT
 maturity: no tagged release, active (2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+upstream:
+  pushed_at: 2026-06-24T06:28:05Z
+  default_branch: main
+  default_branch_sha: c193ad45419c13ceb49a43740186f680ad5ea264
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:32:59Z
@@ -80,12 +85,12 @@ This repo gives you that starting set: 154+ subagent markdown files organized in
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [wshobson/agents](wshobson-agents.md) | ✅ | The other large Claude Code subagent collection. Compare on which roles each covers, frontmatter conventions, and how opinionated each persona's prompt is — both are "drop into `~/.claude/agents/`" packs, so pick by coverage and prompt quality, not format. |
-| antfu/skills, Dimillian/Skills, gstack, khazix-skills, … | 未收录 / [dimillian-skills](../personal-collections/dimillian-skills.md) ✅ | Personal *skill* collections (the `Skill`-tool format), not subagent personas. Different unit of consumption — skills are on-demand procedures, subagents are delegated sub-conversations. Use those when you want behaviors loaded into the main agent, this when you want separate delegated experts. |
-| Anthropic's built-in subagent docs / hand-rolled agents | 未收录 | The native way to author subagents yourself. This repo is a third-party starter set layered on that same mechanism, so it can duplicate or collide with agents you've already written. |
-| Superpowers / SDLC methodology packs | 未收录 | Those install a *workflow discipline* (brainstorm→plan→TDD→verify) into one agent; this installs a *roster of role experts*. Orthogonal — you can run both, but they solve different problems. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [wshobson/agents](wshobson-agents.md) | ✅ | Use this page for its stated niche; choose wshobson/agents when you need the other large Claude Code subagent collection. | The other large Claude Code subagent collection. Compare on which roles each covers, frontmatter conventions, and how opinionated each persona's prompt is — both are "drop into `~/.claude/agents/`" packs, so pick by coverage and prompt quality, not format. |
+| antfu/skills, Dimillian/Skills, gstack, khazix-skills, … | 未收录 / [dimillian-skills](../personal-collections/dimillian-skills.md) ✅ | Use this page for its stated niche; choose antfu/skills, Dimillian/Skills, gstack, khazix-skills, … when you need personal *skill* collections (the `Skill`-tool format), not subagent personas. | Personal *skill* collections (the `Skill`-tool format), not subagent personas. Different unit of consumption — skills are on-demand procedures, subagents are delegated sub-conversations. Use those when you want behaviors loaded into the main agent, this when you want separate delegated experts. |
+| Anthropic's built-in subagent docs / hand-rolled agents | 未收录 | Use this page for its stated niche; choose Anthropic's built-in subagent docs / hand-rolled agents when you need the native way to author subagents yourself. | The native way to author subagents yourself. This repo is a third-party starter set layered on that same mechanism, so it can duplicate or collide with agents you've already written. |
+| Superpowers / SDLC methodology packs | 未收录 | Use this page for its stated niche; choose Superpowers / SDLC methodology packs when you need those install a *workflow discipline* (brainstorm→plan→TDD→verify) into one agent. | Those install a *workflow discipline* (brainstorm→plan→TDD→verify) into one agent; this installs a *roster of role experts*. Orthogonal — you can run both, but they solve different problems. |
 
 ## Health & viability
 

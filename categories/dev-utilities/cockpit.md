@@ -9,6 +9,11 @@ license: LGPL-2.1-or-later
 maturity: release 364, active (2026-06)
 last_verified: 2026-06-26
 type: app
+upstream:
+  pushed_at: 2026-06-29T10:04:42Z
+  default_branch: main
+  default_branch_sha: 262565fb117b9b05765580256f5665b36a4449e2
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:47:00Z
@@ -84,14 +89,14 @@ It shines when you have a handful of servers and want a low-ceremony pane of gla
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| Webmin | 未收录 | Older, broader Perl-based control panel covering many services (mail, DNS, Apache, BIND) on multiple init systems; heavier and less "live session" — Cockpit is leaner, systemd-native, and reflects real-time OS state. |
-| cPanel / Plesk | 未收录 | Commercial web-hosting control panels (vhosts, mail, billing, reseller accounts); different problem — managed hosting, not bare OS administration. Proprietary and paid. |
-| Ansible / Salt / Puppet | 未收录 | Declarative, agentless (Ansible) or agent-based config management for fleets with version control and idempotency; the right tool at scale, but no live interactive UI for ad-hoc one-host triage. |
-| Portainer | 未收录 | Web UI focused specifically on Docker/Kubernetes container management; Cockpit's container view (Podman) is one tab among many, not the whole product. |
-| Grafana + Prometheus | 未收录 | Observability dashboards for metrics/alerting across a fleet; read-mostly monitoring, whereas Cockpit is hands-on administration of a single host. |
-| [DevToys](devtoys.md) | ✅ | A developer's offline format/encode/convert toolbox on the desktop — unrelated problem; listed only because it shares this category, not a substitute. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| Webmin | 未收录 | Use this page for its stated niche; choose Webmin when you need older, broader Perl-based control panel covering many services (mail, DNS, Apache, BIND) on multiple. | Older, broader Perl-based control panel covering many services (mail, DNS, Apache, BIND) on multiple init systems; heavier and less "live session" — Cockpit is leaner, systemd-native, and reflects real-time OS state. |
+| cPanel / Plesk | 未收录 | Use this page for its stated niche; choose cPanel / Plesk when you need commercial web-hosting control panels (vhosts, mail, billing, reseller accounts). | Commercial web-hosting control panels (vhosts, mail, billing, reseller accounts); different problem — managed hosting, not bare OS administration. Proprietary and paid. |
+| Ansible / Salt / Puppet | 未收录 | Use this page for its stated niche; choose Ansible / Salt / Puppet when you need declarative, agentless (Ansible) or agent-based config management for fleets with version control an. | Declarative, agentless (Ansible) or agent-based config management for fleets with version control and idempotency; the right tool at scale, but no live interactive UI for ad-hoc one-host triage. |
+| Portainer | 未收录 | Use this page for its stated niche; choose Portainer when you need web UI focused specifically on Docker/Kubernetes container management. | Web UI focused specifically on Docker/Kubernetes container management; Cockpit's container view (Podman) is one tab among many, not the whole product. |
+| Grafana + Prometheus | 未收录 | Use this page for its stated niche; choose Grafana + Prometheus when you need observability dashboards for metrics/alerting across a fleet. | Observability dashboards for metrics/alerting across a fleet; read-mostly monitoring, whereas Cockpit is hands-on administration of a single host. |
+| [DevToys](devtoys.md) | ✅ | Use this page for its stated niche; choose DevToys when you need a developer's offline format/encode/convert toolbox on the desktop. | A developer's offline format/encode/convert toolbox on the desktop — unrelated problem; listed only because it shares this category, not a substitute. |
 
 ## Tech stack
 

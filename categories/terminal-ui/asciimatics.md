@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v1.15.x, active (2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2025-06-03T21:42:03Z
+  default_branch: master
+  default_branch_sha: 0a400e6c6c52cb7f4ba15ffaaa55b535d0d1b2b1
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:18:32Z
@@ -85,13 +90,13 @@ You also reach for it when you want the *fun* layer: scrolling banners, sprites,
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| Textual | 未收录 | Modern async, CSS-styled, mouse-first TUI framework (Textualize); much richer widget/styling model and active backing, but heavier and a different programming model than asciimatics' curses-like API. |
-| urwid | 未收录 | Long-established Python console UI library with a flexible widget/layout system; Unix-focused (weaker Windows story) and no animation engine. |
-| rich | 未收录 | Styled terminal *output* (tables, markup, progress, syntax) — not a full-screen UI/event loop; complementary, not a substitute for interactive screens. |
-| blessed / curses (stdlib) | 未收录 | Lower-level terminal control; `curses` is Unix-only, `blessed` is a friendlier wrapper — neither ships widgets or an animation framework. |
-| prompt_toolkit | 未收录 | Powerful for interactive prompts/REPLs and some full-screen apps; strong line-editing, but a different focus (input) and no ASCII-effects engine. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| Textual | 未收录 | Use this page for its stated niche; choose Textual when you need modern async, CSS-styled, mouse-first TUI framework (Textualize). | Modern async, CSS-styled, mouse-first TUI framework (Textualize); much richer widget/styling model and active backing, but heavier and a different programming model than asciimatics' curses-like API. |
+| urwid | 未收录 | Use this page for its stated niche; choose urwid when you need long-established Python console UI library with a flexible widget/layout system. | Long-established Python console UI library with a flexible widget/layout system; Unix-focused (weaker Windows story) and no animation engine. |
+| rich | 未收录 | Use this page for its stated niche; choose rich when you need styled terminal *output* (tables, markup, progress, syntax). | Styled terminal *output* (tables, markup, progress, syntax) — not a full-screen UI/event loop; complementary, not a substitute for interactive screens. |
+| blessed / curses (stdlib) | 未收录 | Use this page for its stated niche; choose blessed / curses (stdlib) when you need lower-level terminal control. | Lower-level terminal control; `curses` is Unix-only, `blessed` is a friendlier wrapper — neither ships widgets or an animation framework. |
+| prompt_toolkit | 未收录 | Use this page for its stated niche; choose prompttoolkit when you need powerful for interactive prompts/REPLs and some full-screen apps. | Powerful for interactive prompts/REPLs and some full-screen apps; strong line-editing, but a different focus (input) and no ASCII-effects engine. |
 
 ## Tech stack
 

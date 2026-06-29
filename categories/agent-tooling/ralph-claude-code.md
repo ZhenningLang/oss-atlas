@@ -9,6 +9,11 @@ license: MIT
 maturity: v0.11.x line per README, active as of 2026-06; no tagged GitHub releases (see caveats)
 last_verified: 2026-06-26
 type: tool
+upstream:
+  pushed_at: 2026-06-20T02:33:03Z
+  default_branch: main
+  default_branch_sha: 0c1d7bf8395ceb669482c3443162e2cf381f2040
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:36:28Z
@@ -90,14 +95,14 @@ So you `ralph-enable` (or `ralph-import requirements.md`) in your repo, drop you
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [beads](beads.md) | ✅ | A persistent dependency-aware *task graph* (the *what to do* store); Ralph is the *loop that does it*. Complementary — Ralph even imports beads tasks — not substitutes. |
-| [CCPM](ccpm.md) | ✅ | Spec/PRD-driven project management on top of Claude Code with GitHub-issue workflows; heavier on planning structure, less on a hardened unattended run-loop with circuit breaker + rate limiting. |
-| [Entire](entire-cli.md) | ✅ | A broader agent-workflow CLI; overlaps on driving an agent but with a different orchestration model than Ralph's single-prompt Bash loop. |
-| [Context Mode](context-mode.md) | ✅ | Focuses on context/memory shaping for the agent rather than an autonomous completion loop with exit detection. |
-| Geoffrey Huntley's original Ralph (`while :; claude -p ...`) | 未收录 | The raw technique is a one-line shell loop; this project is that idea plus exit gating, rate limits, circuit breaker, monitoring, backups, and sandboxing — i.e. the safety scaffolding the bare loop lacks. |
-| Aider `--auto` / OpenHands / SWE-agent | 未收录 | General autonomous coding agents with their own models/loops; not Claude-Code-CLI wrappers and not built around the dual-condition `EXIT_SIGNAL` gate. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [beads](beads.md) | ✅ | Use this page for its stated niche; choose beads when you need a persistent dependency-aware *task graph* (the *what to do* store). | A persistent dependency-aware *task graph* (the *what to do* store); Ralph is the *loop that does it*. Complementary — Ralph even imports beads tasks — not substitutes. |
+| [CCPM](ccpm.md) | ✅ | Use this page for its stated niche; choose CCPM when you need spec/PRD-driven project management on top of Claude Code with GitHub-issue workflows. | Spec/PRD-driven project management on top of Claude Code with GitHub-issue workflows; heavier on planning structure, less on a hardened unattended run-loop with circuit breaker + rate limiting. |
+| [Entire](entire-cli.md) | ✅ | Use this page for its stated niche; choose Entire when you need a broader agent-workflow CLI. | A broader agent-workflow CLI; overlaps on driving an agent but with a different orchestration model than Ralph's single-prompt Bash loop. |
+| [Context Mode](context-mode.md) | ✅ | Use this page for its stated niche; choose Context Mode when you need focuses on context/memory shaping for the agent rather than an autonomous completion loop with exit. | Focuses on context/memory shaping for the agent rather than an autonomous completion loop with exit detection. |
+| Geoffrey Huntley's original Ralph (`while :; claude -p ...`) | 未收录 | Use this page for its stated niche; choose Geoffrey Huntley's original Ralph (while :; claude -p ...) when you need the raw technique is a one-line shell loop. | The raw technique is a one-line shell loop; this project is that idea plus exit gating, rate limits, circuit breaker, monitoring, backups, and sandboxing — i.e. the safety scaffolding the bare loop lacks. |
+| Aider `--auto` / OpenHands / SWE-agent | 未收录 | Use this page for its stated niche; choose Aider --auto / OpenHands / SWE-agent when you need general autonomous coding agents with their own models/loops. | General autonomous coding agents with their own models/loops; not Claude-Code-CLI wrappers and not built around the dual-condition `EXIT_SIGNAL` gate. |
 
 ## Tech stack
 

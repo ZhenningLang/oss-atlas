@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: "Beta releases (v0.1.x-beta line, 2026-06); very active"
 last_verified: 2026-06-26
 type: tool
+upstream:
+  pushed_at: 2026-06-29T11:05:14Z
+  default_branch: main
+  default_branch_sha: 2f8521ed54b20775025ce28bc9965e97d76318b3
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:58:50Z
@@ -87,14 +92,14 @@ It shines when your constraint is one GPU and your goal is fast, cheap iteration
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-| --- | --- | --- |
-| [LLaMA-Factory](llamafactory.md) | ✅ | Broadest method/model coverage with YAML + web UI and real multi-GPU; can even use Unsloth as a backend. Unsloth is faster on a single GPU but narrower in workflow/scale. |
-| [ART](art.md) | ✅ | Agent-first GRPO trainer for multi-step agents (task + reward → RL loop). Unsloth is a general fine-tuning/RL library, not an agent-trajectory framework. |
-| [Agent Lightning](agent-lightning.md) | ✅ | Decouples agent execution from RL training to add RL to existing agents (LangChain/AutoGen/etc.) with near-zero code change. Unsloth optimizes the training kernels, not agent orchestration. |
-| Axolotl | 未收录 | First-class multi-GPU (FSDP2/DeepSpeed) and strong multimodal support; the go-to once you outgrow a single GPU. Unsloth wins on single-GPU speed/VRAM. |
-| torchtune | 未收录 | Native-PyTorch recipes with explicit control and `torch.compile`; narrower model coverage. Unsloth offers higher single-GPU throughput and broader model list. |
-| HF TRL | 未收录 | Reference SFT/DPO/GRPO trainers from Hugging Face; Unsloth builds on TRL and accelerates it with custom kernels. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [LLaMA-Factory](llamafactory.md) | ✅ | Use this page for its stated niche; choose LLaMA-Factory when you need broadest method/model coverage with YAML + web UI and real multi-GPU. | Broadest method/model coverage with YAML + web UI and real multi-GPU; can even use Unsloth as a backend. Unsloth is faster on a single GPU but narrower in workflow/scale. |
+| [ART](art.md) | ✅ | Use this page for its stated niche; choose ART when you need agent-first GRPO trainer for multi-step agents (task + reward → RL loop). | Agent-first GRPO trainer for multi-step agents (task + reward → RL loop). Unsloth is a general fine-tuning/RL library, not an agent-trajectory framework. |
+| [Agent Lightning](agent-lightning.md) | ✅ | Use this page for its stated niche; choose Agent Lightning when you need decouples agent execution from RL training to add RL to existing agents (LangChain/AutoGen/etc. | Decouples agent execution from RL training to add RL to existing agents (LangChain/AutoGen/etc.) with near-zero code change. Unsloth optimizes the training kernels, not agent orchestration. |
+| Axolotl | 未收录 | Use this page for its stated niche; choose Axolotl when you need first-class multi-GPU (FSDP2/DeepSpeed) and strong multimodal support. | First-class multi-GPU (FSDP2/DeepSpeed) and strong multimodal support; the go-to once you outgrow a single GPU. Unsloth wins on single-GPU speed/VRAM. |
+| torchtune | 未收录 | Use this page for its stated niche; choose torchtune when you need native-PyTorch recipes with explicit control and `torch. | Native-PyTorch recipes with explicit control and `torch.compile`; narrower model coverage. Unsloth offers higher single-GPU throughput and broader model list. |
+| HF TRL | 未收录 | Use this page for its stated niche; choose HF TRL when you need reference SFT/DPO/GRPO trainers from Hugging Face. | Reference SFT/DPO/GRPO trainers from Hugging Face; Unsloth builds on TRL and accelerates it with custom kernels. |
 
 ## Tech stack
 

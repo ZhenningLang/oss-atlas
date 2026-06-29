@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v4.x (npm 4.1.3), master frozen since 2020-06, coasting, ~7.9k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: tool
+upstream:
+  pushed_at: 2023-03-06T17:20:04Z
+  default_branch: master
+  default_branch_sha: b93f948107b956e07c7b68faeff0c777a1f50486
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:44:21Z
@@ -82,12 +87,12 @@ It's a reasonable pick when you specifically want a *scriptable* Node.js proxy w
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [whistle](whistle.md) | ✅ | The actively-maintained Node.js MITM debugging proxy; richer rule system and ongoing releases — the better default for new work in this niche. |
-| mitmproxy | 未收录 | Python, actively maintained, powerful scripting + TUI/web UI; the go-to programmable MITM proxy if you're not tied to Node.js. |
-| Charles / Fiddler | 未收录 | Mature commercial/freeware GUI debugging proxies; polished UX but closed-source and not scriptable in JS the way AnyProxy's rule files are. |
-| Proxyman | 未收录 | Modern macOS/cross-platform GUI proxy; great UX, freemium, not a Node.js library you embed. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [whistle](whistle.md) | ✅ | Use this page for its stated niche; choose whistle when you need the actively-maintained Node. | The actively-maintained Node.js MITM debugging proxy; richer rule system and ongoing releases — the better default for new work in this niche. |
+| mitmproxy | 未收录 | Use this page for its stated niche; choose mitmproxy when you need python, actively maintained, powerful scripting + TUI/web UI. | Python, actively maintained, powerful scripting + TUI/web UI; the go-to programmable MITM proxy if you're not tied to Node.js. |
+| Charles / Fiddler | 未收录 | Use this page for its stated niche; choose Charles / Fiddler when you need mature commercial/freeware GUI debugging proxies. | Mature commercial/freeware GUI debugging proxies; polished UX but closed-source and not scriptable in JS the way AnyProxy's rule files are. |
+| Proxyman | 未收录 | Use this page for its stated niche; choose Proxyman when you need modern macOS/cross-platform GUI proxy. | Modern macOS/cross-platform GUI proxy; great UX, freemium, not a Node.js library you embed. |
 
 ## Tech stack
 

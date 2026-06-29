@@ -9,6 +9,11 @@ license: MIT
 maturity: v0.34.x, very active but young (2026-06)
 last_verified: 2026-06-28
 type: app
+upstream:
+  pushed_at: 2026-06-29T04:14:43Z
+  default_branch: main
+  default_branch_sha: 6804c297c52bfad176baf3e1a1813cbe77e416c4
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:34:50Z
@@ -88,12 +93,12 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| 各 agent 内置历史（Claude Code 的 `/resume` 等） | 未收录 | 原生、零安装，但单 agent 且无跨工具搜索/成本汇总——正是 AgentsView 填的缺口。 |
-| ccusage / token 成本 CLI | 未收录 | 聚焦 Claude Code/agent 的 token 成本报告器；范围更窄（成本，常为单 agent），对比 AgentsView 的搜索＋分析＋多 agent。 |
-| Langfuse / Helicone / 可观测性 SaaS | 未收录 | 生产级 LLM 可观测性平台（tracing、evals）；为应用管线而建，通常托管/需埋点，而非对*你自己*编码 agent 会话做 local-first 浏览。 |
-| 对 `~/.claude` / 会话目录做 grep | 未收录 | 零依赖且完全本地，但没有 UI、没有 token/成本计算、没有跨 agent 归一化。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| 各 agent 内置历史（Claude Code 的 `/resume` 等） | 未收录 | 当前页用于它的主场景；如果更看重“原生、零安装，但单 agent 且无跨工具搜索/成本汇总”，再选 各 agent 内置历史（Claude Code 的 /resume 等）。 | 原生、零安装，但单 agent 且无跨工具搜索/成本汇总——正是 AgentsView 填的缺口。 |
+| ccusage / token 成本 CLI | 未收录 | 当前页用于它的主场景；如果更看重“聚焦 Claude Code/agent 的 token 成本报告器”，再选 ccusage / token 成本 CLI。 | 聚焦 Claude Code/agent 的 token 成本报告器；范围更窄（成本，常为单 agent），对比 AgentsView 的搜索＋分析＋多 agent。 |
+| Langfuse / Helicone / 可观测性 SaaS | 未收录 | 当前页用于它的主场景；如果更看重“生产级 LLM 可观测性平台（tracing、evals）”，再选 Langfuse / Helicone / 可观测性 SaaS。 | 生产级 LLM 可观测性平台（tracing、evals）；为应用管线而建，通常托管/需埋点，而非对*你自己*编码 agent 会话做 local-first 浏览。 |
+| 对 `~/.claude` / 会话目录做 grep | 未收录 | 当前页用于它的主场景；如果更看重“零依赖且完全本地，但没有 UI、没有 token/成本计算、没有跨 agent 归一化”，再选 对 ~/.claude / 会话目录做 grep。 | 零依赖且完全本地，但没有 UI、没有 token/成本计算、没有跨 agent 归一化。 |
 
 ## 技术栈
 

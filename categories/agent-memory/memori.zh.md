@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v3.3.6, active (2026-06)
 last_verified: 2026-06-26
 type: library
+upstream:
+  pushed_at: 2026-06-15T23:18:56Z
+  default_branch: main
+  default_branch_sha: 56600c525ba3046354c17a7663dca06a813a0bb5
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:27:37Z
@@ -86,14 +91,14 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| [Mem0](mem0.zh.md) | ✅ | 被引用最多的 agent 记忆层；在向量库之上提供 add/search API，自托管能力广。Memori 偏向自动客户端拦截 + 结构化 entity/process 状态加一个有主张的 cloud，而 Mem0 召回更显式、datastore 更灵活。 |
-| [claude-subconscious](claude-subconscious.zh.md) | ✅ | 一个 Claude 专属的后台记忆实验（Letta 血统）；范围比 Memori 的多 provider、多 framework 基础设施窄。 |
-| Letta (MemGPT) | 未收录 | 带记忆管理 OS 的 agent runtime（分层 context、自编辑记忆）；是更重的有状态 agent 服务，不是即插即用的客户端包裹器。 |
-| Zep | 未收录 | 基于时序知识图谱的记忆服务，自托管/OSS 核心很强；结构化记忆的野心相当，但模型是图优先的。 |
-| LangMem (LangChain) | 未收录 | 绑在 LangGraph/LangChain 栈上的记忆工具；独立性不如 Memori 的 framework-无关定位。 |
-| 普通向量库（pgvector / Chroma） | 未收录 | schema 和召回都你自己掌控；没有 augmentation、没有 entity 模型、没有 cloud——掌控最大，接线也最多。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [Mem0](mem0.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“被引用最多的 agent 记忆层”，再选 Mem0。 | 被引用最多的 agent 记忆层；在向量库之上提供 add/search API，自托管能力广。Memori 偏向自动客户端拦截 + 结构化 entity/process 状态加一个有主张的 cloud，而 Mem0 召回更显式、datastore 更灵活。 |
+| [claude-subconscious](claude-subconscious.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“一个 Claude 专属的后台记忆实验（Letta 血统）”，再选 claude-subconscious。 | 一个 Claude 专属的后台记忆实验（Letta 血统）；范围比 Memori 的多 provider、多 framework 基础设施窄。 |
+| Letta (MemGPT) | 未收录 | 当前页用于它的主场景；如果更看重“带记忆管理 OS 的 agent runtime（分层 context、自编辑记忆）”，再选 Letta (MemGPT)。 | 带记忆管理 OS 的 agent runtime（分层 context、自编辑记忆）；是更重的有状态 agent 服务，不是即插即用的客户端包裹器。 |
+| Zep | 未收录 | 当前页用于它的主场景；如果更看重“基于时序知识图谱的记忆服务，自托管/OSS 核心很强”，再选 Zep。 | 基于时序知识图谱的记忆服务，自托管/OSS 核心很强；结构化记忆的野心相当，但模型是图优先的。 |
+| LangMem (LangChain) | 未收录 | 当前页用于它的主场景；如果更看重“绑在 LangGraph/LangChain 栈上的记忆工具”，再选 LangMem (LangChain)。 | 绑在 LangGraph/LangChain 栈上的记忆工具；独立性不如 Memori 的 framework-无关定位。 |
+| 普通向量库（pgvector / Chroma） | 未收录 | 当前页用于它的主场景；如果更看重“schema 和召回都你自己掌控”，再选 普通向量库（pgvector / Chroma）。 | schema 和召回都你自己掌控；没有 augmentation、没有 entity 模型、没有 cloud——掌控最大，接线也最多。 |
 
 ## 技术栈
 

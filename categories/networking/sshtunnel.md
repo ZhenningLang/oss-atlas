@@ -9,6 +9,11 @@ license: MIT
 maturity: v0.4.0 (last release 2021), low activity, ~1.3k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2025-08-27T14:29:08Z
+  default_branch: master
+  default_branch_sha: dc0732884379a19a21bf7a49650d0708519ec54f
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:06:24Z
@@ -86,12 +91,12 @@ It shines for throwaway automation and data scripts: a one-off migration that mu
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [Paramiko](paramiko.md) | ✅ | The engine sshtunnel wraps — full SSH/SFTP/transport control, but you implement the forwarding/context-manager ergonomics yourself. |
-| native `ssh -L` / `autossh` | 未收录 | OpenSSH client (optionally auto-reconnecting) — robust, fast, full config fidelity, but it's a subprocess to manage, not an in-Python object. |
-| `subprocess` + `ssh` | 未收录 | Zero extra deps, but you parse text and manage the child process / readiness yourself. |
-| AsyncSSH (forwarding API) | 未收录 | asyncio-native SSH with its own forwarding; better for async codebases, different API, heavier than a thin wrapper. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [Paramiko](paramiko.md) | ✅ | Use this page for its stated niche; choose Paramiko when you need the engine sshtunnel wraps. | The engine sshtunnel wraps — full SSH/SFTP/transport control, but you implement the forwarding/context-manager ergonomics yourself. |
+| native `ssh -L` / `autossh` | 未收录 | Use this page for its stated niche; choose native ssh -L / autossh when you need openSSH client (optionally auto-reconnecting). | OpenSSH client (optionally auto-reconnecting) — robust, fast, full config fidelity, but it's a subprocess to manage, not an in-Python object. |
+| `subprocess` + `ssh` | 未收录 | Use this page for its stated niche; choose subprocess + ssh when you need zero extra deps, but you parse text and manage the child process / readiness yourself. | Zero extra deps, but you parse text and manage the child process / readiness yourself. |
+| AsyncSSH (forwarding API) | 未收录 | Use this page for its stated niche; choose AsyncSSH (forwarding API) when you need asyncio-native SSH with its own forwarding. | asyncio-native SSH with its own forwarding; better for async codebases, different API, heavier than a thin wrapper. |
 
 ## Tech stack
 

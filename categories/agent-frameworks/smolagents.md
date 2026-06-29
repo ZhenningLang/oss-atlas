@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v1.x, active, ~28k stars (2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2026-06-23T18:34:53Z
+  default_branch: main
+  default_branch_sha: 526069c1ead958b36d9fd09a6b1ef37f68ed6ade
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:25:45Z
@@ -88,13 +93,13 @@ It's also a good fit when you're model-shopping or staying close to the Hugging 
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| LangGraph | 未收录 | Graph-based orchestration (nodes/edges, durable state, checkpoints, human-in-the-loop); far more powerful for complex stateful workflows, but heavier and more abstraction to learn. smolagents trades all of that away for a tiny readable loop. |
-| [AgentScope](agentscope.md) | ✅ | Multi-agent runtime/platform (message passing, observability, deployment); a production "agent OS" where smolagents is a single-loop library you embed and own. |
-| [DSPy](dspy.md) | ✅ | *Compiles/optimizes* LM programs against a metric; different paradigm — smolagents just runs a code-acting loop, it doesn't optimize prompts or weights. |
-| CrewAI | 未收录 | Role/crew-based multi-agent orchestration with a higher-level "team of agents" model; more structure and opinion, less minimal than smolagents' single transparent loop. |
-| Pydantic AI | 未收录 | Type-safe, Pydantic-centric agent framework emphasizing structured/validated outputs; smolagents leans into code-as-action instead of schema-validated tool calls. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| LangGraph | 未收录 | Use this page for its stated niche; choose LangGraph when you need graph-based orchestration (nodes/edges, durable state, checkpoints, human-in-the-loop). | Graph-based orchestration (nodes/edges, durable state, checkpoints, human-in-the-loop); far more powerful for complex stateful workflows, but heavier and more abstraction to learn. smolagents trades all of that away for a tiny readable loop. |
+| [AgentScope](agentscope.md) | ✅ | Use this page for its stated niche; choose AgentScope when you need multi-agent runtime/platform (message passing, observability, deployment). | Multi-agent runtime/platform (message passing, observability, deployment); a production "agent OS" where smolagents is a single-loop library you embed and own. |
+| [DSPy](dspy.md) | ✅ | Use this page for its stated niche; choose DSPy when you need *Compiles/optimizes* LM programs against a metric. | *Compiles/optimizes* LM programs against a metric; different paradigm — smolagents just runs a code-acting loop, it doesn't optimize prompts or weights. |
+| CrewAI | 未收录 | Use this page for its stated niche; choose CrewAI when you need role/crew-based multi-agent orchestration with a higher-level "team of agents" model. | Role/crew-based multi-agent orchestration with a higher-level "team of agents" model; more structure and opinion, less minimal than smolagents' single transparent loop. |
+| Pydantic AI | 未收录 | Use this page for its stated niche; choose Pydantic AI when you need type-safe, Pydantic-centric agent framework emphasizing structured/validated outputs. | Type-safe, Pydantic-centric agent framework emphasizing structured/validated outputs; smolagents leans into code-as-action instead of schema-validated tool calls. |
 
 ## Tech stack
 

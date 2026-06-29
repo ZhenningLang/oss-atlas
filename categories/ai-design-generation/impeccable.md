@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: CLI v3.1.0 / Skill v3.8.0, active (2026-06)
 last_verified: 2026-06-26
 type: tool
+upstream:
+  pushed_at: 2026-06-29T07:31:57Z
+  default_branch: main
+  default_branch_sha: c979ac37c361da564dcce100a4f2623d94ef54c8
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:38:45Z
@@ -89,15 +94,15 @@ When you want the agent itself to improve the design rather than just lint it, y
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [html-anything](html-anything.md) | ✅ | Generates HTML artifacts from agents; Impeccable instead critiques/lints what an agent already produced. Complementary, not substitute. |
-| [open-design](open-design.md) | ✅ | A design-language / generation layer in the same category; overlaps on "make agent design better" but differs on whether it lints existing output vs drives generation. Compare the two pages directly. |
-| [guizang-ppt](guizang-ppt.md) | ✅ | A skill-pack for slide-deck generation; narrow output type, no deterministic detector or CLI. Impeccable is broader frontend-quality tooling. |
-| [guizang-social-card](guizang-social-card.md) | ✅ | Skill-pack for social-card generation; single artifact type vs Impeccable's general UI linting. |
-| ESLint + a11y plugins (eslint-plugin-jsx-a11y) | 未收录 | Mature, AST-based linting for accessibility/code, fully offline; but no notion of "AI-design slop" patterns or aesthetic critique, and no agent-skill layer. |
-| Stylelint | 未收录 | Deterministic CSS linting with a huge rule ecosystem; targets CSS correctness/conventions, not aesthetic AI-pattern detection or agent design coaching. |
-| Lighthouse / axe-core | 未收录 | Audits performance/accessibility on rendered pages; overlaps on URL scanning but not on AI-design-pattern detection or the skill-driven "polish/bolder/quieter" workflow. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [html-anything](html-anything.md) | ✅ | Use this page for its stated niche; choose html-anything when you need generates HTML artifacts from agents. | Generates HTML artifacts from agents; Impeccable instead critiques/lints what an agent already produced. Complementary, not substitute. |
+| [open-design](open-design.md) | ✅ | Use this page for its stated niche; choose open-design when you need a design-language / generation layer in the same category. | A design-language / generation layer in the same category; overlaps on "make agent design better" but differs on whether it lints existing output vs drives generation. Compare the two pages directly. |
+| [guizang-ppt](guizang-ppt.md) | ✅ | Use this page for its stated niche; choose guizang-ppt when you need a skill-pack for slide-deck generation. | A skill-pack for slide-deck generation; narrow output type, no deterministic detector or CLI. Impeccable is broader frontend-quality tooling. |
+| [guizang-social-card](guizang-social-card.md) | ✅ | Use this page for its stated niche; choose guizang-social-card when you need skill-pack for social-card generation. | Skill-pack for social-card generation; single artifact type vs Impeccable's general UI linting. |
+| ESLint + a11y plugins (eslint-plugin-jsx-a11y) | 未收录 | Use this page for its stated niche; choose ESLint + a11y plugins (eslint-plugin-jsx-a11y) when you need mature, AST-based linting for accessibility/code, fully offline. | Mature, AST-based linting for accessibility/code, fully offline; but no notion of "AI-design slop" patterns or aesthetic critique, and no agent-skill layer. |
+| Stylelint | 未收录 | Use this page for its stated niche; choose Stylelint when you need deterministic CSS linting with a huge rule ecosystem. | Deterministic CSS linting with a huge rule ecosystem; targets CSS correctness/conventions, not aesthetic AI-pattern detection or agent design coaching. |
+| Lighthouse / axe-core | 未收录 | Use this page for its stated niche; choose Lighthouse / axe-core when you need audits performance/accessibility on rendered pages. | Audits performance/accessibility on rendered pages; overlaps on URL scanning but not on AI-design-pattern detection or the skill-driven "polish/bolder/quieter" workflow. |
 
 ## Tech stack
 

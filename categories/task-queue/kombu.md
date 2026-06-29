@@ -9,6 +9,11 @@ license: BSD-3-Clause
 maturity: v5.6.2, active (2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2026-06-27T14:10:46Z
+  default_branch: main
+  default_branch_sha: c04ae09fe77454983b632267cb9f779ae88450d2
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:17:04Z
@@ -88,13 +93,13 @@ You also reach for Kombu when you're building framework-level infrastructure rat
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [Celery](celery.md) | ✅ | A task queue built *on* Kombu; use Celery for "run this job", use Kombu when you need the raw broker abstraction. Not a substitute — a higher layer. |
-| py-amqp / pika | 未收录 | Lower-level AMQP-only clients; less abstraction, no multi-broker portability, but fewer moving parts if you'll only ever use RabbitMQ. |
-| aio-pika | 未收录 | Async-native AMQP client for `asyncio`; better async ergonomics, RabbitMQ-only, smaller scope than Kombu's multi-transport model. |
-| confluent-kafka-python / kafka-python | 未收录 | Kafka clients for log-structured streaming; different semantics (replay, partitions, consumer groups) — right when you need a stream, not a broker. |
-| NATS / Redis Streams (direct) | 未收录 | Talk to one system directly; simpler if you've committed to it, no broker-agnostic layer. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [Celery](celery.md) | ✅ | Use this page for its stated niche; choose Celery when you need a task queue built *on* Kombu. | A task queue built *on* Kombu; use Celery for "run this job", use Kombu when you need the raw broker abstraction. Not a substitute — a higher layer. |
+| py-amqp / pika | 未收录 | Use this page for its stated niche; choose py-amqp / pika when you need lower-level AMQP-only clients. | Lower-level AMQP-only clients; less abstraction, no multi-broker portability, but fewer moving parts if you'll only ever use RabbitMQ. |
+| aio-pika | 未收录 | Use this page for its stated niche; choose aio-pika when you need async-native AMQP client for `asyncio`. | Async-native AMQP client for `asyncio`; better async ergonomics, RabbitMQ-only, smaller scope than Kombu's multi-transport model. |
+| confluent-kafka-python / kafka-python | 未收录 | Use this page for its stated niche; choose confluent-kafka-python / kafka-python when you need kafka clients for log-structured streaming. | Kafka clients for log-structured streaming; different semantics (replay, partitions, consumer groups) — right when you need a stream, not a broker. |
+| NATS / Redis Streams (direct) | 未收录 | Use this page for its stated niche; choose NATS / Redis Streams (direct) when you need talk to one system directly. | Talk to one system directly; simpler if you've committed to it, no broker-agnostic layer. |
 
 ## Tech stack
 

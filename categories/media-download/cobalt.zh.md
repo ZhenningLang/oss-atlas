@@ -9,6 +9,11 @@ license: AGPL-3.0
 maturity: "active (2026-04), ~41.3k stars (2026-06), Svelte web UI + Node API backend"
 last_verified: 2026-06-28
 type: app
+upstream:
+  pushed_at: 2026-04-06T11:59:56Z
+  default_branch: main
+  default_branch_sha: a636575b09de1fc55d9b8cd98cac88f5f2f16b42
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:00:01Z
@@ -83,12 +88,12 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| [youtube-dl](youtube-dl.zh.md) | ✅ | Python CLI / 库，靠约 1000 个按站点划分的 extractor 驱动；为脚本和流水线而生、没有服务要跑——但它是命令行工具而非浏览器 UI，且上游发布节奏已放缓（yt-dlp 才是活跃继任者）。 |
-| yt-dlp | 未收录 | youtube-dl 的活跃维护分叉；YouTube 抽取事实上的 CLI，站点支持最广、更新最快。是可脚本化的二进制，而非 cobalt 那样的托管 UI/API 服务。 |
-| you-get | 未收录 | Python 命令行下载器，自带站点列表；UX 比 yt-dlp 简单，但 extractor 目录更小、跟进更不积极——同样是 CLI，不是 Web 服务。 |
-| gallery-dl | 未收录 | 专攻*图片/图集*站点（booru、社交媒体图集），而非视频/音频；与 cobalt 互补，不是替代。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [youtube-dl](youtube-dl.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“Python CLI / 库，靠约 1000 个按站点划分的 extractor 驱动”，再选 youtube-dl。 | Python CLI / 库，靠约 1000 个按站点划分的 extractor 驱动；为脚本和流水线而生、没有服务要跑——但它是命令行工具而非浏览器 UI，且上游发布节奏已放缓（yt-dlp 才是活跃继任者）。 |
+| yt-dlp | 未收录 | 当前页用于它的主场景；如果更看重“youtube-dl 的活跃维护分叉”，再选 yt-dlp。 | youtube-dl 的活跃维护分叉；YouTube 抽取事实上的 CLI，站点支持最广、更新最快。是可脚本化的二进制，而非 cobalt 那样的托管 UI/API 服务。 |
+| you-get | 未收录 | 当前页用于它的主场景；如果更看重“Python 命令行下载器，自带站点列表”，再选 you-get。 | Python 命令行下载器，自带站点列表；UX 比 yt-dlp 简单，但 extractor 目录更小、跟进更不积极——同样是 CLI，不是 Web 服务。 |
+| gallery-dl | 未收录 | 当前页用于它的主场景；如果更看重“专攻*图片/图集*站点（booru、社交媒体图集），而非视频/音频”，再选 gallery-dl。 | 专攻*图片/图集*站点（booru、社交媒体图集），而非视频/音频；与 cobalt 互补，不是替代。 |
 
 ## 技术栈
 

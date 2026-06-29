@@ -9,6 +9,11 @@ license: MIT
 maturity: active, JetBrains-maintained (2026-06)
 last_verified: 2026-06-28
 type: tool
+upstream:
+  pushed_at: 2026-06-29T10:59:38Z
+  default_branch: master
+  default_branch_sha: 63b76e649f43321efc7dfd00adb89ef0a3f1c48d
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:48:57Z
@@ -86,12 +91,12 @@ You reach for it specifically when the IDE is non-negotiable (large JVM/Kotlin/G
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| VSCodeVim | 未收录 | Vim emulation for VS Code; same idea on a different host — choose by which IDE you actually use, not by the plugin. |
-| vscode-neovim | 未收录 | Embeds a *real* Neovim instance inside VS Code for higher fidelity + your Neovim config; heavier and VS Code-only, no JetBrains equivalent of this depth. |
-| Real Vim / Neovim | 未收录 | The genuine article with full plugin ecosystem and Lua/LSP; but you lose JetBrains' integrated refactoring/debugger/indexing. |
-| JetBrains stock keymap | 未收录 | No emulation layer, fully supported; but no Vim modes/motions — defeats the purpose for a Vim user. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| VSCodeVim | 未收录 | Use this page for its stated niche; choose VSCodeVim when you need vim emulation for VS Code. | Vim emulation for VS Code; same idea on a different host — choose by which IDE you actually use, not by the plugin. |
+| vscode-neovim | 未收录 | Use this page for its stated niche; choose vscode-neovim when you need embeds a *real* Neovim instance inside VS Code for higher fidelity + your Neovim config. | Embeds a *real* Neovim instance inside VS Code for higher fidelity + your Neovim config; heavier and VS Code-only, no JetBrains equivalent of this depth. |
+| Real Vim / Neovim | 未收录 | Use this page for its stated niche; choose Real Vim / Neovim when you need the genuine article with full plugin ecosystem and Lua/LSP. | The genuine article with full plugin ecosystem and Lua/LSP; but you lose JetBrains' integrated refactoring/debugger/indexing. |
+| JetBrains stock keymap | 未收录 | Use this page for its stated niche; choose JetBrains stock keymap when you need no emulation layer, fully supported. | No emulation layer, fully supported; but no Vim modes/motions — defeats the purpose for a Vim user. |
 
 ## Tech stack
 

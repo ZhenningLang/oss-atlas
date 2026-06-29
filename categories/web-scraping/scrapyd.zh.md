@@ -9,6 +9,11 @@ license: BSD-3-Clause
 maturity: v1.6.0 (2025-07), active, ~3.1k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: service
+upstream:
+  pushed_at: 2026-06-19T03:52:53Z
+  default_branch: master
+  default_branch_sha: c661f050d76342e057509986ef851d3c7c1d0208
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:24:58Z
@@ -84,12 +89,12 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| [SpiderKeeper](spiderkeeper.zh.md) | ✅ | 不是竞品——是**叠在 Scrapyd 之上**的 Flask 管理 UI（部署、周期调度、看板）。更老更陈旧；是 Scrapyd 的补充而非替代。 |
-| ScrapydWeb / Gerapy | 未收录 | 同样是 Scrapyd 之上的管理 UI：ScrapydWeb 加多节点/日志解析/告警；Gerapy 是 Django+Vue、更现代。二者都调 Scrapyd 的 API，不是守护进程的替代。 |
-| Zyte Scrapy Cloud | 未收录 | Scrapy 的商业托管 SaaS（无需自托管）；以厂商锁定和按量计费为代价卸掉运维。 |
-| Apache Airflow / Celery / cron | 未收录 | 通用调度器——范围更广，但没有 Scrapy 原生的 eggify/部署/版本模型；跑爬虫的胶水得你自己搭。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [SpiderKeeper](spiderkeeper.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“不是竞品”，再选 SpiderKeeper。 | 不是竞品——是**叠在 Scrapyd 之上**的 Flask 管理 UI（部署、周期调度、看板）。更老更陈旧；是 Scrapyd 的补充而非替代。 |
+| ScrapydWeb / Gerapy | 未收录 | 当前页用于它的主场景；如果更看重“同样是 Scrapyd 之上的管理 UI：ScrapydWeb 加多节点/日志解析/告警”，再选 ScrapydWeb / Gerapy。 | 同样是 Scrapyd 之上的管理 UI：ScrapydWeb 加多节点/日志解析/告警；Gerapy 是 Django+Vue、更现代。二者都调 Scrapyd 的 API，不是守护进程的替代。 |
+| Zyte Scrapy Cloud | 未收录 | 当前页用于它的主场景；如果更看重“Scrapy 的商业托管 SaaS（无需自托管）”，再选 Zyte Scrapy Cloud。 | Scrapy 的商业托管 SaaS（无需自托管）；以厂商锁定和按量计费为代价卸掉运维。 |
+| Apache Airflow / Celery / cron | 未收录 | 当前页用于它的主场景；如果更看重“通用调度器”，再选 Apache Airflow / Celery / cron。 | 通用调度器——范围更广，但没有 Scrapy 原生的 eggify/部署/版本模型；跑爬虫的胶水得你自己搭。 |
 
 ## 技术栈
 

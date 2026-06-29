@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v0.x (python SDK v0.1.13), active, ~11.7k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: framework
+upstream:
+  pushed_at: 2026-06-29T11:31:31Z
+  default_branch: main
+  default_branch_sha: 032790072b3efb69a75a2917e26259df49cf7138
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:36:04Z
@@ -83,13 +88,13 @@ You also reach for it when isolation strength is the requirement, not an afterth
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| E2B (firecracker sandboxes) | 未收录 | Popular hosted+OSS sandbox SDK for agent code execution; managed cloud is turnkey, but self-hosting and multi-runtime breadth differ — OpenSandbox foregrounds K8s-scale + multiple secure runtimes. |
-| Daytona | 未收录 | Dev-environment/sandbox runtime for agents; overlapping use case, different orchestration and feature emphasis. |
-| gVisor / Kata / Firecracker (alone) | 未收录 | The isolation primitives themselves — OpenSandbox orchestrates these; using them directly means building the sandbox lifecycle/API/scheduling yourself. |
-| Plain Docker / containerd | 未收录 | Ubiquitous and trusted, but gives you a container, not a sandbox protocol, credential vault, egress policy, or multi-language SDK surface. |
-| Jupyter Kernel Gateway / nsjail | 未收录 | Narrower, single-purpose code-execution/isolation tools; less of an agent-oriented platform. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| E2B (firecracker sandboxes) | 未收录 | Use this page for its stated niche; choose E2B (firecracker sandboxes) when you need popular hosted+OSS sandbox SDK for agent code execution. | Popular hosted+OSS sandbox SDK for agent code execution; managed cloud is turnkey, but self-hosting and multi-runtime breadth differ — OpenSandbox foregrounds K8s-scale + multiple secure runtimes. |
+| Daytona | 未收录 | Use this page for its stated niche; choose Daytona when you need dev-environment/sandbox runtime for agents. | Dev-environment/sandbox runtime for agents; overlapping use case, different orchestration and feature emphasis. |
+| gVisor / Kata / Firecracker (alone) | 未收录 | Use this page for its stated niche; choose gVisor / Kata / Firecracker (alone) when you need the isolation primitives themselves. | The isolation primitives themselves — OpenSandbox orchestrates these; using them directly means building the sandbox lifecycle/API/scheduling yourself. |
+| Plain Docker / containerd | 未收录 | Use this page for its stated niche; choose Plain Docker / containerd when you need ubiquitous and trusted, but gives you a container, not a sandbox protocol, credential vault, egress. | Ubiquitous and trusted, but gives you a container, not a sandbox protocol, credential vault, egress policy, or multi-language SDK surface. |
+| Jupyter Kernel Gateway / nsjail | 未收录 | Use this page for its stated niche; choose Jupyter Kernel Gateway / nsjail when you need narrower, single-purpose code-execution/isolation tools. | Narrower, single-purpose code-execution/isolation tools; less of an agent-oriented platform. |
 
 ## Tech stack
 

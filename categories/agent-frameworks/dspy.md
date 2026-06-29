@@ -9,6 +9,11 @@ license: MIT
 maturity: v3.2.1, active (2026-06)
 last_verified: 2026-06-26
 type: framework
+upstream:
+  pushed_at: 2026-06-25T16:53:41Z
+  default_branch: main
+  default_branch_sha: 498760149b230f402c56bece2aa45df6e1ba946b
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:09:01Z
@@ -89,14 +94,14 @@ It's also a good fit when you expect to swap models often. Because DSPy routes c
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [AgentScope](agentscope.md) | ✅ | Multi-agent runtime/messaging platform; focuses on agent orchestration & coordination, not compiling/optimizing single LM programs against a metric. |
-| [Symphony](symphony.md) | ✅ | Agent framework with a different orchestration model; DSPy's distinctive feature is the optimizer layer, which most agent frameworks don't have. |
-| LangChain | 未收录 | Far broader integration/chain/agent catalog and ecosystem; prompts stay hand-authored. DSPy trades breadth for systematic prompt/weight optimization. |
-| LlamaIndex | 未收录 | RAG/data-framework heavyweight with rich connectors and indices; DSPy is lighter on data plumbing but optimizes the reasoning program itself. |
-| TextGrad | 未收录 | Also optimizes LM pipelines, via "textual gradients" / backprop-through-text; narrower module model than DSPy's signatures+optimizers. |
-| AdalFlow (LightRAG) | 未收录 | "PyTorch-like" library for building & auto-optimizing LM apps; closest in philosophy (optimize, don't hand-prompt), smaller ecosystem. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [AgentScope](agentscope.md) | ✅ | Use this page for its stated niche; choose AgentScope when you need multi-agent runtime/messaging platform. | Multi-agent runtime/messaging platform; focuses on agent orchestration & coordination, not compiling/optimizing single LM programs against a metric. |
+| [Symphony](symphony.md) | ✅ | Use this page for its stated niche; choose Symphony when you need agent framework with a different orchestration model. | Agent framework with a different orchestration model; DSPy's distinctive feature is the optimizer layer, which most agent frameworks don't have. |
+| LangChain | 未收录 | Use this page for its stated niche; choose LangChain when you need far broader integration/chain/agent catalog and ecosystem. | Far broader integration/chain/agent catalog and ecosystem; prompts stay hand-authored. DSPy trades breadth for systematic prompt/weight optimization. |
+| LlamaIndex | 未收录 | Use this page for its stated niche; choose LlamaIndex when you need RAG/data-framework heavyweight with rich connectors and indices. | RAG/data-framework heavyweight with rich connectors and indices; DSPy is lighter on data plumbing but optimizes the reasoning program itself. |
+| TextGrad | 未收录 | Use this page for its stated niche; choose TextGrad when you need also optimizes LM pipelines, via "textual gradients" / backprop-through-text. | Also optimizes LM pipelines, via "textual gradients" / backprop-through-text; narrower module model than DSPy's signatures+optimizers. |
+| AdalFlow (LightRAG) | 未收录 | Use this page for its stated niche; choose AdalFlow (LightRAG) when you need "PyTorch-like" library for building & auto-optimizing LM apps. | "PyTorch-like" library for building & auto-optimizing LM apps; closest in philosophy (optimize, don't hand-prompt), smaller ecosystem. |
 
 ## Tech stack
 

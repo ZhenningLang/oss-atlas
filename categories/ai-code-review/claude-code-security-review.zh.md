@@ -9,6 +9,11 @@ license: MIT
 maturity: no tagged release, pinned via @main, active (2026-02)
 last_verified: 2026-06-26
 type: tool
+upstream:
+  pushed_at: 2026-02-11T18:01:23Z
+  default_branch: main
+  default_branch_sha: 0c6a49f1fa56a1d472575da86a94dbc1edb78eda
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:37:01Z
@@ -88,14 +93,14 @@ Anthropic 出的 AI 安全审查器：一个 GitHub Action（外加 Claude Code 
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| [open-code-review](open-code-review.zh.md) | ✅ | 阿里出的基于 LLM 的代码审查器，面向 GitLab / 编码风格 + 质量；本工具则是安全专用，且是 Claude/GitHub-Actions 原生。 |
-| [react-doctor](react-doctor.zh.md) | ✅ | React 专用的性能/正确性诊断，不是安全审查器；完全是另一类问题。 |
-| Semgrep | 未收录 | 确定性、基于规则的 SAST，带 SARIF 和庞大的社区规则集；快、免费、可复现——但被模式绑死，在逻辑/上下文型 bug 上更弱。 |
-| GitHub CodeQL | 未收录 | 深度数据流/污点分析，原生 code-scanning UI，对公开仓库免费；按语言、配置更重，无 LLM 修复文字。 |
-| Claude Code GitHub Action（通用版） | 未收录 | Anthropic 通用的 Claude Action，面向 PR/编码；并未专门做安全审计或 finding 过滤。 |
-| Snyk Code | 未收录 | 商业 ML/SAST，带托管面板和依赖扫描；是托管 SaaS，而非单仓库开源 Action。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [open-code-review](open-code-review.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“阿里出的基于 LLM 的代码审查器，面向 GitLab / 编码风格 + 质量”，再选 open-code-review。 | 阿里出的基于 LLM 的代码审查器，面向 GitLab / 编码风格 + 质量；本工具则是安全专用，且是 Claude/GitHub-Actions 原生。 |
+| [react-doctor](react-doctor.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“React 专用的性能/正确性诊断，不是安全审查器”，再选 react-doctor。 | React 专用的性能/正确性诊断，不是安全审查器；完全是另一类问题。 |
+| Semgrep | 未收录 | 当前页用于它的主场景；如果更看重“确定性、基于规则的 SAST，带 SARIF 和庞大的社区规则集”，再选 Semgrep。 | 确定性、基于规则的 SAST，带 SARIF 和庞大的社区规则集；快、免费、可复现——但被模式绑死，在逻辑/上下文型 bug 上更弱。 |
+| GitHub CodeQL | 未收录 | 当前页用于它的主场景；如果更看重“深度数据流/污点分析，原生 code-scanning UI，对公开仓库免费”，再选 GitHub CodeQL。 | 深度数据流/污点分析，原生 code-scanning UI，对公开仓库免费；按语言、配置更重，无 LLM 修复文字。 |
+| Claude Code GitHub Action（通用版） | 未收录 | 当前页用于它的主场景；如果更看重“Anthropic 通用的 Claude Action，面向 PR/编码”，再选 Claude Code GitHub Action（通用版）。 | Anthropic 通用的 Claude Action，面向 PR/编码；并未专门做安全审计或 finding 过滤。 |
+| Snyk Code | 未收录 | 当前页用于它的主场景；如果更看重“商业 ML/SAST，带托管面板和依赖扫描”，再选 Snyk Code。 | 商业 ML/SAST，带托管面板和依赖扫描；是托管 SaaS，而非单仓库开源 Action。 |
 
 ## 技术栈
 

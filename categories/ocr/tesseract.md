@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v5.5.2, active (2026-06), ~75.0k stars
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2026-06-27T16:23:38Z
+  default_branch: main
+  default_branch_sha: 7a5e5f39cc211eb8aecc2de9c700a864dc3e3baa
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:08:54Z
@@ -83,13 +88,13 @@ You also reach for it when you control the input quality. Tesseract rewards prep
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| PaddleOCR | 未收录 | Deep-learning OCR + layout/table/structure models; far stronger on complex layouts, photos, and CJK, but heavier deps (PaddlePaddle), Apache-2.0, GPU-helpful — a fuller pipeline vs Tesseract's single recognizer. |
-| EasyOCR | 未收录 | PyTorch-based, 80+ languages, easy install, good on scene/photo text out of the box; bigger runtime and GPU-friendly, less battle-tested at extreme scale than Tesseract's C++ core. |
-| Google Cloud Vision / AWS Textract | 未收录 | Managed cloud OCR; best-in-class accuracy on messy input plus Textract's table/form extraction, but per-page cost, data leaves your network, and no offline/self-host — the opposite of Tesseract's deployment model. |
-| TrOCR | 未收录 | Transformer (encoder-decoder) OCR from Microsoft; strong on handwriting and hard lines, but model-heavy and GPU-oriented, and it is line-level recognition without Tesseract's full page/format tooling. |
-| docTR | 未收录 | Deep-learning OCR (detection + recognition) in TF/PyTorch with a clean Python API; better on varied layouts than Tesseract, heavier deps, smaller language coverage. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| PaddleOCR | 未收录 | Use this page for its stated niche; choose PaddleOCR when you need deep-learning OCR + layout/table/structure models. | Deep-learning OCR + layout/table/structure models; far stronger on complex layouts, photos, and CJK, but heavier deps (PaddlePaddle), Apache-2.0, GPU-helpful — a fuller pipeline vs Tesseract's single recognizer. |
+| EasyOCR | 未收录 | Use this page for its stated niche; choose EasyOCR when you need pyTorch-based, 80+ languages, easy install, good on scene/photo text out of the box. | PyTorch-based, 80+ languages, easy install, good on scene/photo text out of the box; bigger runtime and GPU-friendly, less battle-tested at extreme scale than Tesseract's C++ core. |
+| Google Cloud Vision / AWS Textract | 未收录 | Use this page for its stated niche; choose Google Cloud Vision / AWS Textract when you need managed cloud OCR. | Managed cloud OCR; best-in-class accuracy on messy input plus Textract's table/form extraction, but per-page cost, data leaves your network, and no offline/self-host — the opposite of Tesseract's deployment model. |
+| TrOCR | 未收录 | Use this page for its stated niche; choose TrOCR when you need transformer (encoder-decoder) OCR from Microsoft. | Transformer (encoder-decoder) OCR from Microsoft; strong on handwriting and hard lines, but model-heavy and GPU-oriented, and it is line-level recognition without Tesseract's full page/format tooling. |
+| docTR | 未收录 | Use this page for its stated niche; choose docTR when you need deep-learning OCR (detection + recognition) in TF/PyTorch with a clean Python API. | Deep-learning OCR (detection + recognition) in TF/PyTorch with a clean Python API; better on varied layouts than Tesseract, heavier deps, smaller language coverage. |
 
 ## Tech stack
 

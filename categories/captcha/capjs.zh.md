@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: standalone v3.1.5, capjs-core v0.1.1, active (2026-06)
 last_verified: 2026-06-26
 type: library
+upstream:
+  pushed_at: 2026-06-21T11:12:11Z
+  default_branch: main
+  default_branch_sha: a7f6c15b15ee1a60b9e79b9e85ff57c1beee4b61
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:40:33Z
@@ -87,15 +92,15 @@ Cap 正好适合这个场景。你在受保护的表单上放一个 `<cap-widget
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| reCAPTCHA (Google) | 未收录 | 全托管、免费、风控评分强——但会把用户数据送到 Google、要点图、是第三方依赖。Cap 自托管、隐私优先；运维归你，也拿不到 Google 量级的风控模型。 |
-| hCaptcha | 未收录 | reCAPTCHA 的托管替代，可给站长分成；仍是第三方、基于图片。Cap 的 widget 约小 250 倍、可完全自托管、无外部请求。 |
-| Cloudflare Turnstile | 未收录 | 全托管、无感、客户端不做 PoW，靠 Cloudflare 网络的行为信号——但它是托管在 Cloudflare 上的依赖。Cap 把一切留在你自己的基础设施里，代价是自己运维。 |
-| Altcha | 未收录 | 最接近的同类：开源、客户端工作量证明、不做指纹、widget 为 MIT。Altcha 的开源版只有 PoW（ML 检测是付费的 Sentinel 产品），服务端/面板要你自己接；Cap 打包了 instrumentation + 带面板的 Standalone 服务，Apache-2.0。 |
-| mCaptcha | 未收录 | 自托管的 Rust 工作量证明 CAPTCHA，有自己的限流式难度模型；目标重叠，技术栈与手感不同。 |
-| FriendlyCaptcha | 未收录 | 注重隐私的 PoW CAPTCHA，但在维护的产品是托管的商业服务；Cap 完全开源、自托管。 |
-| Anubis | 未收录 | 反向代理 / 全站级 PoW 网关，挡爬虫与 AI crawler——作用域不同（入口闸门 vs 按动作）。两者互补而非互替。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| reCAPTCHA (Google) | 未收录 | 当前页用于它的主场景；如果更看重“全托管、免费、风控评分强”，再选 reCAPTCHA (Google)。 | 全托管、免费、风控评分强——但会把用户数据送到 Google、要点图、是第三方依赖。Cap 自托管、隐私优先；运维归你，也拿不到 Google 量级的风控模型。 |
+| hCaptcha | 未收录 | 当前页用于它的主场景；如果更看重“reCAPTCHA 的托管替代，可给站长分成”，再选 hCaptcha。 | reCAPTCHA 的托管替代，可给站长分成；仍是第三方、基于图片。Cap 的 widget 约小 250 倍、可完全自托管、无外部请求。 |
+| Cloudflare Turnstile | 未收录 | 当前页用于它的主场景；如果更看重“全托管、无感、客户端不做 PoW，靠 Cloudflare 网络的行为信号”，再选 Cloudflare Turnstile。 | 全托管、无感、客户端不做 PoW，靠 Cloudflare 网络的行为信号——但它是托管在 Cloudflare 上的依赖。Cap 把一切留在你自己的基础设施里，代价是自己运维。 |
+| Altcha | 未收录 | 当前页用于它的主场景；如果更看重“最接近的同类：开源、客户端工作量证明、不做指纹、widget 为 MIT”，再选 Altcha。 | 最接近的同类：开源、客户端工作量证明、不做指纹、widget 为 MIT。Altcha 的开源版只有 PoW（ML 检测是付费的 Sentinel 产品），服务端/面板要你自己接；Cap 打包了 instrumentation + 带面板的 Standalone 服务，Apache-2.0。 |
+| mCaptcha | 未收录 | 当前页用于它的主场景；如果更看重“自托管的 Rust 工作量证明 CAPTCHA，有自己的限流式难度模型”，再选 mCaptcha。 | 自托管的 Rust 工作量证明 CAPTCHA，有自己的限流式难度模型；目标重叠，技术栈与手感不同。 |
+| FriendlyCaptcha | 未收录 | 当前页用于它的主场景；如果更看重“注重隐私的 PoW CAPTCHA，但在维护的产品是托管的商业服务”，再选 FriendlyCaptcha。 | 注重隐私的 PoW CAPTCHA，但在维护的产品是托管的商业服务；Cap 完全开源、自托管。 |
+| Anubis | 未收录 | 当前页用于它的主场景；如果更看重“反向代理 / 全站级 PoW 网关，挡爬虫与 AI crawler”，再选 Anubis。 | 反向代理 / 全站级 PoW 网关，挡爬虫与 AI crawler——作用域不同（入口闸门 vs 按动作）。两者互补而非互替。 |
 
 ## 技术栈
 

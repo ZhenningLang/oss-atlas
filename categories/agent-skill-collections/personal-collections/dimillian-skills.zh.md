@@ -9,6 +9,11 @@ license: MIT
 maturity: no tagged releases, active, last pushed 2026-03 (as of 2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+upstream:
+  pushed_at: 2026-03-29T15:28:02Z
+  default_branch: main
+  default_branch_sha: 05ba982bfeb0d77d3c97d4542b0ee15034d05f84
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:30:56Z
@@ -80,13 +85,13 @@ health:
 
 ## 横向对比
 
-| 替代方案 | 已收录 | 取舍 |
-|---|---|---|
-| antfu/skills | 未收录 | 另一份单作者个人 skill 集（偏 web / TS）。重心不同——Dimillian 这份在 Swift / SwiftUI / Apple 平台上独有深度。 |
-| [wshobson/agents](../subagent-collections/wshobson-agents.zh.md) | ✅ | 大型 subagent 人格集；角色覆盖广但偏通才，无 Apple 平台专精。 |
-| awesome-claude-code-subagents | 未收录 | 面向 Claude Code 的 subagent 目录；瞄准不同 harness，比本包广而浅，缺 Swift 深度。 |
-| karpathy-skills | 未收录 | 来自另一位作者 / 领域的个人 skill 集；按你的活儿是否「Apple 味」来选——若不是，两份各自的专长都用不上。 |
-| 你 harness 自带的 review / simplify 命令 | 未收录 | Codex / Claude 本就内置通用 diff 评审与 simplify 流程；本包里的通用 skill（`review-swarm`、`review-and-simplify-changes`）与之重叠——独有价值在 SwiftUI / iOS skill，不在通用那几个。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| antfu/skills | 未收录 | 当前页用于它的主场景；如果更看重“另一份单作者个人 skill 集（偏 web / TS）”，再选 antfu/skills。 | 另一份单作者个人 skill 集（偏 web / TS）。重心不同——Dimillian 这份在 Swift / SwiftUI / Apple 平台上独有深度。 |
+| [wshobson/agents](../subagent-collections/wshobson-agents.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“大型 subagent 人格集”，再选 wshobson/agents。 | 大型 subagent 人格集；角色覆盖广但偏通才，无 Apple 平台专精。 |
+| awesome-claude-code-subagents | 未收录 | 当前页用于它的主场景；如果更看重“面向 Claude Code 的 subagent 目录”，再选 awesome-claude-code-subagents。 | 面向 Claude Code 的 subagent 目录；瞄准不同 harness，比本包广而浅，缺 Swift 深度。 |
+| karpathy-skills | 未收录 | 当前页用于它的主场景；如果更看重“来自另一位作者 / 领域的个人 skill 集”，再选 karpathy-skills。 | 来自另一位作者 / 领域的个人 skill 集；按你的活儿是否「Apple 味」来选——若不是，两份各自的专长都用不上。 |
+| 你 harness 自带的 review / simplify 命令 | 未收录 | 当前页用于它的主场景；如果更看重“Codex / Claude 本就内置通用 diff 评审与 simplify 流程”，再选 你 harness 自带的 review / simplify 命令。 | Codex / Claude 本就内置通用 diff 评审与 simplify 流程；本包里的通用 skill（`review-swarm`、`review-and-simplify-changes`）与之重叠——独有价值在 SwiftUI / iOS skill，不在通用那几个。 |
 
 ## 健康度与可持续性
 

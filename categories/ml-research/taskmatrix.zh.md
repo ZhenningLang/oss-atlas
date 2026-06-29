@@ -9,6 +9,11 @@ license: MIT
 maturity: "research demo (orig. 'Visual ChatGPT', Microsoft); last pushed 2024-01, no commits since — abandoned in practice (as of 2026-06)"
 last_verified: 2026-06-28
 type: app
+upstream:
+  pushed_at: 2024-01-06T02:41:20Z
+  default_branch: main
+  default_branch_sha: 4b7664f8d3a23804ac1b795d75a73efd162769f0
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:05:29Z
@@ -73,13 +78,13 @@ health:
 
 ## 横向对比
 
-| 替代方案 | 是否收录 | 取舍 |
-|---|---|---|
-| 现代多模态大模型（GPT-4o / Gemini / 带视觉的 Claude / Qwen-VL） | 未收录 | 单个模型原生带视觉——描述、VQA、生成 / 编辑由模型或其内建工具完成；无需托管基础模型动物园，且在持续维护。正是它取代了整套 TaskMatrix 范式。 |
-| HuggingGPT / JARVIS | 未收录 | 同时代、同思路——一个 LLM 控制器把任务路由到一批 Hugging Face 模型；任务面更广（不限视觉），同样是研究 demo 而非受维护的产品。 |
-| LangChain agents | 未收录 | 受维护的通用 LLM 工具编排框架；你用当下的 function-calling 自己接工具（包括视觉模型），而不是用 TaskMatrix 那套 2023 年手写的 prompt 路由器。 |
-| 现代 agent 框架（function-calling / 基于 MCP 的工具链） | 未收录 | 当下给 LLM 配工具的标准化做法；编排、结构化工具 I/O 和活跃支持都远胜这个定制 demo。 |
-| [autoresearch](autoresearch.zh.md) | ✅ | 同样是单作者研究 demo 类 app，但它是个面向 agent 驱动 ML 研究的单卡*训练*循环——问题完全无关；只共享「当参考读、别部署」这个姿态。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| 现代多模态大模型（GPT-4o / Gemini / 带视觉的 Claude / Qwen-VL） | 未收录 | 当前页用于它的主场景；如果更看重“单个模型原生带视觉”，再选 现代多模态大模型（GPT-4o / Gemini / 带视觉的 Claude / Qwen-VL）。 | 单个模型原生带视觉——描述、VQA、生成 / 编辑由模型或其内建工具完成；无需托管基础模型动物园，且在持续维护。正是它取代了整套 TaskMatrix 范式。 |
+| HuggingGPT / JARVIS | 未收录 | 当前页用于它的主场景；如果更看重“同时代、同思路”，再选 HuggingGPT / JARVIS。 | 同时代、同思路——一个 LLM 控制器把任务路由到一批 Hugging Face 模型；任务面更广（不限视觉），同样是研究 demo 而非受维护的产品。 |
+| LangChain agents | 未收录 | 当前页用于它的主场景；如果更看重“受维护的通用 LLM 工具编排框架”，再选 LangChain agents。 | 受维护的通用 LLM 工具编排框架；你用当下的 function-calling 自己接工具（包括视觉模型），而不是用 TaskMatrix 那套 2023 年手写的 prompt 路由器。 |
+| 现代 agent 框架（function-calling / 基于 MCP 的工具链） | 未收录 | 当前页用于它的主场景；如果更看重“当下给 LLM 配工具的标准化做法”，再选 现代 agent 框架（function-calling / 基于 MCP 的工具链）。 | 当下给 LLM 配工具的标准化做法；编排、结构化工具 I/O 和活跃支持都远胜这个定制 demo。 |
+| [autoresearch](autoresearch.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“同样是单作者研究 demo 类 app，但它是个面向 agent 驱动 ML 研究的单卡*训练*循环”，再选 autoresearch。 | 同样是单作者研究 demo 类 app，但它是个面向 agent 驱动 ML 研究的单卡*训练*循环——问题完全无关；只共享「当参考读、别部署」这个姿态。 |
 
 ## 技术栈
 

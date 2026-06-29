@@ -9,6 +9,11 @@ license: MIT
 maturity: no tagged release, active (last pushed 2026-04; ~1.9k stars [未验证])
 last_verified: 2026-06-26
 type: skill-pack
+upstream:
+  pushed_at: 2026-04-19T15:27:44Z
+  default_branch: main
+  default_branch_sha: 384562064fcdd99778fcbafd8729626fe6aab02f
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:28:35Z
@@ -80,13 +85,13 @@ health:
 
 ## 横向对比
 
-| 替代项 | 已收录 | 取舍 |
-|---|---|---|
-| [taste-skill](taste-skill.md) | ✅ | 更宽的「anti-slop 视觉品味」包：推断设计方向、映射完整的色/字/间距系统、铺 GSAP 动效骨架。本 skill 更窄——机械的细节打磨，不定方向。页面平淡时用 taste-skill；方向已 OK 但不够精细时用本 skill。 |
-| [designer-skills](designer-skills.md) | ✅ | 完整设计*生命周期*套装（97 个 skill：调研、IA、设计系统、批评）。偏重、偏流程；本 skill 是单一工艺细节清单，几乎零仪式。 |
-| [ui-ux-pro-max](ui-ux-pro-max.md) | ✅ | 更大的 UI/UX skill 套装，面向端到端界面质量。比表面积：本 skill 是一份紧凑的、源自文章的规则集，不是多 skill 系统。 |
-| [stitch-skills](stitch-skills.md) | ✅ | 同叶目录的设计 skill 包；比较各自「强制 vs 建议」的阶段，以及动效/排版指引是否重叠。 |
-| 写在自己 `CLAUDE.md` / prompt 里的手写设计清单 | 未收录 | DIY 方案；同样是建议性的，但由你维护。本 skill 把一份已知好用的细节清单打包，省得你每个项目重新推导。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [taste-skill](taste-skill.md) | ✅ | 当前页用于它的主场景；如果更看重“更宽的「anti-slop 视觉品味」包：推断设计方向、映射完整的色/字/间距系统、铺 GSAP 动效骨架”，再选 taste-skill。 | 更宽的「anti-slop 视觉品味」包：推断设计方向、映射完整的色/字/间距系统、铺 GSAP 动效骨架。本 skill 更窄——机械的细节打磨，不定方向。页面平淡时用 taste-skill；方向已 OK 但不够精细时用本 skill。 |
+| [designer-skills](designer-skills.md) | ✅ | 当前页用于它的主场景；如果更看重“完整设计*生命周期*套装（97 个 skill：调研、IA、设计系统、批评）”，再选 designer-skills。 | 完整设计*生命周期*套装（97 个 skill：调研、IA、设计系统、批评）。偏重、偏流程；本 skill 是单一工艺细节清单，几乎零仪式。 |
+| [ui-ux-pro-max](ui-ux-pro-max.md) | ✅ | 当前页用于它的主场景；如果更看重“更大的 UI/UX skill 套装，面向端到端界面质量”，再选 ui-ux-pro-max。 | 更大的 UI/UX skill 套装，面向端到端界面质量。比表面积：本 skill 是一份紧凑的、源自文章的规则集，不是多 skill 系统。 |
+| [stitch-skills](stitch-skills.md) | ✅ | 当前页用于它的主场景；如果更看重“同叶目录的设计 skill 包”，再选 stitch-skills。 | 同叶目录的设计 skill 包；比较各自「强制 vs 建议」的阶段，以及动效/排版指引是否重叠。 |
+| 写在自己 `CLAUDE.md` / prompt 里的手写设计清单 | 未收录 | 当前页用于它的主场景；如果更看重“DIY 方案”，再选 写在自己 CLAUDE.md / prompt 里的手写设计清单。 | DIY 方案；同样是建议性的，但由你维护。本 skill 把一份已知好用的细节清单打包，省得你每个项目重新推导。 |
 
 ## 健康度与可持续性
 

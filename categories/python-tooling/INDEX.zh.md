@@ -5,24 +5,24 @@
 
 ## 本分类项目
 
-| 项目 | 何时用 | 页面 |
-|---|---|---|
-| **Cython** | 当你已 profile 出的 Python 热点循环需要逼近 C 的速度、或要封装 C／C++ 库时用它——但它会引入 C 编译器和按平台构建 wheel 的流水线负担。 | [→](cython.zh.md) |
-| **pyrasite** | 当你必须向一个无法重启、卡死或泄漏的运行中 Python 进程注入诊断代码时用它——但注入可能让目标崩溃，只当救火工具用。 | [→](pyrasite.zh.md) |
-| **memory-analyzer** | 当你需要经 GDB 对一个活的 Python 3 进程做一次性按类型内存快照时用它——但 Meta 已**归档**它（代码停在 2021，目标是 EOL 的 3.6／3.7），优先选 memray／tracemalloc 这类有维护的工具。 | [→](memory-analyzer.zh.md) |
-| **gophernotes** | 当你想在 Jupyter 笔记本里用交互式 Go 单元做探索或教程时用它——但它自 2023 年起停滞，且跑的是解释器而非标准 Go。 | [→](gophernotes.zh.md) |
-| **GRequests** | 当你想用 `map()` 以最小改动让现有同步 `requests` 代码并发时用它——但 gevent 会猴补丁标准库，可能与你的技术栈冲突。 | [→](grequests.zh.md) |
+| 项目 | 何时用 | 健康度 | 页面 |
+| --- | --- | --- | --- |
+| **Cython** | 当你已 profile 出的 Python 热点循环需要逼近 C 的速度、或要封装 C／C++ 库时用它——但它会引入 C 编译器和按平台构建 wheel 的流水线负担。 | A（6/6） | [→](cython.zh.md) |
+| **pyrasite** | 当你必须向一个无法重启、卡死或泄漏的运行中 Python 进程注入诊断代码时用它——但注入可能让目标崩溃，只当救火工具用。 | C（4/6） | [→](pyrasite.zh.md) |
+| **memory-analyzer** | 当你需要经 GDB 对一个活的 Python 3 进程做一次性按类型内存快照时用它——但 Meta 已**归档**它（代码停在 2021，目标是 EOL 的 3.6／3.7），优先选 memray／tracemalloc 这类有维护的工具。 | D（5/6） | [→](memory-analyzer.zh.md) |
+| **gophernotes** | 当你想在 Jupyter 笔记本里用交互式 Go 单元做探索或教程时用它——但它自 2023 年起停滞，且跑的是解释器而非标准 Go。 | D（3/6） | [→](gophernotes.zh.md) |
+| **GRequests** | 当你想用 `map()` 以最小改动让现有同步 `requests` 代码并发时用它——但 gevent 会猴补丁标准库，可能与你的技术栈冲突。 | C（4/6） | [→](grequests.zh.md) |
 
 ## 对比矩阵
 
-| 选项 | 是否收录 | 一句话取舍 |
-|---|---|---|
-| [Cython](cython.zh.md) | ✅ | 当你已 profile 出的 Python 热点循环需要逼近 C 的速度、或要封装 C／C++ 库时用它——但它会引入 C 编译器和按平台构建 wheel 的流水线负担。 |
-| [pyrasite](pyrasite.zh.md) | ✅ | 当你必须向一个无法重启、卡死或泄漏的运行中 Python 进程注入诊断代码时用它——但注入可能让目标崩溃，只当救火工具用。 |
-| [memory-analyzer](memory-analyzer.zh.md) | ✅ | 当你需要经 GDB 对一个活的 Python 3 进程做一次性按类型内存快照时用它——但 Meta 已**归档**它（代码停在 2021，目标是 EOL 的 3.6／3.7），优先选 memray／tracemalloc 这类有维护的工具。 |
-| [gophernotes](gophernotes.zh.md) | ✅ | 当你想在 Jupyter 笔记本里用交互式 Go 单元做探索或教程时用它——但它自 2023 年起停滞，且跑的是解释器而非标准 Go。 |
-| [GRequests](grequests.zh.md) | ✅ | 当你想用 `map()` 以最小改动让现有同步 `requests` 代码并发时用它——但 gevent 会猴补丁标准库，可能与你的技术栈冲突。 |
-| （各页对比里点到的替代品） | 未收录 | 详见各页 Comparison。 |
+| 选项 | 是否收录 | 健康度 | 一句话取舍 |
+| --- | --- | --- | --- |
+| [Cython](cython.zh.md) | ✅ | A（6/6） | 当你已 profile 出的 Python 热点循环需要逼近 C 的速度、或要封装 C／C++ 库时用它——但它会引入 C 编译器和按平台构建 wheel 的流水线负担。 |
+| [pyrasite](pyrasite.zh.md) | ✅ | C（4/6） | 当你必须向一个无法重启、卡死或泄漏的运行中 Python 进程注入诊断代码时用它——但注入可能让目标崩溃，只当救火工具用。 |
+| [memory-analyzer](memory-analyzer.zh.md) | ✅ | D（5/6） | 当你需要经 GDB 对一个活的 Python 3 进程做一次性按类型内存快照时用它——但 Meta 已**归档**它（代码停在 2021，目标是 EOL 的 3.6／3.7），优先选 memray／tracemalloc 这类有维护的工具。 |
+| [gophernotes](gophernotes.zh.md) | ✅ | D（3/6） | 当你想在 Jupyter 笔记本里用交互式 Go 单元做探索或教程时用它——但它自 2023 年起停滞，且跑的是解释器而非标准 Go。 |
+| [GRequests](grequests.zh.md) | ✅ | C（4/6） | 当你想用 `map()` 以最小改动让现有同步 `requests` 代码并发时用它——但 gevent 会猴补丁标准库，可能与你的技术栈冲突。 |
+| （各页对比里点到的替代品） | 未收录 | — | 详见各页 Comparison。 |
 
 ## 什么该放这里
 

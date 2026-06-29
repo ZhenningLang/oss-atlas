@@ -9,6 +9,11 @@ license: BSD-2-Clause
 maturity: v0.10.31 line, active, ~11.8k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2026-06-28T15:38:03Z
+  default_branch: master
+  default_branch_sha: bbed32a6e500895b248df915a3b77b5a2d1b285e
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:07:17Z
@@ -84,14 +89,14 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| OpenResty（套件） | 未收录 | *打包发行*本模块外加 LuaJIT、lua-resty-* 库和一个匹配 NGINX 的完整发行版——实际上你就是这么消费 ngx_lua 的；本仓库是其中一个组件。 |
-| njs（nginx JavaScript） | 未收录 | NGINX 官方脚本模块，用 JS 子集；第一方、安装更简单，但生态更小、不如 Lua/OpenResty 世界成熟。 |
-| nginx C 模块 | 未收录 | 性能/控制力最强，但你要写 C 且每次变更都重编 NGINX——正是 ngx_lua 要消除的摩擦。 |
-| Envoy + Lua/Wasm 过滤器 | 未收录 | 另一种代理，自带 Lua 和 WebAssembly 过滤模型；xDS/可观测性更丰富，运维比 NGINX+Lua 更重。 |
-| Caddy + 插件（Go） | 未收录 | 基于 Go 的服务器，带插件模型和自动 TLS；语言/生态不同，边缘脚本深度不如 ngx_lua。 |
-| [lua-resty-redis](lua-resty-redis.zh.md) | ✅ | 不是替代——是*跑在*本模块 cosocket API *之上*、用来连 Redis 的库；互补关系。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| OpenResty（套件） | 未收录 | 当前页用于它的主场景；如果更看重“*打包发行*本模块外加 LuaJIT、lua-resty-* 库和一个匹配 NGINX 的完整发行版”，再选 OpenResty（套件）。 | *打包发行*本模块外加 LuaJIT、lua-resty-* 库和一个匹配 NGINX 的完整发行版——实际上你就是这么消费 ngx_lua 的；本仓库是其中一个组件。 |
+| njs（nginx JavaScript） | 未收录 | 当前页用于它的主场景；如果更看重“NGINX 官方脚本模块，用 JS 子集”，再选 njs（nginx JavaScript）。 | NGINX 官方脚本模块，用 JS 子集；第一方、安装更简单，但生态更小、不如 Lua/OpenResty 世界成熟。 |
+| nginx C 模块 | 未收录 | 当前页用于它的主场景；如果更看重“性能/控制力最强，但你要写 C 且每次变更都重编 NGINX”，再选 nginx C 模块。 | 性能/控制力最强，但你要写 C 且每次变更都重编 NGINX——正是 ngx_lua 要消除的摩擦。 |
+| Envoy + Lua/Wasm 过滤器 | 未收录 | 当前页用于它的主场景；如果更看重“另一种代理，自带 Lua 和 WebAssembly 过滤模型”，再选 Envoy + Lua/Wasm 过滤器。 | 另一种代理，自带 Lua 和 WebAssembly 过滤模型；xDS/可观测性更丰富，运维比 NGINX+Lua 更重。 |
+| Caddy + 插件（Go） | 未收录 | 当前页用于它的主场景；如果更看重“基于 Go 的服务器，带插件模型和自动 TLS”，再选 Caddy + 插件（Go）。 | 基于 Go 的服务器，带插件模型和自动 TLS；语言/生态不同，边缘脚本深度不如 ngx_lua。 |
+| [lua-resty-redis](lua-resty-redis.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“不是替代”，再选 lua-resty-redis。 | 不是替代——是*跑在*本模块 cosocket API *之上*、用来连 Redis 的库；互补关系。 |
 
 ## 技术栈
 

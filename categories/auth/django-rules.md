@@ -9,6 +9,11 @@ license: MIT
 maturity: v3.x, active (2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2025-10-11T06:42:08Z
+  default_branch: master
+  default_branch_sha: 4efd45d27b2572b9e6215253c915ec6eae49e032
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:40:16Z
@@ -86,13 +91,13 @@ You reach for it when your authorization is *logic*, not *data* — rules derive
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| django-guardian | 未收录 | Stores per-object permissions as DB rows (assignable via admin/API); the right tool when grants are *data*, but adds tables, queries and sync — heavier than rules-as-logic. |
-| Django built-in permissions | 未收录 | Model-level, DB-backed, admin-managed; no per-object granularity without extra work — django-rules fills exactly that gap. |
-| Casbin (pycasbin) | 未收录 | Policy-engine with multiple models (RBAC/ABAC) and external policy storage; more general and framework-agnostic, more setup than predicate functions. |
-| OPA / OpenFGA | 未收录 | External, language-agnostic policy/authorization services (Rego / Zanzibar-style relationships); powerful at scale and across services, far heavier than an in-process Django lib. |
-| ad-hoc `if` checks | 未收录 | The status quo django-rules replaces — no dependency, but scattered, untested, and easy to get subtly wrong. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| django-guardian | 未收录 | Use this page for its stated niche; choose django-guardian when you need stores per-object permissions as DB rows (assignable via admin/API). | Stores per-object permissions as DB rows (assignable via admin/API); the right tool when grants are *data*, but adds tables, queries and sync — heavier than rules-as-logic. |
+| Django built-in permissions | 未收录 | Use this page for its stated niche; choose Django built-in permissions when you need model-level, DB-backed, admin-managed. | Model-level, DB-backed, admin-managed; no per-object granularity without extra work — django-rules fills exactly that gap. |
+| Casbin (pycasbin) | 未收录 | Use this page for its stated niche; choose Casbin (pycasbin) when you need policy-engine with multiple models (RBAC/ABAC) and external policy storage. | Policy-engine with multiple models (RBAC/ABAC) and external policy storage; more general and framework-agnostic, more setup than predicate functions. |
+| OPA / OpenFGA | 未收录 | Use this page for its stated niche; choose OPA / OpenFGA when you need external, language-agnostic policy/authorization services (Rego / Zanzibar-style relationships). | External, language-agnostic policy/authorization services (Rego / Zanzibar-style relationships); powerful at scale and across services, far heavier than an in-process Django lib. |
+| ad-hoc `if` checks | 未收录 | Use this page for its stated niche; choose ad-hoc if checks when you need the status quo django-rules replaces. | The status quo django-rules replaces — no dependency, but scattered, untested, and easy to get subtly wrong. |
 
 ## Tech stack
 

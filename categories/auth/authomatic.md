@@ -9,6 +9,11 @@ license: MIT
 maturity: v1.x, low-activity (2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2025-12-12T08:28:51Z
+  default_branch: master
+  default_branch_sha: e9bdbbb86159daacfa043c42938b89c296f5d6a8
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:40:00Z
@@ -86,13 +91,13 @@ You reach for it when you want a *thin, embeddable* social-login client that doe
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| Authlib | 未收录 | Comprehensive, actively-maintained Python OAuth1/OAuth2/OIDC + JWT library (client *and* server); broader and more current, but a larger API to learn. |
-| django-allauth | 未收录 | Django-specific social + local auth integrated with Django's user/session model; batteries-included on Django, not framework-agnostic. |
-| requests-oauthlib / oauthlib | 未收录 | Lower-level OAuth client building blocks; you wire the flow yourself — more control, less convenience than Authomatic's provider presets. |
-| python-social-auth | 未收录 | Multi-framework social-auth with many backends; broader provider list, heavier and framework-coupling per integration. |
-| Keycloak / Auth0 (IdP) | 未收录 | Full identity providers (hosted or self-run) — SSO, MFA, admin, SAML; a platform, not a client library — different scope entirely. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| Authlib | 未收录 | Use this page for its stated niche; choose Authlib when you need comprehensive, actively-maintained Python OAuth1/OAuth2/OIDC + JWT library (client *and* server). | Comprehensive, actively-maintained Python OAuth1/OAuth2/OIDC + JWT library (client *and* server); broader and more current, but a larger API to learn. |
+| django-allauth | 未收录 | Use this page for its stated niche; choose django-allauth when you need django-specific social + local auth integrated with Django's user/session model. | Django-specific social + local auth integrated with Django's user/session model; batteries-included on Django, not framework-agnostic. |
+| requests-oauthlib / oauthlib | 未收录 | Use this page for its stated niche; choose requests-oauthlib / oauthlib when you need lower-level OAuth client building blocks. | Lower-level OAuth client building blocks; you wire the flow yourself — more control, less convenience than Authomatic's provider presets. |
+| python-social-auth | 未收录 | Use this page for its stated niche; choose python-social-auth when you need multi-framework social-auth with many backends. | Multi-framework social-auth with many backends; broader provider list, heavier and framework-coupling per integration. |
+| Keycloak / Auth0 (IdP) | 未收录 | Use this page for its stated niche; choose Keycloak / Auth0 (IdP) when you need full identity providers (hosted or self-run). | Full identity providers (hosted or self-run) — SSO, MFA, admin, SAML; a platform, not a client library — different scope entirely. |
 
 ## Tech stack
 

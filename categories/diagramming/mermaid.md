@@ -9,6 +9,11 @@ license: MIT
 maturity: active, ~89k stars (2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2026-06-29T10:42:57Z
+  default_branch: develop
+  default_branch_sha: 338c98df454b7587f4e4a8a73c5dcbbd59ba3175
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:51:15Z
@@ -88,14 +93,14 @@ You also reach for it when you're an agent or a tool generating diagrams program
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| Graphviz / DOT | 未收录 | Mature, scriptable graph **layout** engine with strong algorithms for large/dense graphs; produces excellent auto-layout but DOT is lower-level and not natively rendered inline by docs platforms the way Mermaid is. |
-| PlantUML | 未收录 | Broader and stricter UML coverage (and more diagram types); typically needs a Java runtime/server to render, vs Mermaid's pure-JS in-browser rendering and ubiquitous host support. |
-| D2 | 未收录 | Newer text-to-diagram language (Go) with multiple layout engines (incl. ELK/dagre) and a focus on cleaner layouts; smaller install base and far less built-in host-platform rendering than Mermaid. |
-| draw.io (diagrams.net) | 未收录 | Full WYSIWYG canvas editor — pixel control and rich shapes — but diagrams are stored as XML/binary, not diffable plain text, and not auto-rendered from a fenced code block. |
-| Excalidraw | 未收录 | Hand-drawn-style WYSIWYG whiteboard; great for sketches and collaboration, not a text-to-diagram syntax and not version-control-diffable as source. |
-| flowchart.js | 未收录 | Narrow JS library for flowcharts only; Mermaid covers far more diagram types and has vastly larger ecosystem/host support. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| Graphviz / DOT | 未收录 | Use this page for its stated niche; choose Graphviz / DOT when you need mature, scriptable graph **layout** engine with strong algorithms for large/dense graphs. | Mature, scriptable graph **layout** engine with strong algorithms for large/dense graphs; produces excellent auto-layout but DOT is lower-level and not natively rendered inline by docs platforms the way Mermaid is. |
+| PlantUML | 未收录 | Use this page for its stated niche; choose PlantUML when you need broader and stricter UML coverage (and more diagram types). | Broader and stricter UML coverage (and more diagram types); typically needs a Java runtime/server to render, vs Mermaid's pure-JS in-browser rendering and ubiquitous host support. |
+| D2 | 未收录 | Use this page for its stated niche; choose D2 when you need newer text-to-diagram language (Go) with multiple layout engines (incl. | Newer text-to-diagram language (Go) with multiple layout engines (incl. ELK/dagre) and a focus on cleaner layouts; smaller install base and far less built-in host-platform rendering than Mermaid. |
+| draw.io (diagrams.net) | 未收录 | Use this page for its stated niche; choose draw.io (diagrams.net) when you need full WYSIWYG canvas editor. | Full WYSIWYG canvas editor — pixel control and rich shapes — but diagrams are stored as XML/binary, not diffable plain text, and not auto-rendered from a fenced code block. |
+| Excalidraw | 未收录 | Use this page for its stated niche; choose Excalidraw when you need hand-drawn-style WYSIWYG whiteboard. | Hand-drawn-style WYSIWYG whiteboard; great for sketches and collaboration, not a text-to-diagram syntax and not version-control-diffable as source. |
+| flowchart.js | 未收录 | Use this page for its stated niche; choose flowchart.js when you need narrow JS library for flowcharts only. | Narrow JS library for flowcharts only; Mermaid covers far more diagram types and has vastly larger ecosystem/host support. |
 
 ## Tech stack
 

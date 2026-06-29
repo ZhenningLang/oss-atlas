@@ -9,6 +9,11 @@ license: MIT
 maturity: v3.x, active (2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2025-10-11T06:42:08Z
+  default_branch: master
+  default_branch_sha: 4efd45d27b2572b9e6215253c915ec6eae49e032
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:40:16Z
@@ -86,13 +91,13 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| django-guardian | 未收录 | 把逐对象权限存为数据库行（可通过后台/API 分配）；当授予是*数据*时是对的工具，但加表、加查询、加同步——比“规则即逻辑”更重。 |
-| Django 内置权限 | 未收录 | 模型级、靠数据库、后台管理；不额外做事就没有逐对象粒度——django-rules 正好补这个缺口。 |
-| Casbin（pycasbin） | 未收录 | 策略引擎，支持多种模型（RBAC/ABAC）和外部策略存储；更通用、框架无关，但比谓词函数要更多搭建。 |
-| OPA / OpenFGA | 未收录 | 外部、语言无关的策略/授权服务（Rego / Zanzibar 风格关系）；规模化和跨服务很强，但比进程内 Django 库重得多。 |
-| 临时 `if` 检查 | 未收录 | django-rules 要取代的现状——无依赖，但散落、无测试、容易出微妙错误。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| django-guardian | 未收录 | 当前页用于它的主场景；如果更看重“把逐对象权限存为数据库行（可通过后台/API 分配）”，再选 django-guardian。 | 把逐对象权限存为数据库行（可通过后台/API 分配）；当授予是*数据*时是对的工具，但加表、加查询、加同步——比“规则即逻辑”更重。 |
+| Django 内置权限 | 未收录 | 当前页用于它的主场景；如果更看重“模型级、靠数据库、后台管理”，再选 Django 内置权限。 | 模型级、靠数据库、后台管理；不额外做事就没有逐对象粒度——django-rules 正好补这个缺口。 |
+| Casbin（pycasbin） | 未收录 | 当前页用于它的主场景；如果更看重“策略引擎，支持多种模型（RBAC/ABAC）和外部策略存储”，再选 Casbin（pycasbin）。 | 策略引擎，支持多种模型（RBAC/ABAC）和外部策略存储；更通用、框架无关，但比谓词函数要更多搭建。 |
+| OPA / OpenFGA | 未收录 | 当前页用于它的主场景；如果更看重“外部、语言无关的策略/授权服务（Rego / Zanzibar 风格关系）”，再选 OPA / OpenFGA。 | 外部、语言无关的策略/授权服务（Rego / Zanzibar 风格关系）；规模化和跨服务很强，但比进程内 Django 库重得多。 |
+| 临时 `if` 检查 | 未收录 | 当前页用于它的主场景；如果更看重“django-rules 要取代的现状”，再选 临时 if 检查。 | django-rules 要取代的现状——无依赖，但散落、无测试、容易出微妙错误。 |
 
 ## 技术栈
 

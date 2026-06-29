@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v0.7.2 (2024-04), upstream stalled — see Health, ~12.2k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: app
+upstream:
+  pushed_at: 2024-07-26T08:00:52Z
+  default_branch: master
+  default_branch_sha: 83b5a60cc08501b570a0c4d0b4cdfceb1b88d6b7
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:56:00Z
@@ -79,14 +84,14 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| kafbat/kafka-ui | 未收录 | 正是本项目的**维护中社区分叉**——同一套 UI、持续发布；对新装而言通常比停滞的上游更优。 |
-| Conduktor | 未收录 | 打磨精良的桌面/Web Kafka 平台；功能更丰富、有企业治理，但 freemium/商业——不是完全开源的自托管 OSS UI。 |
-| Confluent Control Center | 未收录 | Confluent Platform 里深度的企业级监控/治理；商业且绑定该生态，比一个单容器 UI 重得多。 |
-| AKHQ | 未收录 | 开源（Apache-2.0）的 Kafka Web UI，范围相近（topic、消费者、Connect、schema registry、ACL）；是直接的 OSS 替代，栈/UX 不同。 |
-| Redpanda Console | 未收录 | 开源 Kafka/Redpanda UI（Go）；干净、快、也能对接原生 Kafka；部分高级功能向 Redpanda 商业版倾斜。 |
-| kafka-python admin CLI | 未收录 | 是 CLI 而非 UI——可脚本化/无头管理；与看板互补而非替代。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| kafbat/kafka-ui | 未收录 | 当前页用于它的主场景；如果更看重“正是本项目的**维护中社区分叉**”，再选 kafbat/kafka-ui。 | 正是本项目的**维护中社区分叉**——同一套 UI、持续发布；对新装而言通常比停滞的上游更优。 |
+| Conduktor | 未收录 | 当前页用于它的主场景；如果更看重“打磨精良的桌面/Web Kafka 平台”，再选 Conduktor。 | 打磨精良的桌面/Web Kafka 平台；功能更丰富、有企业治理，但 freemium/商业——不是完全开源的自托管 OSS UI。 |
+| Confluent Control Center | 未收录 | 当前页用于它的主场景；如果更看重“Confluent Platform 里深度的企业级监控/治理”，再选 Confluent Control Center。 | Confluent Platform 里深度的企业级监控/治理；商业且绑定该生态，比一个单容器 UI 重得多。 |
+| AKHQ | 未收录 | 当前页用于它的主场景；如果更看重“开源（Apache-2”，再选 AKHQ。 | 开源（Apache-2.0）的 Kafka Web UI，范围相近（topic、消费者、Connect、schema registry、ACL）；是直接的 OSS 替代，栈/UX 不同。 |
+| Redpanda Console | 未收录 | 当前页用于它的主场景；如果更看重“开源 Kafka/Redpanda UI（Go）”，再选 Redpanda Console。 | 开源 Kafka/Redpanda UI（Go）；干净、快、也能对接原生 Kafka；部分高级功能向 Redpanda 商业版倾斜。 |
+| kafka-python admin CLI | 未收录 | 当前页用于它的主场景；如果更看重“是 CLI 而非 UI”，再选 kafka-python admin CLI。 | 是 CLI 而非 UI——可脚本化/无头管理；与看板互补而非替代。 |
 
 ## 技术栈
 

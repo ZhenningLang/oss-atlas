@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v0.9.2, likely stalled (last real commit ~2025-06), ~3.2k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: app
+upstream:
+  pushed_at: 2026-03-31T02:03:01Z
+  default_branch: main
+  default_branch_sha: 886d38b50bd7d8af723eb12e7d815e1e2b625c87
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:56:32Z
@@ -80,12 +85,12 @@ You're a developer on a small product team that's started shipping LLM features,
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| Langfuse | 未收录 | Open-source LLM observability + prompt management + evals, actively maintained with a strong community; broadly the healthier successor to Pezzo's niche today. |
-| Helicone | 未收录 | Open-source LLM observability/proxy focused on logging, cost, and caching; lighter to adopt (proxy-based), narrower prompt-management story. |
-| LangSmith (LangChain) | 未收录 | Hosted tracing + evals + prompt hub, deep LangChain integration; managed and feature-rich, but proprietary/SaaS, not self-hostable OSS. |
-| PromptLayer | 未收录 | Prompt registry + request logging; overlapping prompt-management scope, hosted-first. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| Langfuse | 未收录 | Use this page for its stated niche; choose Langfuse when you need open-source LLM observability + prompt management + evals, actively maintained with a strong communi. | Open-source LLM observability + prompt management + evals, actively maintained with a strong community; broadly the healthier successor to Pezzo's niche today. |
+| Helicone | 未收录 | Use this page for its stated niche; choose Helicone when you need open-source LLM observability/proxy focused on logging, cost, and caching. | Open-source LLM observability/proxy focused on logging, cost, and caching; lighter to adopt (proxy-based), narrower prompt-management story. |
+| LangSmith (LangChain) | 未收录 | Use this page for its stated niche; choose LangSmith (LangChain) when you need hosted tracing + evals + prompt hub, deep LangChain integration. | Hosted tracing + evals + prompt hub, deep LangChain integration; managed and feature-rich, but proprietary/SaaS, not self-hostable OSS. |
+| PromptLayer | 未收录 | Use this page for its stated niche; choose PromptLayer when you need prompt registry + request logging. | Prompt registry + request logging; overlapping prompt-management scope, hosted-first. |
 
 ## Tech stack
 

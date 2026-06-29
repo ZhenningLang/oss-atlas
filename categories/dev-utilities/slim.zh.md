@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v1.40.11 (2024-02), repo active (2026-06); CNCF Sandbox
 last_verified: 2026-06-28
 type: tool
+upstream:
+  pushed_at: 2026-06-23T07:23:45Z
+  default_branch: master
+  default_branch_sha: 1e65da745956d856230898ccd292b78332b8a1b0
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:49:24Z
@@ -84,13 +89,13 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| Distroless（GoogleContainerTools） | 未收录 | 你*拿来构建*的极小基础镜像——确定性、无运行时 tracing，但你得重构 Dockerfile（多阶段）并掌握源码。SlimToolkit 则是对已构建好的镜像做改造。 |
-| 多阶段 / 手工优化 Dockerfile | 未收录 | 源头级修法：最小、最可预测、完全可控——但前提是你掌握并能改每个构建。SlimToolkit 的卖点是“不改 Dockerfile”。 |
-| Trivy / Grype（扫描器） | 未收录 | 发现并报告 CVE / 产出 SBOM；它们*度量*攻击面，不*缩小*攻击面。互补，而非替代。 |
-| DockerSlim（前身） | 未收录 | 不是另一个项目——DockerSlim 已改名为 Slim/SlimToolkit；同一套代码、同一套 `slim build` 流程。[推断] |
-| Docker `docker build --squash` / 层压平 | 未收录 | 减少层数/重复，而非*内容*——每个没用到的二进制都还在。机制不同，收益小得多。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| Distroless（GoogleContainerTools） | 未收录 | 当前页用于它的主场景；如果更看重“你*拿来构建*的极小基础镜像”，再选 Distroless（GoogleContainerTools）。 | 你*拿来构建*的极小基础镜像——确定性、无运行时 tracing，但你得重构 Dockerfile（多阶段）并掌握源码。SlimToolkit 则是对已构建好的镜像做改造。 |
+| 多阶段 / 手工优化 Dockerfile | 未收录 | 当前页用于它的主场景；如果更看重“源头级修法：最小、最可预测、完全可控”，再选 多阶段 / 手工优化 Dockerfile。 | 源头级修法：最小、最可预测、完全可控——但前提是你掌握并能改每个构建。SlimToolkit 的卖点是“不改 Dockerfile”。 |
+| Trivy / Grype（扫描器） | 未收录 | 当前页用于它的主场景；如果更看重“发现并报告 CVE / 产出 SBOM”，再选 Trivy / Grype（扫描器）。 | 发现并报告 CVE / 产出 SBOM；它们*度量*攻击面，不*缩小*攻击面。互补，而非替代。 |
+| DockerSlim（前身） | 未收录 | 当前页用于它的主场景；如果更看重“不是另一个项目”，再选 DockerSlim（前身）。 | 不是另一个项目——DockerSlim 已改名为 Slim/SlimToolkit；同一套代码、同一套 `slim build` 流程。[推断] |
+| Docker `docker build --squash` / 层压平 | 未收录 | 当前页用于它的主场景；如果更看重“减少层数/重复，而非*内容*”，再选 Docker docker build --squash / 层压平。 | 减少层数/重复，而非*内容*——每个没用到的二进制都还在。机制不同，收益小得多。 |
 
 ## 技术栈
 

@@ -9,6 +9,11 @@ license: MIT
 maturity: plugin v1.0.0, active, no tagged GitHub release (2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+upstream:
+  pushed_at: 2026-06-14T09:08:35Z
+  default_branch: main
+  default_branch_sha: 95d6e255afe1596b557d7a8498517884438f5b3a
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:29:37Z
@@ -80,14 +85,14 @@ You install this pack (`npx skills add addyosmani/web-quality-skills`, or via th
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [Agent Skills (addyosmani)](addyosmani-agent-skills.md) | ✅ | Same author's broader, general-purpose agent-skills pack; this one is the narrow web-quality vertical. Use both if you want general + web-quality coverage, but watch for routing overlap. |
-| [Scientific Agent Skills](scientific-agent-skills.md) | ✅ | Sibling skill-pack for scientific/eng workflows, not web quality — complementary, different domain. |
-| [Waza](waza.md) | ✅ | Another engineering skill collection in this leaf; compare on which lifecycle stages each actually covers. |
-| [Vercel Agent Skills](vercel-agent-skills.md) | ✅ | Vercel's agent-skills set, deploy/Next.js-leaning; overlaps on web perf but framed around their platform. |
-| Lighthouse CI / WebPageTest | 未收录 | Real measurement + CI gating tools (not skill packs). Use these when you need numbers and build-blocking budgets; this pack is the advisory layer that interprets and fixes, not the meter. |
-| Pasting the rules into context yourself | n/a | Zero install, full control, but tedious and goes stale; the pack's whole value is packaging the checklist for just-in-time loading. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [Agent Skills (addyosmani)](addyosmani-agent-skills.md) | ✅ | Use this page for its stated niche; choose Agent Skills (addyosmani) when you need same author's broader, general-purpose agent-skills pack. | Same author's broader, general-purpose agent-skills pack; this one is the narrow web-quality vertical. Use both if you want general + web-quality coverage, but watch for routing overlap. |
+| [Scientific Agent Skills](scientific-agent-skills.md) | ✅ | Use this page for its stated niche; choose Scientific Agent Skills when you need sibling skill-pack for scientific/eng workflows, not web quality. | Sibling skill-pack for scientific/eng workflows, not web quality — complementary, different domain. |
+| [Waza](waza.md) | ✅ | Use this page for its stated niche; choose Waza when you need another engineering skill collection in this leaf. | Another engineering skill collection in this leaf; compare on which lifecycle stages each actually covers. |
+| [Vercel Agent Skills](vercel-agent-skills.md) | ✅ | Use this page for its stated niche; choose Vercel Agent Skills when you need vercel's agent-skills set, deploy/Next. | Vercel's agent-skills set, deploy/Next.js-leaning; overlaps on web perf but framed around their platform. |
+| Lighthouse CI / WebPageTest | 未收录 | Use this page for its stated niche; choose Lighthouse CI / WebPageTest when you need real measurement + CI gating tools (not skill packs). | Real measurement + CI gating tools (not skill packs). Use these when you need numbers and build-blocking budgets; this pack is the advisory layer that interprets and fixes, not the meter. |
+| Pasting the rules into context yourself | n/a | Use this page for its stated niche; choose Pasting the rules into context yourself when you need zero install, full control, but tedious and goes stale. | Zero install, full control, but tedious and goes stale; the pack's whole value is packaging the checklist for just-in-time loading. |
 
 ## Health & viability
 

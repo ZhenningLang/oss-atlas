@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v1.2.9, active, ~5.0k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2026-02-14T14:59:10Z
+  default_branch: master
+  default_branch_sha: 073e29c2135bc7805202f69322beb02c358dbe7e
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:14:52Z
@@ -86,12 +91,12 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| sentence-transformers（SBERT） | 未收录 | text2vec 所基于的上游库；模型库更广、英文/多语覆盖更全，但中文开箱筛选更少，且不带 BM25/Word2Vec 便利封装。 |
-| BGE / FlagEmbedding（BAAI） | 未收录 | 最先进的开源 embedding 模型（含强中文）；text2vec 可加载 BGE，但 FlagEmbedding 才是最新检查点与 reranker 的正统出处。 |
-| FAISS / Milvus | 未收录 | 向量索引，不是编码器——互补而非替代；你前面仍需要一个像 text2vec 的 embedder。 |
-| OpenAI / Cohere embedding API | 未收录 | 托管、无需自建或 GPU、质量强——但要付费、依赖网络，且把文本发给第三方；text2vec 全程本地运行。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| sentence-transformers（SBERT） | 未收录 | 当前页用于它的主场景；如果更看重“text2vec 所基于的上游库”，再选 sentence-transformers（SBERT）。 | text2vec 所基于的上游库；模型库更广、英文/多语覆盖更全，但中文开箱筛选更少，且不带 BM25/Word2Vec 便利封装。 |
+| BGE / FlagEmbedding（BAAI） | 未收录 | 当前页用于它的主场景；如果更看重“最先进的开源 embedding 模型（含强中文）”，再选 BGE / FlagEmbedding（BAAI）。 | 最先进的开源 embedding 模型（含强中文）；text2vec 可加载 BGE，但 FlagEmbedding 才是最新检查点与 reranker 的正统出处。 |
+| FAISS / Milvus | 未收录 | 当前页用于它的主场景；如果更看重“向量索引，不是编码器”，再选 FAISS / Milvus。 | 向量索引，不是编码器——互补而非替代；你前面仍需要一个像 text2vec 的 embedder。 |
+| OpenAI / Cohere embedding API | 未收录 | 当前页用于它的主场景；如果更看重“托管、无需自建或 GPU、质量强”，再选 OpenAI / Cohere embedding API。 | 托管、无需自建或 GPU、质量强——但要付费、依赖网络，且把文本发给第三方；text2vec 全程本地运行。 |
 
 ## 技术栈
 

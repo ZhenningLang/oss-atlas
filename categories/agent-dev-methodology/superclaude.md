@@ -9,6 +9,11 @@ license: MIT
 maturity: v4.3.0, active (2026-06)
 last_verified: 2026-06-26
 type: tool
+upstream:
+  pushed_at: 2026-06-13T16:40:33Z
+  default_branch: master
+  default_branch_sha: 226c45cc93b865108843a669c6545d421784b68c
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:08:03Z
@@ -89,14 +94,14 @@ It also fits when you want behavioral *modes* layered on top of the raw model: a
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [Superpowers](superpowers.md) | ✅ | Claude Code skill/plugin collection emphasizing reusable "skills"; overlapping "battery of capabilities for Claude Code" goal, different packaging (plugin/skills vs installed command+persona framework). |
-| [get-shit-done](get-shit-done.md) | ✅ | Opinionated workflow/command pack for agent dev; narrower, workflow-first vs SuperClaude's broad command+agent+mode surface. |
-| [Compound Engineering](compound-engineering.md) | ✅ | Methodology-plus-plugin for compounding agent work; a development *philosophy* with tooling, vs SuperClaude's config-injection framework. |
-| [ECC](ecc.md) | ✅ | Context-engineering methodology for agents; conceptual/process framing rather than an installable command suite. |
-| [12-Factor Agents](12-factor-agents.md) | ✅ | Principles for building reliable LLM agents — a spec/manifesto you read, not software you install into Claude Code. |
-| claude-code-templates / awesome-claude-code | 未收录 | Community config/template collections for Claude Code; lighter, à-la-carte copy-paste vs SuperClaude's installed, coordinated framework. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [Superpowers](superpowers.md) | ✅ | Use this page for its stated niche; choose Superpowers when you need claude Code skill/plugin collection emphasizing reusable "skills". | Claude Code skill/plugin collection emphasizing reusable "skills"; overlapping "battery of capabilities for Claude Code" goal, different packaging (plugin/skills vs installed command+persona framework). |
+| [get-shit-done](get-shit-done.md) | ✅ | Use this page for its stated niche; choose get-shit-done when you need opinionated workflow/command pack for agent dev. | Opinionated workflow/command pack for agent dev; narrower, workflow-first vs SuperClaude's broad command+agent+mode surface. |
+| [Compound Engineering](compound-engineering.md) | ✅ | Use this page for its stated niche; choose Compound Engineering when you need methodology-plus-plugin for compounding agent work. | Methodology-plus-plugin for compounding agent work; a development *philosophy* with tooling, vs SuperClaude's config-injection framework. |
+| [ECC](ecc.md) | ✅ | Use this page for its stated niche; choose ECC when you need context-engineering methodology for agents. | Context-engineering methodology for agents; conceptual/process framing rather than an installable command suite. |
+| [12-Factor Agents](12-factor-agents.md) | ✅ | Use this page for its stated niche; choose 12-Factor Agents when you need principles for building reliable LLM agents. | Principles for building reliable LLM agents — a spec/manifesto you read, not software you install into Claude Code. |
+| claude-code-templates / awesome-claude-code | 未收录 | Use this page for its stated niche; choose claude-code-templates / awesome-claude-code when you need community config/template collections for Claude Code. | Community config/template collections for Claude Code; lighter, à-la-carte copy-paste vs SuperClaude's installed, coordinated framework. |
 
 ## Tech stack
 

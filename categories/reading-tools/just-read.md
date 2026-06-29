@@ -9,6 +9,11 @@ license: Unlicensed (EULA)
 maturity: active, single-maintainer, ~1.3k stars (2026-06)
 last_verified: 2026-06-28
 type: tool
+upstream:
+  pushed_at: 2026-05-22T01:33:38Z
+  default_branch: master
+  default_branch_sha: 246c7b35a63ce27fb13a00f8a4b1f76f2c61618a
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:15:25Z
@@ -89,13 +94,13 @@ You also reach for it when you want per-site control: Just Read lets you save cu
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| Built-in browser Reader Mode (Firefox/Safari/Edge) | 未收录 | Zero install, baked into the browser; far less customizable, no per-site selectors, no editing/highlighting/summaries. |
-| Mozilla Readability (library) | 未收录 | The open-source MPL parsing engine behind many reader modes; a library to build on, not a ready-to-use extension. |
-| Postlight Reader (ex-Mercury) | 未收录 | Open-source readability extension/parser; cleaner licensing story, but less actively maintained and fewer edit/highlight features. |
-| Pocket / Instapaper / Wallabag | 未收录 | Read-it-later services with durable cross-device libraries; heavier (account + backend) and aimed at saving, not in-place reformatting (Wallabag is self-hostable). |
-| Reader View extensions (various) | 未收录 | Many small clones exist; vary widely in parsing quality, licensing, and trustworthiness — Just Read's edge is its customization and selector memory. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| Built-in browser Reader Mode (Firefox/Safari/Edge) | 未收录 | Use this page for its stated niche; choose Built-in browser Reader Mode (Firefox/Safari/Edge) when you need zero install, baked into the browser. | Zero install, baked into the browser; far less customizable, no per-site selectors, no editing/highlighting/summaries. |
+| Mozilla Readability (library) | 未收录 | Use this page for its stated niche; choose Mozilla Readability (library) when you need the open-source MPL parsing engine behind many reader modes. | The open-source MPL parsing engine behind many reader modes; a library to build on, not a ready-to-use extension. |
+| Postlight Reader (ex-Mercury) | 未收录 | Use this page for its stated niche; choose Postlight Reader (ex-Mercury) when you need open-source readability extension/parser. | Open-source readability extension/parser; cleaner licensing story, but less actively maintained and fewer edit/highlight features. |
+| Pocket / Instapaper / Wallabag | 未收录 | Use this page for its stated niche; choose Pocket / Instapaper / Wallabag when you need read-it-later services with durable cross-device libraries. | Read-it-later services with durable cross-device libraries; heavier (account + backend) and aimed at saving, not in-place reformatting (Wallabag is self-hostable). |
+| Reader View extensions (various) | 未收录 | Use this page for its stated niche; choose Reader View extensions (various) when you need many small clones exist. | Many small clones exist; vary widely in parsing quality, licensing, and trustworthiness — Just Read's edge is its customization and selector memory. |
 
 ## Tech stack
 

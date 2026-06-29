@@ -9,6 +9,11 @@ license: MIT
 maturity: no tagged releases, active, last pushed 2026-04 (12.8k stars [未验证])
 last_verified: 2026-06-26
 type: skill-pack
+upstream:
+  pushed_at: 2026-04-18T09:48:47Z
+  default_branch: main
+  default_branch_sha: 60aaae52bb2af8162732751a4332f62a5fef518b
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:34:14Z
@@ -80,12 +85,12 @@ You reach for it when you want an opinionated, ready-made skill bundle covering 
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [Anthropic Skills](anthropic-skills.md) | ✅ | First-party Anthropic bundle (document editing, frontend/canvas, MCP/skill authoring). Tighter Claude-format fidelity; narrower domain. MiniMax adds mobile/shader dev + MiniMax-specific media/multimodal skills. |
-| [Claude Plugins (official)](claude-plugins-official.md) | ✅ | Anthropic's official *plugin* marketplace (commands/agents/hooks/MCP, not just skills). Broader plugin surface, Claude-only. MiniMax is a skill-focused, multi-harness vendor bundle. |
-| aws-agent-plugins | 未收录 | Another vendor/official plugin collection; compare on which harnesses each targets and whether you need cloud-specific vs media/dev-generalist skills. |
-| Building your own `skills/` folder | 未收录 | Full control, zero lock-in, no maintenance bus-factor risk — but you write and curate every skill yourself. MiniMax trades that for a ready-made, vendor-maintained bundle. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [Anthropic Skills](anthropic-skills.md) | ✅ | Use this page for its stated niche; choose Anthropic Skills when you need first-party Anthropic bundle (document editing, frontend/canvas, MCP/skill authoring). | First-party Anthropic bundle (document editing, frontend/canvas, MCP/skill authoring). Tighter Claude-format fidelity; narrower domain. MiniMax adds mobile/shader dev + MiniMax-specific media/multimodal skills. |
+| [Claude Plugins (official)](claude-plugins-official.md) | ✅ | Use this page for its stated niche; choose Claude Plugins (official) when you need anthropic's official *plugin* marketplace (commands/agents/hooks/MCP, not just skills). | Anthropic's official *plugin* marketplace (commands/agents/hooks/MCP, not just skills). Broader plugin surface, Claude-only. MiniMax is a skill-focused, multi-harness vendor bundle. |
+| aws-agent-plugins | 未收录 | Use this page for its stated niche; choose aws-agent-plugins when you need another vendor/official plugin collection. | Another vendor/official plugin collection; compare on which harnesses each targets and whether you need cloud-specific vs media/dev-generalist skills. |
+| Building your own `skills/` folder | 未收录 | Use this page for its stated niche; choose Building your own skills/ folder when you need full control, zero lock-in, no maintenance bus-factor risk. | Full control, zero lock-in, no maintenance bus-factor risk — but you write and curate every skill yourself. MiniMax trades that for a ready-made, vendor-maintained bundle. |
 
 ## Health & viability
 

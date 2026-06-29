@@ -9,6 +9,11 @@ license: MIT
 maturity: v0.7.5 (2022), stalled (2026-06)
 last_verified: 2026-06-28
 type: tool
+upstream:
+  pushed_at: 2023-11-03T18:02:49Z
+  default_branch: master
+  default_branch_sha: 55142043d19696ba037e3e93f9ec6c7f8436e82d
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:12:20Z
@@ -76,13 +81,13 @@ You also reach for it when you want **shareable, executable Go documents** — a
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| Python (IPython) kernel | 未收录 | The default Jupyter experience with the full data-science ecosystem; if you don't specifically need Go, this is the path of least resistance. |
-| gomacro (REPL) | 未收录 | The Go interpreter/REPL gophernotes builds on; great for terminal-based interactive Go, but not a notebook UI. |
-| Go Playground / `go run` | 未收录 | Quick one-off Go execution; no persistent cell state, no notebook prose interleaving — fine for a snippet, not a literate document. |
-| Jupyter polyglot kernels (e.g. for Rust/JS) | 未收录 | Same "language X in Jupyter" idea for other languages; each varies in maintenance and completeness — gophernotes is the Go entry, with the stalled-maintenance caveat. |
-| Tour of Go / interactive docs | 未收录 | Curated interactive Go learning, but fixed content — not a kernel you run your own code in. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| Python (IPython) kernel | 未收录 | Use this page for its stated niche; choose Python (IPython) kernel when you need the default Jupyter experience with the full data-science ecosystem. | The default Jupyter experience with the full data-science ecosystem; if you don't specifically need Go, this is the path of least resistance. |
+| gomacro (REPL) | 未收录 | Use this page for its stated niche; choose gomacro (REPL) when you need the Go interpreter/REPL gophernotes builds on. | The Go interpreter/REPL gophernotes builds on; great for terminal-based interactive Go, but not a notebook UI. |
+| Go Playground / `go run` | 未收录 | Use this page for its stated niche; choose Go Playground / go run when you need quick one-off Go execution. | Quick one-off Go execution; no persistent cell state, no notebook prose interleaving — fine for a snippet, not a literate document. |
+| Jupyter polyglot kernels (e.g. for Rust/JS) | 未收录 | Use this page for its stated niche; choose Jupyter polyglot kernels (e.g. for Rust/JS) when you need same "language X in Jupyter" idea for other languages. | Same "language X in Jupyter" idea for other languages; each varies in maintenance and completeness — gophernotes is the Go entry, with the stalled-maintenance caveat. |
+| Tour of Go / interactive docs | 未收录 | Use this page for its stated niche; choose Tour of Go / interactive docs when you need curated interactive Go learning, but fixed content. | Curated interactive Go learning, but fixed content — not a kernel you run your own code in. |
 
 ## Tech stack
 

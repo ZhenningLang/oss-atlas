@@ -9,6 +9,11 @@ license: BSD-3-Clause
 maturity: v0.7.1, low-volume but maintained, ~1.1k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2025-10-21T06:24:16Z
+  default_branch: main
+  default_branch_sha: 087b30be72640802fddc097472ef35a88020387a
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:40:48Z
@@ -86,12 +91,12 @@ You reach for it specifically when you want full control of the challenge lifecy
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [Cap](capjs.md) | ✅ | Proof-of-work / invisible challenge, privacy-preserving, actually aimed at bot resistance; a different paradigm (no text to read) and JS-first, not a Python image renderer. |
-| Google reCAPTCHA / hCaptcha | 未收录 | Managed, much stronger bot signals; but third-party network call, privacy/data-sharing concerns, and not self-hosted. |
-| django-simple-captcha | 未收录 | Django-integrated CAPTCHA field with storage + verification wired in; less flexible outside Django, heavier than a pure renderer. |
-| Pillow (hand-rolled) | 未收录 | You can draw text+noise yourself with raw Pillow; this library is essentially that, pre-packaged with audio support and sensible defaults. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [Cap](capjs.md) | ✅ | Use this page for its stated niche; choose Cap when you need proof-of-work / invisible challenge, privacy-preserving, actually aimed at bot resistance. | Proof-of-work / invisible challenge, privacy-preserving, actually aimed at bot resistance; a different paradigm (no text to read) and JS-first, not a Python image renderer. |
+| Google reCAPTCHA / hCaptcha | 未收录 | Use this page for its stated niche; choose Google reCAPTCHA / hCaptcha when you need managed, much stronger bot signals. | Managed, much stronger bot signals; but third-party network call, privacy/data-sharing concerns, and not self-hosted. |
+| django-simple-captcha | 未收录 | Use this page for its stated niche; choose django-simple-captcha when you need django-integrated CAPTCHA field with storage + verification wired in. | Django-integrated CAPTCHA field with storage + verification wired in; less flexible outside Django, heavier than a pure renderer. |
+| Pillow (hand-rolled) | 未收录 | Use this page for its stated niche; choose Pillow (hand-rolled) when you need you can draw text+noise yourself with raw Pillow. | You can draw text+noise yourself with raw Pillow; this library is essentially that, pre-packaged with audio support and sensible defaults. |
 
 ## Tech stack
 

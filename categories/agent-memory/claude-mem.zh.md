@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v13.8.0, active (2026-06); ~84.8k stars (API-verified count, as of 2026-06) — production-adoption/vetting meaning unverified and suspicious for a young single-maintainer hook tool
 last_verified: 2026-06-28
 type: tool
+upstream:
+  pushed_at: 2026-06-28T04:33:54Z
+  default_branch: main
+  default_branch_sha: 3fe0725a97e18b5edf3e61cde60e181ab2b6c997
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:26:15Z
@@ -88,13 +93,13 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| [Mem0](mem0.zh.md) | ✅ | 你嵌进自己 agent 代码的模型无关记忆**库/API**（Python/TS，任意 LLM）；为应用内嵌用户记忆而建。claude-mem 是面向编程 agent 的工作站 hook 工具，不是你调用的库。 |
-| [Memori](memori.zh.md) | ✅ | 你用它包裹自己 LLM client 的 SQL 优先记忆引擎；框架无关，带云/BYODB 之分。claude-mem 纯本地、hook 驱动，范围限于编程 agent 会话而非应用记忆。 |
-| [Claude Subconscious](claude-subconscious.zh.md) | ✅ | 形态最接近：同样是做跨会话记忆的 Claude Code hook 插件——但它是 Letta 支撑的 *demo*，作者明示“不用于生产”，且只支持 Claude Code。claude-mem 是本地存储（SQLite+Chroma）、多 agent，定位为正式安装的工具。 |
-| Letta (MemGPT) | 未收录 | 有状态的 agent runtime，带自编辑记忆 OS 和服务端；接管 agent 主循环。claude-mem 通过 hook 嵌在你现有 agent 之下，而非替换它们。 |
-| Zep / Graphiti | 未收录 | 带显式事实失效的时序知识图记忆服务；面向应用记忆的托管/自托管后端，不是每开发者一份的编程 agent hook 层。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [Mem0](mem0.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“你嵌进自己 agent 代码的模型无关记忆**库/API**（Python/TS，任意 LLM）”，再选 Mem0。 | 你嵌进自己 agent 代码的模型无关记忆**库/API**（Python/TS，任意 LLM）；为应用内嵌用户记忆而建。claude-mem 是面向编程 agent 的工作站 hook 工具，不是你调用的库。 |
+| [Memori](memori.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“你用它包裹自己 LLM client 的 SQL 优先记忆引擎”，再选 Memori。 | 你用它包裹自己 LLM client 的 SQL 优先记忆引擎；框架无关，带云/BYODB 之分。claude-mem 纯本地、hook 驱动，范围限于编程 agent 会话而非应用记忆。 |
+| [Claude Subconscious](claude-subconscious.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“形态最接近：同样是做跨会话记忆的 Claude Code hook 插件”，再选 Claude Subconscious。 | 形态最接近：同样是做跨会话记忆的 Claude Code hook 插件——但它是 Letta 支撑的 *demo*，作者明示“不用于生产”，且只支持 Claude Code。claude-mem 是本地存储（SQLite+Chroma）、多 agent，定位为正式安装的工具。 |
+| Letta (MemGPT) | 未收录 | 当前页用于它的主场景；如果更看重“有状态的 agent runtime，带自编辑记忆 OS 和服务端”，再选 Letta (MemGPT)。 | 有状态的 agent runtime，带自编辑记忆 OS 和服务端；接管 agent 主循环。claude-mem 通过 hook 嵌在你现有 agent 之下，而非替换它们。 |
+| Zep / Graphiti | 未收录 | 当前页用于它的主场景；如果更看重“带显式事实失效的时序知识图记忆服务”，再选 Zep / Graphiti。 | 带显式事实失效的时序知识图记忆服务；面向应用记忆的托管/自托管后端，不是每开发者一份的编程 agent hook 层。 |
 
 ## 技术栈
 

@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v1.40.11 (2024-02), repo active (2026-06); CNCF Sandbox
 last_verified: 2026-06-28
 type: tool
+upstream:
+  pushed_at: 2026-06-23T07:23:45Z
+  default_branch: master
+  default_branch_sha: 1e65da745956d856230898ccd292b78332b8a1b0
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:49:24Z
@@ -84,13 +89,13 @@ You reach for it when you want the size and attack-surface win *now*, on images 
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| Distroless (GoogleContainerTools) | 未收录 | Minimal base images you *build on* — deterministic, no runtime tracing, but you must restructure the Dockerfile (multi-stage) and own the source. SlimToolkit retrofits an already-built image instead. |
-| Multi-stage / hand-optimized Dockerfile | 未收录 | The source-level fix: smallest, most predictable, fully under your control — but requires owning and editing every build. SlimToolkit's pitch is "no Dockerfile change." |
-| Trivy / Grype (scanners) | 未收录 | Find and report CVEs / produce SBOMs; they *measure* attack surface, they don't *shrink* it. Complementary, not a substitute. |
-| DockerSlim (predecessor) | 未收录 | Not a separate project — DockerSlim was renamed to Slim/SlimToolkit; the same codebase, same `slim build` flow. [推断] |
-| Docker `docker build --squash` / layer flattening | 未收录 | Reduces layer count/dup, not the *contents* — keeps every unused binary. Different mechanism, far smaller win. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| Distroless (GoogleContainerTools) | 未收录 | Use this page for its stated niche; choose Distroless (GoogleContainerTools) when you need minimal base images you *build on*. | Minimal base images you *build on* — deterministic, no runtime tracing, but you must restructure the Dockerfile (multi-stage) and own the source. SlimToolkit retrofits an already-built image instead. |
+| Multi-stage / hand-optimized Dockerfile | 未收录 | Use this page for its stated niche; choose Multi-stage / hand-optimized Dockerfile when you need the source-level fix: smallest, most predictable, fully under your control. | The source-level fix: smallest, most predictable, fully under your control — but requires owning and editing every build. SlimToolkit's pitch is "no Dockerfile change." |
+| Trivy / Grype (scanners) | 未收录 | Use this page for its stated niche; choose Trivy / Grype (scanners) when you need find and report CVEs / produce SBOMs. | Find and report CVEs / produce SBOMs; they *measure* attack surface, they don't *shrink* it. Complementary, not a substitute. |
+| DockerSlim (predecessor) | 未收录 | Use this page for its stated niche; choose DockerSlim (predecessor) when you need not a separate project. | Not a separate project — DockerSlim was renamed to Slim/SlimToolkit; the same codebase, same `slim build` flow. [推断] |
+| Docker `docker build --squash` / layer flattening | 未收录 | Use this page for its stated niche; choose Docker docker build --squash / layer flattening when you need reduces layer count/dup, not the *contents*. | Reduces layer count/dup, not the *contents* — keeps every unused binary. Different mechanism, far smaller win. |
 
 ## Tech stack
 

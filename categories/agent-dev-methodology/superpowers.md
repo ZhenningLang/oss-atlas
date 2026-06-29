@@ -9,6 +9,11 @@ license: MIT
 maturity: v6.0.3, active (2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+upstream:
+  pushed_at: 2026-06-25T02:35:57Z
+  default_branch: main
+  default_branch_sha: 896224c4b1879920ab573417e68fd51d2ccc9072
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:08:18Z
@@ -80,14 +85,14 @@ You reach for it when you want an opinionated, battle-tested workflow rather tha
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [SuperClaude Framework](superclaude.md) | ✅ | Persona/command/MCP-oriented configuration framework for Claude Code; richer command + agent surface, heavier install. Superpowers is leaner and centers a TDD/SDLC discipline rather than a persona system. |
-| [get-shit-done](get-shit-done.md) | ✅ | Workflow/command pack aimed at shipping; overlapping "drive the agent through a process" goal, different process shape. Superpowers leads with brainstorm-then-TDD and subagent dispatch. |
-| [Compound Engineering](compound-engineering.md) | ✅ | Methodology plugin built around compounding/automation patterns; sibling philosophy, different primitives. Pick by which workflow spine matches your team. |
-| [ECC](ecc.md) | ✅ | Another agent-dev methodology in this category; compare on which lifecycle stages each actually enforces vs. suggests. |
-| [12-Factor Agents](12-factor-agents.md) | ✅ | Principles/methodology doc for building agent *applications*, not a plug-in skill pack you install into a coding agent — different unit of consumption. |
-| Anthropic's official skills / built-in slash commands | 未收录 | The platform's own skill ecosystem; Superpowers is a third-party curated bundle layered on top, so it can conflict with or duplicate native skills. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [SuperClaude Framework](superclaude.md) | ✅ | Use this page for its stated niche; choose SuperClaude Framework when you need persona/command/MCP-oriented configuration framework for Claude Code. | Persona/command/MCP-oriented configuration framework for Claude Code; richer command + agent surface, heavier install. Superpowers is leaner and centers a TDD/SDLC discipline rather than a persona system. |
+| [get-shit-done](get-shit-done.md) | ✅ | Use this page for its stated niche; choose get-shit-done when you need workflow/command pack aimed at shipping. | Workflow/command pack aimed at shipping; overlapping "drive the agent through a process" goal, different process shape. Superpowers leads with brainstorm-then-TDD and subagent dispatch. |
+| [Compound Engineering](compound-engineering.md) | ✅ | Use this page for its stated niche; choose Compound Engineering when you need methodology plugin built around compounding/automation patterns. | Methodology plugin built around compounding/automation patterns; sibling philosophy, different primitives. Pick by which workflow spine matches your team. |
+| [ECC](ecc.md) | ✅ | Use this page for its stated niche; choose ECC when you need another agent-dev methodology in this category. | Another agent-dev methodology in this category; compare on which lifecycle stages each actually enforces vs. suggests. |
+| [12-Factor Agents](12-factor-agents.md) | ✅ | Use this page for its stated niche; choose 12-Factor Agents when you need principles/methodology doc for building agent *applications*, not a plug-in skill pack you install i. | Principles/methodology doc for building agent *applications*, not a plug-in skill pack you install into a coding agent — different unit of consumption. |
+| Anthropic's official skills / built-in slash commands | 未收录 | Use this page for its stated niche; choose Anthropic's official skills / built-in slash commands when you need the platform's own skill ecosystem. | The platform's own skill ecosystem; Superpowers is a third-party curated bundle layered on top, so it can conflict with or duplicate native skills. |
 
 ## Health & viability
 

@@ -9,6 +9,11 @@ license: MIT
 maturity: "v2.16.0, low-cadence/effectively stale, ~60.2k stars (last pushed 2025-08)"
 last_verified: 2026-06-28
 type: tool
+upstream:
+  pushed_at: 2025-08-22T00:21:50Z
+  default_branch: master
+  default_branch_sha: e00d005299922198aef968e0cd42b275525c20a6
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:59:09Z
@@ -80,12 +85,12 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| marked | 未收录 | 一个供 JavaScript 调用的 Markdown→HTML *解析库*；当你需要在 app 或管线里做渲染时它才是对的工具——但它不是浏览器 UI，编辑器/撰写框集成得你自己接。 |
-| 浏览器原生富文本撰写（Gmail/Outlook 工具栏） | 未收录 | 邮件客户端自带、无需安装；但它是工具栏式所见即所得，没有 Markdown，代码块/表格支持也弱——正是 Markdown Here 要消除的摩擦。 |
-| Obsidian / 编辑器 Markdown 插件 | 未收录 | 一流的 Markdown 写作加实时预览，但是在*文档编辑器*里，而非你的网页邮箱撰写框；你得在那边起草再粘过来，丢掉了就地、发送时转换那一环。 |
-| Markdown Here Revival（分叉/后继） | 未收录 | 一个社区分叉，意在让这个点子活下去（尤其面向 Thunderbird），因为原项目停滞了；其托管位置和自身维护状态在依赖前需自行核实（见存疑）。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| marked | 未收录 | 当前页用于它的主场景；如果更看重“一个供 JavaScript 调用的 Markdown→HTML *解析库*”，再选 marked。 | 一个供 JavaScript 调用的 Markdown→HTML *解析库*；当你需要在 app 或管线里做渲染时它才是对的工具——但它不是浏览器 UI，编辑器/撰写框集成得你自己接。 |
+| 浏览器原生富文本撰写（Gmail/Outlook 工具栏） | 未收录 | 当前页用于它的主场景；如果更看重“邮件客户端自带、无需安装”，再选 浏览器原生富文本撰写（Gmail/Outlook 工具栏）。 | 邮件客户端自带、无需安装；但它是工具栏式所见即所得，没有 Markdown，代码块/表格支持也弱——正是 Markdown Here 要消除的摩擦。 |
+| Obsidian / 编辑器 Markdown 插件 | 未收录 | 当前页用于它的主场景；如果更看重“一流的 Markdown 写作加实时预览，但是在*文档编辑器*里，而非你的网页邮箱撰写框”，再选 Obsidian / 编辑器 Markdown 插件。 | 一流的 Markdown 写作加实时预览，但是在*文档编辑器*里，而非你的网页邮箱撰写框；你得在那边起草再粘过来，丢掉了就地、发送时转换那一环。 |
+| Markdown Here Revival（分叉/后继） | 未收录 | 当前页用于它的主场景；如果更看重“一个社区分叉，意在让这个点子活下去（尤其面向 Thunderbird），因为原项目停滞了”，再选 Markdown Here Revival（分叉/后继）。 | 一个社区分叉，意在让这个点子活下去（尤其面向 Thunderbird），因为原项目停滞了；其托管位置和自身维护状态在依赖前需自行核实（见存疑）。 |
 
 ## 技术栈
 

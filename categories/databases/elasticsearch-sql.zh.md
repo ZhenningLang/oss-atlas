@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v9.3.4, active, 7.0k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: tool
+upstream:
+  pushed_at: 2026-05-04T10:59:18Z
+  default_branch: master
+  default_branch_sha: f55dbfe4fd4ad4bd20e7e0da8a68d48f569e9b1c
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:42:42Z
@@ -80,12 +85,12 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| Elasticsearch SQL / ES\|QL（X-Pack） | 未收录 | Elastic 一方 SQL 与更新的 ES\|QL 管道语言，带 JDBC/ODBC；随引擎维护——能覆盖需求时优先用它。本插件早于它且有重叠。 |
-| OpenSearch SQL 插件 | 未收录 | OpenSearch 分叉自己的 SQL/PPL 插件；若你跑 OpenSearch 而非 Elastic，这是对应答案。 |
-| 原生 Query DSL | 未收录 | 能力与控制力最大、版本原生，但冗长 JSON 学习曲线陡——正是本项目要消除的摩擦。 |
-| Presto/Trino + ES 连接器 | 未收录 | 完整 ANSI-SQL 引擎，可把 ES 与其他源联邦；运维重得多，但有真正的 SQL 语义和跨存储 JOIN。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| Elasticsearch SQL / ES\|QL（X-Pack） | 未收录 | 只有需要这个旧插件时才看当前页；若 Elastic 一方 SQL/ES\|QL 已覆盖需求，优先用官方能力。 | Elastic 一方 SQL 与更新的 ES\|QL 管道语言，带 JDBC/ODBC；随引擎维护。本插件早于它且有重叠。 |
+| OpenSearch SQL 插件 | 未收录 | 当前页用于它的主场景；如果更看重“OpenSearch 分叉自己的 SQL/PPL 插件”，再选 OpenSearch SQL 插件。 | OpenSearch 分叉自己的 SQL/PPL 插件；若你跑 OpenSearch 而非 Elastic，这是对应答案。 |
+| 原生 Query DSL | 未收录 | 当前页用于它的主场景；如果更看重“能力与控制力最大、版本原生，但冗长 JSON 学习曲线陡”，再选 原生 Query DSL。 | 能力与控制力最大、版本原生，但冗长 JSON 学习曲线陡——正是本项目要消除的摩擦。 |
+| Presto/Trino + ES 连接器 | 未收录 | 当前页用于它的主场景；如果更看重“完整 ANSI-SQL 引擎，可把 ES 与其他源联邦”，再选 Presto/Trino + ES 连接器。 | 完整 ANSI-SQL 引擎，可把 ES 与其他源联邦；运维重得多，但有真正的 SQL 语义和跨存储 JOIN。 |
 
 ## 技术栈
 

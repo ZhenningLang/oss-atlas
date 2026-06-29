@@ -9,6 +9,11 @@ license: GPL-3.0-or-later
 maturity: tombstone — repo emptied 2023-04, lineage archived, ~2.4k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: tool
+upstream:
+  pushed_at: 2023-04-08T12:38:11Z
+  default_branch: master
+  default_branch_sha: 7ec65cf2446f02a539001ebbbd6a7afeb49fb74e
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:55:01Z
@@ -83,11 +88,11 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| qwerty472123/wxappUnpacker（上游） | 未收录 | 原始血缘，比这个被清空的 fork 完整，但**自 2020 起 archived/只读**——同样没人维护，只是没被删。 |
-| 其它活着的 fork（SangeCoder / PyCoreDev / yangyang5214） | 未收录 | 能跑的代码幸存于此；PyCoreDev（2023-02）保留了完整代码 + `package.json`。都不大，也没明显维护——按近期活跃度挑，并自己读 diff。 |
-| 自写解包脚本 | 未收录 | `.wxapkg` 格式有足够文档，临时脚本是存在的；若你只需提取素材而非完整还原源码，这条路可行。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| qwerty472123/wxappUnpacker（上游） | 未收录 | 当前页用于它的主场景；如果更看重“原始血缘，比这个被清空的 fork 完整，但**自 2020 起 archived/只读**”，再选 qwerty472123/wxappUnpacker（上游）。 | 原始血缘，比这个被清空的 fork 完整，但**自 2020 起 archived/只读**——同样没人维护，只是没被删。 |
+| 其它活着的 fork（SangeCoder / PyCoreDev / yangyang5214） | 未收录 | 当前页用于它的主场景；如果更看重“能跑的代码幸存于此”，再选 其它活着的 fork（SangeCoder / PyCoreDev / yangyang5214）。 | 能跑的代码幸存于此；PyCoreDev（2023-02）保留了完整代码 + `package.json`。都不大，也没明显维护——按近期活跃度挑，并自己读 diff。 |
+| 自写解包脚本 | 未收录 | 当前页用于它的主场景；如果更看重“`”，再选 自写解包脚本。 | `.wxapkg` 格式有足够文档，临时脚本是存在的；若你只需提取素材而非完整还原源码，这条路可行。 |
 
 ## 技术栈
 

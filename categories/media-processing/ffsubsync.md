@@ -9,6 +9,11 @@ license: MIT
 maturity: v0.5.0, active, ~7.8k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: tool
+upstream:
+  pushed_at: 2026-06-17T17:25:11Z
+  default_branch: master
+  default_branch_sha: 65ac685bee1b5895cb150c63dc23c826622ea2c7
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:02:34Z
@@ -88,12 +93,12 @@ You also reach for it in a batch/automation context — a media server (it's the
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| alass | 未收录 | Rust subtitle aligner that explicitly handles *split* synchronization (variable offsets across the file) — stronger for ad-break/scene desync, ffsubsync's known weak spot. |
-| Bazarr | 未收录 | A subtitle *management* service for Sonarr/Radarr that finds and downloads subs (and can call ffsubsync to sync) — orchestration layer, not the alignment algorithm itself. |
-| Subtitle Edit (sync features) | 未收录 | Full GUI subtitle editor with manual + automatic sync, OCR, and format conversion; far broader, but interactive and Windows-centric rather than a scriptable one-shot CLI. |
-| OpenAI Whisper | 未收录 | Generates subtitles from audio (transcription), a different job — useful when you have *no* subtitle file; overkill and lossy when you already have correct text that's merely mistimed. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| alass | 未收录 | Use this page for its stated niche; choose alass when you need rust subtitle aligner that explicitly handles *split* synchronization (variable offsets across the f. | Rust subtitle aligner that explicitly handles *split* synchronization (variable offsets across the file) — stronger for ad-break/scene desync, ffsubsync's known weak spot. |
+| Bazarr | 未收录 | Use this page for its stated niche; choose Bazarr when you need a subtitle *management* service for Sonarr/Radarr that finds and downloads subs (and can call ffsubs. | A subtitle *management* service for Sonarr/Radarr that finds and downloads subs (and can call ffsubsync to sync) — orchestration layer, not the alignment algorithm itself. |
+| Subtitle Edit (sync features) | 未收录 | Use this page for its stated niche; choose Subtitle Edit (sync features) when you need full GUI subtitle editor with manual + automatic sync, OCR, and format conversion. | Full GUI subtitle editor with manual + automatic sync, OCR, and format conversion; far broader, but interactive and Windows-centric rather than a scriptable one-shot CLI. |
+| OpenAI Whisper | 未收录 | Use this page for its stated niche; choose OpenAI Whisper when you need generates subtitles from audio (transcription), a different job. | Generates subtitles from audio (transcription), a different job — useful when you have *no* subtitle file; overkill and lossy when you already have correct text that's merely mistimed. |
 
 ## Tech stack
 

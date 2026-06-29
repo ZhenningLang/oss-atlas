@@ -9,6 +9,11 @@ license: CC-BY-NC-4.0
 maturity: v2.14.2, active (2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+upstream:
+  pushed_at: 2026-06-29T03:58:40Z
+  default_branch: main
+  default_branch_sha: 096f726a20407901ca517cfc42509f96232fd0ea
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:30:46Z
@@ -78,12 +83,12 @@ You reach for it when you want this *specific author's* methodology — the fram
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [antfu/skills](antfu-skills.md) | ✅ | A maintainer's personal coding/devtools skills; engineering-flavored, English-first. dbskill is a domain pack for business diagnosis, not code workflow. |
-| [Dimillian/Skills](dimillian-skills.md) | ✅ | Personal skills from an iOS/Swift developer; software-focused. Disjoint domain — pick by whether you want coding help or business coaching. |
-| [awesome-claude-code-subagents](../subagent-collections/awesome-claude-code-subagents.md) | ✅ | A large broad subagent collection across many technical roles; breadth over a single opinionated voice. dbskill is one author's deep, narrow business methodology. |
-| Generic LLM business-coaching prompts | 未收录 | Ad-hoc prompts have no curated framework, case library, or persistence; dbskill ships ~4k knowledge atoms and state commands behind a coherent author voice. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [antfu/skills](antfu-skills.md) | ✅ | Use this page for its stated niche; choose antfu/skills when you need a maintainer's personal coding/devtools skills. | A maintainer's personal coding/devtools skills; engineering-flavored, English-first. dbskill is a domain pack for business diagnosis, not code workflow. |
+| [Dimillian/Skills](dimillian-skills.md) | ✅ | Use this page for its stated niche; choose Dimillian/Skills when you need personal skills from an iOS/Swift developer. | Personal skills from an iOS/Swift developer; software-focused. Disjoint domain — pick by whether you want coding help or business coaching. |
+| [awesome-claude-code-subagents](../subagent-collections/awesome-claude-code-subagents.md) | ✅ | Use this page for its stated niche; choose awesome-claude-code-subagents when you need a large broad subagent collection across many technical roles. | A large broad subagent collection across many technical roles; breadth over a single opinionated voice. dbskill is one author's deep, narrow business methodology. |
+| Generic LLM business-coaching prompts | 未收录 | Use this page for its stated niche; choose Generic LLM business-coaching prompts when you need ad-hoc prompts have no curated framework, case library, or persistence. | Ad-hoc prompts have no curated framework, case library, or persistence; dbskill ships ~4k knowledge atoms and state commands behind a coherent author voice. |
 
 ## Health & viability
 

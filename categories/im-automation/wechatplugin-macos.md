@@ -9,6 +9,11 @@ license: MIT
 maturity: dated — coasting (last pushed 2024-06, ~2y idle) and version-fragile; patches the macOS WeChat client binary, so it breaks on WeChat updates and is likely non-functional on current WeChat (2026-06)
 last_verified: 2026-06-28
 type: tool
+upstream:
+  pushed_at: 2024-06-09T03:27:58Z
+  default_branch: master
+  default_branch_sha: 113b9a06013ce7b8bd7dc067ee8d4501c1c9075b
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:54:47Z
@@ -77,12 +82,12 @@ Realistically that is the **only** scenario where reaching for it makes sense in
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| WeChatTweak-macOS (Sunnyyoung fork/successor) | 未收录 | The community successor for macOS WeChat tweaks — same anti-revoke/multi-instance class of features, but more recently maintained and with a CLI installer; still a binary patch against a specific WeChat version, so it inherits the same version-fragility and ToS/ban exposure. The more sensible pick if you insist on this approach. |
-| [ItChat](itchat.md) | ✅ | Python library automating WeChat **personal accounts** via the (now-defunct) web protocol — a programmatic API, not a desktop client tweak. Also effectively dead and platform-blocked; different surface (web protocol vs binary injection), same "abandoned + ToS risk" verdict. |
-| Official WeChat (no plugin) | 未收录 | The supported path: no anti-revoke, no auto-reply, no multi-instance, but it updates cleanly, isn't a ban risk, and doesn't inject foreign code into your messenger. The honest default for anyone who values the account. |
-| WeCom / Official Account / Mini-Program APIs | 未收录 | Tencent's **official, sanctioned** automation surfaces; stable and supported, but they automate enterprise/public-account contexts, not your personal desktop WeChat — a legitimate but different product, not a drop-in. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| WeChatTweak-macOS (Sunnyyoung fork/successor) | 未收录 | Use this page for its stated niche; choose WeChatTweak-macOS (Sunnyyoung fork/successor) when you need the community successor for macOS WeChat tweaks. | The community successor for macOS WeChat tweaks — same anti-revoke/multi-instance class of features, but more recently maintained and with a CLI installer; still a binary patch against a specific WeChat version, so it inherits the same version-fragility and ToS/ban exposure. The more sensible pick if you insist on this approach. |
+| [ItChat](itchat.md) | ✅ | Use this page for its stated niche; choose ItChat when you need python library automating WeChat **personal accounts** via the (now-defunct) web protocol. | Python library automating WeChat **personal accounts** via the (now-defunct) web protocol — a programmatic API, not a desktop client tweak. Also effectively dead and platform-blocked; different surface (web protocol vs binary injection), same "abandoned + ToS risk" verdict. |
+| Official WeChat (no plugin) | 未收录 | Use this page for its stated niche; choose Official WeChat (no plugin) when you need the supported path: no anti-revoke, no auto-reply, no multi-instance, but it updates cleanly, isn't. | The supported path: no anti-revoke, no auto-reply, no multi-instance, but it updates cleanly, isn't a ban risk, and doesn't inject foreign code into your messenger. The honest default for anyone who values the account. |
+| WeCom / Official Account / Mini-Program APIs | 未收录 | Use this page for its stated niche; choose WeCom / Official Account / Mini-Program APIs when you need tencent's **official, sanctioned** automation surfaces. | Tencent's **official, sanctioned** automation surfaces; stable and supported, but they automate enterprise/public-account contexts, not your personal desktop WeChat — a legitimate but different product, not a drop-in. |
 
 ## Tech stack
 

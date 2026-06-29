@@ -9,6 +9,11 @@ license: GPL-2.0-or-later
 maturity: v4.0.3, active (2026-06)
 last_verified: 2026-06-26
 type: app
+upstream:
+  pushed_at: 2026-06-29T09:12:35Z
+  default_branch: master
+  default_branch_sha: 0bbc7b6ed0b746fc33fea7a0422975c4177f7d43
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:53:53Z
@@ -84,15 +89,15 @@ It also fits when you need to *script and operationalize* GIS work, not just cli
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| GRASS GIS | 未收录 | Deep raster/geospatial-analysis engine and topology model; steeper UI, often used *through* QGIS as a Processing provider rather than standalone. |
-| SAGA GIS | 未收录 | Strong terrain/raster analysis library and modules; weaker cartography and general-purpose editing; also wrapped inside QGIS Processing. |
-| GDAL/OGR | 未收录 | The underlying I/O + raster/vector translation library QGIS itself depends on; a CLI/library, not a desktop app — choose it for scripted ETL, not interactive mapping. |
-| GeoServer | 未收录 | Java OGC server focused on publishing (WMS/WFS/WCS); overlaps QGIS Server on the publishing side but has no desktop authoring/analysis GUI. |
-| MapServer | 未收录 | Fast, mature C OGC map server; publishing-only, mapfile-configured; comparable to QGIS Server, not to the desktop. |
-| GeoPandas / Shapely | 未收录 | Python-native vector analysis for code-first/reproducible pipelines; no GUI, no cartographic print layout, no raster-first workflow. |
-| ArcGIS Pro (Esri) | 未收录 | Proprietary commercial desktop GIS; broader vendor support/ecosystem and licensing cost — the main commercial alternative QGIS substitutes for. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| GRASS GIS | 未收录 | Use this page for its stated niche; choose GRASS GIS when you need deep raster/geospatial-analysis engine and topology model. | Deep raster/geospatial-analysis engine and topology model; steeper UI, often used *through* QGIS as a Processing provider rather than standalone. |
+| SAGA GIS | 未收录 | Use this page for its stated niche; choose SAGA GIS when you need strong terrain/raster analysis library and modules. | Strong terrain/raster analysis library and modules; weaker cartography and general-purpose editing; also wrapped inside QGIS Processing. |
+| GDAL/OGR | 未收录 | Use this page for its stated niche; choose GDAL/OGR when you need the underlying I/O + raster/vector translation library QGIS itself depends on. | The underlying I/O + raster/vector translation library QGIS itself depends on; a CLI/library, not a desktop app — choose it for scripted ETL, not interactive mapping. |
+| GeoServer | 未收录 | Use this page for its stated niche; choose GeoServer when you need java OGC server focused on publishing (WMS/WFS/WCS). | Java OGC server focused on publishing (WMS/WFS/WCS); overlaps QGIS Server on the publishing side but has no desktop authoring/analysis GUI. |
+| MapServer | 未收录 | Use this page for its stated niche; choose MapServer when you need fast, mature C OGC map server. | Fast, mature C OGC map server; publishing-only, mapfile-configured; comparable to QGIS Server, not to the desktop. |
+| GeoPandas / Shapely | 未收录 | Use this page for its stated niche; choose GeoPandas / Shapely when you need python-native vector analysis for code-first/reproducible pipelines. | Python-native vector analysis for code-first/reproducible pipelines; no GUI, no cartographic print layout, no raster-first workflow. |
+| ArcGIS Pro (Esri) | 未收录 | Use this page for its stated niche; choose ArcGIS Pro (Esri) when you need proprietary commercial desktop GIS. | Proprietary commercial desktop GIS; broader vendor support/ecosystem and licensing cost — the main commercial alternative QGIS substitutes for. |
 
 ## Tech stack
 

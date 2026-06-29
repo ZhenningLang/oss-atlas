@@ -9,6 +9,11 @@ license: MIT
 maturity: no tagged releases, last pushed 2023-10 (stale), 4.2k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: tool
+upstream:
+  pushed_at: 2023-10-22T02:50:06Z
+  default_branch: master
+  default_branch_sha: fe261969558bf79dffa46d37d2b95f62d65502a1
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:42:59Z
@@ -76,13 +81,13 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| Debezium（+ Kafka Connect） | 未收录 | 工业级 CDC 标准；经 Kafka 实现持久、多源、近似 exactly-once——但它是一整套平台要运维，对比一个 Go 二进制。 |
-| Logstash JDBC input | 未收录 | 基于轮询（非 binlog CDC），起步更简单，但查询轮询漏掉删除并增加 DB 负载；比真 CDC 粗糙。 |
-| Flink CDC | 未收录 | 完整流处理 CDC，带变换和众多连接器；强大且有维护，运维重得多。 |
-| Canal（阿里） | 未收录 | 成熟的 MySQL binlog CDC 服务端（Java）；更稳健更活跃，但要运维一个服务端而非单二进制同步器。 |
-| go-mysql（库） | 未收录 | 本工具构建其上的底层 binlog／复制库；若你想自建同步器而非用这个现成的，直接用它。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| Debezium（+ Kafka Connect） | 未收录 | 当前页用于它的主场景；如果更看重“工业级 CDC 标准”，再选 Debezium（+ Kafka Connect）。 | 工业级 CDC 标准；经 Kafka 实现持久、多源、近似 exactly-once——但它是一整套平台要运维，对比一个 Go 二进制。 |
+| Logstash JDBC input | 未收录 | 当前页用于它的主场景；如果更看重“基于轮询（非 binlog CDC），起步更简单，但查询轮询漏掉删除并增加 DB 负载”，再选 Logstash JDBC input。 | 基于轮询（非 binlog CDC），起步更简单，但查询轮询漏掉删除并增加 DB 负载；比真 CDC 粗糙。 |
+| Flink CDC | 未收录 | 当前页用于它的主场景；如果更看重“完整流处理 CDC，带变换和众多连接器”，再选 Flink CDC。 | 完整流处理 CDC，带变换和众多连接器；强大且有维护，运维重得多。 |
+| Canal（阿里） | 未收录 | 当前页用于它的主场景；如果更看重“成熟的 MySQL binlog CDC 服务端（Java）”，再选 Canal（阿里）。 | 成熟的 MySQL binlog CDC 服务端（Java）；更稳健更活跃，但要运维一个服务端而非单二进制同步器。 |
+| go-mysql（库） | 未收录 | 当前页用于它的主场景；如果更看重“本工具构建其上的底层 binlog／复制库”，再选 go-mysql（库）。 | 本工具构建其上的底层 binlog／复制库；若你想自建同步器而非用这个现成的，直接用它。 |
 
 ## 技术栈
 

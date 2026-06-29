@@ -9,6 +9,11 @@ license: AGPL-3.0
 maturity: Active, mature codebase; latest release 1.103.0 (2026-06-23), main at 1.105.0 (see caveats)
 last_verified: 2026-06-26
 type: app
+upstream:
+  pushed_at: 2026-06-29T09:34:45Z
+  default_branch: master
+  default_branch_sha: 63e2513dea9dc46910018208b0efce6014bcbd98
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:52:20Z
@@ -84,13 +89,13 @@ This is the right pick when your real goal is *file storage and link-sharing ins
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [paperless-ngx](paperless-ngx.md) | ✅ | A true OCR/DMS: ingests, OCRs, auto-tags and full-text-searches scanned paperwork. The right tool when "documents" means searchable scans. Twake Drive does none of that — it's a file drive, not an archiver. |
-| [copyparty](copyparty.md) | ✅ | Single-binary file server with upload UI, WebDAV, sharing and (optional) media indexing; far lighter to run than Twake Drive's Cozy-stack dependency, but no suite/auth/connector ecosystem. |
-| Nextcloud | 未收录 | The mainstream self-hosted Drive+groupware platform — files, sharing, collaborative office, huge app ecosystem; much heavier (PHP/DB stack) but standalone and not tied to cozy-stack. |
-| Seafile | 未收录 | Sync-first self-hosted drive with strong delta-sync, versioning and (Pro) encryption; standalone server, weaker suite/groupware integration than Twake/Cozy. |
-| Cozy Drive (upstream) | 未收录 | This *is* the upstream — Twake Drive is Linagora/Twake Workplace's fork/rebrand of `cozy/cozy-drive`. Same architecture; pick based on which ecosystem (Cozy Cloud vs Twake Workplace) you run. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [paperless-ngx](paperless-ngx.md) | ✅ | Use this page for its stated niche; choose paperless-ngx when you need a true OCR/DMS: ingests, OCRs, auto-tags and full-text-searches scanned paperwork. | A true OCR/DMS: ingests, OCRs, auto-tags and full-text-searches scanned paperwork. The right tool when "documents" means searchable scans. Twake Drive does none of that — it's a file drive, not an archiver. |
+| [copyparty](copyparty.md) | ✅ | Use this page for its stated niche; choose copyparty when you need single-binary file server with upload UI, WebDAV, sharing and (optional) media indexing. | Single-binary file server with upload UI, WebDAV, sharing and (optional) media indexing; far lighter to run than Twake Drive's Cozy-stack dependency, but no suite/auth/connector ecosystem. |
+| Nextcloud | 未收录 | Use this page for its stated niche; choose Nextcloud when you need the mainstream self-hosted Drive+groupware platform. | The mainstream self-hosted Drive+groupware platform — files, sharing, collaborative office, huge app ecosystem; much heavier (PHP/DB stack) but standalone and not tied to cozy-stack. |
+| Seafile | 未收录 | Use this page for its stated niche; choose Seafile when you need sync-first self-hosted drive with strong delta-sync, versioning and (Pro) encryption. | Sync-first self-hosted drive with strong delta-sync, versioning and (Pro) encryption; standalone server, weaker suite/groupware integration than Twake/Cozy. |
+| Cozy Drive (upstream) | 未收录 | Use this page for its stated niche; choose Cozy Drive (upstream) when you need this *is* the upstream. | This *is* the upstream — Twake Drive is Linagora/Twake Workplace's fork/rebrand of `cozy/cozy-drive`. Same architecture; pick based on which ecosystem (Cozy Cloud vs Twake Workplace) you run. |
 
 ## Tech stack
 

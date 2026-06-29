@@ -9,6 +9,11 @@ license: MIT
 maturity: v7.1, active (2026-06)
 last_verified: 2026-06-28
 type: app
+upstream:
+  pushed_at: 2026-06-29T00:41:39Z
+  default_branch: main
+  default_branch_sha: 3b22efcdc97ece294c7dc746bc4f4917e04042ef
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:15:38Z
@@ -83,13 +88,13 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| Reeder | 未收录 | 打磨精良的商业 Apple 平台阅读器，同步支持广；闭源且收费，而 NetNewsWire 免费/MIT、可审计。 |
-| FreshRSS | 未收录 | 自建的 PHP 订阅*服务器*加 web UI；你自己跑，它同步给很多客户端（含 NetNewsWire）——是后端，不是原生客户端。 |
-| Miniflux | 未收录 | 极简的自建 Go 订阅阅读器（服务器加 web）；单二进制后端，本身没有原生 Apple 应用。 |
-| Feedly / Inoreader | 未收录 | 带发现和规则的托管 SaaS 阅读器；跨平台、功能多但专有且吃数据——NetNewsWire 可作为其中部分服务的原生客户端。 |
-| NewsBlur | 未收录 | 开源的托管阅读器，带训练/智能特性；是一整套服务栈，对比 NetNewsWire 的本地优先原生客户端。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| Reeder | 未收录 | 当前页用于它的主场景；如果更看重“打磨精良的商业 Apple 平台阅读器，同步支持广”，再选 Reeder。 | 打磨精良的商业 Apple 平台阅读器，同步支持广；闭源且收费，而 NetNewsWire 免费/MIT、可审计。 |
+| FreshRSS | 未收录 | 当前页用于它的主场景；如果更看重“自建的 PHP 订阅*服务器*加 web UI”，再选 FreshRSS。 | 自建的 PHP 订阅*服务器*加 web UI；你自己跑，它同步给很多客户端（含 NetNewsWire）——是后端，不是原生客户端。 |
+| Miniflux | 未收录 | 当前页用于它的主场景；如果更看重“极简的自建 Go 订阅阅读器（服务器加 web）”，再选 Miniflux。 | 极简的自建 Go 订阅阅读器（服务器加 web）；单二进制后端，本身没有原生 Apple 应用。 |
+| Feedly / Inoreader | 未收录 | 当前页用于它的主场景；如果更看重“带发现和规则的托管 SaaS 阅读器”，再选 Feedly / Inoreader。 | 带发现和规则的托管 SaaS 阅读器；跨平台、功能多但专有且吃数据——NetNewsWire 可作为其中部分服务的原生客户端。 |
+| NewsBlur | 未收录 | 当前页用于它的主场景；如果更看重“开源的托管阅读器，带训练/智能特性”，再选 NewsBlur。 | 开源的托管阅读器，带训练/智能特性；是一整套服务栈，对比 NetNewsWire 的本地优先原生客户端。 |
 
 ## 技术栈
 

@@ -5,16 +5,16 @@
 
 ## Projects in this category
 
-| Project | Use when | Page |
-|---|---|---|
-| **HiveChat** | Self-hostable, admin-managed AI chat for small/medium teams: one admin wires many LLM providers; the team chats with per-group model access and token quotas. | [→](hivechat.md) |
+| Project | Use when | Health | Page |
+| --- | --- | --- | --- |
+| **HiveChat** | Self-hostable, admin-managed AI chat for small/medium teams: one admin wires many LLM providers; the team chats with per-group model access and token quotas. | C (3/6) | [→](hivechat.md) |
 
 ## Comparison matrix
 
-| Option | Indexed | One-line tradeoff |
-|---|---|---|
-| [HiveChat](hivechat.md) | ✅ | Self-hostable, admin-managed AI chat for small/medium teams: one admin wires many LLM providers; the team chats with per-group model access and token quotas. |
-| LibreChat / Lobe Chat / Open WebUI | 未收录 | Other self-hosted chat UIs named on the page. |
+| Option | Indexed | Health | One-line tradeoff |
+| --- | --- | --- | --- |
+| [HiveChat](hivechat.md) | ✅ | C (3/6) | Self-hostable, admin-managed AI chat for small/medium teams: one admin wires many LLM providers; the team chats with per-group model access and token quotas. |
+| LibreChat / Lobe Chat / Open WebUI | 未收录 | — | Other self-hosted chat UIs named on the page. |
 
 ## What belongs here
 

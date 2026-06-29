@@ -9,6 +9,11 @@ license: GPL-3.0
 maturity: Mature, active; stable v2.20.x (2026-04), v3.0 in beta as of 2026-06 (see caveats)
 last_verified: 2026-06-26
 type: tool
+upstream:
+  pushed_at: 2026-06-29T01:18:26Z
+  default_branch: dev
+  default_branch_sha: 67972a074070c7a7677b423c50a7627c5fbfd060
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:51:58Z
@@ -86,13 +91,13 @@ So you stand up paperless-ngx with its Docker-first compose stack and point your
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| Mayan EDMS | 未收录 | Also Python/Django, but a heavier enterprise EDMS with a real workflow engine, versioning and granular permissions; far steeper to operate and overkill for a personal scan archive. Apache-2.0 (more permissive than paperless's GPLv3). |
-| Docspell | 未收录 | Inbox/metadata-extraction model with strong email ingestion; Scala/JVM stack means heavier memory footprint and a smaller community than paperless-ngx. |
-| Teedy / sismics docs | 未收录 | Lightweight Java DMS with versioning, clean UI and modest resource needs; weaker automated OCR/auto-tagging and smaller momentum. |
-| OpenDocMan | 未收录 | PHP/MySQL DMS for business file control + access rules; dated UI, no first-class OCR/auto-tagging — only if you need simple web access control on an existing PHP stack. |
-| Self-built (Tesseract + Meilisearch/Elasticsearch + object storage) | 未收录 | Maximum flexibility and full control over encryption/schema, but you build and maintain the whole ingest/OCR/index/UI pipeline — worth it only when paperless's data model or security constraints are dealbreakers. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| Mayan EDMS | 未收录 | Use this page for its stated niche; choose Mayan EDMS when you need also Python/Django, but a heavier enterprise EDMS with a real workflow engine, versioning and granul. | Also Python/Django, but a heavier enterprise EDMS with a real workflow engine, versioning and granular permissions; far steeper to operate and overkill for a personal scan archive. Apache-2.0 (more permissive than paperless's GPLv3). |
+| Docspell | 未收录 | Use this page for its stated niche; choose Docspell when you need inbox/metadata-extraction model with strong email ingestion. | Inbox/metadata-extraction model with strong email ingestion; Scala/JVM stack means heavier memory footprint and a smaller community than paperless-ngx. |
+| Teedy / sismics docs | 未收录 | Use this page for its stated niche; choose Teedy / sismics docs when you need lightweight Java DMS with versioning, clean UI and modest resource needs. | Lightweight Java DMS with versioning, clean UI and modest resource needs; weaker automated OCR/auto-tagging and smaller momentum. |
+| OpenDocMan | 未收录 | Use this page for its stated niche; choose OpenDocMan when you need PHP/MySQL DMS for business file control + access rules. | PHP/MySQL DMS for business file control + access rules; dated UI, no first-class OCR/auto-tagging — only if you need simple web access control on an existing PHP stack. |
+| Self-built (Tesseract + Meilisearch/Elasticsearch + object storage) | 未收录 | Use this page for its stated niche; choose Self-built (Tesseract + Meilisearch/Elasticsearch + object storage) when you need maximum flexibility and full control over encryption/schema, but you build and maintain the whole in. | Maximum flexibility and full control over encryption/schema, but you build and maintain the whole ingest/OCR/index/UI pipeline — worth it only when paperless's data model or security constraints are dealbreakers. |
 
 ## Tech stack
 

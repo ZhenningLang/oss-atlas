@@ -9,6 +9,11 @@ license: MIT
 maturity: v3.1.3 (2026-06-16), active; installs across 60+ agents via the SKILL.md standard
 last_verified: 2026-06-26
 type: skill-pack
+upstream:
+  pushed_at: 2026-06-16T15:16:19Z
+  default_branch: master
+  default_branch_sha: 8f5a3c2e1c347635cf94debde033b3c1ac97e4ab
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:36:19Z
@@ -81,14 +86,14 @@ You install Planning with Files (`npx skills add OthmanAdi/planning-with-files -
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [beads](beads.md) | ✅ | Dependency-aware, version-controlled task *graph* (Dolt-backed, `bd` binary) with merge-safe IDs and ready-detection; heavier and a real datastore vs. these three plain markdown files an agent edits. |
-| [Context Mode](context-mode.md) | ✅ | Sibling agent-context approach; overlapping "keep the agent oriented" goal, different mechanism — compare the two pages directly for your IDE. |
-| [Ralph](ralph-claude-code.md) | ✅ | Long-running autonomous-loop harness for Claude Code; orchestrates the run, whereas Planning with Files supplies the persistent plan/state the loop reads and writes. |
-| Plain `task_plan.md` / `TODO.md` you maintain by hand | 未收录 | Zero install and fully yours, but no lifecycle hooks, no auto re-injection after `/clear`, no completion gate, no session catchup — exactly the manual workflow this skill automates. |
-| Native agent memory (`CLAUDE.md`, Cursor rules, Codex `AGENTS.md`) | 未收录 | Built-in, always loaded, no extra install — but a static instruction file, not a per-task evolving plan with progress logging and a stop gate. |
-| Manus / hosted autonomous-agent products | 未收录 | The commercial pattern this skill imitates ("work like Manus"); managed and richer, but a hosted product, not an open, IDE-local, repo-committable skill. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [beads](beads.md) | ✅ | Use this page for its stated niche; choose beads when you need dependency-aware, version-controlled task *graph* (Dolt-backed, `bd` binary) with merge-safe IDs and. | Dependency-aware, version-controlled task *graph* (Dolt-backed, `bd` binary) with merge-safe IDs and ready-detection; heavier and a real datastore vs. these three plain markdown files an agent edits. |
+| [Context Mode](context-mode.md) | ✅ | Use this page for its stated niche; choose Context Mode when you need sibling agent-context approach. | Sibling agent-context approach; overlapping "keep the agent oriented" goal, different mechanism — compare the two pages directly for your IDE. |
+| [Ralph](ralph-claude-code.md) | ✅ | Use this page for its stated niche; choose Ralph when you need long-running autonomous-loop harness for Claude Code. | Long-running autonomous-loop harness for Claude Code; orchestrates the run, whereas Planning with Files supplies the persistent plan/state the loop reads and writes. |
+| Plain `task_plan.md` / `TODO.md` you maintain by hand | 未收录 | Use this page for its stated niche; choose Plain taskplan.md / TODO.md you maintain by hand when you need zero install and fully yours, but no lifecycle hooks, no auto re-injection after `/clear`, no comple. | Zero install and fully yours, but no lifecycle hooks, no auto re-injection after `/clear`, no completion gate, no session catchup — exactly the manual workflow this skill automates. |
+| Native agent memory (`CLAUDE.md`, Cursor rules, Codex `AGENTS.md`) | 未收录 | Use this page for its stated niche; choose Native agent memory (CLAUDE.md, Cursor rules, Codex AGENTS.md) when you need built-in, always loaded, no extra install. | Built-in, always loaded, no extra install — but a static instruction file, not a per-task evolving plan with progress logging and a stop gate. |
+| Manus / hosted autonomous-agent products | 未收录 | Use this page for its stated niche; choose Manus / hosted autonomous-agent products when you need the commercial pattern this skill imitates ("work like Manus"). | The commercial pattern this skill imitates ("work like Manus"); managed and richer, but a hosted product, not an open, IDE-local, repo-committable skill. |
 
 ## Health & viability
 

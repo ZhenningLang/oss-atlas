@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v2.0.2, active (2026-06)
 last_verified: 2026-06-26
 type: framework
+upstream:
+  pushed_at: 2026-06-29T06:35:40Z
+  default_branch: main
+  default_branch_sha: 3467754dc48c7ba12cfce79fae6e0fa39831074b
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:08:31Z
@@ -89,15 +94,15 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| [DSPy](dspy.zh.md) | ✅ | 声明式的 prompt/流水线*优化*（编译 + 调优程序）；不是多智能体服务运行时。用它提质量，而不是用它编排/服务 agent。 |
-| [openfang](openfang.zh.md) | ✅ | 本索引内的同类 agent 框架；设计取向不同——选型前对比 scope/成熟度。[未验证] |
-| [Symphony](symphony.zh.md) | ✅ | 本索引内的同类多智能体框架；“编排多个 agent”目标有重叠，工效学不同。[未验证] |
-| [claude-octopus](claude-octopus.zh.md) | ✅ | 本索引内的同类项目，围绕 Claude 式多智能体工作流；模型聚焦比 AgentScope 的多 provider 服务更窄。 |
-| LangGraph | 未收录 | 图/状态机式编排，生态庞大、控制流显式；比 AgentScope“信任模型”的循环更重、更有主张。 |
-| AutoGen | 未收录 | 成熟的对话驱动多智能体框架；多智能体 scope 可比，抽象不同、社区盘子更大。 |
-| CrewAI | 未收录 | 角色/crew 式 agent 编排，DX 很好；不像 AgentScope 那样强调 service/权限/沙箱/可观测这整套栈。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [DSPy](dspy.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“声明式的 prompt/流水线*优化*（编译 + 调优程序）”，再选 DSPy。 | 声明式的 prompt/流水线*优化*（编译 + 调优程序）；不是多智能体服务运行时。用它提质量，而不是用它编排/服务 agent。 |
+| [openfang](openfang.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“本索引内的同类 agent 框架”，再选 openfang。 | 本索引内的同类 agent 框架；设计取向不同——选型前对比 scope/成熟度。[未验证] |
+| [Symphony](symphony.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“本索引内的同类多智能体框架”，再选 Symphony。 | 本索引内的同类多智能体框架；“编排多个 agent”目标有重叠，工效学不同。[未验证] |
+| [claude-octopus](claude-octopus.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“本索引内的同类项目，围绕 Claude 式多智能体工作流”，再选 claude-octopus。 | 本索引内的同类项目，围绕 Claude 式多智能体工作流；模型聚焦比 AgentScope 的多 provider 服务更窄。 |
+| LangGraph | 未收录 | 当前页用于它的主场景；如果更看重“图/状态机式编排，生态庞大、控制流显式”，再选 LangGraph。 | 图/状态机式编排，生态庞大、控制流显式；比 AgentScope“信任模型”的循环更重、更有主张。 |
+| AutoGen | 未收录 | 当前页用于它的主场景；如果更看重“成熟的对话驱动多智能体框架”，再选 AutoGen。 | 成熟的对话驱动多智能体框架；多智能体 scope 可比，抽象不同、社区盘子更大。 |
+| CrewAI | 未收录 | 当前页用于它的主场景；如果更看重“角色/crew 式 agent 编排，DX 很好”，再选 CrewAI。 | 角色/crew 式 agent 编排，DX 很好；不像 AgentScope 那样强调 service/权限/沙箱/可观测这整套栈。 |
 
 ## 技术栈
 

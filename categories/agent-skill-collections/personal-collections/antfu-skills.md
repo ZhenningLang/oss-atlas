@@ -9,6 +9,11 @@ license: MIT
 maturity: no tagged releases, active (pushed 2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+upstream:
+  pushed_at: 2026-06-23T00:14:36Z
+  default_branch: main
+  default_branch_sha: a74f281a27dadc02397bc1a174b0f2c97531b6ae
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:30:23Z
@@ -81,13 +86,13 @@ You run `pnpx skills add antfu/skills --skill='*'` (add `-g` for global) and you
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [Vercel Agent Skills](../engineering/vercel-agent-skills.md) ✅ | indexed | Vercel's official pack for the *React/Next.js/Vercel* ecosystem, distributed through the same `skills` CLI/format. Mirror image of antfu's: pick by which framework world (Vue vs. React) is yours; both are opinionated vendor/maintainer rule sets, not vendor-neutral. |
-| [Agent Skills (addyosmani)](../engineering/addyosmani-agent-skills.md) ✅ | indexed | Addy Osmani's personal full-SDLC engineering pack (spec→build→review→ship, web-perf, security). Broader lifecycle scope and framework-agnostic; antfu's is narrower and stack-specific (Vue toolchain conventions) rather than a methodology spine. |
-| [web-quality-skills (addyosmani)](../engineering/addyosmani-web-quality.md) ✅ | indexed | Focused web performance/accessibility/quality auditing, vendor-neutral. Overlaps antfu's `web-design-guidelines` vendored skill but is dedicated and travels off the Vue stack. |
-| Dimillian/Skills, gstack, ljg-skills, khazix-skills, taches-cc-resources (other personal collections) | 未收录 | Same genre — individual maintainers' curated skill/harness bundles — but each reflects a different person's stack and conventions; compare on whose toolchain and opinions you actually share. |
-| Each agent's built-in skills / slash commands | 未收录 | The platform's own skill ecosystem; antfu/skills is a third-party bundle layered on top, so it can duplicate or conflict with native skills. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [Vercel Agent Skills](../engineering/vercel-agent-skills.md) ✅ | indexed | Use this page for its stated niche; choose Vercel Agent Skills ✅ when you need vercel's official pack for the *React/Next. | Vercel's official pack for the *React/Next.js/Vercel* ecosystem, distributed through the same `skills` CLI/format. Mirror image of antfu's: pick by which framework world (Vue vs. React) is yours; both are opinionated vendor/maintainer rule sets, not vendor-neutral. |
+| [Agent Skills (addyosmani)](../engineering/addyosmani-agent-skills.md) ✅ | indexed | Use this page for its stated niche; choose Agent Skills (addyosmani) ✅ when you need addy Osmani's personal full-SDLC engineering pack (spec→build→review→ship, web-perf, security). | Addy Osmani's personal full-SDLC engineering pack (spec→build→review→ship, web-perf, security). Broader lifecycle scope and framework-agnostic; antfu's is narrower and stack-specific (Vue toolchain conventions) rather than a methodology spine. |
+| [web-quality-skills (addyosmani)](../engineering/addyosmani-web-quality.md) ✅ | indexed | Use this page for its stated niche; choose web-quality-skills (addyosmani) ✅ when you need focused web performance/accessibility/quality auditing, vendor-neutral. | Focused web performance/accessibility/quality auditing, vendor-neutral. Overlaps antfu's `web-design-guidelines` vendored skill but is dedicated and travels off the Vue stack. |
+| Dimillian/Skills, gstack, ljg-skills, khazix-skills, taches-cc-resources (other personal collections) | 未收录 | Use this page for its stated niche; choose Dimillian/Skills, gstack, ljg-skills, khazix-skills, taches-cc-resources (other personal collections) when you need same genre. | Same genre — individual maintainers' curated skill/harness bundles — but each reflects a different person's stack and conventions; compare on whose toolchain and opinions you actually share. |
+| Each agent's built-in skills / slash commands | 未收录 | Use this page for its stated niche; choose Each agent's built-in skills / slash commands when you need the platform's own skill ecosystem. | The platform's own skill ecosystem; antfu/skills is a third-party bundle layered on top, so it can duplicate or conflict with native skills. |
 
 ## Health & viability
 

@@ -9,6 +9,11 @@ license: MIT
 maturity: v3.5.0, active (2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+upstream:
+  pushed_at: 2026-06-17T15:15:16Z
+  default_branch: main
+  default_branch_sha: d602b75218600aa9063fb2464e22be81388c6e68
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:31:53Z
@@ -80,12 +85,12 @@ You reach for it when you'd rather adopt an opinionated, theatrical persistence 
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [antfu/skills](antfu-skills.md) | ✅ | A maintainer's personal general-purpose skill collection; broad utility skills, no persona/pressure theme. PUA is single-purpose: it only adds a persistence persona, not a toolbox. |
-| [awesome-claude-code-subagents](../subagent-collections/awesome-claude-code-subagents.md) | ✅ | A large catalog of role-based subagents to dispatch work to. PUA is not a roster of specialists — it's a behavioral overlay that changes how one agent persists. |
-| Superpowers | 未收录 | Full brainstorm→plan→TDD→verify SDLC methodology pack; its `verification-before-completion` / `systematic-debugging` skills overlap PUA's Red Lines but ship a whole lifecycle, where PUA is just the persistence/anti-quit layer with a persona skin. |
-| Anthropic's built-in skills / native slash commands | 未收录 | The platform's own skill surface; PUA is a third-party persona bundle layered on top and can duplicate or conflict with native behavior. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [antfu/skills](antfu-skills.md) | ✅ | Use this page for its stated niche; choose antfu/skills when you need a maintainer's personal general-purpose skill collection. | A maintainer's personal general-purpose skill collection; broad utility skills, no persona/pressure theme. PUA is single-purpose: it only adds a persistence persona, not a toolbox. |
+| [awesome-claude-code-subagents](../subagent-collections/awesome-claude-code-subagents.md) | ✅ | Use this page for its stated niche; choose awesome-claude-code-subagents when you need a large catalog of role-based subagents to dispatch work to. | A large catalog of role-based subagents to dispatch work to. PUA is not a roster of specialists — it's a behavioral overlay that changes how one agent persists. |
+| Superpowers | 未收录 | Use this page for its stated niche; choose Superpowers when you need full brainstorm→plan→TDD→verify SDLC methodology pack. | Full brainstorm→plan→TDD→verify SDLC methodology pack; its `verification-before-completion` / `systematic-debugging` skills overlap PUA's Red Lines but ship a whole lifecycle, where PUA is just the persistence/anti-quit layer with a persona skin. |
+| Anthropic's built-in skills / native slash commands | 未收录 | Use this page for its stated niche; choose Anthropic's built-in skills / native slash commands when you need the platform's own skill surface. | The platform's own skill surface; PUA is a third-party persona bundle layered on top and can duplicate or conflict with native behavior. |
 
 ## Health & viability
 

@@ -5,16 +5,16 @@
 
 ## Projects in this category
 
-| Project | Use when | Page |
-|---|---|---|
-| **QGIS** | Full-featured cross-platform desktop GIS (Qt/C++) to view, edit, analyze and publish vector/raster/mesh/point-cloud spatial data, with PyQGIS plugins and a headless server. | [→](qgis.md) |
+| Project | Use when | Health | Page |
+| --- | --- | --- | --- |
+| **QGIS** | Full-featured cross-platform desktop GIS (Qt/C++) to view, edit, analyze and publish vector/raster/mesh/point-cloud spatial data, with PyQGIS plugins and a headless server. | A (5/6) | [→](qgis.md) |
 
 ## Comparison matrix
 
-| Option | Indexed | One-line tradeoff |
-|---|---|---|
-| [QGIS](qgis.md) | ✅ | Full-featured cross-platform desktop GIS (Qt/C++) to view, edit, analyze and publish vector/raster/mesh/point-cloud spatial data, with PyQGIS plugins and a headless server. |
-| ArcGIS / GRASS GIS / gvSIG | 未收录 | Other GIS platforms named on the page. |
+| Option | Indexed | Health | One-line tradeoff |
+| --- | --- | --- | --- |
+| [QGIS](qgis.md) | ✅ | A (5/6) | Full-featured cross-platform desktop GIS (Qt/C++) to view, edit, analyze and publish vector/raster/mesh/point-cloud spatial data, with PyQGIS plugins and a headless server. |
+| ArcGIS / GRASS GIS / gvSIG | 未收录 | — | Other GIS platforms named on the page. |
 
 ## What belongs here
 

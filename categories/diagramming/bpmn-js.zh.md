@@ -9,6 +9,11 @@ license: MIT + bpmn.io watermark clause
 maturity: v18.19.0, active, ~9.6k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2026-06-26T07:11:27Z
+  default_branch: develop
+  default_branch_sha: 2067c99c8a807061ed78a7c0d6de9329610c3c44
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:50:32Z
@@ -86,13 +91,13 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| [flowchart.js](flowchart-js.zh.md) | ✅ | 极小的文本 DSL 转 SVG 流程图渲染器；做简单非标准流程图很好，但没有 BPMN 语义、不能交互编辑、范围小得多。 |
-| [Mermaid](mermaid.zh.md) | 未收录 | 广义的文本转图工具（含一种基础的类 BPMN 流程），Markdown 原生；但不是真正的 BPMN 2.0 建模器，也不做交互编辑。 |
-| dmn-js / form-js（bpmn.io） | 未收录 | 做 DMN 决策表和表单的兄弟库；同团队同架构，但记法不同——互补而非替代。 |
-| jBPM / Flowable 自带 Web 建模器 | 未收录 | 与特定 Java 流程引擎绑定的引擎内置 BPMN 建模器；集成了执行，但更重，作为独立 JS 画布更难嵌入。 |
-| GoJS / mxGraph（draw.io） | 未收录 | 你需要自己在其上搭 BPMN 的通用商业/开源图画布；更通用，但 BPMN 的正确性要你自己实现，而 bpmn-js 直接给你。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [flowchart.js](flowchart-js.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“极小的文本 DSL 转 SVG 流程图渲染器”，再选 flowchart.js。 | 极小的文本 DSL 转 SVG 流程图渲染器；做简单非标准流程图很好，但没有 BPMN 语义、不能交互编辑、范围小得多。 |
+| [Mermaid](mermaid.zh.md) | 未收录 | 当前页用于它的主场景；如果更看重“广义的文本转图工具（含一种基础的类 BPMN 流程），Markdown 原生”，再选 Mermaid。 | 广义的文本转图工具（含一种基础的类 BPMN 流程），Markdown 原生；但不是真正的 BPMN 2.0 建模器，也不做交互编辑。 |
+| dmn-js / form-js（bpmn.io） | 未收录 | 当前页用于它的主场景；如果更看重“做 DMN 决策表和表单的兄弟库”，再选 dmn-js / form-js（bpmn.io）。 | 做 DMN 决策表和表单的兄弟库；同团队同架构，但记法不同——互补而非替代。 |
+| jBPM / Flowable 自带 Web 建模器 | 未收录 | 当前页用于它的主场景；如果更看重“与特定 Java 流程引擎绑定的引擎内置 BPMN 建模器”，再选 jBPM / Flowable 自带 Web 建模器。 | 与特定 Java 流程引擎绑定的引擎内置 BPMN 建模器；集成了执行，但更重，作为独立 JS 画布更难嵌入。 |
+| GoJS / mxGraph（draw.io） | 未收录 | 当前页用于它的主场景；如果更看重“你需要自己在其上搭 BPMN 的通用商业/开源图画布”，再选 GoJS / mxGraph（draw.io）。 | 你需要自己在其上搭 BPMN 的通用商业/开源图画布；更通用，但 BPMN 的正确性要你自己实现，而 bpmn-js 直接给你。 |
 
 ## 技术栈
 

@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v3.0.6 (2026-06), active, ~5.9k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2026-06-28T22:11:41Z
+  default_branch: master
+  default_branch_sha: a5da13adece530043e3a789cd27ba6bb088b3317
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:55:31Z
@@ -88,13 +93,13 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| confluent-kafka-python | 未收录 | 官方 Confluent 客户端，封装 `librdkafka`（C）——吞吐/延迟最佳、协议覆盖最快，但需要原生库，可移植性不如纯 Python 那么轻易。 |
-| aiokafka | 未收录 | 原生 `asyncio` Kafka 客户端（脱胎于 kafka-python 一脉）；async 优先应用的正确选择，面比同步客户端窄。 |
-| [kafka-ui](kafka-ui.zh.md) | ✅ | 是集群管理的 Web UI，而非客户端库——互补而非竞争；完全不同的活。 |
-| Java/Scala 官方客户端 | 未收录 | 参考实现，特性一等支持且带 Kafka Streams，但仅限 JVM——对 Python 服务不是选项。 |
-| Sarama（Go） | 未收录 | 成熟的纯 Go Kafka 客户端；同样「无原生依赖」的卖点，但面向 Go 而非 Python。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| confluent-kafka-python | 未收录 | 当前页用于它的主场景；如果更看重“官方 Confluent 客户端，封装 `librdkafka`（C）”，再选 confluent-kafka-python。 | 官方 Confluent 客户端，封装 `librdkafka`（C）——吞吐/延迟最佳、协议覆盖最快，但需要原生库，可移植性不如纯 Python 那么轻易。 |
+| aiokafka | 未收录 | 当前页用于它的主场景；如果更看重“原生 `asyncio` Kafka 客户端（脱胎于 kafka-python 一脉）”，再选 aiokafka。 | 原生 `asyncio` Kafka 客户端（脱胎于 kafka-python 一脉）；async 优先应用的正确选择，面比同步客户端窄。 |
+| [kafka-ui](kafka-ui.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“是集群管理的 Web UI，而非客户端库”，再选 kafka-ui。 | 是集群管理的 Web UI，而非客户端库——互补而非竞争；完全不同的活。 |
+| Java/Scala 官方客户端 | 未收录 | 当前页用于它的主场景；如果更看重“参考实现，特性一等支持且带 Kafka Streams，但仅限 JVM”，再选 Java/Scala 官方客户端。 | 参考实现，特性一等支持且带 Kafka Streams，但仅限 JVM——对 Python 服务不是选项。 |
+| Sarama（Go） | 未收录 | 当前页用于它的主场景；如果更看重“成熟的纯 Go Kafka 客户端”，再选 Sarama（Go）。 | 成熟的纯 Go Kafka 客户端；同样「无原生依赖」的卖点，但面向 Go 而非 Python。 |
 
 ## 技术栈
 

@@ -9,6 +9,11 @@ license: MIT
 maturity: no tagged release, active (last pushed 2026-06; ~1.7k stars [未验证])
 last_verified: 2026-06-26
 type: skill-pack
+upstream:
+  pushed_at: 2026-06-14T16:29:55Z
+  default_branch: main
+  default_branch_sha: acc3e574b36ef2895268a176dbae886e1b845ae0
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:28:22Z
@@ -80,14 +85,14 @@ You reach for it when you want *breadth* — one install that covers research �
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [stitch-skills](stitch-skills.md) | ✅ | Compare on scope: Stitch-oriented pack vs. this broad full-lifecycle design suite. If your need is narrow, the focused pack is lighter; Designer Skills wins on breadth. |
-| [ui-ux-pro-max](ui-ux-pro-max.md) | ✅ | Another UI/UX skill pack; overlaps heavily on the "polished interface" surface. Pick by which one's UI/interaction guidance matches your taste and which install path fits your harness. |
-| [taste-skill](taste-skill.md) | ✅ | Centers visual *taste*/judgment; narrower than this multi-discipline suite. Use it for critique-flavored taste calls; use Designer Skills when you also need research/systems/ops. |
-| [make-interfaces-feel-better](make-interfaces-feel-better.md) | ✅ | Aimed at interaction polish / "feel"; overlaps Designer Skills' `interaction-design` plugin. The narrow pack is sharper on micro-interaction; Designer Skills covers the rest of the lifecycle too. |
-| Anthropic's official / built-in skills | 未收录 | The platform's own skill ecosystem; Designer Skills is a third-party bundle layered on top, so it can duplicate or conflict with native skills. |
-| Companion collections (AI product design, UX program mgmt, design leadership, inclusive design) | 未收录 | Same author's sibling repos in the family; this entry covers only the "design practice" collection. Reach for the others for adjacent disciplines. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [stitch-skills](stitch-skills.md) | ✅ | Use this page for its stated niche; choose stitch-skills when you need compare on scope: Stitch-oriented pack vs. | Compare on scope: Stitch-oriented pack vs. this broad full-lifecycle design suite. If your need is narrow, the focused pack is lighter; Designer Skills wins on breadth. |
+| [ui-ux-pro-max](ui-ux-pro-max.md) | ✅ | Use this page for its stated niche; choose ui-ux-pro-max when you need another UI/UX skill pack. | Another UI/UX skill pack; overlaps heavily on the "polished interface" surface. Pick by which one's UI/interaction guidance matches your taste and which install path fits your harness. |
+| [taste-skill](taste-skill.md) | ✅ | Use this page for its stated niche; choose taste-skill when you need centers visual *taste*/judgment. | Centers visual *taste*/judgment; narrower than this multi-discipline suite. Use it for critique-flavored taste calls; use Designer Skills when you also need research/systems/ops. |
+| [make-interfaces-feel-better](make-interfaces-feel-better.md) | ✅ | Use this page for its stated niche; choose make-interfaces-feel-better when you need aimed at interaction polish / "feel". | Aimed at interaction polish / "feel"; overlaps Designer Skills' `interaction-design` plugin. The narrow pack is sharper on micro-interaction; Designer Skills covers the rest of the lifecycle too. |
+| Anthropic's official / built-in skills | 未收录 | Use this page for its stated niche; choose Anthropic's official / built-in skills when you need the platform's own skill ecosystem. | The platform's own skill ecosystem; Designer Skills is a third-party bundle layered on top, so it can duplicate or conflict with native skills. |
+| Companion collections (AI product design, UX program mgmt, design leadership, inclusive design) | 未收录 | Use this page for its stated niche; choose Companion collections (AI product design, UX program mgmt, design leadership, inclusive design) when you need same author's sibling repos in the family. | Same author's sibling repos in the family; this entry covers only the "design practice" collection. Reach for the others for adjacent disciplines. |
 
 ## Health & viability
 

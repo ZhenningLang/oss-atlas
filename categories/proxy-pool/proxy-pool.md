@@ -9,6 +9,11 @@ license: MIT
 maturity: last release 2.4.1 (2023-02), repo still pushed 2026-06, ~23.4k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: app
+upstream:
+  pushed_at: 2026-06-15T14:36:35Z
+  default_branch: master
+  default_branch_sha: 9cc0cad4c47e84e34aaec2eead099421960dcd07
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:11:02Z
@@ -81,13 +86,13 @@ It fits best when proxy *quality* is negotiable but you need *rotation and fresh
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| Paid proxy services (Bright Data / Decodo) | 未收录 | Commercial residential/datacenter/ISP proxies with SLAs, large clean IP ranges, and support — reliable and fast, but paid (often metered per-GB) and not open-source. The right call for production. |
-| ProxyBroker | 未收录 | Python async library/CLI that finds and checks public proxies; more of a toolkit/library than a packaged service-with-API + storage. Maintenance has been intermittent. [未验证] |
-| scylla | 未收录 | Self-hosted intelligent free-proxy pool with a web UI and API (Python); similar niche, different stack and feature emphasis. [未验证] |
-| haipproxy | 未收录 | Scrapy/Redis-based high-availability proxy pool aimed at scraping; heavier Scrapy-centric design vs proxy_pool's small Flask service. [未验证] |
-| scrapy-rotating-proxies | 未收录 | A Scrapy *downloader middleware* that rotates a list you supply and bans dead ones — it consumes proxies, it does not source/validate them; pair it with a pool like this one rather than treat it as a substitute. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| Paid proxy services (Bright Data / Decodo) | 未收录 | Use this page for its stated niche; choose Paid proxy services (Bright Data / Decodo) when you need commercial residential/datacenter/ISP proxies with SLAs, large clean IP ranges, and support. | Commercial residential/datacenter/ISP proxies with SLAs, large clean IP ranges, and support — reliable and fast, but paid (often metered per-GB) and not open-source. The right call for production. |
+| ProxyBroker | 未收录 | Use this page for its stated niche; choose ProxyBroker when you need python async library/CLI that finds and checks public proxies. | Python async library/CLI that finds and checks public proxies; more of a toolkit/library than a packaged service-with-API + storage. Maintenance has been intermittent. [未验证] |
+| scylla | 未收录 | Use this page for its stated niche; choose scylla when you need self-hosted intelligent free-proxy pool with a web UI and API (Python). | Self-hosted intelligent free-proxy pool with a web UI and API (Python); similar niche, different stack and feature emphasis. [未验证] |
+| haipproxy | 未收录 | Use this page for its stated niche; choose haipproxy when you need scrapy/Redis-based high-availability proxy pool aimed at scraping. | Scrapy/Redis-based high-availability proxy pool aimed at scraping; heavier Scrapy-centric design vs proxy_pool's small Flask service. [未验证] |
+| scrapy-rotating-proxies | 未收录 | Use this page for its stated niche; choose scrapy-rotating-proxies when you need a Scrapy *downloader middleware* that rotates a list you supply and bans dead ones. | A Scrapy *downloader middleware* that rotates a list you supply and bans dead ones — it consumes proxies, it does not source/validate them; pair it with a pool like this one rather than treat it as a substitute. |
 
 ## Tech stack
 

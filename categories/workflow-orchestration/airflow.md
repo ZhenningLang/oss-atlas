@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v3.x line, active, ~46k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: framework
+upstream:
+  pushed_at: 2026-06-29T11:36:14Z
+  default_branch: main
+  default_branch_sha: 512a0445875c950ff50f9fbd890751da20e92a09
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:26:10Z
@@ -89,13 +94,13 @@ You reach for it specifically when you want pipelines as code in version control
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| Prefect | 未收录 | Pythonic, dynamic flows with lighter local-dev ergonomics and a hybrid/managed control plane; smaller operator ecosystem and a different (flow/task) model than Airflow's DAG files. |
-| Dagster | 未收录 | Asset-oriented orchestration with typing, data lineage, and strong local testing; more opinionated and newer, with a smaller integration catalog than Airflow's providers. |
-| Argo Workflows | 未收录 | Kubernetes-native, container-step DAGs defined in YAML/CRDs; great if everything already runs as pods, but no rich Python operator library and a thinner data-engineering UX. |
-| Temporal | 未收录 | Durable-execution engine for long-running, stateful, code-driven workflows (signals, retries, timers); not a batch *scheduler* with a DAG UI — a different orchestration shape entirely. |
-| Luigi | 未收录 | Spotify's older Python pipeline library; lighter and simpler, but largely superseded by Airflow with a much smaller community and weaker scheduling/UI. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| Prefect | 未收录 | Use this page for its stated niche; choose Prefect when you need pythonic, dynamic flows with lighter local-dev ergonomics and a hybrid/managed control plane. | Pythonic, dynamic flows with lighter local-dev ergonomics and a hybrid/managed control plane; smaller operator ecosystem and a different (flow/task) model than Airflow's DAG files. |
+| Dagster | 未收录 | Use this page for its stated niche; choose Dagster when you need asset-oriented orchestration with typing, data lineage, and strong local testing. | Asset-oriented orchestration with typing, data lineage, and strong local testing; more opinionated and newer, with a smaller integration catalog than Airflow's providers. |
+| Argo Workflows | 未收录 | Use this page for its stated niche; choose Argo Workflows when you need kubernetes-native, container-step DAGs defined in YAML/CRDs. | Kubernetes-native, container-step DAGs defined in YAML/CRDs; great if everything already runs as pods, but no rich Python operator library and a thinner data-engineering UX. |
+| Temporal | 未收录 | Use this page for its stated niche; choose Temporal when you need durable-execution engine for long-running, stateful, code-driven workflows (signals, retries, timers. | Durable-execution engine for long-running, stateful, code-driven workflows (signals, retries, timers); not a batch *scheduler* with a DAG UI — a different orchestration shape entirely. |
+| Luigi | 未收录 | Use this page for its stated niche; choose Luigi when you need spotify's older Python pipeline library. | Spotify's older Python pipeline library; lighter and simpler, but largely superseded by Airflow with a much smaller community and weaker scheduling/UI. |
 
 ## Tech stack
 

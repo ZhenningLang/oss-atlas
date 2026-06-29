@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v1.6.2, active (2026-06)
 last_verified: 2026-06-26
 type: tool
+upstream:
+  pushed_at: 2026-06-29T09:21:58Z
+  default_branch: main
+  default_branch_sha: 403335ef5afe95fd14b0b31c9929a004f557c6c1
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:37:14Z
@@ -89,13 +94,13 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| [claude-code-security-review](claude-code-security-review.zh.md) | 未收录 | Anthropic 的 GitHub Action，聚焦*安全*发现、走 Claude；更窄（只安全）但 PR 原生。Open Code Review 更宽（通用质量 + 少量安全规则）、CLI 优先，不自动回贴。 |
-| [react-doctor](react-doctor.zh.md) | 未收录 | 针对 React 单一框架的健康/诊断；Open Code Review 跨 ~10+ 语言、与语言无关，不为某框架精调。 |
-| CodeRabbit | 未收录 | 托管 SaaS，在 PR 上自动评论、召回广；Open Code Review 自托管/CLI、偏精确率，LLM key 和回贴胶水都你自己掌控。 |
-| PR-Agent(Qodo) | 未收录 | OSS 的 PR 助手，直接往 GitHub/GitLab MR 发评论、做摘要和问答；Open Code Review 输出结构化发现，靠确定性定位层而非 MR 集成。 |
-| Semgrep | 未收录 | 确定性规则/AST 扫描器（无 LLM），安全规则库庞大；单次更快、免费但没有 agent 推理或自然语言行级评论。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [claude-code-security-review](claude-code-security-review.zh.md) | 未收录 | 当前页用于它的主场景；如果更看重“Anthropic 的 GitHub Action，聚焦*安全*发现、走 Claude”，再选 claude-code-security-review。 | Anthropic 的 GitHub Action，聚焦*安全*发现、走 Claude；更窄（只安全）但 PR 原生。Open Code Review 更宽（通用质量 + 少量安全规则）、CLI 优先，不自动回贴。 |
+| [react-doctor](react-doctor.zh.md) | 未收录 | 当前页用于它的主场景；如果更看重“针对 React 单一框架的健康/诊断”，再选 react-doctor。 | 针对 React 单一框架的健康/诊断；Open Code Review 跨 ~10+ 语言、与语言无关，不为某框架精调。 |
+| CodeRabbit | 未收录 | 当前页用于它的主场景；如果更看重“托管 SaaS，在 PR 上自动评论、召回广”，再选 CodeRabbit。 | 托管 SaaS，在 PR 上自动评论、召回广；Open Code Review 自托管/CLI、偏精确率，LLM key 和回贴胶水都你自己掌控。 |
+| PR-Agent(Qodo) | 未收录 | 当前页用于它的主场景；如果更看重“OSS 的 PR 助手，直接往 GitHub/GitLab MR 发评论、做摘要和问答”，再选 PR-Agent(Qodo)。 | OSS 的 PR 助手，直接往 GitHub/GitLab MR 发评论、做摘要和问答；Open Code Review 输出结构化发现，靠确定性定位层而非 MR 集成。 |
+| Semgrep | 未收录 | 当前页用于它的主场景；如果更看重“确定性规则/AST 扫描器（无 LLM），安全规则库庞大”，再选 Semgrep。 | 确定性规则/AST 扫描器（无 LLM），安全规则库庞大；单次更快、免费但没有 agent 推理或自然语言行级评论。 |
 
 ## 技术栈
 

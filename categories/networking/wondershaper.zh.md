@@ -9,6 +9,11 @@ license: GPL-2.0
 maturity: stable, low activity (last push 2024-07), ~1.9k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: tool
+upstream:
+  pushed_at: 2024-07-25T02:46:32Z
+  default_branch: master
+  default_branch_sha: 98792b55c2ebf4ab4cafffb0780e0c4185fdc03d
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:07:01Z
@@ -83,13 +88,13 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| 裸 `tc`（iproute2） | 未收录 | 对 qdisc/class/filter（HTB、HFSC、cake、fq_codel）完全控制——最灵活，但 DSL 陡峭；wondershaper 不过是它上面友好的封装。 |
-| `cake` / SQM（OpenWrt） | 未收录 | 现代的杀 bufferbloat 整形器；负载下延迟最佳，但通常跑在路由器/OpenWrt 上，不是一个按主机的快脚本。 |
-| `tcconfig`（Python） | 未收录 | tc 之上的 Python CLI/库，规则更丰富（按 IP/端口、netem 丢包/延迟）——更有料更可脚本化，但带一个 Python 依赖 vs 一个 Bash 文件。 |
-| `trickle` | 未收录 | 用户态按进程带宽限制器（LD_PRELOAD）——无需 root/tc 就能给单条命令整形，但是按进程，不是网卡级上限。 |
-| 手写 Linux `tc` + `fq_codel` | 未收录 | 同一引擎、当前 qdisc、无封装——对 bufferbloat 更正确但要多写。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| 裸 `tc`（iproute2） | 未收录 | 当前页用于它的主场景；如果更看重“对 qdisc/class/filter（HTB、HFSC、cake、fq_codel）完全控制”，再选 裸 tc（iproute2）。 | 对 qdisc/class/filter（HTB、HFSC、cake、fq_codel）完全控制——最灵活，但 DSL 陡峭；wondershaper 不过是它上面友好的封装。 |
+| `cake` / SQM（OpenWrt） | 未收录 | 当前页用于它的主场景；如果更看重“现代的杀 bufferbloat 整形器”，再选 cake / SQM（OpenWrt）。 | 现代的杀 bufferbloat 整形器；负载下延迟最佳，但通常跑在路由器/OpenWrt 上，不是一个按主机的快脚本。 |
+| `tcconfig`（Python） | 未收录 | 当前页用于它的主场景；如果更看重“tc 之上的 Python CLI/库，规则更丰富（按 IP/端口、netem 丢包/延迟）”，再选 tcconfig（Python）。 | tc 之上的 Python CLI/库，规则更丰富（按 IP/端口、netem 丢包/延迟）——更有料更可脚本化，但带一个 Python 依赖 vs 一个 Bash 文件。 |
+| `trickle` | 未收录 | 当前页用于它的主场景；如果更看重“用户态按进程带宽限制器（LD_PRELOAD）”，再选 trickle。 | 用户态按进程带宽限制器（LD_PRELOAD）——无需 root/tc 就能给单条命令整形，但是按进程，不是网卡级上限。 |
+| 手写 Linux `tc` + `fq_codel` | 未收录 | 当前页用于它的主场景；如果更看重“同一引擎、当前 qdisc、无封装”，再选 手写 Linux tc + fqcodel。 | 同一引擎、当前 qdisc、无封装——对 bufferbloat 更正确但要多写。 |
 
 ## 技术栈
 

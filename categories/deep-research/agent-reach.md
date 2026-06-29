@@ -9,6 +9,11 @@ license: MIT
 maturity: v1.5.0 (2026-06-11), active, ~41.6k stars (as of 2026-06)
 last_verified: 2026-06-26
 type: tool
+upstream:
+  pushed_at: 2026-06-29T03:34:57Z
+  default_branch: main
+  default_branch_sha: d1d2eda070221cf600e2517a5b028c8d4b0aa67a
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:44:57Z
@@ -83,13 +88,13 @@ The part that earns its keep over a hand-rolled toolbox is **multi-backend routi
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [deep-research](deep-research.md) | ✅ | A true iterative research *agent* (fan-out search → read → recursive deepening → report). Agent-Reach is the access layer it lacks; different layer of the stack, not a substitute. |
-| [local-deep-research](local-deep-research.md) | ✅ | Privacy-first local research assistant with synthesis + citations and local-LLM support. Does the reasoning Agent-Reach skips; pair them rather than choose. |
-| [Vane](vane.md) | ✅ | Research/search agent focused on synthesis. Same "does the thinking" contrast — Agent-Reach is reach, not reasoning. |
-| Firecrawl | 未收录 | Hosted/OSS web-scrape-to-markdown + crawl API; cleaner single-source web extraction and a real API, but paid and web-only — no Twitter/Reddit/Bilibili/XiaoHongShu social reach. |
-| Exa / Tavily / SearXNG | 未收录 | Search backends (semantic / agent-search / self-hosted meta-search). Agent-Reach actually wraps Exa via MCP; these give you search but not the per-platform social-scrape stack. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [deep-research](deep-research.md) | ✅ | Use this page for its stated niche; choose deep-research when you need a true iterative research *agent* (fan-out search → read → recursive deepening → report). | A true iterative research *agent* (fan-out search → read → recursive deepening → report). Agent-Reach is the access layer it lacks; different layer of the stack, not a substitute. |
+| [local-deep-research](local-deep-research.md) | ✅ | Use this page for its stated niche; choose local-deep-research when you need privacy-first local research assistant with synthesis + citations and local-LLM support. | Privacy-first local research assistant with synthesis + citations and local-LLM support. Does the reasoning Agent-Reach skips; pair them rather than choose. |
+| [Vane](vane.md) | ✅ | Use this page for its stated niche; choose Vane when you need research/search agent focused on synthesis. | Research/search agent focused on synthesis. Same "does the thinking" contrast — Agent-Reach is reach, not reasoning. |
+| Firecrawl | 未收录 | Use this page for its stated niche; choose Firecrawl when you need hosted/OSS web-scrape-to-markdown + crawl API. | Hosted/OSS web-scrape-to-markdown + crawl API; cleaner single-source web extraction and a real API, but paid and web-only — no Twitter/Reddit/Bilibili/XiaoHongShu social reach. |
+| Exa / Tavily / SearXNG | 未收录 | Use this page for its stated niche; choose Exa / Tavily / SearXNG when you need search backends (semantic / agent-search / self-hosted meta-search). | Search backends (semantic / agent-search / self-hosted meta-search). Agent-Reach actually wraps Exa via MCP; these give you search but not the per-platform social-scrape stack. |
 
 ## Tech stack
 

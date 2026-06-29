@@ -9,6 +9,11 @@ license: MIT
 maturity: v1.3.0, active (2025-11)
 last_verified: 2026-06-26
 type: tool
+upstream:
+  pushed_at: 2025-11-21T17:42:12Z
+  default_branch: master
+  default_branch_sha: eea5cb28ba79ab8b078a1eaa44ce9ec44f75dbf8
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:28:07Z
@@ -81,12 +86,12 @@ You install this skill (`git clone` into `~/.claude/skills/notebooklm/`) so Clau
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [Agent Skills for Context Engineering](context-engineering-skills.md) | ✅ | A broader context-engineering *skill pack* (multiple prompt/skill files for context plumbing); this repo is a single, runnable retrieval bridge to one external service (NotebookLM) rather than a methodology bundle. |
-| notebooklm-mcp (same author) | 未收录 | The MCP-server sibling: persistent chat sessions, TypeScript/npm, and multi-tool support (Claude Code, Codex, Cursor). Choose it for stateful research across tools; choose this skill for a zero-server, Python, Claude-Code-only clone-and-go install. |
-| Local RAG stacks (LlamaIndex / LangChain retrievers, etc.) | 未收录 | Self-hosted embeddings + vector DB you own end-to-end; higher setup cost (chunking, embeddings, infra) but no third-party account, no public-share requirement, no browser automation. This skill trades that control for NotebookLM's pre-built Gemini grounding. |
-| Built-in file reading / grep retrieval | 未收录 | What Claude Code does by default — high token cost, keyword-shaped retrieval, hallucination on gaps. This skill exists specifically to replace that for doc-heavy tasks. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [Agent Skills for Context Engineering](context-engineering-skills.md) | ✅ | Use this page for its stated niche; choose Agent Skills for Context Engineering when you need a broader context-engineering *skill pack* (multiple prompt/skill files for context plumbing). | A broader context-engineering *skill pack* (multiple prompt/skill files for context plumbing); this repo is a single, runnable retrieval bridge to one external service (NotebookLM) rather than a methodology bundle. |
+| notebooklm-mcp (same author) | 未收录 | Use this page for its stated niche; choose notebooklm-mcp (same author) when you need the MCP-server sibling: persistent chat sessions, TypeScript/npm, and multi-tool support (Claude Cod. | The MCP-server sibling: persistent chat sessions, TypeScript/npm, and multi-tool support (Claude Code, Codex, Cursor). Choose it for stateful research across tools; choose this skill for a zero-server, Python, Claude-Code-only clone-and-go install. |
+| Local RAG stacks (LlamaIndex / LangChain retrievers, etc.) | 未收录 | Use this page for its stated niche; choose Local RAG stacks (LlamaIndex / LangChain retrievers, etc.) when you need self-hosted embeddings + vector DB you own end-to-end. | Self-hosted embeddings + vector DB you own end-to-end; higher setup cost (chunking, embeddings, infra) but no third-party account, no public-share requirement, no browser automation. This skill trades that control for NotebookLM's pre-built Gemini grounding. |
+| Built-in file reading / grep retrieval | 未收录 | Use this page for its stated niche; choose Built-in file reading / grep retrieval when you need what Claude Code does by default. | What Claude Code does by default — high token cost, keyword-shaped retrieval, hallucination on gaps. This skill exists specifically to replace that for doc-heavy tasks. |
 
 ## Tech stack
 

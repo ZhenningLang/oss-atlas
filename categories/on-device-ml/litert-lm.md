@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: Pre-1.0, fast cadence; stable v0.13.1 (2026-06-03), v0.14.0-alpha (2026-06-18); Google-maintained
 last_verified: 2026-06-26
 type: tool
+upstream:
+  pushed_at: 2026-06-29T08:21:44Z
+  default_branch: main
+  default_branch_sha: 645fcac1d5b47d1077edb01bc8f104e04c1ae6dc
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:09:41Z
@@ -89,13 +94,13 @@ So you reach for LiteRT-LM. You package a **Gemma** model into the `.litertlm` f
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| llama.cpp | 未收录 | Far broader model/quantization support (GGUF ecosystem) and ubiquitous reach, but more cross-platform build complexity and no single Google-blessed mobile SDK — you assemble more glue. |
-| MLX / mlx-lm (Apple) | 未收录 | Faster than LiteRT-LM on many non-Gemma models with clean Swift/Python ergonomics on Apple silicon, but Apple-only — can't be your cross-platform answer. |
-| MediaPipe LLM Inference API (Google) | 未收录 | Higher-level, easier drop-in on-device LLM from the same org using `.task` models, but less of a low-level orchestration layer and overlapping/superseded by LiteRT-LM in direction — the simpler-but-less-flexible sibling. |
-| ONNX Runtime (+ GenAI / Mobile) | 未收录 | Vendor-neutral, mature, many formats and backends across ecosystems, but heavier, less tuned for the latest small mobile LLMs, and lacks LiteRT-LM's Gemma-specific mobile quantization wins. |
-| Apple Core ML / Foundation Models | 未收录 | Best Apple Neural Engine integration and OS-level models on newer iPhones, but Apple-locked, conversion can be painful, no path to Android or generic edge hardware. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| llama.cpp | 未收录 | Use this page for its stated niche; choose llama.cpp when you need far broader model/quantization support (GGUF ecosystem) and ubiquitous reach, but more cross-platfor. | Far broader model/quantization support (GGUF ecosystem) and ubiquitous reach, but more cross-platform build complexity and no single Google-blessed mobile SDK — you assemble more glue. |
+| MLX / mlx-lm (Apple) | 未收录 | Use this page for its stated niche; choose MLX / mlx-lm (Apple) when you need faster than LiteRT-LM on many non-Gemma models with clean Swift/Python ergonomics on Apple silicon,. | Faster than LiteRT-LM on many non-Gemma models with clean Swift/Python ergonomics on Apple silicon, but Apple-only — can't be your cross-platform answer. |
+| MediaPipe LLM Inference API (Google) | 未收录 | Use this page for its stated niche; choose MediaPipe LLM Inference API (Google) when you need higher-level, easier drop-in on-device LLM from the same org using `. | Higher-level, easier drop-in on-device LLM from the same org using `.task` models, but less of a low-level orchestration layer and overlapping/superseded by LiteRT-LM in direction — the simpler-but-less-flexible sibling. |
+| ONNX Runtime (+ GenAI / Mobile) | 未收录 | Use this page for its stated niche; choose ONNX Runtime (+ GenAI / Mobile) when you need vendor-neutral, mature, many formats and backends across ecosystems, but heavier, less tuned for the. | Vendor-neutral, mature, many formats and backends across ecosystems, but heavier, less tuned for the latest small mobile LLMs, and lacks LiteRT-LM's Gemma-specific mobile quantization wins. |
+| Apple Core ML / Foundation Models | 未收录 | Use this page for its stated niche; choose Apple Core ML / Foundation Models when you need best Apple Neural Engine integration and OS-level models on newer iPhones, but Apple-locked, convers. | Best Apple Neural Engine integration and OS-level models on newer iPhones, but Apple-locked, conversion can be painful, no path to Android or generic edge hardware. |
 
 ## Tech stack
 

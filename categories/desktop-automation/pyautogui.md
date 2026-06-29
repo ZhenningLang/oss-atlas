@@ -9,6 +9,11 @@ license: BSD-3-Clause
 maturity: stable, coasting, ~12.6k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2024-08-20T18:34:57Z
+  default_branch: master
+  default_branch_sha: b4255d0be42c377154c7d92337d7f8515fc63234
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:46:20Z
@@ -83,13 +88,13 @@ It's also the natural reach when you want a *visible*, human-mimicking robot —
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| pywinauto | 未收录 | Windows-only, drives the UI Automation / Win32 accessibility tree — element-aware and far more robust than pixels, but not cross-platform and a steeper API. |
-| AutoHotkey | 未收录 | Windows-only scripting language purpose-built for hotkeys/macros and GUI automation; very mature, but its own language and no native cross-platform/Python story. |
-| SikuliX | 未收录 | Java-based image-recognition automation (OCR + template match); cross-platform like PyAutoGUI but heavier (JVM) and IDE-centric. |
-| Selenium / Playwright | 未收录 | DOM-level browser automation — the right tool when the target is a web page, not a native desktop app. |
-| pynput | 未收录 | Lower-level cross-platform input control/monitoring (incl. global hotkey listeners); no screenshot/image-locate, smaller scope than PyAutoGUI. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| pywinauto | 未收录 | Use this page for its stated niche; choose pywinauto when you need windows-only, drives the UI Automation / Win32 accessibility tree. | Windows-only, drives the UI Automation / Win32 accessibility tree — element-aware and far more robust than pixels, but not cross-platform and a steeper API. |
+| AutoHotkey | 未收录 | Use this page for its stated niche; choose AutoHotkey when you need windows-only scripting language purpose-built for hotkeys/macros and GUI automation. | Windows-only scripting language purpose-built for hotkeys/macros and GUI automation; very mature, but its own language and no native cross-platform/Python story. |
+| SikuliX | 未收录 | Use this page for its stated niche; choose SikuliX when you need java-based image-recognition automation (OCR + template match). | Java-based image-recognition automation (OCR + template match); cross-platform like PyAutoGUI but heavier (JVM) and IDE-centric. |
+| Selenium / Playwright | 未收录 | Use this page for its stated niche; choose Selenium / Playwright when you need DOM-level browser automation. | DOM-level browser automation — the right tool when the target is a web page, not a native desktop app. |
+| pynput | 未收录 | Use this page for its stated niche; choose pynput when you need lower-level cross-platform input control/monitoring (incl. | Lower-level cross-platform input control/monitoring (incl. global hotkey listeners); no screenshot/image-locate, smaller scope than PyAutoGUI. |
 
 ## Tech stack
 

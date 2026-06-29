@@ -9,6 +9,11 @@ license: MIT
 maturity: no tagged release, active, last pushed 2026-06 (as of 2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+upstream:
+  pushed_at: 2026-06-14T17:12:08Z
+  default_branch: main
+  default_branch_sha: ff554365af3a57af5858749a57d7cc3230beec89
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:31:26Z
@@ -81,14 +86,14 @@ You reach for this pack when you'd rather install one author's battle-tested, re
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [antfu/skills](antfu-skills.md) | ✅ | Another single-author personal skill collection; antfu's leans web/JS-tooling and is English-first. Khazix's is Chinese-first and tilts toward content/ops chores (writing, AI-news, cleanup). |
-| [Dimillian/Skills](dimillian-skills.md) | ✅ | Personal collection skewed to Apple/Swift dev. Khazix's overlaps little — different domain and language. |
-| [ljg-skills](ljg-skills.md) | ✅ | Sibling personal collection in this leaf; compare by which specific chores each author automates and whether the trigger language matches yours. |
-| [qiushi-skill](qiushi-skill.md) | ✅ | Another Chinese-language personal skill set; pick by overlap with your actual tasks. |
-| [Superpowers](../../agent-dev-methodology/superpowers.md) | ✅ | An opinionated SDLC *methodology* pack (TDD/subagent discipline) — different unit of consumption. Khazix's is independent utility skills, not a workflow framework. |
-| Anthropic's official / built-in Agent Skills | 未收录 | The platform's first-party skill ecosystem; Khazix's is a third-party personal bundle layered on top and can duplicate or conflict with native skills. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [antfu/skills](antfu-skills.md) | ✅ | Use this page for its stated niche; choose antfu/skills when you need another single-author personal skill collection. | Another single-author personal skill collection; antfu's leans web/JS-tooling and is English-first. Khazix's is Chinese-first and tilts toward content/ops chores (writing, AI-news, cleanup). |
+| [Dimillian/Skills](dimillian-skills.md) | ✅ | Use this page for its stated niche; choose Dimillian/Skills when you need personal collection skewed to Apple/Swift dev. | Personal collection skewed to Apple/Swift dev. Khazix's overlaps little — different domain and language. |
+| [ljg-skills](ljg-skills.md) | ✅ | Use this page for its stated niche; choose ljg-skills when you need sibling personal collection in this leaf. | Sibling personal collection in this leaf; compare by which specific chores each author automates and whether the trigger language matches yours. |
+| [qiushi-skill](qiushi-skill.md) | ✅ | Use this page for its stated niche; choose qiushi-skill when you need another Chinese-language personal skill set. | Another Chinese-language personal skill set; pick by overlap with your actual tasks. |
+| [Superpowers](../../agent-dev-methodology/superpowers.md) | ✅ | Use this page for its stated niche; choose Superpowers when you need an opinionated SDLC *methodology* pack (TDD/subagent discipline). | An opinionated SDLC *methodology* pack (TDD/subagent discipline) — different unit of consumption. Khazix's is independent utility skills, not a workflow framework. |
+| Anthropic's official / built-in Agent Skills | 未收录 | Use this page for its stated niche; choose Anthropic's official / built-in Agent Skills when you need the platform's first-party skill ecosystem. | The platform's first-party skill ecosystem; Khazix's is a third-party personal bundle layered on top and can duplicate or conflict with native skills. |
 
 ## Health & viability
 

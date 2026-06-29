@@ -5,17 +5,17 @@
 
 ## Projects in this category
 
-| Project | Use when | Page |
-|---|---|---|
-| **NextChat** | Use it when you want a private, self-deployable multi-provider AI chat UI across web/desktop/mobile — not a multi-user RBAC team platform. | [→](nextchat.md) |
+| Project | Use when | Health | Page |
+| --- | --- | --- | --- |
+| **NextChat** | Use it when you want a private, self-deployable multi-provider AI chat UI across web/desktop/mobile — not a multi-user RBAC team platform. | B (5/6) | [→](nextchat.md) |
 
 ## Comparison matrix
 
-| Option | Indexed | One-line tradeoff |
-|---|---|---|
-| [NextChat](nextchat.md) | ✅ | Light, cross-platform, one-click-deploy chat UI; single-user-shaped, not RBAC/quota team admin. |
-| [HiveChat](../team-chat/hivechat.md) | ✅ | Admin-managed multi-user team chat with per-group model access and token quotas. |
-| LibreChat / Lobe Chat / open-webui | 未收录 | Other self-hosted chat UIs named across the pages (some with multi-user/RBAC). |
+| Option | Indexed | Health | One-line tradeoff |
+| --- | --- | --- | --- |
+| [NextChat](nextchat.md) | ✅ | B (5/6) | Light, cross-platform, one-click-deploy chat UI; single-user-shaped, not RBAC/quota team admin. |
+| [HiveChat](../team-chat/hivechat.md) | ✅ | C (3/6) | Admin-managed multi-user team chat with per-group model access and token quotas. |
+| LibreChat / Lobe Chat / open-webui | 未收录 | — | Other self-hosted chat UIs named across the pages (some with multi-user/RBAC). |
 
 ## What belongs here
 

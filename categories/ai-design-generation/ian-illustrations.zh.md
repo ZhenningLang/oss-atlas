@@ -9,6 +9,11 @@ license: MIT
 maturity: v1.0.0 release 2026-05-27, active (2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+upstream:
+  pushed_at: 2026-06-03T11:35:43Z
+  default_branch: main
+  default_branch_sha: 91b560849e8f883922cc2fa8a358a668caa94105
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:38:34Z
@@ -81,14 +86,14 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| [guizang-social-card](guizang-social-card.zh.md) | ✅ | 生成精修的社交/金句卡片（常走可编辑模板），不是手绘的正文解释草图；视觉调性不同。 |
-| [guizang-ppt](guizang-ppt.zh.md) | ✅ | 做幻灯片 deck（结构化、多页）；本 skill 只做单概念正文配图，并拒绝做 deck。 |
-| [html-anything](html-anything.zh.md) | ✅ | 产出可编辑、可托管的 HTML/CSS 产物；本 skill 产出固定画风的扁平 PNG。 |
-| [open-design](open-design.zh.md) | ✅ | 偏向可复用的 UI/设计系统产物；与「固定 IP 的中文配图嗓音」是正交诉求。 |
-| [impeccable](impeccable.zh.md) | ✅ | 生成目标不同（设计类产物），而非固定 IP 的中文插画风格。 |
-| nano-banana / gpt-image 提示词包 | 未收录 | 通用出图提示词集合给你裸的模型访问，但没有本 skill 的文章分析、shot list、一致 IP 这一层。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [guizang-social-card](guizang-social-card.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“生成精修的社交/金句卡片（常走可编辑模板），不是手绘的正文解释草图”，再选 guizang-social-card。 | 生成精修的社交/金句卡片（常走可编辑模板），不是手绘的正文解释草图；视觉调性不同。 |
+| [guizang-ppt](guizang-ppt.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“做幻灯片 deck（结构化、多页）”，再选 guizang-ppt。 | 做幻灯片 deck（结构化、多页）；本 skill 只做单概念正文配图，并拒绝做 deck。 |
+| [html-anything](html-anything.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“产出可编辑、可托管的 HTML/CSS 产物”，再选 html-anything。 | 产出可编辑、可托管的 HTML/CSS 产物；本 skill 产出固定画风的扁平 PNG。 |
+| [open-design](open-design.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“偏向可复用的 UI/设计系统产物”，再选 open-design。 | 偏向可复用的 UI/设计系统产物；与「固定 IP 的中文配图嗓音」是正交诉求。 |
+| [impeccable](impeccable.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“生成目标不同（设计类产物），而非固定 IP 的中文插画风格”，再选 impeccable。 | 生成目标不同（设计类产物），而非固定 IP 的中文插画风格。 |
+| nano-banana / gpt-image 提示词包 | 未收录 | 当前页用于它的主场景；如果更看重“通用出图提示词集合给你裸的模型访问，但没有本 skill 的文章分析、shot list、一致 IP 这一层”，再选 nano-banana / gpt-image 提示词包。 | 通用出图提示词集合给你裸的模型访问，但没有本 skill 的文章分析、shot list、一致 IP 这一层。 |
 
 ## 健康度与可持续性
 

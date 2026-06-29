@@ -9,6 +9,11 @@ license: MIT
 maturity: v0.1.2, ARCHIVED by Meta (read-only), last code push 2021-09 (2026-06)
 last_verified: 2026-06-29
 type: tool
+upstream:
+  pushed_at: 2021-09-15T20:30:34Z
+  default_branch: main
+  default_branch_sha: 9704810d994704761181eafcb816122751ef0fb7
+  archived: true
 health:
   schema: 1
   computed_at: 2026-06-29T04:21:21Z
@@ -87,14 +92,14 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| [pyrasite](pyrasite.zh.md) | ✅ | 同样经 gdb 挂到运行中的 Python 进程，但它*注入任意代码*（对象 dump、线程栈、反向 shell），而非给出打包好的按类型内存报告；面更广、更危险，同样低节奏但**未归档**。 |
-| tracemalloc（标准库） | 未收录 | 内置于 CPython；*从你自己的进程内部*追踪分配并显示内存从何处分配——永久维护、无需 GDB，但要求你掌控／能埋点代码（无法挂到任意运行中的 PID）。 |
-| memray（Bloomberg） | 未收录 | 活跃维护的原生内存 profiler，带火焰图和 live 模式；当下 Python 内存工作的现代默认选择，但你用它自己的工具启动／挂载，而非读取任意 PID 的 ncurses 快照。 |
-| Pympler | 未收录 | memory-analyzer 自己依赖的对象内省库；从你的进程内部给出按类型的对象大小／计数——有维护，但是个你嵌入的库，不是挂到 PID 的工具。 |
-| objgraph | 未收录 | 这里的另一个依赖；从进程内部画对象引用图，追是什么让对象活着——有维护，但是进程内的，不是外部挂载。 |
-| guppy3 / heapy、Scalene | 未收录 | guppy3 ＝从进程内部做堆分析；Scalene ＝有维护的 CPU＋GPU＋内存 profiler。两者都是「内存去哪了」的有维护替代品，都不像 memory-analyzer 那样挂到一个外部的活 PID。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [pyrasite](pyrasite.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“同样经 gdb 挂到运行中的 Python 进程，但它*注入任意代码*（对象 dump、线程栈、反向 shell），而非给出打包好的按类型内存报告”，再选 pyrasite。 | 同样经 gdb 挂到运行中的 Python 进程，但它*注入任意代码*（对象 dump、线程栈、反向 shell），而非给出打包好的按类型内存报告；面更广、更危险，同样低节奏但**未归档**。 |
+| tracemalloc（标准库） | 未收录 | 当前页用于它的主场景；如果更看重“内置于 CPython”，再选 tracemalloc（标准库）。 | 内置于 CPython；*从你自己的进程内部*追踪分配并显示内存从何处分配——永久维护、无需 GDB，但要求你掌控／能埋点代码（无法挂到任意运行中的 PID）。 |
+| memray（Bloomberg） | 未收录 | 当前页用于它的主场景；如果更看重“活跃维护的原生内存 profiler，带火焰图和 live 模式”，再选 memray（Bloomberg）。 | 活跃维护的原生内存 profiler，带火焰图和 live 模式；当下 Python 内存工作的现代默认选择，但你用它自己的工具启动／挂载，而非读取任意 PID 的 ncurses 快照。 |
+| Pympler | 未收录 | 当前页用于它的主场景；如果更看重“memory-analyzer 自己依赖的对象内省库”，再选 Pympler。 | memory-analyzer 自己依赖的对象内省库；从你的进程内部给出按类型的对象大小／计数——有维护，但是个你嵌入的库，不是挂到 PID 的工具。 |
+| objgraph | 未收录 | 当前页用于它的主场景；如果更看重“这里的另一个依赖”，再选 objgraph。 | 这里的另一个依赖；从进程内部画对象引用图，追是什么让对象活着——有维护，但是进程内的，不是外部挂载。 |
+| guppy3 / heapy、Scalene | 未收录 | 当前页用于它的主场景；如果更看重“guppy3 ＝从进程内部做堆分析”，再选 guppy3 / heapy、Scalene。 | guppy3 ＝从进程内部做堆分析；Scalene ＝有维护的 CPU＋GPU＋内存 profiler。两者都是「内存去哪了」的有维护替代品，都不像 memory-analyzer 那样挂到一个外部的活 PID。 |
 
 ## 技术栈
 

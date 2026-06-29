@@ -5,16 +5,16 @@
 
 ## 本分类项目
 
-| 项目 | 何时用 | 页面 |
-|---|---|---|
-| **Kong Gateway** | 基于 OpenResty/Nginx 的 API 网关，插件层把一个反向代理变成可编程边界：既管 REST/微服务，也从 3.x 起管 LLM/MCP 流量。 | [→](kong.zh.md) |
+| 项目 | 何时用 | 健康度 | 页面 |
+| --- | --- | --- | --- |
+| **Kong Gateway** | 基于 OpenResty/Nginx 的 API 网关，插件层把一个反向代理变成可编程边界：既管 REST/微服务，也从 3.x 起管 LLM/MCP 流量。 | A（5/6） | [→](kong.zh.md) |
 
 ## 对比矩阵
 
-| 选项 | 是否收录 | 一句话取舍 |
-|---|---|---|
-| [Kong Gateway](kong.zh.md) | ✅ | 基于 OpenResty/Nginx 的 API 网关，插件层把一个反向代理变成可编程边界：既管 REST/微服务，也从 3.x 起管 LLM/MCP 流量。 |
-| Tyk / KrakenD / Envoy / APISIX | 未收录 | 页面里点到的其他 API 网关。 |
+| 选项 | 是否收录 | 健康度 | 一句话取舍 |
+| --- | --- | --- | --- |
+| [Kong Gateway](kong.zh.md) | ✅ | A（5/6） | 基于 OpenResty/Nginx 的 API 网关，插件层把一个反向代理变成可编程边界：既管 REST/微服务，也从 3.x 起管 LLM/MCP 流量。 |
+| Tyk / KrakenD / Envoy / APISIX | 未收录 | — | 页面里点到的其他 API 网关。 |
 
 ## 什么该放这里
 

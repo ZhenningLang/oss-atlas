@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v1.15.x, active (2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2025-06-03T21:42:03Z
+  default_branch: master
+  default_branch_sha: 0a400e6c6c52cb7f4ba15ffaaa55b535d0d1b2b1
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:18:32Z
@@ -85,13 +90,13 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| Textual | 未收录 | 现代异步、CSS 样式、鼠标优先的 TUI 框架（Textualize）；widget/样式模型丰富得多、背书活跃，但更重，编程模型也与 asciimatics 类 curses 的 API 不同。 |
-| urwid | 未收录 | 老牌 Python 控制台 UI 库，widget/布局系统灵活；偏 Unix（Windows 支持弱），且无动画引擎。 |
-| rich | 未收录 | 带样式的终端*输出*（表格、标记、进度、语法）——不是全屏 UI/事件循环；与之互补，不能替代交互屏。 |
-| blessed / curses（标准库） | 未收录 | 更底层的终端控制；`curses` 仅 Unix，`blessed` 是更友好的封装——两者都不带 widget 或动画框架。 |
-| prompt_toolkit | 未收录 | 擅长交互式提示/REPL 和部分全屏应用，行编辑很强，但侧重点不同（输入），也没有 ASCII 特效引擎。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| Textual | 未收录 | 当前页用于它的主场景；如果更看重“现代异步、CSS 样式、鼠标优先的 TUI 框架（Textualize）”，再选 Textual。 | 现代异步、CSS 样式、鼠标优先的 TUI 框架（Textualize）；widget/样式模型丰富得多、背书活跃，但更重，编程模型也与 asciimatics 类 curses 的 API 不同。 |
+| urwid | 未收录 | 当前页用于它的主场景；如果更看重“老牌 Python 控制台 UI 库，widget/布局系统灵活”，再选 urwid。 | 老牌 Python 控制台 UI 库，widget/布局系统灵活；偏 Unix（Windows 支持弱），且无动画引擎。 |
+| rich | 未收录 | 当前页用于它的主场景；如果更看重“带样式的终端*输出*（表格、标记、进度、语法）”，再选 rich。 | 带样式的终端*输出*（表格、标记、进度、语法）——不是全屏 UI/事件循环；与之互补，不能替代交互屏。 |
+| blessed / curses（标准库） | 未收录 | 当前页用于它的主场景；如果更看重“更底层的终端控制”，再选 blessed / curses（标准库）。 | 更底层的终端控制；`curses` 仅 Unix，`blessed` 是更友好的封装——两者都不带 widget 或动画框架。 |
+| prompt_toolkit | 未收录 | 当前页用于它的主场景；如果更看重“擅长交互式提示/REPL 和部分全屏应用，行编辑很强，但侧重点不同（输入），也没有 ASCII 特效引擎”，再选 prompttoolkit。 | 擅长交互式提示/REPL 和部分全屏应用，行编辑很强，但侧重点不同（输入），也没有 ASCII 特效引擎。 |
 
 ## 技术栈
 

@@ -9,6 +9,11 @@ license: MIT
 maturity: research demo, no tagged release, last pushed 2026-03 (as of 2026-06)
 last_verified: 2026-06-26
 type: tool
+upstream:
+  pushed_at: 2026-03-20T01:51:23Z
+  default_branch: main
+  default_branch_sha: 77263483cd51fffed9593ce580e8702130c34bec
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:04:17Z
@@ -86,12 +91,12 @@ You're a hobbyist or independent researcher with a couple of consumer GPUs and a
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| RYS / `mergekit` passthrough (layer-stacking model merges) | 未收录 | mergekit's `passthrough` method also duplicates/stacks layers, but it's a general model-merging toolkit aimed at producing a finished merged model; llm-circuit-finder adds the *search* loop (sweep + probes) to discover *which* block to duplicate and validate it. |
-| lm-evaluation-harness | 未收录 | The standard benchmark runner this repo calls out to for validation; it measures models but doesn't perform or search layer surgery. |
-| Mechanistic-interpretability circuit tooling (e.g. TransformerLens) | 未收录 | Studies circuits via activation patching/ablation on HF models for *understanding*; this repo is a coarse, capability-oriented "duplicate whole layer blocks in GGUF and measure" demo, not feature-level interp. |
-| Fine-tuning / LoRA stacks | 未收录 | Change weights to improve a capability; this is orthogonal (no training) and the author notes you can stack both. Different cost/benefit and reproducibility profile. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| RYS / `mergekit` passthrough (layer-stacking model merges) | 未收录 | Use this page for its stated niche; choose RYS / mergekit passthrough (layer-stacking model merges) when you need mergekit's `passthrough` method also duplicates/stacks layers, but it's a general model-merging tool. | mergekit's `passthrough` method also duplicates/stacks layers, but it's a general model-merging toolkit aimed at producing a finished merged model; llm-circuit-finder adds the *search* loop (sweep + probes) to discover *which* block to duplicate and validate it. |
+| lm-evaluation-harness | 未收录 | Use this page for its stated niche; choose lm-evaluation-harness when you need the standard benchmark runner this repo calls out to for validation. | The standard benchmark runner this repo calls out to for validation; it measures models but doesn't perform or search layer surgery. |
+| Mechanistic-interpretability circuit tooling (e.g. TransformerLens) | 未收录 | Use this page for its stated niche; choose Mechanistic-interpretability circuit tooling (e.g. TransformerLens) when you need studies circuits via activation patching/ablation on HF models for *understanding*. | Studies circuits via activation patching/ablation on HF models for *understanding*; this repo is a coarse, capability-oriented "duplicate whole layer blocks in GGUF and measure" demo, not feature-level interp. |
+| Fine-tuning / LoRA stacks | 未收录 | Use this page for its stated niche; choose Fine-tuning / LoRA stacks when you need change weights to improve a capability. | Change weights to improve a capability; this is orthogonal (no training) and the author notes you can stack both. Different cost/benefit and reproducibility profile. |
 
 ## Tech stack
 

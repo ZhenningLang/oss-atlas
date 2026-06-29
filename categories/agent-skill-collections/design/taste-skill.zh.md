@@ -9,6 +9,11 @@ license: MIT
 maturity: no tagged release, active, last push 2026-06 (51.2k stars [未验证])
 last_verified: 2026-06-26
 type: skill-pack
+upstream:
+  pushed_at: 2026-06-20T23:05:00Z
+  default_branch: main
+  default_branch_sha: 06d6028b5c623016c59ce8536f578e5a1127b499
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:29:02Z
@@ -81,13 +86,13 @@ health:
 
 ## 横向对比
 
-| 替代方案 | 已收录 | 取舍 |
-|---|---|---|
-| [designer-skills](designer-skills.md) | ✅ | 同 leaf 的姊妹 design-taste 包；按各自覆盖的美学变体、支持的 harness，以及协议是否贴合你的输出风格来选。 |
-| [stitch-skills](stitch-skills.md) | ✅ | 同 design leaf 的姊妹 skill 包；目标同样是「改进 agent 的 UI 输出」，但 skill 原语不同——按安装目标与变体覆盖度来选。 |
-| [ui-ux-pro-max](ui-ux-pro-max.md) | ✅ | 偏向更宽泛 UI/UX 指导的姊妹包；Taste-Skill 更窄，聚焦 anti-slop 前端生成，并带可调的 variance / motion / density 旋钮。 |
-| make-interfaces-feel-better | 未收录 | 被列为 leaf 姊妹但尚无页面；按它强调交互打磨、还是 Taste-Skill 的生成期美学来对比。 |
-| Anthropic / 内置 agent skills | 未收录 | 宿主 harness 自带的 skill 生态；Taste-Skill 是叠加其上的第三方包，可能与原生设计 skill 重复或冲突。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [designer-skills](designer-skills.md) | ✅ | 当前页用于它的主场景；如果更看重“同 leaf 的姊妹 design-taste 包”，再选 designer-skills。 | 同 leaf 的姊妹 design-taste 包；按各自覆盖的美学变体、支持的 harness，以及协议是否贴合你的输出风格来选。 |
+| [stitch-skills](stitch-skills.md) | ✅ | 当前页用于它的主场景；如果更看重“同 design leaf 的姊妹 skill 包”，再选 stitch-skills。 | 同 design leaf 的姊妹 skill 包；目标同样是「改进 agent 的 UI 输出」，但 skill 原语不同——按安装目标与变体覆盖度来选。 |
+| [ui-ux-pro-max](ui-ux-pro-max.md) | ✅ | 当前页用于它的主场景；如果更看重“偏向更宽泛 UI/UX 指导的姊妹包”，再选 ui-ux-pro-max。 | 偏向更宽泛 UI/UX 指导的姊妹包；Taste-Skill 更窄，聚焦 anti-slop 前端生成，并带可调的 variance / motion / density 旋钮。 |
+| make-interfaces-feel-better | 未收录 | 当前页用于它的主场景；如果更看重“被列为 leaf 姊妹但尚无页面”，再选 make-interfaces-feel-better。 | 被列为 leaf 姊妹但尚无页面；按它强调交互打磨、还是 Taste-Skill 的生成期美学来对比。 |
+| Anthropic / 内置 agent skills | 未收录 | 当前页用于它的主场景；如果更看重“宿主 harness 自带的 skill 生态”，再选 Anthropic / 内置 agent skills。 | 宿主 harness 自带的 skill 生态；Taste-Skill 是叠加其上的第三方包，可能与原生设计 skill 重复或冲突。 |
 
 ## 健康度与可持续性
 

@@ -9,6 +9,11 @@ license: MIT
 maturity: no tagged releases, last pushed 2023-10 (stale), 4.2k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: tool
+upstream:
+  pushed_at: 2023-10-22T02:50:06Z
+  default_branch: master
+  default_branch_sha: fe261969558bf79dffa46d37d2b95f62d65502a1
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:42:59Z
@@ -76,13 +81,13 @@ You reach for it when the job is specifically **MySQL→ES, one direction, modes
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| Debezium (+ Kafka Connect) | 未收录 | The industrial-strength CDC standard; durable, multi-source, exactly-once-ish via Kafka — but it's a whole platform to run vs one Go binary. |
-| Logstash JDBC input | 未收录 | Polling-based (not binlog CDC), simpler to start, but query-polling misses deletes and adds DB load; coarser than true CDC. |
-| Flink CDC | 未收录 | Full stream-processing CDC with transforms and many connectors; powerful and maintained, far heavier operationally. |
-| Canal (Alibaba) | 未收录 | Mature MySQL binlog CDC server (Java); more robust and active, but a server to operate rather than a single-binary syncer. |
-| go-mysql (library) | 未收录 | The underlying binlog/replication library this tool is built on; use it directly if you want to build a custom syncer rather than this canned one. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| Debezium (+ Kafka Connect) | 未收录 | Use this page for its stated niche; choose Debezium (+ Kafka Connect) when you need the industrial-strength CDC standard. | The industrial-strength CDC standard; durable, multi-source, exactly-once-ish via Kafka — but it's a whole platform to run vs one Go binary. |
+| Logstash JDBC input | 未收录 | Use this page for its stated niche; choose Logstash JDBC input when you need polling-based (not binlog CDC), simpler to start, but query-polling misses deletes and adds DB load. | Polling-based (not binlog CDC), simpler to start, but query-polling misses deletes and adds DB load; coarser than true CDC. |
+| Flink CDC | 未收录 | Use this page for its stated niche; choose Flink CDC when you need full stream-processing CDC with transforms and many connectors. | Full stream-processing CDC with transforms and many connectors; powerful and maintained, far heavier operationally. |
+| Canal (Alibaba) | 未收录 | Use this page for its stated niche; choose Canal (Alibaba) when you need mature MySQL binlog CDC server (Java). | Mature MySQL binlog CDC server (Java); more robust and active, but a server to operate rather than a single-binary syncer. |
+| go-mysql (library) | 未收录 | Use this page for its stated niche; choose go-mysql (library) when you need the underlying binlog/replication library this tool is built on. | The underlying binlog/replication library this tool is built on; use it directly if you want to build a custom syncer rather than this canned one. |
 
 ## Tech stack
 

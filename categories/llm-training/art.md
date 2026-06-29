@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v0.5.x, active (2026-03 latest release seen; 2026-06)
 last_verified: 2026-06-26
 type: framework
+upstream:
+  pushed_at: 2026-06-29T01:04:19Z
+  default_branch: main
+  default_branch_sha: b2347d248320b4560641ea1ab6a10520f6a68477
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:57:56Z
@@ -84,14 +89,14 @@ ART is built for exactly this. You keep your agent code in Python and route its 
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-| --- | --- | --- |
-| [Unsloth](unsloth.md) | ✅ | Faster/cheaper LoRA fine-tuning kernels (ART uses it under the hood). Unsloth is the training-efficiency layer; ART adds the agentic GRPO loop + RULER reward orchestration on top. Use Unsloth alone for SFT/single-turn GRPO; use ART for multi-step agents. |
-| [agent-lightning](agent-lightning.md) | ✅ | Microsoft's framework to RL-train agents with minimal code changes, decoupling agent execution from training. Closest conceptual sibling; differs on integration model and reward tooling — ART's headline differentiator is the bundled RULER zero-label reward. |
-| [LLaMA-Factory](llamafactory.md) | ✅ | Broad SFT/DPO/PPO fine-tuning toolkit across many models with a config/UI workflow. Stronger for general fine-tuning breadth; weaker on the specific "train a deployed multi-step agent from rollouts" loop ART specializes in. |
-| HF TRL | 未收录 | The lower-level GRPO/PPO/DPO trainer library ART (and others) build on. More control and generality, but you assemble the agent rollout loop, reward function, and inference serving yourself. |
-| verl | 未收录 | High-throughput, distributed RLHF/RL library aimed at large-scale training. Scales further but is heavier to operate; less focused on the single-engineer "instrument my agent" ergonomics. |
-| torchtune | 未收录 | PyTorch-native fine-tuning/RL recipes (ART leans on it in its training stack). A building block, not an agent-RL framework. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [Unsloth](unsloth.md) | ✅ | Use this page for its stated niche; choose Unsloth when you need faster/cheaper LoRA fine-tuning kernels (ART uses it under the hood). | Faster/cheaper LoRA fine-tuning kernels (ART uses it under the hood). Unsloth is the training-efficiency layer; ART adds the agentic GRPO loop + RULER reward orchestration on top. Use Unsloth alone for SFT/single-turn GRPO; use ART for multi-step agents. |
+| [agent-lightning](agent-lightning.md) | ✅ | Use this page for its stated niche; choose agent-lightning when you need microsoft's framework to RL-train agents with minimal code changes, decoupling agent execution from. | Microsoft's framework to RL-train agents with minimal code changes, decoupling agent execution from training. Closest conceptual sibling; differs on integration model and reward tooling — ART's headline differentiator is the bundled RULER zero-label reward. |
+| [LLaMA-Factory](llamafactory.md) | ✅ | Use this page for its stated niche; choose LLaMA-Factory when you need broad SFT/DPO/PPO fine-tuning toolkit across many models with a config/UI workflow. | Broad SFT/DPO/PPO fine-tuning toolkit across many models with a config/UI workflow. Stronger for general fine-tuning breadth; weaker on the specific "train a deployed multi-step agent from rollouts" loop ART specializes in. |
+| HF TRL | 未收录 | Use this page for its stated niche; choose HF TRL when you need the lower-level GRPO/PPO/DPO trainer library ART (and others) build on. | The lower-level GRPO/PPO/DPO trainer library ART (and others) build on. More control and generality, but you assemble the agent rollout loop, reward function, and inference serving yourself. |
+| verl | 未收录 | Use this page for its stated niche; choose verl when you need high-throughput, distributed RLHF/RL library aimed at large-scale training. | High-throughput, distributed RLHF/RL library aimed at large-scale training. Scales further but is heavier to operate; less focused on the single-engineer "instrument my agent" ergonomics. |
+| torchtune | 未收录 | Use this page for its stated niche; choose torchtune when you need pyTorch-native fine-tuning/RL recipes (ART leans on it in its training stack). | PyTorch-native fine-tuning/RL recipes (ART leans on it in its training stack). A building block, not an agent-RL framework. |
 
 ## Tech stack
 

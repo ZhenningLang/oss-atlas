@@ -9,6 +9,11 @@ license: MIT
 maturity: multi-package monorepo; cua-agent v0.8.4, cua-sandbox v0.1.17, cua-cloud v0.1.1, cua-driver-rs v0.6.8 (pre-release), all updated 2026-06; active, trycua-maintained
 last_verified: 2026-06-26
 type: framework
+upstream:
+  pushed_at: 2026-06-29T08:11:15Z
+  default_branch: main
+  default_branch_sha: 7468487d303469b4993b960c8a2cb66289034bed
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:20:21Z
@@ -89,14 +94,14 @@ health:
 
 ## 横向对比
 
-| 替代方案 | 是否已收录 | 取舍 |
-|---|---|---|
-| [page-agent](page-agent.zh.md) | ✅ | 页面内 JS GUI agent，在用户自己的浏览器里把 DOM 当文本操作——无 VM、无视觉，远更便宜更快，但仅限 web、碰不到原生桌面应用。 |
-| [Chrome DevTools MCP](chrome-devtools-mcp.zh.md) | ✅ | 通过 MCP 用 DevTools 协议暴露真实 Chrome——擅长浏览器调试/自动化，但范围限于 Chrome，不是整桌面沙箱。 |
-| [Agent Browser](agent-browser.zh.md) | ✅ | 面向 agent 的无头浏览器自动化 CLI——轻量的 web 任务执行器；无 OS 级控制、无 VM 隔离。 |
-| OpenAI Operator / Anthropic computer use | 未收录 | 托管的视觉 computer-use agent——开箱即用但闭源、绑定单一模型厂商；Cua 是可自托管的开源基础设施层（且能通过 liteLLM *运行*这些模型）。 |
-| OSWorld / WebArena（评测基准） | 未收录 | Cua-Bench 对接的评测环境——它们给 agent 打分；Cua 提供被打分的可运行沙箱 + agent。 |
-| E2B / Daytona（开发沙箱） | 未收录 | 面向 agent 的代码执行沙箱——在 VM 隔离上有重叠，但定位是跑代码，不是截图驱动 GUI 桌面。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [page-agent](page-agent.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“页面内 JS GUI agent，在用户自己的浏览器里把 DOM 当文本操作”，再选 page-agent。 | 页面内 JS GUI agent，在用户自己的浏览器里把 DOM 当文本操作——无 VM、无视觉，远更便宜更快，但仅限 web、碰不到原生桌面应用。 |
+| [Chrome DevTools MCP](chrome-devtools-mcp.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“通过 MCP 用 DevTools 协议暴露真实 Chrome”，再选 Chrome DevTools MCP。 | 通过 MCP 用 DevTools 协议暴露真实 Chrome——擅长浏览器调试/自动化，但范围限于 Chrome，不是整桌面沙箱。 |
+| [Agent Browser](agent-browser.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“面向 agent 的无头浏览器自动化 CLI”，再选 Agent Browser。 | 面向 agent 的无头浏览器自动化 CLI——轻量的 web 任务执行器；无 OS 级控制、无 VM 隔离。 |
+| OpenAI Operator / Anthropic computer use | 未收录 | 当前页用于它的主场景；如果更看重“托管的视觉 computer-use agent”，再选 OpenAI Operator / Anthropic computer use。 | 托管的视觉 computer-use agent——开箱即用但闭源、绑定单一模型厂商；Cua 是可自托管的开源基础设施层（且能通过 liteLLM *运行*这些模型）。 |
+| OSWorld / WebArena（评测基准） | 未收录 | 当前页用于它的主场景；如果更看重“Cua-Bench 对接的评测环境”，再选 OSWorld / WebArena（评测基准）。 | Cua-Bench 对接的评测环境——它们给 agent 打分；Cua 提供被打分的可运行沙箱 + agent。 |
+| E2B / Daytona（开发沙箱） | 未收录 | 当前页用于它的主场景；如果更看重“面向 agent 的代码执行沙箱”，再选 E2B / Daytona（开发沙箱）。 | 面向 agent 的代码执行沙箱——在 VM 隔离上有重叠，但定位是跑代码，不是截图驱动 GUI 桌面。 |
 
 ## 技术栈
 

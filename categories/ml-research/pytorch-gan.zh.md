@@ -9,6 +9,11 @@ license: MIT
 maturity: educational reference collection, idle since ~2024-06, ~17.5k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2024-06-18T07:08:31Z
+  default_branch: master
+  default_branch_sha: 36d3c77e5ff20ebe0aeefd322326a134a279b93e
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:04:59Z
@@ -83,12 +88,12 @@ health:
 
 ## 横向对比
 
-| 替代方案 | 是否已收录 | 取舍 |
-|---|---|---|
-| `diffusers`（Hugging Face） | 未收录 | 面向**扩散**模型（当下生成的默认选项）的受维护库，带预训练 pipeline 和真正的 API；解决的是今天的生成问题，但属于不同模型家族，也不是一份「读代码」的从零阅读材料。 |
-| 各论文官方仓库（StyleGAN、CycleGAN……） | 未收录 | 作者们自己的实现——权重和数字对论文准确，但每个都是各自的代码库、各有风格和怪癖；不是一份风格统一、可并排浏览多种 GAN 的合集。 |
-| lucidrains 的实现 | 未收录 | 另一位高产单作者写的大量干净 PyTorch 重实现，覆盖许多架构（含较新的）；通常更新更勤，类似的「读代码」价值，范围更广也更新。 |
-| torchgan | 未收录 | 一个真正的 GAN *库/框架*（模块化 trainer、损失、指标），你 import 并配置它；想要可复用的积木时更合适，想端到端读懂某篇论文的架构则不如本仓库。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| `diffusers`（Hugging Face） | 未收录 | 当前页用于它的主场景；如果更看重“面向**扩散**模型（当下生成的默认选项）的受维护库，带预训练 pipeline 和真正的 API”，再选 diffusers（Hugging Face）。 | 面向**扩散**模型（当下生成的默认选项）的受维护库，带预训练 pipeline 和真正的 API；解决的是今天的生成问题，但属于不同模型家族，也不是一份「读代码」的从零阅读材料。 |
+| 各论文官方仓库（StyleGAN、CycleGAN……） | 未收录 | 当前页用于它的主场景；如果更看重“作者们自己的实现”，再选 各论文官方仓库（StyleGAN、CycleGAN……）。 | 作者们自己的实现——权重和数字对论文准确，但每个都是各自的代码库、各有风格和怪癖；不是一份风格统一、可并排浏览多种 GAN 的合集。 |
+| lucidrains 的实现 | 未收录 | 当前页用于它的主场景；如果更看重“另一位高产单作者写的大量干净 PyTorch 重实现，覆盖许多架构（含较新的）”，再选 lucidrains 的实现。 | 另一位高产单作者写的大量干净 PyTorch 重实现，覆盖许多架构（含较新的）；通常更新更勤，类似的「读代码」价值，范围更广也更新。 |
+| torchgan | 未收录 | 当前页用于它的主场景；如果更看重“一个真正的 GAN *库/框架*（模块化 trainer、损失、指标），你 import 并配置它”，再选 torchgan。 | 一个真正的 GAN *库/框架*（模块化 trainer、损失、指标），你 import 并配置它；想要可复用的积木时更合适，想端到端读懂某篇论文的架构则不如本仓库。 |
 
 ## 技术栈
 

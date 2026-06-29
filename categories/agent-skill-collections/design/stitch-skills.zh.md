@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v1.0 release (2026-05), pushed 2026-06 (as of 2026-06-26)
 last_verified: 2026-06-26
 type: skill-pack
+upstream:
+  pushed_at: 2026-06-26T23:34:22Z
+  default_branch: main
+  default_branch_sha: 38f45dd1c0d2c38031686cf319412f4b22a00686
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:28:48Z
@@ -81,14 +86,14 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否已收录 | 取舍 |
-|---|---|---|
-| [designer-skills](designer-skills.zh.md) | ✅ | 通用的设计师 persona 技能包，偏 UI/UX 品味，无需后端。Stitch Skills 更重（要 MCP server），但能真正*生成和转换*设计，而非只给建议。 |
-| [ui-ux-pro-max](ui-ux-pro-max.zh.md) | ✅ | 偏指导与批评的宽口径 UI/UX 技能集，厂商无关。想要可移植的品味就选它，已押注 Stitch 生成闭环就选 Stitch Skills。 |
-| taste-skill | 未收录 | 纯“品味”/反通用批评包；只和 Stitch 的 `taste-design` 切片重叠，没有任何代码↔设计的管道，也没有锁定。 |
-| make-interfaces-feel-better | 未收录 | 偏交互/打磨的技能；做建议性的微改进。Stitch Skills 工作在屏幕生成和组件导出这一层。 |
-| Stitch MCP server 本体（`stitch.withgoogle.com`） | 未收录（托管产品，非仓库） | 这些技能真正调用的引擎；它是托管产品，不是可索引的仓库。本仓库只是包在它外面、面向 agent 的技能壳。 |
-| v0 / Lovable / 其它 AI UI 生成器 | 未收录 | 竞品 AI 设计转代码产品，多为托管 SaaS 而非 agent 技能仓库；消费单元不同（你驱动它们的 UI，而非你的 agent）。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [designer-skills](designer-skills.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“通用的设计师 persona 技能包，偏 UI/UX 品味，无需后端”，再选 designer-skills。 | 通用的设计师 persona 技能包，偏 UI/UX 品味，无需后端。Stitch Skills 更重（要 MCP server），但能真正*生成和转换*设计，而非只给建议。 |
+| [ui-ux-pro-max](ui-ux-pro-max.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“偏指导与批评的宽口径 UI/UX 技能集，厂商无关”，再选 ui-ux-pro-max。 | 偏指导与批评的宽口径 UI/UX 技能集，厂商无关。想要可移植的品味就选它，已押注 Stitch 生成闭环就选 Stitch Skills。 |
+| taste-skill | 未收录 | 当前页用于它的主场景；如果更看重“纯“品味”/反通用批评包”，再选 taste-skill。 | 纯“品味”/反通用批评包；只和 Stitch 的 `taste-design` 切片重叠，没有任何代码↔设计的管道，也没有锁定。 |
+| make-interfaces-feel-better | 未收录 | 当前页用于它的主场景；如果更看重“偏交互/打磨的技能”，再选 make-interfaces-feel-better。 | 偏交互/打磨的技能；做建议性的微改进。Stitch Skills 工作在屏幕生成和组件导出这一层。 |
+| Stitch MCP server 本体（`stitch.withgoogle.com`） | 未收录（托管产品，非仓库） | 当前页用于它的主场景；如果更看重“这些技能真正调用的引擎”，再选 Stitch MCP server 本体（stitch.withgoogle.com）。 | 这些技能真正调用的引擎；它是托管产品，不是可索引的仓库。本仓库只是包在它外面、面向 agent 的技能壳。 |
+| v0 / Lovable / 其它 AI UI 生成器 | 未收录 | 当前页用于它的主场景；如果更看重“竞品 AI 设计转代码产品，多为托管 SaaS 而非 agent 技能仓库”，再选 v0 / Lovable / 其它 AI UI 生成器。 | 竞品 AI 设计转代码产品，多为托管 SaaS 而非 agent 技能仓库；消费单元不同（你驱动它们的 UI，而非你的 agent）。 |
 
 ## 健康度与可持续性
 

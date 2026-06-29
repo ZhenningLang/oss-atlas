@@ -9,6 +9,11 @@ license: MIT
 maturity: "active, latest release v0.4.1743 (2025-01-04), ~56.8k stars (2026-06)"
 last_verified: 2026-06-28
 type: tool
+upstream:
+  pushed_at: 2026-04-30T05:24:16Z
+  default_branch: develop
+  default_branch_sha: 049548f3f3f35e67ba8d3181c71fdc71d11cf260
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:00:41Z
@@ -80,12 +85,12 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| [youtube-dl](youtube-dl.zh.md) | ✅ | 经典的 Python 下载器，约 1000 个站点的 extractor 目录；站点覆盖广得多，但维护放缓，且在部分中文站上历来比 you-get 更弱/更不及时。 |
-| yt-dlp | 未收录 | 活跃维护的 youtube-dl 分叉；目录最广、YouTube 修复最快，选项更多（SponsorBlock、格式排序、aria2c）。要广度和 YouTube 关键任务选它；you-get 仍因体积小、聚焦中文站而有吸引力。 |
-| lux | 未收录 | Go 写的单二进制下载器（原名 annie），自带对中国友好的站点列表；无需 Python 运行时、速度快，但目录更窄、收录取向不同。 |
-| cobalt | 未收录 | 以 Web/API 为先的下载器（可自托管的服务）；浏览器 UX 干净，但它是一个要跑的服务，而非可 pip 安装、便于脚本化的 CLI。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [youtube-dl](youtube-dl.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“经典的 Python 下载器，约 1000 个站点的 extractor 目录”，再选 youtube-dl。 | 经典的 Python 下载器，约 1000 个站点的 extractor 目录；站点覆盖广得多，但维护放缓，且在部分中文站上历来比 you-get 更弱/更不及时。 |
+| yt-dlp | 未收录 | 当前页用于它的主场景；如果更看重“活跃维护的 youtube-dl 分叉”，再选 yt-dlp。 | 活跃维护的 youtube-dl 分叉；目录最广、YouTube 修复最快，选项更多（SponsorBlock、格式排序、aria2c）。要广度和 YouTube 关键任务选它；you-get 仍因体积小、聚焦中文站而有吸引力。 |
+| lux | 未收录 | 当前页用于它的主场景；如果更看重“Go 写的单二进制下载器（原名 annie），自带对中国友好的站点列表”，再选 lux。 | Go 写的单二进制下载器（原名 annie），自带对中国友好的站点列表；无需 Python 运行时、速度快，但目录更窄、收录取向不同。 |
+| cobalt | 未收录 | 当前页用于它的主场景；如果更看重“以 Web/API 为先的下载器（可自托管的服务）”，再选 cobalt。 | 以 Web/API 为先的下载器（可自托管的服务）；浏览器 UX 干净，但它是一个要跑的服务，而非可 pip 安装、便于脚本化的 CLI。 |
 
 ## 技术栈
 

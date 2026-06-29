@@ -9,6 +9,11 @@ license: GPL-3.0
 maturity: v2.6.2 (2023-01), commits ongoing to 2026-04, ~2.6k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: tool
+upstream:
+  pushed_at: 2026-04-12T02:28:43Z
+  default_branch: master
+  default_branch_sha: 8c293a46843c818bea2c2013db38191867993a14
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:59:43Z
@@ -86,12 +91,12 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| gallery-dl | 未收录 | 面广的多站点媒体下载器（Reddit 只是其一）；跨网的*文件*下载很强，但在 Reddit 专属的元数据/评论归档和「下载/归档/克隆」三模式上更弱。 |
-| redditdownloader（shadowmoose） | 未收录 | 另一个专用 Reddit 下载器，带网页 UI；对非 CLI 用户更友好，但 BDFR 可脚本化的 CLI + YAML 配置更适合自动化。[未验证] |
-| Pushshift 转储 / PRAW 脚本 | 未收录 | 直接上数据转储或自己调 API，绕开工具和约 1000 上限（转储），但都得自己造——BDFR 帮你打包好了解析器、去重、命名和日志。 |
-| yt-dlp（直接用） | 未收录 | BDFR 底层*用* yt-dlp 处理宿主媒体；直接调 yt-dlp 对单条链接有效，但缺少 Reddit 来源枚举、元数据归档和去重。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| gallery-dl | 未收录 | 当前页用于它的主场景；如果更看重“面广的多站点媒体下载器（Reddit 只是其一）”，再选 gallery-dl。 | 面广的多站点媒体下载器（Reddit 只是其一）；跨网的*文件*下载很强，但在 Reddit 专属的元数据/评论归档和「下载/归档/克隆」三模式上更弱。 |
+| redditdownloader（shadowmoose） | 未收录 | 当前页用于它的主场景；如果更看重“另一个专用 Reddit 下载器，带网页 UI”，再选 redditdownloader（shadowmoose）。 | 另一个专用 Reddit 下载器，带网页 UI；对非 CLI 用户更友好，但 BDFR 可脚本化的 CLI + YAML 配置更适合自动化。[未验证] |
+| Pushshift 转储 / PRAW 脚本 | 未收录 | 当前页用于它的主场景；如果更看重“直接上数据转储或自己调 API，绕开工具和约 1000 上限（转储），但都得自己造”，再选 Pushshift 转储 / PRAW 脚本。 | 直接上数据转储或自己调 API，绕开工具和约 1000 上限（转储），但都得自己造——BDFR 帮你打包好了解析器、去重、命名和日志。 |
+| yt-dlp（直接用） | 未收录 | 当前页用于它的主场景；如果更看重“BDFR 底层*用* yt-dlp 处理宿主媒体”，再选 yt-dlp（直接用）。 | BDFR 底层*用* yt-dlp 处理宿主媒体；直接调 yt-dlp 对单条链接有效，但缺少 Reddit 来源枚举、元数据归档和去重。 |
 
 ## 技术栈
 

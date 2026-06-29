@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: NeurIPS 2024 release, code active, ~8.3k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: model
+upstream:
+  pushed_at: 2026-03-24T10:59:06Z
+  default_branch: main
+  default_branch_sha: a561b849ebae10a6f5ef49e26c83cbbcd36c71bf
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:04:04Z
@@ -80,13 +85,13 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| Depth Anything V1 | 未收录 | 前作；按作者说法 V2 在细节上更锐、更鲁棒——除非你有钉死 V1 的流水线，否则用 V2。 |
-| MiDaS / DPT（Intel ISL） | 未收录 | 更早、广泛使用的单目深度模型；成熟且许可宽松，但在细节/鲁棒性上普遍被 Depth Anything V2 超过。[推断] |
-| Marigold（基于 SD） | 未收录 | 基于扩散的深度；质量可以很高，但更慢、参数更多——V2 明确以更快推理 / 更少参数为目标。 |
-| ZoeDepth | 未收录 | metric 单目深度；当你专门需要绝对尺度而非相对深度时的直接替代。 |
-| [CLIP](clip.zh.md) | ✅ | 任务不同（视觉语言），但同一货架——广泛采用的已发布基础模型，产品就是它的 checkpoint。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| Depth Anything V1 | 未收录 | 当前页用于它的主场景；如果更看重“前作”，再选 Depth Anything V1。 | 前作；按作者说法 V2 在细节上更锐、更鲁棒——除非你有钉死 V1 的流水线，否则用 V2。 |
+| MiDaS / DPT（Intel ISL） | 未收录 | 当前页用于它的主场景；如果更看重“更早、广泛使用的单目深度模型”，再选 MiDaS / DPT（Intel ISL）。 | 更早、广泛使用的单目深度模型；成熟且许可宽松，但在细节/鲁棒性上普遍被 Depth Anything V2 超过。[推断] |
+| Marigold（基于 SD） | 未收录 | 当前页用于它的主场景；如果更看重“基于扩散的深度”，再选 Marigold（基于 SD）。 | 基于扩散的深度；质量可以很高，但更慢、参数更多——V2 明确以更快推理 / 更少参数为目标。 |
+| ZoeDepth | 未收录 | 当前页用于它的主场景；如果更看重“metric 单目深度”，再选 ZoeDepth。 | metric 单目深度；当你专门需要绝对尺度而非相对深度时的直接替代。 |
+| [CLIP](clip.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“任务不同（视觉语言），但同一货架”，再选 CLIP。 | 任务不同（视觉语言），但同一货架——广泛采用的已发布基础模型，产品就是它的 checkpoint。 |
 
 ## 技术栈
 

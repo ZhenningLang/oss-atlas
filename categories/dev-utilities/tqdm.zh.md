@@ -9,6 +9,11 @@ license: MPL-2.0 AND MIT
 maturity: v4.x, active (2026-06), ~31.2k stars
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2026-06-17T08:10:21Z
+  default_branch: master
+  default_branch_sha: 9aff6090b6fa98c88a2dbff8bd9e2a68d9a99c1b
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:50:07Z
@@ -86,13 +91,13 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| rich.progress | 未收录 | `rich` 库的一部分——花哨得多（颜色、列、多条进度条、spinner、表格），很适合做精致 CLI；依赖更重、API 面也比 tqdm 的一行裹更大。 |
-| alive-progress | 未收录 | 单条进度条做得更有动画、视觉更丰富，带实时 spinner；生态和集成集比 tqdm 小（没有同等广度的 pandas/notebook/管道支持）。 |
-| progressbar2 | 未收录 | 更老牌、可配置的进度条库；基于 widget 的 API 比 `tqdm(iterable)` 啰嗦，现代采用度更小。 |
-| 朴素 logging / `print` | 未收录 | 零依赖且天然机器可解析；没有 ETA/速率/原地回刷，交互式用又很吵——文件/CI 场景该选它，给人盯着看的 TTY 场景不该选。 |
-| [Telegraf](telegraf.zh.md) | ✅ | 一个指标采集/路由 agent，不是进度条——完全不同的活；当你需要真正的遥测而非给人看的计量器时才用它。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| rich.progress | 未收录 | 当前页用于它的主场景；如果更看重“`rich` 库的一部分”，再选 rich.progress。 | `rich` 库的一部分——花哨得多（颜色、列、多条进度条、spinner、表格），很适合做精致 CLI；依赖更重、API 面也比 tqdm 的一行裹更大。 |
+| alive-progress | 未收录 | 当前页用于它的主场景；如果更看重“单条进度条做得更有动画、视觉更丰富，带实时 spinner”，再选 alive-progress。 | 单条进度条做得更有动画、视觉更丰富，带实时 spinner；生态和集成集比 tqdm 小（没有同等广度的 pandas/notebook/管道支持）。 |
+| progressbar2 | 未收录 | 当前页用于它的主场景；如果更看重“更老牌、可配置的进度条库”，再选 progressbar2。 | 更老牌、可配置的进度条库；基于 widget 的 API 比 `tqdm(iterable)` 啰嗦，现代采用度更小。 |
+| 朴素 logging / `print` | 未收录 | 当前页用于它的主场景；如果更看重“零依赖且天然机器可解析”，再选 朴素 logging / print。 | 零依赖且天然机器可解析；没有 ETA/速率/原地回刷，交互式用又很吵——文件/CI 场景该选它，给人盯着看的 TTY 场景不该选。 |
+| [Telegraf](telegraf.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“一个指标采集/路由 agent，不是进度条”，再选 Telegraf。 | 一个指标采集/路由 agent，不是进度条——完全不同的活；当你需要真正的遥测而非给人看的计量器时才用它。 |
 
 ## 技术栈
 

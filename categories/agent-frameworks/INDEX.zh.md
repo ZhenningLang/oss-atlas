@@ -5,36 +5,36 @@
 
 ## 本分类项目
 
-| 项目 | 何时用 | 页面 |
-|---|---|---|
-| **DSPy** | 你有评测数据和指标、想让优化器编译提示词而非手工调时。 | [→](dspy.zh.md) |
-| **AgentScope** | 要把多智能体 LLM 应用作为生产服务交付，需要沙箱工具、权限闸门、tracing 和人工介入时。 | [→](agentscope.zh.md) |
-| **OpenFang** | 想用单个自托管 Rust 二进制、让自治智能体按计划 7×24 无人值守干活时。 | [→](openfang.zh.md) |
-| **Symphony** | 你的 Linear 待办和 Codex agent 需要一个自托管编排器、按 issue 跑隔离自治实现运行时。 | [→](symphony.zh.md) |
-| **Claude Octopus** | 你以 Claude Code 为主力、想让其他 AI 模型在交付前交叉评审任务、揭出盲点时。 | [→](claude-octopus.zh.md) |
-| **oh-my-claudecode** | 你常驻 Claude Code、需要多阶段 agent 团队加模型路由和 tmux 并行编排时。 | [→](oh-my-claudecode.zh.md) |
-| **smolagents** | 当你想要 Hugging Face 出的极简、透明、写代码行动的 agent 循环时用它——不是重型生产 agent 操作系统。 | [→](smolagents.zh.md) |
-| **Kilo Code** | 当你想要一个开源、BYOK、在 VS Code 内的编码 agent（带规划与模式）时用它——是终端用户工具，不是构建 agent 的库。 | [→](kilocode.zh.md) |
-| **Parlant** | 当你要构建一个必须靠行为准则严格守规的对客 agent 时用它——简单或自由式 agent 用它过重。 | [→](parlant.zh.md) |
-| **SkillOpt** | 当你要针对可打分基准、为冻结的 LLM 优化 Agent 的自然语言技能文档时用它——但没有可靠评测来把关每次编辑，方法就毫无信号，且它还是全新的 v0.1.0。 | [→](skillopt.zh.md) |
-| **Open Interpreter** | 当你想要一个 Codex-fork 的终端编码 agent、带为低成本 / 开源模型（DeepSeek、Kimi、Qwen）调过的可切换 harness 时用它——不是老的 Python REPL（那个已迁到社区 fork），而且它是几周大的 0.0.x 重写、会执行代码。 | [→](open-interpreter.zh.md) |
+| 项目 | 何时用 | 健康度 | 页面 |
+| --- | --- | --- | --- |
+| **DSPy** | 你有评测数据和指标、想让优化器编译提示词而非手工调时。 | A（6/6） | [→](dspy.zh.md) |
+| **AgentScope** | 要把多智能体 LLM 应用作为生产服务交付，需要沙箱工具、权限闸门、tracing 和人工介入时。 | B（6/6） | [→](agentscope.zh.md) |
+| **OpenFang** | 想用单个自托管 Rust 二进制、让自治智能体按计划 7×24 无人值守干活时。 | B（5/6） | [→](openfang.zh.md) |
+| **Symphony** | 你的 Linear 待办和 Codex agent 需要一个自托管编排器、按 issue 跑隔离自治实现运行时。 | B（5/6） | [→](symphony.zh.md) |
+| **Claude Octopus** | 你以 Claude Code 为主力、想让其他 AI 模型在交付前交叉评审任务、揭出盲点时。 | C（6/6） | [→](claude-octopus.zh.md) |
+| **oh-my-claudecode** | 你常驻 Claude Code、需要多阶段 agent 团队加模型路由和 tmux 并行编排时。 | B（5/6） | [→](oh-my-claudecode.zh.md) |
+| **smolagents** | 当你想要 Hugging Face 出的极简、透明、写代码行动的 agent 循环时用它——不是重型生产 agent 操作系统。 | B（6/6） | [→](smolagents.zh.md) |
+| **Kilo Code** | 当你想要一个开源、BYOK、在 VS Code 内的编码 agent（带规划与模式）时用它——是终端用户工具，不是构建 agent 的库。 | B（6/6） | [→](kilocode.zh.md) |
+| **Parlant** | 当你要构建一个必须靠行为准则严格守规的对客 agent 时用它——简单或自由式 agent 用它过重。 | B（6/6） | [→](parlant.zh.md) |
+| **SkillOpt** | 当你要针对可打分基准、为冻结的 LLM 优化 Agent 的自然语言技能文档时用它——但没有可靠评测来把关每次编辑，方法就毫无信号，且它还是全新的 v0.1.0。 | B（6/6） | [→](skillopt.zh.md) |
+| **Open Interpreter** | 当你想要一个 Codex-fork 的终端编码 agent、带为低成本 / 开源模型（DeepSeek、Kimi、Qwen）调过的可切换 harness 时用它——不是老的 Python REPL（那个已迁到社区 fork），而且它是几周大的 0.0.x 重写、会执行代码。 | A（6/6） | [→](open-interpreter.zh.md) |
 
 ## 对比矩阵
 
-| 选项 | 是否收录 | 一句话取舍 |
-|---|---|---|
-| [DSPy](dspy.zh.md) | ✅ | 优化器层按指标编译提示词/权重——本类独有；需评测数据，非工作流引擎。 |
-| [AgentScope](agentscope.zh.md) | ✅ | 生产级多智能体运行时：沙箱工具、权限闸门、tracing、人工介入。 |
-| [OpenFang](openfang.zh.md) | ✅ | 自托管 Rust「agent OS」，按计划 7×24 自治运行。 |
-| [Symphony](symphony.zh.md) | ✅ | 自托管编排器，按 issue 跑隔离自治实现运行（Linear + Codex）。 |
-| [Claude Octopus](claude-octopus.zh.md) | ✅ | Claude Code 内的跨模型盲点评审层。 |
-| [oh-my-claudecode](oh-my-claudecode.zh.md) | ✅ | Claude Code 的多阶段 agent 团队 + 模型路由 + tmux 并行。 |
-| [smolagents](smolagents.zh.md) | ✅ | 当你想要 Hugging Face 出的极简、透明、写代码行动的 agent 循环时用它——不是重型生产 agent 操作系统。 |
-| [Kilo Code](kilocode.zh.md) | ✅ | 当你想要一个开源、BYOK、在 VS Code 内的编码 agent（带规划与模式）时用它——是终端用户工具，不是构建 agent 的库。 |
-| [Parlant](parlant.zh.md) | ✅ | 当你要构建一个必须靠行为准则严格守规的对客 agent 时用它——简单或自由式 agent 用它过重。 |
-| [SkillOpt](skillopt.zh.md) | ✅ | 当你要针对可打分基准、为冻结的 LLM 优化 Agent 的自然语言技能文档时用它——但没有可靠评测来把关每次编辑，方法就毫无信号，且它还是全新的 v0.1.0。 |
-| [Open Interpreter](open-interpreter.zh.md) | ✅ | OpenAI Codex-fork 的终端编码 agent，带运行时可切换、为低成本 / 开源模型调过的 harness；几周大的 0.0.x Rust 重写、在 OS 沙箱里执行代码——不是已停更的 Python REPL。 |
-| LangChain / LlamaIndex / CrewAI / AutoGen | 未收录 | 各页对比里点到的更广义 agent 构建/运行生态。 |
+| 选项 | 是否收录 | 健康度 | 一句话取舍 |
+| --- | --- | --- | --- |
+| [DSPy](dspy.zh.md) | ✅ | A（6/6） | 优化器层按指标编译提示词/权重——本类独有；需评测数据，非工作流引擎。 |
+| [AgentScope](agentscope.zh.md) | ✅ | B（6/6） | 生产级多智能体运行时：沙箱工具、权限闸门、tracing、人工介入。 |
+| [OpenFang](openfang.zh.md) | ✅ | B（5/6） | 自托管 Rust「agent OS」，按计划 7×24 自治运行。 |
+| [Symphony](symphony.zh.md) | ✅ | B（5/6） | 自托管编排器，按 issue 跑隔离自治实现运行（Linear + Codex）。 |
+| [Claude Octopus](claude-octopus.zh.md) | ✅ | C（6/6） | Claude Code 内的跨模型盲点评审层。 |
+| [oh-my-claudecode](oh-my-claudecode.zh.md) | ✅ | B（5/6） | Claude Code 的多阶段 agent 团队 + 模型路由 + tmux 并行。 |
+| [smolagents](smolagents.zh.md) | ✅ | B（6/6） | 当你想要 Hugging Face 出的极简、透明、写代码行动的 agent 循环时用它——不是重型生产 agent 操作系统。 |
+| [Kilo Code](kilocode.zh.md) | ✅ | B（6/6） | 当你想要一个开源、BYOK、在 VS Code 内的编码 agent（带规划与模式）时用它——是终端用户工具，不是构建 agent 的库。 |
+| [Parlant](parlant.zh.md) | ✅ | B（6/6） | 当你要构建一个必须靠行为准则严格守规的对客 agent 时用它——简单或自由式 agent 用它过重。 |
+| [SkillOpt](skillopt.zh.md) | ✅ | B（6/6） | 当你要针对可打分基准、为冻结的 LLM 优化 Agent 的自然语言技能文档时用它——但没有可靠评测来把关每次编辑，方法就毫无信号，且它还是全新的 v0.1.0。 |
+| [Open Interpreter](open-interpreter.zh.md) | ✅ | A（6/6） | OpenAI Codex-fork 的终端编码 agent，带运行时可切换、为低成本 / 开源模型调过的 harness；几周大的 0.0.x Rust 重写、在 OS 沙箱里执行代码——不是已停更的 Python REPL。 |
+| LangChain / LlamaIndex / CrewAI / AutoGen | 未收录 | — | 各页对比里点到的更广义 agent 构建/运行生态。 |
 
 ## 什么该放这里
 

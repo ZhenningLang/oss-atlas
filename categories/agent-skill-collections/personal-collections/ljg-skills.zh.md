@@ -9,6 +9,11 @@ license: NOASSERTION
 maturity: no tagged releases, active (pushed 2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+upstream:
+  pushed_at: 2026-06-26T04:33:36Z
+  default_branch: master
+  default_branch_sha: 2e91dec43ed34dd926329c8cdf2f6b404de6abee
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:31:42Z
@@ -81,13 +86,13 @@ health:
 
 ## 横向对比
 
-| 替代项 | 是否收录 | 取舍 |
-|---|---|---|
-| [pua](pua.zh.md) ✅ | 已收录 | 另一个单人维护的中文技能合集；侧重点和约定不同。同一类型（一个人精选的中文技能），按作者方法和领域是否对你胃口来选。 |
-| [qiushi-skill](qiushi-skill.zh.md) ✅ | 已收录 | 单人维护的中文技能集；同为个人合集，有自己的任务覆盖。ljg-skills 主打阅读/知识提炼和视觉卡片。 |
-| [antfu/skills](antfu-skills.zh.md) ✅ | 已收录 | 同样是维护者个人包，但面向 Vue/Vite 前端*工程*栈——领域相反。按你需要代码约定还是知识工作方法来选。 |
-| [Dimillian/Skills](dimillian-skills.zh.md) ✅ | 已收录 | 偏 Swift/Apple 开发的个人合集。同为「一个人的技能」类型，领域（代码）不同。 |
-| Anthropic 官方技能 / 内置 slash 命令 | 未收录 | 平台自带的技能生态；ljg-skills 是叠在上面的第三方精选包，可能与原生技能重复或冲突。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [pua](pua.zh.md) ✅ | 已收录 | 当前页用于它的主场景；如果更看重“另一个单人维护的中文技能合集”，再选 pua ✅。 | 另一个单人维护的中文技能合集；侧重点和约定不同。同一类型（一个人精选的中文技能），按作者方法和领域是否对你胃口来选。 |
+| [qiushi-skill](qiushi-skill.zh.md) ✅ | 已收录 | 当前页用于它的主场景；如果更看重“单人维护的中文技能集”，再选 qiushi-skill ✅。 | 单人维护的中文技能集；同为个人合集，有自己的任务覆盖。ljg-skills 主打阅读/知识提炼和视觉卡片。 |
+| [antfu/skills](antfu-skills.zh.md) ✅ | 已收录 | 当前页用于它的主场景；如果更看重“同样是维护者个人包，但面向 Vue/Vite 前端*工程*栈”，再选 antfu/skills ✅。 | 同样是维护者个人包，但面向 Vue/Vite 前端*工程*栈——领域相反。按你需要代码约定还是知识工作方法来选。 |
+| [Dimillian/Skills](dimillian-skills.zh.md) ✅ | 已收录 | 当前页用于它的主场景；如果更看重“偏 Swift/Apple 开发的个人合集”，再选 Dimillian/Skills ✅。 | 偏 Swift/Apple 开发的个人合集。同为「一个人的技能」类型，领域（代码）不同。 |
+| Anthropic 官方技能 / 内置 slash 命令 | 未收录 | 当前页用于它的主场景；如果更看重“平台自带的技能生态”，再选 Anthropic 官方技能 / 内置 slash 命令。 | 平台自带的技能生态；ljg-skills 是叠在上面的第三方精选包，可能与原生技能重复或冲突。 |
 
 ## 健康度与可持续性
 

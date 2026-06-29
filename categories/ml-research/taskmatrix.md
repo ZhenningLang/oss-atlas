@@ -9,6 +9,11 @@ license: MIT
 maturity: "research demo (orig. 'Visual ChatGPT', Microsoft); last pushed 2024-01, no commits since — abandoned in practice (as of 2026-06)"
 last_verified: 2026-06-28
 type: app
+upstream:
+  pushed_at: 2024-01-06T02:41:20Z
+  default_branch: main
+  default_branch_sha: 4b7664f8d3a23804ac1b795d75a73efd162769f0
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:05:29Z
@@ -73,13 +78,13 @@ It's also a useful teaching reference when you're building your *own* tool-routi
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| Modern multimodal LLMs (GPT-4o / Gemini / Claude vision / Qwen-VL) | 未收录 | Native vision in a single model — captioning, VQA, generation/editing via the model or its built-in tools; no foundation-model zoo to host, actively maintained. This is what replaced the whole TaskMatrix pattern. |
-| HuggingGPT / JARVIS | 未收录 | Same era, same idea — an LLM controller that routes tasks to a catalog of Hugging Face models; broader (not vision-only) task scope, also a research demo rather than a maintained product. |
-| LangChain agents | 未收录 | Maintained, general-purpose LLM tool-orchestration framework; you wire your own tools (including vision models) with current function-calling, instead of TaskMatrix's hand-rolled 2023 prompt-router. |
-| Modern agent frameworks (function-calling / MCP-based tooling) | 未收录 | Current, standardized way to give an LLM tools; far better orchestration, structured tool I/O, and active support than this bespoke demo. |
-| [autoresearch](autoresearch.md) | ✅ | Also a single-author research-demo app, but a single-GPU *training* loop for agent-driven ML research — unrelated problem; shares only the "read-it-as-a-reference, don't deploy" posture. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| Modern multimodal LLMs (GPT-4o / Gemini / Claude vision / Qwen-VL) | 未收录 | Use this page for its stated niche; choose Modern multimodal LLMs (GPT-4o / Gemini / Claude vision / Qwen-VL) when you need native vision in a single model. | Native vision in a single model — captioning, VQA, generation/editing via the model or its built-in tools; no foundation-model zoo to host, actively maintained. This is what replaced the whole TaskMatrix pattern. |
+| HuggingGPT / JARVIS | 未收录 | Use this page for its stated niche; choose HuggingGPT / JARVIS when you need same era, same idea. | Same era, same idea — an LLM controller that routes tasks to a catalog of Hugging Face models; broader (not vision-only) task scope, also a research demo rather than a maintained product. |
+| LangChain agents | 未收录 | Use this page for its stated niche; choose LangChain agents when you need maintained, general-purpose LLM tool-orchestration framework. | Maintained, general-purpose LLM tool-orchestration framework; you wire your own tools (including vision models) with current function-calling, instead of TaskMatrix's hand-rolled 2023 prompt-router. |
+| Modern agent frameworks (function-calling / MCP-based tooling) | 未收录 | Use this page for its stated niche; choose Modern agent frameworks (function-calling / MCP-based tooling) when you need current, standardized way to give an LLM tools. | Current, standardized way to give an LLM tools; far better orchestration, structured tool I/O, and active support than this bespoke demo. |
+| [autoresearch](autoresearch.md) | ✅ | Use this page for its stated niche; choose autoresearch when you need also a single-author research-demo app, but a single-GPU *training* loop for agent-driven ML researc. | Also a single-author research-demo app, but a single-GPU *training* loop for agent-driven ML research — unrelated problem; shares only the "read-it-as-a-reference, don't deploy" posture. |
 
 ## Tech stack
 

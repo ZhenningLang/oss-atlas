@@ -9,6 +9,11 @@ license: MIT AND GPL-2.0-only (component split)
 maturity: no releases, abandoned (last push 2020-11)
 last_verified: 2026-06-28
 type: tool
+upstream:
+  pushed_at: 2020-11-15T20:48:21Z
+  default_branch: master
+  default_branch_sha: 5f993a323845da0d21c9511186d0037038be4f0b
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:48:09Z
@@ -80,13 +85,13 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| Alfred | 未收录 | 成熟的商业 macOS 启动器，工作流生态庞大；积极维护、无需关 SIP/注入，但它是独立应用（不是原生 Spotlight 栏），高级功能需付费 Powerpack。 |
-| Raycast | 未收录 | 现代、积极开发的启动器，带扩展商店与团队功能；它替换 Spotlight 的交互，而非注入其中。 |
-| LaunchBar | 未收录 | 历史悠久的键盘启动器；成熟且受支持，是独立应用，不是 Spotlight 插件层。 |
-| nate-parrott/Flashlight（原版） | 未收录 | 本仓库的上游；同样无人维护——分叉链（w0lfschild 等）之所以存在，正是因为原版停滞了。 |
-| macOS Spotlight（内置） | 未收录 | 无需安装、受支持，但其有限的内置查询/应答面正是 Flashlight 想扩展的东西。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| Alfred | 未收录 | 当前页用于它的主场景；如果更看重“成熟的商业 macOS 启动器，工作流生态庞大”，再选 Alfred。 | 成熟的商业 macOS 启动器，工作流生态庞大；积极维护、无需关 SIP/注入，但它是独立应用（不是原生 Spotlight 栏），高级功能需付费 Powerpack。 |
+| Raycast | 未收录 | 当前页用于它的主场景；如果更看重“现代、积极开发的启动器，带扩展商店与团队功能”，再选 Raycast。 | 现代、积极开发的启动器，带扩展商店与团队功能；它替换 Spotlight 的交互，而非注入其中。 |
+| LaunchBar | 未收录 | 当前页用于它的主场景；如果更看重“历史悠久的键盘启动器”，再选 LaunchBar。 | 历史悠久的键盘启动器；成熟且受支持，是独立应用，不是 Spotlight 插件层。 |
+| nate-parrott/Flashlight（原版） | 未收录 | 当前页用于它的主场景；如果更看重“本仓库的上游”，再选 nate-parrott/Flashlight（原版）。 | 本仓库的上游；同样无人维护——分叉链（w0lfschild 等）之所以存在，正是因为原版停滞了。 |
+| macOS Spotlight（内置） | 未收录 | 当前页用于它的主场景；如果更看重“无需安装、受支持，但其有限的内置查询/应答面正是 Flashlight 想扩展的东西”，再选 macOS Spotlight（内置）。 | 无需安装、受支持，但其有限的内置查询/应答面正是 Flashlight 想扩展的东西。 |
 
 ## 技术栈
 

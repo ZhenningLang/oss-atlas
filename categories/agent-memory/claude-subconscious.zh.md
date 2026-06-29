@@ -9,6 +9,11 @@ license: MIT
 maturity: v2.1.1, active demo (2026-06)
 last_verified: 2026-06-26
 type: tool
+upstream:
+  pushed_at: 2026-05-13T00:56:41Z
+  default_branch: main
+  default_branch_sha: 795046e5e5e4edc2d44e0bc21cda9cbd8f4169bb
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:26:33Z
@@ -90,13 +95,13 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| [Mem0](mem0.zh.md) | ✅ | 框架无关、可嵌进你自己 agent 的记忆**库/API**（Python/TS，任意 LLM）；不是 Claude Code 插件、也不是后台“低语”agent。要可移植、偏生产的记忆选它。 |
-| [Memori](memori.zh.md) | ✅ | SQL 原生的开源 agent 记忆引擎；同样 LLM/框架无关、可自托管。形态不同：是记忆后端，不是绑定 Claude Code 的插件。 |
-| Letta Code | 未收录 | 同团队的生产版本——Letta 平台上的完整编码 agent。README 明确推荐用它替代本 demo 做真实使用。 |
-| CLAUDE.md（内置） | 未收录 | 手动、确定、零依赖的项目记忆。没有后台学习、没有跨项目大脑；靠你手工维护。Claude Subconscious 刻意不写这里。 |
-| [Cipher](https://github.com/campfirein/cipher) | 未收录 | 基于 MCP 的编码 agent 记忆层（经 MCP 跨 IDE/CLI 通用）；客户端支持比单工具插件更广。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [Mem0](mem0.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“框架无关、可嵌进你自己 agent 的记忆**库/API**（Python/TS，任意 LLM）”，再选 Mem0。 | 框架无关、可嵌进你自己 agent 的记忆**库/API**（Python/TS，任意 LLM）；不是 Claude Code 插件、也不是后台“低语”agent。要可移植、偏生产的记忆选它。 |
+| [Memori](memori.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“SQL 原生的开源 agent 记忆引擎”，再选 Memori。 | SQL 原生的开源 agent 记忆引擎；同样 LLM/框架无关、可自托管。形态不同：是记忆后端，不是绑定 Claude Code 的插件。 |
+| Letta Code | 未收录 | 当前页用于它的主场景；如果更看重“同团队的生产版本”，再选 Letta Code。 | 同团队的生产版本——Letta 平台上的完整编码 agent。README 明确推荐用它替代本 demo 做真实使用。 |
+| CLAUDE.md（内置） | 未收录 | 当前页用于它的主场景；如果更看重“手动、确定、零依赖的项目记忆”，再选 CLAUDE.md（内置）。 | 手动、确定、零依赖的项目记忆。没有后台学习、没有跨项目大脑；靠你手工维护。Claude Subconscious 刻意不写这里。 |
+| [Cipher](https://github.com/campfirein/cipher) | 未收录 | 当前页用于它的主场景；如果更看重“基于 MCP 的编码 agent 记忆层（经 MCP 跨 IDE/CLI 通用）”，再选 Cipher。 | 基于 MCP 的编码 agent 记忆层（经 MCP 跨 IDE/CLI 通用）；客户端支持比单工具插件更广。 |
 
 ## 技术栈
 

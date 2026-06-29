@@ -9,6 +9,11 @@ license: NONE (no LICENSE file — all rights reserved)
 maturity: no tagged releases, active, last push 2026-05 (verified 2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2026-05-08T05:01:15Z
+  default_branch: master
+  default_branch_sha: dcd1ac317c73cd29a7e3118f935c2b3fbd34cb02
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:41:18Z
@@ -87,12 +92,12 @@ You reach for it specifically when your target is the interactive *click-select*
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [Cap](capjs.md) | ✅ | A CAPTCHA *generation/challenge* system (proof-of-work, server-side) — the opposite side of the problem; not a solver. Listed here to disambiguate "captcha" tooling, not as a substitute. |
-| ddddocr | 未收录 | Popular Chinese general OCR/CAPTCHA library with detection + classification + slide-match; broader coverage, also a solver — often the first thing to try for mixed CAPTCHA types. |
-| Commercial solving services (打码平台) | 未收录 | Human/hybrid CAPTCHA-solving APIs; pay-per-solve, no model to host, but ongoing cost, third-party dependency, and the same legal questions. |
-| Roll-your-own YOLO + Siamese | 未收录 | Full control and clean licensing, but you build, label, and train the whole pipeline this repo already assembles. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [Cap](capjs.md) | ✅ | Use this page for its stated niche; choose Cap when you need a CAPTCHA *generation/challenge* system (proof-of-work, server-side). | A CAPTCHA *generation/challenge* system (proof-of-work, server-side) — the opposite side of the problem; not a solver. Listed here to disambiguate "captcha" tooling, not as a substitute. |
+| ddddocr | 未收录 | Use this page for its stated niche; choose ddddocr when you need popular Chinese general OCR/CAPTCHA library with detection + classification + slide-match. | Popular Chinese general OCR/CAPTCHA library with detection + classification + slide-match; broader coverage, also a solver — often the first thing to try for mixed CAPTCHA types. |
+| Commercial solving services (打码平台) | 未收录 | Use this page for its stated niche; choose Commercial solving services (打码平台) when you need human/hybrid CAPTCHA-solving APIs. | Human/hybrid CAPTCHA-solving APIs; pay-per-solve, no model to host, but ongoing cost, third-party dependency, and the same legal questions. |
+| Roll-your-own YOLO + Siamese | 未收录 | Use this page for its stated niche; choose Roll-your-own YOLO + Siamese when you need full control and clean licensing, but you build, label, and train the whole pipeline this repo alrea. | Full control and clean licensing, but you build, label, and train the whole pipeline this repo already assembles. |
 
 ## Tech stack
 

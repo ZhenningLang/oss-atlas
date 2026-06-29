@@ -9,6 +9,11 @@ license: MIT
 maturity: v1.x line, active as of 2026-06; author still self-describes as "alpha" (see caveats)
 last_verified: 2026-06-26
 type: tool
+upstream:
+  pushed_at: 2026-06-29T00:55:01Z
+  default_branch: main
+  default_branch_sha: fa4dce4548d8d15d5478b9ad7e4f6ee7cbfabaa1
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:35:06Z
@@ -92,13 +97,13 @@ So you `bd init` in the repo and hand the agent the `bd` binary. Now its task st
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| Plain markdown `MEMORY.md` / `TODO.md` | 未收录 | Zero deps and human-readable, but no dependency graph, no ready-detection, no merge-safe IDs — exactly the unstructured approach beads replaces. |
-| GitHub Issues (+ `gh` CLI) | 未收录 | Mature hosted tracker with web UI/notifications/cross-repo views, but online-first, not branch-scoped/version-controlled, no native dependency-graph + auto-ready for agents. |
-| Taskwarrior | 未收录 | Battle-tested offline CLI task manager with rich filtering, but no SQL/version-control backend, weaker multi-agent merge story, not built around agent JSON workflows. |
-| Linear / Jira | 未收录 | Best-in-class for human teams (workflows, dashboards, guarantees), but heavyweight, online-only, not version-controlled with the code, not agent-native. |
-| Dolt directly (raw versioned SQL) | 未收录 | Same versioned-SQL superpowers without an opinionated schema, but you build the issue schema, dependency logic, ready-detection and agent ergonomics yourself — beads is that opinionated layer. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| Plain markdown `MEMORY.md` / `TODO.md` | 未收录 | Use this page for its stated niche; choose Plain markdown MEMORY.md / TODO.md when you need zero deps and human-readable, but no dependency graph, no ready-detection, no merge-safe IDs. | Zero deps and human-readable, but no dependency graph, no ready-detection, no merge-safe IDs — exactly the unstructured approach beads replaces. |
+| GitHub Issues (+ `gh` CLI) | 未收录 | Use this page for its stated niche; choose GitHub Issues (+ gh CLI) when you need mature hosted tracker with web UI/notifications/cross-repo views, but online-first, not branch-scope. | Mature hosted tracker with web UI/notifications/cross-repo views, but online-first, not branch-scoped/version-controlled, no native dependency-graph + auto-ready for agents. |
+| Taskwarrior | 未收录 | Use this page for its stated niche; choose Taskwarrior when you need battle-tested offline CLI task manager with rich filtering, but no SQL/version-control backend, weak. | Battle-tested offline CLI task manager with rich filtering, but no SQL/version-control backend, weaker multi-agent merge story, not built around agent JSON workflows. |
+| Linear / Jira | 未收录 | Use this page for its stated niche; choose Linear / Jira when you need best-in-class for human teams (workflows, dashboards, guarantees), but heavyweight, online-only, not. | Best-in-class for human teams (workflows, dashboards, guarantees), but heavyweight, online-only, not version-controlled with the code, not agent-native. |
+| Dolt directly (raw versioned SQL) | 未收录 | Use this page for its stated niche; choose Dolt directly (raw versioned SQL) when you need same versioned-SQL superpowers without an opinionated schema, but you build the issue schema, depend. | Same versioned-SQL superpowers without an opinionated schema, but you build the issue schema, dependency logic, ready-detection and agent ergonomics yourself — beads is that opinionated layer. |
 
 ## Tech stack
 

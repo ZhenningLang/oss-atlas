@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: early, no tagged release, active (2026-06)
 last_verified: 2026-06-26
 type: app
+upstream:
+  pushed_at: 2026-06-16T10:22:48Z
+  default_branch: main
+  default_branch_sha: 8fd5227d6e5d826f856029372ef84359d9374eb6
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:38:16Z
@@ -84,14 +89,14 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| [open-design](open-design.zh.md) | ✅ | 同团队更大的桌面应用——skill/设计系统多得多、原生桌面、支持 PPTX/MP4 导出。HTML Anything 是构建其上、聚焦 Web、只产 HTML 的子集。 |
-| [guizang-ppt-skill](guizang-ppt.zh.md) | ✅ | 单个生成精致 HTML deck 的 agent skill（被 vendored 进 HTML Anything 成 `deck-guizang-editorial`）。它是丢进任意 agent 的 skill;HTML Anything 是外围的 app + 选择器 + 导出 + 75 个 skill。 |
-| [guizang-social-card-skill](guizang-social-card.zh.md) | ✅ | 生成小红书/公众号封面卡的 skill。窄而可移植，对比 HTML Anything 这套多交付面的宽应用。 |
-| [Impeccable](impeccable.zh.md) | ✅ | 一套设计*语言* / 提升 harness 设计质量的层（让任意 agent 更会做设计），不是生成应用。互补，而非替代。 |
-| markdown-nice(mdnice) | 未收录 | Markdown→微信/知乎可粘贴样式的 Web 编辑器；成熟、无 agent、基于主题而非 prompt。HTML Anything 复用了它的 `juice` 内联思路，但加了 agent 生成 + 9 种交付面。 |
-| markdown-to-image(gcui-art) | 未收录 | Markdown→社交卡 PNG 的生成器；输出更窄，同样没有本地 agent 模型。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [open-design](open-design.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“同团队更大的桌面应用”，再选 open-design。 | 同团队更大的桌面应用——skill/设计系统多得多、原生桌面、支持 PPTX/MP4 导出。HTML Anything 是构建其上、聚焦 Web、只产 HTML 的子集。 |
+| [guizang-ppt-skill](guizang-ppt.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“单个生成精致 HTML deck 的 agent skill（被 vendored 进 HTML Anything 成 `deck-guizang-editorial`）”，再选 guizang-ppt-skill。 | 单个生成精致 HTML deck 的 agent skill（被 vendored 进 HTML Anything 成 `deck-guizang-editorial`）。它是丢进任意 agent 的 skill;HTML Anything 是外围的 app + 选择器 + 导出 + 75 个 skill。 |
+| [guizang-social-card-skill](guizang-social-card.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“生成小红书/公众号封面卡的 skill”，再选 guizang-social-card-skill。 | 生成小红书/公众号封面卡的 skill。窄而可移植，对比 HTML Anything 这套多交付面的宽应用。 |
+| [Impeccable](impeccable.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“一套设计*语言* / 提升 harness 设计质量的层（让任意 agent 更会做设计），不是生成应用”，再选 Impeccable。 | 一套设计*语言* / 提升 harness 设计质量的层（让任意 agent 更会做设计），不是生成应用。互补，而非替代。 |
+| markdown-nice(mdnice) | 未收录 | 当前页用于它的主场景；如果更看重“Markdown→微信/知乎可粘贴样式的 Web 编辑器”，再选 markdown-nice(mdnice)。 | Markdown→微信/知乎可粘贴样式的 Web 编辑器；成熟、无 agent、基于主题而非 prompt。HTML Anything 复用了它的 `juice` 内联思路，但加了 agent 生成 + 9 种交付面。 |
+| markdown-to-image(gcui-art) | 未收录 | 当前页用于它的主场景；如果更看重“Markdown→社交卡 PNG 的生成器”，再选 markdown-to-image(gcui-art)。 | Markdown→社交卡 PNG 的生成器；输出更窄，同样没有本地 agent 模型。 |
 
 ## 技术栈
 

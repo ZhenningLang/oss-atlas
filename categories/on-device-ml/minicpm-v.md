@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: ~25.7k stars, active (last push 2026-06); created 2024-01 (~2.5yr); multiple model generations (MiniCPM-V 4.x / MiniCPM-o) (as of 2026-06-28)
 last_verified: 2026-06-28
 type: model
+upstream:
+  pushed_at: 2026-06-25T12:12:59Z
+  default_branch: main
+  default_branch_sha: 8a2db6841e86b4b1a9b77e016a153c081677ac21
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:09:56Z
@@ -80,14 +85,14 @@ So you reach for MiniCPM-V. You pick one of the small models (e.g. a ~1–9B Min
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| Qwen-VL / Qwen2.5-VL (Alibaba) | 未收录 | Strong open vision-language family across sizes; broader size range and ecosystem, but the smallest tiers aren't as single-mindedly tuned for phone-class on-device footprint as MiniCPM-V. |
-| LLaVA | 未收录 | The influential open VLM recipe/lineage; great for research and fine-tuning, but generally larger / less optimized for edge deployment out of the box. |
-| SmolVLM (Hugging Face) | 未收录 | Explicitly tiny VLMs for on-device; comparable "small + multimodal" niche, often even smaller, but typically less capable on video and a narrower model lineup than MiniCPM-V's generations. |
-| Phi-3.5-vision (Microsoft) | 未收录 | Small, capable vision model with strong MS tooling/backing; competitive on image tasks, weaker/narrower video-and-speech story than the MiniCPM-o line. |
-| GPT-4o / Gemini (cloud) | 未收录 | Frontier multimodal quality and zero deployment effort, but cloud-only — network dependency, per-call cost, no offline/on-device, and your data leaves the device. The opposite tradeoff from MiniCPM-V. |
-| [BitNet](bitnet.md) | ✅ | 1.58-bit *text* LLM inference framework for CPU energy efficiency — a different layer/modality; not a vision model, complementary rather than a substitute. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| Qwen-VL / Qwen2.5-VL (Alibaba) | 未收录 | Use this page for its stated niche; choose Qwen-VL / Qwen2.5-VL (Alibaba) when you need strong open vision-language family across sizes. | Strong open vision-language family across sizes; broader size range and ecosystem, but the smallest tiers aren't as single-mindedly tuned for phone-class on-device footprint as MiniCPM-V. |
+| LLaVA | 未收录 | Use this page for its stated niche; choose LLaVA when you need the influential open VLM recipe/lineage. | The influential open VLM recipe/lineage; great for research and fine-tuning, but generally larger / less optimized for edge deployment out of the box. |
+| SmolVLM (Hugging Face) | 未收录 | Use this page for its stated niche; choose SmolVLM (Hugging Face) when you need explicitly tiny VLMs for on-device. | Explicitly tiny VLMs for on-device; comparable "small + multimodal" niche, often even smaller, but typically less capable on video and a narrower model lineup than MiniCPM-V's generations. |
+| Phi-3.5-vision (Microsoft) | 未收录 | Use this page for its stated niche; choose Phi-3.5-vision (Microsoft) when you need small, capable vision model with strong MS tooling/backing. | Small, capable vision model with strong MS tooling/backing; competitive on image tasks, weaker/narrower video-and-speech story than the MiniCPM-o line. |
+| GPT-4o / Gemini (cloud) | 未收录 | Use this page for its stated niche; choose GPT-4o / Gemini (cloud) when you need frontier multimodal quality and zero deployment effort, but cloud-only. | Frontier multimodal quality and zero deployment effort, but cloud-only — network dependency, per-call cost, no offline/on-device, and your data leaves the device. The opposite tradeoff from MiniCPM-V. |
+| [BitNet](bitnet.md) | ✅ | Use this page for its stated niche; choose BitNet when you need 1. | 1.58-bit *text* LLM inference framework for CPU energy efficiency — a different layer/modality; not a vision model, complementary rather than a substitute. |
 
 ## Tech stack
 

@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v0.1.0, active, ~1.2k stars (as of 2026-06)
 last_verified: 2026-06-26
 type: app
+upstream:
+  pushed_at: 2025-09-16T16:08:49Z
+  default_branch: main
+  default_branch_sha: 9d1e8ed614923dcf74414357e0fe53f66b016c0a
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:17:41Z
@@ -78,13 +83,13 @@ HiveChat is built for exactly this shape. You deploy it once (Docker Compose wit
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| LibreChat | 未收录 | Far more mature, larger feature surface (RAG, assistants, code interpreter, many auth backends), MIT-licensed; heavier to operate and not as opinionated toward the small-team admin-quota flow. |
-| Open WebUI | 未收录 | Popular self-hosted UI strong on Ollama/local models with RBAC and pipelines; broader and more active, but its sweet spot is local-model serving rather than HiveChat's multi-cloud-provider + per-group quota framing. |
-| Lobe Chat | 未收录 | Polished UI, plugins, multi-provider, can self-host; oriented to personal/prosumer use more than centralized admin-managed team governance with token quotas. |
-| Chatbox / Cherry Studio | 未收录 | Desktop, single-user clients that bring-your-own-key per person; no central admin, groups, quotas, or shared server. |
-| ChatGPT Team / Claude Team (SaaS) | 未收录 | Managed, zero-ops, vendor-locked to one model family; HiveChat trades that convenience for self-hosting, multi-provider choice, and key/data control. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| LibreChat | 未收录 | Use this page for its stated niche; choose LibreChat when you need far more mature, larger feature surface (RAG, assistants, code interpreter, many auth backends), MIT. | Far more mature, larger feature surface (RAG, assistants, code interpreter, many auth backends), MIT-licensed; heavier to operate and not as opinionated toward the small-team admin-quota flow. |
+| Open WebUI | 未收录 | Use this page for its stated niche; choose Open WebUI when you need popular self-hosted UI strong on Ollama/local models with RBAC and pipelines. | Popular self-hosted UI strong on Ollama/local models with RBAC and pipelines; broader and more active, but its sweet spot is local-model serving rather than HiveChat's multi-cloud-provider + per-group quota framing. |
+| Lobe Chat | 未收录 | Use this page for its stated niche; choose Lobe Chat when you need polished UI, plugins, multi-provider, can self-host. | Polished UI, plugins, multi-provider, can self-host; oriented to personal/prosumer use more than centralized admin-managed team governance with token quotas. |
+| Chatbox / Cherry Studio | 未收录 | Use this page for its stated niche; choose Chatbox / Cherry Studio when you need desktop, single-user clients that bring-your-own-key per person. | Desktop, single-user clients that bring-your-own-key per person; no central admin, groups, quotas, or shared server. |
+| ChatGPT Team / Claude Team (SaaS) | 未收录 | Use this page for its stated niche; choose ChatGPT Team / Claude Team (SaaS) when you need managed, zero-ops, vendor-locked to one model family. | Managed, zero-ops, vendor-locked to one model family; HiveChat trades that convenience for self-hosting, multi-provider choice, and key/data control. |
 
 ## Tech stack
 

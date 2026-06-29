@@ -9,6 +9,11 @@ license: MIT
 maturity: no tagged release, active (2026-06)
 last_verified: 2026-06-26
 type: library
+upstream:
+  pushed_at: 2026-06-29T06:58:57Z
+  default_branch: main
+  default_branch_sha: 293730afbd4319a683fe4aee439360a2b21b8c3c
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:14:37Z
@@ -84,14 +89,14 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| [FalkorDB](falkordb.zh.md) | ✅ | 面向 GraphRAG 的属性图数据库（向量 + 多跳遍历）;PageIndex 是单文档推理树，不是图存储——检索原语不同。 |
-| [graphify](graphify.zh.md) | ✅ | 从代码/文档构建知识图谱；PageIndex 为单篇文档构建层级目录树并在其上推理——没有实体图。 |
-| [code-review-graph](code-review-graph.zh.md) | ✅ | 专做 code-review 的图工具；与文档树检索正交。 |
-| LlamaIndex | 未收录 | 通用 RAG 框架，含多种索引（包括树/摘要索引）；覆盖广得多且以嵌入为中心，而 PageIndex 是聚焦的无向量推理索引。 |
-| RAPTOR | 未收录 | 递归聚类 + 摘要构建检索树，但查询时仍靠嵌入检索；PageIndex 改为用 LLM 推理导航这棵树，而非向量搜索。 |
-| pgvector / Qdrant | 未收录 | 经典的嵌入 + ANN 向量检索；在规模与广度上更便宜，但正是 PageIndex 要规避的“相似 ≠ 相关”失败模式。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [FalkorDB](falkordb.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“面向 GraphRAG 的属性图数据库（向量 + 多跳遍历）”，再选 FalkorDB。 | 面向 GraphRAG 的属性图数据库（向量 + 多跳遍历）;PageIndex 是单文档推理树，不是图存储——检索原语不同。 |
+| [graphify](graphify.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“从代码/文档构建知识图谱”，再选 graphify。 | 从代码/文档构建知识图谱；PageIndex 为单篇文档构建层级目录树并在其上推理——没有实体图。 |
+| [code-review-graph](code-review-graph.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“专做 code-review 的图工具”，再选 code-review-graph。 | 专做 code-review 的图工具；与文档树检索正交。 |
+| LlamaIndex | 未收录 | 当前页用于它的主场景；如果更看重“通用 RAG 框架，含多种索引（包括树/摘要索引）”，再选 LlamaIndex。 | 通用 RAG 框架，含多种索引（包括树/摘要索引）；覆盖广得多且以嵌入为中心，而 PageIndex 是聚焦的无向量推理索引。 |
+| RAPTOR | 未收录 | 当前页用于它的主场景；如果更看重“递归聚类 + 摘要构建检索树，但查询时仍靠嵌入检索”，再选 RAPTOR。 | 递归聚类 + 摘要构建检索树，但查询时仍靠嵌入检索；PageIndex 改为用 LLM 推理导航这棵树，而非向量搜索。 |
+| pgvector / Qdrant | 未收录 | 当前页用于它的主场景；如果更看重“经典的嵌入 + ANN 向量检索”，再选 pgvector / Qdrant。 | 经典的嵌入 + ANN 向量检索；在规模与广度上更便宜，但正是 PageIndex 要规避的“相似 ≠ 相关”失败模式。 |
 
 ## 技术栈
 

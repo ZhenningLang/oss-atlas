@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v6.1.0, active, ~73.6k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: app
+upstream:
+  pushed_at: 2026-06-29T07:10:08Z
+  default_branch: master
+  default_branch_sha: 90fe1f5b7c49d9980afb4fb54ac92d789b294490
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:41:45Z
@@ -89,13 +94,13 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| Metabase | 未收录 | 开源 BI，部署简单得多（单 jar / 容器），无 SQL 的问题构建器更友好；对非技术用户更易上手，但语义 / 定制能力更轻、原始 SQL 与图表深度不如 Superset。 |
-| [Grafana](../observability/grafana.zh.md) | ✅ | 以可观测性为先，面向时序 / 指标 / 日志（Prometheus、Loki、InfluxDB）做看板，告警能力强；也能查 SQL，但它是为监控面板而生，不是数仓式的临时 BI 探索。 |
-| Redash | 未收录 | 以查询为中心：写 SQL、存查询、再据此搭看板；模型更简单、比 Superset 更轻，但可视化集更窄、语义 / 治理层更弱。 |
-| Tableau / Power BI | 未收录 | 专有商业 BI，可视化、数据准备和企业支持成熟；打磨和生态更强，但有授权成本、厂商绑定，以及（Power BI 的）微软栈引力——不是自托管开源。 |
-| Looker | 未收录 | 专有（Google）BI，围绕 LookML 这门真正的建模语言和受治理语义层构建；建模 / 治理强于 Superset 的轻量语义层，但商业、绑定且面向企业定价。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| Metabase | 未收录 | 当前页用于它的主场景；如果更看重“开源 BI，部署简单得多（单 jar / 容器），无 SQL 的问题构建器更友好”，再选 Metabase。 | 开源 BI，部署简单得多（单 jar / 容器），无 SQL 的问题构建器更友好；对非技术用户更易上手，但语义 / 定制能力更轻、原始 SQL 与图表深度不如 Superset。 |
+| [Grafana](../observability/grafana.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“以可观测性为先，面向时序 / 指标 / 日志（Prometheus、Loki、InfluxDB）做看板，告警能力强”，再选 Grafana。 | 以可观测性为先，面向时序 / 指标 / 日志（Prometheus、Loki、InfluxDB）做看板，告警能力强；也能查 SQL，但它是为监控面板而生，不是数仓式的临时 BI 探索。 |
+| Redash | 未收录 | 当前页用于它的主场景；如果更看重“以查询为中心：写 SQL、存查询、再据此搭看板”，再选 Redash。 | 以查询为中心：写 SQL、存查询、再据此搭看板；模型更简单、比 Superset 更轻，但可视化集更窄、语义 / 治理层更弱。 |
+| Tableau / Power BI | 未收录 | 当前页用于它的主场景；如果更看重“专有商业 BI，可视化、数据准备和企业支持成熟”，再选 Tableau / Power BI。 | 专有商业 BI，可视化、数据准备和企业支持成熟；打磨和生态更强，但有授权成本、厂商绑定，以及（Power BI 的）微软栈引力——不是自托管开源。 |
+| Looker | 未收录 | 当前页用于它的主场景；如果更看重“专有（Google）BI，围绕 LookML 这门真正的建模语言和受治理语义层构建”，再选 Looker。 | 专有（Google）BI，围绕 LookML 这门真正的建模语言和受治理语义层构建；建模 / 治理强于 Superset 的轻量语义层，但商业、绑定且面向企业定价。 |
 
 ## 技术栈
 

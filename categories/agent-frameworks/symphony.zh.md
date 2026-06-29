@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: engineering preview (no tagged release), active (2026-06)
 last_verified: 2026-06-26
 type: framework
+upstream:
+  pushed_at: 2026-06-09T23:25:36Z
+  default_branch: main
+  default_branch_sha: 4cbe3a9699a73b862466c0b157ceca0c1985d6d7
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:26:02Z
@@ -88,14 +93,14 @@ OpenAI 出品的长驻编排器：轮询 issue 跟踪器（Linear），为每个
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| [openfang](openfang.zh.md) | ✅ | 同属「一队自治 coding agent」的赛道；栈与集成假设不同——选型前先比跟踪器、隔离模型和 agent 后端。 |
-| [claude-octopus](claude-octopus.zh.md) | ✅ | 并行编排多个 Claude Code agent;Symphony 以 Codex 为中心、由跟踪器（Linear）驱动，所以选择往往取决于你已经标准化了哪个 agent CLI。 |
-| [AgentScope](agentscope.zh.md) | ✅ | 用于构建 agent 应用的通用多 agent 运行时/框架；Symphony 更窄——是「队列→工作区→agent 运行」的编排器，不是用来组合 agent 的框架。 |
-| [DSPy](dspy.zh.md) | ✅ | 编排/优化 LLM 流水线；是正交问题——DSPy 构建 agent 的推理，Symphony 调度并隔离整次实现运行。 |
-| Devin / Cognition（托管） | 未收录 | 托管「自治工程师」SaaS，卖点类似「管理工作」；闭源、不能自托管、不能 fork。Symphony 开源可自托管，但处于预览阶段。 |
-| GitHub Actions + agent CLI（自建） | 未收录 | 自己搭：CI 在 issue 上触发 agent。控制力更强、基础设施更持久（CI runner），但 dispatch/对账/隔离得你自己造——这些正是 Symphony 给你的。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [openfang](openfang.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“同属「一队自治 coding agent」的赛道”，再选 openfang。 | 同属「一队自治 coding agent」的赛道；栈与集成假设不同——选型前先比跟踪器、隔离模型和 agent 后端。 |
+| [claude-octopus](claude-octopus.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“并行编排多个 Claude Code agent”，再选 claude-octopus。 | 并行编排多个 Claude Code agent;Symphony 以 Codex 为中心、由跟踪器（Linear）驱动，所以选择往往取决于你已经标准化了哪个 agent CLI。 |
+| [AgentScope](agentscope.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“用于构建 agent 应用的通用多 agent 运行时/框架”，再选 AgentScope。 | 用于构建 agent 应用的通用多 agent 运行时/框架；Symphony 更窄——是「队列→工作区→agent 运行」的编排器，不是用来组合 agent 的框架。 |
+| [DSPy](dspy.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“编排/优化 LLM 流水线”，再选 DSPy。 | 编排/优化 LLM 流水线；是正交问题——DSPy 构建 agent 的推理，Symphony 调度并隔离整次实现运行。 |
+| Devin / Cognition（托管） | 未收录 | 当前页用于它的主场景；如果更看重“托管「自治工程师」SaaS，卖点类似「管理工作」”，再选 Devin / Cognition（托管）。 | 托管「自治工程师」SaaS，卖点类似「管理工作」；闭源、不能自托管、不能 fork。Symphony 开源可自托管，但处于预览阶段。 |
+| GitHub Actions + agent CLI（自建） | 未收录 | 当前页用于它的主场景；如果更看重“自己搭：CI 在 issue 上触发 agent”，再选 GitHub Actions + agent CLI（自建）。 | 自己搭：CI 在 issue 上触发 agent。控制力更强、基础设施更持久（CI runner），但 dispatch/对账/隔离得你自己造——这些正是 Symphony 给你的。 |
 
 ## 技术栈
 

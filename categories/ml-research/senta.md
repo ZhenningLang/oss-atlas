@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: research release (ACL 2020 SKEP), idle since ~2024-08, ~2.0k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2024-08-20T16:16:48Z
+  default_branch: master
+  default_branch_sha: e5294c00a6ffc4b1284f38000f0fbf24d6554c22
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:05:12Z
@@ -76,12 +81,12 @@ You reach for it specifically when you're inside the **PaddlePaddle / ERNIE ecos
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| Hugging Face sentiment models | 未收录 | Huge catalog of fine-tuned sentiment models (incl. Chinese) on PyTorch/Transformers with trivial install; not the specific SKEP method, but far easier to adopt and maintain. |
-| PaddleNLP / ERNIE | 未收录 | Baidu's actively-maintained successor NLP stack on Paddle 2.x; where current Baidu NLP (incl. sentiment) development actually happens — Senta is the older, frozen sibling. |
-| SnowNLP / cnsenti | 未收录 | Lightweight Chinese sentiment libraries (lexicon/classic ML); trivial to run, far weaker than pretrained transformers — opposite end of the accuracy/effort tradeoff. |
-| [CLIP](clip.md) | ✅ | Unrelated modality (vision-language) but the same shelf — an org-published reference model release where the *checkpoints + paper* are the asset, not active library maintenance. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| Hugging Face sentiment models | 未收录 | Use this page for its stated niche; choose Hugging Face sentiment models when you need huge catalog of fine-tuned sentiment models (incl. | Huge catalog of fine-tuned sentiment models (incl. Chinese) on PyTorch/Transformers with trivial install; not the specific SKEP method, but far easier to adopt and maintain. |
+| PaddleNLP / ERNIE | 未收录 | Use this page for its stated niche; choose PaddleNLP / ERNIE when you need baidu's actively-maintained successor NLP stack on Paddle 2. | Baidu's actively-maintained successor NLP stack on Paddle 2.x; where current Baidu NLP (incl. sentiment) development actually happens — Senta is the older, frozen sibling. |
+| SnowNLP / cnsenti | 未收录 | Use this page for its stated niche; choose SnowNLP / cnsenti when you need lightweight Chinese sentiment libraries (lexicon/classic ML). | Lightweight Chinese sentiment libraries (lexicon/classic ML); trivial to run, far weaker than pretrained transformers — opposite end of the accuracy/effort tradeoff. |
+| [CLIP](clip.md) | ✅ | Use this page for its stated niche; choose CLIP when you need unrelated modality (vision-language) but the same shelf. | Unrelated modality (vision-language) but the same shelf — an org-published reference model release where the *checkpoints + paper* are the asset, not active library maintenance. |
 
 ## Tech stack
 

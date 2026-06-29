@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: active, no tagged releases, ~31.1k stars (as of 2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+upstream:
+  pushed_at: 2026-06-29T09:06:05Z
+  default_branch: main
+  default_branch_sha: 3dc50d51835dc85f7a3f77d593dd9a565a87276b
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:33:49Z
@@ -80,12 +85,12 @@ You reach for this specifically when you want the *first-party* baseline: plugin
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [Anthropic Skills](anthropic-skills.md) | ✅ | Anthropic's standalone *skills* repo (self-contained `SKILL.md` folders, not the `/plugin`-installable marketplace format). Use it when you want the raw skill content for Claude Code / Claude.ai / the API; use this repo when you want one-command marketplace install into Claude Code. |
-| awslabs/agent-plugins | 未收录 | Another vendor (AWS) plugin/skill collection; compare on whose tooling matches your stack and which harness each targets. |
-| MiniMax-AI/skills | 未收录 | Vendor skill collection from MiniMax; different provider, likely different harness assumptions — compare target-agent compatibility before mixing. |
-| Third-party Claude Code marketplaces / community plugin lists | 未收录 | Larger surface and faster-moving, but no Anthropic curation or provenance guarantee. This repo is the first-party baseline; community marketplaces extend it at higher trust cost. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [Anthropic Skills](anthropic-skills.md) | ✅ | Use this page for its stated niche; choose Anthropic Skills when you need anthropic's standalone *skills* repo (self-contained `SKILL. | Anthropic's standalone *skills* repo (self-contained `SKILL.md` folders, not the `/plugin`-installable marketplace format). Use it when you want the raw skill content for Claude Code / Claude.ai / the API; use this repo when you want one-command marketplace install into Claude Code. |
+| awslabs/agent-plugins | 未收录 | Use this page for its stated niche; choose awslabs/agent-plugins when you need another vendor (AWS) plugin/skill collection. | Another vendor (AWS) plugin/skill collection; compare on whose tooling matches your stack and which harness each targets. |
+| MiniMax-AI/skills | 未收录 | Use this page for its stated niche; choose MiniMax-AI/skills when you need vendor skill collection from MiniMax. | Vendor skill collection from MiniMax; different provider, likely different harness assumptions — compare target-agent compatibility before mixing. |
+| Third-party Claude Code marketplaces / community plugin lists | 未收录 | Use this page for its stated niche; choose Third-party Claude Code marketplaces / community plugin lists when you need larger surface and faster-moving, but no Anthropic curation or provenance guarantee. | Larger surface and faster-moving, but no Anthropic curation or provenance guarantee. This repo is the first-party baseline; community marketplaces extend it at higher trust cost. |
 
 ## Health & viability
 

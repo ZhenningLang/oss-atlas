@@ -9,6 +9,11 @@ license: MIT
 maturity: no tagged release, active (pushed 2026-05), ~3.3k stars (as of 2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+upstream:
+  pushed_at: 2026-05-01T14:14:49Z
+  default_branch: main
+  default_branch_sha: 6cac8a569d3e5c48311d5bfe41c9d3dced27d14b
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:32:02Z
@@ -81,14 +86,14 @@ You reach for it when you want a ready-made *thinking discipline* rather than bu
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [antfu/skills](antfu-skills.md) | ✅ | Personal task-oriented skill set (build/repo chores) rather than a thinking methodology; complementary, not a substitute — Qiushi shapes *how to reason*, antfu's shape *how to do specific jobs*. |
-| [Dimillian/Skills](dimillian-skills.md) | ✅ | Another personal curated collection skewed to a specific stack/workflow; overlaps as "someone's skill bundle" but not on the methodology/discipline axis. |
-| [gstack](gstack.md) | ✅ | Personal harness-config collection; same leaf, different intent — config/tooling vs. a cognitive-method spine. |
-| [wshobson/agents](../subagent-collections/wshobson-agents.md) | ✅ | Large subagent persona library (role specialists). Qiushi is a small set of *thinking methods*, not a roster of domain agents — combine rather than choose. |
-| [awesome-claude-code-subagents](../subagent-collections/awesome-claude-code-subagents.md) | ✅ | Breadth-first subagent catalog; Qiushi is depth-first on one methodology. Pick by whether you need many personas or one disciplined loop. |
-| Superpowers / general SDLC methodology packs | 未收录 | Brainstorm→plan→TDD→verify methodology plugins occupy the same "discipline as skills" niche; Qiushi differs by leading with contradiction-analysis and prioritization rather than a test-first lifecycle. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [antfu/skills](antfu-skills.md) | ✅ | Use this page for its stated niche; choose antfu/skills when you need personal task-oriented skill set (build/repo chores) rather than a thinking methodology. | Personal task-oriented skill set (build/repo chores) rather than a thinking methodology; complementary, not a substitute — Qiushi shapes *how to reason*, antfu's shape *how to do specific jobs*. |
+| [Dimillian/Skills](dimillian-skills.md) | ✅ | Use this page for its stated niche; choose Dimillian/Skills when you need another personal curated collection skewed to a specific stack/workflow. | Another personal curated collection skewed to a specific stack/workflow; overlaps as "someone's skill bundle" but not on the methodology/discipline axis. |
+| [gstack](gstack.md) | ✅ | Use this page for its stated niche; choose gstack when you need personal harness-config collection. | Personal harness-config collection; same leaf, different intent — config/tooling vs. a cognitive-method spine. |
+| [wshobson/agents](../subagent-collections/wshobson-agents.md) | ✅ | Use this page for its stated niche; choose wshobson/agents when you need large subagent persona library (role specialists). | Large subagent persona library (role specialists). Qiushi is a small set of *thinking methods*, not a roster of domain agents — combine rather than choose. |
+| [awesome-claude-code-subagents](../subagent-collections/awesome-claude-code-subagents.md) | ✅ | Use this page for its stated niche; choose awesome-claude-code-subagents when you need breadth-first subagent catalog. | Breadth-first subagent catalog; Qiushi is depth-first on one methodology. Pick by whether you need many personas or one disciplined loop. |
+| Superpowers / general SDLC methodology packs | 未收录 | Use this page for its stated niche; choose Superpowers / general SDLC methodology packs when you need brainstorm→plan→TDD→verify methodology plugins occupy the same "discipline as skills" niche. | Brainstorm→plan→TDD→verify methodology plugins occupy the same "discipline as skills" niche; Qiushi differs by leading with contradiction-analysis and prioritization rather than a test-first lifecycle. |
 
 ## Health & viability
 

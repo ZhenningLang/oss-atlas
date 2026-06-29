@@ -9,6 +9,11 @@ license: MIT
 maturity: v1.2.4, active, ~7.8k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2026-05-19T18:17:07Z
+  default_branch: master
+  default_branch_sha: 72d79711ec4db95262660029b4d63298b0820502
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:01:41Z
@@ -88,12 +93,12 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| yt-dlp（`--write-auto-subs`） | 未收录 | 这个重量级下载器也能拉字幕轨道；面广得多（多站点的媒体 + 字幕）但更重、偏 CLI——本库是聚焦、进程内、只取转写的 Python 调用。 |
-| YouTube Data API v3（Captions） | 未收录 | 官方且有契约，但需要 OAuth，且字幕*下载*要频道所有权——你一般取不到任意第三方的字幕文本，而这正是本库的生态位。 |
-| Selenium / Playwright 爬取 | 未收录 | 驱动真实浏览器，因此能扛住一些播放器本身能扛的变更，但慢、吃资源、脆——本库完全绕开了浏览器。 |
-| OpenAI Whisper（转写音频） | 未收录 | 当没有字幕轨道时从音频*生成*转写；算力大得多，也不与 YouTube 自家字幕时间戳对齐，但能处理关掉字幕的视频。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| yt-dlp（`--write-auto-subs`） | 未收录 | 当前页用于它的主场景；如果更看重“这个重量级下载器也能拉字幕轨道”，再选 yt-dlp（--write-auto-subs）。 | 这个重量级下载器也能拉字幕轨道；面广得多（多站点的媒体 + 字幕）但更重、偏 CLI——本库是聚焦、进程内、只取转写的 Python 调用。 |
+| YouTube Data API v3（Captions） | 未收录 | 当前页用于它的主场景；如果更看重“官方且有契约，但需要 OAuth，且字幕*下载*要频道所有权”，再选 YouTube Data API v3（Captions）。 | 官方且有契约，但需要 OAuth，且字幕*下载*要频道所有权——你一般取不到任意第三方的字幕文本，而这正是本库的生态位。 |
+| Selenium / Playwright 爬取 | 未收录 | 当前页用于它的主场景；如果更看重“驱动真实浏览器，因此能扛住一些播放器本身能扛的变更，但慢、吃资源、脆”，再选 Selenium / Playwright 爬取。 | 驱动真实浏览器，因此能扛住一些播放器本身能扛的变更，但慢、吃资源、脆——本库完全绕开了浏览器。 |
+| OpenAI Whisper（转写音频） | 未收录 | 当前页用于它的主场景；如果更看重“当没有字幕轨道时从音频*生成*转写”，再选 OpenAI Whisper（转写音频）。 | 当没有字幕轨道时从音频*生成*转写；算力大得多，也不与 YouTube 自家字幕时间戳对齐，但能处理关掉字幕的视频。 |
 
 ## 技术栈
 

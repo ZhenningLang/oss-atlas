@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: last release 0.3.2 (~2018), repo near-dormant (pushed 2024-03), ~4.2k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: tool
+upstream:
+  pushed_at: 2024-03-18T18:41:12Z
+  default_branch: master
+  default_branch_sha: d21aae8575fc3a95493233ecfd2c7cf47b36b069
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:11:18Z
@@ -82,12 +87,12 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| [Scylla](scylla.zh.md) | ✅ | 一个更长寿的智能代理池，带网页 UI、JSON API 和质量打分——比 ProxyBroker 的 CLI 更像一个可运行的*服务*，也维护得更近，尽管同样不常发版。 |
-| [haipproxy](haipproxy.zh.md) | ✅ | 分布式 Scrapy+Redis 代理池，面向大型爬虫的高可用——重得多（需要 Redis、Scrapy）且自身也长期休眠，但为规模而非单个 CLI 设计。 |
-| 付费代理供应商（Bright Data、Oxylabs……） | 未收录 | 商业住宅/数据中心池，自带 SLA、鉴权和轮换——真正的生产答案；只有当「免费 + 用完即弃」可接受时，ProxyBroker 才说得通。 |
-| scrapy-rotating-proxies / 代理中间件 | 未收录 | 在 Scrapy 内轮换*你提供的列表*的库中间件；是互补而非竞争——它不收割代理，只消费代理。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [Scylla](scylla.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“一个更长寿的智能代理池，带网页 UI、JSON API 和质量打分”，再选 Scylla。 | 一个更长寿的智能代理池，带网页 UI、JSON API 和质量打分——比 ProxyBroker 的 CLI 更像一个可运行的*服务*，也维护得更近，尽管同样不常发版。 |
+| [haipproxy](haipproxy.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“分布式 Scrapy+Redis 代理池，面向大型爬虫的高可用”，再选 haipproxy。 | 分布式 Scrapy+Redis 代理池，面向大型爬虫的高可用——重得多（需要 Redis、Scrapy）且自身也长期休眠，但为规模而非单个 CLI 设计。 |
+| 付费代理供应商（Bright Data、Oxylabs……） | 未收录 | 当前页用于它的主场景；如果更看重“商业住宅/数据中心池，自带 SLA、鉴权和轮换”，再选 付费代理供应商（Bright Data、Oxylabs……）。 | 商业住宅/数据中心池，自带 SLA、鉴权和轮换——真正的生产答案；只有当「免费 + 用完即弃」可接受时，ProxyBroker 才说得通。 |
+| scrapy-rotating-proxies / 代理中间件 | 未收录 | 当前页用于它的主场景；如果更看重“在 Scrapy 内轮换*你提供的列表*的库中间件”，再选 scrapy-rotating-proxies / 代理中间件。 | 在 Scrapy 内轮换*你提供的列表*的库中间件；是互补而非竞争——它不收割代理，只消费代理。 |
 
 ## 技术栈
 

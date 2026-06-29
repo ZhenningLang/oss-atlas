@@ -9,6 +9,11 @@ license: GPL-3.0-or-later
 maturity: tombstone — repo emptied 2023-04, lineage archived, ~2.4k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: tool
+upstream:
+  pushed_at: 2023-04-08T12:38:11Z
+  default_branch: master
+  default_branch_sha: 7ec65cf2446f02a539001ebbbd6a7afeb49fb74e
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:55:01Z
@@ -83,11 +88,11 @@ But note what you're actually reaching for: **not this repo.** `xdmjun/wxappUnpa
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| qwerty472123/wxappUnpacker (upstream) | 未收录 | The original lineage; more complete than this gutted fork, but **archived/read-only since 2020** — also unmaintained, just not deleted. |
-| Other live forks (SangeCoder / PyCoreDev / yangyang5214) | 未收录 | Where working code survives; PyCoreDev (2023-02) retains full code + `package.json`. None are large or clearly maintained — pick by recency and read the diff yourself. |
-| Custom unpack scripts | 未收录 | The `.wxapkg` format is documented enough that ad-hoc scripts exist; viable if you only need asset extraction, not full source restore. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| qwerty472123/wxappUnpacker (upstream) | 未收录 | Use this page for its stated niche; choose qwerty472123/wxappUnpacker (upstream) when you need the original lineage. | The original lineage; more complete than this gutted fork, but **archived/read-only since 2020** — also unmaintained, just not deleted. |
+| Other live forks (SangeCoder / PyCoreDev / yangyang5214) | 未收录 | Use this page for its stated niche; choose Other live forks (SangeCoder / PyCoreDev / yangyang5214) when you need where working code survives. | Where working code survives; PyCoreDev (2023-02) retains full code + `package.json`. None are large or clearly maintained — pick by recency and read the diff yourself. |
+| Custom unpack scripts | 未收录 | Use this page for its stated niche; choose Custom unpack scripts when you need the `. | The `.wxapkg` format is documented enough that ad-hoc scripts exist; viable if you only need asset extraction, not full source restore. |
 
 ## Tech stack
 

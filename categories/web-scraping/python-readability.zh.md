@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v0.8.x, maintained (low cadence), ~2.9k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2026-01-26T13:06:04Z
+  default_branch: master
+  default_branch_sha: 701833ccb24f9a15b463434f78229e4d6daf1c79
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:23:49Z
@@ -76,13 +81,13 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| [Readability.js](readability-js.zh.md) | ✅ | Mozilla 的 JS 引擎，Firefox Reader View 背后那个；按语言选（JS/Node）——启发式不同，需要 DOM。 |
-| [dragnet](dragnet.zh.md) | ✅ | 基于 ML 的抽取（Python）；在某些页面上可胜出，但更重、pin 的依赖老化、维护较少。 |
-| [boilerpipe](boilerpipe.zh.md) | ✅ | Java 样板移除算法；经典，但仓库实际已废弃（最后 push 2018）。 |
-| trafilatura | 未收录 | 现代 Python 抽取库，基准强、带元数据和爬取功能；常是当下 Python 默认——范围更广、更重。 |
-| newspaper3k / goose3 | 未收录 | 自带抓取和元数据的文章抽取库；方便，但历来维护起伏不定。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [Readability.js](readability-js.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“Mozilla 的 JS 引擎，Firefox Reader View 背后那个”，再选 Readability.js。 | Mozilla 的 JS 引擎，Firefox Reader View 背后那个；按语言选（JS/Node）——启发式不同，需要 DOM。 |
+| [dragnet](dragnet.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“基于 ML 的抽取（Python）”，再选 dragnet。 | 基于 ML 的抽取（Python）；在某些页面上可胜出，但更重、pin 的依赖老化、维护较少。 |
+| [boilerpipe](boilerpipe.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“Java 样板移除算法”，再选 boilerpipe。 | Java 样板移除算法；经典，但仓库实际已废弃（最后 push 2018）。 |
+| trafilatura | 未收录 | 当前页用于它的主场景；如果更看重“现代 Python 抽取库，基准强、带元数据和爬取功能”，再选 trafilatura。 | 现代 Python 抽取库，基准强、带元数据和爬取功能；常是当下 Python 默认——范围更广、更重。 |
+| newspaper3k / goose3 | 未收录 | 当前页用于它的主场景；如果更看重“自带抓取和元数据的文章抽取库”，再选 newspaper3k / goose3。 | 自带抓取和元数据的文章抽取库；方便，但历来维护起伏不定。 |
 
 ## 技术栈
 

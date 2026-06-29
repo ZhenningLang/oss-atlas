@@ -5,18 +5,18 @@
 
 ## Projects in this category
 
-| Project | Use when | Page |
-|---|---|---|
-| **promptfoo** | Use it when you need declarative YAML evals plus red-teaming for your LLM app in CI. | [→](promptfoo.md) |
-| **Pezzo** | Use it when a small team wants one self-hosted control plane for prompt versioning plus cost/latency observability — but it looks stalled since mid-2025, so assume you'll maintain it yourself. | [→](pezzo.md) |
+| Project | Use when | Health | Page |
+| --- | --- | --- | --- |
+| **promptfoo** | Use it when you need declarative YAML evals plus red-teaming for your LLM app in CI. | A (6/6) | [→](promptfoo.md) |
+| **Pezzo** | Use it when a small team wants one self-hosted control plane for prompt versioning plus cost/latency observability — but it looks stalled since mid-2025, so assume you'll maintain it yourself. | C (4/6) | [→](pezzo.md) |
 
 ## Comparison matrix
 
-| Option | Indexed | One-line tradeoff |
-|---|---|---|
-| [promptfoo](promptfoo.md) | ✅ | Use it when you need declarative YAML evals plus red-teaming for your LLM app in CI. |
-| [Pezzo](pezzo.md) | ✅ | Use it when a small team wants one self-hosted control plane for prompt versioning plus cost/latency observability — but it looks stalled since mid-2025, so assume you'll maintain it yourself. |
-| DeepEval / Ragas / OpenAI Evals / Giskard | 未收录 | Other LLM eval / red-team frameworks named across the pages. |
+| Option | Indexed | Health | One-line tradeoff |
+| --- | --- | --- | --- |
+| [promptfoo](promptfoo.md) | ✅ | A (6/6) | Use it when you need declarative YAML evals plus red-teaming for your LLM app in CI. |
+| [Pezzo](pezzo.md) | ✅ | C (4/6) | Use it when a small team wants one self-hosted control plane for prompt versioning plus cost/latency observability — but it looks stalled since mid-2025, so assume you'll maintain it yourself. |
+| DeepEval / Ragas / OpenAI Evals / Giskard | 未收录 | — | Other LLM eval / red-team frameworks named across the pages. |
 
 ## What belongs here
 

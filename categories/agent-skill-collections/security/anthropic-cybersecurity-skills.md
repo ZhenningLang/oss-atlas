@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v1.3.0, active (2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+upstream:
+  pushed_at: 2026-06-26T14:37:50Z
+  default_branch: main
+  default_branch_sha: 673da1f3b0b7be34ffc9624ef3858fe45f1c3bed
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:32:37Z
@@ -80,12 +85,12 @@ You reach for this pack to drop in a security playbook: install once (`npx skill
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| `/guard-secure`, `/guard-threat-model` style security skills in a personal/team skill stack | 未收录 | Hand-curated, harness-native security gates you already trust and can enforce in hooks; far narrower coverage. This pack trades enforceability and curation for 800+ ready-made domain workflows. |
-| MITRE ATT&CK Navigator / framework docs (read the source mappings yourself) | 未收录 | Authoritative, always-current technique data, but no agent-executable workflow — you wire ATT&CK to procedure manually. This pack pre-binds workflows to (a snapshot of) those frameworks. |
-| Security MCP servers (e.g. tool-wrapping SIEM/scanner MCPs) | 未收录 | Give the agent live *tool access* with structured I/O; this pack gives *procedural knowledge*, not connectivity. Complementary, not substitutes — one knows the steps, the other can execute against a system. |
-| Bespoke per-task prompting (write your own `SKILL.md`) | 未收录 | Maximum control and zero unused surface, but you rebuild and maintain curated, framework-mapped runbooks for every domain yourself instead of installing a vetted bundle. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| `/guard-secure`, `/guard-threat-model` style security skills in a personal/team skill stack | 未收录 | Use this page for its stated niche; choose /guard-secure, /guard-threat-model style security skills in a personal/team skill stack when you need hand-curated, harness-native security gates you already trust and can enforce in hooks. | Hand-curated, harness-native security gates you already trust and can enforce in hooks; far narrower coverage. This pack trades enforceability and curation for 800+ ready-made domain workflows. |
+| MITRE ATT&CK Navigator / framework docs (read the source mappings yourself) | 未收录 | Use this page for its stated niche; choose MITRE ATT&CK Navigator / framework docs (read the source mappings yourself) when you need authoritative, always-current technique data, but no agent-executable workflow. | Authoritative, always-current technique data, but no agent-executable workflow — you wire ATT&CK to procedure manually. This pack pre-binds workflows to (a snapshot of) those frameworks. |
+| Security MCP servers (e.g. tool-wrapping SIEM/scanner MCPs) | 未收录 | Use this page for its stated niche; choose Security MCP servers (e.g. tool-wrapping SIEM/scanner MCPs) when you need give the agent live *tool access* with structured I/O. | Give the agent live *tool access* with structured I/O; this pack gives *procedural knowledge*, not connectivity. Complementary, not substitutes — one knows the steps, the other can execute against a system. |
+| Bespoke per-task prompting (write your own `SKILL.md`) | 未收录 | Use this page for its stated niche; choose Bespoke per-task prompting (write your own SKILL.md) when you need maximum control and zero unused surface, but you rebuild and maintain curated, framework-mapped runb. | Maximum control and zero unused surface, but you rebuild and maintain curated, framework-mapped runbooks for every domain yourself instead of installing a vetted bundle. |
 
 ## Health & viability
 

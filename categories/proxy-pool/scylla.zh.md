@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: last release 1.2.0 (2022-03), repo touched 2025-06, ~4.0k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: app
+upstream:
+  pushed_at: 2025-06-09T01:51:36Z
+  default_branch: main
+  default_branch_sha: b051fd586f2e3268bb07f8d94a0b27dce01dea12
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:11:36Z
@@ -76,12 +81,12 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| [ProxyBroker](proxybroker.zh.md) | ✅ | 一个 CLI 优先的 finder/checker/server，而非 UI+API 服务；更休眠、更易在现代 Python 上崩，但快速收割时调用更轻。 |
-| [haipproxy](haipproxy.zh.md) | ✅ | 为爬虫规模的高可用而建的分布式 Scrapy+Redis 池；基建重得多（需 Redis）且同样长期休眠，对照 Scylla 的单服务简洁。 |
-| 付费代理供应商（Bright Data、Oxylabs……） | 未收录 | 带 SLA、鉴权、住宅 IP 和轮换的商业池——生产答案；只有当「免费 + 自托管」可接受时 Scylla 才合适。 |
-| proxy_pool（jhao104） | 未收录 | 另一个流行的自托管免费代理池，爬取/校验/API 形态相似（Redis 支撑）；生态位相近，栈和维护状态不同。[未验证] |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [ProxyBroker](proxybroker.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“一个 CLI 优先的 finder/checker/server，而非 UI+API 服务”，再选 ProxyBroker。 | 一个 CLI 优先的 finder/checker/server，而非 UI+API 服务；更休眠、更易在现代 Python 上崩，但快速收割时调用更轻。 |
+| [haipproxy](haipproxy.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“为爬虫规模的高可用而建的分布式 Scrapy+Redis 池”，再选 haipproxy。 | 为爬虫规模的高可用而建的分布式 Scrapy+Redis 池；基建重得多（需 Redis）且同样长期休眠，对照 Scylla 的单服务简洁。 |
+| 付费代理供应商（Bright Data、Oxylabs……） | 未收录 | 当前页用于它的主场景；如果更看重“带 SLA、鉴权、住宅 IP 和轮换的商业池”，再选 付费代理供应商（Bright Data、Oxylabs……）。 | 带 SLA、鉴权、住宅 IP 和轮换的商业池——生产答案；只有当「免费 + 自托管」可接受时 Scylla 才合适。 |
+| proxy_pool（jhao104） | 未收录 | 当前页用于它的主场景；如果更看重“另一个流行的自托管免费代理池，爬取/校验/API 形态相似（Redis 支撑）”，再选 proxypool（jhao104）。 | 另一个流行的自托管免费代理池，爬取/校验/API 形态相似（Redis 支撑）；生态位相近，栈和维护状态不同。[未验证] |
 
 ## 技术栈
 

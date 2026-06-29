@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v13.8.0, active (2026-06); ~84.8k stars (API-verified count, as of 2026-06) — production-adoption/vetting meaning unverified and suspicious for a young single-maintainer hook tool
 last_verified: 2026-06-28
 type: tool
+upstream:
+  pushed_at: 2026-06-28T04:33:54Z
+  default_branch: main
+  default_branch_sha: 3fe0725a97e18b5edf3e61cde60e181ab2b6c997
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:26:15Z
@@ -88,13 +93,13 @@ It fits when you want this *across* tools, not bound to one agent: the same memo
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [Mem0](mem0.md) | ✅ | Model-agnostic memory **library/API** you embed in your own agent code (Python/TS, any LLM); built for app-embedded user memory. claude-mem is a workstation hook tool for coding agents, not a library you call. |
-| [Memori](memori.md) | ✅ | SQL-first memory engine you wrap your LLM client with; framework-agnostic, with a cloud/BYODB split. claude-mem is local-only and hook-driven, scoped to coding-agent sessions rather than app memory. |
-| [Claude Subconscious](claude-subconscious.md) | ✅ | Closest shape: a Claude Code hook plugin doing cross-session memory — but it's a Letta-backed *demo* explicitly "not for production" and Claude-Code-only. claude-mem is local-store (SQLite+Chroma), multi-agent, and positions as a real install. |
-| Letta (MemGPT) | 未收录 | Stateful agent runtime with a self-editing memory OS and a server; owns the agent loop. claude-mem slots under your existing agents via hooks rather than replacing them. |
-| Zep / Graphiti | 未收录 | Temporal knowledge-graph memory service with explicit fact invalidation; a hosted/self-host backend for app memory, not a per-developer coding-agent hook layer. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [Mem0](mem0.md) | ✅ | Use this page for its stated niche; choose Mem0 when you need model-agnostic memory **library/API** you embed in your own agent code (Python/TS, any LLM). | Model-agnostic memory **library/API** you embed in your own agent code (Python/TS, any LLM); built for app-embedded user memory. claude-mem is a workstation hook tool for coding agents, not a library you call. |
+| [Memori](memori.md) | ✅ | Use this page for its stated niche; choose Memori when you need SQL-first memory engine you wrap your LLM client with. | SQL-first memory engine you wrap your LLM client with; framework-agnostic, with a cloud/BYODB split. claude-mem is local-only and hook-driven, scoped to coding-agent sessions rather than app memory. |
+| [Claude Subconscious](claude-subconscious.md) | ✅ | Use this page for its stated niche; choose Claude Subconscious when you need closest shape: a Claude Code hook plugin doing cross-session memory. | Closest shape: a Claude Code hook plugin doing cross-session memory — but it's a Letta-backed *demo* explicitly "not for production" and Claude-Code-only. claude-mem is local-store (SQLite+Chroma), multi-agent, and positions as a real install. |
+| Letta (MemGPT) | 未收录 | Use this page for its stated niche; choose Letta (MemGPT) when you need stateful agent runtime with a self-editing memory OS and a server. | Stateful agent runtime with a self-editing memory OS and a server; owns the agent loop. claude-mem slots under your existing agents via hooks rather than replacing them. |
+| Zep / Graphiti | 未收录 | Use this page for its stated niche; choose Zep / Graphiti when you need temporal knowledge-graph memory service with explicit fact invalidation. | Temporal knowledge-graph memory service with explicit fact invalidation; a hosted/self-host backend for app memory, not a per-developer coding-agent hook layer. |
 
 ## Tech stack
 

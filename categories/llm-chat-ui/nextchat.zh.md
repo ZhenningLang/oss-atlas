@@ -9,6 +9,11 @@ license: MIT
 maturity: v2.16.1, active (2026-05), ~88.3k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: app
+upstream:
+  pushed_at: 2026-05-15T01:19:01Z
+  default_branch: main
+  default_branch_sha: 89b8f26ff8f03a0c5b98fc3026d980721495227e
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:56:16Z
@@ -84,13 +89,13 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| LibreChat | 未收录 | 完整的多用户平台——账号、多种鉴权后端、RAG、assistants、代码解释器；能力强得多，也重得多。NextChat 是更轻的单次部署客户端，不是团队平台。 |
-| Lobe Chat | 未收录 | 同样精致的多服务商自部署 UI，带插件、知识库，以及（在其云/DB 模式下）多用户；功能面更宽，开启这些后更重。NextChat 保持极简、浏览器本地。 |
-| Open WebUI | 未收录 | 自部署 UI，在 Ollama/本地模型上很强，内建 RBAC、用户和 pipelines；需要服务器 + 数据库。NextChat 用静态/Vercel 部署换掉了这层，没有后端要运维。 |
-| [HiveChat](../team-chat/hivechat.zh.md) | ✅ | 管理员托管的团队聊天：按组的模型权限、token 配额、Postgres 支撑的用户账号。正是 NextChat 社区版有意不去做的那个团队治理答案。 |
-| ChatGPT / Claude.ai（商业 SaaS） | 未收录 | 零运维、厂商托管、锁定单一模型家族，数据由服务商持有。NextChat 用这份便利换来了自部署、多服务商选择和 key/数据掌控。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| LibreChat | 未收录 | 当前页用于它的主场景；如果更看重“完整的多用户平台”，再选 LibreChat。 | 完整的多用户平台——账号、多种鉴权后端、RAG、assistants、代码解释器；能力强得多，也重得多。NextChat 是更轻的单次部署客户端，不是团队平台。 |
+| Lobe Chat | 未收录 | 当前页用于它的主场景；如果更看重“同样精致的多服务商自部署 UI，带插件、知识库，以及（在其云/DB 模式下）多用户”，再选 Lobe Chat。 | 同样精致的多服务商自部署 UI，带插件、知识库，以及（在其云/DB 模式下）多用户；功能面更宽，开启这些后更重。NextChat 保持极简、浏览器本地。 |
+| Open WebUI | 未收录 | 当前页用于它的主场景；如果更看重“自部署 UI，在 Ollama/本地模型上很强，内建 RBAC、用户和 pipelines”，再选 Open WebUI。 | 自部署 UI，在 Ollama/本地模型上很强，内建 RBAC、用户和 pipelines；需要服务器 + 数据库。NextChat 用静态/Vercel 部署换掉了这层，没有后端要运维。 |
+| [HiveChat](../team-chat/hivechat.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“管理员托管的团队聊天：按组的模型权限、token 配额、Postgres 支撑的用户账号”，再选 HiveChat。 | 管理员托管的团队聊天：按组的模型权限、token 配额、Postgres 支撑的用户账号。正是 NextChat 社区版有意不去做的那个团队治理答案。 |
+| ChatGPT / Claude.ai（商业 SaaS） | 未收录 | 当前页用于它的主场景；如果更看重“零运维、厂商托管、锁定单一模型家族，数据由服务商持有”，再选 ChatGPT / Claude.ai（商业 SaaS）。 | 零运维、厂商托管、锁定单一模型家族，数据由服务商持有。NextChat 用这份便利换来了自部署、多服务商选择和 key/数据掌控。 |
 
 ## 技术栈
 

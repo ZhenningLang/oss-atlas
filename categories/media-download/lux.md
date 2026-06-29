@@ -9,6 +9,11 @@ license: MIT
 maturity: "active-but-slowing, master pushed ~2026-03, last tagged release v0.24.1 (2024-05), ~31.4k stars (2026-06)"
 last_verified: 2026-06-28
 type: tool
+upstream:
+  pushed_at: 2026-03-29T18:18:56Z
+  default_branch: master
+  default_branch_sha: dd00f6d258d80b6684a0b9402d7124e5c18ef42f
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:00:21Z
@@ -83,12 +88,12 @@ You especially reach for it when the sources are **Chinese sites** — Bilibili,
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [youtube-dl](youtube-dl.md) | indexed | Python CLI with the largest legacy extractor catalog (~1000 sites); broader Western-site coverage, but needs a Python runtime and its upstream tags lag (yt-dlp is the active path). lux trades breadth for a single Go binary and stronger Chinese-site support. |
-| yt-dlp | 未收录 | The de-facto most-active downloader; widest extractor coverage and fastest fixes, Python-based. Pick it when breadth/currency matters more than shipping a single static binary. |
-| [you-get](you-get.md) | indexed | Python downloader also strong on Chinese sites (Bilibili etc.); similar niche to lux but with a Python runtime instead of a Go binary, and its own separately-curated site list. |
-| [cobalt](cobalt.md) | indexed | Web/API-first, self-hostable *service*; clean browser-friendly UX, but it's a server to run rather than a single CLI binary you drop into a script. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [youtube-dl](youtube-dl.md) | indexed | Use this page for its stated niche; choose youtube-dl when you need python CLI with the largest legacy extractor catalog (~1000 sites). | Python CLI with the largest legacy extractor catalog (~1000 sites); broader Western-site coverage, but needs a Python runtime and its upstream tags lag (yt-dlp is the active path). lux trades breadth for a single Go binary and stronger Chinese-site support. |
+| yt-dlp | 未收录 | Use this page for its stated niche; choose yt-dlp when you need the de-facto most-active downloader. | The de-facto most-active downloader; widest extractor coverage and fastest fixes, Python-based. Pick it when breadth/currency matters more than shipping a single static binary. |
+| [you-get](you-get.md) | indexed | Use this page for its stated niche; choose you-get when you need python downloader also strong on Chinese sites (Bilibili etc. | Python downloader also strong on Chinese sites (Bilibili etc.); similar niche to lux but with a Python runtime instead of a Go binary, and its own separately-curated site list. |
+| [cobalt](cobalt.md) | indexed | Use this page for its stated niche; choose cobalt when you need web/API-first, self-hostable *service*. | Web/API-first, self-hostable *service*; clean browser-friendly UX, but it's a server to run rather than a single CLI binary you drop into a script. |
 
 ## Tech stack
 

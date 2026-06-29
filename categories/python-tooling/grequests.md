@@ -9,6 +9,11 @@ license: BSD-2-Clause
 maturity: v0.7.0, low-activity (2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2024-08-08T21:52:34Z
+  default_branch: master
+  default_branch_sha: 60f70e99e942a2df378b4e4f6202dcf862754c2d
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:12:39Z
@@ -82,12 +87,12 @@ You reach for it specifically when the surrounding stack is already gevent-based
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| httpx | 未收录 | Modern sync+async client with HTTP/2; the recommended path for new concurrent code, but requires `async`/`await` (or its sync client without the same concurrency model). |
-| aiohttp | 未收录 | Mature asyncio HTTP client/server; full async ecosystem, but a different programming model than drop-in `requests`. |
-| requests-futures | 未收录 | Also wraps `requests` for concurrency but via a `ThreadPoolExecutor` (real threads, no monkeypatching) — simpler integration, different concurrency tradeoffs. |
-| `requests` + `concurrent.futures` | 未收录 | Stdlib thread/process pools around plain `requests`; no extra dep and no monkeypatching, slightly more boilerplate than `map()`. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| httpx | 未收录 | Use this page for its stated niche; choose httpx when you need modern sync+async client with HTTP/2. | Modern sync+async client with HTTP/2; the recommended path for new concurrent code, but requires `async`/`await` (or its sync client without the same concurrency model). |
+| aiohttp | 未收录 | Use this page for its stated niche; choose aiohttp when you need mature asyncio HTTP client/server. | Mature asyncio HTTP client/server; full async ecosystem, but a different programming model than drop-in `requests`. |
+| requests-futures | 未收录 | Use this page for its stated niche; choose requests-futures when you need also wraps `requests` for concurrency but via a `ThreadPoolExecutor` (real threads, no monkeypatchin. | Also wraps `requests` for concurrency but via a `ThreadPoolExecutor` (real threads, no monkeypatching) — simpler integration, different concurrency tradeoffs. |
+| `requests` + `concurrent.futures` | 未收录 | Use this page for its stated niche; choose requests + concurrent.futures when you need stdlib thread/process pools around plain `requests`. | Stdlib thread/process pools around plain `requests`; no extra dep and no monkeypatching, slightly more boilerplate than `map()`. |
 
 ## Tech stack
 

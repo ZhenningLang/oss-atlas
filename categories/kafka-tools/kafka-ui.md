@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v0.7.2 (2024-04), upstream stalled — see Health, ~12.2k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: app
+upstream:
+  pushed_at: 2024-07-26T08:00:52Z
+  default_branch: master
+  default_branch_sha: 83b5a60cc08501b570a0c4d0b4cdfceb1b88d6b7
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:56:00Z
@@ -79,14 +84,14 @@ It also fits when you need a self-hosted, no-license-cost alternative to commerc
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| kafbat/kafka-ui | 未收录 | The **maintained community fork** of this exact project — same UI, ongoing releases; for new installs it's generally the better choice than the stalled upstream. |
-| Conduktor | 未收录 | Polished desktop/web Kafka platform; richer features and enterprise governance, but freemium/commercial — not a fully-open self-hosted OSS UI. |
-| Confluent Control Center | 未收录 | Deep, enterprise-grade monitoring/governance in the Confluent Platform; commercial and tied to that ecosystem, far heavier than a single-container UI. |
-| AKHQ | 未收录 | Open-source (Apache-2.0) Kafka web UI with similar scope (topics, consumers, Connect, schema registry, ACLs); a direct OSS substitute, different stack/UX. |
-| Redpanda Console | 未收录 | Open-source Kafka/Redpanda UI (Go); clean, fast, works with vanilla Kafka too; some advanced features gated toward Redpanda's commercial tier. |
-| kafka-python admin CLI | 未收录 | CLI, not a UI — scriptable/headless admin; complements rather than replaces a dashboard. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| kafbat/kafka-ui | 未收录 | Use this page for its stated niche; choose kafbat/kafka-ui when you need the **maintained community fork** of this exact project. | The **maintained community fork** of this exact project — same UI, ongoing releases; for new installs it's generally the better choice than the stalled upstream. |
+| Conduktor | 未收录 | Use this page for its stated niche; choose Conduktor when you need polished desktop/web Kafka platform. | Polished desktop/web Kafka platform; richer features and enterprise governance, but freemium/commercial — not a fully-open self-hosted OSS UI. |
+| Confluent Control Center | 未收录 | Use this page for its stated niche; choose Confluent Control Center when you need deep, enterprise-grade monitoring/governance in the Confluent Platform. | Deep, enterprise-grade monitoring/governance in the Confluent Platform; commercial and tied to that ecosystem, far heavier than a single-container UI. |
+| AKHQ | 未收录 | Use this page for its stated niche; choose AKHQ when you need open-source (Apache-2. | Open-source (Apache-2.0) Kafka web UI with similar scope (topics, consumers, Connect, schema registry, ACLs); a direct OSS substitute, different stack/UX. |
+| Redpanda Console | 未收录 | Use this page for its stated niche; choose Redpanda Console when you need open-source Kafka/Redpanda UI (Go). | Open-source Kafka/Redpanda UI (Go); clean, fast, works with vanilla Kafka too; some advanced features gated toward Redpanda's commercial tier. |
+| kafka-python admin CLI | 未收录 | Use this page for its stated niche; choose kafka-python admin CLI when you need CLI, not a UI. | CLI, not a UI — scriptable/headless admin; complements rather than replaces a dashboard. |
 
 ## Tech stack
 

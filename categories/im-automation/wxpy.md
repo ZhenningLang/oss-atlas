@@ -9,6 +9,11 @@ license: MIT
 maturity: abandoned — archived 2019-07 (last pushed 2019-07, ~7y frozen); built on the same now-defunct WeChat web protocol as ItChat, mostly non-functional for new accounts (2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2019-07-14T17:59:47Z
+  default_branch: master
+  default_branch_sha: ab63e12da822dc85615fa203e5be9fa28ae0b59f
+  archived: true
 health:
   schema: 1
   computed_at: 2026-06-29T09:55:17Z
@@ -86,12 +91,12 @@ That is realistically the only safe reason to reach for it in 2026. If your actu
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [ItChat](itchat.md) | indexed | wxpy's **own base layer** — the lower-level web-WeChat library wxpy wraps. Also abandoned and also non-functional on the dead web protocol; wxpy adds a nicer object API on top but inherits *every* viability problem ItChat has, plus its own 2019 archival. Strictly downstream — no reason to prefer wxpy for new work over either. |
-| wechaty | 未收录 | Actively-maintained multi-language (TS/Python/Go/Java) conversational-bot framework with pluggable "puppets"; the de-facto successor for personal-account-style WeChat bots, but still rides on unofficial/3rd-party access channels and the same ToS/ban exposure — pick a puppet carefully. |
-| WeCom / Official WeChat Work API | 未收录 | Tencent's **official, sanctioned** enterprise messaging API; stable and supported, but it automates *WeCom* accounts/contacts, not arbitrary personal WeChat accounts — a different (legitimate) surface, not a drop-in replacement. |
-| WeChat Official Account / Mini-Program server APIs | 未收录 | Official server-side APIs for *public accounts* and mini-programs; fully supported but a different product surface (broadcast/service accounts), not personal 1:1 IM automation. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [ItChat](itchat.md) | indexed | Use this page for its stated niche; choose ItChat when you need wxpy's **own base layer**. | wxpy's **own base layer** — the lower-level web-WeChat library wxpy wraps. Also abandoned and also non-functional on the dead web protocol; wxpy adds a nicer object API on top but inherits *every* viability problem ItChat has, plus its own 2019 archival. Strictly downstream — no reason to prefer wxpy for new work over either. |
+| wechaty | 未收录 | Use this page for its stated niche; choose wechaty when you need actively-maintained multi-language (TS/Python/Go/Java) conversational-bot framework with pluggable ". | Actively-maintained multi-language (TS/Python/Go/Java) conversational-bot framework with pluggable "puppets"; the de-facto successor for personal-account-style WeChat bots, but still rides on unofficial/3rd-party access channels and the same ToS/ban exposure — pick a puppet carefully. |
+| WeCom / Official WeChat Work API | 未收录 | Use this page for its stated niche; choose WeCom / Official WeChat Work API when you need tencent's **official, sanctioned** enterprise messaging API. | Tencent's **official, sanctioned** enterprise messaging API; stable and supported, but it automates *WeCom* accounts/contacts, not arbitrary personal WeChat accounts — a different (legitimate) surface, not a drop-in replacement. |
+| WeChat Official Account / Mini-Program server APIs | 未收录 | Use this page for its stated niche; choose WeChat Official Account / Mini-Program server APIs when you need official server-side APIs for *public accounts* and mini-programs. | Official server-side APIs for *public accounts* and mini-programs; fully supported but a different product surface (broadcast/service accounts), not personal 1:1 IM automation. |
 
 ## Tech stack
 

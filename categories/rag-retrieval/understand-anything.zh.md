@@ -9,6 +9,11 @@ license: MIT
 maturity: "v2.7.3 (2026-05), active (2026-06); ~68.8k stars (API-verified count), but adoption/vetting meaning unverified and suspicious for a young repo — flag, don't trust"
 last_verified: 2026-06-28
 type: tool
+upstream:
+  pushed_at: 2026-06-23T20:29:48Z
+  default_branch: main
+  default_branch_sha: 54754a6f97051d1d76c8758353d8ea41afe502a6
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:15:09Z
@@ -91,13 +96,13 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| [graphify](graphify.zh.md) | ✅ | 最近的同类：代码/文档 → 给 agent 用的可查询图，但有文档完备的 Python CLI + MCP server、36 种语法、Leiden 聚类、可移植 JSON/HTML/Cypher 产物。更可检视、文档更全；Understand-Anything 是 TypeScript、插件优先、更年轻、文档更薄。 |
-| [code-review-graph](code-review-graph.zh.md) | ✅ | 窄域的代码评审/爆炸半径管线（AST→SQLite→MCP），带风险评分 CI Action 和代码不出网的 runner 方案。Understand-Anything 是通用探索/查询工具，不是 PR 评审闸门。 |
-| [PageIndex](pageindex.zh.md) | ✅ | 基于推理的*文档*层级检索（无代码 AST/调用图）；检索原语不同——prose 目录树 vs 代码/实体图。 |
-| [FalkorDB](falkordb.zh.md) | ✅ | 真正的持久化属性图数据库（Redis 模块、OpenCypher、向量索引），你在它上面建应用；Understand-Anything 是开箱即用的抽取-查询工具，不是图后端。 |
-| Sourcegraph / SCIP | 未收录 | 工业级精确代码智能（跨仓、language server、规模化）；基础设施更重，不是 agent 插件形态的即插即用工具。Understand-Anything 更轻、有 LLM 增强，但未经证明。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [graphify](graphify.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“最近的同类：代码/文档 → 给 agent 用的可查询图，但有文档完备的 Python CLI + MCP server、36 种语法、Leiden 聚类、可移植 JSON/HTML/Cypher 产”，再选 graphify。 | 最近的同类：代码/文档 → 给 agent 用的可查询图，但有文档完备的 Python CLI + MCP server、36 种语法、Leiden 聚类、可移植 JSON/HTML/Cypher 产物。更可检视、文档更全；Understand-Anything 是 TypeScript、插件优先、更年轻、文档更薄。 |
+| [code-review-graph](code-review-graph.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“窄域的代码评审/爆炸半径管线（AST→SQLite→MCP），带风险评分 CI Action 和代码不出网的 runner 方案”，再选 code-review-graph。 | 窄域的代码评审/爆炸半径管线（AST→SQLite→MCP），带风险评分 CI Action 和代码不出网的 runner 方案。Understand-Anything 是通用探索/查询工具，不是 PR 评审闸门。 |
+| [PageIndex](pageindex.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“基于推理的*文档*层级检索（无代码 AST/调用图）”，再选 PageIndex。 | 基于推理的*文档*层级检索（无代码 AST/调用图）；检索原语不同——prose 目录树 vs 代码/实体图。 |
+| [FalkorDB](falkordb.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“真正的持久化属性图数据库（Redis 模块、OpenCypher、向量索引），你在它上面建应用”，再选 FalkorDB。 | 真正的持久化属性图数据库（Redis 模块、OpenCypher、向量索引），你在它上面建应用；Understand-Anything 是开箱即用的抽取-查询工具，不是图后端。 |
+| Sourcegraph / SCIP | 未收录 | 当前页用于它的主场景；如果更看重“工业级精确代码智能（跨仓、language server、规模化）”，再选 Sourcegraph / SCIP。 | 工业级精确代码智能（跨仓、language server、规模化）；基础设施更重，不是 agent 插件形态的即插即用工具。Understand-Anything 更轻、有 LLM 增强，但未经证明。 |
 
 ## 技术栈
 

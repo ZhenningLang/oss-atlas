@@ -9,6 +9,11 @@ license: NONE
 maturity: PyPI package, last commit 2023-09 (likely coasting), 2.5k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2023-09-15T04:10:37Z
+  default_branch: master
+  default_branch_sha: defae2e431751e28a78db1c68f83a5b9c1062c5d
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:22:53Z
@@ -77,13 +82,13 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| AKShare | 未收录 | 当下主流、活跃维护的中文开源金融/经济数据库；目录广得多、社区也大得多——干同样的活通常是更有维护的选择。 |
-| Tushare | 未收录 | 老牌中文金融数据库（如今大量走 token/积分门槛）；市场数据强，比 gopup 更多商业门槛。 |
-| baostock | 未收录 | 免费的中文股票/行情历史数据；更窄（仅市场）但接口稳定。 |
-| pandas-datareader | 未收录 | 有维护的通用读取器，把（多为西方的）经济/市场源读成 DataFrame；DataFrame 体验相同，源集（全球）不同。 |
-| [requests-html](requests-html.zh.md) | ✅ | 通用爬取构件——你得自己重写每个源；gopup 是覆盖多源的预制目录。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| AKShare | 未收录 | 当前页用于它的主场景；如果更看重“当下主流、活跃维护的中文开源金融/经济数据库”，再选 AKShare。 | 当下主流、活跃维护的中文开源金融/经济数据库；目录广得多、社区也大得多——干同样的活通常是更有维护的选择。 |
+| Tushare | 未收录 | 当前页用于它的主场景；如果更看重“老牌中文金融数据库（如今大量走 token/积分门槛）”，再选 Tushare。 | 老牌中文金融数据库（如今大量走 token/积分门槛）；市场数据强，比 gopup 更多商业门槛。 |
+| baostock | 未收录 | 当前页用于它的主场景；如果更看重“免费的中文股票/行情历史数据”，再选 baostock。 | 免费的中文股票/行情历史数据；更窄（仅市场）但接口稳定。 |
+| pandas-datareader | 未收录 | 当前页用于它的主场景；如果更看重“有维护的通用读取器，把（多为西方的）经济/市场源读成 DataFrame”，再选 pandas-datareader。 | 有维护的通用读取器，把（多为西方的）经济/市场源读成 DataFrame；DataFrame 体验相同，源集（全球）不同。 |
+| [requests-html](requests-html.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“通用爬取构件”，再选 requests-html。 | 通用爬取构件——你得自己重写每个源；gopup 是覆盖多源的预制目录。 |
 
 ## 技术栈
 

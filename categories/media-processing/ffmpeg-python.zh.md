@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v0.2.x, last commit 2024-08 (coasting), 11k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2024-08-04T00:07:08Z
+  default_branch: master
+  default_branch_sha: df129c7ba30aaa9ffffb81a48f53aa7253b0b4e6
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:01:58Z
@@ -83,13 +88,13 @@ FFmpeg 的 Python 绑定，让你把复杂的滤镜图写成链式 Python 表达
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| [FFmpeg](ffmpeg.zh.md)（CLI 本身） | ✅ | 底层引擎；能力最大、是权威参照，但复杂图的 `-filter_complex` 字符串不可读——这正是本库要包的东西。 |
-| PyAV | 未收录 | 对 libav* 库的 Pythonic 绑定——进程内解/编码与按帧访问，不靠外部进程；安装更重、比建 CLI 图更底层。 |
-| MoviePy | 未收录 | 更高层的 Python 视频编辑（特效、合成、文字），API 更友好；适合剪辑，不太是对 FFmpeg 图的薄映射。 |
-| subprocess + 裸 ffmpeg | 未收录 | 零依赖、完全可控，但 `-filter_complex` 字符串得你自己拼和转义——这正是本库消除的痛。 |
-| imageio-ffmpeg / fluent-ffmpeg | 未收录 | 别的语言或更窄范围的 FFmpeg 封装（Node 的 fluent-ffmpeg、Python imageio 垫片）；同为外部进程模型，体验不同。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [FFmpeg](ffmpeg.zh.md)（CLI 本身） | ✅ | 当前页用于它的主场景；如果更看重“底层引擎”，再选 FFmpeg（CLI 本身）。 | 底层引擎；能力最大、是权威参照，但复杂图的 `-filter_complex` 字符串不可读——这正是本库要包的东西。 |
+| PyAV | 未收录 | 当前页用于它的主场景；如果更看重“对 libav* 库的 Pythonic 绑定”，再选 PyAV。 | 对 libav* 库的 Pythonic 绑定——进程内解/编码与按帧访问，不靠外部进程；安装更重、比建 CLI 图更底层。 |
+| MoviePy | 未收录 | 当前页用于它的主场景；如果更看重“更高层的 Python 视频编辑（特效、合成、文字），API 更友好”，再选 MoviePy。 | 更高层的 Python 视频编辑（特效、合成、文字），API 更友好；适合剪辑，不太是对 FFmpeg 图的薄映射。 |
+| subprocess + 裸 ffmpeg | 未收录 | 当前页用于它的主场景；如果更看重“零依赖、完全可控，但 `-filter_complex` 字符串得你自己拼和转义”，再选 subprocess + 裸 ffmpeg。 | 零依赖、完全可控，但 `-filter_complex` 字符串得你自己拼和转义——这正是本库消除的痛。 |
+| imageio-ffmpeg / fluent-ffmpeg | 未收录 | 当前页用于它的主场景；如果更看重“别的语言或更窄范围的 FFmpeg 封装（Node 的 fluent-ffmpeg、Python imageio 垫片）”，再选 imageio-ffmpeg / fluent-ffmpeg。 | 别的语言或更窄范围的 FFmpeg 封装（Node 的 fluent-ffmpeg、Python imageio 垫片）；同为外部进程模型，体验不同。 |
 
 ## 技术栈
 

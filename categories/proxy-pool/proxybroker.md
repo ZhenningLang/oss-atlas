@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: last release 0.3.2 (~2018), repo near-dormant (pushed 2024-03), ~4.2k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: tool
+upstream:
+  pushed_at: 2024-03-18T18:41:12Z
+  default_branch: master
+  default_branch_sha: d21aae8575fc3a95493233ecfd2c7cf47b36b069
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:11:18Z
@@ -82,12 +87,12 @@ This is a *learning/experiment* reach: when you want to understand how a finder-
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [Scylla](scylla.md) | ✅ | A longer-lived intelligent proxy pool with a web UI, JSON API, and quality scoring — more of a runnable *service* than ProxyBroker's CLI, and more recently maintained, though also not frequently released. |
-| [haipproxy](haipproxy.md) | ✅ | Distributed Scrapy+Redis proxy pool aimed at high availability for large crawlers — far heavier (needs Redis, Scrapy) and itself long-dormant, but architected for scale rather than a single CLI. |
-| Paid proxy providers (Bright Data, Oxylabs, …) | 未收录 | Commercial residential/datacenter pools with SLAs, auth, and rotation built in — the actual production answer; ProxyBroker only makes sense when free + throwaway is acceptable. |
-| scrapy-rotating-proxies / proxy middlewares | 未收录 | Library middleware that rotates a *list you supply* inside Scrapy; complements rather than competes — it doesn't harvest proxies, it consumes them. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [Scylla](scylla.md) | ✅ | Use this page for its stated niche; choose Scylla when you need a longer-lived intelligent proxy pool with a web UI, JSON API, and quality scoring. | A longer-lived intelligent proxy pool with a web UI, JSON API, and quality scoring — more of a runnable *service* than ProxyBroker's CLI, and more recently maintained, though also not frequently released. |
+| [haipproxy](haipproxy.md) | ✅ | Use this page for its stated niche; choose haipproxy when you need distributed Scrapy+Redis proxy pool aimed at high availability for large crawlers. | Distributed Scrapy+Redis proxy pool aimed at high availability for large crawlers — far heavier (needs Redis, Scrapy) and itself long-dormant, but architected for scale rather than a single CLI. |
+| Paid proxy providers (Bright Data, Oxylabs, …) | 未收录 | Use this page for its stated niche; choose Paid proxy providers (Bright Data, Oxylabs, …) when you need commercial residential/datacenter pools with SLAs, auth, and rotation built in. | Commercial residential/datacenter pools with SLAs, auth, and rotation built in — the actual production answer; ProxyBroker only makes sense when free + throwaway is acceptable. |
+| scrapy-rotating-proxies / proxy middlewares | 未收录 | Use this page for its stated niche; choose scrapy-rotating-proxies / proxy middlewares when you need library middleware that rotates a *list you supply* inside Scrapy. | Library middleware that rotates a *list you supply* inside Scrapy; complements rather than competes — it doesn't harvest proxies, it consumes them. |
 
 ## Tech stack
 

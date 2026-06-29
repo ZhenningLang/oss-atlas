@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v3.3.6, active (2026-06)
 last_verified: 2026-06-26
 type: library
+upstream:
+  pushed_at: 2026-06-15T23:18:56Z
+  default_branch: main
+  default_branch_sha: 56600c525ba3046354c17a7663dca06a813a0bb5
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:27:37Z
@@ -86,14 +91,14 @@ It's a fit when you want memory that's keyed on *what agents do*, not just chat 
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [Mem0](mem0.md) | ✅ | The most-cited agent-memory layer; add/search API over a vector store, broad self-host story. Memori leans on automatic client interception + structured entity/process state and an opinionated cloud, vs Mem0's more explicit, datastore-flexible retrieval. |
-| [claude-subconscious](claude-subconscious.md) | ✅ | A Claude-specific background-memory experiment (Letta lineage); narrower scope than Memori's multi-provider, multi-framework infrastructure. |
-| Letta (MemGPT) | 未收录 | Agent runtime with a memory-management OS (tiered context, self-editing memory); a heavier stateful-agent server, not a drop-in client wrapper. |
-| Zep | 未收录 | Temporal knowledge-graph memory service with a strong self-host/OSS core; comparable structured-memory ambition, different graph-first model. |
-| LangMem (LangChain) | 未收录 | Memory utilities tied to the LangGraph/LangChain stack; less standalone than Memori's framework-agnostic pitch. |
-| plain vector DB (pgvector / Chroma) | 未收录 | You own the schema and retrieval; no augmentation, no entity model, no cloud — maximum control, maximum wiring. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [Mem0](mem0.md) | ✅ | Use this page for its stated niche; choose Mem0 when you need the most-cited agent-memory layer. | The most-cited agent-memory layer; add/search API over a vector store, broad self-host story. Memori leans on automatic client interception + structured entity/process state and an opinionated cloud, vs Mem0's more explicit, datastore-flexible retrieval. |
+| [claude-subconscious](claude-subconscious.md) | ✅ | Use this page for its stated niche; choose claude-subconscious when you need a Claude-specific background-memory experiment (Letta lineage). | A Claude-specific background-memory experiment (Letta lineage); narrower scope than Memori's multi-provider, multi-framework infrastructure. |
+| Letta (MemGPT) | 未收录 | Use this page for its stated niche; choose Letta (MemGPT) when you need agent runtime with a memory-management OS (tiered context, self-editing memory). | Agent runtime with a memory-management OS (tiered context, self-editing memory); a heavier stateful-agent server, not a drop-in client wrapper. |
+| Zep | 未收录 | Use this page for its stated niche; choose Zep when you need temporal knowledge-graph memory service with a strong self-host/OSS core. | Temporal knowledge-graph memory service with a strong self-host/OSS core; comparable structured-memory ambition, different graph-first model. |
+| LangMem (LangChain) | 未收录 | Use this page for its stated niche; choose LangMem (LangChain) when you need memory utilities tied to the LangGraph/LangChain stack. | Memory utilities tied to the LangGraph/LangChain stack; less standalone than Memori's framework-agnostic pitch. |
+| plain vector DB (pgvector / Chroma) | 未收录 | Use this page for its stated niche; choose plain vector DB (pgvector / Chroma) when you need you own the schema and retrieval. | You own the schema and retrieval; no augmentation, no entity model, no cloud — maximum control, maximum wiring. |
 
 ## Tech stack
 

@@ -9,6 +9,11 @@ license: MIT
 maturity: no tagged release, active (last pushed 2026-04; ~1.9k stars [未验证])
 last_verified: 2026-06-26
 type: skill-pack
+upstream:
+  pushed_at: 2026-04-19T15:27:44Z
+  default_branch: main
+  default_branch_sha: 384562064fcdd99778fcbafd8729626fe6aab02f
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:28:35Z
@@ -80,13 +85,13 @@ You reach for it specifically when the gap is *craft-level detail*, not directio
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [taste-skill](taste-skill.md) | ✅ | Broader "anti-slop visual taste" pack: infers design direction, maps a full color/type/spacing system, lays in GSAP motion. This skill is narrower — mechanical detail-polish, no direction-setting. Use taste-skill when the screen is bland; use this when it's directionally fine but unrefined. |
-| [designer-skills](designer-skills.md) | ✅ | Full design *lifecycle* bundle (97 skills: research, IA, design systems, critique). Heavyweight and process-oriented; this one is a single craft-detail checklist with near-zero ceremony. |
-| [ui-ux-pro-max](ui-ux-pro-max.md) | ✅ | Larger UI/UX skill bundle aimed at end-to-end interface quality. Compare on surface area: this skill is one tight article-derived rule set, not a multi-skill system. |
-| [stitch-skills](stitch-skills.md) | ✅ | Sibling design skill pack; compare on which stages each enforces vs. suggests and whether the motion/typography guidance overlaps. |
-| Hand-written design checklist in your own `CLAUDE.md` / prompt | 未收录 | The DIY alternative; same advisory nature, but you maintain it. This skill packages a known-good detail list so you don't re-derive it per project. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [taste-skill](taste-skill.md) | ✅ | Use this page for its stated niche; choose taste-skill when you need broader "anti-slop visual taste" pack: infers design direction, maps a full color/type/spacing syste. | Broader "anti-slop visual taste" pack: infers design direction, maps a full color/type/spacing system, lays in GSAP motion. This skill is narrower — mechanical detail-polish, no direction-setting. Use taste-skill when the screen is bland; use this when it's directionally fine but unrefined. |
+| [designer-skills](designer-skills.md) | ✅ | Use this page for its stated niche; choose designer-skills when you need full design *lifecycle* bundle (97 skills: research, IA, design systems, critique). | Full design *lifecycle* bundle (97 skills: research, IA, design systems, critique). Heavyweight and process-oriented; this one is a single craft-detail checklist with near-zero ceremony. |
+| [ui-ux-pro-max](ui-ux-pro-max.md) | ✅ | Use this page for its stated niche; choose ui-ux-pro-max when you need larger UI/UX skill bundle aimed at end-to-end interface quality. | Larger UI/UX skill bundle aimed at end-to-end interface quality. Compare on surface area: this skill is one tight article-derived rule set, not a multi-skill system. |
+| [stitch-skills](stitch-skills.md) | ✅ | Use this page for its stated niche; choose stitch-skills when you need sibling design skill pack. | Sibling design skill pack; compare on which stages each enforces vs. suggests and whether the motion/typography guidance overlaps. |
+| Hand-written design checklist in your own `CLAUDE.md` / prompt | 未收录 | Use this page for its stated niche; choose Hand-written design checklist in your own CLAUDE.md / prompt when you need the DIY alternative. | The DIY alternative; same advisory nature, but you maintain it. This skill packages a known-good detail list so you don't re-derive it per project. |
 
 ## Health & viability
 

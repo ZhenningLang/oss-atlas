@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v3.3.2, active (2026-06)
 last_verified: 2026-06-28
 type: framework
+upstream:
+  pushed_at: 2026-06-28T11:43:37Z
+  default_branch: develop
+  default_branch_sha: 82c9a7f48b7480f61ecd0c9845eb24e0dc209472
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:25:15Z
@@ -89,13 +94,13 @@ Parlant is built for exactly this lane. Instead of cramming everything into one 
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [AgentScope](agentscope.md) | ✅ | Generic multi-agent serving framework (service/permission/sandbox/observability); "trust the model" loop, not a guardrails-first conversation model. Pick AgentScope to orchestrate/serve agents, Parlant to constrain one customer-facing agent. |
-| [smolagents](smolagents.md) | ✅ | Minimal, code-first agent library — small surface, great for simple/autonomous loops; no built-in behavioral-rule/guardrail layer, so high-stakes on-rails control is on you. |
-| Rasa | 未收录 | Mature open-source conversational-AI/chatbot framework (intents/stories/dialogue management); more classic NLU pipeline, heavier to operate, less LLM-native guideline modeling. |
-| LangGraph | 未收录 | Graph/state-machine orchestration with explicit control flow and a large ecosystem; you build guardrails yourself rather than getting a guideline-enforcement model out of the box. |
-| Guidance / Guardrails (AI) | 未收录 | Output-constraint / structured-generation libraries (constrain a single LLM call's format/validity); narrower than Parlant's conversation-level behavioral control across a multi-turn dialogue. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [AgentScope](agentscope.md) | ✅ | Use this page for its stated niche; choose AgentScope when you need generic multi-agent serving framework (service/permission/sandbox/observability). | Generic multi-agent serving framework (service/permission/sandbox/observability); "trust the model" loop, not a guardrails-first conversation model. Pick AgentScope to orchestrate/serve agents, Parlant to constrain one customer-facing agent. |
+| [smolagents](smolagents.md) | ✅ | Use this page for its stated niche; choose smolagents when you need minimal, code-first agent library. | Minimal, code-first agent library — small surface, great for simple/autonomous loops; no built-in behavioral-rule/guardrail layer, so high-stakes on-rails control is on you. |
+| Rasa | 未收录 | Use this page for its stated niche; choose Rasa when you need mature open-source conversational-AI/chatbot framework (intents/stories/dialogue management). | Mature open-source conversational-AI/chatbot framework (intents/stories/dialogue management); more classic NLU pipeline, heavier to operate, less LLM-native guideline modeling. |
+| LangGraph | 未收录 | Use this page for its stated niche; choose LangGraph when you need graph/state-machine orchestration with explicit control flow and a large ecosystem. | Graph/state-machine orchestration with explicit control flow and a large ecosystem; you build guardrails yourself rather than getting a guideline-enforcement model out of the box. |
+| Guidance / Guardrails (AI) | 未收录 | Use this page for its stated niche; choose Guidance / Guardrails (AI) when you need output-constraint / structured-generation libraries (constrain a single LLM call's format/validity). | Output-constraint / structured-generation libraries (constrain a single LLM call's format/validity); narrower than Parlant's conversation-level behavioral control across a multi-turn dialogue. |
 
 ## Tech stack
 

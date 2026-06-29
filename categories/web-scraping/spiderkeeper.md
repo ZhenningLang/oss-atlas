@@ -9,6 +9,11 @@ license: MIT
 maturity: PyPI v1.2.0 (2017-09), repo stale since 2023-05, ~2.8k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: app
+upstream:
+  pushed_at: 2023-05-04T20:44:05Z
+  default_branch: master
+  default_branch_sha: d6156d35a95ba8c3ac759a08367079619555b6dd
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:25:17Z
@@ -74,12 +79,12 @@ You're running a small crawl operation on Scrapyd and you're tired of `curl`-ing
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [Scrapyd](scrapyd.md) | ✅ | The daemon SpiderKeeper wraps — actively maintained, org-backed. SpiderKeeper is a UI *on top of* it, not an alternative to it. |
-| Gerapy | 未收录 | Django + Vue dashboard for distributed Scrapy management; more modern and generally the recommended successor in this niche today. |
-| ScrapydWeb | 未收录 | More featureful web UI over Scrapyd (multi-node, log parsing, email alerts), but itself also fairly stale. |
-| Zyte Scrapy Cloud | 未收录 | Commercial hosted alternative — no self-hosting of the scrapyd+UI stack, at the cost of vendor lock-in and pricing. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [Scrapyd](scrapyd.md) | ✅ | Use this page for its stated niche; choose Scrapyd when you need the daemon SpiderKeeper wraps. | The daemon SpiderKeeper wraps — actively maintained, org-backed. SpiderKeeper is a UI *on top of* it, not an alternative to it. |
+| Gerapy | 未收录 | Use this page for its stated niche; choose Gerapy when you need django + Vue dashboard for distributed Scrapy management. | Django + Vue dashboard for distributed Scrapy management; more modern and generally the recommended successor in this niche today. |
+| ScrapydWeb | 未收录 | Use this page for its stated niche; choose ScrapydWeb when you need more featureful web UI over Scrapyd (multi-node, log parsing, email alerts), but itself also fairly. | More featureful web UI over Scrapyd (multi-node, log parsing, email alerts), but itself also fairly stale. |
+| Zyte Scrapy Cloud | 未收录 | Use this page for its stated niche; choose Zyte Scrapy Cloud when you need commercial hosted alternative. | Commercial hosted alternative — no self-hosting of the scrapyd+UI stack, at the cost of vendor lock-in and pricing. |
 
 ## Tech stack
 

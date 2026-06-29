@@ -9,6 +9,11 @@ license: MIT
 maturity: v2.53.0, active (2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+upstream:
+  pushed_at: 2026-06-23T23:48:47Z
+  default_branch: main
+  default_branch_sha: 9c9bd2e92af12311ecd0c1a643e0931643f9ea04
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:29:50Z
@@ -80,13 +85,13 @@ You reach for this pack to drop in a domain library: install once (`npx skills a
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| [addyosmani/agent-skills](addyosmani-agent-skills.md) | ✅ | General-purpose / web-leaning engineering skill collection; broad coding utility, not domain-science. This pack is narrowly scientific (omics, cheminformatics, lab) and far larger. |
-| [web-quality-skills](addyosmani-web-quality.md) | ✅ | Web-performance / quality-focused skills; orthogonal domain. Choose by whether your task is frontend quality vs. wet-lab/computational science. |
-| [Waza](waza.md) | ✅ | Engineering-workflow skill pack; overlapping "install skills into your agent" shape, different (non-science) subject matter. |
-| [vercel-labs/agent-skills](vercel-agent-skills.md) | ✅ | Vendor/web-platform engineering skills; useful for app/deploy workflows, not for bioinformatics or drug discovery. |
-| Bespoke per-library prompting (write your own SKILL.md) | 未收录 | Maximum control and zero unused surface, but you rebuild and maintain curated docs for every library yourself instead of installing a vetted bundle. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| [addyosmani/agent-skills](addyosmani-agent-skills.md) | ✅ | Use this page for its stated niche; choose addyosmani/agent-skills when you need general-purpose / web-leaning engineering skill collection. | General-purpose / web-leaning engineering skill collection; broad coding utility, not domain-science. This pack is narrowly scientific (omics, cheminformatics, lab) and far larger. |
+| [web-quality-skills](addyosmani-web-quality.md) | ✅ | Use this page for its stated niche; choose web-quality-skills when you need web-performance / quality-focused skills. | Web-performance / quality-focused skills; orthogonal domain. Choose by whether your task is frontend quality vs. wet-lab/computational science. |
+| [Waza](waza.md) | ✅ | Use this page for its stated niche; choose Waza when you need engineering-workflow skill pack. | Engineering-workflow skill pack; overlapping "install skills into your agent" shape, different (non-science) subject matter. |
+| [vercel-labs/agent-skills](vercel-agent-skills.md) | ✅ | Use this page for its stated niche; choose vercel-labs/agent-skills when you need vendor/web-platform engineering skills. | Vendor/web-platform engineering skills; useful for app/deploy workflows, not for bioinformatics or drug discovery. |
+| Bespoke per-library prompting (write your own SKILL.md) | 未收录 | Use this page for its stated niche; choose Bespoke per-library prompting (write your own SKILL.md) when you need maximum control and zero unused surface, but you rebuild and maintain curated docs for every library. | Maximum control and zero unused surface, but you rebuild and maintain curated docs for every library yourself instead of installing a vetted bundle. |
 
 ## Health & viability
 

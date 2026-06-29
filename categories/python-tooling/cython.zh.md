@@ -9,6 +9,11 @@ license: Apache-2.0
 maturity: v3.2.x, active (2026-06)
 last_verified: 2026-06-28
 type: tool
+upstream:
+  pushed_at: 2026-06-29T10:16:07Z
+  default_branch: master
+  default_branch_sha: 9d6ad7fd54ba3d155bdf5e11531352ca509980d4
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T10:11:51Z
@@ -88,14 +93,14 @@ health:
 
 ## 横向对比
 
-| 替代品 | 是否收录 | 取舍 |
-|---|---|---|
-| Numba | 未收录 | 经装饰器对数值 Python 做基于 LLVM 的 JIT；无单独 C 构建，对数组/循环核函数极好，但范围更窄（数值、不能封 C++）且是运行时 JIT 模型。 |
-| PyPy | 未收录 | 带追踪 JIT 的另一种 Python 解释器；可不改代码加速整程序，但 C 扩展兼容性和生态契合可能是坑。 |
-| pybind11 / nanobind | 未收录 | header-only 的 C++ ↔ Python 绑定库；当你的代码已经是 C++ 时理想，但你写的是 C++ 而非 Python 超集。 |
-| cffi / ctypes | 未收录 | 不编译自定义扩展就从 Python 调 C；薄 FFI 更简单，但没有编译级速度的 Python，静态类型也比 Cython 弱。 |
-| mypyc | 未收录 | 用 mypy 的类型把带标注的 Python 编译成 C；更接近“编译我的 Python”且用标准类型，但比 Cython 更年轻更窄。 |
-| Rust + PyO3 | 未收录 | 用 Rust 写热点组件并绑定到 Python；内存安全且快，但是另一种语言和工具链，不同于 Python 超集路线。 |
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| Numba | 未收录 | 当前页用于它的主场景；如果更看重“经装饰器对数值 Python 做基于 LLVM 的 JIT”，再选 Numba。 | 经装饰器对数值 Python 做基于 LLVM 的 JIT；无单独 C 构建，对数组/循环核函数极好，但范围更窄（数值、不能封 C++）且是运行时 JIT 模型。 |
+| PyPy | 未收录 | 当前页用于它的主场景；如果更看重“带追踪 JIT 的另一种 Python 解释器”，再选 PyPy。 | 带追踪 JIT 的另一种 Python 解释器；可不改代码加速整程序，但 C 扩展兼容性和生态契合可能是坑。 |
+| pybind11 / nanobind | 未收录 | 当前页用于它的主场景；如果更看重“header-only 的 C++ ↔ Python 绑定库”，再选 pybind11 / nanobind。 | header-only 的 C++ ↔ Python 绑定库；当你的代码已经是 C++ 时理想，但你写的是 C++ 而非 Python 超集。 |
+| cffi / ctypes | 未收录 | 当前页用于它的主场景；如果更看重“不编译自定义扩展就从 Python 调 C”，再选 cffi / ctypes。 | 不编译自定义扩展就从 Python 调 C；薄 FFI 更简单，但没有编译级速度的 Python，静态类型也比 Cython 弱。 |
+| mypyc | 未收录 | 当前页用于它的主场景；如果更看重“用 mypy 的类型把带标注的 Python 编译成 C”，再选 mypyc。 | 用 mypy 的类型把带标注的 Python 编译成 C；更接近“编译我的 Python”且用标准类型，但比 Cython 更年轻更窄。 |
+| Rust + PyO3 | 未收录 | 当前页用于它的主场景；如果更看重“用 Rust 写热点组件并绑定到 Python”，再选 Rust + PyO3。 | 用 Rust 写热点组件并绑定到 Python；内存安全且快，但是另一种语言和工具链，不同于 Python 超集路线。 |
 
 ## 技术栈
 

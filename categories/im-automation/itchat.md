@@ -9,6 +9,11 @@ license: MIT
 maturity: abandoned — last pushed 2023-09 (~3y dormant); built on WeChat's now-defunct web protocol, mostly non-functional for new accounts (2026-06)
 last_verified: 2026-06-28
 type: library
+upstream:
+  pushed_at: 2023-09-28T07:46:58Z
+  default_branch: master
+  default_branch_sha: d5ce5db32ca15cef8eefa548a438a9fcc4502a6d
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:54:33Z
@@ -82,12 +87,12 @@ That is realistically the only safe reason to reach for it in 2026. If your actu
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| wechaty | 未收录 | Actively-maintained multi-language (TS/Python/Go/Java) conversational-bot framework with pluggable "puppets"; the de-facto successor for personal-account-style WeChat bots, but still rides on unofficial/3rd-party access channels and the same ToS/ban exposure — pick a puppet carefully. |
-| WeCom / Official WeChat Work API | 未收录 | Tencent's **official, sanctioned** enterprise messaging API; stable and supported, but it automates *WeCom* accounts/contacts, not arbitrary personal WeChat accounts — a different (legitimate) surface, not a drop-in replacement. |
-| itchat-uos (community fork) | 未收录 | Fork patched against the "UOS" web-WeChat endpoint to coax logins past some of the blocks; buys partial, fragile functionality on some accounts but is itself lightly maintained and fights the same platform that keeps closing the door. |
-| WeChat Official Account / Mini-Program server APIs | 未收录 | Official server-side APIs for *public accounts* and mini-programs; fully supported but a different product surface (broadcast/service accounts), not personal 1:1 IM automation. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| wechaty | 未收录 | Use this page for its stated niche; choose wechaty when you need actively-maintained multi-language (TS/Python/Go/Java) conversational-bot framework with pluggable ". | Actively-maintained multi-language (TS/Python/Go/Java) conversational-bot framework with pluggable "puppets"; the de-facto successor for personal-account-style WeChat bots, but still rides on unofficial/3rd-party access channels and the same ToS/ban exposure — pick a puppet carefully. |
+| WeCom / Official WeChat Work API | 未收录 | Use this page for its stated niche; choose WeCom / Official WeChat Work API when you need tencent's **official, sanctioned** enterprise messaging API. | Tencent's **official, sanctioned** enterprise messaging API; stable and supported, but it automates *WeCom* accounts/contacts, not arbitrary personal WeChat accounts — a different (legitimate) surface, not a drop-in replacement. |
+| itchat-uos (community fork) | 未收录 | Use this page for its stated niche; choose itchat-uos (community fork) when you need fork patched against the "UOS" web-WeChat endpoint to coax logins past some of the blocks. | Fork patched against the "UOS" web-WeChat endpoint to coax logins past some of the blocks; buys partial, fragile functionality on some accounts but is itself lightly maintained and fights the same platform that keeps closing the door. |
+| WeChat Official Account / Mini-Program server APIs | 未收录 | Use this page for its stated niche; choose WeChat Official Account / Mini-Program server APIs when you need official server-side APIs for *public accounts* and mini-programs. | Official server-side APIs for *public accounts* and mini-programs; fully supported but a different product surface (broadcast/service accounts), not personal 1:1 IM automation. |
 
 ## Tech stack
 

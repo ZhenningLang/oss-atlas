@@ -9,6 +9,11 @@ license: BSD-3-Clause
 maturity: v4.0.3 / v3.5.7, active, 6.1k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: service
+upstream:
+  pushed_at: 2026-06-18T09:04:24Z
+  default_branch: unstable
+  default_branch_sha: d16db1eee9aadb1db42338269936deb7b584ddcc
+  archived: false
 health:
   schema: 1
   computed_at: 2026-06-29T09:43:17Z
@@ -83,13 +88,13 @@ You reach for it specifically when the dataset is **big and cost-sensitive** rat
 
 ## Comparison
 
-| Alternative | In index | Tradeoff |
-|---|---|---|
-| Redis | 未收录 | In-memory original; lowest latency and richest command/module ecosystem, but bounded by RAM and expensive per-GB at large scale. PikiwiDB is the disk-backed capacity play, not a latency upgrade. |
-| KeyDB | 未收录 | Multithreaded Redis fork, still memory-resident; helps throughput, not the capacity-vs-RAM-cost problem PikiwiDB targets. |
-| Dragonfly | 未收录 | Modern multithreaded Redis-compatible store; very high throughput but in-memory-first, BSL-licensed — different licensing and capacity model. |
-| SSDB | 未收录 | Older LevelDB-backed Redis-ish disk store; similar idea, smaller/aging community and weaker protocol fidelity than PikiwiDB. |
-| Kvrocks (Apache) | 未收录 | RocksDB-backed, Redis-protocol, now an Apache project; the closest direct competitor — weigh Apache governance vs PikiwiDB's OpenAtom/Qihoo backing. |
+| Alternative | In index | Our verdict | Tradeoff |
+|---|---|---|---|
+| Redis | 未收录 | Use this page for its stated niche; choose Redis when you need in-memory original. | In-memory original; lowest latency and richest command/module ecosystem, but bounded by RAM and expensive per-GB at large scale. PikiwiDB is the disk-backed capacity play, not a latency upgrade. |
+| KeyDB | 未收录 | Use this page for its stated niche; choose KeyDB when you need multithreaded Redis fork, still memory-resident. | Multithreaded Redis fork, still memory-resident; helps throughput, not the capacity-vs-RAM-cost problem PikiwiDB targets. |
+| Dragonfly | 未收录 | Use this page for its stated niche; choose Dragonfly when you need modern multithreaded Redis-compatible store. | Modern multithreaded Redis-compatible store; very high throughput but in-memory-first, BSL-licensed — different licensing and capacity model. |
+| SSDB | 未收录 | Use this page for its stated niche; choose SSDB when you need older LevelDB-backed Redis-ish disk store. | Older LevelDB-backed Redis-ish disk store; similar idea, smaller/aging community and weaker protocol fidelity than PikiwiDB. |
+| Kvrocks (Apache) | 未收录 | Use this page for its stated niche; choose Kvrocks (Apache) when you need rocksDB-backed, Redis-protocol, now an Apache project. | RocksDB-backed, Redis-protocol, now an Apache project; the closest direct competitor — weigh Apache governance vs PikiwiDB's OpenAtom/Qihoo backing. |
 
 ## Tech stack
 
