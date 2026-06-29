@@ -9,11 +9,69 @@ license: Apache-2.0
 maturity: v1.7 models, active, ~8.3k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: framework
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:45:45Z
+  overall: C
+  overall_score: 2.17
+  scored_axes: 6
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: B
+      raw:
+        archived: false
+        last_commit_age_days: 77
+        active_weeks_13: 2
+        carve_out: null
+    responsiveness:
+      grade: C
+      raw:
+        median_ttfr_hours: 178.4
+        qualifying_issues: 5
+        band: default
+        window_offset_days: 6
+    adoption:
+      grade: E
+      raw:
+        registry: null
+        canonical_package: null
+        dependent_repos_count: 0
+        downloads_last_month: null
+        graph_tier: E
+        volume_tier: null
+        cross_check_divergence: null
+        archived: false
+    longevity:
+      grade: D
+      raw:
+        repo_age_days: 326
+        last_commit_age_days: 77
+        cohort: framework
+    governance:
+      grade: B
+      raw:
+        active_maintainers_12mo: 19
+        top1_share: 0.599
+        top3_share: 0.766
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # MiroThinker
 
 一个开源 deep-research agent：微调过的 LLM 加上一套 MCP 工具环境（网络搜索、抓取、代码执行），由 MiroFlow 框架编排，用来回答复杂的多步研究与预测问题。
+
+![mirothinker — 健康度雷达](../../assets/health/mirothinker.zh.svg)
 
 ## 何时使用
 

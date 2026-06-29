@@ -9,11 +9,63 @@ license: AGPL-3.0
 maturity: Active, mature codebase; latest release 1.103.0 (2026-06-23), main at 1.105.0 (see caveats)
 last_verified: 2026-06-26
 type: app
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:52:20Z
+  overall: B
+  overall_score: 3.4
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 6.7
+        qualifying_issues: 13
+        band: relaxed_solo
+        window_offset_days: 4
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: A
+      raw:
+        repo_age_days: 3486
+        last_commit_age_days: 0
+        cohort: app
+    governance:
+      grade: A
+      raw:
+        active_maintainers_12mo: 9
+        top1_share: 0.253
+        top3_share: 0.607
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: D
+      raw:
+        spdx_id: AGPL-3.0
+        permissiveness: strong_network_copyleft
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    adoption: { reason: no_package_structural }
 ---
 
 # Twake Drive
 
 一个可自托管的“Google Drive 开源替代”——用于存储、浏览、链接分享和预览文件的 React Web 应用，作为 Cozy 应用运行在 cozy-stack 后端之上（隶属 Twake Workplace 套件）。它是个人/团队文件网盘，不是 OCR 文档归档系统。
+
+![twake-drive — 健康度雷达](../../assets/health/twake-drive.zh.svg)
 
 ## 何时使用
 

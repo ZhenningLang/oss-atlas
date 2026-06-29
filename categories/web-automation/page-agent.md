@@ -9,11 +9,68 @@ license: MIT
 maturity: v1.10.0 (2026-06-15); ~33 releases, ~1061 commits, active; Alibaba-maintained
 last_verified: 2026-06-26
 type: tool
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:20:46Z
+  overall: B
+  overall_score: 2.67
+  scored_axes: 6
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 4
+        active_weeks_13: 12
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 72.2
+        qualifying_issues: 37
+        band: relaxed_solo
+        window_offset_days: 10
+    adoption:
+      grade: D
+      raw:
+        registry: npmjs.org
+        canonical_package: "@page-agent/core"
+        dependent_repos_count: 0
+        downloads_last_month: 38673
+        graph_tier: E
+        volume_tier: D
+        cross_check_divergence: null
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 279
+        last_commit_age_days: 4
+        cohort: tool
+    governance:
+      grade: D
+      raw:
+        active_maintainers_12mo: 30
+        top1_share: 0.933
+        top3_share: 0.948
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # page-agent
 
 A JavaScript **in-page GUI agent** from Alibaba: control a web interface with natural-language commands by reading and manipulating the DOM directly inside the user's existing browser session — no screenshots, no headless browser, no backend rewrite.
+
+![page-agent — health radar](../../assets/health/page-agent.svg)
 
 ## When to use
 

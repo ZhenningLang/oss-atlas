@@ -9,11 +9,60 @@ license: MIT
 maturity: no tagged release, active (2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:31:06Z
+  overall: B
+  overall_score: 3.0
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 4
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 110
+        last_commit_age_days: 4
+        cohort: skill-pack
+    governance:
+      grade: C
+      raw:
+        active_maintainers_12mo: 77
+        top1_share: 0.767
+        top3_share: 0.795
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: type_na }
+    adoption: { reason: no_package_structural }
 ---
 
 # gstack
 
 Garry Tan's personal Claude Code setup: ~23 opinionated slash-command skills that role-play a virtual engineering team (CEO review, designer, eng-manager, release manager, doc engineer, QA, security officer) and drive a plan → build → review → ship → retro loop.
+
+![gstack — health radar](../../../assets/health/gstack.svg)
 
 ## When to use
 

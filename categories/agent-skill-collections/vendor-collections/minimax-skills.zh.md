@@ -9,11 +9,60 @@ license: MIT
 maturity: no tagged releases, active, last pushed 2026-04 (12.8k stars [未验证])
 last_verified: 2026-06-26
 type: skill-pack
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:34:14Z
+  overall: B
+  overall_score: 3.25
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: B
+      raw:
+        archived: false
+        last_commit_age_days: 72
+        active_weeks_13: 3
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 104
+        last_commit_age_days: 72
+        cohort: skill-pack
+    governance:
+      grade: A
+      raw:
+        active_maintainers_12mo: 14
+        top1_share: 0.333
+        top3_share: 0.644
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: type_na }
+    adoption: { reason: no_package_structural }
 ---
 
 # MiniMax Skills
 
 MiniMax 官方公开的约 16 个 Agent Skill 集合 —— 覆盖前端 / 全栈 / Android / iOS / Flutter / React Native / shader 开发，外加文档与媒体生成（pdf/docx/xlsx/pptx、音乐、视觉），通过插件市场安装进 Claude Code 及其他编码 agent。
+
+![minimax-skills — 健康度雷达](../../../assets/health/minimax-skills.zh.svg)
 
 ## 何时使用
 

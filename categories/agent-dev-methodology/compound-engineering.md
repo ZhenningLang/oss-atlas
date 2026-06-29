@@ -9,11 +9,60 @@ license: MIT
 maturity: v3.14.3, active (2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:07:24Z
+  overall: B
+  overall_score: 3.25
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 263
+        last_commit_age_days: 0
+        cohort: skill-pack
+    governance:
+      grade: B
+      raw:
+        active_maintainers_12mo: 67
+        top1_share: 0.566
+        top3_share: 0.867
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: type_na }
+    adoption: { reason: no_package_structural }
 ---
 
 # Compound Engineering
 
 An opinionated, install-as-a-plugin skill-pack that wires a six-step loop — brainstorm → plan → work → simplify → review → compound — into Claude Code, Codex, Cursor, and a dozen other coding agents, so each task writes learnings back for the next one.
+
+![compound-engineering — health radar](../../assets/health/compound-engineering.svg)
 
 ## When to use
 

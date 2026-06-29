@@ -9,11 +9,66 @@ license: ISC
 maturity: v2.8.0 (2025-09), active, ~2.7k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:05:41Z
+  overall: B
+  overall_score: 3.2
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 1
+        active_weeks_13: 6
+        carve_out: null
+    responsiveness:
+      grade: B
+      raw:
+        median_ttfr_hours: 76.1
+        qualifying_issues: 3
+        band: default
+        window_offset_days: 0
+    adoption:
+      grade: A
+      raw:
+        registry: pypi.org
+        canonical_package: dnspython
+        dependent_repos_count: 46555
+        downloads_last_month: 271811005
+        graph_tier: A
+        volume_tier: A
+        cross_check_divergence: 1.01
+    longevity:
+      grade: A
+      raw:
+        repo_age_days: 5423
+        last_commit_age_days: 1
+        cohort: library
+    governance:
+      grade: D
+      raw:
+        active_maintainers_12mo: 12
+        top1_share: 0.835
+        top3_share: 0.906
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: "?"
+      raw: {}
+  unknowns:
+    risk_license: { reason: license_unparsed }
 ---
 
 # dnspython
 
 A powerful, pure-Python DNS toolkit — both high-level resolution (`dns.resolver`) and low-level message/record manipulation (queries, zone transfers, dynamic updates, TSIG, DNSSEC, and modern transports: UDP/TCP, DoH, DoT, DoQ).
+
+![dnspython — health radar](../../assets/health/dnspython.svg)
 
 ## When to use
 

@@ -9,11 +9,60 @@ license: MIT
 maturity: no tagged release, active, last push 2026-06 (51.2k stars [未验证])
 last_verified: 2026-06-26
 type: skill-pack
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:29:02Z
+  overall: B
+  overall_score: 3.0
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 8
+        active_weeks_13: 8
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 129
+        last_commit_age_days: 8
+        cohort: skill-pack
+    governance:
+      grade: C
+      raw:
+        active_maintainers_12mo: 6
+        top1_share: 0.733
+        top3_share: 0.981
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: type_na }
+    adoption: { reason: no_package_structural }
 ---
 
 # Taste-Skill
 
 A collection of portable, framework-agnostic agent skills whose single job is to give your coding agent visual taste — stopping it from emitting boring, generic "AI slop" frontends and pushing it toward intentional layout, typography, motion, and spacing.
+
+![taste-skill — health radar](../../../assets/health/taste-skill.svg)
 
 ## When to use
 

@@ -9,11 +9,68 @@ license: BSD-3-Clause
 maturity: v5.6.2, active (2026-06)
 last_verified: 2026-06-28
 type: library
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:17:04Z
+  overall: B
+  overall_score: 3.33
+  scored_axes: 6
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 2
+        active_weeks_13: 10
+        carve_out: null
+    responsiveness:
+      grade: C
+      raw:
+        median_ttfr_hours: 89.3
+        qualifying_issues: 1
+        band: default
+        window_offset_days: 3
+    adoption:
+      grade: A
+      raw:
+        registry: pypi.org
+        canonical_package: kombu
+        dependent_repos_count: 26706
+        downloads_last_month: 55041599
+        graph_tier: A
+        volume_tier: A
+        cross_check_divergence: 1.02
+    longevity:
+      grade: A
+      raw:
+        repo_age_days: 5850
+        last_commit_age_days: 2
+        cohort: library
+    governance:
+      grade: C
+      raw:
+        active_maintainers_12mo: 18
+        top1_share: 0.678
+        top3_share: 0.776
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: BSD-3-Clause
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # Kombu
 
 一个 Python 消息库，用一套地道的高层 API 统一封装多种消息 broker——AMQP/RabbitMQ，外加可插拔的“虚拟”传输（Redis、Amazon SQS、MongoDB、ZooKeeper、内存）——它正是 Celery 所构建于其上的传输层。
+
+![kombu — 健康度雷达](../../assets/health/kombu.zh.svg)
 
 ## 何时使用
 

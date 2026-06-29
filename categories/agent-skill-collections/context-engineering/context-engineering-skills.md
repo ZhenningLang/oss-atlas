@@ -9,11 +9,60 @@ license: MIT
 maturity: v2.3.0, active (2026-05)
 last_verified: 2026-06-26
 type: skill-pack
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:27:53Z
+  overall: B
+  overall_score: 2.5
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: B
+      raw:
+        archived: false
+        last_commit_age_days: 34
+        active_weeks_13: 5
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 190
+        last_commit_age_days: 34
+        cohort: skill-pack
+    governance:
+      grade: D
+      raw:
+        active_maintainers_12mo: 10
+        top1_share: 0.827
+        top3_share: 0.937
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: type_na }
+    adoption: { reason: no_package_structural }
 ---
 
 # Agent Skills for Context Engineering
 
 A 15-skill plugin pack that teaches a coding agent the discipline of *context engineering* — managing what goes into the context window — covering fundamentals, degradation, compression, multi-agent coordination, memory, tool design, evaluation, and harness engineering.
+
+![context-engineering-skills — health radar](../../../assets/health/context-engineering-skills.svg)
 
 ## When to use
 

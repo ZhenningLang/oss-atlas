@@ -9,11 +9,60 @@ license: MIT
 maturity: v0.6.2, active (2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:29:26Z
+  overall: B
+  overall_score: 3.25
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 1
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 134
+        last_commit_age_days: 1
+        cohort: skill-pack
+    governance:
+      grade: B
+      raw:
+        active_maintainers_12mo: 39
+        top1_share: 0.493
+        top3_share: 0.69
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: type_na }
+    adoption: { reason: no_package_structural }
 ---
 
 # Agent Skills (addyosmani)
 
 一套约 24 个「生产级工程」技能包——把资深工程师用的工作流、质量闸门和评审清单装进你的 coding agent，再通过约 8 个贯穿研发生命周期的斜杠命令路由（`/spec`、`/plan`、`/build`、`/test`、`/review`、`/webperf`、`/code-simplify`、`/ship`）。
+
+![addyosmani-agent-skills — 健康度雷达](../../../assets/health/addyosmani-agent-skills.zh.svg)
 
 ## 何时使用
 

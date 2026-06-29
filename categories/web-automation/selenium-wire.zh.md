@@ -9,11 +9,66 @@ license: MIT
 maturity: v5.1.0 (2022-10), archived & unmaintained, ~2.0k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:21:22Z
+  overall: D
+  overall_score: 1.4
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: E
+      raw:
+        archived: true
+        last_commit_age_days: 908
+        active_weeks_13: 0
+        carve_out: null
+    responsiveness:
+      grade: E
+      raw:
+        median_ttfr_hours: null
+        qualifying_issues: 0
+        band: default
+        window_offset_days: 9
+    adoption:
+      grade: B
+      raw:
+        registry: pypi.org
+        canonical_package: selenium-wire
+        dependent_repos_count: 297
+        downloads_last_month: 1098925
+        graph_tier: C
+        volume_tier: B
+        cross_check_divergence: null
+        archived: true
+    longevity:
+      grade: E
+      raw:
+        repo_age_days: 2932
+        last_commit_age_days: 908
+        cohort: library
+    governance:
+      grade: "?"
+      raw: {}
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    governance: { reason: unattributable }
 ---
 
 # Selenium Wire
 
 扩展 Selenium 的 Python 绑定，让你能检视并修改浏览器底层的 HTTP/HTTPS 流量——做法是把浏览器路由穿过一个内置的 MITM 代理。**该项目已 archived 且明确不再维护。**
+
+![selenium-wire — 健康度雷达](../../assets/health/selenium-wire.zh.svg)
 
 ## 何时使用
 

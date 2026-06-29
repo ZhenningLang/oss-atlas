@@ -9,11 +9,63 @@ license: Apache-2.0
 maturity: "v0.4.4, active (2026-06); ~17.2k stars (API-verified count; adoption meaning unverified/suspicious — anomalous for a ~4-month single-maintainer repo), created 2026-02 (very young), owner=User"
 last_verified: 2026-06-28
 type: framework
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:57:21Z
+  overall: B
+  overall_score: 3.0
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 27.9
+        qualifying_issues: 22
+        band: default
+        window_offset_days: 2
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: D
+      raw:
+        repo_age_days: 136
+        last_commit_age_days: 0
+        cohort: framework
+    governance:
+      grade: C
+      raw:
+        active_maintainers_12mo: 97
+        top1_share: 0.756
+        top3_share: 0.807
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    adoption: { reason: ambiguous }
 ---
 
 # oMLX
 
 一个只跑在 Apple Silicon 上的 LLM 推理服务器（基于 Apple 的 MLX），带 continuous batching 和「热内存 + 冷 SSD」分层 KV 缓存，从 macOS 菜单栏管理——目标是让本地模型在 Claude Code 这类日常编码 agent 上真正可用。
+
+![omlx — 健康度雷达](../../assets/health/omlx.zh.svg)
 
 ## 何时使用
 

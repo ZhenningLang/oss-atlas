@@ -9,11 +9,68 @@ license: MIT
 maturity: v1.5.13, active (2026-06)
 last_verified: 2026-06-26
 type: tool
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:36:46Z
+  overall: D
+  overall_score: 2.5
+  scored_axes: 6
+  capped: true
+  cap_reason: "source-available/no-license: NONE"
+  needs_human_review: true
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 6
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 39.9
+        qualifying_issues: 6
+        band: relaxed_solo
+        window_offset_days: 0
+    adoption:
+      grade: B
+      raw:
+        registry: npmjs.org
+        canonical_package: skills
+        dependent_repos_count: 3
+        downloads_last_month: 2903169
+        graph_tier: D
+        volume_tier: B
+        cross_check_divergence: 11.98
+    longevity:
+      grade: D
+      raw:
+        repo_age_days: 166
+        last_commit_age_days: 6
+        cohort: tool
+    governance:
+      grade: B
+      raw:
+        active_maintainers_12mo: 97
+        top1_share: 0.462
+        top3_share: 0.594
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: E
+      raw:
+        spdx_id: NONE
+        permissiveness: source_available
+        relicense_36mo: false
+        content_license: null
 ---
 
 # Vercel Skills
 
 A package-manager-style CLI (`npx skills`) that installs, finds, and updates agent "skills" — `SKILL.md` instruction packs — into 70+ coding agents from GitHub/GitLab/local sources. It is the *installer*, not the skill content.
+
+![vercel-skills — health radar](../../assets/health/vercel-skills.svg)
 
 ## When to use
 

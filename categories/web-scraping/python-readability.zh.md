@@ -9,11 +9,56 @@ license: Apache-2.0
 maturity: v0.8.x, maintained (low cadence), ~2.9k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:23:49Z
+  overall: B
+  overall_score: 3.33
+  scored_axes: 3
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: B
+      raw:
+        archived: false
+        last_commit_age_days: 154
+        active_weeks_13: 0
+        carve_out: mature_library_lindy
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: B
+      raw:
+        repo_age_days: 5537
+        last_commit_age_days: 154
+        cohort: library
+    governance:
+      grade: "?"
+      raw: {}
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: no_traffic }
+    adoption: { reason: ambiguous }
+    governance: { reason: fork }
 ---
 
 # python-readability
 
 一个快速、基于 lxml 的 arc90 Readability Python 移植——递给它一个 HTML 文档，它返回清理过的正文（`summary()`）和标题（`title()`），剥掉导航、广告和样板。
+
+![python-readability — 健康度雷达](../../assets/health/python-readability.zh.svg)
 
 ## 何时使用
 

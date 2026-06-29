@@ -9,11 +9,66 @@ license: Apache-2.0
 maturity: standalone v3.1.5, capjs-core v0.1.1, active (2026-06)
 last_verified: 2026-06-26
 type: library
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:40:33Z
+  overall: B
+  overall_score: 2.6
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 8
+        active_weeks_13: 12
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 5.5
+        qualifying_issues: 37
+        band: default
+        window_offset_days: 9
+    adoption:
+      grade: C
+      raw:
+        registry: npmjs.org
+        canonical_package: "@cap.js/widget"
+        dependent_repos_count: 0
+        downloads_last_month: 81941
+        graph_tier: E
+        volume_tier: C
+        cross_check_divergence: null
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 534
+        last_commit_age_days: 8
+        cohort: library
+    governance:
+      grade: D
+      raw:
+        active_maintainers_12mo: 23
+        top1_share: 0.898
+        top3_share: 0.921
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: "?"
+      raw: {}
+  unknowns:
+    risk_license: { reason: license_unparsed }
 ---
 
 # Cap
 
 一个轻量、可自托管的 reCAPTCHA/hCaptcha/Turnstile 替代品：用一道无感的工作量证明（proof-of-work，客户端做 SHA-256 nonce 搜索，跑在 Rust→WASM worker 里）外加可选的 JavaScript instrumentation 检测来拦住某个动作，发放一个可兑换 token 让你的服务端校验——自托管时没有图片验证，也不向第三方发任何网络请求。
+
+![capjs — 健康度雷达](../../assets/health/capjs.zh.svg)
 
 ## 何时使用
 

@@ -9,11 +9,60 @@ license: MIT
 maturity: no tagged release, active (last pushed 2026-06; ~1.7k stars [未验证])
 last_verified: 2026-06-26
 type: skill-pack
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:28:22Z
+  overall: B
+  overall_score: 2.5
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: B
+      raw:
+        archived: false
+        last_commit_age_days: 15
+        active_weeks_13: 3
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 114
+        last_commit_age_days: 15
+        cohort: skill-pack
+    governance:
+      grade: D
+      raw:
+        active_maintainers_12mo: 4
+        top1_share: 0.914
+        top3_share: 0.971
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: type_na }
+    adoption: { reason: no_package_structural }
 ---
 
 # Designer Skills
 
 A broad design-practice skill pack — 97 skills and 30 commands across 9 plugins (research, design systems, UX strategy, UI, interaction, prototyping/testing, design ops, toolkit, visual critique) installed into Claude Code or Gemini CLI via a plugin marketplace.
+
+![designer-skills — health radar](../../../assets/health/designer-skills.svg)
 
 ## When to use
 

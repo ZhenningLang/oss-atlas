@@ -9,11 +9,66 @@ license: MIT
 maturity: stable reference release, low ongoing maintenance, ~33.9k stars (last pushed 2026-03, as of 2026-06)
 last_verified: 2026-06-28
 type: model
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:03:53Z
+  overall: C
+  overall_score: 2.4
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: C
+      raw:
+        archived: false
+        last_commit_age_days: 96
+        active_weeks_13: 0
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: D
+      raw:
+        registry: pypi.org
+        canonical_package: clip-openai
+        dependent_repos_count: 1
+        downloads_last_month: 3991
+        graph_tier: D
+        volume_tier: D
+        cross_check_divergence: null
+    longevity:
+      grade: B
+      raw:
+        repo_age_days: 2021
+        last_commit_age_days: 96
+        cohort: model
+    governance:
+      grade: C
+      raw:
+        active_maintainers_12mo: 2
+        top1_share: 0.5
+        top3_share: 1.0
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: type_na }
 ---
 
 # CLIP
 
 OpenAI's original reference implementation of CLIP (Contrastive Language-Image Pre-training) — a model that maps images and text into one shared embedding space, so you can classify or retrieve images by writing the labels as plain text, with no task-specific training.
+
+![clip — health radar](../../assets/health/clip.svg)
 
 ## When to use
 

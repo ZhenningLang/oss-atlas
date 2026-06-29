@@ -12,3 +12,4 @@ __pycache__/
 node_modules/
 memory_telemetry.jsonl
 .agent-state/
+.health-backfill/

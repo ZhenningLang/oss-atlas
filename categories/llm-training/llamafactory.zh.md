@@ -9,11 +9,69 @@ license: Apache-2.0
 maturity: v0.9.5, active (2026-06)
 last_verified: 2026-06-26
 type: framework
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:58:35Z
+  overall: B
+  overall_score: 3.0
+  scored_axes: 6
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 3
+        active_weeks_13: 12
+        carve_out: null
+    responsiveness:
+      grade: B
+      raw:
+        median_ttfr_hours: 119.5
+        qualifying_issues: 38
+        band: default
+        window_offset_days: 9
+    adoption:
+      grade: E
+      raw:
+        registry: null
+        canonical_package: null
+        dependent_repos_count: 0
+        downloads_last_month: null
+        graph_tier: E
+        volume_tier: null
+        cross_check_divergence: null
+        archived: false
+    longevity:
+      grade: B
+      raw:
+        repo_age_days: 1128
+        last_commit_age_days: 3
+        cohort: framework
+    governance:
+      grade: A
+      raw:
+        active_maintainers_12mo: 33
+        top1_share: 0.38
+        top3_share: 0.623
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # LlamaFactory
 
 零代码、配置驱动的统一微调框架，把 100+ LLM/VLM 的微调收敛到一套 CLI、一个 Gradio Web UI（LlamaBoard）和一个 OpenAI 兼容 API 之下。
+
+![llamafactory — 健康度雷达](../../assets/health/llamafactory.zh.svg)
 
 ## 何时使用
 

@@ -9,11 +9,60 @@ license: MIT
 maturity: no tagged releases, active, last pushed 2026-04, ~1.9k stars (as of 2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:32:24Z
+  overall: C
+  overall_score: 2.25
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: C
+      raw:
+        archived: false
+        last_commit_age_days: 89
+        active_weeks_13: 1
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 228
+        last_commit_age_days: 89
+        cohort: skill-pack
+    governance:
+      grade: D
+      raw:
+        active_maintainers_12mo: 1
+        top1_share: 1.0
+        top3_share: 1.0
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: type_na }
+    adoption: { reason: no_package_structural }
 ---
 
 # TÂCHES CC Resources
 
 TÂCHES（glittercowboy）的个人化、带主观偏好的 Claude Code 扩展合集：约 27 个 slash 命令、9 个「skill」（大多是用来生成新命令/skill/subagent/hook/MCP server 的元生成器）、3 个审计 subagent，以及示例 hook —— 作为单个 marketplace 插件安装。
+
+![taches-cc-resources — 健康度雷达](../../../assets/health/taches-cc-resources.zh.svg)
 
 ## 何时使用
 

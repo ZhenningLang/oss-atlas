@@ -9,11 +9,60 @@ license: Apache-2.0
 maturity: ~25.7k stars, active (last push 2026-06); created 2024-01 (~2.5yr); multiple model generations (MiniCPM-V 4.x / MiniCPM-o) (as of 2026-06-28)
 last_verified: 2026-06-28
 type: model
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:09:56Z
+  overall: A
+  overall_score: 4.0
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 4
+        active_weeks_13: 7
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: A
+      raw:
+        repo_age_days: 882
+        last_commit_age_days: 4
+        cohort: model
+    governance:
+      grade: A
+      raw:
+        active_maintainers_12mo: 12
+        top1_share: 0.28
+        top3_share: 0.689
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: type_na }
+    adoption: { reason: no_package_structural }
 ---
 
 # MiniCPM-V
 
 A series of efficient, "pocket-sized" multimodal LLMs from OpenBMB — small vision-language models for image, multi-image and video understanding (the MiniCPM-o line adds speech), designed for strong performance-per-parameter so they can run on phones and edge hardware. Open weights plus inference/deployment code.
+
+![minicpm-v — health radar](../../assets/health/minicpm-v.svg)
 
 ## When to use
 

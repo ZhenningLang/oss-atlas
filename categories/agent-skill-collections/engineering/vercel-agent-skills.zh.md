@@ -9,11 +9,60 @@ license: MIT
 maturity: no tagged releases, active (pushed 2026-06), ~28.3k stars (as of 2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:30:03Z
+  overall: B
+  overall_score: 2.5
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 19
+        active_weeks_13: 8
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 203
+        last_commit_age_days: 19
+        cohort: skill-pack
+    governance:
+      grade: A
+      raw:
+        active_maintainers_12mo: 23
+        top1_share: 0.251
+        top3_share: 0.575
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: E
+      raw:
+        spdx_id: NONE
+        permissiveness: source_available
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: type_na }
+    adoption: { reason: no_package_structural }
 ---
 
 # Vercel Agent Skills
 
 Vercel 官方的 agent skill 集合——按需安装的 React、Next.js、Vercel 部署、Web 设计与文档审查的审计/构建指南，以 [agentskills.io](https://agentskills.io/) / [skills.sh](https://skills.sh/) 格式打包。
+
+![vercel-agent-skills — 健康度雷达](../../../assets/health/vercel-agent-skills.zh.svg)
 
 ## 何时使用
 

@@ -9,11 +9,56 @@ license: Apache-2.0
 maturity: research release (ACL 2020 SKEP), idle since ~2024-08, ~2.0k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:05:12Z
+  overall: D
+  overall_score: 1.33
+  scored_axes: 3
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: E
+      raw:
+        archived: false
+        last_commit_age_days: 2190
+        active_weeks_13: 0
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: E
+      raw:
+        repo_age_days: 2919
+        last_commit_age_days: 2190
+        cohort: library
+    governance:
+      grade: "?"
+      raw: {}
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: no_traffic }
+    adoption: { reason: ambiguous }
+    governance: { reason: unattributable }
 ---
 
 # Senta (SKEP)
 
 Baidu's open-source sentiment-analysis toolkit built on SKEP — a sentiment-knowledge-enhanced pretraining method (ACL 2020) — shipping Chinese/English pretrained models and a one-line prediction tool, all on the PaddlePaddle 1.x framework.
+
+![senta — health radar](../../assets/health/senta.svg)
 
 ## When to use
 

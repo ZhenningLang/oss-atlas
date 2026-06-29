@@ -9,11 +9,57 @@ license: CC-BY-SA-4.0 (content) / Apache-2.0 (code examples)
 maturity: no tagged releases; content stable, last pushed 2025-09 (as of 2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+health:
+  schema: 1
+  computed_at: 2026-06-29T08:58:17Z
+  overall: C
+  overall_score: 2.0
+  scored_axes: 3
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: C
+      raw:
+        archived: false
+        last_commit_age_days: 281
+        active_weeks_13: 0
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 455
+        last_commit_age_days: 281
+        cohort: skill-pack
+    governance:
+      grade: C
+      raw:
+        active_maintainers_12mo: 2
+        top1_share: 0.913
+        top3_share: 1.0
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: "?"
+      raw: {}
+  unknowns:
+    responsiveness: { reason: type_na }
+    adoption: { reason: no_package_structural }
+    risk_license: { reason: license_unparsed }
 ---
 
 # 12-Factor Agents
 
 一套 12 条工程原则（是方法论文档，不是运行时），用来构建可靠到能交付给生产客户的 LLM 软件——自己掌控 prompt、自己掌控 context window、让 agent 保持小而无状态。
+
+![12-factor-agents — 健康度雷达](../../assets/health/12-factor-agents.zh.svg)
 
 ## 何时使用
 

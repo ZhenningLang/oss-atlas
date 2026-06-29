@@ -9,11 +9,63 @@ license: MIT
 maturity: "active-but-slowing, master pushed ~2026-03, last tagged release v0.24.1 (2024-05), ~31.4k stars (2026-06)"
 last_verified: 2026-06-28
 type: tool
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:00:21Z
+  overall: B
+  overall_score: 2.8
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: C
+      raw:
+        archived: false
+        last_commit_age_days: 182
+        active_weeks_13: 0
+        carve_out: null
+    responsiveness:
+      grade: B
+      raw:
+        median_ttfr_hours: 180.7
+        qualifying_issues: 4
+        band: relaxed_solo
+        window_offset_days: 8
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 3047
+        last_commit_age_days: 182
+        cohort: tool
+    governance:
+      grade: B
+      raw:
+        active_maintainers_12mo: 4
+        top1_share: 0.25
+        top3_share: 0.75
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    adoption: { reason: ambiguous }
 ---
 
 # lux
 
 A fast, simple Go video-download library and CLI (formerly *annie*) — a single static binary with strong coverage of Chinese sites (Bilibili, Douyin, etc.) and parallel multi-segment downloads.
+
+![lux — health radar](../../assets/health/lux.svg)
 
 ## When to use
 

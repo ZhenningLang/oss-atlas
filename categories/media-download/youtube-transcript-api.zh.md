@@ -9,11 +9,68 @@ license: MIT
 maturity: v1.2.4, active, ~7.8k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:01:41Z
+  overall: A
+  overall_score: 3.5
+  scored_axes: 6
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: B
+      raw:
+        archived: false
+        last_commit_age_days: 47
+        active_weeks_13: 3
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 22.7
+        qualifying_issues: 11
+        band: default
+        window_offset_days: 2
+    adoption:
+      grade: A
+      raw:
+        registry: pypi.org
+        canonical_package: youtube-transcript-api
+        dependent_repos_count: 205
+        downloads_last_month: 32850802
+        graph_tier: C
+        volume_tier: A
+        cross_check_divergence: 1.03
+    longevity:
+      grade: A
+      raw:
+        repo_age_days: 2992
+        last_commit_age_days: 47
+        cohort: library
+    governance:
+      grade: C
+      raw:
+        active_maintainers_12mo: 6
+        top1_share: 0.769
+        top3_share: 0.885
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # youtube-transcript-api
 
 一个 Python 库，获取 YouTube 视频的字幕/转写文本（含自动生成的）——无需 API key、无需无头浏览器——靠调用 YouTube 网页端用的那个未公开端点。
+
+![youtube-transcript-api — 健康度雷达](../../assets/health/youtube-transcript-api.zh.svg)
 
 ## 何时使用
 

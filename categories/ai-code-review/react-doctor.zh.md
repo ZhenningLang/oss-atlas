@@ -9,11 +9,66 @@ license: LicenseRef-Modified-MIT
 maturity: oxlint-plugin-react-doctor@0.5.8, active (2026-06)
 last_verified: 2026-06-26
 type: tool
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:37:35Z
+  overall: B
+  overall_score: 3.0
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 3
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 3.0
+        qualifying_issues: 47
+        band: relaxed_solo
+        window_offset_days: 7
+    adoption:
+      grade: B
+      raw:
+        registry: npmjs.org
+        canonical_package: react-doctor
+        dependent_repos_count: 0
+        downloads_last_month: 2363597
+        graph_tier: E
+        volume_tier: B
+        cross_check_divergence: 1.05
+    longevity:
+      grade: D
+      raw:
+        repo_age_days: 136
+        last_commit_age_days: 3
+        cohort: tool
+    governance:
+      grade: B
+      raw:
+        active_maintainers_12mo: 17
+        top1_share: 0.587
+        top3_share: 0.938
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: "?"
+      raw: {}
+  unknowns:
+    risk_license: { reason: license_unparsed }
 ---
 
 # React Doctor
 
 一个面向 React 的确定性静态分析器，专抓 coding agent 写出来的烂 React 代码——既能用 `npx` 一次性审计，也能装成 agent skill、装成 oxlint/ESLint 插件，或接进 CI。
+
+![react-doctor — 健康度雷达](../../assets/health/react-doctor.zh.svg)
 
 ## 何时使用
 

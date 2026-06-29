@@ -9,11 +9,68 @@ license: Apache-2.0
 maturity: v4.45.0 (2026-06), active; ~34.2k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: framework
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:21:37Z
+  overall: B
+  overall_score: 3.33
+  scored_axes: 6
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 8.7
+        qualifying_issues: 38
+        band: default
+        window_offset_days: 1
+    adoption:
+      grade: E
+      raw:
+        registry: nuget.org
+        canonical_package: selenium.webdriver
+        dependent_repos_count: 0
+        downloads_last_month: 176959370
+        graph_tier: E
+        volume_tier: "?"
+        cross_check_divergence: null
+    longevity:
+      grade: A
+      raw:
+        repo_age_days: 4914
+        last_commit_age_days: 0
+        cohort: framework
+    governance:
+      grade: A
+      raw:
+        active_maintainers_12mo: 45
+        top1_share: 0.254
+        top3_share: 0.515
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # Selenium
 
 The long-standing umbrella project for cross-browser automation via the **W3C WebDriver** protocol: a language-neutral coding interface (Java/Python/JS/C#/Ruby and more) plus **Grid** for distributed execution and **Selenium IDE** for record-and-playback.
+
+![selenium — health radar](../../assets/health/selenium.svg)
 
 ## When to use
 

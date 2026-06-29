@@ -9,11 +9,68 @@ license: MIT
 maturity: v7.x, very active, ~24.9k stars (2026-06)
 last_verified: 2026-06-28
 type: app
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:24:17Z
+  overall: B
+  overall_score: 3.0
+  scored_axes: 6
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 1.8
+        qualifying_issues: 7
+        band: relaxed_solo
+        window_offset_days: 2
+    adoption:
+      grade: E
+      raw:
+        registry: open-vsx.org
+        canonical_package: kilocode/kilo-code
+        dependent_repos_count: 0
+        downloads_last_month: 2786908
+        graph_tier: E
+        volume_tier: "?"
+        cross_check_divergence: null
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 476
+        last_commit_age_days: 0
+        cohort: app
+    governance:
+      grade: A
+      raw:
+        active_maintainers_12mo: 472
+        top1_share: 0.087
+        top3_share: 0.254
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # Kilo Code
 
 An open-source AI coding agent that lives inside your IDE: a VS Code (and JetBrains) extension that plans, edits code across files, runs commands, and switches between specialized modes — bring-your-own-key across 500+ models, billed at the provider's rate.
+
+![kilocode — health radar](../../assets/health/kilocode.svg)
 
 ## When to use
 

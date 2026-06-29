@@ -9,11 +9,60 @@ license: MIT
 maturity: v3.14.3, active (2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:07:24Z
+  overall: B
+  overall_score: 3.25
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 263
+        last_commit_age_days: 0
+        cohort: skill-pack
+    governance:
+      grade: B
+      raw:
+        active_maintainers_12mo: 67
+        top1_share: 0.566
+        top3_share: 0.867
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: type_na }
+    adoption: { reason: no_package_structural }
 ---
 
 # Compound Engineering
 
 一个有明确主张、以插件形式安装的 skill-pack：把一套六步循环——brainstorm → plan → work → simplify → review → compound——接进 Claude Code、Codex、Cursor 等十多种 coding agent，让每个任务都把经验沉淀回去，喂给下一个任务。
+
+![compound-engineering — 健康度雷达](../../assets/health/compound-engineering.zh.svg)
 
 ## 何时使用
 

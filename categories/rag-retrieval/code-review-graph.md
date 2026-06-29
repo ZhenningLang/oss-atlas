@@ -9,11 +9,68 @@ license: MIT
 maturity: v2.3.6, active, beta (2026-06)
 last_verified: 2026-06-26
 type: tool
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:13:29Z
+  overall: B
+  overall_score: 3.0
+  scored_axes: 6
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 19
+        active_weeks_13: 8
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 139.0
+        qualifying_issues: 34
+        band: relaxed_solo
+        window_offset_days: 13
+    adoption:
+      grade: B
+      raw:
+        registry: pypi.org
+        canonical_package: code-review-graph
+        dependent_repos_count: 0
+        downloads_last_month: 254286
+        graph_tier: E
+        volume_tier: B
+        cross_check_divergence: 1.24
+    longevity:
+      grade: D
+      raw:
+        repo_age_days: 123
+        last_commit_age_days: 19
+        cohort: tool
+    governance:
+      grade: C
+      raw:
+        active_maintainers_12mo: 82
+        top1_share: 0.605
+        top3_share: 0.659
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # code-review-graph
 
 A local-first code-intelligence graph: Tree-sitter parses your repo into a SQLite graph of functions/classes/edges, then serves your AI coding tool the minimal blast-radius context via MCP so it reads only what matters.
+
+![code-review-graph — health radar](../../assets/health/code-review-graph.svg)
 
 ## When to use
 

@@ -9,11 +9,57 @@ license: Apache-2.0
 maturity: v0.1.0, active, ~1.2k stars (as of 2026-06)
 last_verified: 2026-06-26
 type: app
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:17:41Z
+  overall: C
+  overall_score: 2.33
+  scored_axes: 3
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: C
+      raw:
+        archived: false
+        last_commit_age_days: 286
+        active_weeks_13: 0
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 495
+        last_commit_age_days: 286
+        cohort: app
+    governance:
+      grade: B
+      raw:
+        active_maintainers_12mo: 3
+        top1_share: 0.409
+        top3_share: 1.0
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: "?"
+      raw: {}
+  unknowns:
+    responsiveness: { reason: no_traffic }
+    adoption: { reason: no_package_structural }
+    risk_license: { reason: license_unparsed }
 ---
 
 # HiveChat
 
 A self-hostable, admin-managed AI chat app for small-to-medium teams: one admin wires up many LLM providers (OpenAI, Claude, Gemini, DeepSeek, Ollama, OpenAI-compatible), and the whole team chats through them with per-group model access and token quotas.
+
+![hivechat — health radar](../../assets/health/hivechat.svg)
 
 ## When to use
 

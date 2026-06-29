@@ -9,11 +9,68 @@ license: LGPL-2.1
 maturity: v2.6.x, active (2026-06)
 last_verified: 2026-06-28
 type: library
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:53:38Z
+  overall: D
+  overall_score: 2.17
+  scored_axes: 6
+  capped: true
+  cap_reason: "source-available/no-license: NONE"
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: B
+      raw:
+        archived: false
+        last_commit_age_days: 266
+        active_weeks_13: 0
+        carve_out: mature_library_lindy
+    responsiveness:
+      grade: B
+      raw:
+        median_ttfr_hours: 97.1
+        qualifying_issues: 21
+        band: default
+        window_offset_days: 6
+    adoption:
+      grade: A
+      raw:
+        registry: pypi.org
+        canonical_package: pygame
+        dependent_repos_count: 17300
+        downloads_last_month: 2737877
+        graph_tier: A
+        volume_tier: A
+        cross_check_divergence: 1.03
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 3382
+        last_commit_age_days: 266
+        cohort: library
+    governance:
+      grade: D
+      raw:
+        active_maintainers_12mo: 1
+        top1_share: 1.0
+        top3_share: 1.0
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: E
+      raw:
+        spdx_id: NONE
+        permissiveness: source_available
+        relicense_36mo: false
+        content_license: null
 ---
 
 # pygame
 
 一个免费、跨平台的 Python 库，用来写 2D 游戏和多媒体应用——它是 SDL 之上的 Pythonic 封装，给你一个显示 surface、一个事件循环、图像/声音/字体加载，以及精灵/碰撞辅助。
+
+![pygame — 健康度雷达](../../assets/health/pygame.zh.svg)
 
 ## 何时使用
 

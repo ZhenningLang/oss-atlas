@@ -9,11 +9,63 @@ license: SSPL-1.0
 maturity: v4.18.11, active (2026-06)
 last_verified: 2026-06-26
 type: tool
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:14:07Z
+  overall: D
+  overall_score: 3.0
+  scored_axes: 5
+  capped: true
+  cap_reason: "source-available/no-license: NOASSERTION"
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 5
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 10.4
+        qualifying_issues: 13
+        band: relaxed_solo
+        window_offset_days: 12
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: B
+      raw:
+        repo_age_days: 1075
+        last_commit_age_days: 5
+        cohort: tool
+    governance:
+      grade: A
+      raw:
+        active_maintainers_12mo: 16
+        top1_share: 0.38
+        top3_share: 0.68
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: E
+      raw:
+        spdx_id: NOASSERTION
+        permissiveness: source_available
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    adoption: { reason: ambiguous }
 ---
 
 # FalkorDB
 
 A sparse-matrix (GraphBLAS) property-graph database that runs as a Redis module, speaks OpenCypher, and adds vector + full-text indexing to back GraphRAG retrieval for LLM apps.
+
+![falkordb — health radar](../../assets/health/falkordb.svg)
 
 ## When to use
 

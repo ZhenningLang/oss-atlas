@@ -9,11 +9,57 @@ license: CC-BY-NC-4.0
 maturity: v2.14.2, active (2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:30:46Z
+  overall: C
+  overall_score: 2.33
+  scored_axes: 3
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 11
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 101
+        last_commit_age_days: 0
+        cohort: skill-pack
+    governance:
+      grade: D
+      raw:
+        active_maintainers_12mo: 3
+        top1_share: 0.87
+        top3_share: 1.0
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: "?"
+      raw: {}
+  unknowns:
+    responsiveness: { reason: type_na }
+    adoption: { reason: no_package_structural }
+    risk_license: { reason: license_unparsed }
 ---
 
 # dbskill
 
 一套个人精选的中文 agent 技能包（约 21 个 `/dbs-*` 命令），聚焦商业模式诊断、内容创作与个人决策，可通过插件市场或 `skills` CLI 安装进 Claude Code 等 harness。
+
+![dbskill — 健康度雷达](../../../assets/health/dbskill.zh.svg)
 
 ## 何时使用
 

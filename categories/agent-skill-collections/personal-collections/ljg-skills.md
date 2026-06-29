@@ -9,11 +9,60 @@ license: NOASSERTION
 maturity: no tagged releases, active (pushed 2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:31:42Z
+  overall: C
+  overall_score: 1.75
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 3
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 113
+        last_commit_age_days: 3
+        cohort: skill-pack
+    governance:
+      grade: D
+      raw:
+        active_maintainers_12mo: 3
+        top1_share: 0.935
+        top3_share: 1.0
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: E
+      raw:
+        spdx_id: NONE
+        permissiveness: source_available
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: type_na }
+    adoption: { reason: no_package_structural }
 ---
 
 # ljg-skills
 
 Li Jigang's personal, curated Claude Code skill collection (20+ skills) for Chinese-language knowledge work — reading, deconstructing papers/books, conceptual analysis, plain-language rewriting, and turning content into visual PNG cards — installed via the `skills` CLI.
+
+![ljg-skills — health radar](../../../assets/health/ljg-skills.svg)
 
 ## When to use
 

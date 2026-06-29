@@ -9,11 +9,56 @@ license: MIT
 maturity: v1.2a, stalled (last push 2024-04)
 last_verified: 2026-06-28
 type: app
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:39:23Z
+  overall: D
+  overall_score: 1.33
+  scored_axes: 3
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: E
+      raw:
+        archived: false
+        last_commit_age_days: 795
+        active_weeks_13: 0
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: E
+      raw:
+        repo_age_days: 1169
+        last_commit_age_days: 795
+        cohort: app
+    governance:
+      grade: "?"
+      raw: {}
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: no_traffic }
+    adoption: { reason: no_package_structural }
+    governance: { reason: unattributable }
 ---
 
 # SdPaint
 
 A real-time sketch-to-image painting app: you draw on a pygame canvas and each stroke is sent to a running Stable Diffusion (AUTOMATIC1111 + ControlNet) backend, so a rough scribble becomes a generated image live as you draw.
+
+![sdpaint — health radar](../../assets/health/sdpaint.svg)
 
 ## When to use
 

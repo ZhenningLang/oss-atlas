@@ -9,11 +9,60 @@ license: MIT
 maturity: no tagged release, active (2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:31:06Z
+  overall: B
+  overall_score: 3.0
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 4
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 110
+        last_commit_age_days: 4
+        cohort: skill-pack
+    governance:
+      grade: C
+      raw:
+        active_maintainers_12mo: 77
+        top1_share: 0.767
+        top3_share: 0.795
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: type_na }
+    adoption: { reason: no_package_structural }
 ---
 
 # gstack
 
 Garry Tan 的私人 Claude Code 配置：约 23 个带强烈个人主张的 slash-command 技能，扮演一支虚拟工程团队（CEO 复盘、设计师、工程经理、发布经理、文档工程师、QA、安全官），驱动「规划 → 构建 → 评审 → 发布 → 复盘」的闭环。
+
+![gstack — 健康度雷达](../../../assets/health/gstack.zh.svg)
 
 ## 何时使用
 

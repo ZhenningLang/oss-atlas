@@ -9,11 +9,63 @@ license: AGPL-3.0
 maturity: "active (2026-04), ~41.3k stars (2026-06), Svelte web UI + Node API backend"
 last_verified: 2026-06-28
 type: app
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:00:01Z
+  overall: B
+  overall_score: 3.0
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: B
+      raw:
+        archived: false
+        last_commit_age_days: 84
+        active_weeks_13: 2
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 117.2
+        qualifying_issues: 8
+        band: relaxed_solo
+        window_offset_days: 11
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: A
+      raw:
+        repo_age_days: 1452
+        last_commit_age_days: 84
+        cohort: app
+    governance:
+      grade: B
+      raw:
+        active_maintainers_12mo: 6
+        top1_share: 0.575
+        top3_share: 0.95
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: D
+      raw:
+        spdx_id: AGPL-3.0
+        permissiveness: strong_network_copyleft
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    adoption: { reason: no_package_structural }
 ---
 
 # cobalt
 
 A self-hostable media downloader with a clean web UI and a JSON API — paste a link from many social sites and it hands back the video or audio, with no ads, trackers, or paywalls.
+
+![cobalt — health radar](../../assets/health/cobalt.svg)
 
 ## When to use
 

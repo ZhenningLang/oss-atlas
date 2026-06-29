@@ -9,11 +9,66 @@ license: Apache-2.0
 maturity: v3.3.6, active (2026-06)
 last_verified: 2026-06-26
 type: library
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:27:37Z
+  overall: B
+  overall_score: 3.0
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 13
+        active_weeks_13: 12
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 14.8
+        qualifying_issues: 14
+        band: default
+        window_offset_days: 7
+    adoption:
+      grade: C
+      raw:
+        registry: pypi.org
+        canonical_package: memori
+        dependent_repos_count: 1
+        downloads_last_month: 33978
+        graph_tier: D
+        volume_tier: C
+        cross_check_divergence: null
+    longevity:
+      grade: D
+      raw:
+        repo_age_days: 340
+        last_commit_age_days: 13
+        cohort: library
+    governance:
+      grade: A
+      raw:
+        active_maintainers_12mo: 45
+        top1_share: 0.223
+        top3_share: 0.588
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: "?"
+      raw: {}
+  unknowns:
+    risk_license: { reason: license_unparsed }
 ---
 
 # Memori
 
 An LLM-agnostic memory layer that turns agent execution and conversation into structured, persistent state — captured by wrapping your existing LLM client, recalled automatically, no `search()` calls in your hot path.
+
+![memori — health radar](../../assets/health/memori.svg)
 
 ## When to use
 

@@ -9,11 +9,67 @@ license: MIT
 maturity: no tagged release, pinned via @main, active (2026-02)
 last_verified: 2026-06-26
 type: tool
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:37:01Z
+  overall: C
+  overall_score: 1.8
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: C
+      raw:
+        archived: false
+        last_commit_age_days: 138
+        active_weeks_13: 0
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: E
+      raw:
+        registry: null
+        canonical_package: null
+        dependent_repos_count: 0
+        downloads_last_month: null
+        graph_tier: E
+        volume_tier: null
+        cross_check_divergence: null
+        archived: false
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 329
+        last_commit_age_days: 138
+        cohort: tool
+    governance:
+      grade: D
+      raw:
+        active_maintainers_12mo: 3
+        top1_share: 0.889
+        top3_share: 1.0
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: no_traffic }
 ---
 
 # Claude Code Security Review
 
 Anthropic's AI security reviewer: a GitHub Action (plus a `/security-review` Claude Code slash command) that reads a PR diff with Claude and posts line-level vulnerability findings.
+
+![claude-code-security-review — health radar](../../assets/health/claude-code-security-review.svg)
 
 ## When to use
 

@@ -9,11 +9,66 @@ license: Apache-2.0
 maturity: active (2026-05); ~41.4k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: framework
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:58:15Z
+  overall: B
+  overall_score: 2.6
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: B
+      raw:
+        archived: false
+        last_commit_age_days: 81
+        active_weeks_13: 1
+        carve_out: mature_library_lindy
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: D
+      raw:
+        registry: pypi.org
+        canonical_package: colossalai
+        dependent_repos_count: 63
+        downloads_last_month: 14927
+        graph_tier: D
+        volume_tier: D
+        cross_check_divergence: null
+    longevity:
+      grade: B
+      raw:
+        repo_age_days: 1705
+        last_commit_age_days: 81
+        cohort: framework
+    governance:
+      grade: C
+      raw:
+        active_maintainers_12mo: 5
+        top1_share: 0.625
+        top3_share: 0.875
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: no_traffic }
 ---
 
 # Colossal-AI
 
 A distributed deep-learning system that makes training and fine-tuning very large models across many GPUs cheaper and faster — bundling tensor / pipeline / sequence parallelism, ZeRO sharding, and heterogeneous (CPU/NVMe) offload behind a thin wrapper over PyTorch.
+
+![colossalai — health radar](../../assets/health/colossalai.svg)
 
 ## When to use
 

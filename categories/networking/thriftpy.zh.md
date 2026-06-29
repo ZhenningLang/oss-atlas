@@ -9,11 +9,66 @@ license: MIT
 maturity: v0.3.9 (2016-08), deprecated + archived, ~1.1k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:06:43Z
+  overall: D
+  overall_score: 0.8
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: E
+      raw:
+        archived: true
+        last_commit_age_days: 2830
+        active_weeks_13: 0
+        carve_out: null
+    responsiveness:
+      grade: E
+      raw:
+        median_ttfr_hours: null
+        qualifying_issues: 0
+        band: default
+        window_offset_days: 2
+    adoption:
+      grade: E
+      raw:
+        registry: null
+        canonical_package: null
+        dependent_repos_count: 0
+        downloads_last_month: null
+        graph_tier: E
+        volume_tier: null
+        cross_check_divergence: null
+        archived: true
+    longevity:
+      grade: E
+      raw:
+        repo_age_days: 4521
+        last_commit_age_days: 2830
+        cohort: library
+    governance:
+      grade: "?"
+      raw: {}
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    governance: { reason: unattributable }
 ---
 
 # ThriftPy
 
 Apache Thrift 的纯 Python 实现：运行时直接加载 `.thrift` 文件、即时生成 RPC 客户端/服务端代码——**已弃用并归档**，由 [thriftpy2](https://github.com/Thriftpy/thriftpy2) 取代。
+
+![thriftpy — 健康度雷达](../../assets/health/thriftpy.zh.svg)
 
 ## 何时使用
 

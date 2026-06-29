@@ -9,11 +9,60 @@ license: BSD-3-Clause
 maturity: stable, active, ~3.8k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:18:49Z
+  overall: B
+  overall_score: 3.25
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: B
+      raw:
+        archived: false
+        last_commit_age_days: 47
+        active_weeks_13: 2
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: A
+      raw:
+        repo_age_days: 4456
+        last_commit_age_days: 47
+        cohort: library
+    governance:
+      grade: C
+      raw:
+        active_maintainers_12mo: 2
+        top1_share: 0.714
+        top3_share: 1.0
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: BSD-3-Clause
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: no_traffic }
+    adoption: { reason: registry_no_counts }
 ---
 
 # colorama
 
 一个极小的纯 Python 库，让 ANSI 颜色/样式转义码在 Windows 上也能工作——调一次 `colorama.init()`，那些在 Linux/macOS 上给你输出着色的同一套 ANSI 序列，如今在老式 Windows 终端里也能正确渲染。
+
+![colorama — 健康度雷达](../../assets/health/colorama.zh.svg)
 
 ## 何时使用
 

@@ -9,11 +9,63 @@ license: LGPL-2.1-or-later
 maturity: release 364, active (2026-06)
 last_verified: 2026-06-26
 type: app
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:47:00Z
+  overall: D
+  overall_score: 3.2
+  scored_axes: 5
+  capped: true
+  cap_reason: "source-available/no-license: NONE"
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 3
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 30.0
+        qualifying_issues: 45
+        band: relaxed_solo
+        window_offset_days: 6
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: A
+      raw:
+        repo_age_days: 4623
+        last_commit_age_days: 3
+        cohort: app
+    governance:
+      grade: A
+      raw:
+        active_maintainers_12mo: 28
+        top1_share: 0.322
+        top3_share: 0.702
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: E
+      raw:
+        spdx_id: NONE
+        permissiveness: source_available
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    adoption: { reason: no_package_structural }
 ---
 
 # Cockpit
 
 A web-based graphical admin interface for Linux servers — log in through a browser and manage services, storage, networking, containers, accounts and logs from a real `systemd` session, with no agent or persistent daemon to babysit.
+
+![cockpit — health radar](../../assets/health/cockpit.svg)
 
 ## When to use
 

@@ -9,11 +9,63 @@ license: GPL-2.0
 maturity: stable, low activity (last push 2024-07), ~1.9k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: tool
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:07:01Z
+  overall: D
+  overall_score: 0.5
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: E
+      raw:
+        archived: false
+        last_commit_age_days: 1718
+        active_weeks_13: 0
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: E
+      raw:
+        registry: null
+        canonical_package: null
+        dependent_repos_count: 0
+        downloads_last_month: null
+        graph_tier: E
+        volume_tier: null
+        cross_check_divergence: null
+        archived: false
+    longevity:
+      grade: E
+      raw:
+        repo_age_days: 5039
+        last_commit_age_days: 1718
+        cohort: tool
+    governance:
+      grade: "?"
+      raw: {}
+    risk_license:
+      grade: C
+      raw:
+        spdx_id: GPL-2.0
+        permissiveness: weak_file_copyleft
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: no_traffic }
+    governance: { reason: unattributable }
 ---
 
 # wondershaper
 
 A single Bash script that wraps Linux `tc` (traffic control) to cap the up/download bandwidth of a network adapter with one command — `wondershaper -a eth0 -d 8192 -u 2048` instead of a wall of HTB queueing-discipline incantations.
+
+![wondershaper — health radar](../../assets/health/wondershaper.svg)
 
 ## When to use
 

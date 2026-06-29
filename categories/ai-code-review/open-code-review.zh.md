@@ -9,11 +9,68 @@ license: Apache-2.0
 maturity: v1.6.2, active (2026-06)
 last_verified: 2026-06-26
 type: tool
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:37:14Z
+  overall: B
+  overall_score: 2.67
+  scored_axes: 6
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 6
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 4.6
+        qualifying_issues: 43
+        band: relaxed_solo
+        window_offset_days: 8
+    adoption:
+      grade: D
+      raw:
+        registry: npmjs.org
+        canonical_package: "@alibaba-group/open-code-review"
+        dependent_repos_count: 0
+        downloads_last_month: 12994
+        graph_tier: E
+        volume_tier: D
+        cross_check_divergence: null
+    longevity:
+      grade: D
+      raw:
+        repo_age_days: 42
+        last_commit_age_days: 0
+        cohort: tool
+    governance:
+      grade: C
+      raw:
+        active_maintainers_12mo: 32
+        top1_share: 0.714
+        top3_share: 0.807
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # Open Code Review
 
 一个 CLI：读取你的 Git diff，把改动文件交给一个会用工具的 LLM agent（底层叠着一套确定性的文件选择/规则匹配流水线），输出行级 review 评论，刻意以精确率优先于召回率。
+
+![open-code-review — 健康度雷达](../../assets/health/open-code-review.zh.svg)
 
 ## 何时使用
 

@@ -9,11 +9,60 @@ license: MIT
 maturity: v2.8.8, active (2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:29:13Z
+  overall: B
+  overall_score: 3.25
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: B
+      raw:
+        archived: false
+        last_commit_age_days: 1
+        active_weeks_13: 3
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 211
+        last_commit_age_days: 1
+        cohort: skill-pack
+    governance:
+      grade: A
+      raw:
+        active_maintainers_12mo: 51
+        top1_share: 0.322
+        top3_share: 0.562
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: type_na }
+    adoption: { reason: no_package_structural }
 ---
 
 # UI UX Pro Max Skill
 
 一个设计智能 skill pack，给你的 coding agent 注入 UI/UX 品味——一个本地检索引擎，覆盖数百条行业推理规则、UI 风格、配色方案和字体搭配，在你让它构建界面时自动触发，并附带一份交付前质量清单。
+
+![ui-ux-pro-max — 健康度雷达](../../../assets/health/ui-ux-pro-max.zh.svg)
 
 ## 何时使用
 

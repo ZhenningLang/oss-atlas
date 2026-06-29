@@ -9,11 +9,56 @@ license: MIT
 maturity: ~v0.0.31, coasting — last pushed 2025-01 (~1.5 yr idle as of 2026-06), ~16.5k stars
 last_verified: 2026-06-28
 type: library
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:08:37Z
+  overall: C
+  overall_score: 2.0
+  scored_axes: 3
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: D
+      raw:
+        archived: false
+        last_commit_age_days: 527
+        active_weeks_13: 0
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: D
+      raw:
+        repo_age_days: 2026
+        last_commit_age_days: 527
+        cohort: library
+    governance:
+      grade: "?"
+      raw: {}
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: no_traffic }
+    adoption: { reason: ambiguous }
+    governance: { reason: unattributable }
 ---
 
 # LaTeX-OCR (pix2tex)
 
 一个 ViT 编码器 + Transformer 解码器的模型，把数学公式的图片转成能编译出它的 LaTeX 源码——以 Python 库的形式发布，外加一个 CLI（`pix2tex`）、一个截图 GUI（`latexocr`），以及一个小型 REST/Streamlit API。
+
+![latex-ocr — 健康度雷达](../../assets/health/latex-ocr.zh.svg)
 
 ## 何时使用
 

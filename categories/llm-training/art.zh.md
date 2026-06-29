@@ -9,11 +9,63 @@ license: Apache-2.0
 maturity: v0.5.x, active (2026-03 latest release seen; 2026-06)
 last_verified: 2026-06-26
 type: framework
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:57:56Z
+  overall: B
+  overall_score: 2.6
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: B
+      raw:
+        median_ttfr_hours: 129.2
+        qualifying_issues: 8
+        band: default
+        window_offset_days: 10
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 476
+        last_commit_age_days: 0
+        cohort: framework
+    governance:
+      grade: A
+      raw:
+        active_maintainers_12mo: 21
+        top1_share: 0.343
+        top3_share: 0.737
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: E
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: true
+        content_license: null
+  unknowns:
+    adoption: { reason: ambiguous }
 ---
 
 # ART (Agent Reinforcement Trainer)
 
 ART 是 OpenPipe 开源的框架，用 GRPO 强化学习在真实任务上训练多步 LLM agent；它把客户端-服务端训练循环与 RULER（一个无需标注数据、由 LLM 充当裁判的奖励函数）配在一起。
+
+![art — 健康度雷达](../../assets/health/llm-training-art.zh.svg)
 
 ## 何时使用
 

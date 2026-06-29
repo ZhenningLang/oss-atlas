@@ -9,11 +9,60 @@ license: MIT
 maturity: no tagged release, active (last pushed 2026-04; ~1.9k stars [未验证])
 last_verified: 2026-06-26
 type: skill-pack
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:28:35Z
+  overall: D
+  overall_score: 1.25
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: C
+      raw:
+        archived: false
+        last_commit_age_days: 71
+        active_weeks_13: 1
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 108
+        last_commit_age_days: 71
+        cohort: skill-pack
+    governance:
+      grade: D
+      raw:
+        active_maintainers_12mo: 1
+        top1_share: 1.0
+        top3_share: 1.0
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: E
+      raw:
+        spdx_id: NONE
+        permissiveness: source_available
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: type_na }
+    adoption: { reason: no_package_structural }
 ---
 
 # make-interfaces-feel-better
 
 一个单一、聚焦的 agent skill，把约 16 条具体的 UI 打磨原则——同心圆角、可中断过渡、等宽数字、入场/出场动画、视觉对齐、字体平滑——注入你的 coding agent，让它交付的界面「感觉」做完了，而不只是「功能正确」。
+
+![make-interfaces-feel-better — 健康度雷达](../../../assets/health/make-interfaces-feel-better.zh.svg)
 
 ## 何时使用
 

@@ -9,11 +9,63 @@ license: BSD-3-Clause
 maturity: v4.0.3 / v3.5.7, active, 6.1k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: service
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:43:17Z
+  overall: B
+  overall_score: 3.4
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 12
+        active_weeks_13: 6
+        carve_out: null
+    responsiveness:
+      grade: D
+      raw:
+        median_ttfr_hours: 1028.4
+        qualifying_issues: 1
+        band: default
+        window_offset_days: 9
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: A
+      raw:
+        repo_age_days: 4256
+        last_commit_age_days: 12
+        cohort: service
+    governance:
+      grade: A
+      raw:
+        active_maintainers_12mo: 8
+        top1_share: 0.306
+        top3_share: 0.722
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: BSD-3-Clause
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    adoption: { reason: no_package_structural }
 ---
 
 # PikiwiDB
 
 一个兼容 Redis 协议、落盘的 KV 存储（RocksDB 引擎），由 Qihoo360 基础架构团队打造——热数据留在内存，全量数据持久化到磁盘，于是单节点能装下 Redis 装不下的几百 GB。（本仓库就是历史上称为 **Pika** 的项目所在地。）
+
+![pikiwidb — 健康度雷达](../../assets/health/pikiwidb.zh.svg)
 
 ## 何时使用
 

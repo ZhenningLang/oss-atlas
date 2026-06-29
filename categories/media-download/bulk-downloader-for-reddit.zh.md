@@ -9,11 +9,66 @@ license: GPL-3.0
 maturity: v2.6.2 (2023-01), commits ongoing to 2026-04, ~2.6k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: tool
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:59:43Z
+  overall: D
+  overall_score: 0.8
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: E
+      raw:
+        archived: false
+        last_commit_age_days: 1245
+        active_weeks_13: 0
+        carve_out: null
+    responsiveness:
+      grade: C
+      raw:
+        median_ttfr_hours: 10.7
+        qualifying_issues: 1
+        band: relaxed_solo
+        window_offset_days: 10
+    adoption:
+      grade: E
+      raw:
+        registry: null
+        canonical_package: null
+        dependent_repos_count: 0
+        downloads_last_month: null
+        graph_tier: E
+        volume_tier: null
+        cross_check_divergence: null
+        archived: false
+    longevity:
+      grade: E
+      raw:
+        repo_age_days: 2937
+        last_commit_age_days: 1245
+        cohort: tool
+    governance:
+      grade: "?"
+      raw: {}
+    risk_license:
+      grade: C
+      raw:
+        spdx_id: GPL-3.0
+        permissiveness: weak_file_copyleft
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    governance: { reason: unattributable }
 ---
 
 # bulk-downloader-for-reddit
 
 一个命令行工具（BDFR），从 Reddit 下载媒体并/或归档元数据——子版块、multireddit、用户、收藏/点赞的帖子，或直接链接——经由官方 Reddit OAuth API。
+
+![bulk-downloader-for-reddit — 健康度雷达](../../assets/health/bulk-downloader-for-reddit.zh.svg)
 
 ## 何时使用
 

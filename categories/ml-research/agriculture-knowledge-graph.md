@@ -9,11 +9,56 @@ license: GPL-3.0
 maturity: research project, maintenance stopped (per README), ~4.4k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: app
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:03:25Z
+  overall: D
+  overall_score: 1.33
+  scored_axes: 3
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: D
+      raw:
+        archived: false
+        last_commit_age_days: 503
+        active_weeks_13: 0
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: D
+      raw:
+        repo_age_days: 3138
+        last_commit_age_days: 503
+        cohort: app
+    governance:
+      grade: "?"
+      raw: {}
+    risk_license:
+      grade: C
+      raw:
+        spdx_id: GPL-3.0
+        permissiveness: weak_file_copyleft
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: no_traffic }
+    adoption: { reason: no_package_structural }
+    governance: { reason: unattributable }
 ---
 
 # Agriculture Knowledge Graph (AgriKG)
 
 A Chinese-language research project (ECNU) that builds an agricultural knowledge graph end-to-end — crawlers, entity recognition, relation extraction, a Neo4j store, and a Django demo with retrieval and Q&A — published as a reference, and explicitly no longer maintained.
+
+![agriculture-knowledge-graph — health radar](../../assets/health/agriculture-knowledge-graph.svg)
 
 ## When to use
 

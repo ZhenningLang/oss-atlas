@@ -9,11 +9,68 @@ license: Apache-2.0
 maturity: v3.x line, active, ~46k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: framework
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:26:10Z
+  overall: A
+  overall_score: 4.0
+  scored_axes: 6
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 0.0
+        qualifying_issues: 32
+        band: default
+        window_offset_days: 5
+    adoption:
+      grade: A
+      raw:
+        registry: pypi.org
+        canonical_package: apache-airflow-providers-common-sql
+        dependent_repos_count: 189
+        downloads_last_month: 42046300
+        graph_tier: C
+        volume_tier: A
+        cross_check_divergence: 1.01
+    longevity:
+      grade: A
+      raw:
+        repo_age_days: 4095
+        last_commit_age_days: 0
+        cohort: framework
+    governance:
+      grade: A
+      raw:
+        active_maintainers_12mo: 211
+        top1_share: 0.114
+        top3_share: 0.243
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # Apache Airflow
 
 一个用代码编排、调度并监控批处理数据工作流的平台——把流水线写成 Python DAG，由调度器、元数据库、Web UI 和可插拔执行器组成，并带有庞大的 operator 与 provider 集成目录。
+
+![airflow — 健康度雷达](../../assets/health/airflow.zh.svg)
 
 ## 何时使用
 

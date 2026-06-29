@@ -9,11 +9,65 @@ license: MIT
 maturity: v2.x, active (2026-06), ~62.3k stars; LF AI & Data project (IBM-originated)
 last_verified: 2026-06-28
 type: library
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:52:40Z
+  overall: A
+  overall_score: 3.6
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 0.3
+        qualifying_issues: 54
+        band: default
+        window_offset_days: 0
+    adoption:
+      grade: A
+      raw:
+        registry: pypi.org
+        canonical_package: docling
+        dependent_repos_count: 0
+        downloads_last_month: 14588206
+        graph_tier: E
+        volume_tier: A
+        cross_check_divergence: 1.0
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 720
+        last_commit_age_days: 0
+        cohort: library
+    governance:
+      grade: "?"
+      raw: {}
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    governance: { reason: empty_or_gated }
 ---
 
 # Docling
 
 一个 Python 库，把 PDF、DOCX、PPTX、XLSX、HTML、图片等等解析成一套统一的结构化表示（`DoclingDocument`）——还原页面版面、阅读顺序和表格结构——再导出干净的 Markdown / HTML / 无损 JSON，供 gen-AI 和 RAG 摄取。
+
+![docling — 健康度雷达](../../assets/health/docling.zh.svg)
 
 ## 何时使用
 

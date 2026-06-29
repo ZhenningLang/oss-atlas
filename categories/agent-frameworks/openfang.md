@@ -9,11 +9,63 @@ license: Apache-2.0 OR MIT
 maturity: v0.6.9, pre-1.0, active (2026-06)
 last_verified: 2026-06-26
 type: framework
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:25:00Z
+  overall: B
+  overall_score: 2.8
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: B
+      raw:
+        archived: false
+        last_commit_age_days: 48
+        active_weeks_13: 7
+        carve_out: null
+    responsiveness:
+      grade: B
+      raw:
+        median_ttfr_hours: 127.5
+        qualifying_issues: 34
+        band: default
+        window_offset_days: 4
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: D
+      raw:
+        repo_age_days: 124
+        last_commit_age_days: 48
+        cohort: framework
+    governance:
+      grade: B
+      raw:
+        active_maintainers_12mo: 64
+        top1_share: 0.582
+        top3_share: 0.653
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    adoption: { reason: ambiguous }
 ---
 
 # OpenFang
 
 A Rust "agent operating system" that ships as a single self-contained binary: it runs autonomous agents ("Hands") on schedules — 24/7, without you prompting them — with a built-in kernel, scheduler, WASM tool sandbox, MCP support, and 40 messaging-channel adapters.
+
+![openfang — health radar](../../assets/health/openfang.svg)
 
 ## When to use
 

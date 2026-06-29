@@ -9,11 +9,53 @@ license: BSD-3-Clause
 maturity: v2.3.0 tag line, low activity (last push 2024-07), ~1.0k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:07:51Z
+  overall: "?"
+  overall_score: null
+  scored_axes: 2
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: E
+      raw:
+        archived: false
+        last_commit_age_days: 1104
+        active_weeks_13: 0
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: E
+      raw:
+        repo_age_days: 6398
+        last_commit_age_days: 1104
+        cohort: library
+    governance:
+      grade: "?"
+      raw: {}
+    risk_license:
+      grade: "?"
+      raw: {}
+  unknowns:
+    responsiveness: { reason: no_traffic }
+    adoption: { reason: ambiguous }
+    governance: { reason: unattributable }
+    risk_license: { reason: license_unparsed }
 ---
 
 # nginx-upload-module
 
 An NGINX C module that handles `multipart/form-data` (RFC 1867) file uploads at the server edge — NGINX streams the upload to disk itself and passes only the file metadata (paths, names, sizes) to your backend, so your application never has to buffer the raw upload.
+
+![nginx-upload-module — health radar](../../assets/health/nginx-upload-module.svg)
 
 ## When to use
 

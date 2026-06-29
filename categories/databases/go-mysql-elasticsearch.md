@@ -9,11 +9,56 @@ license: MIT
 maturity: no tagged releases, last pushed 2023-10 (stale), 4.2k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: tool
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:42:59Z
+  overall: D
+  overall_score: 1.33
+  scored_axes: 3
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: E
+      raw:
+        archived: false
+        last_commit_age_days: 2137
+        active_weeks_13: 0
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: E
+      raw:
+        repo_age_days: 4183
+        last_commit_age_days: 2137
+        cohort: tool
+    governance:
+      grade: "?"
+      raw: {}
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: no_traffic }
+    adoption: { reason: ambiguous }
+    governance: { reason: unattributable }
 ---
 
 # go-mysql-elasticsearch
 
 A small Go service that syncs MySQL into Elasticsearch in real time: it does an initial dump, then tails the MySQL binlog as a fake replica and applies inserts/updates/deletes to ES indices per a mapping rule file.
+
+![go-mysql-elasticsearch — health radar](../../assets/health/go-mysql-elasticsearch.svg)
 
 ## When to use
 

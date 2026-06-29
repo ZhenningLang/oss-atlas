@@ -9,11 +9,66 @@ license: BSD-3-Clause
 maturity: v5.x, active (2026-06), ~28.6k stars
 last_verified: 2026-06-28
 type: framework
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:16:13Z
+  overall: B
+  overall_score: 3.4
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 2
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: B
+      raw:
+        median_ttfr_hours: 99.5
+        qualifying_issues: 11
+        band: default
+        window_offset_days: 8
+    adoption:
+      grade: A
+      raw:
+        registry: pypi.org
+        canonical_package: celery
+        dependent_repos_count: 40119
+        downloads_last_month: 55110873
+        graph_tier: A
+        volume_tier: A
+        cross_check_divergence: 1.05
+    longevity:
+      grade: A
+      raw:
+        repo_age_days: 6275
+        last_commit_age_days: 2
+        cohort: framework
+    governance:
+      grade: C
+      raw:
+        active_maintainers_12mo: 21
+        top1_share: 0.643
+        top3_share: 0.801
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: "?"
+      raw: {}
+  unknowns:
+    risk_license: { reason: license_unparsed }
 ---
 
 # Celery
 
 Python 事实标准的分布式任务队列：通过消息 broker（RabbitMQ/Redis）把异步、后台作业交给一组 worker 执行，自带重试、定时调度（beat）、路由，以及可选的 result backend。
+
+![celery — 健康度雷达](../../assets/health/celery.zh.svg)
 
 ## 何时使用
 

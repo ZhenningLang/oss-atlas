@@ -9,11 +9,62 @@ license: Apache-2.0
 maturity: v4.x (npm 4.1.3), master frozen since 2020-06, coasting, ~7.9k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: tool
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:44:21Z
+  overall: C
+  overall_score: 1.5
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: E
+      raw:
+        archived: false
+        last_commit_age_days: 2202
+        active_weeks_13: 0
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: C
+      raw:
+        registry: npmjs.org
+        canonical_package: anyproxy
+        dependent_repos_count: 238
+        downloads_last_month: 8995
+        graph_tier: C
+        volume_tier: D
+        cross_check_divergence: null
+    longevity:
+      grade: E
+      raw:
+        repo_age_days: 4340
+        last_commit_age_days: 2202
+        cohort: tool
+    governance:
+      grade: "?"
+      raw: {}
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: no_traffic }
+    governance: { reason: unattributable }
 ---
 
 # AnyProxy
 
 一个用 Node.js 写的完全可配置 HTTP/HTTPS 中间人代理：把你机器（或移动设备）的流量路由穿过它，在 web UI 里检视、录制，并用 JS 规则文件改写请求/响应。阿里背书——但 master 分支自 2020 年中起就没动过。
+
+![anyproxy — 健康度雷达](../../assets/health/anyproxy.zh.svg)
 
 ## 何时使用
 

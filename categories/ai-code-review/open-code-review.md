@@ -9,11 +9,68 @@ license: Apache-2.0
 maturity: v1.6.2, active (2026-06)
 last_verified: 2026-06-26
 type: tool
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:37:14Z
+  overall: B
+  overall_score: 2.67
+  scored_axes: 6
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 6
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 4.6
+        qualifying_issues: 43
+        band: relaxed_solo
+        window_offset_days: 8
+    adoption:
+      grade: D
+      raw:
+        registry: npmjs.org
+        canonical_package: "@alibaba-group/open-code-review"
+        dependent_repos_count: 0
+        downloads_last_month: 12994
+        graph_tier: E
+        volume_tier: D
+        cross_check_divergence: null
+    longevity:
+      grade: D
+      raw:
+        repo_age_days: 42
+        last_commit_age_days: 0
+        cohort: tool
+    governance:
+      grade: C
+      raw:
+        active_maintainers_12mo: 32
+        top1_share: 0.714
+        top3_share: 0.807
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # Open Code Review
 
 A CLI that reads your Git diff, hands changed files to a tool-using LLM agent on top of a deterministic file-selection/rule-matching pipeline, and prints line-level review comments tuned for precision over recall.
+
+![open-code-review — health radar](../../assets/health/open-code-review.svg)
 
 ## When to use
 

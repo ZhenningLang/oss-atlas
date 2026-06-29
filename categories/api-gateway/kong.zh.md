@@ -9,11 +9,63 @@ license: Apache-2.0
 maturity: v3.9.x, active (2026-06)
 last_verified: 2026-06-26
 type: service
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:39:38Z
+  overall: A
+  overall_score: 3.8
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: B
+      raw:
+        archived: false
+        last_commit_age_days: 12
+        active_weeks_13: 4
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 26.0
+        qualifying_issues: 5
+        band: default
+        window_offset_days: 5
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: A
+      raw:
+        repo_age_days: 4241
+        last_commit_age_days: 12
+        cohort: service
+    governance:
+      grade: A
+      raw:
+        active_maintainers_12mo: 17
+        top1_share: 0.135
+        top3_share: 0.378
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    adoption: { reason: no_package_structural }
 ---
 
 # Kong Gateway
 
 基于 OpenResty/Nginx 的 API 网关，靠插件层把一个反向代理变成可编程的流量边界：既管 REST/微服务流量，也从 3.x 起通过 AI Gateway 插件管 LLM 与 MCP 流量。
+
+![kong — 健康度雷达](../../assets/health/kong.zh.svg)
 
 ## 何时使用
 

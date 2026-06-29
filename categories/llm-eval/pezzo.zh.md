@@ -9,11 +9,62 @@ license: Apache-2.0
 maturity: v0.9.2, likely stalled (last real commit ~2025-06), ~3.2k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: app
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:56:32Z
+  overall: C
+  overall_score: 1.75
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: D
+      raw:
+        archived: false
+        last_commit_age_days: 366
+        active_weeks_13: 0
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: D
+      raw:
+        registry: npmjs.org
+        canonical_package: "@pezzo/client"
+        dependent_repos_count: 1
+        downloads_last_month: 1879
+        graph_tier: D
+        volume_tier: D
+        cross_check_divergence: null
+    longevity:
+      grade: D
+      raw:
+        repo_age_days: 1164
+        last_commit_age_days: 366
+        cohort: app
+    governance:
+      grade: "?"
+      raw: {}
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: no_traffic }
+    governance: { reason: unattributable }
 ---
 
 # Pezzo
 
 一个开源、可自托管的 LLMOps 平台，做 prompt 管理、版本化、可观测性和成本/延迟监控——一个集中编写 prompt 并观察它们在生产中表现的地方。
+
+![pezzo — 健康度雷达](../../assets/health/pezzo.zh.svg)
 
 ## 何时使用
 

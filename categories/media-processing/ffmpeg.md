@@ -9,11 +9,57 @@ license: LGPL-2.1-or-later
 maturity: "active, LGPL-2.1+ core with optional GPL parts, ~61.5k stars (2026-06)"
 last_verified: 2026-06-28
 type: tool
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:02:15Z
+  overall: A
+  overall_score: 4.0
+  scored_axes: 3
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: A
+      raw:
+        repo_age_days: 5555
+        last_commit_age_days: 0
+        cohort: tool
+    governance:
+      grade: A
+      raw:
+        active_maintainers_12mo: 107
+        top1_share: 0.206
+        top3_share: 0.458
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: "?"
+      raw: {}
+  unknowns:
+    responsiveness: { reason: issues_disabled }
+    adoption: { reason: ambiguous }
+    risk_license: { reason: license_unparsed }
 ---
 
 # FFmpeg
 
 The universal audio/video framework — `ffmpeg`/`ffprobe`/`ffplay` CLIs plus the `libav*` libraries that decode, encode, transcode, mux, demux, and filter virtually any media format in existence.
+
+![ffmpeg — health radar](../../assets/health/ffmpeg.svg)
 
 ## When to use
 

@@ -9,11 +9,56 @@ license: MIT
 maturity: PyPI v1.2.0 (2017-09), repo stale since 2023-05, ~2.8k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: app
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:25:17Z
+  overall: E
+  overall_score: 0.0
+  scored_axes: 3
+  capped: true
+  cap_reason: "source-available/no-license: NONE"
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: E
+      raw:
+        archived: false
+        last_commit_age_days: 2953
+        active_weeks_13: 0
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: E
+      raw:
+        repo_age_days: 3815
+        last_commit_age_days: 2953
+        cohort: app
+    governance:
+      grade: "?"
+      raw: {}
+    risk_license:
+      grade: E
+      raw:
+        spdx_id: NONE
+        permissiveness: source_available
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: no_traffic }
+    adoption: { reason: no_package_structural }
+    governance: { reason: unattributable }
 ---
 
 # SpiderKeeper
 
 A Flask-based admin web UI / dashboard for Scrapy spiders that sits on top of Scrapyd — deploy projects, schedule periodic jobs, and watch run stats from a browser. It crawls nothing itself; it's a management layer over one or more Scrapyd servers. Lightweight, popular, and largely stale.
+
+![spiderkeeper — health radar](../../assets/health/spiderkeeper.svg)
 
 ## When to use
 

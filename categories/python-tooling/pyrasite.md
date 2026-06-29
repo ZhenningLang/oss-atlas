@@ -9,11 +9,62 @@ license: GPL-3.0
 maturity: v2.0 (old), low-cadence maintenance (2026-06)
 last_verified: 2026-06-28
 type: tool
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:13:09Z
+  overall: C
+  overall_score: 1.5
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: D
+      raw:
+        archived: false
+        last_commit_age_days: 448
+        active_weeks_13: 0
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: C
+      raw:
+        registry: pypi.org
+        canonical_package: pyrasite
+        dependent_repos_count: 14
+        downloads_last_month: 79705
+        graph_tier: D
+        volume_tier: C
+        cross_check_divergence: null
+    longevity:
+      grade: D
+      raw:
+        repo_age_days: 5406
+        last_commit_age_days: 448
+        cohort: tool
+    governance:
+      grade: "?"
+      raw: {}
+    risk_license:
+      grade: C
+      raw:
+        spdx_id: GPL-3.0
+        permissiveness: weak_file_copyleft
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: no_traffic }
+    governance: { reason: unattributable }
 ---
 
 # pyrasite
 
 A tool to inject arbitrary Python code into a **running** Python process — attach to a live PID via gdb, run diagnostic snippets, dump objects, or open a reverse shell, without restarting the target.
+
+![pyrasite — health radar](../../assets/health/pyrasite.svg)
 
 ## When to use
 

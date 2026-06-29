@@ -9,11 +9,68 @@ license: BSD-2-Clause
 maturity: v8.0.x, active (2026-06), 4.2k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:23:28Z
+  overall: B
+  overall_score: 3.17
+  scored_axes: 6
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 5
+        active_weeks_13: 6
+        carve_out: null
+    responsiveness:
+      grade: C
+      raw:
+        median_ttfr_hours: 4.2
+        qualifying_issues: 2
+        band: default
+        window_offset_days: 11
+    adoption:
+      grade: B
+      raw:
+        registry: pypi.org
+        canonical_package: praw
+        dependent_repos_count: 5679
+        downloads_last_month: 1699946
+        graph_tier: B
+        volume_tier: B
+        cross_check_divergence: 1.01
+    longevity:
+      grade: A
+      raw:
+        repo_age_days: 5793
+        last_commit_age_days: 5
+        cohort: library
+    governance:
+      grade: C
+      raw:
+        active_maintainers_12mo: 3
+        top1_share: 0.681
+        top3_share: 1.0
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: BSD-2-Clause
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # PRAW
 
 The "Python Reddit API Wrapper" — a Python package that gives you typed, Pythonic objects (Submission, Comment, Subreddit, Redditor) over Reddit's official OAuth API, and handles rate-limit compliance so you don't have to sprinkle `sleep` calls in your code.
+
+![praw — health radar](../../assets/health/praw.svg)
 
 ## When to use
 

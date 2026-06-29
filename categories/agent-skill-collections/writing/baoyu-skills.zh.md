@@ -9,11 +9,60 @@ license: MIT
 maturity: v2.5.2, active (2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:34:26Z
+  overall: B
+  overall_score: 2.75
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 1
+        active_weeks_13: 12
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 167
+        last_commit_age_days: 1
+        cohort: skill-pack
+    governance:
+      grade: D
+      raw:
+        active_maintainers_12mo: 38
+        top1_share: 0.894
+        top3_share: 0.912
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: type_na }
+    adoption: { reason: no_package_structural }
 ---
 
 # Baoyu Skills
 
 宝玉出品的 20+ 个 coding agent 技能合集——翻译、markdown/HTML 排版、字幕与网页抓取，外加图片/图表/幻灯片生成——可装入 Claude Code、Codex 等支持 skill 的 harness。
+
+![baoyu-skills — 健康度雷达](../../../assets/health/baoyu-skills.zh.svg)
 
 ## 何时使用
 

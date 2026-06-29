@@ -9,11 +9,60 @@ license: Apache-2.0
 maturity: v9.3.4, active, 7.0k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: tool
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:42:42Z
+  overall: B
+  overall_score: 3.0
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: C
+      raw:
+        archived: false
+        last_commit_age_days: 56
+        active_weeks_13: 1
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: A
+      raw:
+        repo_age_days: 4327
+        last_commit_age_days: 56
+        cohort: tool
+    governance:
+      grade: C
+      raw:
+        active_maintainers_12mo: 2
+        top1_share: 0.962
+        top3_share: 1.0
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: no_traffic }
+    adoption: { reason: ambiguous }
 ---
 
 # elasticsearch-sql
 
 Query Elasticsearch with SQL instead of its native JSON Query DSL — a community plugin (and library) that parses SQL and translates it into ES queries/aggregations, with version-matched releases tracking the ES major you run.
+
+![elasticsearch-sql — health radar](../../assets/health/elasticsearch-sql.svg)
 
 ## When to use
 

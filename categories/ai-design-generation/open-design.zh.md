@@ -9,11 +9,60 @@ license: Apache-2.0
 maturity: v0.11.0 "The Bazaar", active (2026-06)
 last_verified: 2026-06-26
 type: app
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:39:03Z
+  overall: B
+  overall_score: 3.25
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 9
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: D
+      raw:
+        repo_age_days: 62
+        last_commit_age_days: 0
+        cohort: app
+    governance:
+      grade: A
+      raw:
+        active_maintainers_12mo: 97
+        top1_share: 0.162
+        top3_share: 0.382
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: no_traffic }
+    adoption: { reason: no_package_structural }
 ---
 
 # Open Design
 
 一个 local-first、BYOK 的 Electron 桌面应用，把编码 agent 变成设计工作室——生成沙箱化 HTML 原型、杂志风幻灯片、品牌级图像，以及 HTML→MP4 动态图形，全部由可复用的 Skills 和 `DESIGN.md` 设计系统驱动。
+
+![open-design — 健康度雷达](../../assets/health/open-design.zh.svg)
 
 ## 何时使用
 

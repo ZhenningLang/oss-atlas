@@ -9,11 +9,63 @@ license: GPL-3.0
 maturity: ~30.3k stars, active (2026-06); single-lead-author project, created 2015-11
 last_verified: 2026-06-28
 type: framework
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:17:23Z
+  overall: B
+  overall_score: 2.8
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 8
+        active_weeks_13: 7
+        carve_out: null
+    responsiveness:
+      grade: B
+      raw:
+        median_ttfr_hours: 100.8
+        qualifying_issues: 24
+        band: default
+        window_offset_days: 13
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: A
+      raw:
+        repo_age_days: 3866
+        last_commit_age_days: 8
+        cohort: framework
+    governance:
+      grade: D
+      raw:
+        active_maintainers_12mo: 9
+        top1_share: 0.957
+        top3_share: 0.98
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: C
+      raw:
+        spdx_id: GPL-3.0
+        permissiveness: weak_file_copyleft
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    adoption: { reason: ambiguous }
 ---
 
 # XXL-JOB
 
 一个轻量级的分布式任务调度平台：一个中心化的、基于 Web 的**调度中心（admin/dispatcher）**，按 cron 触发任务，分发到你应用里的**执行器（executor）**上，支持分片执行、failover 和内置 UI——在中国企业里被广泛部署。
+
+![xxl-job — 健康度雷达](../../assets/health/xxl-job.zh.svg)
 
 ## 何时使用
 

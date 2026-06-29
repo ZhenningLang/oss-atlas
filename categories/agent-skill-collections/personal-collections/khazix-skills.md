@@ -9,11 +9,60 @@ license: MIT
 maturity: no tagged release, active, last pushed 2026-06 (as of 2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:31:26Z
+  overall: B
+  overall_score: 2.5
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 15
+        active_weeks_13: 8
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: D
+      raw:
+        repo_age_days: 84
+        last_commit_age_days: 15
+        cohort: skill-pack
+    governance:
+      grade: D
+      raw:
+        active_maintainers_12mo: 1
+        top1_share: 1.0
+        top3_share: 1.0
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: type_na }
+    adoption: { reason: no_package_structural }
 ---
 
 # Khazix Skills
 
 A small, personally-curated collection of SKILL.md-format Agent Skills from 数字生命卡兹克 (Khazix) — five practical, mostly Chinese-language skills (disk cleanup, AI-news lookup, doc/memory reconciliation, long-form research reports, WeChat-style writing) that drop into a SKILL.md-capable agent.
+
+![khazix-skills — health radar](../../../assets/health/khazix-skills.svg)
 
 ## When to use
 

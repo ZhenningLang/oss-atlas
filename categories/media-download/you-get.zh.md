@@ -9,11 +9,59 @@ license: MIT
 maturity: "active, latest release v0.4.1743 (2025-01-04), ~56.8k stars (2026-06)"
 last_verified: 2026-06-28
 type: tool
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:00:41Z
+  overall: D
+  overall_score: 0.67
+  scored_axes: 3
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: D
+      raw:
+        archived: false
+        last_commit_age_days: 428
+        active_weeks_13: 0
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: E
+      raw:
+        registry: conda-forge.org
+        canonical_package: you-get
+        dependent_repos_count: 0
+        downloads_last_month: 49144
+        graph_tier: E
+        volume_tier: "?"
+        cross_check_divergence: null
+    longevity:
+      grade: D
+      raw:
+        repo_age_days: 5061
+        last_commit_age_days: 428
+        cohort: tool
+    governance:
+      grade: "?"
+      raw: {}
+    risk_license:
+      grade: "?"
+      raw: {}
+  unknowns:
+    responsiveness: { reason: issues_disabled }
+    governance: { reason: unattributable }
+    risk_license: { reason: license_unparsed }
 ---
 
 # you-get
 
 一个小巧的命令行程序，从 YouTube 及 100+ 个其他站点下载媒体（视频、音频、图片）；对中文视频站（Bilibili、Youku、iQIYI、腾讯视频……）的覆盖尤为出色。
+
+![you-get — 健康度雷达](../../assets/health/you-get.zh.svg)
 
 ## 何时使用
 

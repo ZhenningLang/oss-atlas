@@ -9,11 +9,68 @@ license: Apache-2.0
 maturity: v11.2.0, active (2026-06)
 last_verified: 2026-06-26
 type: app
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:47:15Z
+  overall: B
+  overall_score: 3.33
+  scored_axes: 6
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 3
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 5.0
+        qualifying_issues: 35
+        band: relaxed_solo
+        window_offset_days: 3
+    adoption:
+      grade: D
+      raw:
+        registry: npmjs.org
+        canonical_package: cyberchef
+        dependent_repos_count: 12
+        downloads_last_month: 1840
+        graph_tier: D
+        volume_tier: D
+        cross_check_divergence: null
+    longevity:
+      grade: A
+      raw:
+        repo_age_days: 3500
+        last_commit_age_days: 3
+        cohort: app
+    governance:
+      grade: B
+      raw:
+        active_maintainers_12mo: 14
+        top1_share: 0.436
+        top3_share: 0.864
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # CyberChef
 
 一个完全运行在客户端的「网络瑞士军刀」Web 应用，把 300+ 个编解码、加解密、压缩、哈希和数据分析操作串成可复用的可视化「recipe」——可在浏览器里离线运行，也可作为 Node 库调用。
+
+![cyberchef — 健康度雷达](../../assets/health/cyberchef.zh.svg)
 
 ## 何时使用
 

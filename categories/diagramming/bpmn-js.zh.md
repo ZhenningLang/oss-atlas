@@ -9,11 +9,66 @@ license: MIT + bpmn.io watermark clause
 maturity: v18.19.0, active, ~9.6k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:50:32Z
+  overall: B
+  overall_score: 3.4
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 3
+        active_weeks_13: 11
+        carve_out: null
+    responsiveness:
+      grade: B
+      raw:
+        median_ttfr_hours: 25.5
+        qualifying_issues: 3
+        band: default
+        window_offset_days: 2
+    adoption:
+      grade: B
+      raw:
+        registry: npmjs.org
+        canonical_package: bpmn-js
+        dependent_repos_count: 1072
+        downloads_last_month: 645650
+        graph_tier: B
+        volume_tier: B
+        cross_check_divergence: 1.49
+    longevity:
+      grade: A
+      raw:
+        repo_age_days: 4494
+        last_commit_age_days: 3
+        cohort: library
+    governance:
+      grade: B
+      raw:
+        active_maintainers_12mo: 12
+        top1_share: 0.588
+        top3_share: 0.844
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: "?"
+      raw: {}
+  unknowns:
+    risk_license: { reason: license_unparsed }
 ---
 
 # bpmn-js
 
 面向浏览器的 BPMN 2.0 渲染与建模工具包——导入 BPMN XML、渲染成可交互的图、并就地编辑，由 Camunda 旗下 bpmn.io 团队打造。
+
+![bpmn-js — 健康度雷达](../../assets/health/bpmn-js.zh.svg)
 
 ## 何时使用
 

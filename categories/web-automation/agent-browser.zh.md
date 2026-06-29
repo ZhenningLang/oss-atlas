@@ -9,11 +9,68 @@ license: Apache-2.0
 maturity: v0.31.0 (2026-06-25); active, Vercel Labs; CDP-based Rust daemon + CLI
 last_verified: 2026-06-26
 type: tool
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:19:47Z
+  overall: B
+  overall_score: 3.0
+  scored_axes: 6
+  capped: false
+  cap_reason: null
+  needs_human_review: true
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 3
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 118.9
+        qualifying_issues: 15
+        band: relaxed_solo
+        window_offset_days: 12
+    adoption:
+      grade: B
+      raw:
+        registry: npmjs.org
+        canonical_package: agent-browser
+        dependent_repos_count: 0
+        downloads_last_month: 2005864
+        graph_tier: E
+        volume_tier: B
+        cross_check_divergence: 2.07
+    longevity:
+      grade: D
+      raw:
+        repo_age_days: 169
+        last_commit_age_days: 3
+        cohort: tool
+    governance:
+      grade: C
+      raw:
+        active_maintainers_12mo: 96
+        top1_share: 0.67
+        top3_share: 0.766
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # Agent Browser
 
 来自 Vercel Labs 的原生 Rust CLI + 守护进程，通过 CDP 直接驱动一个真实 Chrome 供 AI agent 使用：每次 `snapshot` 都把可访问性树（accessibility tree）连同稳定的元素引用（`@e1`、`@e2`）交给模型，于是 agent 操作 `@e1` 而不必去写一改 markup 就失效的脆弱 CSS 选择器。
+
+![agent-browser — 健康度雷达](../../assets/health/agent-browser.zh.svg)
 
 ## 何时使用
 

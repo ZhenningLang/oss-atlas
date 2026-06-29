@@ -9,11 +9,59 @@ license: Apache-2.0
 maturity: v2.1.1 (2023-02), ARCHIVED — maintenance stopped, 3.2k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: app
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:43:34Z
+  overall: D
+  overall_score: 1.0
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: E
+      raw:
+        archived: true
+        last_commit_age_days: 902
+        active_weeks_13: 0
+        carve_out: null
+    responsiveness:
+      grade: E
+      raw:
+        median_ttfr_hours: null
+        qualifying_issues: 0
+        band: relaxed_solo
+        window_offset_days: 8
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: E
+      raw:
+        repo_age_days: 2466
+        last_commit_age_days: 902
+        cohort: app
+    governance:
+      grade: "?"
+      raw: {}
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    adoption: { reason: no_package_structural }
+    governance: { reason: unattributable }
 ---
 
 # PrettyZoo
 
 一个跨平台的 Apache ZooKeeper 桌面 GUI（Win／Mac／Linux）——浏览 znode 树、查看／编辑节点数据、管理 ACL 与连接，无需跌进 `zkCli.sh` shell。**已归档：作者于 2023 年公开宣布停止维护。**
+
+![prettyzoo — 健康度雷达](../../assets/health/prettyzoo.zh.svg)
 
 ## 何时使用
 

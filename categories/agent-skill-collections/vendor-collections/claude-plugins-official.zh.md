@@ -9,11 +9,60 @@ license: Apache-2.0
 maturity: active, no tagged releases, ~31.1k stars (as of 2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:33:49Z
+  overall: B
+  overall_score: 3.25
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 221
+        last_commit_age_days: 0
+        cohort: skill-pack
+    governance:
+      grade: B
+      raw:
+        active_maintainers_12mo: 36
+        top1_share: 0.405
+        top3_share: 0.633
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: type_na }
+    adoption: { reason: no_package_structural }
 ---
 
 # Claude Plugins (Official)
 
 Anthropic 官方的 Claude Code 插件市场：一个精选的可安装插件目录，每个插件打包了 slash 命令、agent、skill 和/或 MCP server，通过 Claude Code 原生 `/plugin` 系统按名安装。
+
+![claude-plugins-official — 健康度雷达](../../../assets/health/claude-plugins-official.zh.svg)
 
 ## 何时使用
 

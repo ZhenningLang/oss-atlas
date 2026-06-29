@@ -9,11 +9,63 @@ license: MIT
 maturity: v4.15.0, active (2026-06)
 last_verified: 2026-06-26
 type: framework
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:24:44Z
+  overall: B
+  overall_score: 3.0
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 2
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 0.1
+        qualifying_issues: 30
+        band: default
+        window_offset_days: 9
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: D
+      raw:
+        repo_age_days: 171
+        last_commit_age_days: 2
+        cohort: framework
+    governance:
+      grade: C
+      raw:
+        active_maintainers_12mo: 99
+        top1_share: 0.787
+        top3_share: 0.83
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    adoption: { reason: ambiguous }
 ---
 
 # oh-my-claudecode
 
 架在 Anthropic Claude Code CLI 之上的多智能体编排层：把一队专职 agent 按阶段串成流水线（plan → prd → exec → verify → fix），为每个子任务路由到更便宜或更强的模型，并在 tmux 下跑并行 worker——以 Claude Code 插件形式安装，或通过 `oh-my-claude-sisyphus` npm 包安装。
+
+![oh-my-claudecode — 健康度雷达](../../assets/health/oh-my-claudecode.zh.svg)
 
 ## 何时使用
 

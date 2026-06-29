@@ -9,11 +9,63 @@ license: MIT
 maturity: no tagged release, active (2026-06)
 last_verified: 2026-06-26
 type: library
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:14:37Z
+  overall: B
+  overall_score: 3.2
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 7
+        active_weeks_13: 9
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 35.2
+        qualifying_issues: 16
+        band: default
+        window_offset_days: 12
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 454
+        last_commit_age_days: 7
+        cohort: library
+    governance:
+      grade: C
+      raw:
+        active_maintainers_12mo: 8
+        top1_share: 0.778
+        top3_share: 0.966
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    adoption: { reason: ambiguous }
 ---
 
 # PageIndex
 
 一个“无向量”（vectorless）的 RAG 文档索引：它为一篇长文档构建一棵类似目录（table of contents）的树，然后让 LLM 沿着树往下推理、定位相关章节，而不是走“切块 + 嵌入 + 向量相似度检索”那条路。
+
+![pageindex — 健康度雷达](../../assets/health/pageindex.zh.svg)
 
 ## 何时使用
 

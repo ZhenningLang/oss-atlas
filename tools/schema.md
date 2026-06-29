@@ -38,6 +38,8 @@ embedded; **currently optional (pilot), to become required once the index is bac
 In the page body, the health card is top meta: place it immediately after the opening one-line
 TL;DR and before any notice block, extra prose, or `##` section. Do not put the SVG in a Markdown
 table; GitHub table rendering makes large cards fragile.
+The card/`overall` grade is a measured-signal aggregate, not a project-quality verdict or a selection
+conclusion; render the scored-axis coverage (`scored_axes/6`) so incomplete aggregates are visible.
 
 Rules enforced by the linter:
 

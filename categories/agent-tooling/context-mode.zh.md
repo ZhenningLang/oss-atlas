@@ -9,11 +9,68 @@ license: Elastic-2.0
 maturity: v1.0.x line, very active; latest v1.0.166 (2026-06-23), pushed 2026-06-25 — source-available (ELv2), not OSI open source
 last_verified: 2026-06-26
 type: tool
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:35:34Z
+  overall: D
+  overall_score: 2.17
+  scored_axes: 6
+  capped: true
+  cap_reason: "source-available/no-license: NOASSERTION"
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 145.6
+        qualifying_issues: 28
+        band: relaxed_solo
+        window_offset_days: 13
+    adoption:
+      grade: C
+      raw:
+        registry: npmjs.org
+        canonical_package: context-mode
+        dependent_repos_count: 0
+        downloads_last_month: 117857
+        graph_tier: E
+        volume_tier: C
+        cross_check_divergence: null
+    longevity:
+      grade: D
+      raw:
+        repo_age_days: 126
+        last_commit_age_days: 0
+        cohort: tool
+    governance:
+      grade: C
+      raw:
+        active_maintainers_12mo: 98
+        top1_share: 0.785
+        top3_share: 0.832
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: E
+      raw:
+        spdx_id: NOASSERTION
+        permissiveness: source_available
+        relicense_36mo: false
+        content_license: null
 ---
 
 # Context Mode
 
 一个 MCP server，把工具的原始输出挡在 agent 上下文窗口之外：它在隔离子进程里跑读取/抓取/日志处理（只有 stdout 回到上下文），把会话事件索引进 SQLite FTS5 让 agent 熬过 compaction，并用 hooks 把重量级工具调用「路由」进沙箱——覆盖约 17 个 agent 平台。
+
+![context-mode — 健康度雷达](../../assets/health/context-mode.zh.svg)
 
 ## 何时使用
 

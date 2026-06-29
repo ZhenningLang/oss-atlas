@@ -9,11 +9,66 @@ license: Apache-2.0
 maturity: Headline model TimesFM 2.5 (200M, released 2025-09-15); repo release v2.0.1 (2026-06-11); active, Google Research (as of 2026-06)
 last_verified: 2026-06-26
 type: model
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:10:09Z
+  overall: B
+  overall_score: 3.2
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: B
+      raw:
+        archived: false
+        last_commit_age_days: 21
+        active_weeks_13: 5
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: C
+      raw:
+        registry: pypi.org
+        canonical_package: timesfm
+        dependent_repos_count: 0
+        downloads_last_month: 49632
+        graph_tier: E
+        volume_tier: C
+        cross_check_divergence: null
+    longevity:
+      grade: A
+      raw:
+        repo_age_days: 791
+        last_commit_age_days: 21
+        cohort: model
+    governance:
+      grade: B
+      raw:
+        active_maintainers_12mo: 7
+        top1_share: 0.347
+        top3_share: 0.853
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: type_na }
 ---
 
 # TimesFM
 
 A pretrained decoder-only **time-series foundation model** from Google Research: feed it a univariate history and it produces zero-shot point and quantile forecasts — no per-dataset training — small enough (200M) to run locally on CPU/GPU.
+
+![timesfm — health radar](../../assets/health/timesfm.svg)
 
 ## When to use
 

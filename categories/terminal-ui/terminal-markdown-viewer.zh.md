@@ -9,11 +9,53 @@ license: BSD-3-Clause
 maturity: v0.x, low-activity (2026-06)
 last_verified: 2026-06-28
 type: tool
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:19:33Z
+  overall: "?"
+  overall_score: null
+  scored_axes: 2
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: E
+      raw:
+        archived: false
+        last_commit_age_days: 997
+        active_weeks_13: 0
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: E
+      raw:
+        repo_age_days: 4005
+        last_commit_age_days: 997
+        cohort: tool
+    governance:
+      grade: "?"
+      raw: {}
+    risk_license:
+      grade: "?"
+      raw: {}
+  unknowns:
+    responsiveness: { reason: no_traffic }
+    adoption: { reason: ambiguous }
+    governance: { reason: unattributable }
+    risk_license: { reason: license_unparsed }
 ---
 
 # Terminal Markdown Viewer (mdv)
 
 一个 Python CLI（`mdv`），把 Markdown 渲染成带样式、彩色、适合终端阅读的文本——表格、带语法高亮的代码块、提示框和主题——让你在纯终端里读 `.md` 文件。
+
+![terminal-markdown-viewer — 健康度雷达](../../assets/health/terminal-markdown-viewer.zh.svg)
 
 ## 何时使用
 

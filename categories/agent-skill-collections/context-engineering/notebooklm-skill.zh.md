@@ -9,11 +9,60 @@ license: MIT
 maturity: v1.3.0, active (2025-11)
 last_verified: 2026-06-26
 type: tool
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:28:07Z
+  overall: C
+  overall_score: 2.25
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: C
+      raw:
+        archived: false
+        last_commit_age_days: 220
+        active_weeks_13: 0
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 253
+        last_commit_age_days: 220
+        cohort: tool
+    governance:
+      grade: D
+      raw:
+        active_maintainers_12mo: 1
+        top1_share: 1.0
+        top3_share: 1.0
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: no_traffic }
+    adoption: { reason: ambiguous }
 ---
 
 # NotebookLM Claude Code Skill
 
 一个 Claude Code skill：用真实 Chrome 浏览器驱动查询你的 Google NotebookLM 笔记本，让 agent 从你自己上传的文档里取回有来源依据、带引用的答案，而不是逐个读文件（或凭空编造）。
+
+![notebooklm-skill — 健康度雷达](../../../assets/health/notebooklm-skill.zh.svg)
 
 ## 何时使用
 

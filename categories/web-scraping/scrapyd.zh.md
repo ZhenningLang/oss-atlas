@@ -9,11 +9,66 @@ license: BSD-3-Clause
 maturity: v1.6.0 (2025-07), active, ~3.1k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: service
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:24:58Z
+  overall: B
+  overall_score: 3.0
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: B
+      raw:
+        archived: false
+        last_commit_age_days: 10
+        active_weeks_13: 4
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: C
+      raw:
+        registry: pypi.org
+        canonical_package: scrapyd
+        dependent_repos_count: 525
+        downloads_last_month: 45155
+        graph_tier: C
+        volume_tier: C
+        cross_check_divergence: null
+    longevity:
+      grade: A
+      raw:
+        repo_age_days: 4896
+        last_commit_age_days: 10
+        cohort: service
+    governance:
+      grade: C
+      raw:
+        active_maintainers_12mo: 2
+        top1_share: 0.977
+        top3_share: 1.0
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: BSD-3-Clause
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: no_traffic }
 ---
 
 # Scrapyd
 
 一个通过 JSON HTTP API 部署并运行 Scrapy 爬虫的服务守护进程——把 Scrapy 项目打成 egg、上传，然后远程调度/取消/监控抓取作业。它是 Scrapy 官方组织出品、把“在生产里跑 Scrapy”这件事标准化的守护进程。
+
+![scrapyd — 健康度雷达](../../assets/health/scrapyd.zh.svg)
 
 ## 何时使用
 

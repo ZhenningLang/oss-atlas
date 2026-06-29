@@ -9,11 +9,66 @@ license: Apache-2.0 WITH LLVM-exception
 maturity: "MAX v26.4.0, active (2026-06); ~26.4k stars, single-vendor (Modular Inc.)"
 last_verified: 2026-06-28
 type: framework
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:57:05Z
+  overall: B
+  overall_score: 3.0
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: B
+      raw:
+        median_ttfr_hours: 87.6
+        qualifying_issues: 16
+        band: default
+        window_offset_days: 12
+    adoption:
+      grade: D
+      raw:
+        registry: pypi.org
+        canonical_package: modular
+        dependent_repos_count: 3
+        downloads_last_month: 5389
+        graph_tier: D
+        volume_tier: D
+        cross_check_divergence: null
+    longevity:
+      grade: B
+      raw:
+        repo_age_days: 1157
+        last_commit_age_days: 0
+        cohort: framework
+    governance:
+      grade: A
+      raw:
+        active_maintainers_12mo: 245
+        top1_share: 0.05
+        top3_share: 0.146
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: "?"
+      raw: {}
+  unknowns:
+    risk_license: { reason: license_unparsed }
 ---
 
 # Modular Platform (MAX + Mojo)
 
 A vendor-built AI stack in one repo: **MAX** — a high-performance inference/serving engine that runs popular open models on GPU and CPU behind an OpenAI-compatible endpoint — plus **Mojo**, a Python-superset systems language for writing the high-performance kernels underneath.
+
+![modular — health radar](../../assets/health/modular.svg)
 
 ## When to use
 

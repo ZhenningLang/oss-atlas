@@ -9,11 +9,60 @@ license: MIT
 maturity: v3.1.3 (2026-06-16), active; installs across 60+ agents via the SKILL.md standard
 last_verified: 2026-06-26
 type: skill-pack
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:36:19Z
+  overall: B
+  overall_score: 3.0
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 13
+        active_weeks_13: 10
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 177
+        last_commit_age_days: 13
+        cohort: skill-pack
+    governance:
+      grade: C
+      raw:
+        active_maintainers_12mo: 42
+        top1_share: 0.733
+        top3_share: 0.765
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: type_na }
+    adoption: { reason: no_package_structural }
 ---
 
 # Planning with Files
 
 A SKILL.md-standard skill that makes a coding agent keep `task_plan.md` / `findings.md` / `progress.md` on disk so it survives `/clear`, compaction, and crashes — Manus-style file-based planning, with an opt-in completion gate, plus per-IDE lifecycle hooks.
+
+![planning-with-files — health radar](../../assets/health/planning-with-files.svg)
 
 ## When to use
 

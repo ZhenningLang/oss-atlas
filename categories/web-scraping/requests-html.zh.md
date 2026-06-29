@@ -9,11 +9,56 @@ license: MIT
 maturity: "v0.10.0, effectively unmaintained — last pushed 2024-04 (~2y idle as of 2026-06)"
 last_verified: 2026-06-28
 type: library
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:24:27Z
+  overall: D
+  overall_score: 1.33
+  scored_axes: 3
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: E
+      raw:
+        archived: false
+        last_commit_age_days: 1183
+        active_weeks_13: 0
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: E
+      raw:
+        repo_age_days: 3047
+        last_commit_age_days: 1183
+        cohort: library
+    governance:
+      grade: "?"
+      raw: {}
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: no_traffic }
+    adoption: { reason: ambiguous }
+    governance: { reason: empty_or_gated }
 ---
 
 # requests-html
 
 "HTML Parsing for Humans"——一个 Python 库，把 `requests`、PyQuery/lxml 解析，以及可选的 JavaScript 渲染（经 pyppeteer/Chromium）打包到一套顺手的 API 后面，让一个小脚本无需把三个库接线串起来就能抓页面、选元素。
+
+![requests-html — 健康度雷达](../../assets/health/requests-html.zh.svg)
 
 ## 何时使用
 

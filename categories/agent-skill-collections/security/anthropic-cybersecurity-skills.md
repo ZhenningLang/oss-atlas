@@ -9,11 +9,60 @@ license: Apache-2.0
 maturity: v1.3.0, active (2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:32:37Z
+  overall: B
+  overall_score: 2.75
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 3
+        active_weeks_13: 9
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 124
+        last_commit_age_days: 3
+        cohort: skill-pack
+    governance:
+      grade: D
+      raw:
+        active_maintainers_12mo: 8
+        top1_share: 0.878
+        top3_share: 0.97
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: type_na }
+    adoption: { reason: no_package_structural }
 ---
 
 # Anthropic Cybersecurity Skills
 
 A large cybersecurity skill pack (~817 skills as of this check) that loads structured, framework-mapped security workflows into a coding agent — each skill is a `SKILL.md` (when-to-use → prerequisites → step-by-step workflow → verification) cross-referenced to MITRE ATT&CK, NIST CSF, ATLAS, D3FEND, NIST AI RMF and MITRE F3.
+
+![anthropic-cybersecurity-skills — health radar](../../../assets/health/anthropic-cybersecurity-skills.svg)
 
 ## When to use
 

@@ -9,11 +9,68 @@ license: Apache-2.0
 maturity: v1.4.0 (2026-06-23); active, ChromeDevTools (Google) org, pushed 2026-06-25
 last_verified: 2026-06-26
 type: tool
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:20:04Z
+  overall: A
+  overall_score: 3.5
+  scored_axes: 6
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 3
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 24.6
+        qualifying_issues: 45
+        band: relaxed_solo
+        window_offset_days: 11
+    adoption:
+      grade: A
+      raw:
+        registry: npmjs.org
+        canonical_package: chrome-devtools-mcp
+        dependent_repos_count: 0
+        downloads_last_month: 10687215
+        graph_tier: E
+        volume_tier: A
+        cross_check_divergence: 1.02
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 291
+        last_commit_age_days: 3
+        cohort: tool
+    governance:
+      grade: B
+      raw:
+        active_maintainers_12mo: 96
+        top1_share: 0.453
+        top3_share: 0.636
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # Chrome DevTools MCP
 
 来自 Chrome DevTools 团队的 MCP 服务器：把一个真实的 Chrome 实例交给 coding agent 去驱动和检查。底层基于 Puppeteer + Chrome DevTools Protocol(CDP)，对外暴露 45+ 个工具，覆盖输入自动化、页面导航、性能 trace、网络、控制台、截图与堆内存分析。
+
+![chrome-devtools-mcp — 健康度雷达](../../assets/health/chrome-devtools-mcp.zh.svg)
 
 ## 何时使用
 

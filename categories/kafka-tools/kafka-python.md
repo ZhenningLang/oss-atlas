@@ -9,11 +9,68 @@ license: Apache-2.0
 maturity: v3.0.6 (2026-06), active, ~5.9k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:55:31Z
+  overall: A
+  overall_score: 3.5
+  scored_axes: 6
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 3.8
+        qualifying_issues: 6
+        band: default
+        window_offset_days: 8
+    adoption:
+      grade: A
+      raw:
+        registry: pypi.org
+        canonical_package: kafka-python
+        dependent_repos_count: 3616
+        downloads_last_month: 25491988
+        graph_tier: B
+        volume_tier: A
+        cross_check_divergence: 1.01
+    longevity:
+      grade: A
+      raw:
+        repo_age_days: 5026
+        last_commit_age_days: 0
+        cohort: library
+    governance:
+      grade: D
+      raw:
+        active_maintainers_12mo: 3
+        top1_share: 0.982
+        top3_share: 1.0
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # kafka-python
 
 A pure-Python client library for Apache Kafka — high-level `KafkaConsumer`, `KafkaProducer`, and `KafkaAdminClient` classes plus CLI scripts, with no C/Cython/Rust core so installs are trivial across environments.
+
+![kafka-python — health radar](../../assets/health/kafka-python.svg)
 
 ## When to use
 

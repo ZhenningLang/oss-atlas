@@ -9,11 +9,68 @@ license: MIT
 maturity: active, ~89k stars (2026-06)
 last_verified: 2026-06-28
 type: library
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:51:15Z
+  overall: A
+  overall_score: 4.0
+  scored_axes: 6
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 3
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 37.2
+        qualifying_issues: 31
+        band: default
+        window_offset_days: 7
+    adoption:
+      grade: A
+      raw:
+        registry: npmjs.org
+        canonical_package: "@mermaid-js/parser"
+        dependent_repos_count: 1
+        downloads_last_month: 32486503
+        graph_tier: D
+        volume_tier: A
+        cross_check_divergence: 1.03
+    longevity:
+      grade: A
+      raw:
+        repo_age_days: 4257
+        last_commit_age_days: 3
+        cohort: library
+    governance:
+      grade: A
+      raw:
+        active_maintainers_12mo: 86
+        top1_share: 0.137
+        top3_share: 0.35
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # Mermaid
 
 一个 JavaScript/TypeScript 库，用一种类 Markdown 的文本语法渲染图表——流程图、时序图、甘特图、类图、ER 图、状态图、git-graph、饼图、思维导图等等——让图表以纯文本形式进版本库，而不再是二进制图片文件。
+
+![mermaid — 健康度雷达](../../assets/health/mermaid.zh.svg)
 
 ## 何时使用
 

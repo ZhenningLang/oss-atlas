@@ -9,11 +9,68 @@ license: MIT
 maturity: multi-package monorepo; cua-agent v0.8.4, cua-sandbox v0.1.17, cua-cloud v0.1.1, cua-driver-rs v0.6.8 (pre-release), all updated 2026-06; active, trycua-maintained
 last_verified: 2026-06-26
 type: framework
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:20:21Z
+  overall: B
+  overall_score: 3.17
+  scored_axes: 6
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 2
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: B
+      raw:
+        median_ttfr_hours: 66.6
+        qualifying_issues: 15
+        band: default
+        window_offset_days: 6
+    adoption:
+      grade: C
+      raw:
+        registry: pypi.org
+        canonical_package: cua-auto
+        dependent_repos_count: 0
+        downloads_last_month: 62410
+        graph_tier: E
+        volume_tier: C
+        cross_check_divergence: null
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 514
+        last_commit_age_days: 2
+        cohort: framework
+    governance:
+      grade: A
+      raw:
+        active_maintainers_12mo: 61
+        top1_share: 0.301
+        top3_share: 0.691
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # Cua
 
 面向 **Computer-Use Agent（计算机操作智能体）** 的开源基础设施：提供 VM/容器沙箱、视觉驱动的 Agent SDK、驱动层和评测基准，让 AI agent 通过“看屏幕、点击”来操作*整台桌面*（macOS、Windows、Linux、Android），而不是靠脚本操纵 DOM。
+
+![cua — 健康度雷达](../../assets/health/cua.zh.svg)
 
 ## 何时使用
 

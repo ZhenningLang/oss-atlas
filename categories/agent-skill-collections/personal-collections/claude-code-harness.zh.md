@@ -9,11 +9,60 @@ license: MIT
 maturity: v4.16.3, active (2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:30:33Z
+  overall: B
+  overall_score: 2.75
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 1
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 199
+        last_commit_age_days: 1
+        cohort: skill-pack
+    governance:
+      grade: D
+      raw:
+        active_maintainers_12mo: 3
+        top1_share: 0.985
+        top3_share: 1.0
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: type_na }
+    adoption: { reason: no_package_structural }
 ---
 
 # claude-code-harness
 
 一套个人化的 Claude Code harness：以插件形式装入受治理的 plan → work → review → release 循环——spec 优先的契约、TDD 门控的执行、独立 review——并附带一个 Go 原生 `doctor` CLI，用于诊断插件缓存与 skill 漂移。
+
+![claude-code-harness — 健康度雷达](../../../assets/health/claude-code-harness.zh.svg)
 
 ## 何时使用
 

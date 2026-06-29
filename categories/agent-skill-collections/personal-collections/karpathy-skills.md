@@ -9,11 +9,60 @@ license: MIT
 maturity: no tagged releases, active, last pushed 2026-04 (as of 2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:31:17Z
+  overall: C
+  overall_score: 2.0
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: B
+      raw:
+        archived: false
+        last_commit_age_days: 70
+        active_weeks_13: 2
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 153
+        last_commit_age_days: 70
+        cohort: skill-pack
+    governance:
+      grade: B
+      raw:
+        active_maintainers_12mo: 7
+        top1_share: 0.45
+        top3_share: 0.8
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: E
+      raw:
+        spdx_id: NONE
+        permissiveness: source_available
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: type_na }
+    adoption: { reason: no_package_structural }
 ---
 
 # andrej-karpathy-skills
 
 A single behavioral-guidelines pack — one `CLAUDE.md` (plus a Cursor variant and a thin `skills/karpathy-guidelines/` wrapper) distilling Andrej Karpathy's observations on LLM coding pitfalls into four principles: Think Before Coding, Simplicity First, Surgical Changes, Goal-Driven Execution.
+
+![karpathy-skills — health radar](../../../assets/health/karpathy-skills.svg)
 
 ## When to use
 

@@ -9,11 +9,53 @@ license: Apache-2.0
 maturity: effectively abandoned (last pushed 2018-01), ~1.1k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:22:07Z
+  overall: "?"
+  overall_score: null
+  scored_axes: 2
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: E
+      raw:
+        archived: false
+        last_commit_age_days: 3955
+        active_weeks_13: 0
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: E
+      raw:
+        repo_age_days: 4228
+        last_commit_age_days: 3955
+        cohort: library
+    governance:
+      grade: "?"
+      raw: {}
+    risk_license:
+      grade: "?"
+      raw: {}
+  unknowns:
+    responsiveness: { reason: no_traffic }
+    adoption: { reason: ambiguous }
+    governance: { reason: unattributable }
+    risk_license: { reason: license_unparsed }
 ---
 
 # boilerpipe
 
 一个用于从 HTML 做样板移除和全文抽取的 Java 库——经典的、算法驱动的路子（浅层文本特征、链接密度、标签比率），把文章抽出来、丢掉导航、广告和周边杂物。
+
+![boilerpipe — 健康度雷达](../../assets/health/boilerpipe.zh.svg)
 
 ## 何时使用
 

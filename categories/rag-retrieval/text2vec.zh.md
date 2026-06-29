@@ -9,11 +9,66 @@ license: Apache-2.0
 maturity: v1.2.9, active, ~5.0k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:14:52Z
+  overall: C
+  overall_score: 2.4
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: B
+      raw:
+        archived: false
+        last_commit_age_days: 135
+        active_weeks_13: 0
+        carve_out: mature_library_lindy
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: D
+      raw:
+        registry: pypi.org
+        canonical_package: text2vec
+        dependent_repos_count: 6
+        downloads_last_month: 2623
+        graph_tier: D
+        volume_tier: D
+        cross_check_divergence: null
+    longevity:
+      grade: B
+      raw:
+        repo_age_days: 2421
+        last_commit_age_days: 135
+        cohort: library
+    governance:
+      grade: D
+      raw:
+        active_maintainers_12mo: 1
+        top1_share: 1.0
+        top3_share: 1.0
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: no_traffic }
 ---
 
 # text2vec
 
 把文本转成向量、用于语义相似与检索的 Python 库——一个 `pip install` 即打包了 Word2Vec、BM25、Sentence-BERT、CoSENT 和 BGE 系方法，且明显偏向中文。
+
+![text2vec — 健康度雷达](../../assets/health/text2vec.zh.svg)
 
 ## 何时使用
 

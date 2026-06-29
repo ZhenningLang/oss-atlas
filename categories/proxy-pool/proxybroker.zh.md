@@ -9,11 +9,62 @@ license: Apache-2.0
 maturity: last release 0.3.2 (~2018), repo near-dormant (pushed 2024-03), ~4.2k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: tool
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:11:18Z
+  overall: D
+  overall_score: 1.25
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: E
+      raw:
+        archived: false
+        last_commit_age_days: 2665
+        active_weeks_13: 0
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: D
+      raw:
+        registry: pypi.org
+        canonical_package: proxybroker
+        dependent_repos_count: 60
+        downloads_last_month: 5975
+        graph_tier: D
+        volume_tier: D
+        cross_check_divergence: null
+    longevity:
+      grade: E
+      raw:
+        repo_age_days: 3914
+        last_commit_age_days: 2665
+        cohort: tool
+    governance:
+      grade: "?"
+      raw: {}
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: no_traffic }
+    governance: { reason: unattributable }
 ---
 
 # ProxyBroker
 
 一个异步 Python 工具，从约 50 个来源找公开代理、检查它们（类型、匿名度、延迟、国家、DNSBL），并能作为一个自轮换的代理服务器挡在你的流量前面。
+
+![proxybroker — 健康度雷达](../../assets/health/proxybroker.zh.svg)
 
 ## 何时使用
 

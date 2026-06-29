@@ -9,11 +9,65 @@ license: Apache-2.0
 maturity: v1.15.x, active (2026-06)
 last_verified: 2026-06-28
 type: library
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:18:32Z
+  overall: C
+  overall_score: 2.0
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: D
+      raw:
+        archived: false
+        last_commit_age_days: 394
+        active_weeks_13: 0
+        carve_out: null
+    responsiveness:
+      grade: C
+      raw:
+        median_ttfr_hours: 244.0
+        qualifying_issues: 1
+        band: default
+        window_offset_days: 12
+    adoption:
+      grade: C
+      raw:
+        registry: pypi.org
+        canonical_package: asciimatics
+        dependent_repos_count: 176
+        downloads_last_month: 77064
+        graph_tier: C
+        volume_tier: C
+        cross_check_divergence: null
+    longevity:
+      grade: D
+      raw:
+        repo_age_days: 4093
+        last_commit_age_days: 394
+        cohort: library
+    governance:
+      grade: "?"
+      raw: {}
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    governance: { reason: unattributable }
 ---
 
 # asciimatics
 
 A cross-platform Python library for full-screen text UIs — a single curses-like API plus a widget/forms toolkit and an ASCII animation/effects engine, working the same on Linux, macOS and Windows.
+
+![asciimatics — health radar](../../assets/health/asciimatics.svg)
 
 ## When to use
 

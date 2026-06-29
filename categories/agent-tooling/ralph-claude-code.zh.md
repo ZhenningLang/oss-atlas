@@ -9,11 +9,69 @@ license: MIT
 maturity: v0.11.x line per README, active as of 2026-06; no tagged GitHub releases (see caveats)
 last_verified: 2026-06-26
 type: tool
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:36:28Z
+  overall: B
+  overall_score: 2.67
+  scored_axes: 6
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 13
+        active_weeks_13: 7
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 0.1
+        qualifying_issues: 30
+        band: relaxed_solo
+        window_offset_days: 2
+    adoption:
+      grade: E
+      raw:
+        registry: null
+        canonical_package: null
+        dependent_repos_count: 0
+        downloads_last_month: null
+        graph_tier: E
+        volume_tier: null
+        cross_check_divergence: null
+        archived: false
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 306
+        last_commit_age_days: 13
+        cohort: tool
+    governance:
+      grade: C
+      raw:
+        active_maintainers_12mo: 23
+        top1_share: 0.726
+        top3_share: 0.872
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # Ralph for Claude Code
 
 一个把 Claude Code CLI 包进自治「Ralph」循环的 Bash 套壳：反复以 `.ralph/PROMPT.md` 为输入重新调用 Claude，直到双条件退出闸门触发；配速率限制、熔断器和 tmux 监控面板，避免循环失控或无止境烧 token。
+
+![ralph-claude-code — 健康度雷达](../../assets/health/ralph-claude-code.zh.svg)
 
 ## 何时使用
 

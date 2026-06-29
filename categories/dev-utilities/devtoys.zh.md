@@ -9,11 +9,60 @@ license: MIT
 maturity: v2.0.9.0 (prerelease, 2026-01), active (2026-06)
 last_verified: 2026-06-26
 type: app
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:47:33Z
+  overall: B
+  overall_score: 2.75
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: C
+      raw:
+        archived: false
+        last_commit_age_days: 124
+        active_weeks_13: 0
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: B
+      raw:
+        repo_age_days: 1734
+        last_commit_age_days: 124
+        cohort: app
+    governance:
+      grade: C
+      raw:
+        active_maintainers_12mo: 2
+        top1_share: 0.75
+        top3_share: 1.0
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: no_traffic }
+    adoption: { reason: no_package_structural }
 ---
 
 # DevToys
 
 一个离线、跨平台的桌面「瑞士军刀」，把约 30 个开发小工具（转换器、编解码、格式化、生成器、测试器）收进一个原生 GUI——外加一个独立 CLI 供自动化使用。
+
+![devtoys — 健康度雷达](../../assets/health/devtoys.zh.svg)
 
 ## 何时使用
 

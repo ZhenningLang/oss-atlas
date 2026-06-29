@@ -9,11 +9,68 @@ license: MIT
 maturity: v1.7.0, active (2026-06)
 last_verified: 2026-06-26
 type: app
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:45:26Z
+  overall: B
+  overall_score: 2.67
+  scored_axes: 6
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 1
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 13.7
+        qualifying_issues: 12
+        band: relaxed_solo
+        window_offset_days: 1
+    adoption:
+      grade: D
+      raw:
+        registry: pypi.org
+        canonical_package: local-deep-research
+        dependent_repos_count: 0
+        downloads_last_month: 10866
+        graph_tier: E
+        volume_tier: D
+        cross_check_divergence: null
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 505
+        last_commit_age_days: 1
+        cohort: app
+    governance:
+      grade: D
+      raw:
+        active_maintainers_12mo: 46
+        top1_share: 0.906
+        top3_share: 0.961
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # Local Deep Research
 
 一个可自托管的深度研究助手（Web UI + API + CLI），把整套“迭代检索—综合”的循环跑在你自己的机器上，可全程用本地 LLM 和本地 SearXNG 元搜索，数据无需离开你的网络。
+
+![local-deep-research — 健康度雷达](../../assets/health/local-deep-research.zh.svg)
 
 ## 何时使用
 

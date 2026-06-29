@@ -9,11 +9,60 @@ license: MIT
 maturity: no tagged release, active (2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:32:59Z
+  overall: A
+  overall_score: 3.5
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 5
+        active_weeks_13: 11
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: B
+      raw:
+        repo_age_days: 334
+        last_commit_age_days: 5
+        cohort: skill-pack
+    governance:
+      grade: B
+      raw:
+        active_maintainers_12mo: 33
+        top1_share: 0.466
+        top3_share: 0.859
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: type_na }
+    adoption: { reason: no_package_structural }
 ---
 
 # awesome-claude-code-subagents
 
 A curated bundle of 100+ specialized Claude Code subagent definitions — one markdown persona per role (backend-developer, code-reviewer, security-auditor, …) you drop into `~/.claude/agents/` so Claude Code can delegate to a domain expert.
+
+![awesome-claude-code-subagents — health radar](../../../assets/health/awesome-claude-code-subagents.svg)
 
 ## When to use
 

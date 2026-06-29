@@ -9,11 +9,60 @@ license: Apache-2.0
 maturity: v1.0 release (2026-05), pushed 2026-06 (as of 2026-06-26)
 last_verified: 2026-06-26
 type: skill-pack
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:28:48Z
+  overall: B
+  overall_score: 3.25
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 2
+        active_weeks_13: 8
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 164
+        last_commit_age_days: 2
+        cohort: skill-pack
+    governance:
+      grade: B
+      raw:
+        active_maintainers_12mo: 10
+        top1_share: 0.554
+        top3_share: 0.857
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: type_na }
+    adoption: { reason: no_package_structural }
 ---
 
 # Stitch Skills
 
 A library of Agent Skills (Agent Skills open standard) that drive Google's **Stitch** MCP server — generating UI screens from text/images, converting code↔design, extracting a `DESIGN.md`, and shipping React / React Native / shadcn components out of a Stitch project.
+
+![stitch-skills — health radar](../../../assets/health/stitch-skills.svg)
 
 ## When to use
 

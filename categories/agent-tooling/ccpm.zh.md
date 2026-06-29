@@ -9,11 +9,60 @@ license: MIT
 maturity: v2 (Agent Skills compatible), active; last push 2026-03, no tagged GitHub releases (as of 2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:35:21Z
+  overall: B
+  overall_score: 2.75
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: C
+      raw:
+        archived: false
+        last_commit_age_days: 103
+        active_weeks_13: 0
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: B
+      raw:
+        repo_age_days: 314
+        last_commit_age_days: 103
+        cohort: skill-pack
+    governance:
+      grade: C
+      raw:
+        active_maintainers_12mo: 9
+        top1_share: 0.753
+        top3_share: 0.926
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: type_na }
+    adoption: { reason: no_package_structural }
 ---
 
 # CCPM
 
 一个 spec-driven 的项目管理 skill（bash 脚本 + skill 提示词），把 PRD 转成 GitHub Issues，并借助 git worktree 让多个编码 agent 并行干活——项目状态存在 markdown 文件里，而不是聊天记录里。
+
+![ccpm — 健康度雷达](../../assets/health/ccpm.zh.svg)
 
 ## 何时使用
 

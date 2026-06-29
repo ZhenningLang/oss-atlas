@@ -9,11 +9,60 @@ license: MIT
 maturity: plugin v1.0.0, active, no tagged GitHub release (2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:29:37Z
+  overall: B
+  overall_score: 2.75
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: B
+      raw:
+        archived: false
+        last_commit_age_days: 15
+        active_weeks_13: 4
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 162
+        last_commit_age_days: 15
+        cohort: skill-pack
+    governance:
+      grade: C
+      raw:
+        active_maintainers_12mo: 5
+        top1_share: 0.636
+        top3_share: 0.909
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: type_na }
+    adoption: { reason: no_package_structural }
 ---
 
 # web-quality-skills
 
 A six-skill agent pack that encodes Lighthouse / Core Web Vitals / WCAG / SEO best practices as on-demand instruction sets, so a coding agent can audit and fix web-quality issues without you hand-feeding it the rules.
+
+![addyosmani-web-quality — health radar](../../../assets/health/addyosmani-web-quality.svg)
 
 ## When to use
 

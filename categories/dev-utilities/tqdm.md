@@ -9,11 +9,66 @@ license: MPL-2.0 AND MIT
 maturity: v4.x, active (2026-06), ~31.2k stars
 last_verified: 2026-06-28
 type: library
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:50:07Z
+  overall: B
+  overall_score: 2.8
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: B
+      raw:
+        archived: false
+        last_commit_age_days: 12
+        active_weeks_13: 4
+        carve_out: null
+    responsiveness:
+      grade: C
+      raw:
+        median_ttfr_hours: 511.3
+        qualifying_issues: 2
+        band: default
+        window_offset_days: 0
+    adoption:
+      grade: A
+      raw:
+        registry: pypi.org
+        canonical_package: tqdm
+        dependent_repos_count: 136364
+        downloads_last_month: 562149971
+        graph_tier: A
+        volume_tier: A
+        cross_check_divergence: 1.0
+    longevity:
+      grade: A
+      raw:
+        repo_age_days: 4044
+        last_commit_age_days: 12
+        cohort: library
+    governance:
+      grade: D
+      raw:
+        active_maintainers_12mo: 5
+        top1_share: 0.909
+        top3_share: 0.955
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: "?"
+      raw: {}
+  unknowns:
+    risk_license: { reason: license_unparsed }
 ---
 
 # tqdm
 
 A fast, low-overhead progress-bar library for Python — wrap any iterable (`for x in tqdm(iterable):`) and get a live, self-updating meter with ETA, rate, and percentage in loops, CLI pipes, and notebooks, with near-zero dependencies.
+
+![tqdm — health radar](../../assets/health/tqdm.svg)
 
 ## When to use
 

@@ -9,11 +9,68 @@ license: MIT
 maturity: v1.6.0, active (2026-06), single-maintainer personal repo
 last_verified: 2026-06-28
 type: library
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:25:33Z
+  overall: B
+  overall_score: 2.67
+  scored_axes: 6
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: B
+      raw:
+        archived: false
+        last_commit_age_days: 2
+        active_weeks_13: 1
+        carve_out: mature_library_lindy
+    responsiveness:
+      grade: D
+      raw:
+        median_ttfr_hours: 1735.8
+        qualifying_issues: 4
+        band: default
+        window_offset_days: 2
+    adoption:
+      grade: B
+      raw:
+        registry: npmjs.org
+        canonical_package: driver.js
+        dependent_repos_count: 2055
+        downloads_last_month: 3969367
+        graph_tier: B
+        volume_tier: B
+        cross_check_divergence: 1.07
+    longevity:
+      grade: A
+      raw:
+        repo_age_days: 3032
+        last_commit_age_days: 2
+        cohort: library
+    governance:
+      grade: D
+      raw:
+        active_maintainers_12mo: 5
+        top1_share: 0.93
+        top3_share: 0.965
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # Driver.js
 
 一个轻量、零依赖的 JavaScript/TypeScript 库，靠遮罩加聚光（spotlight）引导用户在页面上的视觉焦点——产品引导（product tour）、新功能高亮、分步 onboarding，无需任何框架、无运行时依赖。
+
+![driver-js — 健康度雷达](../../assets/health/driver-js.zh.svg)
 
 ## 何时使用
 

@@ -9,11 +9,63 @@ license: Apache-2.0
 maturity: Python mem0ai v2.0.8, Node ts-v3.0.10; active (2026-06)
 last_verified: 2026-06-26
 type: library
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:26:50Z
+  overall: A
+  overall_score: 3.8
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 15.0
+        qualifying_issues: 26
+        band: default
+        window_offset_days: 3
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: B
+      raw:
+        repo_age_days: 1105
+        last_commit_age_days: 0
+        cohort: library
+    governance:
+      grade: A
+      raw:
+        active_maintainers_12mo: 56
+        top1_share: 0.272
+        top3_share: 0.478
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    adoption: { reason: registry_no_counts }
 ---
 
 # Mem0
 
 An LLM-agnostic memory layer that runs an LLM extraction pass over conversations, stores the distilled facts in a vector store, and retrieves them on later turns so your agent remembers users across sessions.
+
+![mem0 — health radar](../../assets/health/mem0.svg)
 
 ## When to use
 

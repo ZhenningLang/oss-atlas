@@ -9,11 +9,68 @@ license: Apache-2.0
 maturity: v1.x, active, ~28k stars (2026-06)
 last_verified: 2026-06-28
 type: library
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:25:45Z
+  overall: B
+  overall_score: 3.0
+  scored_axes: 6
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 13
+        active_weeks_13: 8
+        carve_out: null
+    responsiveness:
+      grade: C
+      raw:
+        median_ttfr_hours: 236.0
+        qualifying_issues: 25
+        band: default
+        window_offset_days: 7
+    adoption:
+      grade: B
+      raw:
+        registry: pypi.org
+        canonical_package: smolagents
+        dependent_repos_count: 0
+        downloads_last_month: 623672
+        graph_tier: E
+        volume_tier: B
+        cross_check_divergence: 1.06
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 571
+        last_commit_age_days: 13
+        cohort: library
+    governance:
+      grade: B
+      raw:
+        active_maintainers_12mo: 47
+        top1_share: 0.519
+        top3_share: 0.647
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # smolagents
 
 一个极简的库，用来构建“用代码思考”的 agent：LLM 不再吐 JSON 工具调用，而是把动作写成 Python 代码片段（`CodeAgent`），在 ReAct 循环里执行——整个 agent 逻辑约 1,000 行、模型无关、并接进 Hugging Face Hub。
+
+![smolagents — 健康度雷达](../../assets/health/smolagents.zh.svg)
 
 ## 何时使用
 

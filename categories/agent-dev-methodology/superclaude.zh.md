@@ -9,11 +9,68 @@ license: MIT
 maturity: v4.3.0, active (2026-06)
 last_verified: 2026-06-26
 type: tool
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:08:03Z
+  overall: B
+  overall_score: 2.5
+  scored_axes: 6
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: C
+      raw:
+        archived: false
+        last_commit_age_days: 63
+        active_weeks_13: 1
+        carve_out: null
+    responsiveness:
+      grade: C
+      raw:
+        median_ttfr_hours: 97.8
+        qualifying_issues: 2
+        band: relaxed_solo
+        window_offset_days: 11
+    adoption:
+      grade: C
+      raw:
+        registry: pypi.org
+        canonical_package: superclaude
+        dependent_repos_count: 0
+        downloads_last_month: 84102
+        graph_tier: E
+        volume_tier: C
+        cross_check_divergence: null
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 372
+        last_commit_age_days: 63
+        cohort: tool
+    governance:
+      grade: B
+      raw:
+        active_maintainers_12mo: 41
+        top1_share: 0.409
+        top3_share: 0.812
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # SuperClaude Framework
 
 一个用 Python 安装的配置层，通过行为指令注入，给 Claude Code 装上 30 个 `/sc:` 斜杠命令、20 个专用 agent、7 种行为模式以及 MCP 接线。
+
+![superclaude — 健康度雷达](../../assets/health/superclaude.zh.svg)
 
 ## 何时使用
 

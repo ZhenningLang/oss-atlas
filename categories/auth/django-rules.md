@@ -9,11 +9,66 @@ license: MIT
 maturity: v3.x, active (2026-06)
 last_verified: 2026-06-28
 type: library
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:40:16Z
+  overall: B
+  overall_score: 2.6
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: B
+      raw:
+        archived: false
+        last_commit_age_days: 261
+        active_weeks_13: 0
+        carve_out: mature_library_lindy
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: B
+      raw:
+        registry: pypi.org
+        canonical_package: rules
+        dependent_repos_count: 487
+        downloads_last_month: 487460
+        graph_tier: C
+        volume_tier: B
+        cross_check_divergence: 1.03
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 4498
+        last_commit_age_days: 261
+        cohort: library
+    governance:
+      grade: D
+      raw:
+        active_maintainers_12mo: 1
+        top1_share: 1.0
+        top3_share: 1.0
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: no_traffic }
 ---
 
 # django-rules
 
 A tiny Django app that provides **object-level permissions without a database** — you express authorization as composable predicate functions ("rules") and plug them into Django's permission system, views, templates, and DRF.
+
+![django-rules — health radar](../../assets/health/django-rules.svg)
 
 ## When to use
 

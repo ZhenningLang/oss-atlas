@@ -9,11 +9,68 @@ license: Apache-2.0
 maturity: Pre-1.0, fast cadence; stable v0.13.1 (2026-06-03), v0.14.0-alpha (2026-06-18); Google-maintained
 last_verified: 2026-06-26
 type: tool
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:09:41Z
+  overall: B
+  overall_score: 3.17
+  scored_axes: 6
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 20.3
+        qualifying_issues: 15
+        band: relaxed_solo
+        window_offset_days: 10
+    adoption:
+      grade: D
+      raw:
+        registry: pypi.org
+        canonical_package: litert-lm
+        dependent_repos_count: 0
+        downloads_last_month: 11218
+        graph_tier: E
+        volume_tier: D
+        cross_check_divergence: null
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 441
+        last_commit_age_days: 0
+        cohort: tool
+    governance:
+      grade: A
+      raw:
+        active_maintainers_12mo: 32
+        top1_share: 0.279
+        top3_share: 0.525
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # LiteRT-LM
 
 Google's C++ orchestration/runtime layer on top of LiteRT (the TensorFlow Lite successor) for running LLMs fully **on-device** — Gemma first-class (Llama/Phi/Qwen nominally supported but less optimized) on Android, iOS, desktop and edge hardware via CPU/GPU/NPU. Python/Kotlin/C++ bindings are marked *Stable* by Google, but the project itself is pre-1.0 — expect breaking changes; Swift/JS are preview.
+
+![litert-lm — health radar](../../assets/health/litert-lm.svg)
 
 ## When to use
 

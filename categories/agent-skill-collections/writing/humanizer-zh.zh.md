@@ -9,11 +9,60 @@ license: MIT
 maturity: no tagged release, last pushed 2026-01, not archived (as of 2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:34:40Z
+  overall: C
+  overall_score: 2.25
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: C
+      raw:
+        archived: false
+        last_commit_age_days: 161
+        active_weeks_13: 0
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 161
+        last_commit_age_days: 161
+        cohort: skill-pack
+    governance:
+      grade: D
+      raw:
+        active_maintainers_12mo: 1
+        top1_share: 1.0
+        top3_share: 1.0
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: type_na }
+    adoption: { reason: no_package_structural }
 ---
 
 # Humanizer-zh
 
 一个 Claude Code 单技能（`SKILL.md`，简体中文），把文本里典型的「AI 味」改写掉——它是 `blader/humanizer` 的中文本地化版，靠一份覆盖内容 / 语言 / 风格 / 套话四类、约 24 条的清单来驱动改写。
+
+![humanizer-zh — 健康度雷达](../../../assets/health/humanizer-zh.zh.svg)
 
 ## 何时使用
 

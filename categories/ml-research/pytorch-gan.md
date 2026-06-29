@@ -9,11 +9,63 @@ license: MIT
 maturity: educational reference collection, idle since ~2024-06, ~17.5k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:04:59Z
+  overall: D
+  overall_score: 1.0
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: E
+      raw:
+        archived: false
+        last_commit_age_days: 2000
+        active_weeks_13: 0
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: E
+      raw:
+        registry: null
+        canonical_package: null
+        dependent_repos_count: 0
+        downloads_last_month: null
+        graph_tier: E
+        volume_tier: null
+        cross_check_divergence: null
+        archived: false
+    longevity:
+      grade: E
+      raw:
+        repo_age_days: 2991
+        last_commit_age_days: 2000
+        cohort: library
+    governance:
+      grade: "?"
+      raw: {}
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: no_traffic }
+    governance: { reason: unattributable }
 ---
 
 # PyTorch-GAN
 
 A single-author collection of clean, from-scratch PyTorch implementations of many GAN papers (DCGAN, CycleGAN, WGAN, pix2pix, and dozens more) — built to be *read and learned from*, one self-contained script per architecture, not imported as a dependency.
+
+![pytorch-gan — health radar](../../assets/health/pytorch-gan.svg)
 
 ## When to use
 

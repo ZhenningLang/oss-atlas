@@ -9,11 +9,63 @@ license: MIT
 maturity: v1.12.2, active (2026-04)
 last_verified: 2026-06-26
 type: app
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:46:04Z
+  overall: B
+  overall_score: 3.0
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: B
+      raw:
+        archived: false
+        last_commit_age_days: 79
+        active_weeks_13: 2
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 59.6
+        qualifying_issues: 13
+        band: relaxed_solo
+        window_offset_days: 13
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: B
+      raw:
+        repo_age_days: 811
+        last_commit_age_days: 79
+        cohort: app
+    governance:
+      grade: D
+      raw:
+        active_maintainers_12mo: 16
+        top1_share: 0.943
+        top3_share: 0.958
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    adoption: { reason: no_package_structural }
 ---
 
 # Vane
 
 自托管、注重隐私的 AI 应答引擎：用 SearxNG 做联网搜索 + 你自选的本地或云端 LLM，返回带引用的答案——同一作者 Perplexica 项目的继任/改名版。
+
+![vane — 健康度雷达](../../assets/health/vane.zh.svg)
 
 ## 何时使用
 

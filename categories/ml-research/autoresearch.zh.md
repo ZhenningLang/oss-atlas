@@ -9,11 +9,63 @@ license: MIT
 maturity: no tagged release, active, master @ ~36 commits (as of 2026-03)
 last_verified: 2026-06-26
 type: app
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:03:42Z
+  overall: D
+  overall_score: 1.8
+  scored_axes: 5
+  capped: true
+  cap_reason: "source-available/no-license: NONE"
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: C
+      raw:
+        archived: false
+        last_commit_age_days: 95
+        active_weeks_13: 0
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 44.4
+        qualifying_issues: 6
+        band: relaxed_solo
+        window_offset_days: 6
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: D
+      raw:
+        repo_age_days: 115
+        last_commit_age_days: 95
+        cohort: app
+    governance:
+      grade: C
+      raw:
+        active_maintainers_12mo: 8
+        top1_share: 0.75
+        top3_share: 0.821
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: E
+      raw:
+        spdx_id: NONE
+        permissiveness: source_available
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    adoption: { reason: no_package_structural }
 ---
 
 # autoresearch
 
 一个自包含的单卡 LLM 训练脚手架，设计目标是让 AI agent 在夜里自主迭代 `train.py`——每次跑 5 分钟实验，用验证集 bits-per-byte 打分，只保留能降低 loss 的改动。
+
+![autoresearch — 健康度雷达](../../assets/health/autoresearch.zh.svg)
 
 ## 何时使用
 

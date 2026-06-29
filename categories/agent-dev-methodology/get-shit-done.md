@@ -9,11 +9,69 @@ license: MIT
 maturity: GitHub release v1.42.3 (2026-05); main README now redirects to open-gsd/gsd-core (as of 2026-06)
 last_verified: 2026-06-26
 type: framework
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:07:49Z
+  overall: C
+  overall_score: 1.5
+  scored_axes: 6
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: E
+      raw:
+        archived: true
+        last_commit_age_days: 29
+        active_weeks_13: 9
+        carve_out: null
+    responsiveness:
+      grade: E
+      raw:
+        median_ttfr_hours: null
+        qualifying_issues: 0
+        band: default
+        window_offset_days: 10
+    adoption:
+      grade: C
+      raw:
+        registry: npmjs.org
+        canonical_package: get-shit-done-cc
+        dependent_repos_count: 0
+        downloads_last_month: 194520
+        graph_tier: E
+        volume_tier: C
+        cross_check_divergence: null
+        archived: true
+    longevity:
+      grade: E
+      raw:
+        repo_age_days: 197
+        last_commit_age_days: 29
+        cohort: framework
+    governance:
+      grade: B
+      raw:
+        active_maintainers_12mo: 97
+        top1_share: 0.454
+        top3_share: 0.871
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # Get Shit Done (GSD)
 
 A spec-driven, context-engineering workflow for coding agents: it turns a vague idea into PROJECT/ROADMAP/CONTEXT/PLAN docs, then executes each phase in a fresh context window with orchestrated subagents to fight context rot.
+
+![get-shit-done — health radar](../../assets/health/get-shit-done.svg)
 
 ## When to use
 

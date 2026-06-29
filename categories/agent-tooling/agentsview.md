@@ -9,11 +9,68 @@ license: MIT
 maturity: v0.34.x, very active but young (2026-06)
 last_verified: 2026-06-28
 type: app
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:34:50Z
+  overall: B
+  overall_score: 2.83
+  scored_axes: 6
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 26.1
+        qualifying_issues: 31
+        band: relaxed_solo
+        window_offset_days: 12
+    adoption:
+      grade: D
+      raw:
+        registry: pypi.org
+        canonical_package: agentsview
+        dependent_repos_count: 0
+        downloads_last_month: 8825
+        graph_tier: E
+        volume_tier: D
+        cross_check_divergence: null
+    longevity:
+      grade: D
+      raw:
+        repo_age_days: 130
+        last_commit_age_days: 0
+        cohort: app
+    governance:
+      grade: B
+      raw:
+        active_maintainers_12mo: 91
+        top1_share: 0.589
+        top3_share: 0.708
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # AgentsView
 
 A local-first desktop/CLI app that discovers, searches, and analyzes your coding-agent sessions across 40+ agents (Claude Code, Codex, Cursor, Gemini, and more) — full-text search, token-usage analytics, and cost tracking, all on your machine without an account.
+
+![agentsview — health radar](../../assets/health/agentsview.svg)
 
 ## When to use
 

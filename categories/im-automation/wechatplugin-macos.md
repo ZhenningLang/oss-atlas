@@ -9,11 +9,56 @@ license: MIT
 maturity: dated — coasting (last pushed 2024-06, ~2y idle) and version-fragile; patches the macOS WeChat client binary, so it breaks on WeChat updates and is likely non-functional on current WeChat (2026-06)
 last_verified: 2026-06-28
 type: tool
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:54:47Z
+  overall: D
+  overall_score: 1.33
+  scored_axes: 3
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: E
+      raw:
+        archived: false
+        last_commit_age_days: 1196
+        active_weeks_13: 0
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: E
+      raw:
+        repo_age_days: 3357
+        last_commit_age_days: 1196
+        cohort: tool
+    governance:
+      grade: "?"
+      raw: {}
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: no_traffic }
+    adoption: { reason: ambiguous }
+    governance: { reason: unattributable }
 ---
 
 # WeChatPlugin-MacOS
 
 A macOS WeChat **client tweak** (微信小助手) — anti-revoke, auto-reply, remote control, multi-instance, and assorted UI conveniences — by **injecting a plugin into WeChat.app on macOS**. **Read this plainly: it works by patching the WeChat client binary against a *specific* WeChat version, so it breaks whenever WeChat updates; the repo has been idle ~2 years (last pushed 2024-06) and targets old WeChat builds, so on a current WeChat it is almost certainly non-functional.**
+
+![wechatplugin-macos — health radar](../../assets/health/wechatplugin-macos.svg)
 
 ## When to use
 

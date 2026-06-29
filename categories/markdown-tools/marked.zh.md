@@ -9,11 +9,66 @@ license: MIT
 maturity: v18.x, active (2026-06)
 last_verified: 2026-06-28
 type: library
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:59:23Z
+  overall: A
+  overall_score: 3.6
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: true
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 6
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 7.0
+        qualifying_issues: 19
+        band: default
+        window_offset_days: 6
+    adoption:
+      grade: A
+      raw:
+        registry: npmjs.org
+        canonical_package: marked
+        dependent_repos_count: 468889
+        downloads_last_month: 78935009
+        graph_tier: A
+        volume_tier: A
+        cross_check_divergence: 2.51
+    longevity:
+      grade: A
+      raw:
+        repo_age_days: 5454
+        last_commit_age_days: 6
+        cohort: library
+    governance:
+      grade: C
+      raw:
+        active_maintainers_12mo: 13
+        top1_share: 0.61
+        top3_share: 0.729
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: "?"
+      raw: {}
+  unknowns:
+    risk_license: { reason: license_unparsed }
 ---
 
 # marked
 
 一个快速、低层的 JavaScript Markdown 解析器与编译器——一次函数调用就把 Markdown 变成 HTML，无强制依赖、API 面很小（口号是「Built for speed」）。
+
+![marked — 健康度雷达](../../assets/health/marked.zh.svg)
 
 ## 何时使用
 

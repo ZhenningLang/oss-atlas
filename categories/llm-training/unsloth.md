@@ -9,11 +9,66 @@ license: Apache-2.0
 maturity: "Beta releases (v0.1.x-beta line, 2026-06); very active"
 last_verified: 2026-06-26
 type: tool
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:58:50Z
+  overall: B
+  overall_score: 3.4
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: B
+      raw:
+        registry: pypi.org
+        canonical_package: unsloth
+        dependent_repos_count: 0
+        downloads_last_month: 1867697
+        graph_tier: E
+        volume_tier: B
+        cross_check_divergence: 1.25
+    longevity:
+      grade: B
+      raw:
+        repo_age_days: 943
+        last_commit_age_days: 0
+        cohort: tool
+    governance:
+      grade: B
+      raw:
+        active_maintainers_12mo: 50
+        top1_share: 0.469
+        top3_share: 0.671
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: no_traffic }
 ---
 
 # Unsloth
 
 Drop-in fine-tuning library that rewrites the hot paths of LoRA/QLoRA/RL training with hand-written Triton kernels to train open LLMs ~2x faster with large VRAM savings on a single GPU.
+
+![unsloth — health radar](../../assets/health/unsloth.svg)
 
 ## When to use
 

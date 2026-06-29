@@ -9,11 +9,66 @@ license: BSD-2-Clause-Patent
 maturity: libvmaf v3.2.0, active (2026-06), 5.4k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:03:09Z
+  overall: B
+  overall_score: 2.8
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 6
+        active_weeks_13: 12
+        carve_out: null
+    responsiveness:
+      grade: B
+      raw:
+        median_ttfr_hours: 41.2
+        qualifying_issues: 4
+        band: default
+        window_offset_days: 5
+    adoption:
+      grade: D
+      raw:
+        registry: formulae.brew.sh
+        canonical_package: libvmaf
+        dependent_repos_count: 11
+        downloads_last_month: 97260
+        graph_tier: D
+        volume_tier: "?"
+        cross_check_divergence: null
+    longevity:
+      grade: A
+      raw:
+        repo_age_days: 3794
+        last_commit_age_days: 6
+        cohort: library
+    governance:
+      grade: C
+      raw:
+        active_maintainers_12mo: 14
+        top1_share: 0.782
+        top3_share: 0.859
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: "?"
+      raw: {}
+  unknowns:
+    risk_license: { reason: license_unparsed }
 ---
 
 # VMAF
 
 Netflix's Emmy-winning perceptual video-quality metric — a C library `libvmaf` (plus a `vmaf` CLI and a Python wrapper) that scores how good a distorted/encoded video looks to a human vs a reference, and also implements PSNR, SSIM, MS-SSIM, PSNR-HVS, CIEDE2000 and the CAMBI banding detector.
+
+![vmaf — health radar](../../assets/health/vmaf.svg)
 
 ## When to use
 

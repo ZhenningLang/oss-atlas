@@ -9,11 +9,63 @@ license: GPL-2.0-or-later
 maturity: v4.0.3, active (2026-06)
 last_verified: 2026-06-26
 type: app
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:53:53Z
+  overall: A
+  overall_score: 3.6
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 3.7
+        qualifying_issues: 19
+        band: relaxed_solo
+        window_offset_days: 12
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: A
+      raw:
+        repo_age_days: 5537
+        last_commit_age_days: 0
+        cohort: app
+    governance:
+      grade: A
+      raw:
+        active_maintainers_12mo: 88
+        top1_share: 0.341
+        top3_share: 0.441
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: C
+      raw:
+        spdx_id: GPL-2.0
+        permissiveness: weak_file_copyleft
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    adoption: { reason: no_package_structural }
 ---
 
 # QGIS
 
 A full-featured, cross-platform desktop GIS for viewing, editing, analyzing, and publishing geospatial data — vector, raster, mesh, and point cloud — built on Qt/C++ with a Python (PyQGIS) plugin ecosystem and a headless server (QGIS Server) for OGC web services.
+
+![qgis — health radar](../../assets/health/qgis.svg)
 
 ## When to use
 

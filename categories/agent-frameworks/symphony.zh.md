@@ -9,11 +9,67 @@ license: Apache-2.0
 maturity: engineering preview (no tagged release), active (2026-06)
 last_verified: 2026-06-26
 type: framework
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:26:02Z
+  overall: B
+  overall_score: 2.6
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 19
+        active_weeks_13: 6
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: E
+      raw:
+        registry: null
+        canonical_package: null
+        dependent_repos_count: 0
+        downloads_last_month: null
+        graph_tier: E
+        volume_tier: null
+        cross_check_divergence: null
+        archived: false
+    longevity:
+      grade: D
+      raw:
+        repo_age_days: 122
+        last_commit_age_days: 19
+        cohort: framework
+    governance:
+      grade: A
+      raw:
+        active_maintainers_12mo: 10
+        top1_share: 0.345
+        top3_share: 0.655
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: issues_disabled }
 ---
 
 # Symphony
 
 OpenAI 出品的长驻编排器：轮询 issue 跟踪器（Linear），为每个 issue 拉起隔离工作区，并驱动一个 coding agent 会话（Codex）跑到完成——让你管理「工作」，而不是盯着 agent 干活。
+
+![symphony — 健康度雷达](../../assets/health/symphony.zh.svg)
 
 ## 何时使用
 

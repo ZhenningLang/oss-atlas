@@ -9,11 +9,68 @@ license: Apache-2.0
 maturity: v13.8.0, active (2026-06); ~84.8k stars (API-verified count, as of 2026-06) — production-adoption/vetting meaning unverified and suspicious for a young single-maintainer hook tool
 last_verified: 2026-06-28
 type: tool
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:26:15Z
+  overall: B
+  overall_score: 2.83
+  scored_axes: 6
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 4
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 46.3
+        qualifying_issues: 14
+        band: relaxed_solo
+        window_offset_days: 1
+    adoption:
+      grade: C
+      raw:
+        registry: npmjs.org
+        canonical_package: claude-mem
+        dependent_repos_count: 0
+        downloads_last_month: 118823
+        graph_tier: E
+        volume_tier: C
+        cross_check_divergence: null
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 302
+        last_commit_age_days: 4
+        cohort: tool
+    governance:
+      grade: D
+      raw:
+        active_maintainers_12mo: 96
+        top1_share: 0.861
+        top3_share: 0.9
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # claude-mem
 
 面向编程 agent 的 hook/MCP 记忆层：把一次会话里 agent 做过的一切捕获下来，用 LLM 压缩，再把相关片段注入到后续会话——本地 SQLite + 向量库，没有托管后端。
+
+![claude-mem — 健康度雷达](../../assets/health/claude-mem.zh.svg)
 
 ## 何时使用
 

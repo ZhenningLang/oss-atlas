@@ -9,11 +9,69 @@ license: MIT
 maturity: No tagged releases; commit-versioned, last push 2026-03-10; created 2024-08; Microsoft-maintained (as of 2026-06-26)
 last_verified: 2026-06-26
 type: framework
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:09:26Z
+  overall: C
+  overall_score: 2.17
+  scored_axes: 6
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: C
+      raw:
+        archived: false
+        last_commit_age_days: 111
+        active_weeks_13: 0
+        carve_out: null
+    responsiveness:
+      grade: B
+      raw:
+        median_ttfr_hours: 131.4
+        qualifying_issues: 8
+        band: default
+        window_offset_days: 11
+    adoption:
+      grade: E
+      raw:
+        registry: null
+        canonical_package: null
+        dependent_repos_count: 0
+        downloads_last_month: null
+        graph_tier: E
+        volume_tier: null
+        cross_check_divergence: null
+        archived: false
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 693
+        last_commit_age_days: 111
+        cohort: framework
+    governance:
+      grade: C
+      raw:
+        active_maintainers_12mo: 2
+        top1_share: 0.857
+        top3_share: 1.0
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # BitNet
 
 Microsoft's official inference framework (`bitnet.cpp`) for **1-bit / 1.58-bit (ternary)** LLMs — a fork-of-llama.cpp runtime with custom CPU kernels (I2_S / TL1 / TL2) that runs ternary models like BitNet-b1.58-2B-4T fast and low-energy on x86 and ARM CPUs. Inference only; no training.
+
+![bitnet — health radar](../../assets/health/bitnet.svg)
 
 ## When to use
 

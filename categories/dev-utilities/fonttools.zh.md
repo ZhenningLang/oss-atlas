@@ -9,11 +9,68 @@ license: MIT
 maturity: v4.63.0, active (2026-06)
 last_verified: 2026-06-28
 type: library
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:48:21Z
+  overall: A
+  overall_score: 3.67
+  scored_axes: 6
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 6
+        active_weeks_13: 11
+        carve_out: null
+    responsiveness:
+      grade: B
+      raw:
+        median_ttfr_hours: 1.6
+        qualifying_issues: 4
+        band: default
+        window_offset_days: 4
+    adoption:
+      grade: A
+      raw:
+        registry: pypi.org
+        canonical_package: fonttools
+        dependent_repos_count: 33983
+        downloads_last_month: 232784741
+        graph_tier: A
+        volume_tier: A
+        cross_check_divergence: 1.01
+    longevity:
+      grade: A
+      raw:
+        repo_age_days: 4723
+        last_commit_age_days: 6
+        cohort: library
+    governance:
+      grade: B
+      raw:
+        active_maintainers_12mo: 22
+        top1_share: 0.43
+        top3_share: 0.777
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # fontTools
 
 一个 Python 库（外加一组命令行工具），用来读取、写入、操纵字体文件——TrueType/OpenType、WOFF/WOFF2、AFM 等等——是开源字体工具栈事实上的基石。
+
+![fonttools — 健康度雷达](../../assets/health/fonttools.zh.svg)
 
 ## 何时使用
 

@@ -9,11 +9,62 @@ license: BSD-3-Clause
 maturity: stable, coasting, ~12.6k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:46:20Z
+  overall: C
+  overall_score: 2.0
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: E
+      raw:
+        archived: false
+        last_commit_age_days: 1118
+        active_weeks_13: 0
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: A
+      raw:
+        registry: pypi.org
+        canonical_package: pyautogui
+        dependent_repos_count: 1028
+        downloads_last_month: 2717852
+        graph_tier: B
+        volume_tier: A
+        cross_check_divergence: 1.0
+    longevity:
+      grade: E
+      raw:
+        repo_age_days: 4364
+        last_commit_age_days: 1118
+        cohort: library
+    governance:
+      grade: "?"
+      raw: {}
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: BSD-3-Clause
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: no_traffic }
+    governance: { reason: unattributable }
 ---
 
 # PyAutoGUI
 
 一个跨平台的 Python 模块，用程序驱动鼠标和键盘并读取屏幕——移动/点击、输入/快捷键、截图，以及在屏幕上做图像匹配定位，全部通过一套极小的同步 API 完成。
+
+![pyautogui — 健康度雷达](../../assets/health/pyautogui.zh.svg)
 
 ## 何时使用
 

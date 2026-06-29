@@ -9,11 +9,68 @@ license: MIT
 maturity: v4.5.0, active (2026-06)
 last_verified: 2026-06-26
 type: library
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:53:18Z
+  overall: B
+  overall_score: 2.83
+  scored_axes: 6
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: B
+      raw:
+        archived: false
+        last_commit_age_days: 7
+        active_weeks_13: 2
+        carve_out: null
+    responsiveness:
+      grade: C
+      raw:
+        median_ttfr_hours: 306.1
+        qualifying_issues: 4
+        band: default
+        window_offset_days: 3
+    adoption:
+      grade: B
+      raw:
+        registry: npmjs.org
+        canonical_package: animejs
+        dependent_repos_count: 7272
+        downloads_last_month: 2065381
+        graph_tier: B
+        volume_tier: B
+        cross_check_divergence: 1.86
+    longevity:
+      grade: A
+      raw:
+        repo_age_days: 3760
+        last_commit_age_days: 7
+        cohort: library
+    governance:
+      grade: D
+      raw:
+        active_maintainers_12mo: 8
+        top1_share: 0.9
+        top3_share: 0.938
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # Anime.js
 
 一个体积小、零依赖的 JavaScript 动画引擎，通过统一的 `animate()` API 驱动 CSS 属性、SVG、DOM 属性和普通 JS 对象，内置时间线、错峰（stagger）、弹簧缓动、滚动联动播放，以及可拖拽（draggable）模块。
+
+![anime — 健康度雷达](../../assets/health/anime.zh.svg)
 
 ## 何时使用
 

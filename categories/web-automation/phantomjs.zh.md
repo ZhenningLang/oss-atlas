@@ -9,11 +9,66 @@ license: BSD-3-Clause
 maturity: archived/abandoned — development suspended since 2018, repo archived (last pushed 2022-11); ~29.5k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: tool
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:21:06Z
+  overall: D
+  overall_score: 0.8
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: E
+      raw:
+        archived: true
+        last_commit_age_days: 2177
+        active_weeks_13: 0
+        carve_out: null
+    responsiveness:
+      grade: E
+      raw:
+        median_ttfr_hours: null
+        qualifying_issues: 0
+        band: relaxed_solo
+        window_offset_days: 2
+    adoption:
+      grade: E
+      raw:
+        registry: nuget.org
+        canonical_package: phantomjs
+        dependent_repos_count: 0
+        downloads_last_month: 4585941
+        graph_tier: E
+        volume_tier: "?"
+        cross_check_divergence: null
+        archived: true
+    longevity:
+      grade: E
+      raw:
+        repo_age_days: 5663
+        last_commit_age_days: 2177
+        cohort: tool
+    governance:
+      grade: "?"
+      raw: {}
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: BSD-3-Clause
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    governance: { reason: unattributable }
 ---
 
 # PhantomJS
 
 一个可脚本化的**无头 WebKit** 浏览器——在 headless Chrome 出现**之前**，它历史上就是「不开显示器也能跑一个真实浏览器引擎」来做测试、抓取、截图的那条路。**它已归档、已废弃：活跃开发在 2018 年被中止，仓库也已归档。** 任何新东西，都不要从这里起步。
+
+![phantomjs — 健康度雷达](../../assets/health/phantomjs.zh.svg)
 
 ## 何时使用
 

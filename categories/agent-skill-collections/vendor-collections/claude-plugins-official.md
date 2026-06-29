@@ -9,11 +9,60 @@ license: Apache-2.0
 maturity: active, no tagged releases, ~31.1k stars (as of 2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:33:49Z
+  overall: B
+  overall_score: 3.25
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 221
+        last_commit_age_days: 0
+        cohort: skill-pack
+    governance:
+      grade: B
+      raw:
+        active_maintainers_12mo: 36
+        top1_share: 0.405
+        top3_share: 0.633
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: type_na }
+    adoption: { reason: no_package_structural }
 ---
 
 # Claude Plugins (Official)
 
 Anthropic's first-party plugin marketplace for Claude Code: a curated directory of installable plugins, each bundling slash commands, agents, skills and/or MCP servers, installed by name through Claude Code's native `/plugin` system.
+
+![claude-plugins-official — health radar](../../../assets/health/claude-plugins-official.svg)
 
 ## When to use
 

@@ -9,11 +9,66 @@ license: MIT
 maturity: "newspaper3k 0.2.8 (last PyPI 2018-09), codebase stale since ~2020; active fork newspaper4k — ~15.1k stars (as of 2026-06)"
 last_verified: 2026-06-28
 type: library
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:23:08Z
+  overall: B
+  overall_score: 3.0
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: B
+      raw:
+        archived: false
+        last_commit_age_days: 47
+        active_weeks_13: 4
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: B
+      raw:
+        registry: pypi.org
+        canonical_package: newspaper3k
+        dependent_repos_count: 1068
+        downloads_last_month: 802011
+        graph_tier: B
+        volume_tier: B
+        cross_check_divergence: 1.01
+    longevity:
+      grade: A
+      raw:
+        repo_age_days: 4599
+        last_commit_age_days: 47
+        cohort: library
+    governance:
+      grade: D
+      raw:
+        active_maintainers_12mo: 1
+        top1_share: 1.0
+        top3_share: 1.0
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: no_traffic }
 ---
 
 # newspaper
 
 A Python library that takes a news/article URL, downloads it, and pulls out the clean article text, title, authors, publish date, top image, and (optionally) NLP keywords/summary — boilerplate stripped, no per-site scraping rules to write.
+
+![newspaper — health radar](../../assets/health/newspaper.svg)
 
 ## When to use
 

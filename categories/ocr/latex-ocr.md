@@ -9,11 +9,56 @@ license: MIT
 maturity: ~v0.0.31, coasting — last pushed 2025-01 (~1.5 yr idle as of 2026-06), ~16.5k stars
 last_verified: 2026-06-28
 type: library
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:08:37Z
+  overall: C
+  overall_score: 2.0
+  scored_axes: 3
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: D
+      raw:
+        archived: false
+        last_commit_age_days: 527
+        active_weeks_13: 0
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: D
+      raw:
+        repo_age_days: 2026
+        last_commit_age_days: 527
+        cohort: library
+    governance:
+      grade: "?"
+      raw: {}
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: no_traffic }
+    adoption: { reason: ambiguous }
+    governance: { reason: unattributable }
 ---
 
 # LaTeX-OCR (pix2tex)
 
 A ViT-encoder + Transformer-decoder model that turns an image of a math equation into the LaTeX source that produces it — shipped as a Python library plus a CLI (`pix2tex`), a screenshot GUI (`latexocr`), and a small REST/Streamlit API.
+
+![latex-ocr — health radar](../../assets/health/latex-ocr.svg)
 
 ## When to use
 

@@ -9,11 +9,60 @@ license: MIT
 maturity: no tagged release, active (pushed 2026-06-22)
 last_verified: 2026-06-26
 type: skill-pack
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:32:48Z
+  overall: B
+  overall_score: 3.25
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: B
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 4
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 259
+        last_commit_age_days: 0
+        cohort: skill-pack
+    governance:
+      grade: A
+      raw:
+        active_maintainers_12mo: 88
+        top1_share: 0.223
+        top3_share: 0.419
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: type_na }
+    adoption: { reason: no_package_structural }
 ---
 
 # Agency-Agents
 
 约 232 个专业 subagent 人格（persona）的精选集合（markdown），覆盖 16 个职能「部门」——工程、设计、营销、安全、游戏开发、GIS 等——并附带 install/convert 脚本，可部署到 Claude Code 及另外约 11 个 agent harness。
+
+![agency-agents — 健康度雷达](../../../assets/health/agency-agents.zh.svg)
 
 ## 何时使用
 

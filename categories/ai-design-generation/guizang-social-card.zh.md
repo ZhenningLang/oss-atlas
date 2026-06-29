@@ -9,11 +9,56 @@ license: AGPL-3.0-only
 maturity: no tagged release, active (last push 2026-05)
 last_verified: 2026-06-26
 type: skill-pack
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:38:02Z
+  overall: D
+  overall_score: 1.0
+  scored_axes: 3
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: C
+      raw:
+        archived: false
+        last_commit_age_days: 33
+        active_weeks_13: 1
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: D
+      raw:
+        repo_age_days: 33
+        last_commit_age_days: 33
+        cohort: skill-pack
+    governance:
+      grade: "?"
+      raw: {}
+    risk_license:
+      grade: E
+      raw:
+        spdx_id: AGPL-3.0
+        permissiveness: strong_network_copyleft
+        relicense_36mo: true
+        content_license: null
+  unknowns:
+    responsiveness: { reason: type_na }
+    adoption: { reason: no_package_structural }
+    governance: { reason: unattributable }
 ---
 
 # Guizang Social Card Skill
 
 一个 agent skill，把一个主题和几张图片变成小红书图文（1080×1440）以及公众号 21:9 + 1:1 封面对——单文件 HTML 经 Playwright 渲染成 PNG，由两套锁定的视觉系统（编辑杂志风与瑞士国际风）驱动。
+
+![guizang-social-card — 健康度雷达](../../assets/health/guizang-social-card.zh.svg)
 
 ## 何时使用
 

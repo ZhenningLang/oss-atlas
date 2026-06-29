@@ -9,11 +9,68 @@ license: Apache-2.0
 maturity: Pre-1.0, fast cadence; stable v0.13.1 (2026-06-03), v0.14.0-alpha (2026-06-18); Google-maintained
 last_verified: 2026-06-26
 type: tool
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:09:41Z
+  overall: B
+  overall_score: 3.17
+  scored_axes: 6
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 20.3
+        qualifying_issues: 15
+        band: relaxed_solo
+        window_offset_days: 10
+    adoption:
+      grade: D
+      raw:
+        registry: pypi.org
+        canonical_package: litert-lm
+        dependent_repos_count: 0
+        downloads_last_month: 11218
+        graph_tier: E
+        volume_tier: D
+        cross_check_divergence: null
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 441
+        last_commit_age_days: 0
+        cohort: tool
+    governance:
+      grade: A
+      raw:
+        active_maintainers_12mo: 32
+        top1_share: 0.279
+        top3_share: 0.525
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # LiteRT-LM
 
 Google 在 LiteRT（TensorFlow Lite 的继任者）之上构建的 C++ 编排/运行时层，用于完全**在端侧**运行 LLM——一等支持 Gemma（Llama/Phi/Qwen 名义上支持，但优化程度较低），在 Android、iOS、桌面及边缘硬件上经由 CPU/GPU/NPU 运行；面向需要离线小模型（尤其 Gemma 系列）的 Android/跨平台 App，前提是团队能接受 Google 生态与 Bazel 构建。
+
+![litert-lm — 健康度雷达](../../assets/health/litert-lm.zh.svg)
 
 Google 把 Python/Kotlin/C++ 绑定标记为 *Stable*，但项目本身仍处于 pre-1.0——预期会有破坏性变更；Swift/JS 为预览状态。
 

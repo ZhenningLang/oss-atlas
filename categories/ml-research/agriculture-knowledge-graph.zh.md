@@ -9,11 +9,56 @@ license: GPL-3.0
 maturity: research project, maintenance stopped (per README), ~4.4k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: app
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:03:25Z
+  overall: D
+  overall_score: 1.33
+  scored_axes: 3
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: D
+      raw:
+        archived: false
+        last_commit_age_days: 503
+        active_weeks_13: 0
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: D
+      raw:
+        repo_age_days: 3138
+        last_commit_age_days: 503
+        cohort: app
+    governance:
+      grade: "?"
+      raw: {}
+    risk_license:
+      grade: C
+      raw:
+        spdx_id: GPL-3.0
+        permissiveness: weak_file_copyleft
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: no_traffic }
+    adoption: { reason: no_package_structural }
+    governance: { reason: unattributable }
 ---
 
 # Agriculture Knowledge Graph (AgriKG)
 
 一个中文研究项目（华师大），端到端构建农业知识图谱——爬虫、实体识别、关系抽取、Neo4j 存储，外加一个带检索与问答的 Django demo——作为参考发布，且作者已明确不再维护。
+
+![agriculture-knowledge-graph — 健康度雷达](../../assets/health/agriculture-knowledge-graph.zh.svg)
 
 ## 何时使用
 

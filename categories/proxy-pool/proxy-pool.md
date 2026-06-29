@@ -9,11 +9,60 @@ license: MIT
 maturity: last release 2.4.1 (2023-02), repo still pushed 2026-06, ~23.4k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: app
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:11:02Z
+  overall: A
+  overall_score: 3.5
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 14
+        active_weeks_13: 7
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: A
+      raw:
+        repo_age_days: 3503
+        last_commit_age_days: 14
+        cohort: app
+    governance:
+      grade: C
+      raw:
+        active_maintainers_12mo: 2
+        top1_share: 0.958
+        top3_share: 1.0
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: no_traffic }
+    adoption: { reason: no_package_structural }
 ---
 
 # proxy_pool
 
 A self-hosted free-proxy IP pool: it crawls free HTTP/HTTPS proxies from public web sources, validates them on a schedule, stores the live ones in Redis, and serves usable IPs to your scraper through a tiny Flask HTTP API.
+
+![proxy-pool — health radar](../../assets/health/proxy-pool.svg)
 
 ## When to use
 

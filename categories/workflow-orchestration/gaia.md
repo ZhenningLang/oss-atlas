@@ -9,11 +9,63 @@ license: Apache-2.0
 maturity: v0.2.9 (2022-01), archived/abandoned (2026-06)
 last_verified: 2026-06-28
 type: app
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:27:01Z
+  overall: D
+  overall_score: 1.0
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: E
+      raw:
+        archived: true
+        last_commit_age_days: 170
+        active_weeks_13: 0
+        carve_out: null
+    responsiveness:
+      grade: E
+      raw:
+        median_ttfr_hours: null
+        qualifying_issues: 0
+        band: relaxed_solo
+        window_offset_days: 12
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: E
+      raw:
+        repo_age_days: 3105
+        last_commit_age_days: 170
+        cohort: app
+    governance:
+      grade: D
+      raw:
+        active_maintainers_12mo: 1
+        top1_share: 1.0
+        top3_share: 1.0
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    adoption: { reason: no_package_structural }
 ---
 
 # Gaia
 
 An automation/pipeline platform that lets you build pipelines in any programming language (Go, Python, Java, C++, …) by compiling your code into plugins it executes — **now archived and no longer maintained**.
+
+![gaia — health radar](../../assets/health/gaia.svg)
 
 ## When to use
 

@@ -9,11 +9,60 @@ license: Apache-2.0
 maturity: v1.0.0 (2026-02), active, last pushed 2026-06 (~809 stars [未验证])
 last_verified: 2026-06-26
 type: skill-pack
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:33:36Z
+  overall: A
+  overall_score: 3.5
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 4
+        active_weeks_13: 12
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 144
+        last_commit_age_days: 4
+        cohort: skill-pack
+    governance:
+      grade: A
+      raw:
+        active_maintainers_12mo: 39
+        top1_share: 0.26
+        top3_share: 0.512
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: type_na }
+    adoption: { reason: no_package_structural }
 ---
 
 # Agent Plugins for AWS
 
 AWS Labs 官方出品的插件集合，教 coding agent 如何在 AWS 上做架构、部署和运维——九个领域插件（serverless、Amplify、SageMaker、迁移、数据库、部署/成本估算等），从 Claude Code / Cursor / Codex 的 marketplace 安装。
+
+![aws-agent-plugins — 健康度雷达](../../../assets/health/aws-agent-plugins.zh.svg)
 
 ## 何时使用
 

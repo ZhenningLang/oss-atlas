@@ -9,11 +9,69 @@ license: MIT
 maturity: v2.1.1, active demo (2026-06)
 last_verified: 2026-06-26
 type: tool
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:26:33Z
+  overall: C
+  overall_score: 2.33
+  scored_axes: 6
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: B
+      raw:
+        archived: false
+        last_commit_age_days: 47
+        active_weeks_13: 3
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 91.3
+        qualifying_issues: 5
+        band: relaxed_solo
+        window_offset_days: 13
+    adoption:
+      grade: E
+      raw:
+        registry: null
+        canonical_package: null
+        dependent_repos_count: 0
+        downloads_last_month: null
+        graph_tier: E
+        volume_tier: null
+        cross_check_divergence: null
+        archived: false
+    longevity:
+      grade: D
+      raw:
+        repo_age_days: 166
+        last_commit_age_days: 47
+        cohort: tool
+    governance:
+      grade: C
+      raw:
+        active_maintainers_12mo: 5
+        top1_share: 0.739
+        top3_share: 0.958
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # Claude Subconscious
 
 一个 Claude Code 插件：在后台跑一个 Letta agent，观察你的会话、积累长期记忆块，再通过 hook 把跨会话的指引“低语”回每一次 prompt。
+
+![claude-subconscious — 健康度雷达](../../assets/health/claude-subconscious.zh.svg)
 
 ## 何时使用
 

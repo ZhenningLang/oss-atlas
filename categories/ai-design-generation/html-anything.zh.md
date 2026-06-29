@@ -9,11 +9,63 @@ license: Apache-2.0
 maturity: early, no tagged release, active (2026-06)
 last_verified: 2026-06-26
 type: app
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:38:16Z
+  overall: B
+  overall_score: 3.2
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: B
+      raw:
+        archived: false
+        last_commit_age_days: 13
+        active_weeks_13: 5
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 0.2
+        qualifying_issues: 52
+        band: relaxed_solo
+        window_offset_days: 4
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: D
+      raw:
+        repo_age_days: 49
+        last_commit_age_days: 13
+        cohort: app
+    governance:
+      grade: A
+      raw:
+        active_maintainers_12mo: 11
+        top1_share: 0.263
+        top3_share: 0.579
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    adoption: { reason: no_package_structural }
 ---
 
 # HTML Anything
 
 一个 local-first 的 Next.js Web 应用，通过驱动你本地已登录的 coding-agent CLI，把 Markdown/CSV/JSON 变成可直接交付的单文件 HTML——零 API key,75 个 skill 模板覆盖 9 种交付面，一键导出到微信 / X / 知乎 / PNG。
+
+![html-anything — 健康度雷达](../../assets/health/html-anything.zh.svg)
 
 ## 何时使用
 

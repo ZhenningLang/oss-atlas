@@ -9,11 +9,56 @@ license: MIT
 maturity: "v0.10.0, effectively unmaintained — last pushed 2024-04 (~2y idle as of 2026-06)"
 last_verified: 2026-06-28
 type: library
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:24:27Z
+  overall: D
+  overall_score: 1.33
+  scored_axes: 3
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: E
+      raw:
+        archived: false
+        last_commit_age_days: 1183
+        active_weeks_13: 0
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: E
+      raw:
+        repo_age_days: 3047
+        last_commit_age_days: 1183
+        cohort: library
+    governance:
+      grade: "?"
+      raw: {}
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: no_traffic }
+    adoption: { reason: ambiguous }
+    governance: { reason: empty_or_gated }
 ---
 
 # requests-html
 
 "HTML Parsing for Humans" — a Python library that bundles `requests`, PyQuery/lxml parsing, and optional JavaScript rendering (via pyppeteer/Chromium) behind one ergonomic API, so a small script can fetch a page and select elements without wiring three libraries together.
+
+![requests-html — health radar](../../assets/health/requests-html.svg)
 
 ## When to use
 

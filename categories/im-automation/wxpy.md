@@ -9,11 +9,66 @@ license: MIT
 maturity: abandoned — archived 2019-07 (last pushed 2019-07, ~7y frozen); built on the same now-defunct WeChat web protocol as ItChat, mostly non-functional for new accounts (2026-06)
 last_verified: 2026-06-28
 type: library
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:55:17Z
+  overall: D
+  overall_score: 1.2
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: E
+      raw:
+        archived: true
+        last_commit_age_days: 3257
+        active_weeks_13: 0
+        carve_out: null
+    responsiveness:
+      grade: E
+      raw:
+        median_ttfr_hours: null
+        qualifying_issues: 0
+        band: default
+        window_offset_days: 10
+    adoption:
+      grade: C
+      raw:
+        registry: pypi.org
+        canonical_package: wxpy
+        dependent_repos_count: 182
+        downloads_last_month: 1051
+        graph_tier: C
+        volume_tier: D
+        cross_check_divergence: null
+        archived: true
+    longevity:
+      grade: E
+      raw:
+        repo_age_days: 3416
+        last_commit_age_days: 3257
+        cohort: library
+    governance:
+      grade: "?"
+      raw: {}
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    governance: { reason: unattributable }
 ---
 
 # wxpy
 
 An elegant Python API for WeChat **personal** accounts — a friendly, higher-level wrapper over [ItChat](itchat.md)'s web-WeChat protocol, historically used to build chatbots and account automation. **Read this plainly: the repo was archived in 2019-07 (read-only, abandoned), and the WeChat web (`wx.qq.com`) login protocol it relies on — the very same one ItChat uses — has been largely shut down, so for most accounts wxpy no longer logs in or works at all.** It survives as reference code and nostalgia, not as a tool you can ship today.
+
+![wxpy — health radar](../../assets/health/wxpy.svg)
 
 ## When to use
 

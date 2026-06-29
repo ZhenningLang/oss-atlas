@@ -9,11 +9,60 @@ license: Apache-2.0
 maturity: ~25.7k stars, active (last push 2026-06); created 2024-01 (~2.5yr); multiple model generations (MiniCPM-V 4.x / MiniCPM-o) (as of 2026-06-28)
 last_verified: 2026-06-28
 type: model
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:09:56Z
+  overall: A
+  overall_score: 4.0
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 4
+        active_weeks_13: 7
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: A
+      raw:
+        repo_age_days: 882
+        last_commit_age_days: 4
+        cohort: model
+    governance:
+      grade: A
+      raw:
+        active_maintainers_12mo: 12
+        top1_share: 0.28
+        top3_share: 0.689
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: type_na }
+    adoption: { reason: no_package_structural }
 ---
 
 # MiniCPM-V
 
 OpenBMB 出品的一系列高效“口袋级”多模态 LLM——面向图像、多图与视频理解的小型视觉语言模型（MiniCPM-o 线还加了语音），按高“每参数性能”调优，能跑在手机和边缘硬件上。开放权重，外加推理/部署代码。
+
+![minicpm-v — 健康度雷达](../../assets/health/minicpm-v.zh.svg)
 
 ## 何时使用
 

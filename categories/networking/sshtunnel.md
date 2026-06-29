@@ -9,11 +9,66 @@ license: MIT
 maturity: v0.4.0 (last release 2021), low activity, ~1.3k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:06:24Z
+  overall: B
+  overall_score: 2.8
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: B
+      raw:
+        archived: false
+        last_commit_age_days: 306
+        active_weeks_13: 0
+        carve_out: mature_library_lindy
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: A
+      raw:
+        registry: pypi.org
+        canonical_package: sshtunnel
+        dependent_repos_count: 1287
+        downloads_last_month: 25422007
+        graph_tier: B
+        volume_tier: A
+        cross_check_divergence: 1.01
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 4401
+        last_commit_age_days: 306
+        cohort: library
+    governance:
+      grade: D
+      raw:
+        active_maintainers_12mo: 1
+        top1_share: 1.0
+        top3_share: 1.0
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: no_traffic }
 ---
 
 # sshtunnel
 
 A small Python library (and CLI) that wraps Paramiko to give you SSH port-forwarding tunnels as a context manager — `with SSHTunnelForwarder(...) as t:` opens a local port that bridges, through an SSH bastion, to a service you can't reach directly.
+
+![sshtunnel — health radar](../../assets/health/sshtunnel.svg)
 
 ## When to use
 

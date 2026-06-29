@@ -9,11 +9,62 @@ license: MIT
 maturity: v6.x, active (2026-06)
 last_verified: 2026-06-28
 type: library
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:17:57Z
+  overall: C
+  overall_score: 2.25
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: D
+      raw:
+        archived: false
+        last_commit_age_days: 443
+        active_weeks_13: 0
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: B
+      raw:
+        registry: pypi.org
+        canonical_package: art
+        dependent_repos_count: 391
+        downloads_last_month: 1151096
+        graph_tier: C
+        volume_tier: B
+        cross_check_divergence: 1.02
+    longevity:
+      grade: D
+      raw:
+        repo_age_days: 3190
+        last_commit_age_days: 443
+        cohort: library
+    governance:
+      grade: "?"
+      raw: {}
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: no_traffic }
+    governance: { reason: unattributable }
 ---
 
 # ART
 
 A pure-Python ASCII-art library: turn text into figlet-style large-font banners (`text2art`), insert single-character art pieces (`art`), and wrap output in decorative borders — hundreds of fonts and art pieces, no system dependencies.
+
+![art — health radar](../../assets/health/terminal-ui-art.svg)
 
 ## When to use
 

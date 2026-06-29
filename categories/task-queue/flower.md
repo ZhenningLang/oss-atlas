@@ -9,11 +9,63 @@ license: BSD-3-Clause
 maturity: stable, active (2026-06)
 last_verified: 2026-06-28
 type: tool
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:16:34Z
+  overall: B
+  overall_score: 3.0
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: C
+      raw:
+        archived: false
+        last_commit_age_days: 19
+        active_weeks_13: 1
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: A
+      raw:
+        registry: pypi.org
+        canonical_package: flower
+        dependent_repos_count: 3295
+        downloads_last_month: 12645929
+        graph_tier: B
+        volume_tier: A
+        cross_check_divergence: 1.01
+    longevity:
+      grade: A
+      raw:
+        repo_age_days: 5104
+        last_commit_age_days: 19
+        cohort: tool
+    governance:
+      grade: C
+      raw:
+        active_maintainers_12mo: 2
+        top1_share: 0.8
+        top3_share: 1.0
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: "?"
+      raw: {}
+  unknowns:
+    responsiveness: { reason: no_traffic }
+    risk_license: { reason: license_unparsed }
 ---
 
 # Flower
 
 A real-time web dashboard and admin tool for Celery — it shows live task/worker state, lets you inspect and control workers, and exposes a REST API and Prometheus metrics for a running Celery cluster.
+
+![flower — health radar](../../assets/health/flower.svg)
 
 ## When to use
 

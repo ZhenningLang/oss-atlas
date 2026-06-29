@@ -9,11 +9,60 @@ license: AGPL-3.0-only
 maturity: v1.1.0, active (2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:37:49Z
+  overall: C
+  overall_score: 1.75
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 27
+        active_weeks_13: 7
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: D
+      raw:
+        repo_age_days: 67
+        last_commit_age_days: 27
+        cohort: skill-pack
+    governance:
+      grade: C
+      raw:
+        active_maintainers_12mo: 2
+        top1_share: 0.5
+        top3_share: 1.0
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: E
+      raw:
+        spdx_id: AGPL-3.0
+        permissiveness: strong_network_copyleft
+        relicense_36mo: true
+        content_license: null
+  unknowns:
+    responsiveness: { reason: type_na }
+    adoption: { reason: no_package_structural }
 ---
 
 # Guizang PPT Skill
 
 An agent skill that turns an article or outline into a single-file HTML horizontal-swipe slide deck — plus matching deck images and multi-platform covers — using two locked visual systems (editorial-magazine and Swiss international).
+
+![guizang-ppt — health radar](../../assets/health/guizang-ppt.svg)
 
 ## When to use
 

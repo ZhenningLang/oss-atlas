@@ -9,11 +9,68 @@ license: MIT
 maturity: v0.5.0, active, ~7.8k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: tool
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:02:34Z
+  overall: B
+  overall_score: 2.67
+  scored_axes: 6
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: B
+      raw:
+        archived: false
+        last_commit_age_days: 12
+        active_weeks_13: 4
+        carve_out: null
+    responsiveness:
+      grade: C
+      raw:
+        median_ttfr_hours: 202.0
+        qualifying_issues: 1
+        band: relaxed_solo
+        window_offset_days: 7
+    adoption:
+      grade: D
+      raw:
+        registry: pypi.org
+        canonical_package: ffsubsync
+        dependent_repos_count: 9
+        downloads_last_month: 17416
+        graph_tier: D
+        volume_tier: D
+        cross_check_divergence: null
+    longevity:
+      grade: A
+      raw:
+        repo_age_days: 2682
+        last_commit_age_days: 12
+        cohort: tool
+    governance:
+      grade: C
+      raw:
+        active_maintainers_12mo: 7
+        top1_share: 0.612
+        top3_share: 0.918
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # ffsubsync
 
 A language-agnostic CLI that automatically re-times an out-of-sync subtitle file against the video (or a reference subtitle), aligning speech segments via FFT cross-correlation.
+
+![ffsubsync — health radar](../../assets/health/ffsubsync.svg)
 
 ## When to use
 

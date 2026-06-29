@@ -9,11 +9,66 @@ license: BSD-3-Clause
 maturity: archived/abandoned — development suspended since 2018, repo archived (last pushed 2022-11); ~29.5k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: tool
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:21:06Z
+  overall: D
+  overall_score: 0.8
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: E
+      raw:
+        archived: true
+        last_commit_age_days: 2177
+        active_weeks_13: 0
+        carve_out: null
+    responsiveness:
+      grade: E
+      raw:
+        median_ttfr_hours: null
+        qualifying_issues: 0
+        band: relaxed_solo
+        window_offset_days: 2
+    adoption:
+      grade: E
+      raw:
+        registry: nuget.org
+        canonical_package: phantomjs
+        dependent_repos_count: 0
+        downloads_last_month: 4585941
+        graph_tier: E
+        volume_tier: "?"
+        cross_check_divergence: null
+        archived: true
+    longevity:
+      grade: E
+      raw:
+        repo_age_days: 5663
+        last_commit_age_days: 2177
+        cohort: tool
+    governance:
+      grade: "?"
+      raw: {}
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: BSD-3-Clause
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    governance: { reason: unattributable }
 ---
 
 # PhantomJS
 
 A scriptable **headless WebKit** browser — historically the way to run a real browser engine without a display for testing, scraping, and screenshots **before** headless Chrome existed. **It is archived and abandoned: active development was suspended in 2018 and the repository is archived.** For anything new, do not start here.
+
+![phantomjs — health radar](../../assets/health/phantomjs.svg)
 
 ## When to use
 

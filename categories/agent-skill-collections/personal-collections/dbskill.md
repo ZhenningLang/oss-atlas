@@ -9,11 +9,57 @@ license: CC-BY-NC-4.0
 maturity: v2.14.2, active (2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:30:46Z
+  overall: C
+  overall_score: 2.33
+  scored_axes: 3
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 11
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 101
+        last_commit_age_days: 0
+        cohort: skill-pack
+    governance:
+      grade: D
+      raw:
+        active_maintainers_12mo: 3
+        top1_share: 0.87
+        top3_share: 1.0
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: "?"
+      raw: {}
+  unknowns:
+    responsiveness: { reason: type_na }
+    adoption: { reason: no_package_structural }
+    risk_license: { reason: license_unparsed }
 ---
 
 # dbskill
 
 A personal, curated pack of ~21 Chinese-language agent skills (`/dbs-*`) for business-model diagnosis, content creation, and personal decision-making, installable into Claude Code and other harnesses via a plugin marketplace or a `skills` CLI.
+
+![dbskill — health radar](../../../assets/health/dbskill.svg)
 
 ## When to use
 

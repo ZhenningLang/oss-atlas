@@ -9,11 +9,66 @@ license: MIT
 maturity: v10.x, active, ~15.4k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:47:50Z
+  overall: A
+  overall_score: 3.8
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 1
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 4.1
+        qualifying_issues: 13
+        band: default
+        window_offset_days: 2
+    adoption:
+      grade: A
+      raw:
+        registry: npmjs.org
+        canonical_package: "@faker-js/faker"
+        dependent_repos_count: 17617
+        downloads_last_month: 65781383
+        graph_tier: A
+        volume_tier: A
+        cross_check_divergence: 1.05
+    longevity:
+      grade: B
+      raw:
+        repo_age_days: 1634
+        last_commit_age_days: 1
+        cohort: library
+    governance:
+      grade: A
+      raw:
+        active_maintainers_12mo: 12
+        top1_share: 0.249
+        top3_share: 0.582
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: "?"
+      raw: {}
+  unknowns:
+    risk_license: { reason: license_unparsed }
 ---
 
 # Faker (faker-js)
 
 A JavaScript/TypeScript library that generates massive amounts of realistic fake data — names, addresses, finance, commerce, dates, lorem, and more — for tests, seed scripts, and prototypes, in both the browser and Node.js.
+
+![faker-js — health radar](../../assets/health/faker-js.svg)
 
 ## When to use
 

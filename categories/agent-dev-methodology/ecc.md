@@ -9,11 +9,68 @@ license: MIT
 maturity: v2.0.0, active (2026-06)
 last_verified: 2026-06-26
 type: framework
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:07:35Z
+  overall: B
+  overall_score: 2.67
+  scored_axes: 6
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 3
+        active_weeks_13: 12
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 44.9
+        qualifying_issues: 32
+        band: default
+        window_offset_days: 4
+    adoption:
+      grade: D
+      raw:
+        registry: npmjs.org
+        canonical_package: ecc-universal
+        dependent_repos_count: 0
+        downloads_last_month: 1204
+        graph_tier: E
+        volume_tier: D
+        cross_check_divergence: null
+    longevity:
+      grade: D
+      raw:
+        repo_age_days: 162
+        last_commit_age_days: 3
+        cohort: framework
+    governance:
+      grade: C
+      raw:
+        active_maintainers_12mo: 93
+        top1_share: 0.738
+        top3_share: 0.771
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # ECC
 
 A cross-harness "agent operating system" that installs hundreds of skills, agents, rules, hooks, memory/instinct learning, and a security scanner into Claude Code (and Codex/OpenCode/Cursor) from one repo.
+
+![ecc — health radar](../../assets/health/ecc.svg)
 
 ## When to use
 

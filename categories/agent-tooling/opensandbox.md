@@ -9,11 +9,63 @@ license: Apache-2.0
 maturity: v0.x (python SDK v0.1.13), active, ~11.7k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: framework
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:36:04Z
+  overall: B
+  overall_score: 3.4
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 40.8
+        qualifying_issues: 36
+        band: default
+        window_offset_days: 0
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: D
+      raw:
+        repo_age_days: 194
+        last_commit_age_days: 0
+        cohort: framework
+    governance:
+      grade: A
+      raw:
+        active_maintainers_12mo: 68
+        top1_share: 0.395
+        top3_share: 0.639
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    adoption: { reason: ambiguous }
 ---
 
 # OpenSandbox
 
 A general-purpose, secure sandbox runtime and platform for AI agents — multi-language SDKs, a unified sandbox protocol, and Docker/Kubernetes backends for running untrusted agent-generated code, GUI/browser automation, and RL/eval workloads in isolated environments.
+
+![opensandbox — health radar](../../assets/health/opensandbox.svg)
 
 ## When to use
 

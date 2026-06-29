@@ -9,11 +9,66 @@ license: MIT
 maturity: stable reference release, low ongoing maintenance, ~33.9k stars (last pushed 2026-03, as of 2026-06)
 last_verified: 2026-06-28
 type: model
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:03:53Z
+  overall: C
+  overall_score: 2.4
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: C
+      raw:
+        archived: false
+        last_commit_age_days: 96
+        active_weeks_13: 0
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: D
+      raw:
+        registry: pypi.org
+        canonical_package: clip-openai
+        dependent_repos_count: 1
+        downloads_last_month: 3991
+        graph_tier: D
+        volume_tier: D
+        cross_check_divergence: null
+    longevity:
+      grade: B
+      raw:
+        repo_age_days: 2021
+        last_commit_age_days: 96
+        cohort: model
+    governance:
+      grade: C
+      raw:
+        active_maintainers_12mo: 2
+        top1_share: 0.5
+        top3_share: 1.0
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: type_na }
 ---
 
 # CLIP
 
 OpenAI 官方的 CLIP（Contrastive Language-Image Pre-training）原始参考实现——一个把图像和文本映射到同一个共享 embedding 空间的模型，于是你可以把标签写成纯文本来给图像分类或检索，无需任何任务专属训练。
+
+![clip — 健康度雷达](../../assets/health/clip.zh.svg)
 
 ## 何时使用
 

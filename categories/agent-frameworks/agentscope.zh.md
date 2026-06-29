@@ -9,11 +9,68 @@ license: Apache-2.0
 maturity: v2.0.2, active (2026-06)
 last_verified: 2026-06-26
 type: framework
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:08:31Z
+  overall: B
+  overall_score: 3.17
+  scored_axes: 6
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 3
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: B
+      raw:
+        median_ttfr_hours: 53.8
+        qualifying_issues: 34
+        band: default
+        window_offset_days: 2
+    adoption:
+      grade: C
+      raw:
+        registry: pypi.org
+        canonical_package: agentscope
+        dependent_repos_count: 0
+        downloads_last_month: 167849
+        graph_tier: E
+        volume_tier: C
+        cross_check_divergence: null
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 899
+        last_commit_age_days: 3
+        cohort: framework
+    governance:
+      grade: A
+      raw:
+        active_maintainers_12mo: 76
+        top1_share: 0.388
+        top3_share: 0.686
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # AgentScope
 
 一个用于构建并对外服务多智能体 LLM 应用的 Python 框架，倾向于信任模型的推理/工具调用能力而非死板编排，把统一事件总线、细粒度工具权限、OpenTelemetry tracing 直接焊进 agent 循环里。
+
+![agentscope — 健康度雷达](../../assets/health/agentscope.zh.svg)
 
 ## 何时使用
 

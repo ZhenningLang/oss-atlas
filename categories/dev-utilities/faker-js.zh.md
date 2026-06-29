@@ -9,11 +9,66 @@ license: MIT
 maturity: v10.x, active, ~15.4k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:47:50Z
+  overall: A
+  overall_score: 3.8
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 1
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 4.1
+        qualifying_issues: 13
+        band: default
+        window_offset_days: 2
+    adoption:
+      grade: A
+      raw:
+        registry: npmjs.org
+        canonical_package: "@faker-js/faker"
+        dependent_repos_count: 17617
+        downloads_last_month: 65781383
+        graph_tier: A
+        volume_tier: A
+        cross_check_divergence: 1.05
+    longevity:
+      grade: B
+      raw:
+        repo_age_days: 1634
+        last_commit_age_days: 1
+        cohort: library
+    governance:
+      grade: A
+      raw:
+        active_maintainers_12mo: 12
+        top1_share: 0.249
+        top3_share: 0.582
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: "?"
+      raw: {}
+  unknowns:
+    risk_license: { reason: license_unparsed }
 ---
 
 # Faker (faker-js)
 
 一个 JavaScript/TypeScript 库，批量生成逼真的假数据——姓名、地址、金融、商品、日期、lorem 等等——用于测试、seed 脚本和原型，浏览器和 Node.js 都能跑。
+
+![faker-js — 健康度雷达](../../assets/health/faker-js.zh.svg)
 
 ## 何时使用
 

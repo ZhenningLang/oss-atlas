@@ -51,20 +51,16 @@ correct (e.g. adoption for an `app`/`skill-pack` that ships no package, governan
 repo with zero in-window commits) — leave it `?`, don't force a grade.
 
 ### 4. Batch backfill the index (`--backfill`) — Phase 1
-Score every page that has no `health:` block yet:
+Use the operational runner, not a hand-written shell loop. It dry-runs by default, records a
+checkpoint, prints progress/ETA, and keeps a failed set for retry:
 ```bash
-for PAGE in $(find categories -name '*.md' ! -name 'INDEX*' ! -name '*.zh.md' | xargs grep -L '^health:'); do
-  python3 tools/health.py --page "$PAGE" --write || echo "FAILED: $PAGE"
-  sleep 2   # be gentle: GitHub's stats/* secondary rate limit is the real ceiling, not 5000/hr
-done
-python3 tools/health_card.py --all
-python3 tools/lint.py
+python3 tools/health_backfill.py                         # dry-run: counts + samples, no writes
+python3 tools/health_backfill.py --apply --yes --limit 5  # smoke apply on a bounded sample
+python3 tools/health_backfill.py --apply --yes --resume   # full/resumed apply
 ```
-**Known gap (Phase 1 hardening):** `tools/health.py` is per-page and has **no `--resume`,
-progress, or failed-set output yet** — at ~229 repos run it **serially**, capture the `FAILED:`
-lines above, and re-run just those. Honor the spec's rate-limit mitigations (serial + ETag +
-warm-then-rerun for `stats/*`). A GitHub token must be present (`gh auth status`); unauthenticated
-60/hr dies early.
+State lives at `.health-backfill/state.json` by default. Use `--state <path>` for experiments,
+`--sleep` to slow down under GitHub secondary rate limits, and `--timeout/--retries` for flaky
+network calls. A GitHub token must be present (`gh auth status`); unauthenticated 60/hr dies early.
 
 ## Discipline
 - **Machine SSOT, not hand-grades.** Don't touch the `health:` block or the SVGs by hand — re-run

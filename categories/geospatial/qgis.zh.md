@@ -9,11 +9,63 @@ license: GPL-2.0-or-later
 maturity: v4.0.3, active (2026-06)
 last_verified: 2026-06-26
 type: app
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:53:53Z
+  overall: A
+  overall_score: 3.6
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 3.7
+        qualifying_issues: 19
+        band: relaxed_solo
+        window_offset_days: 12
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: A
+      raw:
+        repo_age_days: 5537
+        last_commit_age_days: 0
+        cohort: app
+    governance:
+      grade: A
+      raw:
+        active_maintainers_12mo: 88
+        top1_share: 0.341
+        top3_share: 0.441
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: C
+      raw:
+        spdx_id: GPL-2.0
+        permissiveness: weak_file_copyleft
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    adoption: { reason: no_package_structural }
 ---
 
 # QGIS
 
 一款功能完整、跨平台的桌面 GIS，用于浏览、编辑、分析和发布地理空间数据（矢量、栅格、网格、点云）。基于 Qt/C++ 构建，带有 Python（PyQGIS）插件生态，以及用于 OGC 网络服务的无界面服务端（QGIS Server）。
+
+![qgis — 健康度雷达](../../assets/health/qgis.zh.svg)
 
 ## 何时使用
 

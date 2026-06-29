@@ -9,11 +9,68 @@ license: MIT
 maturity: v0.1.0, active, ~9.6k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:25:32Z
+  overall: B
+  overall_score: 3.0
+  scored_axes: 6
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 3
+        active_weeks_13: 6
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 39.0
+        qualifying_issues: 29
+        band: default
+        window_offset_days: 4
+    adoption:
+      grade: D
+      raw:
+        registry: pypi.org
+        canonical_package: skillopt
+        dependent_repos_count: 0
+        downloads_last_month: 5594
+        graph_tier: E
+        volume_tier: D
+        cross_check_divergence: null
+    longevity:
+      grade: D
+      raw:
+        repo_age_days: 52
+        last_commit_age_days: 3
+        cohort: library
+    governance:
+      grade: A
+      raw:
+        active_maintainers_12mo: 23
+        top1_share: 0.317
+        top3_share: 0.582
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # SkillOpt
 
 A text-space optimizer that "trains" reusable natural-language skill documents for a frozen LLM agent — applying validation-gated, trajectory-driven edits to produce a compact, deployable `best_skill.md`.
+
+![skillopt — health radar](../../assets/health/skillopt.svg)
 
 ## When to use
 

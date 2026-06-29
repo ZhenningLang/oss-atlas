@@ -9,11 +9,60 @@ license: MIT
 maturity: v6.0.3, active (2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:08:18Z
+  overall: B
+  overall_score: 3.0
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 10
+        active_weeks_13: 12
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 263
+        last_commit_age_days: 10
+        cohort: skill-pack
+    governance:
+      grade: C
+      raw:
+        active_maintainers_12mo: 40
+        top1_share: 0.769
+        top3_share: 0.916
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: type_na }
+    adoption: { reason: no_package_structural }
 ---
 
 # Superpowers
 
 A composable skills library that installs a full SDLC methodology — brainstorm → plan → TDD → subagent-driven execution → verify — into your coding agent as a plugin.
+
+![superpowers — health radar](../../assets/health/superpowers.svg)
 
 ## When to use
 

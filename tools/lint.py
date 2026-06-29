@@ -179,6 +179,25 @@ def base_slug(name: str) -> str:
     return name[: -len(ZH_SUFFIX)] if name.endswith(ZH_SUFFIX) else name[: -len(".md")]
 
 
+def duplicate_slugs(root: Path) -> set[str]:
+    counts: dict[str, int] = {}
+    for page in (root / "categories").rglob("*.md"):
+        if page.name.startswith("INDEX") or page.name.endswith(ZH_SUFFIX):
+            continue
+        counts[page.stem] = counts.get(page.stem, 0) + 1
+    return {slug for slug, count in counts.items() if count > 1}
+
+
+def health_card_stem(path: Path, root: Path, base: str, duplicate_bases: set[str]) -> str:
+    if base not in duplicate_bases:
+        return base
+    try:
+        rel_parent = path.parent.relative_to(root / "categories")
+    except ValueError:
+        return base
+    return f"{'-'.join(rel_parent.parts)}-{base}"
+
+
 def required_sections(ptype: str, zh: bool) -> list[str]:
     core = CORE_ZH if zh else CORE_EN
     extra = EXTRA_ZH if zh else EXTRA_EN
@@ -186,7 +205,7 @@ def required_sections(ptype: str, zh: bool) -> list[str]:
     return core + health + ([] if ptype in NO_EXTRA_TYPES else extra)
 
 
-def check_health_block(path: Path, text: str, base: str, zh: bool, category_dir: Path, rep: Report) -> None:
+def check_health_block(path: Path, text: str, base: str, zh: bool, root: Path, duplicate_bases: set[str], rep: Report) -> None:
     """Validate a frontmatter `health:` radar block + its SVG card, if present.
 
     Pilot phase: silent when a page has no block. Validates shape (overall +
@@ -216,8 +235,7 @@ def check_health_block(path: Path, text: str, base: str, zh: bool, category_dir:
     if len(grades) != 6:
         rep.error(path, f"health: expected 6 axis grades, found {len(grades)}")
 
-    root = category_dir.parent.parent
-    card = base + (".zh.svg" if zh else ".svg")   # one card per language (no mixed scripts)
+    card = health_card_stem(path, root, base, duplicate_bases) + (".zh.svg" if zh else ".svg")
     if not (root / "assets" / "health" / card).exists():
         rep.error(path, f"health: card missing: assets/health/{card} (run tools/health_card.py)")
     card_ref = f"assets/health/{card}"
@@ -246,7 +264,7 @@ def check_health_block(path: Path, text: str, base: str, zh: bool, category_dir:
         rep.error(path, "health: card must appear before the first H2 section")
 
 
-def check_page(path: Path, category_dir: Path, rep: Report, today: dt.date) -> None:
+def check_page(path: Path, category_dir: Path, root: Path, duplicate_bases: set[str], rep: Report, today: dt.date) -> None:
     name = path.name
     zh = name.endswith(ZH_SUFFIX)
     base = base_slug(name)
@@ -326,7 +344,7 @@ def check_page(path: Path, category_dir: Path, rep: Report, today: dt.date) -> N
             if drift:
                 rep.error(path, f"frontmatter drift vs {sibling.name} (must be identical): {drift}")
 
-    check_health_block(path, text, base, zh, category_dir, rep)
+    check_health_block(path, text, base, zh, root, duplicate_bases, rep)
 
     for link in md_links(text):
         if link.startswith(("http://", "https://", "#", "mailto:")):
@@ -335,7 +353,7 @@ def check_page(path: Path, category_dir: Path, rep: Report, today: dt.date) -> N
             rep.error(path, f"broken internal link: {link}")
 
 
-def walk_category(catdir: Path, rep: Report, today: dt.date) -> None:
+def walk_category(catdir: Path, root: Path, duplicate_bases: set[str], rep: Report, today: dt.date) -> None:
     en_index, zh_index = catdir / INDEX_EN, catdir / INDEX_ZH
     if not en_index.exists():
         rep.error(catdir, f"category node has no {INDEX_EN}")
@@ -346,7 +364,7 @@ def walk_category(catdir: Path, rep: Report, today: dt.date) -> None:
     pages = sorted(p for p in catdir.glob("*.md") if is_page(p.name))
     n_en_pages = 0
     for page in pages:
-        check_page(page, catdir, rep, today)
+        check_page(page, catdir, root, duplicate_bases, rep, today)
         zh = page.name.endswith(ZH_SUFFIX)
         if not zh:
             n_en_pages += 1
@@ -366,7 +384,7 @@ def walk_category(catdir: Path, rep: Report, today: dt.date) -> None:
             rep.error(en_index, f"sub-category '{sub.name}' not linked from {INDEX_EN}")
         if zh_index.exists() and (sub / INDEX_ZH).resolve() not in zh_linked and sub.resolve() not in zh_linked:
             rep.error(zh_index, f"sub-category '{sub.name}' not linked from {INDEX_ZH}")
-        walk_category(sub, rep, today)
+        walk_category(sub, root, duplicate_bases, rep, today)
 
     # INDEX internal links resolve
     for idx in (en_index, zh_index):
@@ -421,12 +439,13 @@ def main() -> int:
         rep.error(root, "no categories/ directory")
         print("\n".join(rep.errors))
         return 1
+    duplicate_bases = duplicate_slugs(root)
 
     # Every non-hidden dir under categories/ is a top-level category node (not gated on INDEX.md;
     # see walk_category — a node missing its INDEX is reported, never skipped).
     top_categories = sorted(d for d in categories_dir.iterdir() if d.is_dir() and not d.name.startswith("."))
     for cat in top_categories:
-        walk_category(cat, rep, today)
+        walk_category(cat, root, duplicate_bases, rep, today)
 
     check_root_index(root, INDEX_EN, INDEX_EN, top_categories, rep)
     check_root_index(root, INDEX_ZH, INDEX_ZH, top_categories, rep)

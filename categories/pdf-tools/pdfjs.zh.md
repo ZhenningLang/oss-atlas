@@ -9,11 +9,68 @@ license: Apache-2.0
 maturity: v6.x, active (2026-06), ~53.5k stars
 last_verified: 2026-06-28
 type: library
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:10:20Z
+  overall: A
+  overall_score: 3.83
+  scored_axes: 6
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 2.5
+        qualifying_issues: 45
+        band: default
+        window_offset_days: 5
+    adoption:
+      grade: A
+      raw:
+        registry: npmjs.org
+        canonical_package: pdfjs-dist
+        dependent_repos_count: 17822
+        downloads_last_month: 82426476
+        graph_tier: A
+        volume_tier: A
+        cross_check_divergence: 1.02
+    longevity:
+      grade: A
+      raw:
+        repo_age_days: 5543
+        last_commit_age_days: 0
+        cohort: library
+    governance:
+      grade: B
+      raw:
+        active_maintainers_12mo: 37
+        top1_share: 0.425
+        top3_share: 0.962
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # PDF.js
 
 Mozilla 出品的纯 JavaScript PDF 渲染与解析库，驱动着 Firefox 内置的 PDF 阅读器——它把 PDF 页面绘制到 `<canvas>`、抽取文本和元数据，并附带一套可直接落地的预编译阅读器，浏览器和 Node 里都能跑。
+
+![pdfjs — 健康度雷达](../../assets/health/pdfjs.zh.svg)
 
 ## 何时使用
 

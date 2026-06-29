@@ -9,11 +9,60 @@ license: Apache-2.0
 maturity: v1.3.0, active (2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:32:37Z
+  overall: B
+  overall_score: 2.75
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 3
+        active_weeks_13: 9
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 124
+        last_commit_age_days: 3
+        cohort: skill-pack
+    governance:
+      grade: D
+      raw:
+        active_maintainers_12mo: 8
+        top1_share: 0.878
+        top3_share: 0.97
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: type_na }
+    adoption: { reason: no_package_structural }
 ---
 
 # Anthropic Cybersecurity Skills
 
 一个大型网络安全技能包（本次核查约 817 个技能），把结构化、已对齐框架的安全工作流加载进 coding agent——每个技能是一份 `SKILL.md`（何时使用 → 前置条件 → 分步工作流 → 验证），并交叉映射到 MITRE ATT&CK、NIST CSF、ATLAS、D3FEND、NIST AI RMF 与 MITRE F3。
+
+![anthropic-cybersecurity-skills — 健康度雷达](../../../assets/health/anthropic-cybersecurity-skills.zh.svg)
 
 ## 何时使用
 

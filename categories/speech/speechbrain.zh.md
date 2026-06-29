@@ -9,11 +9,63 @@ license: Apache-2.0
 maturity: v1.1.0 (2026-03), active, ~11.7k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: framework
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:15:56Z
+  overall: B
+  overall_score: 3.4
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: B
+      raw:
+        archived: false
+        last_commit_age_days: 14
+        active_weeks_13: 5
+        carve_out: null
+    responsiveness:
+      grade: C
+      raw:
+        median_ttfr_hours: 128.8
+        qualifying_issues: 2
+        band: default
+        window_offset_days: 6
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: A
+      raw:
+        repo_age_days: 2253
+        last_commit_age_days: 14
+        cohort: framework
+    governance:
+      grade: A
+      raw:
+        active_maintainers_12mo: 28
+        top1_share: 0.25
+        top3_share: 0.575
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    adoption: { reason: ambiguous }
 ---
 
 # SpeechBrain
 
 一个一站式、基于 PyTorch 的语音工具箱，覆盖语音识别、说话人识别、增强、分离、语种识别、文本转语音等——并带数百份在标准数据集上可直接跑的训练“recipe”。
+
+![speechbrain — 健康度雷达](../../assets/health/speechbrain.zh.svg)
 
 ## 何时使用
 

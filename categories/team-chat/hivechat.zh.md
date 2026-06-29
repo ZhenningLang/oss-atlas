@@ -9,11 +9,57 @@ license: Apache-2.0
 maturity: v0.1.0, active, ~1.2k stars (as of 2026-06)
 last_verified: 2026-06-26
 type: app
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:17:41Z
+  overall: C
+  overall_score: 2.33
+  scored_axes: 3
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: C
+      raw:
+        archived: false
+        last_commit_age_days: 286
+        active_weeks_13: 0
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 495
+        last_commit_age_days: 286
+        cohort: app
+    governance:
+      grade: B
+      raw:
+        active_maintainers_12mo: 3
+        top1_share: 0.409
+        top3_share: 1.0
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: "?"
+      raw: {}
+  unknowns:
+    responsiveness: { reason: no_traffic }
+    adoption: { reason: no_package_structural }
+    risk_license: { reason: license_unparsed }
 ---
 
 # HiveChat
 
 一款可自托管、由管理员统一管理的中小团队 AI 聊天应用：管理员一次配好多家大模型供应商（OpenAI、Claude、Gemini、DeepSeek、Ollama 以及任意 OpenAI 兼容服务），整个团队据此聊天，并按用户分组控制可见模型与 token 配额。
+
+![hivechat — 健康度雷达](../../assets/health/hivechat.zh.svg)
 
 ## 何时使用
 

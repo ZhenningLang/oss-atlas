@@ -373,6 +373,10 @@ A=4, B=3, C=2, D=1, E=0. `?` axes contribute **nothing** and are **excluded from
 ### 3.2 Base overall grade
 `overall_score = mean(points over the non-? axes)`. Require **≥3 scored axes** or the overall grade is itself `?` (too little signal). Map the mean back to a letter by nearest band:
 
+**Interpretation guardrail:** `overall` is a measured-signal aggregate over the scored axes, not a
+project-quality verdict and not an OSS-selection conclusion. Always show `scored_axes/6` next to the
+headline grade so a 3-axis aggregate cannot masquerade as a complete six-axis assessment.
+
 | mean range | overall |
 |------------|---------|
 | ≥3.5 | **A** |
@@ -395,6 +399,8 @@ The CAP is a **legal-embeddability** guard, narrowed from the original (which sm
 - Per-axis `?` → dashed/gray ghost spoke, excluded from area and from `overall_score`.
 - All-or-mostly-`?` (scored axes < 3) → overall = `?`.
 - A `?` is never a strength (full radius) and never a failure (E).
+- The card must display the scored-axis count (`AXES n/6` / `已评分 n/6`) because `overall` is only
+  an aggregate over the measured axes.
 
 ---
 

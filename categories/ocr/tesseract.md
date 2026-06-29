@@ -9,11 +9,63 @@ license: Apache-2.0
 maturity: v5.5.2, active (2026-06), ~75.0k stars
 last_verified: 2026-06-28
 type: library
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:08:54Z
+  overall: A
+  overall_score: 3.6
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 2
+        active_weeks_13: 7
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 1.4
+        qualifying_issues: 9
+        band: default
+        window_offset_days: 7
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: A
+      raw:
+        repo_age_days: 4339
+        last_commit_age_days: 2
+        cohort: library
+    governance:
+      grade: C
+      raw:
+        active_maintainers_12mo: 6
+        top1_share: 0.637
+        top3_share: 0.857
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    adoption: { reason: ambiguous }
 ---
 
 # Tesseract
 
 The classic open-source OCR engine: a C++ `libtesseract` library plus a CLI that turns images of text into machine-readable text, runs fully offline, and recognizes 100+ languages via separately-downloaded trained data.
+
+![tesseract — health radar](../../assets/health/tesseract.svg)
 
 ## When to use
 

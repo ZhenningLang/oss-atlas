@@ -9,11 +9,69 @@ license: MIT
 maturity: "v2.7.3 (2026-05), active (2026-06); ~68.8k stars (API-verified count), but adoption/vetting meaning unverified and suspicious for a young repo — flag, don't trust"
 last_verified: 2026-06-28
 type: tool
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:15:09Z
+  overall: B
+  overall_score: 2.5
+  scored_axes: 6
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 6
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 19.4
+        qualifying_issues: 27
+        band: relaxed_solo
+        window_offset_days: 4
+    adoption:
+      grade: E
+      raw:
+        registry: null
+        canonical_package: null
+        dependent_repos_count: 0
+        downloads_last_month: null
+        graph_tier: E
+        volume_tier: null
+        cross_check_divergence: null
+        archived: false
+    longevity:
+      grade: D
+      raw:
+        repo_age_days: 106
+        last_commit_age_days: 6
+        cohort: tool
+    governance:
+      grade: C
+      raw:
+        active_maintainers_12mo: 42
+        top1_share: 0.792
+        top3_share: 0.854
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # Understand-Anything
 
 A TypeScript tool that turns any codebase (or knowledge base / docs folder) into an interactive, searchable knowledge graph an agent can query in plain English, installable as a plugin across Claude Code, Cursor, Copilot, Codex, Gemini CLI and more.
+
+![understand-anything — health radar](../../assets/health/understand-anything.svg)
 
 ## When to use
 

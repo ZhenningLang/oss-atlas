@@ -9,11 +9,63 @@ license: AGPL-3.0
 maturity: educational article companion, idle since ~2023-03, ~5.2k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:04:26Z
+  overall: E
+  overall_score: 0.25
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: E
+      raw:
+        archived: false
+        last_commit_age_days: 2617
+        active_weeks_13: 0
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: E
+      raw:
+        registry: null
+        canonical_package: null
+        dependent_repos_count: 0
+        downloads_last_month: null
+        graph_tier: E
+        volume_tier: null
+        cross_check_divergence: null
+        archived: false
+    longevity:
+      grade: E
+      raw:
+        repo_age_days: 3480
+        last_commit_age_days: 2617
+        cohort: library
+    governance:
+      grade: "?"
+      raw: {}
+    risk_license:
+      grade: D
+      raw:
+        spdx_id: AGPL-3.0
+        permissiveness: strong_network_copyleft
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: no_traffic }
+    governance: { reason: unattributable }
 ---
 
 # LSTM Neural Network for Time Series Prediction
 
 一份配套文章的精简代码库，演示如何用 Keras 搭一个 LSTM 来预测时间序列——以正弦波和标普 500 数据为例——它是用来讲明白这个技术的，不是用来当预测库交付的。
+
+![lstm-time-series — 健康度雷达](../../assets/health/lstm-time-series.zh.svg)
 
 ## 何时使用
 

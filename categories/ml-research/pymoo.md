@@ -9,11 +9,69 @@ license: Apache-2.0
 maturity: v0.6.x, active (last pushed 2026-06), ~2.9k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:04:43Z
+  overall: C
+  overall_score: 2.17
+  scored_axes: 6
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: B
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 2
+        carve_out: null
+    responsiveness:
+      grade: D
+      raw:
+        median_ttfr_hours: 754.7
+        qualifying_issues: 5
+        band: default
+        window_offset_days: 3
+    adoption:
+      grade: E
+      raw:
+        registry: null
+        canonical_package: null
+        dependent_repos_count: 0
+        downloads_last_month: null
+        graph_tier: E
+        volume_tier: null
+        cross_check_divergence: null
+        archived: false
+    longevity:
+      grade: A
+      raw:
+        repo_age_days: 3205
+        last_commit_age_days: 0
+        cohort: library
+    governance:
+      grade: D
+      raw:
+        active_maintainers_12mo: 12
+        top1_share: 0.852
+        top3_share: 0.898
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # pymoo
 
 A Python framework for single- and multi-objective optimization: NSGA-II/III, MOEA/D, GA, DE, CMA-ES, PSO and more, plus test problems, constraint handling, visualization, and decision-making tools — built on NumPy/SciPy with optional compiled speedups.
+
+![pymoo — health radar](../../assets/health/pymoo.svg)
 
 ## When to use
 

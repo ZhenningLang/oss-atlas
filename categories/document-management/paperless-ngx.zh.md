@@ -9,11 +9,63 @@ license: GPL-3.0
 maturity: Mature, active; stable v2.20.x (2026-04), v3.0 in beta as of 2026-06 (see caveats)
 last_verified: 2026-06-26
 type: tool
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:51:58Z
+  overall: B
+  overall_score: 3.2
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 1
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 1.1
+        qualifying_issues: 52
+        band: relaxed_solo
+        window_offset_days: 13
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: A
+      raw:
+        repo_age_days: 1597
+        last_commit_age_days: 1
+        cohort: tool
+    governance:
+      grade: C
+      raw:
+        active_maintainers_12mo: 43
+        top1_share: 0.687
+        top3_share: 0.93
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: C
+      raw:
+        spdx_id: GPL-3.0
+        permissiveness: weak_file_copyleft
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    adoption: { reason: ambiguous }
 ---
 
 # paperless-ngx
 
 一套自托管文档管理系统（DMS），基于 Django + Angular，配合 PostgreSQL/Redis，把账单、发票、信件等纸质/扫描件自动 OCR、打标签、建索引并提供全文检索。
+
+![paperless-ngx — 健康度雷达](../../assets/health/paperless-ngx.zh.svg)
 
 ## 何时使用
 

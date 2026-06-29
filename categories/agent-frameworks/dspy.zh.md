@@ -9,11 +9,68 @@ license: MIT
 maturity: v3.2.1, active (2026-06)
 last_verified: 2026-06-26
 type: framework
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:09:01Z
+  overall: A
+  overall_score: 3.83
+  scored_axes: 6
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 13
+        active_weeks_13: 11
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 19.9
+        qualifying_issues: 42
+        band: default
+        window_offset_days: 10
+    adoption:
+      grade: A
+      raw:
+        registry: pypi.org
+        canonical_package: dspy
+        dependent_repos_count: 3
+        downloads_last_month: 5843535
+        graph_tier: D
+        volume_tier: A
+        cross_check_divergence: 1.02
+    longevity:
+      grade: B
+      raw:
+        repo_age_days: 1267
+        last_commit_age_days: 13
+        cohort: framework
+    governance:
+      grade: A
+      raw:
+        active_maintainers_12mo: 21
+        top1_share: 0.262
+        top3_share: 0.646
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # DSPy
 
 一个用来“编程”（而非“写提示词”）语言模型的框架：你声明带类型的输入→输出 `Signature`，把它们组合成 `Module`，再让优化器对照一个指标自动“编译”出真正的提示词（必要时还能编译权重）。
+
+![dspy — 健康度雷达](../../assets/health/dspy.zh.svg)
 
 ## 何时使用
 

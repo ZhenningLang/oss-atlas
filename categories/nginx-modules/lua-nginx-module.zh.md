@@ -9,11 +9,63 @@ license: BSD-2-Clause
 maturity: v0.10.31 line, active, ~11.8k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:07:17Z
+  overall: D
+  overall_score: 2.8
+  scored_axes: 5
+  capped: true
+  cap_reason: "source-available/no-license: NONE"
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 1
+        active_weeks_13: 10
+        carve_out: null
+    responsiveness:
+      grade: B
+      raw:
+        median_ttfr_hours: 22.3
+        qualifying_issues: 3
+        band: default
+        window_offset_days: 2
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: A
+      raw:
+        repo_age_days: 5918
+        last_commit_age_days: 1
+        cohort: library
+    governance:
+      grade: B
+      raw:
+        active_maintainers_12mo: 19
+        top1_share: 0.578
+        top3_share: 0.716
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: E
+      raw:
+        spdx_id: NONE
+        permissiveness: source_available
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    adoption: { reason: ambiguous }
 ---
 
 # lua-nginx-module (ngx_lua)
 
 一个把 LuaJIT（或 Lua）虚拟机嵌入服务器的 NGINX 模块，让你在请求处理的每个阶段——rewrite、access、content、log——运行 Lua，并配一套非阻塞 cosocket API，使你的 Lua 能与上游 TCP/UDP 服务通信而不卡住 worker。
+
+![lua-nginx-module — 健康度雷达](../../assets/health/lua-nginx-module.zh.svg)
 
 ## 何时使用
 

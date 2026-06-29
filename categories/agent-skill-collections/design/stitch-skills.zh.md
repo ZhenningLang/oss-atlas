@@ -9,11 +9,60 @@ license: Apache-2.0
 maturity: v1.0 release (2026-05), pushed 2026-06 (as of 2026-06-26)
 last_verified: 2026-06-26
 type: skill-pack
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:28:48Z
+  overall: B
+  overall_score: 3.25
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 2
+        active_weeks_13: 8
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 164
+        last_commit_age_days: 2
+        cohort: skill-pack
+    governance:
+      grade: B
+      raw:
+        active_maintainers_12mo: 10
+        top1_share: 0.554
+        top3_share: 0.857
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: type_na }
+    adoption: { reason: no_package_structural }
 ---
 
 # Stitch Skills
 
 一套遵循 Agent Skills 开放标准的技能库，用来驱动 Google 的 **Stitch** MCP server——从文字/图片生成 UI 屏幕、在代码与设计之间双向转换、抽取 `DESIGN.md`，并把 Stitch 项目导出成 React / React Native / shadcn 组件。
+
+![stitch-skills — 健康度雷达](../../../assets/health/stitch-skills.zh.svg)
 
 ## 何时使用
 

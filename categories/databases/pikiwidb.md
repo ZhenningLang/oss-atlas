@@ -9,11 +9,63 @@ license: BSD-3-Clause
 maturity: v4.0.3 / v3.5.7, active, 6.1k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: service
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:43:17Z
+  overall: B
+  overall_score: 3.4
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 12
+        active_weeks_13: 6
+        carve_out: null
+    responsiveness:
+      grade: D
+      raw:
+        median_ttfr_hours: 1028.4
+        qualifying_issues: 1
+        band: default
+        window_offset_days: 9
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: A
+      raw:
+        repo_age_days: 4256
+        last_commit_age_days: 12
+        cohort: service
+    governance:
+      grade: A
+      raw:
+        active_maintainers_12mo: 8
+        top1_share: 0.306
+        top3_share: 0.722
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: BSD-3-Clause
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    adoption: { reason: no_package_structural }
 ---
 
 # PikiwiDB
 
 A Redis-protocol-compatible, disk-backed KV store (RocksDB engine) built by Qihoo360's infra team — keeps hot data in memory and persists the full dataset to disk so a single node can hold hundreds of GB the way Redis can't. (This repo is the home of the project historically known as **Pika**.)
+
+![pikiwidb — health radar](../../assets/health/pikiwidb.svg)
 
 ## When to use
 

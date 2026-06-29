@@ -9,11 +9,62 @@ license: Apache-2.0
 maturity: v0.2.x, last commit 2024-08 (coasting), 11k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:01:58Z
+  overall: C
+  overall_score: 2.0
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: E
+      raw:
+        archived: false
+        last_commit_age_days: 1449
+        active_weeks_13: 0
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: A
+      raw:
+        registry: pypi.org
+        canonical_package: ffmpeg-python
+        dependent_repos_count: 5000
+        downloads_last_month: 10690898
+        graph_tier: B
+        volume_tier: A
+        cross_check_divergence: null
+    longevity:
+      grade: E
+      raw:
+        repo_age_days: 3333
+        last_commit_age_days: 1449
+        cohort: library
+    governance:
+      grade: "?"
+      raw: {}
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: no_traffic }
+    governance: { reason: unattributable }
 ---
 
 # ffmpeg-python
 
 FFmpeg 的 Python 绑定，让你把复杂的滤镜图写成链式 Python 表达式，而不必手搓 `-filter_complex` 字符串——它替你拼出 FFmpeg 命令行，再去调用 `ffmpeg` 二进制。
+
+![ffmpeg-python — 健康度雷达](../../assets/health/ffmpeg-python.zh.svg)
 
 ## 何时使用
 

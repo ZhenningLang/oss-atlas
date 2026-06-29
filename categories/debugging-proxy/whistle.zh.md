@@ -9,11 +9,68 @@ license: MIT
 maturity: v2.10.x, active, ~15.6k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: tool
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:44:38Z
+  overall: B
+  overall_score: 2.83
+  scored_axes: 6
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: B
+      raw:
+        archived: false
+        last_commit_age_days: 8
+        active_weeks_13: 5
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 8.9
+        qualifying_issues: 15
+        band: relaxed_solo
+        window_offset_days: 11
+    adoption:
+      grade: D
+      raw:
+        registry: npmjs.org
+        canonical_package: whistle
+        dependent_repos_count: 24
+        downloads_last_month: 11769
+        graph_tier: D
+        volume_tier: D
+        cross_check_divergence: null
+    longevity:
+      grade: A
+      raw:
+        repo_age_days: 4126
+        last_commit_age_days: 8
+        cohort: tool
+    governance:
+      grade: D
+      raw:
+        active_maintainers_12mo: 5
+        top1_share: 0.982
+        top3_share: 0.995
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # whistle
 
 跨平台的 HTTP/HTTPS/HTTP2/WebSocket 调试代理：把流量指向它，在 web UI 里写规则行，就能即时抓包、检视、改写、重定向、Mock 请求——类似 Fiddler/Charles，但基于浏览器、由配置驱动。
+
+![whistle — 健康度雷达](../../assets/health/whistle.zh.svg)
 
 ## 何时使用
 

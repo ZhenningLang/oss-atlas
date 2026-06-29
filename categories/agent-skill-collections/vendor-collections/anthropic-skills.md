@@ -9,11 +9,60 @@ license: Apache-2.0
 maturity: no tagged releases, active, last pushed 2026-06 (155k+ stars [未验证])
 last_verified: 2026-06-26
 type: skill-pack
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:33:25Z
+  overall: B
+  overall_score: 2.75
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 2
+        active_weeks_13: 11
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: B
+      raw:
+        repo_age_days: 280
+        last_commit_age_days: 2
+        cohort: skill-pack
+    governance:
+      grade: A
+      raw:
+        active_maintainers_12mo: 13
+        top1_share: 0.317
+        top3_share: 0.683
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: E
+      raw:
+        spdx_id: NONE
+        permissiveness: source_available
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: type_na }
+    adoption: { reason: no_package_structural }
 ---
 
 # Anthropic Skills
 
 Anthropic's own public collection of Agent Skills — self-contained `SKILL.md` folders (document editing, frontend/canvas design, MCP/skill authoring, brand & comms) installable into Claude Code, Claude.ai, or the Claude API.
+
+![anthropic-skills — health radar](../../../assets/health/anthropic-skills.svg)
 
 ## When to use
 

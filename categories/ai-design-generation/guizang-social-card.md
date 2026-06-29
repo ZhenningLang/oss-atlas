@@ -9,11 +9,56 @@ license: AGPL-3.0-only
 maturity: no tagged release, active (last push 2026-05)
 last_verified: 2026-06-26
 type: skill-pack
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:38:02Z
+  overall: D
+  overall_score: 1.0
+  scored_axes: 3
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: C
+      raw:
+        archived: false
+        last_commit_age_days: 33
+        active_weeks_13: 1
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: D
+      raw:
+        repo_age_days: 33
+        last_commit_age_days: 33
+        cohort: skill-pack
+    governance:
+      grade: "?"
+      raw: {}
+    risk_license:
+      grade: E
+      raw:
+        spdx_id: AGPL-3.0
+        permissiveness: strong_network_copyleft
+        relicense_36mo: true
+        content_license: null
+  unknowns:
+    responsiveness: { reason: type_na }
+    adoption: { reason: no_package_structural }
+    governance: { reason: unattributable }
 ---
 
 # Guizang Social Card Skill
 
 An agent skill that turns a topic and a few images into Xiaohongshu carousels (1080×1440) and WeChat 21:9 + 1:1 cover pairs — single-file HTML rendered to PNG via Playwright, driven by two locked visual systems (editorial-magazine and Swiss international).
+
+![guizang-social-card — health radar](../../assets/health/guizang-social-card.svg)
 
 ## When to use
 

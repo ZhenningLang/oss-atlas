@@ -9,11 +9,68 @@ license: Apache-2.0
 maturity: v3.2.x, active (2026-06)
 last_verified: 2026-06-28
 type: tool
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:11:51Z
+  overall: A
+  overall_score: 3.83
+  scored_axes: 6
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 6.0
+        qualifying_issues: 27
+        band: relaxed_solo
+        window_offset_days: 9
+    adoption:
+      grade: A
+      raw:
+        registry: pypi.org
+        canonical_package: cython
+        dependent_repos_count: 18920
+        downloads_last_month: 121992790
+        graph_tier: A
+        volume_tier: A
+        cross_check_divergence: 1.03
+    longevity:
+      grade: A
+      raw:
+        repo_age_days: 5699
+        last_commit_age_days: 0
+        cohort: tool
+    governance:
+      grade: B
+      raw:
+        active_maintainers_12mo: 39
+        top1_share: 0.588
+        top3_share: 0.933
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # Cython
 
 一个把 Python（以及带类型标注的 Python 超集）编译成 C、产出原生 CPython 扩展模块的编译器——是让热点 Python 代码变快、或封装 C/C++ 库的标准做法。
+
+![cython — 健康度雷达](../../assets/health/cython.zh.svg)
 
 ## 何时使用
 

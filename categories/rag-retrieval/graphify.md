@@ -9,11 +9,68 @@ license: MIT
 maturity: v0.8.49, active (2026-06)
 last_verified: 2026-06-26
 type: tool
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:14:22Z
+  overall: B
+  overall_score: 3.0
+  scored_axes: 6
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 28.6
+        qualifying_issues: 17
+        band: relaxed_solo
+        window_offset_days: 5
+    adoption:
+      grade: B
+      raw:
+        registry: pypi.org
+        canonical_package: graphifyy
+        dependent_repos_count: 0
+        downloads_last_month: 788764
+        graph_tier: E
+        volume_tier: B
+        cross_check_divergence: 1.26
+    longevity:
+      grade: D
+      raw:
+        repo_age_days: 87
+        last_commit_age_days: 0
+        cohort: tool
+    governance:
+      grade: C
+      raw:
+        active_maintainers_12mo: 99
+        top1_share: 0.771
+        top3_share: 0.791
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # graphify
 
 A Python CLI + MCP server (also packaged as an AI-coding-assistant skill) that turns a folder of code, schemas, scripts, docs and media into a portable, queryable knowledge graph an agent can ask instead of grepping.
+
+![graphify — health radar](../../assets/health/graphify.svg)
 
 ## When to use
 

@@ -9,11 +9,60 @@ license: MIT
 maturity: untagged (no GitHub releases), active, last pushed 2026-04 (as of 2026-06)
 last_verified: 2026-06-26
 type: app
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:45:11Z
+  overall: C
+  overall_score: 2.25
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: C
+      raw:
+        archived: false
+        last_commit_age_days: 78
+        active_weeks_13: 1
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 510
+        last_commit_age_days: 78
+        cohort: app
+    governance:
+      grade: D
+      raw:
+        active_maintainers_12mo: 1
+        top1_share: 1.0
+        top3_share: 1.0
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: no_traffic }
+    adoption: { reason: no_package_structural }
 ---
 
 # deep-research
 
 一个刻意做到极简（约 500 行）的 TypeScript 深度研究 agent：通过 Firecrawl 递归地扇出搜索查询、抓取结果、提炼 learnings，再合成带引用的 Markdown 报告——它的定位是「最简单、可读的参考实现」，而非一个产品。
+
+![deep-research — 健康度雷达](../../assets/health/deep-research.zh.svg)
 
 ## 何时使用
 

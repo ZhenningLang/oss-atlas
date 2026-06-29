@@ -9,11 +9,63 @@ license: MIT
 maturity: v1.39.0, active (2026-06)
 last_verified: 2026-06-26
 type: tool
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:49:45Z
+  overall: A
+  overall_score: 3.8
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 3
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 27.5
+        qualifying_issues: 43
+        band: relaxed_solo
+        window_offset_days: 0
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: A
+      raw:
+        repo_age_days: 4107
+        last_commit_age_days: 3
+        cohort: tool
+    governance:
+      grade: B
+      raw:
+        active_maintainers_12mo: 55
+        top1_share: 0.356
+        top3_share: 0.785
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    adoption: { reason: ambiguous }
 ---
 
 # Telegraf
 
 单二进制、插件驱动的采集 agent，负责收集、处理、聚合并写出指标、日志和任意数据——300+ 个输入/输出/处理/聚合插件，全部由一个 TOML 文件接线串起来。
+
+![telegraf — 健康度雷达](../../assets/health/telegraf.zh.svg)
 
 ## 何时使用
 

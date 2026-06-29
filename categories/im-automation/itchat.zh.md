@@ -9,11 +9,62 @@ license: MIT
 maturity: abandoned — last pushed 2023-09 (~3y dormant); built on WeChat's now-defunct web protocol, mostly non-functional for new accounts (2026-06)
 last_verified: 2026-06-28
 type: library
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:54:33Z
+  overall: C
+  overall_score: 1.5
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: E
+      raw:
+        archived: false
+        last_commit_age_days: 2833
+        active_weeks_13: 0
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: C
+      raw:
+        registry: pypi.org
+        canonical_package: itchat
+        dependent_repos_count: 394
+        downloads_last_month: 23586
+        graph_tier: C
+        volume_tier: C
+        cross_check_divergence: null
+    longevity:
+      grade: E
+      raw:
+        repo_age_days: 3814
+        last_commit_age_days: 2833
+        cohort: library
+    governance:
+      grade: "?"
+      raw: {}
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: no_traffic }
+    governance: { reason: unattributable }
 ---
 
 # ItChat
 
 面向微信**个人号**的优雅 Python API——历史上用来在网页版（`wx.qq.com`）微信协议之上搭聊天机器人和 IM 自动化。**话说白了：这个项目已基本废弃（最后 push 约 2023-09），而它依赖的微信网页协议早已被大面积关停，所以对绝大多数账号而言，ItChat 已经登不上、跑不起来了。** 它如今主要还有意义的地方在于作为参考代码，而不是你今天能拿来交付的工具。
+
+![itchat — 健康度雷达](../../assets/health/itchat.zh.svg)
 
 ## 何时使用
 

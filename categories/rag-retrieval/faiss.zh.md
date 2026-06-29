@@ -9,11 +9,68 @@ license: MIT
 maturity: v1.14.x, active (2026-06)
 last_verified: 2026-06-28
 type: library
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:13:47Z
+  overall: A
+  overall_score: 3.83
+  scored_axes: 6
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 4
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: B
+      raw:
+        median_ttfr_hours: 62.6
+        qualifying_issues: 15
+        band: default
+        window_offset_days: 4
+    adoption:
+      grade: A
+      raw:
+        registry: pypi.org
+        canonical_package: faiss-cpu
+        dependent_repos_count: 5592
+        downloads_last_month: 18313484
+        graph_tier: B
+        volume_tier: A
+        cross_check_divergence: 1.13
+    longevity:
+      grade: A
+      raw:
+        repo_age_days: 3429
+        last_commit_age_days: 4
+        cohort: library
+    governance:
+      grade: A
+      raw:
+        active_maintainers_12mo: 49
+        top1_share: 0.211
+        top3_share: 0.48
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # FAISS
 
 Meta FAIR 出品的 C++ 库（带 NumPy 友好的 Python 绑定），用于稠密向量的高效相似度检索与聚类——它是众多向量库底层那个事实标准的进程内 ANN 索引（IVF / HNSW / PQ，CPU + GPU）。
+
+![faiss — 健康度雷达](../../assets/health/faiss.zh.svg)
 
 ## 何时使用
 

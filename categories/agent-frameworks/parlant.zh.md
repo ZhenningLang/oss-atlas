@@ -9,11 +9,68 @@ license: Apache-2.0
 maturity: v3.3.2, active (2026-06)
 last_verified: 2026-06-28
 type: framework
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:25:15Z
+  overall: B
+  overall_score: 3.0
+  scored_axes: 6
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 4
+        active_weeks_13: 10
+        carve_out: null
+    responsiveness:
+      grade: B
+      raw:
+        median_ttfr_hours: 48.2
+        qualifying_issues: 5
+        band: default
+        window_offset_days: 0
+    adoption:
+      grade: D
+      raw:
+        registry: pypi.org
+        canonical_package: parlant
+        dependent_repos_count: 0
+        downloads_last_month: 10560
+        graph_tier: E
+        volume_tier: D
+        cross_check_divergence: null
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 865
+        last_commit_age_days: 4
+        cohort: framework
+    governance:
+      grade: A
+      raw:
+        active_maintainers_12mo: 35
+        top1_share: 0.355
+        top3_share: 0.725
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # Parlant
 
 一个用于构建可靠、可控的面向客户 LLM agent 的 Python 框架——你用声明式的「guidelines」（约束 agent 行为的行为规则）来掌舵，而不是手调一个巨型 prompt 再祈祷它扛得住。
+
+![parlant — 健康度雷达](../../assets/health/parlant.zh.svg)
 
 ## 何时使用
 

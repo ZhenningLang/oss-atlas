@@ -9,11 +9,56 @@ license: MIT
 maturity: dated — coasting (last pushed 2024-06, ~2y idle) and version-fragile; patches the macOS WeChat client binary, so it breaks on WeChat updates and is likely non-functional on current WeChat (2026-06)
 last_verified: 2026-06-28
 type: tool
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:54:47Z
+  overall: D
+  overall_score: 1.33
+  scored_axes: 3
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: E
+      raw:
+        archived: false
+        last_commit_age_days: 1196
+        active_weeks_13: 0
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: E
+      raw:
+        repo_age_days: 3357
+        last_commit_age_days: 1196
+        cohort: tool
+    governance:
+      grade: "?"
+      raw: {}
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: no_traffic }
+    adoption: { reason: ambiguous }
+    governance: { reason: unattributable }
 ---
 
 # WeChatPlugin-MacOS
 
 一个 macOS 微信**客户端魔改插件**（微信小助手）——消息防撤回、自动回复、远程控制、微信多开，以及一堆界面便利功能——做法是**把插件注入到 macOS 上的 WeChat.app 里**。**话说白了：它靠对*特定*微信版本的客户端二进制打补丁来工作，所以微信一更新它就坏；仓库已沉寂约 2 年（最后 push 于 2024-06）、针对的是老版本微信，因此在当前微信上几乎可以肯定已经跑不起来了。**
+
+![wechatplugin-macos — 健康度雷达](../../assets/health/wechatplugin-macos.zh.svg)
 
 ## 何时使用
 

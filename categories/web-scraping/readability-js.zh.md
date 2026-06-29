@@ -9,11 +9,63 @@ license: Apache-2.0
 maturity: v0.6.0, active (low cadence), ~11.3k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:24:04Z
+  overall: B
+  overall_score: 2.75
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: B
+      raw:
+        archived: false
+        last_commit_age_days: 223
+        active_weeks_13: 0
+        carve_out: mature_library_lindy
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: A
+      raw:
+        registry: npmjs.org
+        canonical_package: "@mozilla/readability"
+        dependent_repos_count: 1293
+        downloads_last_month: 9256833
+        graph_tier: B
+        volume_tier: A
+        cross_check_divergence: 1.28
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 4164
+        last_commit_age_days: 223
+        cohort: library
+    governance:
+      grade: C
+      raw:
+        active_maintainers_12mo: 2
+        top1_share: 0.5
+        top3_share: 1.0
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: "?"
+      raw: {}
+  unknowns:
+    responsiveness: { reason: no_traffic }
+    risk_license: { reason: license_unparsed }
 ---
 
 # Readability.js
 
 Firefox Reader View 背后那个 readability 库的独立版本——给它一个 DOM document，拿回文章的标题、作者署名和清理过的正文，导航、广告和样板内容都被剥掉。
+
+![readability-js — 健康度雷达](../../assets/health/readability-js.zh.svg)
 
 ## 何时使用
 

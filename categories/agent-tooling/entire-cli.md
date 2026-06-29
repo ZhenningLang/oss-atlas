@@ -9,11 +9,63 @@ license: MIT
 maturity: v0.7.x line, active as of 2026-06 (latest release v0.7.7, 2026-06-18); pre-1.0
 last_verified: 2026-06-26
 type: tool
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:35:49Z
+  overall: B
+  overall_score: 3.4
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 1
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 18.3
+        qualifying_issues: 36
+        band: relaxed_solo
+        window_offset_days: 13
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: D
+      raw:
+        repo_age_days: 178
+        last_commit_age_days: 1
+        cohort: tool
+    governance:
+      grade: A
+      raw:
+        active_maintainers_12mo: 50
+        top1_share: 0.22
+        top3_share: 0.469
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    adoption: { reason: ambiguous }
 ---
 
 # Entire
 
 A Git-native CLI (`entire`) that hooks into your workflow to capture AI coding-agent sessions — prompts, responses, tool calls, files changed, token usage — and indexes them as checkpoints alongside your commits on a separate `entire/checkpoints/v1` branch, giving you a searchable, rewindable record of *how* code was written. Single Go binary; fully local, no hosted account required for core use.
+
+![entire-cli — health radar](../../assets/health/entire-cli.svg)
 
 ## When to use
 

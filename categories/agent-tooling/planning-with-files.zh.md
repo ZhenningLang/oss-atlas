@@ -9,11 +9,60 @@ license: MIT
 maturity: v3.1.3 (2026-06-16), active; installs across 60+ agents via the SKILL.md standard
 last_verified: 2026-06-26
 type: skill-pack
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:36:19Z
+  overall: B
+  overall_score: 3.0
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 13
+        active_weeks_13: 10
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 177
+        last_commit_age_days: 13
+        cohort: skill-pack
+    governance:
+      grade: C
+      raw:
+        active_maintainers_12mo: 42
+        top1_share: 0.733
+        top3_share: 0.765
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: type_na }
+    adoption: { reason: no_package_structural }
 ---
 
 # Planning with Files
 
 一个遵循 SKILL.md 标准的 skill，让编码 agent 把 `task_plan.md` / `findings.md` / `progress.md` 写到磁盘上，从而在 `/clear`、上下文压缩和崩溃中存活——Manus 风格的文件化规划，带一个可选的完成闸（completion gate），外加各 IDE 的生命周期 hook。
+
+![planning-with-files — 健康度雷达](../../assets/health/planning-with-files.zh.svg)
 
 ## 何时使用
 

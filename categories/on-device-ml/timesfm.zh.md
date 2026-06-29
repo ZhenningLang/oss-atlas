@@ -9,11 +9,66 @@ license: Apache-2.0
 maturity: Headline model TimesFM 2.5 (200M, released 2025-09-15); repo release v2.0.1 (2026-06-11); active, Google Research (as of 2026-06)
 last_verified: 2026-06-26
 type: model
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:10:09Z
+  overall: B
+  overall_score: 3.2
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: B
+      raw:
+        archived: false
+        last_commit_age_days: 21
+        active_weeks_13: 5
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: C
+      raw:
+        registry: pypi.org
+        canonical_package: timesfm
+        dependent_repos_count: 0
+        downloads_last_month: 49632
+        graph_tier: E
+        volume_tier: C
+        cross_check_divergence: null
+    longevity:
+      grade: A
+      raw:
+        repo_age_days: 791
+        last_commit_age_days: 21
+        cohort: model
+    governance:
+      grade: B
+      raw:
+        active_maintainers_12mo: 7
+        top1_share: 0.347
+        top3_share: 0.853
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: type_na }
 ---
 
 # TimesFM
 
 Google Research 出品的预训练**时间序列基础模型**（decoder-only）：喂入一段单变量历史，它直接给出零样本（zero-shot）点预测和分位数预测——无需按数据集逐一训练——体量足够小（200M），可在本地 CPU/GPU 上跑。
+
+![timesfm — 健康度雷达](../../assets/health/timesfm.zh.svg)
 
 ## 何时使用
 

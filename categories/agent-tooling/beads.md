@@ -9,11 +9,68 @@ license: MIT
 maturity: v1.x line, active as of 2026-06; author still self-describes as "alpha" (see caveats)
 last_verified: 2026-06-26
 type: tool
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:35:06Z
+  overall: B
+  overall_score: 2.83
+  scored_axes: 6
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 3
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 80.7
+        qualifying_issues: 14
+        band: relaxed_solo
+        window_offset_days: 11
+    adoption:
+      grade: D
+      raw:
+        registry: pypi.org
+        canonical_package: beads-mcp
+        dependent_repos_count: 0
+        downloads_last_month: 18772
+        graph_tier: E
+        volume_tier: D
+        cross_check_divergence: null
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 260
+        last_commit_age_days: 3
+        cohort: tool
+    governance:
+      grade: C
+      raw:
+        active_maintainers_12mo: 95
+        top1_share: 0.645
+        top3_share: 0.787
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # beads
 
 A dependency-aware, version-controlled task/issue graph that gives AI coding agents persistent structured memory — backed by Dolt (versioned SQL), shipped as a single Go binary (`bd`). Started by Steve Yegge; repo moved from `steveyegge/beads` to the `gastownhall` org.
+
+![beads — health radar](../../assets/health/beads.svg)
 
 ## When to use
 

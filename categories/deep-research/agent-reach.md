@@ -9,11 +9,63 @@ license: MIT
 maturity: v1.5.0 (2026-06-11), active, ~41.6k stars (as of 2026-06)
 last_verified: 2026-06-26
 type: tool
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:44:57Z
+  overall: B
+  overall_score: 2.6
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: B
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 5
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 84.4
+        qualifying_issues: 18
+        band: relaxed_solo
+        window_offset_days: 10
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: D
+      raw:
+        repo_age_days: 125
+        last_commit_age_days: 0
+        cohort: tool
+    governance:
+      grade: D
+      raw:
+        active_maintainers_12mo: 31
+        top1_share: 0.852
+        top3_share: 0.868
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    adoption: { reason: ambiguous }
 ---
 
 # Agent-Reach
 
 An access/reach layer (not a research agent): a CLI that installs and routes a stack of upstream tools so your agent can read and search Twitter/X, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu, RSS and the open web — "zero API fees".
+
+![agent-reach — health radar](../../assets/health/agent-reach.svg)
 
 ## When to use
 

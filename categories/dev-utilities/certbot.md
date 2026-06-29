@@ -9,11 +9,66 @@ license: Apache-2.0
 maturity: v5.6.0, active (2026-06)
 last_verified: 2026-06-28
 type: tool
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:46:38Z
+  overall: A
+  overall_score: 3.6
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 5
+        active_weeks_13: 11
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 61.5
+        qualifying_issues: 27
+        band: relaxed_solo
+        window_offset_days: 4
+    adoption:
+      grade: B
+      raw:
+        registry: pypi.org
+        canonical_package: certbot
+        dependent_repos_count: 470
+        downloads_last_month: 606164
+        graph_tier: C
+        volume_tier: B
+        cross_check_divergence: 1.05
+    longevity:
+      grade: A
+      raw:
+        repo_age_days: 4247
+        last_commit_age_days: 5
+        cohort: tool
+    governance:
+      grade: B
+      raw:
+        active_maintainers_12mo: 20
+        top1_share: 0.41
+        top3_share: 0.863
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: "?"
+      raw: {}
+  unknowns:
+    risk_license: { reason: license_unparsed }
 ---
 
 # Certbot
 
 The EFF/Let's Encrypt ACME client that obtains and auto-renews free, browser-trusted TLS certificates, with plugins that wire the certs straight into nginx/Apache.
+
+![certbot — health radar](../../assets/health/certbot.svg)
 
 ## When to use
 

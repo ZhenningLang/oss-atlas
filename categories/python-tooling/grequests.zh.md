@@ -9,11 +9,62 @@ license: BSD-2-Clause
 maturity: v0.7.0, low-activity (2026-06)
 last_verified: 2026-06-28
 type: library
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:12:39Z
+  overall: C
+  overall_score: 2.25
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: D
+      raw:
+        archived: false
+        last_commit_age_days: 690
+        active_weeks_13: 0
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: B
+      raw:
+        registry: pypi.org
+        canonical_package: grequests
+        dependent_repos_count: 1000
+        downloads_last_month: 456092
+        graph_tier: B
+        volume_tier: B
+        cross_check_divergence: 1.02
+    longevity:
+      grade: D
+      raw:
+        repo_age_days: 5163
+        last_commit_age_days: 690
+        cohort: library
+    governance:
+      grade: "?"
+      raw: {}
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: BSD-2-Clause
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: no_traffic }
+    governance: { reason: unattributable }
 ---
 
 # GRequests
 
 Requests + Gevent：用熟悉的 `requests` API 并发发出大量 HTTP 请求，通过 `map()`/`imap()` 收集结果，而不必自己写异步代码。
+
+![grequests — 健康度雷达](../../assets/health/grequests.zh.svg)
 
 ## 何时使用
 

@@ -9,11 +9,63 @@ license: MIT
 maturity: v0.3.0, active (2026-06)
 last_verified: 2026-06-26
 type: framework
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:57:39Z
+  overall: C
+  overall_score: 2.2
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: C
+      raw:
+        archived: false
+        last_commit_age_days: 61
+        active_weeks_13: 1
+        carve_out: null
+    responsiveness:
+      grade: C
+      raw:
+        median_ttfr_hours: 73.4
+        qualifying_issues: 1
+        band: default
+        window_offset_days: 0
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 376
+        last_commit_age_days: 61
+        cohort: framework
+    governance:
+      grade: D
+      raw:
+        active_maintainers_12mo: 30
+        top1_share: 0.811
+        top3_share: 0.852
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    adoption: { reason: ambiguous }
 ---
 
 # Agent Lightning
 
 微软出品的框架，把 agent 的执行与训练后端解耦，用强化学习、提示优化或 SFT 来训练和优化*任意框架*构建的 AI agent，现有 agent 代码几乎不用改。
+
+![agent-lightning — 健康度雷达](../../assets/health/agent-lightning.zh.svg)
 
 ## 何时使用
 

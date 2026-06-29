@@ -9,11 +9,69 @@ license: Unlicensed (EULA)
 maturity: active, single-maintainer, ~1.3k stars (2026-06)
 last_verified: 2026-06-28
 type: tool
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:15:25Z
+  overall: D
+  overall_score: 1.83
+  scored_axes: 6
+  capped: true
+  cap_reason: "source-available/no-license: NONE"
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: C
+      raw:
+        archived: false
+        last_commit_age_days: 41
+        active_weeks_13: 1
+        carve_out: null
+    responsiveness:
+      grade: B
+      raw:
+        median_ttfr_hours: 9.6
+        qualifying_issues: 3
+        band: relaxed_solo
+        window_offset_days: 8
+    adoption:
+      grade: E
+      raw:
+        registry: null
+        canonical_package: null
+        dependent_repos_count: 0
+        downloads_last_month: null
+        graph_tier: E
+        volume_tier: null
+        cross_check_divergence: null
+        archived: false
+    longevity:
+      grade: A
+      raw:
+        repo_age_days: 3900
+        last_commit_age_days: 41
+        cohort: tool
+    governance:
+      grade: C
+      raw:
+        active_maintainers_12mo: 2
+        top1_share: 0.875
+        top3_share: 1.0
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: E
+      raw:
+        spdx_id: NONE
+        permissiveness: source_available
+        relicense_36mo: false
+        content_license: null
 ---
 
 # Just Read
 
 一个可定制的“阅读模式”浏览器扩展，把文章页里的广告、弹窗和导航剥掉，重排成干净可读的视图——还带可选的编辑、高亮，以及（付费版的）跨设备保存和 OpenAI 摘要。
+
+![just-read — 健康度雷达](../../assets/health/just-read.zh.svg)
 
 ## 何时使用
 

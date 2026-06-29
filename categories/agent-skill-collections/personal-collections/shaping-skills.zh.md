@@ -9,11 +9,60 @@ license: NOASSERTION
 maturity: no tagged releases, last pushed 2026-04 (as of 2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:32:12Z
+  overall: D
+  overall_score: 1.25
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: C
+      raw:
+        archived: false
+        last_commit_age_days: 80
+        active_weeks_13: 1
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 151
+        last_commit_age_days: 80
+        cohort: skill-pack
+    governance:
+      grade: D
+      raw:
+        active_maintainers_12mo: 1
+        top1_share: 1.0
+        top3_share: 1.0
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: E
+      raw:
+        spdx_id: NONE
+        permissiveness: source_available
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: type_na }
+    adoption: { reason: no_package_structural }
 ---
 
 # shaping-skills
 
 Ryan Singer 的个人 Claude Code 技能包，把 Shape Up 的「shaping（塑形）」流程——框定问题、breadboarding 梳理交互、产出 framing/kickoff 文档——带进 coding agent，让 AI 在写任何代码之前先帮你想清楚「要做什么」。
+
+![shaping-skills — 健康度雷达](../../../assets/health/shaping-skills.zh.svg)
 
 ## 何时使用
 

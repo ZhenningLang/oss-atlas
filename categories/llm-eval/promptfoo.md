@@ -9,11 +9,68 @@ license: MIT
 maturity: v0.121.x, active (2026-06)
 last_verified: 2026-06-26
 type: tool
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:56:47Z
+  overall: A
+  overall_score: 3.67
+  scored_axes: 6
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 0.0
+        qualifying_issues: 51
+        band: relaxed_solo
+        window_offset_days: 10
+    adoption:
+      grade: C
+      raw:
+        registry: npmjs.org
+        canonical_package: promptfoo
+        dependent_repos_count: 1
+        downloads_last_month: 415776
+        graph_tier: D
+        volume_tier: C
+        cross_check_divergence: null
+    longevity:
+      grade: A
+      raw:
+        repo_age_days: 1158
+        last_commit_age_days: 0
+        cohort: tool
+    governance:
+      grade: A
+      raw:
+        active_maintainers_12mo: 58
+        top1_share: 0.392
+        top3_share: 0.672
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # promptfoo
 
 A local-first CLI + library that turns prompt/model/RAG/agent evaluation into declarative YAML test suites, with a built-in red-teaming/vulnerability scanner and CI/CD hooks.
+
+![promptfoo — health radar](../../assets/health/promptfoo.svg)
 
 ## When to use
 

@@ -9,11 +9,63 @@ license: MIT
 maturity: v2.16.1, active (2026-05), ~88.3k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: app
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:56:16Z
+  overall: B
+  overall_score: 3.2
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: C
+      raw:
+        archived: false
+        last_commit_age_days: 45
+        active_weeks_13: 1
+        carve_out: null
+    responsiveness:
+      grade: B
+      raw:
+        median_ttfr_hours: 113.2
+        qualifying_issues: 4
+        band: relaxed_solo
+        window_offset_days: 5
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: A
+      raw:
+        repo_age_days: 1207
+        last_commit_age_days: 45
+        cohort: app
+    governance:
+      grade: B
+      raw:
+        active_maintainers_12mo: 4
+        top1_share: 0.417
+        top3_share: 0.917
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    adoption: { reason: no_package_structural }
 ---
 
 # NextChat
 
 一个轻量、跨平台（Web/iOS/macOS/Android/Linux/Windows）的可自部署 AI 聊天客户端，在前面接住众多服务商（OpenAI/Claude/Gemini/DeepSeek/Ollama/…），支持一键 Vercel 部署和自带 key(BYOK)。
+
+![nextchat — 健康度雷达](../../assets/health/nextchat.zh.svg)
 
 ## 何时使用
 

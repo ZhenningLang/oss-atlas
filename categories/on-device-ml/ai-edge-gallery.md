@@ -9,11 +9,63 @@ license: Apache-2.0
 maturity: v1.0.16 (2026-06-23), active, ~23.9k stars (2026-06-26); Google-maintained
 last_verified: 2026-06-26
 type: app
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:09:11Z
+  overall: A
+  overall_score: 3.6
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 4
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 13.6
+        qualifying_issues: 54
+        band: relaxed_solo
+        window_offset_days: 9
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 455
+        last_commit_age_days: 4
+        cohort: app
+    governance:
+      grade: A
+      raw:
+        active_maintainers_12mo: 11
+        top1_share: 0.247
+        top3_share: 0.692
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    adoption: { reason: no_package_structural }
 ---
 
 # Google AI Edge Gallery
 
 A Google-maintained, end-user showcase **app** that runs open LLMs (Gemma-first) fully on-device — chat, Ask Image, Audio Scribe, Prompt Lab, Agent Skills/MCP and a benchmark tool — on Android, iOS and macOS, powered by LiteRT + Google AI Edge. It is a *runnable demo and evaluation harness*, not a library you embed.
+
+![ai-edge-gallery — health radar](../../assets/health/ai-edge-gallery.svg)
 
 ## When to use
 

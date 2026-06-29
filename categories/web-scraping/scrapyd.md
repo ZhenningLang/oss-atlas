@@ -9,11 +9,66 @@ license: BSD-3-Clause
 maturity: v1.6.0 (2025-07), active, ~3.1k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: service
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:24:58Z
+  overall: B
+  overall_score: 3.0
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: B
+      raw:
+        archived: false
+        last_commit_age_days: 10
+        active_weeks_13: 4
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: C
+      raw:
+        registry: pypi.org
+        canonical_package: scrapyd
+        dependent_repos_count: 525
+        downloads_last_month: 45155
+        graph_tier: C
+        volume_tier: C
+        cross_check_divergence: null
+    longevity:
+      grade: A
+      raw:
+        repo_age_days: 4896
+        last_commit_age_days: 10
+        cohort: service
+    governance:
+      grade: C
+      raw:
+        active_maintainers_12mo: 2
+        top1_share: 0.977
+        top3_share: 1.0
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: BSD-3-Clause
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: no_traffic }
 ---
 
 # Scrapyd
 
 A service daemon for deploying and running Scrapy spiders over a JSON HTTP API — eggify a Scrapy project, upload it, and schedule/cancel/monitor crawl jobs remotely. The canonical "run Scrapy in production" daemon, from the Scrapy org itself.
+
+![scrapyd — health radar](../../assets/health/scrapyd.svg)
 
 ## When to use
 

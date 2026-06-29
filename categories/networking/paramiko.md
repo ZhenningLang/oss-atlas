@@ -9,11 +9,68 @@ license: LGPL-2.1
 maturity: stable, active, ~9.8k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:05:59Z
+  overall: B
+  overall_score: 3.0
+  scored_axes: 6
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: B
+      raw:
+        archived: false
+        last_commit_age_days: 51
+        active_weeks_13: 2
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 4.0
+        qualifying_issues: 5
+        band: default
+        window_offset_days: 3
+    adoption:
+      grade: A
+      raw:
+        registry: pypi.org
+        canonical_package: paramiko
+        dependent_repos_count: 30613
+        downloads_last_month: 140365916
+        graph_tier: A
+        volume_tier: A
+        cross_check_divergence: 1.0
+    longevity:
+      grade: A
+      raw:
+        repo_age_days: 6356
+        last_commit_age_days: 51
+        cohort: library
+    governance:
+      grade: D
+      raw:
+        active_maintainers_12mo: 1
+        top1_share: 1.0
+        top3_share: 1.0
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: C
+      raw:
+        spdx_id: LGPL-2.1
+        permissiveness: weak_file_copyleft
+        relicense_36mo: false
+        content_license: null
 ---
 
 # Paramiko
 
 The leading pure-Python implementation of the SSHv2 protocol — client and server, with SFTP — letting Python code open SSH connections, run remote commands, and transfer files without shelling out to the `ssh` binary.
+
+![paramiko — health radar](../../assets/health/paramiko.svg)
 
 ## When to use
 

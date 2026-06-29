@@ -9,11 +9,66 @@ license: AGPL-3.0
 maturity: v13.0.2, active, ~75.1k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: app
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:08:06Z
+  overall: B
+  overall_score: 3.2
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: B
+      raw:
+        registry: npmjs.org
+        canonical_package: "@grafana/e2e-selectors"
+        dependent_repos_count: 904
+        downloads_last_month: 702530
+        graph_tier: C
+        volume_tier: B
+        cross_check_divergence: 1.02
+    longevity:
+      grade: A
+      raw:
+        repo_age_days: 4583
+        last_commit_age_days: 0
+        cohort: app
+    governance:
+      grade: A
+      raw:
+        active_maintainers_12mo: 238
+        top1_share: 0.04
+        top3_share: 0.102
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: D
+      raw:
+        spdx_id: AGPL-3.0
+        permissiveness: strong_network_copyleft
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: no_traffic }
 ---
 
 # Grafana
 
 一个看板与可观测性平台：它从你本来就在跑的数据源（Prometheus、Loki、Elasticsearch、InfluxDB、Postgres 等等）查询指标、日志和追踪，渲染成面板，并在上面叠加告警——它自己几乎不存任何数据。
+
+![grafana — 健康度雷达](../../assets/health/grafana.zh.svg)
 
 ## 何时使用
 

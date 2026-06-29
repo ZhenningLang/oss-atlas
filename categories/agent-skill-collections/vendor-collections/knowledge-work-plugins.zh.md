@@ -9,11 +9,60 @@ license: Apache-2.0
 maturity: active, no tagged releases, ~22.1k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: skill-pack
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:34:01Z
+  overall: B
+  overall_score: 3.25
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 1
+        active_weeks_13: 12
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 157
+        last_commit_age_days: 1
+        cohort: skill-pack
+    governance:
+      grade: B
+      raw:
+        active_maintainers_12mo: 24
+        top1_share: 0.407
+        top3_share: 0.681
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: type_na }
+    adoption: { reason: no_package_structural }
 ---
 
 # Anthropic Knowledge Work Plugins
 
 Anthropic 官方的一组 plugin/skill 合集，面向**知识工作**——文档、沟通、调研与日常办公任务——可安装进 Claude，而非面向写代码的工作流。
+
+![knowledge-work-plugins — 健康度雷达](../../../assets/health/knowledge-work-plugins.zh.svg)
 
 ## 何时使用
 

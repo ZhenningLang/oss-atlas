@@ -9,11 +9,66 @@ license: BSD-3-Clause
 maturity: v0.7.1, low-volume but maintained, ~1.1k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:40:48Z
+  overall: B
+  overall_score: 2.6
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: B
+      raw:
+        archived: false
+        last_commit_age_days: 251
+        active_weeks_13: 0
+        carve_out: mature_library_lindy
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: B
+      raw:
+        registry: pypi.org
+        canonical_package: captcha
+        dependent_repos_count: 506
+        downloads_last_month: 357193
+        graph_tier: C
+        volume_tier: B
+        cross_check_divergence: 1.02
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 4234
+        last_commit_age_days: 251
+        cohort: library
+    governance:
+      grade: D
+      raw:
+        active_maintainers_12mo: 1
+        top1_share: 1.0
+        top3_share: 1.0
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: BSD-3-Clause
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: no_traffic }
 ---
 
 # captcha (lepture)
 
 一个小巧的 Python 库，把你给定的字符串渲染成扭曲的图片验证码，或合成语音验证码——挑战文本、存储和校验都归你管，它只负责画图和发声。
+
+![lepture-captcha — 健康度雷达](../../assets/health/lepture-captcha.zh.svg)
 
 ## 何时使用
 

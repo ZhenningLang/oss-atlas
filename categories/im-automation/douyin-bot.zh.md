@@ -9,11 +9,56 @@ license: MIT
 maturity: v0.0.1 demo, no commits since 2020-05, ~9.6k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: app
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:54:16Z
+  overall: D
+  overall_score: 1.33
+  scored_axes: 3
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: E
+      raw:
+        archived: false
+        last_commit_age_days: 2245
+        active_weeks_13: 0
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: E
+      raw:
+        repo_age_days: 2955
+        last_commit_age_days: 2245
+        cohort: app
+    governance:
+      grade: "?"
+      raw: {}
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: no_traffic }
+    adoption: { reason: no_package_structural }
+    governance: { reason: unattributable }
 ---
 
 # Douyin-Bot
 
 一个 2018 年的 Python 玩具/demo，通过 ADB 驱动一部真实 Android 手机自动刷抖音，用云 API 给人脸打分，并自动给“漂亮”的视频点赞。很有名，约 9.6k star——但自 2020 年起实质已死。
+
+![douyin-bot — 健康度雷达](../../assets/health/douyin-bot.zh.svg)
 
 ## 何时使用
 

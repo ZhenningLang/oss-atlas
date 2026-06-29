@@ -9,11 +9,66 @@ license: Apache-2.0
 maturity: v1.0.15, active, 2.4k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:43:49Z
+  overall: D
+  overall_score: 2.2
+  scored_axes: 5
+  capped: true
+  cap_reason: "source-available/no-license: NONE"
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: B
+      raw:
+        archived: false
+        last_commit_age_days: 142
+        active_weeks_13: 0
+        carve_out: mature_library_lindy
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: B
+      raw:
+        registry: pypi.org
+        canonical_package: mysql-replication
+        dependent_repos_count: 111
+        downloads_last_month: 394878
+        graph_tier: C
+        volume_tier: B
+        cross_check_divergence: 1.0
+    longevity:
+      grade: B
+      raw:
+        repo_age_days: 5035
+        last_commit_age_days: 142
+        cohort: library
+    governance:
+      grade: C
+      raw:
+        active_maintainers_12mo: 5
+        top1_share: 0.667
+        top3_share: 0.889
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: E
+      raw:
+        spdx_id: NONE
+        permissiveness: source_available
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: no_traffic }
 ---
 
 # python-mysql-replication
 
 MySQL 复制协议的纯 Python 实现（构建于 PyMySQL）：以伪从库身份连接、流式读取 binlog，把解析后的 row／query／rotate 事件作为 Python 对象交给你——大多数 Python MySQL CDC 工具底下的那块积木。
+
+![python-mysql-replication — 健康度雷达](../../assets/health/python-mysql-replication.zh.svg)
 
 ## 何时使用
 

@@ -9,11 +9,68 @@ license: Apache-2.0
 maturity: v6.1.0, active, ~73.6k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: app
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:41:45Z
+  overall: A
+  overall_score: 3.83
+  scored_axes: 6
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 0.0
+        qualifying_issues: 36
+        band: relaxed_solo
+        window_offset_days: 13
+    adoption:
+      grade: B
+      raw:
+        registry: npmjs.org
+        canonical_package: "@superset-ui/switchboard"
+        dependent_repos_count: 145
+        downloads_last_month: 535009
+        graph_tier: C
+        volume_tier: B
+        cross_check_divergence: 1.18
+    longevity:
+      grade: A
+      raw:
+        repo_age_days: 3996
+        last_commit_age_days: 0
+        cohort: app
+    governance:
+      grade: A
+      raw:
+        active_maintainers_12mo: 116
+        top1_share: 0.222
+        top3_share: 0.363
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # Apache Superset
 
 A self-hosted, enterprise-grade BI web application: explore SQL databases through a no-code chart builder and SQL Lab, then assemble the results into interactive dashboards backed by a lightweight semantic layer.
+
+![superset — health radar](../../assets/health/superset.svg)
 
 ## When to use
 

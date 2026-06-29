@@ -9,11 +9,63 @@ license: Apache-2.0
 maturity: v1.40.11 (2024-02), repo active (2026-06); CNCF Sandbox
 last_verified: 2026-06-28
 type: tool
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:49:24Z
+  overall: B
+  overall_score: 2.6
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: C
+      raw:
+        archived: false
+        last_commit_age_days: 96
+        active_weeks_13: 0
+        carve_out: null
+    responsiveness:
+      grade: C
+      raw:
+        median_ttfr_hours: 268.3
+        qualifying_issues: 2
+        band: relaxed_solo
+        window_offset_days: 1
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: B
+      raw:
+        repo_age_days: 3946
+        last_commit_age_days: 96
+        cohort: tool
+    governance:
+      grade: C
+      raw:
+        active_maintainers_12mo: 2
+        top1_share: 0.5
+        top3_share: 1.0
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    adoption: { reason: ambiguous }
 ---
 
 # SlimToolkit
 
 A CLI that inspects a container image, runs it to observe what it actually uses, then produces a minified, hardened image — often many times smaller — without changing your Dockerfile, and can auto-generate Seccomp/AppArmor profiles along the way.
+
+![slim — health radar](../../assets/health/slim.svg)
 
 ## When to use
 

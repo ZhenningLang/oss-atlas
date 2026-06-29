@@ -9,11 +9,68 @@ license: MIT
 maturity: v1.2.4, active, ~7.8k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:01:41Z
+  overall: A
+  overall_score: 3.5
+  scored_axes: 6
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: B
+      raw:
+        archived: false
+        last_commit_age_days: 47
+        active_weeks_13: 3
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 22.7
+        qualifying_issues: 11
+        band: default
+        window_offset_days: 2
+    adoption:
+      grade: A
+      raw:
+        registry: pypi.org
+        canonical_package: youtube-transcript-api
+        dependent_repos_count: 205
+        downloads_last_month: 32850802
+        graph_tier: C
+        volume_tier: A
+        cross_check_divergence: 1.03
+    longevity:
+      grade: A
+      raw:
+        repo_age_days: 2992
+        last_commit_age_days: 47
+        cohort: library
+    governance:
+      grade: C
+      raw:
+        active_maintainers_12mo: 6
+        top1_share: 0.769
+        top3_share: 0.885
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # youtube-transcript-api
 
 A Python library that fetches the transcript/subtitles (including auto-generated ones) for a YouTube video — no API key, no headless browser — by calling the same undocumented endpoint the YouTube web client uses.
+
+![youtube-transcript-api — health radar](../../assets/health/youtube-transcript-api.svg)
 
 ## When to use
 

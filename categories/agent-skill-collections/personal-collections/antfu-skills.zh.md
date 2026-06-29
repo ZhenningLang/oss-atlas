@@ -9,11 +9,60 @@ license: MIT
 maturity: no tagged releases, active (pushed 2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:30:23Z
+  overall: B
+  overall_score: 2.75
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: B
+      raw:
+        archived: false
+        last_commit_age_days: 6
+        active_weeks_13: 2
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 152
+        last_commit_age_days: 6
+        cohort: skill-pack
+    governance:
+      grade: C
+      raw:
+        active_maintainers_12mo: 11
+        top1_share: 0.79
+        top3_share: 0.871
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: type_na }
+    adoption: { reason: no_package_structural }
 ---
 
 # antfu/skills
 
 Anthony Fu 个人精选的 agent skill 集合，面向 Vue/Vite/Nuxt 生态——包含他本人的 ESLint/pnpm/Vitest/UnoCSS 偏好，以及从官方文档自动生成和外部 vendored 的 Vue、Nuxt、Pinia、Vite、VitePress、Vitest、UnoCSS、Slidev、VueUse 等 skill，通过 `skills` CLI 安装。
+
+![antfu-skills — 健康度雷达](../../../assets/health/antfu-skills.zh.svg)
 
 ## 何时使用
 

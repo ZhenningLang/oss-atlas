@@ -9,11 +9,60 @@ license: MIT
 maturity: v6.0.3, active (2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:08:18Z
+  overall: B
+  overall_score: 3.0
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 10
+        active_weeks_13: 12
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 263
+        last_commit_age_days: 10
+        cohort: skill-pack
+    governance:
+      grade: C
+      raw:
+        active_maintainers_12mo: 40
+        top1_share: 0.769
+        top3_share: 0.916
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: type_na }
+    adoption: { reason: no_package_structural }
 ---
 
 # Superpowers
 
 一套可组合的 skills 库，以插件形式把完整的 SDLC 方法论——头脑风暴 → 写计划 → TDD → subagent 驱动执行 → 验证——装进你的编程 agent。
+
+![superpowers — 健康度雷达](../../assets/health/superpowers.zh.svg)
 
 ## 何时使用
 

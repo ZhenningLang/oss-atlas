@@ -8,6 +8,8 @@ tools/health.py). Safe to run in a pre-commit hook.
 One card per LANGUAGE (no mixed scripts on a card):
   <slug>.md     -> assets/health/<slug>.svg     (English)
   <slug>.zh.md  -> assets/health/<slug>.zh.svg  (Chinese)
+If the same slug appears in multiple categories, the category path is prefixed:
+  categories/<cat>/<slug>.md -> assets/health/<cat>-<slug>.svg
 
 Usage:
   python3 tools/health_card.py categories/<cat>/<slug>.md [more pages...]
@@ -39,6 +41,7 @@ LANG = {
         "axes": ["Maintenance", "Responsiveness", "Adoption", "Longevity", "Bus Factor", "Permissiveness"],
         "tag": "HEALTH RADAR",
         "overall": "OVERALL",
+        "axes_scored": "AXES",
         "archived": "ARCHIVED",
         "ext": ".svg",
         "label_font": "'Arial Black','Helvetica Neue',Arial,sans-serif",
@@ -48,6 +51,7 @@ LANG = {
         "axes": ["维护活跃度", "响应速度", "采用广度", "长青度", "维护者分散度", "许可宽松度"],
         "tag": "健康度雷达",
         "overall": "总评",
+        "axes_scored": "已评分",
         "archived": "已归档",
         "ext": ".zh.svg",
         "label_font": "'PingFang SC','Hiragino Sans GB','Heiti SC','Microsoft YaHei',sans-serif",
@@ -71,6 +75,30 @@ def _v(i: int, frac: float) -> tuple[float, float]:
 
 def _esc(s: str) -> str:
     return s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+
+
+def base_slug(page: Path) -> str:
+    return page.name[: -len(".zh.md")] if page.name.endswith(".zh.md") else page.stem
+
+
+def duplicate_slugs(root: Path) -> set[str]:
+    counts: dict[str, int] = {}
+    for page in (root / "categories").rglob("*.md"):
+        if page.name.startswith("INDEX") or page.name.endswith(".zh.md"):
+            continue
+        counts[page.stem] = counts.get(page.stem, 0) + 1
+    return {slug for slug, count in counts.items() if count > 1}
+
+
+def card_stem_for_page(page: Path, duplicates: set[str]) -> str:
+    slug = base_slug(page)
+    if slug not in duplicates:
+        return slug
+    try:
+        rel_parent = page.parent.relative_to(ROOT / "categories")
+    except ValueError:
+        return slug
+    return f"{'-'.join(rel_parent.parts)}-{slug}"
 
 
 # ---------------------------------------------------------------- frontmatter
@@ -102,7 +130,7 @@ def parse_frontmatter(text: str) -> dict:
 
 
 # ---------------------------------------------------------------- renderer
-def render(lang: str, name: str, grades: list[str], overall: str, note: str, flags: list[str]) -> str:
+def render(lang: str, name: str, grades: list[str], overall: str, note: str, flags: list[str], scored_axes: str) -> str:
     cfg = LANG[lang]
     oc = TIER.get(overall, TIER["?"])[1]
     lf = cfg["label_font"]
@@ -234,6 +262,8 @@ def render(lang: str, name: str, grades: list[str], overall: str, note: str, fla
     nt = f"   {_esc(note)}" if note else ""
     s.append(f'<text x="{px}" y="252" font-size="11" letter-spacing="3" fill="{GOLD}" font-family="{lf}" font-weight="900">'
              f'{cfg["overall"]}{nt}</text>')
+    s.append(f'<text x="{px+150}" y="252" font-size="11" letter-spacing="2" fill="#8B949E" '
+             f'font-family="{lf}" font-weight="900" text-anchor="end">{cfg["axes_scored"]} {scored_axes}/6</text>')
     # axis rows
     y0 = 288
     for i, label in enumerate(cfg["axes"]):
@@ -263,7 +293,7 @@ def render(lang: str, name: str, grades: list[str], overall: str, note: str, fla
 
 
 # ---------------------------------------------------------------- page -> card
-def card_for_page(page: Path) -> Path | None:
+def card_for_page(page: Path, duplicates: set[str]) -> Path | None:
     fm = parse_frontmatter(page.read_text(encoding="utf-8"))
     health = fm.get("health")
     if not isinstance(health, dict):
@@ -272,6 +302,7 @@ def card_for_page(page: Path) -> Path | None:
     axes = health.get("axes", {})
     grades = [str(axes.get(k, {}).get("grade", "?")) for k in AXIS_KEYS]
     overall = str(health.get("overall", "?"))
+    scored_axes = str(health.get("scored_axes", sum(1 for g in grades if g != "?")))
     name = str(fm.get("name", page.stem))
 
     flags: list[str] = []
@@ -285,9 +316,9 @@ def card_for_page(page: Path) -> Path | None:
     if str(health.get("capped", "")).lower() == "true":
         note = str(health.get("cap_reason") or "")
 
-    svg = render(lang, name, grades, overall, note, flags[:3])
+    svg = render(lang, name, grades, overall, note, flags[:3], scored_axes)
     ASSETS.mkdir(parents=True, exist_ok=True)
-    out = ASSETS / (str(fm.get("slug", page.stem)) + LANG[lang]["ext"])
+    out = ASSETS / (card_stem_for_page(page, duplicates) + LANG[lang]["ext"])
     out.write_text(svg, encoding="utf-8")
     return out
 
@@ -300,9 +331,10 @@ def main(argv: list[str]) -> int:
         pages = [p for p in (ROOT / "categories").rglob("*.md") if not p.name.startswith("INDEX")]
     else:
         pages = [Path(a) if Path(a).is_absolute() else ROOT / a for a in argv]
+    duplicates = duplicate_slugs(ROOT)
     n = 0
     for page in pages:
-        out = card_for_page(page)
+        out = card_for_page(page, duplicates)
         if out:
             print(f"wrote {out.relative_to(ROOT)}")
             n += 1

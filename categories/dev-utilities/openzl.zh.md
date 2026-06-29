@@ -9,11 +9,60 @@ license: BSD-3-Clause
 maturity: v0.2.0, active, pre-1.0 (2026-05); format/API still changing
 last_verified: 2026-06-26
 type: library
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:49:10Z
+  overall: B
+  overall_score: 3.0
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 3
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: B
+      raw:
+        median_ttfr_hours: 102.4
+        qualifying_issues: 7
+        band: default
+        window_offset_days: 0
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: D
+      raw:
+        repo_age_days: 272
+        last_commit_age_days: 3
+        cohort: library
+    governance:
+      grade: A
+      raw:
+        active_maintainers_12mo: 29
+        top1_share: 0.274
+        top3_share: 0.637
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: "?"
+      raw: {}
+  unknowns:
+    adoption: { reason: ambiguous }
+    risk_license: { reason: license_unparsed }
 ---
 
 # OpenZL
 
 来自 Meta 的格式感知压缩框架：你描述结构化数据的形状，它据此构建一个专用压缩器，而它产出的所有结果都能被同一个通用解压器读取。
+
+![openzl — 健康度雷达](../../assets/health/openzl.zh.svg)
 
 ## 何时使用
 

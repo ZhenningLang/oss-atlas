@@ -9,11 +9,63 @@ license: Unlicense
 maturity: "active-but-slowing, last tagged release 2021.12.17, master still pushed ~2026-02, ~140.6k stars (2026-06)"
 last_verified: 2026-06-28
 type: tool
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:00:54Z
+  overall: B
+  overall_score: 2.6
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: C
+      raw:
+        archived: false
+        last_commit_age_days: 215
+        active_weeks_13: 0
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 9.9
+        qualifying_issues: 10
+        band: relaxed_solo
+        window_offset_days: 1
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 5720
+        last_commit_age_days: 215
+        cohort: tool
+    governance:
+      grade: D
+      raw:
+        active_maintainers_12mo: 1
+        top1_share: 1.0
+        top3_share: 1.0
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: Unlicense
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    adoption: { reason: registry_no_counts }
 ---
 
 # youtube-dl
 
 一个命令行程序，从 YouTube 及约 1000 个其他站点下载视频和音频；靠一套打包在同一个 Python 包里的按站点划分的“extractor（抽取器）”插件驱动。
+
+![youtube-dl — 健康度雷达](../../assets/health/youtube-dl.zh.svg)
 
 ## 何时使用
 

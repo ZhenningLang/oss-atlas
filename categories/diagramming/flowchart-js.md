@@ -9,11 +9,66 @@ license: MIT
 maturity: v1.18.0, active, ~8.7k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: library
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:50:53Z
+  overall: B
+  overall_score: 2.8
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: B
+      raw:
+        archived: false
+        last_commit_age_days: 165
+        active_weeks_13: 0
+        carve_out: mature_library_lindy
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: B
+      raw:
+        registry: npmjs.org
+        canonical_package: flowchart.js
+        dependent_repos_count: 1725
+        downloads_last_month: 82674
+        graph_tier: B
+        volume_tier: C
+        cross_check_divergence: 1.0
+    longevity:
+      grade: B
+      raw:
+        repo_age_days: 4730
+        last_commit_age_days: 165
+        cohort: library
+    governance:
+      grade: D
+      raw:
+        active_maintainers_12mo: 1
+        top1_share: 1.0
+        top3_share: 1.0
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: no_traffic }
 ---
 
 # flowchart.js
 
 A tiny JavaScript library that turns a small textual DSL into an SVG flowchart in the browser — define nodes and connections as text, get a rendered diagram.
+
+![flowchart-js — health radar](../../assets/health/flowchart-js.svg)
 
 ## When to use
 

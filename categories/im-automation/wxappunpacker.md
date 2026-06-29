@@ -9,11 +9,63 @@ license: GPL-3.0-or-later
 maturity: tombstone — repo emptied 2023-04, lineage archived, ~2.4k stars (as of 2026-06)
 last_verified: 2026-06-28
 type: tool
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:55:01Z
+  overall: E
+  overall_score: 0.0
+  scored_axes: 4
+  capped: true
+  cap_reason: "source-available/no-license: NONE"
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: E
+      raw:
+        archived: false
+        last_commit_age_days: 1178
+        active_weeks_13: 0
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: E
+      raw:
+        registry: null
+        canonical_package: null
+        dependent_repos_count: 0
+        downloads_last_month: null
+        graph_tier: E
+        volume_tier: null
+        cross_check_divergence: null
+        archived: false
+    longevity:
+      grade: E
+      raw:
+        repo_age_days: 2402
+        last_commit_age_days: 1178
+        cohort: tool
+    governance:
+      grade: "?"
+      raw: {}
+    risk_license:
+      grade: E
+      raw:
+        spdx_id: NONE
+        permissiveness: source_available
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: no_traffic }
+    governance: { reason: empty_or_gated }
 ---
 
 # wxappUnpacker
 
 A WeChat mini-program (微信小程序) `.wxapkg` decompiler/unpacker — except *this particular fork* has been gutted: the `xdmjun/wxappUnpacker` repo now contains a single `README.md` whose entire content is the literal string `del`. It is a tombstone for a tool that lives on only in forks.
+
+![wxappunpacker — health radar](../../assets/health/wxappunpacker.svg)
 
 ## When to use
 

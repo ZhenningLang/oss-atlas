@@ -9,11 +9,53 @@ license: MIT
 maturity: "research demo (orig. 'Visual ChatGPT', Microsoft); last pushed 2024-01, no commits since — abandoned in practice (as of 2026-06)"
 last_verified: 2026-06-28
 type: app
+health:
+  schema: 1
+  computed_at: 2026-06-29T10:05:29Z
+  overall: "?"
+  overall_score: null
+  scored_axes: 2
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: E
+      raw:
+        archived: false
+        last_commit_age_days: 1096
+        active_weeks_13: 0
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: E
+      raw:
+        repo_age_days: 1215
+        last_commit_age_days: 1096
+        cohort: app
+    governance:
+      grade: "?"
+      raw: {}
+    risk_license:
+      grade: "?"
+      raw: {}
+  unknowns:
+    responsiveness: { reason: no_traffic }
+    adoption: { reason: no_package_structural }
+    governance: { reason: unattributable }
+    risk_license: { reason: license_unparsed }
 ---
 
 # TaskMatrix
 
 一个历史性的研究 demo（最初叫「Visual ChatGPT」，出自微软）：它把 ChatGPT 接到一组固定的视觉基础模型上，让你能用对话来给图片做描述、生成和编辑——作为早期「工具路由 agent」的设计样本很有意思，但自 2024 年初起已停更，并已被现代多模态大模型取代。
+
+![taskmatrix — 健康度雷达](../../assets/health/taskmatrix.zh.svg)
 
 ## 何时使用
 

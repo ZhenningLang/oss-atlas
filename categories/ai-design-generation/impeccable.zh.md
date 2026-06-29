@@ -9,11 +9,68 @@ license: Apache-2.0
 maturity: CLI v3.1.0 / Skill v3.8.0, active (2026-06)
 last_verified: 2026-06-26
 type: tool
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:38:45Z
+  overall: B
+  overall_score: 2.67
+  scored_axes: 6
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 29.8
+        qualifying_issues: 51
+        band: relaxed_solo
+        window_offset_days: 1
+    adoption:
+      grade: D
+      raw:
+        registry: npmjs.org
+        canonical_package: impeccable
+        dependent_repos_count: 0
+        downloads_last_month: 1842
+        graph_tier: E
+        volume_tier: D
+        cross_check_divergence: null
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 225
+        last_commit_age_days: 0
+        cohort: tool
+    governance:
+      grade: D
+      raw:
+        active_maintainers_12mo: 28
+        top1_share: 0.898
+        top3_share: 0.941
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # Impeccable
 
 面向 AI coding agent 的设计语言层：一个 `/impeccable` skill（约 23 个子命令）外加一个独立 CLI，用 44 条确定性 detector 规则（无 LLM、无 API key）扫描 AI 生成的前端产物。
+
+![impeccable — 健康度雷达](../../assets/health/impeccable.zh.svg)
 
 ## 何时使用
 

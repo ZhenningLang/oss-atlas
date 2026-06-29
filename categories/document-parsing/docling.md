@@ -9,11 +9,65 @@ license: MIT
 maturity: v2.x, active (2026-06), ~62.3k stars; LF AI & Data project (IBM-originated)
 last_verified: 2026-06-28
 type: library
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:52:40Z
+  overall: A
+  overall_score: 3.6
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 0.3
+        qualifying_issues: 54
+        band: default
+        window_offset_days: 0
+    adoption:
+      grade: A
+      raw:
+        registry: pypi.org
+        canonical_package: docling
+        dependent_repos_count: 0
+        downloads_last_month: 14588206
+        graph_tier: E
+        volume_tier: A
+        cross_check_divergence: 1.0
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 720
+        last_commit_age_days: 0
+        cohort: library
+    governance:
+      grade: "?"
+      raw: {}
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    governance: { reason: empty_or_gated }
 ---
 
 # Docling
 
 A Python library that parses PDF, DOCX, PPTX, XLSX, HTML, images and more into one unified structured representation (`DoclingDocument`) — with page layout, reading order, and table structure recovered — then exports clean Markdown / HTML / lossless JSON for gen-AI and RAG ingestion.
+
+![docling — health radar](../../assets/health/docling.svg)
 
 ## When to use
 

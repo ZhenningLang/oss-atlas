@@ -9,11 +9,60 @@ license: MIT
 maturity: no tagged releases, active (pushed 2026-06)
 last_verified: 2026-06-26
 type: skill-pack
+health:
+  schema: 1
+  computed_at: 2026-06-29T09:30:23Z
+  overall: B
+  overall_score: 2.75
+  scored_axes: 4
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: B
+      raw:
+        archived: false
+        last_commit_age_days: 6
+        active_weeks_13: 2
+        carve_out: null
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 152
+        last_commit_age_days: 6
+        cohort: skill-pack
+    governance:
+      grade: C
+      raw:
+        active_maintainers_12mo: 11
+        top1_share: 0.79
+        top3_share: 0.871
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: type_na }
+    adoption: { reason: no_package_structural }
 ---
 
 # antfu/skills
 
 Anthony Fu's personal, curated agent-skill collection for the Vue/Vite/Nuxt ecosystem — his ESLint/pnpm/Vitest/UnoCSS preferences plus auto-generated and vendored skills for Vue, Nuxt, Pinia, Vite, VitePress, Vitest, UnoCSS, Slidev, VueUse and more, installed via the `skills` CLI.
+
+![antfu-skills — health radar](../../../assets/health/antfu-skills.svg)
 
 ## When to use
 
