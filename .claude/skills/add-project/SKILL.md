@@ -67,7 +67,19 @@ Author one conformant selection page. The contract is `tools/schema.md`; read it
    `README.zh.md`). If new category, also add it to root `INDEX.md` + `INDEX.zh.md`. The linter
    ERRORs if a page is missing from its INDEX or from either README, so nothing drifts silently.
 
-6. **Lint.** `python3 tools/lint.py` — fix every ERROR before finishing.
+6. **Health radar (automated — do not hand-grade).** Compute the 6-axis viability radar and embed
+   its card:
+   - `python3 tools/health.py --page categories/<category>/<slug>.md --write` — scores the repo from
+     GitHub + package registries (via the authenticated `gh` CLI) and writes the identical `health:`
+     block into **both** the `.md` and `.zh.md` frontmatter. Never hand-author the grades.
+   - `python3 tools/health_card.py categories/<category>/<slug>.md` — regenerates
+     `assets/health/<slug>.svg` from that block.
+   - Embed the card once in **each** page, right after the TL;DR line:
+     `![<name> — health radar](../../assets/health/<slug>.svg)` (EN) /
+     `![<name> — 健康度雷达](../../assets/health/<slug>.svg)` (ZH).
+   See `docs/health-rubric.md` for the rubric (A–E + `?`; `?` is first-class, never a low score).
+
+7. **Lint.** `python3 tools/lint.py` — fix every ERROR before finishing.
 
 ## Quality bar
 

@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="500" viewBox="0 0 820 500" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC',sans-serif">
+<defs>
+<radialGradient id="bg" cx="32%" cy="40%" r="80%"><stop offset="0%" stop-color="#241a0e"/><stop offset="55%" stop-color="#15110b"/><stop offset="100%" stop-color="#000000"/></radialGradient>
+<linearGradient id="poly" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#3FB950" stop-opacity="0.85"/><stop offset="100%" stop-color="#3FB950" stop-opacity="0.32"/></linearGradient>
+<filter id="glow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<radialGradient id="halo" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#3FB950" stop-opacity="0.30"/><stop offset="70%" stop-color="#3FB950" stop-opacity="0.05"/><stop offset="100%" stop-color="#3FB950" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="820" height="500" rx="18" fill="url(#bg)"/>
+<rect x="7" y="7" width="806" height="486" rx="13" fill="none" stroke="#3FB950" stroke-opacity="0.55" stroke-width="2"/>
+<rect x="12" y="12" width="796" height="476" rx="9" fill="none" stroke="#C9A227" stroke-opacity="0.35" stroke-width="1"/>
+<circle cx="250" cy="268" r="190" fill="url(#halo)"/>
+<polygon points="250.0,118.0 379.9,193.0 379.9,343.0 250.0,418.0 120.1,343.0 120.1,193.0" fill="none" stroke="#6b5a33" stroke-opacity="0.40" stroke-width="1"/>
+<polygon points="250.0,148.0 353.9,208.0 353.9,328.0 250.0,388.0 146.1,328.0 146.1,208.0" fill="none" stroke="#6b5a33" stroke-opacity="0.40" stroke-width="1"/>
+<polygon points="250.0,178.0 327.9,223.0 327.9,313.0 250.0,358.0 172.1,313.0 172.1,223.0" fill="none" stroke="#6b5a33" stroke-opacity="0.40" stroke-width="1"/>
+<polygon points="250.0,208.0 302.0,238.0 302.0,298.0 250.0,328.0 198.0,298.0 198.0,238.0" fill="none" stroke="#6b5a33" stroke-opacity="0.40" stroke-width="1"/>
+<polygon points="250.0,238.0 276.0,253.0 276.0,283.0 250.0,298.0 224.0,283.0 224.0,253.0" fill="none" stroke="#6b5a33" stroke-opacity="0.40" stroke-width="1"/>
+<line x1="250" y1="268" x2="250.0" y2="118.0" stroke="#6b5a33" stroke-opacity="0.35" stroke-width="1"/>
+<line x1="250" y1="268" x2="379.9" y2="193.0" stroke="#6b5a33" stroke-opacity="0.35" stroke-width="1"/>
+<line x1="250" y1="268" x2="379.9" y2="343.0" stroke="#6b5a33" stroke-opacity="0.35" stroke-width="1"/>
+<line x1="250" y1="268" x2="250.0" y2="418.0" stroke="#6b5a33" stroke-opacity="0.35" stroke-width="1"/>
+<line x1="250" y1="268" x2="120.1" y2="343.0" stroke="#6b5a33" stroke-opacity="0.35" stroke-width="1"/>
+<line x1="250" y1="268" x2="120.1" y2="193.0" stroke="#6b5a33" stroke-opacity="0.35" stroke-width="1"/>
+<text x="259" y="122.0" font-size="10" fill="#7d6a3c" font-family="'Georgia','Times New Roman',serif">A</text>
+<text x="259" y="152.0" font-size="10" fill="#7d6a3c" font-family="'Georgia','Times New Roman',serif">B</text>
+<text x="259" y="182.0" font-size="10" fill="#7d6a3c" font-family="'Georgia','Times New Roman',serif">C</text>
+<text x="259" y="212.0" font-size="10" fill="#7d6a3c" font-family="'Georgia','Times New Roman',serif">D</text>
+<text x="259" y="242.0" font-size="10" fill="#7d6a3c" font-family="'Georgia','Times New Roman',serif">E</text>
+<polygon points="250.0,118.0 379.9,193.0 315.0,305.5 250.0,328.0 120.1,343.0 120.1,193.0" fill="url(#poly)" filter="url(#glow)"/>
+<line x1="250.0" y1="118.0" x2="379.9" y2="193.0" stroke="#3FB950" stroke-width="2.5"/>
+<line x1="379.9" y1="193.0" x2="315.0" y2="305.5" stroke="#8B949E" stroke-width="2" stroke-dasharray="4 4" stroke-opacity="0.9"/>
+<line x1="315.0" y1="305.5" x2="250.0" y2="328.0" stroke="#8B949E" stroke-width="2" stroke-dasharray="4 4" stroke-opacity="0.9"/>
+<line x1="250.0" y1="328.0" x2="120.1" y2="343.0" stroke="#3FB950" stroke-width="2.5"/>
+<line x1="120.1" y1="343.0" x2="120.1" y2="193.0" stroke="#3FB950" stroke-width="2.5"/>
+<line x1="120.1" y1="193.0" x2="250.0" y2="118.0" stroke="#3FB950" stroke-width="2.5"/>
+<circle cx="250.0" cy="118.0" r="5" fill="#E5B80B" stroke="#000" stroke-width="0.8"/>
+<circle cx="379.9" cy="193.0" r="5" fill="#E5B80B" stroke="#000" stroke-width="0.8"/>
+<circle cx="315.0" cy="305.5" r="5" fill="#15110b" stroke="#8B949E" stroke-width="2" stroke-dasharray="2 2"/>
+<circle cx="250.0" cy="328.0" r="5" fill="#E8702A" stroke="#000" stroke-width="0.8"/>
+<circle cx="120.1" cy="343.0" r="5" fill="#E5B80B" stroke="#000" stroke-width="0.8"/>
+<circle cx="120.1" cy="193.0" r="5" fill="#E5B80B" stroke="#000" stroke-width="0.8"/>
+<text x="250.0" y="85.0" font-size="15" font-weight="700" fill="#efe6d2" text-anchor="middle">维护 <tspan fill="#E5B80B" font-family="'Georgia','Times New Roman',serif" font-weight="700">A</tspan></text>
+<text x="250.0" y="98.0" font-size="8" letter-spacing="1.5" fill="#8a7c5a" text-anchor="middle" font-family="'Georgia','Times New Roman',serif">POWER</text>
+<text x="405.9" y="175.0" font-size="15" font-weight="700" fill="#efe6d2" text-anchor="start">响应 <tspan fill="#E5B80B" font-family="'Georgia','Times New Roman',serif" font-weight="700">A</tspan></text>
+<text x="405.9" y="188.0" font-size="8" letter-spacing="1.5" fill="#8a7c5a" text-anchor="start" font-family="'Georgia','Times New Roman',serif">SPEED</text>
+<text x="405.9" y="355.0" font-size="15" font-weight="700" fill="#efe6d2" text-anchor="start">采用 <tspan fill="#8B949E" font-family="'Georgia','Times New Roman',serif" font-weight="700">?</tspan></text>
+<text x="405.9" y="368.0" font-size="8" letter-spacing="1.5" fill="#8a7c5a" text-anchor="start" font-family="'Georgia','Times New Roman',serif">RANGE</text>
+<text x="250.0" y="445.0" font-size="15" font-weight="700" fill="#efe6d2" text-anchor="middle">寿命 <tspan fill="#E8702A" font-family="'Georgia','Times New Roman',serif" font-weight="700">D</tspan></text>
+<text x="250.0" y="458.0" font-size="8" letter-spacing="1.5" fill="#8a7c5a" text-anchor="middle" font-family="'Georgia','Times New Roman',serif">STAYING</text>
+<text x="94.1" y="355.0" font-size="15" font-weight="700" fill="#efe6d2" text-anchor="end">治理 <tspan fill="#E5B80B" font-family="'Georgia','Times New Roman',serif" font-weight="700">A</tspan></text>
+<text x="94.1" y="368.0" font-size="8" letter-spacing="1.5" fill="#8a7c5a" text-anchor="end" font-family="'Georgia','Times New Roman',serif">PRECISION</text>
+<text x="94.1" y="175.0" font-size="15" font-weight="700" fill="#efe6d2" text-anchor="end">风险 <tspan fill="#E5B80B" font-family="'Georgia','Times New Roman',serif" font-weight="700">A</tspan></text>
+<text x="94.1" y="188.0" font-size="8" letter-spacing="1.5" fill="#8a7c5a" text-anchor="end" font-family="'Georgia','Times New Roman',serif">DURABILITY</text>
+<text x="500" y="60" font-size="12" letter-spacing="3" fill="#C9A227" font-family="'Georgia','Times New Roman',serif">[ HEALTH / 健康度 ]</text>
+<text x="500" y="98" font-size="26" font-weight="700" fill="#fbf4e2" font-family="'Georgia','Times New Roman',serif">Agent Orchestrator</text>
+<text x="500" y="120" font-size="12" fill="#9c8e6c">app · agent-tooling</text>
+<text x="500" y="210" font-size="96" font-weight="700" fill="#3FB950" font-family="'Georgia','Times New Roman',serif" filter="url(#glow)">B</text>
+<text x="508" y="234" font-size="12" letter-spacing="2" fill="#9c8e6c" font-family="'Georgia','Times New Roman',serif">OVERALL · 总评</text>
+<text x="500" y="280" font-size="14" fill="#cdbf9d">维护</text>
+<text x="570" y="280" font-size="9" letter-spacing="1" fill="#7d6f50" font-family="'Georgia','Times New Roman',serif">POWER</text>
+<rect x="650" y="269" width="120" height="9" rx="4" fill="#2a2417"/>
+<rect x="650" y="269" width="120" height="9" rx="4" fill="#E5B80B"/>
+<text x="782" y="280" font-size="15" font-weight="700" fill="#E5B80B" font-family="'Georgia','Times New Roman',serif">A</text>
+<text x="500" y="310" font-size="14" fill="#cdbf9d">响应</text>
+<text x="570" y="310" font-size="9" letter-spacing="1" fill="#7d6f50" font-family="'Georgia','Times New Roman',serif">SPEED</text>
+<rect x="650" y="299" width="120" height="9" rx="4" fill="#2a2417"/>
+<rect x="650" y="299" width="120" height="9" rx="4" fill="#E5B80B"/>
+<text x="782" y="310" font-size="15" font-weight="700" fill="#E5B80B" font-family="'Georgia','Times New Roman',serif">A</text>
+<text x="500" y="340" font-size="14" fill="#cdbf9d">采用</text>
+<text x="570" y="340" font-size="9" letter-spacing="1" fill="#7d6f50" font-family="'Georgia','Times New Roman',serif">RANGE</text>
+<rect x="650" y="329" width="120" height="9" rx="4" fill="#2a2417"/>
+<rect x="650" y="329" width="120" height="9" rx="4" fill="none" stroke="#8B949E" stroke-dasharray="3 3"/>
+<text x="782" y="340" font-size="15" font-weight="700" fill="#8B949E" font-family="'Georgia','Times New Roman',serif">?</text>
+<text x="500" y="370" font-size="14" fill="#cdbf9d">寿命</text>
+<text x="570" y="370" font-size="9" letter-spacing="1" fill="#7d6f50" font-family="'Georgia','Times New Roman',serif">STAYING</text>
+<rect x="650" y="359" width="120" height="9" rx="4" fill="#2a2417"/>
+<rect x="650" y="359" width="48" height="9" rx="4" fill="#E8702A"/>
+<text x="782" y="370" font-size="15" font-weight="700" fill="#E8702A" font-family="'Georgia','Times New Roman',serif">D</text>
+<text x="500" y="400" font-size="14" fill="#cdbf9d">治理</text>
+<text x="570" y="400" font-size="9" letter-spacing="1" fill="#7d6f50" font-family="'Georgia','Times New Roman',serif">PRECISION</text>
+<rect x="650" y="389" width="120" height="9" rx="4" fill="#2a2417"/>
+<rect x="650" y="389" width="120" height="9" rx="4" fill="#E5B80B"/>
+<text x="782" y="400" font-size="15" font-weight="700" fill="#E5B80B" font-family="'Georgia','Times New Roman',serif">A</text>
+<text x="500" y="430" font-size="14" fill="#cdbf9d">风险</text>
+<text x="570" y="430" font-size="9" letter-spacing="1" fill="#7d6f50" font-family="'Georgia','Times New Roman',serif">DURABILITY</text>
+<rect x="650" y="419" width="120" height="9" rx="4" fill="#2a2417"/>
+<rect x="650" y="419" width="120" height="9" rx="4" fill="#E5B80B"/>
+<text x="782" y="430" font-size="15" font-weight="700" fill="#E5B80B" font-family="'Georgia','Times New Roman',serif">A</text>
+<rect x="500" y="453" width="108" height="20" rx="10" fill="#1d1810" stroke="#C9A227" stroke-opacity="0.4"/>
+<text x="554.0" y="467" font-size="11" fill="#cdbf9d" text-anchor="middle">Apache-2.0</text>
+</svg>

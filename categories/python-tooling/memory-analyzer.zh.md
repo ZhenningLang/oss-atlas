@@ -9,11 +9,66 @@ license: MIT
 maturity: v0.1.2, ARCHIVED by Meta (read-only), last code push 2021-09 (2026-06)
 last_verified: 2026-06-29
 type: tool
+health:
+  schema: 1
+  computed_at: 2026-06-29T04:21:21Z
+  overall: D
+  overall_score: 0.8
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: E
+      raw:
+        archived: true
+        last_commit_age_days: 1747
+        active_weeks_13: 0
+        carve_out: null
+    responsiveness:
+      grade: E
+      raw:
+        median_ttfr_hours: null
+        qualifying_issues: 0
+        band: relaxed_solo
+        window_offset_days: 9
+    adoption:
+      grade: E
+      raw:
+        registry: null
+        canonical_package: null
+        dependent_repos_count: 0
+        downloads_last_month: null
+        graph_tier: E
+        volume_tier: null
+        cross_check_divergence: null
+        archived: true
+    longevity:
+      grade: E
+      raw:
+        repo_age_days: 2532
+        last_commit_age_days: 1747
+        cohort: tool
+    governance:
+      grade: "?"
+      raw: {}
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    governance: { reason: unattributable }
 ---
 
 # memory-analyzer
 
 一个对**正在运行**的 Python 进程做一次性内存检查的工具——通过 GDB 挂上去、暂停目标，报告按类型的对象计数、总大小，以及前向／后向引用图。**已被 Meta 归档（只读）——依赖前先看「健康度与可持续性」。**
+
+![memory-analyzer — 健康度雷达](../../assets/health/memory-analyzer.svg)
 
 ## 何时使用
 
@@ -72,7 +127,7 @@ type: tool
 ## 存疑（未验证）
 
 - [未验证] 截至 2026-06 约 156 star、约 14 fork、6 个 open issue——易变且对时间敏感；反映的是历史／一般的认可度，而非当前活跃度（仓库已归档）。
-- [未验证] 没找到 GitHub release；唯一的版本信号是 `setup.py` 里的 `version="0.1.2"` 加分类 「Development Status :: 1 - Planning」——即它从未到达稳定发布线。
+- [未验证] 只有一个早期 GitHub release（`0.1.0`，「Initial Release」，2019-10）；`0.1.1`／`0.1.2` 只是 tag 而无 release，`setup.py` 里写着 `version="0.1.2"` 加分类 「Development Status :: 1 - Planning」——即它从未到达稳定发布线。
 - [推断] 与当前 CPython（3.7 之后）和现代 GDB 的兼容性未确认；`python_requires>=3.6`、仅 3.6／3.7 的分类，加自 2021 年无更新，使不兼容很可能但此处未测试——用前请核实。
 - [未验证] 确切的 GDB／ptrace 要求（GDB 版本、`ptrace_scope`、容器 `SYS_PTRACE`）随主机而异；以 Linux／ptrace 为中心的约束取自 README，并非逐环境审计。
 - [推断] Phabricator 的 PNG 上传路径，以及「把 objgraph＋pympler 装进目标库路径」的要求，取自 README／manifest，而非当前版本的一次实跑——若你要继续用请对照代码核实。

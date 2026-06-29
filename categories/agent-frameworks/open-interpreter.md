@@ -11,6 +11,61 @@ maturity: rust-v0.0.17 (2026-06), active rewrite; ~64k stars (2026-06)
 last_verified: 2026-06-29
 type: framework
 aka: [oi, interpreter]
+health:
+  schema: 1
+  computed_at: 2026-06-29T04:20:56Z
+  overall: A
+  overall_score: 3.5
+  scored_axes: 6
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 9
+        active_weeks_13: 12
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 45.1
+        qualifying_issues: 16
+        band: default
+        window_offset_days: 12
+    adoption:
+      grade: B
+      raw:
+        registry: pypi.org
+        canonical_package: open-interpreter
+        dependent_repos_count: 7
+        downloads_last_month: 242577
+        graph_tier: D
+        volume_tier: B
+        cross_check_divergence: 1.12
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 1081
+        last_commit_age_days: 9
+        cohort: framework
+    governance:
+      grade: A
+      raw:
+        active_maintainers_12mo: 90
+        top1_share: 0.153
+        top3_share: 0.349
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # Open Interpreter
@@ -18,6 +73,8 @@ aka: [oi, interpreter]
 A terminal coding agent that is a **fork of OpenAI's Codex CLI**, re-focused on an *emulated agent harness* that squeezes good behavior out of low-cost / open models (DeepSeek, Kimi, Qwen) — it runs commands and edits files in a native OS sandbox, switches model + harness from a TUI, and exposes skills/MCP/hooks/`AGENTS.md`.
 
 > **Identity change — read this first.** The project you may remember — the Python "natural-language interface for your computer" REPL that wrote and executed code locally — is *not* what this repo ships today. That Python codebase last shipped `v0.4.2` (2024-10) and now lives on as a community fork at [`endolith/open-interpreter`](https://github.com/endolith/open-interpreter). The `openinterpreter/open-interpreter` repo was rewritten in **Rust as a Codex fork** and relaunched mid-2026. Everything below describes the *current* Rust project. If you want the old Python tool, use the community fork, not this page.
+
+![open-interpreter — health radar](../../assets/health/open-interpreter.svg)
 
 ## When to use
 

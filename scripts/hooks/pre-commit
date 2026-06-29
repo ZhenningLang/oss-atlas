@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# oss-atlas pre-commit hook — OFFLINE only (no network; safe and fast).
+#   1. regenerate the health radar SVG cards from each staged page's `health:` block
+#      (keeps the image == its SSOT — scoring itself lives in tools/health.py / skills),
+#   2. run the linter and block the commit on any error.
+# Install once with:  make install-hooks   (sets core.hooksPath to scripts/hooks)
+set -euo pipefail
+cd "$(git rev-parse --show-toplevel)"
+
+# 1. refresh cards for staged project pages that carry a health: block (offline)
+# (no bashisms — works on macOS's stock bash 3.2; repo paths have no spaces)
+staged=$(git diff --cached --name-only --diff-filter=ACM | grep -E '^categories/.*\.md$' || true)
+if [ -n "$staged" ]; then
+  echo "$staged" | xargs python3 tools/health_card.py >/dev/null || true
+  if ! git diff --quiet -- assets/health 2>/dev/null; then
+    git add assets/health
+    echo "pre-commit: refreshed health radar card(s) from frontmatter and staged them"
+  fi
+fi
+
+# 2. lint gate (the real guard)
+python3 tools/lint.py

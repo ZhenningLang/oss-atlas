@@ -11,6 +11,61 @@ maturity: rust-v0.0.17 (2026-06), active rewrite; ~64k stars (2026-06)
 last_verified: 2026-06-29
 type: framework
 aka: [oi, interpreter]
+health:
+  schema: 1
+  computed_at: 2026-06-29T04:20:56Z
+  overall: A
+  overall_score: 3.5
+  scored_axes: 6
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 9
+        active_weeks_13: 12
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 45.1
+        qualifying_issues: 16
+        band: default
+        window_offset_days: 12
+    adoption:
+      grade: B
+      raw:
+        registry: pypi.org
+        canonical_package: open-interpreter
+        dependent_repos_count: 7
+        downloads_last_month: 242577
+        graph_tier: D
+        volume_tier: B
+        cross_check_divergence: 1.12
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 1081
+        last_commit_age_days: 9
+        cohort: framework
+    governance:
+      grade: A
+      raw:
+        active_maintainers_12mo: 90
+        top1_share: 0.153
+        top3_share: 0.349
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # Open Interpreter
@@ -18,6 +73,8 @@ aka: [oi, interpreter]
 一个终端编码 agent，本质是 **OpenAI Codex CLI 的一个 fork**，重新聚焦在「模拟 agent harness」上——让低成本 / 开源模型（DeepSeek、Kimi、Qwen）跑出更好的行为：它在 OS 原生沙箱里执行命令、改文件，从 TUI 里切换模型与 harness，并暴露 skills / MCP / hooks / `AGENTS.md`。
 
 > **身份已变——请先读这段。** 你也许记得的那个项目——那个用 Python 写的「自然语言操作你的电脑」REPL，在本地生成并执行代码——*不是*这个仓库今天交付的东西。那套 Python 代码最后一次发版是 `v0.4.2`（2024-10），如今作为社区 fork 存活在 [`endolith/open-interpreter`](https://github.com/endolith/open-interpreter)。而 `openinterpreter/open-interpreter` 仓库已用 **Rust 重写成 Codex 的 fork**，于 2026 年年中重新发布。下文描述的全部是*当前*这个 Rust 项目。如果你想要的是老的 Python 工具，请用社区 fork，而不是看这一页。
+
+![open-interpreter — 健康度雷达](../../assets/health/open-interpreter.svg)
 
 ## 何时使用
 

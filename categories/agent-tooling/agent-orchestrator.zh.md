@@ -10,11 +10,63 @@ homepage: https://ao-agents.com
 maturity: pre-1.0 (latest v0.10.1, 2026-06-28), very active, nightly prereleases; ~7.7k stars (as of 2026-06)
 last_verified: 2026-06-29
 type: app
+health:
+  schema: 1
+  computed_at: 2026-06-29T04:20:45Z
+  overall: B
+  overall_score: 3.4
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 46.1
+        qualifying_issues: 5
+        band: relaxed_solo
+        window_offset_days: 2
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: D
+      raw:
+        repo_age_days: 136
+        last_commit_age_days: 0
+        cohort: app
+    governance:
+      grade: A
+      raw:
+        active_maintainers_12mo: 39
+        top1_share: 0.243
+        top3_share: 0.469
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    adoption: { reason: no_package_structural }
 ---
 
 # Agent Orchestrator
 
 一个“Agentic IDE”——一个常驻的 Go daemon 加上一个 Electron/React 桌面应用，在隔离的 git worktree 里监管多个并行的 AI 编码 agent，并用自动反馈环把 CI 失败、PR review 评论和合并冲突路由回拥有该分支的 agent。
+
+![agent-orchestrator — 健康度雷达](../../assets/health/agent-orchestrator.svg)
 
 ## 何时使用
 
@@ -68,14 +120,14 @@ type: app
 ## 健康度与可持续性
 
 - **维护（2026-06）。** 最后 push 于 2026-06-29，带频繁的 nightly 预发布，v0.10.1 于 2026-06-28 打 tag——**非常活跃**的开发。未归档。另一面：约 588 个未关 issue 配上很高的 fork 数，说明是个快速演进、仍在稳定中的项目。[推断]
-- **治理 / bus factor。** `owner.type` 是 **User**，不是 Organization 或基金会。约 30 名贡献者，但贡献集中在头部几人（harshitsinghbhandari、suraj-markup 和所有者 AgentWrapper）；Discord 驱动、带“每日贡献者同步”的社区显出热度，但路线图系于一个小的、个人所有的群体——真实的 bus-factor 风险。[推断]
+- **治理 / bus factor。** `owner.type` 是 **User**，不是 Organization 或基金会。约 36 名贡献者，但贡献集中在头部几人（harshitsinghbhandari、suraj-markup 和所有者 AgentWrapper）；Discord 驱动、带“每日贡献者同步”的社区显出热度，但路线图系于一个小的、个人所有的群体——真实的 bus-factor 风险。[推断]
 - **年龄 × Lindy（2026-06）。** 2026-02 创建——约 4.5 个月大。这是一个**非常年轻的项目**；Lindy 不给它加分。把 API/schema/UI 稳定性当成未经验证，寿命未知。
 - **采用度与生态。** 约 4.5 个月内约 7.7k star、约 1.1k fork，对一个这个年龄的 User 所有仓库而言异常地高；这*可能*反映真实拉力，也*可能*是炒作/灌水——数据无法区分二者，所以别把它当履历来读。广的 agent 适配器覆盖（23+）是最强的生态信号。[推断]
 - **风险标记。** 年轻 + pre-1.0 变动（nightly 节奏）、单一 User 所有且无基金会、loopback 无鉴权的 daemon 姿态、仅 GUI 桌面（非无头）、以及 opt-in 的远程遥测。Apache-2.0，未发现 relicense 历史。[未验证]
 
 ## 存疑（未验证）
 
-- [未验证] 约 7.7k star、约 1.1k fork、约 588 个未关 issue、最新 v0.10.1、30 名贡献者——均截至 2026-06-29；这些数字对时间敏感且易变（nightly 节奏），仅供参考。
+- [未验证] 约 7.7k star、约 1.1k fork、约 588 个未关 issue、最新 v0.10.1、约 36 名贡献者——均截至 2026-06-29；这些数字对时间敏感且易变（nightly 节奏），仅供参考。
 - [推断] “对一个这么年轻的 User 所有仓库而言 star 异常地高”按 read-repo 方法论被标记为可能的炒作/灌水信号——这**不是**断言这些数字被灌水，只是说年龄 + 所有权 + 量级合起来值得警惕；数据既不能证实也不能证伪。
 - [未验证] “Loopback-Only……no auth, CORS, or TLS by design”的姿态、遥测（本地默认 / 经环境变量远程 opt-in）、23+ 适配器清单、tmux/conpty 运行时，以及 SQLite-CDC-over-SSE 架构，均取自 README/文档，未在源码中独立核实。
 - [推断] 归类为 `type: app`（而非 `tool`），因为主要交付物是一个打包的 Electron **桌面应用**加本地 daemon，而非无头 CLI/库——GUI 才是产品面。

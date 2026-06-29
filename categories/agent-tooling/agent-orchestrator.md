@@ -10,11 +10,63 @@ homepage: https://ao-agents.com
 maturity: pre-1.0 (latest v0.10.1, 2026-06-28), very active, nightly prereleases; ~7.7k stars (as of 2026-06)
 last_verified: 2026-06-29
 type: app
+health:
+  schema: 1
+  computed_at: 2026-06-29T04:20:45Z
+  overall: B
+  overall_score: 3.4
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 46.1
+        qualifying_issues: 5
+        band: relaxed_solo
+        window_offset_days: 2
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: D
+      raw:
+        repo_age_days: 136
+        last_commit_age_days: 0
+        cohort: app
+    governance:
+      grade: A
+      raw:
+        active_maintainers_12mo: 39
+        top1_share: 0.243
+        top3_share: 0.469
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    adoption: { reason: no_package_structural }
 ---
 
 # Agent Orchestrator
 
 An "Agentic IDE" — a long-running Go daemon plus an Electron/React desktop app that supervises multiple parallel AI coding agents in isolated git worktrees, with automatic feedback loops routing CI failures, PR review comments, and merge conflicts back to the owning agent.
+
+![agent-orchestrator — health radar](../../assets/health/agent-orchestrator.svg)
 
 ## When to use
 
@@ -68,14 +120,14 @@ So you install Agent Orchestrator as a desktop app. It runs a local Go daemon th
 ## Health & viability
 
 - **Maintenance (2026-06).** Last pushed 2026-06-29 with frequent nightly prereleases and a v0.10.1 tagged 2026-06-28 — **very active** development. Not archived. The flip side: ~588 open issues against a large fork count signals a fast-moving, still-stabilizing project. [推断]
-- **Governance / bus factor.** `owner.type` is **User**, not an Organization or foundation. ~30 contributors, but contributions concentrate in the top few (harshitsinghbhandari, suraj-markup, and the owner AgentWrapper); a Discord-driven community with a "daily contributor sync" suggests energy, but the roadmap rests on a small, individually-owned group — real bus-factor risk. [推断]
+- **Governance / bus factor.** `owner.type` is **User**, not an Organization or foundation. ~36 contributors, but contributions concentrate in the top few (harshitsinghbhandari, suraj-markup, and the owner AgentWrapper); a Discord-driven community with a "daily contributor sync" suggests energy, but the roadmap rests on a small, individually-owned group — real bus-factor risk. [推断]
 - **Age × Lindy (2026-06).** Created 2026-02 — about 4.5 months old. This is a **very young project**; Lindy gives it no credit. Treat API/schema/UI stability as unproven and the longevity unknown.
 - **Adoption & ecosystem.** ~7.7k stars and ~1.1k forks in ~4.5 months is unusually high for a User-owned vendor repo of this age; that *could* reflect genuine pull or hype/inflation — the data can't distinguish them, so don't read it as a track record. Broad agent-adapter coverage (23+) is the strongest ecosystem signal. [推断]
 - **Risk flags.** Youth + pre-1.0 churn (nightly cadence), single-User ownership with no foundation, the loopback-no-auth daemon posture, GUI-desktop-only (not headless), and opt-in remote telemetry. Apache-2.0 with no relicense history found. [未验证]
 
 ## Caveats (unverified)
 
-- [未验证] ~7.7k stars, ~1.1k forks, ~588 open issues, latest v0.10.1, 30 contributors — all as of 2026-06-29; these numbers are date-sensitive and volatile (nightly cadence), treat as indicative only.
+- [未验证] ~7.7k stars, ~1.1k forks, ~588 open issues, latest v0.10.1, ~36 contributors — all as of 2026-06-29; these numbers are date-sensitive and volatile (nightly cadence), treat as indicative only.
 - [推断] "Unusually high stars for a User-owned repo this young" is flagged as a possible hype/inflation signal per the read-repo methodology — this is **not** an assertion that the numbers are inflated, only that age + ownership + magnitude warrant caution; the data can't confirm or deny it.
 - [未验证] The "Loopback-Only … no auth, CORS, or TLS by design" posture, telemetry (local default / remote opt-in via env), the 23+ adapter list, tmux/conpty runtimes, and SQLite-CDC-over-SSE architecture are taken from the README/docs, not independently inspected in source.
 - [推断] Classified as `type: app` (over `tool`) because the primary artifact is a packaged Electron **desktop application** backed by a local daemon, not a headless CLI/library — the GUI is the product surface.

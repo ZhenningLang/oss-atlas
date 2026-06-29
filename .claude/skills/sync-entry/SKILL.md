@@ -47,7 +47,12 @@ delta-gated** refresh: it only spends effort re-verifying entries that are actua
 5. **Re-judge if facts moved materially.** A new major version can invalidate "when not to use"
    (e.g. a missing feature now exists). Don't just bump the date over stale judgment.
 6. **Bump `last_verified` to today.** Only after actually re-checking — never bump blindly.
-7. **Lint**: `python3 tools/lint.py`.
+7. **Re-score the health radar (if the page has a `health:` block).** Health grades go stale like any
+   fact — re-run the scorer when you re-verify:
+   `python3 tools/health.py --page <page> --write && python3 tools/health_card.py <page>`
+   This recomputes the 6 axes from live data, rewrites the identical `health:` block into both
+   siblings (bumping its `computed_at`), and regenerates the card. See `docs/health-rubric.md`.
+8. **Lint**: `python3 tools/lint.py`.
 
 ## Discipline
 

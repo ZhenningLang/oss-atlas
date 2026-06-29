@@ -9,11 +9,66 @@ license: MIT
 maturity: v0.1.2, ARCHIVED by Meta (read-only), last code push 2021-09 (2026-06)
 last_verified: 2026-06-29
 type: tool
+health:
+  schema: 1
+  computed_at: 2026-06-29T04:21:21Z
+  overall: D
+  overall_score: 0.8
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: false
+  axes:
+    maintenance:
+      grade: E
+      raw:
+        archived: true
+        last_commit_age_days: 1747
+        active_weeks_13: 0
+        carve_out: null
+    responsiveness:
+      grade: E
+      raw:
+        median_ttfr_hours: null
+        qualifying_issues: 0
+        band: relaxed_solo
+        window_offset_days: 9
+    adoption:
+      grade: E
+      raw:
+        registry: null
+        canonical_package: null
+        dependent_repos_count: 0
+        downloads_last_month: null
+        graph_tier: E
+        volume_tier: null
+        cross_check_divergence: null
+        archived: true
+    longevity:
+      grade: E
+      raw:
+        repo_age_days: 2532
+        last_commit_age_days: 1747
+        cohort: tool
+    governance:
+      grade: "?"
+      raw: {}
+    risk_license:
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    governance: { reason: unattributable }
 ---
 
 # memory-analyzer
 
 A one-shot tool to inspect the memory of a **running** Python process — it attaches via GDB, pauses the target, and reports per-type object counts, total sizes, and forward/backward reference graphs. **Archived by Meta (read-only) — see Health & viability before relying on it.**
+
+![memory-analyzer — health radar](../../assets/health/memory-analyzer.svg)
 
 ## When to use
 
@@ -72,7 +127,7 @@ The honest caveat is that this is the *legitimate* use case for a tool that is *
 ## Caveats (unverified)
 
 - [未验证] ~156 stars, ~14 forks, 6 open issues as of 2026-06 — volatile and date-sensitive; reflects historical/modest recognition, not current activity (the repo is archived).
-- [未验证] No GitHub releases were found; the only version signal is `setup.py` `version="0.1.2"` with classifier "Development Status :: 1 - Planning" — i.e. it never reached a stable release line.
+- [未验证] Only a single early GitHub release exists (`0.1.0`, "Initial Release", 2019-10); `0.1.1`/`0.1.2` are tags without releases, and `setup.py` carries `version="0.1.2"` with classifier "Development Status :: 1 - Planning" — i.e. it never reached a stable release line.
 - [推断] Compatibility with current CPython (post-3.7) and modern GDB is unconfirmed; `python_requires>=3.6` and 3.6/3.7-only classifiers plus no updates since 2021 make incompatibility likely but untested here — verify before use.
 - [未验证] Exact GDB/ptrace requirements (GDB version, `ptrace_scope`, container `SYS_PTRACE`) vary by host; the Linux/ptrace-centric constraint is from the README, not a per-environment audit.
 - [推断] The Phabricator PNG-upload path and the "install objgraph+pympler in the target's library path" requirement are taken from the README/manifest, not a current-version run — confirm against the code if you proceed.
