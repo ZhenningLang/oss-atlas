@@ -12,20 +12,20 @@
 <rect width="820" height="500" rx="17" fill="url(#bg)"/>
 <rect width="820" height="500" rx="17" fill="url(#halftone)"/>
 <g opacity="0.5" filter="url(#glow)">
-<path d="M244,268 L477,235 L477,301 Z" fill="#E8C45A" fill-opacity="0.10"/>
-<path d="M244,268 L462,356 L429,413 Z" fill="#F2C200" fill-opacity="0.10"/>
-<path d="M244,268 L389,453 L332,486 Z" fill="#E8C45A" fill-opacity="0.10"/>
-<path d="M244,268 L277,501 L211,501 Z" fill="#F2C200" fill-opacity="0.10"/>
-<path d="M244,268 L156,486 L99,453 Z" fill="#E8C45A" fill-opacity="0.10"/>
-<path d="M244,268 L59,413 L26,356 Z" fill="#F2C200" fill-opacity="0.10"/>
-<path d="M244,268 L11,301 L11,235 Z" fill="#E8C45A" fill-opacity="0.10"/>
-<path d="M244,268 L26,180 L59,123 Z" fill="#F2C200" fill-opacity="0.10"/>
-<path d="M244,268 L99,83 L156,50 Z" fill="#E8C45A" fill-opacity="0.10"/>
-<path d="M244,268 L211,35 L277,35 Z" fill="#F2C200" fill-opacity="0.10"/>
-<path d="M244,268 L332,50 L389,83 Z" fill="#E8C45A" fill-opacity="0.10"/>
-<path d="M244,268 L429,123 L462,180 Z" fill="#F2C200" fill-opacity="0.10"/>
+<path d="M260,268 L493,235 L493,301 Z" fill="#E8C45A" fill-opacity="0.10"/>
+<path d="M260,268 L478,356 L445,413 Z" fill="#F2C200" fill-opacity="0.10"/>
+<path d="M260,268 L405,453 L348,486 Z" fill="#E8C45A" fill-opacity="0.10"/>
+<path d="M260,268 L293,501 L227,501 Z" fill="#F2C200" fill-opacity="0.10"/>
+<path d="M260,268 L172,486 L115,453 Z" fill="#E8C45A" fill-opacity="0.10"/>
+<path d="M260,268 L75,413 L42,356 Z" fill="#F2C200" fill-opacity="0.10"/>
+<path d="M260,268 L27,301 L27,235 Z" fill="#E8C45A" fill-opacity="0.10"/>
+<path d="M260,268 L42,180 L75,123 Z" fill="#F2C200" fill-opacity="0.10"/>
+<path d="M260,268 L115,83 L172,50 Z" fill="#E8C45A" fill-opacity="0.10"/>
+<path d="M260,268 L227,35 L293,35 Z" fill="#F2C200" fill-opacity="0.10"/>
+<path d="M260,268 L348,50 L405,83 Z" fill="#E8C45A" fill-opacity="0.10"/>
+<path d="M260,268 L445,123 L478,180 Z" fill="#F2C200" fill-opacity="0.10"/>
 </g>
-<circle cx="244" cy="268" r="174" fill="url(#halo)"/>
+<circle cx="260" cy="268" r="161" fill="url(#halo)"/>
 <rect x="6" y="6" width="808" height="488" rx="14" fill="none" stroke="url(#frame)" stroke-width="3.5"/>
 <rect x="13" y="13" width="794" height="474" rx="9" fill="none" stroke="#9c7d2a" stroke-width="1" stroke-opacity="0.8"/>
 <path d="M14,28 L14,14 L28,14" fill="none" stroke="#E8C45A" stroke-width="2.4"/>
@@ -33,41 +33,41 @@
 <path d="M14,472 L14,486 L28,486" fill="none" stroke="#E8C45A" stroke-width="2.4"/>
 <path d="M806,472 L806,486 L792,486" fill="none" stroke="#E8C45A" stroke-width="2.4"/>
 <rect width="820" height="500" rx="17" fill="url(#vig)"/>
-<polygon points="244.0,140.0 354.9,204.0 354.9,332.0 244.0,396.0 133.1,332.0 133.1,204.0" fill="none" stroke="#9c7d2a" stroke-opacity="0.55" stroke-width="1"/>
-<polygon points="244.0,165.6 332.7,216.8 332.7,319.2 244.0,370.4 155.3,319.2 155.3,216.8" fill="none" stroke="#9c7d2a" stroke-opacity="0.55" stroke-width="1"/>
-<polygon points="244.0,191.2 310.5,229.6 310.5,306.4 244.0,344.8 177.5,306.4 177.5,229.6" fill="none" stroke="#9c7d2a" stroke-opacity="0.55" stroke-width="1"/>
-<polygon points="244.0,216.8 288.3,242.4 288.3,293.6 244.0,319.2 199.7,293.6 199.7,242.4" fill="none" stroke="#9c7d2a" stroke-opacity="0.55" stroke-width="1"/>
-<polygon points="244.0,242.4 266.2,255.2 266.2,280.8 244.0,293.6 221.8,280.8 221.8,255.2" fill="none" stroke="#9c7d2a" stroke-opacity="0.55" stroke-width="1"/>
-<line x1="244" y1="268" x2="244.0" y2="140.0" stroke="#9c7d2a" stroke-opacity="0.5" stroke-width="1"/>
-<line x1="244" y1="268" x2="354.9" y2="204.0" stroke="#9c7d2a" stroke-opacity="0.5" stroke-width="1"/>
-<line x1="244" y1="268" x2="354.9" y2="332.0" stroke="#9c7d2a" stroke-opacity="0.5" stroke-width="1"/>
-<line x1="244" y1="268" x2="244.0" y2="396.0" stroke="#9c7d2a" stroke-opacity="0.5" stroke-width="1"/>
-<line x1="244" y1="268" x2="133.1" y2="332.0" stroke="#9c7d2a" stroke-opacity="0.5" stroke-width="1"/>
-<line x1="244" y1="268" x2="133.1" y2="204.0" stroke="#9c7d2a" stroke-opacity="0.5" stroke-width="1"/>
-<text x="252" y="144.0" font-size="11" font-style="italic" fill="#E8C45A" fill-opacity="0.55" font-family="'Georgia','Times New Roman',serif">A</text>
-<text x="252" y="169.6" font-size="11" font-style="italic" fill="#E8C45A" fill-opacity="0.55" font-family="'Georgia','Times New Roman',serif">B</text>
-<text x="252" y="195.2" font-size="11" font-style="italic" fill="#E8C45A" fill-opacity="0.55" font-family="'Georgia','Times New Roman',serif">C</text>
-<text x="252" y="220.8" font-size="11" font-style="italic" fill="#E8C45A" fill-opacity="0.55" font-family="'Georgia','Times New Roman',serif">D</text>
-<text x="252" y="246.4" font-size="11" font-style="italic" fill="#E8C45A" fill-opacity="0.55" font-family="'Georgia','Times New Roman',serif">E</text>
-<polygon points="244.0,140.0 354.9,204.0 332.7,319.2 244.0,344.8 133.1,332.0 133.1,204.0" fill="url(#poly)" filter="url(#glow)"/>
-<line x1="244.0" y1="140.0" x2="354.9" y2="204.0" stroke="#F2C200" stroke-width="3"/>
-<line x1="354.9" y1="204.0" x2="332.7" y2="319.2" stroke="#F2C200" stroke-width="3"/>
-<line x1="332.7" y1="319.2" x2="244.0" y2="344.8" stroke="#F2C200" stroke-width="3"/>
-<line x1="244.0" y1="344.8" x2="133.1" y2="332.0" stroke="#F2C200" stroke-width="3"/>
-<line x1="133.1" y1="332.0" x2="133.1" y2="204.0" stroke="#F2C200" stroke-width="3"/>
-<line x1="133.1" y1="204.0" x2="244.0" y2="140.0" stroke="#F2C200" stroke-width="3"/>
-<circle cx="244.0" cy="140.0" r="5.5" fill="#F2C200" stroke="#1a1306" stroke-width="1.2"/>
-<circle cx="354.9" cy="204.0" r="5.5" fill="#F2C200" stroke="#1a1306" stroke-width="1.2"/>
-<circle cx="332.7" cy="319.2" r="5.5" fill="#3FB950" stroke="#1a1306" stroke-width="1.2"/>
-<circle cx="244.0" cy="344.8" r="5.5" fill="#D4C20A" stroke="#1a1306" stroke-width="1.2"/>
-<circle cx="133.1" cy="332.0" r="5.5" fill="#F2C200" stroke="#1a1306" stroke-width="1.2"/>
-<circle cx="133.1" cy="204.0" r="5.5" fill="#F2C200" stroke="#1a1306" stroke-width="1.2"/>
-<text x="244.0" y="120.0" font-size="12" font-weight="900" fill="#f3e7c8" text-anchor="middle" font-family="'Arial Black','Helvetica Neue',Arial,sans-serif" letter-spacing="0.4" filter="url(#soft)">Maintenance <tspan fill="#F2C200" font-family="'Georgia','Times New Roman',serif" font-style="italic" font-size="17">A</tspan></text>
-<text x="373.9" y="196.0" font-size="12" font-weight="900" fill="#f3e7c8" text-anchor="start" font-family="'Arial Black','Helvetica Neue',Arial,sans-serif" letter-spacing="0.4" filter="url(#soft)">Responsiveness <tspan fill="#F2C200" font-family="'Georgia','Times New Roman',serif" font-style="italic" font-size="17">A</tspan></text>
-<text x="373.9" y="348.0" font-size="12" font-weight="900" fill="#f3e7c8" text-anchor="start" font-family="'Arial Black','Helvetica Neue',Arial,sans-serif" letter-spacing="0.4" filter="url(#soft)">Adoption <tspan fill="#3FB950" font-family="'Georgia','Times New Roman',serif" font-style="italic" font-size="17">B</tspan></text>
-<text x="244.0" y="424.0" font-size="12" font-weight="900" fill="#f3e7c8" text-anchor="middle" font-family="'Arial Black','Helvetica Neue',Arial,sans-serif" letter-spacing="0.4" filter="url(#soft)">Longevity <tspan fill="#D4C20A" font-family="'Georgia','Times New Roman',serif" font-style="italic" font-size="17">C</tspan></text>
-<text x="114.1" y="348.0" font-size="12" font-weight="900" fill="#f3e7c8" text-anchor="end" font-family="'Arial Black','Helvetica Neue',Arial,sans-serif" letter-spacing="0.4" filter="url(#soft)">Governance <tspan fill="#F2C200" font-family="'Georgia','Times New Roman',serif" font-style="italic" font-size="17">A</tspan></text>
-<text x="114.1" y="196.0" font-size="12" font-weight="900" fill="#f3e7c8" text-anchor="end" font-family="'Arial Black','Helvetica Neue',Arial,sans-serif" letter-spacing="0.4" filter="url(#soft)">Risk <tspan fill="#F2C200" font-family="'Georgia','Times New Roman',serif" font-style="italic" font-size="17">A</tspan></text>
+<polygon points="260.0,153.0 359.6,210.5 359.6,325.5 260.0,383.0 160.4,325.5 160.4,210.5" fill="none" stroke="#9c7d2a" stroke-opacity="0.55" stroke-width="1"/>
+<polygon points="260.0,176.0 339.7,222.0 339.7,314.0 260.0,360.0 180.3,314.0 180.3,222.0" fill="none" stroke="#9c7d2a" stroke-opacity="0.55" stroke-width="1"/>
+<polygon points="260.0,199.0 319.8,233.5 319.8,302.5 260.0,337.0 200.2,302.5 200.2,233.5" fill="none" stroke="#9c7d2a" stroke-opacity="0.55" stroke-width="1"/>
+<polygon points="260.0,222.0 299.8,245.0 299.8,291.0 260.0,314.0 220.2,291.0 220.2,245.0" fill="none" stroke="#9c7d2a" stroke-opacity="0.55" stroke-width="1"/>
+<polygon points="260.0,245.0 279.9,256.5 279.9,279.5 260.0,291.0 240.1,279.5 240.1,256.5" fill="none" stroke="#9c7d2a" stroke-opacity="0.55" stroke-width="1"/>
+<line x1="260" y1="268" x2="260.0" y2="153.0" stroke="#9c7d2a" stroke-opacity="0.5" stroke-width="1"/>
+<line x1="260" y1="268" x2="359.6" y2="210.5" stroke="#9c7d2a" stroke-opacity="0.5" stroke-width="1"/>
+<line x1="260" y1="268" x2="359.6" y2="325.5" stroke="#9c7d2a" stroke-opacity="0.5" stroke-width="1"/>
+<line x1="260" y1="268" x2="260.0" y2="383.0" stroke="#9c7d2a" stroke-opacity="0.5" stroke-width="1"/>
+<line x1="260" y1="268" x2="160.4" y2="325.5" stroke="#9c7d2a" stroke-opacity="0.5" stroke-width="1"/>
+<line x1="260" y1="268" x2="160.4" y2="210.5" stroke="#9c7d2a" stroke-opacity="0.5" stroke-width="1"/>
+<text x="268" y="157.0" font-size="11" font-style="italic" fill="#E8C45A" fill-opacity="0.55" font-family="'Georgia','Times New Roman',serif">A</text>
+<text x="268" y="180.0" font-size="11" font-style="italic" fill="#E8C45A" fill-opacity="0.55" font-family="'Georgia','Times New Roman',serif">B</text>
+<text x="268" y="203.0" font-size="11" font-style="italic" fill="#E8C45A" fill-opacity="0.55" font-family="'Georgia','Times New Roman',serif">C</text>
+<text x="268" y="226.0" font-size="11" font-style="italic" fill="#E8C45A" fill-opacity="0.55" font-family="'Georgia','Times New Roman',serif">D</text>
+<text x="268" y="249.0" font-size="11" font-style="italic" fill="#E8C45A" fill-opacity="0.55" font-family="'Georgia','Times New Roman',serif">E</text>
+<polygon points="260.0,153.0 359.6,210.5 339.7,314.0 260.0,337.0 160.4,325.5 160.4,210.5" fill="url(#poly)" filter="url(#glow)"/>
+<line x1="260.0" y1="153.0" x2="359.6" y2="210.5" stroke="#F2C200" stroke-width="3"/>
+<line x1="359.6" y1="210.5" x2="339.7" y2="314.0" stroke="#F2C200" stroke-width="3"/>
+<line x1="339.7" y1="314.0" x2="260.0" y2="337.0" stroke="#F2C200" stroke-width="3"/>
+<line x1="260.0" y1="337.0" x2="160.4" y2="325.5" stroke="#F2C200" stroke-width="3"/>
+<line x1="160.4" y1="325.5" x2="160.4" y2="210.5" stroke="#F2C200" stroke-width="3"/>
+<line x1="160.4" y1="210.5" x2="260.0" y2="153.0" stroke="#F2C200" stroke-width="3"/>
+<circle cx="260.0" cy="153.0" r="5.5" fill="#F2C200" stroke="#1a1306" stroke-width="1.2"/>
+<circle cx="359.6" cy="210.5" r="5.5" fill="#F2C200" stroke="#1a1306" stroke-width="1.2"/>
+<circle cx="339.7" cy="314.0" r="5.5" fill="#3FB950" stroke="#1a1306" stroke-width="1.2"/>
+<circle cx="260.0" cy="337.0" r="5.5" fill="#D4C20A" stroke="#1a1306" stroke-width="1.2"/>
+<circle cx="160.4" cy="325.5" r="5.5" fill="#F2C200" stroke="#1a1306" stroke-width="1.2"/>
+<circle cx="160.4" cy="210.5" r="5.5" fill="#F2C200" stroke="#1a1306" stroke-width="1.2"/>
+<text x="260.0" y="135.0" font-size="12" font-weight="900" fill="#f3e7c8" text-anchor="middle" font-family="'Arial Black','Helvetica Neue',Arial,sans-serif" letter-spacing="0.4" filter="url(#soft)">Maintenance <tspan fill="#F2C200" font-family="'Georgia','Times New Roman',serif" font-style="italic" font-size="17">A</tspan></text>
+<text x="370.9" y="203.5" font-size="12" font-weight="900" fill="#f3e7c8" text-anchor="start" font-family="'Arial Black','Helvetica Neue',Arial,sans-serif" letter-spacing="0.4" filter="url(#soft)">Responsiveness <tspan fill="#F2C200" font-family="'Georgia','Times New Roman',serif" font-style="italic" font-size="17">A</tspan></text>
+<text x="370.9" y="340.5" font-size="12" font-weight="900" fill="#f3e7c8" text-anchor="start" font-family="'Arial Black','Helvetica Neue',Arial,sans-serif" letter-spacing="0.4" filter="url(#soft)">Adoption <tspan fill="#3FB950" font-family="'Georgia','Times New Roman',serif" font-style="italic" font-size="17">B</tspan></text>
+<text x="260.0" y="409.0" font-size="12" font-weight="900" fill="#f3e7c8" text-anchor="middle" font-family="'Arial Black','Helvetica Neue',Arial,sans-serif" letter-spacing="0.4" filter="url(#soft)">Longevity <tspan fill="#D4C20A" font-family="'Georgia','Times New Roman',serif" font-style="italic" font-size="17">C</tspan></text>
+<text x="149.1" y="340.5" font-size="12" font-weight="900" fill="#f3e7c8" text-anchor="end" font-family="'Arial Black','Helvetica Neue',Arial,sans-serif" letter-spacing="0.4" filter="url(#soft)">Bus Factor <tspan fill="#F2C200" font-family="'Georgia','Times New Roman',serif" font-style="italic" font-size="17">A</tspan></text>
+<text x="149.1" y="203.5" font-size="12" font-weight="900" fill="#f3e7c8" text-anchor="end" font-family="'Arial Black','Helvetica Neue',Arial,sans-serif" letter-spacing="0.4" filter="url(#soft)">Permissiveness <tspan fill="#F2C200" font-family="'Georgia','Times New Roman',serif" font-style="italic" font-size="17">A</tspan></text>
 <text x="498" y="60" font-size="13" letter-spacing="5" fill="#E8C45A" font-weight="900" font-family="'Arial Black','Helvetica Neue',Arial,sans-serif" filter="url(#soft)">◆ HEALTH RADAR</text>
 <g transform="translate(498,112) skewX(-9)"><text x="2" y="2" font-size="30" font-weight="900" font-style="italic" fill="#000" fill-opacity="0.6" font-family="'Georgia','Times New Roman',serif">Open Interpreter</text><text x="0" y="0" font-size="30" font-weight="900" font-style="italic" fill="#fff7e2" font-family="'Georgia','Times New Roman',serif">Open Interpreter</text></g>
 <line x1="498" y1="124" x2="648" y2="124" stroke="url(#frame)" stroke-width="2"/>
@@ -107,11 +107,11 @@
 <rect x="648" y="364" width="118" height="9" rx="2" fill="#241d0e" stroke="#9c7d2a" stroke-opacity="0.5"/>
 <rect x="648" y="364" width="71" height="9" rx="2" fill="#D4C20A"/>
 <text x="779" y="375" font-size="16" font-weight="900" font-style="italic" fill="#D4C20A" font-family="'Georgia','Times New Roman',serif" text-anchor="middle">C</text>
-<text x="498" y="404" font-size="11" font-weight="900" fill="#f3e7c8" font-family="'Arial Black','Helvetica Neue',Arial,sans-serif" letter-spacing="0.4">Governance</text>
+<text x="498" y="404" font-size="11" font-weight="900" fill="#f3e7c8" font-family="'Arial Black','Helvetica Neue',Arial,sans-serif" letter-spacing="0.4">Bus Factor</text>
 <rect x="648" y="393" width="118" height="9" rx="2" fill="#241d0e" stroke="#9c7d2a" stroke-opacity="0.5"/>
 <rect x="648" y="393" width="118" height="9" rx="2" fill="#F2C200"/>
 <text x="779" y="404" font-size="16" font-weight="900" font-style="italic" fill="#F2C200" font-family="'Georgia','Times New Roman',serif" text-anchor="middle">A</text>
-<text x="498" y="433" font-size="11" font-weight="900" fill="#f3e7c8" font-family="'Arial Black','Helvetica Neue',Arial,sans-serif" letter-spacing="0.4">Risk</text>
+<text x="498" y="433" font-size="11" font-weight="900" fill="#f3e7c8" font-family="'Arial Black','Helvetica Neue',Arial,sans-serif" letter-spacing="0.4">Permissiveness</text>
 <rect x="648" y="422" width="118" height="9" rx="2" fill="#241d0e" stroke="#9c7d2a" stroke-opacity="0.5"/>
 <rect x="648" y="422" width="118" height="9" rx="2" fill="#F2C200"/>
 <text x="779" y="433" font-size="16" font-weight="900" font-style="italic" fill="#F2C200" font-family="'Georgia','Times New Roman',serif" text-anchor="middle">A</text>

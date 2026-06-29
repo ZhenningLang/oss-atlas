@@ -36,7 +36,7 @@ AXIS_KEYS = ["maintenance", "responsiveness", "adoption", "longevity", "governan
 # JoJo is the *visual* influence only — no Stand-stat vocabulary in the text.
 LANG = {
     "en": {
-        "axes": ["Maintenance", "Responsiveness", "Adoption", "Longevity", "Governance", "Risk"],
+        "axes": ["Maintenance", "Responsiveness", "Adoption", "Longevity", "Bus Factor", "Permissiveness"],
         "tag": "HEALTH RADAR",
         "overall": "OVERALL",
         "archived": "ARCHIVED",
@@ -45,7 +45,7 @@ LANG = {
         "axis_fs": 12,
     },
     "zh": {
-        "axes": ["维护", "响应", "采用", "寿命", "治理", "风险"],
+        "axes": ["维护活跃度", "响应速度", "采用广度", "长青度", "维护者分散度", "许可宽松度"],
         "tag": "健康度雷达",
         "overall": "总评",
         "archived": "已归档",
@@ -58,7 +58,7 @@ DISP = "'Georgia','Times New Roman',serif"          # dramatic serif for name + 
 LOUD = "'Arial Black','Helvetica Neue',Arial,sans-serif"
 
 W, H = 820, 500
-CX, CY, R = 244, 268, 128
+CX, CY, R = 260, 268, 115
 GOLD = "#E8C45A"
 GOLD_DK = "#9c7d2a"
 PARCH = "#f3e7c8"
@@ -196,7 +196,7 @@ def render(lang: str, name: str, grades: list[str], overall: str, note: str, fla
     for i, label in enumerate(cfg["axes"]):
         lx, ly = _v(i, 1.0)
         a = math.radians(-90 + 60 * i)
-        ox, oy = lx + 22 * math.cos(a), ly + 24 * math.sin(a)
+        ox, oy = lx + 13 * math.cos(a), ly + 22 * math.sin(a)
         anchor = "middle"
         if math.cos(a) > 0.3:
             anchor = "start"

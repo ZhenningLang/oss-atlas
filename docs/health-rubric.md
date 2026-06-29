@@ -16,16 +16,18 @@
 
 ## 0. The Stand: six hexagon vertices
 
-A project is rendered as a JoJo Stand-stats hexagon. Six axes, each graded **A / B / C / D / E** or **`?`** (unknown — first-class, never coerced to a grade). Filled tier-colored polygon; `?` axes render as a dashed/gray ghost spoke and are **excluded from area**.
+A project is rendered as a hexagon radar (JoJo-stand-stats *visual style* only — no Stand vocabulary). Six axes, each graded **A / B / C / D / E** or **`?`** (unknown — first-class, never coerced to a grade). Filled tier-colored polygon; `?` axes render as a dashed/gray ghost spoke and are **excluded from area**.
 
-| # | Axis key | EN label | ZH label | JoJo vertex (kanji / reading) | One-line meaning |
-|---|----------|----------|----------|-------------------------------|------------------|
-| 1 | `maintenance` | Maintenance | 维护活跃度 | 破壊力 / Power (はかいりょく) | Is it still alive and shipping on the default branch right now? |
-| 2 | `responsiveness` | Responsiveness | 响应性 | スピード / Speed (そくど) | If I file something, will a human notice — and how fast? |
-| 3 | `adoption` | Adoption | 采用度 | 射程距離 / Range (しゃていきょり) | How far does its reach extend into the dependency graph / install base? |
-| 4 | `longevity` | Longevity (Lindy) | 寿命×仍活跃 | 持続力 / Staying-power (じぞくりょく) | Old AND still active — proven survival, never age alone. |
-| 5 | `governance` | Governance & Bus-factor | 治理与巴士系数 | 精密動作性 / Precision (せいみつどうさせい) | How concentrated is the work — does it survive the busiest person leaving? |
-| 6 | `risk_license` | Risk / License | 许可与风险 | 成長性 / Durability (せいちょうせい) | Is it legally safe to embed forever — or a relicense / source-available time-bomb? |
+**Label orientation: every axis is phrased so MORE = BETTER**, matching the radar (fuller = healthier). No negative-semantics labels (e.g. "risk", "single-point dependency") that would invert against the chart.
+
+| # | Axis key | EN label | ZH label | One-line meaning (positive direction) |
+|---|----------|----------|----------|---------------------------------------|
+| 1 | `maintenance` | Maintenance | 维护活跃度 | Still alive and shipping on the default branch right now. |
+| 2 | `responsiveness` | Responsiveness | 响应速度 | A human notices filed issues quickly. |
+| 3 | `adoption` | Adoption | 采用广度 | Reach into the dependency graph / install base (downloads + dependents). |
+| 4 | `longevity` | Longevity | 长青度 | Old AND still active — proven survival (Lindy), never age alone. |
+| 5 | `governance` | Bus Factor | 维护者分散度 | Work is spread across enough people to survive the busiest one leaving. |
+| 6 | `risk_license` | Permissiveness | 许可宽松度 | License is permissive / safe to embed long-term (no relicense / source-available trap). |
 
 **Rejected alternative (do not implement):** *Momentum / 成长势头* (trailing-90d commit-acceleration ratio). Dropped because it double-counts Maintenance (its `curr90=0 → E` and `pushed_at≤45d` gates are pure liveness), its newcomer-inflow corroborator is structurally unobservable for >100-contributor repos (GitHub caps `stats/contributors` at top-100 by lifetime total), and acceleration mis-scales for the index's solo/skill-pack-heavy makeup. Its one survivable idea — *release recency* — is folded into Maintenance's optional A-confirm. **6A = Risk/License is the 6th axis.**
 
