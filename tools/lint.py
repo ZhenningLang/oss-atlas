@@ -186,7 +186,7 @@ def required_sections(ptype: str, zh: bool) -> list[str]:
     return core + health + ([] if ptype in NO_EXTRA_TYPES else extra)
 
 
-def check_health_block(path: Path, text: str, base: str, category_dir: Path, rep: Report) -> None:
+def check_health_block(path: Path, text: str, base: str, zh: bool, category_dir: Path, rep: Report) -> None:
     """Validate a frontmatter `health:` radar block + its SVG card, if present.
 
     Pilot phase: silent when a page has no block. Validates shape (overall +
@@ -217,10 +217,11 @@ def check_health_block(path: Path, text: str, base: str, category_dir: Path, rep
         rep.error(path, f"health: expected 6 axis grades, found {len(grades)}")
 
     root = category_dir.parent.parent
-    if not (root / "assets" / "health" / (base + ".svg")).exists():
-        rep.error(path, f"health: card missing: assets/health/{base}.svg (run tools/health_card.py)")
-    if f"assets/health/{base}.svg" not in text[end:]:
-        rep.error(path, f"health: block present but card not embedded in body (assets/health/{base}.svg)")
+    card = base + (".zh.svg" if zh else ".svg")   # one card per language (no mixed scripts)
+    if not (root / "assets" / "health" / card).exists():
+        rep.error(path, f"health: card missing: assets/health/{card} (run tools/health_card.py)")
+    if f"assets/health/{card}" not in text[end:]:
+        rep.error(path, f"health: block present but card not embedded in body (assets/health/{card})")
 
 
 def check_page(path: Path, category_dir: Path, rep: Report, today: dt.date) -> None:
@@ -303,7 +304,7 @@ def check_page(path: Path, category_dir: Path, rep: Report, today: dt.date) -> N
             if drift:
                 rep.error(path, f"frontmatter drift vs {sibling.name} (must be identical): {drift}")
 
-    check_health_block(path, text, base, category_dir, rep)
+    check_health_block(path, text, base, zh, category_dir, rep)
 
     for link in md_links(text):
         if link.startswith(("http://", "https://", "#", "mailto:")):

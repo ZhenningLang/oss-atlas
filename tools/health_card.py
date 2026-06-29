@@ -2,12 +2,16 @@
 """Generate a JoJo Stand-stats HEALTH radar card (SVG) from a page's `health:` block.
 
 PURE / OFFLINE: reads the SSOT `health:` block already present in a page's YAML
-frontmatter and renders an SVG to assets/health/<slug>.svg. Never hits the network
-(scoring lives in tools/health.py). Safe to run in a pre-commit hook.
+frontmatter and renders an SVG. Never hits the network (scoring lives in
+tools/health.py). Safe to run in a pre-commit hook.
+
+One card per LANGUAGE (no mixed scripts on a card):
+  <slug>.md     -> assets/health/<slug>.svg     (English)
+  <slug>.zh.md  -> assets/health/<slug>.zh.svg  (Chinese)
 
 Usage:
   python3 tools/health_card.py categories/<cat>/<slug>.md [more pages...]
-  python3 tools/health_card.py --all          # every page that carries a health: block
+  python3 tools/health_card.py --all          # every page (both languages) with a health: block
 """
 from __future__ import annotations
 import math
@@ -19,45 +23,68 @@ ASSETS = ROOT / "assets" / "health"
 
 # grade -> (radius fraction, color)
 TIER = {
-    "A": (1.00, "#E5B80B"),  # gold
+    "A": (1.00, "#F2C200"),  # gold
     "B": (0.80, "#3FB950"),  # green
     "C": (0.60, "#D4C20A"),  # yellow
     "D": (0.40, "#E8702A"),  # orange
     "E": (0.20, "#E5484D"),  # red
     "?": (0.50, "#8B949E"),  # gray (excluded from area)
 }
-# axis key -> (ZH label, JoJo EN vertex); order = top, then clockwise
-AXES = [
-    ("maintenance", "维护", "POWER"),
-    ("responsiveness", "响应", "SPEED"),
-    ("adoption", "采用", "RANGE"),
-    ("longevity", "寿命", "STAYING"),
-    ("governance", "治理", "PRECISION"),
-    ("risk_license", "风险", "DURABILITY"),
-]
+AXIS_KEYS = ["maintenance", "responsiveness", "adoption", "longevity", "governance", "risk_license"]
+
+# Per-language axis labels: (primary meaning, JoJo stat name). Order = top, then clockwise.
+LANG = {
+    "en": {
+        "axes": [("MAINTENANCE", "POWER"), ("RESPONSIVENESS", "SPEED"), ("ADOPTION", "RANGE"),
+                 ("LONGEVITY", "DURABILITY"), ("GOVERNANCE", "PRECISION"), ("RISK", "POTENTIAL")],
+        "tag": "STAND  STATS",
+        "sub": "PROJECT HEALTH",
+        "overall": "OVERALL",
+        "archived": "ARCHIVED",
+        "ext": ".svg",
+        "label_font": "'Arial Black','Helvetica Neue',Arial,sans-serif",
+    },
+    "zh": {
+        "axes": [("维护", "破坏力"), ("响应", "速度"), ("采用", "射程"),
+                 ("寿命", "持续力"), ("治理", "精密度"), ("风险", "成长性")],
+        "tag": "替身能力",
+        "sub": "项目健康度",
+        "overall": "总评",
+        "archived": "已归档",
+        "ext": ".zh.svg",
+        "label_font": "'PingFang SC','Hiragino Sans GB','Heiti SC','Microsoft YaHei',sans-serif",
+    },
+}
+DISP = "'Georgia','Times New Roman',serif"          # dramatic serif for name + overall
+LOUD = "'Arial Black','Helvetica Neue',Arial,sans-serif"
 
 W, H = 820, 500
-CX, CY, R = 250, 268, 150
-CJK = "'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC',sans-serif"
-DISP = "'Georgia','Times New Roman',serif"
+CX, CY, R = 264, 270, 140
+GOLD = "#E8C45A"
+GOLD_DK = "#9c7d2a"
+PARCH = "#f3e7c8"
+
+
+def _v(i: int, frac: float) -> tuple[float, float]:
+    a = math.radians(-90 + 60 * i)
+    return CX + R * frac * math.cos(a), CY + R * frac * math.sin(a)
+
+
+def _esc(s: str) -> str:
+    return s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
 
 
 # ---------------------------------------------------------------- frontmatter
 def parse_frontmatter(text: str) -> dict:
-    """Minimal indent-based YAML subset parser (mappings + scalars).
-
-    Enough for the fixed `health:` block shape; no pip deps. Inline lists
-    (e.g. tags) are kept as raw strings — the card doesn't need them.
-    """
+    """Minimal indent-based YAML subset parser (mappings + scalars)."""
     if not text.startswith("---"):
         return {}
     end = text.find("\n---", 3)
     if end == -1:
         return {}
-    block = text[3:end].strip("\n")
     root: dict = {}
     stack: list[tuple[int, dict]] = [(-1, root)]
-    for line in block.splitlines():
+    for line in text[3:end].strip("\n").splitlines():
         if not line.strip() or line.lstrip().startswith("#"):
             continue
         indent = len(line) - len(line.lstrip(" "))
@@ -75,137 +102,165 @@ def parse_frontmatter(text: str) -> dict:
     return root
 
 
-def _vertex(i: int, frac: float) -> tuple[float, float]:
-    ang = math.radians(-90 + 60 * i)
-    return CX + R * frac * math.cos(ang), CY + R * frac * math.sin(ang)
-
-
-def _esc(s: str) -> str:
-    return s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
-
-
 # ---------------------------------------------------------------- renderer
-def render(name: str, subtitle: str, grades: list[str], overall: str,
-           note: str, flags: list[str]) -> str:
+def render(lang: str, name: str, grades: list[str], overall: str, note: str, flags: list[str]) -> str:
+    cfg = LANG[lang]
     oc = TIER.get(overall, TIER["?"])[1]
+    lf = cfg["label_font"]
     s: list[str] = []
-    s.append(f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" '
-             f'viewBox="0 0 {W} {H}" font-family="{CJK}">')
+    s.append(f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">')
+
+    # ---- defs ----
     s.append("<defs>")
-    s.append('<radialGradient id="bg" cx="32%" cy="40%" r="80%">'
-             '<stop offset="0%" stop-color="#241a0e"/>'
-             '<stop offset="55%" stop-color="#15110b"/>'
-             '<stop offset="100%" stop-color="#000000"/></radialGradient>')
-    s.append(f'<linearGradient id="poly" x1="0" y1="0" x2="1" y2="1">'
-             f'<stop offset="0%" stop-color="{oc}" stop-opacity="0.85"/>'
-             f'<stop offset="100%" stop-color="{oc}" stop-opacity="0.32"/></linearGradient>')
-    s.append('<filter id="glow" x="-40%" y="-40%" width="180%" height="180%">'
+    s.append('<radialGradient id="bg" cx="30%" cy="34%" r="90%">'
+             '<stop offset="0%" stop-color="#2a2010"/><stop offset="48%" stop-color="#181206"/>'
+             '<stop offset="100%" stop-color="#05030a"/></radialGradient>')
+    s.append('<radialGradient id="vig" cx="50%" cy="50%" r="72%">'
+             '<stop offset="62%" stop-color="#000000" stop-opacity="0"/>'
+             '<stop offset="100%" stop-color="#000000" stop-opacity="0.72"/></radialGradient>')
+    s.append(f'<linearGradient id="frame" x1="0" y1="0" x2="1" y2="1">'
+             f'<stop offset="0%" stop-color="#f6dd92"/><stop offset="45%" stop-color="{GOLD}"/>'
+             f'<stop offset="55%" stop-color="{GOLD_DK}"/><stop offset="100%" stop-color="#f6dd92"/></linearGradient>')
+    s.append(f'<linearGradient id="poly" x1="0" y1="0" x2="0.7" y2="1">'
+             f'<stop offset="0%" stop-color="{oc}" stop-opacity="0.92"/>'
+             f'<stop offset="100%" stop-color="{oc}" stop-opacity="0.34"/></linearGradient>')
+    s.append(f'<radialGradient id="halo" cx="50%" cy="50%" r="50%">'
+             f'<stop offset="0%" stop-color="{oc}" stop-opacity="0.34"/>'
+             f'<stop offset="68%" stop-color="{oc}" stop-opacity="0.04"/>'
+             f'<stop offset="100%" stop-color="{oc}" stop-opacity="0"/></radialGradient>')
+    s.append('<filter id="glow" x="-60%" y="-60%" width="220%" height="220%">'
              '<feGaussianBlur stdDeviation="5" result="b"/><feMerge>'
              '<feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>')
-    s.append(f'<radialGradient id="halo" cx="50%" cy="50%" r="50%">'
-             f'<stop offset="0%" stop-color="{oc}" stop-opacity="0.30"/>'
-             f'<stop offset="70%" stop-color="{oc}" stop-opacity="0.05"/>'
-             f'<stop offset="100%" stop-color="{oc}" stop-opacity="0"/></radialGradient>')
+    s.append('<filter id="soft" x="-30%" y="-30%" width="160%" height="160%">'
+             '<feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000" flood-opacity="0.7"/></filter>')
+    s.append('<pattern id="halftone" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(18)">'
+             f'<circle cx="2" cy="2" r="1" fill="{GOLD}" fill-opacity="0.06"/></pattern>')
     s.append("</defs>")
-    s.append(f'<rect width="{W}" height="{H}" rx="18" fill="url(#bg)"/>')
-    s.append(f'<rect x="7" y="7" width="{W-14}" height="{H-14}" rx="13" fill="none" '
-             f'stroke="{oc}" stroke-opacity="0.55" stroke-width="2"/>')
-    s.append(f'<rect x="12" y="12" width="{W-24}" height="{H-24}" rx="9" fill="none" '
-             f'stroke="#C9A227" stroke-opacity="0.35" stroke-width="1"/>')
-    s.append(f'<circle cx="{CX}" cy="{CY}" r="{R+40}" fill="url(#halo)"/>')
 
-    # tier rings + spokes
+    # ---- background plates ----
+    s.append(f'<rect width="{W}" height="{H}" rx="17" fill="url(#bg)"/>')
+    s.append(f'<rect width="{W}" height="{H}" rx="17" fill="url(#halftone)"/>')
+
+    # ---- aura sunburst behind the hexagon (JoJo menace) ----
+    s.append(f'<g opacity="0.5" filter="url(#glow)">')
+    for k in range(12):
+        a0 = math.radians(k * 30 - 8)
+        a1 = math.radians(k * 30 + 8)
+        rr = 235
+        x0, y0 = CX + rr * math.cos(a0), CY + rr * math.sin(a0)
+        x1, y1 = CX + rr * math.cos(a1), CY + rr * math.sin(a1)
+        col = GOLD if k % 2 == 0 else oc
+        s.append(f'<path d="M{CX},{CY} L{x0:.0f},{y0:.0f} L{x1:.0f},{y1:.0f} Z" fill="{col}" fill-opacity="0.10"/>')
+    s.append("</g>")
+    s.append(f'<circle cx="{CX}" cy="{CY}" r="{R+46}" fill="url(#halo)"/>')
+
+    # ---- ornate double frame + corner ticks ----
+    s.append(f'<rect x="6" y="6" width="{W-12}" height="{H-12}" rx="14" fill="none" stroke="url(#frame)" stroke-width="3.5"/>')
+    s.append(f'<rect x="13" y="13" width="{W-26}" height="{H-26}" rx="9" fill="none" stroke="{GOLD_DK}" stroke-width="1" stroke-opacity="0.8"/>')
+    for cx0, cy0, sx, sy in [(6, 6, 1, 1), (W - 6, 6, -1, 1), (6, H - 6, 1, -1), (W - 6, H - 6, -1, -1)]:
+        s.append(f'<path d="M{cx0+sx*8},{cy0+sy*22} L{cx0+sx*8},{cy0+sy*8} L{cx0+sx*22},{cy0+sy*8}" '
+                 f'fill="none" stroke="{GOLD}" stroke-width="2.4"/>')
+    s.append(f'<rect width="{W}" height="{H}" rx="17" fill="url(#vig)"/>')
+
+    # ---- hexagon rings + spokes + A..E ladder ----
     for frac in (1.0, 0.8, 0.6, 0.4, 0.2):
-        pts = " ".join(f"{_vertex(i, frac)[0]:.1f},{_vertex(i, frac)[1]:.1f}" for i in range(6))
-        s.append(f'<polygon points="{pts}" fill="none" stroke="#6b5a33" '
-                 f'stroke-opacity="0.40" stroke-width="1"/>')
+        pts = " ".join(f"{_v(i, frac)[0]:.1f},{_v(i, frac)[1]:.1f}" for i in range(6))
+        s.append(f'<polygon points="{pts}" fill="none" stroke="{GOLD_DK}" stroke-opacity="0.55" stroke-width="1"/>')
     for i in range(6):
-        x, y = _vertex(i, 1.0)
-        s.append(f'<line x1="{CX}" y1="{CY}" x2="{x:.1f}" y2="{y:.1f}" '
-                 f'stroke="#6b5a33" stroke-opacity="0.35" stroke-width="1"/>')
+        x, y = _v(i, 1.0)
+        s.append(f'<line x1="{CX}" y1="{CY}" x2="{x:.1f}" y2="{y:.1f}" stroke="{GOLD_DK}" stroke-opacity="0.5" stroke-width="1"/>')
     for j, g in enumerate("ABCDE"):
         ly = CY - R * (1.0 - j * 0.2) + 4
-        s.append(f'<text x="{CX+9}" y="{ly:.1f}" font-size="10" fill="#7d6a3c" '
-                 f'font-family="{DISP}">{g}</text>')
+        s.append(f'<text x="{CX+8}" y="{ly:.1f}" font-size="11" font-style="italic" fill="{GOLD}" '
+                 f'fill-opacity="0.55" font-family="{DISP}">{g}</text>')
 
-    # data polygon
-    pts = [_vertex(i, TIER.get(grades[i], TIER["?"])[0]) for i in range(6)]
-    fillpts = " ".join(f"{x:.1f},{y:.1f}" for x, y in pts)
-    s.append(f'<polygon points="{fillpts}" fill="url(#poly)" filter="url(#glow)"/>')
+    # ---- data polygon ----
+    pts = [_v(i, TIER.get(grades[i], TIER["?"])[0]) for i in range(6)]
+    s.append(f'<polygon points="{" ".join(f"{x:.1f},{y:.1f}" for x, y in pts)}" fill="url(#poly)" filter="url(#glow)"/>')
     for i in range(6):
         a, b = pts[i], pts[(i + 1) % 6]
         if grades[i] == "?" or grades[(i + 1) % 6] == "?":
             s.append(f'<line x1="{a[0]:.1f}" y1="{a[1]:.1f}" x2="{b[0]:.1f}" y2="{b[1]:.1f}" '
-                     f'stroke="#8B949E" stroke-width="2" stroke-dasharray="4 4" stroke-opacity="0.9"/>')
+                     f'stroke="#8B949E" stroke-width="2" stroke-dasharray="4 4" stroke-opacity="0.92"/>')
         else:
-            s.append(f'<line x1="{a[0]:.1f}" y1="{a[1]:.1f}" x2="{b[0]:.1f}" y2="{b[1]:.1f}" '
-                     f'stroke="{oc}" stroke-width="2.5"/>')
+            s.append(f'<line x1="{a[0]:.1f}" y1="{a[1]:.1f}" x2="{b[0]:.1f}" y2="{b[1]:.1f}" stroke="{oc}" stroke-width="3"/>')
     for i in range(6):
         x, y = pts[i]
         g = grades[i]
         if g == "?":
-            s.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="5" fill="#15110b" '
-                     f'stroke="#8B949E" stroke-width="2" stroke-dasharray="2 2"/>')
+            s.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="5.5" fill="#10100b" stroke="#8B949E" stroke-width="2" stroke-dasharray="2 2"/>')
         else:
-            s.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="5" fill="{TIER[g][1]}" '
-                     f'stroke="#000" stroke-width="0.8"/>')
+            s.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="5.5" fill="{TIER[g][1]}" stroke="#1a1306" stroke-width="1.2"/>')
 
-    # axis labels
-    for i, (_key, zh, en) in enumerate(AXES):
-        lx, ly = _vertex(i, 1.0)
-        ang = math.radians(-90 + 60 * i)
-        ox, oy = lx + 30 * math.cos(ang), ly + 30 * math.sin(ang)
+    # ---- axis labels: JoJo stat name (BIG, short — no clipping) + real meaning (small) ----
+    for i, (prim, stat) in enumerate(cfg["axes"]):
+        lx, ly = _v(i, 1.0)
+        a = math.radians(-90 + 60 * i)
+        ox, oy = lx + 25 * math.cos(a), ly + 28 * math.sin(a)
         anchor = "middle"
-        if math.cos(ang) > 0.3:
+        if math.cos(a) > 0.3:
             anchor = "start"
-        elif math.cos(ang) < -0.3:
+        elif math.cos(a) < -0.3:
             anchor = "end"
         g = grades[i]
         col = TIER.get(g, TIER["?"])[1]
-        s.append(f'<text x="{ox:.1f}" y="{oy-3:.1f}" font-size="15" font-weight="700" '
-                 f'fill="#efe6d2" text-anchor="{anchor}">{zh} '
-                 f'<tspan fill="{col}" font-family="{DISP}" font-weight="700">{g}</tspan></text>')
-        s.append(f'<text x="{ox:.1f}" y="{oy+10:.1f}" font-size="8" letter-spacing="1.5" '
-                 f'fill="#8a7c5a" text-anchor="{anchor}" font-family="{DISP}">{en}</text>')
+        fs = 17 if lang == "zh" else 14
+        s.append(f'<text x="{ox:.1f}" y="{oy-4:.1f}" font-size="{fs}" font-weight="900" fill="{PARCH}" '
+                 f'text-anchor="{anchor}" font-family="{lf}" letter-spacing="0.5" filter="url(#soft)">{stat} '
+                 f'<tspan fill="{col}" font-family="{DISP}" font-style="italic" font-size="18">{g}</tspan></text>')
+        s.append(f'<text x="{ox:.1f}" y="{oy+9:.1f}" font-size="8" letter-spacing="1.2" fill="{GOLD}" '
+                 f'fill-opacity="0.66" text-anchor="{anchor}" font-family="{lf}">{prim}</text>')
 
-    # right panel
-    px = 500
-    s.append(f'<text x="{px}" y="60" font-size="12" letter-spacing="3" fill="#C9A227" '
-             f'font-family="{DISP}">[ HEALTH / 健康度 ]</text>')
-    s.append(f'<text x="{px}" y="98" font-size="26" font-weight="700" fill="#fbf4e2" '
-             f'font-family="{DISP}">{_esc(name)}</text>')
-    s.append(f'<text x="{px}" y="120" font-size="12" fill="#9c8e6c">{_esc(subtitle)}</text>')
-    s.append(f'<text x="{px}" y="210" font-size="96" font-weight="700" fill="{oc}" '
-             f'font-family="{DISP}" filter="url(#glow)">{overall}</text>')
-    tail = f" · {_esc(note)}" if note else ""
-    s.append(f'<text x="{px+8}" y="234" font-size="12" letter-spacing="2" fill="#9c8e6c" '
-             f'font-family="{DISP}">OVERALL · 总评{tail}</text>')
-    y0 = 280
-    for i, (_key, zh, en) in enumerate(AXES):
-        yy = y0 + i * 30
+    # ---- right panel ----
+    px = 498
+    # banner tag
+    s.append(f'<text x="{px}" y="58" font-size="13" letter-spacing="6" fill="{GOLD}" font-weight="900" '
+             f'font-family="{lf}" filter="url(#soft)">◆ {cfg["tag"]}</text>')
+    s.append(f'<text x="{px}" y="74" font-size="9" letter-spacing="4" fill="{GOLD_DK}" font-family="{lf}">{cfg["sub"]}</text>')
+    # name — bold italic, skewed (JoJo logo energy)
+    s.append(f'<g transform="translate({px},112) skewX(-9)">'
+             f'<text x="2" y="2" font-size="30" font-weight="900" font-style="italic" fill="#000" fill-opacity="0.6" '
+             f'font-family="{DISP}">{_esc(name)}</text>'
+             f'<text x="0" y="0" font-size="30" font-weight="900" font-style="italic" fill="#fff7e2" '
+             f'font-family="{DISP}">{_esc(name)}</text></g>')
+    s.append(f'<line x1="{px}" y1="124" x2="{px+150}" y2="124" stroke="url(#frame)" stroke-width="2"/>')
+    # overall — starburst + huge outlined italic letter
+    ocx, ocy = px + 52, 200
+    s.append(f'<g opacity="0.85" filter="url(#glow)">')
+    for k in range(16):
+        a = math.radians(k * 22.5)
+        x1, y1 = ocx + 18 * math.cos(a), ocy - 18 + 18 * math.sin(a)
+        x2, y2 = ocx + 62 * math.cos(a), ocy - 18 + 62 * math.sin(a)
+        s.append(f'<line x1="{x1:.0f}" y1="{y1:.0f}" x2="{x2:.0f}" y2="{y2:.0f}" stroke="{oc}" stroke-opacity="0.16" stroke-width="3"/>')
+    s.append("</g>")
+    s.append(f'<text x="{ocx}" y="226" font-size="104" font-weight="900" font-style="italic" text-anchor="middle" '
+             f'fill="{oc}" stroke="#000" stroke-width="2" paint-order="stroke" font-family="{DISP}" filter="url(#glow)">{overall}</text>')
+    nt = f"   {_esc(note)}" if note else ""
+    s.append(f'<text x="{px}" y="252" font-size="11" letter-spacing="3" fill="{GOLD}" font-family="{lf}" font-weight="900">'
+             f'{cfg["overall"]}{nt}</text>')
+    # axis rows
+    y0 = 288
+    for i, (prim, stat) in enumerate(cfg["axes"]):
+        yy = y0 + i * 29
         g = grades[i]
         col = TIER.get(g, TIER["?"])[1]
-        s.append(f'<text x="{px}" y="{yy}" font-size="14" fill="#cdbf9d">{zh}</text>')
-        s.append(f'<text x="{px+70}" y="{yy}" font-size="9" letter-spacing="1" fill="#7d6f50" '
-                 f'font-family="{DISP}">{en}</text>')
-        bx, bw = px + 150, 120
-        s.append(f'<rect x="{bx}" y="{yy-11}" width="{bw}" height="9" rx="4" fill="#2a2417"/>')
+        lfs = 14 if lang == "zh" else 11
+        s.append(f'<text x="{px}" y="{yy}" font-size="{lfs}" font-weight="900" fill="{PARCH}" font-family="{lf}" letter-spacing="0.4">{prim}</text>')
+        bx, bw = px + 150, 118
+        s.append(f'<rect x="{bx}" y="{yy-11}" width="{bw}" height="9" rx="2" fill="#241d0e" stroke="{GOLD_DK}" stroke-opacity="0.5"/>')
         if g != "?":
-            s.append(f'<rect x="{bx}" y="{yy-11}" width="{bw*TIER[g][0]:.0f}" height="9" rx="4" '
-                     f'fill="{col}"/>')
+            s.append(f'<rect x="{bx}" y="{yy-11}" width="{bw*TIER[g][0]:.0f}" height="9" rx="2" fill="{col}"/>')
         else:
-            s.append(f'<rect x="{bx}" y="{yy-11}" width="{bw}" height="9" rx="4" fill="none" '
-                     f'stroke="#8B949E" stroke-dasharray="3 3"/>')
-        s.append(f'<text x="{bx+bw+12}" y="{yy}" font-size="15" font-weight="700" fill="{col}" '
-                 f'font-family="{DISP}">{g}</text>')
-    fy = y0 + 6 * 30 + 6
+            s.append(f'<rect x="{bx}" y="{yy-11}" width="{bw}" height="9" rx="2" fill="none" stroke="#8B949E" stroke-dasharray="3 3"/>')
+        s.append(f'<text x="{bx+bw+13}" y="{yy}" font-size="16" font-weight="900" font-style="italic" fill="{col}" '
+                 f'font-family="{DISP}" text-anchor="middle">{g}</text>')
+    # flags
+    fy = y0 + 6 * 29 + 6
     fx = px
     for fl in flags:
-        bw = 9 * len(fl) + 18
-        s.append(f'<rect x="{fx}" y="{fy-13}" width="{bw}" height="20" rx="10" fill="#1d1810" '
-                 f'stroke="#C9A227" stroke-opacity="0.4"/>')
-        s.append(f'<text x="{fx+bw/2}" y="{fy+1}" font-size="11" fill="#cdbf9d" '
-                 f'text-anchor="middle">{_esc(fl)}</text>')
+        bw = (9 if fl.isascii() else 13) * len(fl) + 20
+        s.append(f'<rect x="{fx}" y="{fy-13}" width="{bw}" height="21" rx="3" fill="#1b1408" stroke="{GOLD}" stroke-opacity="0.5"/>')
+        s.append(f'<text x="{fx+bw/2}" y="{fy+2}" font-size="11" font-weight="700" fill="{PARCH}" text-anchor="middle" font-family="{lf}">{_esc(fl)}</text>')
         fx += bw + 8
     s.append("</svg>")
     return "\n".join(s)
@@ -217,40 +272,36 @@ def card_for_page(page: Path) -> Path | None:
     health = fm.get("health")
     if not isinstance(health, dict):
         return None
+    lang = "zh" if page.name.endswith(".zh.md") else "en"
     axes = health.get("axes", {})
-    grades = [str(axes.get(key, {}).get("grade", "?")) for key, _zh, _en in AXES]
+    grades = [str(axes.get(k, {}).get("grade", "?")) for k in AXIS_KEYS]
     overall = str(health.get("overall", "?"))
     name = str(fm.get("name", page.stem))
-    subtitle = f"{fm.get('type', '')} · {fm.get('category', '')}".strip(" ·")
 
-    # auto flags from the SSOT raw values
     flags: list[str] = []
-    risk_raw = axes.get("risk_license", {}).get("raw", {})
-    spdx = risk_raw.get("spdx_id") if isinstance(risk_raw, dict) else None
-    maint_raw = axes.get("maintenance", {}).get("raw", {})
-    archived = isinstance(maint_raw, dict) and str(maint_raw.get("archived", "")).lower() == "true"
-    if archived:
-        flags.append("⚠ archived")
-    if spdx:
-        flags.append(str(spdx))
+    maint = axes.get("maintenance", {}).get("raw", {})
+    if isinstance(maint, dict) and str(maint.get("archived", "")).lower() == "true":
+        flags.append(LANG[lang]["archived"])
+    risk = axes.get("risk_license", {}).get("raw", {})
+    if isinstance(risk, dict) and risk.get("spdx_id"):
+        flags.append(str(risk["spdx_id"]))
     note = ""
     if str(health.get("capped", "")).lower() == "true":
-        note = str(health.get("cap_reason") or "license-capped")
+        note = str(health.get("cap_reason") or "")
 
-    svg = render(name, subtitle, grades, overall, note, flags[:3])
+    svg = render(lang, name, grades, overall, note, flags[:3])
     ASSETS.mkdir(parents=True, exist_ok=True)
-    out = ASSETS / f"{fm.get('slug', page.stem)}.svg"
+    out = ASSETS / (str(fm.get("slug", page.stem)) + LANG[lang]["ext"])
     out.write_text(svg, encoding="utf-8")
     return out
 
 
 def main(argv: list[str]) -> int:
     if not argv:
-        print(__doc__)
+        sys.stderr.write(__doc__ or "")
         return 2
     if argv[0] == "--all":
-        pages = [p for p in (ROOT / "categories").rglob("*.md")
-                 if not p.name.endswith(".zh.md") and p.name != "INDEX.md"]
+        pages = [p for p in (ROOT / "categories").rglob("*.md") if not p.name.startswith("INDEX")]
     else:
         pages = [Path(a) if Path(a).is_absolute() else ROOT / a for a in argv]
     n = 0

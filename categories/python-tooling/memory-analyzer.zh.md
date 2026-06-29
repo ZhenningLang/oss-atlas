@@ -68,7 +68,7 @@ health:
 
 一个对**正在运行**的 Python 进程做一次性内存检查的工具——通过 GDB 挂上去、暂停目标，报告按类型的对象计数、总大小，以及前向／后向引用图。**已被 Meta 归档（只读）——依赖前先看「健康度与可持续性」。**
 
-![memory-analyzer — 健康度雷达](../../assets/health/memory-analyzer.svg)
+![memory-analyzer — 健康度雷达](../../assets/health/memory-analyzer.zh.svg)
 
 ## 何时使用
 

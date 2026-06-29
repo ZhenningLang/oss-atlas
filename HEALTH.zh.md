@@ -11,12 +11,12 @@
 
 ## Open Interpreter — 总评 A
 
-[![Open Interpreter 健康度雷达](assets/health/open-interpreter.svg)](categories/agent-frameworks/open-interpreter.zh.md)
+[![Open Interpreter 健康度雷达](assets/health/open-interpreter.zh.svg)](categories/agent-frameworks/open-interpreter.zh.md)
 
 ## Agent Orchestrator — 总评 B
 
-[![Agent Orchestrator 健康度雷达](assets/health/agent-orchestrator.svg)](categories/agent-tooling/agent-orchestrator.zh.md)
+[![Agent Orchestrator 健康度雷达](assets/health/agent-orchestrator.zh.svg)](categories/agent-tooling/agent-orchestrator.zh.md)
 
 ## memory-analyzer — 总评 D
 
-[![memory-analyzer 健康度雷达](assets/health/memory-analyzer.svg)](categories/python-tooling/memory-analyzer.zh.md)
+[![memory-analyzer 健康度雷达](assets/health/memory-analyzer.zh.svg)](categories/python-tooling/memory-analyzer.zh.md)

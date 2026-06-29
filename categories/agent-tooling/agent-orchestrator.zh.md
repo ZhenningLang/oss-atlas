@@ -66,7 +66,7 @@ health:
 
 一个“Agentic IDE”——一个常驻的 Go daemon 加上一个 Electron/React 桌面应用，在隔离的 git worktree 里监管多个并行的 AI 编码 agent，并用自动反馈环把 CI 失败、PR review 评论和合并冲突路由回拥有该分支的 agent。
 
-![agent-orchestrator — 健康度雷达](../../assets/health/agent-orchestrator.svg)
+![agent-orchestrator — 健康度雷达](../../assets/health/agent-orchestrator.zh.svg)
 
 ## 何时使用
 
