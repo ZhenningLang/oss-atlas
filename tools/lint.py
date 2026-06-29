@@ -220,8 +220,30 @@ def check_health_block(path: Path, text: str, base: str, zh: bool, category_dir:
     card = base + (".zh.svg" if zh else ".svg")   # one card per language (no mixed scripts)
     if not (root / "assets" / "health" / card).exists():
         rep.error(path, f"health: card missing: assets/health/{card} (run tools/health_card.py)")
-    if f"assets/health/{card}" not in text[end:]:
+    card_ref = f"assets/health/{card}"
+    if card_ref not in text[end:]:
         rep.error(path, f"health: block present but card not embedded in body (assets/health/{card})")
+        return
+
+    close_end = text.find("\n", end + 4)
+    body = text[close_end + 1 :] if close_end != -1 else text[end + 4 :]
+    lines = body.splitlines()
+    h1_idx = next((i for i, line in enumerate(lines) if re.match(r"^#[ \t]+\S", line)), None)
+    card_idx = next((i for i, line in enumerate(lines) if card_ref in line), None)
+    first_h2_idx = next((i for i, line in enumerate(lines) if re.match(r"^##[ \t]+\S", line)), None)
+    if h1_idx is None or card_idx is None:
+        return
+
+    tldr_start = next((i for i in range(h1_idx + 1, len(lines)) if lines[i].strip()), None)
+    if tldr_start is None:
+        rep.error(path, "health: card must appear after the H1 and one-line TL;DR, before any notice or section")
+        return
+    tldr_end = next((i for i in range(tldr_start + 1, len(lines)) if not lines[i].strip()), len(lines))
+    intervening = [line.strip() for line in lines[tldr_end + 1 : card_idx] if line.strip()]
+    if card_idx <= tldr_end or intervening:
+        rep.error(path, "health: card must be the first block after the opening TL;DR (before notices/body text)")
+    if first_h2_idx is not None and card_idx > first_h2_idx:
+        rep.error(path, "health: card must appear before the first H2 section")
 
 
 def check_page(path: Path, category_dir: Path, rep: Report, today: dt.date) -> None:

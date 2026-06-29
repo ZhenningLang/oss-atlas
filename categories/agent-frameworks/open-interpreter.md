@@ -72,9 +72,9 @@ health:
 
 A terminal coding agent that is a **fork of OpenAI's Codex CLI**, re-focused on an *emulated agent harness* that squeezes good behavior out of low-cost / open models (DeepSeek, Kimi, Qwen) — it runs commands and edits files in a native OS sandbox, switches model + harness from a TUI, and exposes skills/MCP/hooks/`AGENTS.md`.
 
-> **Identity change — read this first.** The project you may remember — the Python "natural-language interface for your computer" REPL that wrote and executed code locally — is *not* what this repo ships today. That Python codebase last shipped `v0.4.2` (2024-10) and now lives on as a community fork at [`endolith/open-interpreter`](https://github.com/endolith/open-interpreter). The `openinterpreter/open-interpreter` repo was rewritten in **Rust as a Codex fork** and relaunched mid-2026. Everything below describes the *current* Rust project. If you want the old Python tool, use the community fork, not this page.
-
 ![open-interpreter — health radar](../../assets/health/open-interpreter.svg)
+
+> **Identity change — read this first.** The project you may remember — the Python "natural-language interface for your computer" REPL that wrote and executed code locally — is *not* what this repo ships today. That Python codebase last shipped `v0.4.2` (2024-10) and now lives on as a community fork at [`endolith/open-interpreter`](https://github.com/endolith/open-interpreter). The `openinterpreter/open-interpreter` repo was rewritten in **Rust as a Codex fork** and relaunched mid-2026. Everything below describes the *current* Rust project. If you want the old Python tool, use the community fork, not this page.
 
 ## When to use
 

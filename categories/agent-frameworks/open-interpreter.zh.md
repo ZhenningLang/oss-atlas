@@ -72,9 +72,9 @@ health:
 
 一个终端编码 agent，本质是 **OpenAI Codex CLI 的一个 fork**，重新聚焦在「模拟 agent harness」上——让低成本 / 开源模型（DeepSeek、Kimi、Qwen）跑出更好的行为：它在 OS 原生沙箱里执行命令、改文件，从 TUI 里切换模型与 harness，并暴露 skills / MCP / hooks / `AGENTS.md`。
 
-> **身份已变——请先读这段。** 你也许记得的那个项目——那个用 Python 写的「自然语言操作你的电脑」REPL，在本地生成并执行代码——*不是*这个仓库今天交付的东西。那套 Python 代码最后一次发版是 `v0.4.2`（2024-10），如今作为社区 fork 存活在 [`endolith/open-interpreter`](https://github.com/endolith/open-interpreter)。而 `openinterpreter/open-interpreter` 仓库已用 **Rust 重写成 Codex 的 fork**，于 2026 年年中重新发布。下文描述的全部是*当前*这个 Rust 项目。如果你想要的是老的 Python 工具，请用社区 fork，而不是看这一页。
-
 ![open-interpreter — 健康度雷达](../../assets/health/open-interpreter.zh.svg)
+
+> **身份已变——请先读这段。** 你也许记得的那个项目——那个用 Python 写的「自然语言操作你的电脑」REPL，在本地生成并执行代码——*不是*这个仓库今天交付的东西。那套 Python 代码最后一次发版是 `v0.4.2`（2024-10），如今作为社区 fork 存活在 [`endolith/open-interpreter`](https://github.com/endolith/open-interpreter)。而 `openinterpreter/open-interpreter` 仓库已用 **Rust 重写成 Codex 的 fork**，于 2026 年年中重新发布。下文描述的全部是*当前*这个 Rust 项目。如果你想要的是老的 Python 工具，请用社区 fork，而不是看这一页。
 
 ## 何时使用
 
