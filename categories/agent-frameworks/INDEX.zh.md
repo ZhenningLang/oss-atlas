@@ -17,6 +17,7 @@
 | **Kilo Code** | 当你想要一个开源、BYOK、在 VS Code 内的编码 agent（带规划与模式）时用它——是终端用户工具，不是构建 agent 的库。 | [→](kilocode.zh.md) |
 | **Parlant** | 当你要构建一个必须靠行为准则严格守规的对客 agent 时用它——简单或自由式 agent 用它过重。 | [→](parlant.zh.md) |
 | **SkillOpt** | 当你要针对可打分基准、为冻结的 LLM 优化 Agent 的自然语言技能文档时用它——但没有可靠评测来把关每次编辑，方法就毫无信号，且它还是全新的 v0.1.0。 | [→](skillopt.zh.md) |
+| **Open Interpreter** | 当你想要一个 Codex-fork 的终端编码 agent、带为低成本 / 开源模型（DeepSeek、Kimi、Qwen）调过的可切换 harness 时用它——不是老的 Python REPL（那个已迁到社区 fork），而且它是几周大的 0.0.x 重写、会执行代码。 | [→](open-interpreter.zh.md) |
 
 ## 对比矩阵
 
@@ -32,6 +33,7 @@
 | [Kilo Code](kilocode.zh.md) | ✅ | 当你想要一个开源、BYOK、在 VS Code 内的编码 agent（带规划与模式）时用它——是终端用户工具，不是构建 agent 的库。 |
 | [Parlant](parlant.zh.md) | ✅ | 当你要构建一个必须靠行为准则严格守规的对客 agent 时用它——简单或自由式 agent 用它过重。 |
 | [SkillOpt](skillopt.zh.md) | ✅ | 当你要针对可打分基准、为冻结的 LLM 优化 Agent 的自然语言技能文档时用它——但没有可靠评测来把关每次编辑，方法就毫无信号，且它还是全新的 v0.1.0。 |
+| [Open Interpreter](open-interpreter.zh.md) | ✅ | OpenAI Codex-fork 的终端编码 agent，带运行时可切换、为低成本 / 开源模型调过的 harness；几周大的 0.0.x Rust 重写、在 OS 沙箱里执行代码——不是已停更的 Python REPL。 |
 | LangChain / LlamaIndex / CrewAI / AutoGen | 未收录 | 各页对比里点到的更广义 agent 构建/运行生态。 |
 
 ## 什么该放这里

@@ -17,6 +17,7 @@
 | **Kilo Code** | Use it when you want an open, BYOK in-IDE (VS Code) coding agent with planning and modes — an end-user tool, not a library to build agents. | [→](kilocode.md) |
 | **Parlant** | Use it when you build a customer-facing agent that must stay on-rails via behavioral guidelines — overkill for simple or free-form agents. | [→](parlant.md) |
 | **SkillOpt** | Use it when you must optimize an agent's natural-language skill doc for a frozen LLM against a scorable benchmark — but without a reliable eval to gate edits the method has no signal, and it's a brand-new v0.1.0. | [→](skillopt.md) |
+| **Open Interpreter** | Use it when you want a Codex-fork terminal coding agent with swappable harnesses tuned for low-cost/open models (DeepSeek, Kimi, Qwen) — not the old Python REPL (that moved to a community fork), and it's a weeks-old 0.0.x rewrite that executes code. | [→](open-interpreter.md) |
 
 ## Comparison matrix
 
@@ -32,6 +33,7 @@
 | [Kilo Code](kilocode.md) | ✅ | Use it when you want an open, BYOK in-IDE (VS Code) coding agent with planning and modes — an end-user tool, not a library to build agents. |
 | [Parlant](parlant.md) | ✅ | Use it when you build a customer-facing agent that must stay on-rails via behavioral guidelines — overkill for simple or free-form agents. |
 | [SkillOpt](skillopt.md) | ✅ | Use it when you must optimize an agent's natural-language skill doc for a frozen LLM against a scorable benchmark — but without a reliable eval to gate edits the method has no signal, and it's a brand-new v0.1.0. |
+| [Open Interpreter](open-interpreter.md) | ✅ | OpenAI Codex-fork terminal coding agent with runtime-swappable harnesses for low-cost/open models; weeks-old 0.0.x Rust rewrite that runs code in an OS sandbox — not the discontinued Python REPL. |
 | LangChain / LlamaIndex / CrewAI / AutoGen | 未收录 | Broader build/run agent ecosystems named across the pages' comparisons. |
 
 ## What belongs here
