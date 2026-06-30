@@ -60,6 +60,7 @@
 | **reading-tools** | Reading tools — reader-mode extensions and RSS readers. | [→](categories/reading-tools/INDEX.md) |
 | **speech** | Speech processing toolkits (ASR, TTS, speaker tasks). | [→](categories/speech/INDEX.md) |
 | **terminal-ui** | Terminal/CLI UI libraries — colors, TUIs, ASCII art, terminal rendering. | [→](categories/terminal-ui/INDEX.md) |
+| **video-production** | AI-orchestrated end-to-end video production — research, scripting, asset generation, composition, and rendering driven by an agent inside a coding assistant. | [→](categories/video-production/INDEX.md) |
 
 ## How to add a category
 

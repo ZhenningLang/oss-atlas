@@ -59,6 +59,7 @@
 | **reading-tools** | 阅读工具——阅读模式扩展与 RSS 阅读器。 | [→](categories/reading-tools/INDEX.zh.md) |
 | **speech** | 语音处理工具包（ASR、TTS、说话人任务）。 | [→](categories/speech/INDEX.zh.md) |
 | **terminal-ui** | 终端/CLI UI 库——着色、TUI、ASCII art、终端渲染。 | [→](categories/terminal-ui/INDEX.zh.md) |
+| **video-production** | AI 编排的端到端视频制作——由编码助手内的 agent 驱动研究、脚本撰写、素材生成、合成与渲染。 | [→](categories/video-production/INDEX.zh.md) |
 
 ## 如何新增分类
 

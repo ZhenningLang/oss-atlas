@@ -358,6 +358,11 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **VMAF** | Use it when you're tuning an encoding ladder and need a perceptual 0-100 score to compare codecs/presets the way the industry does — but it's full-reference only, and picking the wrong model silently invalidates cross-version comparisons. | BSD-2-Clause-Patent | B (5/6) | [EN](categories/media-processing/vmaf.md) · [中](categories/media-processing/vmaf.zh.md) |
 | **m3u8** | Use it when you must parse or rewrite HLS .m3u8 manifests programmatically as a typed object model rather than regex — but it's Python-only, HLS-specific, and quiet since 2025 so the newest rfc8216bis tags may lag. | MIT | C (3/6) | [EN](categories/media-processing/m3u8.md) · [中](categories/media-processing/m3u8.zh.md) |
 | **ffsubsync** | Use it when a subtitle file is off by a constant global offset and you want one-command FFT audio-sync without manual sync points — but it can't fix per-line/variable drift inside the content, and it's single-maintainer. | MIT | B (6/6) | [EN](categories/media-processing/ffsubsync.md) · [中](categories/media-processing/ffsubsync.zh.md) |
+### video-production
+
+| Project | Use when | License | Health | Page |
+| --- | --- | --- | --- | --- |
+| **OpenMontage** | Use it when you want an AI coding assistant to produce full videos — explainers, trailers, animations, or documentary montages — from a plain-language prompt through research, scripting, asset generation, and render. | AGPL-3.0 | C (6/6) | [EN](categories/video-production/open-montage.md) · [中](categories/video-production/open-montage.zh.md) |
 ### llm-chat-ui
 
 | Project | Use when | License | Health | Page |
