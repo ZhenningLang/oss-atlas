@@ -1,0 +1,107 @@
+---
+name: MarkItDown
+slug: markitdown
+repo: https://github.com/microsoft/markitdown
+category: document-parsing
+tags: [document-conversion, markdown, pdf, office, llm-ingestion, python]
+language: Python
+license: MIT
+maturity: v0.x, active, 162k stars (as of 2026-07)
+last_verified: 2026-07-01
+type: library
+upstream:
+  pushed_at: 2026-06-24T15:32:46Z
+  default_branch: main
+  default_branch_sha: 0000000000000000000000000000000000000000
+  archived: false
+health:
+  schema: 1
+  computed_at: 2026-07-01T10:00:00Z
+  overall: "?"
+  overall_score: 0.0
+  scored_axes: 0
+  capped: false
+  cap_reason: null
+  needs_human_review: true
+  axes:
+    maintenance:
+      grade: "?"
+      raw: {}
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: "?"
+      raw: {}
+    governance:
+      grade: "?"
+      raw: {}
+    risk_license:
+      grade: "?"
+      raw: {}
+---
+
+# MarkItDown
+
+一款轻量级 Python 库，用于将各类文件和办公文档转换为 Markdown，面向 LLM 摄入和文本分析管线设计，而非高保真的人类阅读。
+
+![MarkItDown — 健康度雷达](../../assets/health/markitdown.zh.svg)
+
+## 何时使用
+
+你在构建 RAG 管线、文档问答系统或需要消费 PDF、Word 文档、PowerPoint 幻灯片、Excel 表格、图像、音频文件和 HTML 页面的智能体。你想要一个单一 Python 库，把这些异构格式转成干净的 Markdown——保留标题、列表、表格和链接——让你的 LLM 无需被二进制噪音或专有格式淹没即可处理。你通过 pip 安装 MarkItDown，对文件路径调用 `convert()`，取回可直接分块、嵌入或喂进 prompt 的 Markdown 文本。它为机器消费而设计，不是像素级精确的文档复现。
+
+## 何时不用
+
+- **面向人类阅读的高保真文档转换**——输出针对文本分析工具优化；可能会丢弃高级格式、扁平化复杂布局或以降低人类可读性的方式简化表格。如果你需要用于发布的 Word 转 PDF 或 PDF 转 Word 转换器，请另寻它处。
+- **文档编辑或往返转换**——MarkItDown 是单向转换（文件 → Markdown）。它不会编辑、修改或写回原始格式。
+- **复杂表格与布局保留**——虽然它尝试保留表格和结构，但带有嵌套布局、合并单元格或精确排版的重度格式化文档会在 Markdown 输出中丢失保真度。[未验证]
+- **未经输入消毒的生产使用**——该库以当前进程的权限执行 I/O，可访问进程能触及的任何资源。在多租户或不可信输入环境中，请消毒输入并调用最窄的 `convert_*` 函数。[未验证]
+- **以 OCR 为主要用途**——它能提取图像 EXIF 元数据并对图像做 OCR，但专用 OCR 库（如 Tesseract）对纯文本提取任务更成熟、更可配置。
+
+## 横向对比
+
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+|---|---|---|---|
+| [Docling](docling.zh.md) | ✅ | 富文档解析，将版面 + 表格解析成结构化 Markdown/JSON。 | Docling 模型依赖更重，聚焦结构化输出；MarkItDown 更轻更简单，专为 LLM 摄入构建。 |
+| unstructured.io | 未收录 | 企业级文档解析，带分块和嵌入管线。 | 生态更成熟，有云服务；依赖更重，企业功能可能产生许可费用。 |
+| LlamaParse | 未收录 | LlamaIndex 出品的解析服务，托管 API。 | 基于云端，需 API key，对复杂 PDF 表现好；MarkItDown 本地、免费且开源。 |
+| Marker | 未收录 | 面向学术论文优化的快速 PDF 转 Markdown 工具。 | 专攻 PDF，声称对研究论文精度高；MarkItDown 覆盖更多格式（Office、音频、HTML 等）。 |
+| PyMuPDF | 未收录 | 用于提取和操控的底层 Python PDF 库。 | 直接 PDF 页面操控库，非高级 Markdown 转换器；更强大但需要更多代码。 |
+| textract | 未收录 | 从多种格式提取文本的 Python 库。 | 更老的项目，格式支持更广，但对 LLM 的 Markdown 结构保留关注较少。 |
+
+## 技术栈
+
+- **Python**——主要实现语言
+- **模块化转换器架构**——每种格式有独立转换器（PDF、DOCX、PPTX、XLSX、图像、音频、HTML 等）
+- **Markdown 输出**——所有转换的统一目标格式
+
+## 依赖
+
+- **Python 3.9+**——运行时环境
+- **可选格式专属依赖**——某些转换器需要额外包（如 OCR、音频转录或高级 PDF 解析）
+- **无服务或数据库**——纯库；进程内运行
+
+## 运维难度
+
+**低。**`pip install markitdown` 后导入即可。该库无状态、进程内运行；无需部署服务、管理数据库或维护持久基建。主要运维关注点是保持 Python 环境和可选依赖更新，以及安全提示中提到的输入消毒纪律。
+
+## 健康度与可持续性
+
+- **维护**：活跃——上次推送为 2026-06-24，表明近期仍在开发。项目虽年轻，但由微软 AutoGen 团队出品，暗示组织层面对持续开发的承诺。[未验证]
+- **治理**：由微软（`microsoft` 组织）所有。这提供了强力背书和较低的 bus factor 风险（相比单人项目）。路线图与微软更广泛的 AI 工具生态对齐是合理的。[推断]
+- **背书**：微软 / AutoGen 团队。大型企业背书是长寿和维护的重要积极信号，但也意味着路线图可能优先服务于微软的产品战略。
+- **采用**：对 2024 年末创建的项目来说，star 数极高（162k）。受欢迎程度既反映了对文档到 LLM 管线的真实需求，也受益于微软品牌的曝光加成。[推断]
+- **年龄与 Lindy**：2024-11 创建（验证时约 8 个月）。极其年轻，无有意义 Lindy 记录。微软背书部分抵消了年龄风险，但 v0.x 项目应预期破坏性变更。
+- **风险旗标**：MIT 许可干净且宽松。主要风险是项目年轻——API、转换器质量和支持格式可能发生显著变化。此外，作为微软项目，若不再符合战略优先级可能被降权，但与 AutoGen 的关联表明它有具体用例支撑。
+
+## 存疑（未验证）
+
+- [未验证] README badge 声明由微软 AutoGen 团队出品；具体团队结构和长期维护承诺未公开记录。
+- [未验证] 输出质量因格式和文档复杂度差异显著；“Markdown 为 LLM 优化”的免责声明意味着人类可读性被明确列为次要目标。
+- [未验证] 关于 I/O 权限和输入消毒的安全提示在多租户或不可信输入环境中应被视为真实运维关切。
+- [推断] 一个 8 个月大的项目拥有 162k star，很可能被微软品牌和 2024–2025 LLM 工具炒作周期放大。
+- [未验证] 音频转录和图像 OCR 支持可能需要额外外部依赖（如 Whisper、Tesseract），默认不捆绑。

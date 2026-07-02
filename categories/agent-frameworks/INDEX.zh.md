@@ -18,6 +18,14 @@
 | **Parlant** | 当你要构建一个必须靠行为准则严格守规的对客 agent 时用它——简单或自由式 agent 用它过重。 | B（6/6） | [→](parlant.zh.md) |
 | **SkillOpt** | 当你要针对可打分基准、为冻结的 LLM 优化 Agent 的自然语言技能文档时用它——但没有可靠评测来把关每次编辑，方法就毫无信号，且它还是全新的 v0.1.0。 | B（6/6） | [→](skillopt.zh.md) |
 | **Open Interpreter** | 当你想要一个 Codex-fork 的终端编码 agent、带为低成本 / 开源模型（DeepSeek、Kimi、Qwen）调过的可切换 harness 时用它——不是老的 Python REPL（那个已迁到社区 fork），而且它是几周大的 0.0.x 重写、会执行代码。 | A（6/6） | [→](open-interpreter.zh.md) |
+| **Codex** | 当你想要一个轻量级、由 OpenAI 支持的终端编码智能体，能编辑文件、运行测试并提交变更时用它——但需要 OpenAI API 访问权限和网络连接。 | ?（0/6） | [→](codex.zh.md) |
+| **OpenClaw** | 当你想要一款在自有设备上运行、跨 20 余条消息渠道应答你的个人 AI 助手时用它——但它极其年轻，毫无 Lindy 记录。 | ?（0/6） | [→](openclaw.zh.md) |
+| **CC Switch** | 当你同时使用多种 AI 编码智能体（Claude Code、Codex、Gemini CLI、OpenClaw、OpenCode、Hermes Agent）并希望有一个统一的桌面控制平面进行提供商路由和 MCP 支持时用它——但它不足一岁，且为单人维护。 | ?（0/6） | [→](cc-switch.zh.md) |
+| **Hermes Agent** | 当你想要一个带学习循环、能从经验中创建技能、可在 5 美元 VPS 上运行的自我改进 AI 智能体时用它——但它不足一岁，学习循环的稳定性未经检验。 | ?（0/6） | [→](hermes-agent.zh.md) |
+| **AutoGPT** | 当你需要一个用于创建、部署和管理持续运行 AI 智能体以自动化复杂工作流的平台时用它——但它未声明许可，且自托管需要大量资源。 | ?（0/6） | [→](autogpt.zh.md) |
+| **Dify** | 当你想要一个生产就绪的、用于构建 agentic 工作流的低代码可视化平台，内置 RAG 与 MCP 支持时用它——但商用前请核实许可。 | ?（0/6） | [→](dify.zh.md) |
+| **LangChain** | 当你需要一个代码优先的框架来组合 LLM agent、工具与记忆，并拥有庞大的集成生态时用它——但简单单 prompt 应用别用它。 | ?（0/6） | [→](langchain.zh.md) |
+| **RTK** | 当你使用基于 CLI 的 AI 编码智能体，想在常见 shell 命令上减少 60–90% 的 LLM token 消耗时用它——但它仅约 6 个月大，且 star 数高得可疑。 | ?（0/6） | [→](rtk.zh.md) |
 
 ## 对比矩阵
 
@@ -34,7 +42,17 @@
 | [Parlant](parlant.zh.md) | ✅ | B（6/6） | 当你要构建一个必须靠行为准则严格守规的对客 agent 时用它——简单或自由式 agent 用它过重。 |
 | [SkillOpt](skillopt.zh.md) | ✅ | B（6/6） | 当你要针对可打分基准、为冻结的 LLM 优化 Agent 的自然语言技能文档时用它——但没有可靠评测来把关每次编辑，方法就毫无信号，且它还是全新的 v0.1.0。 |
 | [Open Interpreter](open-interpreter.zh.md) | ✅ | A（6/6） | OpenAI Codex-fork 的终端编码 agent，带运行时可切换、为低成本 / 开源模型调过的 harness；几周大的 0.0.x Rust 重写、在 OS 沙箱里执行代码——不是已停更的 Python REPL。 |
-| LangChain / LlamaIndex / CrewAI / AutoGen | 未收录 | — | 各页对比里点到的更广义 agent 构建/运行生态。 |
+| [Codex](codex.zh.md) | ✅ | ?（0/6） | 轻量级 OpenAI 终端编码智能体，带沙箱代码执行；仅限 OpenAI，极其年轻（2025-04 创建），且需要 API 额度。 |
+| [OpenClaw](openclaw.zh.md) | ✅ | ?（0/6） | 在自有设备上跨 20 余条消息渠道运行的个人 AI 助手；极其年轻（2025-11 创建），无 Lindy 记录。 |
+| [CC Switch](cc-switch.zh.md) | ✅ | ?（0/6） | 跨平台桌面管理器，统一管理多个 AI 编码智能体（Claude Code、Codex、Gemini CLI 等），支持提供商路由和 MCP；不足一岁，单人维护，bus factor 为 1。 |
+| [Hermes Agent](hermes-agent.zh.md) | ✅ | ?（0/6） | Nous Research 出品的自我改进 AI 智能体，带学习循环；能从经验中创建技能，但不足一岁，学习循环稳定性未经检验。 |
+| [AutoGPT](autogpt.zh.md) | ✅ | ?（0/6） | 用于创建、部署和管理持续运行 AI 智能体的平台；未声明许可、资源占用高，且云端测试版尚未公开。 |
+| [Dify](dify.zh.md) | ✅ | ?（0/6） | 生产就绪的低代码可视化 agentic 工作流平台，内置 RAG 与 MCP；商用前请核实许可。 |
+| [LangChain](langchain.zh.md) | ✅ | ?（0/6） | 代码优先的 LLM agent、工具与记忆组合框架，集成生态庞大；简单单 prompt 应用别用它。 |
+| [RTK](rtk.zh.md) | ✅ | ?（0/6） | 在 shell 输出到达 AI 智能体前进行压缩的 CLI 代理，可减少 60–90% 的 token 成本；极其年轻（6 个月），star 数高得可疑。 |
+| [OpenCode](opencode.zh.md) | ✅ | ?（0/6） | 可自托管、审计和扩展的开源终端编码智能体；极其年轻（2025-04 创建），无 Lindy 记录。 |
+| [Langflow](langflow.zh.md) | ✅ | ?（0/6） | 可视化拖拽平台，用于构建和部署 LLM 工作流与智能体，内置 API 和 MCP 服务器；可视化流比代码更难做 diff/审查。 |
+| [Gemini CLI](gemini-cli.zh.md) | ✅ | ?（0/6） | 基于 Google Gemini 模型的开源终端 AI 智能体，带免费层、内置工具和 MCP 支持；非常年轻（2025-04 创建）且仅限 Google 模型。 |
 
 ## 什么该放这里
 

@@ -56,6 +56,7 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **paperless-ngx** | Use it when you want to self-host OCR + tagging + full-text search over scanned paperwork. | GPL-3.0 | B (5/6) | [EN](categories/document-management/paperless-ngx.md) · [中](categories/document-management/paperless-ngx.zh.md) |
 | **copyparty** | Use it when you need a single-file portable file server with resumable uploads, dedup, and multi-protocol access — not OCR document search. | MIT | B (6/6) | [EN](categories/document-management/copyparty.md) · [中](categories/document-management/copyparty.zh.md) |
 | **Twake Drive** | Use it when you want a self-hosted Google-Drive-style file network drive inside the Twake/Cozy stack, not OCR archiving. | AGPL-3.0 | B (5/6) | [EN](categories/document-management/twake-drive.md) · [中](categories/document-management/twake-drive.zh.md) |
+| **Immich** | Use it when you want a self-hosted Google Photos alternative with AI-powered face/object recognition, smart search, and mobile app sync — but it requires significant server resources (RAM, storage, GPU for ML). | AGPL-3.0 | ? (0/6) | [EN](categories/document-management/immich.md) · [中](categories/document-management/immich.zh.md) |
 
 ### on-device-ml
 
@@ -66,6 +67,8 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **Google AI Edge Gallery** | Use it when you need to demo and benchmark on-device Gemma LLMs on real phones before building. | Apache-2.0 | A (5/6) | [EN](categories/on-device-ml/ai-edge-gallery.md) · [中](categories/on-device-ml/ai-edge-gallery.zh.md) |
 | **TimesFM** | Use it when you need zero-shot time-series forecasts run locally on CPU/GPU without per-dataset training. | Apache-2.0 | B (5/6) | [EN](categories/on-device-ml/timesfm.md) · [中](categories/on-device-ml/timesfm.zh.md) |
 | **MiniCPM-V** | Use it when you need efficient on-device/edge multimodal (image+video) understanding with a small footprint — verify the per-weight license. | Apache-2.0 | A (4/6) | [EN](categories/on-device-ml/minicpm-v.md) · [中](categories/on-device-ml/minicpm-v.zh.md) |
+| **Stable Diffusion WebUI** | Use it when you want a local web-based GUI for Stable Diffusion image generation, editing, and upscaling on your own GPU — but it requires technical setup and an NVIDIA GPU. | AGPL-3.0 | ? (0/6) | [EN](categories/on-device-ml/stable-diffusion-webui.md) · [中](categories/on-device-ml/stable-diffusion-webui.zh.md) |
+| **ComfyUI** | The most powerful and modular diffusion model GUI with a node-graph interface for building complex workflows locally — but it has a steep learning curve and requires significant GPU resources. | GPL-3.0 | ? (0/6) | [EN](categories/on-device-ml/comfyui.md) · [中](categories/on-device-ml/comfyui.zh.md) |
 
 ### web-automation
 
@@ -103,6 +106,18 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **Parlant** | Use it when you build a customer-facing agent that must stay on-rails via behavioral guidelines — overkill for simple or free-form agents. | Apache-2.0 | B (6/6) | [EN](categories/agent-frameworks/parlant.md) · [中](categories/agent-frameworks/parlant.zh.md) |
 | **SkillOpt** | Use it when you must optimize an agent's natural-language skill doc for a frozen LLM against a scorable benchmark — but without a reliable eval to gate edits the method has no signal, and it's a brand-new v0.1.0. | MIT | B (6/6) | [EN](categories/agent-frameworks/skillopt.md) · [中](categories/agent-frameworks/skillopt.zh.md) |
 | **Open Interpreter** | Use it when you want a Codex-fork terminal coding agent with swappable harnesses tuned for low-cost/open models (DeepSeek, Kimi, Qwen) — not the old Python REPL (that moved to a community fork), and it's a weeks-old 0.0.x rewrite that executes code. | Apache-2.0 | A (6/6) | [EN](categories/agent-frameworks/open-interpreter.md) · [中](categories/agent-frameworks/open-interpreter.zh.md) |
+| **Codex** | Use it when you want a lightweight OpenAI-backed coding agent that runs in your terminal and can edit files, run tests, and commit changes — but it requires OpenAI API access and an internet connection. | Apache-2.0 | ? (0/6) | [EN](categories/agent-frameworks/codex.md) · [中](categories/agent-frameworks/codex.zh.md) |
+| **OpenClaw** | A personal AI assistant that runs on your own devices and answers you across 20+ messaging channels — but it's extremely young with no Lindy track record. | MIT | ? (0/6) | [EN](categories/agent-frameworks/openclaw.md) · [中](categories/agent-frameworks/openclaw.zh.md) |
+| **CC Switch** | A cross-platform desktop manager for multiple AI coding agents with provider routing and MCP support — but it's under a year old with a single maintainer. | MIT | ? (0/6) | [EN](categories/agent-frameworks/cc-switch.md) · [中](categories/agent-frameworks/cc-switch.zh.md) |
+| **Hermes Agent** | The self-improving AI agent built by Nous Research with a learning loop — but it's under a year old and the learning-loop stability is unproven. | MIT | ? (0/6) | [EN](categories/agent-frameworks/hermes-agent.md) · [中](categories/agent-frameworks/hermes-agent.zh.md) |
+| **AutoGPT** | A platform to create, deploy, and manage continuous AI agents that automate complex workflows — but it has no declared license and requires significant resources to self-host. | NOASSERTION | ? (0/6) | [EN](categories/agent-frameworks/autogpt.md) · [中](categories/agent-frameworks/autogpt.zh.md) |
+| **Dify** | A production-ready visual platform for building agentic workflows with low-code, RAG, and MCP support — but verify the license before commercial use. | NOASSERTION | ? (0/6) | [EN](categories/agent-frameworks/dify.md) · [中](categories/agent-frameworks/dify.zh.md) |
+| **LangChain** | A code-first framework to compose LLM agents, tools, and memory with a vast integration ecosystem — but avoid for simple single-prompt apps. | MIT | ? (0/6) | [EN](categories/agent-frameworks/langchain.md) · [中](categories/agent-frameworks/langchain.zh.md) |
+| **OpenCode** | An open-source AI coding agent that runs in your terminal, edits files, and executes commands — but it's extremely young (created 2025-04) with no Lindy track record. | MIT | ? (0/6) | [EN](categories/agent-frameworks/opencode.md) · [中](categories/agent-frameworks/opencode.zh.md) |
+| **Langflow** | A visual drag-and-drop platform for building and deploying LLM workflows and agents with built-in API and MCP servers — but visual flows are harder to diff/review than code. | MIT | ? (0/6) | [EN](categories/agent-frameworks/langflow.md) · [中](categories/agent-frameworks/langflow.zh.md) |
+| **Gemini CLI** | An open-source AI agent that brings Gemini power into your terminal with a free tier, built-in tools, and MCP support — but it's Google-only and very young. | Apache-2.0 | ? (0/6) | [EN](categories/agent-frameworks/gemini-cli.md) · [中](categories/agent-frameworks/gemini-cli.zh.md) |
+| **RTK** | A CLI proxy that compresses shell output before it reaches AI agents, reducing token costs by 60–90% — but extremely young (6 months) with a suspiciously high star count. | Apache-2.0 | ? (0/6) | [EN](categories/agent-frameworks/rtk.md) · [中](categories/agent-frameworks/rtk.zh.md) |
+
 ### agent-memory
 
 | Project | Use when | License | Health | Page |
@@ -111,6 +126,7 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **Memori** | Use it when you want LLM-agnostic persistent agent memory captured by wrapping your existing client. | Apache-2.0 | B (5/6) | [EN](categories/agent-memory/memori.md) · [中](categories/agent-memory/memori.zh.md) |
 | **Claude Subconscious** | Use it when you want a background Letta agent to give Claude Code cross-session memory via hooks. | MIT | C (6/6) | [EN](categories/agent-memory/claude-subconscious.md) · [中](categories/agent-memory/claude-subconscious.zh.md) |
 | **claude-mem** | Use it when your coding agent loses context across sessions and you want local hook/MCP-captured memory compressed and injected back in. | Apache-2.0 | B (6/6) | [EN](categories/agent-memory/claude-mem.md) · [中](categories/agent-memory/claude-mem.zh.md) |
+| **ByteRover CLI** | Use it when you want a portable, structured memory layer for coding agents with git-like versioning and cloud sync — but it is extremely young (2025-06) and the license is ambiguous. | NOASSERTION | ? (0/6) | [EN](categories/agent-memory/byterover.md) · [中](categories/agent-memory/byterover.zh.md) |
 
 ### deep-research
 
@@ -156,6 +172,7 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **Get Shit Done (GSD)** | Use it when you build through a coding agent and want a spec-driven, fresh-context phase pipeline that fights context rot. | MIT | C (6/6) | [EN](categories/agent-dev-methodology/get-shit-done.md) · [中](categories/agent-dev-methodology/get-shit-done.zh.md) |
 | **Compound Engineering** | Use it when you want a turnkey brainstorm→plan→work→review→compound loop that persists learnings across coding-agent sessions. | MIT | B (4/6) | [EN](categories/agent-dev-methodology/compound-engineering.md) · [中](categories/agent-dev-methodology/compound-engineering.zh.md) |
 | **ECC** | Use it when you want a maintained, batteries-included Claude Code harness of skills, agents, hooks, memory, and a security scanner. | MIT | B (6/6) | [EN](categories/agent-dev-methodology/ecc.md) · [中](categories/agent-dev-methodology/ecc.zh.md) |
+| **Spec Kit** | A spec-driven development methodology from GitHub for AI coding agents — but it is extremely young and tightly coupled to the GitHub ecosystem. | MIT | ? (0/6) | [EN](categories/agent-dev-methodology/spec-kit.md) · [中](categories/agent-dev-methodology/spec-kit.zh.md) |
 
 ### ai-design-generation
 
@@ -184,6 +201,15 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **fontTools** | Use it when you need programmatic font surgery — subset webfonts, convert formats, inspect/patch tables — but it edits font files, it won't design glyphs or shape text. | MIT | A (6/6) | [EN](categories/dev-utilities/fonttools.md) · [中](categories/dev-utilities/fonttools.zh.md) |
 | **Flashlight** | Use it when you're keeping a vintage macOS 10.10–10.15 machine and want Spotlight plugins — but it's abandoned since 2020 and requires disabling SIP, avoid on real machines. | MIT AND GPL-2.0-only (component split) | E (3/6) | [EN](categories/dev-utilities/flashlight.md) · [中](categories/dev-utilities/flashlight.zh.md) |
 | **IdeaVim** | Use it when you live in a JetBrains IDE but want Vim motions, modes, and a `.ideavimrc` — but it's an emulation subset, power users will hit fidelity gaps. | MIT | B (5/6) | [EN](categories/dev-utilities/ideavim.md) · [中](categories/dev-utilities/ideavim.zh.md) |
+| **VS Code** | A fast, cross-platform code editor with intelligent completion, debugging, and the largest extension marketplace — but it's Electron-based and the distributed build includes Microsoft telemetry. | MIT | ? (0/6) | [EN](categories/dev-utilities/vscode.md) · [中](categories/dev-utilities/vscode.zh.md) |
+| **Clash Verge Rev** | A modern cross-platform GUI proxy client with rule-based routing, built-in mihomo kernel, and TUN mode — but it's desktop-only and GPL-3.0 licensed. | GPL-3.0 | ? (0/6) | [EN](categories/dev-utilities/clash-verge-rev.md) · [中](categories/dev-utilities/clash-verge-rev.zh.md) |
+| **RustDesk** | An open-source, self-hosted remote desktop application for accessing your own machines across platforms — but it requires managing your own relay server or accepting P2P limitations. | AGPL-3.0 | ? (0/6) | [EN](categories/dev-utilities/rustdesk.md) · [中](categories/dev-utilities/rustdesk.zh.md) |
+| **Tauri** | Build smaller, faster, and more secure desktop and mobile applications with a web frontend using Rust and native OS webviews instead of Electron. | Apache-2.0 | ? (0/6) | [EN](categories/dev-utilities/tauri.md) · [中](categories/dev-utilities/tauri.zh.md) |
+| **Deno** | A modern runtime for JavaScript, TypeScript, and WebAssembly with secure defaults and built-in tooling — no node_modules, but smaller ecosystem than Node.js. | MIT | ? (0/6) | [EN](categories/dev-utilities/deno.md) · [中](categories/dev-utilities/deno.zh.md) |
+| **Vaultwarden** | An unofficial Bitwarden-compatible server written in Rust for self-hosted password management — unofficial, AGPL-3.0, single-core maintainer. | AGPL-3.0 | ? (0/6) | [EN](categories/dev-utilities/vaultwarden.md) · [中](categories/dev-utilities/vaultwarden.zh.md) |
+| **Zed** | A high-performance, native code editor with real-time multiplayer collaboration from the creators of Atom — but far smaller extension ecosystem than VS Code and only ~4 years old. | NOASSERTION | ? (0/6) | [EN](categories/dev-utilities/zed.md) · [中](categories/dev-utilities/zed.zh.md) |
+| **ripgrep** | A fast, gitignore-aware line-oriented search tool with first-class cross-platform support; 10 years old with strong Lindy signal and single-maintainer reliability. | Unlicense | ? (0/6) | [EN](categories/dev-utilities/ripgrep.md) · [中](categories/dev-utilities/ripgrep.zh.md) |
+| **Bun** | An incredibly fast all-in-one JavaScript/TypeScript toolkit (runtime, bundler, test runner, package manager) in a single binary — but verify the custom license before commercial use. | NOASSERTION | ? (0/6) | [EN](categories/dev-utilities/bun.md) · [中](categories/dev-utilities/bun.zh.md) |
 ### frontend-animation
 
 | Project | Use when | License | Health | Page |
@@ -231,6 +257,10 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **Depth Anything V2** | Use it as the current default monocular-depth foundation model for single-image depth in PyTorch/Transformers — only the Small weights are Apache-2.0; Base/Large/Giant are CC-BY-NC-4.0 (non-commercial). | Apache-2.0 | B (4/6) | [EN](categories/ml-research/depth-anything-v2.md) · [中](categories/ml-research/depth-anything-v2.zh.md) |
 | **pymoo** | Use it as the de-facto Python library for evolutionary multi-objective optimization (NSGA-II/III, MOEA/D) to find Pareto fronts — for convex/linear/single-objective problems an LP/gradient solver is far faster. | Apache-2.0 | C (6/6) | [EN](categories/ml-research/pymoo.md) · [中](categories/ml-research/pymoo.zh.md) |
 ### agent-skill-collections
+
+| Project | Use when | License | Health | Page |
+| --- | --- | --- | --- | --- |
+| **book-to-skill** | Use it when you want to turn technical book PDFs (and other document formats) into installable agent skills for Claude Code, Copilot CLI, or Amp. | MIT | ? (0/6) | [EN](categories/agent-skill-collections/book-to-skill.md) · [中](categories/agent-skill-collections/book-to-skill.zh.md) |
 
 #### agent-skill-collections / engineering
 
@@ -331,6 +361,8 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | Project | Use when | License | Health | Page |
 | --- | --- | --- | --- | --- |
 | **Docling** | Use it when you must parse messy PDF/DOCX/PPTX into clean structured Markdown/JSON for RAG ingestion — a parser, not a DMS. | MIT | A (5/6) | [EN](categories/document-parsing/docling.md) · [中](categories/document-parsing/docling.zh.md) |
+| **MarkItDown** | Use it when you need a lightweight Python library to convert various office documents and files to Markdown for LLM ingestion — simpler than Docling but less layout-aware. | MIT | ? (0/6) | [EN](categories/document-parsing/markitdown.md) · [中](categories/document-parsing/markitdown.zh.md) |
+| **olmOCR** | Use it when you must convert complex PDFs with equations, tables, handwriting, and multi-column layouts into clean Markdown for LLM training datasets — requires a GPU. | Apache-2.0 | ? (0/6) | [EN](categories/document-parsing/olmocr.md) · [中](categories/document-parsing/olmocr.zh.md) |
 
 ### diagramming
 
@@ -339,6 +371,7 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **Mermaid** | Use it when you want diagrams as version-controlled plain text (flowchart/sequence/ER) rendered in Markdown and docs — not pixel-precise layouts. | MIT | A (6/6) | [EN](categories/diagramming/mermaid.md) · [中](categories/diagramming/mermaid.zh.md) |
 | **flowchart.js** | Use it when you want simple flowcharts authored as git-diffable text and rendered to SVG in the browser — but it only renders, depends on aging Raphael.js, and chokes on complex diagrams. | MIT | B (5/6) | [EN](categories/diagramming/flowchart-js.md) · [中](categories/diagramming/flowchart-js.zh.md) |
 | **bpmn-js** | Use it when business analysts must author or view standards-correct BPMN 2.0 diagrams inside your web app — but its license mandates a non-removable bpmn.io watermark, so confirm terms before white-labeling. | MIT + bpmn.io watermark clause | B (5/6) | [EN](categories/diagramming/bpmn-js.md) · [中](categories/diagramming/bpmn-js.zh.md) |
+| **Excalidraw** | A virtual whiteboard for sketching hand-drawn style diagrams — collaborative and end-to-end encrypted, but stores JSON not plain text, so it is not diffable in Git. | MIT | ? (0/6) | [EN](categories/diagramming/excalidraw.md) · [中](categories/diagramming/excalidraw.zh.md) |
 ### media-download
 
 | Project | Use when | License | Health | Page |
@@ -349,6 +382,7 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **lux** | Use it when you want a fast single-binary Go downloader, strong on Chinese video sites — smaller coverage and slower updates than yt-dlp. | MIT | B (5/6) | [EN](categories/media-download/lux.md) · [中](categories/media-download/lux.zh.md) |
 | **youtube-transcript-api** | Use it when you need timestamped YouTube transcripts key-free for a RAG/summarization pipeline — but it rides an undocumented endpoint that can break anytime, and cloud/datacenter IPs now require paid residential proxies. | MIT | A (6/6) | [EN](categories/media-download/youtube-transcript-api.md) · [中](categories/media-download/youtube-transcript-api.zh.md) |
 | **bulk-downloader-for-reddit** | Use it when you want a scriptable, reproducible Reddit archive of files plus metadata via OAuth — but Reddit's ~1000-post listing cap is unbypassable, and releases have stalled since early 2023 (GPL-3.0). | GPL-3.0 | D (5/6) | [EN](categories/media-download/bulk-downloader-for-reddit.md) · [中](categories/media-download/bulk-downloader-for-reddit.zh.md) |
+| **yt-dlp** | Use it when you need an actively maintained CLI to download video & audio from YouTube and thousands of other sites — the de-facto successor to youtube-dl with faster fixes and more features. | Unlicense | ? (0/6) | [EN](categories/media-download/yt-dlp.md) · [中](categories/media-download/yt-dlp.zh.md) |
 ### media-processing
 
 | Project | Use when | License | Health | Page |
@@ -368,6 +402,7 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | Project | Use when | License | Health | Page |
 | --- | --- | --- | --- | --- |
 | **NextChat** | Use it when you want a private, self-deployable multi-provider AI chat UI across web/desktop/mobile — not a multi-user RBAC team platform. | MIT | B (5/6) | [EN](categories/llm-chat-ui/nextchat.md) · [中](categories/llm-chat-ui/nextchat.zh.md) |
+| **Open WebUI** | A self-hosted AI chat platform with built-in RAG, Ollama support, and offline operation — but it's single-user-shaped by default. | NOASSERTION | ? (0/6) | [EN](categories/llm-chat-ui/open-webui.md) · [中](categories/llm-chat-ui/open-webui.zh.md) |
 
 ### markdown-tools
 
@@ -389,6 +424,7 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **Apache Airflow** | Use it when you orchestrate scheduled batch data pipelines as Python DAGs with a UI — not low-latency or event-driven flows. | Apache-2.0 | A (6/6) | [EN](categories/workflow-orchestration/airflow.md) · [中](categories/workflow-orchestration/airflow.zh.md) |
 | **Gaia** | Use it when studying the "pipelines-as-compiled-plugins" design as a read-only reference — the repo is archived and abandoned, never pick it for new production work. | Apache-2.0 | D (5/6) | [EN](categories/workflow-orchestration/gaia.md) · [中](categories/workflow-orchestration/gaia.zh.md) |
 | **Airflow Maintenance DAGs** | Use it when self-managed Airflow needs proven copy-in DAGs to clean metadata-DB rows and stale logs — they run destructive DELETEs tied to version-specific internals, so dry-run and back up first. | Apache-2.0 | D (4/6) | [EN](categories/workflow-orchestration/airflow-maintenance-dags.md) · [中](categories/workflow-orchestration/airflow-maintenance-dags.zh.md) |
+| **n8n** | A fair-code workflow automation platform with native AI capabilities — combine visual building with custom code, self-host or use the cloud, with 400+ integrations. | NOASSERTION (fair-code) | ? (0/6) | [EN](categories/workflow-orchestration/n8n.md) · [中](categories/workflow-orchestration/n8n.zh.md) |
 ### llm-inference
 
 | Project | Use when | License | Health | Page |
@@ -418,6 +454,9 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | Project | Use when | License | Health | Page |
 | --- | --- | --- | --- | --- |
 | **Driver.js** | Use it when you want a tiny, dependency-free product tour / feature-spotlight on a web page — not a full onboarding platform. | MIT | B (6/6) | [EN](categories/web-ui/driver-js.md) · [中](categories/web-ui/driver-js.zh.md) |
+| **shadcn/ui** | A set of beautifully-designed, accessible React components that you copy into your project and own completely — but it requires React and Tailwind CSS. | MIT | ? (0/6) | [EN](categories/web-ui/shadcn-ui.md) · [中](categories/web-ui/shadcn-ui.zh.md) |
+| **Angular** | Use it when you need a mature, opinionated full-stack framework with dependency injection, strong typing, and a large ecosystem for enterprise-scale web apps — but it's heavy and overkill for small projects. | MIT | ? (0/6) | [EN](categories/web-ui/angular.md) · [中](categories/web-ui/angular.zh.md) |
+| **Ant Design** | Use it when you want a comprehensive, production-ready React UI component library with enterprise-grade design patterns, theming, and accessibility — but it's React-only and the design is distinctly "Chinese enterprise". | MIT | ? (0/6) | [EN](categories/web-ui/ant-design.md) · [中](categories/web-ui/ant-design.zh.md) |
 
 ### proxy-pool
 
@@ -439,6 +478,7 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | --- | --- | --- | --- | --- |
 | **newspaper** | Use it to bulk-extract article text, authors, and metadata from news URLs — but the original (newspaper3k) is stale; the live path is the newspaper4k fork. | MIT | B (5/6) | [EN](categories/web-scraping/newspaper.md) · [中](categories/web-scraping/newspaper.zh.md) |
 | **requests-html** | Study it for tiny requests + HTML-parsing scripts — effectively unmaintained (~2y idle), the JS-render path is fragile; prefer Playwright + parsel for new work. | MIT | D (3/6) | [EN](categories/web-scraping/requests-html.md) · [中](categories/web-scraping/requests-html.zh.md) |
+| **Firecrawl** | The API to search, scrape, and extract clean Markdown or structured data from the web at scale — but AGPL-3.0 may limit commercial use. | AGPL-3.0 | ? (0/6) | [EN](categories/web-scraping/firecrawl.md) · [中](categories/web-scraping/firecrawl.zh.md) |
 
 
 ### auth
@@ -459,6 +499,7 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **python-mysql-replication** | Use it when you want a pure-Python primitive to stream MySQL binlog as typed events and build a custom CDC loop with full control — but checkpointing, dedup and exactly-once delivery are entirely on you. | Apache-2.0 | D (5/6) | [EN](categories/databases/python-mysql-replication.md) · [中](categories/databases/python-mysql-replication.zh.md) |
 | **PrettyZoo** | Use it when you need a friendly desktop GUI to browse and lightly edit a ZooKeeper znode tree during dev or incident triage — but it's archived since 2023, so new JDK/macOS may break it with no upstream fix. | Apache-2.0 | D (4/6) | [EN](categories/databases/prettyzoo.md) · [中](categories/databases/prettyzoo.zh.md) |
 | **RDR** | Use it when a Redis instance trips its maxmemory alarm and you need offline, fast per-prefix analysis of an RDB snapshot — but figures are approximate and the tool is coasting (v0.0.1, 2019). | Apache-2.0 | D (3/6) | [EN](categories/databases/rdr.md) · [中](categories/databases/rdr.zh.md) |
+| **Supabase** | The open-source Firebase alternative built on PostgreSQL with auth, auto-generated APIs, realtime, edge functions, and vector storage — but it's deeply tied to Postgres. | Apache-2.0 | ? (0/6) | [EN](categories/databases/supabase.md) · [中](categories/databases/supabase.zh.md) |
 
 ### desktop-automation
 
@@ -506,6 +547,7 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **gophernotes** | Use it when you want interactive Go cells in a Jupyter notebook for exploration or tutorials — but it's stalled since 2023 and runs an interpreter, not standard Go. | MIT | D (3/6) | [EN](categories/python-tooling/gophernotes.md) · [中](categories/python-tooling/gophernotes.zh.md) |
 | **GRequests** | Use it when you want to make existing synchronous `requests` code concurrent with minimal diff via `map()` — but gevent monkeypatches the stdlib and can collide with your stack. | BSD-2-Clause | C (4/6) | [EN](categories/python-tooling/grequests.md) · [中](categories/python-tooling/grequests.zh.md) |
 | **memory-analyzer** | Use it when you need a one-shot per-type memory snapshot of a live Python 3 process via GDB — but Meta archived it (last code 2021, targets EOL 3.6/3.7), so prefer a maintained tool like memray/tracemalloc. | MIT | D (5/6) | [EN](categories/python-tooling/memory-analyzer.md) · [中](categories/python-tooling/memory-analyzer.zh.md) |
+| **uv** | An extremely fast Python package and project manager written in Rust, replacing pip, poetry, and pyenv with a single tool and universal lockfile — but only ~3 years old with some edge cases still being resolved. | Apache-2.0 | ? (0/6) | [EN](categories/python-tooling/uv.md) · [中](categories/python-tooling/uv.zh.md) |
 
 ### reading-tools
 
@@ -529,6 +571,8 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **Terminal Markdown Viewer (mdv)** | Use it when you want one-shot read-only Markdown rendered with color/syntax-highlighting in a plain terminal over SSH — but it's low-activity (0.x, 2024-05) and glow/mdcat are the modern defaults. | BSD-3-Clause | ? (2/6) | [EN](categories/terminal-ui/terminal-markdown-viewer.md) · [中](categories/terminal-ui/terminal-markdown-viewer.zh.md) |
 | **ART** | Use it when a Python CLI needs pure-Python figlet-style ASCII text banners with no system binaries — but it's text-to-art only (not image-to-ASCII) and won't match figlet's exact fonts. | MIT | C (4/6) | [EN](categories/terminal-ui/art.md) · [中](categories/terminal-ui/art.zh.md) |
 | **asciify** | Use it as a minimal, legible copy-paste reference for the image-to-ASCII algorithm — but it ships NO license (all rights reserved), is unmaintained since 2022, so never vendor it into a product. | NONE | E (4/6) | [EN](categories/terminal-ui/asciify.md) · [中](categories/terminal-ui/asciify.zh.md) |
+| **Warp** | A modern, AI-powered terminal with command blocks and integrated coding agents — but the GitHub repo is issues-only and the product is proprietary closed-source. | AGPL-3.0 | ? (0/6) | [EN](categories/terminal-ui/warp.md) · [中](categories/terminal-ui/warp.zh.md) |
+| **Alacritty** | A fast, GPU-accelerated OpenGL terminal emulator with sensible defaults; lacks tabs, splits, and ligatures by design — use tmux for multiplexing. | Apache-2.0 | ? (0/6) | [EN](categories/terminal-ui/alacritty.md) · [中](categories/terminal-ui/alacritty.zh.md) |
 
 Categories follow the tree in [INDEX.md](INDEX.md).
 | **Readability.js** | Use it when you need to strip a web page down to just the article (title, byline, body) using Firefox Reader View's battle-tested engine — but it parses a DOM you supply; it won't fetch URLs or render JS-heavy SPAs. | Apache-2.0 | [EN](categories/web-scraping/readability-js.md) · [中](categories/web-scraping/readability-js.zh.md) |

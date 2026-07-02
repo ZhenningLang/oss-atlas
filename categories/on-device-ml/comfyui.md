@@ -1,0 +1,116 @@
+---
+name: ComfyUI
+slug: comfyui
+repo: https://github.com/Comfy-Org/ComfyUI
+category: on-device-ml
+tags: [diffusion, stable-diffusion, image-generation, nodes, pytorch, gui, local-inference, workflow]
+language: Python
+license: GPL-3.0
+maturity: active, ~119k stars (as of 2026-07)
+last_verified: 2026-07-01
+type: tool
+upstream:
+  pushed_at: 2026-07-01T10:06:22Z
+  default_branch: main
+  default_branch_sha: 0000000000000000000000000000000000000000
+  archived: false
+health:
+  schema: 1
+  computed_at: 2026-07-01T00:00:00Z
+  overall: "?"
+  overall_score: 0.0
+  scored_axes: 0
+  capped: false
+  cap_reason: null
+  needs_human_review: true
+  axes:
+    maintenance:
+      grade: "?"
+      raw: {}
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: "?"
+      raw: {}
+    governance:
+      grade: "?"
+      raw: {}
+    risk_license:
+      grade: "?"
+      raw: {}
+---
+
+# ComfyUI
+
+The most powerful and modular diffusion model GUI and backend with a graph/nodes interface for creating complex image-generation workflows without writing code.
+
+![ComfyUI — health radar](../../assets/health/comfyui.svg)
+
+## When to use
+
+You're a digital artist or AI researcher who wants to generate, edit, and upscale images using Stable Diffusion and other diffusion models on your own hardware. You need more than a one-click prompt box: you want to chain samplers, VAEs, ControlNets, IP-Adapters, and custom models into reusable workflows. You drag nodes on a canvas, connect them like a visual shader graph, and run the pipeline locally on your GPU. ComfyUI supports SD 1.x, SDXL, SD3, Flux, and dozens of other checkpoints and LoRAs, and the node ecosystem means the community keeps adding new capabilities — from inpainting to video generation — without waiting for an official release.
+
+## When NOT to use
+
+- **You don't have an NVIDIA GPU or substantial VRAM.** ComfyUI runs on GPU for acceptable speed; CPU-only inference is possible but painfully slow. For minimal VRAM setups (4–6 GB), you must enable optimizations and may still hit out-of-memory errors. [未验证]
+- **You want a simple, one-click image generator.** The node graph is powerful but has a steep learning curve; if you just want to type a prompt and get an image, use Stable Diffusion WebUI or a cloud API.
+- **You need commercial support or a managed cloud service.** ComfyUI is a self-hosted tool with no official SLA; for production pipelines you may need to wrap it yourself or use a commercial inference platform.
+- **GPL-3.0 is incompatible with your project.** The license is GPL-3.0, which may conflict with proprietary integration or distribution plans.
+- **You need stable, reproducible workflows across versions.** Node definitions and custom extensions can change between releases; sharing a workflow JSON does not guarantee it runs identically on another machine with different custom nodes installed. [推断]
+- **You want video or audio generation as a primary use case.** While ComfyUI has nodes for video, its core strength is image generation; dedicated video tools may be more mature.
+
+## Comparison
+
+| Alternative | In index | Our verdict | Tradeoff |
+| --- | --- | --- | --- |
+| [Stable Diffusion WebUI](stable-diffusion-webui.md) | ✅ | Use this page for its stated niche; choose Stable Diffusion WebUI when you want a simpler, more conventional tabbed web UI for Stable Diffusion. | Simpler tabbed web UI for Stable Diffusion with built-in extensions; easier for beginners but less modular than ComfyUI's node graph. |
+| AUTOMATIC1111 WebUI | 未收录 | Use this page for its stated niche; choose AUTOMATIC1111 when you want the classic, most widely documented Stable Diffusion web interface. | The original and most documented Stable Diffusion web UI; massive extension ecosystem but more monolithic than ComfyUI. |
+| InvokeAI | 未收录 | Use this page for its stated niche; choose InvokeAI when you want a polished, artist-focused canvas with unified generation and editing. | Polished artist-focused canvas with generation and editing in one view; smoother UX but less open/customizable than ComfyUI. |
+| Fooocus | 未收录 | Use this page for its stated niche; choose Fooocus when you want a "Midjourney-like" minimal prompt-to-image experience locally. | Minimal prompt-to-image UI inspired by Midjourney; great for quick results but far less flexible than ComfyUI's node graph. |
+| Diffusers (Hugging Face) | 未收录 | Use this page for its stated niche; choose Diffusers when you need a Python library for programmatic diffusion pipelines, not a GUI. | Python library for scripting diffusion pipelines programmatically; no GUI, intended for developers building their own tools. |
+
+## Tech stack
+
+- **Language:** Python (backend inference engine) with a React/TypeScript frontend for the node graph canvas.
+- **ML runtime:** PyTorch with CUDA support; the inference engine executes the node graph by scheduling PyTorch operations on GPU.
+- **Node system:** Custom node architecture where each node is a Python class; the community extends functionality via `custom_nodes` dropped into a directory.
+- **Frontend:** Web-based canvas UI (React/TypeScript) that serializes the graph to JSON and sends it to the Python backend for execution.
+- **Model formats:** Supports Safetensors, CKPT, Diffusers, ONNX, and various community formats (LoRA, ControlNet, T2I-Adapter, IP-Adapter, etc.). [未验证]
+
+## Dependencies
+
+- **Hardware:** An NVIDIA GPU with CUDA is strongly recommended; 8 GB+ VRAM is comfortable for SD 1.5/SDXL, 12 GB+ for Flux and larger models. CPU-only is possible but extremely slow.
+- **Software:** Python 3.10+, PyTorch with CUDA, and various Python packages (installed via pip or a bundled portable package). Windows, Linux, and macOS are supported (macOS via Metal).
+- **Models:** You must download model checkpoints, VAEs, and LoRAs separately; the tool itself does not ship models. Storage requirements can easily exceed 100 GB for a full library.
+- **Network:** Optional for pure local use, but many workflows download custom nodes and models from the internet; air-gapped setups require manual model transfer.
+
+## Ops difficulty
+
+**High.** ComfyUI is not a simple install-and-run tool. You need to:
+- Manage a Python environment with PyTorch + CUDA aligned to your driver version.
+- Download and organize multiple gigabytes of model weights in the correct directory structure.
+- Keep custom nodes updated and resolve version conflicts between node packs and the core ComfyUI version.
+- Monitor GPU memory usage; large workflows or high resolutions will OOM on modest cards.
+- Triage cryptic error messages from the node graph when a custom node breaks or a model is incompatible.
+- Back up your workflows and model library; reinstalling from scratch means re-downloading everything.
+
+## Health & viability
+
+- **Maintenance (2026-07).** Last pushed 2026-07-01 with active daily commits; the project is under rapid development with frequent releases and an active Discord community. [推断]
+- **Governance / bus factor.** Now owned by `Comfy-Org` (a dedicated GitHub organization), moved from the original single-author `comfyanonymous` account — a positive signal for governance maturation. The core team and community custom-node ecosystem share maintenance burden. [推断]
+- **Age & Lindy verdict.** ~2.5 years old (created 2023-01) and extremely active. It is young but has become the dominant open-source diffusion workflow tool; the Lindy signal is **moderate but strengthening** given its rapid adoption and ecosystem growth. [推断]
+- **Adoption & ecosystem.** ~119k stars and a massive custom-node ecosystem (thousands of community extensions). The `.json` workflow format is a de-facto standard for sharing diffusion pipelines. [未验证]
+- **Risk flags.** GPL-3.0 license may restrict commercial use and integration; the rapid pace of change means API and node interfaces can break between versions. The org transition from `comfyanonymous` to `Comfy-Org` is a positive governance step, but the project is still young and its long-term funding model is unclear. [推断]
+
+## Caveats (unverified)
+
+- [未验证] ~119k GitHub stars as of 2026-07-01; star counts are approximate and time-sensitive.
+- [未验证] Exact VRAM requirements vary by model and workflow; SD 1.5 may run on 4 GB with optimizations, while Flux models need 12 GB+ for reasonable speed. Test with your target models.
+- [未验证] The node graph JSON format and custom node API can shift between releases; verify compatibility when sharing or importing workflows across versions.
+- [未验证] CPU inference and Apple Metal support are possible but performance is drastically lower than CUDA; confirm feasibility for your hardware before committing.
+- [推断] The custom-node ecosystem is vast but unvetted; installing nodes from the community manager carries the same risks as installing unreviewed Python packages.
+- [推断] Model weight management is entirely user-side; there is no built-in model registry or versioning, so keeping track of checkpoints and LoRAs is a manual burden.

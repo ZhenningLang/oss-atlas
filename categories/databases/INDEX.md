@@ -14,6 +14,7 @@
 | **python-mysql-replication** | Use it when you want a pure-Python primitive to stream MySQL binlog as typed events and build a custom CDC loop with full control — but checkpointing, dedup and exactly-once delivery are entirely on you. | D (5/6) | [→](python-mysql-replication.md) |
 | **PrettyZoo** | Use it when you need a friendly desktop GUI to browse and lightly edit a ZooKeeper znode tree during dev or incident triage — but it's archived since 2023, so new JDK/macOS may break it with no upstream fix. | D (4/6) | [→](prettyzoo.md) |
 | **RDR** | Use it when a Redis instance trips its maxmemory alarm and you need offline, fast per-prefix analysis of an RDB snapshot — but figures are approximate and the tool is coasting (v0.0.1, 2019). | D (3/6) | [→](rdr.md) |
+| **Supabase** | Use it when you want an open-source Firebase alternative built on PostgreSQL with auth, auto-generated APIs, realtime, edge functions, and vector storage — but it's deeply tied to Postgres. | ? (0/6) | [→](supabase.md) |
 
 ## Comparison matrix
 
@@ -26,7 +27,7 @@
 | [python-mysql-replication](python-mysql-replication.md) | ✅ | D (5/6) | Use it when you want a pure-Python primitive to stream MySQL binlog as typed events and build a custom CDC loop with full control — but checkpointing, dedup and exactly-once delivery are entirely on you. |
 | [PrettyZoo](prettyzoo.md) | ✅ | D (4/6) | Use it when you need a friendly desktop GUI to browse and lightly edit a ZooKeeper znode tree during dev or incident triage — but it's archived since 2023, so new JDK/macOS may break it with no upstream fix. |
 | [RDR](rdr.md) | ✅ | D (3/6) | Use it when a Redis instance trips its maxmemory alarm and you need offline, fast per-prefix analysis of an RDB snapshot — but figures are approximate and the tool is coasting (v0.0.1, 2019). |
-| (alternatives named across the pages) | 未收录 | — | Substitutes referenced in each page's Comparison. |
+| [Supabase](supabase.md) | ✅ | ? (0/6) | Open-source Firebase alternative built on PostgreSQL with auth, auto-generated APIs, realtime, edge functions, and vector storage; deeply tied to Postgres. |
 
 ## What belongs here
 

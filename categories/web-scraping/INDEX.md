@@ -18,6 +18,7 @@
 | **PRAW** | Use it when your data source is Reddit and you want the official OAuth-compliant path with rate-limit handling built in — but Reddit's own API terms, quotas, and pricing bound what you can do, not the library. | B (6/6) | [→](praw.md) |
 | **Scrapyd** | Use it when you need to deploy local Scrapy spiders to a server and drive scheduled, versioned crawls over an HTTP API — but it only runs Scrapy and ships unauthenticated, so add auth before exposing port 6800. | B (5/6) | [→](scrapyd.md) |
 | **SpiderKeeper** | Use it when a small team running Scrapyd wants the simplest browser dashboard to deploy and cron-schedule spiders — but it's stale since 2023 with default admin/admin auth, so don't expose it untrusted. | E (3/6) | [→](spiderkeeper.md) |
+| **Firecrawl** | Use it when you need an API to search, scrape, and extract clean Markdown or structured data from the web at scale — but AGPL-3.0 may limit commercial use. | ? (0/6) | [→](firecrawl.md) |
 
 ## Comparison matrix
 
@@ -34,6 +35,7 @@
 | [PRAW](praw.md) | ✅ | B (6/6) | Use it when your data source is Reddit and you want the official OAuth-compliant path with rate-limit handling built in — but Reddit's own API terms, quotas, and pricing bound what you can do, not the library. |
 | [Scrapyd](scrapyd.md) | ✅ | B (5/6) | Use it when you need to deploy local Scrapy spiders to a server and drive scheduled, versioned crawls over an HTTP API — but it only runs Scrapy and ships unauthenticated, so add auth before exposing port 6800. |
 | [SpiderKeeper](spiderkeeper.md) | ✅ | E (3/6) | Use it when a small team running Scrapyd wants the simplest browser dashboard to deploy and cron-schedule spiders — but it's stale since 2023 with default admin/admin auth, so don't expose it untrusted. |
+| [Firecrawl](firecrawl.md) | ✅ | ? (0/6) | API to search, scrape, and extract clean Markdown or structured data from the web at scale; AGPL-3.0 may limit commercial use. |
 | Scrapy / trafilatura / httpx + BeautifulSoup / Playwright | 未收录 | — | Other scraping/extraction tools named across the pages. |
 
 ## What belongs here

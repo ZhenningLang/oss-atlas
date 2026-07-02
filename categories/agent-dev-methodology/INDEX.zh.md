@@ -13,6 +13,7 @@
 | **Get Shit Done (GSD)** | 当你靠 coding agent 写代码、想要一条规格驱动、每阶段全新上下文、对抗 context rot 的构建流水线时用它。 | C（6/6） | [→](get-shit-done.zh.md) |
 | **Compound Engineering** | 当你想要一套即插即用的 brainstorm→plan→work→review→compound 循环、并把经验跨会话沉淀复用时，就用它。 | B（4/6） | [→](compound-engineering.zh.md) |
 | **ECC** | 当你想要一套有人维护、开箱即全的 Claude Code 底座（skill、agent、hook、memory 加安全扫描）时用它。 | B（6/6） | [→](ecc.zh.md) |
+| **Spec Kit** | 当你想要 GitHub 出品的面向 AI 编码智能体的 spec-driven 开发方法论时用它——但它极其年轻，且与 GitHub 生态深度绑定。 | ?（0/6） | [→](spec-kit.zh.md) |
 
 ## 对比矩阵
 
@@ -24,6 +25,7 @@
 | [Get Shit Done (GSD)](get-shit-done.zh.md) | ✅ | C（6/6） | 当你靠 coding agent 写代码、想要一条规格驱动、每阶段全新上下文、对抗 context rot 的构建流水线时用它。 |
 | [Compound Engineering](compound-engineering.zh.md) | ✅ | B（4/6） | 当你想要一套即插即用的 brainstorm→plan→work→review→compound 循环、并把经验跨会话沉淀复用时，就用它。 |
 | [ECC](ecc.zh.md) | ✅ | B（6/6） | 当你想要一套有人维护、开箱即全的 Claude Code 底座（skill、agent、hook、memory 加安全扫描）时用它。 |
+| [Spec Kit](spec-kit.zh.md) | ✅ | ?（0/6） | GitHub 出品的面向 AI 编码智能体的 spec-driven 开发方法论；极其年轻，与 GitHub 生态深度绑定。 |
 | BMAD-Method / Spec-Kit / Agent OS | 未收录 | — | 各页对比里点到的其他 agent 开发方法论。 |
 
 ## 什么该放这里

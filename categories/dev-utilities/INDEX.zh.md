@@ -19,6 +19,15 @@
 | **fontTools** | 当你需要对字体做程序化处理——子集化网页字体、转格式、查改表——时用它——但它只编辑字体文件，不绘制字形也不做文字排版。 | A（6/6） | [→](fonttools.zh.md) |
 | **Flashlight** | 当你在维护一台 10.10–10.15 的老 macOS、想给 Spotlight 加插件时用它——但它自 2020 年起已弃，且需关闭 SIP，日常机器上别碰。 | E（3/6） | [→](flashlight.zh.md) |
 | **IdeaVim** | 当你离不开 JetBrains IDE、又想要 Vim 的动作、模式和 `.ideavimrc` 时用它——但它只是 Vim 子集的模拟，重度用户会撞上还原度的缺口。 | B（5/6） | [→](ideavim.zh.md) |
+| **VS Code** | 当你需要一款快速、跨平台、具备智能补全、调试功能和最大扩展市场的代码编辑器时用它——但它是 Electron 应用，且分发版包含微软遥测。 | ?（0/6） | [→](vscode.zh.md) |
+| **Clash Verge Rev** | 当你想要一款现代化的跨平台 GUI 代理客户端，支持基于规则的路由、内置 mihomo 内核和 TUN 模式时用它——但仅限桌面端且为 GPL-3.0 许可。 | ?（0/6） | [→](clash-verge-rev.zh.md) |
+| **RustDesk** | 当你需要一款开源、自托管的跨平台远程桌面来访问自己的机器时用它——但需要自己管理中继服务器或接受 P2P 局限。 | ?（0/6） | [→](rustdesk.zh.md) |
+| **Tauri** | 当你想用 Rust 和操作系统原生 Webview 构建小巧、快速、安全的跨平台桌面与移动应用，替代 Electron 时用它。 | ?（0/6） | [→](tauri.zh.md) |
+| **Deno** | 当你想要一个具备安全默认设置、内置工具链和原生 TypeScript 支持的现代 JavaScript/TypeScript 运行时，无需 node_modules 时用它。 | ?（0/6） | [→](deno.zh.md) |
+| **Vaultwarden** | 当你想要一款自托管的、Rust 编写的 Bitwarden 兼容密码管理器时用它——但它是非官方实现，AGPL-3.0 许可，且核心维护者为单人。 | ?（0/6） | [→](vaultwarden.zh.md) |
+| **Bun** | 当你想要一个极速一体化 JavaScript/TypeScript 工具集（运行时、打包器、测试运行器、包管理器）集成在单个二进制文件中时用它——但商用前请核实许可证。 | ?（0/6） | [→](bun.zh.md) |
+| **Zed** | 当你想要一个高性能原生代码编辑器，支持实时多人协作时用它——但它的扩展生态远小于 VS Code，且仅约 4 年历史。 | ?（0/6） | [→](zed.zh.md) |
+| **ripgrep** | 当你需要一个快速、智能、跨平台的搜索工具，默认遵守 gitignore，且在 Windows、macOS 和 Linux 上行为一致时用它。 | ?（0/6） | [→](ripgrep.zh.md) |
 
 ## 对比矩阵
 
@@ -36,6 +45,15 @@
 | [fontTools](fonttools.zh.md) | ✅ | A（6/6） | 当你需要对字体做程序化处理——子集化网页字体、转格式、查改表——时用它——但它只编辑字体文件，不绘制字形也不做文字排版。 |
 | [Flashlight](flashlight.zh.md) | ✅ | E（3/6） | 当你在维护一台 10.10–10.15 的老 macOS、想给 Spotlight 加插件时用它——但它自 2020 年起已弃，且需关闭 SIP，日常机器上别碰。 |
 | [IdeaVim](ideavim.zh.md) | ✅ | B（5/6） | 当你离不开 JetBrains IDE、又想要 Vim 的动作、模式和 `.ideavimrc` 时用它——但它只是 Vim 子集的模拟，重度用户会撞上还原度的缺口。 |
+| [VS Code](vscode.zh.md) | ✅ | ?（0/6） | 轻量但强大的跨平台代码编辑器，拥有最大的扩展市场；基于 Electron，微软分发版包含遥测。 |
+| [Clash Verge Rev](clash-verge-rev.zh.md) | ✅ | ?（0/6） | 现代化跨平台 GUI 代理客户端，支持基于规则的路由与内置 mihomo 内核；仅限桌面端且为 GPL-3.0 许可。 |
+| [RustDesk](rustdesk.zh.md) | ✅ | ?（0/6） | 开源跨平台自托管远程桌面；需要自己管理中继服务器或接受 P2P 局限。 |
+| [Tauri](tauri.zh.md) | ✅ | ?（0/6） | 用 Rust 和操作系统原生 Webview 构建小巧、快速、安全的跨平台桌面与移动应用；Electron 的替代方案。 |
+| [Deno](deno.zh.md) | ✅ | ?（0/6） | 具备安全默认设置、内置工具链和原生 TypeScript 支持的现代 JS/TS 运行时；无需 node_modules，但生态比 Node.js 小。 |
+| [Vaultwarden](vaultwarden.zh.md) | ✅ | ?（0/6） | 自托管的 Rust 版 Bitwarden 兼容密码管理器；非官方、AGPL-3.0、单人核心维护者模式。 |
+| [Zed](zed.zh.md) | ✅ | ?（0/6） | 由 Atom 创作者打造的高性能原生代码编辑器，支持实时多人协作；扩展生态远小于 VS Code，仅约 4 年历史。 |
+| [ripgrep](ripgrep.zh.md) | ✅ | ?（0/6） | 快速、感知 gitignore 的面向行搜索工具，跨平台支持一流；10 年历史，Lindy 信号强劲，单人维护但可靠性高。 |
+| [Bun](bun.zh.md) | ✅ | ?（0/6） | 极速一体化 JS/TS 工具集（运行时、打包器、测试运行器、包管理器）；单二进制文件，但许可证为自定义 NOASSERTION，且比 Node.js/Deno 年轻。 |
 
 ## 什么该放这里
 

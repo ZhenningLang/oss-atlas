@@ -12,6 +12,8 @@
 | **Terminal Markdown Viewer (mdv)** | Use it when you want one-shot read-only Markdown rendered with color/syntax-highlighting in a plain terminal over SSH — but it's low-activity (0.x, 2024-05) and glow/mdcat are the modern defaults. | ? (2/6) | [→](terminal-markdown-viewer.md) |
 | **ART** | Use it when a Python CLI needs pure-Python figlet-style ASCII text banners with no system binaries — but it's text-to-art only (not image-to-ASCII) and won't match figlet's exact fonts. | C (4/6) | [→](art.md) |
 | **asciify** | Use it as a minimal, legible copy-paste reference for the image-to-ASCII algorithm — but it ships NO license (all rights reserved), is unmaintained since 2022, so never vendor it into a product. | E (4/6) | [→](asciify.md) |
+| **Warp** | Use it when you want a modern, AI-powered terminal with command blocks and integrated coding agents — but the GitHub repo is issues-only; the product is proprietary closed-source. | ? (0/6) | [→](warp.md) |
+| **Alacritty** | Use it when you want a fast, GPU-accelerated, cross-platform terminal emulator with sensible defaults — but it explicitly lacks tabs, splits, and ligatures, and requires OpenGL 3.3+. | ? (0/6) | [→](alacritty.md) |
 
 ## Comparison matrix
 
@@ -22,6 +24,8 @@
 | [Terminal Markdown Viewer (mdv)](terminal-markdown-viewer.md) | ✅ | ? (2/6) | Use it when you want one-shot read-only Markdown rendered with color/syntax-highlighting in a plain terminal over SSH — but it's low-activity (0.x, 2024-05) and glow/mdcat are the modern defaults. |
 | [ART](art.md) | ✅ | C (4/6) | Use it when a Python CLI needs pure-Python figlet-style ASCII text banners with no system binaries — but it's text-to-art only (not image-to-ASCII) and won't match figlet's exact fonts. |
 | [asciify](asciify.md) | ✅ | E (4/6) | Use it as a minimal, legible copy-paste reference for the image-to-ASCII algorithm — but it ships NO license (all rights reserved), is unmaintained since 2022, so never vendor it into a product. |
+| [Alacritty](alacritty.md) | ✅ | ? (0/6) | Fast, GPU-accelerated OpenGL terminal emulator with sensible defaults; lacks tabs, splits, and ligatures by design — use tmux for multiplexing. |
+| [Warp](warp.md) | ✅ | ? (0/6) | Modern, AI-powered terminal with command blocks and coding agents; the GitHub repo is issues-only and the product is proprietary closed-source. |
 | (alternatives named across the pages) | 未收录 | — | Substitutes referenced in each page's Comparison. |
 
 ## What belongs here

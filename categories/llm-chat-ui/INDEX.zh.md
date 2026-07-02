@@ -8,14 +8,16 @@
 | 项目 | 何时用 | 健康度 | 页面 |
 | --- | --- | --- | --- |
 | **NextChat** | 当你想要一个私有、可自部署、跨 web/桌面/移动 的多 provider AI 聊天前端时用它——不是多用户 RBAC 团队平台。 | B（5/6） | [→](nextchat.zh.md) |
+| **Open WebUI** | 当你想要一个自托管 AI 聊天平台，内置 RAG、支持 Ollama、可完全离线运行时用它——但默认偏单用户。 | ?（0/6） | [→](open-webui.zh.md) |
 
 ## 对比矩阵
 
 | 选项 | 是否收录 | 健康度 | 一句话取舍 |
 | --- | --- | --- | --- |
 | [NextChat](nextchat.zh.md) | ✅ | B（5/6） | 轻量、跨平台、一键部署的聊天前端；偏单用户，不做 RBAC/配额团队管理。 |
+| [Open WebUI](open-webui.zh.md) | ✅ | ?（0/6） | 自托管 AI 聊天平台，内置 RAG 且支持 Ollama；可离线运行，但默认偏单用户。 |
 | [HiveChat](../team-chat/hivechat.zh.md) | ✅ | C（3/6） | 管理员统管的多用户团队聊天，带分组模型权限和 token 配额。 |
-| LibreChat / Lobe Chat / open-webui | 未收录 | — | 各页对比里点到的其他自托管聊天前端（部分带多用户/RBAC）。 |
+| LibreChat / Lobe Chat | 未收录 | — | 各页对比里点到的其他自托管聊天前端（部分带多用户/RBAC）。 |
 
 ## 什么该放这里
 

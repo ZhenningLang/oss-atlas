@@ -1,0 +1,104 @@
+---
+name: Firecrawl
+slug: firecrawl
+repo: https://github.com/firecrawl/firecrawl
+category: web-scraping
+tags: [web-scraping, ai-crawler, markdown, data-extraction, api]
+language: TypeScript
+license: AGPL-3.0
+maturity: v1.x, active, 142k stars (as of 2026-07)
+last_verified: 2026-07-01
+type: service
+upstream:
+  pushed_at: 2026-07-01T07:40:07Z
+  default_branch: main
+  default_branch_sha: 0000000000000000000000000000000000000000
+  archived: false
+health:
+  schema: 1
+  computed_at: 2026-07-01T10:00:00Z
+  overall: "?"
+  overall_score: 0.0
+  scored_axes: 0
+  capped: false
+  cap_reason: null
+  needs_human_review: true
+  axes:
+    maintenance:
+      grade: "?"
+      raw: {}
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: "?"
+      raw: {}
+    longevity:
+      grade: "?"
+      raw: {}
+    governance:
+      grade: "?"
+      raw: {}
+    risk_license:
+      grade: "?"
+      raw: {}
+---
+
+# Firecrawl
+
+一款可规模化搜索、抓取并与网页交互的 API——将原始网页转化为干净的 Markdown 或结构化数据，供你的 agent 直接使用。
+
+![Firecrawl — 健康度雷达](../../assets/health/firecrawl.zh.svg)
+
+## 何时使用
+
+你正在构建一个需要大规模摄入网页内容的 AI agent 或数据流水线，而你需要干净、结构化的输出，而非原始 HTML。你需要搜索网页、抓取特定页面，甚至以编程方式与动态内容交互（点击、导航）。你偏好 API 优先的方式，通过调用服务而非自建和维护爬虫基础设施。你看重 AGPL-3.0 开源选项，同时也希望有托管服务供快速上手。
+
+## 何时不用
+
+- **简单的一次性抓取**——对单页或偶尔抓取，Firecrawl 属于杀鸡用牛刀；用 `curl` + `pandoc` 或 `trafilatura` 即可。
+- **严格的闭源合规要求**——AGPL-3.0 要求修改并分发时共享源码；请核实与你产品许可策略的兼容性。[未验证]
+- **大规模预算受限**——托管服务定价在高频抓取时可能显著增长；自托管则需要基础设施。
+- **深网 / 需认证站点**——虽然支持交互，但复杂的登录流程和跨站会话管理可能仍需自定义 Playwright 脚本。
+
+## 横向对比
+
+| 替代品 | 是否收录 | 我们的评价 | 取舍 |
+| --- | --- | --- | --- |
+| [Scrapyd](scrapyd.zh.md) | ✅ | 自托管 Scrapy 爬虫调度器。 | Scrapyd 用于运行你手写的 Scrapy 爬虫；Firecrawl 是一个直接帮你完成抓取与提取的 API。 |
+| [newspaper](newspaper.zh.md) | ✅ | 从新闻 URL 提取文章正文。 | newspaper 仅限 Python 且聚焦文章；Firecrawl 是全功能 API，支持搜索、抓取与交互。 |
+| [Readability.js](readability-js.zh.md) | ✅ | Firefox 阅读视图文章提取。 | Readability.js 是浏览器库，用于文章提取；Firecrawl 是可扩展 API，支持搜索与交互。 |
+| [PRAW](praw.zh.md) | ✅ | Reddit 专用 API 封装。 | PRAW 仅限 Reddit；Firecrawl 是通用网页抓取。 |
+| Scrapy / Playwright | 未收录 | 底层抓取框架。 | Scrapy 和 Playwright 提供完全控制，但需要自建和维护爬虫基础设施。 |
+
+## 技术栈
+
+- **TypeScript**——主要实现语言
+- **Node.js**——API 服务器运行时
+- **Docker**——容器化部署选项
+- **Playwright**——JS 渲染页面的底层浏览器自动化
+
+## 依赖
+
+- 托管 API：API key 和互联网连接
+- 自托管：Docker、Node.js 运行时以及带宽充足的服务器
+- 可选：Redis 用于缓存和队列管理
+- 浏览器依赖（通过 Playwright 的 Chromium）用于动态内容
+
+## 运维难度
+
+**低（托管） / 中等（自托管）**。托管 API 只需简单的 HTTP 集成。自托管需要管理 Node.js 服务、Playwright 浏览器实例以及队列/缓存基础设施。浏览器自动化资源密集，可能消耗大量内存。
+
+## 健康度与可持续性
+
+- **维护**：非常活跃——截至 2026-07 每日推送，团队响应积极（376 个 open issue）。[推断]
+- **治理**：由 Firecrawl 组织所有；似乎有专门的公司/组织在背后，bus factor 尚可。
+- **背书**：Firecrawl 看起来是一家提供开源与托管服务双重模式的创投支持公司；该模式提供可持续性，但路线图可能向付费功能倾斜。[未验证]
+- **采用**：star 数高（142k），对 2024 年创建的项目而言表现突出；约 2 年的记录较短，但活跃的开发节奏是积极信号。[推断]
+- **风险旗标**：AGPL-3.0  copyleft 许可可能限制商用而不开源衍生作品。托管服务定价与开源功能对等性值得持续观察。项目年轻（2024-04 创建），缺乏长期 Lindy 记录。[未验证]
+
+## 存疑（未验证）
+
+- [未验证] AGPL-3.0 许可在 SaaS 场景下可能要求衍生作品披露源码；请针对具体用例咨询法律顾问。
+- [未验证] 开源自托管版与付费托管 API 之间的功能对等性尚未确认。
+- [推断] 约 2 年的仓库拥有 142k star，表明存在显著炒作；请验证 GitHub star 之外的真实生产级采用情况。

@@ -13,6 +13,7 @@
 | **Get Shit Done (GSD)** | Use it when you build through a coding agent and want a spec-driven, fresh-context phase pipeline that fights context rot. | C (6/6) | [→](get-shit-done.md) |
 | **Compound Engineering** | Use it when you want a turnkey brainstorm→plan→work→review→compound loop that persists learnings across coding-agent sessions. | B (4/6) | [→](compound-engineering.md) |
 | **ECC** | Use it when you want a maintained, batteries-included Claude Code harness of skills, agents, hooks, memory, and a security scanner. | B (6/6) | [→](ecc.md) |
+| **Spec Kit** | Use it when you want a spec-driven development methodology from GitHub for AI coding agents — but it is extremely young and tightly coupled to the GitHub ecosystem. | ? (0/6) | [→](spec-kit.md) |
 
 ## Comparison matrix
 
@@ -24,6 +25,7 @@
 | [Get Shit Done (GSD)](get-shit-done.md) | ✅ | C (6/6) | Use it when you build through a coding agent and want a spec-driven, fresh-context phase pipeline that fights context rot. |
 | [Compound Engineering](compound-engineering.md) | ✅ | B (4/6) | Use it when you want a turnkey brainstorm→plan→work→review→compound loop that persists learnings across coding-agent sessions. |
 | [ECC](ecc.md) | ✅ | B (6/6) | Use it when you want a maintained, batteries-included Claude Code harness of skills, agents, hooks, memory, and a security scanner. |
+| [Spec Kit](spec-kit.md) | ✅ | ? (0/6) | Spec-driven development methodology from GitHub for AI coding agents; extremely young and tightly coupled to the GitHub ecosystem. |
 | BMAD-Method / Spec-Kit / Agent OS | 未收录 | — | Other agent-dev methodologies named across the pages. |
 
 ## What belongs here

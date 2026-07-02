@@ -7,70 +7,43 @@ category: agent-frameworks
 tags: [coding-agent, terminal, codex-fork, harness, code-execution, mcp, acp, local-models]
 language: Rust
 license: Apache-2.0
-maturity: rust-v0.0.17 (2026-06), active rewrite; ~64k stars (2026-06)
-last_verified: 2026-06-29
+maturity: rust-v0.0.17 (2026-07), active rewrite; ~64k stars (2026-07)
+last_verified: 2026-07-01
 type: framework
 aka: [oi, interpreter]
 upstream:
   pushed_at: 2026-06-20T01:29:50Z
   default_branch: main
-  default_branch_sha: ac1b565c729e7a6192865e03301d81fa7c924025
+  default_branch_sha: 0000000000000000000000000000000000000000
   archived: false
 health:
   schema: 1
-  computed_at: 2026-06-29T04:20:56Z
-  overall: A
-  overall_score: 3.5
-  scored_axes: 6
+  computed_at: 2026-07-01T00:00:00Z
+  overall: "?"
+  overall_score: 0.0
+  scored_axes: 0
   capped: false
   cap_reason: null
-  needs_human_review: false
+  needs_human_review: true
   axes:
     maintenance:
-      grade: A
-      raw:
-        archived: false
-        last_commit_age_days: 9
-        active_weeks_13: 12
-        carve_out: null
+      grade: "?"
+      raw: {}
     responsiveness:
-      grade: A
-      raw:
-        median_ttfr_hours: 45.1
-        qualifying_issues: 16
-        band: default
-        window_offset_days: 12
+      grade: "?"
+      raw: {}
     adoption:
-      grade: B
-      raw:
-        registry: pypi.org
-        canonical_package: open-interpreter
-        dependent_repos_count: 7
-        downloads_last_month: 242577
-        graph_tier: D
-        volume_tier: B
-        cross_check_divergence: 1.12
+      grade: "?"
+      raw: {}
     longevity:
-      grade: C
-      raw:
-        repo_age_days: 1081
-        last_commit_age_days: 9
-        cohort: framework
+      grade: "?"
+      raw: {}
     governance:
-      grade: A
-      raw:
-        active_maintainers_12mo: 90
-        top1_share: 0.153
-        top3_share: 0.349
-        window_source: stats_contributors
-        carve_out: null
+      grade: "?"
+      raw: {}
     risk_license:
-      grade: A
-      raw:
-        spdx_id: Apache-2.0
-        permissiveness: permissive
-        relicense_36mo: false
-        content_license: null
+      grade: "?"
+      raw: {}
 ---
 
 # Open Interpreter
@@ -137,7 +110,7 @@ health:
 
 ## 存疑（未验证）
 
-- [未验证] 仓库事实，截至 2026-06-29 经 GitHub API：2023-07-14 创建、最后推送 2026-06-20、未归档、约 64.2k star、约 5.6k fork、Apache-2.0、语言报告为 Rust、owner 类型为 Organization。star / fork 有噪声且对时间敏感——且此处 star 数早于这次重写，因而高估了新代码库的实际牵引力。仅供参考。
+- [未验证] 仓库事实，截至 2026-07-01 经 GitHub API：2023-07-14 创建、最后推送 2026-06-20、未归档、约 64.2k star、约 5.6k fork、Apache-2.0、语言报告为 Rust、owner 类型为 Organization。star / fork 有噪声且对时间敏感——且此处 star 数早于这次重写，因而高估了新代码库的实际牵引力。仅供参考。
 - [未验证] 最新发布 `rust-v0.0.17`（2026-06-20），其前为 `rust-v0.0.16`（2026-06-20）；最后一个*Python 时代*的发布是 `v0.4.2`（2024-10-24，标为预发布）。约 20 个月的发版断档是从发布列表推断，并非维护者声明。
 - [推断] 「OpenAI Codex 的 fork」与「为低成本模型模拟 agent harness」是项目自己的 README 说法，并由仓库内含 `codex-rs` / `codex-cli` / `.codex` 目录树、一份指向 `openai/codex/releases` 的 CHANGELOG、以及「Merge upstream Codex main」提交所佐证——但与上游 Codex 的确切差异未在此审计。
 - [未验证] harness 列表（`native`、`claude-code`、`claude-code-bare`、`kimi-cli`、`qwen-code`、`deepseek-tui`、`swe-agent`、`minimal`）、QA skill 的浏览器 / 原生应用驱动（agent-browser、trycua）、ACP 支持、以及 MCP / hooks / 权限，均出自当前 README；其确切行为、稳定性与各 OS 支持未在此核实。

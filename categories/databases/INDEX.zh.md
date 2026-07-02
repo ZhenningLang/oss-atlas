@@ -14,6 +14,7 @@
 | **python-mysql-replication** | 当你想用纯 Python 原语把 MySQL binlog 流式解析成带类型的事件、自建可控 CDC 循环时用它——但 checkpoint、去重和精确一次投递全得你自己负责。 | D（5/6） | [→](python-mysql-replication.zh.md) |
 | **PrettyZoo** | 当你在开发或故障排查时想用友好的桌面 GUI 浏览并轻量编辑 ZooKeeper znode 树时用它——但它自 2023 年起已归档，新 JDK／macOS 可能跑不起来且无上游修复。 | D（4/6） | [→](prettyzoo.zh.md) |
 | **RDR** | 当 Redis 触发 maxmemory 告警、需要离线快速按前缀分析 RDB 快照时用它——但内存数字是近似值，且项目已停滞（v0.0.1，2019 年）。 | D（3/6） | [→](rdr.zh.md) |
+| **Supabase** | 当你想要一个基于 PostgreSQL 构建的开源 Firebase 替代方案，包含身份认证、自动生成 API、实时订阅、边缘函数和向量存储时用它——但它与 Postgres 深度绑定。 | ?（0/6） | [→](supabase.zh.md) |
 
 ## 对比矩阵
 
@@ -26,7 +27,7 @@
 | [python-mysql-replication](python-mysql-replication.zh.md) | ✅ | D（5/6） | 当你想用纯 Python 原语把 MySQL binlog 流式解析成带类型的事件、自建可控 CDC 循环时用它——但 checkpoint、去重和精确一次投递全得你自己负责。 |
 | [PrettyZoo](prettyzoo.zh.md) | ✅ | D（4/6） | 当你在开发或故障排查时想用友好的桌面 GUI 浏览并轻量编辑 ZooKeeper znode 树时用它——但它自 2023 年起已归档，新 JDK／macOS 可能跑不起来且无上游修复。 |
 | [RDR](rdr.zh.md) | ✅ | D（3/6） | 当 Redis 触发 maxmemory 告警、需要离线快速按前缀分析 RDB 快照时用它——但内存数字是近似值，且项目已停滞（v0.0.1，2019 年）。 |
-| （各页对比里点到的替代品） | 未收录 | — | 详见各页 Comparison。 |
+| [Supabase](supabase.zh.md) | ✅ | ?（0/6） | 基于 PostgreSQL 构建的开源 Firebase 替代方案，包含身份认证、自动生成 API、实时订阅、边缘函数和向量存储；与 Postgres 深度绑定。 |
 
 ## 什么该放这里
 

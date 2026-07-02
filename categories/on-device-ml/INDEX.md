@@ -12,6 +12,8 @@
 | **Google AI Edge Gallery** | Use it when you need to demo and benchmark on-device Gemma LLMs on real phones before building. | A (5/6) | [→](ai-edge-gallery.md) |
 | **TimesFM** | Use it when you need zero-shot time-series forecasts run locally on CPU/GPU without per-dataset training. | B (5/6) | [→](timesfm.md) |
 | **MiniCPM-V** | Use it when you need efficient on-device/edge multimodal (image+video) understanding with a small footprint — verify the per-weight license. | A (4/6) | [→](minicpm-v.md) |
+| **Stable Diffusion WebUI** | Use it when you want a local web-based GUI for Stable Diffusion image generation, editing, and upscaling on your own GPU — but it requires technical setup and an NVIDIA GPU. | ? (0/6) | [→](stable-diffusion-webui.md) |
+| **ComfyUI** | Use it when you want a modular node-graph interface for building complex diffusion-model workflows locally — but it has a steep learning curve and requires significant GPU resources. | ? (0/6) | [→](comfyui.md) |
 
 ## Comparison matrix
 
@@ -22,6 +24,8 @@
 | [Google AI Edge Gallery](ai-edge-gallery.md) | ✅ | A (5/6) | Use it when you need to demo and benchmark on-device Gemma LLMs on real phones before building. |
 | [TimesFM](timesfm.md) | ✅ | B (5/6) | Use it when you need zero-shot time-series forecasts run locally on CPU/GPU without per-dataset training. |
 | [MiniCPM-V](minicpm-v.md) | ✅ | A (4/6) | Use it when you need efficient on-device/edge multimodal (image+video) understanding with a small footprint — verify the per-weight license. |
+| [Stable Diffusion WebUI](stable-diffusion-webui.md) | ✅ | ? (0/6) | Local web-based GUI for Stable Diffusion image generation, editing, and upscaling on your own GPU; requires technical setup and an NVIDIA GPU. |
+| [ComfyUI](comfyui.md) | ✅ | ? (0/6) | Modular node-graph interface for building complex diffusion-model workflows locally; steep learning curve and significant GPU resources required. |
 | llama.cpp / Ollama / MLC LLM / ONNX Runtime | 未收录 | — | Other on-device inference runtimes named across the pages. |
 
 ## What belongs here
