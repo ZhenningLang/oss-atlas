@@ -17,31 +17,40 @@ upstream:
 health:
   schema: 1
   computed_at: 2026-07-01T10:00:00Z
-  overall: "?"
-  overall_score: 0.0
-  scored_axes: 0
+  overall: B
+  overall_score: 3.2
+  scored_axes: 5
   capped: false
   cap_reason: null
   needs_human_review: true
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: B
+      raw:
+        archived: false
     responsiveness:
-      grade: "?"
+      grade: ?
       raw: {}
     adoption:
-      grade: "?"
-      raw: {}
+      grade: B
+      raw:
+        stars: 65651
     longevity:
-      grade: "?"
+      grade: A
       raw: {}
     governance:
-      grade: "?"
-      raw: {}
+      grade: C
+      raw:
+        owner_type: User
     risk_license:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        spdx_id: Unlicense
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: no_data }
 ---
 
 # ripgrep

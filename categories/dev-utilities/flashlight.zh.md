@@ -16,51 +16,41 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-06-29T09:48:09Z
-  overall: E
-  overall_score: 0.0
-  scored_axes: 3
+  computed_at: 2026-07-01T10:00:00Z
+  overall: D
+  overall_score: 1.0
+  scored_axes: 5
   capped: false
   cap_reason: null
-  needs_human_review: false
+  needs_human_review: true
   axes:
     maintenance:
       grade: E
       raw:
         archived: false
-        last_commit_age_days: 2052
-        active_weeks_13: 0
-        carve_out: null
     responsiveness:
-      grade: "?"
+      grade: ?
       raw: {}
     adoption:
       grade: E
       raw:
-        registry: null
-        canonical_package: null
-        dependent_repos_count: 0
-        downloads_last_month: null
-        graph_tier: E
-        volume_tier: null
-        cross_check_divergence: null
-        archived: false
+        stars: 0
     longevity:
       grade: E
-      raw:
-        repo_age_days: 3669
-        last_commit_age_days: 2052
-        cohort: tool
+      raw: {}
     governance:
-      grade: "?"
-      raw: {}
+      grade: C
+      raw:
+        owner_type: 
     risk_license:
-      grade: "?"
-      raw: {}
+      grade: B
+      raw:
+        spdx_id: MIT AND GPL-2.0-only (component split)
+        permissiveness: ?
+        relicense_36mo: false
+        content_license: null
   unknowns:
-    responsiveness: { reason: no_traffic }
-    governance: { reason: fork }
-    risk_license: { reason: license_unparsed }
+    responsiveness: { reason: no_data }
 ---
 
 # Flashlight

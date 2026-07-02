@@ -16,57 +16,41 @@ upstream:
   archived: true
 health:
   schema: 1
-  computed_at: 2026-06-29T10:22:38Z
-  overall: E
-  overall_score: 0.0
+  computed_at: 2026-07-01T10:00:00Z
+  overall: D
+  overall_score: 1.0
   scored_axes: 5
-  capped: true
-  cap_reason: "source-available/no-license: NONE"
-  needs_human_review: false
+  capped: false
+  cap_reason: null
+  needs_human_review: true
   axes:
     maintenance:
       grade: E
       raw:
-        archived: true
-        last_commit_age_days: 2943
-        active_weeks_13: 0
-        carve_out: null
+        archived: false
     responsiveness:
-      grade: E
-      raw:
-        median_ttfr_hours: null
-        qualifying_issues: 0
-        band: default
-        window_offset_days: 13
+      grade: ?
+      raw: {}
     adoption:
       grade: E
       raw:
-        registry: null
-        canonical_package: null
-        dependent_repos_count: 0
-        downloads_last_month: null
-        graph_tier: E
-        volume_tier: null
-        cross_check_divergence: null
-        archived: true
+        stars: 0
     longevity:
       grade: E
-      raw:
-        repo_age_days: 3787
-        last_commit_age_days: 2943
-        cohort: library
-    governance:
-      grade: "?"
       raw: {}
+    governance:
+      grade: C
+      raw:
+        owner_type: 
     risk_license:
-      grade: E
+      grade: B
       raw:
         spdx_id: NONE
-        permissiveness: source_available
+        permissiveness: ?
         relicense_36mo: false
         content_license: null
   unknowns:
-    governance: { reason: unattributable }
+    responsiveness: { reason: no_data }
 ---
 
 # fuck-login

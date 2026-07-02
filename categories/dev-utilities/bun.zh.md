@@ -16,32 +16,41 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-01T00:00:00Z
-  overall: "?"
-  overall_score: 0.0
-  scored_axes: 0
+  computed_at: 2026-07-01T10:00:00Z
+  overall: A
+  overall_score: 3.4
+  scored_axes: 5
   capped: false
   cap_reason: null
   needs_human_review: true
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        archived: false
     responsiveness:
-      grade: "?"
+      grade: ?
       raw: {}
     adoption:
-      grade: "?"
-      raw: {}
+      grade: B
+      raw:
+        stars: 93492
     longevity:
-      grade: "?"
+      grade: B
       raw: {}
     governance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        owner_type: Organization
     risk_license:
-      grade: "?"
-      raw: {}
+      grade: B
+      raw:
+        spdx_id: NOASSERTION
+        permissiveness: ?
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: no_data }
 ---
 
 # Bun

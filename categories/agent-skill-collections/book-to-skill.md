@@ -16,32 +16,41 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-01T00:00:00Z
-  overall: "?"
-  overall_score: 0.0
-  scored_axes: 0
+  computed_at: 2026-07-01T10:00:00Z
+  overall: C
+  overall_score: 2.2
+  scored_axes: 5
   capped: false
   cap_reason: null
   needs_human_review: true
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        archived: false
     responsiveness:
-      grade: "?"
+      grade: ?
       raw: {}
     adoption:
-      grade: "?"
-      raw: {}
+      grade: D
+      raw:
+        stars: 7413
     longevity:
-      grade: "?"
+      grade: E
       raw: {}
     governance:
-      grade: "?"
-      raw: {}
+      grade: C
+      raw:
+        owner_type: User
     risk_license:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
+  unknowns:
+    responsiveness: { reason: no_data }
 ---
 
 # book-to-skill

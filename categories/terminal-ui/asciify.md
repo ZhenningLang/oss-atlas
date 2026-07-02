@@ -16,54 +16,41 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-06-29T10:18:15Z
-  overall: E
-  overall_score: 0.0
-  scored_axes: 4
-  capped: true
-  cap_reason: "source-available/no-license: NONE"
-  needs_human_review: false
+  computed_at: 2026-07-01T10:00:00Z
+  overall: D
+  overall_score: 1.0
+  scored_axes: 5
+  capped: false
+  cap_reason: null
+  needs_human_review: true
   axes:
     maintenance:
       grade: E
       raw:
         archived: false
-        last_commit_age_days: 2818
-        active_weeks_13: 0
-        carve_out: null
     responsiveness:
-      grade: "?"
+      grade: ?
       raw: {}
     adoption:
       grade: E
       raw:
-        registry: null
-        canonical_package: null
-        dependent_repos_count: 0
-        downloads_last_month: null
-        graph_tier: E
-        volume_tier: null
-        cross_check_divergence: null
-        archived: false
+        stars: 0
     longevity:
       grade: E
-      raw:
-        repo_age_days: 2868
-        last_commit_age_days: 2818
-        cohort: tool
-    governance:
-      grade: "?"
       raw: {}
+    governance:
+      grade: C
+      raw:
+        owner_type: 
     risk_license:
-      grade: E
+      grade: B
       raw:
         spdx_id: NONE
-        permissiveness: source_available
+        permissiveness: ?
         relicense_36mo: false
         content_license: null
   unknowns:
-    responsiveness: { reason: no_traffic }
-    governance: { reason: unattributable }
+    responsiveness: { reason: no_data }
 ---
 
 # asciify
