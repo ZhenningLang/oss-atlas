@@ -79,15 +79,15 @@ A line-oriented search tool that recursively searches directories for a regex pa
 
 ## When to use
 
-You're a developer who searches large codebases daily and wants a tool that is fast, smart, and respects your project's structure by default. You are tired of `grep -r` returning noise from `.git`, `node_modules`, and build artifacts. You want something that works identically on Windows, macOS, and Linux with prebuilt binaries for every release. You need Unicode-aware regex search, optional multiline matching, and the ability to search specific file types. You want a tool that is so fast you can run it interactively without waiting.
+You're choosing a code search tool for daily use across large codebases and speed and smart defaults matter. You pick ripgrep over `grep` because you want a tool that automatically respects `.gitignore`, skips hidden files and binary files, and works identically on Windows, macOS, and Linux with prebuilt binaries for every release. You pick ripgrep over The Silver Searcher (ag) because ripgrep is generally faster, has better Unicode support, and more active maintenance. You need Unicode-aware regex search, optional multiline matching, and the ability to search specific file types — all fast enough to run interactively without waiting.
 
 ## When NOT to use
 
-- **If you need to search across lines with complex multiline patterns** — ripgrep is line-oriented by design. While it has a multiline mode (`-U`), it is not as natural for complex cross-line matching as `pcregrep` or `ack`.
-- **If you need to search within binary files** — ripgrep skips binary files by default. Use `grep` or `strings` if you need to search inside compiled binaries or images.
-- **If you are on a system where you cannot install a new binary** — ripgrep is not universally preinstalled like `grep`. On minimal containers or restricted systems, `grep` may be your only option.
-- **If you need a tool that is part of POSIX** — `grep` is POSIX-standard and guaranteed to be on every Unix system. ripgrep is a modern replacement but not a portable standard.
-- **If you need to search compressed files** — ripgrep does not search inside `.gz`, `.zip`, or `.tar` archives by default. Use `zgrep` or `ag` with appropriate plugins for that.
+- If you need to search across lines with complex multiline patterns, use `pcregrep` or `ack` instead of ripgrep, because ripgrep is line-oriented by design and its multiline mode (`-U`) is not as natural for complex cross-line matching.
+- If you need to search within binary files, use `grep` or `strings` instead of ripgrep, because ripgrep skips binary files by default.
+- If you are on a system where you cannot install a new binary, use `grep` instead of ripgrep, because ripgrep is not universally preinstalled like `grep` and on minimal containers or restricted systems `grep` may be your only option.
+- If you need a tool that is part of the POSIX standard and guaranteed on every Unix system, use `grep` instead of ripgrep, because ripgrep is a modern replacement but not a portable standard.
+- If you need to search compressed files (`.gz`, `.zip`, `.tar`), use `zgrep` or `ag` with appropriate plugins instead of ripgrep, because ripgrep does not search inside archives by default.
 
 ## Comparison
 

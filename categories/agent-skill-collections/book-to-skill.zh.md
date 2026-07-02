@@ -80,17 +80,17 @@ health:
 
 ## 何时使用
 
-你是一名软件工程师，书架上堆满了技术 PDF——语言规范、框架指南、算法参考——你希望 coding agent（Claude Code、Copilot CLI、Amp）在工作时能随时调用这些知识。你不想逐本手动总结，也不想每次往 context 里复制摘录，而是想要一条可重复的流水线：把 PDF 喂给工具，取回一个结构化技能，带分块、可引用的内容，让 agent 按需加载。你安装 book-to-skill，指向一个 PDF 目录，它生成一个可直接装进 agent harness 的技能包——把静态文档变成活的、可查询的专业知识。
+你是一名软件工程师，书架上堆满了技术 PDF——语言规范、框架指南、算法参考——你希望 coding agent（Claude Code、Copilot CLI、Amp）在工作时能随时调用这些知识。你不想逐本手动总结，也不想每次往 context 里复制摘录，而是想要一条可重复的流水线：把 PDF 喂给工具，取回一个结构化技能，带分块、可引用的内容，让 agent 按需加载。你选择 book-to-skill 而不是 Docling，因为 Docling 为 RAG 流水线解析文档，但不输出可安装的 agent 技能；你选它而不是 MarkItDown，因为 MarkItDown 只转成普通 Markdown，没有 agent harness 所需的结构分段和 SKILL.md 格式；你偏好它而不是 NotebookLM Claude Code Skill，因为后者查询外部 Google 服务，而 book-to-skill 让一切在本地离线完成。你安装 book-to-skill，指向一个 PDF 目录，它生成一个可直接装进 agent harness 的技能包——把静态文档变成活的、可查询的专业知识。
 
 ## 何时不用
 
-- **非技术或叙事类书籍**——该工具针对带结构化标题、代码示例和参考资料的技术文档优化。小说、散文和无结构 prose 不会产生有用的技能。
-- **你没有所有权或无权处理的文档**——未经适当授权的受版权保护材料无法处理。该工具面向你自己的文档以及公共领域或已获授权的技术内容。
-- **实时查询需求**——这是批处理转换工具，不是 live RAG 系统。如果你需要对大型文档语料库做动态检索、嵌入和语义搜索，请使用完整的 RAG 管线（如 FAISS + 向量数据库）。
-- **需要编辑或创作功能**——该工具提取并结构化内容，但不让你在转换后编辑、批注或扩充源材料。
-- **Agent harness 不支持 skill**——如果你的 coding agent 不支持 Agent Skills 标准（SKILL.md）或插件安装，生成的输出将无法加载。
-- **高频更新场景**——如果源文档频繁变化，你需要每次重新运行转换流水线。与文档源做实时集成会更合适。
-- **生产级精度要求**——提取和分块基于启发式；微妙的技术细节、边界情况和 nuanced 解释可能在技能生成过程中丢失或损坏。[未验证]
+- **非技术或叙事类书籍。**如果你需要处理小说、散文或无结构 prose，请改用 Readwise 或 Obsidian 插件，而不是 book-to-skill，因为该工具针对带结构化标题、代码示例和参考资料的技术文档优化。
+- **你没有所有权或无权处理的文档。**如果你需要处理未经适当授权的受版权保护材料，请改用公共领域文档源或授权图书馆服务，而不是 book-to-skill，因为该工具面向你自己的文档以及公共领域或已获授权的技术内容。
+- **实时查询需求。**如果你需要对大型文档语料库做动态检索、嵌入和语义搜索，请改用 LlamaIndex RAG 管线或 FAISS + 向量数据库，而不是 book-to-skill，因为这是批处理转换工具，不是 live RAG 系统。
+- **需要编辑或创作功能。**如果你需要在转换后编辑、批注或扩充源材料，请改用 NotebookLM 或手动编写 SKILL.md，而不是 book-to-skill，因为该工具只提取并结构化内容，不提供转换后编辑。
+- **Agent harness 不支持 skill。**如果你的 coding agent 不支持 Agent Skills 标准（SKILL.md）或插件安装，请改用 [MarkItDown](../document-parsing/markitdown.zh.md) 转成 Markdown，而不是 book-to-skill，因为生成的输出在不支持 skill 的 harness 中无法加载。
+- **高频更新场景。**如果源文档频繁变化且你需要实时同步，请改用与文档源的实时 RAG 集成，而不是 book-to-skill，因为每次源变化你都需要重新运行转换流水线。
+- **生产级精度要求。**如果你需要确保微妙的技术细节、边界情况和 nuanced 解释得到完整保留，请改用 [Docling](../document-parsing/docling.zh.md) 配合人工审核或手动编写 SKILL.md，而不是 book-to-skill，因为提取和分块基于启发式，可能丢失或损坏内容。
 
 ## 横向对比
 

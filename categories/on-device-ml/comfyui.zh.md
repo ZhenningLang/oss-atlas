@@ -78,23 +78,22 @@ health:
 
 ## 何时使用
 
-你是数字艺术家或 AI 研究者，想在自有硬件上用 Stable Diffusion 和其他扩散模型生成、编辑和超分图像。你不满足于一键提示框：你想把采样器、VAE、ControlNet、IP-Adapter 和自定义模型串成可复用的工作流。你在画布上拖拽节点，像可视化着色器图一样连线，然后在本地 GPU 上跑管线。ComfyUI 支持 SD 1.x、SDXL、SD3、Flux 以及数十种 checkpoint 和 LoRA，节点生态意味着社区不断加入新能力——从图像修复到视频生成——不用等官方发布。
+你是数字艺术家或 AI 研究者，想在自有硬件上用 Stable Diffusion 和其他扩散模型生成、编辑和超分图像。你不满足于一键提示框：你想把采样器、VAE、ControlNet、IP-Adapter 和自定义模型串成可复用的工作流。你选择 ComfyUI 而不是 Stable Diffusion WebUI，因为你需要节点图的深度和模块化，而非固定的标签页界面；你选它而不是 InvokeAI，因为它的开放节点生态比精致但封闭的画布提供更多定制；你偏好它而不是 Fooocus，因为你需要完整管线控制而非简化预设。你在画布上拖拽节点，像可视化着色器图一样连线，然后在本地 GPU 上跑管线。ComfyUI 支持 SD 1.x、SDXL、SD3、Flux 以及数十种 checkpoint 和 LoRA，节点生态意味着社区不断加入新能力——从图像修复到视频生成——不用等官方发布。
 
 ## 何时不用
 
-- **你没有 NVIDIA GPU 或显存不足。** ComfyUI 依赖 GPU 才能达到可接受的速度；纯 CPU 推理可行，但慢得令人痛苦。4–6 GB 显存的配置必须开启优化，仍可能爆显存。[未验证]
-- **你想要简单的一键式图像生成器。** 节点图很强大，但学习曲线陡峭；如果你只想输入提示词拿图，请用 Stable Diffusion WebUI 或云 API。
-- **你需要商业支持或托管云服务。** ComfyUI 是自托管工具，无官方 SLA；生产管线可能需要自己封装或使用商业推理平台。
-- **GPL-3.0 与你们项目不兼容。** 许可为 GPL-3.0，可能与专有集成或分发计划冲突。
-- **你需要跨版本稳定、可复现的工作流。** 节点定义和自定义扩展可能在版本间变动；分享 workflow JSON 并不能保证在另一台装了不同自定义节点的机器上完全一致地运行。[推断]
-- **你的主要需求是视频或音频生成。** 虽然 ComfyUI 有视频节点，但其核心优势是图像生成；专用视频工具可能更成熟。
+- **你没有 NVIDIA GPU 或显存不足。**如果你只有 4–6 GB 显存或没有 GPU，请改用 Stable Diffusion WebUI（优化更简单）或 Midjourney 等云 API，而不是 ComfyUI，因为它面向 GPU 密集型节点图设计，纯 CPU 推理慢得令人痛苦。
+- **你想要简单的一键式图像生成器。**如果你只想输入提示词拿图，不想学节点图，请改用 Stable Diffusion WebUI 或 Fooocus，而不是 ComfyUI，因为节点图学习曲线陡峭，对 casual 使用过于复杂。
+- **你需要商业支持或托管云服务。**如果你需要官方 SLA 或托管生产管线，请改用 Midjourney 或托管 Stable Diffusion API 等云推理平台，而不是 ComfyUI，因为它是自托管工具，无商业背书。
+- **GPL-3.0 与你们项目不兼容。**如果你需要宽松许可用于专有集成，请改用云 API 或 Diffusers（Hugging Face，MIT），而不是 ComfyUI，因为它的 GPL-3.0 可能与专有分发计划冲突。
+- **你需要跨版本稳定、可复现的工作流。**如果你需要版本可控、可复现的管线，请改用 Stable Diffusion WebUI（界面更稳定）或以编程方式使用 Diffusers，而不是 ComfyUI，因为节点定义和自定义扩展可能在版本间变动，分享 workflow JSON 并不能保证在另一台机器上完全一致地运行。
+- **你的主要需求是视频或音频生成。**如果你的主要需求是视频生成，请改用专用视频生成工具，而不是 ComfyUI，因为虽然它有视频节点，但核心优势是图像生成，专用视频工具更成熟。
 
 ## 横向对比
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
 | [Stable Diffusion WebUI](stable-diffusion-webui.zh.md) | ✅ | 当前页用于它的主场景；如果更看重「更简单、更传统的 Stable Diffusion Web UI」，再选 Stable Diffusion WebUI。 | 更简单、更传统的 Stable Diffusion 标签页式 Web UI，带内置扩展；对初学者更友好，但模块化程度不如 ComfyUI 的节点图。 |
-| AUTOMATIC1111 WebUI | 未收录 | 当前页用于它的主场景；如果更看重「经典、文档最丰富的 Stable Diffusion Web 界面」，再选 AUTOMATIC1111。 | 最经典、文档最丰富的 Stable Diffusion Web UI；扩展生态庞大，但比 ComfyUI 更单体化。 |
 | InvokeAI | 未收录 | 当前页用于它的主场景；如果更看重「面向艺术家的精致画布，统一生成与编辑」，再选 InvokeAI。 | 面向艺术家的精致画布，生成与编辑在同一视图；UX 更流畅，但开放度与可定制性不如 ComfyUI。 |
 | Fooocus | 未收录 | 当前页用于它的主场景；如果更看重「类 Midjourney 的极简本地提示词生图体验」，再选 Fooocus。 | 受 Midjourney 启发的极简提示词生图 UI；快速出图不错，但灵活度远不如 ComfyUI 的节点图。 |
 | Diffusers（Hugging Face） | 未收录 | 当前页用于它的主场景；如果更看重「用 Python 库程序化编排扩散管线，不需要 GUI」，再选 Diffusers。 | 用于程序化编写扩散管线的 Python 库；无 GUI，面向开发自己工具的人。 |

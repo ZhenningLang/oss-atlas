@@ -71,15 +71,15 @@ A cross-platform desktop All-in-One manager for Claude Code, Claude Desktop, Cod
 
 ## When to use
 
-You're a developer who juggles multiple AI coding agents and assistants across your daily workflow. You switch between Claude Code for deep codebase work, Codex for quick tasks, Gemini CLI for Google-integrated queries, and OpenClaw for personal messaging. Managing credentials, settings, and model providers for each tool is a hassle, and you want a single desktop control plane that unifies them. You install CC Switch, connect your providers once, and manage all your AI tools from one cross-platform interface with provider routing, skill management, and MCP integration.
+You're a developer who juggles multiple AI coding agents and assistants across your daily workflow. You switch between Claude Code for deep codebase work, Codex for quick tasks, Gemini CLI for Google-integrated queries, and OpenClaw for personal messaging. You pick CC Switch over managing each tool from its own terminal window because it provides a single desktop control plane that unifies credentials, settings, and model providers with visual provider routing, skill management, and MCP integration. You pick it over a terminal-based workflow when you want to switch agents without memorizing CLI flags or maintaining separate config files for each tool. You install CC Switch, connect your providers once, and manage all your AI tools from one cross-platform GUI instead of context-switching across disparate interfaces.
 
 ## When NOT to use
 
-- **Single-tool users** — If you only use one agent (e.g., just Claude Code), CC Switch adds unnecessary overhead.
-- **Headless / server-only environments** — CC Switch is a desktop GUI app built on Tauri; it won't run on a headless server or CI pipeline.
-- **Team-wide policy enforcement** — There's no RBAC or team-wide admin layer; it's a personal productivity tool, not an enterprise governance platform.
-- **No need for provider management** — If you don't switch between LLM providers or manage custom skills/MCP servers, the added abstraction is unnecessary.
-- **Lightweight terminal preference** — If you prefer staying entirely in the terminal without a GUI overlay, a Tauri desktop app is not your style.
+- **If you only use one agent** — use that agent directly (e.g., Claude Code CLI) instead of CC Switch, because CC Switch adds unnecessary GUI overhead and abstraction for a single tool.
+- **If you need to run on a headless server or CI pipeline** — use the CLI agents directly via SSH or shell scripts instead of CC Switch, because CC Switch is a Tauri desktop app that requires a GUI environment and will not run in headless environments.
+- **If you need team-wide RBAC, audit trails, or policy enforcement** — use a governed platform like [Dify](https://github.com/langgenius/dify) or [n8n](https://github.com/n8n-io/n8n) instead of CC Switch, because CC Switch has no RBAC, admin layer, or enterprise compliance features.
+- **If you don't switch between LLM providers or manage custom skills/MCP servers** — use a single agent like Claude Code or Gemini CLI directly instead of CC Switch, because if you don't need provider management, the added abstraction provides no value.
+- **If you prefer staying entirely in the terminal** — use a terminal multiplexer like tmux or a shell alias system instead of CC Switch, because CC Switch is a GUI overlay built on Tauri, not a terminal-native solution.
 
 ## Comparison
 

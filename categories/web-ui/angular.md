@@ -79,16 +79,16 @@ A comprehensive web development platform for building mobile and desktop web app
 
 ## When to use
 
-You're an enterprise team building a large, complex web application with dozens of screens, strict coding standards, and a need for long-term maintainability. Your team values strong typing, a batteries-included framework, and a clear architectural pattern (dependency injection, modules, services). You choose Angular because it ships with everything you need: a powerful CLI for scaffolding, a reactive forms system, an HTTP client, a router with lazy loading, and a first-class TypeScript experience. You don't want to spend weeks evaluating and wiring together third-party libraries for routing, state management, or form validation. Angular's opinionated structure means new hires can onboard faster because the codebase follows predictable patterns.
+You're an enterprise team building a large, complex web application with dozens of screens, strict coding standards, and a need for long-term maintainability. You evaluate React, but its "bring your own everything" philosophy means you would spend weeks choosing and wiring together routing, state management, and form validation libraries. You evaluate Vue, but its gentler learning curve comes with less built-in structure for large teams. You choose Angular because it ships with everything you need: a powerful CLI for scaffolding, a reactive forms system, an HTTP client, a router with lazy loading, and a first-class TypeScript experience. You don't want to spend weeks evaluating and wiring together third-party libraries for routing, state management, or form validation. Angular's opinionated structure means new hires can onboard faster because the codebase follows predictable patterns, and Google's long-term backing gives you confidence the framework will still be maintained in five years.
 
 ## When NOT to use
 
-- **Small or simple projects** — For a landing page, a blog, or a CRUD admin with fewer than 10 screens, Angular's boilerplate and build complexity are overkill. Vite + React or Vue will ship faster.
-- **Team allergic to TypeScript** — Angular is deeply TypeScript-native. If your team prefers plain JavaScript or finds TS decorators and complex types burdensome, friction will be constant.
-- **Rapid prototyping** — Angular's strict module system, build pipeline, and boilerplate slow down quick MVPs. A lighter framework (or no framework) is better for hackathons and prototypes.
-- **SEO-first static sites** — While Angular has SSR (Angular Universal), it is not as seamless as Next.js or Nuxt for static site generation. If your content is mostly static and SEO-critical, look elsewhere.
-- **Micro-frontend heterogeneity** — Angular's zone.js and Ivy compiler create integration friction when mixing with non-Angular micro-frontends. If your architecture requires mixed-framework shells, the complexity is real. [推断]
-- **Bundle size sensitivity** — Angular's core framework is larger than React or Vue. For apps targeting low-bandwidth or mobile-first emerging markets, the initial payload can be a concern.
+- **If you need a small landing page, blog, or simple CRUD with fewer than 10 screens, use Vite + React or Vue instead of Angular, because** Angular's boilerplate and build complexity are overkill for small projects. You will ship faster with a lighter stack.
+- **If your team avoids TypeScript, use plain React or Vue instead of Angular, because** Angular is deeply TypeScript-native. If your team prefers plain JavaScript or finds TS decorators and complex types burdensome, friction will be constant.
+- **If you need rapid prototyping or a quick MVP, use Next.js or Vue instead of Angular, because** Angular's strict module system, build pipeline, and boilerplate slow down quick iterations. A lighter framework is better for hackathons and prototypes.
+- **If you need SEO-first static sites, use Next.js or Nuxt instead of Angular, because** while Angular has SSR (Angular Universal), it is not as seamless as Next.js or Nuxt for static site generation. If your content is mostly static and SEO-critical, those frameworks are the better choice.
+- **If you need mixed-framework micro-frontends, use React-based micro-frontends with module federation instead of Angular, because** Angular's zone.js and Ivy compiler create integration friction when mixing with non-Angular micro-frontends. If your architecture requires mixed-framework shells, the complexity is real.
+- **If bundle size is critical for low-bandwidth or mobile-first markets, use Svelte or Preact instead of Angular, because** Angular's core framework is larger than React or Vue. For apps targeting low-bandwidth or mobile-first emerging markets, the initial payload can be a concern.
 
 ## Comparison
 
@@ -131,11 +131,11 @@ You're an enterprise team building a large, complex web application with dozens 
 
 ## Health & viability
 
-- **Maintenance**: Very active — maintained by Google with a 6-month major release cycle and a public roadmap. Long-term support (LTS) for the last two major versions. [推断]
-- **Governance**: Owned by Google. The Angular team has historically been shielded from Google-wide re-orgs, but it is still a single-vendor project. The community has a voice through the Angular Community Discord and GitHub. [推断]
-- **Backing**: Google is the primary backer. Angular is used internally at Google (Google Cloud Console, Firebase Console, etc.), which provides a strong incentive to keep it maintained. [推断]
-- **Adoption**: Strong enterprise adoption with 100.4k stars, created in 2014 (12-year track record). A staple in large enterprise and fintech codebases. The job market is healthy, especially in enterprise consulting. [推断]
-- **Risk flags**: The MIT license is permissive. Google has a good track record of maintaining Angular, but the risk of "Google kills things" is always a background concern. No relicense history. The shift from zone.js to signals represents a significant architectural change; existing apps may need migration. [推断]
+- **Maintenance**: Very active — maintained by Google with a 6-month major release cycle and a public roadmap. Long-term support (LTS) for the last two major versions.
+- **Governance**: Owned by Google. The Angular team has historically been shielded from Google-wide re-orgs, but it is still a single-vendor project. The community has a voice through the Angular Community Discord and GitHub.
+- **Backing**: Google is the primary backer. Angular is used internally at Google (Google Cloud Console, Firebase Console, etc.), which provides a strong incentive to keep it maintained.
+- **Adoption**: Strong enterprise adoption with 100.4k stars, created in 2014 (12-year track record). A staple in large enterprise and fintech codebases. The job market is healthy, especially in enterprise consulting.
+- **Risk flags**: The MIT license is permissive. Google has a good track record of maintaining Angular, but the risk of "Google kills things" is always a background concern. No relicense history. The shift from zone.js to signals represents a significant architectural change; existing apps may need migration.
 
 ## Caveats (unverified)
 
@@ -143,3 +143,4 @@ You're an enterprise team building a large, complex web application with dozens 
 - [未验证] The precise number of enterprise production deployments and their scale has not been independently audited.
 - [未验证] Angular's market share relative to React and Vue in new project starts is inferred from job postings and community surveys, not hard data.
 - [推断] Micro-frontend integration with non-Angular shells is possible but the exact friction level depends on the module-federation setup.
+- [推断] The actual performance impact of Angular's bundle size compared to React or Vue varies by application and optimization strategy.

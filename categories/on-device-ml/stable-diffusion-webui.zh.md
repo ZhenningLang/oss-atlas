@@ -70,22 +70,22 @@ health:
 
 ## 何时使用
 
-你是一名创作者、研究者或开发者，想在自有硬件上用文本提示生成图像或编辑现有图像。你需要一个本地 Web UI，可以在里面写提示词、调整采样参数、做局部重绘来移除或添加对象、运行 img2img 进行风格迁移，并用文本反演训练自定义嵌入。你有一块至少 6–8 GB 显存的 NVIDIA GPU，并熟悉安装 Python 包和管理模型 checkpoint。你安装 WebUI，下载 Stable Diffusion checkpoint，打开浏览器标签页即可开始生成——无需云积分、无需 API key，对模型和输出完全可控。
+你是一名创作者、研究者或开发者，想在自有硬件上用文本提示生成图像或编辑现有图像。你需要一个本地 Web UI，可以在里面写提示词、调整采样参数、做局部重绘来移除或添加对象、运行 img2img 进行风格迁移，并用文本反演训练自定义嵌入。你选择 Stable Diffusion WebUI 而不是 ComfyUI，因为你想要传统的标签页界面而非节点图；你选它而不是 InvokeAI，因为它的扩展生态更大、文档更丰富；你偏好它而不是 Fooocus，因为你需要完整的参数控制而非简化预设。你有一块至少 6–8 GB 显存的 NVIDIA GPU，并熟悉安装 Python 包和管理模型 checkpoint。你安装 WebUI，下载 Stable Diffusion checkpoint，打开浏览器标签页即可开始生成——无需云积分、无需 API key，对模型和输出完全可控。
 
 ## 何时不用
 
-- **纯 CPU 推理**——技术上 diffusion 模型可在 CPU 上运行，但速度极慢（单张图需数分钟）。本工具为 CUDA GPU 设计；无 GPU 时，迭代式创作体验不切实际。
-- **未核查 AGPL-3.0 的商业用途**——项目采用 AGPL-3.0 许可，带有 copyleft 义务。若计划基于它分发服务或产品，请先与法律顾问确认合规义务。[未验证]
-- **零配置或非技术用户**——安装需要 Python、PyTorch、CUDA 驱动，并管理数 GB 的模型权重。它不是一键式消费级应用。
-- **团队多用户部署**——无内置 RBAC、队列管理或用户隔离。多用户共享一个实例会互相干扰生成任务和设置。
-- **偏好托管云服务**——如果你不想管理 GPU、驱动和模型文件，想要托管 API，请改用云推理服务。
-- **严格可复现需求**——WebUI 暴露了数百个参数、采样器选择和扩展交互；在不同 PyTorch/CUDA 版本或扩展组合下复现完全一致的图像很困难。
+- **纯 CPU 推理。**如果你没有 GPU 却需要运行 diffusion 模型，请改用 Midjourney 或 DALL-E 等云 API，而不是 Stable Diffusion WebUI，因为 diffusion 模型在 CPU 上运行极慢（单张图需数分钟），本工具为 CUDA GPU 设计。
+- **未核查 AGPL-3.0 的商业用途。**如果你需要本地运行且对商业衍生限制更宽松的 diffusion 工具，请改用 ComfyUI（GPL-3.0，copyleft 范围不同）或云 API，而不是 Stable Diffusion WebUI，因为它的 AGPL-3.0 带有强网络 copyleft 义务，可能影响你的分发计划。
+- **零配置或非技术用户。**如果你想要一键消费级体验，不想管理 Python、CUDA 和模型权重，请改用 Fooocus 或 Midjourney 等云服务，而不是 Stable Diffusion WebUI，因为安装需要 Python、PyTorch、CUDA 驱动，并管理数 GB 的模型文件。
+- **团队多用户部署。**如果你需要内置 RBAC、队列管理或用户隔离的共享服务器，请改用 ComfyUI（队列管理更好）或托管云 API，而不是 Stable Diffusion WebUI，因为它没有原生多用户隔离，并发用户会互相干扰生成任务和设置。
+- **偏好托管云服务。**如果你不想管理 GPU、驱动和模型文件，想要托管 API，请改用 Midjourney、DALL-E 或 Stable Diffusion API 服务，而不是 Stable Diffusion WebUI，因为它严格自托管。
+- **严格可复现需求。**如果你需要跨机器可复现、版本可控的工作流，请改用 ComfyUI 搭配 JSON 工作流导出，或以编程方式使用 Diffusers（Hugging Face），而不是 Stable Diffusion WebUI，因为它暴露了数百个参数、采样器选择和扩展交互，在不同 PyTorch/CUDA 版本下复现完全一致很困难。
 
 ## 横向对比
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| ComfyUI | 未收录 | 面向 diffusion 的节点式模块化工作流引擎。 | ComfyUI 通过节点图提供更深度定制，更适合批量管线；WebUI 对 casual 探索更友好。 |
+| [ComfyUI](comfyui.zh.md) | ✅ | 面向 diffusion 的节点式模块化工作流引擎。 | ComfyUI 通过节点图提供更深度定制，更适合批量管线；WebUI 对 casual 探索更友好，界面更简单传统。 |
 | InvokeAI | 未收录 | 更精致的创意画布，支持统一画布与图层。 | 更聚焦艺术工作流，自带画布；扩展生态不如 WebUI 丰富。 |
 | Fooocus | 未收录 | 简化的一键式 UI，强调易用性。 | 预设精简、控制项最少；对新手友好，但对高级用户限制较大。 |
 | DiffusionBee | 未收录 | macOS 原生 Stable Diffusion 桌面应用。 | 无命令行或扩展生态；针对 Apple Silicon 优化，但平台锁定。 |

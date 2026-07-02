@@ -79,24 +79,24 @@ health:
 
 ## 何时使用
 
-你是一位注重隐私的个人或小型团队，需要密码管理器却不想把凭据交给不可控的云端服务。你想要使用官方 Bitwarden 客户端（桌面端、移动端、浏览器扩展）的便利，但需要把后端跑在自己的硬件上、自己的防火墙后，完全掌控数据。你通过 Docker 或编译 Rust 二进制安装 Vaultwarden，把 Bitwarden 客户端指向它，就能获得几乎完整的功能集——个人保险库、组织、集合、Send、附件、2FA（TOTP、FIDO2、YubiKey）以及管理员密码重置——而无需 Microsoft SQL Server 和官方服务端所需的重型基础设施。
+你是一位注重隐私的个人或小型团队，需要密码管理器却不想把凭据交给不可控的云端服务。你选 Vaultwarden 而不选官方 Bitwarden 云端，是因为你需要把后端跑在自己的硬件上、自己的防火墙后，完全掌控数据——而且官方服务端所需的 Microsoft SQL Server 和 .NET 栈对你的家庭服务器或小型 VPS 来说太重。你选它而不选 KeePassXC，是因为你想要使用官方 Bitwarden 客户端（桌面端、移动端、浏览器扩展）的便利，包括原生同步、Web 保险库和移动应用——而非仅一个本地数据库文件。你选它而不选 Passbolt，是因为你需要功能完整的个人和家庭密码管理器，而非仅一个聚焦团队共享的工具。你通过 Docker 或编译 Rust 二进制安装 Vaultwarden，把 Bitwarden 客户端指向它，就能获得几乎完整的功能集——个人保险库、组织、集合、Send、附件、2FA（TOTP、FIDO2、YubiKey）以及管理员密码重置——而无需重型基础设施。
 
 ## 何时不用
 
-- **你需要官方 Bitwarden 支持、SLA 或合规认证。** Vaultwarden 是非官方社区实现，没有厂商支持合同、没有 guaranteed 安全审计、也没有企业合规路线图。如果你的组织需要受保障的服务协议，请使用官方 Bitwarden 云端或自托管企业版。
-- **你需要企业级功能如 SSO（SAML 2.0 / OIDC）、SCIM 或大规模事件日志。** 虽然 Vaultwarden 实现了许多组织功能，但企业 SSO 和高级目录集成相比官方产品仍有缺口。[未验证]
-- **你不愿自托管和保护服务器。** Vaultwarden 把运维责任放在你身上：TLS 终止、备份、更新和主机加固。如果你不想运行 docker compose 和管理反向代理，请直接使用官方 Bitwarden 云服务。
-- **你需要 FIPS 验证或正式审计的密码保险库。** Vaultwarden 是开源社区软件，没有正式认证。其安全模型取决于你自己的加固和 Rust 实现的正确性。[推断]
-- **你想避开 AGPL-3.0 的 copyleft。** 该许可证为 AGPL-3.0，对某些商业部署可能带来顾虑，具体取决于你的法律解读。
+- 如果你需要官方 Bitwarden 支持、SLA 或合规认证，请用官方 Bitwarden 云端或自托管企业版，而不用 Vaultwarden，因为 Vaultwarden 是非官方社区实现，没有厂商支持合同、保障安全审计或企业合规路线图。
+- 如果你需要企业级功能如 SSO（SAML 2.0 / OIDC）、SCIM 或大规模事件日志，请用官方 Bitwarden 企业版，而不用 Vaultwarden，因为 Vaultwarden 虽然实现了许多组织功能，但企业 SSO 和高级目录集成相比官方产品仍有缺口。
+- 如果你不愿自托管和保护服务器，请用官方 Bitwarden 云服务或 1Password，而不用 Vaultwarden，因为 Vaultwarden 把运维责任放在你身上：TLS 终止、备份、更新和主机加固。
+- 如果你需要 FIPS 验证或正式审计的密码保险库，请用官方 Bitwarden 或 1Password，而不用 Vaultwarden，因为 Vaultwarden 是开源社区软件，没有正式认证，其安全模型取决于你自己的加固。
+- 如果你想避开 AGPL-3.0 的 copyleft，请用官方 Bitwarden 云服务或 KeePassXC，而不用 Vaultwarden，因为 AGPL-3.0 对某些商业部署可能带来顾虑，具体取决于你的法律解读。
 
 ## 横向对比
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| 官方 Bitwarden | 未收录 | 上游、官方支持的密码管理器，提供云端和企业自托管选项。 | 官方支持、SSO、合规、更大团队——但自托管版更重（MSSQL、.NET），且免费层仅限云端。 |
-| KeePassXC | 未收录 | 离线、本地优先的密码数据库，无需任何服务器。 | 无需服务器，但没有原生同步、没有 Web 保险库、没有官方移动客户端——架构完全不同。 |
-| Passbolt | 未收录 | 开源团队密码管理器，聚焦协作与访问控制。 | 专为团队共享设计，内置访问控制；客户端生态不如 Bitwarden 成熟。 |
-| 1Password / LastPass | 未收录 | 专有云端密码管理器，体验 polished。 | 闭源、订阅制、依赖云端；便利与可控之间的权衡。 |
+| 官方 Bitwarden | 未收录 | 需要轻量、非官方自托管密码管理器且兼容 Bitwarden 客户端时选 Vaultwarden；需要上游支持、SSO、合规和更大团队时，再选官方 Bitwarden。 | 官方支持、SSO、合规、更大团队——但自托管版更重（MSSQL、.NET），且免费层仅限云端。 |
+| KeePassXC | 未收录 | 需要自托管、基于服务器的密码管理器且兼容官方 Bitwarden 客户端时选 Vaultwarden；需要完全离线、本地优先的密码数据库且无需任何服务器时，再选 KeePassXC。 | 无需服务器，但没有原生同步、没有 Web 保险库、没有官方移动客户端——架构完全不同。 |
+| Passbolt | 未收录 | 需要功能完整的个人和团队密码管理器且兼容 Bitwarden 客户端时选 Vaultwarden；需要开源团队密码管理器且聚焦协作与访问控制时，再选 Passbolt。 | 专为团队共享设计，内置访问控制；客户端生态不如 Bitwarden 成熟。 |
+| 1Password / LastPass | 未收录 | 需要自托管、开源密码管理器且完全掌控数据时选 Vaultwarden；需要专有云端密码管理器且体验 polished 和企业支持时，再选 1Password 或 LastPass。 | 闭源、订阅制、依赖云端；便利与可控之间的权衡。 |
 
 ## 技术栈
 

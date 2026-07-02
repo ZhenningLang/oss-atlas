@@ -70,22 +70,22 @@ A web-based interface for Stable Diffusion image generation, built with Gradio, 
 
 ## When to use
 
-You're a creator, researcher, or developer who wants to generate images from text prompts or edit existing images using diffusion models on your own hardware. You need a local web UI where you can write prompts, tweak sampling parameters, do inpainting to remove or add objects, run img2img for style transfer, and train custom embeddings with textual inversion. You have an NVIDIA GPU with at least 6–8 GB of VRAM and are comfortable installing Python packages and managing model checkpoints. You install the WebUI, download a Stable Diffusion checkpoint, and open the browser tab to start generating — no cloud credits, no API keys, full control over the model and the outputs.
+You're a creator, researcher, or developer who wants to generate images from text prompts or edit existing images using diffusion models on your own hardware. You need a local web UI where you can write prompts, tweak sampling parameters, do inpainting to remove or add objects, run img2img for style transfer, and train custom embeddings with textual inversion. You pick Stable Diffusion WebUI over ComfyUI because you want a conventional tabbed interface rather than a node graph; you choose it over InvokeAI because its extension ecosystem is larger and more documented; you prefer it over Fooocus because you need full parameter control rather than simplified presets. You have an NVIDIA GPU with at least 6–8 GB of VRAM and are comfortable installing Python packages and managing model checkpoints. You install the WebUI, download a Stable Diffusion checkpoint, and open the browser tab to start generating — no cloud credits, no API keys, full control over the model and the outputs.
 
 ## When NOT to use
 
-- **CPU-only inference.** Running diffusion models on CPU is technically possible but excruciatingly slow (minutes per image). This tool is designed for CUDA GPUs; without one, the experience is impractical for iterative creative work.
-- **Commercial use without checking AGPL-3.0.** The project is licensed under AGPL-3.0, which carries copyleft obligations. If you plan to distribute a service or product built on top of it, verify your compliance obligations with legal counsel. [未验证]
-- **Zero-setup or non-technical users.** Installation requires Python, PyTorch, CUDA drivers, and managing multiple gigabytes of model weights. It is not a one-click consumer app.
-- **Team multi-user deployments.** There is no built-in RBAC, queue management, or user isolation. Multiple users sharing one instance will interfere with each other's generation jobs and settings.
-- **Managed cloud preference.** If you want a hosted API without managing GPUs, drivers, and model files, use a cloud inference service instead.
-- **Strict reproducibility needs.** The WebUI exposes hundreds of parameters, sampler choices, and extension interactions; reproducing an exact image across different PyTorch/CUDA versions or extension sets is difficult.
+- **CPU-only inference.** If you have no GPU and need to run diffusion models, use a cloud API like Midjourney or DALL-E instead of Stable Diffusion WebUI, because running diffusion on CPU is excruciatingly slow (minutes per image) and this tool is designed for CUDA GPUs.
+- **Commercial use without checking AGPL-3.0.** If you need a locally run diffusion tool with a less restrictive license for commercial derivatives, use ComfyUI (GPL-3.0, a different copyleft scope) or a cloud API instead of Stable Diffusion WebUI, because its AGPL-3.0 carries strong network copyleft obligations that may affect your distribution plans.
+- **Zero-setup or non-technical users.** If you want a one-click consumer experience without managing Python, CUDA, and model weights, use Fooocus or a cloud service like Midjourney instead of Stable Diffusion WebUI, because installation requires Python, PyTorch, CUDA drivers, and managing multi-gigabyte model files.
+- **Team multi-user deployments.** If you need built-in RBAC, queue management, or user isolation for a shared server, use ComfyUI (which has better queue management) or a hosted cloud API instead of Stable Diffusion WebUI, because it has no native multi-user isolation and concurrent users will interfere with each other's jobs and settings.
+- **Managed cloud preference.** If you want a hosted API without managing GPUs, drivers, and model files, use Midjourney, DALL-E, or a Stable Diffusion API service instead of Stable Diffusion WebUI, because it is strictly self-hosted.
+- **Strict reproducibility needs.** If you need reproducible, version-controlled workflows across machines, use ComfyUI with its JSON workflow export or Diffusers (Hugging Face) programmatically instead of Stable Diffusion WebUI, because the WebUI exposes hundreds of parameters, sampler choices, and extension interactions that make exact reproduction across different PyTorch/CUDA versions difficult.
 
 ## Comparison
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| ComfyUI | 未收录 | Node-based modular workflow engine for diffusion. | ComfyUI offers deeper customization through node graphs and better for batch pipelines; WebUI is more approachable for casual exploration. |
+| [ComfyUI](comfyui.md) | ✅ | Node-based modular workflow engine for diffusion. | ComfyUI offers deeper customization through node graphs and better for batch pipelines; WebUI is more approachable for casual exploration and has a simpler tabbed interface. |
 | InvokeAI | 未收录 | Polished creative canvas with unified canvas and layer support. | More focused on the artistic workflow with a built-in canvas; less extension-heavy than WebUI. |
 | Fooocus | 未收录 | Simplified one-click UI focused on ease of use. | Stripped-down presets and minimal controls; good for beginners but limiting for advanced users. |
 | DiffusionBee | 未收录 | macOS-native desktop app for Stable Diffusion. | No command-line or extension ecosystem; Apple Silicon optimized but platform-locked. |

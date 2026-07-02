@@ -79,15 +79,15 @@ Build smaller, faster, and more secure desktop and mobile applications with a we
 
 ## When to use
 
-You're a web developer who needs to ship a cross-platform desktop or mobile app but wants to avoid Electron's massive bundle size and memory footprint. Your team already knows HTML, CSS, and JavaScript/TypeScript, and you don't want to learn a new UI framework like Qt or Flutter. You use Tauri to wrap your web frontend in a tiny Rust binary that communicates with the OS via a secure API bridge, producing installers for Windows, macOS, Linux, Android, and iOS from a single codebase. Your users get native-feeling apps with minimal disk and RAM usage, and you get built-in auto-updaters, system tray support, and native notifications.
+You're choosing a cross-platform desktop or mobile framework and bundle size, memory footprint, and developer skill reuse matter. You pick Tauri over Electron because you do not want to ship a full Chromium copy to every user, and your users care about installer size and RAM usage. You pick Tauri over Flutter because your team already knows HTML, CSS, and JavaScript/TypeScript, and you do not want to invest in learning Dart and a new widget system. You wrap your web frontend in a tiny Rust binary that communicates with the OS via a secure API bridge, producing installers for Windows, macOS, Linux, Android, and iOS from a single codebase. You get built-in auto-updaters, system tray support, and native notifications while your users get native-feeling apps with minimal disk and RAM usage.
 
 ## When NOT to use
 
-- **Pure native UI requirements** — If you need deeply native widgets (e.g., complex macOS-specific toolbars or Windows UWP integrations), Tauri's webview-based UI will feel like a web app, not a native one.
-- **Heavy webview dependencies** — Tauri relies on the OS native webview (WebView2 on Windows, WKWebView on macOS/iOS, WebKitGTK on Linux). Edge cases or webview bugs on older OS versions can be hard to debug.
-- **No Rust toolchain willingness** — The backend and build system require Rust; if your team refuses to install or maintain Rust tooling, Tauri is blocked.
-- **Complex server-side needs** — Tauri is a client-side framework; it does not replace a backend server. If your app needs heavy server logic, you still need a separate backend.
-- **Electron ecosystem lock-in** — If you depend on Electron-specific native modules or deep V8/Chromium APIs, migration to Tauri is non-trivial.
+- If you need deeply native widgets (e.g., complex macOS-specific toolbars or Windows UWP integrations), use AppKit or WPF instead of Tauri, because Tauri's webview-based UI will feel like a web app, not a native one.
+- If you cannot tolerate OS webview inconsistencies across platforms (WebView2 on Windows, WKWebView on macOS/iOS, WebKitGTK on Linux), use Electron instead of Tauri, because Electron bundles a controlled Chromium version that behaves identically everywhere.
+- If your team refuses to install or maintain Rust tooling, use Electron instead of Tauri, because the backend and build system require Rust.
+- If your app needs heavy server-side logic co-located with the client, use a backend framework (e.g., FastAPI or Express) alongside your client instead of Tauri, because Tauri is a client-side framework, not a server.
+- If you depend on Electron-specific native modules or deep V8/Chromium APIs, use Electron instead of Tauri, because migration to Tauri's webview model is non-trivial.
 
 ## Comparison
 

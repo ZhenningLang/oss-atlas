@@ -74,15 +74,15 @@ A high-performance CLI proxy that filters and compresses command outputs before 
 
 ## When to use
 
-You're a developer or team using AI coding agents (Claude Code, Codex, Open Interpreter) and your LLM API bills are climbing because every `git diff`, `ls -la`, `find`, and `cat` output is dumped raw into the context window. You want a transparent proxy that sits between your shell and the agent, automatically compressing repetitive output, truncating verbose listings, and summarizing large diffs — without you having to manually pipe commands through `| head`. You need it to be fast enough that you don't notice the overhead, and you want it as a single static binary with zero runtime dependencies.
+You're a developer or team using AI coding agents (Claude Code, Codex, Open Interpreter) and your LLM API bills are climbing because every `git diff`, `ls -la`, `find`, and `cat` output is dumped raw into the context window. You pick RTK over manually piping every command through `| head` or `grep` because RTK is a transparent proxy that sits between your shell and the agent, automatically compressing repetitive output, truncating verbose listings, and summarizing large diffs — without you having to remember which command needs filtering. You pick it over Claude Code's built-in compression when you want a deterministic, shell-level layer that works across any CLI agent, not just one tool. You pick it over custom shell wrappers because RTK supports 100+ commands out of the box with zero configuration, whereas hand-rolled pipelines are fragile and per-command. You need it as a single static binary with zero runtime dependencies and sub-10ms overhead so you don't notice it's there.
 
 ## When NOT to use
 
-- **If you don't use CLI-based AI agents** — RTK is a proxy for command-line tool outputs. If you use IDE-based agents (Cursor, Copilot) or web UIs, there is no shell output to intercept.
-- **If your agent already has smart context management** — Some agents (e.g., Claude Code with built-in compression) already truncate and summarize. RTK adds value when the agent is naive or when you want deterministic compression at the shell level.
-- **If you need 100% output fidelity** — RTK compresses and filters by design. If you need every byte of output preserved for the LLM (e.g., precise binary diffs, exact byte counts), the proxy may drop information.
-- **If you are on a platform not supported by the single binary** — RTK provides prebuilt binaries for common platforms, but exotic architectures may require compiling from source.
-- **If your workflow is not shell-heavy** — If you primarily interact with AI agents through file edits and natural language without frequent command execution, RTK's savings will be minimal.
+- **If you use IDE-based agents (Cursor, Copilot) or web UIs** — use Cursor or GitHub Copilot directly instead of RTK + a CLI agent, because RTK is a proxy for shell output and IDE agents do not expose shell streams to intercept.
+- **If your agent already has smart context management that suffices** — use Claude Code or Codex directly instead of RTK, because their built-in compression may be sufficient and adding RTK introduces another moving part with no marginal gain.
+- **If you need every byte of output preserved for the LLM** — use the agent's direct shell execution without RTK, or pipe manually through `cat`, because RTK compresses and filters by design and may drop information (e.g., precise binary diffs, exact byte counts).
+- **If you primarily interact with AI agents through file edits and natural language** — use [Aider](https://github.com/paul-gauthier/aider) instead of RTK + a CLI agent, because Aider focuses on diff-based file edits without requiring frequent shell command execution, where RTK's savings would be minimal.
+- **If you are on an exotic architecture not covered by prebuilt binaries** — compile from source or use the agent's native shell, because RTK provides prebuilt binaries for common platforms only and compiling from source requires a Rust toolchain.
 
 ## Comparison
 

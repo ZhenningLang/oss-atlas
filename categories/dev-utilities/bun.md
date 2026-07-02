@@ -77,15 +77,15 @@ An incredibly fast all-in-one toolkit for JavaScript and TypeScript apps — run
 
 ## When to use
 
-You're building a JavaScript or TypeScript application and you're frustrated with the sprawl of Node.js tooling: one tool for the runtime, another for bundling, another for testing, and yet another for package management. You want a single, fast binary that handles everything. You run `bun run` to execute TypeScript without pre-compilation, `bun test` for built-in testing, `bun build` for bundling, and `bun install` for dependency management — all significantly faster than their Node.js equivalents. You also value the JavaScriptCore engine's fast startup times and lower memory footprint compared to V8-based alternatives.
+You're choosing a JavaScript or TypeScript runtime and tooling stack and speed and integration matter. You pick Bun over Node.js because you're frustrated with the sprawl of Node.js tooling: one tool for the runtime, another for bundling, another for testing, and yet another for package management. You want a single, fast binary that handles everything — `bun run` for execution, `bun test` for testing, `bun build` for bundling, and `bun install` for dependency management — all significantly faster than their Node.js equivalents. You pick Bun over Deno because you value the JavaScriptCore engine's fast startup times and lower memory footprint, and you want an all-in-one toolkit rather than Deno's security-focused, permission-gated model. You also value the JavaScriptCore engine's fast startup times and lower memory footprint compared to V8-based alternatives.
 
 ## When NOT to use
 
-- **You rely on native Node.js addons or complex C++ bindings.** Bun aims for Node.js compatibility, but some native modules and `node-gyp` dependencies may not work without modification.
-- **You need mature ecosystem tooling.** Bun is younger than Node.js and Deno; some npm packages, especially those with post-install scripts or deep Node.js internals, may behave unexpectedly.
-- **You require a fully governed open-source license.** Bun is released under a custom license (NOASSERTION), not a standard OSI-approved license like MIT or Apache-2.0. Verify compliance before commercial use.
-- **You are already deeply invested in Node.js tooling.** If your CI/CD, Docker images, and team expertise are all Node-native, the migration cost may outweigh the performance gains.
-- **You need WebAssembly-first runtime.** While Bun supports Wasm, Deno has stronger WebAssembly integration and first-class Wasm module support.
+- If you rely on native Node.js addons or complex C++ bindings, use Node.js instead of Bun, because Bun aims for Node.js compatibility but some native modules and `node-gyp` dependencies may not work without modification.
+- If you need mature ecosystem tooling with deep npm compatibility, use Node.js or Deno instead of Bun, because Bun is younger and some npm packages with post-install scripts or deep Node.js internals may behave unexpectedly.
+- If you require a fully governed open-source license, use Deno or Node.js instead of Bun, because Bun is released under a custom license (NOASSERTION), not a standard OSI-approved license like MIT or Apache-2.0.
+- If you are already deeply invested in Node.js tooling with CI/CD, Docker images, and team expertise all Node-native, use Node.js instead of Bun, because the migration cost may outweigh the performance gains.
+- If you need WebAssembly-first runtime support, use Deno instead of Bun, because Deno has stronger WebAssembly integration and first-class Wasm module support.
 
 ## Comparison
 
@@ -120,7 +120,7 @@ You're building a JavaScript or TypeScript application and you're frustrated wit
 - **Maintenance**: Active — pushed daily as of 2026-07, with frequent releases and a responsive issue tracker (6,817 open issues). [推断]
 - **Governance**: Owned by the `oven-sh` organization, with Jarred Sumner as the visible lead and a growing team of contributors. The bus factor is improving but still centered on a small core team.
 - **Backing**: Backed by Oven (the company), which has raised venture funding. The commercial model and long-term roadmap are not fully transparent. [未验证]
-- **Adoption**: Strong adoption with ~93.5k stars and ~4,742 forks, created in 2021 (5-year track record). Used in production by teams seeking faster build times. [推断]
+- **Adoption**: Strong adoption with ~93.5k stars and ~4,742 forks, created in 2021 (5-year track record). Used in production by teams seeking faster build times.
 - **Risk flags**: The license is NOASSERTION (not a standard OSI license), which introduces legal uncertainty for commercial redistribution. The venture-backed model may lead to open-core gating or license changes in the future. [推断]
 
 ## Caveats (unverified)

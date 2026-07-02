@@ -77,15 +77,15 @@ health:
 
 ## 何时使用
 
-你是一名常驻终端的开发者，希望有一个能推理你的代码库、运行 shell 命令、搜索网页和读取文件的 AI 助手——全部无需离开命令行。你偏爱 Google 的 Gemini 模型（尤其是 100 万 token 上下文窗口），并想要带有合理速率限制的免费层（60 请求/分钟，1,000 请求/天）。你通过 npm 安装 Gemini CLI，用 Google 账户认证，然后开始委派任务：重构代码、解释 API、生成测试或获取文档。MCP 可扩展性意味着你可以将其接入现有工具生态。
+你是一名常驻终端的开发者，希望有一个能推理你的代码库、运行 shell 命令、搜索网页和读取文件的 AI 助手——全部无需离开命令行。你选择 Gemini CLI 而不是 [OpenCode](opencode.zh.md)，是因为它慷慨的免费层（个人 Google 账户可达 60 请求/分钟、1,000 请求/天）让你无需为每个模型提供商自备并支付 API 密钥。你选择它而不是 Claude Code（Anthropic 的闭源终端智能体），是因为 Gemini CLI 基于 Apache-2.0 开源且可通过免费层使用，而 Claude Code 需要 Anthropic 订阅。你选择它而不是 [Open Interpreter](open-interpreter.zh.md)，是因为你想要深度 Gemini 集成——尤其是 100 万 token 上下文窗口和内置 Google Search grounding——而不是一个必须自行配置每个提供商的模型无关 harness。你通过 npm 安装，用 Google 账户认证，然后委派任务：重构代码、解释 API、生成测试或获取文档。MCP 可扩展性意味着你可以将其接入现有工具生态，无需切换到其他智能体框架。
 
 ## 何时不用
 
-- **非 Gemini 模型偏好**——Gemini CLI 与 Google 的 Gemini API 紧密耦合。如果你需要频繁在 OpenAI、Anthropic 或本地模型之间切换，这不是你的工具。
-- **不允许 Google 账户策略**——免费层需要个人 Google 账户；如果你的组织禁止 Google 认证或你需要企业 SSO，这是障碍。
-- **离线/隔离网络环境**——Gemini CLI 需要联网访问 Gemini API；不支持本地模型推理。
-- **复杂多智能体编排**——Gemini CLI 是单智能体 CLI 工具，不是 LangChain 或 AutoGPT 那样的多智能体框架。如需构建多智能体协作工作流，请另寻他路。
-- **企业审计需求**——无内置审计日志、RBAC 或管理控制；它是个人开发者工具。
+- **如果你需要在 OpenAI、Anthropic 或本地模型之间切换**——请用 [OpenCode](opencode.zh.md) 或 [Open Interpreter](open-interpreter.zh.md) 而不是 Gemini CLI，因为 Gemini CLI 与 Google 的 Gemini API 紧密耦合，不支持其他提供商。
+- **如果你的组织禁止 Google 认证或需要企业 SSO**——请用 Dify 或 n8n 等自托管平台而不是 Gemini CLI，因为免费层需要个人 Google 账户，且没有 RBAC 或管理层面。
+- **如果你在离线或隔离网络环境中工作**——请用 Ollama 搭配 [Open WebUI](../llm-chat-ui/open-webui.zh.md) 等本地聊天界面而不是 Gemini CLI，因为 Gemini CLI 需要联网访问 Gemini API，不支持本地模型推理。
+- **如果你需要复杂的多智能体编排**——请用 LangChain 或 AutoGPT 而不是 Gemini CLI，因为 Gemini CLI 是单智能体 CLI 工具，没有内置的多智能体协作工作流。
+- **如果你需要企业审计日志、RBAC 或合规保障**——请用 Dify 或 n8n 等受治理平台而不是 Gemini CLI，因为它是个人开发者工具，没有内置审计日志或管理控制。
 
 ## 横向对比
 

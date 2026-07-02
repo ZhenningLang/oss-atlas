@@ -71,21 +71,21 @@ health:
 
 # VS Code
 
-Visual Studio Code — a lightweight but powerful code editor combining the simplicity of an editor with the capabilities of an IDE, built on Electron and extensible through a rich marketplace.
+Visual Studio Code — a lightweight but powerful code editor combining the simplicity of an editor with the capabilities of an IDE, built on Electron and extensible through a rich marketplace with tens of thousands of extensions.
 
 ![VS Code — health radar](../../assets/health/vscode.svg)
 
 ## When to use
 
-You're a developer who needs a fast, cross-platform code editor that supports dozens of languages out of the box, with intelligent code completion, debugging, and Git integration. You want an editor that can grow with your needs — from a simple text editor for markdown and config files to a full IDE for TypeScript, Python, or Rust with extensions. You need something that works on macOS, Windows, and Linux with the same shortcuts and settings synced across machines. VS Code is the default choice for millions of developers because it hits this sweet spot.
+You're a developer who needs a fast, cross-platform code editor that supports dozens of languages out of the box, with intelligent code completion, debugging, and Git integration. You want an editor that can grow with your needs — from a simple text editor for markdown and config files to a full IDE for TypeScript, Python, or Rust with extensions. You need something that works on macOS, Windows, and Linux with the same shortcuts and settings synced across machines. Choose VS Code over Zed because VS Code has the largest extension marketplace and deepest ecosystem; choose it over IntelliJ IDEA because VS Code is lighter, language-agnostic, and free for all features. The deciding tradeoff is unmatched ecosystem breadth plus cross-platform consistency without the weight of a full IDE.
 
 ## When NOT to use
 
-- **If you want a fully open-source, unbranded build** — The Microsoft-distributed VS Code includes proprietary telemetry and extensions marketplace. Use the "Code - OSS" build or VSCodium for a fully open build.
-- **If you need a terminal-only editor** — VS Code is a GUI application; for terminal-only environments, use Vim, Neovim, or Emacs.
-- **If you need the absolute fastest editor** — Electron-based apps have higher memory usage and slower startup than native editors like Sublime Text or Zed. On older machines, VS Code can feel sluggish.
-- **If you want a fully MIT-licensed distribution** — The Microsoft product license applies to the distributed VS Code binary; the source (Code - OSS) is MIT.
-- **If you need a deeply integrated JetBrains-style IDE** — For heavy Java, Kotlin, or Android work, IntelliJ IDEA offers deeper language-specific tooling than VS Code extensions can provide.
+- If you want a fully open-source, unbranded build without telemetry, use VSCodium or the "Code - OSS" build instead of VS Code, because the Microsoft-distributed VS Code includes proprietary telemetry and a proprietary extensions marketplace.
+- If you need a terminal-only editor, use Neovim or Vim instead of VS Code, because VS Code is a GUI application and cannot run in a terminal.
+- If you need the absolute fastest editor with minimal memory footprint, use Zed or Sublime Text instead of VS Code, because Electron-based apps have higher memory usage and slower startup than native editors.
+- If you need a deeply integrated JetBrains-style IDE for heavy JVM or Android work, use IntelliJ IDEA instead of VS Code, because IntelliJ offers deeper language-specific tooling, refactoring, and build system integration than VS Code extensions can provide.
+- If you want a fully MIT-licensed distribution with no proprietary extensions, use VSCodium instead of VS Code, because the Microsoft product license applies to the distributed VS Code binary and some popular extensions are proprietary.
 
 ## Comparison
 
@@ -94,7 +94,7 @@ You're a developer who needs a fast, cross-platform code editor that supports do
 | Zed | 未收录 | High-performance native code editor with multiplayer. | Zed is faster and Rust-native but has a smaller ecosystem; VS Code has the largest extension marketplace. |
 | Sublime Text | 未收录 | Fast, lightweight proprietary editor. | Sublime is faster and lighter but proprietary and paid; VS Code is free and open-source. |
 | Neovim | 未收录 | Modal terminal editor with modern Lua configuration. | Neovim is terminal-only and has a steep learning curve; VS Code is GUI-first and beginner-friendly. |
-| IntelliJ IDEA | 未收录 | Deep language-specific IDE for JVM/Android. | IntelliJ is heavier and JVM-focused; VS Code is lighter and language-agnostic. |
+| IntelliJ IDEA | 未收录 | Deep language-specific IDE for JVM and Android. | IntelliJ is heavier and JVM-focused; VS Code is lighter and language-agnostic. |
 | VSCodium | 未收录 | Fully open-source build of VS Code without Microsoft telemetry. | VSCodium removes telemetry but lacks the Microsoft extensions marketplace and some proprietary features. |
 
 ## Tech stack

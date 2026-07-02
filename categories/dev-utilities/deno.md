@@ -79,15 +79,15 @@ A modern runtime for JavaScript, TypeScript, and WebAssembly with secure default
 
 ## When to use
 
-You're building a new server-side project or CLI tool in JavaScript/TypeScript and you're tired of Node.js's complexity: `node_modules` bloat, `package.json` dependency hell, and the need for external tooling (ts-node, nodemon, eslint, prettier). You want a runtime that treats TypeScript as a first-class citizen, has built-in formatting, linting, and testing, and enforces security permissions by default (no file or network access without explicit flags). You install Deno with a single shell command, write `.ts` files that run directly, and ship a compiled standalone binary when you're ready. Deno's standard library and npm compatibility mean you can bring your existing packages along while enjoying a modern toolchain.
+You're choosing a JavaScript/TypeScript runtime for a new server-side project or CLI tool and you want a modern, secure toolchain. You pick Deno over Node.js because you're tired of `node_modules` bloat, `package.json` dependency hell, and the need for external tooling (ts-node, nodemon, eslint, prettier). You want a runtime that treats TypeScript as a first-class citizen, has built-in formatting, linting, and testing, and enforces security permissions by default. You pick Deno over Bun because Deno has a standard OSI license (MIT), a longer track record (8 years vs 5 years), and stronger WebAssembly integration. You install Deno with a single shell command, write `.ts` files that run directly, and ship a compiled standalone binary when you're ready. Deno's standard library and npm compatibility mean you can bring your existing packages along while enjoying a modern toolchain.
 
 ## When NOT to use
 
-- **Existing Node.js monoliths** — Deno can run many npm packages via `npm:` specifiers, but complex projects with native Node.js addons, C++ bindings, or deep `node-gyp` dependencies are unlikely to migrate smoothly.
-- **Deep npm ecosystem lock-in** — While Deno has npm compatibility, some packages rely on Node.js-specific APIs or post-install scripts that may not work. Always test your dependency tree.
-- **Team unfamiliar with Deno** — If your entire team knows Node.js and no one has Deno experience, the productivity hit during onboarding may outweigh the benefits for a short-term project.
-- **V8-specific performance tuning** — Deno uses V8 just like Node.js, so CPU-bound performance is similar. If you need to optimize at the V8 level, switching runtimes won't help.
-- **Deno Deploy lock-in concerns** — Deno's cloud edge runtime (Deno Deploy) is a proprietary service; if you want fully portable serverless code, verify that you can run elsewhere.
+- If you have an existing Node.js monolith with native Node.js addons, C++ bindings, or deep `node-gyp` dependencies, use Node.js instead of Deno, because complex projects with native modules are unlikely to migrate smoothly.
+- If you rely on npm packages that depend on Node.js-specific APIs or post-install scripts, use Node.js instead of Deno, because some packages may not work under Deno's npm compatibility layer.
+- If your entire team knows Node.js and no one has Deno experience, and the project is short-term, use Node.js instead of Deno, because the productivity hit during onboarding may outweigh the benefits.
+- If you need to optimize at the V8 level, stay on Node.js instead of Deno, because both use the same V8 engine and CPU-bound performance is identical.
+- If you want fully portable serverless code without proprietary edge runtime lock-in, use Node.js or Cloudflare Workers instead of Deno, because Deno Deploy is a proprietary service.
 
 ## Comparison
 
@@ -122,7 +122,7 @@ You're building a new server-side project or CLI tool in JavaScript/TypeScript a
 - **Maintenance**: Very active — pushed daily as of 2026-07, with a mature v2 release line and responsive core team (1,354 open issues). [推断]
 - **Governance**: Owned by the `denoland` organization with Ryan Dahl (Node.js creator) as a key figure. The project has a clear technical vision and multiple core contributors. Bus factor is reasonable.
 - **Backing**: Deno Land Inc. is the commercial entity behind the project; Deno Deploy is their revenue source. The company has raised venture funding, which introduces both stability and potential future direction conflicts. [未验证]
-- **Adoption**: Strong adoption with 107.3k stars, created in 2018 (8-year track record). Used by companies like Supabase for edge functions and in various production CLI tools. [推断]
+- **Adoption**: Strong adoption with 107.3k stars, created in 2018 (8-year track record). Used by companies like Supabase for edge functions and in various production CLI tools.
 - **Risk flags**: The MIT license is permissive. The venture-backed backing model means the open-source roadmap may be influenced by the commercial Deno Deploy product. No relicense history visible, but monitor for open-core gating. [未验证]
 
 ## Caveats (unverified)

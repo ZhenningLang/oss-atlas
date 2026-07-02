@@ -74,31 +74,31 @@ An open-source remote desktop application designed for self-hosting, as an alter
 
 ## When to use
 
-You're a developer or sysadmin who needs remote access to your own machines — a home server, a workstation in the office, or a family member's PC — and you don't want to pay commercial remote-desktop subscriptions or route your screen data through a third-party cloud. You install RustDesk on both ends, optionally spin up a small relay server on a VPS, and connect directly with end-to-end encryption. It runs on Windows, macOS, Linux, Android, and iOS, supports file transfer, clipboard sync, and multiple monitors, and the Flutter UI gives it a native feel on each platform. You own the infrastructure, you control the keys, and the AGPL-3.0 license means the code is fully auditable.
+You're a developer or sysadmin who needs remote access to your own machines — a home server, a workstation in the office, or a family member's PC — and you want to own the infrastructure, not rent it. You pick RustDesk over TeamViewer or AnyDesk because you refuse to pay recurring subscriptions and route your screen data through a third-party cloud you don't control. You pick it over Chrome Remote Desktop because you need a self-hosted option that doesn't lock you into a Google account. You pick it over TightVNC or TigerVNC because you need modern encryption, NAT traversal, and mobile clients out of the box, not raw VNC protocol over a LAN. You install RustDesk on both ends, optionally spin up a small relay server on a VPS, and connect directly with end-to-end encryption. It runs on Windows, macOS, Linux, Android, and iOS, supports file transfer, clipboard sync, and multiple monitors, and the Flutter UI gives it a native feel on each platform.
 
 ## When NOT to use
 
-- **You need enterprise-grade support, SLA, or compliance certification.** RustDesk is a community-driven project with no formal support contract; for regulated environments or 24/7 mission-critical access, commercial tools (TeamViewer, AnyDesk enterprise) offer guaranteed response times and compliance documentation.
-- **You want a fully cloud-managed zero-config solution.** RustDesk's strength is self-hosting; the public relay service exists but is not the primary value proposition. If you want to install and forget without managing a server, a commercial SaaS remote-desktop product is simpler.
-- **AGPL-3.0 is incompatible with your use case.** The license is AGPL-3.0, which may restrict how you integrate, distribute, or modify the software in proprietary contexts. Review license implications with legal counsel before embedding or white-labeling.
-- **You need advanced session recording, audit logging, or granular RBAC.** RustDesk provides basic access control and password protection; for full session recording, detailed audit trails, and role-based access control, enterprise remote-access platforms are stronger.
-- **You need seamless Wayland support on Linux.** RustDesk's Linux support has historically been stronger on X11; Wayland support is evolving but may have limitations or require specific compositor compatibility. [推断]
-- **You need high-performance remote gaming or video editing.** While RustDesk is efficient, it is not optimized for low-latency gaming or high-frame-rate video editing remoting; dedicated streaming solutions (Moonlight, Parsec) are better for that niche.
+- If you need enterprise-grade support, SLA, or compliance certification, use TeamViewer or AnyDesk enterprise instead of RustDesk, because RustDesk is a community-driven project with no formal support contract, guaranteed response times, or compliance documentation.
+- If you want a fully cloud-managed zero-config solution, use Chrome Remote Desktop or TeamViewer instead of RustDesk, because RustDesk's primary value is self-hosting; managing a relay server is extra work you don't need if you just want to install and forget.
+- If you need advanced session recording, audit logging, or granular RBAC, use enterprise remote-access platforms like TeamViewer enterprise instead of RustDesk, because RustDesk provides only basic access control and password protection.
+- If you need high-performance remote gaming or video editing, use Sunshine + Moonlight instead of RustDesk, because RustDesk is not optimized for low-latency gaming or high-frame-rate video editing remoting.
+- If you need seamless Wayland support on Linux, use Chrome Remote Desktop or another alternative instead of RustDesk, because RustDesk's Linux support has historically been stronger on X11. [推断]
+- If AGPL-3.0 is incompatible with your use case, use TightVNC or a permissively licensed alternative instead of RustDesk, because the AGPL-3.0 license may restrict how you integrate, distribute, or modify the software in proprietary contexts.
 
 ## Comparison
 
 | Alternative | In index | Our verdict | Tradeoff |
 | --- | --- | --- | --- |
-| TeamViewer | 未收录 | Use this page for its stated niche; choose TeamViewer when you need a commercial, cloud-managed remote-desktop with enterprise support and cross-platform reliability. | Commercial, cloud-managed remote desktop with enterprise support, session recording, and compliance; requires paid subscription and routes data through their cloud. |
-| AnyDesk | 未收录 | Use this page for its stated niche; choose AnyDesk when you want a lightweight, fast proprietary remote desktop with a free tier for personal use. | Lightweight proprietary remote desktop with a free personal tier; fast and simple but closed-source and cloud-dependent. |
-| Chrome Remote Desktop | 未收录 | Use this page for its stated niche; choose Chrome Remote Desktop when you want a free, browser-based remote desktop tied to your Google account. | Free, browser-based remote desktop tied to Google account; very simple but requires Google ecosystem and offers no self-hosting. |
-| TightVNC / TigerVNC | 未收录 | Use this page for its stated niche; choose TightVNC when you need a traditional VNC server for LAN-based remote access without encryption by default. | Traditional VNC for LAN access; simple and protocol-standard but lacks modern encryption, NAT traversal, and mobile clients without extra setup. |
-| Sunshine + Moonlight | 未收录 | Use this page for its stated niche; choose Sunshine + Moonlight when you need low-latency game streaming or high-frame-rate remote desktop. | Open-source game-streaming host (Sunshine) and client (Moonlight) optimized for low latency and high FPS; narrower use case than general remote desktop. |
+| TeamViewer | 未收录 | Use RustDesk for self-hosted, open-source remote desktop; choose TeamViewer when you need a commercial, cloud-managed remote desktop with enterprise support and cross-platform reliability. | Commercial, cloud-managed remote desktop with enterprise support, session recording, and compliance; requires paid subscription and routes data through their cloud. |
+| AnyDesk | 未收录 | Use RustDesk for self-hosted, open-source remote desktop; choose AnyDesk when you want a lightweight, fast proprietary remote desktop with a free tier for personal use. | Lightweight proprietary remote desktop with a free personal tier; fast and simple but closed-source and cloud-dependent. |
+| Chrome Remote Desktop | 未收录 | Use RustDesk for self-hosted, open-source remote desktop; choose Chrome Remote Desktop when you want a free, browser-based remote desktop tied to your Google account. | Free, browser-based remote desktop tied to Google account; very simple but requires Google ecosystem and offers no self-hosting. |
+| TightVNC / TigerVNC | 未收录 | Use RustDesk for self-hosted, open-source remote desktop with modern encryption; choose TightVNC when you need a traditional VNC server for LAN-based remote access without encryption by default. | Traditional VNC for LAN access; simple and protocol-standard but lacks modern encryption, NAT traversal, and mobile clients without extra setup. |
+| Sunshine + Moonlight | 未收录 | Use RustDesk for general-purpose self-hosted remote desktop; choose Sunshine + Moonlight when you need low-latency game streaming or high-frame-rate remote desktop. | Open-source game-streaming host (Sunshine) and client (Moonlight) optimized for low latency and high FPS; narrower use case than general remote desktop. |
 
 ## Tech stack
 
 - **Language:** Rust (core engine and networking) with a Flutter/Dart cross-platform UI layer for desktop and mobile.
-- **Networking:** P2P with NAT traversal (using hole-punching) and fallback to a relay server when direct connection fails; encrypted with TLS 1.3. [未验证]
+- **Networking:** P2P with NAT traversal (using hole-punching) and fallback to a relay server when direct connection fails; encrypted with TLS 1.3.
 - **UI:** Flutter provides a single codebase for Windows, macOS, Linux, Android, and iOS with platform-native rendering.
 - **Media:** Custom video codec pipeline for screen capture and remote display; handles multiple monitors and resolutions.
 - **Build:** Rust compiles to native binaries; Flutter bundles the UI assets. Flatpak and other distribution formats are supported.
@@ -106,7 +106,7 @@ You're a developer or sysadmin who needs remote access to your own machines — 
 ## Dependencies
 
 - **Client hardware:** A device with a screen and network connection running Windows, macOS, Linux, Android, or iOS. The client app is a native binary installed locally.
-- **Server / relay (optional):** For direct P2P, no server is required. For relay fallback or always-on access, you need a small VPS or server to run the `rustdesk-server` relay and ID/registry services. Minimal specs: ~1 CPU, 512 MB RAM, modest bandwidth. [未验证]
+- **Server / relay (optional):** For direct P2P, no server is required. For relay fallback or always-on access, you need a small VPS or server to run the `rustdesk-server` relay and ID/registry services. Minimal specs: ~1 CPU, 512 MB RAM, modest bandwidth.
 - **Network:** Both sides need internet access (or LAN access for direct P2P). The relay server needs a public IP and open ports (TCP/UDP). Firewalls and NAT must allow the connection path.
 - **No external database:** The relay server does not require a database; it is a lightweight stateful daemon.
 

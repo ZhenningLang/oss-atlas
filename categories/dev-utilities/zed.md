@@ -74,22 +74,22 @@ A high-performance, multiplayer code editor built in Rust from the creators of A
 
 ## When to use
 
-You're a developer who values raw editing performance and wants a modern, native code editor that starts instantly and stays responsive even on large codebases. You work on a team where real-time collaborative editing — seeing your teammates' cursors and edits live — would speed up pair programming and code reviews. You are frustrated with Electron-based editors' memory bloat and want something that feels as fast as Sublime Text but with modern language server support and AI assistant integration. You are on macOS, Linux, or Windows and want a consistent native experience.
+You're choosing a code editor and raw performance, modern UX, and team collaboration matter. You pick Zed over VS Code because you want a native, GPU-accelerated editor that starts instantly and stays responsive even on large codebases, without Electron's memory bloat. You pick Zed over Neovim because you want a GUI-first experience with real-time collaborative editing — seeing teammates' cursors and edits live — built-in, not bolted on via plugins. You work on macOS, Linux, or Windows and want a consistent native experience with modern language server support and AI assistant integration.
 
 ## When NOT to use
 
-- **If you need the largest extension marketplace** — Zed's extension ecosystem is young and far smaller than VS Code's 50,000+ extensions. Many niche language supports and tools are missing.
-- **If you depend on VS Code-specific extensions or settings** — Zed is not a drop-in replacement. Your `.vscode/settings.json`, keybindings, and extension workflows will not transfer.
-- **If you need a terminal-only editor** — Zed is a GUI application. For remote SSH or terminal-only environments, use Neovim or Vim.
-- **If you want a fully open-source, unbranded build** — Zed is primarily GPL-3.0-or-later with some Apache-2.0 components, but the project is owned by Zed Industries and the long-term licensing strategy is not yet fully clear (NOASSERTION on GitHub).
-- **If you are on an older or low-spec machine** — While Zed is faster than Electron editors, its GPU-accelerated GPUI framework requires a modern graphics stack. Older integrated GPUs may struggle.
-- **If you need deep IDE features out of the box** — Zed is an editor, not a full IDE. For heavy Java/Android development with built-in debugging, profiling, and project management, JetBrains IDEs are still superior.
+- If you need the largest extension marketplace with 50,000+ extensions, use VS Code instead of Zed, because Zed's extension ecosystem is young and far smaller, with many niche language supports and tools missing.
+- If you depend on VS Code-specific extensions, settings, or keybindings, use VS Code instead of Zed, because Zed is not a drop-in replacement and your `.vscode/settings.json` and workflows will not transfer.
+- If you need a terminal-only editor for remote SSH or minimal environments, use Neovim or Vim instead of Zed, because Zed is a GUI application.
+- If you want a fully open-source, unbranded build with a clear standard license, use VS Code — OSS or Neovim instead of Zed, because Zed's GitHub license is marked NOASSERTION despite the README stating GPL-3.0-or-later, and the long-term licensing strategy is not fully clear.
+- If you are on an older or low-spec machine with an outdated GPU, use VS Code or Sublime Text instead of Zed, because Zed's GPU-accelerated GPUI framework requires a modern graphics stack and older integrated GPUs may struggle.
+- If you need deep IDE features like built-in debugging, profiling, and project management out of the box, use JetBrains IntelliJ IDEA instead of Zed, because Zed is an editor, not a full IDE.
 
 ## Comparison
 
 | Alternative | In index | Our verdict | Tradeoff |
 | --- | --- | --- | --- |
-| VS Code | 已收录 | The most popular code editor with the largest extension ecosystem. | VS Code has unmatched extensions and Microsoft backing but is Electron-based and slower; Zed is native and faster but younger with fewer extensions. |
+| VS Code | ✅ | The most popular code editor with the largest extension ecosystem. | VS Code has unmatched extensions and Microsoft backing but is Electron-based and slower; Zed is native and faster but younger with fewer extensions. |
 | Sublime Text | 未收录 | Fast, lightweight proprietary editor with a long history. | Sublime is faster and more mature but proprietary and paid; Zed is open-source and free with multiplayer collaboration. |
 | Neovim | 未收录 | Modal terminal editor with modern Lua plugin ecosystem. | Neovim is terminal-only and highly customizable; Zed is GUI-first with collaboration built-in. |
 | IntelliJ IDEA | 未收录 | Deep language-specific IDE for JVM and Android. | IntelliJ is heavier and language-specific; Zed is lighter and language-agnostic but lacks deep IDE features. |

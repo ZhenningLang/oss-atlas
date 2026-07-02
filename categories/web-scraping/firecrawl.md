@@ -79,14 +79,16 @@ The API to search, scrape, and interact with the web at scale — turning raw we
 
 ## When to use
 
-You're building an AI agent or data pipeline that needs to ingest web content at scale, and you want clean, structured output rather than raw HTML. You need to search the web, scrape specific pages, and even interact with dynamic content (click, navigate) programmatically. You prefer an API-first approach where you can call a service rather than building and maintaining your own crawler infrastructure. You value the AGPL-3.0 open-source option alongside a hosted service for quick starts.
+You're building an AI agent or data pipeline that needs to ingest web content at scale, and you want clean, structured output rather than raw HTML. You've looked at writing Scrapy spiders or Playwright scripts, but maintaining browser automation, handling anti-bot, and converting messy HTML into Markdown is not your core job. You reach for Firecrawl because it is an API-first service that handles search, scraping, and even browser interaction (click, navigate) for you, returning structured Markdown or JSON without you managing crawler infrastructure. Pick Firecrawl over [Scrapyd](scrapyd.md) or raw Scrapy when you want the extraction and conversion layer handled for you rather than scheduling spiders you wrote yourself; pick it over [newspaper](newspaper.md) or [Readability.js](readability-js.md) when you need general-purpose web scraping, search, and interaction at scale rather than single-page article extraction. If you need a hosted API with an AGPL-3.0 open-source self-host option, Firecrawl is the closer fit than proprietary alternatives.
+
 
 ## When NOT to use
 
-- **Simple one-off scraping** — For a single page or occasional curl, Firecrawl is overkill; use `curl` + `pandoc` or `trafilatura` instead.
-- **Strict closed-source compliance** — AGPL-3.0 requires sharing source if you modify and distribute; verify compatibility with your product's licensing strategy. [未验证]
-- **Budget-constrained at scale** — The hosted service pricing may become significant for high-volume scraping; self-hosting requires infrastructure.
-- **Deep web / authenticated sites** — While it supports interaction, complex login flows and session management across many sites may still require custom Playwright scripts.
+- **Simple one-off scraping.** If you need a single page or occasional curl, use `curl` + `pandoc` or `trafilatura` instead of Firecrawl, because paying for or self-hosting a full crawling API is overkill for sporadic tasks.
+- **Strict closed-source compliance.** If you need a permissive-license scraper without network-copyleft obligations, use [newspaper](newspaper.md) (MIT) or `trafilatura` (Apache-2.0) instead of Firecrawl, because AGPL-3.0 requires sharing source if you modify and distribute the service. [未验证]
+- **Budget-constrained at scale.** If you need high-volume scraping without per-request pricing, use Scrapy or Playwright on your own infrastructure instead of Firecrawl's hosted service, because the API pricing becomes significant at scale and self-hosting Firecrawl still requires managing Node.js and browser automation.
+- **Deep web / authenticated sites.** If you need complex login flows and session management across many sites, use custom Playwright scripts instead of Firecrawl, because while it supports interaction, complex multi-step authentication and stateful crawling are better handled by direct browser automation you control.
+
 
 ## Comparison
 

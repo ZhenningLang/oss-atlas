@@ -71,21 +71,21 @@ health:
 
 # Codex
 
-A lightweight coding agent from OpenAI that runs locally in your terminal. It can read files, execute shell commands, edit code, and ship changes — all through a natural-language interface.
+A lightweight coding agent from OpenAI that runs locally in your terminal. It can read files, execute shell commands, edit code, and ship changes — all through a natural-language interface, with built-in sandboxing and Git integration.
 
 ![Codex — health radar](../../assets/health/codex.svg)
 
 ## When to use
 
-You're a developer who wants an AI assistant that lives inside your terminal and can actually modify your codebase. You describe what you want — "refactor this function to use async/await" or "add error handling to this API route" — and Codex reads the relevant files, makes the edits, runs tests, and commits the changes. You prefer to keep your workflow local rather than relying on a cloud IDE, and you want the agent to have real shell access (with sandboxing) so it can verify its own changes. You install it with a single curl command or via npm, and it works with your existing Git setup.
+You're a developer who wants an AI assistant that lives inside your terminal and can actually modify your codebase. You describe what you want — "refactor this function to use async/await" or "add error handling to this API route" — and Codex reads the relevant files, makes the edits, runs tests, and commits the changes. You prefer to keep your workflow local rather than relying on a cloud IDE, and you want the agent to have real shell access (with sandboxing) so it can verify its own changes. You install it with a single curl command or via npm, and it works with your existing Git setup. Choose Codex over Open Interpreter because Codex is first-party OpenAI-backed with tighter GPT integration and more polish; choose it over GitHub Copilot because Codex is terminal-native and can execute commands, not just suggest code. The deciding tradeoff is a terminal-first coding agent with real file system and shell access, backed by OpenAI's model quality.
 
 ## When NOT to use
 
-- **You need multi-model flexibility.** Codex is optimized for OpenAI models. If you want to switch between DeepSeek, Anthropic, or local models frequently, use [Open Interpreter](open-interpreter.md) instead.
-- **You are in a highly regulated environment.** Codex executes code in a sandbox, but it still runs arbitrary commands on your machine. If your security policy forbids AI agents with shell access, this is a non-starter.
-- **You want a visual IDE experience.** Codex is terminal-only. If you prefer a GUI with click-to-edit, inline suggestions, and visual diffing, use an IDE plugin like GitHub Copilot or Cursor.
-- **You need complex multi-agent orchestration.** Codex is a single-agent coding tool, not a multi-agent framework like LangChain or AutoGPT. For building workflows with multiple collaborating agents, look elsewhere.
-- **You require offline operation.** Codex requires an internet connection to reach the OpenAI API; it does not support local model inference.
+- If you need multi-model flexibility or want to use local models, use Open Interpreter instead of Codex, because Codex is optimized for OpenAI models and does not support other providers.
+- If you are in a highly regulated environment where AI agents with shell access are forbidden, use GitHub Copilot or Cursor instead of Codex, because Codex executes code in a sandbox but still runs arbitrary commands on your machine.
+- If you want a visual IDE experience with click-to-edit and inline suggestions, use GitHub Copilot or Cursor instead of Codex, because Codex is terminal-only and has no GUI.
+- If you need complex multi-agent orchestration with multiple collaborating agents, use LangChain or AutoGPT instead of Codex, because Codex is a single-agent coding tool, not a multi-agent framework.
+- If you require offline operation or local model inference, use Ollama or Open Interpreter instead of Codex, because Codex requires an internet connection to reach the OpenAI API.
 
 ## Comparison
 
@@ -95,7 +95,7 @@ You're a developer who wants an AI assistant that lives inside your terminal and
 | [OpenCode](opencode.md) | ✅ | Open-source terminal coding agent. | OpenCode is model-agnostic and community-driven; Codex is OpenAI-backed with tighter GPT integration. |
 | [Gemini CLI](gemini-cli.md) | ✅ | Google's terminal AI agent. | Gemini CLI is Google-only with a free tier; Codex is OpenAI-only and may require API credits. |
 | Claude Code | 未收录 | Official Anthropic terminal coding agent. | Closed-source, Anthropic-only; Codex is open-source and terminal-native but locked to OpenAI models. |
-| GitHub Copilot | 未收录 | AI pair programmer IDE extension. | Copilot is IDE-integrated and subscription-based; Codex is terminal-first and standalone. |
+| GitHub Copilot | 未收录 | AI pair programmer IDE extension. | Copilot is IDE-integrated and subscription-based; Codex is terminal-first and standalone with shell execution. |
 
 ## Tech stack
 
@@ -114,15 +114,15 @@ You're a developer who wants an AI assistant that lives inside your terminal and
 
 ## Ops difficulty
 
-**Low.** Codex is installed via a shell script or npm and runs as a local CLI process. There is no server to maintain. The operational burden is managing your OpenAI API credentials and reviewing the agent's changes before accepting them. The sandboxing provides safety, but you should still audit executed commands.
+**Low**. Codex is installed via a shell script or npm and runs as a local CLI process. There is no server to maintain. The operational burden is managing your OpenAI API credentials and reviewing the agent's changes before accepting them. The sandboxing provides safety, but you should still audit executed commands.
 
 ## Health & viability
 
-- **Maintenance**: Very active — pushed daily as of 2026-07, with rapid iteration and a large issue volume (8,147 open issues). [推断]
-- **Governance**: Owned by OpenAI (`openai` GitHub org). The project has clear backing from OpenAI, but the roadmap is controlled by a single corporate entity. [未验证]
-- **Backing**: Officially backed by OpenAI. The Apache-2.0 license is permissive, but OpenAI has not relicensed any major projects historically. [推断]
-- **Adoption**: Explosive adoption with ~94.8k stars and ~14.1k forks, created in 2025-04. The OpenAI brand and terminal-native workflow drive rapid uptake. [推断]
-- **Risk flags**: Very young (created 2025-04) with no Lindy track record. Tightly coupled to OpenAI's API and pricing, which can change without notice. The project's future depends on OpenAI's continued commitment to open-source terminal tools. [推断]
+- **Maintenance**: Very active — pushed daily as of 2026-07, with rapid iteration and a large issue volume (8,147 open issues).
+- **Governance**: Owned by OpenAI (`openai` GitHub org). The project has clear backing from OpenAI, but the roadmap is controlled by a single corporate entity.
+- **Backing**: Officially backed by OpenAI. The Apache-2.0 license is permissive, but OpenAI has not relicensed any major projects historically.
+- **Adoption**: Explosive adoption with ~94.8k stars and ~14.1k forks, created in 2025-04. The OpenAI brand and terminal-native workflow drive rapid uptake.
+- **Risk flags**: Very young (created 2025-04) with no Lindy track record. Tightly coupled to OpenAI's API and pricing, which can change without notice. The project's future depends on OpenAI's continued commitment to open-source terminal tools.
 
 ## Caveats (unverified)
 

@@ -79,15 +79,15 @@ health:
 
 ## 何时使用
 
-你是一名 Web 开发者，需要交付跨平台桌面或移动应用，但希望避免 Electron 庞大的包体积和内存占用。你的团队已经熟悉 HTML、CSS 和 JavaScript/TypeScript，不想学习 Qt 或 Flutter 这类新 UI 框架。你用 Tauri 把 Web 前端包进一个极小的 Rust 二进制，通过安全 API 桥与操作系统通信，从单一代码库生成 Windows、macOS、Linux、Android 和 iOS 的安装包。你的用户获得原生体验的轻量应用，而你则获得内置自动更新、系统托盘支持和原生通知。
+你正在选择跨平台桌面或移动框架，而包体积、内存占用和开发技能复用是决定性因素。你选 Tauri 而不是 Electron，因为不想给每个用户都塞一份 Chromium，且你的用户在意安装包大小和内存占用。你选 Tauri 而不是 Flutter，因为你的团队已经熟悉 HTML、CSS 和 JavaScript/TypeScript，不想投入时间学习 Dart 和新的 widget 系统。你用 Tauri 把 Web 前端包进一个极小的 Rust 二进制，通过安全 API 桥与操作系统通信，从单一代码库生成 Windows、macOS、Linux、Android 和 iOS 的安装包。你获得内置自动更新、系统托盘和原生通知，而用户则获得轻量、原生体验的应用。
 
 ## 何时不用
 
-- **纯原生 UI 需求**——如果你需要深度原生控件（例如复杂的 macOS 专用工具栏或 Windows UWP 集成），Tauri 基于 Webview 的 UI 会像 Web 应用而非原生应用。
-- **重度 Webview 依赖**——Tauri 依赖操作系统原生 Webview（Windows 上 WebView2，macOS/iOS 上 WKWebView，Linux 上 WebKitGTK）。旧版操作系统上的边缘情况或 Webview bug 可能难以调试。
-- **不愿使用 Rust 工具链**——后端和构建系统需要 Rust；如果你的团队拒绝安装或维护 Rust 工具链，Tauri 无法使用。
-- **复杂服务端需求**——Tauri 是客户端框架，不能替代后端服务器。如果你的应用需要大量服务端逻辑，仍需单独的后端。
-- **Electron 生态锁定**——如果你依赖 Electron 特定的原生模块或深层 V8/Chromium API，迁移到 Tauri 并非易事。
+- 如果你需要深度原生控件（例如复杂的 macOS 专用工具栏或 Windows UWP 集成），请使用 AppKit 或 WPF 而不是 Tauri，因为 Tauri 基于 Webview 的 UI 会像 Web 应用而非原生应用。
+- 如果你无法容忍不同平台间操作系统 Webview 的不一致（Windows 上的 WebView2、macOS/iOS 上的 WKWebView、Linux 上的 WebKitGTK），请使用 Electron 而不是 Tauri，因为 Electron 捆绑了受控的 Chromium 版本，在各平台行为一致。
+- 如果你的团队拒绝安装或维护 Rust 工具链，请使用 Electron 而不是 Tauri，因为后端和构建系统需要 Rust。
+- 如果你的应用需要与客户端共置的复杂服务端逻辑，请使用后端框架（如 FastAPI 或 Express）配合客户端，而不是 Tauri，因为 Tauri 是客户端框架，不是服务器。
+- 如果你依赖 Electron 特定的原生模块或深层 V8/Chromium API，请使用 Electron 而不是 Tauri，因为迁移到 Tauri 的 Webview 模型并非易事。
 
 ## 横向对比
 

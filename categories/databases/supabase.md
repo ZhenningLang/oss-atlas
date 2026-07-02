@@ -74,15 +74,15 @@ The open-source Firebase alternative built on Postgres. Provides a dedicated Pos
 
 ## When to use
 
-You're building a web or mobile application and need a backend that handles auth, database, real-time subscriptions, and file storage without cobbling together multiple services. You want the power and familiarity of PostgreSQL (including extensions like `pgvector` and `postgis`) but don't want to manage the database, API layer, and auth system separately. You choose Supabase, create a project, and get an auto-generated REST API, a ready-to-use auth system with OAuth providers, and real-time WebSocket subscriptions straight from your Postgres tables. For AI features, you can store and query vector embeddings with `pgvector` without adding a separate vector database. You can self-host the entire stack or use the managed cloud with a generous free tier.
+You're building a web or mobile application and need a backend that handles auth, database, real-time subscriptions, and file storage without cobbling together multiple services. You consider Firebase, but you don't want to be locked into Google's proprietary NoSQL (Firestore) and you want the full power of SQL, relational integrity, and PostgreSQL extensions. You consider Hasura, but you need auth, file storage, and edge functions too — not just a GraphQL API. You choose Supabase because it gives you the power and familiarity of PostgreSQL (including extensions like `pgvector` and `postgis`) without managing the database, API layer, and auth system separately. You create a project and get an auto-generated REST API, a ready-to-use auth system with OAuth providers, and real-time WebSocket subscriptions straight from your Postgres tables. For AI features, you can store and query vector embeddings with `pgvector` without adding a separate vector database. You can self-host the entire stack or use the managed cloud with a generous free tier.
 
 ## When NOT to use
 
-- **Heavy analytics / OLAP workloads** — Supabase is built on PostgreSQL, which is optimized for OLTP. For large-scale data warehousing or complex analytics, use a dedicated OLAP solution (BigQuery, ClickHouse, Snowflake).
-- **Microservices with multiple databases** — Supabase is designed around a single Postgres instance per project. If your architecture requires many independent databases with separate lifecycles, the platform model may not fit.
-- **No PostgreSQL familiarity** — While Supabase abstracts much of the database layer, you still write SQL for complex queries, migrations, and RLS policies. If your team avoids SQL entirely, the learning curve is real.
-- **Extreme multi-region latency requirements** — Supabase supports read replicas but the primary write node is in a single region. If your application needs sub-10ms writes globally, you may need a different architecture.
-- **Non-Postgres database requirement** — Supabase is deeply tied to PostgreSQL. If you need MongoDB, Cassandra, or a graph database as your primary store, Supabase is not the right choice.
+- **If you need heavy analytics or OLAP workloads, use BigQuery, ClickHouse, or Snowflake instead of Supabase, because** Supabase is built on PostgreSQL, which is optimized for OLTP. For large-scale data warehousing or complex analytics, a dedicated OLAP solution is the right tool.
+- **If your architecture requires many independent databases with separate lifecycles, use self-hosted Postgres clusters or MongoDB instead of Supabase, because** Supabase is designed around a single Postgres instance per project. The platform model does not fit multi-database microservices.
+- **If your team avoids SQL entirely, use Firebase or Appwrite instead of Supabase, because** while Supabase abstracts much of the database layer, you still write SQL for complex queries, migrations, and RLS policies. If your team avoids SQL, the learning curve is real.
+- **If you need global sub-10ms writes, use CockroachDB or PlanetScale instead of Supabase, because** Supabase supports read replicas but the primary write node is in a single region. If your application needs sub-10ms writes globally, you need a distributed database architecture.
+- **If you need MongoDB, Cassandra, or a graph database as your primary store, use MongoDB Atlas, ScyllaDB, or Neo4j instead of Supabase, because** Supabase is deeply tied to PostgreSQL. If your data model requires a non-relational or graph primary store, Supabase is not the right choice.
 
 ## Comparison
 
@@ -119,11 +119,11 @@ You're building a web or mobile application and need a backend that handles auth
 
 ## Health & viability
 
-- **Maintenance**: Very active — pushed daily as of 2026-07, with a mature v2 platform and responsive core team (1,086 open issues). [推断]
-- **Governance**: Owned by the `supabase` organization with a dedicated core team and clear product roadmap. The company has a strong open-source culture with Apache-2.0 licensing across the core stack. Bus factor is reasonable. [推断]
-- **Backing**: Supabase Inc. is a venture-backed company with significant funding and a proven revenue model (managed cloud). The open-source core is strategically aligned with the commercial offering. [未验证]
-- **Adoption**: Strong adoption with 105.0k stars, created in 2019 (7-year track record). Widely used in production across startups and enterprises. The Firebase alternative positioning drives consistent demand. [推断]
-- **Risk flags**: Apache-2.0 is permissive. The venture-backed model means some features may be cloud-only (e.g., certain advanced analytics or enterprise features), but the core database, auth, and storage stack remains fully open-source. Monitor for open-core gating over time. [推断]
+- **Maintenance**: Very active — pushed daily as of 2026-07, with a mature v2 platform and responsive core team (1,086 open issues).
+- **Governance**: Owned by the `supabase` organization with a dedicated core team and clear product roadmap. The company has a strong open-source culture with Apache-2.0 licensing across the core stack. Bus factor is reasonable.
+- **Backing**: Supabase Inc. is a venture-backed company with significant funding and a proven revenue model (managed cloud). The open-source core is strategically aligned with the commercial offering.
+- **Adoption**: Strong adoption with 105.0k stars, created in 2019 (7-year track record). Widely used in production across startups and enterprises. The Firebase alternative positioning drives consistent demand.
+- **Risk flags**: Apache-2.0 is permissive. The venture-backed model means some features may be cloud-only (e.g., certain advanced analytics or enterprise features), but the core database, auth, and storage stack remains fully open-source. Monitor for open-core gating over time.
 
 ## Caveats (unverified)
 
@@ -131,3 +131,4 @@ You're building a web or mobile application and need a backend that handles auth
 - [推断] The self-hosted stack is documented but the primary engineering investment goes to the managed cloud; self-hosted users may encounter edge cases or slower bug fixes for non-cloud paths.
 - [未验证] The exact feature parity between self-hosted and cloud tiers is not continuously documented; some enterprise features (e.g., SSO, advanced backups) may be cloud-only.
 - [未验证] `pgvector` performance at very large scale (billions of embeddings) in a shared PostgreSQL instance has not been independently benchmarked for Supabase specifically.
+- [推断] The actual performance and latency characteristics of Supabase read replicas compared to a true multi-region distributed database have not been independently benchmarked.

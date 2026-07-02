@@ -68,30 +68,30 @@ health:
 
 # n8n
 
-A fair-code workflow automation platform with native AI capabilities — combine visual building with custom code, self-host or use the cloud, with 400+ integrations.
+A fair-code workflow automation platform with native AI capabilities — combine visual building with custom JavaScript/Python code, self-host or use the cloud, with 400+ integrations and 900+ ready-to-use templates.
 
 ![n8n — health radar](../../assets/health/n8n.svg)
 
 ## When to use
 
-You're a technical team that needs to automate internal processes — pulling data from APIs, transforming it, and pushing it to other systems — but you don't want to write and maintain thousands of lines of boilerplate integration code. You need a visual builder for non-engineers to contribute, but you also want the ability to drop into JavaScript or Python when the visual nodes hit their limits. You want to self-host for data sovereignty, or you need an AI-native platform that can build agent workflows with LangChain. n8n gives you both the speed of no-code and the flexibility of code.
+You're a technical team that needs to automate internal processes — pulling data from APIs, transforming it, and pushing it to other systems — but you don't want to write and maintain thousands of lines of boilerplate integration code. You need a visual builder so non-engineers can contribute workflows, but you also want the ability to drop into JavaScript or Python when the visual nodes hit their limits. You want to self-host for data sovereignty, or you need an AI-native platform that can build agent workflows with LangChain. Choose n8n over Zapier because n8n is self-hostable and code-extensible; choose it over Apache Airflow because n8n is visual-first and comes with 400+ pre-built integrations rather than requiring you to write Python DAGs from scratch. The deciding tradeoff is speed of no-code prototyping plus the escape hatch of real code.
 
 ## When NOT to use
 
-- **If you need sub-second real-time event processing** — n8n is a batch workflow engine, not a low-latency stream processor; use Kafka/Flink or a stream-processing platform instead.
-- **If you need a pure code-only CI/CD pipeline** — n8n's visual builder is its selling point; for GitOps or infrastructure-as-code pipelines, use Argo Workflows or GitHub Actions.
-- **If you need a fully open-source license without restrictions** — n8n uses a "fair-code" license (Sustainable Use License) that restricts reselling and competing; not OSI-approved.
-- **If your workflows are extremely simple (one or two HTTP calls)** — The overhead of running n8n (database, web server, workers) is overkill for trivial scripts; use Zapier or a simple cron job.
-- **If you need enterprise-grade multi-tenant SaaS out of the box** — The self-hosted version requires significant setup; the cloud offering is managed by n8n GmbH.
+- If you need sub-second real-time event processing, use Kafka or Flink instead of n8n, because n8n is a batch workflow engine, not a low-latency stream processor.
+- If you need a pure code-only CI/CD pipeline, use Argo Workflows or GitHub Actions instead of n8n, because n8n's visual builder is its selling point and adds overhead for infrastructure-as-code pipelines.
+- If you need a fully OSI-approved open-source license without restrictions, use Apache Airflow or Prefect instead of n8n, because n8n uses a "fair-code" Sustainable Use License that restricts reselling and competing use.
+- If your workflows are extremely simple (one or two HTTP calls), use Zapier or a simple cron job instead of n8n, because the overhead of running n8n (database, web server, workers) is overkill for trivial scripts.
+- If you need enterprise-grade multi-tenant SaaS out of the box, use Zapier or Make instead of n8n, because the self-hosted version requires significant setup and the cloud offering is managed by n8n GmbH.
 
 ## Comparison
 
 | Alternative | In index | Our verdict | Tradeoff |
 | --- | --- | --- | --- |
-| [Apache Airflow](airflow.md) | ✅ | Python DAG orchestrator with a mature ecosystem. | Airflow is code-first and batch-data-pipeline focused; n8n is visual-first and integration-focused. |
+| [Apache Airflow](airflow.md) | ✅ | Python DAG orchestrator with a mature ecosystem. | Airflow is code-first and batch-data-pipeline focused; n8n is visual-first and integration-focused with 400+ pre-built nodes. |
 | Prefect | 未收录 | Modern Python workflow orchestrator with a cleaner DX than Airflow. | Prefect is code-first; n8n adds a visual builder and 400+ pre-built integrations. |
-| Zapier | 未收录 | Cloud-only, no-code automation SaaS. | Zapier requires no setup but is proprietary, cloud-only, and charges per task; n8n is self-hostable. |
-| Argo Workflows | 未收录 | Kubernetes-native workflow engine. | Argo is for containerized CI/CD and ML pipelines on K8s; n8n is for API integrations. |
+| Zapier | 未收录 | Cloud-only, no-code automation SaaS. | Zapier requires no setup but is proprietary, cloud-only, and charges per task; n8n is self-hostable and code-extensible. |
+| Argo Workflows | 未收录 | Kubernetes-native workflow engine. | Argo is for containerized CI/CD and ML pipelines on K8s; n8n is for API integrations and business automation. |
 | Make (Integromat) | 未收录 | Visual automation SaaS with a large integration library. | Make is cloud-only and proprietary; n8n offers self-hosting and code extensibility. |
 
 ## Tech stack
@@ -108,7 +108,7 @@ You're a technical team that needs to automate internal processes — pulling da
 - **Node.js** — runtime for the server
 - **Redis** — for queueing and caching in production setups
 - **Docker** — recommended for deployment
-- **Reverse proxy** — nginx/traefik for TLS termination if exposed to the internet
+- **Reverse proxy** — nginx or traefik for TLS termination if exposed to the internet
 
 ## Ops difficulty
 

@@ -79,15 +79,15 @@ health:
 
 ## 何时使用
 
-你在构建 RAG 管线、文档问答系统或需要消费 PDF、Word 文档、PowerPoint 幻灯片、Excel 表格、图像、音频文件和 HTML 页面的智能体。你想要一个单一 Python 库，把这些异构格式转成干净的 Markdown——保留标题、列表、表格和链接——让你的 LLM 无需被二进制噪音或专有格式淹没即可处理。你通过 pip 安装 MarkItDown，对文件路径调用 `convert()`，取回可直接分块、嵌入或喂进 prompt 的 Markdown 文本。它为机器消费而设计，不是像素级精确的文档复现。
+你在构建 RAG 管线、文档问答系统或需要消费 PDF、Word 文档、PowerPoint 幻灯片、Excel 表格、图像、音频文件和 HTML 页面的智能体。你选择 MarkItDown 而不是 [Docling](docling.zh.md)，是因为你想要一个轻量、pip 可装、无 ML 模型依赖的库，通过简单的 `convert()` API 即可使用，而 Docling 为结构化版面分析引入了更重的依赖。你选择它而不是 unstructured.io，是因为你需要一个本地、免费、MIT 许可的方案，无需企业许可层级或云端依赖。你选择它而不是 Marker 或 LlamaParse，是因为你需要跨格式的广度——不仅是 PDF，还包括 Office、音频、图像和 HTML——在一个库中统一处理。你通过 pip 安装，对文件路径调用 `convert()`，即可获得干净的 Markdown，保留标题、列表、表格和链接，让你的 LLM 无需被二进制噪音或专有格式淹没即可处理。
 
 ## 何时不用
 
-- **面向人类阅读的高保真文档转换**——输出针对文本分析工具优化；可能会丢弃高级格式、扁平化复杂布局或以降低人类可读性的方式简化表格。如果你需要用于发布的 Word 转 PDF 或 PDF 转 Word 转换器，请另寻它处。
-- **文档编辑或往返转换**——MarkItDown 是单向转换（文件 → Markdown）。它不会编辑、修改或写回原始格式。
-- **复杂表格与布局保留**——虽然它尝试保留表格和结构，但带有嵌套布局、合并单元格或精确排版的重度格式化文档会在 Markdown 输出中丢失保真度。[未验证]
-- **未经输入消毒的生产使用**——该库以当前进程的权限执行 I/O，可访问进程能触及的任何资源。在多租户或不可信输入环境中，请消毒输入并调用最窄的 `convert_*` 函数。[未验证]
-- **以 OCR 为主要用途**——它能提取图像 EXIF 元数据并对图像做 OCR，但专用 OCR 库（如 Tesseract）对纯文本提取任务更成熟、更可配置。
+- **如果你需要面向人类阅读的高保真文档转换**——请用 [Docling](docling.zh.md) 或专用 PDF 转 Word 工具而不是 MarkItDown，因为 MarkItDown 会扁平化复杂布局，输出针对 LLM 消费优化，对人类读者来说可能不够美观。
+- **如果你需要文档编辑或往返转换**——请直接用 python-docx、PyMuPDF 或文档操控库而不是 MarkItDown，因为 MarkItDown 是单向转换（文件 → Markdown），无法写回原始格式。
+- **如果你需要精确布局、合并单元格和嵌套表格保留**——请用 Docling 而不是 MarkItDown，因为 Docling 以更高保真度建模文档结构与布局，而 MarkItDown 为 Markdown 输出简化表格并扁平化布局。[未验证]
+- **如果你在多租户环境中处理不可信输入**——请用沙箱化转换服务或 LLM 解析 API 而不是 MarkItDown，因为 MarkItDown 以当前进程权限执行 I/O，可访问进程能触及的任何资源。[未验证]
+- **如果 OCR 是你的主要用途**——请用 Tesseract、PaddleOCR 或专用 OCR 管线而不是 MarkItDown，因为 MarkItDown 的图像 OCR 仅为便利级别，不如专业 OCR 库成熟和可配置。
 
 ## 横向对比
 

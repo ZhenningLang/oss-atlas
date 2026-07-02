@@ -77,14 +77,14 @@ An extensible, feature-rich, user-friendly self-hosted AI platform that operates
 
 ## When to use
 
-You're a privacy-conscious developer or small team who wants a self-hosted chat interface for local and remote LLMs. You run Ollama on your own hardware and need a polished web UI that supports multiple models, document upload for RAG, and conversation history without sending data to third-party cloud services. You want something that works out of the box with Docker, has a modern UI, and supports community plugins for extensibility.
+You're a privacy-conscious developer or small team who wants a self-hosted chat interface for local and remote LLMs. You pick Open WebUI over proprietary cloud services like ChatGPT or Claude web because it keeps your data on your own hardware, supports offline operation, and costs nothing beyond your infrastructure. You pick it over [NextChat](nextchat.md) when you need document upload for RAG, a built-in inference engine, and a broader feature set out of the box; NextChat is lighter and faster to deploy but lacks RAG and many advanced features. You pick it over LibreChat when you want a simpler, offline-first deployment without wrestling with a plugin ecosystem that may add operational complexity. You run it with Docker, connect Ollama for local models or OpenAI-compatible APIs for remote ones, and get a polished web UI with conversation history, community extensibility, and no third-party data leakage.
 
 ## When NOT to use
 
-- **Multi-user team admin** — Open WebUI is single-user-shaped by default; advanced RBAC and team quotas are not its core strength.
-- **Zero self-hosting burden** — You must run and maintain the Docker container, manage model files, and keep the app updated.
-- **Enterprise SSO/compliance** — While it supports OAuth, enterprise-grade admin dashboards, audit trails, and SLA guarantees are absent.
-- **Mobile-native experience** — The primary interface is web-based; mobile app experience is through the browser.
+- **If you need advanced RBAC, team quotas, and admin governance** — use [HiveChat](../team-chat/hivechat.md) or a platform like Dify instead of Open WebUI, because Open WebUI is single-user-shaped by default and lacks mature team administration features.
+- **If you want zero operational burden** — use ChatGPT, Claude web, or a managed API directly instead of Open WebUI, because Open WebUI requires running and maintaining a Docker container, managing model files, and keeping the app updated.
+- **If you need enterprise SSO, audit trails, and SLA guarantees** — use a commercial platform like Azure OpenAI, Dify Enterprise, or a managed LLM service instead of Open WebUI, because Open WebUI lacks enterprise-grade admin dashboards, compliance certifications, and SLA-backed support.
+- **If you need a native mobile app experience** — use the ChatGPT or Claude mobile apps instead of Open WebUI, because Open WebUI is web-based and does not offer a dedicated mobile application with native notifications and offline caching.
 
 ## Comparison
 

@@ -74,14 +74,16 @@ A modern cross-platform GUI proxy client based on Tauri, running on Windows, mac
 
 ## When to use
 
-You're a developer or power user who needs a flexible, rule-based proxy client on your desktop. You manage multiple proxy subscriptions and want a clean GUI to switch between them, edit rules, and monitor traffic. You need system-level proxy integration (system proxy and TUN mode) and want to run the mihomo kernel without command-line configuration. You value a native-feeling desktop app built with Rust/Tauri over an Electron-based alternative.
+You're a developer or power user who needs a flexible, rule-based proxy client on your desktop. You've considered the original Clash for Windows, but that project is archived and no longer maintained. You manage multiple proxy subscriptions and want a clean, modern GUI to switch between them, edit rules, and monitor traffic. You need system-level proxy integration (system proxy and TUN mode) and want to run the mihomo kernel without command-line configuration. You reach for Clash Verge Rev because it is the actively maintained continuation of the Clash Verge project, built with Rust/Tauri for a native-feeling desktop app rather than an Electron-based alternative. Pick Clash Verge Rev over ClashX or ClashX Pro when you need a cross-platform client for Windows, macOS, and Linux rather than a macOS-only solution; pick it over sing-box when you want deeper Clash ecosystem compatibility and familiar rule syntax rather than a next-gen protocol-flexible platform.
+
 
 ## When NOT to use
 
-- **Mobile-only users** — There is no iOS or Android version; this is a desktop-only application.
-- **Simple one-proxy setups** — If you only need a single proxy and never switch rules, a minimal CLI client is lighter.
-- **Enterprise MDM environments** — GPL-3.0 copyleft may conflict with corporate software distribution policies; verify compliance. [未验证]
-- **Users unfamiliar with proxy concepts** — The app assumes knowledge of Clash rules, proxy groups, and subscription URLs; beginners may be overwhelmed.
+- **Mobile-only users.** If you need an iOS or Android proxy client, use Shadowrocket or Surge instead of Clash Verge Rev, because this is a desktop-only application.
+- **Simple one-proxy setups.** If you only need a single proxy and never switch rules, use the mihomo CLI directly or v2rayN instead of Clash Verge Rev, because the GUI overhead is unnecessary for a static configuration.
+- **Enterprise MDM environments.** If you need a proxy client for corporate deployment with a permissive license, use sing-box or v2rayN instead of Clash Verge Rev, because GPL-3.0 copyleft may conflict with corporate software distribution policies. [未验证]
+- **Users unfamiliar with proxy concepts.** If you want a beginner-friendly proxy with guided setup, use a commercial client like Surge instead of Clash Verge Rev, because the app assumes knowledge of Clash rules, proxy groups, and subscription URLs.
+
 
 ## Comparison
 

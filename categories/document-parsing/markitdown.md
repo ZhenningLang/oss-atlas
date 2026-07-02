@@ -79,15 +79,15 @@ A lightweight Python library for converting various files and office documents t
 
 ## When to use
 
-You're building a RAG pipeline, a document QA system, or an agent that needs to consume PDFs, Word documents, PowerPoint slides, Excel sheets, images, audio files, and HTML pages as structured text. You want a single Python library that turns these heterogeneous formats into clean Markdown — preserving headings, lists, tables, and links — so your LLM can process them without being overwhelmed by binary noise or proprietary formatting. You install MarkItDown via pip, call `convert()` on a file path, and get back Markdown text you can chunk, embed, or feed directly into a prompt. It is purpose-built for machine consumption, not pixel-perfect document reproduction.
+You're building a RAG pipeline, a document QA system, or an agent that needs to consume PDFs, Word documents, PowerPoint slides, Excel sheets, images, audio files, and HTML pages as structured text. You pick MarkItDown over [Docling](docling.md) when you want a lightweight, pip-installable library with zero ML model dependencies and a simple `convert()` API, whereas Docling pulls in heavier dependencies for structured layout analysis. You pick it over unstructured.io when you need a local, free, MIT-licensed solution without enterprise licensing tiers or cloud dependencies. You pick it over Marker or LlamaParse when you need breadth across formats — not just PDF, but Office, audio, images, and HTML — in a single library. You install via pip, call `convert()` on a file path, and get back clean Markdown with headings, lists, tables, and links preserved so your LLM can process them without being overwhelmed by binary noise or proprietary formatting.
 
 ## When NOT to use
 
-- **High-fidelity document conversion for human reading.** The output is optimized for text-analysis tools; it may drop advanced formatting, flatten complex layouts, or simplify tables in ways that make the result less presentable for human readers. If you need a Word-to-PDF or PDF-to-Word converter for publishing, look elsewhere.
-- **Document editing or round-tripping.** MarkItDown is one-way conversion (file → Markdown). It does not edit, modify, or write back to the original format.
-- **Complex table and layout preservation.** While it attempts to retain tables and structure, heavily formatted documents with nested layouts, merged cells, or precise positioning will lose fidelity in the Markdown output. [未验证]
-- **Production use without input sanitization.** The library performs I/O with the privileges of the current process and can access any resource the process can reach. In untrusted environments, sanitize inputs and call the narrowest `convert_*` function for your use case. [未验证]
-- **OCR as a primary use case.** It can extract EXIF metadata and perform OCR on images, but dedicated OCR libraries (e.g., Tesseract) are more mature and configurable for pure text-extraction tasks.
+- **If you need high-fidelity document conversion for human reading** — use [Docling](docling.md) or a dedicated PDF-to-Word converter instead of MarkItDown, because MarkItDown flattens complex layouts and optimizes output for LLM consumption, which can make results less presentable for human readers.
+- **If you need document editing or round-tripping** — use python-docx, PyMuPDF, or a document manipulation library directly instead of MarkItDown, because MarkItDown is one-way conversion (file → Markdown) and cannot write back to the original format.
+- **If you need precise layout, merged cells, and nested table preservation** — use Docling instead of MarkItDown, because Docling models document structure and layout with higher fidelity, whereas MarkItDown simplifies tables and flattens layouts for Markdown output. [未验证]
+- **If you process untrusted inputs in a multi-tenant environment** — use a sandboxed conversion service or an LLM parsing API instead of MarkItDown, because MarkItDown performs I/O with the privileges of the current process and can access any resource the process can reach. [未验证]
+- **If OCR is your primary use case** — use Tesseract, PaddleOCR, or a dedicated OCR pipeline instead of MarkItDown, because MarkItDown's image OCR is convenience-level and not as mature or configurable as specialized OCR libraries.
 
 ## Comparison
 

@@ -79,15 +79,15 @@ health:
 
 ## 何时使用
 
-你正在用 JavaScript/TypeScript 构建新的服务端项目或 CLI 工具，厌倦了 Node.js 的复杂性：`node_modules` 膨胀、`package.json` 依赖地狱，以及对外部工具（ts-node、nodemon、eslint、prettier）的需求。你想要一个将 TypeScript 视为一等公民、内置格式化、代码检查和测试、并默认强制执行安全权限（没有显式标志就不允许文件或网络访问）的运行时。你用一条 shell 命令安装 Deno，直接运行 `.ts` 文件，准备好时编译成独立二进制。Deno 的标准库和 npm 兼容性意味着你可以带着现有包一起迁移，同时享受现代工具链。
+你正在选择 JavaScript/TypeScript 运行时来构建新的服务端项目或 CLI 工具，想要现代、安全的工具链。你选 Deno 而不是 Node.js，因为厌倦了 `node_modules` 膨胀、`package.json` 依赖地狱，以及对外部工具（ts-node、nodemon、eslint、prettier）的需求。你想要一个将 TypeScript 视为一等公民、内置格式化、代码检查和测试、并默认强制执行安全权限的运行时。你选 Deno 而不是 Bun，因为 Deno 拥有标准 OSI 许可证（MIT）、更长的 track record（8 年对比 5 年），以及更强的 WebAssembly 集成。你用一条 shell 命令安装 Deno，直接运行 `.ts` 文件，准备好时编译成独立二进制。Deno 的标准库和 npm 兼容性意味着你可以带着现有包一起迁移，同时享受现代工具链。
 
 ## 何时不用
 
-- **现有 Node.js 单体应用**——Deno 可以通过 `npm:` 标识符运行许多 npm 包，但带有原生 Node.js 插件、C++ 绑定或深层 `node-gyp` 依赖的复杂项目不太可能平滑迁移。
-- **深度 npm 生态锁定**——虽然 Deno 有 npm 兼容性，但某些包依赖 Node.js 特定 API 或 post-install 脚本，可能无法运行。请务必测试依赖树。
-- **团队不熟悉 Deno**——如果你的整个团队都熟悉 Node.js 而没有人有 Deno 经验，对于短期项目来说， onboarding 期间的生产力下降可能超过收益。
-- **V8 特定性能调优**——Deno 和 Node.js 一样使用 V8，因此 CPU 密集型性能相似。如果你需要在 V8 层面优化，切换运行时没有帮助。
-- **Deno Deploy 锁定顾虑**——Deno 的云边缘运行时（Deno Deploy）是专有服务；如果你希望完全可移植的无服务器代码，请确认能否在其他地方运行。
+- 如果你已有带原生 Node.js 插件、C++ 绑定或深层 `node-gyp` 依赖的 Node.js 单体应用，请使用 Node.js 而不是 Deno，因为带有原生模块的复杂项目不太可能平滑迁移。
+- 如果你依赖依赖 Node.js 特定 API 或 post-install 脚本的 npm 包，请使用 Node.js 而不是 Deno，因为某些包在 Deno 的 npm 兼容层下可能无法运行。
+- 如果你的整个团队都熟悉 Node.js 而没有人有 Deno 经验，且项目是短期的，请使用 Node.js 而不是 Deno，因为 onboarding 期间的生产力下降可能超过收益。
+- 如果你需要在 V8 层面进行性能优化，请继续使用 Node.js 而不是 Deno，因为两者使用相同的 V8 引擎，CPU 密集型性能没有差异。
+- 如果你希望拥有完全可移植的无服务器代码，而不被专有边缘运行时锁定，请使用 Node.js 或 Cloudflare Workers 而不是 Deno，因为 Deno Deploy 是专有服务。
 
 ## 横向对比
 
@@ -122,7 +122,7 @@ health:
 - **维护**：非常活跃——截至 2026-07 每日推送，v2 版本线成熟，核心团队响应迅速（1,354 个开放 issue）。[推断]
 - **治理**：由 `denoland` 组织所有，Ryan Dahl（Node.js 创建者）是关键人物。项目有清晰的技术愿景和多个核心贡献者。bus factor 合理。
 - **背书**：Deno Land Inc. 是项目背后的商业实体；Deno Deploy 是其收入来源。该公司已获得风险投资，这既带来稳定性，也可能导致未来方向冲突。[未验证]
-- **采用**：采用度强劲，107.3k star，2018 年创建（8 年记录）。被 Supabase 等公司用于边缘函数，并在各种生产级 CLI 工具中使用。[推断]
+- **采用**：采用度强劲，107.3k star，2018 年创建（8 年记录）。被 Supabase 等公司用于边缘函数，并在各种生产级 CLI 工具中使用。
 - **风险旗标**：MIT 许可非常宽松。风险投资支持的背书模式意味着开源路线图可能受商业产品 Deno Deploy 的影响。未见 relicense 历史，但需关注是否出现 open-core 阉割。[未验证]
 
 ## 存疑（未验证）

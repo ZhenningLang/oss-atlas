@@ -79,25 +79,25 @@ A fast, cross-platform, OpenGL terminal emulator with sensible defaults and exte
 
 ## When to use
 
-You're a developer who spends hours in the terminal every day and wants the fastest, most responsive terminal emulator available. You are frustrated with terminal emulators that lag when scrolling through large log files or running `cat` on multi-megabyte outputs. You want a terminal that uses your GPU for rendering, offloading work from the CPU. You prefer a minimal, configurable terminal that does not try to be a window manager or a multiplexer — you already use tmux or screen for that. You want something that works consistently across macOS, Linux, BSD, and Windows with the same configuration file.
+You're a developer who spends hours in the terminal every day and wants the fastest, most responsive terminal emulator available. You pick Alacritty over WezTerm or Kitty because you want a terminal that does one thing exceptionally well — GPU-accelerated rendering — and delegates everything else to tools you already use. You pick it over iTerm2 because you need a cross-platform terminal that works identically on macOS, Linux, BSD, and Windows with the same configuration file, not a macOS-only app. You pick it over Warp because you value open-source transparency and minimalism over AI features and cloud integration. You are frustrated with terminal emulators that lag when scrolling through large log files or running `cat` on multi-megabyte outputs. You want a terminal that uses your GPU for rendering, offloading work from the CPU, and you already use tmux or screen for multiplexing.
 
 ## When NOT to use
 
-- **If you need a built-in terminal multiplexer** — Alacritty explicitly does not include tabs, splits, or session management. Use tmux, screen, or Zellij alongside Alacritty, or choose a terminal like WezTerm or iTerm2 that includes these features.
-- **If you need ligature support** — Alacritty does not support font ligatures (combining `!=` into a single glyph). Use WezTerm, Kitty, or a patched font if ligatures are essential to your workflow.
-- **If you are on a system without OpenGL 3.3+ support** — Alacritty requires a modern GPU and graphics driver. Older systems, some VMs, and remote X11/VNC setups may not work.
-- **If you want a terminal with built-in AI or shell integration** — Alacritty is a plain terminal emulator. For AI-powered features, shell suggestions, or smart completions built into the terminal, look at Warp or Fig.
-- **If you need a fully stable, 1.0 product** — Alacritty is self-described as beta-level software. While widely used as a daily driver, there are known missing features and bugs.
+- If you need a built-in terminal multiplexer with tabs and splits, use WezTerm, iTerm2, or Zellij instead of Alacritty, because Alacritty explicitly does not include tabs, splits, or session management.
+- If you need font ligature support, use WezTerm or Kitty instead of Alacritty, because Alacritty does not support combining `!=` into a single glyph.
+- If you are on a system without OpenGL 3.3+ support, use Windows Terminal or a CPU-based terminal instead of Alacritty, because Alacritty requires a modern GPU and graphics driver, and older systems or some VMs may not work.
+- If you want a terminal with built-in AI or shell integration, use Warp instead of Alacritty, because Alacritty is a plain terminal emulator with no AI features, shell suggestions, or smart completions.
+- If you need a fully stable, 1.0 product, use iTerm2 or Windows Terminal instead of Alacritty, because Alacritty is self-described as beta-level software, and while widely used as a daily driver, there are known missing features and bugs.
 
 ## Comparison
 
 | Alternative | In index | Our verdict | Tradeoff |
 | --- | --- | --- | --- |
-| WezTerm | 未收录 | Modern GPU-accelerated terminal with tabs, splits, and ligatures. | WezTerm has more built-in features (tabs, ligatures, multiplexing); Alacritty is faster and more minimal. |
-| Kitty | 未收录 | GPU-based terminal with advanced features like kittens (plugins) and image support. | Kitty has more features and a plugin system; Alacritty is simpler and more focused on raw performance. |
-| iTerm2 | 未收录 | Popular macOS terminal with extensive features and integration. | iTerm2 is macOS-only and feature-rich; Alacritty is cross-platform and minimal. |
-| Windows Terminal | 未收录 | Microsoft's modern terminal for Windows with tabs and GPU acceleration. | Windows Terminal is Windows-only and integrates with WSL; Alacritty is cross-platform and simpler. |
-| Warp | 未收录 | AI-powered modern terminal with cloud features. | Warp has AI features and modern UI; Alacritty is plain, fast, and fully local. |
+| WezTerm | 未收录 | Use Alacritty for minimal, raw-performance GPU terminal emulation; choose WezTerm when you want a modern GPU-accelerated terminal with tabs, splits, and ligatures built in. | WezTerm has more built-in features (tabs, ligatures, multiplexing); Alacritty is faster and more minimal. |
+| Kitty | 未收录 | Use Alacritty for minimal, raw-performance GPU terminal emulation; choose Kitty when you want a GPU-based terminal with advanced features like kittens (plugins) and image support. | Kitty has more features and a plugin system; Alacritty is simpler and more focused on raw performance. |
+| iTerm2 | 未收录 | Use Alacritty for cross-platform, minimal GPU terminal emulation; choose iTerm2 when you want the most popular macOS terminal with deep macOS integration and extensive features. | iTerm2 is macOS-only and feature-rich; Alacritty is cross-platform and minimal. |
+| Windows Terminal | 未收录 | Use Alacritty for cross-platform, minimal GPU terminal emulation; choose Windows Terminal when you want Microsoft's modern terminal for Windows with tabs and GPU acceleration. | Windows Terminal is Windows-only and integrates with WSL; Alacritty is cross-platform and simpler. |
+| Warp | 未收录 | Use Alacritty for fully open-source, minimal, local terminal emulation; choose Warp when you want an AI-powered modern terminal with cloud features and IDE-like blocks. | Warp has AI features and modern UI; Alacritty is plain, fast, and fully local. |
 
 ## Tech stack
 
@@ -113,7 +113,7 @@ You're a developer who spends hours in the terminal every day and wants the fast
 
 ## Ops difficulty
 
-**None**. Alacritty is a single binary. Install via package manager or download from releases. Configuration is a single YAML file. No daemon, no background service.
+**None.** Alacritty is a single binary. Install via package manager or download from releases. Configuration is a single YAML file. No daemon, no background service.
 
 ## Health & viability
 

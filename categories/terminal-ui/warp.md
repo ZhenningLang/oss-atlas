@@ -81,24 +81,24 @@ A modern terminal built for coding with agents — **note: this GitHub repositor
 
 ## When to use
 
-You're a developer who spends most of your day in a terminal and wants a modern, fast, IDE-like experience for the command line. You want features like command blocks (so you can navigate output like a document), AI-assisted command suggestions, and integrated coding agents. You use macOS or Linux and want a terminal that feels like it was built in 2026, not 1986. You install Warp, and it replaces your default terminal with a GPU-accelerated, Rust-powered shell that supports bash, zsh, and fish, with built-in AI agent "Oz" that can help write and debug commands, or you can run external CLI coding agents like Claude Code, Codex, or Gemini CLI inside it.
+You're a developer who spends most of your day in a terminal and wants a modern, fast, IDE-like experience for the command line. You pick Warp over Alacritty because you want features like command blocks (so you can navigate output like a document), AI-assisted command suggestions, and integrated coding agents — not just a plain terminal. You pick it over iTerm2 because you want a terminal that feels built in 2026, not 2006, with GPU acceleration and AI-native design across macOS and Linux. You pick it over Tabby because you want a polished, commercially supported product with weekly updates rather than an open-source project with community-only support. You install Warp, and it replaces your default terminal with a GPU-accelerated, Rust-powered shell that supports bash, zsh, and fish, with built-in AI agent "Oz" that can help write and debug commands, or you can run external CLI coding agents like Claude Code, Codex, or Gemini CLI inside it.
 
 ## When NOT to use
 
-- **You require fully open-source software.** The GitHub repo is an issue tracker only. Warp's actual source code is proprietary and closed. The AGPL-3.0 license on the repo applies to the minimal issue-tracker code, not the product. If you need a terminal you can audit, modify, or self-host, choose Alacritty, iTerm2, or Tabby instead. [推断]
-- **You need a lightweight, minimal terminal.** Warp is a feature-rich, Rust-based application with AI integrations, cloud features, and modern UI. If you want a 10MB terminal that starts in 50ms, this is not it.
-- **You are on Windows.** As of mid-2026, Warp's primary support is macOS and Linux; Windows support is limited or unavailable. [未验证]
-- **You don't want AI features or cloud connectivity.** Warp's value proposition is tightly coupled with AI assistance and cloud-backed features (collaboration, drive, etc.). If you want a terminal with zero network calls and no AI, traditional terminals are a better fit.
-- **You need a terminal for remote/headless servers over SSH.** Warp's advanced features (blocks, AI, etc.) may not work well or at all in a plain SSH session; it's designed for local interactive use. [推断]
-- **You object to proprietary telemetry or cloud accounts.** Warp requires a login for some features and is a closed-source product; you cannot fully audit what data is collected. [推断]
+- If you require fully open-source software, use Alacritty or Tabby instead of Warp, because the GitHub repo is an issue tracker only; Warp's actual source code is proprietary and closed, and the AGPL-3.0 license on the repo applies to the minimal issue-tracker code, not the product. [推断]
+- If you need a lightweight, minimal terminal, use Alacritty instead of Warp, because Warp is a feature-rich, Rust-based application with AI integrations, cloud features, and modern UI — not a 10MB terminal that starts in 50ms.
+- If you are on Windows, use Windows Terminal or Alacritty instead of Warp, because as of mid-2026, Warp's primary support is macOS and Linux, and Windows support is limited or unavailable.
+- If you don't want AI features or cloud connectivity, use Alacritty or iTerm2 instead of Warp, because Warp's value proposition is tightly coupled with AI assistance and cloud-backed features, and traditional terminals make zero network calls.
+- If you need a terminal for remote/headless servers over SSH, use Tabby or Alacritty instead of Warp, because Warp's advanced features (blocks, AI, etc.) are designed for local interactive use and may not work well in a plain SSH session. [推断]
+- If you object to proprietary telemetry or cloud accounts, use Alacritty instead of Warp, because Warp requires a login for some features and is a closed-source product whose data collection cannot be fully audited.
 
 ## Comparison
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| Alacritty | 未收录 | A fast, cross-platform, OpenGL terminal emulator — fully open source. | Fully open source and minimal, but no native AI features, no command blocks, and no built-in shell intelligence. |
-| iTerm2 | 未收录 | The most popular macOS terminal with deep macOS integration. | macOS-only, not open source, but mature and feature-rich without the AI-centric design of Warp. |
-| Tabby | 未收录 | A modern, open-source terminal with SSH client and serial support. | Open source and cross-platform, with some modern UI features, but less AI-native than Warp. |
+| Alacritty | 未收录 | Use Warp for an AI-native, IDE-like terminal experience; choose Alacritty when you want a fast, cross-platform, OpenGL terminal emulator that is fully open source. | Fully open source and minimal, but no native AI features, no command blocks, and no built-in shell intelligence. |
+| iTerm2 | 未收录 | Use Warp for an AI-native, modern terminal across macOS and Linux; choose iTerm2 when you want the most popular macOS terminal with deep macOS integration and no AI-centric design. | macOS-only, not open source, but mature and feature-rich without the AI-centric design of Warp. |
+| Tabby | 未收录 | Use Warp for a polished, commercially supported AI terminal; choose Tabby when you want a modern, open-source terminal with SSH client and serial support. | Open source and cross-platform, with some modern UI features, but less AI-native than Warp. |
 | [asciimatics](asciimatics.md) | ✅ | A Python TUI library for building terminal UIs, not a terminal emulator. | This is a library for building TUIs, not a standalone terminal app — different category. |
 
 ## Tech stack

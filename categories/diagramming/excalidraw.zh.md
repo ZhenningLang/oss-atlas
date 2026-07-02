@@ -79,26 +79,26 @@ health:
 
 ## 何时使用
 
-你是产品经理或设计师，需要在会议中快速白板画出架构草图、用户流程或线框图，并与团队分享。你希望结果看起来非正式、平易近人——像餐巾纸草图而非精致的 CAD 图纸——这样干系人关注想法本身，而非像素级完美。你打开 excalidraw.com，在无限画布上画矩形和箭头，拖入图片，然后分享链接；协作是端到端加密的，`.excalidraw` JSON 格式也是开放的。当你是 React 开发者、需要在文档站或应用里嵌入白板时，你也会选它：`@excalidraw/excalidraw` npm 包提供了一个即插即用的组件，自带暗黑模式、图形库、国际化以及 PNG／SVG／剪贴板导出。
+你是产品经理或设计师，需要在会议中快速白板画出架构草图、用户流程或线框图，并与团队分享。你选 Excalidraw 而不选 Mermaid，是因为你希望结果看起来非正式、平易近人——像餐巾纸草图而非渲染出来的文本图——这样干系人关注想法本身，而非语法。你选它而不选 draw.io，是因为你想要轻量的手绘风格，而非一个带丰富图形和集成的完整 WYSIWYG 画布。你选它而不选 Figma，是因为你需要一个快速白板，而非带有组件变体、约束和响应式预览的高保真设计工具。你打开 excalidraw.com，在无限画布上画矩形和箭头，拖入图片，然后分享链接；协作是端到端加密的，`.excalidraw` JSON 格式也是开放的。当你是 React 开发者、需要在文档站或应用里嵌入白板时，你也会选它：`@excalidraw/excalidraw` npm 包提供了一个即插即用的组件，自带暗黑模式、图形库、国际化以及 PNG／SVG／剪贴板导出。
 
 ## 何时不用
 
-- **你需要可进版本库的纯文本图表。** Excalidraw 以 JSON（或二进制 PNG／SVG）存储图；它不是 Mermaid 或 PlantUML 那样的文本转图语法。如果 diff 和 Git 历史很重要，请改用 diagrams-as-code 工具。
-- **你需要像素级精确或自动排版的图。** 手绘风格就是它的核心卖点；它不强制 BPMN 合规、UML 严格性或自动图布局。做正式建模请用 bpmn-js 或 PlantUML。
-- **你需要从代码程序化生成图。** 它没有声明式文本语法可供渲染；要从 CI 管线或 LLM 输出产图，需要手写 JSON 或换工具。
-- **你需要完整的设计／原型工具。** Excalidraw 是白板，不是 Figma——没有组件变体、约束、响应式预览或设计交付。做高保真 mockup 请用专业设计工具。
-- **你必须在完全离线、无构建步骤的环境下工作。** Web 应用需要浏览器；虽然 React 组件打包后可离线运行，但零摩擦路径是托管应用。[推断]
-- **你需要企业规模的实时协作。** 免费版跑在 excalidraw.com 上；重度团队使用可能需要 Excalidraw+（付费）或自建基础设施，开箱并不提供。[未验证]
+- 如果你需要可进版本库的纯文本图表，请用 Mermaid 或 PlantUML，而不用 Excalidraw，因为 Excalidraw 以 JSON（或二进制 PNG／SVG）存储图；它不是 Mermaid 或 PlantUML 那样的文本转图语法，无法在 Git 里 diff。
+- 如果你需要像素级精确或自动排版的图，请用 draw.io 或 bpmn-js，而不用 Excalidraw，因为手绘风格就是它的核心卖点；它不强制 BPMN 合规、UML 严格性或自动图布局。
+- 如果你需要从代码程序化生成图，请用 Mermaid 或 PlantUML，而不用 Excalidraw，因为它没有声明式文本语法可供渲染，要从 CI 管线或 LLM 输出产图，需要手写 JSON 或换工具。
+- 如果你需要完整的设计／原型工具，请用 Figma，而不用 Excalidraw，因为 Excalidraw 是白板，没有组件变体、约束、响应式预览或设计交付。
+- 如果你必须在完全离线、无构建步骤的环境下工作，请用 draw.io 或桌面图应用，而不用 Excalidraw，因为 Web 应用需要浏览器；虽然 React 组件打包后可离线运行，但零摩擦路径是托管应用。[推断]
+- 如果你需要企业规模的实时协作，请用 Figma 或 draw.io Enterprise，而不用 Excalidraw，因为免费版跑在 excalidraw.com 上；重度团队使用可能需要 Excalidraw+（付费）或自建基础设施，开箱并不提供。[未验证]
 
 ## 横向对比
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [Mermaid](mermaid.zh.md) | ✅ | 当前页用于它的主场景；如果更看重「把图表写成纯文本、在 Git 里 diff、在 Markdown 里渲染」，再选 Mermaid。 | 纯文本、可 diff 的图表，在 Markdown 和文档里渲染；以视觉风格换取版本控制的可移植性。 |
-| [flowchart.js](flowchart-js.zh.md) | ✅ | 当前页用于它的主场景；如果更看重「浏览器里极简轻量的流程图渲染器」，再选 flowchart.js。 | 只做流程图的窄 JS 渲染器；Mermaid 覆盖更多类型、宿主支持更广。 |
-| draw.io（diagrams.net） | 未收录 | 当前页用于它的主场景；如果更看重「完整 WYSIWYG 画布、丰富图形和集成」，再选 draw.io。 | 全功能 WYSIWYG 画布编辑器，支持 Google Drive／OneDrive／GitHub 集成；比 Excalidraw 更重、更正式。 |
-| tldraw | 未收录 | 当前页用于它的主场景；如果更看重「更新的、对开发者 API 更友好的可扩展白板库」，再选 tldraw。 | 较新的白板库，程序 API 强大；生态更小，但对自定义应用更灵活。 |
-| Figma | 未收录 | 当前页用于它的主场景；如果更看重「高保真 UI 设计、原型和设计系统管理」，再选 Figma。 | UI/UX 行业标准设计工具；不是草图白板，完整功能需付费团队版。 |
+| [Mermaid](mermaid.zh.md) | ✅ | 需要手绘风格、协作白板时选 Excalidraw；需要把图表写成纯文本、在 Git 里 diff、在 Markdown 里渲染时，再选 Mermaid。 | 纯文本、可 diff 的图表，在 Markdown 和文档里渲染；以视觉风格换取版本控制的可移植性。 |
+| [flowchart.js](flowchart-js.zh.md) | ✅ | 需要手绘风格、协作白板时选 Excalidraw；需要浏览器里极简轻量的流程图渲染器时，再选 flowchart.js。 | 只做流程图的窄 JS 渲染器；Mermaid 覆盖更多类型、宿主支持更广。 |
+| draw.io（diagrams.net） | 未收录 | 需要轻量、手绘风格草图白板时选 Excalidraw；需要完整 WYSIWYG 画布、丰富图形和集成时，再选 draw.io。 | 全功能 WYSIWYG 画布编辑器，支持 Google Drive／OneDrive／GitHub 集成；比 Excalidraw 更重、更正式。 |
+| tldraw | 未收录 | 需要开源界手绘风格白板的事实标准时选 Excalidraw；需要更新的、对开发者 API 更友好的可扩展白板库时，再选 tldraw。 | 较新的白板库，程序 API 强大；生态更小，但对自定义应用更灵活。 |
+| Figma | 未收录 | 需要快速、非正式草图白板时选 Excalidraw；需要高保真 UI 设计、原型和设计系统管理时，再选 Figma。 | UI/UX 行业标准设计工具；不是草图白板，完整功能需付费团队版。 |
 
 ## 技术栈
 

@@ -79,15 +79,17 @@ An extremely fast Python package and project manager written in Rust, designed t
 
 ## When to use
 
-You're a Python developer tired of waiting for `pip install` to resolve dependencies or juggling multiple tools — pip for installing, pip-tools for locking, pipx for CLI tools, pyenv for Python versions, poetry for project management. You want one tool that installs packages 10–100x faster than pip, manages Python versions, runs scripts with inline dependency metadata, and produces a universal lockfile you can check into Git. You're starting a new Python project or modernizing an existing one and want the fastest, most reliable packaging experience available.
+You're a Python developer tired of waiting for `pip install` to resolve dependencies or juggling multiple tools — pip for installing, pip-tools for locking, pipx for CLI tools, pyenv for Python versions, poetry for project management. You've looked at Poetry for its mature project management and publish workflows, but you want a faster, more unified experience with a single tool and a universal lockfile. You reach for uv because it replaces the entire stack with one Rust-based CLI that installs packages 10–100x faster than pip, manages Python versions, runs scripts with inline dependency metadata, and produces a lockfile you can check into Git. Pick uv over pip when you want a modern resolver and lockfile instead of the legacy dependency algorithm; pick it over Poetry when you prioritize installation speed and a unified CLI over mature publish workflows; pick it over Conda when you are managing pure Python packages rather than scientific binary stacks that need precompiled distributions. You're starting a new Python project or modernizing an existing one and want the fastest, most reliable packaging experience available.
+
 
 ## When NOT to use
 
-- **If you need a mature, battle-tested ecosystem** — uv is relatively new (created 2023). While rapidly adopted, some edge cases in dependency resolution or platform-specific builds may still be rougher than pip or poetry.
-- **If you rely on poetry-specific features** — Poetry's `pyproject.toml` extras, plugins, and build-backend ecosystem are not fully compatible. Migrating existing poetry projects may require manual adjustment.
-- **If you need conda-forge or binary-scientific packages** — uv does not replace Conda/Mamba for scientific stacks that need precompiled binary distributions. It is a pip-replacement, not a Conda-replacement.
-- **If you are on an exotic platform with no Rust toolchain** — uv provides prebuilt binaries for common platforms, but niche architectures may require building from source.
-- **If your team is not ready to change workflows** — uv introduces new commands (`uv pip`, `uv run`, `uv lock`) that differ from standard pip/virtualenv workflows. The learning curve may not be worth the speed gain for stable legacy projects.
+- **If you need a mature, battle-tested ecosystem.** If you need a packaging tool with 20+ years of stability and edge-case coverage, use pip with virtualenv instead of uv, because uv is relatively new (created 2023) and some edge cases in dependency resolution or platform-specific builds may still be rougher than pip or poetry.
+- **If you rely on poetry-specific features.** If you need Poetry's `pyproject.toml` extras, plugins, and build-backend ecosystem, use Poetry instead of uv, because migrating existing poetry projects may require manual adjustment and full feature parity has not been achieved. [未验证]
+- **If you need conda-forge or binary-scientific packages.** If you need precompiled binary distributions for scientific stacks (NumPy, PyTorch with CUDA), use Conda or Mamba instead of uv, because uv is a pip-replacement, not a Conda-replacement, and does not handle binary scientific distributions.
+- **If you are on an exotic platform with no Rust toolchain.** If you need a package manager for a niche architecture without prebuilt binaries, use pip with source builds instead of uv, because uv provides prebuilt binaries for common platforms but niche architectures may require building from source.
+- **If your team is not ready to change workflows.** If you have a stable legacy project with entrenched pip/virtualenv workflows and no migration budget, use pip with pip-tools instead of uv, because uv introduces new commands (`uv pip`, `uv run`, `uv lock`) and the learning curve may not be worth the speed gain for a team that values stability over velocity.
+
 
 ## Comparison
 

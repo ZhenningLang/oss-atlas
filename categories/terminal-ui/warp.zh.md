@@ -81,24 +81,24 @@ health:
 
 ## 何时使用
 
-你是一名开发者，大部分时间泡在终端里，想要一个现代、快速、IDE 般的命令行体验。你需要命令块（让你像浏览文档一样浏览输出）、AI 辅助命令建议、以及集成编码 agent 等功能。你使用 macOS 或 Linux，想要一个感觉像 2026 年而非 1986 年的终端。你安装 Warp，它用基于 Rust 和 GPU 加速的 shell 取代你的默认终端，支持 bash、zsh 和 fish，内置 AI agent「Oz」可以帮你写命令和调试，或者你也可以在里面运行 Claude Code、Codex、Gemini CLI 等外部编码 agent。
+你是一名开发者，大部分时间泡在终端里，想要一个现代、快速、IDE 般的命令行体验。你选 Warp 而不选 Alacritty，是因为你需要命令块（让你像浏览文档一样浏览输出）、AI 辅助命令建议以及集成编码 agent 等功能——而非仅仅一个朴素的终端。你选它而不选 iTerm2，是因为你想要一个感觉像 2026 年而非 2006 年的终端，在 macOS 和 Linux 上都有 GPU 加速和 AI 原生设计。你选它而不选 Tabby，是因为你想要一个 polished、商业支持、每周更新的产品，而非仅有社区支持的开源项目。你安装 Warp，它用基于 Rust 和 GPU 加速的 shell 取代你的默认终端，支持 bash、zsh 和 fish，内置 AI agent「Oz」可以帮你写命令和调试，或者你也可以在里面运行 Claude Code、Codex、Gemini CLI 等外部编码 agent。
 
 ## 何时不用
 
-- **你需要完全开源的软件。** 这个 GitHub 仓库只是 issue 跟踪器。Warp 的实际源代码是专有闭源的。仓库上的 AGPL-3.0 许可证仅适用于极少的 issue 跟踪器代码，不覆盖产品。如果你需要可以审计、修改或自托管的终端，请选择 Alacritty、iTerm2 或 Tabby。[推断]
-- **你需要轻量、极简的终端。** Warp 是一个功能丰富的应用（虽然基于 Rust），带有 AI 集成、云功能和现代 UI。如果你想要一个 10MB、50ms 启动的终端，这不是它。
-- **你在使用 Windows。** 截至 2026 年中，Warp 主要支持 macOS 和 Linux；Windows 支持有限或不可用。[未验证]
-- **你不想要 AI 功能或云连接。** Warp 的价值主张与 AI 辅助和云支持功能（协作、Drive 等）紧密绑定。如果你想要零网络请求、无 AI 的终端，传统终端更合适。
-- **你需要通过 SSH 连接远程/无头服务器。** Warp 的高级功能（块、AI 等）在纯 SSH 会话中可能无法工作或完全失效；它面向本地交互使用设计。[推断]
-- **你反对专有遥测或云端账户。** Warp 的某些功能需要登录，且是闭源产品；你无法完全审计它收集了哪些数据。[推断]
+- 如果你需要完全开源的软件，请用 Alacritty 或 Tabby，而不用 Warp，因为这个 GitHub 仓库只是 issue 跟踪器；Warp 的实际源代码是专有闭源的，仓库上的 AGPL-3.0 许可证仅适用于极少的 issue 跟踪器代码，不覆盖产品。[推断]
+- 如果你需要轻量、极简的终端，请用 Alacritty，而不用 Warp，因为 Warp 是一个功能丰富的应用（虽然基于 Rust），带有 AI 集成、云功能和现代 UI——不是 10MB、50ms 启动的终端。
+- 你在使用 Windows，请用 Windows Terminal 或 Alacritty，而不用 Warp，因为截至 2026 年中，Warp 主要支持 macOS 和 Linux，Windows 支持有限或不可用。
+- 如果你不想要 AI 功能或云连接，请用 Alacritty 或 iTerm2，而不用 Warp，因为 Warp 的价值主张与 AI 辅助和云支持功能（协作、Drive 等）紧密绑定，传统终端不会发起任何网络请求。
+- 你需要通过 SSH 连接远程/无头服务器，请用 Tabby 或 Alacritty，而不用 Warp，因为 Warp 的高级功能（块、AI 等）面向本地交互使用设计，在纯 SSH 会话中可能无法正常工作。[推断]
+- 你反对专有遥测或云端账户，请用 Alacritty，而不用 Warp，因为 Warp 的某些功能需要登录，且是闭源产品；你无法完全审计它收集了哪些数据。
 
 ## 横向对比
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| Alacritty | 未收录 | 快速、跨平台、OpenGL 终端模拟器——完全开源。 | 完全开源且极简，但没有原生 AI 功能、没有命令块、没有内置 shell 智能。 |
-| iTerm2 | 未收录 | 最受欢迎的 macOS 终端，深度集成 macOS。 | 仅限 macOS，不是开源软件，但成熟且功能丰富，没有 Warp 那种 AI 中心设计。 |
-| Tabby | 未收录 | 现代开源终端，带 SSH 客户端和串口支持。 | 开源且跨平台，带一些现代 UI 功能，但不如 Warp 那么原生面向 AI。 |
+| Alacritty | 未收录 | 需要 AI 原生、IDE 般终端体验时选 Warp；需要快速、跨平台、OpenGL 终端模拟器且完全开源时，再选 Alacritty。 | 完全开源且极简，但没有原生 AI 功能、没有命令块、没有内置 shell 智能。 |
+| iTerm2 | 未收录 | 需要 AI 原生、跨 macOS 和 Linux 的现代终端时选 Warp；需要最受欢迎的 macOS 终端且深度集成 macOS、没有 AI 中心设计时，再选 iTerm2。 | 仅限 macOS，不是开源软件，但成熟且功能丰富，没有 Warp 那种 AI 中心设计。 |
+| Tabby | 未收录 | 需要 polished、商业支持的 AI 终端时选 Warp；需要现代开源终端且带 SSH 客户端和串口支持时，再选 Tabby。 | 开源且跨平台，带一些现代 UI 功能，但不如 Warp 那么原生面向 AI。 |
 | [asciimatics](asciimatics.zh.md) | ✅ | 用于构建终端 UI 的 Python TUI 库，不是终端模拟器。 | 这是构建 TUI 的库，不是独立终端应用——不同类别。 |
 
 ## 技术栈

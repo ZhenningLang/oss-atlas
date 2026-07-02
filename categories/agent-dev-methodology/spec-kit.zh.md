@@ -77,18 +77,20 @@ GitHub 出品的开源工具包，帮助你上手 Spec-Driven Development——�
 
 ## 何时使用
 
-你是开发者或产品经理，使用 AI 编码智能体（Copilot、Claude Code、Codex 等），厌倦了「vibe coding」——写个模糊提示，拿到「差不多能跑」的代码，然后凭感觉迭代。你想要结构化方法论：先写 spec，定义场景和预期结果，再让智能体按契约构建。你装上 Spec Kit，拿到 CLI 工具（`specify`）、PRD 模板、基于角色的 bundle 以及与 AI 智能体的集成，把「给我做个功能」变成「这是 spec，按这些验收标准实现」。如果你在 GitHub 上工作，尤其希望编码智能体尊重有纪律的开发流程，而非生成临时方案，那它非常合适。
+你是开发者或产品经理，使用 AI 编码智能体（Copilot、Claude Code、Codex 等），厌倦了「vibe coding」——写个模糊提示，拿到「差不多能跑」的代码，然后凭感觉迭代。你见过 [Superpowers](superpowers.zh.md) 和 [get-shit-done](get-shit-done.zh.md)，但你需要一个由大型厂商背书的方法论，带 CLI 工具、PRD 模板和 GitHub 原生集成，而非即插即用的 skill pack。你选择 Spec Kit，因为它提供结构化的 spec-driven 工作流：先写 spec，定义场景和预期结果，再让智能体按契约构建。它给你 `specify` CLI、PRD 模板、基于角色的 bundle 和 AI 智能体集成，把「给我做个功能」变成「这是 spec，按这些验收标准实现」。需要日常编码阶段的指导性工作流，而非高层级设计原则时，选 Spec Kit 而非 [12-Factor Agents](12-factor-agents.zh.md)；需要 spec 编写工具包，而非会话沉淀循环时，选 Spec Kit 而非 [Compound Engineering](compound-engineering.zh.md)；需要聚焦的方法论层，而非开箱即全的 agent 底座时，选 Spec Kit 而非 [ECC](ecc.zh.md)。如果你在 GitHub 上工作，尤其希望编码智能体尊重有纪律的开发流程，而非生成临时方案，那它非常合适。
 
 当你想标准化团队使用 AI 智能体的方式时，你也会选它。Spec Kit 提供扩展、预设和一套文档化流程（头脑风暴→计划→构建→评审→交付），可在团队成员间共享，让 agent 辅助开发更可预测、更可审查。
 
+
 ## 何时不用
 
-- **你不使用 AI 编码智能体。** Spec Kit 围绕 agent 辅助工作流设计；没有 Copilot、Claude Code 或类似 harness，方法论就失去了主要集成点，价值大打折扣。
-- **你偏好轻量级、即兴编码，不写正式 spec。** 如果你的项目是小实验、原型或一次性脚本，写 PRD 并跑完 spec-driven 阶段管线的开销可能比直接提示智能体更慢。
-- **你需要成熟、久经检验的方法论。** Spec Kit 创建于 2025-08，至今不足一年。虽然背后有 GitHub，但它编码的 spec-driven 开发实践仍在演进，尚未在多年时间或大规模场景下被证明。[推断]
-- **你不在 GitHub 生态里。** 虽然方法论可移植，但工具与集成（以 Copilot 为中心的 bundle、GitHub Pages 文档）针对 GitHub 用户优化。GitLab 或 Bitbucket 团队可能觉得集成面较薄。[推断]
-- **你需要综合项目管理平台。** Spec Kit 是方法论和 CLI 工具包，不是 Jira 或 Linear。它不跟踪 sprint、不管理 backlog、不处理跨团队依赖——它帮你为 agent 驱动的实现写 spec，而不是管理项目生命周期。[推断]
-- **你想要保证结果质量。** Spec-Driven Development 提升可预测性，但并不能消除 AI 生成代码的固有不确定性。你仍然需要人工审查、测试和迭代。
+- **你不使用 AI 编码智能体**——如果你不用 AI 辅助写代码，用传统的测试驱动开发或行为驱动开发实践代替 Spec Kit，因为 Spec Kit 围绕 agent 辅助工作流设计，没有编码智能体，方法论就失去了主要集成点。
+- **你偏好轻量级、即兴编码，不写正式 spec**——如果你的项目是小实验、原型或一次性脚本，用直接提示或 [get-shit-done](get-shit-done.zh.md) 代替 Spec Kit，因为写 PRD 并跑完 spec-driven 阶段管线的开销可能比直接提示智能体更慢。
+- **你需要成熟、久经检验的方法论**——如果你需要经过多年大规模验证的 spec-driven 实践，用 [Superpowers](superpowers.zh.md) 或 [Compound Engineering](compound-engineering.zh.md) 代替 Spec Kit，因为 Spec Kit 创建于 2025-08，至今不足一年，其编码的实践仍在演进。[推断]
+- **你不在 GitHub 生态里**——如果你使用 GitLab 或 Bitbucket，用 [get-shit-done](get-shit-done.zh.md) 或 [Compound Engineering](compound-engineering.zh.md) 代替 Spec Kit，因为工具与集成（以 Copilot 为中心的 bundle、GitHub Pages 文档）针对 GitHub 用户优化，其他平台的集成面较薄。[推断]
+- **你需要综合项目管理平台**——如果你需要跟踪 sprint、管理 backlog 或处理跨团队依赖，用 Jira 或 Linear 代替 Spec Kit，因为 Spec Kit 是面向 agent 驱动实现的方法论和 CLI 工具包，不是项目生命周期管理器。
+- **你想要保证结果质量**——如果你需要确定性的代码生成，用形式化方法或传统 TDD 结合全面人工审查代替 Spec Kit，因为 Spec-Driven Development 提升可预测性，但并不能消除 AI 生成代码的固有不确定性。
+
 
 ## 横向对比
 

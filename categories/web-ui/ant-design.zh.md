@@ -74,22 +74,22 @@ health:
 
 ## 何时使用
 
-你正在用 React 构建一个数据密集的管理后台、内部运营工具或 B2B SaaS 应用。你需要一整套开箱即用、无障碍的预置组件：支持排序和筛选的表格、带验证的表单、日期选择器、模态框、树形控件和上传组件。你希望这些组件看起来专业，无需雇佣设计师。通过 npm 安装 Ant Design，导入组件，你的应用立刻变得一致且精致。这套设计系统经过阿里巴巴和数千家公司的实战检验，你知道它能支撑复杂的多角色企业界面。
+你正在用 React 构建一个数据密集的管理后台、内部运营工具或 B2B SaaS 应用。你看过 shadcn/ui，但不想自己复制粘贴并维护每个组件文件——你需要一个能通过 npm 安装并直接导入的库。你看过 Material UI，但你需要更多开箱即用的企业级数据组件：带内置筛选的排序表格、日期范围选择器、树形控件和处理大文件列表的上传组件。你选择 Ant Design，因为它给你一整套开箱即用、无障碍的预置组件，看起来专业，无需雇佣设计师。通过 npm 安装、导入组件，你的应用立刻变得一致且精致。这套设计系统经过阿里巴巴和数千家公司的实战检验，你知道它能支撑复杂的多角色企业界面。
 
 ## 何时不用
 
-- **非 React 项目**——Ant Design 是 React 库。Vue 有 Ant Design Vue（独立项目），但核心库仅限 React。Svelte 或纯 HTML 项目请另寻他处。
-- **高度定制品牌风格的应用**——Ant Design 的视觉语言很有辨识度（「Ant Design 风格」）。如果你的品牌需要显著偏离 Material Design 或 Apple Human Interface 的独特视觉标识，覆盖默认样式可能繁琐且脆弱。
-- **对包体积敏感的场景**——完整的 Ant Design 库体积较大。如果不使用 Tree-shaking 或单独导入组件，bundle 会膨胀。即使使用 Tree-shaking，设计令牌和 CSS 也会增加相当重量。
-- **移动优先的 consumer 应用**——虽然有 Ant Design Mobile，但主库面向桌面。consumer 移动应用请考虑 Ionic 或原生方案。
-- **不允许覆盖 CSS 的项目**——Ant Design 使用 Less 做主题化，需要特定构建工具（或 CSS-in-JS 变通方案）才能深度定制。如果你的技术栈禁止 Less 或你想要 CSS Module 级隔离，会产生摩擦。[推断]
-- **想要 headless 组件的团队**——Ant Design 是带样式的组件库。如果你想要无样式的 headless 原语（如 Radix UI）并完全掌控样式，Ant Design 的抽象层级不对。
+- **如果你使用 Vue，请用 Ant Design Vue 或 Element Plus，而不是 Ant Design，因为** Ant Design 是 React 库。核心库没有官方 Vue 移植版本，React 组件无法在 Vue 项目中使用。
+- **如果你的品牌需要显著偏离 Material Design 的定制视觉标识，请用 shadcn/ui 或 Tailwind UI，而不是 Ant Design，因为** Ant Design 的视觉语言很有辨识度（「Ant Design 风格」）。覆盖默认样式可能繁琐且脆弱。
+- **如果包体积至关重要且你需要轻量库，请用 shadcn/ui 或 Radix UI，而不是 Ant Design，因为** 完整的 Ant Design 库体积较大。即使使用 Tree-shaking，设计令牌和 CSS 也会增加相当重量。
+- **如果你需要移动优先的 consumer 应用，请用 Ionic 或 Flutter，而不是 Ant Design，因为** 虽然有 Ant Design Mobile，但主库面向桌面。consumer 移动应用更适合原生或混合框架。
+- **如果你想要无样式的 headless 原语并完全掌控样式，请用 Radix UI 或 Headless UI，而不是 Ant Design，因为** Ant Design 是完整的带样式组件库。如果你想从无样式原语构建自己的设计系统，Ant Design 的抽象层级不对。
+- **如果你的技术栈禁止 Less 或 CSS-in-JS，请用 shadcn/ui 或 MUI，而不是 Ant Design，因为** Ant Design 使用 Less 做主题化，需要特定构建工具才能深度定制。如果你需要 CSS Module 级隔离或 Tailwind 原生工作流，会产生摩擦。
 
 ## 横向对比
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 | --- | --- | --- | --- |
-| Material UI (MUI) | 未收录 | 最受欢迎的 React UI 库，Material Design 风格，企业用户众多。 | MUI 在西方更普遍；Ant Design 在企业和亚太市场占主导。两者都很全面；按设计语言偏好和区域生态选择。 |
+| Material UI（MUI） | 未收录 | 最受欢迎的 React UI 库，Material Design 风格，企业用户众多。 | MUI 在西方更普遍；Ant Design 在企业和亚太市场占主导。两者都很全面；按设计语言偏好和区域生态选择。 |
 | [shadcn/ui](shadcn-ui.zh.md) | ✅ | 复制粘贴即可拥有的 React 组件，基于 Radix UI 和 Tailwind CSS。 | shadcn/ui 让你完全拥有、无 npm 依赖；Ant Design 启动更快，但锁定更深、样式灵活性更低。 |
 | Chakra UI | 未收录 | 模块化 React 组件库，注重开发者体验和无障碍。 | Chakra UI 的自定义主题更「开发者友好」；Ant Design 拥有更多企业级组件（尤其是数据表格和表单）。 |
 | Radix UI | 未收录 | 无样式的 headless 原语，用于构建自己的设计系统。 | Radix 层级更低（样式自理）；Ant Design 是完整的带样式系统。 |
@@ -126,11 +126,11 @@ health:
 
 ## 健康度与可持续性
 
-- **维护**：非常活跃——截至 2026-07 仍有日常推送，发布节奏规律，issue/PR 吞吐量大（98.5k stars，1,284 个 open issue）。[推断]
-- **治理**：由阿里巴巴开源生态内的 Ant Design Team 维护。项目拥有多名核心提交者，治理模型清晰。Bus factor 中等到良好。[推断]
-- **背书**：阿里巴巴背书，中国最大科技公司之一。这提供了稳定性和资源，但也意味着项目方向受阿里巴巴内部需求影响。[推断]
-- **采用度**：亚太企业市场采用度极强，全球范围持续增长。98.5k stars，2015 年创建（11 年记录）。阿里巴巴、腾讯和数千家创业公司都在使用。[推断]
-- **风险旗标**：MIT 许可宽松。未见 relicense 历史。项目与阿里巴巴的紧密关系意味着某些西方企业可能产生地缘政治或合规顾虑。v4 到 v5 的迁移涉及主题化破坏性变更；未来主版本可能同样需要投入。[未验证]
+- **维护**：非常活跃——截至 2026-07 仍有日常推送，发布节奏规律，issue/PR 吞吐量大（98.5k stars，1,284 个 open issue）。
+- **治理**：由阿里巴巴开源生态内的 Ant Design Team 维护。项目拥有多名核心提交者，治理模型清晰。Bus factor 中等到良好。
+- **背书**：阿里巴巴背书，中国最大科技公司之一。这提供了稳定性和资源，但也意味着项目方向受阿里巴巴内部需求影响。
+- **采用度**：亚太企业市场采用度极强，全球范围持续增长。98.5k stars，2015 年创建（11 年记录）。阿里巴巴、腾讯和数千家创业公司都在使用。
+- **风险旗标**：MIT 许可宽松。未见 relicense 历史。项目与阿里巴巴的紧密关系意味着某些西方企业可能产生地缘政治或合规顾虑。v4 到 v5 的迁移涉及主题化破坏性变更；未来主版本可能同样需要投入。
 
 ## 存疑（未验证）
 
@@ -138,3 +138,4 @@ health:
 - [推断] Ant Design 的 CSS-in-JS 方案（通过 `@ant-design/cssinjs`）在包含大量动态样式更新的超大型应用中可能存在性能影响。
 - [未验证] 所有 Ant Design 组件的无障碍审计结果未经独立验证。
 - [推断] 阿里巴巴内部产品路线图对 Ant Design 开源优先级的具体影响程度未公开记录。
+- [推断] Ant Design 的包体积和 CSS-in-JS 开销相对于 shadcn/ui 等轻量库的实际性能影响，取决于具体组件集和使用模式。

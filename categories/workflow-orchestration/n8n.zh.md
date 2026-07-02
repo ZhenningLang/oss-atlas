@@ -68,30 +68,30 @@ health:
 
 # n8n
 
-一款 fair-code 工作流自动化平台，原生支持 AI 能力——结合可视化搭建与自定义代码，可自托管或上云，内置 400 余种集成。
+一款 fair-code 工作流自动化平台，原生支持 AI 能力——结合可视化搭建与自定义 JavaScript/Python 代码，可自托管或上云，内置 400 余种集成和 900 余个即用模板。
 
-![n8n — health radar](../../assets/health/n8n.zh.svg)
+![n8n — 健康度雷达](../../assets/health/n8n.zh.svg)
 
 ## 何时使用
 
-你是一支技术团队，需要自动化内部流程——从 API 拉取数据、转换后推送到其他系统——但不愿写并维护成千上万行集成样板代码。你需要一个可视化构建器让非工程师也能参与，同时也希望在可视化节点遇到限制时能下沉到 JavaScript 或 Python。你想自托管以保障数据主权，或需要一个原生支持 AI、能用 LangChain 构建智能体工作流的平台。n8n 同时给了你无代码的速度与代码的灵活性。
+你是一支技术团队，需要自动化内部流程——从 API 拉取数据、转换后推送到其他系统——但不愿写并维护成千上万行集成样板代码。你需要一个可视化构建器让非工程师也能参与，同时也希望在可视化节点遇到限制时能下沉到 JavaScript 或 Python。你想自托管以保障数据主权，或需要一个原生支持 AI、能用 LangChain 构建智能体工作流的平台。选择 n8n 而不是 Zapier，因为 n8n 可自托管且支持代码扩展；选择 n8n 而不是 Apache Airflow，因为 n8n 以可视化优先，自带 400 余个预置集成，无需从零写 Python DAG。决定取舍：无代码原型的速度，加上真实代码的逃生舱。
 
 ## 何时不用
 
-- **如果你需要亚秒级实时事件处理**——n8n 是批处理工作流引擎，不是低延迟流处理器；请用 Kafka/Flink 或流处理平台。
-- **如果你需要纯代码的 CI/CD 流水线**——n8n 的可视化构建器是其卖点；GitOps 或基础设施即代码流水线请用 Argo Workflows 或 GitHub Actions。
-- **如果你需要完全无限制的开源许可**——n8n 使用“fair-code”许可（Sustainable Use License），限制转售与竞争；未获 OSI 批准。
-- **如果你的工作流极其简单（一两次 HTTP 调用）**——运行 n8n 的开销（数据库、Web 服务器、worker）对 trivial 脚本来说过重；用 Zapier 或简单 cron 即可。
-- **如果你需要开箱即用的企业级多租户 SaaS**——自托管版需要大量配置；云端版本由 n8n GmbH 托管。
+- 如果你需要亚秒级实时事件处理，请用 Kafka 或 Flink 而不用 n8n，因为 n8n 是批处理工作流引擎，不是低延迟流处理器。
+- 如果你需要纯代码的 CI/CD 流水线，请用 Argo Workflows 或 GitHub Actions 而不用 n8n，因为 n8n 的可视化构建器是其卖点，对基础设施即代码流水线反而增加开销。
+- 如果你需要完全无限制的 OSI 批准开源许可，请用 Apache Airflow 或 Prefect 而不用 n8n，因为 n8n 使用“fair-code”Sustainable Use License，限制转售与竞争。
+- 如果你的工作流极其简单（一两次 HTTP 调用），请用 Zapier 或简单 cron 而不用 n8n，因为运行 n8n 的开销（数据库、Web 服务器、worker）对 trivial 脚本来说过重。
+- 如果你需要开箱即用的企业级多租户 SaaS，请用 Zapier 或 Make 而不用 n8n，因为自托管版需要大量配置，云端版本由 n8n GmbH 托管。
 
 ## 横向对比
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 | --- | --- | --- | --- |
-| [Apache Airflow](airflow.zh.md) | ✅ | 拥有成熟生态的 Python DAG 编排器。 | Airflow 是代码优先、面向批处理数据管线；n8n 是可视化优先、面向集成。 |
+| [Apache Airflow](airflow.zh.md) | ✅ | 拥有成熟生态的 Python DAG 编排器。 | Airflow 是代码优先、面向批处理数据管线；n8n 是可视化优先、面向集成，自带 400 余个预置节点。 |
 | Prefect | 未收录 | 比 Airflow 更现代的 Python 工作流编排器，开发者体验更简洁。 | Prefect 是代码优先；n8n 额外提供可视化构建器和 400 余个预置集成。 |
-| Zapier | 未收录 | 纯云端无代码自动化 SaaS。 | Zapier 无需配置，但专有、仅限云端、按任务计费；n8n 可自托管。 |
-| Argo Workflows | 未收录 | Kubernetes 原生工作流引擎。 | Argo 面向 K8s 上的容器化 CI/CD 与 ML 流水线；n8n 面向 API 集成。 |
+| Zapier | 未收录 | 纯云端无代码自动化 SaaS。 | Zapier 无需配置，但专有、仅限云端、按任务计费；n8n 可自托管且支持代码扩展。 |
+| Argo Workflows | 未收录 | Kubernetes 原生工作流引擎。 | Argo 面向 K8s 上的容器化 CI/CD 与 ML 流水线；n8n 面向 API 集成与业务自动化。 |
 | Make（Integromat） | 未收录 | 拥有大量集成库的可视化自动化 SaaS。 | Make 仅限云端且专有；n8n 提供自托管与代码扩展能力。 |
 
 ## 技术栈
@@ -108,7 +108,7 @@ health:
 - **Node.js**——服务器运行时
 - **Redis**——生产环境中的队列与缓存
 - **Docker**——推荐用于部署
-- **反向代理**——如暴露到互联网，需 nginx/traefik 做 TLS 终结
+- **反向代理**——如暴露到互联网，需 nginx 或 traefik 做 TLS 终结
 
 ## 运维难度
 

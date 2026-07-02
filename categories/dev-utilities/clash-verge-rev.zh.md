@@ -74,14 +74,16 @@ health:
 
 ## 何时使用
 
-你是一位开发者或高级用户，需要在桌面端使用灵活、基于规则的代理客户端。你管理多个代理订阅，想要一个干净的 GUI 来切换订阅、编辑规则并监控流量。你需要系统级代理集成（系统代理与 TUN 模式），并希望无需命令行配置即可运行 mihomo 内核。你偏爱基于 Rust/Tauri 的桌面原生应用，而非基于 Electron 的替代方案。
+你是一位开发者或高级用户，需要在桌面端使用灵活、基于规则的代理客户端。你考虑过原版 Clash for Windows，但该项目已归档且不再维护。你管理多个代理订阅，想要一个干净、现代的 GUI 来切换订阅、编辑规则并监控流量。你需要系统级代理集成（系统代理与 TUN 模式），并希望无需命令行配置即可运行 mihomo 内核。你选择 Clash Verge Rev，因为它是 Clash Verge 项目的活跃延续，基于 Rust/Tauri 构建，提供原生桌面体验，而非基于 Electron 的替代方案。需要跨平台客户端覆盖 Windows、macOS 和 Linux，而非仅限 macOS 的方案时，选 Clash Verge Rev 而非 ClashX 或 ClashX Pro；需要更深的 Clash 生态兼容性和熟悉的规则语法，而非下一代协议灵活平台时，选 Clash Verge Rev 而非 sing-box。
+
 
 ## 何时不用
 
-- **纯移动端用户**——没有 iOS 或 Android 版本；这是一款仅限桌面端的应用。
-- **简单单代理场景**——如果你只需要一个代理且从不切换规则，最小化 CLI 客户端更轻量。
-- **企业 MDM 环境**——GPL-3.0 copyleft 可能与企业软件分发政策冲突；请核实合规性。[未验证]
-- **不熟悉代理概念的用户**——该应用假设用户已了解 Clash 规则、代理组和订阅 URL；新手可能会感到困惑。
+- **纯移动端用户**——如果你需要 iOS 或 Android 代理客户端，用 Shadowrocket 或 Surge 代替 Clash Verge Rev，因为这是一款仅限桌面端的应用。
+- **简单单代理场景**——如果你只需要一个代理且从不切换规则，直接用 mihomo CLI 或 v2rayN 代替 Clash Verge Rev，因为 GUI 开销对静态配置来说没有必要。
+- **企业 MDM 环境**——如果你需要宽松许可的企业部署代理客户端，用 sing-box 或 v2rayN 代替 Clash Verge Rev，因为 GPL-3.0 copyleft 可能与企业软件分发政策冲突。[未验证]
+- **不熟悉代理概念的用户**——如果你需要带引导式设置的初学者友好代理，用 Surge 等商业客户端代替 Clash Verge Rev，因为该应用假设用户已了解 Clash 规则、代理组和订阅 URL。
+
 
 ## 横向对比
 

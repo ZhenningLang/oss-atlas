@@ -79,16 +79,16 @@ A feature-rich command-line audio/video downloader and the actively maintained s
 
 ## When to use
 
-You're building a media pipeline, archiving content, or just need to grab a video or audio track from a streaming site for local processing. You want a single CLI tool that understands hundreds of sites out of the box, can select the best quality stream, merge formats, embed subtitles, skip sponsor segments, and run as a cron job or inside a Python script. You reach for yt-dlp because it's the actively maintained fork that fixes extractors within days when sites change their layout or player logic. One pip install, one command, and it resolves the URL, picks the formats, and writes the file with a predictable filename template.
+You're building a media pipeline, archiving content, or need to grab a video or audio track from a streaming site for local processing. You want a single CLI tool that understands hundreds of sites out of the box, can select the best quality stream, merge formats, embed subtitles, skip sponsor segments, and run as a cron job or inside a Python script. You reach for yt-dlp instead of youtube-dl because the original upstream has slowed to a crawl on extractor fixes; you pick it over lux because lux is a single-binary Go tool with a narrower site list and slower extractor updates; you choose it over you-get because you-get's extractor catalog is smaller and its maintenance cadence is lower. One pip install, one command, and yt-dlp resolves the URL, picks the formats, and writes the file with a predictable filename template.
 
 ## When NOT to use
 
-- **DRM-protected content.** yt-dlp cannot decrypt Widevine, PlayReady, or FairPlay DRM; for protected streams it will fail or return only the unencrypted portions. [未验证]
-- **Bulk commercial or ToS-violating use.** Many sites prohibit downloading in their Terms of Service; building a product on top of yt-dlp without checking legal exposure is risky. youtube-dl itself was subject to a 2020 DMCA takedown (later reinstated).
-- **JS-heavy SPAs without an extractor.** It does not execute arbitrary page JavaScript; sites that gate media behind heavy client-side rendering or per-request token schemes without a written extractor will fail. It is not a headless-browser scraper.
-- **Geo-restricted or login-walled content at scale.** While it can pass cookies and proxies, it won't solve CAPTCHAs, rotate identities, or shield you from IP bans. Bulk downloading from one IP gets throttled.
-- **You need a stable library API.** It can be imported as a Python module, but internal APIs and extractor behavior change without notice — fine for scripts, risky as a hard dependency in a shipped product.
-- **Live stream capture or very high concurrency.** Live HLS/DASH capture and massive parallel jobs are fragile; dedicated streaming tools handle these better.
+- **DRM-protected content.** If you need to decrypt Widevine, PlayReady, or FairPlay DRM, use a licensed streaming service or a dedicated DRM tool instead of yt-dlp, because it cannot decrypt protected streams and will fail or return only unencrypted portions.
+- **Bulk commercial or ToS-violating use.** If you need a product-grade media-saver service with a web UI, use [cobalt](cobalt.md) instead of yt-dlp, because many sites prohibit downloading in their Terms of Service and youtube-dl itself was subject to a 2020 DMCA takedown (later reinstated).
+- **JS-heavy SPAs without an extractor.** If you need to execute arbitrary page JavaScript to reach media, use a headless browser scraper like Puppeteer or Playwright instead of yt-dlp, because it does not run client-side JavaScript and sites that gate media behind per-request token schemes without a written extractor will fail.
+- **Geo-restricted or login-walled content at scale.** If you need CAPTCHA solving, identity rotation, or anti-bot protection, use a dedicated scraping platform like [Firecrawl](https://firecrawl.dev) or a residential proxy service instead of yt-dlp, because yt-dlp can only pass cookies and proxies and will not shield you from IP bans.
+- **You need a stable library API.** If you need a programmatic API with semver stability, use [youtube-dl](youtube-dl.md) as a more stable (but stale) library or write a dedicated scraper instead of yt-dlp, because yt-dlp's internal APIs and extractor behavior change without notice and are risky as a hard dependency in a shipped product.
+- **Live stream capture or very high concurrency.** If you need reliable live HLS/DASH capture or massive parallel jobs, use FFmpeg directly or a dedicated streaming ingestion tool instead of yt-dlp, because its live capture and concurrency support are fragile.
 
 ## Comparison
 
@@ -130,7 +130,7 @@ You're building a media pipeline, archiving content, or just need to grab a vide
 
 ## Caveats (unverified)
 
-- [未验证] The exact count of supported sites ("thousands") shifts over time; verify with `--list-extractors` for your specific target sites.
-- [未验证] SponsorBlock integration and other advanced features may require additional dependencies or configuration not enabled by default.
+- The exact count of supported sites ("thousands") shifts over time; verify with `--list-extractors` for your specific target sites.
+- SponsorBlock integration and other advanced features may require additional dependencies or configuration not enabled by default.
 - [推断] The high star count (174k) reflects both genuine utility and the visibility boost from being the successor to the widely-known youtube-dl project.
-- [未验证] Some extractors for regional or niche sites may be community-contributed and less thoroughly tested than the core YouTube extractor.
+- Some extractors for regional or niche sites may be community-contributed and less thoroughly tested than the core YouTube extractor.

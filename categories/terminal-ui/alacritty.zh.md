@@ -79,25 +79,25 @@ health:
 
 ## 何时使用
 
-你是一位每天在终端里花数小时的开发者，想要最快、最响应的终端模拟器。你受够了在滚动大型日志文件或对多兆字节输出执行 `cat` 时 lag 的终端。你想要一个利用 GPU 渲染、把负载从 CPU 卸下的终端。你偏好极简、可配置的终端，不想让它充当窗口管理器或复用器——你已经用 tmux 或 screen 做那些事。你想要一个在 macOS、Linux、BSD 和 Windows 上配置一致、行为统一的工具。
+你是一位每天在终端里花数小时的开发者，想要最快、最响应的终端模拟器。你选 Alacritty 而不选 WezTerm 或 Kitty，是因为你想要一个把一件事做到极致的终端——GPU 加速渲染——并把其他所有事交给你已有的工具。你选它而不选 iTerm2，是因为你需要一个在 macOS、Linux、BSD 和 Windows 上配置一致、行为统一的跨平台终端，而非仅限 macOS 的应用。你选它而不选 Warp，是因为你看重开源透明和极简主义，而非 AI 功能和云集成。你受够了在滚动大型日志文件或对多兆字节输出执行 `cat` 时 lag 的终端。你想要一个利用 GPU 渲染、把负载从 CPU 卸下的终端，而且你已经用 tmux 或 screen 做复用。
 
 ## 何时不用
 
-- **如果你需要内置终端复用器**——Alacritty 明确不包含标签页、分屏或会话管理。请配合 tmux、screen 或 Zellij 使用 Alacritty，或选择 WezTerm、iTerm2 等内置这些功能的终端。
-- **如果你需要连字支持**——Alacritty 不支持字体连字（把 `!=` 合成单个字形）。如果连字对你的工作流至关重要，请用 WezTerm、Kitty 或打过补丁的字体。
-- **如果你在不支持 OpenGL 3.3+ 的系统上**——Alacritty 需要现代 GPU 和显卡驱动。老旧系统、部分虚拟机以及远程 X11/VNC 场景可能无法运行。
-- **如果你想要内置 AI 或 shell 集成的终端**——Alacritty 是纯粹的终端模拟器。如需 AI 功能、shell 建议或内置智能补全，请考虑 Warp 或 Fig。
-- **如果你需要完全稳定、1.0 的产品**——Alacritty 自我定位为 beta 级软件。虽然许多人已将其作为日常工具，但仍有已知缺失功能和 bug。
+- 如果你需要内置终端复用器（标签页和分屏），请用 WezTerm、iTerm2 或 Zellij，而不用 Alacritty，因为 Alacritty 明确不包含标签页、分屏或会话管理。
+- 如果你需要字体连字支持，请用 WezTerm 或 Kitty，而不用 Alacritty，因为 Alacritty 不支持把 `!=` 合成单个字形。
+- 如果你在不支持 OpenGL 3.3+ 的系统上，请用 Windows Terminal 或基于 CPU 的终端，而不用 Alacritty，因为 Alacritty 需要现代 GPU 和显卡驱动，老旧系统或部分虚拟机可能无法运行。
+- 如果你想要内置 AI 或 shell 集成的终端，请用 Warp，而不用 Alacritty，因为 Alacritty 是纯粹的终端模拟器，没有 AI 功能、shell 建议或智能补全。
+- 如果你需要完全稳定、1.0 的产品，请用 iTerm2 或 Windows Terminal，而不用 Alacritty，因为 Alacritty 自我定位为 beta 级软件，虽然许多人已将其作为日常工具，但仍有已知缺失功能和 bug。
 
 ## 横向对比
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
-| --- | --- | --- | --- |
-| WezTerm | 未收录 | 现代 GPU 加速终端，支持标签页、分屏与连字。 | WezTerm 内置功能更多（标签页、连字、复用）；Alacritty 更快、更极简。 |
-| Kitty | 未收录 | 基于 GPU 的终端，支持 kitten（插件）和图像等高级功能。 | Kitty 功能更多、有插件系统；Alacritty 更简单、更专注于原生性能。 |
-| iTerm2 | 未收录 | 流行的 macOS 终端，功能丰富且集成度高。 | iTerm2 仅限 macOS、功能丰富；Alacritty 跨平台、极简。 |
-| Windows Terminal | 未收录 | 微软为 Windows 打造的现代终端，支持标签页与 GPU 加速。 | Windows Terminal 仅限 Windows、集成 WSL；Alacritty 跨平台、更简单。 |
-| Warp | 未收录 | 带 AI 功能的现代终端，含云端特性。 | Warp 有 AI 功能和现代 UI；Alacritty 朴素、快速、完全本地。 |
+|---|---|---|---|
+| WezTerm | 未收录 | 需要极简、原生性能 GPU 终端模拟时选 Alacritty；需要现代 GPU 加速终端且内置标签页、分屏和连字时，再选 WezTerm。 | WezTerm 内置功能更多（标签页、连字、复用）；Alacritty 更快、更极简。 |
+| Kitty | 未收录 | 需要极简、原生性能 GPU 终端模拟时选 Alacritty；需要基于 GPU 的终端且支持 kitten（插件）和图像等高级功能时，再选 Kitty。 | Kitty 功能更多、有插件系统；Alacritty 更简单、更专注于原生性能。 |
+| iTerm2 | 未收录 | 需要跨平台、极简 GPU 终端模拟时选 Alacritty；需要最受欢迎的 macOS 终端且深度集成 macOS 和丰富功能时，再选 iTerm2。 | iTerm2 仅限 macOS、功能丰富；Alacritty 跨平台、极简。 |
+| Windows Terminal | 未收录 | 需要跨平台、极简 GPU 终端模拟时选 Alacritty；需要微软为 Windows 打造的现代终端且支持标签页和 GPU 加速时，再选 Windows Terminal。 | Windows Terminal 仅限 Windows、集成 WSL；Alacritty 跨平台、更简单。 |
+| Warp | 未收录 | 需要完全开源、极简、本地终端模拟时选 Alacritty；需要带 AI 功能和现代 UI 的终端时，再选 Warp。 | Warp 有 AI 功能和现代 UI；Alacritty 朴素、快速、完全本地。 |
 
 ## 技术栈
 
@@ -113,16 +113,16 @@ health:
 
 ## 运维难度
 
-**无**。Alacritty 是单一二进制。通过包管理器安装或 release 下载。配置为单个 YAML 文件。无需守护进程、无需后台服务。
+**无。** Alacritty 是单一二进制。通过包管理器安装或 release 下载。配置为单个 YAML 文件。无需守护进程、无需后台服务。
 
 ## 健康度与可持续性
 
-- **维护**：活跃——定期发布，维护者响应及时。65k star、3.5k fork。项目管理良好，issue 分类清晰。
-- **治理**：由 alacritty 组织维护，有多位贡献者。原创建者（jwilm）已退居幕后，但项目已成功过渡到社区/组织维护。
-- **背书**：无企业背书——alacritty GitHub 组织下的社区驱动项目。靠志愿贡献与社区 goodwill 维持。
-- **采用**：在重视终端性能的开发者中非常广泛。常在 Rust 与开发者社区被推荐为默认快速终端。
-- **长期性**：约 10 年（2016 年创建）。持续维护，无显著断档。对社区项目而言，Lindy 信号良好。
-- **风险旗标**：Apache-2.0 安全。无 relicense 历史。项目对功能膨胀持保守态度，这保证了稳定，但可能让想要标签页、连字或内置复用的用户失望。原维护者过渡处理得当。
+- **维护：** 活跃——定期发布，维护者响应及时。65k star、3.5k fork。项目管理良好，issue 分类清晰。
+- **治理：** 由 alacritty 组织维护，有多位贡献者。原创建者（jwilm）已退居幕后，但项目已成功过渡到社区/组织维护。
+- **背书：** 无企业背书——alacritty GitHub 组织下的社区驱动项目。靠志愿贡献与社区 goodwill 维持。
+- **采用：** 在重视终端性能的开发者中非常广泛。常在 Rust 与开发者社区被推荐为默认快速终端。
+- **长期性：** 约 10 年（2016 年创建）。持续维护，无显著断档。对社区项目而言，Lindy 信号良好。
+- **风险旗标：** Apache-2.0 安全。无 relicense 历史。项目对功能膨胀持保守态度，这保证了稳定，但可能让想要标签页、连字或内置复用的用户失望。原维护者过渡处理得当。
 
 ## 存疑（未验证）
 

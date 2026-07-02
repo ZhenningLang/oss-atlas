@@ -77,17 +77,17 @@ A toolkit for converting PDFs and other image-based documents into clean, readab
 
 ## When to use
 
-You're a machine learning researcher or data engineer preparing a large-scale corpus of academic papers, technical manuals, and scanned documents for pre-training or fine-tuning an LLM. Your existing pipeline extracts raw text from PDFs but drops equations, garbles tables, loses multi-column reading order, and embeds headers and footers as if they were body text. You need clean, natural-reading Markdown that preserves the semantic structure of equations, tables, and complex layouts without the noise. You install olmOCR, point it at a directory of PDFs, and it outputs structured Markdown files with headers and footers removed, equations in LaTeX, and tables reconstructed — ready for tokenization and training. It is purpose-built for dataset construction, not one-off document reading.
+You're a machine learning researcher or data engineer preparing a large-scale corpus of academic papers, technical manuals, and scanned documents for pre-training or fine-tuning an LLM. Your existing pipeline extracts raw text from PDFs but drops equations, garbles tables, loses multi-column reading order, and embeds headers and footers as if they were body text. You need clean, natural-reading Markdown that preserves the semantic structure of equations, tables, and complex layouts without the noise. You choose olmOCR over Docling because its VLM-based approach provides deeper semantic understanding of complex documents than Docling's layout-aware heuristics; you pick it over MarkItDown because MarkItDown handles basic office documents but cannot reconstruct equations, tables, or handwritten content; you prefer it over Marker because Marker specializes in academic papers with rule-based heuristics while olmOCR's VLM covers broader document types. You install olmOCR, point it at a directory of PDFs, and it outputs structured Markdown files with headers and footers removed, equations in LaTeX, and tables reconstructed — ready for tokenization and training. It is purpose-built for dataset construction, not one-off document reading.
 
 ## When NOT to use
 
-- **No GPU available.** olmOCR is based on a 7B parameter VLM and requires a GPU for inference. If you only have CPU-only infrastructure, this is not viable.
-- **Cost-sensitive at massive scale.** While the README claims less than $200 USD per million pages, pure rule-based or traditional OCR extraction (e.g., PyMuPDF, Tesseract) is still cheaper for high-volume batch processing where layout fidelity is not critical. [未验证]
-- **Simple, clean text PDFs.** If your PDFs are already well-structured digital text with no equations, tables, or multi-column layouts, a lighter tool like MarkItDown or PyMuPDF will be faster and cheaper.
-- **Real-time or streaming parsing.** The VLM inference pipeline is not designed for low-latency, on-demand document conversion. It is a batch processing tool for dataset preparation.
-- **Proprietary or sensitive documents without audit.** Sending documents through a VLM pipeline means they are processed by a neural model. If your documents require strict data residency or no third-party model processing, verify the offline and self-hosted deployment path before use. [未验证]
-- **Document editing or round-tripping.** This is one-way PDF-to-Markdown conversion. It does not edit, modify, or write back to the original format.
-- **Layout-perfect reproduction for human publishing.** The output is optimized for machine-readable Markdown (training data, RAG), not pixel-perfect or print-quality reproduction. Complex visual layouts may be simplified.
+- **No GPU available.** If you only have CPU-only infrastructure, use [Docling](docling.md) or [MarkItDown](markitdown.md) instead of olmOCR, because olmOCR is based on a 7B parameter VLM and requires a GPU for inference.
+- **Cost-sensitive at massive scale.** If you need high-volume batch processing where layout fidelity is not critical, use PyMuPDF or Tesseract instead of olmOCR, because pure rule-based or traditional OCR extraction is still cheaper than VLM inference even though the README claims less than $200 USD per million pages.
+- **Simple, clean text PDFs.** If your PDFs are already well-structured digital text with no equations, tables, or multi-column layouts, use [MarkItDown](markitdown.md) or PyMuPDF instead of olmOCR, because lighter tools will be faster and cheaper for basic extraction.
+- **Real-time or streaming parsing.** If you need low-latency, on-demand document conversion, use [Docling](docling.md) or [MarkItDown](markitdown.md) instead of olmOCR, because the VLM inference pipeline is designed for batch dataset preparation, not real-time streaming.
+- **Proprietary or sensitive documents without audit.** If your documents require strict data residency or no neural model processing, use self-hosted Docling or on-premise Tesseract instead of olmOCR, because sending documents through a VLM pipeline means they are processed by a neural model and you must verify the offline deployment path before use.
+- **Document editing or round-tripping.** If you need to edit, modify, or write back to the original PDF format, use Adobe Acrobat or a dedicated PDF editor instead of olmOCR, because this is one-way PDF-to-Markdown conversion with no write-back capability.
+- **Layout-perfect reproduction for human publishing.** If you need pixel-perfect or print-quality reproduction of complex visual layouts, use Adobe Acrobat or professional typesetting tools instead of olmOCR, because the output is optimized for machine-readable Markdown (training data, RAG) and may simplify visual layouts.
 
 ## Comparison
 
@@ -117,7 +117,7 @@ You're a machine learning researcher or data engineer preparing a large-scale co
 
 ## Ops difficulty
 
-**Medium.** Requires GPU setup and model weight management. The inference pipeline is more complex than a pure Python library. Batch processing is straightforward once the model is loaded, but you need to manage GPU memory, model download/caching, and potentially queue documents for throughput. The claimed cost of less than $200 per million pages suggests efficient batching, but achieving that efficiency requires tuning batch size and GPU utilization. [未验证]
+**Medium.** Requires GPU setup and model weight management. The inference pipeline is more complex than a pure Python library. Batch processing is straightforward once the model is loaded, but you need to manage GPU memory, model download/caching, and potentially queue documents for throughput. The claimed cost of less than $200 per million pages suggests efficient batching, but achieving that efficiency requires tuning batch size and GPU utilization.
 
 ## Health & viability
 

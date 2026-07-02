@@ -77,15 +77,15 @@ health:
 
 ## 何时使用
 
-你正在构建 JavaScript 或 TypeScript 应用，却对 Node.js 工具链的臃肿感到厌倦：一个运行时、一个打包器、一个测试框架、再加上一个包管理器。你想要一个单一、极速的二进制文件来搞定一切。你用 `bun run` 直接执行 TypeScript，无需预编译；用 `bun test` 做内置测试；用 `bun build` 打包；用 `bun install` 管理依赖——全部比 Node.js 的等价工具快得多。你也看重 JavaScriptCore 引擎相比 V8 方案更快的启动时间和更低的内存占用。
+你正在选择 JavaScript 或 TypeScript 运行时与工具链，而速度和集成度是决定性因素。你选 Bun 而不是 Node.js，因为厌倦了 Node.js 工具链的臃肿：一个运行时、一个打包器、一个测试框架、再加上一个包管理器。你想要一个单一、极速的二进制文件来搞定一切——`bun run` 直接执行 TypeScript，`bun test` 做内置测试，`bun build` 打包，`bun install` 管理依赖——全部比 Node.js 的等价工具快得多。你选 Bun 而不是 Deno，因为你看重 JavaScriptCore 引擎相比 V8 更快的启动时间和更低的内存占用，且你想要一体化的工具集，而非 Deno 以安全权限为核心的模式。
 
 ## 何时不用
 
-- **你依赖原生 Node.js 插件或复杂的 C++ 绑定。** Bun 目标是兼容 Node.js，但某些原生模块和 `node-gyp` 依赖可能无法直接运行。
-- **你需要成熟的生态工具链。** Bun 比 Node.js 和 Deno 年轻，某些 npm 包（尤其是带 post-install 脚本或深入 Node.js 内部的）可能出现异常。
-- **你要求完全受管的开源许可证。** Bun 采用自定义许可证（NOASSERTION），并非标准的 MIT 或 Apache-2.0 等 OSI 认证许可证。商用前请核实合规性。
-- **你已在 Node.js 工具链上深度投入。** 如果你的 CI/CD、Docker 镜像和团队经验全是 Node 原生，迁移成本可能超过性能收益。
-- **你需要以 WebAssembly 为优先的运行时。** Bun 支持 Wasm，但 Deno 在 WebAssembly 集成和原生模块支持上更强。
+- 如果你依赖原生 Node.js 插件或复杂的 C++ 绑定，请使用 Node.js 而不是 Bun，因为 Bun 目标是兼容 Node.js，但某些原生模块和 `node-gyp` 依赖可能无法直接运行。
+- 如果你需要成熟的生态工具链和深度 npm 兼容性，请使用 Node.js 或 Deno 而不是 Bun，因为 Bun 较年轻，某些带 post-install 脚本或深入 Node.js 内部的 npm 包可能出现异常。
+- 如果你要求完全受管的开源许可证，请使用 Deno 或 Node.js 而不是 Bun，因为 Bun 采用自定义许可证（NOASSERTION），并非标准的 MIT 或 Apache-2.0 等 OSI 认证许可证。
+- 如果你已在 Node.js 工具链上深度投入，CI/CD、Docker 镜像和团队经验全是 Node 原生，请使用 Node.js 而不是 Bun，因为迁移成本可能超过性能收益。
+- 如果你需要以 WebAssembly 为优先的运行时支持，请使用 Deno 而不是 Bun，因为 Deno 在 WebAssembly 集成和原生模块支持上更强。
 
 ## 横向对比
 
@@ -120,7 +120,7 @@ health:
 - **维护活跃度**：活跃——截至 2026-07 每日推送，发布频繁，issue 响应积极（6,817 个 open issues）。[推断]
 - **治理与 bus factor**：由 `oven-sh` 组织持有，Jarred Sumner 为核心负责人，贡献者团队正在扩大。Bus factor 在改善，但仍集中在小核心团队。
 - **背书与 longevity**：由 Oven 公司支持，已获风险投资。商业模式与长期路线图尚不完全透明。[未验证]
-- **采用与生态**：约 93.5k stars、约 4,742 forks，2021 年创建（5 年历史）。已有追求更快构建时间的团队将其用于生产。[推断]
+- **采用与生态**：约 93.5k stars、约 4,742 forks，2021 年创建（5 年历史）。已有追求更快构建时间的团队将其用于生产。
 - **风险信号**：许可证为 NOASSERTION（非标准 OSI 许可证），给商业再分发带来法律不确定性。风险投资模式可能导致未来出现 open-core 功能隔离或变更许可证。[推断]
 
 ## 存疑（未验证）

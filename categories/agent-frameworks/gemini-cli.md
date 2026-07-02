@@ -77,15 +77,15 @@ An open-source AI agent that brings the power of Gemini directly into your termi
 
 ## When to use
 
-You're a developer who lives in the terminal and wants an AI assistant that can reason about your codebase, run shell commands, search the web, and read files — all without leaving your command line. You prefer Google's Gemini models (especially the 1M token context window) and want a free tier with reasonable rate limits (60 req/min, 1,000 req/day). You install Gemini CLI via npm, authenticate with your Google account, and start delegating tasks: refactoring code, explaining APIs, generating tests, or fetching documentation. The MCP extensibility means you can wire it into your existing tool ecosystem.
+You're a developer who lives in the terminal and wants an AI assistant that can reason about your codebase, run shell commands, search the web, and read files — all without leaving your command line. You pick Gemini CLI over [OpenCode](opencode.md) because its generous free tier (60 req/min, 1,000 req/day with a personal Google account) eliminates the need to bring and pay for your own API keys across every model provider. You pick it over Claude Code (Anthropic's closed-source terminal agent) because Gemini CLI is open-source under Apache-2.0 and free-tier accessible, whereas Claude Code requires an Anthropic subscription. You pick it over [Open Interpreter](open-interpreter.md) when you want deep Gemini integration — especially the 1M token context window and built-in Google Search grounding — rather than a model-agnostic harness where you must configure every provider yourself. You install via npm, authenticate with your Google account, and delegate tasks: refactoring code, explaining APIs, generating tests, or fetching documentation. The MCP extensibility means you can wire it into your existing tool ecosystem without switching to a different agent framework.
 
 ## When NOT to use
 
-- **Non-Gemini model preference** — Gemini CLI is tightly coupled to Google's Gemini API. If you need to switch between OpenAI, Anthropic, or local models frequently, this is not your tool.
-- **No Google account policy** — The free tier requires a personal Google account; if your organization blocks Google authentication or you need enterprise SSO, this is a barrier.
-- **Offline / air-gapped environments** — Gemini CLI requires internet access to reach the Gemini API; it does not support local model inference.
-- **Complex multi-agent orchestration** — Gemini CLI is a single-agent CLI tool, not a multi-agent framework like LangChain or AutoGPT. For building workflows with multiple collaborating agents, look elsewhere.
-- **Enterprise audit requirements** — No built-in audit logging, RBAC, or admin controls; it's a personal developer tool.
+- **If you need to switch between OpenAI, Anthropic, or local models** — use [OpenCode](opencode.md) or [Open Interpreter](open-interpreter.md) instead of Gemini CLI, because Gemini CLI is tightly coupled to Google's Gemini API and does not support other providers.
+- **If your organization blocks Google authentication or requires enterprise SSO** — use a self-hosted platform like [Dify](https://github.com/langgenius/dify) or [n8n](https://github.com/n8n-io/n8n) instead of Gemini CLI, because the free tier requires a personal Google account and there is no RBAC or admin layer.
+- **If you work in an offline or air-gapped environment** — use Ollama with a local chat UI like [Open WebUI](../llm-chat-ui/open-webui.md) instead of Gemini CLI, because Gemini CLI requires internet access to reach the Gemini API and does not support local model inference.
+- **If you need complex multi-agent orchestration** — use LangChain or AutoGPT instead of Gemini CLI, because Gemini CLI is a single-agent CLI tool without built-in workflows for multiple collaborating agents.
+- **If you need enterprise audit logging, RBAC, or compliance guarantees** — use a governed platform like Dify or n8n instead of Gemini CLI, because it is a personal developer tool with no built-in audit logging or admin controls.
 
 ## Comparison
 

@@ -79,15 +79,15 @@ High performance self-hosted photo and video management solution. A direct alter
 
 ## When to use
 
-You're a privacy-conscious user with thousands of photos and videos scattered across phones, cameras, and cloud services. You want a single, searchable home for all your media that you control, not a Big Tech SaaS. You install Immich on a home server or NAS, set up the mobile app for automatic background backup, and watch your photos sync with face detection, EXIF-based maps, and AI-powered search. You share albums with family without sending data through a third party. Immich gives you the Google Photos experience — auto-backup, timeline, memories, and ML search — with full ownership of the stack.
+You're a privacy-conscious user with thousands of photos and videos scattered across phones, cameras, and cloud services. You want a single, searchable home for all your media that you control, not a Big Tech SaaS. You look at Google Photos, but you don't want your data mined for ad targeting or stored on someone else's servers. You look at PhotoPrism, but its mobile app and UI feel dated and its feature velocity is slower. You choose Immich because it gives you the modern Google Photos experience — auto-backup, timeline, memories, and ML search — with a polished mobile app, a slick web UI, and full ownership of the stack. You install it on a home server or NAS, set up the mobile app for automatic background backup, and watch your photos sync with face detection, EXIF-based maps, and AI-powered search. You share albums with family without sending data through a third party.
 
 ## When NOT to use
 
-- **Small photo collections** — If you have fewer than a few thousand photos, the server overhead (Postgres, Redis, ~4GB RAM) may not be worth it versus a simple NAS folder or a commercial cloud plan.
-- **Zero-ops users** — Immich requires Docker or a Linux server, database setup, and periodic updates. If you don't want to think about backups, disk space, or container restarts, a managed service is simpler.
-- **AGPL-3.0 sensitivity** — The AGPL-3.0 license requires sharing source code if you modify and network-serve the app. Verify this fits your organization's compliance posture before commercial or internal-network deployment.
-- **RAW-only workflows** — While Immich supports RAW formats, it is primarily a photo/video management and sharing platform, not a darkroom or RAW development tool like darktable or Lightroom.
-- **Multi-tenant public SaaS** — Immich is designed for single-family/small-team self-hosting, not as a public-facing multi-tenant photo service. The auth model and rate limits are not built for that scale.
+- **If you have fewer than a few thousand photos, use a simple NAS folder, iCloud, or a commercial cloud plan instead of Immich, because** the server overhead (Postgres, Redis, ~4GB RAM) may not be worth it for a small collection. A simple folder or managed service is lighter.
+- **If you want zero operations and no server maintenance, use Google Photos, iCloud, or Amazon Photos instead of Immich, because** Immich requires Docker or a Linux server, database setup, and periodic updates. If you don't want to think about backups, disk space, or container restarts, a managed service is simpler.
+- **If AGPL-3.0 is a compliance concern for your organization, use a commercial photo service or a differently licensed self-hosted tool instead of Immich, because** the AGPL-3.0 license requires sharing source code if you modify and network-serve the app. Verify this fits your organization's compliance posture before deployment.
+- **If you need professional RAW development and darkroom tools, use darktable, Lightroom, or Capture One instead of Immich, because** while Immich supports RAW formats, it is primarily a photo/video management and sharing platform, not a RAW development tool.
+- **If you need a multi-tenant public-facing photo service, use a custom-built platform or a commercial SaaS instead of Immich, because** Immich is designed for single-family or small-team self-hosting. The auth model and rate limits are not built for public multi-tenant scale.
 
 ## Comparison
 
@@ -95,8 +95,8 @@ You're a privacy-conscious user with thousands of photos and videos scattered ac
 | --- | --- | --- | --- |
 | Google Photos | 未收录 | The incumbent cloud photo service with unlimited storage (for compressed) and best-in-class ML search. | Google hosts your data and trains models on it; Immich keeps everything local but you run the hardware. |
 | Nextcloud Photos | 未收录 | File-sync-first with a photo viewer; not a dedicated photo management app. | Nextcloud is a general file server with photo plugins; Immich is purpose-built for media with AI search and mobile auto-backup. |
-| PhotoPrism | 未收录 | Self-hosted photo management with strong RAW support and a focus on privacy. | PhotoPrism has a more mature RAW pipeline and broader format support; Immich has a more modern mobile app and faster feature velocity. [推断] |
-| LibrePhotos | 未收录 | Lightweight self-hosted photo manager with face recognition. | LibrePhotos is lighter on resources but has a smaller community and less polished mobile experience. [未验证] |
+| PhotoPrism | 未收录 | Self-hosted photo management with strong RAW support and a focus on privacy. | PhotoPrism has a more mature RAW pipeline and broader format support; Immich has a more modern mobile app and faster feature velocity. |
+| LibrePhotos | 未收录 | Lightweight self-hosted photo manager with face recognition. | LibrePhotos is lighter on resources but has a smaller community and less polished mobile experience. |
 
 ## Tech stack
 
@@ -118,7 +118,7 @@ You're a privacy-conscious user with thousands of photos and videos scattered ac
 - **PostgreSQL**: Required for metadata; must be backed up regularly alongside media
 - **Redis**: Required for job queuing; can be co-located on the same host
 - **Reverse proxy**: Nginx or Traefik for TLS termination if exposing to the internet
-- **Backup strategy**: The 3-2-1 rule applies — Immich is not a backup, it is a live photo manager [推断]
+- **Backup strategy**: The 3-2-1 rule applies — Immich is not a backup, it is a live photo manager
 
 ## Ops difficulty
 
@@ -131,11 +131,11 @@ You're a privacy-conscious user with thousands of photos and videos scattered ac
 
 ## Health & viability
 
-- **Maintenance**: Very active — daily pushes as of 2026-07, with a regular release cadence and a large, engaged community (104.8k stars, 669 open issues). [推断]
-- **Governance**: Developed by the `immich-app` organization with multiple core maintainers. The project has a clear roadmap and transparent issue tracking. Bus factor is moderate. [推断]
-- **Backing**: No large corporate backing visible; sustained by community contributions and likely donations/sponsorships. This is a strength for independence but a risk for long-term sustainability. [未验证]
-- **Adoption**: Strong adoption with 104.8k stars, created in 2022 (4-year track record). A popular choice in the self-hosting and homelab communities. [推断]
-- **Risk flags**: AGPL-3.0 license is strong copyleft — verify compatibility before commercial or internal-network use. No relicense history visible, but monitor for any future license changes. The project is young enough that long-term governance is still being proven. [未验证]
+- **Maintenance**: Very active — daily pushes as of 2026-07, with a regular release cadence and a large, engaged community (104.8k stars, 669 open issues).
+- **Governance**: Developed by the `immich-app` organization with multiple core maintainers. The project has a clear roadmap and transparent issue tracking. Bus factor is moderate.
+- **Backing**: No large corporate backing visible; sustained by community contributions and likely donations/sponsorships. This is a strength for independence but a risk for long-term sustainability.
+- **Adoption**: Strong adoption with 104.8k stars, created in 2022 (4-year track record). A popular choice in the self-hosting and homelab communities.
+- **Risk flags**: AGPL-3.0 license is strong copyleft — verify compatibility before commercial or internal-network use. No relicense history visible, but monitor for any future license changes. The project is young enough that long-term governance is still being proven.
 
 ## Caveats (unverified)
 
@@ -143,3 +143,6 @@ You're a privacy-conscious user with thousands of photos and videos scattered ac
 - [未验证] The project's exact funding model (donations, sponsorships, or commercial backing) has not been verified from primary sources.
 - [推断] PhotoPrism may have broader RAW format support than Immich, but this has not been systematically compared.
 - [推断] The ML model accuracy for face detection and CLIP search in non-English contexts may vary.
+- [推断] The battery impact of mobile auto-backup on cellular networks compared to WiFi has not been independently measured.
+- [推断] Immich is a live photo manager, not a backup solution; users must implement their own 3-2-1 backup strategy.
+- [未验证] LibrePhotos has a smaller community and less polished mobile experience than Immich, but this has not been systematically benchmarked.
