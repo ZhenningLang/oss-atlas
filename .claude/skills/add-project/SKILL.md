@@ -44,9 +44,14 @@ Author one conformant selection page. The contract is `tools/schema.md`; read it
      monolingual — no language mixing.
    - Write "When to use" / "何时使用" as a **User Story** (second-person scenario: who you are,
      what you're doing, the problem you hit, how this tool resolves it) — not a feature list.
-     See `tools/schema.md`.
+     **Crucially, define the choice against alternatives**: the User Story must explain *why you pick
+     this over its closest substitutes*. State the deciding tradeoff (e.g., model-agnostic vs.
+     vendor-locked, self-hosted vs. SaaS, code-first vs. no-code). Generic claims like "fast" or
+     "open-source" are insufficient — every competitor can say that. See `tools/schema.md`.
    - Make the "when NOT to use" section the strongest: concrete anti-patterns, scale ceilings,
-     lock-in, maintenance/abandonment risk. This is the section agents most need.
+     lock-in, maintenance/abandonment risk. **Each anti-pattern must name a substitute**: "If you need Z,
+     use Y instead of X, because..." Never just say "this doesn't do Z" — always point the agent to the
+     right alternative. This is the section agents most need.
    - **Health & viability** (`健康度与可持续性`) — required for **all types** (skill-pack included).
      A short dated, labeled verdict on whether it's worth betting on: maintenance/cadence,
      governance & bus factor, backing org, **age as a Lindy prior (age × still-active)**, adoption/

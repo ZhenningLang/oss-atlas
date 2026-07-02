@@ -79,24 +79,25 @@ The agent engineering platform — a framework for building agents and LLM-power
 
 ## When to use
 
-You're a Python developer building an AI application that needs to connect LLMs to external tools, databases, and APIs. You want a structured way to compose prompt templates, manage conversation memory, and route between different models and tools. You need a large ecosystem of pre-built integrations (vector stores, document loaders, model providers) so you don't have to write every adapter yourself. You plan to build agents that can reason, use tools, and maintain state across multiple steps.
+You are a Python developer building an AI application that needs to connect LLMs to external tools, databases, and APIs. You have looked at Dify, but Dify is a low-code platform with a visual builder — you want code-level control over every prompt, chain, and tool invocation. You have looked at AutoGPT, but AutoGPT is a higher-level platform with a web UI and deployment model; you need to build a custom application, not run a pre-built agent. You choose LangChain over both because it is a code-first framework that gives you full compositional control: you assemble prompt templates, manage conversation memory, and route between models and tools in Python, with a massive ecosystem of pre-built integrations so you do not write every adapter yourself. You are building agents that need to reason, use tools, and maintain state across multiple steps — and you want to own the architecture.
 
 ## When NOT to use
 
-- **Simple single-prompt apps** — If you just need to call an LLM API once, LangChain adds abstraction overhead with no benefit.
-- **Production latency sensitivity** — The framework's abstraction layers can introduce overhead. For millisecond-critical paths, consider direct API calls or lighter wrappers.
-- **Vendor lock-in aversion** — Deep integration with LangChain's ecosystem can create migration friction if you later want to move away from it.
-- **Small resource budgets** — The full framework with all integrations can pull in many dependencies. Verify your deployment target's capacity before adopting.
+- **Simple single-prompt apps** — If you just need to call an LLM API once, LangChain adds abstraction overhead with no benefit. Use the OpenAI SDK or Anthropic SDK directly instead of LangChain, because a direct SDK call is faster and has no framework dependency.
+- **Low-code or no-code platform needs** — If you want a visual drag-and-drop interface for building agents without writing code, use Dify or LangFlow instead of LangChain, because those platforms provide visual builders and built-in deployment.
+- **Production latency-critical paths** — The framework's abstraction layers can introduce overhead. For millisecond-critical inference paths, use direct API calls or LiteLLM instead of LangChain, because those options remove the framework indirection.
+- **Vendor lock-in aversion at the framework level** — Deep integration with LangChain's ecosystem can create migration friction if you later want to move away from it. If you want maximum vendor independence, use LiteLLM or direct SDKs with your own orchestration instead of LangChain, because those approaches keep you closer to the underlying APIs.
+- **You need a ready-to-run agent out of the box** — LangChain is a library for building agents, not a pre-configured agent. If you want something that runs immediately without writing orchestration code, use AutoGPT or Hermes Agent instead of LangChain, because those are higher-level platforms that include a runtime and UI.
 
 ## Comparison
 
 | Alternative | In index | Our verdict | Tradeoff |
 | --- | --- | --- | --- |
-| [Dify](dify.md) | ✅ | Visual platform for agentic workflows. | Dify is a low-code platform with built-in RAG and deployment; LangChain is a code-first library for building custom agents. |
-| LlamaIndex | 未收录 | RAG-first data framework for LLMs. | LlamaIndex specializes in retrieval and data ingestion; LangChain is broader, covering agents, chains, and tools. |
-| [DSPy](dspy.md) | ✅ | Prompt optimization via metrics. | DSPy optimizes prompts/weights against a metric; LangChain is a general composition framework. |
-| OpenAI SDK | 未收录 | Direct vendor SDK for OpenAI models. | The OpenAI SDK is minimal and fast but lacks the multi-provider, multi-tool abstraction of LangChain. |
+| [Dify](dify.md) | ✅ | Visual platform for agentic workflows. | Dify is a low-code platform with built-in RAG and deployment; LangChain is a code-first library for building custom agents with full control. |
+| [DSPy](dspy.md) | ✅ | Prompt optimization via metrics. | DSPy optimizes prompts/weights against a metric; LangChain is a general composition framework for agents, chains, and tools. |
+| [AutoGPT](autogpt.md) | ✅ | Platform for autonomous workflow automation. | AutoGPT is a higher-level platform with a web UI and deployment model; LangChain is a lower-level framework you build on. |
 | [smolagents](smolagents.md) | ✅ | Tiny transparent agent loop from Hugging Face. | smolagents is minimal and transparent; LangChain is comprehensive and integration-rich. |
+| LlamaIndex | 未收录 | RAG-first data framework for LLMs. | LlamaIndex specializes in retrieval and data ingestion; LangChain is broader, covering agents, chains, tools, and orchestration. |
 
 ## Tech stack
 

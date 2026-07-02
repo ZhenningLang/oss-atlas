@@ -77,22 +77,22 @@ health:
 
 ## 何时使用
 
-你是一名开发者，想要在终端本地运行一个可审计源码、可按需扩展的 AI 编码智能体。你已厌倦在聊天界面里反复复制粘贴，希望智能体能读取项目文件、跨多文件提出修改建议、运行测试并自行迭代修复错误。你通过 npm 安装 OpenCode（`npm install opencode-ai`），连接 LLM API key，指向一个仓库——它就成了驻留在 shell 里的结对编程搭档，理解你的代码库上下文。
+你是一位开发者，想用 AI 辅助编码，但拒绝被单一 LLM 厂商锁定。你已经试过 Claude Code（只能调 Claude）和 Codex（只能调 OpenAI），发现一旦模型价格暴涨或能力倒退，你就被困住了。你需要一个模型无关的编码智能体——同一个工具，今天接 GPT-4，明天切 Claude 3.5，后天跑本地 Llama，完全由你决定。你选择 OpenCode 而不是 Claude Code，因为 OpenCode 让你自由切换模型，而 Claude Code 被锁死在 Anthropic。你选择它而不是 Open Interpreter，因为 OpenCode 基于 TypeScript/npm，与你已在使用的 JavaScript 生态更自然地集成。OpenCode 是 MIT 许可的，源码可审计，架构可扩展，你甚至能 fork 出来改适合自己团队的工作流。安装只需 `npm install opencode-ai`，连接 API key，指向仓库——它是驻留在 shell 里、不挑模型的结对编程搭档。
 
 ## 何时不用
 
-- **非技术用户或排斥终端的团队**——OpenCode 是 CLI 优先工具。如果你的团队常驻 IDE 或 Web UI，不想学终端命令，它不适合。
-- **企业合规需求**——无内置审计日志、RBAC 或管理后台。它是个人开发者工具，不是受控的团队平台。
-- **零配置 SaaS 偏好**——你必须自备 LLM API key 并管理本地 Node.js 运行时。没有托管云服务。
-- **非编程任务**——OpenCode 专为软件工程工作流设计，不适合通用聊天、数据分析或文档生成。
-- **重度 IDE 集成需求**——它不是 VS Code 或 JetBrains 扩展。如需 IDE 内 AI 补全，请考虑 Kilo Code 或 Copilot。
+- **你已经在用 Claude Code 且对 Anthropic 路线图有信心**——如果你只调 Claude、预算固定、对厂商方向有信心，Claude Code 是更 polished 的选择（Claude 专属的上下文优化、Artifacts 集成）。切换到 OpenCode 只会增加配置负担，没有额外收益。请继续使用 Claude Code 而不是 OpenCode，因为当你不需要模型自由时，厂商锁定体验反而更优。
+- **团队需要 IDE 内无缝集成**——OpenCode 是 CLI 工具，不是 VS Code 插件。如果你习惯在编辑器里点击按钮让 AI 改代码，请改用 Kilo Code 或 GitHub Copilot，因为它们的 IDE 原生集成提供更顺滑的编辑体验。
+- **非技术用户或终端恐惧者**——纯命令行交互，没有 GUI。如果团队里有人不会用终端，这就是门槛。请改用 Claude 网页版或 ChatGPT，因为它们提供熟悉的聊天界面，无需技术设置。
+- **追求企业级治理**——无 RBAC、无审计日志、无 admin 面板。它是个人/小团队的开发工具，不是企业平台。如需组织治理，请改用 Dify 或 GitHub Copilot for Business，因为这些平台提供管理控制、审计轨迹和团队管理。
+- **你 100% 确定只用一个模型且永远不会换**——OpenCode 的核心价值是模型自由切换。如果你知道未来只用 Claude（或只用 GPT-4），模型无关性对你为零价值。请改用 Claude Code 或 Codex CLI，因为单一厂商工具更简单，且对该模型优化得更紧密。
 
 ## 横向对比
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 | --- | --- | --- | --- |
-| [Open Interpreter](open-interpreter.zh.md) | ✅ | 带可切换 harness 的终端编码智能体，面向开源模型。 | Open Interpreter 是 Rust 重写，带 OS 沙箱执行；OpenCode 基于 TypeScript/npm，更年轻。 |
-| [Hermes Agent](hermes-agent.zh.md) | ✅ | Nous Research 出品的带学习循环的自我改进智能体。 | Hermes 侧重跨会话技能创建与个人成长；OpenCode 是专注的编码智能体。 |
+| [Open Interpreter](open-interpreter.zh.md) | ✅ | 带可切换 harness 的终端编码智能体，面向开源模型。 | Open Interpreter 是 Rust 重写，带 OS 沙箱执行；OpenCode 基于 TypeScript/npm，与 JS/TS 工作流更自然集成。 |
+| [Hermes Agent](hermes-agent.zh.md) | ✅ | Nous Research 出品的带学习循环的自我改进智能体。 | Hermes 侧重跨会话技能创建与个人成长；OpenCode 是专注的编码智能体，没有学习循环。 |
 | [AutoGPT](autogpt.zh.md) | ✅ | 用于自主工作流自动化的平台。 | AutoGPT 面向复杂多步自主任务；OpenCode 是终端结对编程助手。 |
 | Claude Code | 未收录 | Anthropic 出品的闭源终端编码智能体。 | 专有、无源码、需订阅；OpenCode 开源且 BYOK。 |
 | Gemini CLI | 未收录 | Google 出品的开源终端 AI 智能体。 | Apache-2.0，Google 背书；OpenCode 是 MIT，社区驱动。 |

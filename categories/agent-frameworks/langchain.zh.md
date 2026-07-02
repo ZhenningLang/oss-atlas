@@ -79,24 +79,25 @@ agent 工程平台——通过组合可互操作组件与第三方集成，构�
 
 ## 何时使用
 
-你是一位 Python 开发者，正在构建需要把大模型连接到外部工具、数据库和 API 的 AI 应用。你想要一种结构化方式来编排 prompt 模板、管理对话记忆，并在不同模型与工具之间路由。你需要庞大的预构建集成生态（向量存储、文档加载器、模型提供商），以免自己写每个适配器。你计划构建能推理、使用工具并在多步之间保持状态的 agent。
+你是一位 Python 开发者，正在构建需要把大模型连接到外部工具、数据库和 API 的 AI 应用。你看过 Dify，但 Dify 是低代码平台，带可视化构建器——你想要代码级别的控制，对每个 prompt、chain 和 tool 调用都有完全掌控。你也看过 AutoGPT，但 AutoGPT 是更高级的平台，带 Web UI 和部署模型；你需要构建自定义应用，而不是运行预置智能体。你选择 LangChain 而不是这两者，因为它是代码优先的框架，给你完整的组合控制能力：你用 Python 编排 prompt 模板、管理对话记忆、在不同模型与工具之间路由，并借助庞大的预构建集成生态，无需自己写每个适配器。你正在构建需要推理、使用工具并在多步之间保持状态的 agent——并且你想拥有架构主导权。
 
 ## 何时不用
 
-- **简单单 prompt 应用**——如果你只需要调用一次大模型 API，LangChain 会增加抽象开销而无实际收益。
-- **生产级延迟敏感场景**——框架的抽象层可能引入开销。对毫秒级关键路径，考虑直接调用 API 或更轻量封装。
-- **厌恶供应商锁定**——与 LangChain 生态的深度集成可能在你后续想迁移时产生摩擦。
-- **小资源预算**——完整框架及其所有集成可能拉入大量依赖。采用前请验证部署目标的容量。
+- **简单单 prompt 应用**——如果你只需要调用一次大模型 API，LangChain 会增加抽象开销而无实际收益。请直接使用 OpenAI SDK 或 Anthropic SDK，因为直接调用更快，没有框架依赖。
+- **低代码或无代码平台需求**——如果你希望用可视化拖拽界面构建 agent 而无需写代码，请改用 Dify 或 LangFlow，因为这些平台提供可视化构建器和内置部署能力。
+- **生产级延迟敏感场景**——框架的抽象层可能引入开销。对毫秒级关键推理路径，请改用直接 API 调用或 LiteLLM，因为这些选项去除了框架间接层。
+- **在框架层面厌恶供应商锁定**——与 LangChain 生态的深度集成可能在你后续想迁移时产生摩擦。如需最大厂商独立性，请改用 LiteLLM 或直接 SDK 配合自研编排，因为这些方式让你更接近底层 API。
+- **你需要开箱即用的现成智能体**——LangChain 是构建 agent 的库，不是预配置智能体。如果你希望无需编写编排代码即可立即运行，请改用 AutoGPT 或 Hermes Agent，因为它们是更高级的平台，包含运行时和 UI。
 
 ## 横向对比
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 | --- | --- | --- | --- |
-| [Dify](dify.zh.md) | ✅ | agentic 工作流可视化平台。 | Dify 是带内置 RAG 与部署能力的低代码平台；LangChain 是构建自定义 agent 的代码优先库。 |
-| LlamaIndex | 未收录 | 面向 LLM 的 RAG 优先数据框架。 | LlamaIndex 专长于检索与数据摄入；LangChain 更广义，涵盖 agent、chain 和 tool。 |
-| [DSPy](dspy.zh.md) | ✅ | 通过指标优化 prompt。 | DSPy 按指标优化 prompt/权重；LangChain 是通用组合框架。 |
-| OpenAI SDK | 未收录 | OpenAI 模型的直接厂商 SDK。 | OpenAI SDK 极简快速，但缺乏 LangChain 的多提供商、多工具抽象能力。 |
+| [Dify](dify.zh.md) | ✅ | agentic 工作流可视化平台。 | Dify 是带内置 RAG 与部署能力的低代码平台；LangChain 是构建自定义 agent 的代码优先库，提供完全控制。 |
+| [DSPy](dspy.zh.md) | ✅ | 通过指标优化 prompt。 | DSPy 按指标优化 prompt/权重；LangChain 是用于 agent、chain 和 tool 的通用组合框架。 |
+| [AutoGPT](autogpt.zh.md) | ✅ | 用于自主工作流自动化的平台。 | AutoGPT 是带 Web UI 和部署模型的高级平台；LangChain 是需在其上构建的底层框架。 |
 | [smolagents](smolagents.zh.md) | ✅ | Hugging Face 出品的极简透明 agent 循环。 | smolagents 极简透明；LangChain 全面且集成丰富。 |
+| LlamaIndex | 未收录 | 面向 LLM 的 RAG 优先数据框架。 | LlamaIndex 专长于检索与数据摄入；LangChain 更广义，涵盖 agent、chain、tool 和编排。 |
 
 ## 技术栈
 

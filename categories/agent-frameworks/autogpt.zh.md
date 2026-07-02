@@ -71,24 +71,24 @@ health:
 
 ## 何时使用
 
-你是开发者或团队，需要用无需人工干预即可持续运行的 AI 智能体来自动化复杂的多步任务。你想构建能研究主题、编写代码、管理文件并按计划与 API 交互的智能体。你需要灵活地在自己的基础设施上免费自托管，或希望使用托管云选项。AutoGPT 提供了完整的平台，带有用于构建和监控智能体的 Web UI，而非仅仅是一个库。
+你是开发者或团队，需要用无需人工干预即可持续运行的 AI 智能体来自动化复杂的多步任务。你看过 LangChain，但 LangChain 是代码优先的库——你需要自己构建智能体基础设施，没有内置 Web UI 或部署模型。你也看过 Hermes Agent，但 Hermes 是单智能体学习框架，聚焦个人技能进化，而非跨工具编排多步工作流。你选择 AutoGPT 而不是这两者，因为它提供了完整的平台，带有用于构建和监控智能体的 Web UI，以及让它们持续运行的部署模型。你想构建能研究主题、编写代码、管理文件并按计划与 API 交互的智能体，并需要在自己的基础设施上免费自托管的灵活性。
 
 ## 何时不用
 
-- **简单、可靠的脚本**——AutoGPT 智能体非确定性，可能意外失败或陷入循环。确定性自动化请用传统脚本或 n8n 等工作流工具。
-- **低资源边缘部署**——README 指定最低要求为 4 核 CPU、8GB 内存（推荐 16GB）及 10GB 以上可用存储。这不是轻量智能体。
-- **编码专用智能体**——AutoGPT 是通用自主智能体平台；软件工程请用 Claude Code、Open Interpreter 或 Kilo Code。
-- **企业支持保障**——Significant Gravitas 是社区组织，不是企业厂商。无 SLA 或正式支持合同。
-- **成熟稳定的 API**——平台仍在快速演变；云端托管测试版尚未公开可用。
+- **简单、可靠的脚本**——AutoGPT 智能体非确定性，可能意外失败或陷入循环。确定性自动化请改用传统脚本或 n8n，因为这些工具产生可预测、可重复的工作流。
+- **低资源边缘部署**——README 指定最低要求为 4 核 CPU、8GB 内存（推荐 16GB）及 10GB 以上可用存储。这不是轻量智能体。如需轻量助手，请改用 OpenClaw 或 Hermes Agent，因为两者都能在 5 美元 VPS 或最低硬件上运行。
+- **编码专用智能体**——AutoGPT 是通用自主智能体平台；软件工程请改用 OpenCode 或 Claude Code，因为它们是专为编码设计的，具备文件编辑与终端执行能力。
+- **企业支持保障**——Significant Gravitas 是社区组织，不是企业厂商。无 SLA 或正式支持合同。如需企业级支持，请改用 Dify 或 LangChain 配合 LangSmith，因为这些选项提供商业背书与支持层级。
+- **成熟稳定的 API**——平台仍在快速演变；云端托管测试版尚未公开可用。如需稳定、已验证的 API，请改用 LangChain，因为 LangChain 有约 3.7 年记录且 API 模式已确立。
 
 ## 横向对比
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 | --- | --- | --- | --- |
 | [Hermes Agent](hermes-agent.zh.md) | ✅ | 带学习循环的自我改进智能体。 | Hermes 聚焦技能进化与记忆；AutoGPT 聚焦工作流自动化与部署。 |
-| [OpenClaw](openclaw.zh.md) | ✅ | 个人多渠道助手。 | OpenClaw 是对话助手；AutoGPT 是任务自动化平台。 |
-| [Open Interpreter](open-interpreter.zh.md) | ✅ | 面向开源模型的终端编码智能体。 | Open Interpreter 是编码工具；AutoGPT 是通用智能体框架。 |
-| LangChain | 未收录 | 构建智能体管线的底层框架。 | LangChain 是库；AutoGPT 是带 UI 和部署模型的高级平台。 |
+| [OpenClaw](openclaw.zh.md) | ✅ | 个人多渠道助手。 | OpenClaw 是对话助手；AutoGPT 是带 Web UI 的任务自动化平台。 |
+| [OpenCode](opencode.zh.md) | ✅ | 模型无关的终端编码智能体。 | OpenCode 是编码工具；AutoGPT 是带持续执行的通用智能体框架。 |
+| [LangChain](langchain.zh.md) | ✅ | 构建智能体管线的底层框架。 | LangChain 是需集成到代码中的库；AutoGPT 是带 UI 和部署模型的高级平台。 |
 | CrewAI | 未收录 | 多智能体编排框架。 | CrewAI 聚焦多智能体团队；AutoGPT 聚焦单智能体持续执行。 |
 
 ## 技术栈

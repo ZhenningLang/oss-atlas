@@ -73,24 +73,25 @@ A personal AI assistant you run on your own devices. It answers you on the messa
 
 ## When to use
 
-You're a privacy-conscious professional who wants a single AI assistant that follows you across all your devices and messaging apps. You don't want to trust cloud-only services with your conversations, and you need the assistant to be reachable on WhatsApp, Telegram, Slack, Discord, iMessage, WeChat, and more without switching between different bots. You install OpenClaw on your own hardware, connect it to your preferred LLM provider, and it becomes a persistent personal agent that answers you on the channels you already use.
+You are a privacy-conscious professional who wants a single AI assistant that follows you across all your devices and messaging apps. You have tried cloud-only assistants like Claude or ChatGPT, but you do not want your conversations stored on someone else's servers, and you want the assistant reachable on WhatsApp, Telegram, Slack, Discord, iMessage, and WeChat without switching between different bots. You choose OpenClaw over Hermes Agent because OpenClaw delivers multi-channel ubiquity out of the box — Hermes is a learning-loop framework, not a messaging-native assistant. You choose it over Claude Code or OpenCode because those are coding-specific tools, not general conversational assistants. You install OpenClaw on your own hardware, connect your preferred LLM provider, and it becomes a persistent personal agent that answers you on the channels you already use.
 
 ## When NOT to use
 
-- **Multi-user or team scenarios** — OpenClaw is designed as a single-user personal assistant. There is no RBAC, team workspace, or shared admin dashboard.
-- **Zero-setup SaaS preference** — Self-hosting requires managing a Node.js runtime, LLM API credentials, and per-channel configuration. There is no managed cloud option.
-- **Enterprise compliance needs** — No audit logs, enterprise SSO, or formal security certifications. This is a personal tool, not a governed enterprise platform.
-- **Coding-specific agent work** — OpenClaw is a general-purpose conversational assistant. For software engineering tasks like code generation and refactoring, use Claude Code, OpenCode, or Open Interpreter.
+- **Multi-user or team scenarios** — OpenClaw is designed as a single-user personal assistant with no RBAC, team workspace, or shared admin dashboard. If you need team collaboration, use AutoGPT or Hermes Agent instead of OpenClaw, because those platforms support multi-user orchestration.
+- **Zero-setup SaaS preference** — Self-hosting requires managing a Node.js runtime, LLM API credentials, and per-channel configuration. There is no managed cloud option. If you want something that works without installation, use Claude or ChatGPT instead of OpenClaw, because they are cloud-native with no setup burden.
+- **Enterprise compliance needs** — No audit logs, enterprise SSO, or formal security certifications. This is a personal tool, not a governed enterprise platform. If you need enterprise governance, use Dify or n8n instead of OpenClaw, because those platforms offer RBAC, audit trails, and SSO.
+- **Coding-specific agent work** — OpenClaw is a general-purpose conversational assistant. For software engineering tasks like code generation and refactoring, use OpenCode or Claude Code instead of OpenClaw, because they are purpose-built for coding with file-editing and terminal execution.
+- **You need a learning loop that improves from experience** — OpenClaw does not create skills or persist knowledge across sessions in a self-improving way. If you want an agent that gets smarter over time, use Hermes Agent instead of OpenClaw, because Hermes has a built-in learning loop that synthesizes skills from conversations.
 
 ## Comparison
 
 | Alternative | In index | Our verdict | Tradeoff |
 | --- | --- | --- | --- |
-| [Hermes Agent](hermes-agent.md) | ✅ | Similar personal-agent angle with a learning loop. | Hermes has built-in self-improvement and skill creation; OpenClaw focuses on multi-channel ubiquity. |
-| [AutoGPT](autogpt.md) | ✅ | Complex workflow-automation platform. | AutoGPT targets autonomous task execution and deployment; OpenClaw is a conversational assistant. |
-| [Open Interpreter](open-interpreter.md) | ✅ | Terminal-first coding agent with swappable harnesses. | Open Interpreter is for coding in the terminal; OpenClaw is a chatbot across messaging apps. |
-| LangChain | 未收录 | Lower-level library for building custom agents. | LangChain is a framework to build from scratch; OpenClaw is a ready-to-run personal assistant. |
-| Claude / ChatGPT native apps | 未收录 | Closed-source cloud-only assistants. | Proprietary and require internet; OpenClaw is self-hosted and channel-agnostic. |
+| [Hermes Agent](hermes-agent.md) | ✅ | Self-improving agent with a learning loop from Nous Research. | Hermes focuses on skill evolution and memory; OpenClaw focuses on multi-channel ubiquity and conversational reach. |
+| [AutoGPT](autogpt.md) | ✅ | Complex workflow-automation platform with deployment UI. | AutoGPT targets autonomous multi-step task execution; OpenClaw is a lightweight personal chat assistant. |
+| [OpenCode](opencode.md) | ✅ | Model-agnostic terminal coding agent. | OpenCode is for software engineering in the shell; OpenClaw is a general messaging chatbot. |
+| [LangChain](langchain.md) | ✅ | Lower-level framework for building custom agent pipelines. | LangChain is a library you build on; OpenClaw is a ready-to-run personal assistant app. |
+| Claude / ChatGPT native apps | 未收录 | Closed-source cloud-only assistants. | Proprietary and require internet; OpenClaw is self-hosted, MIT-licensed, and channel-agnostic. |
 
 ## Tech stack
 
@@ -110,7 +111,7 @@ You're a privacy-conscious professional who wants a single AI assistant that fol
 
 ## Health & viability
 
-- **Maintenance**: Grade A — pushed daily as of 2026-07, with 13 active weeks out of 13 and a large open-issue volume (6,749) indicating engaged community.
+- **Maintenance**: Grade A — pushed daily as of 2026-07, with 13 active weeks out of 13 and 6,749 open issues indicating an engaged community.
 - **Governance**: Grade B — owned by the OpenClaw organization with 487 active maintainers in the past 12 months. The top maintainer holds 52.8% of commits, which is a concentration risk.
 - **Longevity**: Grade C — only 220 days old (created 2025-11). No Lindy track record; the project is extremely young despite its high visibility.
 - **Adoption**: Grade A — 381k GitHub stars and 14.3M monthly npm downloads per the health radar.

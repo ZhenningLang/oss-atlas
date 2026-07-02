@@ -77,22 +77,22 @@ An open-source AI coding agent that runs in your terminal, edits files, executes
 
 ## When to use
 
-You're a developer who wants an AI coding agent you can run locally in your terminal, audit its source code, and extend when needed. You've outgrown copy-pasting into chat UIs and want the agent to read your project files, suggest edits across multiple files, run tests, and iterate on its own errors. You install OpenCode via npm (`npm install opencode-ai`), connect your LLM API key, and point it at a repo — it acts as a pair programmer that lives in your shell and understands your codebase context.
+You are a developer who wants AI-assisted coding but refuses to be locked into a single LLM vendor. You have tried Claude Code (Anthropic-only) and Codex (OpenAI-only), and you realize that if model prices spike or capabilities regress, you are trapped with no escape. You need a model-agnostic coding agent — the same tool running GPT-4 today, Claude 3.5 tomorrow, and a local Llama model next week, entirely under your control. You choose OpenCode over Claude Code because OpenCode lets you switch models at will, while Claude Code is vendor-locked to Anthropic. You choose it over Open Interpreter because OpenCode is TypeScript/npm-based and targets the same fast-iterating JavaScript ecosystem you already work in. OpenCode is MIT-licensed, source-auditable, and extensible — you can fork it to fit your team's workflow. Install with `npm install opencode-ai`, connect an API key, point it at a repo, and it becomes a model-agnostic pair-programmer living in your shell.
 
 ## When NOT to use
 
-- **Non-technical users or terminal-averse teams** — OpenCode is a CLI-first tool. If your team lives in IDEs or web UIs and doesn't want to learn terminal commands, this is the wrong fit.
-- **Enterprise compliance needs** — No built-in audit logs, RBAC, or admin dashboards. It's a personal developer tool, not a governed team platform.
-- **Zero-setup SaaS preference** — You must bring your own LLM API key and manage a local Node.js runtime. There is no managed cloud offering.
-- **Non-coding tasks** — OpenCode is purpose-built for software engineering workflows, not general chat, data analysis, or document generation.
-- **Heavy IDE integration** — It does not ship as a VS Code or JetBrains extension. If you want in-IDE AI completion, look at Kilo Code or Copilot.
+- **You are already satisfied with Claude Code and trust Anthropic's roadmap** — If you only use Claude, have a fixed budget, and are confident in the vendor's direction, Claude Code is the more polished choice with Claude-specific context optimization and Artifacts integration. Switching to OpenCode adds configuration burden with no extra benefit. Stick with Claude Code instead of OpenCode, because the vendor-locked experience is superior when you do not need model freedom.
+- **Your team needs seamless IDE integration** — OpenCode is a CLI tool, not a VS Code plugin. If you want to click a button in your editor to let AI rewrite code, use Kilo Code or GitHub Copilot instead of OpenCode, because their IDE-native integrations provide a smoother editing experience.
+- **Non-technical users or terminal-averse team members** — Pure command-line interaction with no GUI. If someone on your team cannot use a terminal, OpenCode is a hard barrier. Use Claude web or ChatGPT instead of OpenCode, because they provide a familiar chat interface with no technical setup.
+- **You need enterprise-grade governance** — No RBAC, no audit logs, no admin panel. It is a personal or small-team development tool, not an enterprise platform. If you need organizational governance, use Dify or GitHub Copilot for Business instead of OpenCode, because those platforms offer admin controls, audit trails, and team management.
+- **You are 100% committed to a single model and will never switch** — OpenCode's core value is model freedom. If you know you will only ever use Claude (or only GPT-4), model-agnosticism delivers zero value. Use Claude Code or Codex CLI instead of OpenCode, because a single-vendor tool is simpler and more tightly optimized for that one model.
 
 ## Comparison
 
 | Alternative | In index | Our verdict | Tradeoff |
 | --- | --- | --- | --- |
-| [Open Interpreter](open-interpreter.md) | ✅ | Terminal coding agent with swappable harnesses for open models. | Open Interpreter is a Rust rewrite with OS sandbox execution; OpenCode is TypeScript/npm-based and younger. |
-| [Hermes Agent](hermes-agent.md) | ✅ | Self-improving AI agent with a learning loop from Nous Research. | Hermes focuses on skill creation and personal growth across sessions; OpenCode is a focused coding agent. |
+| [Open Interpreter](open-interpreter.md) | ✅ | Terminal coding agent with swappable harnesses for open models. | Open Interpreter is a Rust rewrite with OS sandbox execution; OpenCode is TypeScript/npm-based and integrates more naturally into JS/TS workflows. |
+| [Hermes Agent](hermes-agent.md) | ✅ | Self-improving AI agent with a learning loop from Nous Research. | Hermes focuses on skill creation and personal growth across sessions; OpenCode is a focused coding agent without a learning loop. |
 | [AutoGPT](autogpt.md) | ✅ | Platform for autonomous workflow automation. | AutoGPT targets complex multi-step autonomous tasks; OpenCode is a terminal pair-programmer for code. |
 | Claude Code | 未收录 | Closed-source terminal coding agent from Anthropic. | Proprietary, no source access, subscription-bound; OpenCode is open-source and BYOK. |
 | Gemini CLI | 未收录 | Google's open-source terminal AI agent. | Apache-2.0, backed by Google; OpenCode is MIT and community-driven. |

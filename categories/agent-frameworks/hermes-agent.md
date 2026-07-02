@@ -76,24 +76,24 @@ The self-improving AI agent built by Nous Research. It is the only agent with a 
 
 ## When to use
 
-You're a solo developer or small team running AI agents on a $5 VPS or a GPU cluster, and you need an agent that gets better over time without manual prompt engineering. You want an agent that can search its own past conversations, persist knowledge across sessions, and create new skills from real experience. You also want to talk to it from Telegram while it works on a cloud VM, using any LLM provider you choose. Hermes Agent gives you a learning loop that few other agents offer.
+You are a solo developer or small team running AI agents on a $5 VPS or a GPU cluster, and you need an agent that gets better over time without manual prompt engineering. You have looked at OpenClaw, but OpenClaw is a messaging-native personal assistant with no learning loop — it does not evolve from your conversations. You have looked at AutoGPT, but AutoGPT is a workflow-automation platform focused on task execution, not on accumulating knowledge and skills across sessions. You choose Hermes Agent over both because it is the only one with a built-in learning loop that creates skills from experience, persists knowledge across sessions, and builds a deepening model of you. You also want to talk to it from Telegram while it works on a cloud VM, using any LLM provider you choose.
 
 ## When NOT to use
 
-- **Deterministic, repeatable systems** — The learning loop means behavior changes over time, which can make outputs non-deterministic and harder to debug.
-- **Simple, stateless chatbots** — Hermes is overkill for one-off Q&A; the value is in accumulated memory and skill evolution.
-- **Enterprise security compliance** — Nous Research is an AI research lab, not an enterprise vendor; there are no SOC 2, SSO, or audit-trail guarantees.
-- **Coding-only agents** — Hermes is a general-purpose agent framework, not optimized for software engineering tasks like Claude Code or Open Interpreter.
-- **Teams needing multi-agent orchestration** — Hermes focuses on single-agent self-improvement, not multi-agent collaboration.
+- **Deterministic, repeatable systems** — The learning loop means behavior changes over time, which can make outputs non-deterministic and harder to debug. If you need deterministic automation, use n8n or traditional scripts instead of Hermes Agent, because those tools produce repeatable, predictable outputs.
+- **Simple, stateless chatbots** — Hermes is overkill for one-off Q&A; the value is in accumulated memory and skill evolution. If you just need a quick conversational assistant, use OpenClaw instead of Hermes Agent, because OpenClaw is lighter and designed for immediate messaging responses.
+- **Enterprise security compliance** — Nous Research is an AI research lab, not an enterprise vendor; there are no SOC 2, SSO, or audit-trail guarantees. If you need enterprise governance, use Dify or AutoGPT's cloud beta instead of Hermes Agent, because those platforms are built for organizational compliance.
+- **Coding-only agents** — Hermes is a general-purpose agent framework, not optimized for software engineering tasks. If you need a coding-specific agent, use OpenCode or Claude Code instead of Hermes Agent, because they are purpose-built for terminal-based code editing and execution.
+- **Teams needing multi-agent orchestration** — Hermes focuses on single-agent self-improvement, not multi-agent collaboration. If you need multi-agent teams, use LangChain with LangGraph or CrewAI instead of Hermes Agent, because those frameworks are designed for multi-agent orchestration.
 
 ## Comparison
 
 | Alternative | In index | Our verdict | Tradeoff |
 | --- | --- | --- | --- |
-| [OpenClaw](openclaw.md) | ✅ | Personal assistant focused on multi-channel ubiquity. | OpenClaw is a ready-to-run assistant; Hermes is a learning framework you extend. |
-| [AutoGPT](autogpt.md) | ✅ | Autonomous workflow platform with deployment focus. | AutoGPT targets autonomous task execution; Hermes targets self-improvement through learning. |
-| [Open Interpreter](open-interpreter.md) | ✅ | Terminal coding agent tuned for low-cost/open models. | Open Interpreter is for coding; Hermes is a general conversational agent with a learning loop. |
-| LangChain | 未收录 | Lower-level library for building custom agent pipelines. | LangChain is a toolkit; Hermes is a higher-level agent with built-in memory and skill synthesis. |
+| [OpenClaw](openclaw.md) | ✅ | Personal assistant focused on multi-channel ubiquity. | OpenClaw is a ready-to-run messaging assistant; Hermes is a learning framework you extend. |
+| [AutoGPT](autogpt.md) | ✅ | Autonomous workflow platform with deployment focus. | AutoGPT targets autonomous task execution and deployment; Hermes targets self-improvement through learning. |
+| [OpenCode](opencode.md) | ✅ | Model-agnostic terminal coding agent. | OpenCode is for coding in the terminal; Hermes is a general conversational agent with a learning loop. |
+| [LangChain](langchain.md) | ✅ | Lower-level framework for building custom agent pipelines. | LangChain is a toolkit for building from scratch; Hermes is a higher-level agent with built-in memory and skill synthesis. |
 | CrewAI | 未收录 | Multi-agent orchestration framework. | CrewAI focuses on multi-agent teams; Hermes focuses on single-agent self-improvement. |
 
 ## Tech stack
