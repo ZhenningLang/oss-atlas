@@ -16,20 +16,28 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:43:45Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 1
+  computed_at: 2026-07-02T15:32:29Z
+  overall: B
+  overall_score: 3.33
+  scored_axes: 6
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: C
+      raw:
+        median_ttfr_hours: 360.0
+        qualifying_issues: 0
+        band: default
+        window_offset_days: 11
     adoption:
       grade: A
       raw:
@@ -41,20 +49,26 @@ health:
         volume_tier: A
         cross_check_divergence: 1.0
     longevity:
-      grade: "?"
-      raw: {}
+      grade: C
+      raw:
+        repo_age_days: 445
+        last_commit_age_days: 0
+        cohort: framework
     governance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        active_maintainers_12mo: 91
+        top1_share: 0.155
+        top3_share: 0.349
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
-      grade: "?"
-      raw: {}
-  unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
-    longevity: { reason: not_found }
-    governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # Codex
@@ -105,14 +119,12 @@ OpenAI 出品的轻量级编码智能体，在本地终端运行。可读取文�
 **低**。Codex 通过 shell 脚本或 npm 安装，作为本地 CLI 进程运行。无需维护服务器。运维负担主要在于管理 OpenAI API 凭证，并在接受智能体修改前进行审查。沙箱机制提供了安全性，但你仍应审计执行的命令。
 
 ## 健康度与可持续性
-
-- **响应速度**：无法计算——no_traffic。
-- **维护**：非常活跃——截至 2026-07 每日推送，迭代迅速，issue 数量庞大（8,147 个 open issues）。
-- **治理**：由 OpenAI（`openai` GitHub 组织）持有。项目获得 OpenAI 的明确支持，但路线图由单一商业实体控制。
-- **背书**：由 OpenAI 官方背书。Apache-2.0 许可证宽松，但 OpenAI 历史上未对主要项目重新许可。
-- **采用**：爆发式采用，约 94.8k stars、约 14.1k forks，2025-04 创建。OpenAI 品牌与终端原生工作流推动快速增长。
-- **风险信号**：极其年轻（2025-04 创建），无 Lindy 记录。与 OpenAI 的 API 和定价紧密耦合，后者可能随时变动。项目的未来取决于 OpenAI 对开源终端工具的投入持续性。
-
+- **维护活跃度**：Grade A——最近 13 周中 13 周有提交；最后提交距今 0 天。
+- **响应速度**：Grade C——中位首次响应时间 360.0 小时，基于 0 个 qualifying issues/PRs。
+- **采用广度**：Grade A——npmjs.org 上月下载量 45,794,237（包名：@openai/codex）。
+- **长青度**：Grade C——仓库已创建 445 天。
+- **治理集中度**：Grade A——前三贡献者占比 34.9%（?）。
+- **许可风险**：Grade A——Apache-2.0 许可证。
 ## 存疑（未验证）
 
 - [未验证] Codex 需要 OpenAI API key；重度使用的确切定价与速率限制尚未核实。

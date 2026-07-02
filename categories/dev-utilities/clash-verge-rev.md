@@ -16,39 +16,54 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:50:19Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 0
+  computed_at: 2026-07-02T15:51:01Z
+  overall: B
+  overall_score: 3.2
+  scored_axes: 5
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        median_ttfr_hours: 0.8
+        qualifying_issues: 33
+        band: relaxed_solo
+        window_offset_days: 8
     adoption:
       grade: "?"
       raw: {}
     longevity:
-      grade: "?"
-      raw: {}
+      grade: B
+      raw:
+        repo_age_days: 954
+        last_commit_age_days: 0
+        cohort: tool
     governance:
-      grade: "?"
-      raw: {}
+      grade: B
+      raw:
+        active_maintainers_12mo: 50
+        top1_share: 0.536
+        top3_share: 0.861
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
-      grade: "?"
-      raw: {}
+      grade: C
+      raw:
+        spdx_id: GPL-3.0
+        permissiveness: weak_file_copyleft
+        relicense_36mo: false
+        content_license: null
   unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
-    adoption: { reason: ambiguous }
-    longevity: { reason: not_found }
-    governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
+    adoption: { reason: registry_no_counts }
 ---
 
 # Clash Verge Rev
@@ -98,14 +113,12 @@ You're a developer or power user who needs a flexible, rule-based proxy client o
 **Low**. It is a desktop application with an installer. The main ongoing tasks are updating the app, updating the built-in kernel, and managing subscription URLs. No server or network infrastructure is required.
 
 ## Health & viability
-
-- **Responsiveness**: Cannot be scored — no_traffic.
-- **Maintenance**: Active — regular pushes as of 2026-07, with a moderate issue volume (420 open issues) and active release cadence (Stable, Alpha, AutoBuild channels). [推断]
-- **Governance**: Owned by the clash-verge-rev organization; appears to be a community-driven continuation of the original Clash Verge project. The bus factor is a concern if the core maintainers step away. [推断]
-- **Backing**: No corporate backing visible; community-driven with a Chinese-language primary community. [未验证]
-- **Adoption**: High star count (129k) and significant fork volume (9k+) for a desktop proxy client. The project has been active since late 2023, giving it ~2.5 years of track record. [推断]
-- **Risk flags**: The original Clash project (and Clash for Windows) was archived due to regulatory pressures in China; this fork exists in a politically sensitive domain. The GPL-3.0 license may limit corporate distribution. The project is a continuation fork, not the original, which carries succession risk. [未验证]
-
+- **Maintenance**: Grade A — 13/13 active weeks in trailing 13; last commit 0 days ago.
+- **Responsiveness**: Grade A — median first-response time 0.8 hours across 33 qualifying issues/PRs.
+- **Adoption**: Cannot be scored — unknown.
+- **Longevity**: Grade B — 954 days old.
+- **Governance**: Grade B — top-3 contributor share 86.1% (?).
+- **Risk / License**: Grade C — GPL-3.0 license.
 ## Caveats (unverified)
 
 - [未验证] The original Clash project and its Windows GUI were archived; the long-term stability of this continuation fork depends on ongoing community support.

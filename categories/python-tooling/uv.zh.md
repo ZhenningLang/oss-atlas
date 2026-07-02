@@ -16,10 +16,10 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T14:30:24Z
+  computed_at: 2026-07-02T15:21:18Z
   overall: A
-  overall_score: 3.6
-  scored_axes: 5
+  overall_score: 3.67
+  scored_axes: 6
   capped: false
   cap_reason: null
   needs_human_review: false
@@ -32,8 +32,12 @@ health:
         active_weeks_13: 13
         carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        median_ttfr_hours: 6.5
+        qualifying_issues: 35
+        band: relaxed_solo
+        window_offset_days: 2
     adoption:
       grade: A
       raw:
@@ -65,8 +69,6 @@ health:
         permissiveness: permissive
         relicense_36mo: false
         content_license: null
-  unknowns:
-    responsiveness: { reason: no_traffic }
 ---
 
 # uv
@@ -115,15 +117,12 @@ health:
 **低**。单一静态二进制——通过 `curl`、Homebrew 或 PyPI 安装。无守护进程、无后台服务。对团队而言，主要成本是工作流迁移与培训。
 
 ## 健康度与可持续性
-
-- **响应速度**：无法计算——no_traffic。
-- **维护**：极其活跃——每日提交、快速发布。2023 年创建，但已是 Python 工具类仓库中 star 最多的项目之一。
-- **治理**：由 Astral 背书，一家资金充裕的 Python 工具公司（也是 Ruff 的幕后团队）。有清晰的商业背书和强大的 Rust/Python 团队。
-- **背书**：Astral 对 Ruff 和 uv 的持续投入已证明其承诺。公司看起来稳定，且专注于 Python 开发者体验。
-- **采用**：增长迅速——87k star、3.2k fork，在 Python 社区被广泛讨论。许多项目正从 pip/poetry 迁移到 uv。
-- **长期性**：仅约 3 年（2023 年创建）。虽然有坚定厂商背书，但缺乏 pip（20 余年）的 Lindy 记录。风险低于个人项目，但高于基金会支持的工具。
-- **风险旗标**：Apache-2.0 许可安全。Astral 是单厂商公司；若商业模式失败，维护可能放缓。目前无 relicense 历史，但需留意其在构建商业产品时是否引入 open-core/功能阉割。
-
+- **维护活跃度**：Grade A——最近 13 周中 13 周有提交；最后提交距今 0 天。
+- **响应速度**：Grade A——中位首次响应时间 6.5 小时，基于 35 个 qualifying issues/PRs。
+- **采用广度**：Grade A——pypi.org 上月下载量 157,448,976（包名：uv）。
+- **长青度**：Grade B——仓库已创建 1004 天。
+- **治理集中度**：Grade B——前三贡献者占比 73.6%（?）。
+- **许可风险**：Grade A——Apache-2.0 许可证。
 ## 存疑（未验证）
 
 - [未验证] 实际加速倍数因平台、缓存状态和网络条件而异；10–100 倍是项目自身的基准测试声明。

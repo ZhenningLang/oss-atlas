@@ -16,39 +16,54 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:45:42Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 0
+  computed_at: 2026-07-02T15:23:30Z
+  overall: C
+  overall_score: 2.4
+  scored_axes: 5
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: C
+      raw:
+        median_ttfr_hours: 360.0
+        qualifying_issues: 0
+        band: default
+        window_offset_days: 6
     adoption:
       grade: "?"
       raw: {}
     longevity:
-      grade: "?"
-      raw: {}
+      grade: D
+      raw:
+        repo_age_days: 332
+        last_commit_age_days: 0
+        cohort: framework
     governance:
-      grade: "?"
-      raw: {}
+      grade: D
+      raw:
+        active_maintainers_12mo: 98
+        top1_share: 0.869
+        top3_share: 0.915
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
   unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
     adoption: { reason: ambiguous }
-    longevity: { reason: not_found }
-    governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
 ---
 
 # CC Switch
@@ -98,14 +113,12 @@ You're a developer who juggles multiple AI coding agents and assistants across y
 **Low**. CC Switch is a desktop GUI application distributed via standard installer packages. The operational burden is limited to configuring your agent credentials and keeping the app updated. There is no server or database to maintain. However, you must still manage each underlying agent's credentials and updates independently.
 
 ## Health & viability
-
-- **Responsiveness**: Cannot be scored — no_traffic.
-- **Maintenance**: Active — pushed daily as of 2026-07 with a large issue backlog (1,636 open issues) indicating engaged community.[推断]
-- **Governance**: Owned by a single user (`farion1231`), not an organization — bus factor is effectively 1. [未验证]
-- **Backing**: No corporate backing visible; appears to be an independent project. [未验证]
-- **Adoption**: High star count (111.6k) but very young (created 2025-08). The star count likely reflects hype rather than proven longevity.
-- **Risk flags**: Extremely young with no Lindy track record. Single maintainer raises bus-factor concerns. [未验证]
-
+- **Maintenance**: Grade A — 13/13 active weeks in trailing 13; last commit 0 days ago.
+- **Responsiveness**: Grade C — median first-response time 360.0 hours across 0 qualifying issues/PRs.
+- **Adoption**: Cannot be scored — unknown.
+- **Longevity**: Grade D — 332 days old.
+- **Governance**: Grade D — top-3 contributor share 91.5% (?).
+- **Risk / License**: Grade A — MIT license.
 ## Caveats (unverified)
 
 - [未验证] The `111.6k` star count on a repo created in 2025-08 may be inflated by hype or bot activity rather than organic adoption.

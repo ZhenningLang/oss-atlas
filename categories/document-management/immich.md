@@ -16,20 +16,28 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:47:27Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 1
+  computed_at: 2026-07-02T15:57:46Z
+  overall: B
+  overall_score: 2.83
+  scored_axes: 6
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 1
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        median_ttfr_hours: 2.0
+        qualifying_issues: 31
+        band: relaxed_solo
+        window_offset_days: 3
     adoption:
       grade: D
       raw:
@@ -41,20 +49,26 @@ health:
         volume_tier: D
         cross_check_divergence: null
     longevity:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        repo_age_days: 1610
+        last_commit_age_days: 1
+        cohort: app
     governance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        active_maintainers_12mo: 322
+        top1_share: 0.107
+        top3_share: 0.273
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
-      grade: "?"
-      raw: {}
-  unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
-    longevity: { reason: not_found }
-    governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
+      grade: E
+      raw:
+        spdx_id: AGPL-3.0
+        permissiveness: strong_network_copyleft
+        relicense_36mo: true
+        content_license: null
 ---
 
 # Immich
@@ -116,14 +130,12 @@ You're a privacy-conscious user with thousands of photos and videos scattered ac
 - The mobile app auto-backup works well on WiFi but can be battery-heavy on cellular if not restricted
 
 ## Health & viability
-
-- **Responsiveness**: Cannot be scored — no_traffic.
-- **Maintenance**: Very active — daily pushes as of 2026-07, with a regular release cadence and a large, engaged community (104.8k stars, 669 open issues).
-- **Governance**: Developed by the `immich-app` organization with multiple core maintainers. The project has a clear roadmap and transparent issue tracking. Bus factor is moderate.
-- **Backing**: No large corporate backing visible; sustained by community contributions and likely donations/sponsorships. This is a strength for independence but a risk for long-term sustainability.
-- **Adoption**: Strong adoption with 104.8k stars, created in 2022 (4-year track record). A popular choice in the self-hosting and homelab communities.
-- **Risk flags**: AGPL-3.0 license is strong copyleft — verify compatibility before commercial or internal-network use. No relicense history visible, but monitor for any future license changes. The project is young enough that long-term governance is still being proven.
-
+- **Maintenance**: Grade A — 13/13 active weeks in trailing 13; last commit 1 days ago.
+- **Responsiveness**: Grade A — median first-response time 2.0 hours across 31 qualifying issues/PRs.
+- **Adoption**: Grade D — 6,496 monthly downloads via npmjs.org (package: @immich/cli).
+- **Longevity**: Grade A — 1610 days old.
+- **Governance**: Grade A — top-3 contributor share 27.3% (?).
+- **Risk / License**: Grade E — AGPL-3.0 license.
 ## Caveats (unverified)
 
 - [未验证] The exact number of active production instances and the size of the largest known deployment have not been verified.

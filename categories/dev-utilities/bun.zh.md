@@ -16,45 +16,51 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:49:58Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 1
+  computed_at: 2026-07-02T15:50:19Z
+  overall: A
+  overall_score: 4.0
+  scored_axes: 4
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
-    responsiveness:
-      grade: "?"
-      raw: {}
-    adoption:
       grade: A
       raw:
-        registry: npmjs.org
-        canonical_package: bun-types
-        dependent_repos_count: 3705
-        downloads_last_month: 29288304
-        graph_tier: B
-        volume_tier: A
-        cross_check_divergence: 1.28
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 0.2
+        qualifying_issues: 45
+        band: relaxed_solo
+        window_offset_days: 0
+    adoption:
+      grade: "?"
+      raw: {}
     longevity:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        repo_age_days: 1906
+        last_commit_age_days: 0
+        cohort: tool
     governance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        active_maintainers_12mo: 65
+        top1_share: 0.36
+        top3_share: 0.73
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
       grade: "?"
       raw: {}
   unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
-    longevity: { reason: not_found }
-    governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
+    adoption: { reason: registry_no_counts }
+    risk_license: { reason: license_unparsed }
 ---
 
 # Bun
@@ -104,14 +110,12 @@ health:
 **低。** Bun 是单个二进制文件，可通过 shell 脚本、npm 或系统包管理器安装。无需维护服务器。运维负担主要在于保持二进制更新，并验证你的依赖树在 npm 兼容性上是否有边缘情况。CI/CD 中将 `node` 替换为 `bun` 通常很直接，但需针对原生模块做边缘测试。
 
 ## 健康度与可持续性
-
-- **响应速度**：无法计算——no_traffic。
-- **维护活跃度**：活跃——截至 2026-07 每日推送，发布频繁，issue 响应积极（6,817 个 open issues）。[推断]
-- **治理与 bus factor**：由 `oven-sh` 组织持有，Jarred Sumner 为核心负责人，贡献者团队正在扩大。Bus factor 在改善，但仍集中在小核心团队。
-- **背书与 longevity**：由 Oven 公司支持，已获风险投资。商业模式与长期路线图尚不完全透明。[未验证]
-- **采用与生态**：约 93.5k stars、约 4,742 forks，2021 年创建（5 年历史）。已有追求更快构建时间的团队将其用于生产。
-- **风险信号**：许可证为 NOASSERTION（非标准 OSI 许可证），给商业再分发带来法律不确定性。风险投资模式可能导致未来出现 open-core 功能隔离或变更许可证。[推断]
-
+- **维护活跃度**：Grade A——最近 13 周中 13 周有提交；最后提交距今 0 天。
+- **响应速度**：Grade A——中位首次响应时间 0.2 小时，基于 45 个 qualifying issues/PRs。
+- **采用广度**：无法计算——unknown。
+- **长青度**：Grade A——仓库已创建 1906 天。
+- **治理集中度**：Grade A——前三贡献者占比 73.0%（?）。
+- **许可风险**：无法计算——unknown。
 ## 存疑（未验证）
 
 - [未验证] Bun 的准确许可证条款尚模糊；未标注标准 SPDX 许可证，商用或嵌入式部署可能存在使用限制。

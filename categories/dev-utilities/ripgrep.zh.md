@@ -16,20 +16,28 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:56:32Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 1
+  computed_at: 2026-07-02T15:52:57Z
+  overall: B
+  overall_score: 2.83
+  scored_axes: 6
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: B
+      raw:
+        archived: false
+        last_commit_age_days: 1
+        active_weeks_13: 5
+        carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        median_ttfr_hours: 87.1
+        qualifying_issues: 18
+        band: relaxed_solo
+        window_offset_days: 8
     adoption:
       grade: D
       raw:
@@ -41,20 +49,26 @@ health:
         volume_tier: "?"
         cross_check_divergence: null
     longevity:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        repo_age_days: 3766
+        last_commit_age_days: 1
+        cohort: tool
     governance:
-      grade: "?"
-      raw: {}
+      grade: D
+      raw:
+        active_maintainers_12mo: 9
+        top1_share: 0.892
+        top3_share: 0.931
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
-      grade: "?"
-      raw: {}
-  unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
-    longevity: { reason: not_found }
-    governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
+      grade: A
+      raw:
+        spdx_id: Unlicense
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # ripgrep
@@ -101,15 +115,12 @@ health:
 **无**。ripgrep 是单一静态二进制。通过包管理器安装、release 下载或 `cargo install` 即可。无需配置、无需守护进程、无需维护。
 
 ## 健康度与可持续性
-
-- **响应速度**：无法计算——no_traffic。
-- **维护**：活跃且稳定——定期发布，issue 跟踪管理良好。作者（BurntSushi）响应极快，对范围把控严格。
-- **治理**：主要由 Andrew Gallant（BurntSushi）维护，Rust 社区中备受尊敬的成员。这是一个单人维护项目，但长期可靠性记录出色。
-- **背书**：无企业背书——这是个人开源项目。维护者通过社区 goodwill 与偶尔赞助，已持续多年。
-- **采用**：极其广泛——默认预装于许多开发者环境，被主流框架推荐，在全球 CI 流水线中使用。66k star、2.6k fork。
-- **长期性**：约 10 年（2016 年创建）。持续维护，无断档。强劲的 Lindy 信号——一个单人维护项目，比许多资金充裕的替代品活得更久。
-- **风险旗标**：MIT 或 Unlicense 双许可——两者都宽松且安全。单人维护的 bus factor 是顾虑，但代码库已成熟，维护者已证明长期承诺。无 relicense 风险。
-
+- **维护活跃度**：Grade B——最近 13 周中 5 周有提交；最后提交距今 1 天。
+- **响应速度**：Grade A——中位首次响应时间 87.1 小时，基于 18 个 qualifying issues/PRs。
+- **采用广度**：Grade D——conda-forge.org 上月下载量 13,080,989（包名：ripgrep）。
+- **长青度**：Grade A——仓库已创建 3766 天。
+- **治理集中度**：Grade D——前三贡献者占比 93.1%（?）。
+- **许可风险**：Grade A——Unlicense 许可证。
 ## 存疑（未验证）
 
 - [未验证] 与 grep 和 ag 的确切性能对比取决于具体查询、文件系统和硬件；基准测试会有差异。

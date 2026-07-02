@@ -16,20 +16,28 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:45:55Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 1
+  computed_at: 2026-07-02T15:22:29Z
+  overall: A
+  overall_score: 3.67
+  scored_axes: 6
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 3
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        median_ttfr_hours: 29.1
+        qualifying_issues: 24
+        band: default
+        window_offset_days: 5
     adoption:
       grade: B
       raw:
@@ -41,20 +49,26 @@ health:
         volume_tier: B
         cross_check_divergence: 1.01
     longevity:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        repo_age_days: 2374
+        last_commit_age_days: 3
+        cohort: library
     governance:
-      grade: "?"
-      raw: {}
+      grade: B
+      raw:
+        active_maintainers_12mo: 13
+        top1_share: 0.549
+        top3_share: 0.835
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
-      grade: "?"
-      raw: {}
-  unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
-    longevity: { reason: not_found }
-    governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # Excalidraw
@@ -106,14 +120,12 @@ health:
 **低**（常见情形）：直接用 excalidraw.com 免费托管应用，导出图，收工。**中**（嵌入 React 组件）：需要钉死 npm 包版本、处理升级（组件 API 可能变动），并在构建管线里打包。**中高**（自建实时协作）：必须运维 WebSocket 中继服务器、管理加密密钥，并处理 NAT/防火墙穿透。作为客户端库，主要维护负担是跟上 React/TypeScript 兼容性，以及 npm 包偶尔带来的破坏性 API 变更。[推断]
 
 ## 健康度与可持续性
-
-- **响应速度**：无法计算——no_traffic。
-- **维护（2026-07）。** 最后 push 于 2026-07-01，提交历史活跃；项目未归档，持续接收更新和社区 PR。[推断]
-- **治理 / bus factor。** 归属 `excalidraw` GitHub 组织（多维护者），核心团队自 2020 年起一直主导。付费商业版（Excalidraw+）的存在意味着有持续资金支持。[推断]
-- **年龄与 Lindy 判断。** 约 5.5 年（2020-01 创建）且仍非常活跃 ⇒ 对前端工具而言是**中强 Lindy** 信号；它已成为开源界手绘风格白板的事实标准。[推断]
-- **采用度与生态。** 采用度极高（约 126.5k star），被众多文档站、issue 追踪器和产品作为嵌入组件使用；npm 包被广泛消费。[未验证]
-- **风险标记。** MIT 许可，未发现 relicense 历史；open-core 顾虑较轻——免费编辑器功能完整，Excalidraw+ 增加的是团队/协作便利，而非封锁核心功能。[推断]
-
+- **维护活跃度**：Grade A——最近 13 周中 13 周有提交；最后提交距今 3 天。
+- **响应速度**：Grade A——中位首次响应时间 29.1 小时，基于 24 个 qualifying issues/PRs。
+- **采用广度**：Grade B——npmjs.org 上月下载量 1,390,033（包名：@excalidraw/excalidraw）。
+- **长青度**：Grade A——仓库已创建 2374 天。
+- **治理集中度**：Grade B——前三贡献者占比 83.5%（?）。
+- **许可风险**：Grade A——MIT 许可证。
 ## 存疑（未验证）
 
 - [未验证] 截至 2026-07-01 约 126.5k GitHub star；star 数为近似值且对时间敏感。

@@ -16,20 +16,28 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:43:45Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 1
+  computed_at: 2026-07-02T15:32:29Z
+  overall: B
+  overall_score: 3.33
+  scored_axes: 6
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: C
+      raw:
+        median_ttfr_hours: 360.0
+        qualifying_issues: 0
+        band: default
+        window_offset_days: 11
     adoption:
       grade: A
       raw:
@@ -41,20 +49,26 @@ health:
         volume_tier: A
         cross_check_divergence: 1.0
     longevity:
-      grade: "?"
-      raw: {}
+      grade: C
+      raw:
+        repo_age_days: 445
+        last_commit_age_days: 0
+        cohort: framework
     governance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        active_maintainers_12mo: 91
+        top1_share: 0.155
+        top3_share: 0.349
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
-      grade: "?"
-      raw: {}
-  unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
-    longevity: { reason: not_found }
-    governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # Codex
@@ -105,14 +119,12 @@ You're a developer who wants an AI assistant that lives inside your terminal and
 **Low**. Codex is installed via a shell script or npm and runs as a local CLI process. There is no server to maintain. The operational burden is managing your OpenAI API credentials and reviewing the agent's changes before accepting them. The sandboxing provides safety, but you should still audit executed commands.
 
 ## Health & viability
-
-- **Responsiveness**: Cannot be scored — no_traffic.
-- **Maintenance**: Very active — pushed daily as of 2026-07, with rapid iteration and a large issue volume (8,147 open issues).
-- **Governance**: Owned by OpenAI (`openai` GitHub org). The project has clear backing from OpenAI, but the roadmap is controlled by a single corporate entity.
-- **Backing**: Officially backed by OpenAI. The Apache-2.0 license is permissive, but OpenAI has not relicensed any major projects historically.
-- **Adoption**: Explosive adoption with ~94.8k stars and ~14.1k forks, created in 2025-04. The OpenAI brand and terminal-native workflow drive rapid uptake.
-- **Risk flags**: Very young (created 2025-04) with no Lindy track record. Tightly coupled to OpenAI's API and pricing, which can change without notice. The project's future depends on OpenAI's continued commitment to open-source terminal tools.
-
+- **Maintenance**: Grade A — 13/13 active weeks in trailing 13; last commit 0 days ago.
+- **Responsiveness**: Grade C — median first-response time 360.0 hours across 0 qualifying issues/PRs.
+- **Adoption**: Grade A — 45,794,237 monthly downloads via npmjs.org (package: @openai/codex).
+- **Longevity**: Grade C — 445 days old.
+- **Governance**: Grade A — top-3 contributor share 34.9% (?).
+- **Risk / License**: Grade A — Apache-2.0 license.
 ## Caveats (unverified)
 
 - [未验证] Codex requires an OpenAI API key; the exact pricing and rate limits for heavy usage have not been verified.

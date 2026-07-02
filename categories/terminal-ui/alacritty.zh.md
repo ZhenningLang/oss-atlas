@@ -16,20 +16,28 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:43:58Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 1
+  computed_at: 2026-07-02T16:04:51Z
+  overall: A
+  overall_score: 3.5
+  scored_axes: 6
   capped: false
   cap_reason: null
   needs_human_review: true
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 10
+        active_weeks_13: 7
+        carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        median_ttfr_hours: 1.6
+        qualifying_issues: 54
+        band: relaxed_solo
+        window_offset_days: 11
     adoption:
       grade: B
       raw:
@@ -41,20 +49,26 @@ health:
         volume_tier: B
         cross_check_divergence: 2.32
     longevity:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        repo_age_days: 3787
+        last_commit_age_days: 10
+        cohort: tool
     governance:
-      grade: "?"
-      raw: {}
+      grade: C
+      raw:
+        active_maintainers_12mo: 5
+        top1_share: 0.633
+        top3_share: 0.933
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
-      grade: "?"
-      raw: {}
-  unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
-    longevity: { reason: not_found }
-    governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # Alacritty
@@ -102,15 +116,12 @@ health:
 **无。** Alacritty 是单一二进制。通过包管理器安装或 release 下载。配置为单个 YAML 文件。无需守护进程、无需后台服务。
 
 ## 健康度与可持续性
-
-- **响应速度**：无法计算——no_traffic。
-- **维护：** 活跃——定期发布，维护者响应及时。65k star、3.5k fork。项目管理良好，issue 分类清晰。
-- **治理：** 由 alacritty 组织维护，有多位贡献者。原创建者（jwilm）已退居幕后，但项目已成功过渡到社区/组织维护。
-- **背书：** 无企业背书——alacritty GitHub 组织下的社区驱动项目。靠志愿贡献与社区 goodwill 维持。
-- **采用：** 在重视终端性能的开发者中非常广泛。常在 Rust 与开发者社区被推荐为默认快速终端。
-- **长期性：** 约 10 年（2016 年创建）。持续维护，无显著断档。对社区项目而言，Lindy 信号良好。
-- **风险旗标：** Apache-2.0 安全。无 relicense 历史。项目对功能膨胀持保守态度，这保证了稳定，但可能让想要标签页、连字或内置复用的用户失望。原维护者过渡处理得当。
-
+- **维护活跃度**：Grade A——最近 13 周中 7 周有提交；最后提交距今 10 天。
+- **响应速度**：Grade A——中位首次响应时间 1.6 小时，基于 54 个 qualifying issues/PRs。
+- **采用广度**：Grade B——crates.io 上月下载量 520,819（包名：alacritty_terminal）。
+- **长青度**：Grade A——仓库已创建 3787 天。
+- **治理集中度**：Grade C——前三贡献者占比 93.3%（?）。
+- **许可风险**：Grade A——Apache-2.0 许可证。
 ## 存疑（未验证）
 
 - [未验证] 确切的 OpenGL 版本要求与 Linux 各发行版及硬件上的具体 GPU 驱动兼容性有所不同。

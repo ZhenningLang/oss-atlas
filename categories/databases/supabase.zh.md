@@ -16,39 +16,54 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:43:32Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 0
+  computed_at: 2026-07-02T15:44:50Z
+  overall: A
+  overall_score: 4.0
+  scored_axes: 5
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        median_ttfr_hours: 2.5
+        qualifying_issues: 24
+        band: default
+        window_offset_days: 10
     adoption:
       grade: "?"
       raw: {}
     longevity:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        repo_age_days: 2455
+        last_commit_age_days: 0
+        cohort: service
     governance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        active_maintainers_12mo: 171
+        top1_share: 0.145
+        top3_share: 0.268
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
   unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
     adoption: { reason: no_package_structural }
-    longevity: { reason: not_found }
-    governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
 ---
 
 # Supabase
@@ -103,14 +118,12 @@ health:
 **中**（自托管）/ **低**（云端）。托管云 tier 需要极少运维——只需项目配置和监控。自托管完整栈涉及管理 PostgreSQL、Kong、Redis、Go 服务、Deno 边缘函数和跨 Docker 容器的对象存储。官方 `docker-compose` 栈简化了初始搭建，但生产级自托管需要备份策略、监控和 PostgreSQL 扩容规划。
 
 ## 健康度与可持续性
-
-- **响应速度**：无法计算——no_traffic。
-- **维护**：非常活跃——截至 2026-07 每日推送，v2 平台成熟，核心团队响应迅速（1,086 个开放 issue）。
-- **治理**：由 `supabase` 组织所有，拥有专门的核心团队和清晰的产品路线图。公司以 Apache-2.0 许可为核心栈，具备强大的开源文化。bus factor 合理。
-- **背书**：Supabase Inc. 是获得大量投资的创业公司，拥有成熟的收入模式（托管云）。开源核心与商业产品战略对齐。
-- **采用度**：采用度强劲，105.0k star，2019 年创建（7 年记录）。被初创公司和企业在生产环境中广泛使用。Firebase 替代定位带来持续需求。
-- **风险旗标**：Apache-2.0 非常宽松。风险投资模式意味着某些功能可能仅限云端（如某些高级分析或企业功能），但核心数据库、身份认证和存储栈保持完全开源。需关注是否随时间出现 open-core 阉割。
-
+- **维护活跃度**：Grade A——最近 13 周中 13 周有提交；最后提交距今 0 天。
+- **响应速度**：Grade A——中位首次响应时间 2.5 小时，基于 24 个 qualifying issues/PRs。
+- **采用广度**：无法计算——unknown。
+- **长青度**：Grade A——仓库已创建 2455 天。
+- **治理集中度**：Grade A——前三贡献者占比 26.8%（?）。
+- **许可风险**：Grade A——Apache-2.0 许可证。
 ## 存疑（未验证）
 
 - [未验证] Supabase Inc. 已获得风险投资；具体融资细节和烧钱速度尚未从一手来源核实。

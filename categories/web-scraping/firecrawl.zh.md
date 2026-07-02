@@ -16,20 +16,28 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:44:29Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 1
+  computed_at: 2026-07-02T16:05:53Z
+  overall: B
+  overall_score: 3.17
+  scored_axes: 6
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 1
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: B
+      raw:
+        median_ttfr_hours: 147.3
+        qualifying_issues: 37
+        band: default
+        window_offset_days: 1
     adoption:
       grade: A
       raw:
@@ -39,22 +47,28 @@ health:
         downloads_last_month: 5804535
         graph_tier: E
         volume_tier: A
-        cross_check_divergence: null
+        cross_check_divergence: 1.2
     longevity:
-      grade: "?"
-      raw: {}
+      grade: B
+      raw:
+        repo_age_days: 808
+        last_commit_age_days: 1
+        cohort: service
     governance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        active_maintainers_12mo: 48
+        top1_share: 0.374
+        top3_share: 0.591
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
-      grade: "?"
-      raw: {}
-  unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
-    longevity: { reason: not_found }
-    governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
+      grade: D
+      raw:
+        spdx_id: AGPL-3.0
+        permissiveness: strong_network_copyleft
+        relicense_36mo: false
+        content_license: null
 ---
 
 # Firecrawl
@@ -105,14 +119,12 @@ health:
 **低（托管） / 中等（自托管）**。托管 API 只需简单的 HTTP 集成。自托管需要管理 Node.js 服务、Playwright 浏览器实例以及队列/缓存基础设施。浏览器自动化资源密集，可能消耗大量内存。
 
 ## 健康度与可持续性
-
-- **响应速度**：无法计算——no_traffic。
-- **维护**：非常活跃——截至 2026-07 每日推送，团队响应积极（376 个 open issue）。[推断]
-- **治理**：由 Firecrawl 组织所有；似乎有专门的公司/组织在背后，bus factor 尚可。
-- **背书**：Firecrawl 看起来是一家提供开源与托管服务双重模式的创投支持公司；该模式提供可持续性，但路线图可能向付费功能倾斜。[未验证]
-- **采用**：star 数高（142k），对 2024 年创建的项目而言表现突出；约 2 年的记录较短，但活跃的开发节奏是积极信号。[推断]
-- **风险旗标**：AGPL-3.0  copyleft 许可可能限制商用而不开源衍生作品。托管服务定价与开源功能对等性值得持续观察。项目年轻（2024-04 创建），缺乏长期 Lindy 记录。[未验证]
-
+- **维护活跃度**：Grade A——最近 13 周中 13 周有提交；最后提交距今 1 天。
+- **响应速度**：Grade B——中位首次响应时间 147.3 小时，基于 37 个 qualifying issues/PRs。
+- **采用广度**：Grade A——pypi.org 上月下载量 5,804,535（包名：firecrawl-py）。
+- **长青度**：Grade B——仓库已创建 808 天。
+- **治理集中度**：Grade A——前三贡献者占比 59.1%（?）。
+- **许可风险**：Grade D——AGPL-3.0 许可证。
 ## 存疑（未验证）
 
 - [未验证] AGPL-3.0 许可在 SaaS 场景下可能要求衍生作品披露源码；请针对具体用例咨询法律顾问。

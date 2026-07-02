@@ -16,20 +16,28 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:47:33Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 1
+  computed_at: 2026-07-02T15:58:09Z
+  overall: A
+  overall_score: 3.5
+  scored_axes: 6
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: B
+      raw:
+        archived: false
+        last_commit_age_days: 37
+        active_weeks_13: 3
+        carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        median_ttfr_hours: 35.8
+        qualifying_issues: 33
+        band: default
+        window_offset_days: 2
     adoption:
       grade: A
       raw:
@@ -41,20 +49,26 @@ health:
         volume_tier: A
         cross_check_divergence: 1.01
     longevity:
-      grade: "?"
-      raw: {}
+      grade: C
+      raw:
+        repo_age_days: 596
+        last_commit_age_days: 37
+        cohort: library
     governance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        active_maintainers_12mo: 16
+        top1_share: 0.321
+        top3_share: 0.536
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
-      grade: "?"
-      raw: {}
-  unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
-    longevity: { reason: not_found }
-    governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # MarkItDown
@@ -103,15 +117,12 @@ You're building a RAG pipeline, a document QA system, or an agent that needs to 
 **Low.** `pip install markitdown` and import. The library is stateless and runs in-process; there is no service to deploy, no database to manage, and no persistent infrastructure. The main operational concern is keeping the Python environment and optional dependencies current, plus the input-sanitization discipline mentioned in the security notes.
 
 ## Health & viability
-
-- **Responsiveness**: Cannot be scored — no_traffic.
-- **Maintenance**: Active — last push 2026-06-24, indicating recent development. The project is young but has Microsoft's AutoGen team behind it, which suggests organizational commitment to continued development. [未验证]
-- **Governance**: Owned by Microsoft (`microsoft` organization). This provides strong backing and a low bus-factor risk compared to single-maintainer projects. Roadmap alignment with Microsoft's broader AI tooling ecosystem is plausible. [推断]
-- **Backing**: Microsoft / AutoGen team. A major corporate backing is a significant positive signal for longevity and maintenance, though it also means the roadmap may align with Microsoft's product priorities.
-- **Adoption**: Extremely high star count (162k) for a project created in late 2024. The popularity reflects both genuine demand for document-to-LLM pipelines and the visibility boost from the Microsoft brand. [推断]
-- **Age & Lindy**: Created 2024-11 (~8 months old at verification). This is extremely young with no meaningful Lindy track record. The Microsoft backing partially offsets the age risk, but breaking changes in a v0.x project should be expected.
-- **Risk flags**: MIT license is clean and permissive. The main risk is the project's youth — APIs, converter quality, and supported formats may shift significantly. Also, being a Microsoft project means it could be deprioritized if it no longer serves strategic goals, though the AutoGen tie-in suggests it has a concrete use case.
-
+- **Maintenance**: Grade B — 3/13 active weeks in trailing 13; last commit 37 days ago.
+- **Responsiveness**: Grade A — median first-response time 35.8 hours across 33 qualifying issues/PRs.
+- **Adoption**: Grade A — 10,760,192 monthly downloads via pypi.org (package: markitdown).
+- **Longevity**: Grade C — 596 days old.
+- **Governance**: Grade A — top-3 contributor share 53.6% (?).
+- **Risk / License**: Grade A — MIT license.
 ## Caveats (unverified)
 
 - [未验证] The Microsoft AutoGen team authorship is stated in the README badge; the exact team structure and long-term maintenance commitment are not publicly documented.

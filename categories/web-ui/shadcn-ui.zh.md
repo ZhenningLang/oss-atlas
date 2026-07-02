@@ -16,20 +16,28 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:43:34Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 1
+  computed_at: 2026-07-02T16:12:46Z
+  overall: A
+  overall_score: 3.8
+  scored_axes: 5
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        median_ttfr_hours: 14.7
+        qualifying_issues: 28
+        band: default
+        window_offset_days: 10
     adoption:
       grade: A
       raw:
@@ -41,20 +49,23 @@ health:
         volume_tier: A
         cross_check_divergence: 1.13
     longevity:
-      grade: "?"
-      raw: {}
+      grade: B
+      raw:
+        repo_age_days: 1275
+        last_commit_age_days: 0
+        cohort: library
     governance:
       grade: "?"
       raw: {}
     risk_license:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
   unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
-    longevity: { reason: not_found }
     governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
 ---
 
 # shadcn/ui
@@ -108,14 +119,12 @@ health:
 **低。** 除了正常的 React 构建管线，没有额外东西要部署或运维。运维负担在于**复制组件的维护**：升级 shadcn/ui CLI 或添加新组件时，可能需要调和样式变更或 Tailwind 配置更新。因为组件活在仓库里，发现 bug 时你必须自己 patch——不能简单在 `package.json` 里升版本。好处是你永远不会被上游发布节奏卡住。对小团队而言，复制-拥有模式摩擦很小；对大型组织多团队而言，可能需要自建内部分发机制，以保持组件变体一致性。
 
 ## 健康度与可持续性
-
-- **响应速度**：无法计算——no_traffic。
-- **维护（2026-07）。** 最后 push 于 2026-06-30，提交历史非常活跃，发布频繁；项目未归档，社区繁荣。
-- **治理 / bus factor。** 归属 `shadcn-ui` GitHub 组织（多维护者），shadcn 作为可见核心。项目社区贡献强，CLI 驱动的分发模式清晰。
-- **年龄与 Lindy 判断。** 约 2.5 年（2023-01 创建），极受欢迎——对 UI 库而言是中等 Lindy 信号；它已成为现代 Tailwind 生态中 React 组件分发模式的主导者。
-- **采用度与生态。** 约 117.7k star，在 Next.js、SaaS 和开源项目中被大规模采用。「复制-拥有」模式已影响众多其他组件库。
-- **风险标记。** MIT 许可，无 relicense 历史。主要风险是**生态耦合**：项目与 React + Tailwind CSS + Radix UI 深度绑定；若其中任何一方大幅变动，仓库里的组件文件可能需要手动更新。
-
+- **维护活跃度**：Grade A——最近 13 周中 13 周有提交；最后提交距今 0 天。
+- **响应速度**：Grade A——中位首次响应时间 14.7 小时，基于 28 个 qualifying issues/PRs。
+- **采用广度**：Grade A——npmjs.org 上月下载量 18,842,516（包名：shadcn）。
+- **长青度**：Grade B——仓库已创建 1275 天。
+- **治理集中度**：无法计算——unknown。
+- **许可风险**：Grade A——MIT 许可证。
 ## 存疑（未验证）
 
 - [未验证] 截至 2026-07-01 约 117.7k GitHub star；star 数为近似值且对时间敏感。

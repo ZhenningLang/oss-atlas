@@ -16,20 +16,28 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:52:29Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 1
+  computed_at: 2026-07-02T15:34:03Z
+  overall: B
+  overall_score: 3.17
+  scored_axes: 6
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 1
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: C
+      raw:
+        median_ttfr_hours: 360.0
+        qualifying_issues: 0
+        band: default
+        window_offset_days: 13
     adoption:
       grade: B
       raw:
@@ -41,20 +49,26 @@ health:
         volume_tier: B
         cross_check_divergence: 1.0
     longevity:
-      grade: "?"
-      raw: {}
+      grade: C
+      raw:
+        repo_age_days: 441
+        last_commit_age_days: 1
+        cohort: framework
     governance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        active_maintainers_12mo: 88
+        top1_share: 0.08
+        top3_share: 0.211
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
-      grade: "?"
-      raw: {}
-  unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
-    longevity: { reason: not_found }
-    governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # Gemini CLI
@@ -105,14 +119,12 @@ health:
 **低**。Gemini CLI 通过 npm 安装，作为本地 Node.js 进程运行。无需维护服务器。运维负担仅限于保持 CLI 更新和管理 Google API 凭证。免费层有速率限制，重度使用可能需要升级，但没有任何基础设施需要运维。
 
 ## 健康度与可持续性
-
-- **响应速度**：无法计算——no_traffic。
-- **维护**：活跃——截至 2026-07 每日推送，issue 跟踪响应及时（1,347 个开放 issue）。[推断]
-- **治理**：由 `google-gemini` 组织所有，Google 支持的 GitHub 组织。鉴于 Google 的背书，bus factor 合理，但项目的未来取决于 Google 对开源 CLI 的持续承诺。[未验证]
-- **背书**：由 Google（Gemini 团队）官方背书。Apache-2.0 许可非常宽松，但 Google 有 sunset 开源项目的历史。[推断]
-- **采用**：star 数强劲（105.7k），创建日期较近（2025-04）。Google 的背书和慷慨的免费层推动了快速采用。[推断]
-- **风险旗标**：非常年轻（2025-04 创建），毫无 Lindy 记录。Google 有放弃开源和消费级项目的历史（如 Google Reader、Google+），Gemini 品牌虽看似战略优先，但长期承诺尚未验证。[推断]
-
+- **维护活跃度**：Grade A——最近 13 周中 13 周有提交；最后提交距今 1 天。
+- **响应速度**：Grade C——中位首次响应时间 360.0 小时，基于 0 个 qualifying issues/PRs。
+- **采用广度**：Grade B——npmjs.org 上月下载量 2,522,263（包名：@google/gemini-cli）。
+- **长青度**：Grade C——仓库已创建 441 天。
+- **治理集中度**：Grade A——前三贡献者占比 21.1%（?）。
+- **许可风险**：Grade A——Apache-2.0 许可证。
 ## 存疑（未验证）
 
 - [未验证] `google-gemini` 与更广泛的 Google DeepMind/Gemini 产品组织之间的确切关系尚未核实。

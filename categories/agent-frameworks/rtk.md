@@ -16,39 +16,54 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:48:32Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 0
+  computed_at: 2026-07-02T15:44:16Z
+  overall: B
+  overall_score: 3.4
+  scored_axes: 5
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 1
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        median_ttfr_hours: 3.5
+        qualifying_issues: 5
+        band: relaxed_solo
+        window_offset_days: 7
     adoption:
       grade: "?"
       raw: {}
     longevity:
-      grade: "?"
-      raw: {}
+      grade: D
+      raw:
+        repo_age_days: 161
+        last_commit_age_days: 1
+        cohort: tool
     governance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        active_maintainers_12mo: 97
+        top1_share: 0.276
+        top3_share: 0.59
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
   unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
     adoption: { reason: ambiguous }
-    longevity: { reason: not_found }
-    governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
 ---
 
 # RTK
@@ -95,15 +110,12 @@ You're a developer or team using AI coding agents (Claude Code, Codex, Open Inte
 **Low**. A single static binary — install via `curl`, Homebrew, or download from releases. No daemon, no configuration file required. It transparently intercepts shell output when invoked as a proxy.
 
 ## Health & viability
-
-- **Responsiveness**: Cannot be scored — no_traffic.
-- **Maintenance**: Active — regular commits and releases. 67k stars, 4.1k forks, relatively low open issue count for the star volume.
-- **Governance**: Owned by rtk-ai, an organization focused on AI developer tooling. Appears to be a small but dedicated team.
-- **Backing**: Unknown funding status — the organization appears purpose-built for RTK. No visible foundation or major corporate backing.
-- **Adoption**: Rapidly adopted in the AI coding community due to the immediate cost savings. 67k stars in ~6 months suggests strong viral growth.
-- **Longevity**: Extremely young — created in January 2026, so only ~6 months old. No Lindy track record whatsoever. The star count is suspiciously high for such a young repo, which may indicate artificial inflation or exceptional viral marketing.
-- **Risk flags**: Apache-2.0 is safe. The suspiciously high star count for a 6-month-old project is a concern — it may not reflect genuine organic adoption. The single-vendor governance and lack of funding transparency mean the project could stall if the team loses interest.
-
+- **Maintenance**: Grade A — 13/13 active weeks in trailing 13; last commit 1 days ago.
+- **Responsiveness**: Grade A — median first-response time 3.5 hours across 5 qualifying issues/PRs.
+- **Adoption**: Cannot be scored — unknown.
+- **Longevity**: Grade D — 161 days old.
+- **Governance**: Grade A — top-3 contributor share 59.0% (?).
+- **Risk / License**: Grade A — Apache-2.0 license.
 ## Caveats (unverified)
 
 - [未验证] The claimed 60–90% token reduction is based on the project's own benchmarks and may vary by workflow, command frequency, and agent behavior.

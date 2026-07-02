@@ -16,20 +16,28 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:56:32Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 1
+  computed_at: 2026-07-02T15:52:57Z
+  overall: B
+  overall_score: 2.83
+  scored_axes: 6
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: B
+      raw:
+        archived: false
+        last_commit_age_days: 1
+        active_weeks_13: 5
+        carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        median_ttfr_hours: 87.1
+        qualifying_issues: 18
+        band: relaxed_solo
+        window_offset_days: 8
     adoption:
       grade: D
       raw:
@@ -41,20 +49,26 @@ health:
         volume_tier: "?"
         cross_check_divergence: null
     longevity:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        repo_age_days: 3766
+        last_commit_age_days: 1
+        cohort: tool
     governance:
-      grade: "?"
-      raw: {}
+      grade: D
+      raw:
+        active_maintainers_12mo: 9
+        top1_share: 0.892
+        top3_share: 0.931
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
-      grade: "?"
-      raw: {}
-  unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
-    longevity: { reason: not_found }
-    governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
+      grade: A
+      raw:
+        spdx_id: Unlicense
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # ripgrep
@@ -101,15 +115,12 @@ You're choosing a code search tool for daily use across large codebases and spee
 **None**. ripgrep is a single static binary. Install via package manager, download from releases, or `cargo install`. No configuration, no daemon, no maintenance.
 
 ## Health & viability
-
-- **Responsiveness**: Cannot be scored — no_traffic.
-- **Maintenance**: Active and stable — regular releases, well-managed issue tracker. The author (BurntSushi) is highly responsive and disciplined about scope.
-- **Governance**: Primarily maintained by Andrew Gallant (BurntSushi), a respected Rust community member. This is a single-maintainer project with a long track record of reliability.
-- **Backing**: No corporate backing — this is a personal open-source project. The maintainer has sustained it for years through community goodwill and occasional sponsorship.
-- **Adoption**: Extremely widespread — installed by default in many developer environments, recommended by major frameworks, and used in CI pipelines worldwide. 66k stars, 2.6k forks.
-- **Longevity**: ~10 years old (created 2016). Continuously maintained with no gaps. Strong Lindy signal — a single-maintainer project that has outlasted many well-funded alternatives.
-- **Risk flags**: Dual-licensed under MIT or Unlicense — both are permissive and safe. The single-maintainer bus factor is a concern, but the codebase is mature and the maintainer has demonstrated long-term commitment. No relicense risk.
-
+- **Maintenance**: Grade B — 5/13 active weeks in trailing 13; last commit 1 days ago.
+- **Responsiveness**: Grade A — median first-response time 87.1 hours across 18 qualifying issues/PRs.
+- **Adoption**: Grade D — 13,080,989 monthly downloads via conda-forge.org (package: ripgrep).
+- **Longevity**: Grade A — 3766 days old.
+- **Governance**: Grade D — top-3 contributor share 93.1% (?).
+- **Risk / License**: Grade A — Unlicense license.
 ## Caveats (unverified)
 
 - [未验证] The exact performance comparison against grep and ag depends on the specific query, filesystem, and hardware; benchmarks vary.

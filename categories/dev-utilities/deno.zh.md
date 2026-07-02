@@ -16,20 +16,28 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:50:21Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 1
+  computed_at: 2026-07-02T15:51:44Z
+  overall: A
+  overall_score: 4.0
+  scored_axes: 6
   capped: false
   cap_reason: null
   needs_human_review: true
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        median_ttfr_hours: 7.3
+        qualifying_issues: 37
+        band: relaxed_solo
+        window_offset_days: 1
     adoption:
       grade: A
       raw:
@@ -41,20 +49,26 @@ health:
         volume_tier: A
         cross_check_divergence: 4.42
     longevity:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        repo_age_days: 2971
+        last_commit_age_days: 0
+        cohort: tool
     governance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        active_maintainers_12mo: 91
+        top1_share: 0.33
+        top3_share: 0.594
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
-      grade: "?"
-      raw: {}
-  unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
-    longevity: { reason: not_found }
-    governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # Deno
@@ -104,14 +118,12 @@ health:
 **低**。Deno 是可在主流操作系统上运行的单一二进制文件。部署时，可以直接运行 `deno run`，用 `deno compile` 编译为独立二进制，或部署到 Deno Deploy（托管边缘）。内置工具链（test、fmt、lint、bench）减少了对单独 devDependencies 的需求。没有 `node_modules` 膨胀简化了 CI/CD 缓存和 Docker 镜像大小。
 
 ## 健康度与可持续性
-
-- **响应速度**：无法计算——no_traffic。
-- **维护**：非常活跃——截至 2026-07 每日推送，v2 版本线成熟，核心团队响应迅速（1,354 个开放 issue）。[推断]
-- **治理**：由 `denoland` 组织所有，Ryan Dahl（Node.js 创建者）是关键人物。项目有清晰的技术愿景和多个核心贡献者。bus factor 合理。
-- **背书**：Deno Land Inc. 是项目背后的商业实体；Deno Deploy 是其收入来源。该公司已获得风险投资，这既带来稳定性，也可能导致未来方向冲突。[未验证]
-- **采用**：采用度强劲，107.3k star，2018 年创建（8 年记录）。被 Supabase 等公司用于边缘函数，并在各种生产级 CLI 工具中使用。
-- **风险旗标**：MIT 许可非常宽松。风险投资支持的背书模式意味着开源路线图可能受商业产品 Deno Deploy 的影响。未见 relicense 历史，但需关注是否出现 open-core 阉割。[未验证]
-
+- **维护活跃度**：Grade A——最近 13 周中 13 周有提交；最后提交距今 0 天。
+- **响应速度**：Grade A——中位首次响应时间 7.3 小时，基于 37 个 qualifying issues/PRs。
+- **采用广度**：Grade A——crates.io 上月下载量 5,934,345（包名：deno_core）。
+- **长青度**：Grade A——仓库已创建 2971 天。
+- **治理集中度**：Grade A——前三贡献者占比 59.4%（?）。
+- **许可风险**：Grade A——MIT 许可证。
 ## 存疑（未验证）
 
 - [未验证] Deno Land Inc. 已获得风险投资；具体融资轮次和投资者尚未从一手来源核实。

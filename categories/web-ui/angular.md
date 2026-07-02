@@ -16,20 +16,28 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:52:13Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 1
+  computed_at: 2026-07-02T16:16:41Z
+  overall: A
+  overall_score: 4.0
+  scored_axes: 6
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 1
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        median_ttfr_hours: 0.0
+        qualifying_issues: 20
+        band: default
+        window_offset_days: 11
     adoption:
       grade: A
       raw:
@@ -41,20 +49,26 @@ health:
         volume_tier: A
         cross_check_divergence: 1.0
     longevity:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        repo_age_days: 4305
+        last_commit_age_days: 1
+        cohort: framework
     governance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        active_maintainers_12mo: 90
+        top1_share: 0.167
+        top3_share: 0.368
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
-      grade: "?"
-      raw: {}
-  unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
-    longevity: { reason: not_found }
-    governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # Angular
@@ -116,14 +130,12 @@ You're an enterprise team building a large, complex web application with dozens 
 - You upgrade major versions (Angular's 6-month release cycle means annual upgrades are needed)
 
 ## Health & viability
-
-- **Responsiveness**: Cannot be scored — no_traffic.
-- **Maintenance**: Very active — maintained by Google with a 6-month major release cycle and a public roadmap. Long-term support (LTS) for the last two major versions.
-- **Governance**: Owned by Google. The Angular team has historically been shielded from Google-wide re-orgs, but it is still a single-vendor project. The community has a voice through the Angular Community Discord and GitHub.
-- **Backing**: Google is the primary backer. Angular is used internally at Google (Google Cloud Console, Firebase Console, etc.), which provides a strong incentive to keep it maintained.
-- **Adoption**: Strong enterprise adoption with 100.4k stars, created in 2014 (12-year track record). A staple in large enterprise and fintech codebases. The job market is healthy, especially in enterprise consulting.
-- **Risk flags**: The MIT license is permissive. Google has a good track record of maintaining Angular, but the risk of "Google kills things" is always a background concern. No relicense history. The shift from zone.js to signals represents a significant architectural change; existing apps may need migration.
-
+- **Maintenance**: Grade A — 13/13 active weeks in trailing 13; last commit 1 days ago.
+- **Responsiveness**: Grade A — median first-response time 0.0 hours across 20 qualifying issues/PRs.
+- **Adoption**: Grade A — 23,110,942 monthly downloads via npmjs.org (package: @angular/core).
+- **Longevity**: Grade A — 4305 days old.
+- **Governance**: Grade A — top-3 contributor share 36.8% (?).
+- **Risk / License**: Grade A — MIT license.
 ## Caveats (unverified)
 
 - [推断] Angular's zone.js to signals migration timeline and the exact proportion of Google-internal apps using Angular have not been verified.

@@ -16,20 +16,28 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:47:27Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 1
+  computed_at: 2026-07-02T15:57:46Z
+  overall: B
+  overall_score: 2.83
+  scored_axes: 6
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 1
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        median_ttfr_hours: 2.0
+        qualifying_issues: 31
+        band: relaxed_solo
+        window_offset_days: 3
     adoption:
       grade: D
       raw:
@@ -41,20 +49,26 @@ health:
         volume_tier: D
         cross_check_divergence: null
     longevity:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        repo_age_days: 1610
+        last_commit_age_days: 1
+        cohort: app
     governance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        active_maintainers_12mo: 322
+        top1_share: 0.107
+        top3_share: 0.273
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
-      grade: "?"
-      raw: {}
-  unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
-    longevity: { reason: not_found }
-    governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
+      grade: E
+      raw:
+        spdx_id: AGPL-3.0
+        permissiveness: strong_network_copyleft
+        relicense_36mo: true
+        content_license: null
 ---
 
 # Immich
@@ -116,14 +130,12 @@ health:
 - 移动端自动备份在 WiFi 下表现良好，但如不限定蜂窝网络可能较耗电
 
 ## 健康度与可持续性
-
-- **响应速度**：无法计算——no_traffic。
-- **维护**：非常活跃——截至 2026-07 仍有日常推送，发布节奏规律，社区庞大且活跃（104.8k stars，669 个 open issue）。
-- **治理**：由 `immich-app` 组织开发，拥有多名核心维护者。项目有清晰的路线图和透明的 issue 追踪。Bus factor 中等。
-- **背书**：未见大型商业背书；主要依靠社区贡献和可能的捐赠/赞助。这是独立性的优势，但对长期可持续性也是风险。
-- **采用度**：采用度强，104.8k stars，2022 年创建（4 年记录）。在自托管和 homelab 社区中颇受欢迎。
-- **风险旗标**：AGPL-3.0 是强 copyleft——商用或内部网络部署前请确认兼容性。未见 relicense 历史，但需关注未来是否变动。项目尚年轻，长期治理模式仍在验证中。
-
+- **维护活跃度**：Grade A——最近 13 周中 13 周有提交；最后提交距今 1 天。
+- **响应速度**：Grade A——中位首次响应时间 2.0 小时，基于 31 个 qualifying issues/PRs。
+- **采用广度**：Grade D——npmjs.org 上月下载量 6,496（包名：@immich/cli）。
+- **长青度**：Grade A——仓库已创建 1610 天。
+- **治理集中度**：Grade A——前三贡献者占比 27.3%（?）。
+- **许可风险**：Grade E——AGPL-3.0 许可证。
 ## 存疑（未验证）
 
 - [未验证] 活跃生产实例的确切数量以及已知最大部署规模未经核实。

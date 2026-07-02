@@ -16,7 +16,7 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T14:52:06Z
+  computed_at: 2026-07-02T15:23:09Z
   overall: A
   overall_score: 3.5
   scored_axes: 4
@@ -112,14 +112,12 @@ You are a developer or team that needs to automate complex, multi-step tasks wit
 **High**. Self-hosting the AutoGPT platform requires multiple services (backend, frontend, database, Redis), environment configuration, and ongoing monitoring. The system is resource-intensive and agents can fail in unexpected ways, requiring human oversight.
 
 ## Health & viability
-
-- **Responsiveness**: Grade B — median first-response time 5.2 hours across 12 qualifying issues.
-- **Maintenance**: Grade A — pushed within the past 7 days as of 2026-07, with 13 active weeks out of 13. The 454 open issues suggest a focused, manageable community.
-- **Governance**: Grade A — owned by Significant Gravitas, with 18 active maintainers in the past 12 months. The top maintainer holds 29.2% of commits and the top three hold 56.2%, indicating a distributed core team.
-- **Longevity**: Grade B — 1,204 days old (created 2023-03), giving it a ~3.3-year track record. The project has pivoted from its original "autonomous GPT" demo to a full platform, demonstrating adaptability but also direction shifts.
-- **Adoption**: Grade ? — the health radar could not score adoption due to ambiguous package data. The 185k GitHub stars are high but the project's actual package download footprint is unclear.
-- **Risk flags**: The repository has no declared license (`NOASSERTION`), which creates legal uncertainty for commercial use or redistribution. The cloud-hosted beta is still in closed beta with a public release timeline that is not confirmed.
-
+- **Maintenance**: Grade A — 13/13 active weeks in trailing 13; last commit 7 days ago.
+- **Responsiveness**: Grade B — median first-response time 48.1 hours across 29 qualifying issues/PRs.
+- **Adoption**: Cannot be scored — unknown.
+- **Longevity**: Grade B — 1204 days old.
+- **Governance**: Grade A — top-3 contributor share 56.2% (?).
+- **Risk / License**: Cannot be scored — unknown.
 ## Caveats (unverified)
 
 - [未验证] The repository has no declared license (`NOASSERTION`), which creates legal uncertainty for commercial use or redistribution.

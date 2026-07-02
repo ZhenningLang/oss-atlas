@@ -16,20 +16,28 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:55:19Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 1
+  computed_at: 2026-07-02T16:09:37Z
+  overall: A
+  overall_score: 4.0
+  scored_axes: 6
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        median_ttfr_hours: 0.1
+        qualifying_issues: 40
+        band: default
+        window_offset_days: 5
     adoption:
       grade: A
       raw:
@@ -41,20 +49,26 @@ health:
         volume_tier: A
         cross_check_divergence: 1.2
     longevity:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        repo_age_days: 4087
+        last_commit_age_days: 0
+        cohort: library
     governance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        active_maintainers_12mo: 73
+        top1_share: 0.209
+        top3_share: 0.52
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
-      grade: "?"
-      raw: {}
-  unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
-    longevity: { reason: not_found }
-    governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # Ant Design
@@ -116,14 +130,12 @@ You're building a data-dense admin dashboard, an internal operations tool, or a 
 - Monitoring for accessibility issues in complex components (tables, forms) that may need manual ARIA adjustments
 
 ## Health & viability
-
-- **Responsiveness**: Cannot be scored — no_traffic.
-- **Maintenance**: Very active — daily pushes as of 2026-07, with a regular release schedule and a large issue/PR throughput (98.5k stars, 1,284 open issues).
-- **Governance**: Maintained by the Ant Design Team within Alibaba's open-source ecosystem. The project has multiple core committers and a clear governance model. Bus factor is moderate to good.
-- **Backing**: Backed by Alibaba, one of China's largest tech companies. This provides stability and resources but also means the project's direction is influenced by Alibaba's internal needs.
-- **Adoption**: Extremely strong adoption in the Asia-Pacific enterprise market and growing globally. 98.5k stars, created in 2015 (11-year track record). Used by Alibaba, Tencent, and thousands of startups.
-- **Risk flags**: The MIT license is permissive. No relicense history visible. The project's close ties to Alibaba mean geopolitical or compliance concerns could affect some Western enterprises. The v4-to-v5 migration involved breaking theming changes; future major versions may require similar effort.
-
+- **Maintenance**: Grade A — 13/13 active weeks in trailing 13; last commit 0 days ago.
+- **Responsiveness**: Grade A — median first-response time 0.1 hours across 40 qualifying issues/PRs.
+- **Adoption**: Grade A — 10,718,402 monthly downloads via npmjs.org (package: antd).
+- **Longevity**: Grade A — 4087 days old.
+- **Governance**: Grade A — top-3 contributor share 52.0% (?).
+- **Risk / License**: Grade A — MIT license.
 ## Caveats (unverified)
 
 - [未验证] The exact proportion of Ant Design's user base in China versus the rest of the world has not been verified.

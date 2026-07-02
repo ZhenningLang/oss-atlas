@@ -16,20 +16,28 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:44:29Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 1
+  computed_at: 2026-07-02T16:05:53Z
+  overall: B
+  overall_score: 3.17
+  scored_axes: 6
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 1
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: B
+      raw:
+        median_ttfr_hours: 147.3
+        qualifying_issues: 37
+        band: default
+        window_offset_days: 1
     adoption:
       grade: A
       raw:
@@ -39,22 +47,28 @@ health:
         downloads_last_month: 5804535
         graph_tier: E
         volume_tier: A
-        cross_check_divergence: null
+        cross_check_divergence: 1.2
     longevity:
-      grade: "?"
-      raw: {}
+      grade: B
+      raw:
+        repo_age_days: 808
+        last_commit_age_days: 1
+        cohort: service
     governance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        active_maintainers_12mo: 48
+        top1_share: 0.374
+        top3_share: 0.591
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
-      grade: "?"
-      raw: {}
-  unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
-    longevity: { reason: not_found }
-    governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
+      grade: D
+      raw:
+        spdx_id: AGPL-3.0
+        permissiveness: strong_network_copyleft
+        relicense_36mo: false
+        content_license: null
 ---
 
 # Firecrawl
@@ -105,14 +119,12 @@ You're building an AI agent or data pipeline that needs to ingest web content at
 **Low (hosted) / Medium (self-hosted)**. The hosted API is a simple HTTP integration. Self-hosting requires managing a Node.js service, Playwright browser instances, and queue/caching infrastructure. Browser automation is resource-intensive and can consume significant memory.
 
 ## Health & viability
-
-- **Responsiveness**: Cannot be scored — no_traffic.
-- **Maintenance**: Very active — daily pushes as of 2026-07, with a responsive team (376 open issues). [推断]
-- **Governance**: Owned by the Firecrawl organization; appears to be a dedicated company/org behind the project with reasonable bus factor.
-- **Backing**: Firecrawl appears to be a venture-backed company offering both open-source and hosted services; the dual model provides sustainability but may shift roadmap toward paid features. [未验证]
-- **Adoption**: High star count (142k) for a project created in 2024; the ~2-year track record is short but the active development cadence is positive. [推断]
-- **Risk flags**: AGPL-3.0 copyleft license may limit commercial use without open-sourcing derivatives. The hosted service pricing and open-source feature parity are important to monitor. The project is young (created 2024-04) with no long-term Lindy track record. [未验证]
-
+- **Maintenance**: Grade A — 13/13 active weeks in trailing 13; last commit 1 days ago.
+- **Responsiveness**: Grade B — median first-response time 147.3 hours across 37 qualifying issues/PRs.
+- **Adoption**: Grade A — 5,804,535 monthly downloads via pypi.org (package: firecrawl-py).
+- **Longevity**: Grade B — 808 days old.
+- **Governance**: Grade A — top-3 contributor share 59.1% (?).
+- **Risk / License**: Grade D — AGPL-3.0 license.
 ## Caveats (unverified)
 
 - [未验证] The AGPL-3.0 license may require source disclosure for derivative works in a SaaS context; verify with legal counsel for your specific use case.

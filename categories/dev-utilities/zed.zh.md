@@ -16,20 +16,28 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:45:48Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 1
+  computed_at: 2026-07-02T15:57:24Z
+  overall: B
+  overall_score: 3.4
+  scored_axes: 5
   capped: false
   cap_reason: null
   needs_human_review: true
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: C
+      raw:
+        median_ttfr_hours: 1080.0
+        qualifying_issues: 0
+        band: relaxed_solo
+        window_offset_days: 5
     adoption:
       grade: B
       raw:
@@ -41,20 +49,24 @@ health:
         volume_tier: B
         cross_check_divergence: 3.63
     longevity:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        repo_age_days: 1959
+        last_commit_age_days: 0
+        cohort: tool
     governance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        active_maintainers_12mo: 312
+        top1_share: 0.082
+        top3_share: 0.189
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
       grade: "?"
       raw: {}
   unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
-    longevity: { reason: not_found }
-    governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
+    risk_license: { reason: license_unparsed }
 ---
 
 # Zed
@@ -103,15 +115,12 @@ health:
 **终端用户无运维负担**。Zed 是消费级桌面应用，支持自动更新。对组织而言，主要关注点是管理团队设置、协作权限与扩展治理。
 
 ## 健康度与可持续性
-
-- **响应速度**：无法计算——no_traffic。
-- **维护**：非常活跃——每日提交、频繁发布、响应及时的 issue 跟踪。86k star、9.3k fork。
-- **治理**：由 Zed Industries 所有，公司由 Atom 和 Tree-sitter 的创作者创立。团队在编辑器技术方面底蕴深厚。
-- **背书**：Zed Industries 是一家获得风投支持的初创公司。公司完全专注于 Zed，这是积极信号，但相比多元化基金会，也存在集中风险。
-- **采用**：在开发者社区增长迅速，尤其在 Rust 和注重性能的开发者中。市场份额仍仅为 VS Code 的一小部分。
-- **长期性**：约 4 年（2021 年创建）。团队有 Atom 的强记录，但 Atom 本身被 GitHub 终止。Zed 是同一愿景的第二次尝试，这改善了 Lindy 信号，但并未消除单厂商编辑器的风险。
-- **风险旗标**：GitHub 许可标记为 NOASSERTION，尽管 README 声明 GPL-3.0-or-later。公司的长期可持续性取决于能否找到可行商业模式。需留意潜在的 open-core 阉割或商业协作功能。
-
+- **维护活跃度**：Grade A——最近 13 周中 13 周有提交；最后提交距今 0 天。
+- **响应速度**：Grade C——中位首次响应时间 1080.0 小时，基于 0 个 qualifying issues/PRs。
+- **采用广度**：Grade B——crates.io 上月下载量 812,610（包名：zed_extension_api）。
+- **长青度**：Grade A——仓库已创建 1959 天。
+- **治理集中度**：Grade A——前三贡献者占比 18.9%（?）。
+- **许可风险**：无法计算——unknown。
 ## 存疑（未验证）
 
 - [未验证] GPUI 在老旧集成显卡上的确切 GPU 要求尚未在所有平台上测试。

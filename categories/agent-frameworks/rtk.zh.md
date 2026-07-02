@@ -16,39 +16,54 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:48:32Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 0
+  computed_at: 2026-07-02T15:44:16Z
+  overall: B
+  overall_score: 3.4
+  scored_axes: 5
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 1
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        median_ttfr_hours: 3.5
+        qualifying_issues: 5
+        band: relaxed_solo
+        window_offset_days: 7
     adoption:
       grade: "?"
       raw: {}
     longevity:
-      grade: "?"
-      raw: {}
+      grade: D
+      raw:
+        repo_age_days: 161
+        last_commit_age_days: 1
+        cohort: tool
     governance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        active_maintainers_12mo: 97
+        top1_share: 0.276
+        top3_share: 0.59
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
   unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
     adoption: { reason: ambiguous }
-    longevity: { reason: not_found }
-    governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
 ---
 
 # RTK
@@ -95,15 +110,12 @@ health:
 **低**。单一静态二进制——通过 `curl`、Homebrew 或 release 下载安装。无需守护进程、无需配置文件。作为代理调用时，它透明地拦截 shell 输出。
 
 ## 健康度与可持续性
-
-- **响应速度**：无法计算——no_traffic。
-- **维护**：活跃——定期提交与发布。67k star、4.1k fork，按 star 量级来看开放 issue 数相对较少。
-- **治理**：由 rtk-ai 所有，一家专注于 AI 开发者工具的组织。看起来是小而专注的团队。
-- **背书**：资金状况未知——该组织似乎专为 RTK 而设。无可见基金会或大型企业背书。
-- **采用**：因能立即节省成本，在 AI 编码社区迅速普及。约 6 个月内 67k star，暗示强劲病毒式增长。
-- **长期性**：极其年轻——2026 年 1 月创建，仅约 6 个月。毫无 Lindy 记录。6 个月大的仓库 star 数高得可疑，可能存在人为刷量或异常病毒式营销。
-- **风险旗标**：Apache-2.0 安全。6 个月项目的 star 数高得可疑——可能无法反映真正的有机采用。单厂商治理与资金透明度缺失意味着，若团队失去兴趣，项目可能停滞。
-
+- **维护活跃度**：Grade A——最近 13 周中 13 周有提交；最后提交距今 1 天。
+- **响应速度**：Grade A——中位首次响应时间 3.5 小时，基于 5 个 qualifying issues/PRs。
+- **采用广度**：无法计算——unknown。
+- **长青度**：Grade D——仓库已创建 161 天。
+- **治理集中度**：Grade A——前三贡献者占比 59.0%（?）。
+- **许可风险**：Grade A——Apache-2.0 许可证。
 ## 存疑（未验证）
 
 - [未验证] 所声称的 60–90% token 削减基于项目自身的基准测试，可能因工作流、命令频率和智能体行为而异。

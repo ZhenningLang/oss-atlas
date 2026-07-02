@@ -16,20 +16,28 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:51:57Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 1
+  computed_at: 2026-07-02T15:23:58Z
+  overall: B
+  overall_score: 3.0
+  scored_axes: 5
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: C
+      raw:
+        median_ttfr_hours: 1080.0
+        qualifying_issues: 0
+        band: relaxed_solo
+        window_offset_days: 10
     adoption:
       grade: A
       raw:
@@ -41,20 +49,24 @@ health:
         volume_tier: A
         cross_check_divergence: 1.0
     longevity:
-      grade: "?"
-      raw: {}
+      grade: C
+      raw:
+        repo_age_days: 220
+        last_commit_age_days: 0
+        cohort: app
     governance:
-      grade: "?"
-      raw: {}
+      grade: B
+      raw:
+        active_maintainers_12mo: 487
+        top1_share: 0.528
+        top3_share: 0.753
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
       grade: "?"
       raw: {}
   unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
-    longevity: { reason: not_found }
-    governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
+    risk_license: { reason: license_unparsed }
 ---
 # OpenClaw
 
@@ -101,14 +113,12 @@ You are a privacy-conscious professional who wants a single AI assistant that fo
 **Low**. The gateway is a single control plane; installation is straightforward for users comfortable with running Node.js apps. The main ongoing burden is configuring messaging channels and rotating LLM credentials.
 
 ## Health & viability
-
-- **Responsiveness**: Cannot be scored — no_traffic.
-- **Maintenance**: Grade A — pushed daily as of 2026-07, with 13 active weeks out of 13 and 6,749 open issues indicating an engaged community.
-- **Governance**: Grade B — owned by the OpenClaw organization with 487 active maintainers in the past 12 months. The top maintainer holds 52.8% of commits, which is a concentration risk.
-- **Longevity**: Grade C — only 220 days old (created 2025-11). No Lindy track record; the project is extremely young despite its high visibility.
-- **Adoption**: Grade A — 381k GitHub stars and 14.3M monthly npm downloads per the health radar.
-- **Risk flags**: GitHub metadata shows `NOASSERTION` license while the README displays an MIT badge — a discrepancy that needs clarification before commercial use.
-
+- **Maintenance**: Grade A — 13/13 active weeks in trailing 13; last commit 0 days ago.
+- **Responsiveness**: Grade C — median first-response time 1080.0 hours across 0 qualifying issues/PRs.
+- **Adoption**: Grade A — 14,326,323 monthly downloads via npmjs.org (package: openclaw).
+- **Longevity**: Grade C — 220 days old.
+- **Governance**: Grade B — top-3 contributor share 75.3% (?).
+- **Risk / License**: Cannot be scored — unknown.
 ## Caveats (unverified)
 
 - [未验证] The `NOASSERTION` license in GitHub metadata may differ from the MIT badge shown in the README; verify before commercial use.

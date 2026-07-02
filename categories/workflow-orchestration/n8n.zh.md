@@ -16,20 +16,28 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:45:49Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 1
+  computed_at: 2026-07-02T16:13:20Z
+  overall: B
+  overall_score: 3.4
+  scored_axes: 5
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: C
+      raw:
+        median_ttfr_hours: 1080.0
+        qualifying_issues: 0
+        band: relaxed_solo
+        window_offset_days: 10
     adoption:
       grade: B
       raw:
@@ -41,20 +49,24 @@ health:
         volume_tier: B
         cross_check_divergence: 1.04
     longevity:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        repo_age_days: 2567
+        last_commit_age_days: 0
+        cohort: app
     governance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        active_maintainers_12mo: 176
+        top1_share: 0.062
+        top3_share: 0.149
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
       grade: "?"
       raw: {}
   unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
-    longevity: { reason: not_found }
-    governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
+    risk_license: { reason: license_unparsed }
 ---
 
 # n8n
@@ -106,15 +118,12 @@ health:
 **中等**。n8n 可用单条 `npx` 命令或 Docker 一行命令本地启动，但生产级自托管需要数据库、Redis、备份和监控。fair-code 许可也意味着在商业部署前必须理解使用限制。
 
 ## 健康度与可持续性
-
-- **响应速度**：无法计算——no_traffic。
-- **维护**：非常活跃——每日推送，195k star，1,435 个开放 issue，定期发布。
-- **治理**：由 n8n GmbH 所有，商业实体，路线图清晰。项目既开源又有商业背书。
-- **背书**：n8n GmbH 是获风投支持的公司，商业模式可持续（云服务 + 企业支持）。
-- **采用**：195k star，400 余种集成，900 余个工作流模板，社区论坛庞大。生态强健。
-- **长期性**：2019 年创建，约 7 年历史且持续活跃。良好的 Lindy 信号。
-- **风险旗标**：fair-code 许可（Sustainable Use License）未获 OSI 批准，限制竞争用途。这是刻意的 open-core 策略。企业功能（SSO、气隙部署）被付费层级锁定。
-
+- **维护活跃度**：Grade A——最近 13 周中 13 周有提交；最后提交距今 0 天。
+- **响应速度**：Grade C——中位首次响应时间 1080.0 小时，基于 0 个 qualifying issues/PRs。
+- **采用广度**：Grade B——npmjs.org 上月下载量 1,313,694（包名：n8n-workflow）。
+- **长青度**：Grade A——仓库已创建 2567 天。
+- **治理集中度**：Grade A——前三贡献者占比 14.9%（?）。
+- **许可风险**：无法计算——unknown。
 ## 存疑（未验证）
 
 - [未验证] fair-code 许可的具体条款可能已发生变化；商业部署前请核实当前 Sustainable Use License 文本。

@@ -16,10 +16,10 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T14:34:40Z
+  computed_at: 2026-07-02T15:31:56Z
   overall: B
-  overall_score: 3.0
-  scored_axes: 4
+  overall_score: 3.2
+  scored_axes: 5
   capped: false
   cap_reason: null
   needs_human_review: false
@@ -51,8 +51,13 @@ health:
         last_commit_age_days: 0
         cohort: skill-pack
     governance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        active_maintainers_12mo: 96
+        top1_share: 0.232
+        top3_share: 0.522
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
       grade: A
       raw:
@@ -62,7 +67,6 @@ health:
         content_license: null
   unknowns:
     responsiveness: { reason: type_na }
-    governance: { reason: empty_or_gated }
 ---
 
 # Spec Kit
@@ -99,14 +103,12 @@ GitHub 出品的开源工具包，帮助你上手 Spec-Driven Development——�
 | [ECC](ecc.zh.md) | ✅ | 当前页用于它的主场景；如果更看重「开箱即全的 Claude Code 底座，含 skill、agent、hook、memory 和安全扫描」，再选 ECC。 | 开箱即全的 Claude Code 底座，功能面 broad；方法论层只是更大 agent 基础设施的一部分。 |
 
 ## 健康度与可持续性
-
-- **响应速度**：无法计算——type_na。
-- **维护（2026-07）。** 最后 push 于 2026-07-01，持续开发中；项目未归档，由 GitHub 团队维护更新。[推断]
-- **治理 / bus factor。** 归属 GitHub（微软）——**极强的背书**信号，维护者流失的 bus factor 风险几乎为零。路线图与 GitHub 的 AI 战略绑定，这既是优势，也是潜在的锁定顾虑。[推断]
-- **年龄与 Lindy 判断。** 不足一年（2025-08 创建）⇒ **极弱的 Lindy** 信号。它是一个年轻、靠 hype 推动的项目，star 数庞大但长期 track record 未经检验。GitHub 背书提升了长寿几率，但方法论本身尚未在规模上被证明。[推断]
-- **采用度与生态。** 截至 2026-07 约 116.8k star，主要由 GitHub 品牌效应和 AI 编码 hype 驱动；真实生产采用度和社区生态深度在早期阶段尚不清楚。[未验证]
-- **风险标记。** MIT 许可，很宽松。主要风险是**厂商战略耦合**：若 GitHub 调整其 AI agent 路线图，Spec Kit 的维护和相关性可能下降。项目极年轻，方法论在成熟过程中可能大幅变化。[推断]
-
+- **维护活跃度**：Grade A——最近 13 周中 13 周有提交；最后提交距今 0 天。
+- **响应速度**：无法计算——unknown。
+- **采用广度**：Grade D——pypi.org 上月下载量 1,919（包名：spec-kit-redist）。
+- **长青度**：Grade B——仓库已创建 315 天。
+- **治理集中度**：Grade A——前三贡献者占比 52.2%（?）。
+- **许可风险**：Grade A——MIT 许可证。
 ## 存疑（未验证）
 
 - [未验证] 截至 2026-07-01 约 116.8k GitHub star；star 数受 GitHub 品牌效应和 AI hype 影响很大，不一定代表有机的生产级采用。

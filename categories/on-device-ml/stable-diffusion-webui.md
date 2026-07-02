@@ -16,39 +16,50 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:43:31Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 0
+  computed_at: 2026-07-02T16:04:35Z
+  overall: C
+  overall_score: 1.75
+  scored_axes: 4
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: D
+      raw:
+        archived: false
+        last_commit_age_days: 705
+        active_weeks_13: 0
+        carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        median_ttfr_hours: 69.5
+        qualifying_issues: 12
+        band: relaxed_solo
+        window_offset_days: 3
     adoption:
       grade: "?"
       raw: {}
     longevity:
-      grade: "?"
-      raw: {}
+      grade: D
+      raw:
+        repo_age_days: 1410
+        last_commit_age_days: 705
+        cohort: tool
     governance:
       grade: "?"
       raw: {}
     risk_license:
-      grade: "?"
-      raw: {}
+      grade: D
+      raw:
+        spdx_id: AGPL-3.0
+        permissiveness: strong_network_copyleft
+        relicense_36mo: false
+        content_license: null
   unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
     adoption: { reason: ambiguous }
-    longevity: { reason: not_found }
-    governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
+    governance: { reason: unattributable }
 ---
 
 # Stable Diffusion WebUI
@@ -101,15 +112,12 @@ You're a creator, researcher, or developer who wants to generate images from tex
 **Medium.** Installation is a one-click script for basic setups, but the real burden is keeping the Python environment, PyTorch, CUDA drivers, and extension ecosystem compatible. Extension updates can break the WebUI after a `git pull`, and model files consume tens of gigabytes of disk space. GPU thermal management, VRAM limits, and batch-size tuning are ongoing concerns. For a personal workstation this is manageable; for a shared server or production pipeline, expect frequent troubleshooting.
 
 ## Health & viability
-
-- **Responsiveness**: Cannot be scored — no_traffic.
-- **Maintenance**: Active but last push was 2026-03, a few months before verification date. The project has a large open-issue backlog (2,493), suggesting both high usage and some strain on maintainer capacity.
-- **Governance**: Owned by a single GitHub user (`AUTOMATIC1111`), not an organization. This creates a significant bus-factor risk; the project's continuity depends on one individual's continued involvement. [未验证]
-- **Backing**: No corporate or foundation backing visible; funded by community donations and volunteer contributions.
-- **Adoption**: Extremely popular (164k stars) and the de-facto standard local interface for Stable Diffusion. A vast ecosystem of extensions, models, and community tutorials exists.
-- **Age & Lindy**: Created 2022-08 (~4 years old), which is young but has outlasted many AI-hype tools. It has been continuously active since launch, giving it a partial Lindy signal, though the 4-month gap since last push is worth monitoring.
-- **Risk flags**: AGPL-3.0 copyleft license may affect commercial derivative use. Single-maintainer bus factor is the largest structural risk. The project also carries the general model-license risk: community checkpoints have their own licenses (some non-commercial) separate from the tool's AGPL-3.0.
-
+- **Maintenance**: Grade D — 0/13 active weeks in trailing 13; last commit 705 days ago.
+- **Responsiveness**: Grade A — median first-response time 69.5 hours across 12 qualifying issues/PRs.
+- **Adoption**: Cannot be scored — unknown.
+- **Longevity**: Grade D — 1410 days old.
+- **Governance**: Cannot be scored — unknown.
+- **Risk / License**: Grade D — AGPL-3.0 license.
 ## Caveats (unverified)
 
 - [未验证] The exact maintenance status of the `AUTOMATIC1111` user account and their continued availability is not publicly documented; the bus factor is a genuine concern.

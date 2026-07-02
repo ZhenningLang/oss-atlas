@@ -16,20 +16,28 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:55:19Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 1
+  computed_at: 2026-07-02T16:09:37Z
+  overall: A
+  overall_score: 4.0
+  scored_axes: 6
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        median_ttfr_hours: 0.1
+        qualifying_issues: 40
+        band: default
+        window_offset_days: 5
     adoption:
       grade: A
       raw:
@@ -41,20 +49,26 @@ health:
         volume_tier: A
         cross_check_divergence: 1.2
     longevity:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        repo_age_days: 4087
+        last_commit_age_days: 0
+        cohort: library
     governance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        active_maintainers_12mo: 73
+        top1_share: 0.209
+        top3_share: 0.52
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
-      grade: "?"
-      raw: {}
-  unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
-    longevity: { reason: not_found }
-    governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # Ant Design
@@ -116,14 +130,12 @@ health:
 - 监控复杂组件（表格、表单）的无障碍问题，可能需要手动调整 ARIA
 
 ## 健康度与可持续性
-
-- **响应速度**：无法计算——no_traffic。
-- **维护**：非常活跃——截至 2026-07 仍有日常推送，发布节奏规律，issue/PR 吞吐量大（98.5k stars，1,284 个 open issue）。
-- **治理**：由阿里巴巴开源生态内的 Ant Design Team 维护。项目拥有多名核心提交者，治理模型清晰。Bus factor 中等到良好。
-- **背书**：阿里巴巴背书，中国最大科技公司之一。这提供了稳定性和资源，但也意味着项目方向受阿里巴巴内部需求影响。
-- **采用度**：亚太企业市场采用度极强，全球范围持续增长。98.5k stars，2015 年创建（11 年记录）。阿里巴巴、腾讯和数千家创业公司都在使用。
-- **风险旗标**：MIT 许可宽松。未见 relicense 历史。项目与阿里巴巴的紧密关系意味着某些西方企业可能产生地缘政治或合规顾虑。v4 到 v5 的迁移涉及主题化破坏性变更；未来主版本可能同样需要投入。
-
+- **维护活跃度**：Grade A——最近 13 周中 13 周有提交；最后提交距今 0 天。
+- **响应速度**：Grade A——中位首次响应时间 0.1 小时，基于 40 个 qualifying issues/PRs。
+- **采用广度**：Grade A——npmjs.org 上月下载量 10,718,402（包名：antd）。
+- **长青度**：Grade A——仓库已创建 4087 天。
+- **治理集中度**：Grade A——前三贡献者占比 52.0%（?）。
+- **许可风险**：Grade A——MIT 许可证。
 ## 存疑（未验证）
 
 - [未验证] Ant Design 用户在中国与全球其他地区的精确比例未经核实。

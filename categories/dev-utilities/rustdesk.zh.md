@@ -16,39 +16,54 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:56:43Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 0
+  computed_at: 2026-07-02T15:53:27Z
+  overall: B
+  overall_score: 3.4
+  scored_axes: 5
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        median_ttfr_hours: 6.6
+        qualifying_issues: 15
+        band: relaxed_solo
+        window_offset_days: 13
     adoption:
       grade: "?"
       raw: {}
     longevity:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        repo_age_days: 2103
+        last_commit_age_days: 0
+        cohort: tool
     governance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        active_maintainers_12mo: 108
+        top1_share: 0.241
+        top3_share: 0.532
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
-      grade: "?"
-      raw: {}
+      grade: D
+      raw:
+        spdx_id: AGPL-3.0
+        permissiveness: strong_network_copyleft
+        relicense_36mo: false
+        content_license: null
   unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
     adoption: { reason: ambiguous }
-    longevity: { reason: not_found }
-    governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
 ---
 
 # RustDesk
@@ -103,14 +118,12 @@ health:
 - **更新：** 客户端和中继必须保持版本兼容；版本不匹配可能导致连接失败。
 
 ## 健康度与可持续性
-
-- **响应速度**：无法计算——no_traffic。
-- **维护（2026-07）。** 最后 push 于 2026-07-01，提交历史非常活跃；项目未归档，频繁发布和安全更新。[推断]
-- **治理 / bus factor。** 仓库由单一用户（`rustdesk`）持有，该用户是主要维护者；存在**中等 bus factor 风险**。但项目有庞大的贡献者基础（约 17.8k fork）和活跃社区，若原维护者退出，fork 可能继续。[推断]
-- **年龄与 Lindy 判断。** 约 5.5 年（2020-09 创建）且仍非常活跃 ⇒ 对远程桌面工具而言是**中强 Lindy** 信号；它已证明持续力，自托管和隐私社区中越来越受欢迎。[推断]
-- **采用度与生态。** 约 117.4k star，在自托管和隐私社区中被广泛用作 TeamViewer 替代。跨平台 Flutter UI 和 P2P 架构是显著优势。[未验证]
-- **风险标记。** AGPL-3.0 许可是商业使用和集成的决定性过滤条件。未发现 relicense 历史，但单人维护者持有、缺乏正式基金会意味着治理可能变动。README 中带有关于滥用（未经授权访问）的警示。[推断]
-
+- **维护活跃度**：Grade A——最近 13 周中 13 周有提交；最后提交距今 0 天。
+- **响应速度**：Grade A——中位首次响应时间 6.6 小时，基于 15 个 qualifying issues/PRs。
+- **采用广度**：无法计算——unknown。
+- **长青度**：Grade A——仓库已创建 2103 天。
+- **治理集中度**：Grade A——前三贡献者占比 53.2%（?）。
+- **许可风险**：Grade D——AGPL-3.0 许可证。
 ## 存疑（未验证）
 
 - [未验证] 截至 2026-07-01 约 117.4k GitHub star；star 数为近似值且对时间敏感。

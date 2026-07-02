@@ -16,20 +16,28 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:50:21Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 1
+  computed_at: 2026-07-02T15:51:44Z
+  overall: A
+  overall_score: 4.0
+  scored_axes: 6
   capped: false
   cap_reason: null
   needs_human_review: true
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        median_ttfr_hours: 7.3
+        qualifying_issues: 37
+        band: relaxed_solo
+        window_offset_days: 1
     adoption:
       grade: A
       raw:
@@ -41,20 +49,26 @@ health:
         volume_tier: A
         cross_check_divergence: 4.42
     longevity:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        repo_age_days: 2971
+        last_commit_age_days: 0
+        cohort: tool
     governance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        active_maintainers_12mo: 91
+        top1_share: 0.33
+        top3_share: 0.594
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
-      grade: "?"
-      raw: {}
-  unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
-    longevity: { reason: not_found }
-    governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # Deno
@@ -104,14 +118,12 @@ You're choosing a JavaScript/TypeScript runtime for a new server-side project or
 **Low**. Deno is a single binary that runs on major OSs. For deployment, you can run `deno run` directly, compile to a standalone binary with `deno compile`, or deploy to Deno Deploy (managed edge). The built-in toolchain (test, fmt, lint, bench) reduces the need for separate devDependencies. No `node_modules` bloat simplifies CI/CD caching and Docker image sizes.
 
 ## Health & viability
-
-- **Responsiveness**: Cannot be scored — no_traffic.
-- **Maintenance**: Very active — pushed daily as of 2026-07, with a mature v2 release line and responsive core team (1,354 open issues). [推断]
-- **Governance**: Owned by the `denoland` organization with Ryan Dahl (Node.js creator) as a key figure. The project has a clear technical vision and multiple core contributors. Bus factor is reasonable.
-- **Backing**: Deno Land Inc. is the commercial entity behind the project; Deno Deploy is their revenue source. The company has raised venture funding, which introduces both stability and potential future direction conflicts. [未验证]
-- **Adoption**: Strong adoption with 107.3k stars, created in 2018 (8-year track record). Used by companies like Supabase for edge functions and in various production CLI tools.
-- **Risk flags**: The MIT license is permissive. The venture-backed backing model means the open-source roadmap may be influenced by the commercial Deno Deploy product. No relicense history visible, but monitor for open-core gating. [未验证]
-
+- **Maintenance**: Grade A — 13/13 active weeks in trailing 13; last commit 0 days ago.
+- **Responsiveness**: Grade A — median first-response time 7.3 hours across 37 qualifying issues/PRs.
+- **Adoption**: Grade A — 5,934,345 monthly downloads via crates.io (package: deno_core).
+- **Longevity**: Grade A — 2971 days old.
+- **Governance**: Grade A — top-3 contributor share 59.4% (?).
+- **Risk / License**: Grade A — MIT license.
 ## Caveats (unverified)
 
 - [未验证] Deno Land Inc. has raised venture funding; the exact funding rounds and investors have not been verified from primary sources.

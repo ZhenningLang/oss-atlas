@@ -16,20 +16,28 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:47:40Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 1
+  computed_at: 2026-07-02T15:43:29Z
+  overall: B
+  overall_score: 3.0
+  scored_axes: 6
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: C
+      raw:
+        median_ttfr_hours: 360.0
+        qualifying_issues: 0
+        band: default
+        window_offset_days: 1
     adoption:
       grade: C
       raw:
@@ -41,20 +49,26 @@ health:
         volume_tier: C
         cross_check_divergence: null
     longevity:
-      grade: "?"
-      raw: {}
+      grade: C
+      raw:
+        repo_age_days: 428
+        last_commit_age_days: 0
+        cohort: framework
     governance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        active_maintainers_12mo: 475
+        top1_share: 0.161
+        top3_share: 0.451
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
-      grade: "?"
-      raw: {}
-  unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
-    longevity: { reason: not_found }
-    governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # OpenCode
@@ -104,14 +118,12 @@ You are a developer who wants AI-assisted coding but refuses to be locked into a
 **Low**. Installation is `npm install -g opencode-ai` or similar; the agent runs as a local process with no persistent service to manage. The ongoing burden is API key rotation and keeping the npm package updated.
 
 ## Health & viability
-
-- **Responsiveness**: Cannot be scored — no_traffic.
-- **Maintenance**: Grade A — pushed daily as of 2026-07, with 13 active weeks out of 13. The 7,113 open issues indicate high community engagement.
-- **Governance**: Grade A — owned by the `anomalyco` organization, with 475 active maintainers in the past 12 months. The top maintainer holds only 16.1% of commits and the top three hold 45.1%, indicating a well-distributed core team.
-- **Longevity**: Grade C — 428 days old (created 2025-04). No Lindy track record; the project is young but has been active for over a year.
-- **Adoption**: Grade C — 181k GitHub stars and 127k monthly npm downloads. The volume tier is C and graph tier is E, suggesting the project is still in early adoption.
-- **Risk flags**: The project is extremely young with no proven Lindy track record. MIT license is clean, but the velocity of a v0.x project this young means breaking changes should be expected.
-
+- **Maintenance**: Grade A — 13/13 active weeks in trailing 13; last commit 0 days ago.
+- **Responsiveness**: Grade C — median first-response time 360.0 hours across 0 qualifying issues/PRs.
+- **Adoption**: Grade C — 127,913 monthly downloads via npmjs.org (package: @opencode-ai/cli-darwin-arm64).
+- **Longevity**: Grade C — 428 days old.
+- **Governance**: Grade A — top-3 contributor share 45.1% (?).
+- **Risk / License**: Grade A — MIT license.
 ## Caveats (unverified)
 
 - [推断] 181k GitHub stars on a repo created in April 2025 may be inflated by hype rather than organic production adoption.

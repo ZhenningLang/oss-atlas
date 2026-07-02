@@ -16,20 +16,28 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:52:29Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 1
+  computed_at: 2026-07-02T15:34:03Z
+  overall: B
+  overall_score: 3.17
+  scored_axes: 6
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 1
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: C
+      raw:
+        median_ttfr_hours: 360.0
+        qualifying_issues: 0
+        band: default
+        window_offset_days: 13
     adoption:
       grade: B
       raw:
@@ -41,20 +49,26 @@ health:
         volume_tier: B
         cross_check_divergence: 1.0
     longevity:
-      grade: "?"
-      raw: {}
+      grade: C
+      raw:
+        repo_age_days: 441
+        last_commit_age_days: 1
+        cohort: framework
     governance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        active_maintainers_12mo: 88
+        top1_share: 0.08
+        top3_share: 0.211
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
-      grade: "?"
-      raw: {}
-  unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
-    longevity: { reason: not_found }
-    governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # Gemini CLI
@@ -105,14 +119,12 @@ You're a developer who lives in the terminal and wants an AI assistant that can 
 **Low**. Gemini CLI is installed via npm and runs as a local Node.js process. There is no server to maintain. The operational burden is limited to keeping the CLI updated and managing your Google API credentials. The free tier has rate limits that may require upgrading for heavy usage, but there is no infrastructure to operate.
 
 ## Health & viability
-
-- **Responsiveness**: Cannot be scored — no_traffic.
-- **Maintenance**: Active — pushed daily as of 2026-07, with a responsive issue tracker (1,347 open issues). [推断]
-- **Governance**: Owned by the `google-gemini` organization, a Google-backed GitHub org. Bus factor is reasonable given Google's backing, but the project's future depends on Google's continued commitment to the open-source CLI. [未验证]
-- **Backing**: Officially backed by Google (Gemini team). The Apache-2.0 license is permissive, but Google has a history of sunnsetting open-source projects. [推断]
-- **Adoption**: Strong star count (105.7k) with a recent creation date (2025-04). The backing by Google and the generous free tier drive rapid adoption. [推断]
-- **Risk flags**: Very young (created 2025-04) with no Lindy track record. Google's history of abandoning open-source projects (e.g., Google Reader, Google+) is a relevant prior, though the Gemini brand appears to be a strategic priority. [推断]
-
+- **Maintenance**: Grade A — 13/13 active weeks in trailing 13; last commit 1 days ago.
+- **Responsiveness**: Grade C — median first-response time 360.0 hours across 0 qualifying issues/PRs.
+- **Adoption**: Grade B — 2,522,263 monthly downloads via npmjs.org (package: @google/gemini-cli).
+- **Longevity**: Grade C — 441 days old.
+- **Governance**: Grade A — top-3 contributor share 21.1% (?).
+- **Risk / License**: Grade A — Apache-2.0 license.
 ## Caveats (unverified)
 
 - [未验证] The exact relationship between `google-gemini` and the broader Google DeepMind / Gemini product organization has not been verified.

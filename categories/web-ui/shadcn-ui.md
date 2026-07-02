@@ -16,20 +16,28 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:43:34Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 1
+  computed_at: 2026-07-02T16:12:46Z
+  overall: A
+  overall_score: 3.8
+  scored_axes: 5
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        median_ttfr_hours: 14.7
+        qualifying_issues: 28
+        band: default
+        window_offset_days: 10
     adoption:
       grade: A
       raw:
@@ -41,20 +49,23 @@ health:
         volume_tier: A
         cross_check_divergence: 1.13
     longevity:
-      grade: "?"
-      raw: {}
+      grade: B
+      raw:
+        repo_age_days: 1275
+        last_commit_age_days: 0
+        cohort: library
     governance:
       grade: "?"
       raw: {}
     risk_license:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
   unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
-    longevity: { reason: not_found }
     governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
 ---
 
 # shadcn/ui
@@ -108,14 +119,12 @@ You also reach for it when you want a design system that stays in your repo, not
 **Low.** There is nothing to deploy or operate beyond your normal React build pipeline. The operational burden is in **maintenance of the copied components**: when you upgrade the shadcn/ui CLI or add a new component, you may need to reconcile styling changes or Tailwind config updates. Because the components live in your repo, you must patch them yourself if a bug is found — you cannot just bump a version in `package.json`. The flip side is that you are never blocked by upstream release cadence. For a small team, the copy-and-own model is low-friction; for a large org with many teams, you may need to build your own internal distribution mechanism to keep component variants consistent.
 
 ## Health & viability
-
-- **Responsiveness**: Cannot be scored — no_traffic.
-- **Maintenance (2026-07).** Last pushed 2026-06-30 with a very active commit history and frequent releases; the project is not archived and has a thriving community.
-- **Governance / bus factor.** Owned by the `shadcn-ui` GitHub organization (multi-maintainer), with shadcn as the visible lead. The project has strong community contribution and a clear CLI-driven distribution model.
-- **Age & Lindy verdict.** ~2.5 years old (created 2023-01) and extremely popular — a moderate Lindy signal for a UI library; it has become the dominant React component distribution model in the modern Tailwind ecosystem.
-- **Adoption & ecosystem.** ~117.7k stars and massive real-world adoption across Next.js, SaaS, and open-source projects. The "copy-and-own" model has influenced many other component libraries.
-- **Risk flags.** MIT license with no relicense history. The main risk is **ecosystem coupling**: the project is tightly bound to React + Tailwind CSS + Radix UI; if any of those shifts significantly, the component files in your repo may need manual updates.
-
+- **Maintenance**: Grade A — 13/13 active weeks in trailing 13; last commit 0 days ago.
+- **Responsiveness**: Grade A — median first-response time 14.7 hours across 28 qualifying issues/PRs.
+- **Adoption**: Grade A — 18,842,516 monthly downloads via npmjs.org (package: shadcn).
+- **Longevity**: Grade B — 1275 days old.
+- **Governance**: Cannot be scored — unknown.
+- **Risk / License**: Grade A — MIT license.
 ## Caveats (unverified)
 
 - [未验证] ~117.7k GitHub stars as of 2026-07-01; star counts are approximate and time-sensitive.

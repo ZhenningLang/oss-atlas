@@ -17,20 +17,28 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:44:21Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 1
+  computed_at: 2026-07-02T16:05:24Z
+  overall: B
+  overall_score: 2.6
+  scored_axes: 5
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 10
+        carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        median_ttfr_hours: 0.0
+        qualifying_issues: 35
+        band: relaxed_solo
+        window_offset_days: 2
     adoption:
       grade: E
       raw:
@@ -43,20 +51,23 @@ health:
         cross_check_divergence: null
         archived: false
     longevity:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        repo_age_days: 1820
+        last_commit_age_days: 0
+        cohort: tool
     governance:
       grade: "?"
       raw: {}
     risk_license:
-      grade: "?"
-      raw: {}
+      grade: D
+      raw:
+        spdx_id: AGPL-3.0
+        permissiveness: strong_network_copyleft
+        relicense_36mo: false
+        content_license: null
   unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
-    longevity: { reason: not_found }
     governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
 ---
 
 # Warp
@@ -107,14 +118,12 @@ You're a developer who spends most of your day in a terminal and wants a modern,
 **Low.** Warp is an end-user desktop application. You download it, install it, and use it. The operational complexity is the same as any other desktop app: keeping it updated, managing any account/login requirements, and understanding that it's a closed-source product that receives updates on Warp's schedule (weekly, typically Thursdays). There is no server to run, no database to manage, and no self-hosting burden.
 
 ## Health & viability
-
-- **Responsiveness**: Cannot be scored — no_traffic.
-- **Maintenance — active product development, but closed source.** Weekly releases (typically Thursdays) are claimed by the team. The GitHub repo receives frequent issue and feature-request activity, but this is not a proxy for code commits since the repo is issues-only. [推断]
-- **Governance — vendor-controlled, single company.** Warp is a venture-backed company (Warp.dev) that owns the product entirely. The roadmap is decided by the company, not a community. The GitHub repo exists for transparency on issues, not for community governance. [推断]
-- **Age & Lindy — ~4 years old, still evolving.** Created 2021-07. Four years is a moderate age for a dev tool; the terminal space is conservative, so a new entrant needs to keep proving itself. The "agentic terminal" angle is a recent pivot and its durability is unproven. [推断]
-- **Adoption & ecosystem — growing mindshare, closed ecosystem.** ~62k stars on the issues-only repo signals strong interest. The ecosystem is limited by the closed-source nature — no plugins, no community forks, no independent audits. [未验证]
-- **Risk flags — proprietary, closed-source, AGPL-3.0 on a repo that is not the product.** The AGPL-3.0 license on the issues-only repo is misleading if you expect it to cover the terminal. The company's ability to change pricing, terms, or discontinue features is unchecked by an open-source license. The "agentic" feature pivot is recent and may shift the product's focus. [推断]
-
+- **Maintenance**: Grade A — 10/13 active weeks in trailing 13; last commit 0 days ago.
+- **Responsiveness**: Grade A — median first-response time 0.0 hours across 35 qualifying issues/PRs.
+- **Adoption**: Grade E.
+- **Longevity**: Grade A — 1820 days old.
+- **Governance**: Cannot be scored — unknown.
+- **Risk / License**: Grade D — AGPL-3.0 license.
 ## Caveats (unverified)
 
 - [未验证] Repo facts as of 2026-07-01 via GitHub API: created 2021-07-08, last push 2026-07-01, not archived, ~62.7k stars, ~5.1k forks, AGPL-3.0, language reported as Rust, owner type Organization.

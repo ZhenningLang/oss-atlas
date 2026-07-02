@@ -16,20 +16,28 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:43:58Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 1
+  computed_at: 2026-07-02T16:04:51Z
+  overall: A
+  overall_score: 3.5
+  scored_axes: 6
   capped: false
   cap_reason: null
   needs_human_review: true
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 10
+        active_weeks_13: 7
+        carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        median_ttfr_hours: 1.6
+        qualifying_issues: 54
+        band: relaxed_solo
+        window_offset_days: 11
     adoption:
       grade: B
       raw:
@@ -41,20 +49,26 @@ health:
         volume_tier: B
         cross_check_divergence: 2.32
     longevity:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        repo_age_days: 3787
+        last_commit_age_days: 10
+        cohort: tool
     governance:
-      grade: "?"
-      raw: {}
+      grade: C
+      raw:
+        active_maintainers_12mo: 5
+        top1_share: 0.633
+        top3_share: 0.933
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
-      grade: "?"
-      raw: {}
-  unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
-    longevity: { reason: not_found }
-    governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # Alacritty
@@ -102,15 +116,12 @@ You're a developer who spends hours in the terminal every day and wants the fast
 **None.** Alacritty is a single binary. Install via package manager or download from releases. Configuration is a single YAML file. No daemon, no background service.
 
 ## Health & viability
-
-- **Responsiveness**: Cannot be scored — no_traffic.
-- **Maintenance**: Active — regular releases, responsive maintainers. 65k stars, 3.5k forks. The project is well-managed with clear issue triage.
-- **Governance**: Maintained by the alacritty organization with multiple contributors. The original creator (jwilm) stepped back, but the project has successfully transitioned to community/organization maintenance.
-- **Backing**: No corporate backing — a community-driven project under the alacritty GitHub organization. Sustained by volunteer contributions and community goodwill.
-- **Adoption**: Very widely adopted among developers who prioritize terminal performance. Often recommended in Rust and developer communities as the default fast terminal.
-- **Longevity**: ~10 years old (created 2016). Continuously maintained with no significant gaps. Good Lindy signal for a community project.
-- **Risk flags**: Apache-2.0 is safe. No relicense history. The project is conservative about feature creep, which keeps it stable but may frustrate users wanting tabs, ligatures, or built-in multiplexing. The original maintainer transition was handled well.
-
+- **Maintenance**: Grade A — 7/13 active weeks in trailing 13; last commit 10 days ago.
+- **Responsiveness**: Grade A — median first-response time 1.6 hours across 54 qualifying issues/PRs.
+- **Adoption**: Grade B — 520,819 monthly downloads via crates.io (package: alacritty_terminal).
+- **Longevity**: Grade A — 3787 days old.
+- **Governance**: Grade C — top-3 contributor share 93.3% (?).
+- **Risk / License**: Grade A — Apache-2.0 license.
 ## Caveats (unverified)
 
 - [未验证] The exact OpenGL version requirement and compatibility with specific GPU drivers on Linux vary by distribution and hardware.

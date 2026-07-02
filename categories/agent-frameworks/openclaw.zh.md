@@ -16,20 +16,28 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:51:57Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 1
+  computed_at: 2026-07-02T15:23:58Z
+  overall: B
+  overall_score: 3.0
+  scored_axes: 5
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: C
+      raw:
+        median_ttfr_hours: 1080.0
+        qualifying_issues: 0
+        band: relaxed_solo
+        window_offset_days: 10
     adoption:
       grade: A
       raw:
@@ -41,20 +49,24 @@ health:
         volume_tier: A
         cross_check_divergence: 1.0
     longevity:
-      grade: "?"
-      raw: {}
+      grade: C
+      raw:
+        repo_age_days: 220
+        last_commit_age_days: 0
+        cohort: app
     governance:
-      grade: "?"
-      raw: {}
+      grade: B
+      raw:
+        active_maintainers_12mo: 487
+        top1_share: 0.528
+        top3_share: 0.753
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
       grade: "?"
       raw: {}
   unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
-    longevity: { reason: not_found }
-    governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
+    risk_license: { reason: license_unparsed }
 ---
 # OpenClaw
 
@@ -101,14 +113,12 @@ health:
 **低**。网关是单一控制平面；对习惯运行 Node.js 应用的用户来说安装简单。主要持续负担是配置消息渠道和轮换 LLM 凭证。
 
 ## 健康度与可持续性
-
-- **响应速度**：无法计算——no_traffic。
-- **维护**：Grade A——截至 2026-07 每日推送，13 周中有 13 周活跃，6,749 个开放 issue 表明社区参与度高。
-- **治理**：Grade B——由 OpenClaw 组织所有，过去 12 个月有 487 位活跃维护者。首位维护者占 52.8% 的提交，存在集中度风险。
-- **长期性**：Grade C——仅 220 天历史（2025-11 创建）。毫无 Lindy 记录；项目极其年轻，尽管 visibility 很高。
-- **采用**：Grade A——据健康雷达，GitHub 381k star，npm 月下载量 1430 万。
-- **风险旗标**：GitHub 元数据许可为 `NOASSERTION`，而 README 显示 MIT badge，两者存在差异，商用前需澄清。
-
+- **维护活跃度**：Grade A——最近 13 周中 13 周有提交；最后提交距今 0 天。
+- **响应速度**：Grade C——中位首次响应时间 1080.0 小时，基于 0 个 qualifying issues/PRs。
+- **采用广度**：Grade A——npmjs.org 上月下载量 14,326,323（包名：openclaw）。
+- **长青度**：Grade C——仓库已创建 220 天。
+- **治理集中度**：Grade B——前三贡献者占比 75.3%（?）。
+- **许可风险**：无法计算——unknown。
 ## 存疑（未验证）
 
 - [未验证] GitHub 元数据中的 `NOASSERTION` 许可可能与 README 上显示的 MIT badge 不一致；商用前请核实。

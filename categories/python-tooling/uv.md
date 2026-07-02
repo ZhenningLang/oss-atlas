@@ -16,10 +16,10 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T14:30:24Z
+  computed_at: 2026-07-02T15:21:18Z
   overall: A
-  overall_score: 3.6
-  scored_axes: 5
+  overall_score: 3.67
+  scored_axes: 6
   capped: false
   cap_reason: null
   needs_human_review: false
@@ -32,8 +32,12 @@ health:
         active_weeks_13: 13
         carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        median_ttfr_hours: 6.5
+        qualifying_issues: 35
+        band: relaxed_solo
+        window_offset_days: 2
     adoption:
       grade: A
       raw:
@@ -65,8 +69,6 @@ health:
         permissiveness: permissive
         relicense_36mo: false
         content_license: null
-  unknowns:
-    responsiveness: { reason: no_traffic }
 ---
 
 # uv
@@ -115,15 +117,12 @@ You're a Python developer tired of waiting for `pip install` to resolve dependen
 **Low**. A single static binary — install via `curl`, Homebrew, or PyPI. No daemon, no background service. For teams, the main cost is workflow migration and training.
 
 ## Health & viability
-
-- **Responsiveness**: Cannot be scored — no_traffic.
-- **Maintenance**: Extremely active — daily commits, rapid releases. Created in 2023 but already one of the most starred Python tooling repos.
-- **Governance**: Backed by Astral, a well-funded Python tooling company (also behind Ruff). Clear commercial backing with a strong Rust/Python team.
-- **Backing**: Astral has demonstrated commitment through consistent investment in Ruff and uv. The company appears stable and focused on Python developer experience.
-- **Adoption**: Rapidly growing — 87k stars, 3.2k forks, widely discussed in the Python community. Many projects are migrating from pip/poetry to uv.
-- **Longevity**: Only ~3 years old (created 2023). While backed by a committed vendor, it lacks the Lindy track record of pip (20+ years). The risk is lower than a hobby project but higher than a foundation-backed tool.
-- **Risk flags**: Apache-2.0 license is safe. Astral is a single-vendor company; if the business model fails, maintenance could slow. No relicense history yet, but watch for open-core/feature-gating as they build commercial offerings.
-
+- **Maintenance**: Grade A — 13/13 active weeks in trailing 13; last commit 0 days ago.
+- **Responsiveness**: Grade A — median first-response time 6.5 hours across 35 qualifying issues/PRs.
+- **Adoption**: Grade A — 157,448,976 monthly downloads via pypi.org (package: uv).
+- **Longevity**: Grade B — 1004 days old.
+- **Governance**: Grade B — top-3 contributor share 73.6% (?).
+- **Risk / License**: Grade A — Apache-2.0 license.
 ## Caveats (unverified)
 
 - [未验证] The exact speedup factor varies by platform, cache state, and network conditions; 10–100x is the project's own benchmark claim.

@@ -16,20 +16,28 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:47:59Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 1
+  computed_at: 2026-07-02T15:58:26Z
+  overall: B
+  overall_score: 3.17
+  scored_axes: 6
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 11
+        carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        median_ttfr_hours: 1.1
+        qualifying_issues: 6
+        band: relaxed_solo
+        window_offset_days: 13
     adoption:
       grade: E
       raw:
@@ -41,20 +49,26 @@ health:
         volume_tier: "?"
         cross_check_divergence: null
     longevity:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        repo_age_days: 2075
+        last_commit_age_days: 0
+        cohort: tool
     governance:
-      grade: "?"
-      raw: {}
+      grade: B
+      raw:
+        active_maintainers_12mo: 48
+        top1_share: 0.515
+        top3_share: 0.772
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
-      grade: "?"
-      raw: {}
-  unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
-    longevity: { reason: not_found }
-    governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
+      grade: A
+      raw:
+        spdx_id: Unlicense
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # yt-dlp
@@ -106,15 +120,12 @@ health:
 **运行低，保持更新中等。** 安装 trivial（`pip install yt-dlp` 或独立二进制）。真正的运维负担在于提取器时效性：流媒体站点频繁变化，虽然 yt-dlp 比 youtube-dl 更新快得多，你仍需保持较新版本。对一次性脚本没问题；对长期自动化管线，要为版本锁定和定期更新预留预算。`--update` 标志有帮助，但 CI 环境应锁定版本并测试新版本。
 
 ## 健康度与可持续性
-
-- **响应速度**：无法计算——no_traffic。
-- **维护**：非常活跃——截至 2026-07 每日推送，提交活跃度徽章显示持续速度。该分叉在提取器修复上一直超越原始上游。
-- **治理**：由 `yt-dlp` 组织所有；社区驱动，多名维护者。与单人项目相比，组织结构提供了合理的 bus factor。
-- **背书**：无显著企业背书可见；由社区捐赠和志愿者 effort 资助。
-- **采用**：极受欢迎（174k star），被普遍视为面向 YouTube 提取的 youtube-dl 事实继任者。在脚本、管线和下游工具中大量生产级使用。
-- **年龄与 Lindy**：2020 年作为分叉创建（约 6 年），虽年轻但已活过许多炒作周期工具。“长期工具的分叉”血统通过 youtube-dl 的 15 年以上历史赋予其部分 Lindy 资历。
-- **风险旗标**：Unlicense（公有领域）——无 copyleft 或 relicense 摩擦。主要风险与所有下载器相同的法律/服务条款风险，以及偶尔与流媒体站点的上游军备竞赛可能导致提取器中断数日。
-
+- **维护活跃度**：Grade A——最近 13 周中 11 周有提交；最后提交距今 0 天。
+- **响应速度**：Grade A——中位首次响应时间 1.1 小时，基于 6 个 qualifying issues/PRs。
+- **采用广度**：Grade E——conda-forge.org 上月下载量 138,250（包名：yt-dlp）。
+- **长青度**：Grade A——仓库已创建 2075 天。
+- **治理集中度**：Grade B——前三贡献者占比 77.2%（?）。
+- **许可风险**：Grade A——Unlicense 许可证。
 ## 存疑（未验证）
 
 - 支持的站点精确数量（“数千”）随时间变化；请用 `--list-extractors` 核实你的具体目标站点。

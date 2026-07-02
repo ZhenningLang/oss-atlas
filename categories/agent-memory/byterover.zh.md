@@ -17,20 +17,28 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:48:35Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 1
-  capped: false
-  cap_reason: null
+  computed_at: 2026-07-02T15:44:34Z
+  overall: D
+  overall_score: 2.5
+  scored_axes: 6
+  capped: true
+  cap_reason: "source-available/no-license: NOASSERTION"
   needs_human_review: false
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 7
+        active_weeks_13: 10
+        carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        median_ttfr_hours: 3.6
+        qualifying_issues: 23
+        band: default
+        window_offset_days: 12
     adoption:
       grade: D
       raw:
@@ -42,20 +50,26 @@ health:
         volume_tier: D
         cross_check_divergence: null
     longevity:
-      grade: "?"
-      raw: {}
+      grade: C
+      raw:
+        repo_age_days: 378
+        last_commit_age_days: 7
+        cohort: library
     governance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        active_maintainers_12mo: 17
+        top1_share: 0.288
+        top3_share: 0.634
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
-      grade: "?"
-      raw: {}
-  unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
-    longevity: { reason: not_found }
-    governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
+      grade: E
+      raw:
+        spdx_id: NOASSERTION
+        permissiveness: source_available
+        relicense_36mo: false
+        content_license: null
 ---
 
 # ByteRover CLI
@@ -109,14 +123,12 @@ health:
 **低到中等。** 安装通过 npm（npm install -g byterover-cli）。CLI 自包含，仅本地使用无需服务器设置。中等难度来自把它集成进 agent 工作流：配置 MCP 集成、决定什么该放进上下文树、以及如果使用的话管理云同步。因为项目年轻且未到 1.0，请预期破坏性改动和不断演变的配置。
 
 ## 健康度与可持续性
-
-- **响应速度**：无法计算——no_traffic。
-- **维护——对年轻项目而言非常活跃。** 最后推送 2026-06-25；未归档。项目处于快速开发中，更新频繁，但整个代码库只有约一年历史。[推断]
-- **治理——组织所有，小团队。** 由 campfirein 组织所有。bus factor 未知，但鉴于项目年轻和 modest 的 star 数，很可能很小。[推断]
-- **年龄与 Lindy——极其年轻，没有 Lindy 信号。** 2025-06 创建。大约一岁，这是一个全新的项目，没有已验证的耐久性。相对于年龄而言约 4.9k star 较高，暗示早期兴趣，但这是炒作而非耐久性。[推断]
-- **采用与生态——早期阶段，小众兴趣。** 约 4.9k star、约 450 fork。连接器、技能和 bundle 生态尚处萌芽。它声称兼容 22 种编码 agent，但每种集成的深度未经检验。[未验证]
-- **风险信号——许可模糊和极度年轻。** GitHub 元数据 NOASSERTION 与 README 上的 Elastic 2.0 徽章之间的差异，对商业使用是 red flag。项目也是近期改名（原名为「Cipher」），增加了身份风险。[推断]
-
+- **维护活跃度**：Grade A——最近 13 周中 10 周有提交；最后提交距今 7 天。
+- **响应速度**：Grade A——中位首次响应时间 3.6 小时，基于 23 个 qualifying issues/PRs。
+- **采用广度**：Grade D——npmjs.org 上月下载量 6,431（包名：byterover-cli）。
+- **长青度**：Grade C——仓库已创建 378 天。
+- **治理集中度**：Grade A——前三贡献者占比 63.4%（?）。
+- **许可风险**：Grade E——NOASSERTION 许可证。
 ## 存疑（未验证）
 
 - [未验证] 仓库事实，截至 2026-07-01 经 GitHub API：2025-06-19 创建、最后推送 2026-06-25、未归档、约 4.9k star、约 453 fork、NOASSERTION 许可证（元数据）、语言报告为 TypeScript、owner 类型为 Organization。

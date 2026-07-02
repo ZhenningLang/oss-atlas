@@ -16,20 +16,28 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:45:01Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 1
+  computed_at: 2026-07-02T15:38:35Z
+  overall: B
+  overall_score: 2.83
+  scored_axes: 6
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: C
+      raw:
+        median_ttfr_hours: 360.0
+        qualifying_issues: 0
+        band: default
+        window_offset_days: 11
     adoption:
       grade: B
       raw:
@@ -41,20 +49,26 @@ health:
         volume_tier: B
         cross_check_divergence: 1.01
     longevity:
-      grade: "?"
-      raw: {}
+      grade: D
+      raw:
+        repo_age_days: 345
+        last_commit_age_days: 0
+        cohort: framework
     governance:
-      grade: "?"
-      raw: {}
+      grade: B
+      raw:
+        active_maintainers_12mo: 493
+        top1_share: 0.455
+        top3_share: 0.619
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
-      grade: "?"
-      raw: {}
-  unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
-    longevity: { reason: not_found }
-    governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 # Hermes Agent
 
@@ -103,14 +117,12 @@ You are a solo developer or small team running AI agents on a $5 VPS or a GPU cl
 **Low to medium**. Installation is straightforward via CLI (`hermes setup`); the agent can run on minimal hardware. The learning loop and skill persistence add some operational complexity — you need to manage the knowledge store and monitor skill quality over time.
 
 ## Health & viability
-
-- **Responsiveness**: Cannot be scored — no_traffic.
-- **Maintenance**: Grade A — pushed daily as of 2026-07, with 13 active weeks out of 13. The 24,601 open issues indicate a large, engaged community.
-- **Governance**: Grade B — owned by Nous Research organization, with 493 active maintainers in the past 12 months. The top maintainer holds 45.5% of commits, which is moderate concentration.
-- **Longevity**: Grade D — only 344 days old (created 2025-07). The project is extremely young with no Lindy track record.
-- **Adoption**: Grade B — 207k GitHub stars and 383k monthly PyPI downloads. The volume tier is B and graph tier is E.
-- **Risk flags**: The learning-loop features are novel and their long-term stability is unproven. The project is young and has not yet demonstrated sustained production reliability.
-
+- **Maintenance**: Grade A — 13/13 active weeks in trailing 13; last commit 0 days ago.
+- **Responsiveness**: Grade C — median first-response time 360.0 hours across 0 qualifying issues/PRs.
+- **Adoption**: Grade B — 383,111 monthly downloads via pypi.org (package: hermes-agent).
+- **Longevity**: Grade D — 345 days old.
+- **Governance**: Grade B — top-3 contributor share 61.9% (?).
+- **Risk / License**: Grade A — MIT license.
 ## Caveats (unverified)
 
 - [推断] With 207k stars in under a year, the star count may reflect hype rather than verified production adoption.

@@ -17,20 +17,28 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:48:35Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 1
-  capped: false
-  cap_reason: null
+  computed_at: 2026-07-02T15:44:34Z
+  overall: D
+  overall_score: 2.5
+  scored_axes: 6
+  capped: true
+  cap_reason: "source-available/no-license: NOASSERTION"
   needs_human_review: false
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 7
+        active_weeks_13: 10
+        carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        median_ttfr_hours: 3.6
+        qualifying_issues: 23
+        band: default
+        window_offset_days: 12
     adoption:
       grade: D
       raw:
@@ -42,20 +50,26 @@ health:
         volume_tier: D
         cross_check_divergence: null
     longevity:
-      grade: "?"
-      raw: {}
+      grade: C
+      raw:
+        repo_age_days: 378
+        last_commit_age_days: 7
+        cohort: library
     governance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        active_maintainers_12mo: 17
+        top1_share: 0.288
+        top3_share: 0.634
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
-      grade: "?"
-      raw: {}
-  unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
-    longevity: { reason: not_found }
-    governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
+      grade: E
+      raw:
+        spdx_id: NOASSERTION
+        permissiveness: source_available
+        relicense_36mo: false
+        content_license: null
 ---
 
 # ByteRover CLI
@@ -109,14 +123,12 @@ You're a developer who runs AI coding agents across multiple sessions and keeps 
 **Low to medium.** Installation is via npm (`npm install -g byterover-cli`). The CLI is self-contained, and local-only use requires no server setup. The medium difficulty comes from integrating it into your agent workflow: configuring the MCP integration, deciding what belongs in the context tree, and managing cloud sync if you use it. Because the project is young and pre-1.0, expect breaking changes and evolving configuration.
 
 ## Health & viability
-
-- **Responsiveness**: Cannot be scored — no_traffic.
-- **Maintenance — very active for a young project.** Pushed 2026-06-25; not archived. The project is under rapid development with frequent updates, but the entire codebase is only about a year old. [推断]
-- **Governance — organization-owned, small team.** Owned by the `campfirein` organization. The bus factor is unknown but likely small given the project's youth and modest star count. [推断]
-- **Age & Lindy — extremely young, no Lindy signal.** Created 2025-06. At roughly one year old, this is a brand-new project with no proven longevity. The high star count (~4.9k) relative to its age suggests early interest, but that is hype, not durability. [推断]
-- **Adoption & ecosystem — early stage, niche interest.** ~4.9k stars, ~450 forks. The ecosystem of connectors, skills, and bundles is nascent. It claims compatibility with 22+ coding agents, but the depth of each integration is unverified. [未验证]
-- **Risk flags — license ambiguity and extreme youth.** The `NOASSERTION` GitHub metadata vs. Elastic 2.0 badge on the README is a red flag for commercial use. The project is also a recent rebrand (formerly "Cipher"), which adds identity risk. [推断]
-
+- **Maintenance**: Grade A — 10/13 active weeks in trailing 13; last commit 7 days ago.
+- **Responsiveness**: Grade A — median first-response time 3.6 hours across 23 qualifying issues/PRs.
+- **Adoption**: Grade D — 6,431 monthly downloads via npmjs.org (package: byterover-cli).
+- **Longevity**: Grade C — 378 days old.
+- **Governance**: Grade A — top-3 contributor share 63.4% (?).
+- **Risk / License**: Grade E — NOASSERTION license.
 ## Caveats (unverified)
 
 - [未验证] Repo facts as of 2026-07-01 via GitHub API: created 2025-06-19, last push 2026-06-25, not archived, ~4.9k stars, ~453 forks, NOASSERTION license in metadata, language reported as TypeScript, owner type Organization.

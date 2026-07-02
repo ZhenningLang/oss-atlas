@@ -16,20 +16,28 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:47:33Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 1
+  computed_at: 2026-07-02T15:58:09Z
+  overall: A
+  overall_score: 3.5
+  scored_axes: 6
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: B
+      raw:
+        archived: false
+        last_commit_age_days: 37
+        active_weeks_13: 3
+        carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        median_ttfr_hours: 35.8
+        qualifying_issues: 33
+        band: default
+        window_offset_days: 2
     adoption:
       grade: A
       raw:
@@ -41,20 +49,26 @@ health:
         volume_tier: A
         cross_check_divergence: 1.01
     longevity:
-      grade: "?"
-      raw: {}
+      grade: C
+      raw:
+        repo_age_days: 596
+        last_commit_age_days: 37
+        cohort: library
     governance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        active_maintainers_12mo: 16
+        top1_share: 0.321
+        top3_share: 0.536
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
-      grade: "?"
-      raw: {}
-  unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
-    longevity: { reason: not_found }
-    governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # MarkItDown
@@ -103,15 +117,12 @@ health:
 **低。**`pip install markitdown` 后导入即可。该库无状态、进程内运行；无需部署服务、管理数据库或维护持久基建。主要运维关注点是保持 Python 环境和可选依赖更新，以及安全提示中提到的输入消毒纪律。
 
 ## 健康度与可持续性
-
-- **响应速度**：无法计算——no_traffic。
-- **维护**：活跃——上次推送为 2026-06-24，表明近期仍在开发。项目虽年轻，但由微软 AutoGen 团队出品，暗示组织层面对持续开发的承诺。[未验证]
-- **治理**：由微软（`microsoft` 组织）所有。这提供了强力背书和较低的 bus factor 风险（相比单人项目）。路线图与微软更广泛的 AI 工具生态对齐是合理的。[推断]
-- **背书**：微软 / AutoGen 团队。大型企业背书是长寿和维护的重要积极信号，但也意味着路线图可能优先服务于微软的产品战略。
-- **采用**：对 2024 年末创建的项目来说，star 数极高（162k）。受欢迎程度既反映了对文档到 LLM 管线的真实需求，也受益于微软品牌的曝光加成。[推断]
-- **年龄与 Lindy**：2024-11 创建（验证时约 8 个月）。极其年轻，无有意义 Lindy 记录。微软背书部分抵消了年龄风险，但 v0.x 项目应预期破坏性变更。
-- **风险旗标**：MIT 许可干净且宽松。主要风险是项目年轻——API、转换器质量和支持格式可能发生显著变化。此外，作为微软项目，若不再符合战略优先级可能被降权，但与 AutoGen 的关联表明它有具体用例支撑。
-
+- **维护活跃度**：Grade B——最近 13 周中 3 周有提交；最后提交距今 37 天。
+- **响应速度**：Grade A——中位首次响应时间 35.8 小时，基于 33 个 qualifying issues/PRs。
+- **采用广度**：Grade A——pypi.org 上月下载量 10,760,192（包名：markitdown）。
+- **长青度**：Grade C——仓库已创建 596 天。
+- **治理集中度**：Grade A——前三贡献者占比 53.6%（?）。
+- **许可风险**：Grade A——MIT 许可证。
 ## 存疑（未验证）
 
 - [未验证] README badge 声明由微软 AutoGen 团队出品；具体团队结构和长期维护承诺未公开记录。

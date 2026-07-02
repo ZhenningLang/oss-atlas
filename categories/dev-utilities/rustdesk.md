@@ -16,39 +16,54 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:56:43Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 0
+  computed_at: 2026-07-02T15:53:27Z
+  overall: B
+  overall_score: 3.4
+  scored_axes: 5
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        median_ttfr_hours: 6.6
+        qualifying_issues: 15
+        band: relaxed_solo
+        window_offset_days: 13
     adoption:
       grade: "?"
       raw: {}
     longevity:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        repo_age_days: 2103
+        last_commit_age_days: 0
+        cohort: tool
     governance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        active_maintainers_12mo: 108
+        top1_share: 0.241
+        top3_share: 0.532
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
-      grade: "?"
-      raw: {}
+      grade: D
+      raw:
+        spdx_id: AGPL-3.0
+        permissiveness: strong_network_copyleft
+        relicense_36mo: false
+        content_license: null
   unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
     adoption: { reason: ambiguous }
-    longevity: { reason: not_found }
-    governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
 ---
 
 # RustDesk
@@ -103,14 +118,12 @@ You're a developer or sysadmin who needs remote access to your own machines — 
 - **Updates:** The client and relay must stay version-compatible; mismatched versions can cause connection failures.
 
 ## Health & viability
-
-- **Responsiveness**: Cannot be scored — no_traffic.
-- **Maintenance (2026-07).** Last pushed 2026-07-01 with a very active commit history; the project is not archived and receives frequent releases and security updates. [推断]
-- **Governance / bus factor.** The repo is owned by a single user (`rustdesk`) who is the primary maintainer; this creates a **moderate bus-factor risk**. However, the project has a large contributor base (~17.8k forks) and an active community, so a fork could continue if the original maintainer stepped back. [推断]
-- **Age & Lindy verdict.** ~5.5 years old (created 2020-09) and still very active ⇒ a **moderate-to-strong Lindy** signal for a remote-desktop tool; it has proven staying power and a growing self-hosting community. [推断]
-- **Adoption & ecosystem.** ~117.4k stars and widely used as a TeamViewer alternative in the self-hosting and privacy communities. The cross-platform Flutter UI and P2P architecture are distinctive strengths. [未验证]
-- **Risk flags.** AGPL-3.0 license is a decisive filter for commercial use and integration. There is no evidence of relicense history, but the single-maintainer ownership and lack of a formal foundation means governance could shift. The project carries a caution about misuse (unauthorized access) in its README. [推断]
-
+- **Maintenance**: Grade A — 13/13 active weeks in trailing 13; last commit 0 days ago.
+- **Responsiveness**: Grade A — median first-response time 6.6 hours across 15 qualifying issues/PRs.
+- **Adoption**: Cannot be scored — unknown.
+- **Longevity**: Grade A — 2103 days old.
+- **Governance**: Grade A — top-3 contributor share 53.2% (?).
+- **Risk / License**: Grade D — AGPL-3.0 license.
 ## Caveats (unverified)
 
 - [未验证] ~117.4k GitHub stars as of 2026-07-01; star counts are approximate and time-sensitive.

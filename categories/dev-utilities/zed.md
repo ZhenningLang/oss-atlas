@@ -16,20 +16,28 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:45:48Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 1
+  computed_at: 2026-07-02T15:57:24Z
+  overall: B
+  overall_score: 3.4
+  scored_axes: 5
   capped: false
   cap_reason: null
   needs_human_review: true
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: C
+      raw:
+        median_ttfr_hours: 1080.0
+        qualifying_issues: 0
+        band: relaxed_solo
+        window_offset_days: 5
     adoption:
       grade: B
       raw:
@@ -41,20 +49,24 @@ health:
         volume_tier: B
         cross_check_divergence: 3.63
     longevity:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        repo_age_days: 1959
+        last_commit_age_days: 0
+        cohort: tool
     governance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        active_maintainers_12mo: 312
+        top1_share: 0.082
+        top3_share: 0.189
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
       grade: "?"
       raw: {}
   unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
-    longevity: { reason: not_found }
-    governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
+    risk_license: { reason: license_unparsed }
 ---
 
 # Zed
@@ -103,15 +115,12 @@ You're choosing a code editor and raw performance, modern UX, and team collabora
 **None for end users**. Zed is a consumer desktop application with automatic updates. For organizations, the main concern is managing team settings, collaboration permissions, and extension governance.
 
 ## Health & viability
-
-- **Responsiveness**: Cannot be scored — no_traffic.
-- **Maintenance**: Very active — daily commits, frequent releases, responsive issue tracking. 86k stars, 9.3k forks.
-- **Governance**: Owned by Zed Industries, a company founded by the creators of Atom and Tree-sitter. The team has deep expertise in editor technology.
-- **Backing**: Zed Industries is a startup with venture backing. The company is focused entirely on Zed, which is a positive signal, but also a concentration risk compared to a diversified foundation.
-- **Adoption**: Growing rapidly in the developer community, particularly among Rust and performance-conscious developers. Still a small fraction of VS Code's market share.
-- **Longevity**: ~4 years old (created 2021). The team has a strong track record from Atom, but Atom itself was discontinued by GitHub. Zed is a second attempt at the same vision, which improves the Lindy signal but does not eliminate the risk of a single-vendor editor.
-- **Risk flags**: The GitHub license is marked NOASSERTION despite the README stating GPL-3.0-or-later. The company's long-term sustainability depends on finding a viable business model. Watch for potential open-core gating or commercial collaboration features.
-
+- **Maintenance**: Grade A — 13/13 active weeks in trailing 13; last commit 0 days ago.
+- **Responsiveness**: Grade C — median first-response time 1080.0 hours across 0 qualifying issues/PRs.
+- **Adoption**: Grade B — 812,610 monthly downloads via crates.io (package: zed_extension_api).
+- **Longevity**: Grade A — 1959 days old.
+- **Governance**: Grade A — top-3 contributor share 18.9% (?).
+- **Risk / License**: Cannot be scored — unknown.
 ## Caveats (unverified)
 
 - [未验证] The exact GPU requirements for GPUI on older integrated graphics have not been tested across all platforms.

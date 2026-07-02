@@ -17,20 +17,28 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:44:21Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 1
+  computed_at: 2026-07-02T16:05:24Z
+  overall: B
+  overall_score: 2.6
+  scored_axes: 5
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 10
+        carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        median_ttfr_hours: 0.0
+        qualifying_issues: 35
+        band: relaxed_solo
+        window_offset_days: 2
     adoption:
       grade: E
       raw:
@@ -43,20 +51,23 @@ health:
         cross_check_divergence: null
         archived: false
     longevity:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        repo_age_days: 1820
+        last_commit_age_days: 0
+        cohort: tool
     governance:
       grade: "?"
       raw: {}
     risk_license:
-      grade: "?"
-      raw: {}
+      grade: D
+      raw:
+        spdx_id: AGPL-3.0
+        permissiveness: strong_network_copyleft
+        relicense_36mo: false
+        content_license: null
   unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
-    longevity: { reason: not_found }
     governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
 ---
 
 # Warp
@@ -107,14 +118,12 @@ health:
 **低。** Warp 是终端用户桌面应用。下载、安装、使用即可。运维复杂度和任何其他桌面应用一样：保持更新、管理账户/登录需求，并理解它是闭源产品，按 Warp 自己的节奏更新（通常每周四）。无需运行服务器、管理数据库或自托管。
 
 ## 健康度与可持续性
-
-- **响应速度**：无法计算——no_traffic。
-- **维护——活跃的产品开发，但闭源。** 团队声称每周发布（通常周四）。GitHub 仓库有频繁的 issue 和功能请求活动，但这不是代码提交的代理，因为仓库仅用于 issue。[推断]
-- **治理——厂商控制，单一公司。** Warp 是一家风投支持的公司（Warp.dev），完全拥有这个产品。路线图由公司决定，而非社区。GitHub 仓库存在是为了 issue 透明，不是为了社区治理。[推断]
-- **年龄与 Lindy——约 4 年，仍在演进。** 2021-07 创建。对开发工具而言 4 年是中等年龄；终端领域保守，新入局者需要持续证明自己。「agent 终端」这一方向是近期转向，其耐久性未经检验。[推断]
-- **采用与生态——增长中的心智份额，封闭生态。** 仅 issue 仓库就有约 62k star，说明兴趣浓厚。但闭源性质限制了生态——无插件、无社区 fork、无独立审计。[未验证]
-- **风险信号——专有、闭源，AGPL-3.0 仅覆盖 issue 仓库。** issue 仓库上的 AGPL-3.0 许可证具有误导性，如果你以为它覆盖终端本身。公司改变定价、条款或停止功能的能力不受开源许可证约束。「agentic」功能转向是近期动作，可能改变产品焦点。[推断]
-
+- **维护活跃度**：Grade A——最近 13 周中 10 周有提交；最后提交距今 0 天。
+- **响应速度**：Grade A——中位首次响应时间 0.0 小时，基于 35 个 qualifying issues/PRs。
+- **采用广度**：Grade E。
+- **长青度**：Grade A——仓库已创建 1820 天。
+- **治理集中度**：无法计算——unknown。
+- **许可风险**：Grade D——AGPL-3.0 许可证。
 ## 存疑（未验证）
 
 - [未验证] 仓库事实，截至 2026-07-01 经 GitHub API：2021-07-08 创建、最后推送 2026-07-01、未归档、约 62.7k star、约 5.1k fork、AGPL-3.0、语言报告为 Rust、owner 类型为 Organization。

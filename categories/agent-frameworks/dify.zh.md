@@ -16,20 +16,28 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:43:50Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 1
+  computed_at: 2026-07-02T15:33:30Z
+  overall: B
+  overall_score: 3.2
+  scored_axes: 5
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        median_ttfr_hours: 0.2
+        qualifying_issues: 18
+        band: default
+        window_offset_days: 2
     adoption:
       grade: D
       raw:
@@ -41,20 +49,24 @@ health:
         volume_tier: D
         cross_check_divergence: null
     longevity:
-      grade: "?"
-      raw: {}
+      grade: B
+      raw:
+        repo_age_days: 1177
+        last_commit_age_days: 0
+        cohort: framework
     governance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        active_maintainers_12mo: 255
+        top1_share: 0.111
+        top3_share: 0.226
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
       grade: "?"
       raw: {}
   unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
-    longevity: { reason: not_found }
-    governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
+    risk_license: { reason: license_unparsed }
 ---
 
 # Dify
@@ -105,14 +117,12 @@ health:
 **中等**。Docker Compose 是标准路径，但生产运行 Dify 需要管理数据库、Redis、向量存储和 LLM 凭证。升级、PostgreSQL 备份以及 worker 层扩容都会增加运维面。使用云端托管版可省去这些，但会转为 SaaS 依赖。
 
 ## 健康度与可持续性
-
-- **响应速度**：无法计算——no_traffic。
-- **维护**：非常活跃——截至 2026-07 每日推送，社区参与度高（868 个 open issue，23k forks）。
-- **治理**：由 LangGenius 组织背书，似乎有团队而非单一维护者。
-- **背书**：LangGenius 看起来是专注本项目而成立的组织，未见大型基金会或企业背书。
-- **采用**：star 数高（147k），fork 量显著，表明关注度广。项目自 2023 年起活跃，已有约 3 年记录。
-- **风险旗标**：GitHub 元数据中的 `NOASSERTION` 许可对商用是隐患——请核实实际许可条款。项目约 3 年历史且 star 数高，需警惕炒作与经检验的长期存续之间的区别。
-
+- **维护活跃度**：Grade A——最近 13 周中 13 周有提交；最后提交距今 0 天。
+- **响应速度**：Grade A——中位首次响应时间 0.2 小时，基于 18 个 qualifying issues/PRs。
+- **采用广度**：Grade D——npmjs.org 上月下载量 8,835（包名：dify-client）。
+- **长青度**：Grade B——仓库已创建 1177 天。
+- **治理集中度**：Grade A——前三贡献者占比 22.6%（?）。
+- **许可风险**：无法计算——unknown。
 ## 存疑（未验证）
 
 - [未验证] GitHub API 返回的许可为 `NOASSERTION`，商用前必须核实实际许可条款。

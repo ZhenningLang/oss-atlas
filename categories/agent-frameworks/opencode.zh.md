@@ -16,20 +16,28 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:47:40Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 1
+  computed_at: 2026-07-02T15:43:29Z
+  overall: B
+  overall_score: 3.0
+  scored_axes: 6
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: C
+      raw:
+        median_ttfr_hours: 360.0
+        qualifying_issues: 0
+        band: default
+        window_offset_days: 1
     adoption:
       grade: C
       raw:
@@ -41,20 +49,26 @@ health:
         volume_tier: C
         cross_check_divergence: null
     longevity:
-      grade: "?"
-      raw: {}
+      grade: C
+      raw:
+        repo_age_days: 428
+        last_commit_age_days: 0
+        cohort: framework
     governance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        active_maintainers_12mo: 475
+        top1_share: 0.161
+        top3_share: 0.451
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
-      grade: "?"
-      raw: {}
-  unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
-    longevity: { reason: not_found }
-    governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # OpenCode
@@ -104,14 +118,12 @@ health:
 **低**。安装方式类似 `npm install -g opencode-ai`；智能体作为本地进程运行，无需管理常驻服务。持续负担主要是 API key 轮换与保持 npm 包更新。
 
 ## 健康度与可持续性
-
-- **响应速度**：无法计算——no_traffic。
-- **维护**：Grade A——截至 2026-07 每日推送，13 周中有 13 周活跃。7,113 个开放 issue 表明社区参与度高。
-- **治理**：Grade A——由 `anomalyco` 组织所有，过去 12 个月有 475 位活跃维护者。首位维护者仅占 16.1% 的提交，前三位占 45.1%，核心团队分布良好。
-- **长期性**：Grade C——428 天历史（2025-04 创建）。毫无 Lindy 记录；项目年轻，但已活跃超一年。
-- **采用**：Grade C——据健康雷达，GitHub 181k star，npm 月下载量 127k。volume tier 为 C，graph tier 为 E，表明项目尚处早期采用阶段。
-- **风险旗标**：项目极其年轻，无已验证的 Lindy 记录。MIT 许可干净，但 v0.x 项目如此年轻意味着应预期破坏性变更。
-
+- **维护活跃度**：Grade A——最近 13 周中 13 周有提交；最后提交距今 0 天。
+- **响应速度**：Grade C——中位首次响应时间 360.0 小时，基于 0 个 qualifying issues/PRs。
+- **采用广度**：Grade C——npmjs.org 上月下载量 127,913（包名：@opencode-ai/cli-darwin-arm64）。
+- **长青度**：Grade C——仓库已创建 428 天。
+- **治理集中度**：Grade A——前三贡献者占比 45.1%（?）。
+- **许可风险**：Grade A——MIT 许可证。
 ## 存疑（未验证）
 
 - [推断] 2025 年 4 月创建的仓库已有 181k GitHub star，可能受炒作推动，而非有机生产级采用。

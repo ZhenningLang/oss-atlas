@@ -16,10 +16,10 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T14:34:40Z
+  computed_at: 2026-07-02T15:31:56Z
   overall: B
-  overall_score: 3.0
-  scored_axes: 4
+  overall_score: 3.2
+  scored_axes: 5
   capped: false
   cap_reason: null
   needs_human_review: false
@@ -51,8 +51,13 @@ health:
         last_commit_age_days: 0
         cohort: skill-pack
     governance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        active_maintainers_12mo: 96
+        top1_share: 0.232
+        top3_share: 0.522
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
       grade: A
       raw:
@@ -62,7 +67,6 @@ health:
         content_license: null
   unknowns:
     responsiveness: { reason: type_na }
-    governance: { reason: empty_or_gated }
 ---
 
 # Spec Kit
@@ -99,14 +103,12 @@ You also reach for it when you want to standardize how your team uses AI agents.
 | [ECC](ecc.md) | ✅ | Use this page for its stated niche; choose ECC when you want a batteries-included Claude Code harness with skills, agents, hooks, memory, and security scanning. | Batteries-included Claude Code harness with a broad feature set; the methodology layer is one part of a larger agent infrastructure. |
 
 ## Health & viability
-
-- **Responsiveness**: Cannot be scored — type_na.
-- **Maintenance (2026-07).** Last pushed 2026-07-01 with active development; the project is not archived and receives updates from GitHub's team. [推断]
-- **Governance / bus factor.** Owned by GitHub (Microsoft) — a **very strong backing** signal with virtually zero bus-factor risk from maintainer attrition. The roadmap is tied to GitHub's AI strategy, which is both a strength and a potential lock-in concern. [推断]
-- **Age & Lindy verdict.** Less than a year old (created 2025-08) ⇒ **very weak Lindy** signal. It is a young, hype-backed project with massive star count but no proven long-term track record. The backing by GitHub improves longevity odds, but the methodology itself is unproven at scale. [推断]
-- **Adoption & ecosystem.** ~116.8k stars (as of 2026-07) driven largely by GitHub branding and the AI-coding hype cycle; real production adoption and community ecosystem depth are unclear at this early stage. [未验证]
-- **Risk flags.** MIT license is permissive. The primary risk is **vendor strategy coupling**: if GitHub shifts its AI agent roadmap, Spec Kit's maintenance and relevance could decline. The project is also extremely young, so the methodology may change significantly as it matures. [推断]
-
+- **Maintenance**: Grade A — 13/13 active weeks in trailing 13; last commit 0 days ago.
+- **Responsiveness**: Cannot be scored — unknown.
+- **Adoption**: Grade D — 1,919 monthly downloads via pypi.org (package: spec-kit-redist).
+- **Longevity**: Grade B — 315 days old.
+- **Governance**: Grade A — top-3 contributor share 52.2% (?).
+- **Risk / License**: Grade A — MIT license.
 ## Caveats (unverified)
 
 - [未验证] ~116.8k GitHub stars as of 2026-07-01; the star count is heavily influenced by GitHub branding and AI hype, not necessarily organic production adoption.

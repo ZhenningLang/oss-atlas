@@ -16,20 +16,28 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:46:05Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 1
+  computed_at: 2026-07-02T15:42:30Z
+  overall: A
+  overall_score: 3.5
+  scored_axes: 6
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 1
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        median_ttfr_hours: 17.1
+        qualifying_issues: 56
+        band: default
+        window_offset_days: 1
     adoption:
       grade: C
       raw:
@@ -41,20 +49,26 @@ health:
         volume_tier: C
         cross_check_divergence: null
     longevity:
-      grade: "?"
-      raw: {}
+      grade: B
+      raw:
+        repo_age_days: 1240
+        last_commit_age_days: 1
+        cohort: framework
     governance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        active_maintainers_12mo: 125
+        top1_share: 0.153
+        top3_share: 0.346
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
-      grade: "?"
-      raw: {}
-  unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
-    longevity: { reason: not_found }
-    governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # Langflow
@@ -107,15 +121,12 @@ You're a developer or AI engineer who needs to prototype and deploy LLM-powered 
 **Medium**. Local development is straightforward (`pip install langflow` or Docker). Production deployment requires managing a Python backend, a database for flow persistence, and potentially a vector database. The visual flows themselves need versioning discipline — flows saved as JSON can be committed to git, but diffing and code-reviewing them is awkward. The main ongoing burden is keeping the Langflow version, LangChain dependencies, and model provider APIs in sync.
 
 ## Health & viability
-
-- **Responsiveness**: Cannot be scored — no_traffic.
-- **Maintenance**: Very active — pushed daily as of 2026-07, with a sustained release cadence and a large but manageable open-issue volume (970). The commit activity indicates healthy development velocity.
-- **Governance**: Owned by the `langflow-ai` organization; a dedicated team rather than a single maintainer. This provides reasonable bus factor, though the org is relatively young and independent of a major foundation.
-- **Backing**: No major corporate or foundation backing publicly visible; the project appears to be independently operated by the Langflow organization.
-- **Adoption**: Very popular (150k stars) with a growing community. The PyPI download badge suggests strong adoption in the Python ecosystem. Active Discord and YouTube presence indicate community investment.
-- **Age & Lindy**: Created 2023-02 (~3.5 years old). Young, but has outlasted the initial 2023 AI-agent hype cycle and sustained active development through 2026. It has a partial Lindy signal: it survived the early hype and kept building.
-- **Risk flags**: MIT license is clean. The main risk is the dependency on the broader LangChain ecosystem — if LangChain's API or community shifts, Langflow is affected. Also, being a visual tool, it faces competition from both code-first frameworks and no-code platforms; its long-term niche depends on the "visual + code hybrid" model continuing to resonate.
-
+- **Maintenance**: Grade A — 13/13 active weeks in trailing 13; last commit 1 days ago.
+- **Responsiveness**: Grade A — median first-response time 17.1 hours across 56 qualifying issues/PRs.
+- **Adoption**: Grade C — 90,552 monthly downloads via pypi.org (package: langflow-base).
+- **Longevity**: Grade B — 1240 days old.
+- **Governance**: Grade A — top-3 contributor share 34.6% (?).
+- **Risk / License**: Grade A — MIT license.
 ## Caveats (unverified)
 
 - [未验证] The exact relationship between `langflow-ai` and any commercial entity or funding source is not publicly documented.

@@ -16,39 +16,54 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:45:42Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 0
+  computed_at: 2026-07-02T15:23:30Z
+  overall: C
+  overall_score: 2.4
+  scored_axes: 5
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: C
+      raw:
+        median_ttfr_hours: 360.0
+        qualifying_issues: 0
+        band: default
+        window_offset_days: 6
     adoption:
       grade: "?"
       raw: {}
     longevity:
-      grade: "?"
-      raw: {}
+      grade: D
+      raw:
+        repo_age_days: 332
+        last_commit_age_days: 0
+        cohort: framework
     governance:
-      grade: "?"
-      raw: {}
+      grade: D
+      raw:
+        active_maintainers_12mo: 98
+        top1_share: 0.869
+        top3_share: 0.915
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
   unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
     adoption: { reason: ambiguous }
-    longevity: { reason: not_found }
-    governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
 ---
 
 # CC Switch
@@ -98,14 +113,12 @@ health:
 **低**。CC Switch 是通过标准安装包分发的桌面 GUI 应用。运维负担仅限于配置你的智能体凭证和保持应用更新。无需维护服务器或数据库。但你需要独立管理每个底层智能体的凭证和更新。
 
 ## 健康度与可持续性
-
-- **响应速度**：无法计算——no_traffic。
-- **维护**：活跃——截至 2026-07 每日推送，大量开放 issue（1,636）表明社区参与度高。[推断]
-- **治理**：由单个用户（`farion1231`）所有，而非组织——bus factor 实际上为 1。[未验证]
-- **背书**：未见企业背书；似乎是独立项目。[未验证]
-- **采用**：star 数较高（111.6k）但项目非常年轻（2025-08 创建）。star 数可能反映的是炒作而非已验证的长期存续。
-- **风险旗标**：极其年轻，毫无 Lindy 记录。单一维护者带来 bus factor 隐患。[未验证]
-
+- **维护活跃度**：Grade A——最近 13 周中 13 周有提交；最后提交距今 0 天。
+- **响应速度**：Grade C——中位首次响应时间 360.0 小时，基于 0 个 qualifying issues/PRs。
+- **采用广度**：无法计算——unknown。
+- **长青度**：Grade D——仓库已创建 332 天。
+- **治理集中度**：Grade D——前三贡献者占比 91.5%（?）。
+- **许可风险**：Grade A——MIT 许可证。
 ## 存疑（未验证）
 
 - [未验证] 该仓库 2025-08 创建却已有 111.6k star，star 数可能受炒作或机器人活动推动，而非有机采用。

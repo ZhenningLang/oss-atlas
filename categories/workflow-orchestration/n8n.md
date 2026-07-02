@@ -16,20 +16,28 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:45:49Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 1
+  computed_at: 2026-07-02T16:13:20Z
+  overall: B
+  overall_score: 3.4
+  scored_axes: 5
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: C
+      raw:
+        median_ttfr_hours: 1080.0
+        qualifying_issues: 0
+        band: relaxed_solo
+        window_offset_days: 10
     adoption:
       grade: B
       raw:
@@ -41,20 +49,24 @@ health:
         volume_tier: B
         cross_check_divergence: 1.04
     longevity:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        repo_age_days: 2567
+        last_commit_age_days: 0
+        cohort: app
     governance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        active_maintainers_12mo: 176
+        top1_share: 0.062
+        top3_share: 0.149
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
       grade: "?"
       raw: {}
   unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
-    longevity: { reason: not_found }
-    governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
+    risk_license: { reason: license_unparsed }
 ---
 
 # n8n
@@ -106,15 +118,12 @@ You're a technical team that needs to automate internal processes — pulling da
 **Medium**. n8n can be started with a single `npx` command or Docker one-liner for local use, but production self-hosting requires a database, Redis, backups, and monitoring. The fair-code license also means you must understand the usage restrictions before commercial deployment.
 
 ## Health & viability
-
-- **Responsiveness**: Cannot be scored — no_traffic.
-- **Maintenance**: Very active — pushed daily, 195k stars, 1,435 open issues, regular releases.
-- **Governance**: Owned by n8n GmbH, a commercial entity with a clear roadmap. The project is both open-source and commercially backed.
-- **Backing**: n8n GmbH is a venture-backed company with a sustainable business model (cloud offering + enterprise support).
-- **Adoption**: 195k stars, 400+ integrations, 900+ workflow templates, and a large community forum. Strong ecosystem.
-- **Longevity**: Created in 2019, so ~7 years old with continuous activity. Good Lindy signal.
-- **Risk flags**: The fair-code license (Sustainable Use License) is not OSI-approved and restricts competing use. This is a deliberate open-core strategy. Enterprise features (SSO, air-gapped) are gated behind paid tiers.
-
+- **Maintenance**: Grade A — 13/13 active weeks in trailing 13; last commit 0 days ago.
+- **Responsiveness**: Grade C — median first-response time 1080.0 hours across 0 qualifying issues/PRs.
+- **Adoption**: Grade B — 1,313,694 monthly downloads via npmjs.org (package: n8n-workflow).
+- **Longevity**: Grade A — 2567 days old.
+- **Governance**: Grade A — top-3 contributor share 14.9% (?).
+- **Risk / License**: Cannot be scored — unknown.
 ## Caveats (unverified)
 
 - [未验证] The exact fair-code license terms may have evolved; verify the current Sustainable Use License text before commercial deployment.

@@ -16,39 +16,50 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:43:31Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 0
+  computed_at: 2026-07-02T16:04:35Z
+  overall: C
+  overall_score: 1.75
+  scored_axes: 4
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: D
+      raw:
+        archived: false
+        last_commit_age_days: 705
+        active_weeks_13: 0
+        carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        median_ttfr_hours: 69.5
+        qualifying_issues: 12
+        band: relaxed_solo
+        window_offset_days: 3
     adoption:
       grade: "?"
       raw: {}
     longevity:
-      grade: "?"
-      raw: {}
+      grade: D
+      raw:
+        repo_age_days: 1410
+        last_commit_age_days: 705
+        cohort: tool
     governance:
       grade: "?"
       raw: {}
     risk_license:
-      grade: "?"
-      raw: {}
+      grade: D
+      raw:
+        spdx_id: AGPL-3.0
+        permissiveness: strong_network_copyleft
+        relicense_36mo: false
+        content_license: null
   unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
     adoption: { reason: ambiguous }
-    longevity: { reason: not_found }
-    governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
+    governance: { reason: unattributable }
 ---
 
 # Stable Diffusion WebUI
@@ -101,15 +112,12 @@ health:
 **中等。** 基础安装有一键脚本，但真正的负担在于保持 Python 环境、PyTorch、CUDA 驱动和扩展生态的兼容性。扩展更新可能在 `git pull` 后破坏 WebUI，模型文件占用数十 GB 磁盘空间。GPU 温度管理、显存限制和 batch size 调优是持续的关注点。对个人工作站而言可管理；对共享服务器或生产管线，要预期频繁排障。
 
 ## 健康度与可持续性
-
-- **响应速度**：无法计算——no_traffic。
-- **维护**：活跃，但上次推送为 2026-03，距验证日期已有数月。项目有大量开放 issue（2,493），既表明使用量大，也暗示维护者承受一定压力。
-- **治理**：由单一 GitHub 用户（`AUTOMATIC1111`）所有，非组织。这带来显著的 bus factor 风险；项目延续性取决于该个人的持续投入。[未验证]
-- **背书**：无可见的企业或基金会背书；由社区捐赠和志愿者贡献资助。
-- **采用**：极受欢迎（164k star），是 Stable Diffusion 本地界面的事实标准。存在庞大的扩展、模型和社区教程生态。
-- **年龄与 Lindy**：2022-08 创建（约 4 年），虽年轻但已活过许多 AI 炒作工具。自发布以来持续活跃，赋予其部分 Lindy 信号，但距上次推送已间隔 4 个月，值得留意。
-- **风险旗标**：AGPL-3.0 copyleft 许可可能影响商业衍生用途。单人维护者 bus factor 是最大的结构性风险。项目还带有一般性模型许可风险：社区 checkpoint 拥有独立于工具 AGPL-3.0 的自有许可（部分非商用）。
-
+- **维护活跃度**：Grade D——最近 13 周中 0 周有提交；最后提交距今 705 天。
+- **响应速度**：Grade A——中位首次响应时间 69.5 小时，基于 12 个 qualifying issues/PRs。
+- **采用广度**：无法计算——unknown。
+- **长青度**：Grade D——仓库已创建 1410 天。
+- **治理集中度**：无法计算——unknown。
+- **许可风险**：Grade D——AGPL-3.0 许可证。
 ## 存疑（未验证）
 
 - [未验证] `AUTOMATIC1111` 用户账户的精确维护状态及其持续可用性未公开记录；bus factor 是真实关切。

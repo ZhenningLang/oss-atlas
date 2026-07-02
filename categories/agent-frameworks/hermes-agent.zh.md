@@ -16,20 +16,28 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:45:01Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 1
+  computed_at: 2026-07-02T15:38:35Z
+  overall: B
+  overall_score: 2.83
+  scored_axes: 6
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: C
+      raw:
+        median_ttfr_hours: 360.0
+        qualifying_issues: 0
+        band: default
+        window_offset_days: 11
     adoption:
       grade: B
       raw:
@@ -41,20 +49,26 @@ health:
         volume_tier: B
         cross_check_divergence: 1.01
     longevity:
-      grade: "?"
-      raw: {}
+      grade: D
+      raw:
+        repo_age_days: 345
+        last_commit_age_days: 0
+        cohort: framework
     governance:
-      grade: "?"
-      raw: {}
+      grade: B
+      raw:
+        active_maintainers_12mo: 493
+        top1_share: 0.455
+        top3_share: 0.619
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
-      grade: "?"
-      raw: {}
-  unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
-    longevity: { reason: not_found }
-    governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 # Hermes Agent
 
@@ -103,14 +117,12 @@ Nous Research 构建的自我改进 AI 智能体。它是唯一内置学习循�
 **低至中等**。通过 CLI（`hermes setup`）安装简单；智能体可在最低硬件上运行。学习循环与技能持久化增加了一些运维复杂度——你需要管理知识库并长期监控技能质量。
 
 ## 健康度与可持续性
-
-- **响应速度**：无法计算——no_traffic。
-- **维护**：Grade A——截至 2026-07 每日推送，13 周中有 13 周活跃。24,601 个开放 issue 表明社区庞大且活跃。
-- **治理**：Grade B——由 Nous Research 组织所有，过去 12 个月有 493 位活跃维护者。首位维护者占 45.5% 的提交，集中度适中。
-- **长期性**：Grade D——仅 344 天历史（2025-07 创建）。项目极其年轻，无 Lindy 记录。
-- **采用**：Grade B——据健康雷达，GitHub 207k star，PyPI 月下载量 383k。volume tier 为 B，graph tier 为 E。
-- **风险旗标**：学习循环功能新颖，其长期稳定性未经检验。项目年轻，尚未证明持续的生产级可靠性。
-
+- **维护活跃度**：Grade A——最近 13 周中 13 周有提交；最后提交距今 0 天。
+- **响应速度**：Grade C——中位首次响应时间 360.0 小时，基于 0 个 qualifying issues/PRs。
+- **采用广度**：Grade B——pypi.org 上月下载量 383,111（包名：hermes-agent）。
+- **长青度**：Grade D——仓库已创建 345 天。
+- **治理集中度**：Grade B——前三贡献者占比 61.9%（?）。
+- **许可风险**：Grade A——MIT 许可证。
 ## 存疑（未验证）
 
 - [推断] 不足一年即达 207k star，star 数可能反映炒作而非已验证的生产级采用。

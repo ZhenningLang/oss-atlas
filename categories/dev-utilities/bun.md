@@ -16,45 +16,51 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:49:58Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 1
+  computed_at: 2026-07-02T15:50:19Z
+  overall: A
+  overall_score: 4.0
+  scored_axes: 4
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
-    responsiveness:
-      grade: "?"
-      raw: {}
-    adoption:
       grade: A
       raw:
-        registry: npmjs.org
-        canonical_package: bun-types
-        dependent_repos_count: 3705
-        downloads_last_month: 29288304
-        graph_tier: B
-        volume_tier: A
-        cross_check_divergence: 1.28
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 0.2
+        qualifying_issues: 45
+        band: relaxed_solo
+        window_offset_days: 0
+    adoption:
+      grade: "?"
+      raw: {}
     longevity:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        repo_age_days: 1906
+        last_commit_age_days: 0
+        cohort: tool
     governance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        active_maintainers_12mo: 65
+        top1_share: 0.36
+        top3_share: 0.73
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
       grade: "?"
       raw: {}
   unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
-    longevity: { reason: not_found }
-    governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
+    adoption: { reason: registry_no_counts }
+    risk_license: { reason: license_unparsed }
 ---
 
 # Bun
@@ -104,14 +110,12 @@ You're choosing a JavaScript or TypeScript runtime and tooling stack and speed a
 **Low.** Bun is a single binary installed via shell script, npm, or package manager. There is no server to maintain. The operational burden is in keeping the binary updated and verifying npm compatibility for your specific dependency tree. For CI/CD, replacing `node` with `bun` is usually straightforward, but test for edge cases in native modules.
 
 ## Health & viability
-
-- **Responsiveness**: Cannot be scored — no_traffic.
-- **Maintenance**: Active — pushed daily as of 2026-07, with frequent releases and a responsive issue tracker (6,817 open issues). [推断]
-- **Governance**: Owned by the `oven-sh` organization, with Jarred Sumner as the visible lead and a growing team of contributors. The bus factor is improving but still centered on a small core team.
-- **Backing**: Backed by Oven (the company), which has raised venture funding. The commercial model and long-term roadmap are not fully transparent. [未验证]
-- **Adoption**: Strong adoption with ~93.5k stars and ~4,742 forks, created in 2021 (5-year track record). Used in production by teams seeking faster build times.
-- **Risk flags**: The license is NOASSERTION (not a standard OSI license), which introduces legal uncertainty for commercial redistribution. The venture-backed model may lead to open-core gating or license changes in the future. [推断]
-
+- **Maintenance**: Grade A — 13/13 active weeks in trailing 13; last commit 0 days ago.
+- **Responsiveness**: Grade A — median first-response time 0.2 hours across 45 qualifying issues/PRs.
+- **Adoption**: Cannot be scored — unknown.
+- **Longevity**: Grade A — 1906 days old.
+- **Governance**: Grade A — top-3 contributor share 73.0% (?).
+- **Risk / License**: Cannot be scored — unknown.
 ## Caveats (unverified)
 
 - [未验证] Bun's exact license terms are ambiguous; it is not tagged with a standard SPDX license and may have usage restrictions for commercial or embedded deployments.

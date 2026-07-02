@@ -16,20 +16,28 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:45:55Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 1
+  computed_at: 2026-07-02T15:22:29Z
+  overall: A
+  overall_score: 3.67
+  scored_axes: 6
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 3
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        median_ttfr_hours: 29.1
+        qualifying_issues: 24
+        band: default
+        window_offset_days: 5
     adoption:
       grade: B
       raw:
@@ -41,20 +49,26 @@ health:
         volume_tier: B
         cross_check_divergence: 1.01
     longevity:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        repo_age_days: 2374
+        last_commit_age_days: 3
+        cohort: library
     governance:
-      grade: "?"
-      raw: {}
+      grade: B
+      raw:
+        active_maintainers_12mo: 13
+        top1_share: 0.549
+        top3_share: 0.835
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
-      grade: "?"
-      raw: {}
-  unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
-    longevity: { reason: not_found }
-    governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # Excalidraw
@@ -106,14 +120,12 @@ You're a product manager or designer who needs to quickly whiteboard an architec
 **Low** for the common case: use the free hosted app at excalidraw.com, export your drawings, and move on. **Medium** when embedding the React component: you pin the npm package, handle version upgrades (the component API can shift), and bundle it into your build pipeline. **Medium–High** if you want self-hosted real-time collaboration: you must operate a WebSocket relay server, manage encryption keys, and handle NAT/firewall traversal. As a client-side library, the main maintenance burden is staying current with React/TypeScript compatibility and occasional breaking API changes in the npm package. [推断]
 
 ## Health & viability
-
-- **Responsiveness**: Cannot be scored — no_traffic.
-- **Maintenance (2026-07).** Last pushed 2026-07-01 with active commit history; the project is not archived and receives regular updates and community PRs. [推断]
-- **Governance / bus factor.** Owned by the `excalidraw` GitHub organization (multi-maintainer), with a core team that has guided it since 2020. The presence of a paid commercial tier (Excalidraw+) suggests sustained backing. [推断]
-- **Age & Lindy verdict.** ~5.5 years old (created 2020-01) and still very active ⇒ a **moderate-to-strong Lindy** signal for a front-end tool; it has become the de-facto standard for sketch-style whiteboarding in the open-source world. [推断]
-- **Adoption & ecosystem.** Very large adoption (~126.5k stars) and used as an embeddable component in many docs sites, issue trackers, and products. The npm package is widely consumed. [未验证]
-- **Risk flags.** MIT license with no known relicense history; the open-core concern is mild — the free editor is fully functional, and Excalidraw+ adds team/collaboration conveniences rather than gating core features. [推断]
-
+- **Maintenance**: Grade A — 13/13 active weeks in trailing 13; last commit 3 days ago.
+- **Responsiveness**: Grade A — median first-response time 29.1 hours across 24 qualifying issues/PRs.
+- **Adoption**: Grade B — 1,390,033 monthly downloads via npmjs.org (package: @excalidraw/excalidraw).
+- **Longevity**: Grade A — 2374 days old.
+- **Governance**: Grade B — top-3 contributor share 83.5% (?).
+- **Risk / License**: Grade A — MIT license.
 ## Caveats (unverified)
 
 - [未验证] ~126.5k GitHub stars as of 2026-07-01; star counts are approximate and time-sensitive.

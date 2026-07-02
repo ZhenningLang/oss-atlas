@@ -16,20 +16,28 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:43:50Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 1
+  computed_at: 2026-07-02T15:33:30Z
+  overall: B
+  overall_score: 3.2
+  scored_axes: 5
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        median_ttfr_hours: 0.2
+        qualifying_issues: 18
+        band: default
+        window_offset_days: 2
     adoption:
       grade: D
       raw:
@@ -41,20 +49,24 @@ health:
         volume_tier: D
         cross_check_divergence: null
     longevity:
-      grade: "?"
-      raw: {}
+      grade: B
+      raw:
+        repo_age_days: 1177
+        last_commit_age_days: 0
+        cohort: framework
     governance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        active_maintainers_12mo: 255
+        top1_share: 0.111
+        top3_share: 0.226
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
       grade: "?"
       raw: {}
   unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
-    longevity: { reason: not_found }
-    governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
+    risk_license: { reason: license_unparsed }
 ---
 
 # Dify
@@ -105,14 +117,12 @@ You're a product team that needs to ship AI-powered workflows fast without writi
 **Medium**. Docker Compose is the standard path, but running Dify in production requires managing a database, Redis, a vector store, and LLM credentials. Upgrades, backup of PostgreSQL, and scaling the worker tier add operational surface. The cloud offering offloads this but shifts to SaaS dependency.
 
 ## Health & viability
-
-- **Responsiveness**: Cannot be scored — no_traffic.
-- **Maintenance**: Very active — daily pushes as of 2026-07, with a large engaged community (868 open issues, 23k forks).
-- **Governance**: Backed by the LangGenius organization; appears to have a team behind it rather than a single maintainer.
-- **Backing**: LangGenius appears to be a dedicated org for this project; no large foundation or corporate backing is clearly visible.
-- **Adoption**: High star count (147k) and significant fork volume suggest broad interest. The project has been active since 2023, giving it ~3 years of track record.
-- **Risk flags**: The `NOASSERTION` license in GitHub metadata is a concern for commercial use — verify actual license terms. The project is young (~3 years) with high star count, which warrants caution about hype vs. proven longevity.
-
+- **Maintenance**: Grade A — 13/13 active weeks in trailing 13; last commit 0 days ago.
+- **Responsiveness**: Grade A — median first-response time 0.2 hours across 18 qualifying issues/PRs.
+- **Adoption**: Grade D — 8,835 monthly downloads via npmjs.org (package: dify-client).
+- **Longevity**: Grade B — 1177 days old.
+- **Governance**: Grade A — top-3 contributor share 22.6% (?).
+- **Risk / License**: Cannot be scored — unknown.
 ## Caveats (unverified)
 
 - [未验证] The GitHub API reports `NOASSERTION` as the license; the actual license terms must be verified before commercial use.

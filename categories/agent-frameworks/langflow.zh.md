@@ -16,20 +16,28 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:46:05Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 1
+  computed_at: 2026-07-02T15:42:30Z
+  overall: A
+  overall_score: 3.5
+  scored_axes: 6
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 1
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        median_ttfr_hours: 17.1
+        qualifying_issues: 56
+        band: default
+        window_offset_days: 1
     adoption:
       grade: C
       raw:
@@ -41,20 +49,26 @@ health:
         volume_tier: C
         cross_check_divergence: null
     longevity:
-      grade: "?"
-      raw: {}
+      grade: B
+      raw:
+        repo_age_days: 1240
+        last_commit_age_days: 1
+        cohort: framework
     governance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        active_maintainers_12mo: 125
+        top1_share: 0.153
+        top3_share: 0.346
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
-      grade: "?"
-      raw: {}
-  unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
-    longevity: { reason: not_found }
-    governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # Langflow
@@ -107,15 +121,12 @@ health:
 **中等**。本地开发简单（`pip install langflow` 或 Docker）。生产部署需要管理 Python 后端、用于流持久化的数据库，以及可能的向量数据库。可视化流本身需要版本控制纪律——保存为 JSON 的流可以提交到 git，但做 diff 和代码审查很别扭。主要的持续负担是保持 Langflow 版本、LangChain 依赖和模型提供商 API 的同步。
 
 ## 健康度与可持续性
-
-- **响应速度**：无法计算——no_traffic。
-- **维护**：非常活跃——截至 2026-07 每日推送，保持稳定的发布节奏，开放 issue 数量较大但可控（970）。提交活跃度表明健康的开发速度。
-- **治理**：由 `langflow-ai` 组织所有；是专注团队而非单人维护者。这提供了合理的 bus factor，但组织相对年轻，且独立于大型基金会。
-- **背书**：无公开可见的大型企业或基金会背书；项目似乎由 Langflow 组织独立运营。
-- **采用**：非常受欢迎（150k star），社区不断增长。PyPI 下载徽章显示其在 Python 生态中的强劲采用。活跃的 Discord 和 YouTube 存在表明社区投入度高。
-- **年龄与 Lindy**：2023-02 创建（约 3.5 年）。虽年轻，但已活过 2023 年 AI 智能体炒作周期，并在 2026 年前保持活跃开发。它拥有部分 Lindy 信号：挺过了早期炒作并持续建设。
-- **风险旗标**：MIT 许可干净。主要风险在于对更广泛的 LangChain 生态的依赖——若 LangChain 的 API 或社区转向，Langflow 会受影响。此外，作为可视化工具，它同时面临代码优先框架和无代码平台的竞争；其长期 niche 取决于“可视化 + 代码混合”模式能否持续获得共鸣。
-
+- **维护活跃度**：Grade A——最近 13 周中 13 周有提交；最后提交距今 1 天。
+- **响应速度**：Grade A——中位首次响应时间 17.1 小时，基于 56 个 qualifying issues/PRs。
+- **采用广度**：Grade C——pypi.org 上月下载量 90,552（包名：langflow-base）。
+- **长青度**：Grade B——仓库已创建 1240 天。
+- **治理集中度**：Grade A——前三贡献者占比 34.6%（?）。
+- **许可风险**：Grade A——MIT 许可证。
 ## 存疑（未验证）
 
 - [未验证] `langflow-ai` 与任何商业实体或资金来源之间的确切关系未公开记录。

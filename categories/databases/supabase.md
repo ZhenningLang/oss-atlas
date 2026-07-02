@@ -16,39 +16,54 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:43:32Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 0
+  computed_at: 2026-07-02T15:44:50Z
+  overall: A
+  overall_score: 4.0
+  scored_axes: 5
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        median_ttfr_hours: 2.5
+        qualifying_issues: 24
+        band: default
+        window_offset_days: 10
     adoption:
       grade: "?"
       raw: {}
     longevity:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        repo_age_days: 2455
+        last_commit_age_days: 0
+        cohort: service
     governance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        active_maintainers_12mo: 171
+        top1_share: 0.145
+        top3_share: 0.268
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
   unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
     adoption: { reason: no_package_structural }
-    longevity: { reason: not_found }
-    governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
 ---
 
 # Supabase
@@ -103,14 +118,12 @@ You're building a web or mobile application and need a backend that handles auth
 **Medium** (self-hosted) / **Low** (cloud). The managed cloud tier requires minimal ops — just project configuration and monitoring. Self-hosting the full stack involves managing PostgreSQL, Kong, Redis, Go services, Deno edge functions, and object storage across Docker containers. The official `docker-compose` stack simplifies initial setup, but production self-hosting requires backup strategies, monitoring, and scaling planning for PostgreSQL.
 
 ## Health & viability
-
-- **Responsiveness**: Cannot be scored — no_traffic.
-- **Maintenance**: Very active — pushed daily as of 2026-07, with a mature v2 platform and responsive core team (1,086 open issues).
-- **Governance**: Owned by the `supabase` organization with a dedicated core team and clear product roadmap. The company has a strong open-source culture with Apache-2.0 licensing across the core stack. Bus factor is reasonable.
-- **Backing**: Supabase Inc. is a venture-backed company with significant funding and a proven revenue model (managed cloud). The open-source core is strategically aligned with the commercial offering.
-- **Adoption**: Strong adoption with 105.0k stars, created in 2019 (7-year track record). Widely used in production across startups and enterprises. The Firebase alternative positioning drives consistent demand.
-- **Risk flags**: Apache-2.0 is permissive. The venture-backed model means some features may be cloud-only (e.g., certain advanced analytics or enterprise features), but the core database, auth, and storage stack remains fully open-source. Monitor for open-core gating over time.
-
+- **Maintenance**: Grade A — 13/13 active weeks in trailing 13; last commit 0 days ago.
+- **Responsiveness**: Grade A — median first-response time 2.5 hours across 24 qualifying issues/PRs.
+- **Adoption**: Cannot be scored — unknown.
+- **Longevity**: Grade A — 2455 days old.
+- **Governance**: Grade A — top-3 contributor share 26.8% (?).
+- **Risk / License**: Grade A — Apache-2.0 license.
 ## Caveats (unverified)
 
 - [未验证] Supabase Inc. has raised venture funding; the exact funding details and burn rate are not verified from primary sources.

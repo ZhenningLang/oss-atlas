@@ -16,39 +16,54 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:50:19Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 0
+  computed_at: 2026-07-02T15:51:01Z
+  overall: B
+  overall_score: 3.2
+  scored_axes: 5
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        median_ttfr_hours: 0.8
+        qualifying_issues: 33
+        band: relaxed_solo
+        window_offset_days: 8
     adoption:
       grade: "?"
       raw: {}
     longevity:
-      grade: "?"
-      raw: {}
+      grade: B
+      raw:
+        repo_age_days: 954
+        last_commit_age_days: 0
+        cohort: tool
     governance:
-      grade: "?"
-      raw: {}
+      grade: B
+      raw:
+        active_maintainers_12mo: 50
+        top1_share: 0.536
+        top3_share: 0.861
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
-      grade: "?"
-      raw: {}
+      grade: C
+      raw:
+        spdx_id: GPL-3.0
+        permissiveness: weak_file_copyleft
+        relicense_36mo: false
+        content_license: null
   unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
-    adoption: { reason: ambiguous }
-    longevity: { reason: not_found }
-    governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
+    adoption: { reason: registry_no_counts }
 ---
 
 # Clash Verge Rev
@@ -98,14 +113,12 @@ health:
 **低**。这是一款带安装包的桌面应用。主要持续任务是更新应用、更新内置内核、以及管理订阅 URL。无需服务器或网络基础设施。
 
 ## 健康度与可持续性
-
-- **响应速度**：无法计算——no_traffic。
-- **维护**：活跃——截至 2026-07 定期推送，issue 量适中（420 个 open issue），发布节奏积极（Stable、Alpha、AutoBuild 通道）。[推断]
-- **治理**：由 clash-verge-rev 组织所有；看起来是原版 Clash Verge 项目的社区驱动延续。若核心维护者退出，bus factor 令人担忧。[推断]
-- **背书**：未见企业背书；社区驱动，主要社区以中文为主。[未验证]
-- **采用**：star 数高（129k），fork 量可观（9k+），对桌面代理客户端而言表现突出。项目自 2023 年末起活跃，已有约 2.5 年记录。[推断]
-- **风险旗标**：原版 Clash 项目（及 Clash for Windows）因中国监管压力被归档；该分叉存在于政治敏感领域。GPL-3.0 许可可能限制企业分发。项目是延续分叉而非原版，存在继承风险。[未验证]
-
+- **维护活跃度**：Grade A——最近 13 周中 13 周有提交；最后提交距今 0 天。
+- **响应速度**：Grade A——中位首次响应时间 0.8 小时，基于 33 个 qualifying issues/PRs。
+- **采用广度**：无法计算——unknown。
+- **长青度**：Grade B——仓库已创建 954 天。
+- **治理集中度**：Grade B——前三贡献者占比 86.1%（?）。
+- **许可风险**：Grade C——GPL-3.0 许可证。
 ## 存疑（未验证）
 
 - [未验证] 原版 Clash 项目及其 Windows GUI 已被归档；该延续分叉的长期稳定性取决于持续的社区支持。

@@ -16,20 +16,28 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:52:13Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 1
+  computed_at: 2026-07-02T16:16:41Z
+  overall: A
+  overall_score: 4.0
+  scored_axes: 6
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 1
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        median_ttfr_hours: 0.0
+        qualifying_issues: 20
+        band: default
+        window_offset_days: 11
     adoption:
       grade: A
       raw:
@@ -41,20 +49,26 @@ health:
         volume_tier: A
         cross_check_divergence: 1.0
     longevity:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        repo_age_days: 4305
+        last_commit_age_days: 1
+        cohort: framework
     governance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        active_maintainers_12mo: 90
+        top1_share: 0.167
+        top3_share: 0.368
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
-      grade: "?"
-      raw: {}
-  unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
-    longevity: { reason: not_found }
-    governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # Angular
@@ -116,14 +130,12 @@ health:
 - 升级主版本（Angular 6 个月一个主版本周期，意味着每年需升级）
 
 ## 健康度与可持续性
-
-- **响应速度**：无法计算——no_traffic。
-- **维护**：非常活跃——由 Google 维护，6 个月一个主版本周期，有公开路线图。最近两个主版本提供长期支持（LTS）。
-- **治理**：Google 所有。Angular 团队历史上不受 Google 内部重组影响，但仍是单厂商项目。社区通过 Angular Community Discord 和 GitHub 有发言权。
-- **背书**：Google 是主要背书方。Angular 在 Google 内部被使用（Google Cloud Console、Firebase Console 等），这提供了持续维护的强激励。
-- **采用度**：企业采用度强，100.4k stars，2014 年创建（12 年记录）。是大型企业和金融科技代码库的中流砥柱。就业市场健康，尤其在企业咨询领域。
-- **风险旗标**：MIT 许可宽松。Google 维护 Angular 的记录良好，但「Google 会砍掉项目」的风险始终是背景噪音。未见 relicense 历史。从 zone.js 到 Signals 的架构转变是重大变化；现有应用可能需要迁移。
-
+- **维护活跃度**：Grade A——最近 13 周中 13 周有提交；最后提交距今 1 天。
+- **响应速度**：Grade A——中位首次响应时间 0.0 小时，基于 20 个 qualifying issues/PRs。
+- **采用广度**：Grade A——npmjs.org 上月下载量 23,110,942（包名：@angular/core）。
+- **长青度**：Grade A——仓库已创建 4305 天。
+- **治理集中度**：Grade A——前三贡献者占比 36.8%（?）。
+- **许可风险**：Grade A——MIT 许可证。
 ## 存疑（未验证）
 
 - [推断] Angular 从 zone.js 到 Signals 的迁移时间线，以及 Google 内部使用 Angular 的应用比例，未经核实。

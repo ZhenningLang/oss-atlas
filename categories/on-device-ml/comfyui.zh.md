@@ -16,20 +16,28 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:43:29Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 1
+  computed_at: 2026-07-02T15:59:19Z
+  overall: B
+  overall_score: 2.67
+  scored_axes: 6
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: C
+      raw:
+        median_ttfr_hours: 1080.0
+        qualifying_issues: 0
+        band: relaxed_solo
+        window_offset_days: 9
     adoption:
       grade: E
       raw:
@@ -42,20 +50,26 @@ health:
         cross_check_divergence: null
         archived: false
     longevity:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        repo_age_days: 1263
+        last_commit_age_days: 0
+        cohort: tool
     governance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        active_maintainers_12mo: 50
+        top1_share: 0.38
+        top3_share: 0.623
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
-      grade: "?"
-      raw: {}
-  unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
-    longevity: { reason: not_found }
-    governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
+      grade: C
+      raw:
+        spdx_id: GPL-3.0
+        permissiveness: weak_file_copyleft
+        relicense_36mo: false
+        content_license: null
 ---
 
 # ComfyUI
@@ -112,14 +126,12 @@ health:
 - 备份工作流和模型库；从头重装意味着全部重新下载。
 
 ## 健康度与可持续性
-
-- **响应速度**：无法计算——no_traffic。
-- **维护（2026-07）。** 最后 push 于 2026-07-01，每日提交活跃；项目处于快速开发期，发布频繁，Discord 社区活跃。[推断]
-- **治理 / bus factor。** 现归属 `Comfy-Org`（独立 GitHub 组织），从原来的单作者 `comfyanonymous` 账号迁移而来——治理成熟度的好信号。核心团队与社区自定义节点生态共同分担维护。[推断]
-- **年龄与 Lindy 判断。** 约 2.5 年（2023-01 创建），极其活跃。虽然年轻，但已成为开源扩散工作流工具的统治者；考虑到快速采用与生态增长，Lindy 信号为**中等偏强**。[推断]
-- **采用度与生态。** 约 119k star，自定义节点生态庞大（数千个社区扩展）。`.json` 工作流格式已成为分享扩散管线的事实标准。[未验证]
-- **风险标记。** GPL-3.0 许可可能限制商业使用和集成；变化节奏快，API 和节点接口可能在版本间破坏。从 `comfyanonymous` 迁到 `Comfy-Org` 是积极的治理步骤，但项目仍年轻，长期资金模式不明。[推断]
-
+- **维护活跃度**：Grade A——最近 13 周中 13 周有提交；最后提交距今 0 天。
+- **响应速度**：Grade C——中位首次响应时间 1080.0 小时，基于 0 个 qualifying issues/PRs。
+- **采用广度**：Grade E。
+- **长青度**：Grade A——仓库已创建 1263 天。
+- **治理集中度**：Grade A——前三贡献者占比 62.3%（?）。
+- **许可风险**：Grade C——GPL-3.0 许可证。
 ## 存疑（未验证）
 
 - [未验证] 截至 2026-07-01 约 119k GitHub star；star 数为近似值且对时间敏感。
