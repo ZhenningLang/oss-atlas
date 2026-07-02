@@ -73,7 +73,7 @@ health:
 
 # LangChain
 
-The agent engineering platform — a framework for building agents and LLM-powered applications by chaining interoperable components and third-party integrations.
+The agent engineering platform — a framework for building agents and LLM-powered applications by chaining interoperable components and third-party integrations. Install it with `uv add langchain`.
 
 ![LangChain — health radar](../../assets/health/langchain.svg)
 
@@ -84,9 +84,9 @@ You're a Python developer building an AI application that needs to connect LLMs 
 ## When NOT to use
 
 - **Simple single-prompt apps** — If you just need to call an LLM API once, LangChain adds abstraction overhead with no benefit.
-- **Production latency sensitivity** — The framework's abstraction layers can introduce overhead; for millisecond-critical paths, consider direct API calls or lighter wrappers. [推断]
-- **Vendor lock-in aversion** — Deep integration with LangChain's ecosystem can create migration friction if you later want to move away from it. [推断]
-- **Small resource budgets** — The full framework with all integrations can pull in many dependencies; verify your deployment target's capacity.
+- **Production latency sensitivity** — The framework's abstraction layers can introduce overhead. For millisecond-critical paths, consider direct API calls or lighter wrappers.
+- **Vendor lock-in aversion** — Deep integration with LangChain's ecosystem can create migration friction if you later want to move away from it.
+- **Small resource budgets** — The full framework with all integrations can pull in many dependencies. Verify your deployment target's capacity before adopting.
 
 ## Comparison
 
@@ -118,11 +118,12 @@ You're a Python developer building an AI application that needs to connect LLMs 
 
 ## Health & viability
 
-- **Maintenance**: Very active — daily pushes as of 2026-07, with a well-maintained codebase (415 open issues) and regular releases. [推断]
-- **Governance**: Backed by LangChain AI, Inc. — a dedicated company behind the project. The commercial entity provides sustainability but also means roadmap decisions may prioritize enterprise/ paid features. [未验证]
-- **Backing**: LangChain AI has raised significant venture funding; this provides resources but also creates pressure for commercialization. [未验证]
-- **Adoption**: Very high star count (141k), massive fork volume (23k+), and extensive ecosystem adoption. The project has been active since 2022, giving it a ~4-year track record — a solid Lindy signal for an AI project. [推断]
-- **Risk flags**: The company behind LangChain offers commercial products (LangSmith, LangGraph Cloud) that may create open-core/feature-gating pressure. The framework's rapid evolution has historically caused breaking changes between versions. [未验证]
+- **Maintenance**: Grade A — pushed within the past day as of 2026-07, with 13 active weeks out of 13. The 415 open issues are well-managed for a project of this scale.
+- **Responsiveness**: Grade A — median time to first response is 0.3 hours, indicating an extremely responsive maintainer team.
+- **Governance**: Grade B — backed by LangChain AI, Inc., with 48 active maintainers in the past 12 months. The top maintainer holds 53% of commits, which is a concentration risk.
+- **Longevity**: Grade B — 1,354 days old (created 2022-10), giving it a ~3.7-year track record. This is a solid Lindy signal for an AI project that is still actively maintained.
+- **Adoption**: Grade A — 141k GitHub stars, 23k+ forks, and 44.7M monthly PyPI downloads. The volume tier is A and the project has extensive ecosystem adoption.
+- **Risk flags**: LangChain AI offers commercial products (LangSmith, LangGraph Cloud) that may create open-core or feature-gating pressure. The framework's rapid evolution has historically caused breaking changes between versions.
 
 ## Caveats (unverified)
 

@@ -65,10 +65,9 @@ health:
     responsiveness: { reason: no_traffic }
     risk_license: { reason: license_unparsed }
 ---
-
 # OpenClaw
 
-A personal AI assistant that runs on your own devices and answers you across 20+ messaging channels — the "lobster way" of owning your data.
+A personal AI assistant you run on your own devices. It answers you on the messaging channels you already use — WhatsApp, Telegram, Slack, Discord, Google Chat, Signal, iMessage, IRC, Microsoft Teams, Matrix, Feishu, LINE, Mattermost, Nextcloud Talk, Nostr, Synology Chat, Tlon, Twitch, Zalo, WeChat, QQ, and WebChat — and can speak and listen on macOS, iOS, and Android with a live Canvas you control.
 
 ![OpenClaw — health radar](../../assets/health/openclaw.svg)
 
@@ -78,10 +77,10 @@ You're a privacy-conscious professional who wants a single AI assistant that fol
 
 ## When NOT to use
 
-- **Multi-user or team scenarios** — OpenClaw is designed as a single-user personal assistant, not a team-shared platform with RBAC.
-- **Zero-setup SaaS preference** — Self-hosting requires managing Node.js runtime, LLM credentials, and channel configurations.
-- **Enterprise compliance needs** — No admin dashboards, audit logs, or enterprise SSO; this is a personal tool.
-- **Coding-specific agent work** — OpenClaw is a general-purpose conversational assistant, not a software development agent like Codex or Claude Code.
+- **Multi-user or team scenarios** — OpenClaw is designed as a single-user personal assistant. There is no RBAC, team workspace, or shared admin dashboard.
+- **Zero-setup SaaS preference** — Self-hosting requires managing a Node.js runtime, LLM API credentials, and per-channel configuration. There is no managed cloud option.
+- **Enterprise compliance needs** — No audit logs, enterprise SSO, or formal security certifications. This is a personal tool, not a governed enterprise platform.
+- **Coding-specific agent work** — OpenClaw is a general-purpose conversational assistant. For software engineering tasks like code generation and refactoring, use Claude Code, OpenCode, or Open Interpreter.
 
 ## Comparison
 
@@ -96,7 +95,7 @@ You're a privacy-conscious professional who wants a single AI assistant that fol
 ## Tech stack
 
 - **TypeScript** — primary implementation language
-- **Node.js** — runtime for the gateway/control plane
+- **Node.js** — runtime for the gateway and control plane
 - **Cross-platform** — macOS, iOS, Android, and server OS support
 
 ## Dependencies
@@ -111,14 +110,15 @@ You're a privacy-conscious professional who wants a single AI assistant that fol
 
 ## Health & viability
 
-- **Maintenance**: Very active — pushed daily as of 2026-07, with a large open-issue volume (6,749) indicating engaged community.
-- **Governance**: Owned by the OpenClaw organization; reasonable bus factor but the project is young (created 2025-11).
-- **Backing**: No major corporate backing visible; community-driven with an active Discord.
-- **Adoption**: Extremely high star count (381k) but very young (under 8 months). The star count signals hype rather than proven longevity.
-- **Risk flags**: The project is extremely young with no Lindy track record. The `NOASSERTION` license metadata vs MIT badge on README needs clarification. [未验证]
+- **Maintenance**: Grade A — pushed daily as of 2026-07, with 13 active weeks out of 13 and a large open-issue volume (6,749) indicating engaged community.
+- **Governance**: Grade B — owned by the OpenClaw organization with 487 active maintainers in the past 12 months. The top maintainer holds 52.8% of commits, which is a concentration risk.
+- **Longevity**: Grade C — only 220 days old (created 2025-11). No Lindy track record; the project is extremely young despite its high visibility.
+- **Adoption**: Grade A — 381k GitHub stars and 14.3M monthly npm downloads per the health radar.
+- **Risk flags**: GitHub metadata shows `NOASSERTION` license while the README displays an MIT badge — a discrepancy that needs clarification before commercial use.
 
 ## Caveats (unverified)
 
 - [未验证] The `NOASSERTION` license in GitHub metadata may differ from the MIT badge shown in the README; verify before commercial use.
 - [推断] With 381k stars on a repo created in late 2025, the star count may be inflated by hype rather than organic production adoption.
 - [未验证] The "20+ messaging channels" list includes platforms like WeChat and QQ that may have unstable or unofficial integration APIs.
+- [推断] The health radar shows volume tier A but graph tier E, which may indicate most npm downloads are direct installs rather than transitive dependencies, suggesting individual exploration rather than embedded production use.

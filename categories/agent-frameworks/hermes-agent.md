@@ -68,10 +68,9 @@ health:
   unknowns:
     responsiveness: { reason: no_traffic }
 ---
-
 # Hermes Agent
 
-The self-improving AI agent built by Nous Research — it creates skills from experience, improves them during use, and builds a deepening model of who you are across sessions.
+The self-improving AI agent built by Nous Research. It is the only agent with a built-in learning loop — it creates skills from experience, improves them during use, nudges itself to persist knowledge, searches its own past conversations, and builds a deepening model of who you are across sessions. You can run it on a $5 VPS, a GPU cluster, or serverless infrastructure that costs nearly nothing when idle, and talk to it from Telegram while it works on a cloud VM.
 
 ![Hermes Agent — health radar](../../assets/health/hermes-agent.svg)
 
@@ -81,10 +80,11 @@ You're a solo developer or small team running AI agents on a $5 VPS or a GPU clu
 
 ## When NOT to use
 
-- **If you need a deterministic, repeatable system** — The learning loop means behavior changes over time, which can make outputs non-deterministic and harder to debug.
-- **If you want a simple, stateless chatbot** — Hermes is overkill for one-off Q&A; the value is in accumulated memory and skill evolution.
-- **If you need enterprise security compliance** — Nous Research is an AI research lab, not an enterprise vendor; there are no SOC 2, SSO, or audit-trail guarantees.
-- **If you need a coding-only agent** — Hermes is a general-purpose agent framework, not optimized for software engineering tasks like Claude Code or Open Interpreter.
+- **Deterministic, repeatable systems** — The learning loop means behavior changes over time, which can make outputs non-deterministic and harder to debug.
+- **Simple, stateless chatbots** — Hermes is overkill for one-off Q&A; the value is in accumulated memory and skill evolution.
+- **Enterprise security compliance** — Nous Research is an AI research lab, not an enterprise vendor; there are no SOC 2, SSO, or audit-trail guarantees.
+- **Coding-only agents** — Hermes is a general-purpose agent framework, not optimized for software engineering tasks like Claude Code or Open Interpreter.
+- **Teams needing multi-agent orchestration** — Hermes focuses on single-agent self-improvement, not multi-agent collaboration.
 
 ## Comparison
 
@@ -99,8 +99,9 @@ You're a solo developer or small team running AI agents on a $5 VPS or a GPU clu
 ## Tech stack
 
 - **Python** — primary implementation language
-- **CLI tooling** — interactive shell, setup wizard, migration tools
-- **Gateway** — messaging gateway for Telegram, Discord, etc.
+- **CLI tooling** — interactive shell, setup wizard, migration tools (`hermes`, `hermes setup`, `hermes doctor`, `hermes claw migrate`)
+- **Gateway** — messaging gateway for Telegram, Discord, and other channels (`hermes gateway`)
+- **Model-agnostic** — supports any LLM provider via `hermes model`
 
 ## Dependencies
 
@@ -111,18 +112,19 @@ You're a solo developer or small team running AI agents on a $5 VPS or a GPU clu
 
 ## Ops difficulty
 
-**Low to medium**. Installation is straightforward via CLI; the agent can run on minimal hardware. The learning loop and skill persistence add some operational complexity — you need to manage the knowledge store and monitor skill quality over time.
+**Low to medium**. Installation is straightforward via CLI (`hermes setup`); the agent can run on minimal hardware. The learning loop and skill persistence add some operational complexity — you need to manage the knowledge store and monitor skill quality over time.
 
 ## Health & viability
 
-- **Maintenance**: Very active — pushed daily as of 2026-07, 207k stars, 24,601 open issues indicate a large, engaged community.
-- **Governance**: Owned by Nous Research organization; backed by an established AI research lab.
-- **Backing**: Nous Research is a known AI research organization with a track record in open-source model training.
-- **Adoption**: Very high star count (207k) but young (created 2025-07). The rapid growth suggests hype but also genuine interest.
-- **Risk flags**: Extremely young with no Lindy track record. The learning-loop features are novel and their long-term stability is unproven. [推断]
+- **Maintenance**: Grade A — pushed daily as of 2026-07, with 13 active weeks out of 13. The 24,601 open issues indicate a large, engaged community.
+- **Governance**: Grade B — owned by Nous Research organization, with 493 active maintainers in the past 12 months. The top maintainer holds 45.5% of commits, which is moderate concentration.
+- **Longevity**: Grade D — only 344 days old (created 2025-07). The project is extremely young with no Lindy track record.
+- **Adoption**: Grade B — 207k GitHub stars and 383k monthly PyPI downloads. The volume tier is B and graph tier is E.
+- **Risk flags**: The learning-loop features are novel and their long-term stability is unproven. The project is young and has not yet demonstrated sustained production reliability.
 
 ## Caveats (unverified)
 
 - [推断] With 207k stars in under a year, the star count may reflect hype rather than verified production adoption.
 - [未验证] The "learning loop" that creates skills from experience may produce low-quality or unexpected skills; human review of generated skills may be necessary.
 - [未验证] The $5 VPS claim is likely for minimal usage; production workloads with large models may require significantly more resources.
+- [未验证] The long-term stability of the skill-persistence mechanism and knowledge store has not been proven in production environments.

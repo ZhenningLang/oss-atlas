@@ -71,26 +71,26 @@ health:
 
 # OpenCode
 
-An open-source AI coding agent that runs in your terminal, edits files, executes commands, and works with your existing codebase.
+An open-source AI coding agent that runs in your terminal, edits files, executes commands, and works with your existing codebase. Install it via npm as `opencode-ai`.
 
 ![OpenCode — health radar](../../assets/health/opencode.svg)
 
 ## When to use
 
-You're a developer who wants an AI coding agent you can run locally in your terminal, audit its source code, and extend when needed. You've outgrown copy-pasting into chat UIs and want the agent to read your project files, suggest edits across multiple files, run tests, and iterate on its own errors. You install OpenCode via npm, connect your LLM API key, and point it at a repo — it acts as a pair programmer that lives in your shell and understands your codebase context.
+You're a developer who wants an AI coding agent you can run locally in your terminal, audit its source code, and extend when needed. You've outgrown copy-pasting into chat UIs and want the agent to read your project files, suggest edits across multiple files, run tests, and iterate on its own errors. You install OpenCode via npm (`npm install opencode-ai`), connect your LLM API key, and point it at a repo — it acts as a pair programmer that lives in your shell and understands your codebase context.
 
 ## When NOT to use
 
-- **Non-technical users or terminal-averse teams.** OpenCode is a CLI-first tool; if your team lives in IDEs or web UIs and doesn't want to learn terminal commands, this is the wrong fit.
-- **Enterprise compliance needs.** No built-in audit logs, RBAC, or admin dashboards; it's a personal developer tool, not a governed team platform.
-- **Zero-setup SaaS preference.** You must bring your own LLM API key and manage local Node.js runtime; there's no managed cloud offering.
-- **Non-coding tasks.** OpenCode is purpose-built for software engineering workflows, not general chat, data analysis, or document generation.
-- **Heavy IDE integration.** It does not ship as a VS Code or JetBrains extension; if you want in-IDE AI completion, look at Kilo Code or Copilot.
+- **Non-technical users or terminal-averse teams** — OpenCode is a CLI-first tool. If your team lives in IDEs or web UIs and doesn't want to learn terminal commands, this is the wrong fit.
+- **Enterprise compliance needs** — No built-in audit logs, RBAC, or admin dashboards. It's a personal developer tool, not a governed team platform.
+- **Zero-setup SaaS preference** — You must bring your own LLM API key and manage a local Node.js runtime. There is no managed cloud offering.
+- **Non-coding tasks** — OpenCode is purpose-built for software engineering workflows, not general chat, data analysis, or document generation.
+- **Heavy IDE integration** — It does not ship as a VS Code or JetBrains extension. If you want in-IDE AI completion, look at Kilo Code or Copilot.
 
 ## Comparison
 
 | Alternative | In index | Our verdict | Tradeoff |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | [Open Interpreter](open-interpreter.md) | ✅ | Terminal coding agent with swappable harnesses for open models. | Open Interpreter is a Rust rewrite with OS sandbox execution; OpenCode is TypeScript/npm-based and younger. |
 | [Hermes Agent](hermes-agent.md) | ✅ | Self-improving AI agent with a learning loop from Nous Research. | Hermes focuses on skill creation and personal growth across sessions; OpenCode is a focused coding agent. |
 | [AutoGPT](autogpt.md) | ✅ | Platform for autonomous workflow automation. | AutoGPT targets complex multi-step autonomous tasks; OpenCode is a terminal pair-programmer for code. |
@@ -117,11 +117,11 @@ You're a developer who wants an AI coding agent you can run locally in your term
 
 ## Health & viability
 
-- **Maintenance**: Very active as of 2026-07, with daily pushes and a large issue volume (7,113 open issues) indicating high community engagement.
-- **Governance**: Owned by the `anomalyco` organization; bus factor is reasonable but the project is young (created 2025-04) and the core team's long-term commitment is unproven.
-- **Backing**: No major corporate backing visible; community-driven with an active Discord.
-- **Adoption**: Extremely high star count (181k) for a project under 15 months old. The star count signals hype rather than proven, organic production adoption. [推断]
-- **Risk flags**: The project is extremely young with no Lindy track record. MIT license is clean, but the velocity of a v0.x project this young means breaking changes should be expected.
+- **Maintenance**: Grade A — pushed daily as of 2026-07, with 13 active weeks out of 13. The 7,113 open issues indicate high community engagement.
+- **Governance**: Grade A — owned by the `anomalyco` organization, with 475 active maintainers in the past 12 months. The top maintainer holds only 16.1% of commits and the top three hold 45.1%, indicating a well-distributed core team.
+- **Longevity**: Grade C — 428 days old (created 2025-04). No Lindy track record; the project is young but has been active for over a year.
+- **Adoption**: Grade C — 181k GitHub stars and 127k monthly npm downloads. The volume tier is C and graph tier is E, suggesting the project is still in early adoption.
+- **Risk flags**: The project is extremely young with no proven Lindy track record. MIT license is clean, but the velocity of a v0.x project this young means breaking changes should be expected.
 
 ## Caveats (unverified)
 

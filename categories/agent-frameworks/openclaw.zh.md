@@ -65,10 +65,9 @@ health:
     responsiveness: { reason: no_traffic }
     risk_license: { reason: license_unparsed }
 ---
-
 # OpenClaw
 
-一款在自有设备上运行、跨 20 余条消息渠道应答你的个人 AI 助手——以“龙虾之道”掌控自己的数据。
+一款在自有设备上运行的个人 AI 助手。它在你已使用的消息渠道上应答——包括 WhatsApp、Telegram、Slack、Discord、Google Chat、Signal、iMessage、IRC、Microsoft Teams、Matrix、Feishu、LINE、Mattermost、Nextcloud Talk、Nostr、Synology Chat、Tlon、Twitch、Zalo、WeChat、QQ 和 WebChat——并可在 macOS、iOS 和 Android 上说话、收听，以及渲染你控制的实时 Canvas。
 
 ![OpenClaw — health radar](../../assets/health/openclaw.zh.svg)
 
@@ -78,10 +77,10 @@ health:
 
 ## 何时不用
 
-- **多用户或团队场景**——OpenClaw 设计为单用户个人助手，不是带 RBAC 的团队共享平台。
-- **零配置 SaaS 偏好**——自托管需要管理 Node.js 运行时、LLM 凭证和渠道配置。
-- **企业合规需求**——无管理后台、审计日志或企业 SSO；这是个人工具。
-- **编程专用智能体工作**——OpenClaw 是通用对话助手，不是 Codex 或 Claude Code 这类软件开发智能体。
+- **多用户或团队场景**——OpenClaw 设计为单用户个人助手，没有 RBAC、团队工作区或共享管理后台。
+- **零配置 SaaS 偏好**——自托管需要管理 Node.js 运行时、LLM API 凭证和每个渠道的配置，没有托管云选项。
+- **企业合规需求**——无审计日志、企业 SSO 或正式安全认证，这是个人工具，不是受治理的企业平台。
+- **编程专用智能体工作**——OpenClaw 是通用对话助手。如需代码生成与重构等软件工程任务，请使用 Claude Code、OpenCode 或 Open Interpreter。
 
 ## 横向对比
 
@@ -96,7 +95,7 @@ health:
 ## 技术栈
 
 - **TypeScript**——主要实现语言
-- **Node.js**——网关/控制平面运行时
+- **Node.js**——网关与控制平面运行时
 - **跨平台**——支持 macOS、iOS、Android 及服务器操作系统
 
 ## 依赖
@@ -111,14 +110,15 @@ health:
 
 ## 健康度与可持续性
 
-- **维护**：非常活跃——截至 2026-07 每日推送，大量开放 issue（6,749）表明社区参与度高。
-- **治理**：由 OpenClaw 组织所有；bus factor 尚可，但项目很年轻（2025-11 创建）。
-- **背书**：无显著企业背书可见；社区驱动，Discord 活跃。
-- **采用**：star 数极高（381k），但项目非常年轻（不足 8 个月）。star 数反映的是炒作而非已验证的长期存续。
-- **风险旗标**：项目极其年轻，毫无 Lindy 记录。GitHub 元数据中的 `NOASSERTION` 许可与 README 上的 MIT badge 存在出入，需澄清。[未验证]
+- **维护**：Grade A——截至 2026-07 每日推送，13 周中有 13 周活跃，大量开放 issue（6,749）表明社区参与度高。
+- **治理**：Grade B——由 OpenClaw 组织所有，过去 12 个月有 487 位活跃维护者。首位维护者占 52.8% 的提交，存在集中度风险。
+- **长期性**：Grade C——仅 220 天历史（2025-11 创建）。毫无 Lindy 记录；项目极其年轻，尽管 visibility 很高。
+- **采用**：Grade A——据健康雷达，GitHub 381k star，npm 月下载量 1430 万。
+- **风险旗标**：GitHub 元数据许可为 `NOASSERTION`，而 README 显示 MIT badge，两者存在差异，商用前需澄清。
 
 ## 存疑（未验证）
 
 - [未验证] GitHub 元数据中的 `NOASSERTION` 许可可能与 README 上显示的 MIT badge 不一致；商用前请核实。
-- [推断] 该仓库 2025 年末创建却已有 381k star，star 数可能受炒作推动，而非有机的生产级采用。
+- [推断] 该仓库 2025 年末创建却已有 381k star，star 数可能受炒作推动，而非有机生产级采用。
 - [未验证] “20 余条消息渠道”列表中包含 WeChat、QQ 等平台，其集成 API 可能不稳定或为非官方方案。
+- [推断] 健康雷达显示 volume tier 为 A 而 graph tier 为 E，可能表明大部分 npm 下载为直接安装而非传递依赖，暗示个人探索而非嵌入生产使用。

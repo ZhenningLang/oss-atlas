@@ -65,7 +65,7 @@ health:
 
 # AutoGPT
 
-A platform to create, deploy, and manage continuous AI agents that automate complex workflows — self-host for free or join the cloud-hosted beta.
+A platform to create, deploy, and manage continuous AI agents that automate complex workflows. You can self-host for free on your own infrastructure, or join the waitlist for the cloud-hosted beta.
 
 ![AutoGPT — health radar](../../assets/health/autogpt.svg)
 
@@ -75,11 +75,11 @@ You're a developer or team that needs to automate complex, multi-step tasks with
 
 ## When NOT to use
 
-- **If you need a simple, reliable script** — AutoGPT agents are non-deterministic and can fail or loop unexpectedly. For deterministic automation, use traditional scripting or workflow tools.
-- **If you need low-resource edge deployment** — Minimum requirements are 4 CPU cores and 8GB RAM; the platform is not lightweight.
-- **If you need a coding-specific agent** — AutoGPT is a general-purpose autonomous agent platform; for software engineering, use Claude Code, Open Interpreter, or Kilo Code.
-- **If you need enterprise support guarantees** — Significant Gravitas is a community organization, not an enterprise vendor. There is no SLA or formal support.
-- **If you want a mature, stable API** — The platform is still evolving rapidly; the cloud-hosted beta is not yet publicly available.
+- **Simple, reliable scripts** — AutoGPT agents are non-deterministic and can fail or loop unexpectedly. For deterministic automation, use traditional scripting or workflow tools like n8n.
+- **Low-resource edge deployment** — The README specifies minimum requirements of 4 CPU cores, 8GB RAM (16GB recommended), and 10GB+ free storage. This is not a lightweight agent.
+- **Coding-specific agents** — AutoGPT is a general-purpose autonomous agent platform; for software engineering, use Claude Code, Open Interpreter, or Kilo Code.
+- **Enterprise support guarantees** — Significant Gravitas is a community organization, not an enterprise vendor. There is no SLA or formal support contract.
+- **Mature, stable API** — The platform is still evolving rapidly; the cloud-hosted beta is not yet publicly available.
 
 ## Comparison
 
@@ -94,7 +94,7 @@ You're a developer or team that needs to automate complex, multi-step tasks with
 ## Tech stack
 
 - **Python** — primary implementation language
-- **FastAPI** — backend API framework (inferred)
+- **FastAPI** — backend API framework
 - **React / Next.js** — web UI for the platform
 - **PostgreSQL** — database for agent state and metadata
 - **Redis** — caching and message broker
@@ -113,12 +113,11 @@ You're a developer or team that needs to automate complex, multi-step tasks with
 
 ## Health & viability
 
-- **Maintenance**: Active — pushed daily as of 2026-07, 185k stars, 454 open issues. The project has been through significant pivots since its 2023 launch.
-- **Governance**: Owned by Significant Gravitas, a community organization. Bus factor is unclear.
-- **Backing**: No major corporate backing; funded by community donations and a waitlist for cloud hosting.
-- **Adoption**: Very high star count (185k) but created in 2023, so only ~3 years old. The project had a famous hype cycle in 2023 and has since pivoted toward a platform model.
-- **Longevity**: ~3 years old with active maintenance, but the project's direction has shifted significantly from the original "autonomous GPT" demo to a full platform.
-- **Risk flags**: The project has no declared license (`NOASSERTION`), which is a legal risk for commercial use. The cloud-hosted offering is still in closed beta. The original hype-driven growth may not reflect sustained production use.
+- **Maintenance**: Grade A — pushed within the past 7 days as of 2026-07, with 13 active weeks out of 13. The 454 open issues suggest a focused, manageable community.
+- **Governance**: Grade A — owned by Significant Gravitas, with 18 active maintainers in the past 12 months. The top maintainer holds 29.2% of commits and the top three hold 56.2%, indicating a distributed core team.
+- **Longevity**: Grade B — 1,204 days old (created 2023-03), giving it a ~3.3-year track record. The project has pivoted from its original "autonomous GPT" demo to a full platform, demonstrating adaptability but also direction shifts.
+- **Adoption**: Grade ? — the health radar could not score adoption due to ambiguous package data. The 185k GitHub stars are high but the project's actual package download footprint is unclear.
+- **Risk flags**: The repository has no declared license (`NOASSERTION`), which creates legal uncertainty for commercial use or redistribution. The cloud-hosted beta is still in closed beta with a public release timeline that is not confirmed.
 
 ## Caveats (unverified)
 
