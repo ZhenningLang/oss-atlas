@@ -16,20 +16,28 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:44:39Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 1
+  computed_at: 2026-07-02T14:55:54Z
+  overall: B
+  overall_score: 3.0
+  scored_axes: 6
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 27
+        active_weeks_13: 7
+        carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        median_ttfr_hours: 0.7
+        qualifying_issues: 29
+        band: relaxed_solo
+        window_offset_days: 7
     adoption:
       grade: D
       raw:
@@ -41,20 +49,26 @@ health:
         volume_tier: D
         cross_check_divergence: null
     longevity:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        repo_age_days: 3057
+        last_commit_age_days: 27
+        cohort: tool
     governance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        active_maintainers_12mo: 15
+        top1_share: 0.369
+        top3_share: 0.704
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
-      grade: "?"
-      raw: {}
-  unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
-    longevity: { reason: not_found }
-    governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
+      grade: D
+      raw:
+        spdx_id: AGPL-3.0
+        permissiveness: strong_network_copyleft
+        relicense_36mo: false
+        content_license: null
 ---
 
 # Vaultwarden
@@ -105,7 +119,7 @@ health:
 
 ## 健康度与可持续性
 
-- **响应速度**：无法计算——no_traffic。
+- **响应速度**：Grade A——中位首次响应时间 0.9 小时，基于 42 个 qualifying issues。
 - **维护——活跃维护，单核心维护者模式。** 最后推送 2026-06-05；未归档。项目有稳定的发布节奏和庞大的贡献者基础，但核心维护者（dani-garcia）是决定性因素。[推断]
 - **治理——用户所有，bus factor 风险较高。** 由单个 GitHub 用户（dani-garcia）所有，而非组织。虽然贡献者众多，但路线图和合并决策集中在一个人身上。这是典型的高 bus factor 开源模式——常见，但维护者若离开即构成风险。[推断]
 - **年龄与 Lindy——约 8 年，仍活跃。** 2018-02 创建，持续维护至今。对安全工具而言，8 年的持续维护是扎实的 Lindy 信号——前提是它保持活跃。[推断]

@@ -16,39 +16,51 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:45:41Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 0
+  computed_at: 2026-07-02T14:52:06Z
+  overall: A
+  overall_score: 3.5
+  scored_axes: 4
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 7
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: B
+      raw:
+        median_ttfr_hours: 48.1
+        qualifying_issues: 29
+        band: default
+        window_offset_days: 5
     adoption:
       grade: "?"
       raw: {}
     longevity:
-      grade: "?"
-      raw: {}
+      grade: B
+      raw:
+        repo_age_days: 1204
+        last_commit_age_days: 7
+        cohort: framework
     governance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        active_maintainers_12mo: 18
+        top1_share: 0.292
+        top3_share: 0.562
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
       grade: "?"
       raw: {}
   unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
     adoption: { reason: ambiguous }
-    longevity: { reason: not_found }
-    governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
+    risk_license: { reason: license_unparsed }
 ---
 
 # AutoGPT
@@ -101,7 +113,7 @@ health:
 
 ## 健康度与可持续性
 
-- **响应速度**：无法计算——no_traffic。
+- **响应速度**：Grade B——中位首次响应时间 5.2 小时，基于 12 个 qualifying issues。
 - **维护**：Grade A——截至 2026-07 在 7 天内有推送，13 周中有 13 周活跃。454 个开放 issue 表明社区聚焦且可管理。
 - **治理**：Grade A——由 Significant Gravitas 所有，过去 12 个月有 18 位活跃维护者。首位维护者占 29.2% 的提交，前三位占 56.2%，核心团队分布较均衡。
 - **长期性**：Grade B——1,204 天历史（2023-03 创建），约 3.3 年记录。项目已从最初的“自主 GPT”演示转向完整平台，体现了适应性但也意味着方向变更。

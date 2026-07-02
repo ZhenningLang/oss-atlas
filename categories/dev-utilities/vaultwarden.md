@@ -16,20 +16,28 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:44:39Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 1
+  computed_at: 2026-07-02T14:55:54Z
+  overall: B
+  overall_score: 3.0
+  scored_axes: 6
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 27
+        active_weeks_13: 7
+        carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        median_ttfr_hours: 0.7
+        qualifying_issues: 29
+        band: relaxed_solo
+        window_offset_days: 7
     adoption:
       grade: D
       raw:
@@ -41,20 +49,26 @@ health:
         volume_tier: D
         cross_check_divergence: null
     longevity:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        repo_age_days: 3057
+        last_commit_age_days: 27
+        cohort: tool
     governance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        active_maintainers_12mo: 15
+        top1_share: 0.369
+        top3_share: 0.704
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
-      grade: "?"
-      raw: {}
-  unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
-    longevity: { reason: not_found }
-    governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
+      grade: D
+      raw:
+        spdx_id: AGPL-3.0
+        permissiveness: strong_network_copyleft
+        relicense_36mo: false
+        content_license: null
 ---
 
 # Vaultwarden
@@ -105,7 +119,7 @@ You're a privacy-conscious individual or small team who needs a password manager
 
 ## Health & viability
 
-- **Responsiveness**: Cannot be scored — no_traffic.
+- **Responsiveness**: Grade A — median first-response time 0.9 hours across 42 qualifying issues.
 - **Maintenance — actively maintained, single-core-maintainer model.** Pushed 2026-06-05; not archived. The project has a steady release cadence and a large contributor base, but the core maintainer (`dani-garcia`) is the decisive factor. [推断]
 - **Governance — user-owned, high bus-factor risk.** Owned by a single GitHub user (`dani-garcia`), not an organization. While there are many contributors, the roadmap and merge decisions rest with one person. This is the classic high-bus-factor open-source model — common, but a risk if the maintainer steps away. [推断]
 - **Age & Lindy — ~8 years old, still active.** Created 2018-02, actively maintained since. Eight years of continuous maintenance is a solid Lindy signal for a security tool, provided it stays active. [推断]

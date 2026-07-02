@@ -16,45 +16,54 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:43:29Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 1
+  computed_at: 2026-07-02T14:58:46Z
+  overall: A
+  overall_score: 3.8
+  scored_axes: 5
   capped: false
   cap_reason: null
-  needs_human_review: true
+  needs_human_review: false
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
-    responsiveness:
-      grade: "?"
-      raw: {}
-    adoption:
       grade: A
       raw:
-        registry: crates.io
-        canonical_package: tauri
-        dependent_repos_count: 4409
-        downloads_last_month: 20469125
-        graph_tier: B
-        volume_tier: A
-        cross_check_divergence: 2.77
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 5.0
+        qualifying_issues: 35
+        band: relaxed_solo
+        window_offset_days: 11
+    adoption:
+      grade: "?"
+      raw: {}
     longevity:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        repo_age_days: 2546
+        last_commit_age_days: 0
+        cohort: tool
     governance:
-      grade: "?"
-      raw: {}
+      grade: B
+      raw:
+        active_maintainers_12mo: 20
+        top1_share: 0.381
+        top3_share: 0.843
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
   unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
-    longevity: { reason: not_found }
-    governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
+    adoption: { reason: registry_no_counts }
 ---
 
 # Tauri
@@ -106,7 +115,7 @@ You're choosing a cross-platform desktop or mobile framework and bundle size, me
 
 ## Health & viability
 
-- **Responsiveness**: Cannot be scored — no_traffic.
+- **Responsiveness**: Grade A — median first-response time 2.1 hours across 28 qualifying issues.
 - **Maintenance**: Very active — pushed daily as of 2026-07, with v2 stable and active community support (1,442 open issues). [推断]
 - **Governance**: Owned by the `tauri-apps` organization with a dedicated core team and open governance model. Bus factor is reasonable.
 - **Backing**: Backed by the Tauri Collective and Open Collective funding; has corporate sponsors and a non-profit foundation structure. [未验证]

@@ -16,20 +16,28 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:46:22Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 1
+  computed_at: 2026-07-02T14:56:43Z
+  overall: B
+  overall_score: 3.17
+  scored_axes: 6
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: C
+      raw:
+        median_ttfr_hours: 1080.0
+        qualifying_issues: 0
+        band: relaxed_solo
+        window_offset_days: 4
     adoption:
       grade: D
       raw:
@@ -41,20 +49,26 @@ health:
         volume_tier: D
         cross_check_divergence: null
     longevity:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        repo_age_days: 3955
+        last_commit_age_days: 0
+        cohort: app
     governance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        active_maintainers_12mo: 128
+        top1_share: 0.066
+        top3_share: 0.181
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
-      grade: "?"
-      raw: {}
-  unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
-    longevity: { reason: not_found }
-    governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # VS Code
@@ -104,7 +118,7 @@ Visual Studio Code——一款轻量但强大的代码编辑器，兼具编辑�
 
 ## 健康度与可持续性
 
-- **响应速度**：无法计算——no_traffic。
+- **响应速度**：Grade C——基于维护活跃度推断（窗口期内无直接 issue/PR 响应数据）。
 - **维护**：极其活跃——微软按月发布迭代计划、公开路线图、定期推送更新。187k star，18,939 个开放 issue。
 - **治理**：由微软所有，全球最大的科技公司之一。路线图公开，项目资金充足。
 - **背书**：微软是坚定的厂商，在开发者工具长期投入方面有良好记录。

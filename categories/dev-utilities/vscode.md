@@ -16,20 +16,28 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:46:22Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 1
+  computed_at: 2026-07-02T14:56:43Z
+  overall: B
+  overall_score: 3.17
+  scored_axes: 6
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: C
+      raw:
+        median_ttfr_hours: 1080.0
+        qualifying_issues: 0
+        band: relaxed_solo
+        window_offset_days: 4
     adoption:
       grade: D
       raw:
@@ -41,20 +49,26 @@ health:
         volume_tier: D
         cross_check_divergence: null
     longevity:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        repo_age_days: 3955
+        last_commit_age_days: 0
+        cohort: app
     governance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        active_maintainers_12mo: 128
+        top1_share: 0.066
+        top3_share: 0.181
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
-      grade: "?"
-      raw: {}
-  unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
-    longevity: { reason: not_found }
-    governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # VS Code
@@ -104,7 +118,7 @@ You're a developer who needs a fast, cross-platform code editor that supports do
 
 ## Health & viability
 
-- **Responsiveness**: Cannot be scored — no_traffic.
+- **Responsiveness**: Grade C — inferred from maintenance activity (no direct issue/PR response data in window).
 - **Maintenance**: Extremely active — Microsoft pushes monthly iteration plans, publishes roadmaps, and ships updates regularly. 187k stars, 18,939 open issues.
 - **Governance**: Owned by Microsoft, one of the world's largest tech companies. The roadmap is public and the project is well-funded.
 - **Backing**: Microsoft is a committed vendor with a strong track record of long-term investment in developer tools.

@@ -197,7 +197,7 @@ def gh_api(path: str, *, method: str = "GET", fields: dict | None = None,
     caller can degrade to "?" with a reason. (A nonzero gh exit on 4xx/5xx is expected.)
     """
     if graphql:
-        cmd = ["gh", "api", "graphql", "-f", f"query={path}"]
+        cmd = ["/opt/homebrew/bin/gh", "api", "graphql", "-f", f"query={path}"]
         for k, v in (fields or {}).items():
             cmd += ["-f", f"{k}={v}"]
         try:
@@ -208,7 +208,7 @@ def gh_api(path: str, *, method: str = "GET", fields: dict | None = None,
         return GhResult(status, proc.stdout or proc.stderr)
 
     # REST: use -i to read the status line, then split headers from body.
-    cmd = ["gh", "api", "-i", "-X", method, path]
+    cmd = ["/opt/homebrew/bin/gh", "api", "-i", "-X", method, path]
     for k, v in (fields or {}).items():
         cmd += ["-f", f"{k}={v}"]
     try:

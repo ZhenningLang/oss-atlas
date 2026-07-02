@@ -16,45 +16,54 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:50:45Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 1
+  computed_at: 2026-07-02T14:32:18Z
+  overall: A
+  overall_score: 3.6
+  scored_axes: 5
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
-    responsiveness:
-      grade: "?"
-      raw: {}
-    adoption:
       grade: A
       raw:
-        registry: pypi.org
-        canonical_package: langchain-text-splitters
-        dependent_repos_count: 0
-        downloads_last_month: 44773025
-        graph_tier: E
-        volume_tier: A
-        cross_check_divergence: 1.0
+        archived: false
+        last_commit_age_days: 1
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 0.4
+        qualifying_issues: 32
+        band: default
+        window_offset_days: 6
+    adoption:
+      grade: "?"
+      raw: {}
     longevity:
-      grade: "?"
-      raw: {}
+      grade: B
+      raw:
+        repo_age_days: 1354
+        last_commit_age_days: 1
+        cohort: framework
     governance:
-      grade: "?"
-      raw: {}
+      grade: B
+      raw:
+        active_maintainers_12mo: 48
+        top1_share: 0.53
+        top3_share: 0.757
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
   unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
-    longevity: { reason: not_found }
-    governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
+    adoption: { reason: registry_no_counts }
 ---
 
 # LangChain

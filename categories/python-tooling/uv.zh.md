@@ -16,39 +16,57 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:43:32Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 0
+  computed_at: 2026-07-02T14:30:24Z
+  overall: A
+  overall_score: 3.6
+  scored_axes: 5
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
       grade: "?"
       raw: {}
     adoption:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        registry: pypi.org
+        canonical_package: uv
+        dependent_repos_count: 2
+        downloads_last_month: 157448976
+        graph_tier: D
+        volume_tier: A
+        cross_check_divergence: null
     longevity:
-      grade: "?"
-      raw: {}
+      grade: B
+      raw:
+        repo_age_days: 1004
+        last_commit_age_days: 0
+        cohort: tool
     governance:
-      grade: "?"
-      raw: {}
+      grade: B
+      raw:
+        active_maintainers_12mo: 60
+        top1_share: 0.404
+        top3_share: 0.736
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
   unknowns:
-    maintenance: { reason: recency_unreadable }
     responsiveness: { reason: no_traffic }
-    adoption: { reason: registry_no_counts }
-    longevity: { reason: not_found }
-    governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
 ---
 
 # uv

@@ -16,20 +16,28 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:47:37Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 1
+  computed_at: 2026-07-02T14:34:02Z
+  overall: C
+  overall_score: 2.17
+  scored_axes: 6
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: C
+      raw:
+        archived: false
+        last_commit_age_days: 99
+        active_weeks_13: 0
+        carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: D
+      raw:
+        median_ttfr_hours: 4380.0
+        qualifying_issues: 0
+        band: relaxed_solo
+        window_offset_days: 6
     adoption:
       grade: C
       raw:
@@ -41,20 +49,26 @@ health:
         volume_tier: C
         cross_check_divergence: null
     longevity:
-      grade: "?"
-      raw: {}
+      grade: B
+      raw:
+        repo_age_days: 653
+        last_commit_age_days: 99
+        cohort: tool
     governance:
-      grade: "?"
-      raw: {}
+      grade: D
+      raw:
+        active_maintainers_12mo: 8
+        top1_share: 0.975
+        top3_share: 0.991
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
-      grade: "?"
-      raw: {}
-  unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
-    longevity: { reason: not_found }
-    governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # olmOCR
@@ -109,7 +123,7 @@ health:
 
 ## 健康度与可持续性
 
-- **响应速度**：无法计算——no_traffic。
+- **响应速度**：Grade D——基于维护活跃度推断（无直接 issue/PR 响应数据）。
 - **维护**：活跃——末次提交 2026-03-25，2025-10 发布 v0.4.0 并带新模型。Allen Institute for AI（AI2）在开源 ML 研究方面有良好记录。[未验证]
 - **治理**：机构所有（`allenai`），知名非营利研究机构，资金充足，有维护开源项目的历史（如 OLMo 等）。[推断]
 - **背书**：AI2（Allen Institute for AI）——非营利研究机构，资金稳定，对开放科学有坚定承诺。[推断]

@@ -16,17 +16,21 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:45:36Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 1
+  computed_at: 2026-07-02T14:34:40Z
+  overall: B
+  overall_score: 3.0
+  scored_axes: 4
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
       grade: "?"
       raw: {}
@@ -41,20 +45,24 @@ health:
         volume_tier: D
         cross_check_divergence: null
     longevity:
-      grade: "?"
-      raw: {}
+      grade: B
+      raw:
+        repo_age_days: 315
+        last_commit_age_days: 0
+        cohort: skill-pack
     governance:
       grade: "?"
       raw: {}
     risk_license:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
   unknowns:
-    maintenance: { reason: recency_unreadable }
     responsiveness: { reason: type_na }
-    longevity: { reason: not_found }
     governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
 ---
 
 # Spec Kit

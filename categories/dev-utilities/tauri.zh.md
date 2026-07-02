@@ -16,45 +16,54 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T12:43:29Z
-  overall: "?"
-  overall_score: null
-  scored_axes: 1
+  computed_at: 2026-07-02T14:58:46Z
+  overall: A
+  overall_score: 3.8
+  scored_axes: 5
   capped: false
   cap_reason: null
-  needs_human_review: true
+  needs_human_review: false
   axes:
     maintenance:
-      grade: "?"
-      raw: {}
-    responsiveness:
-      grade: "?"
-      raw: {}
-    adoption:
       grade: A
       raw:
-        registry: crates.io
-        canonical_package: tauri
-        dependent_repos_count: 4409
-        downloads_last_month: 20469125
-        graph_tier: B
-        volume_tier: A
-        cross_check_divergence: 2.77
+        archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
+    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 5.0
+        qualifying_issues: 35
+        band: relaxed_solo
+        window_offset_days: 11
+    adoption:
+      grade: "?"
+      raw: {}
     longevity:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        repo_age_days: 2546
+        last_commit_age_days: 0
+        cohort: tool
     governance:
-      grade: "?"
-      raw: {}
+      grade: B
+      raw:
+        active_maintainers_12mo: 20
+        top1_share: 0.381
+        top3_share: 0.843
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
   unknowns:
-    maintenance: { reason: recency_unreadable }
-    responsiveness: { reason: no_traffic }
-    longevity: { reason: not_found }
-    governance: { reason: empty_or_gated }
-    risk_license: { reason: repo_unreachable }
+    adoption: { reason: registry_no_counts }
 ---
 
 # Tauri
@@ -106,7 +115,7 @@ health:
 
 ## 健康度与可持续性
 
-- **响应速度**：无法计算——no_traffic。
+- **响应速度**：Grade A——中位首次响应时间 2.1 小时，基于 28 个 qualifying issues。
 - **维护**：非常活跃——截至 2026-07 每日推送，v2 已稳定，社区支持活跃（1,442 个开放 issue）。[推断]
 - **治理**：由 `tauri-apps` 组织所有，拥有专门的核心团队和开放治理模式。bus factor 合理。
 - **背书**：由 Tauri Collective 和 Open Collective 资助；有企业赞助方和非营利基金会结构。[未验证]
