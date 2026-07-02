@@ -97,6 +97,7 @@ Reach for it specifically when consistency of *one* visual voice matters across 
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — type_na.
 - **Maintenance (as of 2026-06):** last pushed 2026-06, not archived — active in absolute terms, but the repo was *created in 2026-05*, so there is barely a month of history to judge cadence on. [推断]
 - **Governance & bus factor:** a `User`-owned, single-author skill (helloianneo) at v1.0.0; one person owns the 小黑 IP, the style DNA and the prompt templates. Classic single-maintainer bus-factor risk — if the author stops, nothing carries it. [推断]
 - **Age & Lindy verdict:** age < 1 year and ~6k stars on a fresh repo make this **young + lightly-hyped, longevity unproven**; it has not survived long enough for Lindy to say anything. Bet on the *idea* (a consistent illustration persona), not on this repo being here in two years. [未验证]

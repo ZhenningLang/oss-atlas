@@ -94,6 +94,7 @@ You reach for this pack to drop in a security playbook: install once (`npx skill
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — type_na.
 - **Maintenance** — very active and fast-moving: latest release v1.3.0 (2026-06), last pushed 2026-06, not archived (as of 2026-06). Skill count grew 734 → ~817 across recent releases, so content and framework versions shift release-to-release — pin a version and review the specific skills you depend on.
 - **Governance & bus factor** — single-author community repo (`User`-owned, `mukul975`), ~22k stars. One maintainer owns 800+ security skills of uneven depth; that's a heavy single-author bus factor for safety-relevant content. The "Anthropic" in the name is **not** an endorsement — it's a community project, not an official release.
 - **Age & Lindy** — created 2026-02, ~0 years old as of 2026-06: young and hyped (high stars fast), Lindy-unproven. For *security* runbooks, newness compounds the review burden — none of these workflows have a long track record.

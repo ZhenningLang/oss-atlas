@@ -114,6 +114,7 @@ You reach for it specifically when the alternative — kill and restart with mor
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (2026-06).** Repo last pushed 2025-04 with sporadic merge activity (a few PRs in 2025 and 2023), but the last real release tag (**2.0**) is many years old — best read as **low-cadence / near-dormant maintenance**, coasting rather than abandoned. Not archived. [推断]
 - **Governance / bus factor.** **User**-owned, single-author project (`lmacken`/Luke Macken) with a handful of occasional contributors — a clear single-maintainer bus-factor risk for a tool of this sensitivity. [推断]
 - **Age & Lindy verdict.** Created 2011-09 (~14 years) ⇒ long-lived, but Lindy requires age **× still-active**; here activity is minimal, so the verdict is "venerable but coasting" — it has persisted, but don't read its age as a sign of ongoing investment. [推断]

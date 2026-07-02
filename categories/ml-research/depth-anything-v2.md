@@ -113,6 +113,7 @@ You reach for it as the **current default monocular-depth foundation model** whe
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — type_na.
 - **Maintenance (2026-06).** Last pushed 2026-03; active issue flow (~240 open, consistent with high usage). Code repo is **actively maintained** post-release, with follow-on projects (Video Depth Anything, Prompt Depth Anything) in the same lineage. [推断]
 - **Governance / backing.** Authored by researchers at **HKU and TikTok/ByteDance** (Organization-owned repo, `DepthAnything` org). Institutional + big-vendor backing and a NeurIPS 2024 paper — strong viability signals; roadmap is research-team-led. [推断]
 - **Age & Lindy verdict.** Created 2024-06 (~2 years) — **young**, so Lindy gives little prior either way; the bet rests on adoption + active maintenance + backing, which are currently strong, not on longevity. [推断]

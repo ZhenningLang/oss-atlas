@@ -116,6 +116,7 @@ That is the *only* realistic reason to touch it in 2026. For any new testing, sc
 
 ## Health & viability
 
+- **Responsiveness**: Grade E.
 - **Maintenance (2026-06) — DEAD.** The repository is **archived** (last pushed 2022-11) and active development was **suspended in 2018** (the maintainer announced he was stepping down). No releases, no fixes, no security patches — this is the dominant fact about the project. `[未验证]`
 - **Age × still-active ⇒ FAILS Lindy.** Created **2010-12** (~15 years old), so age alone *looks* long-lived — but Lindy requires **age × still-active**, and PhantomJS is long-*abandoned*. An old, dead project is a **negative** signal, not a safe bet: the correct read is "ancient and unmaintained," the worst quadrant. `[推断]`
 - **Governance / bus factor — gone.** Owned by a **single user** (ariya), the original author, who publicly stepped away; there is no team, no foundation, and no successor maintainer that picked up the official repo. Bus factor effectively zero. `[未验证]`

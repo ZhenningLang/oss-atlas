@@ -16,28 +16,20 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T08:40:09Z
-  overall: A
-  overall_score: 3.5
-  scored_axes: 6
+  computed_at: 2026-07-02T12:46:05Z
+  overall: "?"
+  overall_score: null
+  scored_axes: 1
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: A
-      raw:
-        archived: false
-        last_commit_age_days: 0
-        active_weeks_13: 13
-        carve_out: null
+      grade: "?"
+      raw: {}
     responsiveness:
-      grade: A
-      raw:
-        median_ttfr_hours: 17.1
-        qualifying_issues: 56
-        band: default
-        window_offset_days: 1
+      grade: "?"
+      raw: {}
     adoption:
       grade: C
       raw:
@@ -49,26 +41,20 @@ health:
         volume_tier: C
         cross_check_divergence: null
     longevity:
-      grade: B
-      raw:
-        repo_age_days: 1239
-        last_commit_age_days: 0
-        cohort: framework
+      grade: "?"
+      raw: {}
     governance:
-      grade: A
-      raw:
-        active_maintainers_12mo: 125
-        top1_share: 0.153
-        top3_share: 0.346
-        window_source: stats_contributors
-        carve_out: null
+      grade: "?"
+      raw: {}
     risk_license:
-      grade: A
-      raw:
-        spdx_id: MIT
-        permissiveness: permissive
-        relicense_36mo: false
-        content_license: null
+      grade: "?"
+      raw: {}
+  unknowns:
+    maintenance: { reason: recency_unreadable }
+    responsiveness: { reason: no_traffic }
+    longevity: { reason: not_found }
+    governance: { reason: empty_or_gated }
+    risk_license: { reason: repo_unreachable }
 ---
 
 # Langflow
@@ -122,6 +108,7 @@ You're a developer or AI engineer who needs to prototype and deploy LLM-powered 
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance**: Very active — pushed daily as of 2026-07, with a sustained release cadence and a large but manageable open-issue volume (970). The commit activity indicates healthy development velocity.
 - **Governance**: Owned by the `langflow-ai` organization; a dedicated team rather than a single maintainer. This provides reasonable bus factor, though the org is relatively young and independent of a major foundation.
 - **Backing**: No major corporate or foundation backing publicly visible; the project appears to be independently operated by the Langflow organization.

@@ -126,6 +126,7 @@ It fits best when the same graph should serve *whatever agent you already use* �
 
 ## Health & viability
 
+- **Responsiveness**: Grade A — median first-response time 19.4 hours across 27 qualifying issues/PRs.
 - **Maintenance — active but thin history.** Last pushed 2026-06, not archived; latest release v2.7.3 (2026-05), but only **7 releases and ~603 commits** total — a very short track record for the version number. Active, yet too little history to judge stability. `[未验证]`
 - **Governance / backing — single vendor (Egonex-AI), opaque.** **Organization**-owned (`Egonex-AI/Understand-Anything`), but it reads as an early single-vendor project; the README doesn't make the egress boundary or any mandatory hosted backend clear. `[未验证]` Roadmap and longevity hinge on one vendor with no visible track record.
 - **Age & Lindy — young, unproven (created 2026-03, ~3 months as of 2026-06).** Fails the Lindy prior on age alone: months old with a thin commit history. Do not read the version number (v2.x) as maturity.

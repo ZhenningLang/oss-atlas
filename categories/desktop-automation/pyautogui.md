@@ -117,6 +117,7 @@ It's also the natural reach when you want a *visible*, human-mimicking robot —
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (2026-06).** Last push 2024-08 (≈2 years stale at time of writing); the project reads as **stable but coasting**, not abandoned — the API is mature and the core problem is solved, but new development is minimal. Not archived. ~583 open issues is consistent with a popular library outpacing a thin maintenance budget. [推断]
 - **Governance / bus factor.** `User`-owned (Al Sweigart) and effectively single-maintainer (the author is by far the top contributor across PyAutoGUI and its `pyscreeze`/`pymsgbox`/`pytweening` siblings). High stars on a one-person project is a **bus-factor flag** — direction and longevity depend on one person's continued interest. [推断]
 - **Age × Lindy.** ~12 years old (created 2014-07) and still widely installed ⇒ a **strong Lindy** prior on the *library's* survival and API stability, even though active development has slowed. Old-and-coasting beats young-and-hyped, but verify it still works against your current OS. [推断]

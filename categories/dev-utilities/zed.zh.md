@@ -16,21 +16,17 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T08:45:54Z
-  overall: A
-  overall_score: 3.75
-  scored_axes: 4
+  computed_at: 2026-07-02T12:45:48Z
+  overall: "?"
+  overall_score: null
+  scored_axes: 1
   capped: false
   cap_reason: null
   needs_human_review: true
   axes:
     maintenance:
-      grade: A
-      raw:
-        archived: false
-        last_commit_age_days: 0
-        active_weeks_13: 13
-        carve_out: null
+      grade: "?"
+      raw: {}
     responsiveness:
       grade: "?"
       raw: {}
@@ -43,27 +39,22 @@ health:
         downloads_last_month: 812610
         graph_tier: E
         volume_tier: B
-        cross_check_divergence: 3.64
+        cross_check_divergence: 3.63
     longevity:
-      grade: A
-      raw:
-        repo_age_days: 1958
-        last_commit_age_days: 0
-        cohort: tool
+      grade: "?"
+      raw: {}
     governance:
-      grade: A
-      raw:
-        active_maintainers_12mo: 311
-        top1_share: 0.082
-        top3_share: 0.19
-        window_source: stats_contributors
-        carve_out: null
+      grade: "?"
+      raw: {}
     risk_license:
       grade: "?"
       raw: {}
   unknowns:
+    maintenance: { reason: recency_unreadable }
     responsiveness: { reason: no_traffic }
-    risk_license: { reason: license_unparsed }
+    longevity: { reason: not_found }
+    governance: { reason: empty_or_gated }
+    risk_license: { reason: repo_unreachable }
 ---
 
 # Zed
@@ -113,6 +104,7 @@ health:
 
 ## 健康度与可持续性
 
+- **响应速度**：无法计算——no_traffic。
 - **维护**：非常活跃——每日提交、频繁发布、响应及时的 issue 跟踪。86k star、9.3k fork。
 - **治理**：由 Zed Industries 所有，公司由 Atom 和 Tree-sitter 的创作者创立。团队在编辑器技术方面底蕴深厚。
 - **背书**：Zed Industries 是一家获得风投支持的初创公司。公司完全专注于 Zed，这是积极信号，但相比多元化基金会，也存在集中风险。

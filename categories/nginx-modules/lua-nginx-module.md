@@ -118,6 +118,7 @@ The decisive feature is the **cosocket** API: your Lua can open non-blocking TCP
 
 ## Health & viability
 
+- **Responsiveness**: Grade B — median first-response time 22.3 hours across 3 qualifying issues/PRs.
 - **Maintenance (2026-06) — active.** Last push **2026-06**; tags in the v0.10.31 / v0.10.32rc line are recent. The 2009→2025 copyright range in the license file and ongoing tags confirm continued work. Not archived. **Active.** [推断]
 - **Governance / backing.** `Organization`-owned (OpenResty / OpenResty Inc., founded by Yichun "agentzh" Zhang). Development is **heavily concentrated** in the OpenResty core team (agentzh and a small group dominate contributors) — vendor/founder-led rather than foundation-governed, a bus-factor consideration even though the team is real. [推断]
 - **Age × Lindy.** Created **2010-04** (~16 years) and **still actively maintained** ⇒ a **very strong Lindy** signal; it is foundational infrastructure under widely-deployed gateways (Kong, APISIX) and has survived every NGINX generation. Old-and-active, the safest quadrant. [推断]

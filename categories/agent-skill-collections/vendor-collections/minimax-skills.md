@@ -94,6 +94,7 @@ You reach for it when you want an opinionated, ready-made skill bundle covering 
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — type_na.
 - **Maintenance** — [未验证] last pushed **2026-04** with no tagged releases; against today (2026-06) that is ~2 months stale — reads as **coasting, not abandoned**: re-verify freshness before depending on a specific skill, since a stale skill in a domain you care about is worse than none.
 - **Governance & backing** — [推断] org-owned and **vendor-backed by MiniMax**; strong provenance but single-vendor and tied to MiniMax's models/harness assumptions. Roadmap follows the vendor.
 - **Age & Lindy** — [推断] created 2026-03, so only ~3 months old as of 2026-06: **brand new, no Lindy track record**, and already showing a 2-month activity gap — durability unproven.

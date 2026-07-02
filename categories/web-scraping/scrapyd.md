@@ -117,6 +117,7 @@ You're a data engineer who has written a handful of Scrapy spiders that work fin
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (2026-06).** Active — last pushed 2026-06-19, latest release v1.6.0 (2025-07-22), roughly one feature release per year, status "Production/Stable", not archived. Only ~6 open issues — a small, well-tended scope. [推断 — GitHub Releases API 只到 1.4.1，1.5.0/1.6.0 以 docs/news.rst changelog 为准]
 - **Governance / bus factor.** Lives under the **`scrapy` GitHub org** (same community/team that maintains the Scrapy framework), not a solo account — `jpmckinney` is the notable current maintainer, with several core Scrapy-org names contributing. Low bus-factor risk.
 - **Age × Lindy.** Created 2013 (~13 years) and still pushed this month ⇒ a **strong Lindy** signal: mature, slow-moving infrastructure that has long outlived hype cycles.

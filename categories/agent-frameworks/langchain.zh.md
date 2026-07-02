@@ -16,28 +16,20 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T08:39:16Z
-  overall: A
-  overall_score: 3.67
-  scored_axes: 6
+  computed_at: 2026-07-02T12:50:45Z
+  overall: "?"
+  overall_score: null
+  scored_axes: 1
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: A
-      raw:
-        archived: false
-        last_commit_age_days: 1
-        active_weeks_13: 13
-        carve_out: null
+      grade: "?"
+      raw: {}
     responsiveness:
-      grade: A
-      raw:
-        median_ttfr_hours: 0.3
-        qualifying_issues: 30
-        band: default
-        window_offset_days: 6
+      grade: "?"
+      raw: {}
     adoption:
       grade: A
       raw:
@@ -49,26 +41,20 @@ health:
         volume_tier: A
         cross_check_divergence: 1.0
     longevity:
-      grade: B
-      raw:
-        repo_age_days: 1354
-        last_commit_age_days: 1
-        cohort: framework
+      grade: "?"
+      raw: {}
     governance:
-      grade: B
-      raw:
-        active_maintainers_12mo: 48
-        top1_share: 0.53
-        top3_share: 0.757
-        window_source: stats_contributors
-        carve_out: null
+      grade: "?"
+      raw: {}
     risk_license:
-      grade: A
-      raw:
-        spdx_id: MIT
-        permissiveness: permissive
-        relicense_36mo: false
-        content_license: null
+      grade: "?"
+      raw: {}
+  unknowns:
+    maintenance: { reason: recency_unreadable }
+    responsiveness: { reason: no_traffic }
+    longevity: { reason: not_found }
+    governance: { reason: empty_or_gated }
+    risk_license: { reason: repo_unreachable }
 ---
 
 # LangChain
@@ -119,6 +105,7 @@ agent 工程平台——通过组合可互操作组件与第三方集成，构�
 
 ## 健康度与可持续性
 
+- **响应速度**：无法计算——no_traffic。
 - **维护**：Grade A——截至 2026-07 在 1 天内有推送，13 周中有 13 周活跃。对如此规模的项目，415 个 open issue 管理良好。
 - **响应度**：Grade A——首次响应中位时间 0.3 小时，表明维护团队极其高效。
 - **治理**：Grade B——由 LangChain AI, Inc. 支持，过去 12 个月有 48 位活跃维护者。首位维护者占 53% 的提交，存在集中度风险。

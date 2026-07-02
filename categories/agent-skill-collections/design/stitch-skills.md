@@ -97,6 +97,7 @@ You install Stitch Skills so the agent itself can run the loop. With the Stitch 
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — type_na.
 - **Maintenance (2026-06):** active and early — v1.0 release (2026-05), last pushed 2026-06, not archived. First stable tag just landed; expect the skill set and the underlying Stitch MCP API to move together for a while.
 - **Governance / bus factor:** `Organization`-owned by **`google-labs-code`** — org backing, not a lone maintainer, which lifts the bus factor. The flip side is **vendor risk**: Google Labs is an experimental arm with a documented history of sunsetting projects, so org backing here is not a longevity guarantee. `[推断]`
 - **Age & Lindy verdict:** young (created 2026-01, ~5 months old) — **unproven**. Worse, its viability is *tethered to a hosted product* (`stitch.withgoogle.com`): if Stitch is deprecated, these skills are inert regardless of repo health. Lindy here is the product's, not the repo's.

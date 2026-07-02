@@ -107,6 +107,7 @@ This is the right reach when you want a *queryable, always-on* free-proxy pool w
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (2026-06).** Last tagged release 1.2.0 is from 2022-03; the repo was touched as recently as 2025-06 but without a fresh release — **coasting toward dormant**, not actively developed. This is a fork-lineage repo (`MikeChongCan/scylla`) whose description was repurposed with AI/LLM framing. Not archived.
 - **Governance / bus factor.** A User-account repo with a small contributor set (incl. dependabot); single-maintainer bus-factor risk, no foundation backing. The ~4.0k stars on a User repo with stalled releases is a flag worth weighing, not social proof. [推断]
 - **Age & Lindy verdict.** ~8 years old (created 2018-04) but with a stalled release line ⇒ Lindy is **weak-to-mixed**: long-lived, but the "still-active" half is shaky given no recent releases.

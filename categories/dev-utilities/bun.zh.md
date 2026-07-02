@@ -16,28 +16,20 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T08:43:05Z
-  overall: A
-  overall_score: 4.0
-  scored_axes: 5
+  computed_at: 2026-07-02T12:49:58Z
+  overall: "?"
+  overall_score: null
+  scored_axes: 1
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: A
-      raw:
-        archived: false
-        last_commit_age_days: 0
-        active_weeks_13: 13
-        carve_out: null
+      grade: "?"
+      raw: {}
     responsiveness:
-      grade: A
-      raw:
-        median_ttfr_hours: 0.2
-        qualifying_issues: 46
-        band: relaxed_solo
-        window_offset_days: 0
+      grade: "?"
+      raw: {}
     adoption:
       grade: A
       raw:
@@ -49,24 +41,20 @@ health:
         volume_tier: A
         cross_check_divergence: 1.28
     longevity:
-      grade: A
-      raw:
-        repo_age_days: 1905
-        last_commit_age_days: 0
-        cohort: tool
+      grade: "?"
+      raw: {}
     governance:
-      grade: A
-      raw:
-        active_maintainers_12mo: 65
-        top1_share: 0.36
-        top3_share: 0.73
-        window_source: stats_contributors
-        carve_out: null
+      grade: "?"
+      raw: {}
     risk_license:
       grade: "?"
       raw: {}
   unknowns:
-    risk_license: { reason: license_unparsed }
+    maintenance: { reason: recency_unreadable }
+    responsiveness: { reason: no_traffic }
+    longevity: { reason: not_found }
+    governance: { reason: empty_or_gated }
+    risk_license: { reason: repo_unreachable }
 ---
 
 # Bun
@@ -117,6 +105,7 @@ health:
 
 ## 健康度与可持续性
 
+- **响应速度**：无法计算——no_traffic。
 - **维护活跃度**：活跃——截至 2026-07 每日推送，发布频繁，issue 响应积极（6,817 个 open issues）。[推断]
 - **治理与 bus factor**：由 `oven-sh` 组织持有，Jarred Sumner 为核心负责人，贡献者团队正在扩大。Bus factor 在改善，但仍集中在小核心团队。
 - **背书与 longevity**：由 Oven 公司支持，已获风险投资。商业模式与长期路线图尚不完全透明。[未验证]

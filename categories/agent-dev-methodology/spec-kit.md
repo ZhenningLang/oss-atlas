@@ -16,21 +16,17 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T08:28:55Z
-  overall: B
-  overall_score: 3.2
-  scored_axes: 5
+  computed_at: 2026-07-02T12:45:36Z
+  overall: "?"
+  overall_score: null
+  scored_axes: 1
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: A
-      raw:
-        archived: false
-        last_commit_age_days: 0
-        active_weeks_13: 13
-        carve_out: null
+      grade: "?"
+      raw: {}
     responsiveness:
       grade: "?"
       raw: {}
@@ -45,28 +41,20 @@ health:
         volume_tier: D
         cross_check_divergence: null
     longevity:
-      grade: B
-      raw:
-        repo_age_days: 314
-        last_commit_age_days: 0
-        cohort: skill-pack
+      grade: "?"
+      raw: {}
     governance:
-      grade: A
-      raw:
-        active_maintainers_12mo: 96
-        top1_share: 0.231
-        top3_share: 0.523
-        window_source: stats_contributors
-        carve_out: null
+      grade: "?"
+      raw: {}
     risk_license:
-      grade: A
-      raw:
-        spdx_id: MIT
-        permissiveness: permissive
-        relicense_36mo: false
-        content_license: null
+      grade: "?"
+      raw: {}
   unknowns:
+    maintenance: { reason: recency_unreadable }
     responsiveness: { reason: type_na }
+    longevity: { reason: not_found }
+    governance: { reason: empty_or_gated }
+    risk_license: { reason: repo_unreachable }
 ---
 
 # Spec Kit
@@ -104,6 +92,7 @@ You also reach for it when you want to standardize how your team uses AI agents.
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — type_na.
 - **Maintenance (2026-07).** Last pushed 2026-07-01 with active development; the project is not archived and receives updates from GitHub's team. [推断]
 - **Governance / bus factor.** Owned by GitHub (Microsoft) — a **very strong backing** signal with virtually zero bus-factor risk from maintainer attrition. The roadmap is tied to GitHub's AI strategy, which is both a strength and a potential lock-in concern. [推断]
 - **Age & Lindy verdict.** Less than a year old (created 2025-08) ⇒ **very weak Lindy** signal. It is a young, hype-backed project with massive star count but no proven long-term track record. The backing by GitHub improves longevity odds, but the methodology itself is unproven at scale. [推断]

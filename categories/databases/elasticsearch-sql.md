@@ -112,6 +112,7 @@ You reach for it specifically as a **translation/convenience layer**: SELECT/WHE
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (2026-06).** Last push 2026-05-04, multiple v9.3.x releases dated the same day — **active** and tracking current ES majors, not abandoned. Not archived. [推断]
 - **Governance / backing.** A **community project** under the NLPchina org (contributors incl. ansjsun, shi-yuan); no single corporate vendor behind it — bus-factor rests on a small active maintainer set, a real consideration vs Elastic's first-party SQL. [推断]
 - **Age & Lindy verdict.** Created 2014-08 (~12 years) and **still shipping** version-matched releases ⇒ a **strong Lindy** signal; it has survived many ES majors, which is itself evidence of durable maintenance discipline. [推断]

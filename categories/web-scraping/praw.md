@@ -120,6 +120,7 @@ It's the default building block when your data source *is* Reddit specifically a
 
 ## Health & viability
 
+- **Responsiveness**: Grade C — median first-response time 4.2 hours across 2 qualifying issues/PRs.
 - **Maintenance (2026-06).** **Active.** v8.0.x released in June 2026 (v8.0.0 on 2026-06-14, with v8.0.1/8.0.2 days later), last push 2026-06-24 — current and shipping, with a major-version bump indicating ongoing work. Not archived.
 - **Governance / bus factor.** Lives under the `praw-dev` GitHub **organization** (not a personal account) with a multi-contributor history (`bboe`, `LilSpazJoekp`, and others) — better bus factor than a single-maintainer lib, though still a small core team. [推断]
 - **Age & Lindy verdict.** Created 2010-08, ~16 years old and **still actively shipping** ⇒ **strong Lindy**: one of the longest-lived, most-proven Reddit API wrappers in Python.

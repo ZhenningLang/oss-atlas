@@ -111,6 +111,7 @@ It's the de-facto compatibility shim under a huge slice of Python CLIs and is bu
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (2026-06).** Repo last pushed 2026-05 — **active**, not archived; a stable, mature library that doesn't need frequent change but is kept current. (No GitHub tagged releases listed here; it ships via **PyPI**.) [未验证]
 - **Governance / bus factor.** Owner type **User** (tartley / Jonathan Hartley) with multiple steady contributors (wiggin15, hugovk, njsmith, jdufresne) — better bus factor than a one-person script, though still individually owned rather than foundation-backed. [推断]
 - **Age & Lindy verdict.** Created **2014**, ~12 years old and **still maintained** ⇒ a **strong Lindy** signal; it's a settled, ubiquitous dependency whose problem (legacy-Windows ANSI) is itself stable. [推断]

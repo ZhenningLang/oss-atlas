@@ -16,54 +16,39 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T08:43:29Z
-  overall: B
-  overall_score: 3.0
-  scored_axes: 5
+  computed_at: 2026-07-02T12:48:32Z
+  overall: "?"
+  overall_score: null
+  scored_axes: 0
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: A
-      raw:
-        archived: false
-        last_commit_age_days: 1
-        active_weeks_13: 13
-        carve_out: null
+      grade: "?"
+      raw: {}
     responsiveness:
-      grade: C
-      raw:
-        median_ttfr_hours: 7.3
-        qualifying_issues: 2
-        band: relaxed_solo
-        window_offset_days: 7
+      grade: "?"
+      raw: {}
     adoption:
       grade: "?"
       raw: {}
     longevity:
-      grade: D
-      raw:
-        repo_age_days: 161
-        last_commit_age_days: 1
-        cohort: tool
+      grade: "?"
+      raw: {}
     governance:
-      grade: A
-      raw:
-        active_maintainers_12mo: 97
-        top1_share: 0.276
-        top3_share: 0.59
-        window_source: stats_contributors
-        carve_out: null
+      grade: "?"
+      raw: {}
     risk_license:
-      grade: A
-      raw:
-        spdx_id: Apache-2.0
-        permissiveness: permissive
-        relicense_36mo: false
-        content_license: null
+      grade: "?"
+      raw: {}
   unknowns:
+    maintenance: { reason: recency_unreadable }
+    responsiveness: { reason: no_traffic }
     adoption: { reason: ambiguous }
+    longevity: { reason: not_found }
+    governance: { reason: empty_or_gated }
+    risk_license: { reason: repo_unreachable }
 ---
 
 # RTK
@@ -111,6 +96,7 @@ You're a developer or team using AI coding agents (Claude Code, Codex, Open Inte
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance**: Active — regular commits and releases. 67k stars, 4.1k forks, relatively low open issue count for the star volume.
 - **Governance**: Owned by rtk-ai, an organization focused on AI developer tooling. Appears to be a small but dedicated team.
 - **Backing**: Unknown funding status — the organization appears purpose-built for RTK. No visible foundation or major corporate backing.

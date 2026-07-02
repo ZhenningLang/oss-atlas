@@ -97,6 +97,7 @@ You reach for it when you want a ready-made *thinking discipline* rather than bu
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — type_na.
 - **Maintenance** — active: last pushed 2026-05, not archived (as of 2026-06), but no tagged release to pin — you track a moving branch. Reads active rather than abandoned, but without semver you can't lock a known-good state.
 - **Governance & bus factor** — single-maintainer personal repo (`User`-owned), ~3.3k stars. One author owns the methodology and the multi-harness manifests; modest stars and a niche framing mean limited community backstop if the maintainer steps away.
 - **Age & Lindy** — created 2026-03, ~0 years old as of 2026-06: young, Lindy-unproven. The *underlying* method (dialectical-materialist analysis) is old, but this packaging is new and untested across CLI churn — adopt for the discipline, not for longevity.

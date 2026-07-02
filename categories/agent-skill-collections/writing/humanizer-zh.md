@@ -94,6 +94,7 @@ You reach for it specifically when your output language is Chinese and you'd rat
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — type_na.
 - **Maintenance** — last push 2026-01 (as of 2026-06), so ~5 months idle with no tagged release; this is a small localization repo, not an evolving product. Treat it as coasting-toward-static rather than actively maintained. [推断]
 - **Governance / bus factor** — single-author (`User`-owned) localization of upstream `blader/humanizer`; ~11k stars on a one-person, single-purpose repo is a bus-factor flag — if the author stops, the Chinese pattern list freezes wherever it was. [推断]
 - **Age & Lindy** — created 2026-01, so under a year old as of 2026-06: too young to claim a Lindy track record, and being a translation it inherits upstream's direction rather than setting its own. [推断]

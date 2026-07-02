@@ -16,59 +16,39 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T08:34:23Z
-  overall: A
-  overall_score: 3.67
-  scored_axes: 6
+  computed_at: 2026-07-02T12:43:32Z
+  overall: "?"
+  overall_score: null
+  scored_axes: 0
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: A
-      raw:
-        archived: false
-        last_commit_age_days: 1
-        active_weeks_13: 13
-        carve_out: null
+      grade: "?"
+      raw: {}
     responsiveness:
-      grade: A
-      raw:
-        median_ttfr_hours: 6.5
-        qualifying_issues: 33
-        band: relaxed_solo
-        window_offset_days: 2
+      grade: "?"
+      raw: {}
     adoption:
-      grade: A
-      raw:
-        registry: pypi.org
-        canonical_package: uv
-        dependent_repos_count: 2
-        downloads_last_month: 157448976
-        graph_tier: D
-        volume_tier: A
-        cross_check_divergence: null
+      grade: "?"
+      raw: {}
     longevity:
-      grade: B
-      raw:
-        repo_age_days: 1004
-        last_commit_age_days: 1
-        cohort: tool
+      grade: "?"
+      raw: {}
     governance:
-      grade: B
-      raw:
-        active_maintainers_12mo: 58
-        top1_share: 0.405
-        top3_share: 0.738
-        window_source: stats_contributors
-        carve_out: null
+      grade: "?"
+      raw: {}
     risk_license:
-      grade: A
-      raw:
-        spdx_id: Apache-2.0
-        permissiveness: permissive
-        relicense_36mo: false
-        content_license: null
+      grade: "?"
+      raw: {}
+  unknowns:
+    maintenance: { reason: recency_unreadable }
+    responsiveness: { reason: no_traffic }
+    adoption: { reason: registry_no_counts }
+    longevity: { reason: not_found }
+    governance: { reason: empty_or_gated }
+    risk_license: { reason: repo_unreachable }
 ---
 
 # uv
@@ -118,6 +98,7 @@ health:
 
 ## 健康度与可持续性
 
+- **响应速度**：无法计算——no_traffic。
 - **维护**：极其活跃——每日提交、快速发布。2023 年创建，但已是 Python 工具类仓库中 star 最多的项目之一。
 - **治理**：由 Astral 背书，一家资金充裕的 Python 工具公司（也是 Ruff 的幕后团队）。有清晰的商业背书和强大的 Rust/Python 团队。
 - **背书**：Astral 对 Ruff 和 uv 的持续投入已证明其承诺。公司看起来稳定，且专注于 Python 开发者体验。

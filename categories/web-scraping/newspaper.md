@@ -119,6 +119,7 @@ It shines when the input is *article-shaped* and you want one general extractor 
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (dated 2026-06).** The upstream `codelucas/newspaper` (newspaper3k) is effectively stale: last PyPI release 0.2.8 was 2018-09 and the codebase has been quiet since ~2020. A "pushed 2026-05" repo timestamp, if present, looks like a trivial touch rather than revived development — treat the original as in maintenance-mode/abandoned, not actively evolving. [未验证]
 - **Governance / bus factor.** A single-maintainer, `User`-owned repo (Lucas Ou-Yang) — classic bus-factor risk, and here the maintainer has largely moved on. The healthier path is the **community fork newspaper4k** by Andrei Paraschiv (`AndyTheFactory/newspaper4k`), which reports healthy maintenance and a regular release cadence. [未验证]
 - **Age & Lindy verdict.** Created 2013-11 (~13 years) — the *concept* is durable and battle-tested, so Lindy on the idea is strong; but Lindy needs **age × still-active**, and the original is no longer active. The age signal transfers to newspaper4k, which keeps the lineage alive. [推断]

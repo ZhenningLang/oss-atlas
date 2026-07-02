@@ -96,6 +96,7 @@ It also ships tunable dials — `DESIGN_VARIANCE`, `MOTION_INTENSITY`, `VISUAL_D
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — type_na.
 - **Maintenance (2026-06):** active — last push 2026-06, not archived, but no tagged releases at all, so "version" means a moving commit. Treat it as best-effort, not a versioned product.
 - **Governance & bus factor:** single-author `User` repo (`Leonxlnx`) carrying ~52k stars — a textbook bus-factor flag: outsized adoption resting on one maintainer with no foundation/vendor backing.
 - **Age & Lindy:** created 2026-02, so <1 year old as of 2026-06 — young and star-hyped, with a v2 default still flagged experimental and skills renamed/reorganized between pushes. Unproven on the Lindy axis; the star count says nothing about longevity.

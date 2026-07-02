@@ -118,6 +118,7 @@ You reach for it specifically when you want full control of the challenge lifecy
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (2026-06).** Last pushed 2025-10; latest tag v0.7.1. Low commit volume but not dead — small fixes land and dependencies (Pillow) get tracked. **Maintained, low-velocity** — appropriate for a stable, narrow-scope library. [推断]
 - **Governance / bus factor.** Personal project by a single prolific maintainer (lepture, also author of Authlib/mistune); contributor list is dominated by the owner. Bus-factor risk is real but mitigated by the tiny surface area — the library is "done" more than it is "active". [推断]
 - **Age & Lindy verdict.** Created 2014-11 (~11 years old) and still receiving occasional updates ⇒ a solid Lindy signal for a small utility; it has long outlived most CAPTCHA libraries. [推断]

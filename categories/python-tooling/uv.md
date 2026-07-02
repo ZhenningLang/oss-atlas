@@ -16,59 +16,39 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T08:34:23Z
-  overall: A
-  overall_score: 3.67
-  scored_axes: 6
+  computed_at: 2026-07-02T12:43:32Z
+  overall: "?"
+  overall_score: null
+  scored_axes: 0
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: A
-      raw:
-        archived: false
-        last_commit_age_days: 1
-        active_weeks_13: 13
-        carve_out: null
+      grade: "?"
+      raw: {}
     responsiveness:
-      grade: A
-      raw:
-        median_ttfr_hours: 6.5
-        qualifying_issues: 33
-        band: relaxed_solo
-        window_offset_days: 2
+      grade: "?"
+      raw: {}
     adoption:
-      grade: A
-      raw:
-        registry: pypi.org
-        canonical_package: uv
-        dependent_repos_count: 2
-        downloads_last_month: 157448976
-        graph_tier: D
-        volume_tier: A
-        cross_check_divergence: null
+      grade: "?"
+      raw: {}
     longevity:
-      grade: B
-      raw:
-        repo_age_days: 1004
-        last_commit_age_days: 1
-        cohort: tool
+      grade: "?"
+      raw: {}
     governance:
-      grade: B
-      raw:
-        active_maintainers_12mo: 58
-        top1_share: 0.405
-        top3_share: 0.738
-        window_source: stats_contributors
-        carve_out: null
+      grade: "?"
+      raw: {}
     risk_license:
-      grade: A
-      raw:
-        spdx_id: Apache-2.0
-        permissiveness: permissive
-        relicense_36mo: false
-        content_license: null
+      grade: "?"
+      raw: {}
+  unknowns:
+    maintenance: { reason: recency_unreadable }
+    responsiveness: { reason: no_traffic }
+    adoption: { reason: registry_no_counts }
+    longevity: { reason: not_found }
+    governance: { reason: empty_or_gated }
+    risk_license: { reason: repo_unreachable }
 ---
 
 # uv
@@ -118,6 +98,7 @@ You're a Python developer tired of waiting for `pip install` to resolve dependen
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance**: Extremely active — daily commits, rapid releases. Created in 2023 but already one of the most starred Python tooling repos.
 - **Governance**: Backed by Astral, a well-funded Python tooling company (also behind Ruff). Clear commercial backing with a strong Rust/Python team.
 - **Backing**: Astral has demonstrated commitment through consistent investment in Ruff and uv. The company appears stable and focused on Python developer experience.

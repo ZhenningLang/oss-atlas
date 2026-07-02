@@ -118,6 +118,7 @@ Apache Thrift 的纯 Python 实现：运行时直接加载 `.thrift` 文件、�
 
 ## 健康度与可持续性
 
+- **响应速度**：Grade E。
 - **维护（2026-06）。** **已废弃 / 已归档。** 最后发布 `v0.3.9` 在 2016-08，最后 push 在 2018-12，仓库在 GitHub 上标记为 `archived`。README 明确弃用它、改荐 thriftpy2。[推断]
 - **治理 / bus factor。** 归在 `Thriftpy` GitHub 组织下（Organization 所有者），最初创建于 eleme。维护精力已完全转移到 thriftpy2 仓库；这个仓库什么都收不到。[推断]
 - **年龄 × Lindy。** 2014-02 创建（约 12 岁）但**已不再活跃**——一个长期*被废弃*的项目不通过 Lindy 检验，而非通过它。这里的长寿是历史，不是安全信号。[推断]

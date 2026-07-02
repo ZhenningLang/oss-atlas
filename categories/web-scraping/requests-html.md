@@ -108,6 +108,7 @@ Occasionally a page you scrape needs a little JavaScript to populate content, an
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (DATED 2026-06).** **Last pushed 2024-04 — roughly 2 years idle**; no recent releases or commit activity. This reads as **effectively unmaintained / coasting**, the dominant signal for any 2026 selection decision. Not formally archived, but currency is dead. [未验证]
 - **The kennethreitz pattern.** A kennethreitz-authored project (like `requests` itself and several others): built fast, beautifully ergonomic, widely adopted, then left to coast once attention moved on. Treat "popular and elegant" as orthogonal to "currently maintained" here. [推断]
 - **Governance / bus factor.** Repo lives under the **PSF (`psf`) organization** (owner type Organization), which is *nominal* stewardship — PSF holding the repo does **not** imply an active maintainer is shipping fixes. No evidence of an active maintainer found; treat bus factor as effectively zero for new fixes. [未验证]

@@ -16,21 +16,17 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T08:42:43Z
-  overall: B
-  overall_score: 3.25
-  scored_axes: 4
+  computed_at: 2026-07-02T12:51:57Z
+  overall: "?"
+  overall_score: null
+  scored_axes: 1
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: A
-      raw:
-        archived: false
-        last_commit_age_days: 0
-        active_weeks_13: 13
-        carve_out: null
+      grade: "?"
+      raw: {}
     responsiveness:
       grade: "?"
       raw: {}
@@ -45,25 +41,20 @@ health:
         volume_tier: A
         cross_check_divergence: 1.0
     longevity:
-      grade: C
-      raw:
-        repo_age_days: 220
-        last_commit_age_days: 0
-        cohort: app
+      grade: "?"
+      raw: {}
     governance:
-      grade: B
-      raw:
-        active_maintainers_12mo: 487
-        top1_share: 0.528
-        top3_share: 0.753
-        window_source: stats_contributors
-        carve_out: null
+      grade: "?"
+      raw: {}
     risk_license:
       grade: "?"
       raw: {}
   unknowns:
+    maintenance: { reason: recency_unreadable }
     responsiveness: { reason: no_traffic }
-    risk_license: { reason: license_unparsed }
+    longevity: { reason: not_found }
+    governance: { reason: empty_or_gated }
+    risk_license: { reason: repo_unreachable }
 ---
 # OpenClaw
 
@@ -111,6 +102,7 @@ health:
 
 ## 健康度与可持续性
 
+- **响应速度**：无法计算——no_traffic。
 - **维护**：Grade A——截至 2026-07 每日推送，13 周中有 13 周活跃，6,749 个开放 issue 表明社区参与度高。
 - **治理**：Grade B——由 OpenClaw 组织所有，过去 12 个月有 487 位活跃维护者。首位维护者占 52.8% 的提交，存在集中度风险。
 - **长期性**：Grade C——仅 220 天历史（2025-11 创建）。毫无 Lindy 记录；项目极其年轻，尽管 visibility 很高。

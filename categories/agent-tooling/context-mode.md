@@ -124,6 +124,7 @@ So you install Context Mode as an MCP server (a `/plugin` install on Claude Code
 
 ## Health & viability
 
+- **Responsiveness**: Grade A — median first-response time 145.6 hours across 28 qualifying issues/PRs.
 - **Maintenance** — last push 2026-06 with a very rapid 1.0.x cadence (latest v1.0.166, 2026-06-23, as of 2026-06): clearly active, even hyperactive. The flip side is churn — frequent point releases and many open platform-integration issues mean specifics go stale fast. [推断]
 - **Governance / bus factor** — `[推断]` single-author (`User`-owned) project; ~18k stars on a one-maintainer repo is a bus-factor flag. There's a hosted "Insight" dashboard at context-mode.com, hinting at a commercial intent behind it, but no foundation or team governance to point to — roadmap is one person's.
 - **Age & Lindy** — created 2026-02, so only months old as of 2026-06 despite the v1.0.x label and a #1 Hacker News moment: unproven on Lindy grounds. Treat the stars/HN buzz as attention, not durability.

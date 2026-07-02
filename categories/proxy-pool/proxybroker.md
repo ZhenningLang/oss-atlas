@@ -113,6 +113,7 @@ This is a *learning/experiment* reach: when you want to understand how a finder-
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (2026-06).** Effectively **dormant**: the last meaningful release is from ~2018 and there are no recent tagged releases; the repo shows only sporadic touches (pushed 2024-03). Not formally archived, but not actively developed. Treat as frozen.
 - **Governance / bus factor.** Single-author project (constverum, a User account) that has gone quiet — maximal bus-factor risk: the original maintainer is largely absent and no successor has taken it over. [推断]
 - **Age & Lindy verdict.** ~11 years old (created 2015-10) but **no longer active** ⇒ Lindy *fails* here: age without continued activity is an abandonment signal, not durability. Old + dormant is a red flag.

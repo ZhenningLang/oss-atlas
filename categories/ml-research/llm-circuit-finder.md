@@ -119,6 +119,7 @@ You're a hobbyist or independent researcher with a couple of consumer GPUs and a
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — too_young.
 - **Maintenance (as of 2026-06):** last pushed 2026-03 (~2026-03-20), no tagged release, no test suite or CI visible. [推断] Recently active but with the shape of a one-off research drop, not a maintained tool — there's no cadence to track.
 - **Governance / bus factor:** a **single-author** repo under a personal account with only ~239 stars — minimal bus factor and no community process. If the author stops, it stops; you should expect to read and adapt the scripts yourself rather than file issues and wait.
 - **Age & Lindy verdict (created 2026-03, ~0 yr):** brand-new and tiny. [推断] **Unproven by Lindy** — neither old nor widely adopted; its credibility rests on the technique (RYS layer-duplication) and the author's own checked-in evals, not on survival or usage. Treat it as a learn-by-running demo.

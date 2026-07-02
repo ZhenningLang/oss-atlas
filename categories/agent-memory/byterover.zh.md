@@ -17,28 +17,20 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T08:47:38Z
-  overall: D
-  overall_score: 2.5
-  scored_axes: 6
-  capped: true
-  cap_reason: "source-available/no-license: NOASSERTION"
+  computed_at: 2026-07-02T12:48:35Z
+  overall: "?"
+  overall_score: null
+  scored_axes: 1
+  capped: false
+  cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: A
-      raw:
-        archived: false
-        last_commit_age_days: 7
-        active_weeks_13: 10
-        carve_out: null
+      grade: "?"
+      raw: {}
     responsiveness:
-      grade: A
-      raw:
-        median_ttfr_hours: 3.6
-        qualifying_issues: 23
-        band: default
-        window_offset_days: 12
+      grade: "?"
+      raw: {}
     adoption:
       grade: D
       raw:
@@ -50,26 +42,20 @@ health:
         volume_tier: D
         cross_check_divergence: null
     longevity:
-      grade: C
-      raw:
-        repo_age_days: 377
-        last_commit_age_days: 7
-        cohort: library
+      grade: "?"
+      raw: {}
     governance:
-      grade: A
-      raw:
-        active_maintainers_12mo: 17
-        top1_share: 0.288
-        top3_share: 0.634
-        window_source: stats_contributors
-        carve_out: null
+      grade: "?"
+      raw: {}
     risk_license:
-      grade: E
-      raw:
-        spdx_id: NOASSERTION
-        permissiveness: source_available
-        relicense_36mo: false
-        content_license: null
+      grade: "?"
+      raw: {}
+  unknowns:
+    maintenance: { reason: recency_unreadable }
+    responsiveness: { reason: no_traffic }
+    longevity: { reason: not_found }
+    governance: { reason: empty_or_gated }
+    risk_license: { reason: repo_unreachable }
 ---
 
 # ByteRover CLI
@@ -124,6 +110,7 @@ health:
 
 ## 健康度与可持续性
 
+- **响应速度**：无法计算——no_traffic。
 - **维护——对年轻项目而言非常活跃。** 最后推送 2026-06-25；未归档。项目处于快速开发中，更新频繁，但整个代码库只有约一年历史。[推断]
 - **治理——组织所有，小团队。** 由 campfirein 组织所有。bus factor 未知，但鉴于项目年轻和 modest 的 star 数，很可能很小。[推断]
 - **年龄与 Lindy——极其年轻，没有 Lindy 信号。** 2025-06 创建。大约一岁，这是一个全新的项目，没有已验证的耐久性。相对于年龄而言约 4.9k star 较高，暗示早期兴趣，但这是炒作而非耐久性。[推断]

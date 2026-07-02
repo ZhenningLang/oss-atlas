@@ -97,6 +97,7 @@ You reach for this pack when you want that engineering discipline to fire on dem
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — type_na.
 - **Maintenance (2026-06):** active — last push 2026-06, latest release v0.6.2, frequent pre-1.0 releases, not archived. Versioned, but still v0.x so routing and slash-command mapping can shift between bumps.
 - **Governance & bus factor:** single-maintainer `User` repo (Addy Osmani) carrying ~67k stars — strong individual reputation, but a real bus-factor concentration with no org/foundation backing the roadmap. [推断]
 - **Age & Lindy:** created 2026-02, so only a few months old as of 2026-06 — young and star-hyped; unproven on Lindy. The author's standing is the main signal, not track record of this repo.

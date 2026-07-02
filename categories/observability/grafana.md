@@ -120,6 +120,7 @@ You also reach for it when you want dashboards and alert rules to live in versio
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (as of 2026-06):** last pushed 2026-06, latest release v13.0.2 (2026-06-09) — **actively maintained** on a steady major-version cadence. [推断] One of the most actively developed projects in observability; no abandonment risk.
 - **Governance / backing:** organization-owned and driven by **Grafana Labs**, a venture-funded company; this is a **single-vendor open-source** project, not a foundation-governed one. The roadmap and commercial Enterprise/Cloud tiers are controlled by one company — strong resourcing, but the vendor sets direction and gates features.
 - **Age & Lindy verdict (created 2013-12, ~13 yr):** old *and* still active — a **strong Lindy** signal. It is the de-facto dashboarding layer of the observability ecosystem and has survived more than a decade of stack churn; safe to bet on for longevity.

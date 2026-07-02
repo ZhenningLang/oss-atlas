@@ -113,6 +113,7 @@ That is realistically the only safe reason to reach for it in 2026. If your actu
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (2026-06): abandoned.** Last pushed ~2023-09 → roughly **3 years dormant**; ~284 open issues, single maintainer (owner `littlecodersh`), no recent releases or triage. This is a coasting-to-dead project, not an active one. [未验证]
 - **Platform pulled the rug — the decisive signal.** Independent of the repo going quiet, **WeChat largely disabled the web-login protocol ItChat is built on**, so the library is *non-functional for most accounts* regardless of maintenance. Abandoned **and** structurally obsolete. [未验证]
 - **Lindy verdict: FAILS, hard.** Created **2016-01** (~10 years old), so on age alone it looks Lindy — but Lindy is **age × still-active**, never age alone. Here it is **long-lived *and* dead *and* running on a protocol the platform removed**, which is the textbook case where the age signal is *negated*, not earned. Do not read its longevity as durability. [推断]

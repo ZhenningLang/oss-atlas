@@ -115,6 +115,7 @@ You reach for it as a **learning artifact** — a clean, readable reference impl
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (2026-06).** Last pushed 2023-03; no releases/tags. ~50 open issues with no recent maintainer activity ⇒ effectively **frozen/abandoned** as a maintained project — which is fine for a teaching artifact but disqualifying as a dependency. [推断]
 - **Governance / bus factor.** Single author (jaungiers); bus factor = 1. The high star count (~5.2k) on a one-person, idle, ~7-year-old repo is **popularity, not health** — a classic "famous tutorial" signal, flag accordingly. [推断]
 - **Age & Lindy verdict.** Created 2016-12 (~9 years) but **not still active** (idle since 2023) ⇒ age alone is *not* Lindy here; old-and-stale fails the still-active test. Its longevity is as a referenced example, not as living software. [推断]

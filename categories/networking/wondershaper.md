@@ -114,6 +114,7 @@ It fits ad-hoc and lightweight-persistent QoS on a *single host's* adapter: thro
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (2026-06).** Last repo push **2024-07**; no GitHub tagged releases here. Effectively **stable / low-activity** — a small mature script that rarely needs changes, but not actively developed. Not archived. [未验证]
 - **Governance / bus factor.** Owner type **User** (magnific0, ~20 commits) with a few minor contributors — a **single-maintainer** small utility; bus factor is thin but the surface is tiny. [推断]
 - **Age & Lindy verdict.** Created **2012** (and itself a continuation of the much older Wondershaper lineage from the Linux Advanced Routing HOWTO) — ~14 years; old **but quiet**, so Lindy is *moderate*: long-lived and still works, yet HTB-era design is dated next to modern `cake`/`fq_codel`. [推断]

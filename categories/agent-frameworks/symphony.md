@@ -126,6 +126,7 @@ Because the orchestration contract is published as a language-agnostic spec ("Dr
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — issues_disabled.
 - **Maintenance — active, preview-stage (as of 2026-06).** Last push 2026-06; not archived. But there is **no tagged release / semver** — it's self-described as a "low-key engineering preview," so you track `main` rather than pin a version, and config keys can change without notice. Few open issues (~8), consistent with low external usage rather than a settled API.
 - **Governance & backing — strong vendor (OpenAI), weak product commitment.** Owned by `openai`, so the backing org's resources and longevity are not in doubt — but a "low-key preview" carries no product/SLA commitment, and large vendors do shelve experiments. Backing strength does not equal roadmap guarantee here.
 - **Age & Lindy — young, unproven.** Created 2026-02, ~4 months old (as of 2026-06). No track record and preview-stage; strong-backer but young-and-unproven — the OpenAI name raises the floor, but Lindy does not yet apply.

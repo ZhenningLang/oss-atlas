@@ -16,28 +16,20 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T08:26:18Z
-  overall: A
-  overall_score: 3.5
-  scored_axes: 6
+  computed_at: 2026-07-02T12:43:34Z
+  overall: "?"
+  overall_score: null
+  scored_axes: 1
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: A
-      raw:
-        archived: false
-        last_commit_age_days: 2
-        active_weeks_13: 13
-        carve_out: null
+      grade: "?"
+      raw: {}
     responsiveness:
-      grade: A
-      raw:
-        median_ttfr_hours: 14.7
-        qualifying_issues: 28
-        band: default
-        window_offset_days: 10
+      grade: "?"
+      raw: {}
     adoption:
       grade: A
       raw:
@@ -49,26 +41,20 @@ health:
         volume_tier: A
         cross_check_divergence: 1.13
     longevity:
-      grade: B
-      raw:
-        repo_age_days: 1275
-        last_commit_age_days: 2
-        cohort: library
+      grade: "?"
+      raw: {}
     governance:
-      grade: C
-      raw:
-        active_maintainers_12mo: 72
-        top1_share: 0.784
-        top3_share: 0.802
-        window_source: stats_contributors
-        carve_out: null
+      grade: "?"
+      raw: {}
     risk_license:
-      grade: A
-      raw:
-        spdx_id: MIT
-        permissiveness: permissive
-        relicense_36mo: false
-        content_license: null
+      grade: "?"
+      raw: {}
+  unknowns:
+    maintenance: { reason: recency_unreadable }
+    responsiveness: { reason: no_traffic }
+    longevity: { reason: not_found }
+    governance: { reason: empty_or_gated }
+    risk_license: { reason: repo_unreachable }
 ---
 
 # shadcn/ui
@@ -123,6 +109,7 @@ health:
 
 ## 健康度与可持续性
 
+- **响应速度**：无法计算——no_traffic。
 - **维护（2026-07）。** 最后 push 于 2026-06-30，提交历史非常活跃，发布频繁；项目未归档，社区繁荣。
 - **治理 / bus factor。** 归属 `shadcn-ui` GitHub 组织（多维护者），shadcn 作为可见核心。项目社区贡献强，CLI 驱动的分发模式清晰。
 - **年龄与 Lindy 判断。** 约 2.5 年（2023-01 创建），极受欢迎——对 UI 库而言是中等 Lindy 信号；它已成为现代 Tailwind 生态中 React 组件分发模式的主导者。

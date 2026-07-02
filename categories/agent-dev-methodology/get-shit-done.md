@@ -127,6 +127,7 @@ The core bet is structural: each atomic plan is small enough to run in its own c
 
 ## Health & viability
 
+- **Responsiveness**: Grade E.
 - **Maintenance (2026-06):** facts row reports the `gsd-build/get-shit-done` repo as **archived (true)** as of this verification, with last push 2026-05 — and the `main` README is now a redirect to a *different* org (`open-gsd/gsd-core`). Read this repo as **frozen/relocated**: development appears to have moved (or forked) elsewhere, so the live source of truth is likely no longer this URL — confirm before installing.
 - **Governance & continuity:** Organization-owned (gsd-build), but the redirect-plus-archive split signals an in-flight org migration/fork rather than stable stewardship. This is a **continuity red flag**: who owns the roadmap and where releases land is currently ambiguous.
 - **Age & Lindy (2026-06):** created 2025-12, ~6 months old — and the canonical repo is already archived. Lindy verdict: **fails the prior on this URL** — young *and* abandoned-here is the worst quadrant; any viability now lives entirely in the successor repo (`open-gsd/gsd-core`), which must be assessed on its own.

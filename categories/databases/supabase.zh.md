@@ -16,54 +16,39 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T08:25:42Z
-  overall: A
-  overall_score: 4.0
-  scored_axes: 5
+  computed_at: 2026-07-02T12:43:32Z
+  overall: "?"
+  overall_score: null
+  scored_axes: 0
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: A
-      raw:
-        archived: false
-        last_commit_age_days: 0
-        active_weeks_13: 13
-        carve_out: null
+      grade: "?"
+      raw: {}
     responsiveness:
-      grade: A
-      raw:
-        median_ttfr_hours: 3.5
-        qualifying_issues: 23
-        band: default
-        window_offset_days: 10
+      grade: "?"
+      raw: {}
     adoption:
       grade: "?"
       raw: {}
     longevity:
-      grade: A
-      raw:
-        repo_age_days: 2455
-        last_commit_age_days: 0
-        cohort: service
+      grade: "?"
+      raw: {}
     governance:
-      grade: A
-      raw:
-        active_maintainers_12mo: 171
-        top1_share: 0.146
-        top3_share: 0.268
-        window_source: stats_contributors
-        carve_out: null
+      grade: "?"
+      raw: {}
     risk_license:
-      grade: A
-      raw:
-        spdx_id: Apache-2.0
-        permissiveness: permissive
-        relicense_36mo: false
-        content_license: null
+      grade: "?"
+      raw: {}
   unknowns:
+    maintenance: { reason: recency_unreadable }
+    responsiveness: { reason: no_traffic }
     adoption: { reason: no_package_structural }
+    longevity: { reason: not_found }
+    governance: { reason: empty_or_gated }
+    risk_license: { reason: repo_unreachable }
 ---
 
 # Supabase
@@ -119,6 +104,7 @@ health:
 
 ## 健康度与可持续性
 
+- **响应速度**：无法计算——no_traffic。
 - **维护**：非常活跃——截至 2026-07 每日推送，v2 平台成熟，核心团队响应迅速（1,086 个开放 issue）。
 - **治理**：由 `supabase` 组织所有，拥有专门的核心团队和清晰的产品路线图。公司以 Apache-2.0 许可为核心栈，具备强大的开源文化。bus factor 合理。
 - **背书**：Supabase Inc. 是获得大量投资的创业公司，拥有成熟的收入模式（托管云）。开源核心与商业产品战略对齐。

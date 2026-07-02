@@ -117,6 +117,7 @@ It's a good fit when the diagrams are *simple and few* — onboarding flows, a s
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (2026-06).** Last pushed 2026-01; latest tag v1.18.0. The repo still ships occasional releases and is **not archived**, but cadence is slow and the open-issue count (~104) is sizeable relative to activity — call it maintained-but-slow. [推断]
 - **Governance / bus factor.** A **single-maintainer** project (adrai) with a contributor long tail; bus factor is effectively one. ~8.7k stars is strong adoption proof, not a guarantee of ongoing support. [推断]
 - **Age & Lindy verdict.** Created 2013-07, ~13 years old and still occasionally updated — a **strong Lindy** signal: it has long outlived most contemporaries and remains a small, stable utility. Age here is a genuine plus. [推断]

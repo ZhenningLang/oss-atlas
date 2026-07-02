@@ -16,54 +16,39 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T08:46:43Z
-  overall: B
-  overall_score: 3.4
-  scored_axes: 5
+  computed_at: 2026-07-02T12:56:43Z
+  overall: "?"
+  overall_score: null
+  scored_axes: 0
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: A
-      raw:
-        archived: false
-        last_commit_age_days: 0
-        active_weeks_13: 13
-        carve_out: null
+      grade: "?"
+      raw: {}
     responsiveness:
-      grade: A
-      raw:
-        median_ttfr_hours: 6.6
-        qualifying_issues: 15
-        band: relaxed_solo
-        window_offset_days: 13
+      grade: "?"
+      raw: {}
     adoption:
       grade: "?"
       raw: {}
     longevity:
-      grade: A
-      raw:
-        repo_age_days: 2103
-        last_commit_age_days: 0
-        cohort: tool
+      grade: "?"
+      raw: {}
     governance:
-      grade: A
-      raw:
-        active_maintainers_12mo: 108
-        top1_share: 0.241
-        top3_share: 0.532
-        window_source: stats_contributors
-        carve_out: null
+      grade: "?"
+      raw: {}
     risk_license:
-      grade: D
-      raw:
-        spdx_id: AGPL-3.0
-        permissiveness: strong_network_copyleft
-        relicense_36mo: false
-        content_license: null
+      grade: "?"
+      raw: {}
   unknowns:
+    maintenance: { reason: recency_unreadable }
+    responsiveness: { reason: no_traffic }
     adoption: { reason: ambiguous }
+    longevity: { reason: not_found }
+    governance: { reason: empty_or_gated }
+    risk_license: { reason: repo_unreachable }
 ---
 
 # RustDesk
@@ -119,6 +104,7 @@ health:
 
 ## 健康度与可持续性
 
+- **响应速度**：无法计算——no_traffic。
 - **维护（2026-07）。** 最后 push 于 2026-07-01，提交历史非常活跃；项目未归档，频繁发布和安全更新。[推断]
 - **治理 / bus factor。** 仓库由单一用户（`rustdesk`）持有，该用户是主要维护者；存在**中等 bus factor 风险**。但项目有庞大的贡献者基础（约 17.8k fork）和活跃社区，若原维护者退出，fork 可能继续。[推断]
 - **年龄与 Lindy 判断。** 约 5.5 年（2020-09 创建）且仍非常活跃 ⇒ 对远程桌面工具而言是**中强 Lindy** 信号；它已证明持续力，自托管和隐私社区中越来越受欢迎。[推断]

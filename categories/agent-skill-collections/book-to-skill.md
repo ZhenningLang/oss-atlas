@@ -16,28 +16,20 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T08:26:04Z
-  overall: B
-  overall_score: 2.67
-  scored_axes: 6
+  computed_at: 2026-07-02T12:43:33Z
+  overall: "?"
+  overall_score: null
+  scored_axes: 1
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: A
-      raw:
-        archived: false
-        last_commit_age_days: 2
-        active_weeks_13: 8
-        carve_out: null
+      grade: "?"
+      raw: {}
     responsiveness:
-      grade: A
-      raw:
-        median_ttfr_hours: 10.4
-        qualifying_issues: 8
-        band: relaxed_solo
-        window_offset_days: 8
+      grade: "?"
+      raw: {}
     adoption:
       grade: E
       raw:
@@ -50,26 +42,20 @@ health:
         cross_check_divergence: null
         archived: false
     longevity:
-      grade: D
-      raw:
-        repo_age_days: 62
-        last_commit_age_days: 2
-        cohort: tool
+      grade: "?"
+      raw: {}
     governance:
-      grade: B
-      raw:
-        active_maintainers_12mo: 12
-        top1_share: 0.585
-        top3_share: 0.793
-        window_source: stats_contributors
-        carve_out: null
+      grade: "?"
+      raw: {}
     risk_license:
-      grade: A
-      raw:
-        spdx_id: MIT
-        permissiveness: permissive
-        relicense_36mo: false
-        content_license: null
+      grade: "?"
+      raw: {}
+  unknowns:
+    maintenance: { reason: recency_unreadable }
+    responsiveness: { reason: no_traffic }
+    longevity: { reason: not_found }
+    governance: { reason: empty_or_gated }
+    risk_license: { reason: repo_unreachable }
 ---
 
 # book-to-skill
@@ -124,6 +110,7 @@ You're a software engineer who has accumulated a shelf of technical PDFs — lan
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance:** Active — last push 2026-06-30, very recent. Created 2026-05-01, so only ~2 months old as of 2026-07. [未验证]
 - **Governance:** Single-user repo (`virgiliojr94`). Bus factor is 1. The project is extremely young with no organizational backing. [推断]
 - **Backing:** No institutional backing — maintained by an individual contributor. GitHub Sponsors is available but does not constitute an organizational commitment. [推断]

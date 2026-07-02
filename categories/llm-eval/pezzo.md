@@ -113,6 +113,7 @@ You're a developer on a small product team that's started shipping LLM features,
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (2026-06).** **Likely stalled.** GitHub's `pushed_at` reads 2026-03, but the last *substantive commit* on the default branch appears to be ~2025-06 — roughly a year of inactivity. Latest release v0.9.2 (pre-1.0). Not archived, but the cadence looks dead, not coasting. [推断]
 - **Governance / backing.** A VC-style startup project (pezzolabs / pezzo.ai) with a small core team. Single-company stewardship plus apparent inactivity is a high bus-factor risk — if the company pivoted or wound down, the OSS repo and any cloud tier are at risk. [推断]
 - **Age & Lindy verdict.** Created 2023-04, ~3 years old but **apparently no longer active** — this **fails Lindy**: age only counts when still-active, and a stalled project trends toward abandonment, not durability. [推断]

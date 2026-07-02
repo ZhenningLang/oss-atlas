@@ -108,6 +108,7 @@ Realistically that is the *only* defensible use today: reading it as a historica
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (2026-06).** Abandoned — the last real code commit was 2020-05-06; the 2023-10 `pushed_at` is metadata churn, not activity. Not archived, but no releases, tags, tests, or CI ever. **Dead demo.** [推断]
 - **Governance / bus factor.** Bus factor **1**: a personal User repo (`wangshub`), 4 contributors with the author the only substantive one. The ~9.6k stars on a personal, unmaintained demo are the classic "viral 2018 blog post, not maintenance" anomaly — distrust them as a health signal.
 - **Age × Lindy.** ~8 years old but dead ~6 years — fails the Lindy test, which requires old **and** still-active. Age here is age of a fossil, not durability. [推断]

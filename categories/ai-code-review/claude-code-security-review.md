@@ -124,6 +124,7 @@ You're also a developer using Claude Code day-to-day who wants the same check be
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (2026-06):** [推断] **coasting, not abandoned.** Last push 2026-02 — roughly four months stale as of 2026-06 — and there has never been a tagged release (usage pins `@main`). For a security gate that means: no version line to anchor on, and behavior can change (or silently stop tracking the current Claude model default) without a signal. Not dead, but slower-moving than its peers here.
 - **Governance & backing:** [推断] owned by `anthropics` (the Anthropic org), a vendor with a direct interest in the Claude-Code ecosystem this drives. That cuts bus-factor risk versus a single maintainer, but it's a vendor showcase/companion tool, not a foundation-governed project — Anthropic can re-scope or quietly de-prioritize it.
 - **Age & Lindy:** [推断] created 2025-08, ~10 months old as of 2026-06 — **young-to-middling, weak Lindy prior.** The 4-month-stale push on top of a sub-1-year age means it has neither longevity nor strong recent momentum; treat it as a useful-but-unproven tool, not a long-term bet.

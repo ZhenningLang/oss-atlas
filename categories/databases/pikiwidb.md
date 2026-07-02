@@ -117,6 +117,7 @@ You reach for it specifically when the dataset is **big and cost-sensitive** rat
 
 ## Health & viability
 
+- **Responsiveness**: Grade D — median first-response time 1028.4 hours across 1 qualifying issues/PRs.
 - **Maintenance (2026-06).** Last push 2026-06-18; two active release lines shipping (v3.5.7 and v4.0.3 both dated 2026-06) — **active**, not coasting. Not archived. [推断]
 - **Governance / backing.** Hosted under the **OpenAtom Foundation** with origins in **Qihoo360**'s infrastructure team — foundation backing plus a corporate origin is a healthier bus-factor signal than a lone maintainer, though the core contributor set is concentrated (KernelMaker, Axlgrep, et al.). [推断]
 - **Age & Lindy verdict.** Repo created 2014-11 (~11 years, inherited from the Pika lineage) and **still actively shipping** ⇒ a **strong Lindy** signal — a long-proven Redis-on-disk implementation, not a hyped newcomer. [推断]

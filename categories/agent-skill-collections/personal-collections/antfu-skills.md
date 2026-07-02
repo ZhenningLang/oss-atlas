@@ -96,6 +96,7 @@ You run `pnpx skills add antfu/skills --skill='*'` (add `-g` for global) and you
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — type_na.
 - **Maintenance (2026-06):** active — last pushed 2026-06, only ~9 open issues. No tagged releases, so you track a moving `main` with no semver checkpoints. Active, not coasting.
 - **Governance & bus factor:** a single high-profile maintainer's personal repo (antfu), `User`-owned, no foundation or vendor backing. ~5k stars on a one-person collection is a classic bus-factor flag — direction and continuity depend entirely on one person's continued interest.
 - **Age & Lindy verdict:** created 2026-01, so ~6 months old as of 2026-06 — young and currently hyped, not yet Lindy-proven. Antfu's long track record across the Vue/Vite ecosystem is reassuring, but *this pack* has no longevity history; don't treat its age as a safety signal.

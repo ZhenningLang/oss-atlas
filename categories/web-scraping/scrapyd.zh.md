@@ -117,6 +117,7 @@ health:
 
 ## 健康度与可持续性
 
+- **响应速度**：无法计算——no_traffic。
 - **维护（2026-06）。** 活跃——最后 push 于 2026-06-19，最新 release v1.6.0（2025-07-22），大致每年一个特性版本，状态“Production/Stable”，未 archived。仅约 6 个 open issue——小而被精心照料的范围。[推断——GitHub Releases API 只到 1.4.1，1.5.0/1.6.0 以 docs/news.rst changelog 为准]
 - **治理 / bus factor。** 归在 **`scrapy` GitHub 组织**下（维护 Scrapy 框架的同一社区/团队），不是个人账号——`jpmckinney` 是当前的代表性维护者，还有几位 Scrapy 核心组成员贡献。bus-factor 风险低。
 - **年龄 × Lindy。** 创建于 2013（约 13 年）且本月仍有 push ⇒ **强 Lindy** 信号：成熟、慢节奏的基础设施，早已熬过炒作周期。

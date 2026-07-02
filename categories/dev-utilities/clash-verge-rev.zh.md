@@ -16,54 +16,39 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T08:35:35Z
-  overall: B
-  overall_score: 3.2
-  scored_axes: 5
+  computed_at: 2026-07-02T12:50:19Z
+  overall: "?"
+  overall_score: null
+  scored_axes: 0
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: A
-      raw:
-        archived: false
-        last_commit_age_days: 1
-        active_weeks_13: 13
-        carve_out: null
+      grade: "?"
+      raw: {}
     responsiveness:
-      grade: A
-      raw:
-        median_ttfr_hours: 0.8
-        qualifying_issues: 31
-        band: relaxed_solo
-        window_offset_days: 8
+      grade: "?"
+      raw: {}
     adoption:
       grade: "?"
       raw: {}
     longevity:
-      grade: B
-      raw:
-        repo_age_days: 954
-        last_commit_age_days: 1
-        cohort: tool
+      grade: "?"
+      raw: {}
     governance:
-      grade: B
-      raw:
-        active_maintainers_12mo: 50
-        top1_share: 0.537
-        top3_share: 0.862
-        window_source: stats_contributors
-        carve_out: null
+      grade: "?"
+      raw: {}
     risk_license:
-      grade: C
-      raw:
-        spdx_id: GPL-3.0
-        permissiveness: weak_file_copyleft
-        relicense_36mo: false
-        content_license: null
+      grade: "?"
+      raw: {}
   unknowns:
+    maintenance: { reason: recency_unreadable }
+    responsiveness: { reason: no_traffic }
     adoption: { reason: ambiguous }
+    longevity: { reason: not_found }
+    governance: { reason: empty_or_gated }
+    risk_license: { reason: repo_unreachable }
 ---
 
 # Clash Verge Rev
@@ -114,6 +99,7 @@ health:
 
 ## 健康度与可持续性
 
+- **响应速度**：无法计算——no_traffic。
 - **维护**：活跃——截至 2026-07 定期推送，issue 量适中（420 个 open issue），发布节奏积极（Stable、Alpha、AutoBuild 通道）。[推断]
 - **治理**：由 clash-verge-rev 组织所有；看起来是原版 Clash Verge 项目的社区驱动延续。若核心维护者退出，bus factor 令人担忧。[推断]
 - **背书**：未见企业背书；社区驱动，主要社区以中文为主。[未验证]

@@ -96,6 +96,7 @@ You reach for it when you want an opinionated, battle-tested workflow rather tha
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — type_na.
 - **Maintenance (2026-06):** actively maintained — last pushed 2026-06-25, latest release v6.0.3 (2026-06-18), not archived. Frequent releases on a v6.x line = a live, fast-iterating project (the page already flags "fast-moving, opinionated upstream").
 - **Governance & bus factor:** the repo is **User-owned** (obra / Jesse Vincent) — a single-maintainer project. The ~240k-star headline against one-person stewardship is a **bus-factor flag**, not a durability signal; the roadmap and "mandatory" prompt-level rules are one author's opinionated line. [未验证] No co-maintainer/foundation governance published.
 - **Age & Lindy (2026-06):** created 2025-10, ~8 months old, already at v6.x — frequent major bumps imply the skill set and routing churn release-to-release. Lindy verdict: **unproven by age** — high mindshare is not longevity; adopt for current value, pin versions, re-check skill routing after upgrades.

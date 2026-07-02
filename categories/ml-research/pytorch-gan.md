@@ -114,6 +114,7 @@ You reach for this specific repo when you want *breadth of reference under one c
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (DATED, as of 2026-06):** last pushed **~2024-06**, so roughly **2 years idle** — read as **coasting / effectively done**, not actively maintained. [推断] It still installs and runs (modulo version fixups), but expect no fixes, dependency bumps, or new architectures.
 - **Governance / bus factor:** a **single-author** repo (Erik Linder-Norén, a User account, not an org). Classic high-bus-factor / single-maintainer situation — there's no team or foundation behind it; its continued existence is "famous and frozen," not staffed.
 - **Age & Lindy verdict (created 2018-04, ~8 yr):** old, but its value is a **frozen reference**, not ongoing maintenance — so plain age × *still-active* doesn't apply the usual way. The Lindy signal here is "this reading material has been useful for years and isn't going anywhere," not "this is a living, evolving project." Judge it as a stable teaching artifact, not a dependency to bet a system on.

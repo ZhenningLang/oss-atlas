@@ -16,28 +16,20 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T08:36:26Z
-  overall: A
-  overall_score: 4.0
-  scored_axes: 6
+  computed_at: 2026-07-02T12:50:21Z
+  overall: "?"
+  overall_score: null
+  scored_axes: 1
   capped: false
   cap_reason: null
   needs_human_review: true
   axes:
     maintenance:
-      grade: A
-      raw:
-        archived: false
-        last_commit_age_days: 0
-        active_weeks_13: 13
-        carve_out: null
+      grade: "?"
+      raw: {}
     responsiveness:
-      grade: A
-      raw:
-        median_ttfr_hours: 10.3
-        qualifying_issues: 41
-        band: relaxed_solo
-        window_offset_days: 1
+      grade: "?"
+      raw: {}
     adoption:
       grade: A
       raw:
@@ -47,28 +39,22 @@ health:
         downloads_last_month: 5934345
         graph_tier: C
         volume_tier: A
-        cross_check_divergence: 4.43
+        cross_check_divergence: 4.42
     longevity:
-      grade: A
-      raw:
-        repo_age_days: 2970
-        last_commit_age_days: 0
-        cohort: tool
+      grade: "?"
+      raw: {}
     governance:
-      grade: A
-      raw:
-        active_maintainers_12mo: 91
-        top1_share: 0.33
-        top3_share: 0.594
-        window_source: stats_contributors
-        carve_out: null
+      grade: "?"
+      raw: {}
     risk_license:
-      grade: A
-      raw:
-        spdx_id: MIT
-        permissiveness: permissive
-        relicense_36mo: false
-        content_license: null
+      grade: "?"
+      raw: {}
+  unknowns:
+    maintenance: { reason: recency_unreadable }
+    responsiveness: { reason: no_traffic }
+    longevity: { reason: not_found }
+    governance: { reason: empty_or_gated }
+    risk_license: { reason: repo_unreachable }
 ---
 
 # Deno
@@ -119,6 +105,7 @@ You're choosing a JavaScript/TypeScript runtime for a new server-side project or
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance**: Very active — pushed daily as of 2026-07, with a mature v2 release line and responsive core team (1,354 open issues). [推断]
 - **Governance**: Owned by the `denoland` organization with Ryan Dahl (Node.js creator) as a key figure. The project has a clear technical vision and multiple core contributors. Bus factor is reasonable.
 - **Backing**: Deno Land Inc. is the commercial entity behind the project; Deno Deploy is their revenue source. The company has raised venture funding, which introduces both stability and potential future direction conflicts. [未验证]

@@ -119,6 +119,7 @@ Agent Lightning is built for exactly this. It models agent execution as a Markov
 
 ## Health & viability
 
+- **Responsiveness**: Grade C — median first-response time 73.4 hours across 1 qualifying issues/PRs.
 - **Maintenance — active (as of 2026-06).** Repo pushed 2026-04; shipping v0.x with a recent v0.3.0 (reported late 2025). Pre-1.0 with fast API churn, a preview dashboard, and swappable backends — alive and moving, but expect breaking changes between minors. Not archived. [未验证]
 - **Governance & backing — Microsoft (corporate research).** Organization-owned under `microsoft`. Big-vendor backing means real engineering capacity and is a longevity positive; the offsetting risk is that corporate research repos can be deprioritized or archived once the research interest moves on — Microsoft has retired such projects before. Roadmap is vendor-controlled. [推断]
 - **Age & Lindy — young / unproven.** Created 2025-06, ~1 year old. Too new to have a Lindy track record; the bet rests on Microsoft's continued investment and the agent-RL space maturing, not on longevity. Pin versions and treat it as early-stage.

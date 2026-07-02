@@ -103,6 +103,7 @@ health:
 
 ## 健康度与可持续性
 
+- **响应速度**：无法计算——no_data。
 - **维护（2026-06）。** 最后 push 于 **2018-01**——**陈旧约 8 年**。尽管 GitHub 的 `archived` 标记为 **false**，但其节奏和 README（"work-in-progress transmit from Google Code"）使它**实际已废弃**。无近期发布。[推断]
 - **治理 / bus factor。** 本质是单作者项目（Christian Kohlschütter / `kohlschutter`），有少数历史贡献者——bus factor 极小，且无活跃管护。[推断]
 - **年龄 × Lindy（2026-06）。** 在 GitHub 上 2014-12 创建（算法/代码库更老，原在 Google Code）——但**没有活跃的年龄不通过 Lindy**：在影响力上长寿，但一个长期*休眠*的仓库是风险而非安全信号。要用 年龄 × 仍活跃；这里“仍活跃”缺席。[推断]

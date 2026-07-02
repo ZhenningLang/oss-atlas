@@ -16,21 +16,17 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T08:41:55Z
-  overall: A
-  overall_score: 3.75
-  scored_axes: 4
+  computed_at: 2026-07-02T12:45:49Z
+  overall: "?"
+  overall_score: null
+  scored_axes: 1
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: A
-      raw:
-        archived: false
-        last_commit_age_days: 0
-        active_weeks_13: 13
-        carve_out: null
+      grade: "?"
+      raw: {}
     responsiveness:
       grade: "?"
       raw: {}
@@ -45,25 +41,20 @@ health:
         volume_tier: B
         cross_check_divergence: 1.04
     longevity:
-      grade: A
-      raw:
-        repo_age_days: 2567
-        last_commit_age_days: 0
-        cohort: app
+      grade: "?"
+      raw: {}
     governance:
-      grade: A
-      raw:
-        active_maintainers_12mo: 176
-        top1_share: 0.063
-        top3_share: 0.149
-        window_source: stats_contributors
-        carve_out: null
+      grade: "?"
+      raw: {}
     risk_license:
       grade: "?"
       raw: {}
   unknowns:
+    maintenance: { reason: recency_unreadable }
     responsiveness: { reason: no_traffic }
-    risk_license: { reason: license_unparsed }
+    longevity: { reason: not_found }
+    governance: { reason: empty_or_gated }
+    risk_license: { reason: repo_unreachable }
 ---
 
 # n8n
@@ -116,6 +107,7 @@ You're a technical team that needs to automate internal processes — pulling da
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance**: Very active — pushed daily, 195k stars, 1,435 open issues, regular releases.
 - **Governance**: Owned by n8n GmbH, a commercial entity with a clear roadmap. The project is both open-source and commercially backed.
 - **Backing**: n8n GmbH is a venture-backed company with a sustainable business model (cloud offering + enterprise support).

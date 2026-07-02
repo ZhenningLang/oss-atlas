@@ -96,6 +96,7 @@ TÂCHES（glittercowboy）的个人化、带主观偏好的 Claude Code 扩展�
 
 ## 健康度与可持续性
 
+- **响应速度**：无法计算——type_na。
 - **维护** —— 最后推送 2026-04，未归档（截至 2026-06）：安静了一两个月，没有打 tag 的 release。看上去是「最近还在动的个人合集」而非废弃，但节奏偏低，也没有 semver 可 pin。
 - **治理与 bus factor** —— 单维护者的个人仓库（`User` 所有，glittercowboy/TÂCHES），约 1.9k stars。是一个作者编写扩展的「房间风格」；没有团队兜底——当作可 fork 自管的快照看待。
 - **年龄与 Lindy** —— 创建于 2025-11，截至 2026-06 约 0.5 年：年轻，Lindy 上未经验证。太新，还没经历 Claude Code 的加载器/marketplace 变更——为搭脚手架而采用，不为稳定。

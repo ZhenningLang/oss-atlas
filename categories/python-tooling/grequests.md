@@ -112,6 +112,7 @@ You reach for it specifically when the surrounding stack is already gevent-based
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (2026-06).** Last release v0.7.0 (2023-06); last repo push 2024-08. Releases are infrequent and the recent gap is long — this reads as a **stable, low-activity** utility coasting on a small stable surface rather than actively developed. Not archived. [推断]
 - **Governance / bus factor.** Owner is a **User** account (spyoungtech) who took over the project; original commits trace to Kenneth Reitz (the `requests` author). Effectively single-maintainer — a bus-factor flag. [推断]
 - **Age & Lindy.** Created 2012; ~14 years old and still installed widely. The age plus a narrow, stable scope is a moderate Lindy signal — but Lindy needs *still-active*, and activity here is low, so weight it as "stable legacy," not "vibrantly maintained." [推断]

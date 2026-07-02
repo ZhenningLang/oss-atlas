@@ -108,6 +108,7 @@ You also reach for it when you want **shareable, executable Go documents** — a
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (2026-06).** Last release v0.7.5 is **2022**, repo last pushed **2023-11** — **stalled**: no recent activity, well behind current Go releases. Not formally archived, but effectively in maintenance-stop territory. [推断]
 - **Governance / bus factor.** Organization-owned (`gopherdata`) with several historical contributors (dwhitena, cosmos72, SpencerPark, sbinet, mattn…), but no visible recent steward — a bus-factor and continuity concern given the inactivity. [推断]
 - **Age & Lindy verdict.** Created 2016-01 (~10 years) but Lindy requires **age × still-active**; since it's stalled, age alone is **not** reassuring here — long-lived-but-dormant fails the Lindy test. [推断]

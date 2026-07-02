@@ -96,6 +96,7 @@ This repo is the vendor source: each of the nine plugins (`aws-serverless`, `aws
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — type_na.
 - **Maintenance** — [未验证] last pushed 2026-06, not archived, open issues low (~12); v1.0.0 tagged 2026-02 and activity current as of 2026-06, so **actively maintained** — and uniquely for this leaf, it ships a real versioned release rather than tracking `main`.
 - **Governance & backing** — [推断] org-owned and **vendor-backed by AWS Labs** — strong provenance, but single-vendor and AWS-ecosystem-locked; the roadmap follows AWS's priorities, not a neutral foundation.
 - **Age & Lindy** — [推断] created 2026-02, so only ~4 months old as of 2026-06: **brand new, no Lindy track record yet**. Unproven durability.

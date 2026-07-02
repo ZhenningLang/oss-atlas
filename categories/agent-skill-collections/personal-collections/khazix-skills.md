@@ -97,6 +97,7 @@ You reach for this pack when you'd rather install one author's battle-tested, re
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — type_na.
 - **Maintenance (2026-06):** active — last pushed 2026-06, ~31 open issues, no tagged releases, so you install from `main` with no version to pin. Active, not coasting.
 - **Governance & bus factor:** single-author `User`-owned pack (KKKKhazix / 数字生命卡兹克, a content creator). No team or foundation; ~16k stars on a one-person grab-bag is a bus-factor flag, and the writing skills emulate this one author's voice specifically.
 - **Age & Lindy verdict:** created 2026-04, only ~2 months old as of 2026-06 — the youngest in this batch, hyped, with essentially no track record. Fails the Lindy test on age alone; treat every skill as a fresh snapshot that can change on any push.

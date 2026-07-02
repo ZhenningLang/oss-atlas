@@ -16,21 +16,17 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T08:37:30Z
-  overall: B
-  overall_score: 2.5
-  scored_axes: 4
+  computed_at: 2026-07-02T12:45:42Z
+  overall: "?"
+  overall_score: null
+  scored_axes: 0
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: A
-      raw:
-        archived: false
-        last_commit_age_days: 1
-        active_weeks_13: 13
-        carve_out: null
+      grade: "?"
+      raw: {}
     responsiveness:
       grade: "?"
       raw: {}
@@ -38,29 +34,21 @@ health:
       grade: "?"
       raw: {}
     longevity:
-      grade: D
-      raw:
-        repo_age_days: 332
-        last_commit_age_days: 1
-        cohort: framework
+      grade: "?"
+      raw: {}
     governance:
-      grade: D
-      raw:
-        active_maintainers_12mo: 98
-        top1_share: 0.869
-        top3_share: 0.915
-        window_source: stats_contributors
-        carve_out: null
+      grade: "?"
+      raw: {}
     risk_license:
-      grade: A
-      raw:
-        spdx_id: MIT
-        permissiveness: permissive
-        relicense_36mo: false
-        content_license: null
+      grade: "?"
+      raw: {}
   unknowns:
+    maintenance: { reason: recency_unreadable }
     responsiveness: { reason: no_traffic }
     adoption: { reason: ambiguous }
+    longevity: { reason: not_found }
+    governance: { reason: empty_or_gated }
+    risk_license: { reason: repo_unreachable }
 ---
 
 # CC Switch
@@ -111,6 +99,7 @@ health:
 
 ## 健康度与可持续性
 
+- **响应速度**：无法计算——no_traffic。
 - **维护**：活跃——截至 2026-07 每日推送，大量开放 issue（1,636）表明社区参与度高。[推断]
 - **治理**：由单个用户（`farion1231`）所有，而非组织——bus factor 实际上为 1。[未验证]
 - **背书**：未见企业背书；似乎是独立项目。[未验证]

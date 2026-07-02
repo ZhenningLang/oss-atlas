@@ -16,21 +16,17 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T08:35:03Z
-  overall: B
-  overall_score: 3.2
-  scored_axes: 5
+  computed_at: 2026-07-02T12:47:40Z
+  overall: "?"
+  overall_score: null
+  scored_axes: 1
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: A
-      raw:
-        archived: false
-        last_commit_age_days: 0
-        active_weeks_13: 13
-        carve_out: null
+      grade: "?"
+      raw: {}
     responsiveness:
       grade: "?"
       raw: {}
@@ -45,28 +41,20 @@ health:
         volume_tier: C
         cross_check_divergence: null
     longevity:
-      grade: C
-      raw:
-        repo_age_days: 428
-        last_commit_age_days: 0
-        cohort: framework
+      grade: "?"
+      raw: {}
     governance:
-      grade: A
-      raw:
-        active_maintainers_12mo: 475
-        top1_share: 0.161
-        top3_share: 0.451
-        window_source: stats_contributors
-        carve_out: null
+      grade: "?"
+      raw: {}
     risk_license:
-      grade: A
-      raw:
-        spdx_id: MIT
-        permissiveness: permissive
-        relicense_36mo: false
-        content_license: null
+      grade: "?"
+      raw: {}
   unknowns:
+    maintenance: { reason: recency_unreadable }
     responsiveness: { reason: no_traffic }
+    longevity: { reason: not_found }
+    governance: { reason: empty_or_gated }
+    risk_license: { reason: repo_unreachable }
 ---
 
 # OpenCode
@@ -117,6 +105,7 @@ health:
 
 ## 健康度与可持续性
 
+- **响应速度**：无法计算——no_traffic。
 - **维护**：Grade A——截至 2026-07 每日推送，13 周中有 13 周活跃。7,113 个开放 issue 表明社区参与度高。
 - **治理**：Grade A——由 `anomalyco` 组织所有，过去 12 个月有 475 位活跃维护者。首位维护者仅占 16.1% 的提交，前三位占 45.1%，核心团队分布良好。
 - **长期性**：Grade C——428 天历史（2025-04 创建）。毫无 Lindy 记录；项目年轻，但已活跃超一年。

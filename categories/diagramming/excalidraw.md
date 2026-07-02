@@ -16,28 +16,20 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T08:34:40Z
-  overall: A
-  overall_score: 3.67
-  scored_axes: 6
+  computed_at: 2026-07-02T12:45:55Z
+  overall: "?"
+  overall_score: null
+  scored_axes: 1
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: A
-      raw:
-        archived: false
-        last_commit_age_days: 3
-        active_weeks_13: 13
-        carve_out: null
+      grade: "?"
+      raw: {}
     responsiveness:
-      grade: A
-      raw:
-        median_ttfr_hours: 25.1
-        qualifying_issues: 25
-        band: default
-        window_offset_days: 5
+      grade: "?"
+      raw: {}
     adoption:
       grade: B
       raw:
@@ -49,26 +41,20 @@ health:
         volume_tier: B
         cross_check_divergence: 1.01
     longevity:
-      grade: A
-      raw:
-        repo_age_days: 2373
-        last_commit_age_days: 3
-        cohort: library
+      grade: "?"
+      raw: {}
     governance:
-      grade: B
-      raw:
-        active_maintainers_12mo: 13
-        top1_share: 0.549
-        top3_share: 0.835
-        window_source: stats_contributors
-        carve_out: null
+      grade: "?"
+      raw: {}
     risk_license:
-      grade: A
-      raw:
-        spdx_id: MIT
-        permissiveness: permissive
-        relicense_36mo: false
-        content_license: null
+      grade: "?"
+      raw: {}
+  unknowns:
+    maintenance: { reason: recency_unreadable }
+    responsiveness: { reason: no_traffic }
+    longevity: { reason: not_found }
+    governance: { reason: empty_or_gated }
+    risk_license: { reason: repo_unreachable }
 ---
 
 # Excalidraw
@@ -121,6 +107,7 @@ You're a product manager or designer who needs to quickly whiteboard an architec
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (2026-07).** Last pushed 2026-07-01 with active commit history; the project is not archived and receives regular updates and community PRs. [推断]
 - **Governance / bus factor.** Owned by the `excalidraw` GitHub organization (multi-maintainer), with a core team that has guided it since 2020. The presence of a paid commercial tier (Excalidraw+) suggests sustained backing. [推断]
 - **Age & Lindy verdict.** ~5.5 years old (created 2020-01) and still very active ⇒ a **moderate-to-strong Lindy** signal for a front-end tool; it has become the de-facto standard for sketch-style whiteboarding in the open-source world. [推断]

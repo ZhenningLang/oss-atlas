@@ -16,28 +16,20 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T08:45:11Z
-  overall: A
-  overall_score: 3.5
-  scored_axes: 6
+  computed_at: 2026-07-02T12:43:58Z
+  overall: "?"
+  overall_score: null
+  scored_axes: 1
   capped: false
   cap_reason: null
   needs_human_review: true
   axes:
     maintenance:
-      grade: A
-      raw:
-        archived: false
-        last_commit_age_days: 10
-        active_weeks_13: 7
-        carve_out: null
+      grade: "?"
+      raw: {}
     responsiveness:
-      grade: A
-      raw:
-        median_ttfr_hours: 1.6
-        qualifying_issues: 54
-        band: relaxed_solo
-        window_offset_days: 11
+      grade: "?"
+      raw: {}
     adoption:
       grade: B
       raw:
@@ -47,28 +39,22 @@ health:
         downloads_last_month: 520819
         graph_tier: C
         volume_tier: B
-        cross_check_divergence: 2.33
+        cross_check_divergence: 2.32
     longevity:
-      grade: A
-      raw:
-        repo_age_days: 3787
-        last_commit_age_days: 10
-        cohort: tool
+      grade: "?"
+      raw: {}
     governance:
-      grade: C
-      raw:
-        active_maintainers_12mo: 5
-        top1_share: 0.633
-        top3_share: 0.933
-        window_source: stats_contributors
-        carve_out: null
+      grade: "?"
+      raw: {}
     risk_license:
-      grade: A
-      raw:
-        spdx_id: Apache-2.0
-        permissiveness: permissive
-        relicense_36mo: false
-        content_license: null
+      grade: "?"
+      raw: {}
+  unknowns:
+    maintenance: { reason: recency_unreadable }
+    responsiveness: { reason: no_traffic }
+    longevity: { reason: not_found }
+    governance: { reason: empty_or_gated }
+    risk_license: { reason: repo_unreachable }
 ---
 
 # Alacritty
@@ -117,6 +103,7 @@ health:
 
 ## 健康度与可持续性
 
+- **响应速度**：无法计算——no_traffic。
 - **维护：** 活跃——定期发布，维护者响应及时。65k star、3.5k fork。项目管理良好，issue 分类清晰。
 - **治理：** 由 alacritty 组织维护，有多位贡献者。原创建者（jwilm）已退居幕后，但项目已成功过渡到社区/组织维护。
 - **背书：** 无企业背书——alacritty GitHub 组织下的社区驱动项目。靠志愿贡献与社区 goodwill 维持。

@@ -119,6 +119,7 @@ You reach for it when your authorization is *logic*, not *data* — rules derive
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (2026-06).** Last pushed 2025-10 with a v3.x release line (latest tags v3.4/v3.5); steady, if unhurried, releases tracking Django versions — **active**, not abandoned. Not archived. [推断]
 - **Governance / bus factor.** Led by the original author (dfunckt) on a personal account with a recurring contributor tail; small-team but long-sustained. A single-lead bus-factor consideration, mitigated by the library's small, stable surface. [推断]
 - **Age & Lindy verdict.** ~12 years old (created 2014-03) and **still releasing** ⇒ a **strong Lindy** signal: a mature, narrowly-scoped library that has long since stabilized. [推断]

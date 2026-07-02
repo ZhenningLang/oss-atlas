@@ -119,6 +119,7 @@ You reach for it as a **library, not a turnkey tool** — it gives you the parse
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (2026-06).** **Active** — last push and release (v1.0.15) both 2026-02; reaching a 1.0.x line after years of 0.x signals a stabilized, maintained library. Not archived. [推断]
 - **Governance / bus factor.** Owned by an individual (julien-duponchelle, `owner.type: User`) but with a **multi-contributor** history (sean-k1, dongwook-chan, et al.) — healthier than a true solo project, though the namesake owner is central. The User-owned + long-lived combination is worth noting but mitigated by the active contributor set. [推断]
 - **Age & Lindy verdict.** Created 2012-09 (~14 years) and **still actively shipping** ⇒ a **strong Lindy** signal — one of the oldest, most-depended-on Python MySQL CDC primitives, not a newcomer. [推断]

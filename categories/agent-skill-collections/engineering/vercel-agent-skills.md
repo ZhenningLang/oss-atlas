@@ -96,6 +96,7 @@ You run `npx skills add vercel-labs/agent-skills` and the agent gains a menu of 
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — type_na.
 - **Maintenance (2026-06):** active — last push 2026-06, not archived, but no tagged releases, so you track a moving `main` and rule sets can shift between pulls.
 - **Governance & backing:** `Organization`-owned under `vercel-labs` — vendor-backed by Vercel, which is a longevity plus (real company, real eng team owns the roadmap), but it's a single-vendor `labs` repo, so it can be deprioritized or archived at the vendor's discretion. [推断]
 - **Age & Lindy:** created 2025-12, so only months old as of 2026-06 — young; unproven on Lindy despite ~28k stars. Vendor backing is the stronger durability signal here, not age.

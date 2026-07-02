@@ -97,6 +97,7 @@ You install Planning with Files (`npx skills add OthmanAdi/planning-with-files -
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — type_na.
 - **Maintenance** — last push 2026-06 with a recent release (v3.1.3, 2026-06-16) as of 2026-06: actively maintained, even fast-moving (v2.x → v3.1.3 in a short window). The cadence is a double-edged sword: multiple hotfixes for broken YAML frontmatter and hook-flag drift mean the surface is volatile, and only ~8 open issues. [推断]
 - **Governance / bus factor** — `[推断]` single-author (`User`-owned, `OthmanAdi`); ~24k stars on a one-maintainer skill repo is a bus-factor flag, and the gated/autonomous modes are new (v3.0+). No team or foundation behind the roadmap — verify behavior before trusting it to babysit unattended runs.
 - **Age & Lindy** — created 2026-01, so only months old as of 2026-06 despite the v3 version number (which reflects rapid iteration, not maturity): too young for a Lindy verdict. Read the high stars as ecosystem hype, not durability.

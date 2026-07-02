@@ -16,28 +16,20 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T08:46:57Z
-  overall: B
-  overall_score: 3.17
-  scored_axes: 6
+  computed_at: 2026-07-02T12:47:59Z
+  overall: "?"
+  overall_score: null
+  scored_axes: 1
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: A
-      raw:
-        archived: false
-        last_commit_age_days: 0
-        active_weeks_13: 11
-        carve_out: null
+      grade: "?"
+      raw: {}
     responsiveness:
-      grade: A
-      raw:
-        median_ttfr_hours: 0.7
-        qualifying_issues: 7
-        band: relaxed_solo
-        window_offset_days: 13
+      grade: "?"
+      raw: {}
     adoption:
       grade: E
       raw:
@@ -49,26 +41,20 @@ health:
         volume_tier: "?"
         cross_check_divergence: null
     longevity:
-      grade: A
-      raw:
-        repo_age_days: 2075
-        last_commit_age_days: 0
-        cohort: tool
+      grade: "?"
+      raw: {}
     governance:
-      grade: B
-      raw:
-        active_maintainers_12mo: 48
-        top1_share: 0.515
-        top3_share: 0.772
-        window_source: stats_contributors
-        carve_out: null
+      grade: "?"
+      raw: {}
     risk_license:
-      grade: A
-      raw:
-        spdx_id: Unlicense
-        permissiveness: permissive
-        relicense_36mo: false
-        content_license: null
+      grade: "?"
+      raw: {}
+  unknowns:
+    maintenance: { reason: recency_unreadable }
+    responsiveness: { reason: no_traffic }
+    longevity: { reason: not_found }
+    governance: { reason: empty_or_gated }
+    risk_license: { reason: repo_unreachable }
 ---
 
 # yt-dlp
@@ -121,6 +107,7 @@ health:
 
 ## 健康度与可持续性
 
+- **响应速度**：无法计算——no_traffic。
 - **维护**：非常活跃——截至 2026-07 每日推送，提交活跃度徽章显示持续速度。该分叉在提取器修复上一直超越原始上游。
 - **治理**：由 `yt-dlp` 组织所有；社区驱动，多名维护者。与单人项目相比，组织结构提供了合理的 bus factor。
 - **背书**：无显著企业背书可见；由社区捐赠和志愿者 effort 资助。

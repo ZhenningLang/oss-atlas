@@ -16,28 +16,20 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T08:28:12Z
-  overall: B
-  overall_score: 2.83
-  scored_axes: 6
+  computed_at: 2026-07-02T12:47:27Z
+  overall: "?"
+  overall_score: null
+  scored_axes: 1
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: A
-      raw:
-        archived: false
-        last_commit_age_days: 0
-        active_weeks_13: 13
-        carve_out: null
+      grade: "?"
+      raw: {}
     responsiveness:
-      grade: A
-      raw:
-        median_ttfr_hours: 2.1
-        qualifying_issues: 36
-        band: relaxed_solo
-        window_offset_days: 3
+      grade: "?"
+      raw: {}
     adoption:
       grade: D
       raw:
@@ -49,26 +41,20 @@ health:
         volume_tier: D
         cross_check_divergence: null
     longevity:
-      grade: A
-      raw:
-        repo_age_days: 1610
-        last_commit_age_days: 0
-        cohort: app
+      grade: "?"
+      raw: {}
     governance:
-      grade: A
-      raw:
-        active_maintainers_12mo: 322
-        top1_share: 0.107
-        top3_share: 0.273
-        window_source: stats_contributors
-        carve_out: null
+      grade: "?"
+      raw: {}
     risk_license:
-      grade: E
-      raw:
-        spdx_id: AGPL-3.0
-        permissiveness: strong_network_copyleft
-        relicense_36mo: true
-        content_license: null
+      grade: "?"
+      raw: {}
+  unknowns:
+    maintenance: { reason: recency_unreadable }
+    responsiveness: { reason: no_traffic }
+    longevity: { reason: not_found }
+    governance: { reason: empty_or_gated }
+    risk_license: { reason: repo_unreachable }
 ---
 
 # Immich
@@ -131,6 +117,7 @@ You're a privacy-conscious user with thousands of photos and videos scattered ac
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance**: Very active — daily pushes as of 2026-07, with a regular release cadence and a large, engaged community (104.8k stars, 669 open issues).
 - **Governance**: Developed by the `immich-app` organization with multiple core maintainers. The project has a clear roadmap and transparent issue tracking. Bus factor is moderate.
 - **Backing**: No large corporate backing visible; sustained by community contributions and likely donations/sponsorships. This is a strength for independence but a risk for long-term sustainability.

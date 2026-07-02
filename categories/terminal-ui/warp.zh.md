@@ -17,28 +17,20 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T08:29:09Z
-  overall: B
-  overall_score: 2.83
-  scored_axes: 6
+  computed_at: 2026-07-02T12:44:21Z
+  overall: "?"
+  overall_score: null
+  scored_axes: 1
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: A
-      raw:
-        archived: false
-        last_commit_age_days: 0
-        active_weeks_13: 10
-        carve_out: null
+      grade: "?"
+      raw: {}
     responsiveness:
-      grade: A
-      raw:
-        median_ttfr_hours: 0.0
-        qualifying_issues: 27
-        band: relaxed_solo
-        window_offset_days: 2
+      grade: "?"
+      raw: {}
     adoption:
       grade: E
       raw:
@@ -51,26 +43,20 @@ health:
         cross_check_divergence: null
         archived: false
     longevity:
-      grade: A
-      raw:
-        repo_age_days: 1820
-        last_commit_age_days: 0
-        cohort: tool
+      grade: "?"
+      raw: {}
     governance:
-      grade: A
-      raw:
-        active_maintainers_12mo: 94
-        top1_share: 0.293
-        top3_share: 0.396
-        window_source: stats_contributors
-        carve_out: null
+      grade: "?"
+      raw: {}
     risk_license:
-      grade: D
-      raw:
-        spdx_id: AGPL-3.0
-        permissiveness: strong_network_copyleft
-        relicense_36mo: false
-        content_license: null
+      grade: "?"
+      raw: {}
+  unknowns:
+    maintenance: { reason: recency_unreadable }
+    responsiveness: { reason: no_traffic }
+    longevity: { reason: not_found }
+    governance: { reason: empty_or_gated }
+    risk_license: { reason: repo_unreachable }
 ---
 
 # Warp
@@ -122,6 +108,7 @@ health:
 
 ## 健康度与可持续性
 
+- **响应速度**：无法计算——no_traffic。
 - **维护——活跃的产品开发，但闭源。** 团队声称每周发布（通常周四）。GitHub 仓库有频繁的 issue 和功能请求活动，但这不是代码提交的代理，因为仓库仅用于 issue。[推断]
 - **治理——厂商控制，单一公司。** Warp 是一家风投支持的公司（Warp.dev），完全拥有这个产品。路线图由公司决定，而非社区。GitHub 仓库存在是为了 issue 透明，不是为了社区治理。[推断]
 - **年龄与 Lindy——约 4 年，仍在演进。** 2021-07 创建。对开发工具而言 4 年是中等年龄；终端领域保守，新入局者需要持续证明自己。「agent 终端」这一方向是近期转向，其耐久性未经检验。[推断]

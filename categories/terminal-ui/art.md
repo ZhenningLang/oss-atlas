@@ -114,6 +114,7 @@ You reach for it when ASCII-art *text* is the deliverable: banners, splash scree
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (2026-06).** Last pushed 2026-05 with a v6.x release line and a steady tagged-release cadence — **active**, not coasting. Not archived. [推断]
 - **Governance / bus factor.** Driven primarily by the author (sepandhaghighi) with a recurring co-maintainer and contributors; a small-team/single-lead project but with sustained, disciplined releases and CI/coverage. [推断]
 - **Age & Lindy verdict.** ~9 years old (created 2017-10) and **still actively shipping** ⇒ a **strong Lindy** signal: a mature, stable library that keeps moving. [推断]

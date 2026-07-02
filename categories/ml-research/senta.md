@@ -109,6 +109,7 @@ You reach for it specifically when you're inside the **PaddlePaddle / ERNIE ecos
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (2026-06).** Last pushed 2024-08; no releases/tags; ~74 open issues. Effectively **idle/coasting** — the SKEP work is "published and frozen", with active Baidu NLP development moved to PaddleNLP/ERNIE. [推断]
 - **Governance / backing.** Backed by **Baidu** (Organization owner) — real institutional weight and a peer-reviewed method (ACL 2020) behind it. But big-vendor backing doesn't equal *this repo* being maintained; Baidu has clearly moved its NLP roadmap elsewhere. Bus-factor concern is "superseded by sibling project", not "lone hobbyist". [推断]
 - **Age & Lindy verdict.** Created 2018-07 (~8 years) but **not currently active** ⇒ age is not Lindy on its own here; its durable value is the SKEP method/checkpoints, not living maintenance. [推断]

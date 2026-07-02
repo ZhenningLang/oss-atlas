@@ -123,6 +123,7 @@ It also fits when you've inherited an unfamiliar codebase and there's no meaning
 
 ## Health & viability
 
+- **Responsiveness**: Grade A — median first-response time 4.6 hours across 43 qualifying issues/PRs.
 - **Maintenance (2026-06):** [推断] very actively maintained — last push 2026-06, v1.6.2 released 2026-06-26, on a fast release train (many versions). Low open-issue count (~43) relative to ~9.3k stars suggests issues are being closed, not piling up. Momentum is high *right now*.
 - **Governance & backing:** [推断] published under the `alibaba` GitHub org — a large vendor with a long open-source track record (Dubbo, Nacos, Arthas…), which lowers bus-factor risk versus a hobby project. But it's single-vendor, not foundation-governed; the custom-rule format and config surface are coupled to Alibaba's evolving CLI, and vendor-origin tools can be re-prioritized.
 - **Age & Lindy:** [未验证] the repo was created ~2026-05 (public OSS history is ~1 month old as of 2026-06) — **very young; no Lindy support yet.** The project claims "two years internal at Alibaba / tens of thousands of developers," which if true gives real maturity behind the public repo, but that framing is the project's own and unverified (see Caveats). Judge the public artifact as new.

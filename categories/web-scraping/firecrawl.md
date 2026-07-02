@@ -16,28 +16,20 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T08:37:41Z
-  overall: B
-  overall_score: 3.17
-  scored_axes: 6
+  computed_at: 2026-07-02T12:44:29Z
+  overall: "?"
+  overall_score: null
+  scored_axes: 1
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: A
-      raw:
-        archived: false
-        last_commit_age_days: 0
-        active_weeks_13: 13
-        carve_out: null
+      grade: "?"
+      raw: {}
     responsiveness:
-      grade: B
-      raw:
-        median_ttfr_hours: 147.3
-        qualifying_issues: 37
-        band: default
-        window_offset_days: 1
+      grade: "?"
+      raw: {}
     adoption:
       grade: A
       raw:
@@ -47,28 +39,22 @@ health:
         downloads_last_month: 5804535
         graph_tier: E
         volume_tier: A
-        cross_check_divergence: 1.2
+        cross_check_divergence: null
     longevity:
-      grade: B
-      raw:
-        repo_age_days: 807
-        last_commit_age_days: 0
-        cohort: service
+      grade: "?"
+      raw: {}
     governance:
-      grade: A
-      raw:
-        active_maintainers_12mo: 48
-        top1_share: 0.374
-        top3_share: 0.591
-        window_source: stats_contributors
-        carve_out: null
+      grade: "?"
+      raw: {}
     risk_license:
-      grade: D
-      raw:
-        spdx_id: AGPL-3.0
-        permissiveness: strong_network_copyleft
-        relicense_36mo: false
-        content_license: null
+      grade: "?"
+      raw: {}
+  unknowns:
+    maintenance: { reason: recency_unreadable }
+    responsiveness: { reason: no_traffic }
+    longevity: { reason: not_found }
+    governance: { reason: empty_or_gated }
+    risk_license: { reason: repo_unreachable }
 ---
 
 # Firecrawl
@@ -120,6 +106,7 @@ You're building an AI agent or data pipeline that needs to ingest web content at
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance**: Very active — daily pushes as of 2026-07, with a responsive team (376 open issues). [推断]
 - **Governance**: Owned by the Firecrawl organization; appears to be a dedicated company/org behind the project with reasonable bus factor.
 - **Backing**: Firecrawl appears to be a venture-backed company offering both open-source and hosted services; the dual model provides sustainability but may shift roadmap toward paid features. [未验证]

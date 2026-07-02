@@ -95,6 +95,7 @@ You reach for this pack specifically when your work is Apple-flavored: it ships 
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — type_na.
 - **Maintenance (2026-06):** coasting — last pushed 2026-03, i.e. ~3 months stale as of 2026-06, with ~9 open issues and no tagged releases. That staleness is a real risk *here* because the SwiftUI/Swift-6.2/Liquid-Glass skills track fast-moving Apple betas and rot quickly between pushes. Treat as a snapshot, not a maintained product.
 - **Governance & bus factor:** single-author `User`-owned personal collection (Dimillian, a known iOS developer). No team, foundation, or vendor; ~3k stars on a one-person pack is a bus-factor flag. Roadmap is entirely the author's.
 - **Age & Lindy verdict:** created 2025-12, ~6 months old as of 2026-06 — young *and* already coasting. Young + not-currently-active is the weak quadrant: no longevity to lean on and recent activity has stalled. Don't bank on it staying current.

@@ -109,6 +109,7 @@ You reach for it as a **complete, readable blueprint** of a Chinese KG system (a
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (2026-06).** README explicitly declares maintenance has stopped. Last pushed 2025-02 (likely housekeeping, not feature work); no releases/tags. **Abandoned by author's own statement** — reference-only. [推断]
 - **Governance / bus factor.** A university (ECNU) course/research project, primarily one student author (qq547276542) with a couple of contributors; bus factor ~1. The ~4.4k stars are **academic popularity on an abandoned repo** — a citation/learning signal, not a maintenance signal; flag accordingly. [推断]
 - **Age & Lindy verdict.** Created 2017-11 (~8 years) but **declared unmaintained** ⇒ age does *not* confer Lindy here; it persists as a referenced artifact, not as living software. [推断]

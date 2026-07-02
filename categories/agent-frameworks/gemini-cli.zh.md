@@ -16,21 +16,17 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T08:37:59Z
-  overall: B
-  overall_score: 3.4
-  scored_axes: 5
+  computed_at: 2026-07-02T12:52:29Z
+  overall: "?"
+  overall_score: null
+  scored_axes: 1
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: A
-      raw:
-        archived: false
-        last_commit_age_days: 0
-        active_weeks_13: 13
-        carve_out: null
+      grade: "?"
+      raw: {}
     responsiveness:
       grade: "?"
       raw: {}
@@ -45,28 +41,20 @@ health:
         volume_tier: B
         cross_check_divergence: 1.0
     longevity:
-      grade: C
-      raw:
-        repo_age_days: 441
-        last_commit_age_days: 0
-        cohort: framework
+      grade: "?"
+      raw: {}
     governance:
-      grade: A
-      raw:
-        active_maintainers_12mo: 88
-        top1_share: 0.08
-        top3_share: 0.211
-        window_source: stats_contributors
-        carve_out: null
+      grade: "?"
+      raw: {}
     risk_license:
-      grade: A
-      raw:
-        spdx_id: Apache-2.0
-        permissiveness: permissive
-        relicense_36mo: false
-        content_license: null
+      grade: "?"
+      raw: {}
   unknowns:
+    maintenance: { reason: recency_unreadable }
     responsiveness: { reason: no_traffic }
+    longevity: { reason: not_found }
+    governance: { reason: empty_or_gated }
+    risk_license: { reason: repo_unreachable }
 ---
 
 # Gemini CLI
@@ -118,6 +106,7 @@ health:
 
 ## 健康度与可持续性
 
+- **响应速度**：无法计算——no_traffic。
 - **维护**：活跃——截至 2026-07 每日推送，issue 跟踪响应及时（1,347 个开放 issue）。[推断]
 - **治理**：由 `google-gemini` 组织所有，Google 支持的 GitHub 组织。鉴于 Google 的背书，bus factor 合理，但项目的未来取决于 Google 对开源 CLI 的持续承诺。[未验证]
 - **背书**：由 Google（Gemini 团队）官方背书。Apache-2.0 许可非常宽松，但 Google 有 sunset 开源项目的历史。[推断]

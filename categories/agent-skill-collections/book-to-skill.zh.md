@@ -16,28 +16,20 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T08:26:04Z
-  overall: B
-  overall_score: 2.67
-  scored_axes: 6
+  computed_at: 2026-07-02T12:43:33Z
+  overall: "?"
+  overall_score: null
+  scored_axes: 1
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: A
-      raw:
-        archived: false
-        last_commit_age_days: 2
-        active_weeks_13: 8
-        carve_out: null
+      grade: "?"
+      raw: {}
     responsiveness:
-      grade: A
-      raw:
-        median_ttfr_hours: 10.4
-        qualifying_issues: 8
-        band: relaxed_solo
-        window_offset_days: 8
+      grade: "?"
+      raw: {}
     adoption:
       grade: E
       raw:
@@ -50,26 +42,20 @@ health:
         cross_check_divergence: null
         archived: false
     longevity:
-      grade: D
-      raw:
-        repo_age_days: 62
-        last_commit_age_days: 2
-        cohort: tool
+      grade: "?"
+      raw: {}
     governance:
-      grade: B
-      raw:
-        active_maintainers_12mo: 12
-        top1_share: 0.585
-        top3_share: 0.793
-        window_source: stats_contributors
-        carve_out: null
+      grade: "?"
+      raw: {}
     risk_license:
-      grade: A
-      raw:
-        spdx_id: MIT
-        permissiveness: permissive
-        relicense_36mo: false
-        content_license: null
+      grade: "?"
+      raw: {}
+  unknowns:
+    maintenance: { reason: recency_unreadable }
+    responsiveness: { reason: no_traffic }
+    longevity: { reason: not_found }
+    governance: { reason: empty_or_gated }
+    risk_license: { reason: repo_unreachable }
 ---
 
 # book-to-skill
@@ -124,6 +110,7 @@ health:
 
 ## 健康度与可持续性
 
+- **响应速度**：无法计算——no_traffic。
 - **维护**：活跃——末次提交 2026-06-30，非常近期。2026-05-01 创建，截至 2026-07 仅约 2 个月。[未验证]
 - **治理**：单人仓库（`virgiliojr94`）。bus factor 为 1。项目极其年轻，无机构背书。[推断]
 - **背书**：无机构背书——由个人贡献者维护。GitHub Sponsors 可用，但不构成组织承诺。[推断]

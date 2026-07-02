@@ -102,6 +102,7 @@ It fits academic/research use specifically — the README is explicit that the d
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_data.
 - **Maintenance (2026-06).** **Coasting / near-dormant.** Last commit 2023-09 (~2.5 years stale); not archived, but no recent activity. For a scraper-over-public-sites library, staleness directly means broken interfaces accumulate. [推断]
 - **Governance / bus factor.** Single-maintainer (`justinzm`) `User` repo — the contributor list is essentially one person. 2.5k stars on a one-author, stalling scraper is a mild **bus-factor flag**.
 - **Age & Lindy verdict.** Created 2020-03, ~6 years old but only *intermittently* active; weak Lindy — young-ish and now coasting, so age gives little assurance here. [推断]

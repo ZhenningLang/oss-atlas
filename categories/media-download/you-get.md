@@ -112,6 +112,7 @@ You also use it when you want the *smallest* thing that works for a given Chines
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — issues_disabled.
 - **Maintenance — slow but not dead (last push ~2026-04, last tagged release 2025-01-04, as of 2026-06).** Not archived; the master branch still receives commits, but the tagged-release cadence is light and lags yt-dlp's. For an extractor tool that's the live risk — a freshly-broken site may wait for a patch [推断]. Track master, don't pin the old tag.
 - **Governance & bus factor — single-maintainer flag.** `User`-owned (`soimort/you-get`) with ~56k stars: large adoption resting on a small/one-person maintainer pool, which both explains the slower cadence and is itself the bus-factor risk. No foundation or vendor behind it [推断].
 - **Age & Lindy verdict — old and still-ticking ⇒ moderate Lindy.** Created 2012 (~14y old) and still committing in 2026: long survival is a real positive signal, but "still-active" here is *thin* (slow releases, light maintainer pool), so it's a moderate rather than strong Lindy bet — safer than an abandoned tool, weaker than the fast-moving yt-dlp.

@@ -16,54 +16,39 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T08:35:35Z
-  overall: B
-  overall_score: 3.2
-  scored_axes: 5
+  computed_at: 2026-07-02T12:50:19Z
+  overall: "?"
+  overall_score: null
+  scored_axes: 0
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: A
-      raw:
-        archived: false
-        last_commit_age_days: 1
-        active_weeks_13: 13
-        carve_out: null
+      grade: "?"
+      raw: {}
     responsiveness:
-      grade: A
-      raw:
-        median_ttfr_hours: 0.8
-        qualifying_issues: 31
-        band: relaxed_solo
-        window_offset_days: 8
+      grade: "?"
+      raw: {}
     adoption:
       grade: "?"
       raw: {}
     longevity:
-      grade: B
-      raw:
-        repo_age_days: 954
-        last_commit_age_days: 1
-        cohort: tool
+      grade: "?"
+      raw: {}
     governance:
-      grade: B
-      raw:
-        active_maintainers_12mo: 50
-        top1_share: 0.537
-        top3_share: 0.862
-        window_source: stats_contributors
-        carve_out: null
+      grade: "?"
+      raw: {}
     risk_license:
-      grade: C
-      raw:
-        spdx_id: GPL-3.0
-        permissiveness: weak_file_copyleft
-        relicense_36mo: false
-        content_license: null
+      grade: "?"
+      raw: {}
   unknowns:
+    maintenance: { reason: recency_unreadable }
+    responsiveness: { reason: no_traffic }
     adoption: { reason: ambiguous }
+    longevity: { reason: not_found }
+    governance: { reason: empty_or_gated }
+    risk_license: { reason: repo_unreachable }
 ---
 
 # Clash Verge Rev
@@ -114,6 +99,7 @@ You're a developer or power user who needs a flexible, rule-based proxy client o
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance**: Active — regular pushes as of 2026-07, with a moderate issue volume (420 open issues) and active release cadence (Stable, Alpha, AutoBuild channels). [推断]
 - **Governance**: Owned by the clash-verge-rev organization; appears to be a community-driven continuation of the original Clash Verge project. The bus factor is a concern if the core maintainers step away. [推断]
 - **Backing**: No corporate backing visible; community-driven with a Chinese-language primary community. [未验证]

@@ -117,6 +117,7 @@ JetBrains 系 IDE（IntelliJ IDEA、PyCharm、GoLand、WebStorm、Rider 等）�
 
 ## 健康度与可持续性
 
+- **响应速度**：无法计算——issues_disabled。
 - **维护（2026-06）。** 非常活跃——最后 push 2026-06，提交频繁，由一个 JetBrains 小团队（AlexPl292 等）领衔、提交上千。通过 Marketplace 分发而非 GitHub Releases，所以 GitHub 上「无 release」是正常现象，并非停滞信号。未归档。[推断]
 - **治理 / 背书。** 由 **JetBrains**（一个组织，也就是 IDE 厂商本身）拥有并维护——第一方、资金充足的治理，且有直接动机让它在历次 IDE 发布间保持可用。在 IDE 插件里属于最强的背书画像之一。[推断]
 - **年龄与 Lindy。** 2011 年创建，约 15 岁且**仍在活跃发布**⇒ **强 Lindy** 信号——它跨越 IntelliJ 平台多个大版本一路跟随，至今仍是 JetBrains 的默认 Vim 层。[推断]

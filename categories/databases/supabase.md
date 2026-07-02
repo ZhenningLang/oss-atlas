@@ -16,54 +16,39 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T08:25:42Z
-  overall: A
-  overall_score: 4.0
-  scored_axes: 5
+  computed_at: 2026-07-02T12:43:32Z
+  overall: "?"
+  overall_score: null
+  scored_axes: 0
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: A
-      raw:
-        archived: false
-        last_commit_age_days: 0
-        active_weeks_13: 13
-        carve_out: null
+      grade: "?"
+      raw: {}
     responsiveness:
-      grade: A
-      raw:
-        median_ttfr_hours: 3.5
-        qualifying_issues: 23
-        band: default
-        window_offset_days: 10
+      grade: "?"
+      raw: {}
     adoption:
       grade: "?"
       raw: {}
     longevity:
-      grade: A
-      raw:
-        repo_age_days: 2455
-        last_commit_age_days: 0
-        cohort: service
+      grade: "?"
+      raw: {}
     governance:
-      grade: A
-      raw:
-        active_maintainers_12mo: 171
-        top1_share: 0.146
-        top3_share: 0.268
-        window_source: stats_contributors
-        carve_out: null
+      grade: "?"
+      raw: {}
     risk_license:
-      grade: A
-      raw:
-        spdx_id: Apache-2.0
-        permissiveness: permissive
-        relicense_36mo: false
-        content_license: null
+      grade: "?"
+      raw: {}
   unknowns:
+    maintenance: { reason: recency_unreadable }
+    responsiveness: { reason: no_traffic }
     adoption: { reason: no_package_structural }
+    longevity: { reason: not_found }
+    governance: { reason: empty_or_gated }
+    risk_license: { reason: repo_unreachable }
 ---
 
 # Supabase
@@ -119,6 +104,7 @@ You're building a web or mobile application and need a backend that handles auth
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance**: Very active — pushed daily as of 2026-07, with a mature v2 platform and responsive core team (1,086 open issues).
 - **Governance**: Owned by the `supabase` organization with a dedicated core team and clear product roadmap. The company has a strong open-source culture with Apache-2.0 licensing across the core stack. Bus factor is reasonable.
 - **Backing**: Supabase Inc. is a venture-backed company with significant funding and a proven revenue model (managed cloud). The open-source core is strategically aligned with the commercial offering.

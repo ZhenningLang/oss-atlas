@@ -95,6 +95,7 @@ Baoyu Skills gives you exactly that for the writing/translation slice: `baoyu-tr
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — type_na.
 - **Maintenance** — [未验证] last pushed 2026-06, not archived, open issues ~1; v2.5.2 (2026-06) and a fast v2.x release cadence make it **actively, even rapidly maintained** — and it ships real version pins rather than only `main`.
 - **Governance & bus factor** — [推断] **`User`-owned, single-maintainer repo ("宝玉"/JimLiu) with ~22k stars (2026-06) — a bus-factor flag.** Personal project, no team or org backing; cadence and continuity ride on one author.
 - **Age & Lindy** — [推断] created 2026-01, so only ~5 months old as of 2026-06: **brand new, no Lindy track record**. Popular but unproven over time.

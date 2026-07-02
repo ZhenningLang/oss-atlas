@@ -94,6 +94,7 @@ You reach for it when you want an opinionated, pre-built corpus rather than auth
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — type_na.
 - **Maintenance (2026-06):** active — latest release v2.3.0 (2026-05), last pushed 2026-05, not archived, with "corpus hardening" and router-benchmark work between releases. Moving fast enough that skill names/count/routing shift release-to-release.
 - **Governance / bus factor:** a **single-maintainer, `User`-owned** repo (`muratcankoylan`) carrying ~16k stars — that popularity-vs-bus-factor mismatch is a real fragility flag: a heavily-starred personal repo has no team or org continuity if the author steps away. `[推断]`
 - **Age & Lindy verdict:** young (created 2025-12, ~6 months old) and riding the 2026 skill-pack hype wave — **unproven** on Lindy. It's a corpus of advice, not load-bearing runtime, so the downside of it going stale is lower than for a library, but don't treat its longevity as established.

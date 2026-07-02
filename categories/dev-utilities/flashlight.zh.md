@@ -102,6 +102,7 @@ health:
 
 ## 健康度与可持续性
 
+- **响应速度**：无法计算——no_data。
 - **维护（2026-06）。** **已废弃。** 没有 GitHub release；最后 push 在 2020-11。维护者因 Big Sur 的 Spotlight 改动公开停手。GitHub 上未标「archived」，但功能上已死。[推断]
 - **治理 / bus factor。** owner 是 **User** 账号（w0lfschild）；它本身就是一连串社区维护者接力中的一个分叉（原版 nate-parrott，之后数个分叉）。实际上已无当前 owner——最坏的 bus factor。[推断]
 - **年龄与 Lindy。** 2016 年创建，约 10 岁但**其中约 6 年处于废弃**⇒ Lindy **不成立**——没有持续活跃的年龄不是耐久信号，而是一块墓碑。其底层的系统注入路子也已被 macOS 本身淘汰。[推断]

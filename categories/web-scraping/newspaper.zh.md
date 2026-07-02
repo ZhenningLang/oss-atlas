@@ -119,6 +119,7 @@ health:
 
 ## 健康度与可持续性
 
+- **响应速度**：无法计算——no_traffic。
 - **维护（截至 2026-06）。** 上游 `codelucas/newspaper`（newspaper3k）实质停滞：最后 PyPI 发布 0.2.8 在 2018-09，代码库自 ~2020 起沉寂。即便仓库带着「pushed 2026-05」的时间戳，看起来也更像一次琐碎的 touch 而非开发复活——把原版当作维护模式/已弃，而非活跃演进。[未验证]
 - **治理 / bus factor。** 单一维护者、`User` 所有的仓库（Lucas Ou-Yang）——典型的 bus-factor 风险，而且这里维护者大体已转向他处。更健康的路径是社区分叉 **newspaper4k**，由 Andrei Paraschiv 维护（`AndyTheFactory/newspaper4k`），其维护状况被评为健康、发布节奏规律。[未验证]
 - **年龄与 Lindy 判断。** 2013-11 创建（约 13 年）——这个*概念*久经验证、足够耐用，所以对「想法」的 Lindy 很强；但 Lindy 要的是 **年龄 × 仍活跃**，而原版已不再活跃。年龄信号转移到了延续血脉的 newspaper4k 身上。[推断]

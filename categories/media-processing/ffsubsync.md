@@ -121,6 +121,7 @@ You also reach for it in a batch/automation context — a media server (it's the
 
 ## Health & viability
 
+- **Responsiveness**: Grade C — median first-response time 202.0 hours across 1 qualifying issues/PRs.
 - **Maintenance (2026-06).** Last push 2026-06; v0.5.0 was tagged 2026-06-17, with prior releases through 2024–2025 — **active**, releasing on an irregular but live cadence. Not archived.
 - **Governance / bus factor.** Single-maintainer project (smacke) with a handful of outside contributors (some from the Bazarr/subliminal ecosystem). Bus-factor risk is real: the roadmap and releases hinge on one person. [推断]
 - **Age & Lindy verdict.** ~7 years old (created 2019-02) and still shipping ⇒ a **moderate-to-strong Lindy** signal — long enough to be proven for its narrow job, and it remains the de-facto open-source audio sync tool.

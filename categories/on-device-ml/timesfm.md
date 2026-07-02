@@ -124,6 +124,7 @@ So you reach for TimesFM. You `pip install timesfm[torch]`, pull `google/timesfm
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — type_na.
 - **Maintenance (2026-06):** last push 2026-06, repo release v2.0.1 dated 2026-06-11, headline model line at 2.5 — **active** with a moving model lineage (1.0 → 2.0 → 2.5). [推断] Release-tag versioning lags the model naming, so cadence reads as ongoing research, not a frozen product.
 - **Governance / backing:** Google Research-maintained (`google-research`, Organization). [推断] No single-maintainer bus factor, but the README explicitly states "not an officially supported Google product" — there is **no SLA**, and Google Research code can stall when the team's focus shifts.
 - **Age & Lindy (created 2024-04, ~2yr):** young-ish but consistently active across three model generations — past the "abandoned-young" failure mode, not yet a long-lived Lindy bet. [推断] Treat as a credible-but-evolving foundation model.

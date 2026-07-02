@@ -96,6 +96,7 @@ You install this pack (`npx skills add addyosmani/web-quality-skills`, or via th
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — type_na.
 - **Maintenance (2026-06):** active — last push 2026-06, not archived, but only a `plugin.json` v1.0.0 with no tagged GitHub releases, so versioning is light. Best-effort, not a supported product.
 - **Governance & bus factor:** single-author `User` repo (Addy Osmani); modest ~2k stars, so adoption is low and the whole thing rests on one maintainer — no foundation/vendor backing.
 - **Age & Lindy:** created 2026-01, so under a year old as of 2026-06 — young; unproven on Lindy. Unlike the author's larger pack, it doesn't even carry star-hype to lean on.

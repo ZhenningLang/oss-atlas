@@ -109,6 +109,7 @@ You reach for it when the job is specifically **MySQL→ES, one direction, modes
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (2026-06).** **Stale.** Last push 2023-10, **no tagged releases at all**, `go.mod` pinned to ~2019-era deps (Go 1.12). Not archived, but development has clearly stopped — coasting toward abandoned. [推断]
 - **Governance / bus factor.** Authored by siddontang (also behind the `go-mysql` library and PingCAP-adjacent tooling); now under the `go-mysql-org` org. Effective bus factor is low given the inactivity. [推断]
 - **Age & Lindy verdict.** Created 2015-01 (~11 years old) **but no longer active** ⇒ Lindy **does not** apply — age without ongoing maintenance is a stale-repo risk, not a durability signal. [推断]

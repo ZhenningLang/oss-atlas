@@ -17,28 +17,20 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T08:47:38Z
-  overall: D
-  overall_score: 2.5
-  scored_axes: 6
-  capped: true
-  cap_reason: "source-available/no-license: NOASSERTION"
+  computed_at: 2026-07-02T12:48:35Z
+  overall: "?"
+  overall_score: null
+  scored_axes: 1
+  capped: false
+  cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: A
-      raw:
-        archived: false
-        last_commit_age_days: 7
-        active_weeks_13: 10
-        carve_out: null
+      grade: "?"
+      raw: {}
     responsiveness:
-      grade: A
-      raw:
-        median_ttfr_hours: 3.6
-        qualifying_issues: 23
-        band: default
-        window_offset_days: 12
+      grade: "?"
+      raw: {}
     adoption:
       grade: D
       raw:
@@ -50,26 +42,20 @@ health:
         volume_tier: D
         cross_check_divergence: null
     longevity:
-      grade: C
-      raw:
-        repo_age_days: 377
-        last_commit_age_days: 7
-        cohort: library
+      grade: "?"
+      raw: {}
     governance:
-      grade: A
-      raw:
-        active_maintainers_12mo: 17
-        top1_share: 0.288
-        top3_share: 0.634
-        window_source: stats_contributors
-        carve_out: null
+      grade: "?"
+      raw: {}
     risk_license:
-      grade: E
-      raw:
-        spdx_id: NOASSERTION
-        permissiveness: source_available
-        relicense_36mo: false
-        content_license: null
+      grade: "?"
+      raw: {}
+  unknowns:
+    maintenance: { reason: recency_unreadable }
+    responsiveness: { reason: no_traffic }
+    longevity: { reason: not_found }
+    governance: { reason: empty_or_gated }
+    risk_license: { reason: repo_unreachable }
 ---
 
 # ByteRover CLI
@@ -124,6 +110,7 @@ You're a developer who runs AI coding agents across multiple sessions and keeps 
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance — very active for a young project.** Pushed 2026-06-25; not archived. The project is under rapid development with frequent updates, but the entire codebase is only about a year old. [推断]
 - **Governance — organization-owned, small team.** Owned by the `campfirein` organization. The bus factor is unknown but likely small given the project's youth and modest star count. [推断]
 - **Age & Lindy — extremely young, no Lindy signal.** Created 2025-06. At roughly one year old, this is a brand-new project with no proven longevity. The high star count (~4.9k) relative to its age suggests early interest, but that is hype, not durability. [推断]

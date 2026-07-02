@@ -116,6 +116,7 @@ For an *existing* project already pinned to it, that's still a working pattern. 
 
 ## Health & viability
 
+- **Responsiveness**: Grade E.
 - **Maintenance (2026-06).** Archived and explicitly abandoned — README announces it is no longer maintained; last tag 5.1.0 (2022-10), repo read-only since ~2024-01. **Dead.** This is a hard stop on any "is it maintained" criterion.
 - **Governance / bus factor.** Bus factor **1**: `wkeeling` authored ~886 commits, the next contributor has 5, and that maintainer has publicly stepped away. Watchers count of 1 reinforces it. Single-User project, no org continuity.
 - **Age × Lindy.** ~6 years active (2018→2024), ~2.0k stars — historically popular and proven. But Lindy cuts the other way once abandoned: against a fast-moving Selenium/CDP/TLS landscape, an unmaintained MITM wrapper rots, so age here is not a safety signal. [推断]

@@ -16,21 +16,17 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T08:41:55Z
-  overall: A
-  overall_score: 3.75
-  scored_axes: 4
+  computed_at: 2026-07-02T12:45:49Z
+  overall: "?"
+  overall_score: null
+  scored_axes: 1
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: A
-      raw:
-        archived: false
-        last_commit_age_days: 0
-        active_weeks_13: 13
-        carve_out: null
+      grade: "?"
+      raw: {}
     responsiveness:
       grade: "?"
       raw: {}
@@ -45,25 +41,20 @@ health:
         volume_tier: B
         cross_check_divergence: 1.04
     longevity:
-      grade: A
-      raw:
-        repo_age_days: 2567
-        last_commit_age_days: 0
-        cohort: app
+      grade: "?"
+      raw: {}
     governance:
-      grade: A
-      raw:
-        active_maintainers_12mo: 176
-        top1_share: 0.063
-        top3_share: 0.149
-        window_source: stats_contributors
-        carve_out: null
+      grade: "?"
+      raw: {}
     risk_license:
       grade: "?"
       raw: {}
   unknowns:
+    maintenance: { reason: recency_unreadable }
     responsiveness: { reason: no_traffic }
-    risk_license: { reason: license_unparsed }
+    longevity: { reason: not_found }
+    governance: { reason: empty_or_gated }
+    risk_license: { reason: repo_unreachable }
 ---
 
 # n8n
@@ -116,6 +107,7 @@ health:
 
 ## 健康度与可持续性
 
+- **响应速度**：无法计算——no_traffic。
 - **维护**：非常活跃——每日推送，195k star，1,435 个开放 issue，定期发布。
 - **治理**：由 n8n GmbH 所有，商业实体，路线图清晰。项目既开源又有商业背书。
 - **背书**：n8n GmbH 是获风投支持的公司，商业模式可持续（云服务 + 企业支持）。

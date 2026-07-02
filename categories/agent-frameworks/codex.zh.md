@@ -16,21 +16,17 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T08:42:28Z
-  overall: A
-  overall_score: 3.6
-  scored_axes: 5
+  computed_at: 2026-07-02T12:43:45Z
+  overall: "?"
+  overall_score: null
+  scored_axes: 1
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: A
-      raw:
-        archived: false
-        last_commit_age_days: 0
-        active_weeks_13: 13
-        carve_out: null
+      grade: "?"
+      raw: {}
     responsiveness:
       grade: "?"
       raw: {}
@@ -45,28 +41,20 @@ health:
         volume_tier: A
         cross_check_divergence: 1.0
     longevity:
-      grade: C
-      raw:
-        repo_age_days: 445
-        last_commit_age_days: 0
-        cohort: framework
+      grade: "?"
+      raw: {}
     governance:
-      grade: A
-      raw:
-        active_maintainers_12mo: 92
-        top1_share: 0.155
-        top3_share: 0.349
-        window_source: stats_contributors
-        carve_out: null
+      grade: "?"
+      raw: {}
     risk_license:
-      grade: A
-      raw:
-        spdx_id: Apache-2.0
-        permissiveness: permissive
-        relicense_36mo: false
-        content_license: null
+      grade: "?"
+      raw: {}
   unknowns:
+    maintenance: { reason: recency_unreadable }
     responsiveness: { reason: no_traffic }
+    longevity: { reason: not_found }
+    governance: { reason: empty_or_gated }
+    risk_license: { reason: repo_unreachable }
 ---
 
 # Codex
@@ -118,6 +106,7 @@ OpenAI 出品的轻量级编码智能体，在本地终端运行。可读取文�
 
 ## 健康度与可持续性
 
+- **响应速度**：无法计算——no_traffic。
 - **维护**：非常活跃——截至 2026-07 每日推送，迭代迅速，issue 数量庞大（8,147 个 open issues）。
 - **治理**：由 OpenAI（`openai` GitHub 组织）持有。项目获得 OpenAI 的明确支持，但路线图由单一商业实体控制。
 - **背书**：由 OpenAI 官方背书。Apache-2.0 许可证宽松，但 OpenAI 历史上未对主要项目重新许可。

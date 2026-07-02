@@ -96,6 +96,7 @@ You run `npx skills add lijigang/ljg-skills -g --all` (append `#md` for the Mark
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — type_na.
 - **Maintenance** — actively maintained: last pushed 2026-06, not archived (as of 2026-06). The cadence reads active rather than coasting, but there are no tagged releases — you track a moving branch.
 - **Governance & bus factor** — single-maintainer personal repo (`User`-owned). One author's curated method; if Li Jigang stops, the pack stops. ~6k stars don't change that — it's a one-person bus factor, normal for a personal collection but plan for fork-and-own.
 - **Age & Lindy** — created 2026-03, so ~0 years old as of 2026-06: young, unproven by Lindy. It's active, but too new to have a track record across model/CLI churn — adopt for the method, not for longevity.

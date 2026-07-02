@@ -96,6 +96,7 @@ Compound Engineering installs as a plugin via your agent's marketplace (`/plugin
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — type_na.
 - **Maintenance (2026-06):** actively maintained — last pushed 2026-06, latest release `v3.14.3` (2026-06-24), not archived. A high release cadence (semantic-release on a v3.x line) signals a live project, not a coasting one.
 - **Governance & backing:** Organization-owned (EveryInc / "Every"), i.e. a media-and-software company's editorial product, not a foundation or a lone hobbyist. The roadmap is Every's opinionated line ("opinionated by design," declines off-vision contributions) — vendor-shaped governance with a real org behind it, but you inherit their cadence.
 - **Age & Lindy (2026-06):** created 2025-10, ~8 months old. Very young; already on a v3 major implies fast iteration but also that the install model/command set is still churning. Lindy verdict: **unproven by age** — adopt for current value, expect API/command drift; don't assume long-term stability yet.

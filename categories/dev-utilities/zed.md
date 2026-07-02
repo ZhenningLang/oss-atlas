@@ -16,21 +16,17 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T08:45:54Z
-  overall: A
-  overall_score: 3.75
-  scored_axes: 4
+  computed_at: 2026-07-02T12:45:48Z
+  overall: "?"
+  overall_score: null
+  scored_axes: 1
   capped: false
   cap_reason: null
   needs_human_review: true
   axes:
     maintenance:
-      grade: A
-      raw:
-        archived: false
-        last_commit_age_days: 0
-        active_weeks_13: 13
-        carve_out: null
+      grade: "?"
+      raw: {}
     responsiveness:
       grade: "?"
       raw: {}
@@ -43,27 +39,22 @@ health:
         downloads_last_month: 812610
         graph_tier: E
         volume_tier: B
-        cross_check_divergence: 3.64
+        cross_check_divergence: 3.63
     longevity:
-      grade: A
-      raw:
-        repo_age_days: 1958
-        last_commit_age_days: 0
-        cohort: tool
+      grade: "?"
+      raw: {}
     governance:
-      grade: A
-      raw:
-        active_maintainers_12mo: 311
-        top1_share: 0.082
-        top3_share: 0.19
-        window_source: stats_contributors
-        carve_out: null
+      grade: "?"
+      raw: {}
     risk_license:
       grade: "?"
       raw: {}
   unknowns:
+    maintenance: { reason: recency_unreadable }
     responsiveness: { reason: no_traffic }
-    risk_license: { reason: license_unparsed }
+    longevity: { reason: not_found }
+    governance: { reason: empty_or_gated }
+    risk_license: { reason: repo_unreachable }
 ---
 
 # Zed
@@ -113,6 +104,7 @@ You're choosing a code editor and raw performance, modern UX, and team collabora
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance**: Very active — daily commits, frequent releases, responsive issue tracking. 86k stars, 9.3k forks.
 - **Governance**: Owned by Zed Industries, a company founded by the creators of Atom and Tree-sitter. The team has deep expertise in editor technology.
 - **Backing**: Zed Industries is a startup with venture backing. The company is focused entirely on Zed, which is a positive signal, but also a concentration risk compared to a diversified foundation.

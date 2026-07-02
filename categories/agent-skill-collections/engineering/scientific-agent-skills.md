@@ -95,6 +95,7 @@ You reach for this pack to drop in a domain library: install once (`npx skills a
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — type_na.
 - **Maintenance (2026-06):** very active — last push 2026-06, latest release v2.53.0, high release cadence, not archived. The version churn implies the skill set shifts often (skill count already drifts 140↔147).
 - **Governance & backing:** `Organization`-owned (`K-Dense-AI`), so a team/vendor rather than a lone maintainer, but a single company owns the roadmap; no foundation. The README's "160,000+ scientists / #1" framing is marketing, not a governance signal. [推断]
 - **Age & Lindy:** created 2025-10, so under a year old as of 2026-06 — young; unproven on Lindy despite ~29k stars.

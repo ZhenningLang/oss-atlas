@@ -98,6 +98,7 @@ So you point your harness at CCPM's skill and say "let's plan the payments featu
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — type_na.
 - **Maintenance** — last push 2026-03 (as of 2026-06), so ~3 months since the last commit and no tagged releases; the recent v1→v2 ("Agent Skills") restructure shows real upkeep, but a multi-month gap means it's coasting rather than rapidly iterating. Only ~4 open issues — low backlog, but read alongside the modest ~8k stars. [推断]
 - **Governance / bus factor** — `Organization`-owned (`automazeio`), which softens single-maintainer risk somewhat, but it's still a small vendor-led skill repo, not a foundation project; the roadmap is whoever runs automaze. No formal governance to point to. [推断]
 - **Age & Lindy** — created 2025-08, so under a year old as of 2026-06 and already through one breaking restructure (v1→v2): too young for a Lindy verdict, and the surface is still settling — pin a commit if you need stability.

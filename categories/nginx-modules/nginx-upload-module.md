@@ -104,6 +104,7 @@ It also fits when you need **resumable uploads** (the module supports a resumabl
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_data.
 - **Maintenance (2026-06) — low activity.** Last push **2024-07** (≈2 years stale at writing); tags through **v2.3.0**. Not archived, but reads as **maintenance-mode / low-activity**, not actively developed. This fork exists precisely because the upstream stalled — so the lineage is "kept alive when needed," not vibrant. [推断]
 - **Governance / bus factor.** `User`-owned (Frankie Dintino's fork of Valery Kholodkov's original). A ~1k-star `User`-owned C module with low activity is a **clear bus-factor flag** — survival depends on one maintainer's continued attention, and there's no organizational backing. [推断]
 - **Age × Lindy.** The lineage is old (this repo created **2008-12**, ~17 years) — Lindy on the *concept* and the original code is strong, but the **low recent activity weakens the "still-active" half**: old-and-coasting, not old-and-thriving. Use age × activity together; here activity is the weak factor. [推断]

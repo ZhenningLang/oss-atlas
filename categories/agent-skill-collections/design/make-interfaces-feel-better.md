@@ -95,6 +95,7 @@ You reach for it specifically when the gap is *craft-level detail*, not directio
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — type_na.
 - **Maintenance (2026-06):** low cadence and possibly quiet — last pushed 2026-04 (~2 months stale as of 2026-06), no tagged releases. That's tolerable for a thin, "finished" artifact pinned to one article, but don't expect ongoing iteration.
 - **Governance / bus factor:** single-author, `User`-owned repo (`jakubkrehel`) at ~1.9k stars. It's one person's opinion crystallized from their "Details that make interfaces feel better" article — no team, no org.
 - **Age & Lindy verdict:** very young (created 2026-03) — **unproven** on the Lindy axis, but the stakes are low: it's a static checklist of mechanical CSS/UX details, so "staleness" mostly means the design opinions age, not that it breaks. A narrow, frozen artifact is less Lindy-sensitive than a runtime dependency.

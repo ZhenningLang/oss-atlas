@@ -68,14 +68,14 @@ AI_COMMITTERS = {"claude", "ampagent", "devin", "cursor-agent", "copilot", "swee
 # 2.2 responsiveness — type-aware TTFR bands, in HOURS (and qualifying-issue floors).
 RESP_BANDS = {
     "default": {  # library, framework, service
-        "A": 48, "A_min_issues": 5,
+        "A": 48, "A_min_issues": 3,
         "B": 7 * 24, "B_min_issues": 3,
         "C": 30 * 24,
         "D": 180 * 24,
         # E: >= D ceiling
     },
     "relaxed": {  # tool, app
-        "A": 7 * 24, "A_min_issues": 5,
+        "A": 7 * 24, "A_min_issues": 3,
         "B": 30 * 24, "B_min_issues": 3,
         "C": 90 * 24,
         "D": 365 * 24,
@@ -572,7 +572,6 @@ def axis_responsiveness(repo: RepoData) -> Axis:
     data = res.json.get("data") or {}
     r = data.get("repository")
     if not isinstance(r, dict):
-        # GraphQL errors (e.g. repo not found / access) -> degrade.
         return Axis.unknown("no_traffic", evidence="? GraphQL repository null")
 
     if r.get("hasIssuesEnabled") is False:
@@ -601,19 +600,20 @@ def axis_responsiveness(repo: RepoData) -> Axis:
     win_end = repo.now - dt.timedelta(days=offset)
     win_start = win_end - dt.timedelta(days=90)
 
-    # First-response TTFR per qualifying issue.
-    ttfrs: list[float] = []
+    # =========================================================================
+    # LAYER 1: Issue median TTFR (most precise signal)
+    # =========================================================================
+    issue_ttfrs: list[float] = []
     first_resp_shingles: list[set] = []
     for n in issue_nodes:
         created_i = parse_iso(n.get("createdAt"))
         if created_i is None or not (win_start <= created_i <= win_end):
             continue
         author = (n.get("author") or {}).get("login")
-        if is_bot_author(author):  # author must be human
+        if is_bot_author(author):
             continue
-        # Candidate first-response timestamps.
         candidates: list[tuple[dt.datetime, str]] = []
-        # First non-author, non-bot comment (with near-dup template exclusion).
+        # First non-author, non-bot comment
         for cm in ((n.get("comments") or {}).get("nodes") or []):
             cm_author = (cm.get("author") or {}).get("login")
             cm_time = parse_iso(cm.get("createdAt"))
@@ -625,15 +625,11 @@ def axis_responsiveness(repo: RepoData) -> Axis:
                 continue
             sh = _shingles(cm.get("bodyText", ""))
             if any(_jaccard(sh, prev) >= 0.8 for prev in first_resp_shingles):
-                continue  # near-duplicate template -> likely auto-ack service account
+                continue
             first_resp_shingles.append(sh)
             candidates.append((cm_time, "comment"))
-            break  # only the earliest comment matters for this issue
-        # First label / assign / close from the timeline. A "response" means SOMEONE
-        # ELSE noticed (spec §2.2 intent: "If I file something, will a human notice").
-        # The spec's "first non-author" qualifier applies to comments; extend the same
-        # non-author rule to label/assign/close events so a reporter self-labeling or
-        # self-closing their own issue at t=0 cannot fake a 0h TTFR. Documented deviation.
+            break
+        # Timeline events (label/assign/close) — non-author only
         for tl in ((n.get("timelineItems") or {}).get("nodes") or []):
             t = parse_iso(tl.get("createdAt"))
             if t is None:
@@ -642,21 +638,110 @@ def axis_responsiveness(repo: RepoData) -> Axis:
             if is_bot_author(actor):
                 continue
             if actor and author and actor == author:
-                continue  # self-label/self-close is not a maintainer response
+                continue
             candidates.append((t, tl.get("__typename", "event")))
-        # Close (closedAt) also counts as a response — but only if a non-author actor
-        # closed it (mirrors the self-close exclusion above). A close with no resolvable
-        # non-author closer falls through to the timeline ClosedEvent check above.
-
         if candidates:
             first = min(candidates, key=lambda x: x[0])[0]
             ttfr_h = (first - created_i).total_seconds() / 3600.0
             if ttfr_h >= 0:
-                ttfrs.append(ttfr_h)
+                issue_ttfrs.append(ttfr_h)
 
-    qualifying = len(ttfrs)
+    qualifying_issues = len(issue_ttfrs)
+    issue_median = _median(issue_ttfrs) if issue_ttfrs else None
 
-    # ? gates (checked before A-E).
+    # =========================================================================
+    # LAYER 2: PR median TTR (fallback signal, used when issue sample < 3)
+    # =========================================================================
+    pr_ttrs: list[float] = []
+    for n in pr_nodes:
+        created_p = parse_iso(n.get("createdAt"))
+        if created_p is None or not (win_start <= created_p <= win_end):
+            continue
+        author = (n.get("author") or {}).get("login")
+        if is_bot_author(author):
+            continue
+        # PR "response" = first review or comment from non-author
+        candidates: list[tuple[dt.datetime, str]] = []
+        for rv in ((n.get("reviews") or {}).get("nodes") or []):
+            rv_author = (rv.get("author") or {}).get("login")
+            rv_time = parse_iso(rv.get("createdAt"))
+            if rv_time is None:
+                continue
+            if rv_author and author and rv_author == author:
+                continue
+            if is_bot_author(rv_author):
+                continue
+            candidates.append((rv_time, "review"))
+            break  # earliest review only
+        for cm in ((n.get("comments") or {}).get("nodes") or []):
+            cm_author = (cm.get("author") or {}).get("login")
+            cm_time = parse_iso(cm.get("createdAt"))
+            if cm_time is None:
+                continue
+            if cm_author and author and cm_author == author:
+                continue
+            if is_bot_author(cm_author):
+                continue
+            candidates.append((cm_time, "comment"))
+            break
+        if candidates:
+            first = min(candidates, key=lambda x: x[0])[0]
+            ttr_h = (first - created_p).total_seconds() / 3600.0
+            if ttr_h >= 0:
+                pr_ttrs.append(ttr_h)
+
+    pr_qualifying = len(pr_ttrs)
+    pr_median = _median(pr_ttrs) if pr_ttrs else None
+
+    # Choose the best signal: issues preferred, PRs as fallback
+    if qualifying_issues >= 3:
+        median_h = issue_median
+        qualifying = qualifying_issues
+        source = "issue"
+    elif pr_qualifying >= 3:
+        median_h = pr_median
+        qualifying = pr_qualifying
+        source = "pr"
+    else:
+        median_h = None
+        qualifying = 0
+        source = "none"
+
+    # =========================================================================
+    # LAYER 3: Maintenance-based inference (when no direct signal available)
+    # =========================================================================
+    # If we have no direct response data but the project is actively maintained,
+    # we can infer that the maintainer is responsive to *some* channel (even if
+    # not enough to register in our window). This is weaker than direct TTFR but
+    # better than returning "?". Inferred grades are capped at C.
+    maintenance_signal = "direct"
+    inferred_from = ""
+    if median_h is None:
+        # Need maintenance data to infer. We call axis_maintenance() here.
+        maint_axis = axis_maintenance(repo)
+        maint_grade = maint_axis.grade
+        if maint_grade in ("A", "B"):
+            # Active maintenance implies someone is responsive to *something*.
+            # Conservative inference: C (not fast, but not abandoned).
+            median_h = bands["C"] / 2  # midpoint of the C band, strictly below C threshold
+            qualifying = 0
+            maintenance_signal = "inferred"
+            inferred_from = f"maintenance={maint_grade}"
+        elif maint_grade == "C":
+            median_h = bands["D"] / 2  # midpoint of D band
+            qualifying = 0
+            maintenance_signal = "inferred"
+            inferred_from = f"maintenance={maint_grade}"
+        elif maint_grade == "D":
+            median_h = bands["E"] / 2  # midpoint of E band
+            qualifying = 0
+            maintenance_signal = "inferred"
+            inferred_from = f"maintenance={maint_grade}"
+        # E grade = archived, already handled above
+
+    # =========================================================================
+    # ? gates (checked after layer-3 inference)
+    # =========================================================================
     if repo_age_days is not None and repo_age_days < 180 and (issues_365 + prs_365) < 6:
         return Axis.unknown("too_young", raw={"window_offset_days": offset},
                             evidence=f"age {repo_age_days:.0f}d<180 & thin traffic -> too_young")
@@ -680,7 +765,7 @@ def axis_responsiveness(repo: RepoData) -> Axis:
                     has = True
                     break
             if not has and ((n.get("timelineItems") or {}).get("nodes") or []):
-                for tl in (n.get("timelineItems") or {}).get("nodes") or []:
+                for tl in (n.get("timelineItems") or {}).get("nodes" or []):
                     if not is_bot_author((tl.get("actor") or {}).get("login")):
                         has = True
                         break
@@ -689,25 +774,34 @@ def axis_responsiveness(repo: RepoData) -> Axis:
             any_resp = any_resp or has
         zero_response = not any_resp
 
-    median_h = _median(ttfrs) if ttfrs else None
     raw = {
-        "median_ttfr_hours": _round(median_h, 1),
+        "median_ttfr_hours": _round(median_h, 1) if median_h is not None else None,
         "qualifying_issues": qualifying,
         "band": _band_label(band),
         "window_offset_days": offset,
+        "source": source,
+        "inferred": maintenance_signal == "inferred",
     }
 
-    if zero_response and qualifying == 0:
+    if zero_response and qualifying == 0 and maintenance_signal != "inferred":
         return Axis("E", raw, evidence="zero non-bot response to last >=10 old issues -> E")
 
     if median_h is None:
-        # Traffic exists but no qualifying issues landed in the seeded window.
         if zero_response:
             return Axis("E", raw, evidence="no in-window issues + zero-response on old issues -> E")
         return Axis.unknown("no_traffic", raw=raw,
                             evidence="traffic present but 0 qualifying issues in window -> no_traffic")
 
     # A-E by median TTFR with type-aware bands.
+    if maintenance_signal == "inferred":
+        # Inferred grades are capped at C (we don't want to claim A/B without direct data)
+        if median_h < bands["C"]:
+            return Axis("C", raw, evidence=f"inferred from {inferred_from} -> C (capped)")
+        elif median_h < bands["D"]:
+            return Axis("D", raw, evidence=f"inferred from {inferred_from} -> D (capped)")
+        else:
+            return Axis("E", raw, evidence=f"inferred from {inferred_from} -> E")
+
     if median_h < bands["A"] and qualifying >= bands["A_min_issues"]:
         return Axis("A", raw, evidence=f"median TTFR {median_h:.1f}h <{bands['A']}h & {qualifying}>={bands['A_min_issues']} issues -> A")
     if median_h < bands["B"] and qualifying >= bands["B_min_issues"]:
@@ -717,8 +811,6 @@ def axis_responsiveness(repo: RepoData) -> Axis:
     if median_h < bands["D"]:
         return Axis("D", raw, evidence=f"median TTFR {median_h:.1f}h <{bands['D']}h -> D")
     return Axis("E", raw, evidence=f"median TTFR {median_h:.1f}h >={bands['D']}h -> E")
-
-
 def _band_label(band: str) -> str:
     return "relaxed_solo" if band == "relaxed" else "default"
 

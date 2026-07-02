@@ -118,6 +118,7 @@ You reach for it specifically when your target is the interactive *click-select*
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (2026-06).** Last push 2026-05 — recently touched, so **active** in the loose sense, but there are **no tagged releases** and no changelog, so version discipline is absent. [推断]
 - **Governance / bus factor.** A **single-author** project (`MgArcher`, ~1.6k stars) on a personal account — a clear bus-factor risk; high stars on a solo repo is a flag, not a guarantee of continuity. [推断]
 - **Age & Lindy verdict.** Created 2020-08 (~6 years) and still touched ⇒ a **moderate** Lindy signal — it has persisted for years, but a solo maintainer and a CAPTCHA arms-race domain cap how far that prior carries. [推断]

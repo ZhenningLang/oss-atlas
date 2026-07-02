@@ -115,6 +115,7 @@ It's a reasonable pick when you specifically want a *scriptable* Node.js proxy w
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (2026-06).** Coasting/effectively abandoned: master code frozen since 2020-06, newest GitHub release v4.0.5, 248 open issues. The 2023-03 `pushed_at` reflects pushes to stale feature branches (20 branches: `typescript`, `optimze_memory_usage`, `feat/websocket_hooks`, several `fix/*`) that never merged to master — not real maintenance. [推断]
 - **Governance / backing.** Owned by the Alibaba GitHub org, but heavily single-author in practice (`ottomao` ~168 commits, far ahead of the rest). Big-corp ownership has **not** meant active upkeep — a reminder that org backing ≠ liveness.
 - **Age × Lindy.** Created 2014 (~12 years) — old, but **not currently active**, so Lindy doesn't apply: longevity without liveness is not a safety signal. [推断]

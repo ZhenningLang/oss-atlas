@@ -16,28 +16,20 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T08:36:26Z
-  overall: A
-  overall_score: 4.0
-  scored_axes: 6
+  computed_at: 2026-07-02T12:50:21Z
+  overall: "?"
+  overall_score: null
+  scored_axes: 1
   capped: false
   cap_reason: null
   needs_human_review: true
   axes:
     maintenance:
-      grade: A
-      raw:
-        archived: false
-        last_commit_age_days: 0
-        active_weeks_13: 13
-        carve_out: null
+      grade: "?"
+      raw: {}
     responsiveness:
-      grade: A
-      raw:
-        median_ttfr_hours: 10.3
-        qualifying_issues: 41
-        band: relaxed_solo
-        window_offset_days: 1
+      grade: "?"
+      raw: {}
     adoption:
       grade: A
       raw:
@@ -47,28 +39,22 @@ health:
         downloads_last_month: 5934345
         graph_tier: C
         volume_tier: A
-        cross_check_divergence: 4.43
+        cross_check_divergence: 4.42
     longevity:
-      grade: A
-      raw:
-        repo_age_days: 2970
-        last_commit_age_days: 0
-        cohort: tool
+      grade: "?"
+      raw: {}
     governance:
-      grade: A
-      raw:
-        active_maintainers_12mo: 91
-        top1_share: 0.33
-        top3_share: 0.594
-        window_source: stats_contributors
-        carve_out: null
+      grade: "?"
+      raw: {}
     risk_license:
-      grade: A
-      raw:
-        spdx_id: MIT
-        permissiveness: permissive
-        relicense_36mo: false
-        content_license: null
+      grade: "?"
+      raw: {}
+  unknowns:
+    maintenance: { reason: recency_unreadable }
+    responsiveness: { reason: no_traffic }
+    longevity: { reason: not_found }
+    governance: { reason: empty_or_gated }
+    risk_license: { reason: repo_unreachable }
 ---
 
 # Deno
@@ -119,6 +105,7 @@ health:
 
 ## 健康度与可持续性
 
+- **响应速度**：无法计算——no_traffic。
 - **维护**：非常活跃——截至 2026-07 每日推送，v2 版本线成熟，核心团队响应迅速（1,354 个开放 issue）。[推断]
 - **治理**：由 `denoland` 组织所有，Ryan Dahl（Node.js 创建者）是关键人物。项目有清晰的技术愿景和多个核心贡献者。bus factor 合理。
 - **背书**：Deno Land Inc. 是项目背后的商业实体；Deno Deploy 是其收入来源。该公司已获得风险投资，这既带来稳定性，也可能导致未来方向冲突。[未验证]

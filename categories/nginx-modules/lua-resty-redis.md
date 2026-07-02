@@ -113,6 +113,7 @@ It's the standard way to reach Redis from `access_by_lua`/`content_by_lua` handl
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (2026-06) — active.** Last push **2026-05**; tag line through **v0.33** (the GitHub releases UI lists an older v0.29 from 2020, but the tag list and recent push show ongoing work). README states "considered production ready." Not archived. [推断]
 - **Governance / backing.** `Organization`-owned (OpenResty / OpenResty Inc.); same core team as ngx_lua (agentzh et al.). Development is **concentrated in the OpenResty core** — vendor/founder-led, a bus-factor consideration, but it's first-party tooling for the platform it targets, which lowers abandonment risk. [推断]
 - **Age × Lindy.** Created **2012-02** (~14 years) and **still maintained** ⇒ a **strong Lindy** signal; it's the canonical, long-proven Redis driver for the OpenResty ecosystem, embedded under major gateways. Old-and-active. [推断]

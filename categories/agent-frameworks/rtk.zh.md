@@ -16,54 +16,39 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T08:43:29Z
-  overall: B
-  overall_score: 3.0
-  scored_axes: 5
+  computed_at: 2026-07-02T12:48:32Z
+  overall: "?"
+  overall_score: null
+  scored_axes: 0
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: A
-      raw:
-        archived: false
-        last_commit_age_days: 1
-        active_weeks_13: 13
-        carve_out: null
+      grade: "?"
+      raw: {}
     responsiveness:
-      grade: C
-      raw:
-        median_ttfr_hours: 7.3
-        qualifying_issues: 2
-        band: relaxed_solo
-        window_offset_days: 7
+      grade: "?"
+      raw: {}
     adoption:
       grade: "?"
       raw: {}
     longevity:
-      grade: D
-      raw:
-        repo_age_days: 161
-        last_commit_age_days: 1
-        cohort: tool
+      grade: "?"
+      raw: {}
     governance:
-      grade: A
-      raw:
-        active_maintainers_12mo: 97
-        top1_share: 0.276
-        top3_share: 0.59
-        window_source: stats_contributors
-        carve_out: null
+      grade: "?"
+      raw: {}
     risk_license:
-      grade: A
-      raw:
-        spdx_id: Apache-2.0
-        permissiveness: permissive
-        relicense_36mo: false
-        content_license: null
+      grade: "?"
+      raw: {}
   unknowns:
+    maintenance: { reason: recency_unreadable }
+    responsiveness: { reason: no_traffic }
     adoption: { reason: ambiguous }
+    longevity: { reason: not_found }
+    governance: { reason: empty_or_gated }
+    risk_license: { reason: repo_unreachable }
 ---
 
 # RTK
@@ -111,6 +96,7 @@ health:
 
 ## 健康度与可持续性
 
+- **响应速度**：无法计算——no_traffic。
 - **维护**：活跃——定期提交与发布。67k star、4.1k fork，按 star 量级来看开放 issue 数相对较少。
 - **治理**：由 rtk-ai 所有，一家专注于 AI 开发者工具的组织。看起来是小而专注的团队。
 - **背书**：资金状况未知——该组织似乎专为 RTK 而设。无可见基金会或大型企业背书。

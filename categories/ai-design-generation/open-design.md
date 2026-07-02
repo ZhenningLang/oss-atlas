@@ -119,6 +119,7 @@ It also fits when you want one design surface that plugs into *whatever* agent y
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (as of 2026-06):** last pushed 2026-06, not archived, with a rapid pre-1.0 release cadence (v0.11.0). Clearly **active**, but ~457 open issues against a young repo signals both heavy use and a fast-moving, not-yet-settled surface. [推断]
 - **Governance & bus factor:** `Organization`-owned (nexu-io) rather than a lone maintainer, which is a mild bus-factor improvement over a personal repo; but it is a small/unproven org, not a foundation or established vendor — roadmap ownership and funding model are unverified. [未验证]
 - **Age & Lindy verdict:** created 2026-04, so age < 1 year — **very young and heavily hyped** (~72k stars on a months-old repo). Stars here reflect a launch wave, not durability; this is the opposite of a Lindy-safe bet, so weigh it as "promising but unproven." [未验证]

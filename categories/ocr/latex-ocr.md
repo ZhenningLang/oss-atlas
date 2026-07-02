@@ -108,6 +108,7 @@ You reach for it specifically when the unit of work is *a math equation, already
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (as of 2026-06):** **coasting.** Last pushed 2025-01-18 — roughly 1.5 years idle; not archived, but no recent commits, and open issues (~159) accumulate without active triage. [未验证] Treat it as "works as-is," not "actively developed."
 - **Governance / bus factor:** a **single-author** project (owner `lukas-blecher`, a personal User account, not an org or foundation). One-person bus factor — if the author stays away, there is no team or sponsor to pick it up. [推断]
 - **Age & Lindy verdict:** created 2020-12 (~6 years old). The age gives it some Lindy weight *and* it's a genuinely useful, well-known tool in its niche — but Lindy only counts with **age × still-active**, and the "still-active" half is weak here. A long-lived but now-idle single-author repo is a *usable* bet, not a *durable* one.

@@ -16,21 +16,17 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T08:32:34Z
-  overall: B
-  overall_score: 2.8
-  scored_axes: 5
+  computed_at: 2026-07-02T12:43:29Z
+  overall: "?"
+  overall_score: null
+  scored_axes: 1
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: A
-      raw:
-        archived: false
-        last_commit_age_days: 0
-        active_weeks_13: 13
-        carve_out: null
+      grade: "?"
+      raw: {}
     responsiveness:
       grade: "?"
       raw: {}
@@ -46,28 +42,20 @@ health:
         cross_check_divergence: null
         archived: false
     longevity:
-      grade: A
-      raw:
-        repo_age_days: 1262
-        last_commit_age_days: 0
-        cohort: tool
+      grade: "?"
+      raw: {}
     governance:
-      grade: A
-      raw:
-        active_maintainers_12mo: 50
-        top1_share: 0.38
-        top3_share: 0.623
-        window_source: stats_contributors
-        carve_out: null
+      grade: "?"
+      raw: {}
     risk_license:
-      grade: C
-      raw:
-        spdx_id: GPL-3.0
-        permissiveness: weak_file_copyleft
-        relicense_36mo: false
-        content_license: null
+      grade: "?"
+      raw: {}
   unknowns:
+    maintenance: { reason: recency_unreadable }
     responsiveness: { reason: no_traffic }
+    longevity: { reason: not_found }
+    governance: { reason: empty_or_gated }
+    risk_license: { reason: repo_unreachable }
 ---
 
 # ComfyUI
@@ -125,6 +113,7 @@ You're a digital artist or AI researcher who wants to generate, edit, and upscal
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (2026-07).** Last pushed 2026-07-01 with active daily commits; the project is under rapid development with frequent releases and an active Discord community. [推断]
 - **Governance / bus factor.** Now owned by `Comfy-Org` (a dedicated GitHub organization), moved from the original single-author `comfyanonymous` account — a positive signal for governance maturation. The core team and community custom-node ecosystem share maintenance burden. [推断]
 - **Age & Lindy verdict.** ~2.5 years old (created 2023-01) and extremely active. It is young but has become the dominant open-source diffusion workflow tool; the Lindy signal is **moderate but strengthening** given its rapid adoption and ecosystem growth. [推断]

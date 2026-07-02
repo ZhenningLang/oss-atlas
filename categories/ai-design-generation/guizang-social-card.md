@@ -93,6 +93,7 @@ It fits best when you want a strong, opinionated aesthetic baked in and an artif
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — type_na.
 - **Maintenance (2026-06):** [推断] active but thin — last push 2026-05-27, **no tagged release at all** (pins to a moving `main`), open-issue count ~5. For a one-person skill pack that means layout names, presets, and the brief flow can shift without any versioned notice.
 - **Governance & bus factor:** [推断] **single-maintainer, `User`-owned (`op7418`), ~4k stars** — a bus-factor flag, though milder than its sibling `guizang-ppt` (~19k) since the audience is smaller. No org or co-maintainer backstop; this is the same author's sibling to `guizang-ppt` and shares its sustainability profile. Mitigant: each card is a self-contained `.html` you own outright, so abandonment only stops future updates.
 - **Age & Lindy:** [未验证] repo created ~2026-05, ~1 month old as of 2026-06 — **brand-new; zero Lindy prior.** No release line, fast-moving — treat the contract (28 layouts, 10 presets, canvas sizes) as unstable and verify against the current repo.

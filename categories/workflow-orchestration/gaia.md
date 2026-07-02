@@ -115,6 +115,7 @@ Today this is a *read-only reference*: study it if you're researching the "pipel
 
 ## Health & viability
 
+- **Responsiveness**: Grade E.
 - **Maintenance (2026-06).** **Archived** — the repo is read-only. Last release v0.2.9 in 2022-01; last push 2026-01 is consistent with an archive/housekeeping action, not active development. **Abandoned** for practical purposes. [推断]
 - **Governance / bus factor.** Lived under the `gaia-pipeline` org but driven by a small core (michelvocks, Skarlso); with the project archived, there is effectively **no active maintainer or roadmap**. [推断]
 - **Age & Lindy verdict.** Created 2017-12 (~8 years) but **archived** ⇒ Lindy **fails**: age without ongoing activity is a negative signal, not a positive one. A long-abandoned project is *less* safe to bet on, not more. [推断]

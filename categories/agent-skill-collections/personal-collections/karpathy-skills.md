@@ -95,6 +95,7 @@ You reach for it as a drop-in base layer rather than a big multi-skill collectio
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — type_na.
 - **Maintenance (2026-06):** lightly maintained / near-coasting — last pushed 2026-04, ~2 months stale as of 2026-06, with ~126 open issues and no tagged releases. For a ~65-line principles file there's little to maintain, but staleness + open issues suggest attention has tapered.
 - **Governance & bus factor:** `Organization`-owned (multica-ai), not a single personal account, which is marginally better for continuity than the User-owned packs here — but it's still a small org and a thin single-file pack. The content is a third party's distillation of Karpathy's public remarks, **not authored or endorsed by Karpathy**; the name is attribution of inspiration, not authorship.
 - **Age & Lindy verdict:** created 2026-01, ~5 months old as of 2026-06 — young, and its ~183k stars reflect the famous name far more than any proven longevity. Star count ≠ Lindy: there's no track record, and the substance is four generic principles. Unproven.

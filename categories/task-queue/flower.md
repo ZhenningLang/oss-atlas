@@ -115,6 +115,7 @@ You reach for Flower specifically because it's the de-facto, purpose-built monit
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (2026-06).** Last pushed 2026-06-22; the repo is actively maintained, though it favors a rolling/stable model over frequent tagged releases — **active**, not abandoned. Not archived. [推断]
 - **Governance / bus factor.** Owned by an **individual account** (`mher`) with ~7.2k stars — a high-stars, single-owner project is a **bus-factor flag**: contribution comes partly from the Celery maintainer circle (ask, auvipy), but the namespace and final say rest with one person. [推断]
 - **Age & Lindy verdict.** Created 2012-07, ~14 years old and **still active** ⇒ a **strong Lindy** signal; it has been *the* Celery dashboard for over a decade and is the obvious default. [推断]

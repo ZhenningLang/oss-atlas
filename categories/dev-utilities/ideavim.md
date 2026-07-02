@@ -117,6 +117,7 @@ You reach for it specifically when the IDE is non-negotiable (large JVM/Kotlin/G
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — issues_disabled.
 - **Maintenance (2026-06).** Very active — last push 2026-06, frequent commits, led by a small JetBrains team (AlexPl292 and others) with thousands of commits. Distributed via Marketplace rather than GitHub Releases, so "no releases" on GitHub is expected, not a staleness signal. Not archived. [推断]
 - **Governance / backing.** Owned and maintained by **JetBrains** (an Organization, the IDE vendor itself) — first-party, well-funded stewardship with a direct incentive to keep it working across IDE releases. Among the strongest backing profiles for an IDE plugin. [推断]
 - **Age & Lindy.** Created 2011; ~15 years old and **still actively shipping** ⇒ a **strong Lindy** signal — it has tracked the IntelliJ Platform across many major versions and remains the default Vim layer for JetBrains. [推断]

@@ -113,6 +113,7 @@ health:
 
 ## 健康度与可持续性
 
+- **响应速度**：无法计算——no_traffic。
 - **维护（2026-06）——活跃。** 最后 push 在 **2026-05**；tag 线到 **v0.33**（GitHub releases 界面列的是 2020 年的较旧 v0.29，但 tag 列表和近期 push 显示仍在干）。README 写「considered production ready」。未归档。[推断]
 - **治理 / 背书。** `Organization` 所有（OpenResty / OpenResty Inc.）；与 ngx_lua 同一核心团队（agentzh 等）。开发**集中在 OpenResty 核心**——厂商/创始人主导，是个 bus-factor 考量，但它是其所服务平台的第一方工具，这降低了被弃风险。[推断]
 - **年龄 × Lindy。** 2012-02 创建（约 14 年）且**仍在维护** ⇒ **强 Lindy** 信号；它是 OpenResty 生态里规范、久经验证的 Redis 驱动，嵌在主流网关底下。老而活跃。[推断]

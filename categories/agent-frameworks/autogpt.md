@@ -16,51 +16,39 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T08:33:02Z
-  overall: A
-  overall_score: 3.5
-  scored_axes: 4
+  computed_at: 2026-07-02T12:45:41Z
+  overall: "?"
+  overall_score: null
+  scored_axes: 0
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: A
-      raw:
-        archived: false
-        last_commit_age_days: 7
-        active_weeks_13: 13
-        carve_out: null
+      grade: "?"
+      raw: {}
     responsiveness:
-      grade: B
-      raw:
-        median_ttfr_hours: 48.1
-        qualifying_issues: 27
-        band: default
-        window_offset_days: 5
+      grade: "?"
+      raw: {}
     adoption:
       grade: "?"
       raw: {}
     longevity:
-      grade: B
-      raw:
-        repo_age_days: 1204
-        last_commit_age_days: 7
-        cohort: framework
+      grade: "?"
+      raw: {}
     governance:
-      grade: A
-      raw:
-        active_maintainers_12mo: 18
-        top1_share: 0.292
-        top3_share: 0.562
-        window_source: stats_contributors
-        carve_out: null
+      grade: "?"
+      raw: {}
     risk_license:
       grade: "?"
       raw: {}
   unknowns:
+    maintenance: { reason: recency_unreadable }
+    responsiveness: { reason: no_traffic }
     adoption: { reason: ambiguous }
-    risk_license: { reason: license_unparsed }
+    longevity: { reason: not_found }
+    governance: { reason: empty_or_gated }
+    risk_license: { reason: repo_unreachable }
 ---
 
 # AutoGPT
@@ -113,6 +101,7 @@ You are a developer or team that needs to automate complex, multi-step tasks wit
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance**: Grade A — pushed within the past 7 days as of 2026-07, with 13 active weeks out of 13. The 454 open issues suggest a focused, manageable community.
 - **Governance**: Grade A — owned by Significant Gravitas, with 18 active maintainers in the past 12 months. The top maintainer holds 29.2% of commits and the top three hold 56.2%, indicating a distributed core team.
 - **Longevity**: Grade B — 1,204 days old (created 2023-03), giving it a ~3.3-year track record. The project has pivoted from its original "autonomous GPT" demo to a full platform, demonstrating adaptability but also direction shifts.

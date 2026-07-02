@@ -115,6 +115,7 @@ health:
 
 ## 健康度与可持续性
 
+- **响应速度**：无法计算——no_traffic。
 - **维护（2026-06）。** 吃老本/实质废弃：master 代码自 2020-06 冻结，最新 GitHub release v4.0.5，248 个 open issue。2023-03 的 `pushed_at` 反映的是推到陈旧 feature 分支（20 个分支：`typescript`、`optimze_memory_usage`、`feat/websocket_hooks`、若干 `fix/*`）、从未合进 master 的提交——不是真维护。[推断]
 - **治理 / 背书。** 归属阿里 GitHub 组织，但实际上严重单作者（`ottomao` 约 168 次提交，远超其余）。大厂所有**并未**意味着活跃维护——提醒：组织背书 ≠ 活着。
 - **年龄 × Lindy。** 创建于 2014（约 12 年）——老，但**当前不活跃**，所以 Lindy 不适用：有寿命无活力不是安全信号。[推断]

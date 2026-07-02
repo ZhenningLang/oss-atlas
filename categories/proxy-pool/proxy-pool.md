@@ -115,6 +115,7 @@ It fits best when proxy *quality* is negotiable but you need *rotation and fresh
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (2026-06).** Repo is **not archived** and was last pushed 2026-06-15, so commit activity is recent — but the **last tagged release is 2.4.1 from 2023-02**; treat it as actively-tended-but-not-actively-released rather than fast-moving. [推断]
 - **Governance / bus factor.** A **single-maintainer User repo** (owner jhao104, ~533 of the commits; the next contributor has ~13) — that's a clear **bus-factor flag**: roadmap and continuity rest on one person. [推断]
 - **Age & Lindy verdict.** Created **2016-11 (~9.5 years)** and still receiving commits ⇒ a **decent Lindy** signal for its niche — long-lived and well-known in the Chinese scraping community, not a hyped newcomer. [推断]

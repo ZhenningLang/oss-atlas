@@ -118,6 +118,7 @@ You also reach for it when you want to *fine-tune* a sentence embedder on your o
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (2026-06).** Last pushed 2026-02; latest tag v1.2.9. Commit cadence has slowed from its earlier peak but the repo is **not archived** and saw activity within the last few months — call it lightly-maintained/active, not abandoned. [推断]
 - **Governance / bus factor.** A **single-maintainer** project (shibing624) with a long tail of minor contributors — the bus factor is effectively one. High stars (~5.0k) on a solo project is social proof of usefulness, not of sustained support. [推断]
 - **Age & Lindy verdict.** Created 2019-11, ~6.5 years old and still receiving updates — a moderate Lindy signal: it has outlived the hype cycle of many embedding libraries and remains usable, though the single-maintainer cadence tempers the bet. [推断]

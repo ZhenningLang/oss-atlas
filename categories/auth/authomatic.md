@@ -119,6 +119,7 @@ You reach for it when you want a *thin, embeddable* social-login client that doe
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (2026-06).** Last pushed 2025-12; there is recent activity but cadence is slow and the issue count is non-trivial. Reads as **maintained but low-velocity**, not abandoned. Not archived. [推断]
 - **Governance / bus factor.** Hosted under the `authomatic` GitHub **organization** with multiple contributors over time, though clearly led by a small core. Org ownership is a mild positive over a personal account. [推断]
 - **Age & Lindy verdict.** ~13 years old (created 2013-02) and still receiving occasional updates ⇒ a **reasonable Lindy** signal: long-lived and stable, tempered by low recent velocity. [推断]

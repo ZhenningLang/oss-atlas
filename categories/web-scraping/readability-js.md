@@ -116,6 +116,7 @@ You also reach for it when you want a cheap pre-check: `isProbablyReaderable(doc
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (2026-06).** Last pushed 2026-01 — within the last several months, so **maintained but low-cadence**. v0.6.0 is the published version; this is a slow-moving, stable library rather than a fast-churning one. Not archived. [推断]
 - **Governance / backing.** Owned by **Mozilla** and used in Firefox Reader View — a strong institutional backer with a real product dependency on it, which is a meaningful longevity signal beyond a hobby project. [推断]
 - **Age × Lindy (2026-06).** Created 2015-02 — ~11 years old and **still maintained** ⇒ a **strong Lindy** signal; this is a long-proven, widely embedded extractor, not a newcomer. [推断]

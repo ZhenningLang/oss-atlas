@@ -119,6 +119,7 @@ You also reach for this specific repo when you want the canonical, minimal refer
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — type_na.
 - **Maintenance (as of 2026-06):** last pushed ~2026-03 but effectively a **frozen reference** — a fixed checkpoint set and infrequent commits, not an evolving codebase. [推断] Treat it as coasting-by-design: it still installs and runs, but don't expect new backbones, fixes, or a versioned PyPI release here.
 - **Governance / backing:** organization-owned by OpenAI — the original paper repo, not a community project. That gives provenance (these are *the* reference weights/preprocessing) but no commitment to ongoing maintenance; the live ecosystem moved to OpenCLIP and Hugging Face `transformers`.
 - **Age & Lindy verdict (created 2020-12, ~6 yr):** old *and still widely used*, which is a strong Lindy signal for the **CLIP idea and these weights** as a stable baseline. The verdict is split: the *concept/checkpoints* are Lindy-proven and safe to build on; *this specific repo as a maintained dependency* is not — its longevity is "famous and frozen," not "actively maintained."

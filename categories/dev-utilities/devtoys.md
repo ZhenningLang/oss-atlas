@@ -115,6 +115,7 @@ It also fits when you want the same conveniences in automation: DevToys ships a 
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (2026-06):** **active but in prerelease limbo** — repo pushed 2026-02; the cross-platform 2.x line ships only as **prerelease** builds (latest v2.0.9.0, 2026-01), and the last *stable* GitHub release is the Windows-only 1.0.13.0 (2023). Developing, but with no current stable tag. [未验证]
 - **Governance & bus factor:** `Organization`-owned (`DevToys-app`) with ~31k stars — community/org project, no large vendor behind it; a small maintainer team rather than a single person. [推断]
 - **Age & Lindy (~5yr, created 2021-09):** **mid-aged and active** — enough history to clear a basic Lindy bar, but the unfinished 2.x stabilization tempers the verdict: proven concept, not-yet-frozen current line.

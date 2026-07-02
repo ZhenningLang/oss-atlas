@@ -16,21 +16,17 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T08:47:25Z
-  overall: C
-  overall_score: 2.4
-  scored_axes: 5
+  computed_at: 2026-07-02T12:47:37Z
+  overall: "?"
+  overall_score: null
+  scored_axes: 1
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: C
-      raw:
-        archived: false
-        last_commit_age_days: 99
-        active_weeks_13: 0
-        carve_out: null
+      grade: "?"
+      raw: {}
     responsiveness:
       grade: "?"
       raw: {}
@@ -45,28 +41,20 @@ health:
         volume_tier: C
         cross_check_divergence: null
     longevity:
-      grade: B
-      raw:
-        repo_age_days: 653
-        last_commit_age_days: 99
-        cohort: tool
+      grade: "?"
+      raw: {}
     governance:
-      grade: D
-      raw:
-        active_maintainers_12mo: 8
-        top1_share: 0.975
-        top3_share: 0.991
-        window_source: stats_contributors
-        carve_out: null
+      grade: "?"
+      raw: {}
     risk_license:
-      grade: A
-      raw:
-        spdx_id: Apache-2.0
-        permissiveness: permissive
-        relicense_36mo: false
-        content_license: null
+      grade: "?"
+      raw: {}
   unknowns:
+    maintenance: { reason: recency_unreadable }
     responsiveness: { reason: no_traffic }
+    longevity: { reason: not_found }
+    governance: { reason: empty_or_gated }
+    risk_license: { reason: repo_unreachable }
 ---
 
 # olmOCR
@@ -121,6 +109,7 @@ You're a machine learning researcher or data engineer preparing a large-scale co
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance:** Active — last push 2026-03-25, v0.4.0 released 2025-10 with a new model release. The Allen Institute for AI (AI2) has a strong track record in open-source ML research. [未验证]
 - **Governance:** Organization-owned (`allenai`), a well-known research nonprofit with substantial funding and a history of maintaining open-source projects (OLMo, etc.). [推断]
 - **Backing:** AI2 (Allen Institute for AI) — a nonprofit research institute with consistent funding and a strong commitment to open science. [推断]

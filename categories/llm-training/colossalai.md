@@ -120,6 +120,7 @@ You reach for it when the bottleneck is *scale and cost*: fitting a model that d
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance — active (as of 2026-06).** Repo pushed 2026-05; ~41k stars and an ongoing release stream against a fast-moving training ecosystem. Not archived. The ~500 open issues are a normal load for a large distributed-systems framework. [未验证]
 - **Governance & backing — single vendor (HPC-AI Tech).** Organization-owned by HPC-AI Technology, the company commercializing the project (Colossal-AI was its flagship OSS). Roadmap is vendor-driven; this is a company-backed project, not a foundation one, so longevity tracks the company's commercial health. [推断]
 - **Age & Lindy — moderate-to-strong.** Created 2021-10, ~5 years old and still actively maintained (age × still-active) — old enough to have survived multiple LLM-training hype cycles, which is a meaningful Lindy signal for infrastructure. Not as entrenched as DeepSpeed/Megatron-LM, but well past the unproven stage.

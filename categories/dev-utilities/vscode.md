@@ -16,21 +16,17 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T08:41:04Z
-  overall: B
-  overall_score: 3.4
-  scored_axes: 5
+  computed_at: 2026-07-02T12:46:22Z
+  overall: "?"
+  overall_score: null
+  scored_axes: 1
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: A
-      raw:
-        archived: false
-        last_commit_age_days: 0
-        active_weeks_13: 13
-        carve_out: null
+      grade: "?"
+      raw: {}
     responsiveness:
       grade: "?"
       raw: {}
@@ -45,28 +41,20 @@ health:
         volume_tier: D
         cross_check_divergence: null
     longevity:
-      grade: A
-      raw:
-        repo_age_days: 3955
-        last_commit_age_days: 0
-        cohort: app
+      grade: "?"
+      raw: {}
     governance:
-      grade: A
-      raw:
-        active_maintainers_12mo: 128
-        top1_share: 0.067
-        top3_share: 0.181
-        window_source: stats_contributors
-        carve_out: null
+      grade: "?"
+      raw: {}
     risk_license:
-      grade: A
-      raw:
-        spdx_id: MIT
-        permissiveness: permissive
-        relicense_36mo: false
-        content_license: null
+      grade: "?"
+      raw: {}
   unknowns:
+    maintenance: { reason: recency_unreadable }
     responsiveness: { reason: no_traffic }
+    longevity: { reason: not_found }
+    governance: { reason: empty_or_gated }
+    risk_license: { reason: repo_unreachable }
 ---
 
 # VS Code
@@ -116,6 +104,7 @@ You're a developer who needs a fast, cross-platform code editor that supports do
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance**: Extremely active — Microsoft pushes monthly iteration plans, publishes roadmaps, and ships updates regularly. 187k stars, 18,939 open issues.
 - **Governance**: Owned by Microsoft, one of the world's largest tech companies. The roadmap is public and the project is well-funded.
 - **Backing**: Microsoft is a committed vendor with a strong track record of long-term investment in developer tools.

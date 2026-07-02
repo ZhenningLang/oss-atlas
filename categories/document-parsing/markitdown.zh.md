@@ -16,28 +16,20 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T08:40:50Z
-  overall: A
-  overall_score: 3.5
-  scored_axes: 6
+  computed_at: 2026-07-02T12:47:33Z
+  overall: "?"
+  overall_score: null
+  scored_axes: 1
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: B
-      raw:
-        archived: false
-        last_commit_age_days: 36
-        active_weeks_13: 3
-        carve_out: null
+      grade: "?"
+      raw: {}
     responsiveness:
-      grade: A
-      raw:
-        median_ttfr_hours: 35.8
-        qualifying_issues: 33
-        band: default
-        window_offset_days: 2
+      grade: "?"
+      raw: {}
     adoption:
       grade: A
       raw:
@@ -49,26 +41,20 @@ health:
         volume_tier: A
         cross_check_divergence: 1.01
     longevity:
-      grade: C
-      raw:
-        repo_age_days: 596
-        last_commit_age_days: 36
-        cohort: library
+      grade: "?"
+      raw: {}
     governance:
-      grade: A
-      raw:
-        active_maintainers_12mo: 16
-        top1_share: 0.321
-        top3_share: 0.536
-        window_source: stats_contributors
-        carve_out: null
+      grade: "?"
+      raw: {}
     risk_license:
-      grade: A
-      raw:
-        spdx_id: MIT
-        permissiveness: permissive
-        relicense_36mo: false
-        content_license: null
+      grade: "?"
+      raw: {}
+  unknowns:
+    maintenance: { reason: recency_unreadable }
+    responsiveness: { reason: no_traffic }
+    longevity: { reason: not_found }
+    governance: { reason: empty_or_gated }
+    risk_license: { reason: repo_unreachable }
 ---
 
 # MarkItDown
@@ -118,6 +104,7 @@ health:
 
 ## 健康度与可持续性
 
+- **响应速度**：无法计算——no_traffic。
 - **维护**：活跃——上次推送为 2026-06-24，表明近期仍在开发。项目虽年轻，但由微软 AutoGen 团队出品，暗示组织层面对持续开发的承诺。[未验证]
 - **治理**：由微软（`microsoft` 组织）所有。这提供了强力背书和较低的 bus factor 风险（相比单人项目）。路线图与微软更广泛的 AI 工具生态对齐是合理的。[推断]
 - **背书**：微软 / AutoGen 团队。大型企业背书是长寿和维护的重要积极信号，但也意味着路线图可能优先服务于微软的产品战略。

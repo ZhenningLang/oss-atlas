@@ -112,6 +112,7 @@ It's most useful as a **developer/operator convenience GUI** for inspection and 
 
 ## Health & viability
 
+- **Responsiveness**: Grade E.
 - **Maintenance (2026-06).** **Archived / abandoned.** The author posted an explicit "I have decided to stop maintaining the project" notice; repo is archived, last release v2.1.1 (2023-02), last push 2024-01, 0 open issues (closed out on archival). [推断]
 - **Governance / bus factor.** A **single-author** project (vran-dev, `owner.type: User`) that has now ended — bus factor is effectively zero going forward; any future life depends on community forks. [推断]
 - **Age & Lindy verdict.** Created 2019-09 (~6 years) **but no longer maintained** ⇒ Lindy **does not** apply — it had a solid run, but an abandoned repo's age is not a durability signal. [推断]

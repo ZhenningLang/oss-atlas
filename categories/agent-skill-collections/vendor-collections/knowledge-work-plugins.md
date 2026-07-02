@@ -94,6 +94,7 @@ You reach for it specifically when you want the *knowledge-work* slice of Anthro
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — type_na.
 - **Maintenance** — [未验证] last pushed 2026-06, not archived; activity is current as of 2026-06, so **actively maintained**. No tagged releases; track `main`.
 - **Governance & backing** — [推断] org-owned and **vendor-backed by Anthropic itself** — first-party, known provenance, Apache-2.0. Anthropic official backing is a **strong durability signal** that materially offsets the project's youth, though the roadmap remains the vendor's to set or pivot.
 - **Age & Lindy** — [推断] created 2026-01, so only ~0.5 year old as of 2026-06: **very young, Lindy-unproven**. On age alone this would be a weak bet; vendor backing is what makes it credible despite the youth — bet on the provenance, not the track record.

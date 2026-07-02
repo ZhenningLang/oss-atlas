@@ -94,6 +94,7 @@ This repo gives you that starting set: 154+ subagent markdown files organized in
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — type_na.
 - **Maintenance** — [未验证] last pushed 2026-06, not archived, open issues low (~2); commit activity is current as of 2026-06, so it reads as **actively maintained**. No tagged release means you track a moving `main`, not pinned cuts.
 - **Governance & bus factor** — [推断] org-owned (`VoltAgent`); a curated single-repo persona dump like this typically rides on a small maintainer set, and ~22k stars (2026-06) signal traction, not a governance guarantee. No foundation backing.
 - **Age & Lindy** — [推断] created 2025-07, so ~1 year old as of 2026-06: young-and-hyped, **not yet a Lindy bet**. The `~/.claude/agents/` subagent format it targets is itself recent; treat longevity as unproven before standardizing on it.

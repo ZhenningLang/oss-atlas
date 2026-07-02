@@ -16,28 +16,20 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T08:40:50Z
-  overall: A
-  overall_score: 3.5
-  scored_axes: 6
+  computed_at: 2026-07-02T12:47:33Z
+  overall: "?"
+  overall_score: null
+  scored_axes: 1
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: B
-      raw:
-        archived: false
-        last_commit_age_days: 36
-        active_weeks_13: 3
-        carve_out: null
+      grade: "?"
+      raw: {}
     responsiveness:
-      grade: A
-      raw:
-        median_ttfr_hours: 35.8
-        qualifying_issues: 33
-        band: default
-        window_offset_days: 2
+      grade: "?"
+      raw: {}
     adoption:
       grade: A
       raw:
@@ -49,26 +41,20 @@ health:
         volume_tier: A
         cross_check_divergence: 1.01
     longevity:
-      grade: C
-      raw:
-        repo_age_days: 596
-        last_commit_age_days: 36
-        cohort: library
+      grade: "?"
+      raw: {}
     governance:
-      grade: A
-      raw:
-        active_maintainers_12mo: 16
-        top1_share: 0.321
-        top3_share: 0.536
-        window_source: stats_contributors
-        carve_out: null
+      grade: "?"
+      raw: {}
     risk_license:
-      grade: A
-      raw:
-        spdx_id: MIT
-        permissiveness: permissive
-        relicense_36mo: false
-        content_license: null
+      grade: "?"
+      raw: {}
+  unknowns:
+    maintenance: { reason: recency_unreadable }
+    responsiveness: { reason: no_traffic }
+    longevity: { reason: not_found }
+    governance: { reason: empty_or_gated }
+    risk_license: { reason: repo_unreachable }
 ---
 
 # MarkItDown
@@ -118,6 +104,7 @@ You're building a RAG pipeline, a document QA system, or an agent that needs to 
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance**: Active — last push 2026-06-24, indicating recent development. The project is young but has Microsoft's AutoGen team behind it, which suggests organizational commitment to continued development. [未验证]
 - **Governance**: Owned by Microsoft (`microsoft` organization). This provides strong backing and a low bus-factor risk compared to single-maintainer projects. Roadmap alignment with Microsoft's broader AI tooling ecosystem is plausible. [推断]
 - **Backing**: Microsoft / AutoGen team. A major corporate backing is a significant positive signal for longevity and maintenance, though it also means the roadmap may align with Microsoft's product priorities.

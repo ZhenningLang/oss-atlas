@@ -114,6 +114,7 @@ Its sweet spot is exactly *complex* filter graphs — the README's whole pitch i
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (2026-06).** **Coasting.** Last commit 2024-08 (~2 years stale) and a large open-issue backlog (~525) — not archived and not dead, but clearly not actively driven. Treat it as feature-frozen. [推断]
 - **Governance / bus factor.** Single-maintainer (`kkroening`) `User` repo. 11k stars on a one-author, stalling library is a **bus-factor flag**: popular and useful, but no team or org behind it. The high open-issue count alongside slow commits underlines this.
 - **Age & Lindy verdict.** Created 2017-05, ~9 years old; the API is *stable and proven* (it just wraps FFmpeg's command construction, which doesn't change much), so it remains usable despite stalling — but "old + coasting" is weak Lindy, not strong. [推断]

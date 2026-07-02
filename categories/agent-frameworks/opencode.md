@@ -16,21 +16,17 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T08:35:03Z
-  overall: B
-  overall_score: 3.2
-  scored_axes: 5
+  computed_at: 2026-07-02T12:47:40Z
+  overall: "?"
+  overall_score: null
+  scored_axes: 1
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: A
-      raw:
-        archived: false
-        last_commit_age_days: 0
-        active_weeks_13: 13
-        carve_out: null
+      grade: "?"
+      raw: {}
     responsiveness:
       grade: "?"
       raw: {}
@@ -45,28 +41,20 @@ health:
         volume_tier: C
         cross_check_divergence: null
     longevity:
-      grade: C
-      raw:
-        repo_age_days: 428
-        last_commit_age_days: 0
-        cohort: framework
+      grade: "?"
+      raw: {}
     governance:
-      grade: A
-      raw:
-        active_maintainers_12mo: 475
-        top1_share: 0.161
-        top3_share: 0.451
-        window_source: stats_contributors
-        carve_out: null
+      grade: "?"
+      raw: {}
     risk_license:
-      grade: A
-      raw:
-        spdx_id: MIT
-        permissiveness: permissive
-        relicense_36mo: false
-        content_license: null
+      grade: "?"
+      raw: {}
   unknowns:
+    maintenance: { reason: recency_unreadable }
     responsiveness: { reason: no_traffic }
+    longevity: { reason: not_found }
+    governance: { reason: empty_or_gated }
+    risk_license: { reason: repo_unreachable }
 ---
 
 # OpenCode
@@ -117,6 +105,7 @@ You are a developer who wants AI-assisted coding but refuses to be locked into a
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance**: Grade A — pushed daily as of 2026-07, with 13 active weeks out of 13. The 7,113 open issues indicate high community engagement.
 - **Governance**: Grade A — owned by the `anomalyco` organization, with 475 active maintainers in the past 12 months. The top maintainer holds only 16.1% of commits and the top three hold 45.1%, indicating a well-distributed core team.
 - **Longevity**: Grade C — 428 days old (created 2025-04). No Lindy track record; the project is young but has been active for over a year.

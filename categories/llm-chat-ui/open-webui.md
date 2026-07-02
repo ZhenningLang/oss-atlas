@@ -16,28 +16,20 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T08:28:38Z
-  overall: B
-  overall_score: 3.2
-  scored_axes: 5
+  computed_at: 2026-07-02T12:47:52Z
+  overall: "?"
+  overall_score: null
+  scored_axes: 1
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: A
-      raw:
-        archived: false
-        last_commit_age_days: 1
-        active_weeks_13: 13
-        carve_out: null
+      grade: "?"
+      raw: {}
     responsiveness:
-      grade: A
-      raw:
-        median_ttfr_hours: 0.0
-        qualifying_issues: 11
-        band: relaxed_solo
-        window_offset_days: 2
+      grade: "?"
+      raw: {}
     adoption:
       grade: B
       raw:
@@ -49,24 +41,20 @@ health:
         volume_tier: B
         cross_check_divergence: 1.0
     longevity:
-      grade: B
-      raw:
-        repo_age_days: 999
-        last_commit_age_days: 1
-        cohort: app
+      grade: "?"
+      raw: {}
     governance:
-      grade: C
-      raw:
-        active_maintainers_12mo: 160
-        top1_share: 0.705
-        top3_share: 0.837
-        window_source: stats_contributors
-        carve_out: null
+      grade: "?"
+      raw: {}
     risk_license:
       grade: "?"
       raw: {}
   unknowns:
-    risk_license: { reason: license_unparsed }
+    maintenance: { reason: recency_unreadable }
+    responsiveness: { reason: no_traffic }
+    longevity: { reason: not_found }
+    governance: { reason: empty_or_gated }
+    risk_license: { reason: repo_unreachable }
 ---
 
 # Open WebUI
@@ -116,6 +104,7 @@ You're a privacy-conscious developer or small team who wants a self-hosted chat 
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance**: Very active — pushed daily as of 2026-07, with a responsive issue tracker (242 open issues). [推断]
 - **Governance**: Owned by the open-webui organization; appears to have a dedicated team with reasonable bus factor.
 - **Backing**: No major corporate backing visible; community-driven with active Discord and sponsor program. [未验证]

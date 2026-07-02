@@ -118,6 +118,7 @@ In practice today, that pitch lives on in **thriftpy2**, the maintained fork. Yo
 
 ## Health & viability
 
+- **Responsiveness**: Grade E.
 - **Maintenance (2026-06).** **Abandoned / archived.** Last release `v0.3.9` 2016-08, last push 2018-12, repo flagged `archived` on GitHub. The README explicitly deprecates it in favor of thriftpy2. [推断]
 - **Governance / bus factor.** Lives under the `Thriftpy` GitHub org (Organization owner), originally created at eleme. Maintainer effort has fully moved to the thriftpy2 repo; this one receives nothing. [推断]
 - **Age × Lindy.** Created 2014-02 (~12 years old) but **not still active** — a long-*abandoned* project fails the Lindy test rather than passing it. Longevity here is history, not a safety signal. [推断]

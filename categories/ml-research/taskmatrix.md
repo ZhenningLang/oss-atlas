@@ -103,6 +103,7 @@ It's also a useful teaching reference when you're building your *own* tool-routi
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_data.
 - **Maintenance (as of 2026-06):** last pushed **2024-01-06**, no commits since — **abandoned in practice** (not formally `archived` on GitHub, but functionally dead). [推断] No releases, no fixes, no maintainer to file issues against.
 - **Governance / bus factor:** the repo lives under an individual `User` account (chenfei-wu) though the work originated at Microsoft Research as "Visual ChatGPT." [推断] Whatever institutional backing it once had is gone; there is no team or roadmap behind the current repo.
 - **Age & Lindy verdict (created 2023-03, ~3 yr):** this is the **fails-Lindy** case — old *enough to be stale* but no longer active. Age here is a negative, not a positive: the longer it sits unmaintained against a fast-moving stack (CUDA/PyTorch/`transformers`/`diffusers`), the less likely a clean install even runs. Read it as a historical artifact of the pre-multimodal tool-routing era; do not bet on it.

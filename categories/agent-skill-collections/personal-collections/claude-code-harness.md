@@ -95,6 +95,7 @@ You reach for it specifically when you want the *whole* plan-to-release spine to
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — type_na.
 - **Maintenance (2026-06):** active and fast-moving — last pushed 2026-06, at v4.16.3 with frequent releases, only ~2 open issues. Unlike most personal packs here it actually cuts tagged releases, so you *can* pin a version. Active, not coasting.
 - **Governance & bus factor:** single-maintainer `User`-owned repo (Chachamaru127), no foundation or vendor. ~2k stars is modest, which lowers the bus-factor exposure relative to the headline packs, but the project still rests entirely on one person; roadmap and continuity are theirs alone.
 - **Age & Lindy verdict:** created 2025-12, so ~6 months old as of 2026-06 — young and unproven on longevity. The rapid v4.x release churn signals energy but also instability; behavior baked into prompts/skill routing can shift across version bumps. Not yet a Lindy-safe bet.

@@ -113,6 +113,7 @@ HiveChat is built for exactly this shape. You deploy it once (Docker Compose wit
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance — coasting, not clearly active.** Last pushed **2025-09**, ~9 months stale as of 2026-06; not archived, but a multi-quarter gap with no commits is a coasting/dormancy signal, not "active". There are **no git tags or GitHub releases** at all — version is `0.1.0` from `package.json`, so you track a moving (and idle) `main` with no semver to pin. `[未验证]`
 - **Governance / bus factor — single-vendor, tiny.** **Organization**-owned (`HiveNexus/HiveChat`) but ~1.2k stars [未验证] and early-stage single-vendor pace; the roadmap is one small team's. Low adoption + dormancy is a real abandonment-risk combination here.
 - **Age & Lindy — young (created 2025-02, ~1.3 years) and now quiet.** Not old enough for a Lindy prior, and the recent quiet erodes even that — a young project that stops pushing trends toward the "fails Lindy" quadrant, not the "strong Lindy" one. Verify the repo is still moving before betting a team deployment on it.

@@ -96,6 +96,7 @@ You reach for it when you'd rather adopt one person's battle-tested, end-to-end 
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — type_na.
 - **Maintenance (2026-06):** active — last pushed 2026-06, but with ~743 open issues and **no tagged releases**, so there's no version to pin and you track a moving `main`. High activity, but the open-issue backlog is large for a personal config.
 - **Governance & bus factor:** this is the standout flag — a `User`-owned personal repo (Garry Tan) carrying ~117k stars and ~743 open issues, with one maintainer and no foundation/team behind it. That is an extreme bus-factor concentration: enormous adoption resting on one person's taste and availability. The workflow encodes his preferences, not a community standard.
 - **Age & Lindy verdict:** created 2026-03, only ~3 months old as of 2026-06 — very young and intensely hyped (the star count outruns the project's history). Hype ≠ Lindy: there's no longevity track record, and breaking changes can land on any push. Unproven.

@@ -92,6 +92,7 @@ You reach for it when you want this *specific author's* methodology — the fram
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — type_na.
 - **Maintenance (2026-06):** active — last pushed 2026-06, at v2.14.2 with frequent releases and only ~10 open issues. It does cut tagged releases, so a version is pinnable. Active, not coasting.
 - **Governance & bus factor:** single-author `User`-owned pack (dontbesilent2025); the entire value — frameworks, case library, ~4k knowledge atoms — is one creator's methodology, with no foundation or team behind it. ~7k stars on a one-person pack is a bus-factor flag; continuity is tied to that author.
 - **Age & Lindy verdict:** created 2026-03, so only ~3 months old as of 2026-06 — very young and hyped, with no longevity track record. Treat as unproven; its frameworks are the author's opinions, not time-tested standards. Fails the Lindy test purely on age.

@@ -114,6 +114,7 @@ You reach for it as a **study reference or a starting template**, not as a maint
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (2026-06).** Last push 2020-01, **no tagged releases** — effectively **abandoned/frozen**. Not archived, but ~6 years without a commit means treat it as a static reference, not a maintained project. [推断]
 - **Governance / bus factor.** A **single-author** tutorial repo (`dee1024`, ~1.2k stars) on a personal account, with only a couple of contributors — maximal bus-factor risk, and the author has moved on. [推断]
 - **Age & Lindy verdict.** Created 2018-03 (~8 years) but **inactive since 2020** ⇒ Lindy **fails on the "still-active" half**: age here signals *staleness*, not durability — the value is purely as a learning artifact. [推断]

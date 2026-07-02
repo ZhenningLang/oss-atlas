@@ -108,6 +108,7 @@ This is the right reach when scale and availability are the actual problem — R
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (2026-06).** **Dormant.** Last release v0.1 is from 2018; last push 2022-12 with no activity since — not actively developed, though not formally archived. Treat as frozen, Python-2/3-transition-era code.
 - **Governance / bus factor.** An **Organization** account (SpiderClub) but with a very small active contributor core; the org wrapper doesn't change that real maintenance has stopped. Bus factor is effectively the same as an abandoned single-maintainer repo. [推断]
 - **Age & Lindy verdict.** ~9 years old (created 2017-09) but **dormant since ~2022** ⇒ Lindy *fails*: age without continued activity signals abandonment, not durability. Old + dormant is a red flag, not social proof.

@@ -102,6 +102,7 @@ Realistically, in 2026 this is a **retro / legacy-machine** use case: a vintage 
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_data.
 - **Maintenance (2026-06).** **Abandoned.** No GitHub releases; last push 2020-11. The maintainer publicly stopped due to Big Sur's Spotlight changes. Not flagged "archived" on GitHub, but functionally dead. [推断]
 - **Governance / bus factor.** Owner is a **User** account (w0lfschild); this is itself a fork in a succession of community maintainers (original by nate-parrott, then several forks). Effectively no current owner — worst-case bus factor. [推断]
 - **Age & Lindy.** Created 2016; ~10 years old but **abandoned for ~6 of them** ⇒ Lindy **fails** — age without ongoing activity is not a durability signal, it's a tombstone. The underlying OS-injection approach has also been obsoleted by macOS itself. [推断]

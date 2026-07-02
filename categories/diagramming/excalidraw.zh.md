@@ -16,28 +16,20 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T08:34:40Z
-  overall: A
-  overall_score: 3.67
-  scored_axes: 6
+  computed_at: 2026-07-02T12:45:55Z
+  overall: "?"
+  overall_score: null
+  scored_axes: 1
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: A
-      raw:
-        archived: false
-        last_commit_age_days: 3
-        active_weeks_13: 13
-        carve_out: null
+      grade: "?"
+      raw: {}
     responsiveness:
-      grade: A
-      raw:
-        median_ttfr_hours: 25.1
-        qualifying_issues: 25
-        band: default
-        window_offset_days: 5
+      grade: "?"
+      raw: {}
     adoption:
       grade: B
       raw:
@@ -49,26 +41,20 @@ health:
         volume_tier: B
         cross_check_divergence: 1.01
     longevity:
-      grade: A
-      raw:
-        repo_age_days: 2373
-        last_commit_age_days: 3
-        cohort: library
+      grade: "?"
+      raw: {}
     governance:
-      grade: B
-      raw:
-        active_maintainers_12mo: 13
-        top1_share: 0.549
-        top3_share: 0.835
-        window_source: stats_contributors
-        carve_out: null
+      grade: "?"
+      raw: {}
     risk_license:
-      grade: A
-      raw:
-        spdx_id: MIT
-        permissiveness: permissive
-        relicense_36mo: false
-        content_license: null
+      grade: "?"
+      raw: {}
+  unknowns:
+    maintenance: { reason: recency_unreadable }
+    responsiveness: { reason: no_traffic }
+    longevity: { reason: not_found }
+    governance: { reason: empty_or_gated }
+    risk_license: { reason: repo_unreachable }
 ---
 
 # Excalidraw
@@ -121,6 +107,7 @@ health:
 
 ## 健康度与可持续性
 
+- **响应速度**：无法计算——no_traffic。
 - **维护（2026-07）。** 最后 push 于 2026-07-01，提交历史活跃；项目未归档，持续接收更新和社区 PR。[推断]
 - **治理 / bus factor。** 归属 `excalidraw` GitHub 组织（多维护者），核心团队自 2020 年起一直主导。付费商业版（Excalidraw+）的存在意味着有持续资金支持。[推断]
 - **年龄与 Lindy 判断。** 约 5.5 年（2020-01 创建）且仍非常活跃 ⇒ 对前端工具而言是**中强 Lindy** 信号；它已成为开源界手绘风格白板的事实标准。[推断]

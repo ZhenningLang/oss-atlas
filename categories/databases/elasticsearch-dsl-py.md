@@ -110,6 +110,7 @@ But for new code in 2026 you should **not install this package** — you install
 
 ## Health & viability
 
+- **Responsiveness**: Grade E.
 - **Maintenance (2026-06).** **Archived** — last push 2025-04, final release v8.18.0 (2025-04). Development has **moved into `elasticsearch-py`**; this repo is intentionally frozen, not abandoned-by-neglect. [推断]
 - **Governance / backing.** Backed by **Elastic** (the vendor), Apache-2.0, with experienced maintainers (honzakral, miguelgrinberg, pquentin). Vendor-owned but the code continues under active maintenance in the merged client. [推断]
 - **Age & Lindy verdict.** Created 2014-03 (~12 years); long-lived and well-proven, but the *standalone* tree is now end-of-line — Lindy applies to the **lineage**, which continues inside `elasticsearch-py`, not to this frozen repo. [推断]

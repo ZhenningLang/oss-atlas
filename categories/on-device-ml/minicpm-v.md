@@ -114,6 +114,7 @@ So you reach for MiniCPM-V. You pick one of the small models (e.g. a ~1–9B Min
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — type_na.
 - **Maintenance (2026-06).** Last push 2026-06 and the repo spans several model generations (MiniCPM-V 4.x, MiniCPM-o 4.5/2.6) shipped over time — reads as **actively iterating**, fast cadence, not coasting. [推断]
 - **Governance / backing.** OpenBMB (an open-model org with Tsinghua-affiliated/academic roots). [推断] That's organizational rather than single-maintainer backing, but academic/research-org continuity is its own risk — research groups can re-prioritize or wind down a line; this is not a large-vendor SLA.
 - **Age & Lindy (created 2024-01, ~2.5yr).** Young but moving fast across generations. **Lindy-unproven** — too new to call a long-lived safe bet; the value rides on OpenBMB continuing the line. Use age × still-active: currently active, not yet proven durable. [推断]

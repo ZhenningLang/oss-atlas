@@ -117,6 +117,7 @@ It shines for throwaway automation and data scripts: a one-off migration that mu
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (2026-06).** Last tagged release **0.4.0 (Jan 2021)**; repo last pushed 2025-08 — **low activity / coasting** but not archived. Mature and small enough that "done" is plausible, but don't expect rapid fixes. [未验证]
 - **Governance / bus factor.** Owned by an individual (**pahaz**, ~271 commits) with one substantial co-contributor (fernandezcuesta, ~142) — a **thin bus factor**; it's a single-author utility library. [推断]
 - **Age & Lindy verdict.** Created **2014**, ~12 years old; the wrapper is thin and stable, so age + a small stable API is a *moderate* Lindy signal — but its health is really tied to **Paramiko's** continued maintenance underneath. [推断]

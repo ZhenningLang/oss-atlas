@@ -117,6 +117,7 @@ That is realistically the only safe reason to reach for it in 2026. If your actu
 
 ## Health & viability
 
+- **Responsiveness**: Grade E.
 - **Maintenance (2026-06): archived → dead.** The repo was **archived in 2019-07** (last pushed ~2019-07), making it GitHub read-only — single-maintainer (owner `youfou`), no releases, no triage, no PRs accepted. Archiving is the maintainer's explicit end-of-life flag; this is not "coasting," it is closed.
 - **Platform pulled the rug — compounded by its base.** wxpy wraps **ItChat**, and **WeChat largely disabled the web-login protocol both depend on**, so wxpy is *non-functional for most accounts* regardless of its own code. It is abandoned **and** structurally obsolete **and** one layer removed from the protocol break — strictly worse off than the base it sits on. [未验证]
 - **Lindy verdict: FAILS, hard.** Created **2017-02** (~9 years old), so on age alone it might look Lindy — but Lindy is **age × still-active**, never age alone. Here it is **long-lived *and* explicitly archived *and* running on a protocol the platform removed** — the textbook case where the age signal is *negated*, not earned. Its longevity is not durability. [推断]

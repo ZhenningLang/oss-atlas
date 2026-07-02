@@ -16,21 +16,17 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T08:32:47Z
-  overall: B
-  overall_score: 3.0
-  scored_axes: 5
+  computed_at: 2026-07-02T12:45:01Z
+  overall: "?"
+  overall_score: null
+  scored_axes: 1
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: A
-      raw:
-        archived: false
-        last_commit_age_days: 0
-        active_weeks_13: 13
-        carve_out: null
+      grade: "?"
+      raw: {}
     responsiveness:
       grade: "?"
       raw: {}
@@ -45,28 +41,20 @@ health:
         volume_tier: B
         cross_check_divergence: 1.01
     longevity:
-      grade: D
-      raw:
-        repo_age_days: 344
-        last_commit_age_days: 0
-        cohort: framework
+      grade: "?"
+      raw: {}
     governance:
-      grade: B
-      raw:
-        active_maintainers_12mo: 493
-        top1_share: 0.455
-        top3_share: 0.619
-        window_source: stats_contributors
-        carve_out: null
+      grade: "?"
+      raw: {}
     risk_license:
-      grade: A
-      raw:
-        spdx_id: MIT
-        permissiveness: permissive
-        relicense_36mo: false
-        content_license: null
+      grade: "?"
+      raw: {}
   unknowns:
+    maintenance: { reason: recency_unreadable }
     responsiveness: { reason: no_traffic }
+    longevity: { reason: not_found }
+    governance: { reason: empty_or_gated }
+    risk_license: { reason: repo_unreachable }
 ---
 # Hermes Agent
 
@@ -116,6 +104,7 @@ You are a solo developer or small team running AI agents on a $5 VPS or a GPU cl
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance**: Grade A — pushed daily as of 2026-07, with 13 active weeks out of 13. The 24,601 open issues indicate a large, engaged community.
 - **Governance**: Grade B — owned by Nous Research organization, with 493 active maintainers in the past 12 months. The top maintainer holds 45.5% of commits, which is moderate concentration.
 - **Longevity**: Grade D — only 344 days old (created 2025-07). The project is extremely young with no Lindy track record.

@@ -16,54 +16,45 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T08:27:28Z
-  overall: A
-  overall_score: 4.0
-  scored_axes: 5
+  computed_at: 2026-07-02T12:55:19Z
+  overall: "?"
+  overall_score: null
+  scored_axes: 1
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: A
-      raw:
-        archived: false
-        last_commit_age_days: 0
-        active_weeks_13: 13
-        carve_out: null
-    responsiveness:
-      grade: A
-      raw:
-        median_ttfr_hours: 0.1
-        qualifying_issues: 41
-        band: default
-        window_offset_days: 5
-    adoption:
       grade: "?"
       raw: {}
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: A
+      raw:
+        registry: npmjs.org
+        canonical_package: antd
+        dependent_repos_count: 113307
+        downloads_last_month: 10718402
+        graph_tier: A
+        volume_tier: A
+        cross_check_divergence: 1.2
     longevity:
-      grade: A
-      raw:
-        repo_age_days: 4087
-        last_commit_age_days: 0
-        cohort: library
+      grade: "?"
+      raw: {}
     governance:
-      grade: A
-      raw:
-        active_maintainers_12mo: 73
-        top1_share: 0.209
-        top3_share: 0.52
-        window_source: stats_contributors
-        carve_out: null
+      grade: "?"
+      raw: {}
     risk_license:
-      grade: A
-      raw:
-        spdx_id: MIT
-        permissiveness: permissive
-        relicense_36mo: false
-        content_license: null
+      grade: "?"
+      raw: {}
   unknowns:
-    adoption: { reason: registry_no_counts }
+    maintenance: { reason: recency_unreadable }
+    responsiveness: { reason: no_traffic }
+    longevity: { reason: not_found }
+    governance: { reason: empty_or_gated }
+    risk_license: { reason: repo_unreachable }
 ---
 
 # Ant Design
@@ -126,6 +117,7 @@ health:
 
 ## 健康度与可持续性
 
+- **响应速度**：无法计算——no_traffic。
 - **维护**：非常活跃——截至 2026-07 仍有日常推送，发布节奏规律，issue/PR 吞吐量大（98.5k stars，1,284 个 open issue）。
 - **治理**：由阿里巴巴开源生态内的 Ant Design Team 维护。项目拥有多名核心提交者，治理模型清晰。Bus factor 中等到良好。
 - **背书**：阿里巴巴背书，中国最大科技公司之一。这提供了稳定性和资源，但也意味着项目方向受阿里巴巴内部需求影响。

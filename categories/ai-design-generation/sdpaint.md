@@ -108,6 +108,7 @@ You reach for it specifically when you want **interactive scribble-driven genera
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (2026-06).** **Stalled.** Last release v1.2a (2024-04), last push 2024-04 — roughly two years quiet. Not archived, but no recent activity; treat as coasting/likely-abandoned. [推断]
 - **Governance / bus factor.** Owner is a **User** account (houseofsecrets); a top contributor (Danamir) authored most commits — effectively a one-to-two-person hobby project, weak bus factor. [推断]
 - **Age & Lindy.** Created 2023-04; ~3 years old **but inactive for ~2 of them** ⇒ Lindy does **not** apply — it's a young project that stopped, not a durable one. The fast-moving SD ecosystem makes a stale client especially prone to drift. [推断]

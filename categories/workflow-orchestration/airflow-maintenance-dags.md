@@ -113,6 +113,7 @@ You reach for it specifically when you want **proven, copy-in maintenance recipe
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (2026-06).** Last pushed 2024-06; **no tagged releases**. The repo is **coasting/stale** rather than actively developed — useful as reference recipes, but not tracking the latest Airflow versions. Not archived. [推断]
 - **Governance / bus factor.** Owned by the **teamclairvoyant** organization (a consultancy) with several contributors; org-owned is better than a solo account, but activity has slowed and there's no foundation governance. [推断]
 - **Age & Lindy verdict.** Created 2016-12 (~9 years) — long-lived, but only **partially** Lindy: it's old *and was* widely used, yet the slowing cadence (no update since 2024-06) tempers the "still-active" half of the test. A useful pattern source more than a maintained product. [推断]

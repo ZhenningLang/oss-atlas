@@ -116,6 +116,7 @@ You reach for it specifically when you have (or can label) training data and wan
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (2026-06).** Last pushed 2025-07; latest release 2.0.4 dates to **2019**. This is **low-activity / coasting** — touched occasionally but not actively developed. Not formally archived, but cadence is near-dormant. [推断]
 - **Governance / bus factor.** Owned by an **Organization** (`dragnet-org`) with several historical contributors, but activity has thinned — effective bus factor is low given the dormant cadence. [推断]
 - **Age × Lindy (2026-06).** Created 2012-06 — ~14 years old, but **age without current activity is not a Lindy pass**: a long-lived *coasting* project is durable in code, fragile in support. Use age × still-active, and the "still-active" half is weak here. [推断]

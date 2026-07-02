@@ -114,6 +114,7 @@ You install this skill (`git clone` into `~/.claude/skills/notebooklm/`) so Clau
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (2026-06):** likely **coasting / quiet** — latest release v1.3.0 and last push both 2025-11, i.e. ~7 months without a commit as of 2026-06. Not archived, but the gap is a yellow flag for a tool whose whole job is automating a third-party UI (Google NotebookLM) that drifts.
 - **Governance / bus factor:** single-maintainer, `User`-owned repo (`PleasePrompto`) at ~7k stars — popular but thin on continuity. The author also ships a separate MCP-server sibling, so attention may be split across the two.
 - **Age & Lindy verdict:** young (created 2025-10) *and* apparently dormant — the worst Lindy quadrant for a fragility-prone tool: too new to have a track record, and not actively maintained against the moving target it automates.

@@ -118,6 +118,7 @@ It's the right reach when you want a *scriptable, reproducible* Reddit archive �
 
 ## Health & viability
 
+- **Responsiveness**: Grade C — median first-response time 10.7 hours across 1 qualifying issues/PRs.
 - **Maintenance (2026-06).** Last push 2026-04, so the repo is **not abandoned** — but the last *tagged release* (v2.6.2) is from 2023-01, so the release cadence has effectively stalled even as commits trickle in. Treat it as "maintained but unreleased," a yellow flag. Not archived.
 - **Governance / bus factor.** A small contributor group (project changed hands from the original author aliparlakci to Serene-Arc and others). Real bus-factor risk: a handful of maintainers, no foundation backing. [推断]
 - **Age & Lindy verdict.** ~8 years old (created 2018-06) but with a stalled release line ⇒ Lindy is **mixed**: long-lived and still committed-to, yet the lack of recent releases tempers the "still-active" half of age × still-active.

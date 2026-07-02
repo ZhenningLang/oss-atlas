@@ -111,6 +111,7 @@ You also reach for FFmpeg as a library, not just a CLI, when you're embedding me
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — issues_disabled.
 - **Maintenance — active and continuous (last push 2026-06).** Decades of uninterrupted development with regular releases; one of the most consistently maintained projects in any media stack [未验证]. The ~3 open issues on the GitHub mirror reflect that upstream tracking happens on its own mailing-list/bug-tracker, not that the project is idle.
 - **Governance & bus factor — broad, mature community.** `Org`-owned (`FFmpeg/`) — a long-standing multi-contributor project, not a single maintainer or a single vendor's roadmap; about as low a bus-factor risk as open source offers [推断]. (Note the historical 2011 libav fork, which merged back into irrelevance — FFmpeg is the surviving line.)
 - **Age & Lindy verdict — old and still active ⇒ as strong a Lindy bet as it gets.** Created 2011 on GitHub (roots to ~2000), still shipping in 2026, and the de-facto engine under most browsers, players, NLEs and cloud transcoders. This is the safest longevity bet in the media category — building on it is building on what the rest of the industry depends on.

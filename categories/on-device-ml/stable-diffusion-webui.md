@@ -16,50 +16,39 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T08:32:05Z
-  overall: C
-  overall_score: 1.75
-  scored_axes: 4
+  computed_at: 2026-07-02T12:43:31Z
+  overall: "?"
+  overall_score: null
+  scored_axes: 0
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: D
-      raw:
-        archived: false
-        last_commit_age_days: 705
-        active_weeks_13: 0
-        carve_out: null
+      grade: "?"
+      raw: {}
     responsiveness:
-      grade: A
-      raw:
-        median_ttfr_hours: 69.5
-        qualifying_issues: 12
-        band: relaxed_solo
-        window_offset_days: 3
+      grade: "?"
+      raw: {}
     adoption:
       grade: "?"
       raw: {}
     longevity:
-      grade: D
-      raw:
-        repo_age_days: 1410
-        last_commit_age_days: 705
-        cohort: tool
+      grade: "?"
+      raw: {}
     governance:
       grade: "?"
       raw: {}
     risk_license:
-      grade: D
-      raw:
-        spdx_id: AGPL-3.0
-        permissiveness: strong_network_copyleft
-        relicense_36mo: false
-        content_license: null
+      grade: "?"
+      raw: {}
   unknowns:
+    maintenance: { reason: recency_unreadable }
+    responsiveness: { reason: no_traffic }
     adoption: { reason: ambiguous }
-    governance: { reason: unattributable }
+    longevity: { reason: not_found }
+    governance: { reason: empty_or_gated }
+    risk_license: { reason: repo_unreachable }
 ---
 
 # Stable Diffusion WebUI
@@ -113,6 +102,7 @@ You're a creator, researcher, or developer who wants to generate images from tex
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance**: Active but last push was 2026-03, a few months before verification date. The project has a large open-issue backlog (2,493), suggesting both high usage and some strain on maintainer capacity.
 - **Governance**: Owned by a single GitHub user (`AUTOMATIC1111`), not an organization. This creates a significant bus-factor risk; the project's continuity depends on one individual's continued involvement. [未验证]
 - **Backing**: No corporate or foundation backing visible; funded by community donations and volunteer contributions.

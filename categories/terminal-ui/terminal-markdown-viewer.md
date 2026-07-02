@@ -105,6 +105,7 @@ You reach for it when the job is specifically *one-shot, read-only rendering of 
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (2026-06).** Last pushed 2024-05; commit activity is sparse and the version line is 0.x. Reads as **low-activity / coasting** — usable but not actively developed. Not archived. [推断]
 - **Governance / backing.** Owned by the Axiros organization (a company), with a small contributor tail. Org ownership is a mild positive over a personal account, but activity, not ownership, is the live signal here. [推断]
 - **Age & Lindy verdict.** ~11 years old (created 2015-07); long-lived but with thin recent activity, so Lindy is **mixed** — old enough to be stable, but age alone doesn't offset the slow cadence (use age × still-active). [推断]

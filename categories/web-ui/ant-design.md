@@ -16,54 +16,45 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T08:27:28Z
-  overall: A
-  overall_score: 4.0
-  scored_axes: 5
+  computed_at: 2026-07-02T12:55:19Z
+  overall: "?"
+  overall_score: null
+  scored_axes: 1
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: A
-      raw:
-        archived: false
-        last_commit_age_days: 0
-        active_weeks_13: 13
-        carve_out: null
-    responsiveness:
-      grade: A
-      raw:
-        median_ttfr_hours: 0.1
-        qualifying_issues: 41
-        band: default
-        window_offset_days: 5
-    adoption:
       grade: "?"
       raw: {}
+    responsiveness:
+      grade: "?"
+      raw: {}
+    adoption:
+      grade: A
+      raw:
+        registry: npmjs.org
+        canonical_package: antd
+        dependent_repos_count: 113307
+        downloads_last_month: 10718402
+        graph_tier: A
+        volume_tier: A
+        cross_check_divergence: 1.2
     longevity:
-      grade: A
-      raw:
-        repo_age_days: 4087
-        last_commit_age_days: 0
-        cohort: library
+      grade: "?"
+      raw: {}
     governance:
-      grade: A
-      raw:
-        active_maintainers_12mo: 73
-        top1_share: 0.209
-        top3_share: 0.52
-        window_source: stats_contributors
-        carve_out: null
+      grade: "?"
+      raw: {}
     risk_license:
-      grade: A
-      raw:
-        spdx_id: MIT
-        permissiveness: permissive
-        relicense_36mo: false
-        content_license: null
+      grade: "?"
+      raw: {}
   unknowns:
-    adoption: { reason: registry_no_counts }
+    maintenance: { reason: recency_unreadable }
+    responsiveness: { reason: no_traffic }
+    longevity: { reason: not_found }
+    governance: { reason: empty_or_gated }
+    risk_license: { reason: repo_unreachable }
 ---
 
 # Ant Design
@@ -126,6 +117,7 @@ You're building a data-dense admin dashboard, an internal operations tool, or a 
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance**: Very active — daily pushes as of 2026-07, with a regular release schedule and a large issue/PR throughput (98.5k stars, 1,284 open issues).
 - **Governance**: Maintained by the Ant Design Team within Alibaba's open-source ecosystem. The project has multiple core committers and a clear governance model. Bus factor is moderate to good.
 - **Backing**: Backed by Alibaba, one of China's largest tech companies. This provides stability and resources but also means the project's direction is influenced by Alibaba's internal needs.

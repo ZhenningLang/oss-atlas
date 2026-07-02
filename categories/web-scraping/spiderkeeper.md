@@ -102,6 +102,7 @@ You're running a small crawl operation on Scrapyd and you're tired of `curl`-ing
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_data.
 - **Maintenance (2026-06).** Stale / likely abandoned — repo code untouched since 2023-05, PyPI frozen at v1.2.0 since 2017-09, no GitHub releases or tags, ~70 open issues. Not archived, but no release cadence. [推断]
 - **Governance / bus factor.** Bus factor **1**: `DormyMo` has ~93 commits, every other contributor 1–3. A single-maintainer User account with no org continuity.
 - **Age × Lindy.** Alive since 2016 but silent ~3 years (and the package silent ~9 years) — fails Lindy, which needs old **and** active; an unmaintained tool against a moving Scrapy/Python stack only rots. [推断]

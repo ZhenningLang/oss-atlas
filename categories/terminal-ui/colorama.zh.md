@@ -111,6 +111,7 @@ health:
 
 ## 健康度与可持续性
 
+- **响应速度**：无法计算——no_traffic。
 - **维护（2026-06）。** 仓库最后 push 于 2026-05——**活跃**，未归档；一个稳定成熟、不需频繁改动但保持更新的库。（这里没列 GitHub tag 发布；它经 **PyPI** 发布。）[未验证]
 - **治理 / bus factor。** owner 类型 **User**（tartley / Jonathan Hartley），有多位稳定贡献者（wiggin15、hugovk、njsmith、jdufresne）——bus factor 好于单人脚本，但仍是个人所有而非基金会背书。[推断]
 - **年龄与 Lindy 判断。** **2014** 年创建，约 12 岁且**仍在维护**⇒ **强 Lindy** 信号；它是个安定、无处不在的依赖，它要解决的问题（老式 Windows 的 ANSI）本身也很稳定。[推断]

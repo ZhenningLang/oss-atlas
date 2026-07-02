@@ -123,6 +123,7 @@ It shines when your constraint is one GPU and your goal is fast, cheap iteration
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance — active (as of 2026-06).** Last repo push 2026-06; ships on a fast beta cadence tracking new model releases. Active, not coasting [未验证]. The flip side is churn: kernel/model support and APIs shift quickly, so pin versions.
 - **Governance & backing.** Org-owned (`unslothai/`) — a small VC-funded startup with a commercial Pro/Enterprise tier, not a foundation [推断]. The open-source single-GPU core and the gated multi-GPU/headline-perf tiers share one roadmap controlled by the vendor; viability tracks the company's runway, and the free-vs-paid line can move.
 - **Age & Lindy verdict — young but fast-proving (created 2023-11, ~2.5y).** Too young for a strong Lindy prior, but ~67k stars (2026-06) and heavy ecosystem use mean it has cleared the "is anyone using this" bar; treat as an established-but-still-young bet, not a decade-stable one [推断].

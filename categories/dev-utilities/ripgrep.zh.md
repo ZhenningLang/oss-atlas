@@ -16,28 +16,20 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T08:32:19Z
-  overall: B
-  overall_score: 2.83
-  scored_axes: 6
+  computed_at: 2026-07-02T12:56:32Z
+  overall: "?"
+  overall_score: null
+  scored_axes: 1
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: B
-      raw:
-        archived: false
-        last_commit_age_days: 1
-        active_weeks_13: 5
-        carve_out: null
+      grade: "?"
+      raw: {}
     responsiveness:
-      grade: A
-      raw:
-        median_ttfr_hours: 87.1
-        qualifying_issues: 18
-        band: relaxed_solo
-        window_offset_days: 8
+      grade: "?"
+      raw: {}
     adoption:
       grade: D
       raw:
@@ -49,26 +41,20 @@ health:
         volume_tier: "?"
         cross_check_divergence: null
     longevity:
-      grade: A
-      raw:
-        repo_age_days: 3765
-        last_commit_age_days: 1
-        cohort: tool
+      grade: "?"
+      raw: {}
     governance:
-      grade: D
-      raw:
-        active_maintainers_12mo: 9
-        top1_share: 0.892
-        top3_share: 0.931
-        window_source: stats_contributors
-        carve_out: null
+      grade: "?"
+      raw: {}
     risk_license:
-      grade: A
-      raw:
-        spdx_id: Unlicense
-        permissiveness: permissive
-        relicense_36mo: false
-        content_license: null
+      grade: "?"
+      raw: {}
+  unknowns:
+    maintenance: { reason: recency_unreadable }
+    responsiveness: { reason: no_traffic }
+    longevity: { reason: not_found }
+    governance: { reason: empty_or_gated }
+    risk_license: { reason: repo_unreachable }
 ---
 
 # ripgrep
@@ -116,6 +102,7 @@ health:
 
 ## 健康度与可持续性
 
+- **响应速度**：无法计算——no_traffic。
 - **维护**：活跃且稳定——定期发布，issue 跟踪管理良好。作者（BurntSushi）响应极快，对范围把控严格。
 - **治理**：主要由 Andrew Gallant（BurntSushi）维护，Rust 社区中备受尊敬的成员。这是一个单人维护项目，但长期可靠性记录出色。
 - **背书**：无企业背书——这是个人开源项目。维护者通过社区 goodwill 与偶尔赞助，已持续多年。

@@ -94,6 +94,7 @@ You reach for it especially when you want breadth across many domains at once (n
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — type_na.
 - **Maintenance** — active: last pushed 2026-06, not archived (as of 2026-06), but no tagged release to pin — you track a moving branch. Cadence reads active; the 232-persona surface means individual files vary in upkeep.
 - **Governance & bus factor** — single-maintainer personal repo (`User`-owned, `msitarzewski`) with a very high star count (~116k as of 2026-06). A `User`-owned repo with stars that large is a **bus-factor flag**: one person owns the roadmap and the multi-tool converters, with no team or org behind it — outsized attention, single point of failure.
 - **Age & Lindy** — created 2025-10, ~0.7 years old as of 2026-06: young relative to its hype, Lindy-unproven. High stars signal reach, not durability — treat the longevity as unestablished.

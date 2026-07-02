@@ -16,28 +16,20 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T08:26:35Z
-  overall: A
-  overall_score: 4.0
-  scored_axes: 6
+  computed_at: 2026-07-02T12:52:13Z
+  overall: "?"
+  overall_score: null
+  scored_axes: 1
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: A
-      raw:
-        archived: false
-        last_commit_age_days: 0
-        active_weeks_13: 13
-        carve_out: null
+      grade: "?"
+      raw: {}
     responsiveness:
-      grade: A
-      raw:
-        median_ttfr_hours: 0.0
-        qualifying_issues: 24
-        band: default
-        window_offset_days: 11
+      grade: "?"
+      raw: {}
     adoption:
       grade: A
       raw:
@@ -49,26 +41,20 @@ health:
         volume_tier: A
         cross_check_divergence: 1.0
     longevity:
-      grade: A
-      raw:
-        repo_age_days: 4305
-        last_commit_age_days: 0
-        cohort: framework
+      grade: "?"
+      raw: {}
     governance:
-      grade: A
-      raw:
-        active_maintainers_12mo: 90
-        top1_share: 0.167
-        top3_share: 0.368
-        window_source: stats_contributors
-        carve_out: null
+      grade: "?"
+      raw: {}
     risk_license:
-      grade: A
-      raw:
-        spdx_id: MIT
-        permissiveness: permissive
-        relicense_36mo: false
-        content_license: null
+      grade: "?"
+      raw: {}
+  unknowns:
+    maintenance: { reason: recency_unreadable }
+    responsiveness: { reason: no_traffic }
+    longevity: { reason: not_found }
+    governance: { reason: empty_or_gated }
+    risk_license: { reason: repo_unreachable }
 ---
 
 # Angular
@@ -131,6 +117,7 @@ health:
 
 ## 健康度与可持续性
 
+- **响应速度**：无法计算——no_traffic。
 - **维护**：非常活跃——由 Google 维护，6 个月一个主版本周期，有公开路线图。最近两个主版本提供长期支持（LTS）。
 - **治理**：Google 所有。Angular 团队历史上不受 Google 内部重组影响，但仍是单厂商项目。社区通过 Angular Community Discord 和 GitHub 有发言权。
 - **背书**：Google 是主要背书方。Angular 在 Google 内部被使用（Google Cloud Console、Firebase Console 等），这提供了持续维护的强激励。

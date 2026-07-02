@@ -94,6 +94,7 @@ You reach for this specifically when you want the *first-party* baseline: plugin
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — type_na.
 - **Maintenance** — [未验证] last pushed 2026-06, not archived; activity current as of 2026-06, so **actively maintained**. Open issues high (~783), consistent with a high-traffic official directory that also triages `external_plugins/` submissions. No tagged releases; track `main`.
 - **Governance & backing** — [推断] org-owned and **vendor-backed by Anthropic** — first-party marketplace with known provenance and Apache-2.0. Roadmap is the vendor's; "official/curated" describes Anthropic's hosting and listing, **not an audit guarantee** of every third-party `external_plugins/` entry.
 - **Age & Lindy** — [推断] created 2025-11, so ~7 months old as of 2026-06: young. Lindy weak on age, but vendor backing + first-party status make it the **default baseline** before third-party marketplaces; lower betting risk than a same-age community pack.

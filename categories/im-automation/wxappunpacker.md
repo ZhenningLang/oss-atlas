@@ -98,6 +98,7 @@ But note what you're actually reaching for: **not this repo.** `xdmjun/wxappUnpa
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_data.
 - **Maintenance (2026-06).** Abandoned — the sole real commit gutted the repo on 2023-04-08; the 2026-06 `updated_at` is a metadata touch, not activity. The upstream `qwerty472123` lineage is archived since 2020. **Dead, not coasting.** [未验证]
 - **Governance / bus factor.** Bus factor **0**: deleted by a single User-account owner, upstream frozen. No releases, tags, or active contributors anywhere in the chain.
 - **Age × Lindy.** Created 2019-12; the lineage is older (~2020 upstream). Age means nothing here because it is *not active* — Lindy requires old **and** alive, and this fails the second test. [推断]

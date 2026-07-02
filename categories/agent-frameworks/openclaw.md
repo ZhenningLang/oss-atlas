@@ -16,21 +16,17 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T08:42:43Z
-  overall: B
-  overall_score: 3.25
-  scored_axes: 4
+  computed_at: 2026-07-02T12:51:57Z
+  overall: "?"
+  overall_score: null
+  scored_axes: 1
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: A
-      raw:
-        archived: false
-        last_commit_age_days: 0
-        active_weeks_13: 13
-        carve_out: null
+      grade: "?"
+      raw: {}
     responsiveness:
       grade: "?"
       raw: {}
@@ -45,25 +41,20 @@ health:
         volume_tier: A
         cross_check_divergence: 1.0
     longevity:
-      grade: C
-      raw:
-        repo_age_days: 220
-        last_commit_age_days: 0
-        cohort: app
+      grade: "?"
+      raw: {}
     governance:
-      grade: B
-      raw:
-        active_maintainers_12mo: 487
-        top1_share: 0.528
-        top3_share: 0.753
-        window_source: stats_contributors
-        carve_out: null
+      grade: "?"
+      raw: {}
     risk_license:
       grade: "?"
       raw: {}
   unknowns:
+    maintenance: { reason: recency_unreadable }
     responsiveness: { reason: no_traffic }
-    risk_license: { reason: license_unparsed }
+    longevity: { reason: not_found }
+    governance: { reason: empty_or_gated }
+    risk_license: { reason: repo_unreachable }
 ---
 # OpenClaw
 
@@ -111,6 +102,7 @@ You are a privacy-conscious professional who wants a single AI assistant that fo
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance**: Grade A — pushed daily as of 2026-07, with 13 active weeks out of 13 and 6,749 open issues indicating an engaged community.
 - **Governance**: Grade B — owned by the OpenClaw organization with 487 active maintainers in the past 12 months. The top maintainer holds 52.8% of commits, which is a concentration risk.
 - **Longevity**: Grade C — only 220 days old (created 2025-11). No Lindy track record; the project is extremely young despite its high visibility.

@@ -122,6 +122,7 @@ The honest caveat is that this is the *legitimate* use case for a tool that is *
 
 ## Health & viability
 
+- **Responsiveness**: Grade E.
 - **Archived — the central fact (2026-06).** The repo lives under **`facebookarchive`** and is **`archived: true`** (read-only): no merges, no releases, no fixes. Last code push **2021-09-15**. This is the decisive signal — it is **abandoned**, not merely quiet.
 - **Age × still-active = a NEGATIVE Lindy verdict.** Created **2019-07** (~7 years old) but inactive since 2021. Lindy requires age **× still-active**; age alone is not safety. An old-*and-dead* tool fails the test — the years of dormancy are a risk flag, not a durability signal.
 - **Governance / bus factor → effectively zero.** Owner is an **Organization** (Meta), but the contributors (`thatch`, `lisroach`, `cooperlees`, all ex/Meta) have moved on and the project is archived — there is no maintainer to escalate to. [推断]

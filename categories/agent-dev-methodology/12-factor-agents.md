@@ -94,6 +94,7 @@ You reach for it when you want principles to guide a hand-rolled or thinly-frame
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — type_na.
 - **Maintenance (2026-06):** last pushed 2025-09 with no tagged releases — ~9 months idle. For a living API this would read as coasting, but it's an essay set; [推断] the content is "done/stable" by nature, not abandoned. Treat staleness as low-risk for principles, higher-risk for any model-/tooling-specific specifics it cites.
 - **Governance & backing:** an Organization-owned repo (HumanLayer / Dex Horthy), maintained alongside a commercial product. Effectively a small-vendor / single-author voice, not a foundation — the roadmap is one team's editorial line, though the factors read vendor-neutral.
 - **Age & Lindy (2026-06):** created 2025-03, ~1 year old. Young and idea-driven, not a battle-tested codebase — its ~23k stars reflect mindshare, not longevity. Lindy verdict: **unproven by age**, but it's a methodology doc whose value is conceptual rather than maintenance-dependent, so the usual young-and-hyped risk applies more to specifics than to the core principles.

@@ -115,6 +115,7 @@ You'd pick it specifically because it's *minimal and legible* — you can read t
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (2026-06).** Last pushed 2022-10, no releases or tags, sparse history — effectively **unmaintained / abandoned**. Not formally archived, but inactive for years. [推断]
 - **Governance / bus factor.** Single author on a personal account with a few drive-by contributors; no governance, no roadmap. Maximal bus-factor risk — but for a frozen demo script that matters less than the license gap. [推断]
 - **Age & Lindy verdict.** ~8 years old (created 2018-08) but **inactive since 2022** ⇒ Lindy **does not apply** — age without ongoing activity is staleness, not durability. [推断]

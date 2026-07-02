@@ -16,28 +16,20 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T08:40:35Z
-  overall: B
-  overall_score: 3.2
-  scored_axes: 5
+  computed_at: 2026-07-02T12:43:50Z
+  overall: "?"
+  overall_score: null
+  scored_axes: 1
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: A
-      raw:
-        archived: false
-        last_commit_age_days: 0
-        active_weeks_13: 13
-        carve_out: null
+      grade: "?"
+      raw: {}
     responsiveness:
-      grade: A
-      raw:
-        median_ttfr_hours: 0.2
-        qualifying_issues: 25
-        band: default
-        window_offset_days: 2
+      grade: "?"
+      raw: {}
     adoption:
       grade: D
       raw:
@@ -49,24 +41,20 @@ health:
         volume_tier: D
         cross_check_divergence: null
     longevity:
-      grade: B
-      raw:
-        repo_age_days: 1177
-        last_commit_age_days: 0
-        cohort: framework
+      grade: "?"
+      raw: {}
     governance:
-      grade: A
-      raw:
-        active_maintainers_12mo: 255
-        top1_share: 0.111
-        top3_share: 0.227
-        window_source: stats_contributors
-        carve_out: null
+      grade: "?"
+      raw: {}
     risk_license:
       grade: "?"
       raw: {}
   unknowns:
-    risk_license: { reason: license_unparsed }
+    maintenance: { reason: recency_unreadable }
+    responsiveness: { reason: no_traffic }
+    longevity: { reason: not_found }
+    governance: { reason: empty_or_gated }
+    risk_license: { reason: repo_unreachable }
 ---
 
 # Dify
@@ -118,6 +106,7 @@ You're a product team that needs to ship AI-powered workflows fast without writi
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance**: Very active — daily pushes as of 2026-07, with a large engaged community (868 open issues, 23k forks).
 - **Governance**: Backed by the LangGenius organization; appears to have a team behind it rather than a single maintainer.
 - **Backing**: LangGenius appears to be a dedicated org for this project; no large foundation or corporate backing is clearly visible.

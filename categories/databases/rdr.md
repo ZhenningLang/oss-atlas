@@ -106,6 +106,7 @@ You reach for it specifically when the analysis must be **offline and fast**: th
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (2026-06).** Last repo push 2024-04; the only tagged release is **v0.0.1 (2019)**. Not archived, but effectively **coasting / low-activity** — usable as-is, but don't expect fixes or new-RDB-version support promptly. [未验证]
 - **Governance / bus factor.** Owned by the **Xueqiu** organization (a Chinese investment-community company) but contribution is concentrated in a couple of authors — a thin bus factor typical of an internal-tool-open-sourced. [推断]
 - **Age & Lindy verdict.** Created 2017, ~9 years old but **not actively shipping** — age here is *not* a strong Lindy signal because Lindy requires old **and** still-active; this is old-and-quiet. [推断]

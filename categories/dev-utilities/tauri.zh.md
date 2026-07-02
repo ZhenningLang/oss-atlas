@@ -16,59 +16,45 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T08:46:17Z
-  overall: A
-  overall_score: 3.83
-  scored_axes: 6
+  computed_at: 2026-07-02T12:43:29Z
+  overall: "?"
+  overall_score: null
+  scored_axes: 1
   capped: false
   cap_reason: null
   needs_human_review: true
   axes:
     maintenance:
-      grade: A
-      raw:
-        archived: false
-        last_commit_age_days: 0
-        active_weeks_13: 13
-        carve_out: null
+      grade: "?"
+      raw: {}
     responsiveness:
-      grade: A
-      raw:
-        median_ttfr_hours: 5.0
-        qualifying_issues: 37
-        band: relaxed_solo
-        window_offset_days: 11
+      grade: "?"
+      raw: {}
     adoption:
       grade: A
       raw:
         registry: crates.io
         canonical_package: tauri
         dependent_repos_count: 4409
-        downloads_last_month: 20282921
+        downloads_last_month: 20469125
         graph_tier: B
         volume_tier: A
-        cross_check_divergence: 2.75
+        cross_check_divergence: 2.77
     longevity:
-      grade: A
-      raw:
-        repo_age_days: 2546
-        last_commit_age_days: 0
-        cohort: tool
+      grade: "?"
+      raw: {}
     governance:
-      grade: B
-      raw:
-        active_maintainers_12mo: 20
-        top1_share: 0.373
-        top3_share: 0.841
-        window_source: stats_contributors
-        carve_out: null
+      grade: "?"
+      raw: {}
     risk_license:
-      grade: A
-      raw:
-        spdx_id: Apache-2.0
-        permissiveness: permissive
-        relicense_36mo: false
-        content_license: null
+      grade: "?"
+      raw: {}
+  unknowns:
+    maintenance: { reason: recency_unreadable }
+    responsiveness: { reason: no_traffic }
+    longevity: { reason: not_found }
+    governance: { reason: empty_or_gated }
+    risk_license: { reason: repo_unreachable }
 ---
 
 # Tauri
@@ -120,6 +106,7 @@ health:
 
 ## 健康度与可持续性
 
+- **响应速度**：无法计算——no_traffic。
 - **维护**：非常活跃——截至 2026-07 每日推送，v2 已稳定，社区支持活跃（1,442 个开放 issue）。[推断]
 - **治理**：由 `tauri-apps` 组织所有，拥有专门的核心团队和开放治理模式。bus factor 合理。
 - **背书**：由 Tauri Collective 和 Open Collective 资助；有企业赞助方和非营利基金会结构。[未验证]

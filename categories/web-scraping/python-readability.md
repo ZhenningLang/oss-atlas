@@ -109,6 +109,7 @@ You also reach for it when you specifically want the *Python, lxml* implementati
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (2026-06).** Last pushed 2026-01, so the repo is **still touched** — but the newest GitHub release tag is old (v0.8.1 dates to 2020), with the changelog mentioning later 0.8.x work; treat it as **maintained but low-cadence / coasting**, not fast-moving. Not archived. [推断]
 - **Governance / bus factor.** Owner type is **User** (`buriy`), i.e. an individual-maintainer project with community contributions — a **bus-factor flag**: continuity depends largely on one person. [推断]
 - **Age × Lindy (2026-06).** Created 2011-05 — ~15 years old and **still occasionally maintained** ⇒ a **strong Lindy** signal for a small extractor; it has long outlived most peers. Long life here is real durability, not abandonment. [推断]

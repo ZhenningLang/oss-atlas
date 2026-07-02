@@ -16,50 +16,39 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T08:32:05Z
-  overall: C
-  overall_score: 1.75
-  scored_axes: 4
+  computed_at: 2026-07-02T12:43:31Z
+  overall: "?"
+  overall_score: null
+  scored_axes: 0
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: D
-      raw:
-        archived: false
-        last_commit_age_days: 705
-        active_weeks_13: 0
-        carve_out: null
+      grade: "?"
+      raw: {}
     responsiveness:
-      grade: A
-      raw:
-        median_ttfr_hours: 69.5
-        qualifying_issues: 12
-        band: relaxed_solo
-        window_offset_days: 3
+      grade: "?"
+      raw: {}
     adoption:
       grade: "?"
       raw: {}
     longevity:
-      grade: D
-      raw:
-        repo_age_days: 1410
-        last_commit_age_days: 705
-        cohort: tool
+      grade: "?"
+      raw: {}
     governance:
       grade: "?"
       raw: {}
     risk_license:
-      grade: D
-      raw:
-        spdx_id: AGPL-3.0
-        permissiveness: strong_network_copyleft
-        relicense_36mo: false
-        content_license: null
+      grade: "?"
+      raw: {}
   unknowns:
+    maintenance: { reason: recency_unreadable }
+    responsiveness: { reason: no_traffic }
     adoption: { reason: ambiguous }
-    governance: { reason: unattributable }
+    longevity: { reason: not_found }
+    governance: { reason: empty_or_gated }
+    risk_license: { reason: repo_unreachable }
 ---
 
 # Stable Diffusion WebUI
@@ -113,6 +102,7 @@ health:
 
 ## 健康度与可持续性
 
+- **响应速度**：无法计算——no_traffic。
 - **维护**：活跃，但上次推送为 2026-03，距验证日期已有数月。项目有大量开放 issue（2,493），既表明使用量大，也暗示维护者承受一定压力。
 - **治理**：由单一 GitHub 用户（`AUTOMATIC1111`）所有，非组织。这带来显著的 bus factor 风险；项目延续性取决于该个人的持续投入。[未验证]
 - **背书**：无可见的企业或基金会背书；由社区捐赠和志愿者贡献资助。

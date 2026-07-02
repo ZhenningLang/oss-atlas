@@ -16,21 +16,17 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T08:28:55Z
-  overall: B
-  overall_score: 3.2
-  scored_axes: 5
+  computed_at: 2026-07-02T12:45:36Z
+  overall: "?"
+  overall_score: null
+  scored_axes: 1
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: A
-      raw:
-        archived: false
-        last_commit_age_days: 0
-        active_weeks_13: 13
-        carve_out: null
+      grade: "?"
+      raw: {}
     responsiveness:
       grade: "?"
       raw: {}
@@ -45,28 +41,20 @@ health:
         volume_tier: D
         cross_check_divergence: null
     longevity:
-      grade: B
-      raw:
-        repo_age_days: 314
-        last_commit_age_days: 0
-        cohort: skill-pack
+      grade: "?"
+      raw: {}
     governance:
-      grade: A
-      raw:
-        active_maintainers_12mo: 96
-        top1_share: 0.231
-        top3_share: 0.523
-        window_source: stats_contributors
-        carve_out: null
+      grade: "?"
+      raw: {}
     risk_license:
-      grade: A
-      raw:
-        spdx_id: MIT
-        permissiveness: permissive
-        relicense_36mo: false
-        content_license: null
+      grade: "?"
+      raw: {}
   unknowns:
+    maintenance: { reason: recency_unreadable }
     responsiveness: { reason: type_na }
+    longevity: { reason: not_found }
+    governance: { reason: empty_or_gated }
+    risk_license: { reason: repo_unreachable }
 ---
 
 # Spec Kit
@@ -104,6 +92,7 @@ GitHub 出品的开源工具包，帮助你上手 Spec-Driven Development——�
 
 ## 健康度与可持续性
 
+- **响应速度**：无法计算——type_na。
 - **维护（2026-07）。** 最后 push 于 2026-07-01，持续开发中；项目未归档，由 GitHub 团队维护更新。[推断]
 - **治理 / bus factor。** 归属 GitHub（微软）——**极强的背书**信号，维护者流失的 bus factor 风险几乎为零。路线图与 GitHub 的 AI 战略绑定，这既是优势，也是潜在的锁定顾虑。[推断]
 - **年龄与 Lindy 判断。** 不足一年（2025-08 创建）⇒ **极弱的 Lindy** 信号。它是一个年轻、靠 hype 推动的项目，star 数庞大但长期 track record 未经检验。GitHub 背书提升了长寿几率，但方法论本身尚未在规模上被证明。[推断]

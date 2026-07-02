@@ -94,6 +94,7 @@ You reach for this specifically when you want *breadth* and *cross-harness porta
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — type_na.
 - **Maintenance** — [未验证] last pushed 2026-06, not archived, open issues low (~5); activity is current as of 2026-06, so the catalog is **actively maintained**. No tagged releases — you install whatever is on `main`.
 - **Governance & bus factor** — [推断] **`User`-owned, single-maintainer repo with ~37k stars (2026-06) — a bus-factor flag.** A very large, unversioned surface (~194 agents / ~158 skills) resting on one person means cadence and long-term support are not guaranteed; vendor what you depend on. No foundation or vendor backing.
 - **Age & Lindy** — [推断] created 2025-07, so ~1 year old as of 2026-06: young and popular, **not yet a Lindy bet** despite the star count. Multi-harness generation (`make generate`) is recent tooling; treat durability as unproven.

@@ -95,6 +95,7 @@ You reach for it specifically when you want (a) the document skills (`docx`, `pd
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — type_na.
 - **Maintenance** — [未验证] last pushed 2026-06, not archived; activity is current as of 2026-06, so **actively maintained**. Open-issue count is high (~990) — consistent with a very high-traffic first-party repo, not necessarily a maintenance-debt signal. No tagged releases; track `main`.
 - **Governance & backing** — [推断] org-owned and **vendor-backed by Anthropic itself** (the platform vendor that defines the Agent Skills format). Strongest possible provenance for this format, but roadmap is the vendor's to set or pivot; first-party does not equal stable API.
 - **Age & Lindy** — [推断] created 2025-09, so under ~1 year old as of 2026-06: young. Lindy is weak on age alone, but vendor backing + the canonical `spec/`/`template/` make it the **reference** others fork; betting risk is lower than a community pack of the same age.

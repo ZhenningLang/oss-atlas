@@ -110,6 +110,7 @@ Realistically that is the **only** scenario where reaching for it makes sense in
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (2026-06): coasting → effectively dead.** Last pushed **2024-06** → roughly **2 years idle**; ~152 open issues, single-maintainer (owner type **User**, `TKkk-iOSer`), not archived but not moving. This is a coasting-to-abandoned project, not an active one. [推断]
 - **Inherently version-fragile — the decisive signal.** It **patches an auto-updating client binary** tied to a specific WeChat version. Even a well-maintained project of this kind decays the instant the host app updates; an *un*maintained one against builds as old as 2.3.x–3.7.x is **non-functional on current WeChat by construction.** [推断]
 - **Lindy verdict: FAILS in practice.** Created **2017-04** (~9 years old), so on age alone it looks Lindy — but Lindy is **age × still-active**, never age alone. Here it is **long-lived but idle AND structurally doomed** (a patch against a moving target the maintainer stopped chasing). The longevity is *negated*, not earned — the textbook Lindy-failure case. [推断]

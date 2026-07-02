@@ -16,28 +16,20 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T08:28:12Z
-  overall: B
-  overall_score: 2.83
-  scored_axes: 6
+  computed_at: 2026-07-02T12:47:27Z
+  overall: "?"
+  overall_score: null
+  scored_axes: 1
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: A
-      raw:
-        archived: false
-        last_commit_age_days: 0
-        active_weeks_13: 13
-        carve_out: null
+      grade: "?"
+      raw: {}
     responsiveness:
-      grade: A
-      raw:
-        median_ttfr_hours: 2.1
-        qualifying_issues: 36
-        band: relaxed_solo
-        window_offset_days: 3
+      grade: "?"
+      raw: {}
     adoption:
       grade: D
       raw:
@@ -49,26 +41,20 @@ health:
         volume_tier: D
         cross_check_divergence: null
     longevity:
-      grade: A
-      raw:
-        repo_age_days: 1610
-        last_commit_age_days: 0
-        cohort: app
+      grade: "?"
+      raw: {}
     governance:
-      grade: A
-      raw:
-        active_maintainers_12mo: 322
-        top1_share: 0.107
-        top3_share: 0.273
-        window_source: stats_contributors
-        carve_out: null
+      grade: "?"
+      raw: {}
     risk_license:
-      grade: E
-      raw:
-        spdx_id: AGPL-3.0
-        permissiveness: strong_network_copyleft
-        relicense_36mo: true
-        content_license: null
+      grade: "?"
+      raw: {}
+  unknowns:
+    maintenance: { reason: recency_unreadable }
+    responsiveness: { reason: no_traffic }
+    longevity: { reason: not_found }
+    governance: { reason: empty_or_gated }
+    risk_license: { reason: repo_unreachable }
 ---
 
 # Immich
@@ -131,6 +117,7 @@ health:
 
 ## 健康度与可持续性
 
+- **响应速度**：无法计算——no_traffic。
 - **维护**：非常活跃——截至 2026-07 仍有日常推送，发布节奏规律，社区庞大且活跃（104.8k stars，669 个 open issue）。
 - **治理**：由 `immich-app` 组织开发，拥有多名核心维护者。项目有清晰的路线图和透明的 issue 追踪。Bus factor 中等。
 - **背书**：未见大型商业背书；主要依靠社区贡献和可能的捐赠/赞助。这是独立性的优势，但对长期可持续性也是风险。

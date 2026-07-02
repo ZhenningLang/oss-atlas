@@ -96,6 +96,7 @@ You reach for it when you want a curated, ready-made habit pack that follows you
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — type_na.
 - **Maintenance (2026-06):** active — last push 2026-06, latest release v3.29.0, frequent v3.x cadence, not archived. Versioned, but the fast cadence means a skill's routing/checks can change release-to-release.
 - **Governance & bus factor:** single-maintainer `User` repo (`tw93`); modest ~6k stars. Adoption is moderate and the project rests on one maintainer with no org/foundation backing. [推断]
 - **Age & Lindy:** created 2026-03, so only a few months old as of 2026-06 — the youngest of its engineering-leaf siblings; unproven on Lindy.

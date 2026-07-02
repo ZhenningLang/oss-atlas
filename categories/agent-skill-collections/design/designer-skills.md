@@ -96,6 +96,7 @@ You reach for it when you want *breadth* — one install that covers research �
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — type_na.
 - **Maintenance (2026-06):** active on `main` — last pushed 2026-06, not archived — but with **no tagged release** at all, so there's no stable, versioned surface to pin to; the skill/command set evolves continuously and the maintainer closes PRs lacking a matching issue.
 - **Governance / bus factor:** single-maintainer, `User`-owned repo (`Owl-Listener`) at ~1.7k stars, part of a larger personal family of design collections. One person's roadmap; no org or foundation backing.
 - **Age & Lindy verdict:** very young (created 2026-03, ~3 months old) — **unproven**. Brand-new and unversioned means no track record and no reproducibility anchor; pin a commit if you need stability.

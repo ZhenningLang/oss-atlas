@@ -94,6 +94,7 @@ You reach for it when you'd rather adopt an opinionated, theatrical persistence 
 
 ## Health & viability
 
+- **Responsiveness**: Cannot be scored — type_na.
 - **Maintenance** — very active and fast-moving: latest release v3.5.0 (2026-06), last pushed 2026-06, not archived (as of 2026-06). Frequent v3.x releases mean escalation logic and "flavors" can shift between versions — pin and re-check after upgrades.
 - **Governance & bus factor** — single-maintainer personal repo (`User`-owned); ~18k stars but one author owns the roadmap and the whole persona theme. Heavy theme + one maintainer = real key-person risk.
 - **Age & Lindy** — created 2026-03, ~0 years old as of 2026-06: young and visibly hyped (high stars fast), so Lindy-unproven. Stars signal interest, not durability — treat as a bet on a trend, not a settled tool.
