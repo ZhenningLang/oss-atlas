@@ -16,41 +16,57 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-01T10:00:00Z
-  overall: A
-  overall_score: 3.4
+  computed_at: 2026-07-02T08:28:38Z
+  overall: B
+  overall_score: 3.2
   scored_axes: 5
   capped: false
   cap_reason: null
-  needs_human_review: true
+  needs_human_review: false
   axes:
     maintenance:
       grade: A
       raw:
         archived: false
+        last_commit_age_days: 1
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
-      grade: ?
-      raw: {}
+      grade: A
+      raw:
+        median_ttfr_hours: 0.0
+        qualifying_issues: 11
+        band: relaxed_solo
+        window_offset_days: 2
     adoption:
-      grade: A
-      raw:
-        stars: 143767
-    longevity:
-      grade: C
-      raw: {}
-    governance:
-      grade: A
-      raw:
-        owner_type: Organization
-    risk_license:
       grade: B
       raw:
-        spdx_id: NOASSERTION
-        permissiveness: ?
-        relicense_36mo: false
-        content_license: null
+        registry: pypi.org
+        canonical_package: open-webui
+        dependent_repos_count: 0
+        downloads_last_month: 1635855
+        graph_tier: E
+        volume_tier: B
+        cross_check_divergence: 1.0
+    longevity:
+      grade: B
+      raw:
+        repo_age_days: 999
+        last_commit_age_days: 1
+        cohort: app
+    governance:
+      grade: C
+      raw:
+        active_maintainers_12mo: 160
+        top1_share: 0.705
+        top3_share: 0.837
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: "?"
+      raw: {}
   unknowns:
-    responsiveness: { reason: no_data }
+    risk_license: { reason: license_unparsed }
 ---
 
 # Open WebUI

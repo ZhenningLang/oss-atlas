@@ -16,41 +16,50 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-01T10:00:00Z
+  computed_at: 2026-07-02T08:32:05Z
   overall: C
-  overall_score: 2.2
-  scored_axes: 5
+  overall_score: 1.75
+  scored_axes: 4
   capped: false
   cap_reason: null
-  needs_human_review: true
+  needs_human_review: false
   axes:
     maintenance:
       grade: D
       raw:
         archived: false
+        last_commit_age_days: 705
+        active_weeks_13: 0
+        carve_out: null
     responsiveness:
-      grade: ?
-      raw: {}
-    adoption:
       grade: A
       raw:
-        stars: 163895
-    longevity:
-      grade: C
+        median_ttfr_hours: 69.5
+        qualifying_issues: 12
+        band: relaxed_solo
+        window_offset_days: 3
+    adoption:
+      grade: "?"
       raw: {}
-    governance:
-      grade: C
+    longevity:
+      grade: D
       raw:
-        owner_type: User
+        repo_age_days: 1410
+        last_commit_age_days: 705
+        cohort: tool
+    governance:
+      grade: "?"
+      raw: {}
     risk_license:
-      grade: C
+      grade: D
       raw:
         spdx_id: AGPL-3.0
-        permissiveness: copyleft
+        permissiveness: strong_network_copyleft
         relicense_36mo: false
         content_license: null
   unknowns:
-    responsiveness: { reason: no_data }
+    adoption: { reason: ambiguous }
+    governance: { reason: unattributable }
 ---
 
 # Stable Diffusion WebUI

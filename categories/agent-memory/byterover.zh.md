@@ -17,41 +17,59 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-01T10:00:00Z
-  overall: B
-  overall_score: 2.6
-  scored_axes: 5
-  capped: false
-  cap_reason: null
-  needs_human_review: true
+  computed_at: 2026-07-02T08:47:38Z
+  overall: D
+  overall_score: 2.5
+  scored_axes: 6
+  capped: true
+  cap_reason: "source-available/no-license: NOASSERTION"
+  needs_human_review: false
   axes:
     maintenance:
       grade: A
       raw:
         archived: false
+        last_commit_age_days: 7
+        active_weeks_13: 10
+        carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        median_ttfr_hours: 3.6
+        qualifying_issues: 23
+        band: default
+        window_offset_days: 12
     adoption:
       grade: D
       raw:
-        stars: 4892
+        registry: npmjs.org
+        canonical_package: byterover-cli
+        dependent_repos_count: 0
+        downloads_last_month: 6431
+        graph_tier: E
+        volume_tier: D
+        cross_check_divergence: null
     longevity:
-      grade: D
-      raw: {}
-    governance:
-      grade: B
+      grade: C
       raw:
-        owner_type: Organization
-    risk_license:
+        repo_age_days: 377
+        last_commit_age_days: 7
+        cohort: library
+    governance:
       grade: A
       raw:
-        spdx_id: MIT
-        permissiveness: permissive
+        active_maintainers_12mo: 17
+        top1_share: 0.288
+        top3_share: 0.634
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: E
+      raw:
+        spdx_id: NOASSERTION
+        permissiveness: source_available
         relicense_36mo: false
         content_license: null
-  unknowns:
-    responsiveness: { reason: no_data }
 ---
 
 # ByteRover CLI

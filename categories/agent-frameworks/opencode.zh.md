@@ -16,32 +16,48 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-01T10:00:00Z
-  overall: A
-  overall_score: 3.4
+  computed_at: 2026-07-02T08:35:03Z
+  overall: B
+  overall_score: 3.2
   scored_axes: 5
   capped: false
   cap_reason: null
-  needs_human_review: true
+  needs_human_review: false
   axes:
     maintenance:
       grade: A
       raw:
         archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
-      grade: ?
+      grade: "?"
       raw: {}
     adoption:
-      grade: A
+      grade: C
       raw:
-        stars: 181473
+        registry: npmjs.org
+        canonical_package: "@opencode-ai/cli-darwin-arm64"
+        dependent_repos_count: 0
+        downloads_last_month: 127913
+        graph_tier: E
+        volume_tier: C
+        cross_check_divergence: null
     longevity:
-      grade: D
-      raw: {}
+      grade: C
+      raw:
+        repo_age_days: 428
+        last_commit_age_days: 0
+        cohort: framework
     governance:
       grade: A
       raw:
-        owner_type: Organization
+        active_maintainers_12mo: 475
+        top1_share: 0.161
+        top3_share: 0.451
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
       grade: A
       raw:
@@ -50,7 +66,7 @@ health:
         relicense_36mo: false
         content_license: null
   unknowns:
-    responsiveness: { reason: no_data }
+    responsiveness: { reason: no_traffic }
 ---
 
 # OpenCode

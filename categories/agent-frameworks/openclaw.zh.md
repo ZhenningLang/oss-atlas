@@ -16,41 +16,54 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-01T10:00:00Z
+  computed_at: 2026-07-02T08:42:43Z
   overall: B
-  overall_score: 3.0
-  scored_axes: 5
+  overall_score: 3.25
+  scored_axes: 4
   capped: false
   cap_reason: null
-  needs_human_review: true
+  needs_human_review: false
   axes:
     maintenance:
       grade: A
       raw:
         archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
-      grade: ?
+      grade: "?"
       raw: {}
     adoption:
       grade: A
       raw:
-        stars: 381390
+        registry: npmjs.org
+        canonical_package: openclaw
+        dependent_repos_count: 0
+        downloads_last_month: 14326323
+        graph_tier: E
+        volume_tier: A
+        cross_check_divergence: 1.0
     longevity:
-      grade: E
-      raw: {}
-    governance:
-      grade: A
+      grade: C
       raw:
-        owner_type: Organization
-    risk_license:
+        repo_age_days: 220
+        last_commit_age_days: 0
+        cohort: app
+    governance:
       grade: B
       raw:
-        spdx_id: NOASSERTION
-        permissiveness: ?
-        relicense_36mo: false
-        content_license: null
+        active_maintainers_12mo: 487
+        top1_share: 0.528
+        top3_share: 0.753
+        window_source: stats_contributors
+        carve_out: null
+    risk_license:
+      grade: "?"
+      raw: {}
   unknowns:
-    responsiveness: { reason: no_data }
+    responsiveness: { reason: no_traffic }
+    risk_license: { reason: license_unparsed }
 ---
 
 # OpenClaw

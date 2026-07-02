@@ -16,32 +16,48 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-01T10:00:00Z
+  computed_at: 2026-07-02T08:32:47Z
   overall: B
-  overall_score: 3.2
+  overall_score: 3.0
   scored_axes: 5
   capped: false
   cap_reason: null
-  needs_human_review: true
+  needs_human_review: false
   axes:
     maintenance:
       grade: A
       raw:
         archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
-      grade: ?
+      grade: "?"
       raw: {}
     adoption:
-      grade: A
+      grade: B
       raw:
-        stars: 207548
+        registry: pypi.org
+        canonical_package: hermes-agent
+        dependent_repos_count: 0
+        downloads_last_month: 383111
+        graph_tier: E
+        volume_tier: B
+        cross_check_divergence: 1.01
     longevity:
-      grade: E
-      raw: {}
-    governance:
-      grade: A
+      grade: D
       raw:
-        owner_type: Organization
+        repo_age_days: 344
+        last_commit_age_days: 0
+        cohort: framework
+    governance:
+      grade: B
+      raw:
+        active_maintainers_12mo: 493
+        top1_share: 0.455
+        top3_share: 0.619
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
       grade: A
       raw:
@@ -50,7 +66,7 @@ health:
         relicense_36mo: false
         content_license: null
   unknowns:
-    responsiveness: { reason: no_data }
+    responsiveness: { reason: no_traffic }
 ---
 
 # Hermes Agent

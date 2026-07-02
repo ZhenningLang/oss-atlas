@@ -16,32 +16,52 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-01T10:00:00Z
-  overall: A
-  overall_score: 3.8
-  scored_axes: 5
+  computed_at: 2026-07-02T08:46:57Z
+  overall: B
+  overall_score: 3.17
+  scored_axes: 6
   capped: false
   cap_reason: null
-  needs_human_review: true
+  needs_human_review: false
   axes:
     maintenance:
       grade: A
       raw:
         archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 11
+        carve_out: null
     responsiveness:
-      grade: ?
-      raw: {}
+      grade: A
+      raw:
+        median_ttfr_hours: 0.7
+        qualifying_issues: 7
+        band: relaxed_solo
+        window_offset_days: 13
     adoption:
-      grade: A
+      grade: E
       raw:
-        stars: 174659
+        registry: conda-forge.org
+        canonical_package: yt-dlp
+        dependent_repos_count: 0
+        downloads_last_month: 138250
+        graph_tier: E
+        volume_tier: "?"
+        cross_check_divergence: null
     longevity:
-      grade: B
-      raw: {}
-    governance:
       grade: A
       raw:
-        owner_type: Organization
+        repo_age_days: 2075
+        last_commit_age_days: 0
+        cohort: tool
+    governance:
+      grade: B
+      raw:
+        active_maintainers_12mo: 48
+        top1_share: 0.515
+        top3_share: 0.772
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
       grade: A
       raw:
@@ -49,8 +69,6 @@ health:
         permissiveness: permissive
         relicense_36mo: false
         content_license: null
-  unknowns:
-    responsiveness: { reason: no_data }
 ---
 
 # yt-dlp

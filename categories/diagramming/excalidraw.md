@@ -16,32 +16,52 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-01T10:00:00Z
+  computed_at: 2026-07-02T08:34:40Z
   overall: A
-  overall_score: 3.8
-  scored_axes: 5
+  overall_score: 3.67
+  scored_axes: 6
   capped: false
   cap_reason: null
-  needs_human_review: true
+  needs_human_review: false
   axes:
     maintenance:
       grade: A
       raw:
         archived: false
+        last_commit_age_days: 3
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
-      grade: ?
-      raw: {}
+      grade: A
+      raw:
+        median_ttfr_hours: 25.1
+        qualifying_issues: 25
+        band: default
+        window_offset_days: 5
     adoption:
-      grade: A
-      raw:
-        stars: 126600
-    longevity:
       grade: B
-      raw: {}
-    governance:
+      raw:
+        registry: npmjs.org
+        canonical_package: "@excalidraw/excalidraw"
+        dependent_repos_count: 523
+        downloads_last_month: 1390033
+        graph_tier: C
+        volume_tier: B
+        cross_check_divergence: 1.01
+    longevity:
       grade: A
       raw:
-        owner_type: Organization
+        repo_age_days: 2373
+        last_commit_age_days: 3
+        cohort: library
+    governance:
+      grade: B
+      raw:
+        active_maintainers_12mo: 13
+        top1_share: 0.549
+        top3_share: 0.835
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
       grade: A
       raw:
@@ -49,8 +69,6 @@ health:
         permissiveness: permissive
         relicense_36mo: false
         content_license: null
-  unknowns:
-    responsiveness: { reason: no_data }
 ---
 
 # Excalidraw

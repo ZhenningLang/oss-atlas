@@ -18,41 +18,59 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-01T10:00:00Z
+  computed_at: 2026-07-02T08:45:34Z
   overall: B
-  overall_score: 3.0
-  scored_axes: 5
+  overall_score: 3.33
+  scored_axes: 6
   capped: false
   cap_reason: null
-  needs_human_review: true
+  needs_human_review: false
   axes:
     maintenance:
       grade: A
       raw:
         archived: false
+        last_commit_age_days: 12
+        active_weeks_13: 12
+        carve_out: null
     responsiveness:
-      grade: "?"
-      raw: {}
-    adoption:
-      grade: C
-      raw:
-        stars: 64223
-    longevity:
-      grade: C
-      raw: {}
-    governance:
       grade: B
       raw:
-        owner_type: Organization
+        median_ttfr_hours: 51.5
+        qualifying_issues: 17
+        band: default
+        window_offset_days: 12
+    adoption:
+      grade: B
+      raw:
+        registry: pypi.org
+        canonical_package: open-interpreter
+        dependent_repos_count: 7
+        downloads_last_month: 242577
+        graph_tier: D
+        volume_tier: B
+        cross_check_divergence: 1.1
+    longevity:
+      grade: C
+      raw:
+        repo_age_days: 1084
+        last_commit_age_days: 12
+        cohort: framework
+    governance:
+      grade: A
+      raw:
+        active_maintainers_12mo: 90
+        top1_share: 0.153
+        top3_share: 0.349
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
       grade: A
       raw:
-        spdx_id: MIT
+        spdx_id: Apache-2.0
         permissiveness: permissive
         relicense_36mo: false
         content_license: null
-  unknowns:
-    responsiveness: { reason: no_data }
 ---
 
 # Open Interpreter

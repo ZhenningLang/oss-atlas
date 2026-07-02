@@ -16,41 +16,54 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-01T10:00:00Z
+  computed_at: 2026-07-02T08:41:55Z
   overall: A
-  overall_score: 3.6
-  scored_axes: 5
+  overall_score: 3.75
+  scored_axes: 4
   capped: false
   cap_reason: null
-  needs_human_review: true
+  needs_human_review: false
   axes:
     maintenance:
       grade: A
       raw:
         archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
-      grade: ?
+      grade: "?"
       raw: {}
     adoption:
+      grade: B
+      raw:
+        registry: npmjs.org
+        canonical_package: n8n-workflow
+        dependent_repos_count: 304
+        downloads_last_month: 1313694
+        graph_tier: C
+        volume_tier: B
+        cross_check_divergence: 1.04
+    longevity:
       grade: A
       raw:
-        stars: 194859
-    longevity:
-      grade: B
-      raw: {}
+        repo_age_days: 2567
+        last_commit_age_days: 0
+        cohort: app
     governance:
       grade: A
       raw:
-        owner_type: Organization
+        active_maintainers_12mo: 176
+        top1_share: 0.063
+        top3_share: 0.149
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
-      grade: B
-      raw:
-        spdx_id: NOASSERTION
-        permissiveness: ?
-        relicense_36mo: false
-        content_license: null
+      grade: "?"
+      raw: {}
   unknowns:
-    responsiveness: { reason: no_data }
+    responsiveness: { reason: no_traffic }
+    risk_license: { reason: license_unparsed }
 ---
 
 # n8n

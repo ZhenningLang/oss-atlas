@@ -16,41 +16,59 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-01T10:00:00Z
+  computed_at: 2026-07-02T08:28:12Z
   overall: B
-  overall_score: 3.2
-  scored_axes: 5
+  overall_score: 2.83
+  scored_axes: 6
   capped: false
   cap_reason: null
-  needs_human_review: true
+  needs_human_review: false
   axes:
     maintenance:
       grade: A
       raw:
         archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
-      grade: ?
-      raw: {}
-    adoption:
       grade: A
       raw:
-        stars: 104883
+        median_ttfr_hours: 2.1
+        qualifying_issues: 36
+        band: relaxed_solo
+        window_offset_days: 3
+    adoption:
+      grade: D
+      raw:
+        registry: npmjs.org
+        canonical_package: "@immich/cli"
+        dependent_repos_count: 0
+        downloads_last_month: 6496
+        graph_tier: E
+        volume_tier: D
+        cross_check_divergence: null
     longevity:
-      grade: C
-      raw: {}
+      grade: A
+      raw:
+        repo_age_days: 1610
+        last_commit_age_days: 0
+        cohort: app
     governance:
       grade: A
       raw:
-        owner_type: Organization
+        active_maintainers_12mo: 322
+        top1_share: 0.107
+        top3_share: 0.273
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
-      grade: C
+      grade: E
       raw:
         spdx_id: AGPL-3.0
-        permissiveness: copyleft
-        relicense_36mo: false
+        permissiveness: strong_network_copyleft
+        relicense_36mo: true
         content_license: null
-  unknowns:
-    responsiveness: { reason: no_data }
 ---
 
 # Immich

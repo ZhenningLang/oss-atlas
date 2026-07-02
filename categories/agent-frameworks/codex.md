@@ -16,32 +16,48 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-01T10:00:00Z
-  overall: B
-  overall_score: 3.2
+  computed_at: 2026-07-02T08:42:28Z
+  overall: A
+  overall_score: 3.6
   scored_axes: 5
   capped: false
   cap_reason: null
-  needs_human_review: true
+  needs_human_review: false
   axes:
     maintenance:
       grade: A
       raw:
         archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
-      grade: ?
+      grade: "?"
       raw: {}
     adoption:
-      grade: B
+      grade: A
       raw:
-        stars: 94997
+        registry: npmjs.org
+        canonical_package: "@openai/codex"
+        dependent_repos_count: 0
+        downloads_last_month: 45794237
+        graph_tier: E
+        volume_tier: A
+        cross_check_divergence: 1.0
     longevity:
-      grade: D
-      raw: {}
+      grade: C
+      raw:
+        repo_age_days: 445
+        last_commit_age_days: 0
+        cohort: framework
     governance:
       grade: A
       raw:
-        owner_type: Organization
+        active_maintainers_12mo: 92
+        top1_share: 0.155
+        top3_share: 0.349
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
       grade: A
       raw:
@@ -50,7 +66,7 @@ health:
         relicense_36mo: false
         content_license: null
   unknowns:
-    responsiveness: { reason: no_data }
+    responsiveness: { reason: no_traffic }
 ---
 
 # Codex

@@ -16,32 +16,45 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-01T10:00:00Z
+  computed_at: 2026-07-02T08:27:28Z
   overall: A
-  overall_score: 3.8
+  overall_score: 4.0
   scored_axes: 5
   capped: false
   cap_reason: null
-  needs_human_review: true
+  needs_human_review: false
   axes:
     maintenance:
       grade: A
       raw:
         archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
-      grade: ?
-      raw: {}
-    adoption:
-      grade: B
+      grade: A
       raw:
-        stars: 98538
+        median_ttfr_hours: 0.1
+        qualifying_issues: 41
+        band: default
+        window_offset_days: 5
+    adoption:
+      grade: "?"
+      raw: {}
     longevity:
       grade: A
-      raw: {}
+      raw:
+        repo_age_days: 4087
+        last_commit_age_days: 0
+        cohort: library
     governance:
       grade: A
       raw:
-        owner_type: Organization
+        active_maintainers_12mo: 73
+        top1_share: 0.209
+        top3_share: 0.52
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
       grade: A
       raw:
@@ -50,7 +63,7 @@ health:
         relicense_36mo: false
         content_license: null
   unknowns:
-    responsiveness: { reason: no_data }
+    adoption: { reason: registry_no_counts }
 ---
 
 # Ant Design

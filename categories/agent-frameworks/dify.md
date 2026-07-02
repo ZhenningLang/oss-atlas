@@ -16,41 +16,57 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-01T10:00:00Z
-  overall: A
-  overall_score: 3.4
+  computed_at: 2026-07-02T08:40:35Z
+  overall: B
+  overall_score: 3.2
   scored_axes: 5
   capped: false
   cap_reason: null
-  needs_human_review: true
+  needs_human_review: false
   axes:
     maintenance:
       grade: A
       raw:
         archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
-      grade: ?
-      raw: {}
-    adoption:
       grade: A
       raw:
-        stars: 147340
+        median_ttfr_hours: 0.2
+        qualifying_issues: 25
+        band: default
+        window_offset_days: 2
+    adoption:
+      grade: D
+      raw:
+        registry: npmjs.org
+        canonical_package: dify-client
+        dependent_repos_count: 8
+        downloads_last_month: 8835
+        graph_tier: D
+        volume_tier: D
+        cross_check_divergence: null
     longevity:
-      grade: C
-      raw: {}
+      grade: B
+      raw:
+        repo_age_days: 1177
+        last_commit_age_days: 0
+        cohort: framework
     governance:
       grade: A
       raw:
-        owner_type: Organization
+        active_maintainers_12mo: 255
+        top1_share: 0.111
+        top3_share: 0.227
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
-      grade: B
-      raw:
-        spdx_id: NOASSERTION
-        permissiveness: ?
-        relicense_36mo: false
-        content_license: null
+      grade: "?"
+      raw: {}
   unknowns:
-    responsiveness: { reason: no_data }
+    risk_license: { reason: license_unparsed }
 ---
 
 # Dify

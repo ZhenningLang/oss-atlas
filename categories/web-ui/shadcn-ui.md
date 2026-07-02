@@ -16,32 +16,52 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-01T10:00:00Z
+  computed_at: 2026-07-02T08:26:18Z
   overall: A
-  overall_score: 3.6
-  scored_axes: 5
+  overall_score: 3.5
+  scored_axes: 6
   capped: false
   cap_reason: null
-  needs_human_review: true
+  needs_human_review: false
   axes:
     maintenance:
       grade: A
       raw:
         archived: false
+        last_commit_age_days: 2
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
-      grade: ?
-      raw: {}
+      grade: A
+      raw:
+        median_ttfr_hours: 14.7
+        qualifying_issues: 28
+        band: default
+        window_offset_days: 10
     adoption:
       grade: A
       raw:
-        stars: 117822
+        registry: npmjs.org
+        canonical_package: shadcn
+        dependent_repos_count: 0
+        downloads_last_month: 18842516
+        graph_tier: E
+        volume_tier: A
+        cross_check_divergence: 1.13
     longevity:
-      grade: C
-      raw: {}
-    governance:
-      grade: A
+      grade: B
       raw:
-        owner_type: Organization
+        repo_age_days: 1275
+        last_commit_age_days: 2
+        cohort: library
+    governance:
+      grade: C
+      raw:
+        active_maintainers_12mo: 72
+        top1_share: 0.784
+        top3_share: 0.802
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
       grade: A
       raw:
@@ -49,8 +69,6 @@ health:
         permissiveness: permissive
         relicense_36mo: false
         content_license: null
-  unknowns:
-    responsiveness: { reason: no_data }
 ---
 
 # shadcn/ui

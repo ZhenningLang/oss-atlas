@@ -16,10 +16,10 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-01T10:00:00Z
+  computed_at: 2026-07-02T08:36:26Z
   overall: A
-  overall_score: 3.8
-  scored_axes: 5
+  overall_score: 4.0
+  scored_axes: 6
   capped: false
   cap_reason: null
   needs_human_review: true
@@ -28,20 +28,40 @@ health:
       grade: A
       raw:
         archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
-      grade: ?
-      raw: {}
+      grade: A
+      raw:
+        median_ttfr_hours: 10.3
+        qualifying_issues: 41
+        band: relaxed_solo
+        window_offset_days: 1
     adoption:
       grade: A
       raw:
-        stars: 107352
+        registry: crates.io
+        canonical_package: deno_core
+        dependent_repos_count: 396
+        downloads_last_month: 5934345
+        graph_tier: C
+        volume_tier: A
+        cross_check_divergence: 4.43
     longevity:
-      grade: B
-      raw: {}
+      grade: A
+      raw:
+        repo_age_days: 2970
+        last_commit_age_days: 0
+        cohort: tool
     governance:
       grade: A
       raw:
-        owner_type: Organization
+        active_maintainers_12mo: 91
+        top1_share: 0.33
+        top3_share: 0.594
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
       grade: A
       raw:
@@ -49,8 +69,6 @@ health:
         permissiveness: permissive
         relicense_36mo: false
         content_license: null
-  unknowns:
-    responsiveness: { reason: no_data }
 ---
 
 # Deno

@@ -16,41 +16,59 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-01T10:00:00Z
+  computed_at: 2026-07-02T08:36:08Z
   overall: B
-  overall_score: 2.6
-  scored_axes: 5
+  overall_score: 3.0
+  scored_axes: 6
   capped: false
   cap_reason: null
-  needs_human_review: true
+  needs_human_review: false
   axes:
     maintenance:
-      grade: B
+      grade: A
       raw:
         archived: false
+        last_commit_age_days: 27
+        active_weeks_13: 7
+        carve_out: null
     responsiveness:
-      grade: ?
-      raw: {}
+      grade: A
+      raw:
+        median_ttfr_hours: 0.7
+        qualifying_issues: 29
+        band: relaxed_solo
+        window_offset_days: 7
     adoption:
-      grade: B
+      grade: D
       raw:
-        stars: 63156
+        registry: crates.io
+        canonical_package: vaultwarden
+        dependent_repos_count: 0
+        downloads_last_month: 2726
+        graph_tier: E
+        volume_tier: D
+        cross_check_divergence: null
     longevity:
-      grade: B
-      raw: {}
-    governance:
-      grade: C
+      grade: A
       raw:
-        owner_type: User
+        repo_age_days: 3056
+        last_commit_age_days: 27
+        cohort: tool
+    governance:
+      grade: A
+      raw:
+        active_maintainers_12mo: 15
+        top1_share: 0.369
+        top3_share: 0.704
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
-      grade: C
+      grade: D
       raw:
         spdx_id: AGPL-3.0
-        permissiveness: copyleft
+        permissiveness: strong_network_copyleft
         relicense_36mo: false
         content_license: null
-  unknowns:
-    responsiveness: { reason: no_data }
 ---
 
 # Vaultwarden

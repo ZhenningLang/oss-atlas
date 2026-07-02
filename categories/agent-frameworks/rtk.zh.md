@@ -16,32 +16,45 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-01T10:00:00Z
+  computed_at: 2026-07-02T08:43:29Z
   overall: B
   overall_score: 3.0
   scored_axes: 5
   capped: false
   cap_reason: null
-  needs_human_review: true
+  needs_human_review: false
   axes:
     maintenance:
       grade: A
       raw:
         archived: false
+        last_commit_age_days: 1
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
-      grade: ?
-      raw: {}
-    adoption:
-      grade: B
+      grade: C
       raw:
-        stars: 67498
-    longevity:
-      grade: E
+        median_ttfr_hours: 7.3
+        qualifying_issues: 2
+        band: relaxed_solo
+        window_offset_days: 7
+    adoption:
+      grade: "?"
       raw: {}
+    longevity:
+      grade: D
+      raw:
+        repo_age_days: 161
+        last_commit_age_days: 1
+        cohort: tool
     governance:
       grade: A
       raw:
-        owner_type: Organization
+        active_maintainers_12mo: 97
+        top1_share: 0.276
+        top3_share: 0.59
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
       grade: A
       raw:
@@ -50,7 +63,7 @@ health:
         relicense_36mo: false
         content_license: null
   unknowns:
-    responsiveness: { reason: no_data }
+    adoption: { reason: ambiguous }
 ---
 
 # RTK

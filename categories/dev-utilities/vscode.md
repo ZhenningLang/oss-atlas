@@ -16,32 +16,48 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-01T10:00:00Z
-  overall: A
-  overall_score: 4.0
+  computed_at: 2026-07-02T08:41:04Z
+  overall: B
+  overall_score: 3.4
   scored_axes: 5
   capped: false
   cap_reason: null
-  needs_human_review: true
+  needs_human_review: false
   axes:
     maintenance:
       grade: A
       raw:
         archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
-      grade: ?
+      grade: "?"
       raw: {}
     adoption:
-      grade: A
+      grade: D
       raw:
-        stars: 186885
+        registry: npmjs.org
+        canonical_package: "@theia/vscode-builtin-fsharp"
+        dependent_repos_count: 1
+        downloads_last_month: 2672
+        graph_tier: D
+        volume_tier: D
+        cross_check_divergence: null
     longevity:
       grade: A
-      raw: {}
+      raw:
+        repo_age_days: 3955
+        last_commit_age_days: 0
+        cohort: app
     governance:
       grade: A
       raw:
-        owner_type: Organization
+        active_maintainers_12mo: 128
+        top1_share: 0.067
+        top3_share: 0.181
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
       grade: A
       raw:
@@ -50,7 +66,7 @@ health:
         relicense_36mo: false
         content_license: null
   unknowns:
-    responsiveness: { reason: no_data }
+    responsiveness: { reason: no_traffic }
 ---
 
 # VS Code

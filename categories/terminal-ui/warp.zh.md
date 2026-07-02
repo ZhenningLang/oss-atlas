@@ -17,41 +17,60 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-01T10:00:00Z
+  computed_at: 2026-07-02T08:29:09Z
   overall: B
-  overall_score: 3.0
-  scored_axes: 5
+  overall_score: 2.83
+  scored_axes: 6
   capped: false
   cap_reason: null
-  needs_human_review: true
+  needs_human_review: false
   axes:
     maintenance:
       grade: A
       raw:
         archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 10
+        carve_out: null
     responsiveness:
-      grade: ?
-      raw: {}
-    adoption:
-      grade: B
+      grade: A
       raw:
-        stars: 62664
+        median_ttfr_hours: 0.0
+        qualifying_issues: 27
+        band: relaxed_solo
+        window_offset_days: 2
+    adoption:
+      grade: E
+      raw:
+        registry: null
+        canonical_package: null
+        dependent_repos_count: 0
+        downloads_last_month: null
+        graph_tier: E
+        volume_tier: null
+        cross_check_divergence: null
+        archived: false
     longevity:
-      grade: C
-      raw: {}
+      grade: A
+      raw:
+        repo_age_days: 1820
+        last_commit_age_days: 0
+        cohort: tool
     governance:
       grade: A
       raw:
-        owner_type: Organization
+        active_maintainers_12mo: 94
+        top1_share: 0.293
+        top3_share: 0.396
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
-      grade: C
+      grade: D
       raw:
         spdx_id: AGPL-3.0
-        permissiveness: copyleft
+        permissiveness: strong_network_copyleft
         relicense_36mo: false
         content_license: null
-  unknowns:
-    responsiveness: { reason: no_data }
 ---
 
 # Warp

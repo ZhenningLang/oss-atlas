@@ -16,41 +16,54 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-01T10:00:00Z
+  computed_at: 2026-07-02T08:35:35Z
   overall: B
   overall_score: 3.2
   scored_axes: 5
   capped: false
   cap_reason: null
-  needs_human_review: true
+  needs_human_review: false
   axes:
     maintenance:
       grade: A
       raw:
         archived: false
+        last_commit_age_days: 1
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
-      grade: ?
-      raw: {}
+      grade: A
+      raw:
+        median_ttfr_hours: 0.8
+        qualifying_issues: 31
+        band: relaxed_solo
+        window_offset_days: 8
     adoption:
-      grade: A
-      raw:
-        stars: 129119
-    longevity:
-      grade: C
+      grade: "?"
       raw: {}
-    governance:
-      grade: A
+    longevity:
+      grade: B
       raw:
-        owner_type: Organization
+        repo_age_days: 954
+        last_commit_age_days: 1
+        cohort: tool
+    governance:
+      grade: B
+      raw:
+        active_maintainers_12mo: 50
+        top1_share: 0.537
+        top3_share: 0.862
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
       grade: C
       raw:
         spdx_id: GPL-3.0
-        permissiveness: copyleft
+        permissiveness: weak_file_copyleft
         relicense_36mo: false
         content_license: null
   unknowns:
-    responsiveness: { reason: no_data }
+    adoption: { reason: ambiguous }
 ---
 
 # Clash Verge Rev

@@ -16,10 +16,10 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-01T10:00:00Z
+  computed_at: 2026-07-02T08:45:54Z
   overall: A
-  overall_score: 3.4
-  scored_axes: 5
+  overall_score: 3.75
+  scored_axes: 4
   capped: false
   cap_reason: null
   needs_human_review: true
@@ -28,29 +28,42 @@ health:
       grade: A
       raw:
         archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
-      grade: ?
+      grade: "?"
       raw: {}
     adoption:
       grade: B
       raw:
-        stars: 86334
+        registry: crates.io
+        canonical_package: zed_extension_api
+        dependent_repos_count: 0
+        downloads_last_month: 812610
+        graph_tier: E
+        volume_tier: B
+        cross_check_divergence: 3.64
     longevity:
-      grade: B
-      raw: {}
+      grade: A
+      raw:
+        repo_age_days: 1958
+        last_commit_age_days: 0
+        cohort: tool
     governance:
       grade: A
       raw:
-        owner_type: Organization
+        active_maintainers_12mo: 311
+        top1_share: 0.082
+        top3_share: 0.19
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
-      grade: B
-      raw:
-        spdx_id: NOASSERTION
-        permissiveness: ?
-        relicense_36mo: false
-        content_license: null
+      grade: "?"
+      raw: {}
   unknowns:
-    responsiveness: { reason: no_data }
+    responsiveness: { reason: no_traffic }
+    risk_license: { reason: license_unparsed }
 ---
 
 # Zed

@@ -16,32 +16,52 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-01T10:00:00Z
+  computed_at: 2026-07-02T08:45:11Z
   overall: A
-  overall_score: 3.6
-  scored_axes: 5
+  overall_score: 3.5
+  scored_axes: 6
   capped: false
   cap_reason: null
   needs_human_review: true
   axes:
     maintenance:
-      grade: B
+      grade: A
       raw:
         archived: false
+        last_commit_age_days: 10
+        active_weeks_13: 7
+        carve_out: null
     responsiveness:
-      grade: ?
-      raw: {}
+      grade: A
+      raw:
+        median_ttfr_hours: 1.6
+        qualifying_issues: 54
+        band: relaxed_solo
+        window_offset_days: 11
     adoption:
       grade: B
       raw:
-        stars: 64725
+        registry: crates.io
+        canonical_package: alacritty_terminal
+        dependent_repos_count: 335
+        downloads_last_month: 520819
+        graph_tier: C
+        volume_tier: B
+        cross_check_divergence: 2.33
     longevity:
       grade: A
-      raw: {}
-    governance:
-      grade: A
       raw:
-        owner_type: Organization
+        repo_age_days: 3787
+        last_commit_age_days: 10
+        cohort: tool
+    governance:
+      grade: C
+      raw:
+        active_maintainers_12mo: 5
+        top1_share: 0.633
+        top3_share: 0.933
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
       grade: A
       raw:
@@ -49,8 +69,6 @@ health:
         permissiveness: permissive
         relicense_36mo: false
         content_license: null
-  unknowns:
-    responsiveness: { reason: no_data }
 ---
 
 # Alacritty

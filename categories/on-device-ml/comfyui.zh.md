@@ -16,41 +16,58 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-01T10:00:00Z
+  computed_at: 2026-07-02T08:32:34Z
   overall: B
-  overall_score: 3.2
+  overall_score: 2.8
   scored_axes: 5
   capped: false
   cap_reason: null
-  needs_human_review: true
+  needs_human_review: false
   axes:
     maintenance:
       grade: A
       raw:
         archived: false
+        last_commit_age_days: 0
+        active_weeks_13: 13
+        carve_out: null
     responsiveness:
-      grade: ?
+      grade: "?"
       raw: {}
     adoption:
+      grade: E
+      raw:
+        registry: null
+        canonical_package: null
+        dependent_repos_count: 0
+        downloads_last_month: null
+        graph_tier: E
+        volume_tier: null
+        cross_check_divergence: null
+        archived: false
+    longevity:
       grade: A
       raw:
-        stars: 119112
-    longevity:
-      grade: C
-      raw: {}
+        repo_age_days: 1262
+        last_commit_age_days: 0
+        cohort: tool
     governance:
       grade: A
       raw:
-        owner_type: Organization
+        active_maintainers_12mo: 50
+        top1_share: 0.38
+        top3_share: 0.623
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
       grade: C
       raw:
         spdx_id: GPL-3.0
-        permissiveness: copyleft
+        permissiveness: weak_file_copyleft
         relicense_36mo: false
         content_license: null
   unknowns:
-    responsiveness: { reason: no_data }
+    responsiveness: { reason: no_traffic }
 ---
 
 # ComfyUI

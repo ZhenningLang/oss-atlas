@@ -16,41 +16,44 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-01T10:00:00Z
-  overall: D
-  overall_score: 1.2
-  scored_axes: 5
+  computed_at: 2026-07-02T08:29:33Z
+  overall: "?"
+  overall_score: null
+  scored_axes: 2
   capped: false
   cap_reason: null
-  needs_human_review: true
+  needs_human_review: false
   axes:
     maintenance:
       grade: E
       raw:
         archived: false
+        last_commit_age_days: 1000
+        active_weeks_13: 0
+        carve_out: null
     responsiveness:
-      grade: ?
+      grade: "?"
       raw: {}
     adoption:
-      grade: E
-      raw:
-        stars: 0
+      grade: "?"
+      raw: {}
     longevity:
       grade: E
-      raw: {}
+      raw:
+        repo_age_days: 4008
+        last_commit_age_days: 1000
+        cohort: tool
     governance:
-      grade: C
-      raw:
-        owner_type: 
+      grade: "?"
+      raw: {}
     risk_license:
-      grade: A
-      raw:
-        spdx_id: BSD-3-Clause
-        permissiveness: permissive
-        relicense_36mo: false
-        content_license: null
+      grade: "?"
+      raw: {}
   unknowns:
-    responsiveness: { reason: no_data }
+    responsiveness: { reason: no_traffic }
+    adoption: { reason: ambiguous }
+    governance: { reason: unattributable }
+    risk_license: { reason: license_unparsed }
 ---
 
 # Terminal Markdown Viewer (mdv)
