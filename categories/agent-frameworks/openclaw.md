@@ -16,10 +16,10 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-03T05:34:37Z
+  computed_at: 2026-07-03T07:18:16Z
   overall: B
-  overall_score: 3.17
-  scored_axes: 6
+  overall_score: 3.4
+  scored_axes: 5
   capped: false
   cap_reason: null
   needs_human_review: false
@@ -32,12 +32,8 @@ health:
         active_weeks_13: 13
         carve_out: null
     responsiveness:
-      grade: C
-      raw:
-        median_ttfr_hours: 1080.0
-        qualifying_issues: 0
-        band: relaxed_solo
-        window_offset_days: 10
+      grade: "?"
+      raw: {}
     adoption:
       grade: A
       raw:
@@ -69,6 +65,8 @@ health:
         permissiveness: permissive
         relicense_36mo: false
         content_license: null
+  unknowns:
+    responsiveness: { reason: no_traffic }
 ---
 # OpenClaw
 
@@ -115,15 +113,16 @@ You are a privacy-conscious professional who wants a single AI assistant that fo
 **Low**. The gateway is a single control plane; installation is straightforward for users comfortable with running Node.js apps. The main ongoing burden is configuring messaging channels and rotating LLM credentials.
 
 ## Health & viability
-- **Maintenance**: Grade A — 13/13 active weeks in trailing 13; last commit 0 days ago.
-- **Responsiveness**: Grade C — median first-response time 1080.0 hours across 0 qualifying issues/PRs.
+- **Maintenance**: Grade A — 13/13 active weeks in trailing 13; last commit 0 days ago. This is a measured value, reliable.
+- **Responsiveness**: Grade ? — 0 qualifying issues/PRs in window; no direct response-speed data. Maintenance=A only means the repo is still committing code; it says nothing about issue-response speed. If the repo has closed its issue tracker or uses Discord/forums, responsiveness is simply unmeasurable via GitHub data alone.
 - **Adoption**: Grade A — 14,326,323 monthly downloads via npmjs.org (package: openclaw).
-- **Longevity**: Grade C — 220 days old.
-- **Governance**: Grade B — top-3 contributor share 75.3% (?).
-- **Risk / License**: Cannot be scored — unknown.
+- **Longevity**: Grade C — 220 days old. No proven long-term track record; weak Lindy prior.
+- **Governance**: Grade B — top-3 contributor share 75.3%, concentration risk exists; top-1 at 52.8%, so a core maintainer departure could significantly slow the project.
+- **Risk / License**: Grade A — MIT license. [已验证] 2026-07-03: GitHub API returns `NOASSERTION`, but the LICENSE file body is standard MIT ("Permission is hereby granted..." complete paragraph). Recognition failure caused by a trailing third-party notice pointer. No relicense history.
+
 ## Caveats (unverified)
 
-- [未验证] The `NOASSERTION` license in GitHub metadata may differ from the MIT badge shown in the README; verify before commercial use.
+- [Verified → removable] The `NOASSERTION` license in GitHub metadata matches the MIT badge shown in the README. The LICENSE file is standard MIT; recognition failure is caused by a trailing third-party-notice pointer. Safe for commercial use, but review `THIRD_PARTY_NOTICES.md` for the licenses of incorporated code.
 - [推断] With 381k stars on a repo created in late 2025, the star count may be inflated by hype rather than organic production adoption.
 - [未验证] The "20+ messaging channels" list includes platforms like WeChat and QQ that may have unstable or unofficial integration APIs.
 - [推断] The health radar shows volume tier A but graph tier E, which may indicate most npm downloads are direct installs rather than transitive dependencies, suggesting individual exploration rather than embedded production use.

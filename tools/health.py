@@ -708,35 +708,22 @@ def axis_responsiveness(repo: RepoData) -> Axis:
         source = "none"
 
     # =========================================================================
-    # LAYER 3: Maintenance-based inference (when no direct signal available)
+    # LAYER 3: No direct signal → do NOT infer from maintenance (adversarial fix)
     # =========================================================================
-    # If we have no direct response data but the project is actively maintained,
-    # we can infer that the maintainer is responsive to *some* channel (even if
-    # not enough to register in our window). This is weaker than direct TTFR but
-    # better than returning "?". Inferred grades are capped at C.
+    # When qualifying == 0, we do NOT fabricate a median_h from maintenance.
+    # Inferred grades hide the fact that there is no direct response data.
+    # The user should see "?" (no data) rather than "C" (a machine guess).
+    # =========================================================================
     maintenance_signal = "direct"
     inferred_from = ""
     if median_h is None:
-        # Need maintenance data to infer. We call axis_maintenance() here.
+        # Do not infer — keep median_h as None.
+        # Only fetch maintenance for the evidence note in the fallback.
         maint_axis = axis_maintenance(repo)
         maint_grade = maint_axis.grade
-        if maint_grade in ("A", "B"):
-            # Active maintenance implies someone is responsive to *something*.
-            # Conservative inference: C (not fast, but not abandoned).
-            median_h = bands["C"] / 2  # midpoint of the C band, strictly below C threshold
-            qualifying = 0
-            maintenance_signal = "inferred"
-            inferred_from = f"maintenance={maint_grade}"
-        elif maint_grade == "C":
-            median_h = bands["D"] / 2  # midpoint of D band
-            qualifying = 0
-            maintenance_signal = "inferred"
-            inferred_from = f"maintenance={maint_grade}"
-        elif maint_grade == "D":
-            median_h = bands["E"] / 2  # midpoint of E band
-            qualifying = 0
-            maintenance_signal = "inferred"
-            inferred_from = f"maintenance={maint_grade}"
+        inferred_from = f"maintenance={maint_grade}"
+        # maintenance_signal stays "direct" so zero_response can still trigger.
+        # median_h stays None.
         # E grade = archived, already handled above
 
     # =========================================================================

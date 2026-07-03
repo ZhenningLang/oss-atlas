@@ -16,10 +16,10 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-03T05:34:37Z
+  computed_at: 2026-07-03T07:18:16Z
   overall: B
-  overall_score: 3.17
-  scored_axes: 6
+  overall_score: 3.4
+  scored_axes: 5
   capped: false
   cap_reason: null
   needs_human_review: false
@@ -32,12 +32,8 @@ health:
         active_weeks_13: 13
         carve_out: null
     responsiveness:
-      grade: C
-      raw:
-        median_ttfr_hours: 1080.0
-        qualifying_issues: 0
-        band: relaxed_solo
-        window_offset_days: 10
+      grade: "?"
+      raw: {}
     adoption:
       grade: A
       raw:
@@ -69,6 +65,8 @@ health:
         permissiveness: permissive
         relicense_36mo: false
         content_license: null
+  unknowns:
+    responsiveness: { reason: no_traffic }
 ---
 # OpenClaw
 
@@ -115,15 +113,16 @@ health:
 **低**。网关是单一控制平面；对习惯运行 Node.js 应用的用户来说安装简单。主要持续负担是配置消息渠道和轮换 LLM 凭证。
 
 ## 健康度与可持续性
-- **维护活跃度**：Grade A——最近 13 周中 13 周有提交；最后提交距今 0 天。
-- **响应速度**：Grade C——中位首次响应时间 1080.0 小时，基于 0 个 qualifying issues/PRs。
+- **维护活跃度**：Grade A——最近 13 周中 13 周有提交；最后提交距今 0 天。这是实测值，可靠。
+- **响应速度**：Grade ? —— 0 个符合统计门槛的 issues/PRs，无直接响应速度数据。维护活跃度为 A 只表示仓库仍在提交代码，并不表示 issue 响应速度。若仓库关闭了 issue tracker 或使用 Discord/论坛等外部渠道，响应速度仅凭 GitHub 数据无法测量。
 - **采用广度**：Grade A——npmjs.org 上月下载量 14,326,323（包名：openclaw）。
-- **长青度**：Grade C——仓库已创建 220 天。
-- **治理集中度**：Grade B——前三贡献者占比 75.3%（?）。
-- **许可风险**：无法计算——unknown。
+- **长青度**：Grade C——仓库已创建 220 天。尚无经受长期考验的记录，Lindy 先验弱。
+- **治理集中度**：Grade B——前三贡献者占比 75.3%，存在集中度风险；top-1 占 52.8%，若核心维护者退出可能显著影响项目节奏。
+- **许可风险**：Grade A——MIT 许可证。[已验证] 2026-07-03：GitHub API 返回 `NOASSERTION`，但 LICENSE 文件正文为标准 MIT 许可证（"Permission is hereby granted..." 完整段落），识别失败是因为文件末尾附加了第三方声明指针。无重新授权历史。
+
 ## 存疑（未验证）
 
-- [未验证] GitHub 元数据中的 `NOASSERTION` 许可可能与 README 上显示的 MIT badge 不一致；商用前请核实。
+- [已验证 → 可移除] GitHub 元数据中的 `NOASSERTION` 许可与 README 上的 MIT badge 一致。LICENSE 文件为标准 MIT，识别失败因尾部附加第三方声明指针。商用安全，但需同步查看 `THIRD_PARTY_NOTICES.md` 中收编代码的各自许可。
 - [推断] 该仓库 2025 年末创建却已有 381k star，star 数可能受炒作推动，而非有机生产级采用。
 - [未验证] “20 余条消息渠道”列表中包含 WeChat、QQ 等平台，其集成 API 可能不稳定或为非官方方案。
 - [推断] 健康雷达显示 volume tier 为 A 而 graph tier 为 E，可能表明大部分 npm 下载为直接安装而非传递依赖，暗示个人探索而非嵌入生产使用。
