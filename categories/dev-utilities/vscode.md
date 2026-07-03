@@ -16,10 +16,10 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T14:56:43Z
+  computed_at: 2026-07-03T15:15:50Z
   overall: B
-  overall_score: 3.17
-  scored_axes: 6
+  overall_score: 3.4
+  scored_axes: 5
   capped: false
   cap_reason: null
   needs_human_review: false
@@ -32,12 +32,8 @@ health:
         active_weeks_13: 13
         carve_out: null
     responsiveness:
-      grade: C
-      raw:
-        median_ttfr_hours: 1080.0
-        qualifying_issues: 0
-        band: relaxed_solo
-        window_offset_days: 4
+      grade: "?"
+      raw: {}
     adoption:
       grade: D
       raw:
@@ -51,13 +47,13 @@ health:
     longevity:
       grade: A
       raw:
-        repo_age_days: 3955
+        repo_age_days: 3956
         last_commit_age_days: 0
         cohort: app
     governance:
       grade: A
       raw:
-        active_maintainers_12mo: 128
+        active_maintainers_12mo: 129
         top1_share: 0.066
         top3_share: 0.181
         window_source: stats_contributors
@@ -69,6 +65,8 @@ health:
         permissiveness: permissive
         relicense_36mo: false
         content_license: null
+  unknowns:
+    responsiveness: { reason: no_traffic }
 ---
 
 # VS Code

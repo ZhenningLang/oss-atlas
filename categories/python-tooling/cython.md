@@ -16,7 +16,7 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-06-29T10:11:51Z
+  computed_at: 2026-07-03T08:21:55Z
   overall: A
   overall_score: 3.83
   scored_axes: 6
@@ -35,7 +35,7 @@ health:
       grade: A
       raw:
         median_ttfr_hours: 6.0
-        qualifying_issues: 27
+        qualifying_issues: 29
         band: relaxed_solo
         window_offset_days: 9
     adoption:
@@ -44,21 +44,21 @@ health:
         registry: pypi.org
         canonical_package: cython
         dependent_repos_count: 18920
-        downloads_last_month: 121992790
+        downloads_last_month: 120902949
         graph_tier: A
         volume_tier: A
-        cross_check_divergence: 1.03
+        cross_check_divergence: 1.0
     longevity:
       grade: A
       raw:
-        repo_age_days: 5699
+        repo_age_days: 5703
         last_commit_age_days: 0
         cohort: tool
     governance:
       grade: B
       raw:
         active_maintainers_12mo: 39
-        top1_share: 0.588
+        top1_share: 0.59
         top3_share: 0.933
         window_source: stats_contributors
         carve_out: null

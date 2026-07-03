@@ -16,10 +16,10 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-03T04:03:31Z
+  computed_at: 2026-07-03T08:15:23Z
   overall: B
-  overall_score: 2.6
-  scored_axes: 5
+  overall_score: 2.75
+  scored_axes: 4
   capped: false
   cap_reason: null
   needs_human_review: false
@@ -32,12 +32,8 @@ health:
         active_weeks_13: 4
         carve_out: null
     responsiveness:
-      grade: C
-      raw:
-        median_ttfr_hours: 360.0
-        qualifying_issues: 0
-        band: default
-        window_offset_days: 3
+      grade: "?"
+      raw: {}
     adoption:
       grade: B
       raw:
@@ -66,6 +62,7 @@ health:
       grade: "?"
       raw: {}
   unknowns:
+    responsiveness: { reason: no_traffic }
     risk_license: { reason: license_unparsed }
 ---
 

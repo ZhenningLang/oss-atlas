@@ -16,7 +16,7 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T14:55:54Z
+  computed_at: 2026-07-03T14:38:32Z
   overall: B
   overall_score: 3.0
   scored_axes: 6
@@ -28,7 +28,7 @@ health:
       grade: A
       raw:
         archived: false
-        last_commit_age_days: 27
+        last_commit_age_days: 28
         active_weeks_13: 7
         carve_out: null
     responsiveness:
@@ -44,15 +44,15 @@ health:
         registry: crates.io
         canonical_package: vaultwarden
         dependent_repos_count: 0
-        downloads_last_month: 2726
+        downloads_last_month: 2730
         graph_tier: E
         volume_tier: D
         cross_check_divergence: null
     longevity:
       grade: A
       raw:
-        repo_age_days: 3057
-        last_commit_age_days: 27
+        repo_age_days: 3058
+        last_commit_age_days: 28
         cohort: tool
     governance:
       grade: A

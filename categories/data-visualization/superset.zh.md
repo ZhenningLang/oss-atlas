@@ -16,7 +16,7 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-06-29T09:41:45Z
+  computed_at: 2026-07-03T11:15:54Z
   overall: A
   overall_score: 3.83
   scored_axes: 6
@@ -35,7 +35,7 @@ health:
       grade: A
       raw:
         median_ttfr_hours: 0.0
-        qualifying_issues: 36
+        qualifying_issues: 29
         band: relaxed_solo
         window_offset_days: 13
     adoption:
@@ -44,22 +44,22 @@ health:
         registry: npmjs.org
         canonical_package: "@superset-ui/switchboard"
         dependent_repos_count: 145
-        downloads_last_month: 535009
+        downloads_last_month: 628998
         graph_tier: C
         volume_tier: B
-        cross_check_divergence: 1.18
+        cross_check_divergence: 1.11
     longevity:
       grade: A
       raw:
-        repo_age_days: 3996
+        repo_age_days: 4000
         last_commit_age_days: 0
         cohort: app
     governance:
       grade: A
       raw:
-        active_maintainers_12mo: 116
-        top1_share: 0.222
-        top3_share: 0.363
+        active_maintainers_12mo: 119
+        top1_share: 0.23
+        top3_share: 0.379
         window_source: stats_contributors
         carve_out: null
     risk_license:

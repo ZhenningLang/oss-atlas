@@ -16,7 +16,7 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-06-29T09:55:31Z
+  computed_at: 2026-07-03T08:20:49Z
   overall: A
   overall_score: 3.5
   scored_axes: 6
@@ -28,14 +28,14 @@ health:
       grade: A
       raw:
         archived: false
-        last_commit_age_days: 0
+        last_commit_age_days: 3
         active_weeks_13: 13
         carve_out: null
     responsiveness:
       grade: A
       raw:
-        median_ttfr_hours: 3.8
-        qualifying_issues: 6
+        median_ttfr_hours: 2.7
+        qualifying_issues: 10
         band: default
         window_offset_days: 8
     adoption:
@@ -44,15 +44,15 @@ health:
         registry: pypi.org
         canonical_package: kafka-python
         dependent_repos_count: 3616
-        downloads_last_month: 25491988
+        downloads_last_month: 25999297
         graph_tier: B
         volume_tier: A
-        cross_check_divergence: 1.01
+        cross_check_divergence: 1.0
     longevity:
       grade: A
       raw:
-        repo_age_days: 5026
-        last_commit_age_days: 0
+        repo_age_days: 5030
+        last_commit_age_days: 3
         cohort: library
     governance:
       grade: D

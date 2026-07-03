@@ -16,10 +16,10 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-06-29T10:20:21Z
+  computed_at: 2026-07-03T15:22:17Z
   overall: B
-  overall_score: 3.17
-  scored_axes: 6
+  overall_score: 3.33
+  scored_axes: 3
   capped: false
   cap_reason: null
   needs_human_review: false
@@ -32,43 +32,31 @@ health:
         active_weeks_13: 13
         carve_out: null
     responsiveness:
-      grade: B
+      grade: A
       raw:
-        median_ttfr_hours: 66.6
-        qualifying_issues: 15
+        median_ttfr_hours: 1.5
+        qualifying_issues: 12
         band: default
         window_offset_days: 6
     adoption:
-      grade: C
-      raw:
-        registry: pypi.org
-        canonical_package: cua-auto
-        dependent_repos_count: 0
-        downloads_last_month: 62410
-        graph_tier: E
-        volume_tier: C
-        cross_check_divergence: null
+      grade: "?"
+      raw: {}
     longevity:
       grade: C
       raw:
-        repo_age_days: 514
+        repo_age_days: 518
         last_commit_age_days: 2
         cohort: framework
     governance:
-      grade: A
-      raw:
-        active_maintainers_12mo: 61
-        top1_share: 0.301
-        top3_share: 0.691
-        window_source: stats_contributors
-        carve_out: null
+      grade: "?"
+      raw: {}
     risk_license:
-      grade: A
-      raw:
-        spdx_id: MIT
-        permissiveness: permissive
-        relicense_36mo: false
-        content_license: null
+      grade: "?"
+      raw: {}
+  unknowns:
+    adoption: { reason: registry_no_counts }
+    governance: { reason: empty_or_gated }
+    risk_license: { reason: repo_unreachable }
 ---
 
 # Cua

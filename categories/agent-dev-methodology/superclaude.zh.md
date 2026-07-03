@@ -16,10 +16,10 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-06-29T09:08:03Z
+  computed_at: 2026-07-03T08:18:03Z
   overall: B
-  overall_score: 2.5
-  scored_axes: 6
+  overall_score: 2.75
+  scored_axes: 4
   capped: false
   cap_reason: null
   needs_human_review: false
@@ -28,31 +28,20 @@ health:
       grade: C
       raw:
         archived: false
-        last_commit_age_days: 63
+        last_commit_age_days: 67
         active_weeks_13: 1
         carve_out: null
     responsiveness:
-      grade: C
-      raw:
-        median_ttfr_hours: 97.8
-        qualifying_issues: 2
-        band: relaxed_solo
-        window_offset_days: 11
+      grade: "?"
+      raw: {}
     adoption:
-      grade: C
-      raw:
-        registry: pypi.org
-        canonical_package: superclaude
-        dependent_repos_count: 0
-        downloads_last_month: 84102
-        graph_tier: E
-        volume_tier: C
-        cross_check_divergence: null
+      grade: "?"
+      raw: {}
     longevity:
       grade: C
       raw:
-        repo_age_days: 372
-        last_commit_age_days: 63
+        repo_age_days: 376
+        last_commit_age_days: 67
         cohort: tool
     governance:
       grade: B
@@ -69,6 +58,9 @@ health:
         permissiveness: permissive
         relicense_36mo: false
         content_license: null
+  unknowns:
+    responsiveness: { reason: no_traffic }
+    adoption: { reason: registry_no_counts }
 ---
 
 # SuperClaude Framework

@@ -16,9 +16,9 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-06-29T09:48:21Z
+  computed_at: 2026-07-03T15:12:16Z
   overall: A
-  overall_score: 3.67
+  overall_score: 3.83
   scored_axes: 6
   capped: false
   cap_reason: null
@@ -28,13 +28,13 @@ health:
       grade: A
       raw:
         archived: false
-        last_commit_age_days: 6
-        active_weeks_13: 11
+        last_commit_age_days: 1
+        active_weeks_13: 10
         carve_out: null
     responsiveness:
-      grade: B
+      grade: A
       raw:
-        median_ttfr_hours: 1.6
+        median_ttfr_hours: 1.2
         qualifying_issues: 4
         band: default
         window_offset_days: 4
@@ -44,22 +44,22 @@ health:
         registry: pypi.org
         canonical_package: fonttools
         dependent_repos_count: 33983
-        downloads_last_month: 232784741
+        downloads_last_month: 239987161
         graph_tier: A
         volume_tier: A
-        cross_check_divergence: 1.01
+        cross_check_divergence: null
     longevity:
       grade: A
       raw:
-        repo_age_days: 4723
-        last_commit_age_days: 6
+        repo_age_days: 4727
+        last_commit_age_days: 1
         cohort: library
     governance:
       grade: B
       raw:
-        active_maintainers_12mo: 22
-        top1_share: 0.43
-        top3_share: 0.777
+        active_maintainers_12mo: 23
+        top1_share: 0.421
+        top3_share: 0.766
         window_source: stats_contributors
         carve_out: null
     risk_license:

@@ -16,10 +16,10 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T14:32:18Z
+  computed_at: 2026-07-03T10:41:19Z
   overall: A
-  overall_score: 3.6
-  scored_axes: 5
+  overall_score: 3.67
+  scored_axes: 6
   capped: false
   cap_reason: null
   needs_human_review: false
@@ -28,24 +28,31 @@ health:
       grade: A
       raw:
         archived: false
-        last_commit_age_days: 1
+        last_commit_age_days: 2
         active_weeks_13: 13
         carve_out: null
     responsiveness:
       grade: A
       raw:
-        median_ttfr_hours: 0.4
-        qualifying_issues: 32
+        median_ttfr_hours: 0.0
+        qualifying_issues: 27
         band: default
         window_offset_days: 6
     adoption:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        registry: pypi.org
+        canonical_package: langchain-tests
+        dependent_repos_count: 0
+        downloads_last_month: 2418075
+        graph_tier: E
+        volume_tier: A
+        cross_check_divergence: null
     longevity:
       grade: B
       raw:
-        repo_age_days: 1354
-        last_commit_age_days: 1
+        repo_age_days: 1355
+        last_commit_age_days: 2
         cohort: framework
     governance:
       grade: B
@@ -62,8 +69,6 @@ health:
         permissiveness: permissive
         relicense_36mo: false
         content_license: null
-  unknowns:
-    adoption: { reason: registry_no_counts }
 ---
 
 # LangChain

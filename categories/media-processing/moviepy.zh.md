@@ -16,10 +16,10 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-03T03:07:08Z
+  computed_at: 2026-07-03T08:24:21Z
   overall: B
-  overall_score: 3.0
-  scored_axes: 6
+  overall_score: 3.2
+  scored_axes: 5
   capped: false
   cap_reason: null
   needs_human_review: false
@@ -32,12 +32,8 @@ health:
         active_weeks_13: 0
         carve_out: mature_library_lindy
     responsiveness:
-      grade: C
-      raw:
-        median_ttfr_hours: 360.0
-        qualifying_issues: 0
-        band: default
-        window_offset_days: 2
+      grade: "?"
+      raw: {}
     adoption:
       grade: A
       raw:
@@ -47,7 +43,7 @@ health:
         downloads_last_month: 6211330
         graph_tier: B
         volume_tier: A
-        cross_check_divergence: 1.0
+        cross_check_divergence: null
     longevity:
       grade: C
       raw:
@@ -69,6 +65,8 @@ health:
         permissiveness: permissive
         relicense_36mo: false
         content_license: null
+  unknowns:
+    responsiveness: { reason: no_traffic }
 ---
 
 # MoviePy

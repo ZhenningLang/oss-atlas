@@ -16,7 +16,7 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-06-29T10:16:13Z
+  computed_at: 2026-07-03T08:13:59Z
   overall: B
   overall_score: 3.4
   scored_axes: 5
@@ -44,22 +44,22 @@ health:
         registry: pypi.org
         canonical_package: celery
         dependent_repos_count: 40119
-        downloads_last_month: 55110873
+        downloads_last_month: 53621751
         graph_tier: A
         volume_tier: A
-        cross_check_divergence: 1.05
+        cross_check_divergence: 1.02
     longevity:
       grade: A
       raw:
-        repo_age_days: 6275
+        repo_age_days: 6279
         last_commit_age_days: 2
         cohort: framework
     governance:
       grade: C
       raw:
         active_maintainers_12mo: 21
-        top1_share: 0.643
-        top3_share: 0.801
+        top1_share: 0.644
+        top3_share: 0.8
         window_source: stats_contributors
         carve_out: null
     risk_license:

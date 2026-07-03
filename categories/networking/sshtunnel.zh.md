@@ -16,7 +16,7 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-06-29T10:06:24Z
+  computed_at: 2026-07-03T08:17:10Z
   overall: B
   overall_score: 2.8
   scored_axes: 5
@@ -28,7 +28,7 @@ health:
       grade: B
       raw:
         archived: false
-        last_commit_age_days: 306
+        last_commit_age_days: 310
         active_weeks_13: 0
         carve_out: mature_library_lindy
     responsiveness:
@@ -40,15 +40,15 @@ health:
         registry: pypi.org
         canonical_package: sshtunnel
         dependent_repos_count: 1287
-        downloads_last_month: 25422007
+        downloads_last_month: 25619796
         graph_tier: B
         volume_tier: A
-        cross_check_divergence: 1.01
+        cross_check_divergence: null
     longevity:
       grade: C
       raw:
-        repo_age_days: 4401
-        last_commit_age_days: 306
+        repo_age_days: 4404
+        last_commit_age_days: 310
         cohort: library
     governance:
       grade: D

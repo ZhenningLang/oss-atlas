@@ -16,10 +16,10 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-06-29T09:57:05Z
+  computed_at: 2026-07-03T08:20:13Z
   overall: B
-  overall_score: 3.0
-  scored_axes: 5
+  overall_score: 3.17
+  scored_axes: 6
   capped: false
   cap_reason: null
   needs_human_review: false
@@ -34,8 +34,8 @@ health:
     responsiveness:
       grade: B
       raw:
-        median_ttfr_hours: 87.6
-        qualifying_issues: 16
+        median_ttfr_hours: 55.1
+        qualifying_issues: 18
         band: default
         window_offset_days: 12
     adoption:
@@ -51,22 +51,24 @@ health:
     longevity:
       grade: B
       raw:
-        repo_age_days: 1157
+        repo_age_days: 1161
         last_commit_age_days: 0
         cohort: framework
     governance:
       grade: A
       raw:
-        active_maintainers_12mo: 245
-        top1_share: 0.05
-        top3_share: 0.146
+        active_maintainers_12mo: 246
+        top1_share: 0.049
+        top3_share: 0.145
         window_source: stats_contributors
         carve_out: null
     risk_license:
-      grade: "?"
-      raw: {}
-  unknowns:
-    risk_license: { reason: license_unparsed }
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # Modular Platform (MAX + Mojo)

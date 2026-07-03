@@ -16,32 +16,36 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-01T10:00:00Z
+  computed_at: 2026-07-03T14:51:07Z
   overall: D
-  overall_score: 1.2
-  scored_axes: 5
+  overall_score: 1.33
+  scored_axes: 3
   capped: false
   cap_reason: null
-  needs_human_review: true
+  needs_human_review: false
   axes:
     maintenance:
       grade: E
       raw:
         archived: false
+        last_commit_age_days: 1100
+        active_weeks_13: 0
+        carve_out: null
     responsiveness:
-      grade: ?
+      grade: "?"
       raw: {}
     adoption:
-      grade: E
-      raw:
-        stars: 0
+      grade: "?"
+      raw: {}
     longevity:
       grade: E
-      raw: {}
-    governance:
-      grade: C
       raw:
-        owner_type: 
+        repo_age_days: 1219
+        last_commit_age_days: 1100
+        cohort: app
+    governance:
+      grade: "?"
+      raw: {}
     risk_license:
       grade: A
       raw:
@@ -50,7 +54,9 @@ health:
         relicense_36mo: false
         content_license: null
   unknowns:
-    responsiveness: { reason: no_data }
+    responsiveness: { reason: no_traffic }
+    adoption: { reason: no_package_structural }
+    governance: { reason: unattributable }
 ---
 
 # TaskMatrix

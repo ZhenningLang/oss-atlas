@@ -16,7 +16,7 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-06-29T10:01:58Z
+  computed_at: 2026-07-03T08:24:23Z
   overall: C
   overall_score: 2.0
   scored_axes: 4
@@ -28,7 +28,7 @@ health:
       grade: E
       raw:
         archived: false
-        last_commit_age_days: 1449
+        last_commit_age_days: 1452
         active_weeks_13: 0
         carve_out: null
     responsiveness:
@@ -40,15 +40,15 @@ health:
         registry: pypi.org
         canonical_package: ffmpeg-python
         dependent_repos_count: 5000
-        downloads_last_month: 10690898
+        downloads_last_month: 10449425
         graph_tier: B
         volume_tier: A
         cross_check_divergence: null
     longevity:
       grade: E
       raw:
-        repo_age_days: 3333
-        last_commit_age_days: 1449
+        repo_age_days: 3337
+        last_commit_age_days: 1452
         cohort: library
     governance:
       grade: "?"

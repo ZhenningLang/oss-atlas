@@ -16,7 +16,7 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T15:51:01Z
+  computed_at: 2026-07-03T11:22:04Z
   overall: B
   overall_score: 3.2
   scored_axes: 5
@@ -28,14 +28,14 @@ health:
       grade: A
       raw:
         archived: false
-        last_commit_age_days: 0
+        last_commit_age_days: 1
         active_weeks_13: 13
         carve_out: null
     responsiveness:
       grade: A
       raw:
         median_ttfr_hours: 0.8
-        qualifying_issues: 33
+        qualifying_issues: 29
         band: relaxed_solo
         window_offset_days: 8
     adoption:
@@ -44,8 +44,8 @@ health:
     longevity:
       grade: B
       raw:
-        repo_age_days: 954
-        last_commit_age_days: 0
+        repo_age_days: 955
+        last_commit_age_days: 1
         cohort: tool
     governance:
       grade: B
@@ -63,7 +63,7 @@ health:
         relicense_36mo: false
         content_license: null
   unknowns:
-    adoption: { reason: registry_no_counts }
+    adoption: { reason: ambiguous }
 ---
 
 # Clash Verge Rev

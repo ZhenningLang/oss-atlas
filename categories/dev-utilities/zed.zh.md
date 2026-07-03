@@ -16,9 +16,9 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T15:57:24Z
-  overall: B
-  overall_score: 3.4
+  computed_at: 2026-07-03T15:16:47Z
+  overall: A
+  overall_score: 3.8
   scored_axes: 5
   capped: false
   cap_reason: null
@@ -32,12 +32,8 @@ health:
         active_weeks_13: 13
         carve_out: null
     responsiveness:
-      grade: C
-      raw:
-        median_ttfr_hours: 1080.0
-        qualifying_issues: 0
-        band: relaxed_solo
-        window_offset_days: 5
+      grade: "?"
+      raw: {}
     adoption:
       grade: B
       raw:
@@ -47,11 +43,11 @@ health:
         downloads_last_month: 812610
         graph_tier: E
         volume_tier: B
-        cross_check_divergence: 3.63
+        cross_check_divergence: 3.61
     longevity:
       grade: A
       raw:
-        repo_age_days: 1959
+        repo_age_days: 1960
         last_commit_age_days: 0
         cohort: tool
     governance:
@@ -63,10 +59,14 @@ health:
         window_source: stats_contributors
         carve_out: null
     risk_license:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
   unknowns:
-    risk_license: { reason: license_unparsed }
+    responsiveness: { reason: no_traffic }
 ---
 
 # Zed

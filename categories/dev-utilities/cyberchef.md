@@ -16,10 +16,10 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-06-29T09:47:15Z
+  computed_at: 2026-07-03T15:28:42Z
   overall: B
-  overall_score: 3.33
-  scored_axes: 6
+  overall_score: 3.4
+  scored_axes: 5
   capped: false
   cap_reason: null
   needs_human_review: false
@@ -28,7 +28,7 @@ health:
       grade: A
       raw:
         archived: false
-        last_commit_age_days: 3
+        last_commit_age_days: 0
         active_weeks_13: 13
         carve_out: null
     responsiveness:
@@ -51,17 +51,12 @@ health:
     longevity:
       grade: A
       raw:
-        repo_age_days: 3500
-        last_commit_age_days: 3
+        repo_age_days: 3504
+        last_commit_age_days: 0
         cohort: app
     governance:
-      grade: B
-      raw:
-        active_maintainers_12mo: 14
-        top1_share: 0.436
-        top3_share: 0.864
-        window_source: stats_contributors
-        carve_out: null
+      grade: "?"
+      raw: {}
     risk_license:
       grade: A
       raw:
@@ -69,6 +64,8 @@ health:
         permissiveness: permissive
         relicense_36mo: false
         content_license: null
+  unknowns:
+    governance: { reason: empty_or_gated }
 ---
 
 # CyberChef

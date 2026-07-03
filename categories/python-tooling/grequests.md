@@ -16,7 +16,7 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-06-29T10:12:39Z
+  computed_at: 2026-07-03T08:22:23Z
   overall: C
   overall_score: 2.25
   scored_axes: 4
@@ -28,7 +28,7 @@ health:
       grade: D
       raw:
         archived: false
-        last_commit_age_days: 690
+        last_commit_age_days: 693
         active_weeks_13: 0
         carve_out: null
     responsiveness:
@@ -40,15 +40,15 @@ health:
         registry: pypi.org
         canonical_package: grequests
         dependent_repos_count: 1000
-        downloads_last_month: 456092
+        downloads_last_month: 466528
         graph_tier: B
         volume_tier: B
-        cross_check_divergence: 1.02
+        cross_check_divergence: null
     longevity:
       grade: D
       raw:
-        repo_age_days: 5163
-        last_commit_age_days: 690
+        repo_age_days: 5166
+        last_commit_age_days: 693
         cohort: library
     governance:
       grade: "?"

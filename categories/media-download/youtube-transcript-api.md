@@ -16,7 +16,7 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-06-29T10:01:41Z
+  computed_at: 2026-07-03T14:47:41Z
   overall: A
   overall_score: 3.5
   scored_axes: 6
@@ -28,13 +28,13 @@ health:
       grade: B
       raw:
         archived: false
-        last_commit_age_days: 47
-        active_weeks_13: 3
+        last_commit_age_days: 51
+        active_weeks_13: 4
         carve_out: null
     responsiveness:
       grade: A
       raw:
-        median_ttfr_hours: 22.7
+        median_ttfr_hours: 28.4
         qualifying_issues: 11
         band: default
         window_offset_days: 2
@@ -44,15 +44,15 @@ health:
         registry: pypi.org
         canonical_package: youtube-transcript-api
         dependent_repos_count: 205
-        downloads_last_month: 32850802
+        downloads_last_month: 36786385
         graph_tier: C
         volume_tier: A
         cross_check_divergence: 1.03
     longevity:
       grade: A
       raw:
-        repo_age_days: 2992
-        last_commit_age_days: 47
+        repo_age_days: 2996
+        last_commit_age_days: 51
         cohort: library
     governance:
       grade: C

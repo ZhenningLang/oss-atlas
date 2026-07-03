@@ -16,10 +16,10 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T15:50:19Z
+  computed_at: 2026-07-03T11:16:18Z
   overall: A
   overall_score: 4.0
-  scored_axes: 4
+  scored_axes: 5
   capped: false
   cap_reason: null
   needs_human_review: false
@@ -28,24 +28,31 @@ health:
       grade: A
       raw:
         archived: false
-        last_commit_age_days: 0
+        last_commit_age_days: 1
         active_weeks_13: 13
         carve_out: null
     responsiveness:
       grade: A
       raw:
         median_ttfr_hours: 0.2
-        qualifying_issues: 45
+        qualifying_issues: 44
         band: relaxed_solo
         window_offset_days: 0
     adoption:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        registry: npmjs.org
+        canonical_package: bun-types
+        dependent_repos_count: 3705
+        downloads_last_month: 29288304
+        graph_tier: B
+        volume_tier: A
+        cross_check_divergence: 1.36
     longevity:
       grade: A
       raw:
         repo_age_days: 1906
-        last_commit_age_days: 0
+        last_commit_age_days: 1
         cohort: tool
     governance:
       grade: A
@@ -59,7 +66,6 @@ health:
       grade: "?"
       raw: {}
   unknowns:
-    adoption: { reason: registry_no_counts }
     risk_license: { reason: license_unparsed }
 ---
 

@@ -16,7 +16,7 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-06-29T09:43:49Z
+  computed_at: 2026-07-03T08:13:28Z
   overall: D
   overall_score: 2.2
   scored_axes: 5
@@ -28,7 +28,7 @@ health:
       grade: B
       raw:
         archived: false
-        last_commit_age_days: 142
+        last_commit_age_days: 146
         active_weeks_13: 0
         carve_out: mature_library_lindy
     responsiveness:
@@ -40,15 +40,15 @@ health:
         registry: pypi.org
         canonical_package: mysql-replication
         dependent_repos_count: 111
-        downloads_last_month: 394878
+        downloads_last_month: 413367
         graph_tier: C
         volume_tier: B
-        cross_check_divergence: 1.0
+        cross_check_divergence: 1.01
     longevity:
       grade: B
       raw:
-        repo_age_days: 5035
-        last_commit_age_days: 142
+        repo_age_days: 5039
+        last_commit_age_days: 146
         cohort: library
     governance:
       grade: C

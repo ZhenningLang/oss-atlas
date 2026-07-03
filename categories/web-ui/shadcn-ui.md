@@ -16,10 +16,10 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T16:12:46Z
+  computed_at: 2026-07-03T08:14:50Z
   overall: A
-  overall_score: 3.8
-  scored_axes: 5
+  overall_score: 3.5
+  scored_axes: 6
   capped: false
   cap_reason: null
   needs_human_review: false
@@ -28,13 +28,13 @@ health:
       grade: A
       raw:
         archived: false
-        last_commit_age_days: 0
+        last_commit_age_days: 1
         active_weeks_13: 13
         carve_out: null
     responsiveness:
       grade: A
       raw:
-        median_ttfr_hours: 14.7
+        median_ttfr_hours: 15.3
         qualifying_issues: 28
         band: default
         window_offset_days: 10
@@ -51,12 +51,17 @@ health:
     longevity:
       grade: B
       raw:
-        repo_age_days: 1275
-        last_commit_age_days: 0
+        repo_age_days: 1276
+        last_commit_age_days: 1
         cohort: library
     governance:
-      grade: "?"
-      raw: {}
+      grade: C
+      raw:
+        active_maintainers_12mo: 71
+        top1_share: 0.787
+        top3_share: 0.804
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
       grade: A
       raw:
@@ -64,8 +69,6 @@ health:
         permissiveness: permissive
         relicense_36mo: false
         content_license: null
-  unknowns:
-    governance: { reason: empty_or_gated }
 ---
 
 # shadcn/ui

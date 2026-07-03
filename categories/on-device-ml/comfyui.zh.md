@@ -16,10 +16,10 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T15:59:19Z
+  computed_at: 2026-07-03T14:53:43Z
   overall: B
-  overall_score: 2.67
-  scored_axes: 6
+  overall_score: 2.8
+  scored_axes: 5
   capped: false
   cap_reason: null
   needs_human_review: false
@@ -32,12 +32,8 @@ health:
         active_weeks_13: 13
         carve_out: null
     responsiveness:
-      grade: C
-      raw:
-        median_ttfr_hours: 1080.0
-        qualifying_issues: 0
-        band: relaxed_solo
-        window_offset_days: 9
+      grade: "?"
+      raw: {}
     adoption:
       grade: E
       raw:
@@ -60,7 +56,7 @@ health:
       raw:
         active_maintainers_12mo: 50
         top1_share: 0.38
-        top3_share: 0.623
+        top3_share: 0.624
         window_source: stats_contributors
         carve_out: null
     risk_license:
@@ -70,6 +66,8 @@ health:
         permissiveness: weak_file_copyleft
         relicense_36mo: false
         content_license: null
+  unknowns:
+    responsiveness: { reason: no_traffic }
 ---
 
 # ComfyUI

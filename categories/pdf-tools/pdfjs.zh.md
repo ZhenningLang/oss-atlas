@@ -16,7 +16,7 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-06-29T10:10:20Z
+  computed_at: 2026-07-03T15:43:57Z
   overall: A
   overall_score: 3.83
   scored_axes: 6
@@ -44,21 +44,21 @@ health:
         registry: npmjs.org
         canonical_package: pdfjs-dist
         dependent_repos_count: 17822
-        downloads_last_month: 82426476
+        downloads_last_month: 80749282
         graph_tier: A
         volume_tier: A
-        cross_check_divergence: 1.02
+        cross_check_divergence: 1.05
     longevity:
       grade: A
       raw:
-        repo_age_days: 5543
+        repo_age_days: 5547
         last_commit_age_days: 0
         cohort: library
     governance:
       grade: B
       raw:
-        active_maintainers_12mo: 37
-        top1_share: 0.425
+        active_maintainers_12mo: 39
+        top1_share: 0.426
         top3_share: 0.962
         window_source: stats_contributors
         carve_out: null

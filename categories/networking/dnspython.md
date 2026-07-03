@@ -16,7 +16,7 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-06-29T10:05:41Z
+  computed_at: 2026-07-03T08:17:14Z
   overall: B
   overall_score: 3.2
   scored_axes: 5
@@ -28,8 +28,8 @@ health:
       grade: A
       raw:
         archived: false
-        last_commit_age_days: 1
-        active_weeks_13: 6
+        last_commit_age_days: 5
+        active_weeks_13: 7
         carve_out: null
     responsiveness:
       grade: B
@@ -44,15 +44,15 @@ health:
         registry: pypi.org
         canonical_package: dnspython
         dependent_repos_count: 46555
-        downloads_last_month: 271811005
+        downloads_last_month: 285058747
         graph_tier: A
         volume_tier: A
-        cross_check_divergence: 1.01
+        cross_check_divergence: null
     longevity:
       grade: A
       raw:
-        repo_age_days: 5423
-        last_commit_age_days: 1
+        repo_age_days: 5427
+        last_commit_age_days: 5
         cohort: library
     governance:
       grade: D

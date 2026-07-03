@@ -16,10 +16,10 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-06-29T09:27:37Z
+  computed_at: 2026-07-03T10:42:45Z
   overall: B
-  overall_score: 3.0
-  scored_axes: 5
+  overall_score: 3.17
+  scored_axes: 6
   capped: false
   cap_reason: null
   needs_human_review: false
@@ -28,8 +28,8 @@ health:
       grade: A
       raw:
         archived: false
-        last_commit_age_days: 13
-        active_weeks_13: 12
+        last_commit_age_days: 17
+        active_weeks_13: 11
         carve_out: null
     responsiveness:
       grade: A
@@ -51,8 +51,8 @@ health:
     longevity:
       grade: D
       raw:
-        repo_age_days: 340
-        last_commit_age_days: 13
+        repo_age_days: 344
+        last_commit_age_days: 17
         cohort: library
     governance:
       grade: A
@@ -63,10 +63,12 @@ health:
         window_source: stats_contributors
         carve_out: null
     risk_license:
-      grade: "?"
-      raw: {}
-  unknowns:
-    risk_license: { reason: license_unparsed }
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # Memori

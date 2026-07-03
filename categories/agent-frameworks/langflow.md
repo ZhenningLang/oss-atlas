@@ -16,7 +16,7 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T15:42:30Z
+  computed_at: 2026-07-03T08:26:15Z
   overall: A
   overall_score: 3.5
   scored_axes: 6
@@ -34,8 +34,8 @@ health:
     responsiveness:
       grade: A
       raw:
-        median_ttfr_hours: 17.1
-        qualifying_issues: 56
+        median_ttfr_hours: 16.9
+        qualifying_issues: 55
         band: default
         window_offset_days: 1
     adoption:
@@ -44,7 +44,7 @@ health:
         registry: pypi.org
         canonical_package: langflow-base
         dependent_repos_count: 0
-        downloads_last_month: 90552
+        downloads_last_month: 92752
         graph_tier: E
         volume_tier: C
         cross_check_divergence: null

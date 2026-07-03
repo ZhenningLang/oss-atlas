@@ -16,7 +16,7 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-06-29T09:47:50Z
+  computed_at: 2026-07-03T14:33:49Z
   overall: A
   overall_score: 3.8
   scored_axes: 5
@@ -28,14 +28,14 @@ health:
       grade: A
       raw:
         archived: false
-        last_commit_age_days: 1
+        last_commit_age_days: 0
         active_weeks_13: 13
         carve_out: null
     responsiveness:
       grade: A
       raw:
         median_ttfr_hours: 4.1
-        qualifying_issues: 13
+        qualifying_issues: 12
         band: default
         window_offset_days: 2
     adoption:
@@ -47,19 +47,19 @@ health:
         downloads_last_month: 65781383
         graph_tier: A
         volume_tier: A
-        cross_check_divergence: 1.05
+        cross_check_divergence: 1.02
     longevity:
       grade: B
       raw:
-        repo_age_days: 1634
-        last_commit_age_days: 1
+        repo_age_days: 1638
+        last_commit_age_days: 0
         cohort: library
     governance:
       grade: A
       raw:
         active_maintainers_12mo: 12
-        top1_share: 0.249
-        top3_share: 0.582
+        top1_share: 0.256
+        top3_share: 0.59
         window_source: stats_contributors
         carve_out: null
     risk_license:

@@ -16,10 +16,10 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-06-29T09:26:50Z
+  computed_at: 2026-07-03T10:42:28Z
   overall: A
-  overall_score: 3.8
-  scored_axes: 5
+  overall_score: 3.83
+  scored_axes: 6
   capped: false
   cap_reason: null
   needs_human_review: false
@@ -28,31 +28,38 @@ health:
       grade: A
       raw:
         archived: false
-        last_commit_age_days: 0
+        last_commit_age_days: 1
         active_weeks_13: 13
         carve_out: null
     responsiveness:
       grade: A
       raw:
-        median_ttfr_hours: 15.0
-        qualifying_issues: 26
+        median_ttfr_hours: 20.6
+        qualifying_issues: 31
         band: default
         window_offset_days: 3
     adoption:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        registry: pypi.org
+        canonical_package: mem0ai
+        dependent_repos_count: 0
+        downloads_last_month: 3046493
+        graph_tier: E
+        volume_tier: A
+        cross_check_divergence: 1.0
     longevity:
       grade: B
       raw:
-        repo_age_days: 1105
-        last_commit_age_days: 0
+        repo_age_days: 1109
+        last_commit_age_days: 1
         cohort: library
     governance:
       grade: A
       raw:
-        active_maintainers_12mo: 56
-        top1_share: 0.272
-        top3_share: 0.478
+        active_maintainers_12mo: 59
+        top1_share: 0.273
+        top3_share: 0.472
         window_source: stats_contributors
         carve_out: null
     risk_license:
@@ -62,8 +69,6 @@ health:
         permissiveness: permissive
         relicense_36mo: false
         content_license: null
-  unknowns:
-    adoption: { reason: registry_no_counts }
 ---
 
 # Mem0

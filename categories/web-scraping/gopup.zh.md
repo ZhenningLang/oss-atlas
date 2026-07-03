@@ -16,41 +16,47 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-01T10:00:00Z
-  overall: D
-  overall_score: 1.0
-  scored_axes: 5
-  capped: false
-  cap_reason: null
-  needs_human_review: true
+  computed_at: 2026-07-03T15:00:08Z
+  overall: E
+  overall_score: 0.0
+  scored_axes: 3
+  capped: true
+  cap_reason: "source-available/no-license: NONE"
+  needs_human_review: false
   axes:
     maintenance:
       grade: E
       raw:
         archived: false
+        last_commit_age_days: 1022
+        active_weeks_13: 0
+        carve_out: null
     responsiveness:
-      grade: ?
+      grade: "?"
       raw: {}
     adoption:
-      grade: E
-      raw:
-        stars: 0
+      grade: "?"
+      raw: {}
     longevity:
       grade: E
-      raw: {}
-    governance:
-      grade: C
       raw:
-        owner_type: 
+        repo_age_days: 2296
+        last_commit_age_days: 1022
+        cohort: library
+    governance:
+      grade: "?"
+      raw: {}
     risk_license:
-      grade: B
+      grade: E
       raw:
         spdx_id: NONE
-        permissiveness: ?
+        permissiveness: source_available
         relicense_36mo: false
         content_license: null
   unknowns:
-    responsiveness: { reason: no_data }
+    responsiveness: { reason: no_traffic }
+    adoption: { reason: ambiguous }
+    governance: { reason: unattributable }
 ---
 
 # gopup

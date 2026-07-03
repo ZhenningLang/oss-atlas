@@ -16,10 +16,10 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-06-29T10:18:49Z
+  computed_at: 2026-07-03T08:19:22Z
   overall: B
-  overall_score: 3.25
-  scored_axes: 4
+  overall_score: 3.4
+  scored_axes: 5
   capped: false
   cap_reason: null
   needs_human_review: false
@@ -28,20 +28,27 @@ health:
       grade: B
       raw:
         archived: false
-        last_commit_age_days: 47
-        active_weeks_13: 2
-        carve_out: null
+        last_commit_age_days: 51
+        active_weeks_13: 1
+        carve_out: mature_library_lindy
     responsiveness:
       grade: "?"
       raw: {}
     adoption:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        registry: pypi.org
+        canonical_package: colorama
+        dependent_repos_count: 189970
+        downloads_last_month: 416445454
+        graph_tier: A
+        volume_tier: A
+        cross_check_divergence: 1.0
     longevity:
       grade: A
       raw:
-        repo_age_days: 4456
-        last_commit_age_days: 47
+        repo_age_days: 4460
+        last_commit_age_days: 51
         cohort: library
     governance:
       grade: C
@@ -60,7 +67,6 @@ health:
         content_license: null
   unknowns:
     responsiveness: { reason: no_traffic }
-    adoption: { reason: registry_no_counts }
 ---
 
 # colorama

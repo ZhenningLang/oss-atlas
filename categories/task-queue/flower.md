@@ -16,7 +16,7 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-06-29T10:16:34Z
+  computed_at: 2026-07-03T08:14:06Z
   overall: B
   overall_score: 3.0
   scored_axes: 4
@@ -28,7 +28,7 @@ health:
       grade: C
       raw:
         archived: false
-        last_commit_age_days: 19
+        last_commit_age_days: 23
         active_weeks_13: 1
         carve_out: null
     responsiveness:
@@ -40,15 +40,15 @@ health:
         registry: pypi.org
         canonical_package: flower
         dependent_repos_count: 3295
-        downloads_last_month: 12645929
+        downloads_last_month: 12623492
         graph_tier: B
         volume_tier: A
-        cross_check_divergence: 1.01
+        cross_check_divergence: 1.02
     longevity:
       grade: A
       raw:
-        repo_age_days: 5104
-        last_commit_age_days: 19
+        repo_age_days: 5108
+        last_commit_age_days: 23
         cohort: tool
     governance:
       grade: C

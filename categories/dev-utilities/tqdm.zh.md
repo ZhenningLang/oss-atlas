@@ -16,9 +16,9 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-06-29T09:50:07Z
+  computed_at: 2026-07-03T15:15:22Z
   overall: B
-  overall_score: 2.8
+  overall_score: 3.2
   scored_axes: 5
   capped: false
   cap_reason: null
@@ -28,31 +28,27 @@ health:
       grade: B
       raw:
         archived: false
-        last_commit_age_days: 12
+        last_commit_age_days: 16
         active_weeks_13: 4
         carve_out: null
     responsiveness:
-      grade: C
-      raw:
-        median_ttfr_hours: 511.3
-        qualifying_issues: 2
-        band: default
-        window_offset_days: 0
+      grade: "?"
+      raw: {}
     adoption:
       grade: A
       raw:
         registry: pypi.org
         canonical_package: tqdm
         dependent_repos_count: 136364
-        downloads_last_month: 562149971
+        downloads_last_month: 580186396
         graph_tier: A
         volume_tier: A
-        cross_check_divergence: 1.0
+        cross_check_divergence: null
     longevity:
       grade: A
       raw:
-        repo_age_days: 4044
-        last_commit_age_days: 12
+        repo_age_days: 4048
+        last_commit_age_days: 16
         cohort: library
     governance:
       grade: D
@@ -63,10 +59,14 @@ health:
         window_source: stats_contributors
         carve_out: null
     risk_license:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
   unknowns:
-    risk_license: { reason: license_unparsed }
+    responsiveness: { reason: no_traffic }
 ---
 
 # tqdm

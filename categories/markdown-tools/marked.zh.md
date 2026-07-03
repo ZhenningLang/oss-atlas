@@ -16,10 +16,10 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-06-29T09:59:23Z
+  computed_at: 2026-07-03T15:17:12Z
   overall: A
-  overall_score: 3.6
-  scored_axes: 5
+  overall_score: 3.83
+  scored_axes: 6
   capped: false
   cap_reason: null
   needs_human_review: true
@@ -28,14 +28,14 @@ health:
       grade: A
       raw:
         archived: false
-        last_commit_age_days: 6
-        active_weeks_13: 13
+        last_commit_age_days: 3
+        active_weeks_13: 12
         carve_out: null
     responsiveness:
       grade: A
       raw:
-        median_ttfr_hours: 7.0
-        qualifying_issues: 19
+        median_ttfr_hours: 6.6
+        qualifying_issues: 18
         band: default
         window_offset_days: 6
     adoption:
@@ -47,26 +47,28 @@ health:
         downloads_last_month: 78935009
         graph_tier: A
         volume_tier: A
-        cross_check_divergence: 2.51
+        cross_check_divergence: 2.67
     longevity:
       grade: A
       raw:
-        repo_age_days: 5454
-        last_commit_age_days: 6
+        repo_age_days: 5458
+        last_commit_age_days: 3
         cohort: library
     governance:
-      grade: C
+      grade: B
       raw:
-        active_maintainers_12mo: 13
-        top1_share: 0.61
-        top3_share: 0.729
+        active_maintainers_12mo: 18
+        top1_share: 0.554
+        top3_share: 0.662
         window_source: stats_contributors
         carve_out: null
     risk_license:
-      grade: "?"
-      raw: {}
-  unknowns:
-    risk_license: { reason: license_unparsed }
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # marked

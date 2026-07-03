@@ -16,10 +16,10 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-06-29T10:03:09Z
+  computed_at: 2026-07-03T08:24:05Z
   overall: B
-  overall_score: 2.8
-  scored_axes: 5
+  overall_score: 3.17
+  scored_axes: 6
   capped: false
   cap_reason: null
   needs_human_review: false
@@ -28,11 +28,11 @@ health:
       grade: A
       raw:
         archived: false
-        last_commit_age_days: 6
-        active_weeks_13: 12
+        last_commit_age_days: 3
+        active_weeks_13: 11
         carve_out: null
     responsiveness:
-      grade: B
+      grade: A
       raw:
         median_ttfr_hours: 41.2
         qualifying_issues: 4
@@ -51,8 +51,8 @@ health:
     longevity:
       grade: A
       raw:
-        repo_age_days: 3794
-        last_commit_age_days: 6
+        repo_age_days: 3798
+        last_commit_age_days: 3
         cohort: library
     governance:
       grade: C
@@ -63,10 +63,12 @@ health:
         window_source: stats_contributors
         carve_out: null
     risk_license:
-      grade: "?"
-      raw: {}
-  unknowns:
-    risk_license: { reason: license_unparsed }
+      grade: A
+      raw:
+        spdx_id: BSD-3-Clause
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # VMAF

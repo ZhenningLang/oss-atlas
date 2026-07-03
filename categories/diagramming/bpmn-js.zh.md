@@ -16,10 +16,10 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-06-29T09:50:32Z
-  overall: B
-  overall_score: 3.4
-  scored_axes: 5
+  computed_at: 2026-07-03T08:22:28Z
+  overall: A
+  overall_score: 3.67
+  scored_axes: 6
   capped: false
   cap_reason: null
   needs_human_review: false
@@ -32,7 +32,7 @@ health:
         active_weeks_13: 11
         carve_out: null
     responsiveness:
-      grade: B
+      grade: A
       raw:
         median_ttfr_hours: 25.5
         qualifying_issues: 3
@@ -51,7 +51,7 @@ health:
     longevity:
       grade: A
       raw:
-        repo_age_days: 4494
+        repo_age_days: 4498
         last_commit_age_days: 3
         cohort: library
     governance:
@@ -63,10 +63,12 @@ health:
         window_source: stats_contributors
         carve_out: null
     risk_license:
-      grade: "?"
-      raw: {}
-  unknowns:
-    risk_license: { reason: license_unparsed }
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # bpmn-js

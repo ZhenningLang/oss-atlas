@@ -16,10 +16,10 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-06-29T10:00:41Z
-  overall: D
-  overall_score: 0.67
-  scored_axes: 3
+  computed_at: 2026-07-03T14:46:56Z
+  overall: C
+  overall_score: 1.5
+  scored_axes: 4
   capped: false
   cap_reason: null
   needs_human_review: false
@@ -28,7 +28,7 @@ health:
       grade: D
       raw:
         archived: false
-        last_commit_age_days: 428
+        last_commit_age_days: 432
         active_weeks_13: 0
         carve_out: null
     responsiveness:
@@ -47,19 +47,22 @@ health:
     longevity:
       grade: D
       raw:
-        repo_age_days: 5061
-        last_commit_age_days: 428
+        repo_age_days: 5065
+        last_commit_age_days: 432
         cohort: tool
     governance:
       grade: "?"
       raw: {}
     risk_license:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
   unknowns:
     responsiveness: { reason: issues_disabled }
     governance: { reason: unattributable }
-    risk_license: { reason: license_unparsed }
 ---
 
 # you-get

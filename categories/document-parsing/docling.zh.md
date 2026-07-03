@@ -16,10 +16,10 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-06-29T09:52:40Z
+  computed_at: 2026-07-03T14:39:53Z
   overall: A
-  overall_score: 3.6
-  scored_axes: 5
+  overall_score: 3.67
+  scored_axes: 6
   capped: false
   cap_reason: null
   needs_human_review: false
@@ -34,8 +34,8 @@ health:
     responsiveness:
       grade: A
       raw:
-        median_ttfr_hours: 0.3
-        qualifying_issues: 54
+        median_ttfr_hours: 0.5
+        qualifying_issues: 56
         band: default
         window_offset_days: 0
     adoption:
@@ -44,19 +44,24 @@ health:
         registry: pypi.org
         canonical_package: docling
         dependent_repos_count: 0
-        downloads_last_month: 14588206
+        downloads_last_month: 14981319
         graph_tier: E
         volume_tier: A
-        cross_check_divergence: 1.0
+        cross_check_divergence: 1.11
     longevity:
       grade: C
       raw:
-        repo_age_days: 720
+        repo_age_days: 724
         last_commit_age_days: 0
         cohort: library
     governance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        active_maintainers_12mo: 89
+        top1_share: 0.198
+        top3_share: 0.511
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
       grade: A
       raw:
@@ -64,8 +69,6 @@ health:
         permissiveness: permissive
         relicense_36mo: false
         content_license: null
-  unknowns:
-    governance: { reason: empty_or_gated }
 ---
 
 # Docling

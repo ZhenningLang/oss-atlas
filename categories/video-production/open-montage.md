@@ -16,9 +16,9 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-06-30T03:58:40Z
+  computed_at: 2026-07-03T14:55:40Z
   overall: C
-  overall_score: 2.17
+  overall_score: 2.0
   scored_axes: 6
   capped: false
   cap_reason: null
@@ -29,34 +29,47 @@ health:
       raw:
         archived: false
         last_commit_age_days: 0
-        active_weeks_13: 13
+        active_weeks_13: 7
+        carve_out: null
     responsiveness:
-      grade: B
-      raw: {}
-    adoption:
-      grade: C
+      grade: A
       raw:
-        stars: 28813
-        forks: 3218
-        open_issues: 130
+        median_ttfr_hours: 29.1
+        qualifying_issues: 29
+        band: relaxed_solo
+        window_offset_days: 3
+    adoption:
+      grade: E
+      raw:
+        registry: null
+        canonical_package: null
+        dependent_repos_count: 0
+        downloads_last_month: null
+        graph_tier: E
+        volume_tier: null
+        cross_check_divergence: null
+        archived: false
     longevity:
       grade: D
       raw:
-        repo_age_days: 93
+        repo_age_days: 96
         last_commit_age_days: 0
         cohort: tool
     governance:
       grade: C
       raw:
-        active_maintainers_12mo: 1
-        top1_share: 0.95
+        active_maintainers_12mo: 17
+        top1_share: 0.778
+        top3_share: 0.874
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
       grade: D
       raw:
         spdx_id: AGPL-3.0
-        permissiveness: strong-copyleft
-  unknowns:
-    responsiveness: { reason: no_traffic }
+        permissiveness: strong_network_copyleft
+        relicense_36mo: false
+        content_license: null
 ---
 
 # OpenMontage

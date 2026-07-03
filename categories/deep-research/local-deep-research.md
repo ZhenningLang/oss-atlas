@@ -16,7 +16,7 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-06-29T09:45:26Z
+  computed_at: 2026-07-03T08:18:26Z
   overall: B
   overall_score: 2.67
   scored_axes: 6
@@ -28,14 +28,14 @@ health:
       grade: A
       raw:
         archived: false
-        last_commit_age_days: 1
+        last_commit_age_days: 0
         active_weeks_13: 13
         carve_out: null
     responsiveness:
       grade: A
       raw:
-        median_ttfr_hours: 13.7
-        qualifying_issues: 12
+        median_ttfr_hours: 21.9
+        qualifying_issues: 13
         band: relaxed_solo
         window_offset_days: 1
     adoption:
@@ -44,20 +44,20 @@ health:
         registry: pypi.org
         canonical_package: local-deep-research
         dependent_repos_count: 0
-        downloads_last_month: 10866
+        downloads_last_month: 10860
         graph_tier: E
         volume_tier: D
         cross_check_divergence: null
     longevity:
       grade: C
       raw:
-        repo_age_days: 505
-        last_commit_age_days: 1
+        repo_age_days: 509
+        last_commit_age_days: 0
         cohort: app
     governance:
       grade: D
       raw:
-        active_maintainers_12mo: 46
+        active_maintainers_12mo: 47
         top1_share: 0.906
         top3_share: 0.961
         window_source: stats_contributors

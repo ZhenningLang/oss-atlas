@@ -16,7 +16,7 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-06-29T09:25:45Z
+  computed_at: 2026-07-03T08:25:22Z
   overall: B
   overall_score: 3.0
   scored_axes: 6
@@ -28,14 +28,14 @@ health:
       grade: A
       raw:
         archived: false
-        last_commit_age_days: 13
-        active_weeks_13: 8
+        last_commit_age_days: 17
+        active_weeks_13: 7
         carve_out: null
     responsiveness:
       grade: C
       raw:
-        median_ttfr_hours: 236.0
-        qualifying_issues: 25
+        median_ttfr_hours: 211.9
+        qualifying_issues: 24
         band: default
         window_offset_days: 7
     adoption:
@@ -44,15 +44,15 @@ health:
         registry: pypi.org
         canonical_package: smolagents
         dependent_repos_count: 0
-        downloads_last_month: 623672
+        downloads_last_month: 619627
         graph_tier: E
         volume_tier: B
-        cross_check_divergence: 1.06
+        cross_check_divergence: 1.02
     longevity:
       grade: C
       raw:
-        repo_age_days: 571
-        last_commit_age_days: 13
+        repo_age_days: 575
+        last_commit_age_days: 17
         cohort: library
     governance:
       grade: B

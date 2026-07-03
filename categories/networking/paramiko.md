@@ -16,7 +16,7 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-06-29T10:05:59Z
+  computed_at: 2026-07-03T08:16:57Z
   overall: B
   overall_score: 3.0
   scored_axes: 6
@@ -28,7 +28,7 @@ health:
       grade: B
       raw:
         archived: false
-        last_commit_age_days: 51
+        last_commit_age_days: 55
         active_weeks_13: 2
         carve_out: null
     responsiveness:
@@ -44,15 +44,15 @@ health:
         registry: pypi.org
         canonical_package: paramiko
         dependent_repos_count: 30613
-        downloads_last_month: 140365916
+        downloads_last_month: 144396805
         graph_tier: A
         volume_tier: A
         cross_check_divergence: 1.0
     longevity:
       grade: A
       raw:
-        repo_age_days: 6356
-        last_commit_age_days: 51
+        repo_age_days: 6360
+        last_commit_age_days: 55
         cohort: library
     governance:
       grade: D

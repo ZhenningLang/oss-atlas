@@ -16,9 +16,9 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-06-29T09:46:38Z
+  computed_at: 2026-07-03T15:52:25Z
   overall: A
-  overall_score: 3.6
+  overall_score: 3.8
   scored_axes: 5
   capped: false
   cap_reason: null
@@ -28,8 +28,8 @@ health:
       grade: A
       raw:
         archived: false
-        last_commit_age_days: 5
-        active_weeks_13: 11
+        last_commit_age_days: 9
+        active_weeks_13: 10
         carve_out: null
     responsiveness:
       grade: A
@@ -39,20 +39,13 @@ health:
         band: relaxed_solo
         window_offset_days: 4
     adoption:
-      grade: B
-      raw:
-        registry: pypi.org
-        canonical_package: certbot
-        dependent_repos_count: 470
-        downloads_last_month: 606164
-        graph_tier: C
-        volume_tier: B
-        cross_check_divergence: 1.05
+      grade: "?"
+      raw: {}
     longevity:
       grade: A
       raw:
-        repo_age_days: 4247
-        last_commit_age_days: 5
+        repo_age_days: 4252
+        last_commit_age_days: 9
         cohort: tool
     governance:
       grade: B
@@ -63,10 +56,14 @@ health:
         window_source: stats_contributors
         carve_out: null
     risk_license:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
   unknowns:
-    risk_license: { reason: license_unparsed }
+    adoption: { reason: ambiguous }
 ---
 
 # Certbot

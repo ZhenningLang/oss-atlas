@@ -16,10 +16,10 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-06-29T09:49:10Z
+  computed_at: 2026-07-03T14:35:31Z
   overall: B
-  overall_score: 3.0
-  scored_axes: 4
+  overall_score: 3.2
+  scored_axes: 5
   capped: false
   cap_reason: null
   needs_human_review: false
@@ -28,7 +28,7 @@ health:
       grade: A
       raw:
         archived: false
-        last_commit_age_days: 3
+        last_commit_age_days: 2
         active_weeks_13: 13
         carve_out: null
     responsiveness:
@@ -44,23 +44,26 @@ health:
     longevity:
       grade: D
       raw:
-        repo_age_days: 272
-        last_commit_age_days: 3
+        repo_age_days: 276
+        last_commit_age_days: 2
         cohort: library
     governance:
       grade: A
       raw:
         active_maintainers_12mo: 29
-        top1_share: 0.274
+        top1_share: 0.272
         top3_share: 0.637
         window_source: stats_contributors
         carve_out: null
     risk_license:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        spdx_id: BSD-3-Clause
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
   unknowns:
     adoption: { reason: ambiguous }
-    risk_license: { reason: license_unparsed }
 ---
 
 # OpenZL

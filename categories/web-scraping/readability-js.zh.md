@@ -16,10 +16,10 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-06-29T10:24:04Z
+  computed_at: 2026-07-03T15:01:48Z
   overall: B
-  overall_score: 2.75
-  scored_axes: 4
+  overall_score: 3.0
+  scored_axes: 5
   capped: false
   cap_reason: null
   needs_human_review: false
@@ -28,7 +28,7 @@ health:
       grade: B
       raw:
         archived: false
-        last_commit_age_days: 223
+        last_commit_age_days: 228
         active_weeks_13: 0
         carve_out: mature_library_lindy
     responsiveness:
@@ -43,12 +43,12 @@ health:
         downloads_last_month: 9256833
         graph_tier: B
         volume_tier: A
-        cross_check_divergence: 1.28
+        cross_check_divergence: 1.41
     longevity:
       grade: C
       raw:
-        repo_age_days: 4164
-        last_commit_age_days: 223
+        repo_age_days: 4168
+        last_commit_age_days: 228
         cohort: library
     governance:
       grade: C
@@ -59,11 +59,14 @@ health:
         window_source: stats_contributors
         carve_out: null
     risk_license:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        spdx_id: Apache-2.0
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
   unknowns:
     responsiveness: { reason: no_traffic }
-    risk_license: { reason: license_unparsed }
 ---
 
 # Readability.js

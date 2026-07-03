@@ -16,10 +16,10 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-03T02:49:01Z
+  computed_at: 2026-07-03T08:20:26Z
   overall: A
-  overall_score: 3.67
-  scored_axes: 6
+  overall_score: 4.0
+  scored_axes: 5
   capped: false
   cap_reason: null
   needs_human_review: false
@@ -32,19 +32,15 @@ health:
         active_weeks_13: 13
         carve_out: null
     responsiveness:
-      grade: C
-      raw:
-        median_ttfr_hours: 1080.0
-        qualifying_issues: 0
-        band: relaxed_solo
-        window_offset_days: 4
+      grade: "?"
+      raw: {}
     adoption:
       grade: A
       raw:
         registry: pypi.org
         canonical_package: vllm
         dependent_repos_count: 5
-        downloads_last_month: 5519417
+        downloads_last_month: 5503961
         graph_tier: D
         volume_tier: A
         cross_check_divergence: 1.0
@@ -59,7 +55,7 @@ health:
       raw:
         active_maintainers_12mo: 433
         top1_share: 0.061
-        top3_share: 0.144
+        top3_share: 0.143
         window_source: stats_contributors
         carve_out: null
     risk_license:
@@ -69,6 +65,8 @@ health:
         permissiveness: permissive
         relicense_36mo: false
         content_license: null
+  unknowns:
+    responsiveness: { reason: no_traffic }
 ---
 
 # vLLM

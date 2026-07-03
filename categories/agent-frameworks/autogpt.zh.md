@@ -16,10 +16,10 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T15:23:09Z
+  computed_at: 2026-07-03T08:25:20Z
   overall: A
-  overall_score: 3.5
-  scored_axes: 4
+  overall_score: 3.8
+  scored_axes: 5
   capped: false
   cap_reason: null
   needs_human_review: false
@@ -28,14 +28,14 @@ health:
       grade: A
       raw:
         archived: false
-        last_commit_age_days: 7
-        active_weeks_13: 13
+        last_commit_age_days: 8
+        active_weeks_13: 12
         carve_out: null
     responsiveness:
-      grade: B
+      grade: A
       raw:
-        median_ttfr_hours: 48.1
-        qualifying_issues: 29
+        median_ttfr_hours: 47.7
+        qualifying_issues: 28
         band: default
         window_offset_days: 5
     adoption:
@@ -44,8 +44,8 @@ health:
     longevity:
       grade: B
       raw:
-        repo_age_days: 1204
-        last_commit_age_days: 7
+        repo_age_days: 1205
+        last_commit_age_days: 8
         cohort: framework
     governance:
       grade: A
@@ -56,11 +56,14 @@ health:
         window_source: stats_contributors
         carve_out: null
     risk_license:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
   unknowns:
     adoption: { reason: ambiguous }
-    risk_license: { reason: license_unparsed }
 ---
 
 # AutoGPT

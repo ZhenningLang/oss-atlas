@@ -17,10 +17,10 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T16:05:24Z
+  computed_at: 2026-07-03T08:18:47Z
   overall: B
-  overall_score: 2.6
-  scored_axes: 5
+  overall_score: 2.83
+  scored_axes: 6
   capped: false
   cap_reason: null
   needs_human_review: false
@@ -36,7 +36,7 @@ health:
       grade: A
       raw:
         median_ttfr_hours: 0.0
-        qualifying_issues: 35
+        qualifying_issues: 31
         band: relaxed_solo
         window_offset_days: 2
     adoption:
@@ -53,12 +53,17 @@ health:
     longevity:
       grade: A
       raw:
-        repo_age_days: 1820
+        repo_age_days: 1821
         last_commit_age_days: 0
         cohort: tool
     governance:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        active_maintainers_12mo: 93
+        top1_share: 0.295
+        top3_share: 0.399
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
       grade: D
       raw:
@@ -66,8 +71,6 @@ health:
         permissiveness: strong_network_copyleft
         relicense_36mo: false
         content_license: null
-  unknowns:
-    governance: { reason: empty_or_gated }
 ---
 
 # Warp

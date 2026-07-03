@@ -16,7 +16,7 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-06-29T10:10:09Z
+  computed_at: 2026-07-03T14:54:55Z
   overall: B
   overall_score: 3.2
   scored_axes: 5
@@ -28,7 +28,7 @@ health:
       grade: B
       raw:
         archived: false
-        last_commit_age_days: 21
+        last_commit_age_days: 1
         active_weeks_13: 5
         carve_out: null
     responsiveness:
@@ -47,15 +47,15 @@ health:
     longevity:
       grade: A
       raw:
-        repo_age_days: 791
-        last_commit_age_days: 21
+        repo_age_days: 795
+        last_commit_age_days: 1
         cohort: model
     governance:
       grade: B
       raw:
-        active_maintainers_12mo: 7
-        top1_share: 0.347
-        top3_share: 0.853
+        active_maintainers_12mo: 8
+        top1_share: 0.333
+        top3_share: 0.833
         window_source: stats_contributors
         carve_out: null
     risk_license:

@@ -16,48 +16,48 @@ upstream:
   archived: true
 health:
   schema: 1
-  computed_at: 2026-06-29T10:06:43Z
-  overall: D
-  overall_score: 0.8
+  computed_at: 2026-07-03T08:16:29Z
+  overall: B
+  overall_score: 2.8
   scored_axes: 5
   capped: false
   cap_reason: null
   needs_human_review: false
   axes:
     maintenance:
-      grade: E
+      grade: B
       raw:
-        archived: true
-        last_commit_age_days: 2830
-        active_weeks_13: 0
-        carve_out: null
+        archived: false
+        last_commit_age_days: 1
+        active_weeks_13: 1
+        carve_out: mature_library_lindy
     responsiveness:
-      grade: E
-      raw:
-        median_ttfr_hours: null
-        qualifying_issues: 0
-        band: default
-        window_offset_days: 2
-    adoption:
-      grade: E
-      raw:
-        registry: null
-        canonical_package: null
-        dependent_repos_count: 0
-        downloads_last_month: null
-        graph_tier: E
-        volume_tier: null
-        cross_check_divergence: null
-        archived: true
-    longevity:
-      grade: E
-      raw:
-        repo_age_days: 4521
-        last_commit_age_days: 2830
-        cohort: library
-    governance:
       grade: "?"
       raw: {}
+    adoption:
+      grade: C
+      raw:
+        registry: pypi.org
+        canonical_package: thriftpy
+        dependent_repos_count: 286
+        downloads_last_month: 19000
+        graph_tier: C
+        volume_tier: D
+        cross_check_divergence: null
+    longevity:
+      grade: A
+      raw:
+        repo_age_days: 4525
+        last_commit_age_days: 1
+        cohort: library
+    governance:
+      grade: D
+      raw:
+        active_maintainers_12mo: 1
+        top1_share: 1.0
+        top3_share: 1.0
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
       grade: A
       raw:
@@ -66,7 +66,7 @@ health:
         relicense_36mo: false
         content_license: null
   unknowns:
-    governance: { reason: unattributable }
+    responsiveness: { reason: no_traffic }
 ---
 
 # ThriftPy

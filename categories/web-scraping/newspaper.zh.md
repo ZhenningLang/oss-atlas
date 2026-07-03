@@ -16,7 +16,7 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-06-29T10:23:08Z
+  computed_at: 2026-07-03T15:00:24Z
   overall: B
   overall_score: 3.0
   scored_axes: 5
@@ -28,8 +28,8 @@ health:
       grade: B
       raw:
         archived: false
-        last_commit_age_days: 47
-        active_weeks_13: 4
+        last_commit_age_days: 51
+        active_weeks_13: 2
         carve_out: null
     responsiveness:
       grade: "?"
@@ -40,15 +40,15 @@ health:
         registry: pypi.org
         canonical_package: newspaper3k
         dependent_repos_count: 1068
-        downloads_last_month: 802011
+        downloads_last_month: 812808
         graph_tier: B
         volume_tier: B
-        cross_check_divergence: 1.01
+        cross_check_divergence: null
     longevity:
       grade: A
       raw:
-        repo_age_days: 4599
-        last_commit_age_days: 47
+        repo_age_days: 4603
+        last_commit_age_days: 51
         cohort: library
     governance:
       grade: D

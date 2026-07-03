@@ -16,10 +16,10 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T15:34:03Z
+  computed_at: 2026-07-03T08:27:02Z
   overall: B
-  overall_score: 3.17
-  scored_axes: 6
+  overall_score: 3.4
+  scored_axes: 5
   capped: false
   cap_reason: null
   needs_human_review: false
@@ -32,12 +32,8 @@ health:
         active_weeks_13: 13
         carve_out: null
     responsiveness:
-      grade: C
-      raw:
-        median_ttfr_hours: 360.0
-        qualifying_issues: 0
-        band: default
-        window_offset_days: 13
+      grade: "?"
+      raw: {}
     adoption:
       grade: B
       raw:
@@ -51,7 +47,7 @@ health:
     longevity:
       grade: C
       raw:
-        repo_age_days: 441
+        repo_age_days: 442
         last_commit_age_days: 1
         cohort: framework
     governance:
@@ -69,6 +65,8 @@ health:
         permissiveness: permissive
         relicense_36mo: false
         content_license: null
+  unknowns:
+    responsiveness: { reason: no_traffic }
 ---
 
 # Gemini CLI

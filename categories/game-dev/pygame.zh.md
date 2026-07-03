@@ -16,7 +16,7 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-06-29T09:53:38Z
+  computed_at: 2026-07-03T08:12:57Z
   overall: D
   overall_score: 2.17
   scored_axes: 6
@@ -28,7 +28,7 @@ health:
       grade: B
       raw:
         archived: false
-        last_commit_age_days: 266
+        last_commit_age_days: 270
         active_weeks_13: 0
         carve_out: mature_library_lindy
     responsiveness:
@@ -44,15 +44,15 @@ health:
         registry: pypi.org
         canonical_package: pygame
         dependent_repos_count: 17300
-        downloads_last_month: 2737877
+        downloads_last_month: 2687573
         graph_tier: A
         volume_tier: A
-        cross_check_divergence: 1.03
+        cross_check_divergence: 1.0
     longevity:
       grade: C
       raw:
-        repo_age_days: 3382
-        last_commit_age_days: 266
+        repo_age_days: 3386
+        last_commit_age_days: 270
         cohort: library
     governance:
       grade: D

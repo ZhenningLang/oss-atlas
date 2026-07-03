@@ -16,13 +16,13 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T14:58:46Z
+  computed_at: 2026-07-03T16:20:55Z
   overall: A
-  overall_score: 3.8
-  scored_axes: 5
+  overall_score: 3.83
+  scored_axes: 6
   capped: false
   cap_reason: null
-  needs_human_review: false
+  needs_human_review: true
   axes:
     maintenance:
       grade: A
@@ -39,12 +39,19 @@ health:
         band: relaxed_solo
         window_offset_days: 11
     adoption:
-      grade: "?"
-      raw: {}
+      grade: A
+      raw:
+        registry: crates.io
+        canonical_package: tauri
+        dependent_repos_count: 4409
+        downloads_last_month: 20603938
+        graph_tier: B
+        volume_tier: A
+        cross_check_divergence: 2.76
     longevity:
       grade: A
       raw:
-        repo_age_days: 2546
+        repo_age_days: 2547
         last_commit_age_days: 0
         cohort: tool
     governance:
@@ -52,7 +59,7 @@ health:
       raw:
         active_maintainers_12mo: 20
         top1_share: 0.381
-        top3_share: 0.843
+        top3_share: 0.84
         window_source: stats_contributors
         carve_out: null
     risk_license:
@@ -62,8 +69,6 @@ health:
         permissiveness: permissive
         relicense_36mo: false
         content_license: null
-  unknowns:
-    adoption: { reason: registry_no_counts }
 ---
 
 # Tauri

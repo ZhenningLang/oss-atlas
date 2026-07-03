@@ -16,10 +16,10 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T15:38:35Z
+  computed_at: 2026-07-03T08:27:10Z
   overall: B
-  overall_score: 2.83
-  scored_axes: 6
+  overall_score: 3.0
+  scored_axes: 5
   capped: false
   cap_reason: null
   needs_human_review: false
@@ -32,19 +32,15 @@ health:
         active_weeks_13: 13
         carve_out: null
     responsiveness:
-      grade: C
-      raw:
-        median_ttfr_hours: 360.0
-        qualifying_issues: 0
-        band: default
-        window_offset_days: 11
+      grade: "?"
+      raw: {}
     adoption:
       grade: B
       raw:
         registry: pypi.org
         canonical_package: hermes-agent
         dependent_repos_count: 0
-        downloads_last_month: 383111
+        downloads_last_month: 377785
         graph_tier: E
         volume_tier: B
         cross_check_divergence: 1.01
@@ -58,7 +54,7 @@ health:
       grade: B
       raw:
         active_maintainers_12mo: 493
-        top1_share: 0.455
+        top1_share: 0.453
         top3_share: 0.619
         window_source: stats_contributors
         carve_out: null
@@ -69,6 +65,8 @@ health:
         permissiveness: permissive
         relicense_36mo: false
         content_license: null
+  unknowns:
+    responsiveness: { reason: no_traffic }
 ---
 # Hermes Agent
 

@@ -16,10 +16,10 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-06-29T10:18:32Z
+  computed_at: 2026-07-03T08:19:27Z
   overall: C
   overall_score: 2.0
-  scored_axes: 5
+  scored_axes: 4
   capped: false
   cap_reason: null
   needs_human_review: false
@@ -28,31 +28,27 @@ health:
       grade: D
       raw:
         archived: false
-        last_commit_age_days: 394
+        last_commit_age_days: 398
         active_weeks_13: 0
         carve_out: null
     responsiveness:
-      grade: C
-      raw:
-        median_ttfr_hours: 244.0
-        qualifying_issues: 1
-        band: default
-        window_offset_days: 12
+      grade: "?"
+      raw: {}
     adoption:
       grade: C
       raw:
         registry: pypi.org
         canonical_package: asciimatics
         dependent_repos_count: 176
-        downloads_last_month: 77064
+        downloads_last_month: 82881
         graph_tier: C
         volume_tier: C
         cross_check_divergence: null
     longevity:
       grade: D
       raw:
-        repo_age_days: 4093
-        last_commit_age_days: 394
+        repo_age_days: 4097
+        last_commit_age_days: 398
         cohort: library
     governance:
       grade: "?"
@@ -65,6 +61,7 @@ health:
         relicense_36mo: false
         content_license: null
   unknowns:
+    responsiveness: { reason: no_traffic }
     governance: { reason: unattributable }
 ---
 

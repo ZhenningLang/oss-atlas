@@ -16,10 +16,10 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T14:55:28Z
+  computed_at: 2026-07-03T08:17:49Z
   overall: B
-  overall_score: 3.2
-  scored_axes: 5
+  overall_score: 3.33
+  scored_axes: 6
   capped: false
   cap_reason: null
   needs_human_review: false
@@ -28,14 +28,14 @@ health:
       grade: A
       raw:
         archived: false
-        last_commit_age_days: 1
+        last_commit_age_days: 2
         active_weeks_13: 13
         carve_out: null
     responsiveness:
       grade: A
       raw:
         median_ttfr_hours: 0.0
-        qualifying_issues: 20
+        qualifying_issues: 25
         band: relaxed_solo
         window_offset_days: 2
     adoption:
@@ -47,12 +47,12 @@ health:
         downloads_last_month: 1635855
         graph_tier: E
         volume_tier: B
-        cross_check_divergence: 1.0
+        cross_check_divergence: 1.01
     longevity:
       grade: B
       raw:
         repo_age_days: 1000
-        last_commit_age_days: 1
+        last_commit_age_days: 2
         cohort: app
     governance:
       grade: C
@@ -63,10 +63,12 @@ health:
         window_source: stats_contributors
         carve_out: null
     risk_license:
-      grade: "?"
-      raw: {}
-  unknowns:
-    risk_license: { reason: license_unparsed }
+      grade: A
+      raw:
+        spdx_id: BSD-3-Clause
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 
 # Open WebUI

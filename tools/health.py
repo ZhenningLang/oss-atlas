@@ -201,7 +201,7 @@ def gh_api(path: str, *, method: str = "GET", fields: dict | None = None,
         for k, v in (fields or {}).items():
             cmd += ["-f", f"{k}={v}"]
         try:
-            proc = subprocess.run(cmd, capture_output=True, text=True, timeout=60)
+            proc = subprocess.run(cmd, capture_output=True, text=True, timeout=180)
         except (subprocess.TimeoutExpired, OSError) as e:
             return GhResult(0, json.dumps({"_transport_error": str(e)}))
         status = 200 if proc.returncode == 0 else 502

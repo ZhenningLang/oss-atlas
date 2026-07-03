@@ -16,7 +16,7 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-06-29T09:46:20Z
+  computed_at: 2026-07-03T08:14:15Z
   overall: C
   overall_score: 2.0
   scored_axes: 4
@@ -28,7 +28,7 @@ health:
       grade: E
       raw:
         archived: false
-        last_commit_age_days: 1118
+        last_commit_age_days: 1122
         active_weeks_13: 0
         carve_out: null
     responsiveness:
@@ -40,15 +40,15 @@ health:
         registry: pypi.org
         canonical_package: pyautogui
         dependent_repos_count: 1028
-        downloads_last_month: 2717852
+        downloads_last_month: 2742212
         graph_tier: B
         volume_tier: A
         cross_check_divergence: 1.0
     longevity:
       grade: E
       raw:
-        repo_age_days: 4364
-        last_commit_age_days: 1118
+        repo_age_days: 4368
+        last_commit_age_days: 1122
         cohort: library
     governance:
       grade: "?"
