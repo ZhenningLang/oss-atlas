@@ -74,6 +74,13 @@ English (`*.md` / `INDEX.md`) is the canonical path. The `.zh.md` files are a Ch
   outdated and verify the decisive ones against the live repo before relying on them.
 - Surface `[未验证]` / `[推断]` labels and the `## Caveats (unverified)` ledger from the page —
   don't launder them into confident facts.
+- **Challenge `?` on the health radar.** A gray `?` on a radar axis means the machine could
+  not confidently measure it — **not** that the project is deficient. If `risk_license` is `?`,
+  the license may be a standard MIT/Apache that GitHub's licensee failed to parse (e.g. a trailing
+  third-party notice pushed the text outside the template-match tolerance). If `maintenance` or
+  `governance` is `?`, the repo may live on GitLab or a non-Git host the scorer cannot reach.
+  Treat `?` as "unverified" and, when the choice hinges on that axis, verify it manually
+  (e.g. `gh repo view <owner>/<name>` or read the LICENSE file) before deciding.
 - If two candidates are genuinely tied, present both with their tradeoffs instead of forcing a
   single pick.
 

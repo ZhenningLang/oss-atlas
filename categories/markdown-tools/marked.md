@@ -92,10 +92,10 @@ It's the right reach when *throughput and simplicity* matter more than strict sp
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| markdown-it | 未收录 | Use this page for its stated niche; choose markdown-it when you need commonMark-strict, pluggable architecture with a rich plugin ecosystem. | CommonMark-strict, pluggable architecture with a rich plugin ecosystem; heavier API and a touch slower than marked, but the choice when spec conformance and plugins matter. |
-| remark / unified | 未收录 | Use this page for its stated niche; choose remark / unified when you need full mdast AST pipeline for parsing, transforming, linting, and serializing (Markdown, MDX). | Full mdast AST pipeline for parsing, transforming, linting, and serializing (Markdown, MDX); far more powerful and far heavier — a toolchain, not a one-call renderer. |
-| micromark | 未收录 | Use this page for its stated niche; choose micromark when you need the low-level CommonMark/GFM tokenizer underneath remark. | The low-level CommonMark/GFM tokenizer underneath remark; correct and streaming-oriented, but you build the rendering layer yourself. |
-| CommonMark reference (commonmark.js) | 未收录 | Use this page for its stated niche; choose CommonMark reference (commonmark.js) when you need the spec's own reference implementation. | The spec's own reference implementation; the conformance yardstick, but fewer GFM niceties and not optimized as a production renderer. |
+| [markdown-it](markdown-it.md) | ✅ | Use this page for its stated niche; choose markdown-it when you need commonMark-strict, pluggable architecture with a rich plugin ecosystem. | CommonMark-strict, pluggable architecture with a rich plugin ecosystem; heavier API and a touch slower than marked, but the choice when spec conformance and plugins matter. |
+| [remark](../markdown-tools/remark.md) | ✅ | Use this page for its stated niche; choose remark when you need a full mdast AST pipeline for parsing, transforming, linting, and serializing (Markdown, MDX). | Full mdast AST pipeline for parsing, transforming, linting, and serializing (Markdown, MDX); far more powerful and far heavier — a toolchain, not a one-call renderer. |
+| [micromark](micromark.md) | ✅ | Use this page for its stated niche; choose micromark when you need the low-level CommonMark/GFM tokenizer underneath remark. | The low-level CommonMark/GFM tokenizer underneath remark; correct and streaming-oriented, but you build the rendering layer yourself. |
+| [CommonMark](commonmark.md) | ✅ | Use this page for its stated niche; choose CommonMark when you need the spec's own reference implementation. | The spec's own reference implementation; the conformance yardstick, but fewer GFM niceties and not optimized as a production renderer. |
 
 ## Tech stack
 

@@ -7,16 +7,23 @@
 
 | Project | Use when | Health | Page |
 | --- | --- | --- | --- |
+| **CommonMark** | Use it when you need the canonical, spec-compliant Markdown reference implementation with a traversable AST — but not for speed, GFM, or a plugin ecosystem. | — | [→](commonmark.md) |
 | **Markdown Here** | Use it when you want to write email in Markdown and render it before sending via a browser/Thunderbird extension — mind its slow maintenance. | C (4/6) | [→](markdown-here.md) |
 | **marked** | Use it when you need a fast, low-level Markdown→HTML parser in JS — but you must sanitize the output yourself and don't need strict CommonMark. | A (5/6) | [→](marked.md) |
+| **remark** | Use it when you need a full mdast AST pipeline for parsing, transforming, linting, and serializing Markdown — but it's a toolchain, not a one-call renderer. | — | [→](remark.md) |
+| **markdown-it** | Use it when you need a strict CommonMark/GFM-compliant, pluggable Markdown→HTML parser in JS — but the plugin ecosystem adds weight and you must still sanitize untrusted input. | — | [→](markdown-it.md) |
+| **micromark** | Use it when you need a low-level, streaming-friendly CommonMark/GFM tokenizer in JS — the engine underneath remark — but you must build the rendering layer yourself. | — | [→](micromark.md) |
 
 ## Comparison matrix
 
 | Option | Indexed | Health | One-line tradeoff |
 | --- | --- | --- | --- |
+| [CommonMark](commonmark.md) | ✅ | — | Use it when you need the canonical, spec-compliant Markdown reference implementation with a traversable AST — but not for speed, GFM, or a plugin ecosystem. |
 | [Markdown Here](markdown-here.md) | ✅ | C (4/6) | Use it when you want to write email in Markdown and render it before sending via a browser/Thunderbird extension — mind its slow maintenance. |
 | [marked](marked.md) | ✅ | A (5/6) | Use it when you need a fast, low-level Markdown→HTML parser in JS — but you must sanitize the output yourself and don't need strict CommonMark. |
-| markdown-it / remark / micromark | 未收录 | — | Other Markdown parsers & toolchains named across the pages. |
+| [remark](remark.md) | ✅ | — | Use it when you need a full mdast AST pipeline for parsing, transforming, linting, and serializing Markdown — but it's a toolchain, not a one-call renderer. |
+| [markdown-it](markdown-it.md) | ✅ | — | Use it when you need a strict CommonMark/GFM-compliant, pluggable Markdown→HTML parser in JS — but the plugin ecosystem adds weight and you must still sanitize untrusted input. |
+| [micromark](micromark.md) | ✅ | — | Use it when you need a low-level, streaming-friendly CommonMark/GFM tokenizer in JS — the engine underneath remark — but you must build the rendering layer yourself. |
 
 ## What belongs here
 

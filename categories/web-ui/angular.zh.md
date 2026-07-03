@@ -99,6 +99,7 @@ health:
 | Svelte / SvelteKit | 未收录 | 编译时框架，运行时开销极小，没有虚拟 DOM。 | Svelte 对中小型应用更快更简单；Angular 拥有更深的企业支持、更多第三方集成和更长的记录。 |
 | Next.js | 未收录 | 全栈 React 框架，SSR/SSG 一流，与 Vercel 深度集成。 | Next.js 是 React 生态 SSR/SEO 的默认选择；Angular Universal 存在，但在该细分领域不占主导。 |
 | [shadcn/ui](shadcn-ui.zh.md) | ✅ | 组件分发模式，不是框架——通常在 React 内部使用。 | 并非直接替代品；shadcn/ui 关注组件所有权，Angular 是完整应用框架。 |
+| [Lit](lit.zh.md) | ✅ | 基于标准的 Web Components 构建库，运行时极小。 | Lit 用于构建可互操作的组件，而非完整 SPA；Angular 是带路由、依赖注入和 CLI 的完整框架。如果设计系统需要跨框架工作，选 Lit。 |
 
 ## 技术栈
 

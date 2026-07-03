@@ -96,8 +96,9 @@ health:
 | llama.cpp | 未收录 | 当前页用于它的主场景；如果更看重“可移植的 C/C++ 推理引擎（GGUF），靠 Metal 也能在 Mac 上跑、到处都能跑”，再选 llama.cpp。 | 可移植的 C/C++ 推理引擎（GGUF），靠 Metal 也能在 Mac 上跑、到处都能跑；可移植性和成熟度都顶，但不是 MLX 原生，也没有内建的 macOS 菜单栏/admin 管理层。 |
 | vLLM | 未收录 | 当前页用于它的主场景；如果更看重“事实标准的数据中心 LLM 服务引擎（PagedAttention、continuous batching），社区庞大”，再选 vLLM。 | 事实标准的数据中心 LLM 服务引擎（PagedAttention、continuous batching），社区庞大；偏 NVIDIA/Linux——不是 Mac/Apple Silicon 本地服务器。 |
 | Text Generation Inference (TGI) | 未收录 | 当前页用于它的主场景；如果更看重“Hugging Face 的生产服务器，与 HF 贴合紧密、在规模上久经检验”，再选 Text Generation Inference (TGI)。 | Hugging Face 的生产服务器，与 HF 贴合紧密、在规模上久经检验；面向服务器 GPU，不是 Mac 本地栈。 |
-| SGLang | 未收录 | 当前页用于它的主场景；如果更看重“高吞吐服务引擎，带 RadixAttention 前缀缓存”，再选 SGLang。 | 高吞吐服务引擎，带 RadixAttention 前缀缓存；面向服务器 GPU、运维更复杂，不是单 Mac 菜单栏应用。 |
+| [SGLang](sglang.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“高吞吐服务引擎，带 RadixAttention 前缀缓存”，再选 SGLang。 | 高吞吐服务引擎，带 RadixAttention 前缀缓存；面向服务器 GPU、运维更复杂，不是单 Mac 菜单栏应用。 |
 | [Modular Platform (MAX + Mojo)](modular.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“厂商自建的跨厂商 GPU/CPU 服务引擎 + Mojo kernel 语言”，再选 Modular Platform (MAX + Mojo)。 | 厂商自建的跨厂商 GPU/CPU 服务引擎 + Mojo kernel 语言；一个大得多、服务器级、单一厂商的平台——与 Mac 本地服务器是不同的层和量级。 |
+| [Ray Serve](ray-serve.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“通用可扩展的 Python 模型服务框架，支持多模型组合和自动扩缩容”，再选 Ray Serve。 | 通用可扩展的 Python 模型服务框架，支持多模型组合和自动扩缩容；基于 Ray，运维要求高，不是 Mac 本地服务器。 |
 
 ## 技术栈
 

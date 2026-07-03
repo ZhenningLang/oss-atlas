@@ -93,8 +93,8 @@ health:
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
 | markdown-it | 未收录 | 当前页用于它的主场景；如果更看重“CommonMark 严格、可插拔架构，插件生态丰富”，再选 markdown-it。 | CommonMark 严格、可插拔架构，插件生态丰富；API 更重、比 marked 略慢，但当规范一致和插件重要时它是首选。 |
-| remark / unified | 未收录 | 当前页用于它的主场景；如果更看重“完整的 mdast AST 管线，能解析、变换、lint、序列化（Markdown、MDX）”，再选 remark / unified。 | 完整的 mdast AST 管线，能解析、变换、lint、序列化（Markdown、MDX）；强大得多也重得多——是工具链，不是一次调用的渲染器。 |
-| micromark | 未收录 | 当前页用于它的主场景；如果更看重“remark 底下那个低层 CommonMark/GFM 分词器”，再选 micromark。 | remark 底下那个低层 CommonMark/GFM 分词器；正确、面向流式，但渲染层要你自己搭。 |
+| [remark](../markdown-tools/remark.md) | ✅ | 当前页用于它的主场景；如果更看重“完整的 mdast AST 管线，能解析、变换、lint、序列化（Markdown、MDX）”，再选 remark。 | 完整的 mdast AST 管线，能解析、变换、lint、序列化（Markdown、MDX）；强大得多也重得多——是工具链，不是一次调用的渲染器。 |
+| [micromark](micromark.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“remark 底下那个低层 CommonMark/GFM 分词器”，再选 micromark。 | remark 底下那个低层 CommonMark/GFM 分词器；正确、面向流式，但渲染层要你自己搭。 |
 | CommonMark 参考实现（commonmark.js） | 未收录 | 当前页用于它的主场景；如果更看重“规范自己的参考实现”，再选 CommonMark 参考实现（commonmark.js）。 | 规范自己的参考实现；是一致性标尺，但 GFM 便利特性更少，也未针对生产渲染做优化。 |
 
 ## 技术栈

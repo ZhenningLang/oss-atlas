@@ -385,10 +385,17 @@ skill 从 `raw.githubusercontent.com/ZhenningLang/oss-atlas/main/` 拉取页面�
 | 项目 | 何时用 | 许可 | 健康度 | 页面 |
 | --- | --- | --- | --- | --- |
 | **FFmpeg** | 当你需要在管线里解码/编码/转码/滤镜处理几乎任何音视频时用它——注意 LGPL→GPL 的构建授权陷阱。 | LGPL-2.1-or-later | A（3/6） | [中](categories/media-processing/ffmpeg.zh.md) · [EN](categories/media-processing/ffmpeg.md) |
+| **HandBrake** | 当你需要预设驱动的 GUI 或 CLI 将视频转码/翻录为现代 MP4/MKV 配合 H.264/H.265 时用它——但它是终端用户应用，不是库，且远比原生 FFmpeg 窄。 | GPL-2.0-or-later | — | [中](categories/media-processing/handbrake.zh.md) · [EN](categories/media-processing/handbrake.md) |
 | **ffmpeg-python** | 当你想用 Python 编排复杂的 FFmpeg 滤镜图、把不可读的 -filter_complex 字符串换成可读的 DAG 代码时用它——但它自 2024 年起停更、仅单人维护，且仍依赖系统已装 ffmpeg 二进制。 | Apache-2.0 | C（4/6） | [中](categories/media-processing/ffmpeg-python.zh.md) · [EN](categories/media-processing/ffmpeg-python.md) |
+| **PyAV** | 当你需要在 Python 中以进程内方式把视频/音频帧作为 NumPy 数组进行程序化访问时用它——但它比 CLI 包装器更底层、安装更重（需要针对 FFmpeg 头文件编译 Cython 扩展）。 | MIT | — | [中](categories/media-processing/pyav.zh.md) · [EN](categories/media-processing/pyav.md) |
 | **VMAF** | 当你在调编码档位、需要用业界通用的 0—100 感知分对比编解码器与预设时用它——但它只支持全参考，且选错模型会悄悄让跨版本对比失效。 | BSD-2-Clause-Patent | B（5/6） | [中](categories/media-processing/vmaf.zh.md) · [EN](categories/media-processing/vmaf.md) |
+| **SSIMULACRA2** | 当你需要对比图像编解码器（JPEG XL、AVIF、WebP）并需要一个与人类主观评分相关的感知质量分时用它——但它仅限图像，非对称，且采用度不及 VMAF。 | MIT | — | [中](categories/media-processing/ssimulacra2.zh.md) · [EN](categories/media-processing/ssimulacra2.md) |
 | **m3u8** | 当你需要把 HLS 的 .m3u8 清单当作带类型的对象模型来解析或改写、而非正则硬抠时用它——但它仅限 Python 与 HLS，且自 2025 年起沉寂，最新的 rfc8216bis 标签可能滞后。 | MIT | C（3/6） | [中](categories/media-processing/m3u8.zh.md) · [EN](categories/media-processing/m3u8.md) |
 | **ffsubsync** | 当字幕整体存在恒定偏移、你想用一条命令做 FFT 音频对齐而不手动设同步点时用它——但它修不了内容内部的逐行／变动漂移，且仅单人维护。 | MIT | B（6/6） | [中](categories/media-processing/ffsubsync.zh.md) · [EN](categories/media-processing/ffsubsync.md) |
+| **MoviePy** | 当你想用友好的 Python API 做程序化视频编辑——剪辑、合成、文字、特效——时用它——但它是纯离线批处理，对大文件比原生 FFmpeg 慢，且维护速度已从巅峰期下降。 | MIT | ?（0/6） | [中](categories/media-processing/moviepy.zh.md) · [EN](categories/media-processing/moviepy.md) |
+| **GStreamer** | 当你需要实时、持久、嵌入应用的音视频管线框架而非 CLI 工具时用它——但要接受陡峭的学习曲线和插件依赖管理。 | LGPL-2.1-or-later | — | [中](categories/media-processing/gstreamer.zh.md) · [EN](categories/media-processing/gstreamer.md) |
+| **MLT** | 当你需要构建自定义视频编辑器或需要时间线模型的自动化剪辑管线时用它——但它是框架，不是开箱即用的 NLE，且底层编解码工作委托给 FFmpeg。 | LGPL-2.1-or-later | — | [中](categories/media-processing/mlt.zh.md) · [EN](categories/media-processing/mlt.md) |
+| **OpenAI Whisper** | 当你需要通用的多语言语音转文字转写或从音视频英译时用它——但它默认不是实时系统，大模型在 CPU 上很慢，且对非语音内容会幻觉。 | MIT | — | [中](categories/media-processing/whisper.zh.md) · [EN](categories/media-processing/whisper.md) |
 ### video-production
 
 | 项目 | 何时用 | 许可 | 健康度 | 页面 |
@@ -405,14 +412,20 @@ skill 从 `raw.githubusercontent.com/ZhenningLang/oss-atlas/main/` 拉取页面�
 
 | 项目 | 何时用 | 许可 | 健康度 | 页面 |
 | --- | --- | --- | --- | --- |
+| **CommonMark** | 当你需要规范合规、可遍历 AST 的 Markdown 官方参考实现时用它——但它不以速度见长，也不支持 GFM 或插件生态。 | BSD-3-Clause | — | [中](categories/markdown-tools/commonmark.zh.md) · [EN](categories/markdown-tools/commonmark.md) |
 | **Markdown Here** | 当你想用浏览器/Thunderbird 扩展把邮件用 Markdown 写好、发送前渲染成 HTML 时用它——注意维护已放缓。 | MIT | C（4/6） | [中](categories/markdown-tools/markdown-here.zh.md) · [EN](categories/markdown-tools/markdown-here.md) |
 | **marked** | 当你需要一个快速、底层的 JS Markdown→HTML 解析器时用它——但你得自己做 XSS 消毒，且不要求严格 CommonMark。 | MIT | A（5/6） | [中](categories/markdown-tools/marked.zh.md) · [EN](categories/markdown-tools/marked.md) |
+| **remark** | 当你需要完整的 mdast AST 管线来解析、变换、lint 和序列化 Markdown 时用它——但它是工具链，不是一次调用的渲染器。 | MIT | — | [中](categories/markdown-tools/remark.zh.md) · [EN](categories/markdown-tools/remark.md) |
+| **markdown-it** | 当你需要一个严格遵循 CommonMark/GFM、可插拔的 JS Markdown→HTML 解析器时用它——但插件生态会增加体积，且处理不受信任内容时仍需消毒。 | MIT | — | [中](categories/markdown-tools/markdown-it.zh.md) · [EN](categories/markdown-tools/markdown-it.md) |
+| **micromark** | 当你需要一个低层、面向流式处理的 JS CommonMark/GFM 分词器时用它——remark 的底层引擎——但渲染层要你自己搭。 | MIT | — | [中](categories/markdown-tools/micromark.zh.md) · [EN](categories/markdown-tools/micromark.md) |
 
 ### pdf-tools
 
 | 项目 | 何时用 | 许可 | 健康度 | 页面 |
 | --- | --- | --- | --- | --- |
 | **PDF.js** | 当你需要在浏览器/Node 里渲染或读取 PDF（Firefox 的引擎）时用它——它不创建也不编辑 PDF。 | Apache-2.0 | A（6/6） | [中](categories/pdf-tools/pdfjs.zh.md) · [EN](categories/pdf-tools/pdfjs.md) |
+| **pdf-lib** | 当你需要在 JS/TS 里创建或修改 PDF——在浏览器、Node、Deno 或 React Native 中——且不需要原生依赖时用它。 | MIT | — | [中](categories/pdf-tools/pdf-lib.zh.md) · [EN](categories/pdf-tools/pdf-lib.md) |
+| **jsPDF** | 当你需要在浏览器里从 HTML、文本和图形生成客户端 PDF——它只创建不编辑已有 PDF——时用它。 | MIT | — | [中](categories/pdf-tools/jspdf.zh.md) · [EN](categories/pdf-tools/jspdf.md) |
 
 ### workflow-orchestration
 
@@ -428,6 +441,10 @@ skill 从 `raw.githubusercontent.com/ZhenningLang/oss-atlas/main/` 拉取页面�
 | --- | --- | --- | --- | --- |
 | **Modular Platform (MAX + Mojo)** | 当你想要高性能 GPU/CPU 推理平台（MAX）加 Mojo 系统语言、并接受单厂商绑定与部分非生产许可时用它。 | Apache-2.0 (mixed) | B（5/6） | [中](categories/llm-inference/modular.zh.md) · [EN](categories/llm-inference/modular.md) |
 | **omlx** | 当你想在 Mac（Apple Silicon）上用 MLX 跑带 SSD 分层 KV 缓存的本地 LLM 推理服务时用它——年轻的单人仓库，star 数存疑。 | Apache-2.0 | B（5/6） | [中](categories/llm-inference/omlx.zh.md) · [EN](categories/llm-inference/omlx.md) |
+| **TensorRT-LLM** | 当你需要在 NVIDIA GPU 上榨取最大 LLM 推理吞吐、并愿意接受仅限 NVIDIA 的绑定、复杂的构建/engine 编译流程以及闭源内核时用它。 | Apache-2.0 | — | [中](categories/llm-inference/tensorrt-llm.zh.md) · [EN](categories/llm-inference/tensorrt-llm.md) |
+| **vLLM** | 当你想要事实上的开源 LLM 服务引擎，带 PagedAttention、连续批处理和 OpenAI 兼容 API 时用它——接受 NVIDIA 主导的 GPU 运维和快速迭代的代码库。 | Apache-2.0 | — | [中](categories/llm-inference/vllm.zh.md) · [EN](categories/llm-inference/vllm.md) |
+| **SGLang** | 当你需要带 RadixAttention 前缀缓存和结构化生成的快速 LLM 服务引擎——适合工具调用型 agent 和 JSON 模式 API——并接受比 vLLM 更年轻、更小的生态时用它。 | Apache-2.0 | — | [中](categories/llm-inference/sglang.zh.md) · [EN](categories/llm-inference/sglang.md) |
+| **Ray Serve** | 当你需要通用、可扩展的 Python 模型服务框架，支持多模型组合和自动扩缩容时用它——但要接受 Ray 的运维复杂性和学习曲线。 | Apache-2.0 | — | [中](categories/llm-inference/ray-serve.zh.md) · [EN](categories/llm-inference/ray-serve.md) |
 
 ### task-queue
 
@@ -451,9 +468,16 @@ skill 从 `raw.githubusercontent.com/ZhenningLang/oss-atlas/main/` 拉取页面�
 | 项目 | 何时用 | 许可 | 健康度 | 页面 |
 | --- | --- | --- | --- | --- |
 | **Driver.js** | 当你想在网页上加一个极简、无依赖的产品引导/功能高亮时用它——不是完整的 onboarding 平台。 | MIT | B（6/6） | [中](categories/web-ui/driver-js.zh.md) · [EN](categories/web-ui/driver-js.md) |
+| **Shepherd.js** | 当你想要一个稳健、框架无关的产品引导库，支持高级定位和复杂多步骤 onboarding 时用它——但你要接受比 Driver.js 更大的包体积。 | MIT | ?（0/6） | [中](categories/web-ui/shepherd-js.zh.md) · [EN](categories/web-ui/shepherd-js.md) |
+| **Intro.js** | 当你想要一个成熟、框架无关、文档详尽的产品引导库时用它——但你要接受非商用 AGPL-3.0，或必须购买商业授权。 | AGPL-3.0 | ?（0/6） | [中](categories/web-ui/intro-js.zh.md) · [EN](categories/web-ui/intro-js.md) |
+| **Vue.js** | 当你想要一个渐进式、易于上手的 JavaScript 框架，带优秀文档、温和学习曲线和可增量采纳的架构时用它——但你要接受它在西方就业市场比 React 小，且没有 mega-corporate 背书。 | MIT | ?（0/6） | [中](categories/web-ui/vue.zh.md) · [EN](categories/web-ui/vue.md) |
+| **Svelte** | 当你想要一个编译时前端框架，带小包体积、无虚拟 DOM 和可读性强的语法时用它——但你要接受它的生态和就业市场比 React 或 Vue 小。 | MIT | ?（0/6） | [中](categories/web-ui/svelte.zh.md) · [EN](categories/web-ui/svelte.md) |
 | **shadcn/ui** | 一套精心设计、无障碍的 React 组件，复制进项目并完全拥有——但它需要 React 和 Tailwind CSS。 | MIT | ?（0/6） | [中](categories/web-ui/shadcn-ui.zh.md) · [EN](categories/web-ui/shadcn-ui.md) |
 | **Angular** | 当你需要一个成熟、opinionated、带依赖注入和强类型的全栈框架，用于企业级大规模 web 应用时用它——但它很重，小项目用它过度。 | MIT | ?（0/6） | [中](categories/web-ui/angular.zh.md) · [EN](categories/web-ui/angular.md) |
 | **Ant Design** | 当你想要一套完整、生产就绪、带企业级设计规范、主题化和无障碍支持的 React UI 组件库时用它——但它仅限 React，且设计风格明显偏「中式企业风」。 | MIT | ?（0/6） | [中](categories/web-ui/ant-design.zh.md) · [EN](categories/web-ui/ant-design.md) |
+| **Lit** | 当你需要一套轻量、基于标准的 Web Components，能在任何框架中工作时用它——但你要接受生态较小，且需要学习 Web Components。 | BSD-3-Clause | ?（0/6） | [中](categories/web-ui/lit.zh.md) · [EN](categories/web-ui/lit.md) |
+| **React** | 当你想要最流行的 UI 库，带庞大生态、深厚的人才池和声明式组件模型时用它——但你要接受需要自己组合路由、状态管理和构建管线。 | MIT | A（6/6） | [中](categories/web-ui/react.zh.md) · [EN](categories/web-ui/react.md) |
+| **Next.js** | 当你想要一个全栈 React 框架，内置 SSR、SSG、基于文件的路由和 API 路由时用它——但你要接受 Vercel 对路线图的影响，以及比纯 React 更强的主见架构。 | MIT | ?（0/6） | [中](categories/web-ui/nextjs.zh.md) · [EN](categories/web-ui/nextjs.md) |
 
 ### proxy-pool
 
@@ -534,6 +558,7 @@ skill 从 `raw.githubusercontent.com/ZhenningLang/oss-atlas/main/` 拉取页面�
 | **lua-nginx-module (ngx_lua)** | 当你需要在 NGINX 上用 LuaJIT cosocket 实现真正的逐请求可编程能力（鉴权、路由、限流）时用它——但一次阻塞调用就会卡死整个 worker，且你被绑定在 OpenResty 版本耦合、核心团队高度集中的生态上。 | BSD-2-Clause | D（5/6） | [中](categories/nginx-modules/lua-nginx-module.zh.md) · [EN](categories/nginx-modules/lua-nginx-module.md) |
 | **lua-resty-redis** | 当你的 OpenResty 边缘逻辑要在请求热路径上非阻塞访问 Redis（带连接池和 pipeline）时用它——但它只能在 ngx_lua 内运行，且不内置 Redis Cluster 的槽位路由。 | BSD-2-Clause | D（4/6） | [中](categories/nginx-modules/lua-resty-redis.zh.md) · [EN](categories/nginx-modules/lua-resty-redis.md) |
 | **nginx-upload-module** | 当你想让 NGINX 把大文件 multipart 上传直接落盘、只把文件元数据交给后端时用它——但你在编译一个老化、单人维护的 C 分叉（末次提交 2024-07），如今直传 S3 预签名上传往往更优。 | BSD-3-Clause | ?（2/6） | [中](categories/nginx-modules/nginx-upload-module.zh.md) · [EN](categories/nginx-modules/nginx-upload-module.md) |
+| **tusd** | 当你需要一个基于协议的稳健断点续传上传服务器，能把文件流式写到本地磁盘或云存储时用它——但它是独立服务，不是 NGINX 模块，对小文件/可靠网络可能过度设计。 | MIT | B（6/6） | [中](categories/nginx-modules/tusd.zh.md) · [EN](categories/nginx-modules/tusd.md) |
 
 ### python-tooling
 

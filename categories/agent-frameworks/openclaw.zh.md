@@ -16,10 +16,10 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-02T15:23:58Z
+  computed_at: 2026-07-03T05:34:37Z
   overall: B
-  overall_score: 3.0
-  scored_axes: 5
+  overall_score: 3.17
+  scored_axes: 6
   capped: false
   cap_reason: null
   needs_human_review: false
@@ -51,7 +51,7 @@ health:
     longevity:
       grade: C
       raw:
-        repo_age_days: 220
+        repo_age_days: 221
         last_commit_age_days: 0
         cohort: app
     governance:
@@ -59,14 +59,16 @@ health:
       raw:
         active_maintainers_12mo: 487
         top1_share: 0.528
-        top3_share: 0.753
+        top3_share: 0.752
         window_source: stats_contributors
         carve_out: null
     risk_license:
-      grade: "?"
-      raw: {}
-  unknowns:
-    risk_license: { reason: license_unparsed }
+      grade: A
+      raw:
+        spdx_id: MIT
+        permissiveness: permissive
+        relicense_36mo: false
+        content_license: null
 ---
 # OpenClaw
 

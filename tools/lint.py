@@ -326,6 +326,10 @@ def check_health_block(path: Path, text: str, base: str, zh: bool, root: Path, d
         rep.error(path, f"health: invalid grade value(s): {bad}")
     if len(grades) != 6:
         rep.error(path, f"health: expected 6 axis grades, found {len(grades)}")
+    # Adversarial review: challenge '?' grades — they may be false negatives.
+    for axis_name, grade in zip(HEALTH_AXES, grades):
+        if grade == "?":
+            rep.warn(path, f"health: axis '{axis_name}' is '?' — verify this is genuinely unmeasurable, not a machine false-negative")
 
     card = health_card_stem(path, root, base, duplicate_bases) + (".zh.svg" if zh else ".svg")
     if not (root / "assets" / "health" / card).exists():

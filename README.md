@@ -388,10 +388,17 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | Project | Use when | License | Health | Page |
 | --- | --- | --- | --- | --- |
 | **FFmpeg** | Use it when you must decode/encode/transcode/filter virtually any audio or video in a pipeline — mind the LGPL→GPL build trap. | LGPL-2.1-or-later | A (3/6) | [EN](categories/media-processing/ffmpeg.md) · [中](categories/media-processing/ffmpeg.zh.md) |
+| **HandBrake** | Use it when you need a preset-driven GUI or CLI to rip/transcode video to modern MP4/MKV with H.264/H.265 — but it's an end-user app, not a library, and far narrower than raw FFmpeg. | GPL-2.0-or-later | — | [EN](categories/media-processing/handbrake.md) · [中](categories/media-processing/handbrake.zh.md) |
 | **ffmpeg-python** | Use it when you're scripting complex FFmpeg filter graphs in Python and want readable DAG code instead of write-only -filter_complex strings — but it's coasting since 2024, single-maintainer, and still needs the ffmpeg binary installed. | Apache-2.0 | C (4/6) | [EN](categories/media-processing/ffmpeg-python.md) · [中](categories/media-processing/ffmpeg-python.zh.md) |
+| **PyAV** | Use it when you need programmatic, in-process access to video/audio frames as NumPy arrays from Python — but it's lower-level than a CLI wrapper and heavier to install (Cython compilation against FFmpeg headers). | MIT | — | [EN](categories/media-processing/pyav.md) · [中](categories/media-processing/pyav.zh.md) |
 | **VMAF** | Use it when you're tuning an encoding ladder and need a perceptual 0-100 score to compare codecs/presets the way the industry does — but it's full-reference only, and picking the wrong model silently invalidates cross-version comparisons. | BSD-2-Clause-Patent | B (5/6) | [EN](categories/media-processing/vmaf.md) · [中](categories/media-processing/vmaf.zh.md) |
+| **SSIMULACRA2** | Use it when you're benchmarking image codecs (JPEG XL, AVIF, WebP) and need a perceptual quality score that correlates with human subjective ratings — but it's image-only, asymmetric, and lacks the adoption of VMAF. | MIT | — | [EN](categories/media-processing/ssimulacra2.md) · [中](categories/media-processing/ssimulacra2.zh.md) |
 | **m3u8** | Use it when you must parse or rewrite HLS .m3u8 manifests programmatically as a typed object model rather than regex — but it's Python-only, HLS-specific, and quiet since 2025 so the newest rfc8216bis tags may lag. | MIT | C (3/6) | [EN](categories/media-processing/m3u8.md) · [中](categories/media-processing/m3u8.zh.md) |
 | **ffsubsync** | Use it when a subtitle file is off by a constant global offset and you want one-command FFT audio-sync without manual sync points — but it can't fix per-line/variable drift inside the content, and it's single-maintainer. | MIT | B (6/6) | [EN](categories/media-processing/ffsubsync.md) · [中](categories/media-processing/ffsubsync.zh.md) |
+| **MoviePy** | Use it when you want a friendly Python API for programmatic video editing — cutting, compositing, text, effects — but it's batch-only, slower than raw FFmpeg for large files, and maintenance has slowed from its peak. | MIT | ? (0/6) | [EN](categories/media-processing/moviepy.md) · [中](categories/media-processing/moviepy.zh.md) |
+| **GStreamer** | Use it when you need a real-time, persistent, application-embedded audio/video pipeline framework — not a CLI tool — but accept a steep learning curve and plugin-dependency management. | LGPL-2.1-or-later | — | [EN](categories/media-processing/gstreamer.md) · [中](categories/media-processing/gstreamer.zh.md) |
+| **MLT** | Use it when you're building a custom video editor or automated editing pipeline that needs a timeline model — but it's a framework, not a ready-to-use NLE, and delegates all codec work to FFmpeg. | LGPL-2.1-or-later | — | [EN](categories/media-processing/mlt.md) · [中](categories/media-processing/mlt.zh.md) |
+| **OpenAI Whisper** | Use it when you need general-purpose multilingual speech-to-text transcription or translation to English from audio/video files — but it's not real-time by default, large models are slow on CPU, and it hallucinates on non-speech content. | MIT | — | [EN](categories/media-processing/whisper.md) · [中](categories/media-processing/whisper.zh.md) |
 ### video-production
 
 | Project | Use when | License | Health | Page |
@@ -408,14 +415,20 @@ The complete index, grouped by category. Each project has an English page (`<slu
 
 | Project | Use when | License | Health | Page |
 | --- | --- | --- | --- | --- |
+| **CommonMark** | Use it when you need the canonical, spec-compliant Markdown reference implementation with a traversable AST — but not for speed, GFM, or a plugin ecosystem. | BSD-3-Clause | — | [EN](categories/markdown-tools/commonmark.md) · [中](categories/markdown-tools/commonmark.zh.md) |
 | **Markdown Here** | Use it when you want to write email in Markdown and render it before sending via a browser/Thunderbird extension — mind its slow maintenance. | MIT | C (4/6) | [EN](categories/markdown-tools/markdown-here.md) · [中](categories/markdown-tools/markdown-here.zh.md) |
 | **marked** | Use it when you need a fast, low-level Markdown→HTML parser in JS — but you must sanitize the output yourself and don't need strict CommonMark. | MIT | A (5/6) | [EN](categories/markdown-tools/marked.md) · [中](categories/markdown-tools/marked.zh.md) |
+| **remark** | Use it when you need a full mdast AST pipeline for parsing, transforming, linting, and serializing Markdown — but it's a toolchain, not a one-call renderer. | MIT | — | [EN](categories/markdown-tools/remark.md) · [中](categories/markdown-tools/remark.zh.md) |
+| **markdown-it** | Use it when you need a strict CommonMark/GFM-compliant, pluggable Markdown→HTML parser in JS — but the plugin ecosystem adds weight and you must still sanitize untrusted input. | MIT | — | [EN](categories/markdown-tools/markdown-it.md) · [中](categories/markdown-tools/markdown-it.zh.md) |
+| **micromark** | Use it when you need a low-level, streaming-friendly CommonMark/GFM tokenizer in JS — the engine underneath remark — but you must build the rendering layer yourself. | MIT | — | [EN](categories/markdown-tools/micromark.md) · [中](categories/markdown-tools/micromark.zh.md) |
 
 ### pdf-tools
 
 | Project | Use when | License | Health | Page |
 | --- | --- | --- | --- | --- |
 | **PDF.js** | Use it when you need to render or read PDFs in the browser/Node (Firefox's engine) — it doesn't create or edit PDFs. | Apache-2.0 | A (6/6) | [EN](categories/pdf-tools/pdfjs.md) · [中](categories/pdf-tools/pdfjs.zh.md) |
+| **pdf-lib** | Use it when you need to create or modify PDFs in JS/TS — in the browser, Node, Deno, or React Native — without native dependencies. | MIT | — | [EN](categories/pdf-tools/pdf-lib.md) · [中](categories/pdf-tools/pdf-lib.zh.md) |
+| **jsPDF** | Use it when you need client-side PDF generation from HTML, text, and graphics in the browser — it's creation-only, not for editing existing PDFs. | MIT | — | [EN](categories/pdf-tools/jspdf.md) · [中](categories/pdf-tools/jspdf.zh.md) |
 
 ### workflow-orchestration
 
@@ -431,6 +444,10 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | --- | --- | --- | --- | --- |
 | **Modular Platform (MAX + Mojo)** | Use it when you want a high-performance GPU/CPU inference platform (MAX) plus the Mojo systems language — accepting single-vendor lock-in and partly non-production licensing. | Apache-2.0 (mixed) | B (5/6) | [EN](categories/llm-inference/modular.md) · [中](categories/llm-inference/modular.zh.md) |
 | **omlx** | Use it when you want a Mac (Apple Silicon) local LLM inference server on MLX with SSD-tiered KV caching — a young single-maintainer repo with a suspicious star count. | Apache-2.0 | B (5/6) | [EN](categories/llm-inference/omlx.md) · [中](categories/llm-inference/omlx.zh.md) |
+| **TensorRT-LLM** | Use it when you need maximum LLM inference throughput on NVIDIA GPUs and are willing to accept NVIDIA-only lock-in, complex build/engine-compile workflow, and closed-source kernels. | Apache-2.0 | — | [EN](categories/llm-inference/tensorrt-llm.md) · [中](categories/llm-inference/tensorrt-llm.zh.md) |
+| **vLLM** | Use it when you want the de-facto open-source LLM serving engine with PagedAttention, continuous batching, and an OpenAI-compatible API — accepting NVIDIA-centric GPU ops and a fast-moving codebase. | Apache-2.0 | — | [EN](categories/llm-inference/vllm.md) · [中](categories/llm-inference/vllm.zh.md) |
+| **SGLang** | Use it when you need a fast LLM serving engine with RadixAttention prefix caching and structured generation — ideal for tool-using agents and JSON-mode APIs — accepting a younger, smaller ecosystem than vLLM. | Apache-2.0 | — | [EN](categories/llm-inference/sglang.md) · [中](categories/llm-inference/sglang.zh.md) |
+| **Ray Serve** | Use it when you need a general-purpose, scalable Python model-serving framework with multi-model composition and autoscaling — but accept Ray's operational complexity and learning curve. | Apache-2.0 | — | [EN](categories/llm-inference/ray-serve.md) · [中](categories/llm-inference/ray-serve.zh.md) |
 
 ### task-queue
 
@@ -454,9 +471,16 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | Project | Use when | License | Health | Page |
 | --- | --- | --- | --- | --- |
 | **Driver.js** | Use it when you want a tiny, dependency-free product tour / feature-spotlight on a web page — not a full onboarding platform. | MIT | B (6/6) | [EN](categories/web-ui/driver-js.md) · [中](categories/web-ui/driver-js.zh.md) |
+| **Shepherd.js** | Use it when you want a robust, framework-agnostic product tour library with advanced positioning and multi-step onboarding — but you accept a heavier bundle than Driver.js. | MIT | ? (0/6) | [EN](categories/web-ui/shepherd-js.md) · [中](categories/web-ui/shepherd-js.zh.md) |
+| **Intro.js** | Use it when you want a mature, framework-agnostic product tour library with extensive documentation — but you accept AGPL-3.0 for non-commercial use or must purchase a commercial license. | AGPL-3.0 | ? (0/6) | [EN](categories/web-ui/intro-js.md) · [中](categories/web-ui/intro-js.zh.md) |
+| **Vue.js** | Use it when you want a progressive, approachable JavaScript framework with excellent documentation, gentle learning curve, and incrementally adoptable architecture — but you accept a smaller Western job market than React and no mega-corporate backing. | MIT | ? (0/6) | [EN](categories/web-ui/vue.md) · [中](categories/web-ui/vue.zh.md) |
+| **Svelte** | Use it when you want a compile-time frontend framework with small bundles, no virtual DOM, and readable syntax — but you accept a smaller ecosystem and job market than React or Vue. | MIT | ? (0/6) | [EN](categories/web-ui/svelte.md) · [中](categories/web-ui/svelte.zh.md) |
 | **shadcn/ui** | A set of beautifully-designed, accessible React components that you copy into your project and own completely — but it requires React and Tailwind CSS. | MIT | ? (0/6) | [EN](categories/web-ui/shadcn-ui.md) · [中](categories/web-ui/shadcn-ui.zh.md) |
 | **Angular** | Use it when you need a mature, opinionated full-stack framework with dependency injection, strong typing, and a large ecosystem for enterprise-scale web apps — but it's heavy and overkill for small projects. | MIT | ? (0/6) | [EN](categories/web-ui/angular.md) · [中](categories/web-ui/angular.zh.md) |
 | **Ant Design** | Use it when you want a comprehensive, production-ready React UI component library with enterprise-grade design patterns, theming, and accessibility — but it's React-only and the design is distinctly "Chinese enterprise". | MIT | ? (0/6) | [EN](categories/web-ui/ant-design.md) · [中](categories/web-ui/ant-design.zh.md) |
+| **Lit** | Use it when you need lightweight, standards-based web components that work across any framework — but you accept a smaller ecosystem and the need to learn Web Components. | BSD-3-Clause | ? (0/6) | [EN](categories/web-ui/lit.md) · [中](categories/web-ui/lit.zh.md) |
+| **React** | Use it when you want the most popular UI library with a vast ecosystem, deep hiring pool, and declarative component model — but you accept the need to assemble your own routing, state management, and build pipeline. | MIT | A (6/6) | [EN](categories/web-ui/react.md) · [中](categories/web-ui/react.zh.md) |
+| **Next.js** | Use it when you want a full-stack React framework with SSR, SSG, file-based routing, and API routes built in — but you accept Vercel's influence on the roadmap and a more opinionated architecture than plain React. | MIT | ? (0/6) | [EN](categories/web-ui/nextjs.md) · [中](categories/web-ui/nextjs.zh.md) |
 
 ### proxy-pool
 
@@ -537,6 +561,7 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **lua-nginx-module (ngx_lua)** | Use it when you need real per-request programmability on NGINX (auth, routing, rate-limit) via LuaJIT cosockets — but one blocking call stalls a worker, and you're bound to OpenResty's version-coupled, founder-concentrated core. | BSD-2-Clause | D (5/6) | [EN](categories/nginx-modules/lua-nginx-module.md) · [中](categories/nginx-modules/lua-nginx-module.zh.md) |
 | **lua-resty-redis** | Use it when your OpenResty edge logic must hit Redis non-blocking on the request hot path with pooling and pipelining — but it works only inside ngx_lua and has no built-in Redis Cluster slot-routing. | BSD-2-Clause | D (4/6) | [EN](categories/nginx-modules/lua-resty-redis.md) · [中](categories/nginx-modules/lua-resty-redis.zh.md) |
 | **nginx-upload-module** | Use it when you want NGINX to stream large multipart uploads to disk and hand your backend just file metadata — but you're compiling an aging, single-maintainer C fork (last push 2024-07); direct-to-S3 presigned uploads often beat it now. | BSD-3-Clause | ? (2/6) | [EN](categories/nginx-modules/nginx-upload-module.md) · [中](categories/nginx-modules/nginx-upload-module.zh.md) |
+| **tusd** | Use it when you need a robust, protocol-based resumable upload server that can stream to local disk or cloud storage — but it's a separate service, not an NGINX module, and may be overkill for small, reliable uploads. | MIT | B (6/6) | [EN](categories/nginx-modules/tusd.md) · [中](categories/nginx-modules/tusd.zh.md) |
 
 ### python-tooling
 

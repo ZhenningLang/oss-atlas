@@ -9,14 +9,22 @@
 | --- | --- | --- | --- |
 | **Modular Platform (MAX + Mojo)** | Use it when you want a high-performance GPU/CPU inference platform (MAX) plus the Mojo systems language — accepting single-vendor lock-in and partly non-production licensing. | B (5/6) | [→](modular.md) |
 | **omlx** | Use it when you want a Mac (Apple Silicon) local LLM inference server on MLX with SSD-tiered KV caching — a young single-maintainer repo with a suspicious star count. | B (5/6) | [→](omlx.md) |
+| **TensorRT-LLM** | Use it when you need maximum LLM inference throughput on NVIDIA GPUs and are willing to accept NVIDIA-only lock-in, complex build/engine-compile workflow, and closed-source kernels. | — | [→](tensorrt-llm.md) |
+| **vLLM** | Use it when you want the de-facto open-source LLM serving engine with PagedAttention, continuous batching, and an OpenAI-compatible API — accepting NVIDIA-centric GPU ops and a fast-moving codebase. | — | [→](vllm.md) |
+| **SGLang** | Use it when you need a fast LLM serving engine with RadixAttention prefix caching and structured generation — ideal for tool-using agents and JSON-mode APIs — accepting a younger, smaller ecosystem than vLLM. | — | [→](sglang.md) |
+| **Ray Serve** | Use it when you need a general-purpose, scalable Python model-serving framework with multi-model composition and autoscaling — but accept Ray's operational complexity and learning curve. | — | [→](ray-serve.md) |
 
 ## Comparison matrix
 
 | Option | Indexed | Health | One-line tradeoff |
 | --- | --- | --- | --- |
+| [TensorRT-LLM](tensorrt-llm.md) | ✅ | — | Use it when you need maximum LLM inference throughput on NVIDIA GPUs and are willing to accept NVIDIA-only lock-in, complex build/engine-compile workflow, and closed-source kernels. |
 | [Modular Platform (MAX + Mojo)](modular.md) | ✅ | B (5/6) | Use it when you want a high-performance GPU/CPU inference platform (MAX) plus the Mojo systems language — accepting single-vendor lock-in and partly non-production licensing. |
 | [omlx](omlx.md) | ✅ | B (5/6) | Use it when you want a Mac (Apple Silicon) local LLM inference server on MLX with SSD-tiered KV caching — a young single-maintainer repo with a suspicious star count. |
-| vLLM / TGI / TensorRT-LLM / Ray Serve | 未收录 | — | Other LLM inference/serving engines named across the pages. |
+| [vLLM](vllm.md) | ✅ | — | The de-facto open-source LLM serving engine (PagedAttention, continuous batching), huge community and model coverage; NVIDIA-first, fast-moving codebase. |
+| [SGLang](sglang.md) | ✅ | — | Fast LLM serving engine with RadixAttention prefix caching and structured generation; younger ecosystem than vLLM, ideal for tool-using agents. |
+| [Ray Serve](ray-serve.md) | ✅ | — | General-purpose scalable Python model-serving framework with multi-model composition and autoscaling; built on Ray, operationally demanding. |
+| TGI / BentoML | 未收录 | — | Other LLM inference/serving engines named across the pages. |
 
 ## What belongs here
 

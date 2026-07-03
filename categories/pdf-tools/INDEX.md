@@ -8,13 +8,17 @@
 | Project | Use when | Health | Page |
 | --- | --- | --- | --- |
 | **PDF.js** | Use it when you need to render or read PDFs in the browser/Node (Firefox's engine) — it doesn't create or edit PDFs. | A (6/6) | [→](pdfjs.md) |
+| **pdf-lib** | Use it when you need to create or modify PDFs in JS/TS — in the browser, Node, Deno, or React Native — without native dependencies. | — | [→](pdf-lib.md) |
+| **jsPDF** | Use it when you need client-side PDF generation from HTML, text, and graphics in the browser — it's creation-only, not for editing existing PDFs. | — | [→](jspdf.md) |
 
 ## Comparison matrix
 
 | Option | Indexed | Health | One-line tradeoff |
 | --- | --- | --- | --- |
 | [PDF.js](pdfjs.md) | ✅ | A (6/6) | Use it when you need to render or read PDFs in the browser/Node (Firefox's engine) — it doesn't create or edit PDFs. |
-| pdf-lib / jsPDF / PyMuPDF / pdfplumber | 未收录 | — | PDF generation/edit and server-side extraction tools named across the pages. |
+| [pdf-lib](pdf-lib.md) | ✅ | — | Use it when you need to create or modify PDFs in JS/TS — in the browser, Node, Deno, or React Native — without native dependencies. |
+| [jsPDF](jspdf.md) | ✅ | — | Use it when you need client-side PDF generation from HTML, text, and graphics in the browser — it's creation-only, not for editing existing PDFs. |
+| PyMuPDF / pdfplumber | 未收录 | — | Server-side PDF text/table extraction and rendering tools; named across the pages. |
 
 ## What belongs here
 

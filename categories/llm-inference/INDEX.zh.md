@@ -9,6 +9,10 @@
 | --- | --- | --- | --- |
 | **Modular Platform (MAX + Mojo)** | 当你想要高性能 GPU/CPU 推理平台（MAX）加 Mojo 系统语言、并接受单厂商绑定与部分非生产许可时用它。 | B（5/6） | [→](modular.zh.md) |
 | **omlx** | 当你想在 Mac（Apple Silicon）上用 MLX 跑带 SSD 分层 KV 缓存的本地 LLM 推理服务时用它——年轻的单人仓库，star 数存疑。 | B（5/6） | [→](omlx.zh.md) |
+| **TensorRT-LLM** | 当你需要在 NVIDIA GPU 上榨取最大 LLM 推理吞吐、并愿意接受仅限 NVIDIA 的绑定、复杂的构建/engine 编译流程以及闭源内核时用它。 | — | [→](tensorrt-llm.zh.md) |
+| **vLLM** | 当你想要事实上的开源 LLM 服务引擎，带 PagedAttention、连续批处理和 OpenAI 兼容 API 时用它——接受 NVIDIA 主导的 GPU 运维和快速迭代的代码库。 | — | [→](vllm.zh.md) |
+| **SGLang** | 当你需要带 RadixAttention 前缀缓存和结构化生成的快速 LLM 服务引擎——适合工具调用型 agent 和 JSON 模式 API——并接受比 vLLM 更年轻、更小的生态时用它。 | — | [→](sglang.zh.md) |
+| **Ray Serve** | 当你需要通用、可扩展的 Python 模型服务框架，支持多模型组合和自动扩缩容时用它——但要接受 Ray 的运维复杂性和学习曲线。 | — | [→](ray-serve.zh.md) |
 
 ## 对比矩阵
 
@@ -16,7 +20,11 @@
 | --- | --- | --- | --- |
 | [Modular Platform (MAX + Mojo)](modular.zh.md) | ✅ | B（5/6） | 当你想要高性能 GPU/CPU 推理平台（MAX）加 Mojo 系统语言、并接受单厂商绑定与部分非生产许可时用它。 |
 | [omlx](omlx.zh.md) | ✅ | B（5/6） | 当你想在 Mac（Apple Silicon）上用 MLX 跑带 SSD 分层 KV 缓存的本地 LLM 推理服务时用它——年轻的单人仓库，star 数存疑。 |
-| vLLM / TGI / TensorRT-LLM / Ray Serve | 未收录 | — | 各页对比里点到的其他 LLM 推理/服务引擎。 |
+| [vLLM](vllm.zh.md) | ✅ | — | 事实上的开源 LLM 服务引擎（PagedAttention、连续批处理），庞大社区与模型覆盖；NVIDIA 优先，代码库快速迭代。 |
+| [SGLang](sglang.zh.md) | ✅ | — | 快速 LLM 服务引擎，带 RadixAttention 前缀缓存和结构化生成；比 vLLM 更年轻的生态，适合工具调用型 agent。 |
+| [Ray Serve](ray-serve.zh.md) | ✅ | — | 通用可扩展的 Python 模型服务框架，支持多模型组合和自动扩缩容；基于 Ray，运维要求高。 |
+| [TensorRT-LLM](tensorrt-llm.zh.md) | ✅ | — | 当你需要在 NVIDIA GPU 上榨取最大 LLM 推理吞吐、并愿意接受仅限 NVIDIA 的绑定、复杂的构建/engine 编译流程以及闭源内核时用它。 |
+| TGI / BentoML | 未收录 | — | 各页对比里点到的其他 LLM 推理/服务引擎。 |
 
 ## 什么该放这里
 

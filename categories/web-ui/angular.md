@@ -99,6 +99,7 @@ You're an enterprise team building a large, complex web application with dozens 
 | Svelte / SvelteKit | 未收录 | Compile-time framework with minimal runtime overhead and no virtual DOM. | Svelte is faster and simpler for small-to-medium apps; Angular has deeper enterprise support, more third-party integrations, and a longer track record. |
 | Next.js | 未收录 | Full-stack React framework with best-in-class SSR/SSG and Vercel integration. | Next.js is the default for React-based SSR/SEO; Angular Universal exists but is less dominant in that niche. |
 | [shadcn/ui](shadcn-ui.md) | ✅ | A component distribution model, not a framework — often used inside React. | Not a direct substitute; shadcn/ui is about component ownership, Angular is a full application framework. |
+| [Lit](lit.md) | ✅ | Lightweight library for building standards-based web components with a tiny runtime. | Lit is for building interoperable components, not full SPAs; Angular is a complete framework with routing, DI, and CLI. Choose Lit for design systems that must work across frameworks. |
 
 ## Tech stack
 
