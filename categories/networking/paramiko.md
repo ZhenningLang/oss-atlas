@@ -95,11 +95,11 @@ It's also the substrate you inherit indirectly: **Fabric** (remote task executio
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| AsyncSSH | 未收录 | Use this page for its stated niche; choose AsyncSSH when you need asyncio-native SSHv2 client+server, broad modern algorithm support. | asyncio-native SSHv2 client+server, broad modern algorithm support; better fit for async codebases, but a different (await-based) API and smaller ecosystem of dependents. |
-| Fabric | 未收录 | Use this page for its stated niche; choose Fabric when you need high-level remote-execution framework built *on* Paramiko. | High-level remote-execution framework built *on* Paramiko; great for task orchestration, but it's a layer above, not a transport library. |
-| `subprocess` + system `ssh` | 未收录 | Use this page for its stated niche; choose subprocess + system ssh when you need zero Python deps and full OpenSSH parity, but fragile (text parsing, quoting, host-key prompts) and. | Zero Python deps and full OpenSSH parity, but fragile (text parsing, quoting, host-key prompts) and requires the `ssh` binary present. |
-| libssh2 / ssh2-python | 未收录 | Use this page for its stated niche; choose libssh2 / ssh2-python when you need C library bindings. | C library bindings — faster transfers, but a compiled dependency and a thinner Pythonic API. |
-| `sshtunnel` | [sshtunnel](sshtunnel.md) ✅ | Use this page for its stated niche; choose sshtunnel when you need a thin Paramiko *wrapper* dedicated to port-forwarding tunnels only. | A thin Paramiko *wrapper* dedicated to port-forwarding tunnels only — narrower scope, built on the same engine. |
+| AsyncSSH | 未收录 | Pick AsyncSSH when your codebase is asyncio-native and you want SSH client/server APIs built around `await`. | asyncio-native SSHv2 client+server, broad modern algorithm support; better fit for async codebases, but a different (await-based) API and smaller ecosystem of dependents. |
+| Fabric | 未收录 | Pick Fabric when you need high-level remote task orchestration built on Paramiko. | High-level remote-execution framework built *on* Paramiko; great for task orchestration, but it's a layer above, not a transport library. |
+| `subprocess` + system `ssh` | 未收录 | Pick system `ssh` when zero Python dependencies and exact OpenSSH parity matter more than robust Python APIs. | Zero Python deps and full OpenSSH parity, but fragile (text parsing, quoting, host-key prompts) and requires the `ssh` binary present. |
+| libssh2 / ssh2-python | 未收录 | Pick libssh2 bindings when transfer speed and a C-backed dependency matter more than Pythonic ergonomics. | C library bindings — faster transfers, but a compiled dependency and a thinner Pythonic API. |
+| [`sshtunnel`](sshtunnel.md) | ✅ | Pick sshtunnel when all you need is a thin Paramiko wrapper for port-forwarding tunnels. | A thin Paramiko *wrapper* dedicated to port-forwarding tunnels only — narrower scope, built on the same engine. |
 
 ## Tech stack
 

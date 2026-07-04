@@ -95,11 +95,11 @@ You also reach for it when you want one parser across heterogeneous formats inst
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| unstructured.io | 未收录 | Use this page for its stated niche; choose unstructured.io when you need broad multi-format document loader popular for RAG ingestion with many partitioners. | Broad multi-format document loader popular for RAG ingestion with many partitioners; open-source core plus a commercial API/service tier — capability split and licensing differ from Docling's single MIT library. |
-| LlamaParse | 未收录 | Use this page for its stated niche; choose LlamaParse when you need hosted parsing service (LlamaIndex) strong on complex PDFs/tables. | Hosted parsing service (LlamaIndex) strong on complex PDFs/tables; SaaS with usage pricing and data leaving your boundary, vs Docling running fully local/in-process. |
-| Marker | 未收录 | Use this page for its stated niche; choose Marker when you need PDF→Markdown converter also using deep-learning layout models. | PDF→Markdown converter also using deep-learning layout models; similar gen-AI target, narrower input-format range than Docling's PDF/Office/HTML/image spread. |
-| PyMuPDF / pdfplumber | 未收录 | Use this page for its stated niche; choose PyMuPDF / pdfplumber when you need fast, lightweight low-level PDF text/geometry extraction with no heavy models. | Fast, lightweight low-level PDF text/geometry extraction with no heavy models; you build layout/table logic yourself — less fidelity out of the box, far lighter footprint. |
-| [PageIndex](../rag-retrieval/pageindex.md) | ✅ | Use this page for its stated niche; choose PageIndex when you need a retrieval/reasoning layer over documents, not a parser. | A retrieval/reasoning layer over documents, not a parser — complementary, not a substitute; Docling produces the structured text it indexes. |
+| unstructured.io | 未收录 | Pick unstructured.io when you want the broader RAG-loader ecosystem and accept an OSS core plus commercial service split. | Broad multi-format document loader popular for RAG ingestion with many partitioners; open-source core plus a commercial API/service tier — capability split and licensing differ from Docling's single MIT library. |
+| LlamaParse | 未收录 | Pick LlamaParse when a hosted parser for complex PDFs/tables is acceptable despite SaaS pricing and data-boundary tradeoffs. | Hosted parsing service (LlamaIndex) strong on complex PDFs/tables; SaaS with usage pricing and data leaving your boundary, vs Docling running fully local/in-process. |
+| Marker | 未收录 | Pick Marker when PDF-to-Markdown with DL layout models is enough and Docling's broader input spread is unnecessary. | PDF→Markdown converter also using deep-learning layout models; similar gen-AI target, narrower input-format range than Docling's PDF/Office/HTML/image spread. |
+| PyMuPDF / pdfplumber | 未收录 | Pick low-level PDF libraries when speed and light footprint matter more than built-in layout/table fidelity. | Fast, lightweight low-level PDF text/geometry extraction with no heavy models; you build layout/table logic yourself — less fidelity out of the box, far lighter footprint. |
+| [PageIndex](../rag-retrieval/pageindex.md) | ✅ | Pick PageIndex when you need retrieval/reasoning over already parsed documents rather than parsing itself. | A retrieval/reasoning layer over documents, not a parser — complementary, not a substitute; Docling produces the structured text it indexes. |
 
 ## Tech stack
 
@@ -122,7 +122,7 @@ You also reach for it when you want one parser across heterogeneous formats inst
 
 ## Health & viability
 
-- **Responsiveness**: Grade A — median first-response time 0.3 hours across 54 qualifying issues/PRs.
+- **Responsiveness**: Grade A — median first-response time 0.5 hours across 56 qualifying issues/PRs.
 - **Maintenance (2026-06).** Last pushed 2026-06 with very frequent releases (v2.107.0, 2026-06-24) — **highly active**, not archived. [推断]
 - **Governance / backing.** The strongest signal here: **IBM-originated and hosted under the LF AI & Data Foundation** — foundation governance plus a major-vendor origin is a much safer footing than a lone-maintainer repo, lowering bus-factor and abandonment risk. [推断]
 - **Age & Lindy verdict.** Only ~2 years old (created 2024-07) ⇒ **young**, so the Lindy prior is weak *on age alone* — but the rapid-fire release cadence, foundation backing, and ~62k stars are the offsetting signals. Treat it as a fast-rising, well-backed project rather than a battle-tested veteran. [推断]

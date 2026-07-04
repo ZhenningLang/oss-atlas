@@ -95,11 +95,11 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| AsyncSSH | 未收录 | 当前页用于它的主场景；如果更看重“asyncio 原生的 SSHv2 客户端+服务端，现代算法支持广”，再选 AsyncSSH。 | asyncio 原生的 SSHv2 客户端+服务端，现代算法支持广；更适合 async 代码库，但 API 不同（基于 await）且依赖它的生态更小。 |
-| Fabric | 未收录 | 当前页用于它的主场景；如果更看重“构建*在* Paramiko 之上的高层远程执行框架”，再选 Fabric。 | 构建*在* Paramiko 之上的高层远程执行框架；做任务编排很好，但它是上面那层，不是传输库。 |
-| `subprocess` + 系统 `ssh` | 未收录 | 当前页用于它的主场景；如果更看重“零 Python 依赖、与 OpenSSH 完全对齐，但脆弱（文本解析、引号、host-key 提示），且要求 `ssh` 二进制存在”，再选 subprocess + 系统 ssh。 | 零 Python 依赖、与 OpenSSH 完全对齐，但脆弱（文本解析、引号、host-key 提示），且要求 `ssh` 二进制存在。 |
-| libssh2 / ssh2-python | 未收录 | 当前页用于它的主场景；如果更看重“C 库绑定”，再选 libssh2 / ssh2-python。 | C 库绑定——传输更快，但带一个编译依赖、Python 风格的 API 更薄。 |
-| `sshtunnel` | [sshtunnel](sshtunnel.zh.md) ✅ | 当前页用于它的主场景；如果更看重“一个只做端口转发隧道的薄 Paramiko*封装*”，再选 sshtunnel。 | 一个只做端口转发隧道的薄 Paramiko*封装*——范围更窄，建在同一引擎上。 |
+| AsyncSSH | 未收录 | 代码库是 asyncio 原生，并希望 SSH 客户端/服务端 API 围绕 `await` 设计时，选 AsyncSSH。 | asyncio 原生的 SSHv2 客户端+服务端，现代算法支持广；更适合 async 代码库，但 API 不同（基于 await）且依赖它的生态更小。 |
+| Fabric | 未收录 | 需要构建在 Paramiko 之上的高层远程任务编排时，选 Fabric。 | 构建*在* Paramiko 之上的高层远程执行框架；做任务编排很好，但它是上面那层，不是传输库。 |
+| `subprocess` + 系统 `ssh` | 未收录 | 零 Python 依赖和完全 OpenSSH 对齐比稳健 Python API 更重要时，选系统 `ssh`。 | 零 Python 依赖、与 OpenSSH 完全对齐，但脆弱（文本解析、引号、host-key 提示），且要求 `ssh` 二进制存在。 |
+| libssh2 / ssh2-python | 未收录 | 传输速度和 C 后端依赖比 Python 风格 API 更重要时，选 libssh2 绑定。 | C 库绑定——传输更快，但带一个编译依赖、Python 风格的 API 更薄。 |
+| [`sshtunnel`](sshtunnel.zh.md) | ✅ | 只需要一个薄 Paramiko 封装来做端口转发隧道时，选 sshtunnel。 | 一个只做端口转发隧道的薄 Paramiko*封装*——范围更窄，建在同一引擎上。 |
 
 ## 技术栈
 

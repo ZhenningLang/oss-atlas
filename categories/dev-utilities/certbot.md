@@ -90,10 +90,10 @@ You reach for it specifically when you want the *reference* ACME client — the 
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| acme.sh | 未收录 | Use this page for its stated niche; choose acme.sh when you need pure-shell ACME client, zero language runtime, tiny footprint, huge DNS-API list. | Pure-shell ACME client, zero language runtime, tiny footprint, huge DNS-API list; less "official," no config-rewriting nginx/apache installer — you wire the cert in yourself. |
-| lego | 未收录 | Use this page for its stated niche; choose lego when you need single static Go binary, ACME client + Go library, broad DNS provider support. | Single static Go binary, ACME client + Go library, broad DNS provider support; great for embedding/automation, but no web-server config installer. |
-| Caddy (automatic HTTPS) | 未收录 | Use this page for its stated niche; choose Caddy (automatic HTTPS) when you need a web server that *is* the ACME client. | A web server that *is* the ACME client — issues/renews transparently with no separate tool; replaces Certbot only if you also adopt Caddy as your server. |
-| dehydrated | 未收录 | Use this page for its stated niche; choose dehydrated when you need minimal Bash ACME client (formerly letsencrypt. | Minimal Bash ACME client (formerly letsencrypt.sh); hook-driven, lightweight, but more DIY and a smaller ecosystem than Certbot. |
+| acme.sh | 未收录 | Pick acme.sh when you want a pure-shell ACME client with a tiny footprint and many DNS APIs. | Pure-shell ACME client, zero language runtime, tiny footprint, huge DNS-API list; less "official," no config-rewriting nginx/apache installer — you wire the cert in yourself. |
+| lego | 未收录 | Pick lego when you need a static Go binary or embeddable Go ACME library with broad DNS support. | Single static Go binary, ACME client + Go library, broad DNS provider support; great for embedding/automation, but no web-server config installer. |
+| Caddy (automatic HTTPS) | 未收录 | Pick Caddy when adopting a web server that handles ACME automatically is acceptable. | A web server that *is* the ACME client — issues/renews transparently with no separate tool; replaces Certbot only if you also adopt Caddy as your server. |
+| dehydrated | 未收录 | Pick dehydrated when you want a minimal hook-driven Bash ACME client and accept more DIY wiring. | Minimal Bash ACME client (formerly letsencrypt.sh); hook-driven, lightweight, but more DIY and a smaller ecosystem than Certbot. |
 
 ## Tech stack
 

@@ -88,12 +88,12 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [beads](beads.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“依赖感知、版本化的任务*图*（Dolt 后端、`bd` 二进制），带 merge 安全 ID 和 ready 检测”，再选 beads。 | 依赖感知、版本化的任务*图*（Dolt 后端、`bd` 二进制），带 merge 安全 ID 和 ready 检测；相比这三个 agent 直接编辑的纯 markdown 文件，它更重、是个真正的数据存储。 |
-| [Context Mode](context-mode.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“同类别的 agent 上下文方案”，再选 Context Mode。 | 同类别的 agent 上下文方案；目标（让 agent 保持定向）有重叠，机制不同——按你的 IDE 直接对照两页选。 |
-| [Ralph](ralph-claude-code.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“面向 Claude Code 的长时自主循环 harness”，再选 Ralph。 | 面向 Claude Code 的长时自主循环 harness；它编排「跑」这件事，而 Planning with Files 提供这个循环要读写的持久计划/状态。 |
-| 你手工维护的 `task_plan.md` / `TODO.md` | 未收录 | 当前页用于它的主场景；如果更看重“零安装、完全归你，但没有生命周期 hook、没有 `/clear` 后自动重注入、没有完成闸、没有 session 续接”，再选 你手工维护的 taskplan.md / TODO.md。 | 零安装、完全归你，但没有生命周期 hook、没有 `/clear` 后自动重注入、没有完成闸、没有 session 续接——正是这个 skill 要自动化掉的手工流程。 |
-| 原生 agent 记忆（`CLAUDE.md`、Cursor rules、Codex `AGENTS.md`） | 未收录 | 当前页用于它的主场景；如果更看重“内置、总是被加载、无需额外安装”，再选 原生 agent 记忆（CLAUDE.md、Cursor rules、Codex AGENTS.md）。 | 内置、总是被加载、无需额外安装——但那是一个静态指令文件，不是带进度日志和 stop 闸、逐任务演进的计划。 |
-| Manus / 托管自主 agent 产品 | 未收录 | 当前页用于它的主场景；如果更看重“这个 skill 模仿的商业范式（「work like Manus」）”，再选 Manus / 托管自主 agent 产品。 | 这个 skill 模仿的商业范式（「work like Manus」）；托管且更丰富，但是托管产品，不是开源、IDE 本地、可随仓库提交的 skill。 |
+| [beads](beads.zh.md) | ✅ | 需要依赖感知、版本化任务图、merge 安全 ID 和 ready 检测时，选 beads。 | 依赖感知、版本化的任务*图*（Dolt 后端、`bd` 二进制），带 merge 安全 ID 和 ready 检测；相比这三个 agent 直接编辑的纯 markdown 文件，它更重、是个真正的数据存储。 |
+| [Context Mode](context-mode.zh.md) | ✅ | 同样是让 agent 保持定向，但你的 IDE 更适合它的上下文捕获机制时，选 Context Mode。 | 同类别的 agent 上下文方案；目标（让 agent 保持定向）有重叠，机制不同——按你的 IDE 直接对照两页选。 |
+| [Ralph](ralph-claude-code.zh.md) | ✅ | 需要 Claude Code 自主循环 harness，而不只是持久计划/状态文件时，选 Ralph。 | 面向 Claude Code 的长时自主循环 harness；它编排「跑」这件事，而 Planning with Files 提供这个循环要读写的持久计划/状态。 |
+| 你手工维护的 `task_plan.md` / `TODO.md` | 未收录 | 零安装和完全归你比生命周期 hook 或完成闸更重要时，选手工文件。 | 零安装、完全归你，但没有生命周期 hook、没有 `/clear` 后自动重注入、没有完成闸、没有 session 续接——正是这个 skill 要自动化掉的手工流程。 |
+| 原生 agent 记忆（`CLAUDE.md`、Cursor rules、Codex `AGENTS.md`） | 未收录 | 静态、总是加载的指令文件已经足够时，选原生记忆。 | 内置、总是被加载、无需额外安装——但那是一个静态指令文件，不是带进度日志和 stop 闸、逐任务演进的计划。 |
+| Manus / 托管自主 agent 产品 | 未收录 | 想要更丰富的托管式 “work like Manus” 体验，并接受离开 repo-local OSS 路径时，选托管产品。 | 这个 skill 模仿的商业范式（「work like Manus」）；托管且更丰富，但是托管产品，不是开源、IDE 本地、可随仓库提交的 skill。 |
 
 ## 健康度与可持续性
 

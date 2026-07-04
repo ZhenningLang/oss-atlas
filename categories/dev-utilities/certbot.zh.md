@@ -90,10 +90,10 @@ EFF/Let's Encrypt 的 ACME 客户端，负责申请并自动续期免费、浏�
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| acme.sh | 未收录 | 当前页用于它的主场景；如果更看重“纯 shell 的 ACME 客户端，零语言运行时，体积极小，DNS-API 列表庞大”，再选 acme.sh。 | 纯 shell 的 ACME 客户端，零语言运行时，体积极小，DNS-API 列表庞大；不那么“官方”，没有改写 nginx/apache 配置的安装器——证书得你自己接进去。 |
-| lego | 未收录 | 当前页用于它的主场景；如果更看重“单个静态 Go 二进制，既是 ACME 客户端又是 Go 库，DNS provider 支持广”，再选 lego。 | 单个静态 Go 二进制，既是 ACME 客户端又是 Go 库，DNS provider 支持广；适合嵌入/自动化，但没有 Web 服务器配置安装器。 |
-| Caddy（自动 HTTPS） | 未收录 | 当前页用于它的主场景；如果更看重“一个本身*就是* ACME 客户端的 Web 服务器”，再选 Caddy（自动 HTTPS）。 | 一个本身*就是* ACME 客户端的 Web 服务器——透明签发/续期，不需要单独工具；只有当你同时把 Caddy 当服务器用时它才替代 Certbot。 |
-| dehydrated | 未收录 | 当前页用于它的主场景；如果更看重“极简的 Bash ACME 客户端（前身 letsencrypt”，再选 dehydrated。 | 极简的 Bash ACME 客户端（前身 letsencrypt.sh）；钩子驱动、轻量，但更偏 DIY，生态比 Certbot 小。 |
+| acme.sh | 未收录 | 想要纯 shell、小体积、DNS API 覆盖很广的 ACME 客户端时，选 acme.sh。 | 纯 shell 的 ACME 客户端，零语言运行时，体积极小，DNS-API 列表庞大；不那么“官方”，没有改写 nginx/apache 配置的安装器——证书得你自己接进去。 |
+| lego | 未收录 | 需要静态 Go 二进制，或可嵌入的 Go ACME 库并要求广泛 DNS 支持时，选 lego。 | 单个静态 Go 二进制，既是 ACME 客户端又是 Go 库，DNS provider 支持广；适合嵌入/自动化，但没有 Web 服务器配置安装器。 |
+| Caddy（自动 HTTPS） | 未收录 | 可以同时采用一个自动处理 ACME 的 Web 服务器时，选 Caddy。 | 一个本身*就是* ACME 客户端的 Web 服务器——透明签发/续期，不需要单独工具；只有当你同时把 Caddy 当服务器用时它才替代 Certbot。 |
+| dehydrated | 未收录 | 想要极简、钩子驱动的 Bash ACME 客户端，且能接受更多 DIY 接线时，选 dehydrated。 | 极简的 Bash ACME 客户端（前身 letsencrypt.sh）；钩子驱动、轻量，但更偏 DIY，生态比 Certbot 小。 |
 
 ## 技术栈
 
