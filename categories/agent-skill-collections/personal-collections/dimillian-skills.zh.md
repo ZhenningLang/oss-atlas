@@ -89,7 +89,7 @@ health:
 |---|---|---|---|
 | [antfu/skills](antfu-skills.zh.md) | ✅ | 缺的是 web/TypeScript 与 Vue/Vite/Nuxt 实践，而不是 Apple 平台技能时，选 antfu/skills。 | 另一份单作者个人 skill 集（偏 web / TS）。重心不同——Dimillian 这份在 Swift / SwiftUI / Apple 平台上独有深度。 |
 | [wshobson/agents](../subagent-collections/wshobson-agents.zh.md) | ✅ | 需要宽泛的 subagent 人格库，而不是 Apple 专项编码技能时，选 wshobson/agents。 | 大型 subagent 人格集；角色覆盖广但偏通才，无 Apple 平台专精。 |
-| awesome-claude-code-subagents | 未收录 | 要发现大量 Claude Code subagent，而不是采用一份 curated skill pack 时，选这个目录。 | 面向 Claude Code 的 subagent 目录；瞄准不同 harness，比本包广而浅，缺 Swift 深度。 |
+| [awesome-claude-code-subagents](../subagent-collections/awesome-claude-code-subagents.zh.md) | ✅ | 要发现大量 Claude Code subagent，而不是采用一份 curated skill pack 时，选这个目录。 | 面向 Claude Code 的 subagent 目录；瞄准不同 harness，比本包广而浅，缺 Swift 深度。 |
 | [karpathy-skills](karpathy-skills.zh.md) | ✅ | 想要极小的通用 agent 纪律原则，而不是 SwiftUI/iOS 深度时，选 karpathy-skills。 | 来自另一位作者 / 领域的个人 skill 集；按你的活儿是否「Apple 味」来选——若不是，两份各自的专长都用不上。 |
 | 你 harness 自带的 review / simplify 命令 | 未收录 | 通用 diff 评审已经足够、且不需要 Dimillian 的 Apple 专项技能时，优先用内置命令。 | Codex / Claude 本就内置通用 diff 评审与 simplify 流程；本包里的通用 skill（`review-swarm`、`review-and-simplify-changes`）与之重叠——独有价值在 SwiftUI / iOS skill，不在通用那几个。 |
 
@@ -108,4 +108,4 @@ health:
 - [未验证] 这 16 个 skill 的清单与文件夹名取自本次核对时的 README；实际 `skills/` 内容与 `SKILL.md` 触发条件会随 push 变化——请直接读仓库，别只信此清单。
 - [推断] 安装目标是 OpenAI Codex（`$CODEX_HOME/skills`）；在其他 harness（Claude Code、Cursor）上的激活未经确认，需要移植。
 - [推断] 依赖 MCP / swarm 的 skill（`ios-debugger-agent` 走 XcodeBuildMCP，`review-swarm`、`bug-hunt-swarm` 多 agent）默认了你环境里可能不存在的工具 / 运行时；其效果取决于环境，此处未独立验证。
-- [未验证] 横向对比中引用的 leaf 同级页里，wshobson/agents 的中文页在撰写时已存在（已链接）;antfu/skills、awesome-claude-code-subagents、karpathy-skills 尚未收录（或中文页未就绪），故不附链接——索引状态为并发产出，可能变化。
+- [未验证] 横向对比链接反映本轮核对时的当前索引状态；依赖某个相邻 skill-pack 推荐前，请重新核对同级页和子分类页是否仍然存在。

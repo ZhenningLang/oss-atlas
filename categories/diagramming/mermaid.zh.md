@@ -79,7 +79,7 @@ health:
 
 ## 何时使用
 
-你是个工程师，架构文档和 runbook 一直写在 Markdown 里，而图表一直在烂掉：一年前有人用 draw.io 画了流程、导出成 PNG，如今 PNG 已经过时，但没人手里还有源文件。你想让图*活在*文档里、能在 PR 里 diff、自动重渲。于是你写一个 ` ```mermaid ` 围栏块,几行 `graph TD; A-->B`，推上去，GitHub、GitLab、你的文档站（Docusaurus、MkDocs、Obsidian）和 IDE 预览全都内联渲染出来——没有二进制资产、不用外部编辑器、不会有坏掉的导出。流程一改，你只改文本，图就跟着变；评审看到的是*图本身*的 diff，而不是被换掉的一张图片。
+你是个工程师，架构文档和 runbook 一直写在 Markdown 里，而图表一直在烂掉：一年前有人用 draw.io 画了流程、导出成 PNG，如今 PNG 已经过时，但没人手里还有源文件。你想让图*活在*文档里、能在 PR 里 diff、自动重渲。于是你写一个 ` ```mermaid ` 围栏块，几行 `graph TD; A-->B`，推上去，GitHub、GitLab、你的文档站（Docusaurus、MkDocs、Obsidian）和 IDE 预览全都内联渲染出来——没有二进制资产、不用外部编辑器、不会有坏掉的导出。流程一改，你只改文本，图就跟着变；评审看到的是*图本身*的 diff，而不是被换掉的一张图片。
 
 当你是个 agent 或工具、要程序化生成图时，你也会选它：输入就是可模板化、可拼接生成的文本，所以从代码或从 LLM 产出一张时序图或 ER schema 不过是字符串拼装，再在浏览器/无头环境里 `mermaid.render()`（或用 `@mermaid-js/mermaid-cli` 的 `mmdc`）拿到 SVG/PNG。它之所以成了事实上的文本转图格式，正是因为太多宿主平台已经认得这个围栏块——你只要瞄准 Mermaid，就白白继承了 GitHub/GitLab/Notion 那一套渲染。
 
