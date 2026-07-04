@@ -270,6 +270,25 @@ class QualityScanTest(unittest.TestCase):
 
             self.assertTrue(any(f.category == "composite-alternative-partly-indexed" for f in result.findings))
 
+    def test_partially_indexed_status_does_not_report_composite(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            write_page(root, "categories/demo/mlt.md", "## Comparison\n")
+            write_page(
+                root,
+                "categories/demo/source.md",
+                """## Comparison
+
+| Alternative | In index | Our verdict |
+|---|---|---|
+| [MLT](mlt.md) / Shotcut | 部分已收录 | Mixed row. |
+""",
+            )
+
+            result = quality_scan.scan(root)
+
+            self.assertFalse(any(f.category == "composite-alternative-partly-indexed" for f in result.findings))
+
     def test_counts_health_unknown_axes_by_axis_and_reason(self) -> None:
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)

@@ -29,6 +29,7 @@ KNOWN_CATEGORIES = [
 ]
 NOT_INDEXED_MARKERS = ["not indexed", "未收录"]
 INDEXED_MARKERS = ["✅", "已收录"]
+PARTIALLY_INDEXED_MARKERS = ["partly indexed", "partially indexed", "部分已收录"]
 LINK_RE = re.compile(r"\[([^\]]+)\]\(([^)]+)\)")
 HEALTH_AXES = ["maintenance", "responsiveness", "adoption", "longevity", "governance", "risk_license"]
 AXIS_LABELS = {
@@ -160,6 +161,8 @@ def detects_partly_indexed_composite(source: Path, cells: list[str], indexed_tar
     if len(cells) < 2 or not any(marker in cells[1] for marker in INDEXED_MARKERS):
         return False
     if any(marker in cells[1] for marker in NOT_INDEXED_MARKERS):
+        return False
+    if any(marker in cells[1] for marker in PARTIALLY_INDEXED_MARKERS):
         return False
     parts = split_composite_label(cells[0])
     if not parts:
