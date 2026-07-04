@@ -10,9 +10,9 @@ maturity: v1.x, active, 195k stars (as of 2026-07)
 last_verified: 2026-07-01
 type: app
 upstream:
-  pushed_at: 2026-07-01T10:39:00Z
-  default_branch: main
-  default_branch_sha: 0000000000000000000000000000000000000000
+  pushed_at: 2026-07-04T08:19:53Z
+  default_branch: master
+  default_branch_sha: 3029ca0a38409a3a9bcbcef4a316e1676d0b7d3e
   archived: false
 health:
   schema: 1
@@ -116,11 +116,12 @@ You're a technical team that needs to automate internal processes — pulling da
 
 ## Health & viability
 - **Maintenance**: Grade A — 13/13 active weeks in trailing 13; last commit 0 days ago.
-- **Responsiveness**: Grade C — median first-response time 1080.0 hours across 0 qualifying issues/PRs.
+- **Responsiveness**: Cannot be scored — no qualifying recent issue/PR traffic was found by the scorer (`no_traffic`).
 - **Adoption**: Grade B — 1,313,694 monthly downloads via npmjs.org (package: n8n-workflow).
 - **Longevity**: Grade A — 2567 days old.
-- **Governance**: Grade A — top-3 contributor share 14.9% (?).
-- **Risk / License**: Cannot be scored — unknown.
+- **Governance**: Grade A — top-3 contributor share 14.9%.
+- **Risk / License**: Cannot be scored — the fair-code license was not parsed into a comparable SPDX-style tier (`license_unparsed`).
+
 ## Caveats (unverified)
 
 - [未验证] The exact fair-code license terms may have evolved; verify the current Sustainable Use License text before commercial deployment.

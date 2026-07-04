@@ -93,11 +93,11 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [Telegraf](../dev-utilities/telegraf.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“是*采集/路由 agent*，不是可视化层”，再选 Telegraf。 | 是*采集/路由 agent*，不是可视化层——它把指标送进存储，Grafana 把它们读出来。互补而非互替，常一起用。 |
-| Kibana | 未收录 | 当前页用于它的主场景；如果更看重“与 Elasticsearch/OpenSearch 紧耦合”，再选 Kibana。 | 与 Elasticsearch/OpenSearch 紧耦合；做日志搜索和 Elastic 栈极强，但作为多后端看板工具，比 Grafana 数据源中立的模型窄。 |
-| Datadog / Grafana Cloud | 未收录 | 当前页用于它的主场景；如果更看重“托管一体化（采集+存储+看板+告警）”，再选 Datadog / Grafana Cloud。 | 托管一体化（采集+存储+看板+告警）；零基础设施，但按主机/按指标计费且厂商绑定，对比自托管 Grafana 自己跑后端。 |
-| Apache Superset | 未收录 | 当前页用于它的主场景；如果更看重“面向数仓和 SQL 库的 BI/SQL 分析看板”，再选 Apache Superset。 | 面向数仓和 SQL 库的 BI/SQL 分析看板；探索式报表和图表更强，运维时序、日志/追踪关联和值班告警更弱。 |
-| Metabase | 未收录 | 当前页用于它的主场景；如果更看重“给业务用户用的自助 BI，查 SQL 源很友好”，再选 Metabase。 | 给业务用户用的自助 BI，查 SQL 源很友好；不是为运维时序、日志/追踪关联或 PromQL/LogQL 类后端设计的。 |
+| [Telegraf](../dev-utilities/telegraf.zh.md) | ✅ | 缺的是指标采集/路由，而不是看板可视化时，选 Telegraf。 | 是*采集/路由 agent*，不是可视化层——它把指标送进存储，Grafana 把它们读出来。互补而非互替，常一起用。 |
+| Kibana | 未收录 | 技术栈明确围绕 Elasticsearch/OpenSearch 时，选 Kibana。 | 与 Elasticsearch/OpenSearch 紧耦合；做日志搜索和 Elastic 栈极强，但作为多后端看板工具，比 Grafana 数据源中立的模型窄。 |
+| Datadog / Grafana Cloud | 未收录 | 想让采集、存储、看板和告警都由托管套件代管时，选托管方案。 | 托管一体化（采集+存储+看板+告警）；零基础设施，但按主机/按指标计费且厂商绑定，对比自托管 Grafana 自己跑后端。 |
+| Apache Superset | 未收录 | 任务是面向数仓和关系库的 BI/SQL 分析时，选 Superset。 | 面向数仓和 SQL 库的 BI/SQL 分析看板；探索式报表和图表更强，运维时序、日志/追踪关联和值班告警更弱。 |
+| Metabase | 未收录 | 业务用户需要友好的自助 SQL BI，而不是运维遥测时，选 Metabase。 | 给业务用户用的自助 BI，查 SQL 源很友好；不是为运维时序、日志/追踪关联或 PromQL/LogQL 类后端设计的。 |
 
 ## 技术栈
 

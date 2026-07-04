@@ -96,10 +96,10 @@ The same library is your tool when you need to *read* a PDF, not just show it: p
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
 | pdf-lib | ✅ | Choose [pdf-lib](pdf-lib.md) when you need a JS library to **create and modify** PDFs (forms, merge, draw). | JS library to **create and modify** PDFs (forms, merge, draw) — the write side PDF.js doesn't cover; not a renderer/viewer. |
-| [jsPDF](jspdf.md) | ✅ | Use this page for its stated niche; choose jsPDF when you need client-side PDF **generation** from JS. | Client-side PDF **generation** from JS; complementary, not a substitute — it builds documents, PDF.js displays them. |
-| PyMuPDF / pdfplumber | 未收录 | Use this page for its stated niche; choose PyMuPDF / pdfplumber when you need python libraries for fast server-side render + text/table extraction. | Python libraries for fast server-side render + text/table extraction; better for back-end batch jobs, but not a browser viewer. |
-| [Docling](../document-parsing/docling.md) | 未收录 | Use this page for its stated niche; choose Docling when you need layout-aware document parser producing structured output (reading order, tables) for AI/RAG. | Layout-aware document parser producing structured output (reading order, tables) for AI/RAG; different goal — semantic structure, not pixel-faithful display. |
-| Native `<embed>` / browser PDF plugin | 未收录 | Use this page for its stated niche; choose Native <embed> / browser PDF plugin when you need zero-dependency and built into the browser, but inconsistent across browsers, not controllable, and. | Zero-dependency and built into the browser, but inconsistent across browsers, not controllable, and gives you no programmatic text/render access. |
+| [jsPDF](jspdf.md) | ✅ | Pick jsPDF when you need to generate PDFs in client-side JavaScript. | Client-side PDF **generation** from JS; complementary, not a substitute — it builds documents, PDF.js displays them. |
+| PyMuPDF / pdfplumber | 未收录 | Pick these Python libraries for server-side rendering, text extraction, or table extraction batch jobs. | Python libraries for fast server-side render + text/table extraction; better for back-end batch jobs, but not a browser viewer. |
+| [Docling](../document-parsing/docling.md) | ✅ | Pick Docling when you need layout-aware document parsing into structured AI/RAG input, not a browser PDF viewer. | Layout-aware document parser producing structured output (reading order, tables) for AI/RAG; different goal — semantic structure, not pixel-faithful display. |
+| Native `<embed>` / browser PDF plugin | 未收录 | Pick native embedding only when zero dependency matters more than consistent behavior and programmatic access. | Zero-dependency and built into the browser, but inconsistent across browsers, not controllable, and gives you no programmatic text/render access. |
 
 ## Tech stack
 

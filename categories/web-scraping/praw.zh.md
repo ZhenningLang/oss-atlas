@@ -93,11 +93,11 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| Async PRAW（asyncpraw） | 未收录 | 当前页用于它的主场景；如果更看重“同一项目的 asyncio 变体”，再选 Async PRAW（asyncpraw）。 | 同一项目的 asyncio 变体；更适合并发/流式负载，代价是异步代码。同一批维护者。 |
-| 裸 Reddit REST + requests | 未收录 | 当前页用于它的主场景；如果更看重“控制最大、零抽象，但 OAuth 刷新、分页、限速合规都得自己重写”，再选 裸 Reddit REST + requests。 | 控制最大、零抽象，但 OAuth 刷新、分页、限速合规都得自己重写。 |
-| PSAW / Pushshift 客户端 | 未收录 | 当前页用于它的主场景；如果更看重“Reddit 历史批量数据（在 Pushshift 可用时）”，再选 PSAW / Pushshift 客户端。 | Reddit 历史批量数据（在 Pushshift 可用时）；是对实时 API wrapper 的补充而非替代。 |
-| JRAW / snoowrap | 未收录 | 当前页用于它的主场景；如果更看重“其他语言（Java / JS）的 Reddit API wrapper”，再选 JRAW / snoowrap。 | 其他语言（Java / JS）的 Reddit API wrapper；同一生态位，不同运行时。 |
-| [requests-html](requests-html.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“通用爬取库”，再选 requests-html。 | 通用爬取库——你得自己解析 Reddit HTML 并承担 ToS 风险；PRAW 改用受认可的 API。 |
+| Async PRAW（asyncpraw） | 未收录 | 需要把同一套 Reddit API wrapper 放进 asyncio 管线时，选 Async PRAW。 | 同一项目的 asyncio 变体；更适合并发/流式负载，代价是异步代码。同一批维护者。 |
+| 裸 Reddit REST + requests | 未收录 | 只有在你要完全控制请求，并愿意自管 OAuth 刷新、分页和限速合规时，才选裸 REST。 | 控制最大、零抽象，但 OAuth 刷新、分页、限速合规都得自己重写。 |
+| PSAW / Pushshift 客户端 | 未收录 | 需要历史批量 Reddit 归档，且 Pushshift 类数据源可用时，选这类客户端。 | Reddit 历史批量数据（在 Pushshift 可用时）；是对实时 API wrapper 的补充而非替代。 |
+| JRAW / snoowrap | 未收录 | 真正约束是 Java 或 JavaScript 运行时时，选这些语言生态里的 wrapper。 | 其他语言（Java / JS）的 Reddit API wrapper；同一生态位，不同运行时。 |
+| [requests-html](requests-html.zh.md) | ✅ | 只有在你明确要爬通用 HTML，而不是走 Reddit 官方 API 时，才选 requests-html。 | 通用爬取库——你得自己解析 Reddit HTML 并承担 ToS 风险；PRAW 改用受认可的 API。 |
 
 ## 技术栈
 
@@ -118,7 +118,7 @@ health:
 
 ## 健康度与可持续性
 
-- **响应速度**：Grade C——中位首次响应时间 4.2 小时，基于 2 个 qualifying issues/PRs。
+- **响应速度**：无法计算——评分器没有找到足够的近期 qualifying issue/PR 互动样本（`no_traffic`）。
 - **维护（2026-06）。** **活跃。** v8.0.x 于 2026 年 6 月发布（v8.0.0 在 2026-06-14，几天后跟上 v8.0.1/8.0.2），最后 push 在 2026-06-24——当前且在持续发布，主版本跃迁表明有持续工作。未归档。
 - **治理 / bus factor。** 挂在 `praw-dev` GitHub **组织**下（而非个人账号），有多贡献者历史（`bboe`、`LilSpazJoekp` 等）——bus factor 好于单维护者库，不过核心团队仍小。[推断]
 - **年龄与 Lindy 判断。** 2010-08 创建，约 16 岁且**仍在活跃发布**⇒ **强 Lindy**：Python 里最长寿、最久经验证的 Reddit API wrapper 之一。

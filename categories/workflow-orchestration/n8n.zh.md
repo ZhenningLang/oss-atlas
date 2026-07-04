@@ -10,9 +10,9 @@ maturity: v1.x, active, 195k stars (as of 2026-07)
 last_verified: 2026-07-01
 type: app
 upstream:
-  pushed_at: 2026-07-01T10:39:00Z
-  default_branch: main
-  default_branch_sha: 0000000000000000000000000000000000000000
+  pushed_at: 2026-07-04T08:19:53Z
+  default_branch: master
+  default_branch_sha: 3029ca0a38409a3a9bcbcef4a316e1676d0b7d3e
   archived: false
 health:
   schema: 1
@@ -116,11 +116,12 @@ health:
 
 ## 健康度与可持续性
 - **维护活跃度**：Grade A——最近 13 周中 13 周有提交；最后提交距今 0 天。
-- **响应速度**：Grade C——中位首次响应时间 1080.0 小时，基于 0 个 qualifying issues/PRs。
+- **响应速度**：无法计算——评分器没有找到可用于计分的近期 issue/PR 互动样本（`no_traffic`）。
 - **采用广度**：Grade B——npmjs.org 上月下载量 1,313,694（包名：n8n-workflow）。
 - **长青度**：Grade A——仓库已创建 2567 天。
-- **治理集中度**：Grade A——前三贡献者占比 14.9%（?）。
-- **许可风险**：无法计算——unknown。
+- **治理集中度**：Grade A——前三贡献者占比 14.9%。
+- **许可风险**：无法计算——fair-code 许可未被解析成可比较的 SPDX 风格档位（`license_unparsed`）。
+
 ## 存疑（未验证）
 
 - [未验证] fair-code 许可的具体条款可能已发生变化；商业部署前请核实当前 Sustainable Use License 文本。

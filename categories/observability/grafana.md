@@ -93,11 +93,11 @@ You also reach for it when you want dashboards and alert rules to live in versio
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| [Telegraf](../dev-utilities/telegraf.md) | ✅ | Use this page for its stated niche; choose Telegraf when you need a *collection/routing agent*, not a viz layer. | A *collection/routing agent*, not a viz layer — it gets metrics into a store; Grafana is what reads them out. Complementary, not substitutes; commonly used together. |
-| Kibana | 未收录 | Use this page for its stated niche; choose Kibana when you need tightly coupled to Elasticsearch/OpenSearch. | Tightly coupled to Elasticsearch/OpenSearch; superb for log search and the Elastic stack, but narrower as a multi-backend dashboarding tool than Grafana's data-source-agnostic model. |
-| Datadog / Grafana Cloud | 未收录 | Use this page for its stated niche; choose Datadog / Grafana Cloud when you need hosted all-in-one (collection + storage + dashboards + alerting). | Hosted all-in-one (collection + storage + dashboards + alerting); zero infra to run but per-host/per-metric billing and vendor lock-in vs. self-hosted Grafana over your own backends. |
-| Apache Superset | 未收录 | Use this page for its stated niche; choose Apache Superset when you need BI/SQL-analytics dashboarding over warehouses and SQL databases. | BI/SQL-analytics dashboarding over warehouses and SQL databases; stronger for exploratory reporting and charts, weaker for operational time-series, logs, traces, and on-call alerting. |
-| Metabase | 未收录 | Use this page for its stated niche; choose Metabase when you need friendly self-service BI for business users querying SQL sources. | Friendly self-service BI for business users querying SQL sources; not built for ops time-series, log/trace correlation, or PromQL/LogQL-style backends. |
+| [Telegraf](../dev-utilities/telegraf.md) | ✅ | Pick Telegraf when the missing piece is metric collection/routing, not dashboard visualization. | A *collection/routing agent*, not a viz layer — it gets metrics into a store; Grafana is what reads them out. Complementary, not substitutes; commonly used together. |
+| Kibana | 未收录 | Pick Kibana when the stack is deliberately Elasticsearch/OpenSearch-centered. | Tightly coupled to Elasticsearch/OpenSearch; superb for log search and the Elastic stack, but narrower as a multi-backend dashboarding tool than Grafana's data-source-agnostic model. |
+| Datadog / Grafana Cloud | 未收录 | Pick a hosted suite when you want collection, storage, dashboards, and alerting operated for you. | Hosted all-in-one (collection + storage + dashboards + alerting); zero infra to run but per-host/per-metric billing and vendor lock-in vs. self-hosted Grafana over your own backends. |
+| Apache Superset | 未收录 | Pick Superset when the job is BI/SQL analytics over warehouses and relational databases. | BI/SQL-analytics dashboarding over warehouses and SQL databases; stronger for exploratory reporting and charts, weaker for operational time-series, logs, traces, and on-call alerting. |
+| Metabase | 未收录 | Pick Metabase when business users need friendly self-service SQL BI rather than ops telemetry. | Friendly self-service BI for business users querying SQL sources; not built for ops time-series, log/trace correlation, or PromQL/LogQL-style backends. |
 
 ## Tech stack
 

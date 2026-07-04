@@ -88,13 +88,13 @@ It also fits when you want one design surface that plugs into *whatever* agent y
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| [html-anything](html-anything.md) | ✅ | Use this page for its stated niche; choose html-anything when you need sibling focused on turning prompts into standalone HTML artifacts. | Sibling focused on turning prompts into standalone HTML artifacts; Open Design is the heavier full desktop studio (decks/video/design-systems/export) around that idea. |
-| [Impeccable](impeccable.md) | ✅ | Use this page for its stated niche; choose Impeccable when you need sibling aimed at high-polish UI generation. | Sibling aimed at high-polish UI generation; Open Design is broader (slides, images, video, MP4) and ships as a local app rather than a narrower generator. |
-| [guizang-ppt-skill](guizang-ppt.md) | ✅ | Use this page for its stated niche; choose guizang-ppt-skill when you need a single-purpose deck-generation Skill. | A single-purpose deck-generation Skill; Open Design includes deck generation as one of several artifact types plus its own runtime/export. |
-| [guizang-social-card-skill](guizang-social-card.md) | ✅ | Use this page for its stated niche; choose guizang-social-card-skill when you need a focused social-card Skill. | A focused social-card Skill; Open Design covers cards/images among many artifact types inside a packaged app. |
-| Claude Design (Anthropic, hosted) | 未收录 | Use this page for its stated niche; choose Claude Design (Anthropic, hosted) when you need the proprietary hosted product this clones. | The proprietary hosted product this clones; managed cloud + polish vs Open Design's local-first, BYOK, open-format stance. |
-| v0 (Vercel) | 未收录 | Use this page for its stated niche; choose v0 (Vercel) when you need hosted prompt-to-UI generator. | Hosted prompt-to-UI generator; cloud SaaS, narrower to web UI, vs Open Design's local multi-artifact studio. |
-| Figma / Penpot | 未收录 | Use this page for its stated niche; choose Figma / Penpot when you need true vector design editors with multiplayer. | True vector design editors with multiplayer; Open Design generates code-rendered artifacts, not editable vector docs. |
+| [html-anything](html-anything.md) | ✅ | Pick html-anything when you only need prompt-to-standalone-HTML artifacts. | Sibling focused on turning prompts into standalone HTML artifacts; Open Design is the heavier full desktop studio (decks/video/design-systems/export) around that idea. |
+| [Impeccable](impeccable.md) | ✅ | Pick Impeccable when high-polish UI generation is the whole job. | Sibling aimed at high-polish UI generation; Open Design is broader (slides, images, video, MP4) and ships as a local app rather than a narrower generator. |
+| [guizang-ppt-skill](guizang-ppt.md) | ✅ | Pick guizang-ppt-skill when you need only deck generation as a Skill. | A single-purpose deck-generation Skill; Open Design includes deck generation as one of several artifact types plus its own runtime/export. |
+| [guizang-social-card-skill](guizang-social-card.md) | ✅ | Pick guizang-social-card-skill when the artifact is a focused social card. | A focused social-card Skill; Open Design covers cards/images among many artifact types inside a packaged app. |
+| Claude Design (Anthropic, hosted) | 未收录 | Pick the hosted proprietary product when managed cloud polish matters more than local-first/BYOK control. | The proprietary hosted product this clones; managed cloud + polish vs Open Design's local-first, BYOK, open-format stance. |
+| v0 (Vercel) | 未收录 | Pick v0 when the target is hosted prompt-to-web-UI generation rather than a local multi-artifact studio. | Hosted prompt-to-UI generator; cloud SaaS, narrower to web UI, vs Open Design's local multi-artifact studio. |
+| Figma / Penpot | 未收录 | Pick Figma or Penpot when you need multiplayer vector editing, not generated code-rendered artifacts. | True vector design editors with multiplayer; Open Design generates code-rendered artifacts, not editable vector docs. |
 
 ## Tech stack
 
