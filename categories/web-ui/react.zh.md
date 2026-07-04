@@ -98,7 +98,8 @@ health:
 | --- | --- | --- | --- |
 | [Vue.js](vue.zh.md) | ✅ | 需要渐进式框架、更温和学习曲线和优秀文档时，选 Vue。 | Vue 更容易增量采纳；React 生态更大、就业市场更深。 |
 | [Angular](angular.zh.md) | ✅ | 由 Google 构建的综合性、opinionated TypeScript 框架，面向企业级应用。 | Angular 内置一切；React 更灵活，但需要你自己组装技术栈。 |
-| [Svelte / SvelteKit](svelte.zh.md) | ✅ | 需要编译时组件、极小运行时和无虚拟 DOM 时，选 Svelte。 | Svelte 对中小型应用更快更简单；React 生态庞大得多，招聘更容易。 |
+| [Svelte](svelte.zh.md) | ✅ | 需要编译时组件、极小运行时和无虚拟 DOM 时，选 Svelte。 | Svelte 对中小型应用更快更简单；React 生态庞大得多，招聘更容易。 |
+| SvelteKit | 未收录 | 需要 Svelte 的全栈应用框架，而不只是 UI 库时，选 SvelteKit。 | SvelteKit 围绕 Svelte 增加路由、SSR 和应用约定；纯 React 更轻，但需要自行组装更多技术栈。 |
 | [Next.js](nextjs.zh.md) | ✅ | 需要默认的全栈 React 框架、一流 SSR/SSG 和 Vercel 生态时，选 Next.js。 | Next.js 是 React 加上路由、SSR 和部署；当你需要这些功能时用它，想要更轻量、更可控的 setup 时用纯 React。 |
 | [shadcn/ui](shadcn-ui.zh.md) | ✅ | 构建在 React 之上的组件分发模式——不是替代品，而是常见搭档。 | shadcn/ui 提供可复制的粘贴组件；它不是独立的 UI 库。 |
 | [Ant Design](ant-design.zh.md) | ✅ | 企业级 React 组件库，拥有全面的预置组件。 | Ant Design 是 React 内部使用的样式组件套件；它不是 React 的替代品。 |
