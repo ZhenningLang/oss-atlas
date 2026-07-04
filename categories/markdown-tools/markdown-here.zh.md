@@ -87,10 +87,10 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| marked | 未收录 | 当前页用于它的主场景；如果更看重“一个供 JavaScript 调用的 Markdown→HTML *解析库*”，再选 marked。 | 一个供 JavaScript 调用的 Markdown→HTML *解析库*；当你需要在 app 或管线里做渲染时它才是对的工具——但它不是浏览器 UI，编辑器/撰写框集成得你自己接。 |
-| 浏览器原生富文本撰写（Gmail/Outlook 工具栏） | 未收录 | 当前页用于它的主场景；如果更看重“邮件客户端自带、无需安装”，再选 浏览器原生富文本撰写（Gmail/Outlook 工具栏）。 | 邮件客户端自带、无需安装；但它是工具栏式所见即所得，没有 Markdown，代码块/表格支持也弱——正是 Markdown Here 要消除的摩擦。 |
-| Obsidian / 编辑器 Markdown 插件 | 未收录 | 当前页用于它的主场景；如果更看重“一流的 Markdown 写作加实时预览，但是在*文档编辑器*里，而非你的网页邮箱撰写框”，再选 Obsidian / 编辑器 Markdown 插件。 | 一流的 Markdown 写作加实时预览，但是在*文档编辑器*里，而非你的网页邮箱撰写框；你得在那边起草再粘过来，丢掉了就地、发送时转换那一环。 |
-| Markdown Here Revival（分叉/后继） | 未收录 | 当前页用于它的主场景；如果更看重“一个社区分叉，意在让这个点子活下去（尤其面向 Thunderbird），因为原项目停滞了”，再选 Markdown Here Revival（分叉/后继）。 | 一个社区分叉，意在让这个点子活下去（尤其面向 Thunderbird），因为原项目停滞了；其托管位置和自身维护状态在依赖前需自行核实（见存疑）。 |
+| [marked](marked.zh.md) | ✅ | 需要一个供 JavaScript 调用的 Markdown→HTML *解析库*时，选 marked。 | 一个供 JavaScript 调用的 Markdown→HTML *解析库*；当你需要在 app 或管线里做渲染时它才是对的工具——但它不是浏览器 UI，编辑器/撰写框集成得你自己接。 |
+| 浏览器原生富文本撰写（Gmail/Outlook 工具栏） | 未收录 | 需要邮件客户端内置能力且不想安装扩展时，选浏览器原生富文本撰写。 | 邮件客户端自带、无需安装；但它是工具栏式所见即所得，没有 Markdown，代码块/表格支持也弱——正是 Markdown Here 要消除的摩擦。 |
+| Obsidian / 编辑器 Markdown 插件 | 未收录 | 需要文档编辑器里的 Markdown 写作和实时预览时，选 Obsidian 或编辑器插件。 | 一流的 Markdown 写作加实时预览，但是在*文档编辑器*里，而非你的网页邮箱撰写框；你得在那边起草再粘过来，丢掉了就地、发送时转换那一环。 |
+| Markdown Here Revival（分叉/后继） | 未收录 | 明确需要社区后继分叉，尤其围绕 Thunderbird 继续使用时，选 Markdown Here Revival。 | 一个社区分叉，意在让这个点子活下去（尤其面向 Thunderbird），因为原项目停滞了；其托管位置和自身维护状态在依赖前需自行核实（见存疑）。 |
 
 ## 技术栈
 
