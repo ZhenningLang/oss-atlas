@@ -27,6 +27,7 @@ KNOWN_CATEGORIES = [
     "zh-link-to-english-sibling",
 ]
 NOT_INDEXED_MARKERS = ["not indexed", "未收录"]
+INDEXED_MARKERS = ["✅", "已收录"]
 LINK_RE = re.compile(r"\[([^\]]+)\]\(([^)]+)\)")
 HEALTH_AXES = ["maintenance", "responsiveness", "adoption", "longevity", "governance", "risk_license"]
 AXIS_LABELS = {
@@ -47,7 +48,7 @@ RAW_FIELD_TRIGGERS = {
     "median_ttfr_hours": ["median", "first-response", "首次响应", "中位"],
     "qualifying_issues": ["qualifying", "issues/PRs", "issue/PR"],
     "downloads_last_month": ["download", "downloads", "下载量"],
-    "dependent_repos_count": ["dependent", "dependents", "dependent repos", "依赖仓库"],
+    "dependent_repos_count": ["dependent repos", "dependent repositories", "dependents", "依赖仓库"],
     "repo_age_days": ["days old", "repo age", "created", "创建", "已创建"],
     "last_commit_age_days": ["last commit", "last pushed", "最后提交", "最后 push", "最近推送"],
     "top3_share": ["top-3", "top3", "前三"],
@@ -258,7 +259,7 @@ def health_axis_raw_values(text: str) -> dict[tuple[str, str], str]:
         )
         raw_fields = set(RAW_NUMERIC_FIELDS.get(axis, []))
         for entry in lines[i + 1 : section_end]:
-            match = re.match(r"\s*([a-z_]+):\s*([-+]?[0-9][0-9.,]*)\s*$", entry)
+            match = re.match(r"\s*([a-z0-9_]+):\s*([-+]?[0-9][0-9.,]*)\s*$", entry)
             if match and match.group(1) in raw_fields:
                 values[(axis, match.group(1))] = yaml_scalar(match.group(2))
     return values
@@ -316,7 +317,11 @@ def extract_numbers(line: str) -> set[str]:
 
 def line_mentions_raw_field(line: str, field: str) -> bool:
     lowered = line.lower()
-    return any(trigger.lower() in lowered for trigger in RAW_FIELD_TRIGGERS.get(field, []))
+    for trigger in RAW_FIELD_TRIGGERS.get(field, []):
+        trigger_lower = trigger.lower()
+        if re.search(rf"(?<![a-z0-9]){re.escape(trigger_lower)}(?![a-z0-9])", lowered):
+            return True
+    return False
 
 
 def detect_health_prose_raw_drift(page: Path, text: str, root: Path) -> list[Finding]:
@@ -430,7 +435,12 @@ def scan(root: Path | str) -> ScanResult:
                 if candidate_slug:
                     sibling = page.with_name(f"{candidate_slug}.md").resolve()
                     indexed_plain_target = sibling in indexed_targets
-            if linked_indexed_targets or indexed_plain_target:
+            status_cell = cells[1] if len(cells) >= 2 else ""
+            if (
+                (linked_indexed_targets or indexed_plain_target)
+                and any(marker in status_cell for marker in NOT_INDEXED_MARKERS)
+                and not any(marker in status_cell for marker in INDEXED_MARKERS)
+            ):
                 findings.append(
                     Finding(
                         "indexed-page-marked-not-indexed",

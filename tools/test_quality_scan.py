@@ -231,6 +231,25 @@ class QualityScanTest(unittest.TestCase):
 
             self.assertTrue(any(f.category == "indexed-page-marked-not-indexed" and "yt-dlp" in f.evidence for f in result.findings))
 
+    def test_mixed_comparison_status_row_does_not_mark_indexed_link_unindexed(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            write_page(root, "categories/demo/dimillian-skills.md", "## Comparison\n")
+            write_page(
+                root,
+                "categories/demo/source.md",
+                """## Comparison
+
+| Alternative | In index | Our verdict |
+|---|---|---|
+| External / [dimillian-skills](dimillian-skills.md) | 未收录 / ✅ | Mixed row. |
+""",
+            )
+
+            result = quality_scan.scan(root)
+
+            self.assertFalse(any(f.category == "indexed-page-marked-not-indexed" for f in result.findings))
+
     def test_counts_health_unknown_axes_by_axis_and_reason(self) -> None:
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
@@ -421,6 +440,49 @@ class QualityScanTest(unittest.TestCase):
       grade: A
       raw:
         downloads_last_month: 80749282
+""",
+            )
+
+            result = quality_scan.scan(root)
+
+            self.assertFalse(any(f.category == "health-prose-raw-drift" for f in result.findings))
+
+    def test_health_raw_values_parse_numeric_field_names(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            page = write_page_with_health(
+                root,
+                "categories/demo/demo.md",
+                "## Health & viability\n",
+                """    governance:
+      grade: A
+      raw:
+        top3_share: 0.149
+        top1_share: 0.062
+        active_maintainers_12mo: 177
+""",
+            )
+
+            values = quality_scan.health_axis_raw_values(page.read_text(encoding="utf-8"))
+
+            self.assertEqual(values[("governance", "top3_share")], "0.149")
+            self.assertEqual(values[("governance", "top1_share")], "0.062")
+            self.assertEqual(values[("governance", "active_maintainers_12mo")], "177")
+
+    def test_dependent_substring_does_not_trigger_dependents_drift(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            write_page_with_health(
+                root,
+                "categories/demo/demo.md",
+                """## Health & viability
+
+- **Adoption**: Grade D — not independently confirmed by this pass.
+""",
+                """    adoption:
+      grade: D
+      raw:
+        dependent_repos_count: 1
 """,
             )
 
