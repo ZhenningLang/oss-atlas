@@ -926,7 +926,7 @@ def axis_adoption(repo: RepoData) -> Axis:
         if repo.type in ADOPTION_NO_PACKAGE_TYPES:
             return Axis.unknown("no_package_structural",
                                 evidence=f"type {repo.type} & no canonical package -> no_package_structural")
-        # tool/library/framework that fails lookup is measurably unadopted -> E (spec §2.3).
+        # A successful empty lookup for package-relevant types is measurably unadopted -> E (spec §2.3).
         if candidates:
             return Axis.unknown("ambiguous",
                                 evidence=f"{len(candidates)} candidates, none clears noise filter -> ambiguous")
