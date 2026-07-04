@@ -88,11 +88,11 @@ Anthony Fu 个人精选的 agent skill 集合，面向 Vue/Vite/Nuxt 生态—�
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [Vercel Agent Skills](../engineering/vercel-agent-skills.md) ✅ | 已收录 | 当前页用于它的主场景；如果更看重“Vercel 官方为 *React/Next”，再选 Vercel Agent Skills ✅。 | Vercel 官方为 *React/Next.js/Vercel* 生态出的 pack，走同一套 `skills` CLI/格式。与 antfu 的恰成镜像：按你属于哪个框架世界（Vue 还是 React）来选；两者都是有主见的厂商/维护者规则集，并非中立。 |
-| [Agent Skills (addyosmani)](../engineering/addyosmani-agent-skills.md) ✅ | 已收录 | 当前页用于它的主场景；如果更看重“Addy Osmani 个人的全 SDLC 工程 pack（spec→build→review→ship、web 性能、安全）”，再选 Agent Skills (addyosmani) ✅。 | Addy Osmani 个人的全 SDLC 工程 pack（spec→build→review→ship、web 性能、安全）。生命周期覆盖更广且框架无关；antfu 的更窄、更绑栈（Vue 工具链约定），而非一条方法论脊柱。 |
-| [web-quality-skills (addyosmani)](../engineering/addyosmani-web-quality.md) ✅ | 已收录 | 当前页用于它的主场景；如果更看重“专注 web 性能/可访问性/质量审计，厂商中立”，再选 web-quality-skills (addyosmani) ✅。 | 专注 web 性能/可访问性/质量审计，厂商中立。与 antfu 的 `web-design-guidelines` vendored skill 有重叠，但更专一且能脱离 Vue 栈使用。 |
-| Dimillian/Skills、gstack、ljg-skills、khazix-skills、taches-cc-resources（其它个人集合） | 未收录 | 当前页用于它的主场景；如果更看重“同一类型”，再选 Dimillian/Skills、gstack、ljg-skills、khazix-skills、taches-cc-resources（其它个人集合）。 | 同一类型——个人维护者精选的 skill/harness 捆绑——但各自反映不同人的栈和约定；按你真正认同谁的工具链与意见来比。 |
-| 各 agent 自带的 skills / 斜杠命令 | 未收录 | 当前页用于它的主场景；如果更看重“平台自身的 skill 生态”，再选 各 agent 自带的 skills / 斜杠命令。 | 平台自身的 skill 生态；antfu/skills 是叠在其上的第三方捆绑，可能与原生 skill 重复或冲突。 |
+| [Vercel Agent Skills](../engineering/vercel-agent-skills.zh.md) | ✅ | React/Next.js/Vercel 平台规则比 Vue/Vite 约定更重要时，选 Vercel Agent Skills。 | Vercel 官方为 *React/Next.js/Vercel* 生态出的 pack，走同一套 `skills` CLI/格式。与 antfu 的恰成镜像：按你属于哪个框架世界（Vue 还是 React）来选；两者都是有主见的厂商/维护者规则集，并非中立。 |
+| [Agent Skills (addyosmani)](../engineering/addyosmani-agent-skills.zh.md) | ✅ | 需要框架无关的全 SDLC 工程规则时，选 Agent Skills。 | Addy Osmani 个人的全 SDLC 工程 pack（spec→build→review→ship、web 性能、安全）。生命周期覆盖更广且框架无关；antfu 的更窄、更绑栈（Vue 工具链约定），而非一条方法论脊柱。 |
+| [web-quality-skills (addyosmani)](../engineering/addyosmani-web-quality.zh.md) | ✅ | 只要厂商中立的 web 性能、可访问性和质量审计时，选 web-quality-skills。 | 专注 web 性能/可访问性/质量审计，厂商中立。与 antfu 的 `web-design-guidelines` vendored skill 有重叠，但更专一且能脱离 Vue 栈使用。 |
+| Dimillian/Skills、gstack、ljg-skills、khazix-skills、taches-cc-resources（其它个人集合） | 部分已收录 | 更认同某位维护者的个人栈和工作习惯时，选对应个人集合。 | 同一类型——个人维护者精选的 skill/harness 捆绑——但各自反映不同人的栈和约定；按你真正认同谁的工具链与意见来比。 |
+| 各 agent 自带的 skills / 斜杠命令 | 未收录 | 想优先使用平台维护的原生能力，而非第三方捆绑时，选内置 skill。 | 平台自身的 skill 生态；antfu/skills 是叠在其上的第三方捆绑，可能与原生 skill 重复或冲突。 |
 
 ## 健康度与可持续性
 

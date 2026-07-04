@@ -85,10 +85,10 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [antfu/skills](antfu-skills.md) | ✅ | 当前页用于它的主场景；如果更看重“一位维护者的个人编码/devtools 技能”，再选 antfu/skills。 | 一位维护者的个人编码/devtools 技能；工程味、英文优先。dbskill 是商业诊断的领域包，不是代码工作流。 |
-| [Dimillian/Skills](dimillian-skills.md) | ✅ | 当前页用于它的主场景；如果更看重“一位 iOS/Swift 开发者的个人技能”，再选 Dimillian/Skills。 | 一位 iOS/Swift 开发者的个人技能；软件向。领域不重叠——按你要编码帮助还是商业教练来选。 |
-| [awesome-claude-code-subagents](../subagent-collections/awesome-claude-code-subagents.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“一个覆盖众多技术角色的大型 subagent 合集”，再选 awesome-claude-code-subagents。 | 一个覆盖众多技术角色的大型 subagent 合集；重广度而非单一鲜明声音。dbskill 是单作者、窄而深的商业方法论。 |
-| 通用 LLM 商业教练 prompt | 未收录 | 当前页用于它的主场景；如果更看重“临时 prompt 没有精选框架、案例库或持久化”，再选 通用 LLM 商业教练 prompt。 | 临时 prompt 没有精选框架、案例库或持久化；dbskill 在连贯的作者声音背后带了约 4000 条知识原子和状态命令。 |
+| [antfu/skills](antfu-skills.zh.md) | ✅ | 需要编码或 devtools 个人技能，而非商业诊断时，选 antfu/skills。 | 一位维护者的个人编码/devtools 技能；工程味、英文优先。dbskill 是商业诊断的领域包，不是代码工作流。 |
+| [Dimillian/Skills](dimillian-skills.zh.md) | ✅ | 需要 iOS/Swift 软件开发帮助，而非商业教练时，选 Dimillian/Skills。 | 一位 iOS/Swift 开发者的个人技能；软件向。领域不重叠——按你要编码帮助还是商业教练来选。 |
+| [awesome-claude-code-subagents](../subagent-collections/awesome-claude-code-subagents.zh.md) | ✅ | 需要覆盖众多技术角色的大型 subagent 合集时，选 awesome-claude-code-subagents。 | 一个覆盖众多技术角色的大型 subagent 合集；重广度而非单一鲜明声音。dbskill 是单作者、窄而深的商业方法论。 |
+| 通用 LLM 商业教练 prompt | 未收录 | 只需要临时商业教练、且不需要精选框架或持久化状态时，选临时 prompt。 | 临时 prompt 没有精选框架、案例库或持久化；dbskill 在连贯的作者声音背后带了约 4000 条知识原子和状态命令。 |
 
 ## 健康度与可持续性
 
