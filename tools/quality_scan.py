@@ -18,6 +18,7 @@ ZERO_SHA = "0000000000000000000000000000000000000000"
 GENERIC_TEMPLATES = ["Use this page for its stated niche", "当前页用于它的主场景"]
 TRUNCATION_FRAGMENTS = ["trac.", "(Node.", "and.", "per-har.", "before co."]
 KNOWN_CATEGORIES = [
+    "composite-alternative-partly-indexed",
     "generic-comparison-template",
     "health-prose-grade-drift",
     "health-prose-raw-drift",
@@ -125,6 +126,13 @@ def slugify_label(label: str) -> str:
     return plain
 
 
+def split_composite_label(label: str) -> list[str]:
+    plain = re.sub(r"`([^`]+)`", r"\1", label).strip()
+    plain = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", plain).strip()
+    parts = [part.strip() for part in re.split(r"\s+/\s+", plain) if part.strip()]
+    return parts if len(parts) > 1 else []
+
+
 def resolve_markdown_target(source: Path, href: str) -> Path | None:
     target = href.split("#", 1)[0]
     if not target or target.startswith(("http://", "https://", "mailto:", "#")):
@@ -146,6 +154,37 @@ def table_cells(line: str) -> list[str]:
 def is_table_separator(line: str) -> bool:
     cells = table_cells(line)
     return bool(cells) and all(cell and set(cell) <= set("-: ") and cell.count("-") >= 3 for cell in cells)
+
+
+def detects_partly_indexed_composite(source: Path, cells: list[str], indexed_targets: set[Path]) -> bool:
+    if len(cells) < 2 or not any(marker in cells[1] for marker in INDEXED_MARKERS):
+        return False
+    parts = split_composite_label(cells[0])
+    if not parts:
+        return False
+
+    linked_slugs = set()
+    for _label, href in LINK_RE.findall(cells[0]):
+        target = resolve_markdown_target(source, href)
+        if target and canonical_target(target) in indexed_targets:
+            linked_slugs.add(base_slug(target.name))
+
+    if not linked_slugs:
+        return False
+
+    covered = 0
+    uncovered = 0
+    for part in parts:
+        slug = slugify_label(part)
+        if not slug:
+            continue
+        if slug in linked_slugs:
+            covered += 1
+        elif source.with_name(f"{slug}.md").resolve() in indexed_targets:
+            covered += 1
+        else:
+            uncovered += 1
+    return covered > 0 and uncovered > 0
 
 
 def section_lines(text: str, heading: str) -> list[tuple[int, str]]:
@@ -429,6 +468,17 @@ def scan(root: Path | str) -> ScanResult:
                         line_no,
                         "High-confidence truncation fragment found in a comparison row.",
                         fragment,
+                    )
+                )
+            if detects_partly_indexed_composite(page, cells, indexed_targets):
+                findings.append(
+                    Finding(
+                        "composite-alternative-partly-indexed",
+                        "high",
+                        rel,
+                        line_no,
+                        "Composite comparison row marks an only-partly indexed alternative as indexed.",
+                        line.strip(),
                     )
                 )
             if not any(marker in line for marker in NOT_INDEXED_MARKERS):

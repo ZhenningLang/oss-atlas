@@ -250,6 +250,25 @@ class QualityScanTest(unittest.TestCase):
 
             self.assertFalse(any(f.category == "indexed-page-marked-not-indexed" for f in result.findings))
 
+    def test_detects_composite_alternative_partly_marked_indexed(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            write_page(root, "categories/demo/svelte.md", "## Comparison\n")
+            write_page(
+                root,
+                "categories/demo/source.md",
+                """## Comparison
+
+| Alternative | In index | Our verdict |
+|---|---|---|
+| [Svelte / SvelteKit](svelte.md) | ✅ | Composite row marks both indexed. |
+""",
+            )
+
+            result = quality_scan.scan(root)
+
+            self.assertTrue(any(f.category == "composite-alternative-partly-indexed" for f in result.findings))
+
     def test_counts_health_unknown_axes_by_axis_and_reason(self) -> None:
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
