@@ -90,12 +90,12 @@ You're a frontend lead at an enterprise SaaS company, and product has asked for 
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| [Driver.js](driver-js.md) | ✅ | Use this page for its stated niche; choose [Driver.js](driver-js.md) when you need a tiny, dependency-free tour library with minimal bundle size. | ~4KB dependency-free core; smaller footprint but fewer built-in positioning options and a simpler API. |
-| Intro.js | 未收录 | Use this page for its stated niche; choose Intro.js when you want the original tour library. | The original tour library; widely used but its modern usage is **dual-licensed** (free for non-commercial, paid commercial license) — a real lock-in/cost consideration Shepherd.js (MIT) avoids. |
-| Reactour / react-joyride | 未收录 | Use this page for its stated niche; choose Reactour / react-joyride when you need React-specific tour components with native hooks/JSX. | React-specific tour components (hooks/JSX-native); nicer DX inside React, but framework-locked vs Shepherd.js's framework-agnostic core. |
-| Appcues / Userflow / Userpilot | 未收录 | Use this page for its stated niche; choose Appcues / Userflow / Userpilot when you need commercial no-code onboarding **platforms**. | Commercial no-code onboarding **platforms** — segmentation, analytics, targeting, checklists, surveys; not open-source repos, recurring SaaS cost, but solve product-led-growth, not just tour rendering. |
-| Bootstrap Tour | 未收录 | Use this page for its stated niche; avoid Bootstrap Tour for new work — it is abandoned. | Built for Bootstrap 3/4 era; effectively abandoned. Do not use for new projects. |
-| Angular CDK stepper | 未收录 | Use this page for its stated niche; choose Angular CDK stepper when you need Angular-native step-by-step UI flows within the Angular ecosystem. | Angular-native stepper component; not a general-purpose tour/overlay library and Angular-only. |
+| [Driver.js](driver-js.md) | ✅ | Choose Driver.js when you need a tiny, dependency-free tour library with minimal bundle size. | ~4KB dependency-free core; smaller footprint but fewer built-in positioning options and a simpler API. |
+| [Intro.js](intro-js.md) | ✅ | Choose Intro.js when you want the original tour library and accept its dual-license tradeoff. | The original tour library; widely used but its modern usage is **dual-licensed** (free for non-commercial, paid commercial license) — a real lock-in/cost consideration Shepherd.js (MIT) avoids. |
+| Reactour / react-joyride | 未收录 | Choose Reactour / react-joyride when you need React-specific tour components with native hooks or JSX. | React-specific tour components (hooks/JSX-native); nicer DX inside React, but framework-locked vs Shepherd.js's framework-agnostic core. |
+| Appcues / Userflow / Userpilot | 未收录 | Choose Appcues, Userflow, or Userpilot when you need commercial no-code onboarding **platforms**. | Commercial no-code onboarding **platforms** — segmentation, analytics, targeting, checklists, surveys; not open-source repos, recurring SaaS cost, but solve product-led-growth, not just tour rendering. |
+| Bootstrap Tour | 未收录 | Avoid Bootstrap Tour for new work because it is abandoned. | Built for Bootstrap 3/4 era; effectively abandoned. Do not use for new projects. |
+| Angular CDK stepper | 未收录 | Choose Angular CDK stepper when you need Angular-native step-by-step UI flows within the Angular ecosystem. | Angular-native stepper component; not a general-purpose tour/overlay library and Angular-only. |
 
 ## Tech stack
 

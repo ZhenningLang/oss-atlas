@@ -94,10 +94,10 @@ You're an enterprise team building a large, complex web application with dozens 
 
 | Alternative | In index | Our verdict | Tradeoff |
 | --- | --- | --- | --- |
-| React | 未收录 | The most popular UI library with a vast ecosystem and a "just JavaScript" philosophy. | React is more flexible and has a larger job market; Angular is more opinionated and ships with more built-in tooling, reducing decision fatigue. |
-| Vue.js | 未收录 | Progressive framework with a gentler learning curve and excellent documentation. | Vue is easier to adopt incrementally; Angular demands all-in commitment but rewards it with stronger enterprise structure. |
-| Svelte / SvelteKit | 未收录 | Compile-time framework with minimal runtime overhead and no virtual DOM. | Svelte is faster and simpler for small-to-medium apps; Angular has deeper enterprise support, more third-party integrations, and a longer track record. |
-| Next.js | 未收录 | Full-stack React framework with best-in-class SSR/SSG and Vercel integration. | Next.js is the default for React-based SSR/SEO; Angular Universal exists but is less dominant in that niche. |
+| [React](react.md) | ✅ | Choose React when you want the largest UI ecosystem and a "just JavaScript" philosophy. | React is more flexible and has a larger job market; Angular is more opinionated and ships with more built-in tooling, reducing decision fatigue. |
+| [Vue.js](vue.md) | ✅ | Choose Vue when you need a progressive framework with a gentler learning curve and excellent documentation. | Vue is easier to adopt incrementally; Angular demands all-in commitment but rewards it with stronger enterprise structure. |
+| [Svelte / SvelteKit](svelte.md) | ✅ | Choose Svelte when you want compile-time components with minimal runtime overhead and no virtual DOM. | Svelte is faster and simpler for small-to-medium apps; Angular has deeper enterprise support, more third-party integrations, and a longer track record. |
+| [Next.js](nextjs.md) | ✅ | Choose Next.js when you need React-based SSR/SSG with a dominant full-stack ecosystem. | Next.js is the default for React-based SSR/SEO; Angular Universal exists but is less dominant in that niche. |
 | [shadcn/ui](shadcn-ui.md) | ✅ | A component distribution model, not a framework — often used inside React. | Not a direct substitute; shadcn/ui is about component ownership, Angular is a full application framework. |
 | [Lit](lit.md) | ✅ | Lightweight library for building standards-based web components with a tiny runtime. | Lit is for building interoperable components, not full SPAs; Angular is a complete framework with routing, DI, and CLI. Choose Lit for design systems that must work across frameworks. |
 

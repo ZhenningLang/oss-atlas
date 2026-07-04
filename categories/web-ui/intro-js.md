@@ -94,11 +94,11 @@ You also reach for it when you need auto-play tours, programmatic step control, 
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| [Driver.js](../web-ui/driver-js.md) | ✅ | Use this page for its stated niche; choose Driver.js when you want a MIT-licensed, lighter, zero-dependency alternative. | MIT-licensed, smaller bundle (~5KB), zero dependencies; fewer built-in features and positioning options than Intro.js. |
-| Shepherd.js | 未收录 | Use this page for its stated niche; choose Shepherd.js when you want a MIT-licensed tour library with a richer API and more positioning options. | MIT-licensed, more built-in step/positioning options and a richer API; uses Floating UI / popper-style positioning, heavier than Driver.js. |
-| Reactour / react-joyride | 未收录 | Use this page for its stated niche; choose Reactour / react-joyride when you need React-specific tour components (hooks/JSX-native). | React-specific components (hooks/JSX-native); nicer DX inside React but framework-locked vs Intro.js's vanilla core. |
-| Appcues / Userflow / Userpilot | 未收录 | Use this page for its stated niche; choose Appcues / Userflow / Userpilot when you need a commercial no-code onboarding **platform**. | Commercial platforms with segmentation, analytics, targeting, checklists, surveys; not open-source repos, recurring SaaS cost. |
-| Bootstrap Tour | 未收录 | Use this page for its stated niche; avoid Bootstrap Tour — it is abandoned and unmaintained. | Abandoned; was a Bootstrap-dependent tour plugin, no longer viable. |
+| [Driver.js](driver-js.md) | ✅ | Choose Driver.js when you want a MIT-licensed, lighter, zero-dependency alternative. | MIT-licensed, smaller bundle (~5KB), zero dependencies; fewer built-in features and positioning options than Intro.js. |
+| [Shepherd.js](shepherd-js.md) | ✅ | Choose Shepherd.js when you want a MIT-licensed tour library with a richer API and more positioning options. | MIT-licensed, more built-in step/positioning options and a richer API; uses Floating UI / popper-style positioning, heavier than Driver.js. |
+| Reactour / react-joyride | 未收录 | Choose Reactour / react-joyride when you need React-specific tour components with hooks or JSX-native APIs. | React-specific components (hooks/JSX-native); nicer DX inside React but framework-locked vs Intro.js's vanilla core. |
+| Appcues / Userflow / Userpilot | 未收录 | Choose Appcues, Userflow, or Userpilot when you need a commercial no-code onboarding **platform**. | Commercial platforms with segmentation, analytics, targeting, checklists, surveys; not open-source repos, recurring SaaS cost. |
+| Bootstrap Tour | 未收录 | Avoid Bootstrap Tour for new work because it is abandoned and unmaintained. | Abandoned; was a Bootstrap-dependent tour plugin, no longer viable. |
 
 ## Tech stack
 
