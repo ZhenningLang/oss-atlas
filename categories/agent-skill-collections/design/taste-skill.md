@@ -88,11 +88,11 @@ It also ships tunable dials — `DESIGN_VARIANCE`, `MOTION_INTENSITY`, `VISUAL_D
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| [designer-skills](designer-skills.md) | ✅ | Use this page for its stated niche; choose designer-skills when you need sibling design-taste pack. | Sibling design-taste pack; compare on which aesthetic variants and harnesses each covers and which one's protocol matches your output style. |
-| [stitch-skills](stitch-skills.md) | ✅ | Use this page for its stated niche; choose stitch-skills when you need sibling skill pack in the same design leaf. | Sibling skill pack in the same design leaf; overlapping "improve agent UI output" goal, different skill primitives — pick by install target and variant coverage. |
-| [ui-ux-pro-max](ui-ux-pro-max.md) | ✅ | Use this page for its stated niche; choose ui-ux-pro-max when you need sibling pack leaning toward broader UI/UX guidance. | Sibling pack leaning toward broader UI/UX guidance; Taste-Skill is narrower and centers anti-slop frontend generation with tunable variance/motion/density dials. |
-| make-interfaces-feel-better | 未收录 | Use this page for its stated niche; choose make-interfaces-feel-better when you need listed as a leaf sibling but no page exists yet. | Listed as a leaf sibling but no page exists yet; compare on whether it enforces interaction polish vs. Taste-Skill's generation-time aesthetics. |
-| Anthropic / built-in agent skills | 未收录 | Use this page for its stated niche; choose Anthropic / built-in agent skills when you need native skill ecosystem of the host harness. | Native skill ecosystem of the host harness; Taste-Skill is a third-party bundle layered on top and can duplicate or conflict with native design skills. |
+| [designer-skills](designer-skills.md) | ✅ | Pick designer-skills when you need a broader sibling design-taste pack. | Sibling design-taste pack; compare on which aesthetic variants and harnesses each covers and which one's protocol matches your output style. |
+| [stitch-skills](stitch-skills.md) | ✅ | Pick stitch-skills when you need the design leaf's generation/conversion loop. | Sibling skill pack in the same design leaf; overlapping "improve agent UI output" goal, different skill primitives — pick by install target and variant coverage. |
+| [ui-ux-pro-max](ui-ux-pro-max.md) | ✅ | Pick ui-ux-pro-max when you need broader UI/UX guidance instead of narrow anti-slop aesthetics. | Sibling pack leaning toward broader UI/UX guidance; Taste-Skill is narrower and centers anti-slop frontend generation with tunable variance/motion/density dials. |
+| [make-interfaces-feel-better](make-interfaces-feel-better.md) | ✅ | Pick make-interfaces-feel-better when the stronger need is interaction polish rather than generation-time aesthetics. | Leaf sibling focused on interaction polish; compare on whether it enforces interaction polish vs. Taste-Skill's generation-time aesthetics. |
+| Anthropic / built-in agent skills | 未收录 | Pick built-in agent skills when you prefer the host harness's native skill ecosystem. | Native skill ecosystem of the host harness; Taste-Skill is a third-party bundle layered on top and can duplicate or conflict with native design skills. |
 
 ## Health & viability
 
