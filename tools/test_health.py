@@ -23,12 +23,14 @@ def graphql_result(repo_payload: dict) -> health.GhResult:
     return health.GhResult(200, health.json.dumps({"data": {"repository": repo_payload}}))
 
 
-def pr_node(created: str, author: str, response: str, reviewer: str = "maintainer") -> dict:
+def pr_node(created: str, author: str, response: str | None, reviewer: str = "maintainer", *, comment: bool = False) -> dict:
+    reviews = [] if response is None or comment else [{"createdAt": response, "author": {"login": reviewer}}]
+    comments = [] if response is None or not comment else [{"createdAt": response, "author": {"login": reviewer}}]
     return {
         "createdAt": created,
         "author": {"login": author},
-        "reviews": {"nodes": [{"createdAt": response, "author": {"login": reviewer}}]},
-        "comments": {"nodes": []},
+        "reviews": {"nodes": reviews},
+        "comments": {"nodes": comments},
     }
 
 
@@ -64,7 +66,7 @@ class HealthMechanismTest(unittest.TestCase):
         self.assertTrue(all(call[0] == "/tmp/gh" for call in calls))
         self.assertFalse(any(call[0] == "/opt/homebrew/bin/gh" for call in calls))
 
-    def test_responsiveness_pr_fallback_scores_from_pr_reviews(self) -> None:
+    def test_responsiveness_pr_fallback_scores_b_from_three_pr_reviews(self) -> None:
         repo_payload = {
             "hasIssuesEnabled": True,
             "isArchived": False,
@@ -81,9 +83,52 @@ class HealthMechanismTest(unittest.TestCase):
         with mock.patch("health.gh_api", return_value=graphql_result(repo_payload)):
             axis = health.axis_responsiveness(FakeRepo("library"))
 
-        self.assertEqual(axis.grade, "A")
+        self.assertEqual(axis.grade, "B")
         self.assertEqual(axis.raw["source"], "pr")
         self.assertEqual(axis.raw["qualifying_issues"], 3)
+
+    def test_responsiveness_pr_fallback_can_score_a_with_five_pr_comments(self) -> None:
+        repo_payload = {
+            "hasIssuesEnabled": True,
+            "isArchived": False,
+            "createdAt": "2020-01-01T00:00:00Z",
+            "issues": {"nodes": []},
+            "pullRequests": {
+                "nodes": [
+                    pr_node("2026-06-01T00:00:00Z", "alice", "2026-06-01T10:00:00Z", comment=True),
+                    pr_node("2026-06-02T00:00:00Z", "bob", "2026-06-02T12:00:00Z", comment=True),
+                    pr_node("2026-06-03T00:00:00Z", "carol", "2026-06-03T14:00:00Z", comment=True),
+                    pr_node("2026-06-04T00:00:00Z", "dana", "2026-06-04T16:00:00Z", comment=True),
+                    pr_node("2026-06-05T00:00:00Z", "erin", "2026-06-05T18:00:00Z", comment=True),
+                ]
+            },
+        }
+        with mock.patch("health.gh_api", return_value=graphql_result(repo_payload)):
+            axis = health.axis_responsiveness(FakeRepo("library"))
+
+        self.assertEqual(axis.grade, "A")
+        self.assertEqual(axis.raw["source"], "pr")
+        self.assertEqual(axis.raw["qualifying_issues"], 5)
+
+    def test_responsiveness_pr_fallback_ignores_self_and_bot_responses(self) -> None:
+        repo_payload = {
+            "hasIssuesEnabled": True,
+            "isArchived": False,
+            "createdAt": "2020-01-01T00:00:00Z",
+            "issues": {"nodes": []},
+            "pullRequests": {
+                "nodes": [
+                    pr_node("2026-06-01T00:00:00Z", "alice", "2026-06-01T10:00:00Z", reviewer="alice"),
+                    pr_node("2026-06-02T00:00:00Z", "bob", "2026-06-02T12:00:00Z", reviewer="dependabot[bot]"),
+                    pr_node("2026-06-03T00:00:00Z", "carol", "2026-06-03T14:00:00Z", reviewer="maintainer"),
+                ]
+            },
+        }
+        with mock.patch("health.gh_api", return_value=graphql_result(repo_payload)):
+            axis = health.axis_responsiveness(FakeRepo("library"))
+
+        self.assertEqual(axis.grade, "?")
+        self.assertEqual(axis.reason, "no_window_signal")
 
     def test_responsiveness_github_failure_is_not_no_traffic(self) -> None:
         with mock.patch("health.gh_api", return_value=health.GhResult(0, '{"_transport_error":"boom"}')):
@@ -92,6 +137,34 @@ class HealthMechanismTest(unittest.TestCase):
         self.assertEqual(axis.grade, "?")
         self.assertEqual(axis.reason, "github_unavailable")
         self.assertIn("GraphQL HTTP 0", axis.evidence)
+
+    def test_responsiveness_genuine_no_traffic_remains_no_traffic(self) -> None:
+        repo_payload = {
+            "hasIssuesEnabled": True,
+            "isArchived": False,
+            "createdAt": "2020-01-01T00:00:00Z",
+            "issues": {"nodes": []},
+            "pullRequests": {"nodes": []},
+        }
+        with mock.patch("health.gh_api", return_value=graphql_result(repo_payload)):
+            axis = health.axis_responsiveness(FakeRepo("library"))
+
+        self.assertEqual(axis.grade, "?")
+        self.assertEqual(axis.reason, "no_traffic")
+
+    def test_responsiveness_traffic_without_window_signal_is_distinct(self) -> None:
+        repo_payload = {
+            "hasIssuesEnabled": True,
+            "isArchived": False,
+            "createdAt": "2020-01-01T00:00:00Z",
+            "issues": {"nodes": [{"createdAt": "2026-06-01T00:00:00Z", "author": {"login": "alice"}, "comments": {"nodes": []}, "timelineItems": {"nodes": []}}]},
+            "pullRequests": {"nodes": [pr_node("2026-06-02T00:00:00Z", "bob", None), pr_node("2026-06-03T00:00:00Z", "carol", None), pr_node("2026-06-04T00:00:00Z", "dana", None)]},
+        }
+        with mock.patch("health.gh_api", return_value=graphql_result(repo_payload)):
+            axis = health.axis_responsiveness(FakeRepo("library"))
+
+        self.assertEqual(axis.grade, "?")
+        self.assertEqual(axis.reason, "no_window_signal")
 
     def test_adoption_structural_no_package_for_app(self) -> None:
         with mock.patch("health.http_get_json", return_value=(200, [])):

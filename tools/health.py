@@ -70,7 +70,7 @@ AI_COMMITTERS = {"claude", "ampagent", "devin", "cursor-agent", "copilot", "swee
 # 2.2 responsiveness — type-aware TTFR bands, in HOURS (and qualifying-issue floors).
 RESP_BANDS = {
     "default": {  # library, framework, service
-        "A": 48, "A_min_issues": 3,
+        "A": 48, "A_min_issues": 5,
         "B": 7 * 24, "B_min_issues": 3,
         "C": 30 * 24,
         "D": 180 * 24,
@@ -785,6 +785,8 @@ def axis_responsiveness(repo: RepoData) -> Axis:
 
     raw = {
         "median_ttfr_hours": _round(median_h, 1) if median_h is not None else None,
+        # Historical key name kept for frontmatter compatibility. When source == "pr",
+        # this count is qualifying PRs rather than issues.
         "qualifying_issues": qualifying,
         "band": _band_label(band),
         "window_offset_days": offset,

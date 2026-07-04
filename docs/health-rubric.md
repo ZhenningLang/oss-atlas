@@ -116,6 +116,7 @@ Fallback when `stats/participation` stays 202: `gh api 'repos/{o}/{r}/commits?si
 **Qualifying-issue & first-response hardening**
 - An issue qualifies if `createdAt` ∈ window AND author is human.
 - A "first response" comment is excluded if its author matches the bot regex (§1.3) **OR** its body is a near-duplicate template across the window (shingle/Jaccard similarity ≥ 0.8 to another first-response in the window) — defeats a human-named auto-ack service account. **Documented as best-effort heuristic, not a guarantee.**
+- If the qualifying issue sample is <3, PR review/comment response is used as a fallback signal. PR fallback uses the same sample floors as issues: default A still requires ≥5 qualifying responses; B requires ≥3. The persisted `qualifying_issues` raw field is historical: when `source: pr`, it means qualifying PRs.
 
 **Exact tiers** (type-aware bands; bands chosen to fit this index's solo-tool / skill-pack makeup, not a Western team-OSS SLA)
 
@@ -201,7 +202,7 @@ query($o:String!,$n:String!){ repository(owner:$o,name:$n){
 **`?` rule** (require POSITIVE proof of no-package, so a real E can't be dodged by mislabeling `type`)
 - `no_package_structural` — `type ∈ {app, skill-pack, service, model}` AND `packages/lookup` returns zero entries clearing the noise filter AND GitHub "Used by" empty/unavailable. (model weights on HF Hub → `?` unless a pip/npm wrapper exists, in which case score the wrapper.)
 - `registry_lookup_failed` — packages.ecosyste.ms lookup transport failed; this is a tool/data-source failure, not evidence of zero adoption.
-- `registry_no_counts` — Maven/Go where the registry exposes no downloads AND ecosyste.ms returns no `dependent_repos_count`. (If dependents ARE present → score from dependents, not `?`.)
+- `registry_no_counts` — a canonical package exists, but comparable dependency/download counts are unavailable. Maven/Go commonly hit this, but the condition is data-shape based rather than registry-name-only. If dependents ARE present → score from dependents, not `?`.
 - `ambiguous` — multiple plausible canonical packages, none clears the noise filter.
 - **A `tool`/`library` that merely fails lookup is NOT `?`** — it is **E** (measurably unadopted) or a manual-flag, never `?`. Archived repos keep their last computed tier with an `archived` flag, not `?`.
 
