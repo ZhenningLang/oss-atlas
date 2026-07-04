@@ -96,7 +96,7 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 | --- | --- | --- | --- |
-| React | 未收录 | 占据主导地位的 UI 库，生态最大，就业市场最广。 | React 的库和招聘池 vastly 更大；Svelte 对中小型应用更快、更简单，包体积更小。 |
+| [React](react.zh.md) | ✅ | 需要生态最大、招聘池最广的主流 UI 库时，选 React。 | React 的库和招聘池 vastly 更大；Svelte 对中小型应用更快、更简单，包体积更小。 |
 | Vue.js | 未收录 | 渐进式框架，学习曲线温和，生态强劲。 | Vue 更容易招到人，第三方集成更多；Svelte 编译出的包更小，运行时开销更低。 |
 | [Angular](angular.zh.md) | ✅ | 企业级、有主见的框架，与 TypeScript 深度集成。 | Angular 为大型团队内置了一切；Svelte 更轻更快，但缺乏企业级工具深度和 CLI 脚手架。 |
 | Next.js | 未收录 | 全栈 React 框架，SSR/SSG 一流，与 Vercel 深度集成。 | Next.js 主导 React meta-framework 领域；SvelteKit 是 Svelte 的对应方案，但生态和集成更小。 |

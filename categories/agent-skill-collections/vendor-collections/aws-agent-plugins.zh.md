@@ -90,9 +90,9 @@ AWS Labs 官方出品的插件集合，教 coding agent 如何在 AWS 上做架�
 |---|---|---|---|
 | [Anthropic Skills](anthropic-skills.zh.md) | ✅ | 需要云中立、任务通用的一方 skill 时，选 Anthropic Skills。 | Anthropic 第一方的通用 skill（文档生成、前端、编写规范）。云中立、任务通用；本 AWS repo 更窄、锁定生态，但在 AWS 架构/部署/运维上深得多。价值单元不同。 |
 | [Claude Plugins (official)](claude-plugins-official.zh.md) | ✅ | 需要 Anthropic 宽口径官方插件或 marketplace 目录时，选 Claude Plugins。 | Anthropic 宽口径的官方插件/marketplace 目录；通用。本 repo 是基于同一插件机制叠加的单 vendor（AWS）领域集合——按你要的是 AWS 深度还是通用插件集来选。 |
-| MiniMax skills | 未收录 | 当前页用于它的主场景；如果更看重“另一家 vendor 的 skill 集合，绑定其模型/harness”，再选 MiniMax skills。 | 另一家 vendor 的 skill 集合，绑定其模型/harness；有「官方起步 skill」的重叠目标但没有 AWS 领域内容。混用前先核对格式/loader 兼容性。 |
-| AWS 官方 MCP server（独立） | 未收录 | 当前页用于它的主场景；如果更看重“底层的 AWS MCP server（文档、定价、IaC）不靠这些插件也能接”，再选 AWS 官方 MCP server（独立）。 | 底层的 AWS MCP server（文档、定价、IaC）不靠这些插件也能接；你能拿到数据源，但拿不到打包好的 skill、触发短语和护栏。更多组装、更少意见。 |
-| 自己写 AWS skill | n/a | 当前页用于它的主场景；如果更看重“贴合度最高、不依赖 marketplace，但你放弃了 AWS 维护的 playbook 和 MCP 接线，得自己保持各服务最佳实践常新”，再选 自己写 AWS skill。 | 贴合度最高、不依赖 marketplace，但你放弃了 AWS 维护的 playbook 和 MCP 接线，得自己保持各服务最佳实践常新。 |
+| [MiniMax skills](minimax-skills.zh.md) | ✅ | 需要另一家 vendor 的模型/媒体/多模态 skill 集合时，选 MiniMax skills。 | 另一家 vendor 的 skill 集合，绑定其模型/harness；有「官方起步 skill」的重叠目标但没有 AWS 领域内容。混用前先核对格式/loader 兼容性。 |
+| AWS 官方 MCP server（独立） | 未收录 | 只需要底层 AWS MCP 数据源而不需要打包 skill/playbook 时，选 AWS 官方 MCP server。 | 底层的 AWS MCP server（文档、定价、IaC）不靠这些插件也能接；你能拿到数据源，但拿不到打包好的 skill、触发短语和护栏。更多组装、更少意见。 |
+| 自己写 AWS skill | n/a | 需要最高贴合度且愿意自行维护 AWS playbook 和接线时，选自写 skill。 | 贴合度最高、不依赖 marketplace，但你放弃了 AWS 维护的 playbook 和 MCP 接线，得自己保持各服务最佳实践常新。 |
 
 ## 健康度与可持续性
 
