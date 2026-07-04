@@ -20,6 +20,7 @@ TRUNCATION_FRAGMENTS = ["trac.", "(Node.", "and.", "per-har.", "before co."]
 KNOWN_CATEGORIES = [
     "generic-comparison-template",
     "health-prose-grade-drift",
+    "health-prose-raw-drift",
     "indexed-page-marked-not-indexed",
     "truncation-fragment",
     "zero-placeholder-upstream-sha",
@@ -35,6 +36,23 @@ AXIS_LABELS = {
     "longevity": ["Longevity", "长青度"],
     "governance": ["Governance", "Bus factor", "Bus Factor", "治理集中度", "维护者分散度"],
     "risk_license": ["Risk", "License", "Risk/License", "许可宽松度", "许可证风险"],
+}
+RAW_NUMERIC_FIELDS = {
+    "responsiveness": ["median_ttfr_hours", "qualifying_issues"],
+    "adoption": ["downloads_last_month", "dependent_repos_count"],
+    "longevity": ["repo_age_days", "last_commit_age_days"],
+    "governance": ["top3_share", "top1_share", "active_maintainers_12mo"],
+}
+RAW_FIELD_TRIGGERS = {
+    "median_ttfr_hours": ["median", "first-response", "首次响应", "中位"],
+    "qualifying_issues": ["qualifying", "issues/PRs", "issue/PR"],
+    "downloads_last_month": ["download", "downloads", "下载量"],
+    "dependent_repos_count": ["dependent", "dependents", "dependent repos", "依赖仓库"],
+    "repo_age_days": ["days old", "repo age", "created", "创建", "已创建"],
+    "last_commit_age_days": ["last commit", "last pushed", "最后提交", "最后 push", "最近推送"],
+    "top3_share": ["top-3", "top3", "前三"],
+    "top1_share": ["top-1", "top1", "第一贡献者"],
+    "active_maintainers_12mo": ["active maintainer", "active maintainers", "活跃维护者"],
 }
 
 
@@ -93,6 +111,17 @@ def canonical_target(path: Path) -> Path:
     if path.name.endswith(ZH_SUFFIX):
         return path.with_name(f"{base_slug(path.name)}.md").resolve()
     return path.resolve()
+
+
+def slugify_label(label: str) -> str:
+    plain = re.sub(r"`([^`]+)`", r"\1", label).strip()
+    plain = re.sub(r"\[[^\]]+\]\([^)]+\)", "", plain).strip()
+    plain = plain.split("/", 1)[0].strip()
+    plain = re.sub(r"\([^)]*\)", "", plain).strip()
+    plain = plain.replace("（", " ").replace("）", " ")
+    plain = plain.lower().replace("_", "-")
+    plain = re.sub(r"[^a-z0-9]+", "-", plain).strip("-")
+    return plain
 
 
 def resolve_markdown_target(source: Path, href: str) -> Path | None:
@@ -207,6 +236,34 @@ def health_axis_grades(text: str) -> dict[str, str]:
     return grades
 
 
+def yaml_scalar(raw: str) -> str:
+    return raw.strip().strip('"\'')
+
+
+def health_axis_raw_values(text: str) -> dict[tuple[str, str], str]:
+    values: dict[tuple[str, str], str] = {}
+    lines = text.splitlines()
+    for i, line in enumerate(lines):
+        stripped = line.strip()
+        axis = stripped[:-1] if stripped.endswith(":") else ""
+        if axis not in HEALTH_AXES:
+            continue
+        section_end = next(
+            (
+                j
+                for j in range(i + 1, len(lines))
+                if lines[j].startswith("    ") and not lines[j].startswith("      ") and lines[j].strip().endswith(":")
+            ),
+            len(lines),
+        )
+        raw_fields = set(RAW_NUMERIC_FIELDS.get(axis, []))
+        for entry in lines[i + 1 : section_end]:
+            match = re.match(r"\s*([a-z_]+):\s*([-+]?[0-9][0-9.,]*)\s*$", entry)
+            if match and match.group(1) in raw_fields:
+                values[(axis, match.group(1))] = yaml_scalar(match.group(2))
+    return values
+
+
 def health_section_heading(page: Path) -> str:
     return "## 健康度与可持续性" if page.name.endswith(ZH_SUFFIX) else "## Health & viability"
 
@@ -239,6 +296,65 @@ def detect_health_prose_grade_drift(page: Path, text: str, root: Path) -> list[F
     return findings
 
 
+def numeric_variants(value: str) -> set[str]:
+    normalized = value.replace(",", "")
+    variants = {value, normalized}
+    try:
+        number = float(normalized)
+    except ValueError:
+        return variants
+    variants.add(f"{number:.1f}")
+    if number.is_integer():
+        variants.add(str(int(number)))
+        variants.add(f"{int(number):,}")
+    return variants
+
+
+def extract_numbers(line: str) -> set[str]:
+    return {match.group(0) for match in re.finditer(r"(?<![A-Za-z])\d[\d,]*(?:\.\d+)?", line)}
+
+
+def line_mentions_raw_field(line: str, field: str) -> bool:
+    lowered = line.lower()
+    return any(trigger.lower() in lowered for trigger in RAW_FIELD_TRIGGERS.get(field, []))
+
+
+def detect_health_prose_raw_drift(page: Path, text: str, root: Path) -> list[Finding]:
+    raw_values = health_axis_raw_values(text)
+    if not raw_values:
+        return []
+    findings: list[Finding] = []
+    heading = health_section_heading(page)
+    for line_no, line in section_lines(text, heading):
+        prose_numbers = extract_numbers(line)
+        if not prose_numbers:
+            continue
+        for axis, labels in AXIS_LABELS.items():
+            if not any(label in line for label in labels):
+                continue
+            for field in RAW_NUMERIC_FIELDS.get(axis, []):
+                if not line_mentions_raw_field(line, field):
+                    continue
+                frontmatter_value = raw_values.get((axis, field))
+                if not frontmatter_value:
+                    continue
+                if prose_numbers & numeric_variants(frontmatter_value):
+                    continue
+                findings.append(
+                    Finding(
+                        "health-prose-raw-drift",
+                        "high",
+                        relpath(page, root),
+                        line_no,
+                        f"Health prose numeric values do not include frontmatter {axis}.{field}={frontmatter_value}.",
+                        line.strip(),
+                    )
+                )
+                break
+            break
+    return findings
+
+
 def scan(root: Path | str) -> ScanResult:
     root = Path(root).resolve()
     pages = project_pages(root)
@@ -267,6 +383,7 @@ def scan(root: Path | str) -> ScanResult:
 
         health_unknowns.update(unknown_health_axes(text))
         findings.extend(detect_health_prose_grade_drift(page, text, root))
+        findings.extend(detect_health_prose_raw_drift(page, text, root))
 
         if page.name.endswith(ZH_SUFFIX):
             for match in LINK_RE.finditer(body):
@@ -290,6 +407,7 @@ def scan(root: Path | str) -> ScanResult:
         for line_no, line in section_lines(text, heading):
             if not line.strip().startswith("|") or is_table_separator(line):
                 continue
+            cells = table_cells(line)
             for fragment in truncation_fragments_in_line(line):
                 findings.append(
                     Finding(
@@ -306,7 +424,13 @@ def scan(root: Path | str) -> ScanResult:
             linked_indexed_targets = [
                 target for _label, href in LINK_RE.findall(line) if (target := resolve_markdown_target(page, href)) and canonical_target(target) in indexed_targets
             ]
-            if linked_indexed_targets:
+            indexed_plain_target = False
+            if len(cells) >= 2 and not LINK_RE.search(cells[0]):
+                candidate_slug = slugify_label(cells[0])
+                if candidate_slug:
+                    sibling = page.with_name(f"{candidate_slug}.md").resolve()
+                    indexed_plain_target = sibling in indexed_targets
+            if linked_indexed_targets or indexed_plain_target:
                 findings.append(
                     Finding(
                         "indexed-page-marked-not-indexed",

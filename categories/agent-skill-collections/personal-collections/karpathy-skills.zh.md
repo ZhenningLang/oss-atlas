@@ -105,7 +105,7 @@ health:
 ## 存疑（未验证）
 
 - [未验证] README 页脚报告 license 为 MIT，仓库也列出了 LICENSE 文件，但 GitHub 仓库元数据 API 在 2026-06-26 返回 `licenseInfo: null`（未自动识别出 SPDX）——依赖 MIT 前请确认 LICENSE 文件内容。
-- [未验证] 无打 tag 的 release(`latestRelease: null`);GitHub 元数据（截至 2026-06-26）显示最后推送 2026-04-20。依赖某一版本前请重新核验新鲜度与内容。
+- [未验证] 无打 tag 的 release（`latestRelease: null`）；GitHub 元数据（截至 2026-06-26）显示最后推送 2026-04-20。依赖某一版本前请重新核验新鲜度与内容。
 - [未验证] 报告的 star 数（2026-06-26 GitHub 约 182k）不可靠且对日期敏感；仅作参考，不代表质量或正确性。
 - [未验证] 文件结构（`CLAUDE.md`、`CURSOR.md`、`EXAMPLES.md`、`.claude-plugin/`、`.cursor/rules/karpathy-guidelines.mdc`、`skills/karpathy-guidelines/`）与 marketplace 安装命令来自 README 和目录读取，未在此独立运行验证。
 - [未验证] 此处把主语言记为 "Markdown"，因为 GitHub 元数据未返回 `primaryLanguage`；该仓库是文档/配置，没有真正的实现语言。

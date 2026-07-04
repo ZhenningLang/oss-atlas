@@ -104,7 +104,7 @@ health:
 - **前端：** TypeScript + React（看板 UI、面板，以及基于 Scenes 的看板能力）。
 - **后端：** Go（数据源代理、鉴权、告警引擎、provisioning、插件宿主）。
 - **插件模型：** 数据源、面板、app 均可插拔；许多后端以核心或签名插件形式提供。看板是 JSON，数据源和告警规则可从配置文件 provision。
-- **查询语言（透传）:** Grafana 不自造查询语言——它说每个后端各自的语言（Prometheus 用 PromQL、Loki 用 LogQL、关系库用 SQL、Elasticsearch DSL、InfluxQL/Flux 等）。
+- **查询语言（透传）：** Grafana 不自造查询语言——它说每个后端各自的语言（Prometheus 用 PromQL、Loki 用 LogQL、关系库用 SQL、Elasticsearch DSL、InfluxQL/Flux 等）。
 - **版本：** 一个 OSS/AGPL 构建，外加一个商业版 Grafana Enterprise 构建，在同一核心上叠加被圈起来的功能。[未验证]
 
 ## 依赖
@@ -112,7 +112,7 @@ health:
 - **存 Grafana 自身状态的关系库：** 默认 SQLite（单节点够用），或外接 Postgres/MySQL 做 HA / 共享状态。
 - **数据源要你自己跑：** 没有后端 Grafana 就没用——Prometheus、Loki、Tempo/Jaeger、Elasticsearch/OpenSearch、InfluxDB、Postgres、云厂商数据源等。这些才是重基础设施，Grafana 是轻的那部分。
 - **运行时：** 以单个 Go 二进制、官方 Docker 镜像和 RPM/DEB/Helm chart 分发。服务端本身不需要外部语言运行时。
-- **完整告警所需的可选服务：** 要把告警送出去，你得接好通知渠道（邮件/SMTP、Slack、PagerDuty、webhook）;Grafana 的统一告警也能配合外部 Alertmanager。
+- **完整告警所需的可选服务：** 要把告警送出去，你得接好通知渠道（邮件/SMTP、Slack、PagerDuty、webhook）；Grafana 的统一告警也能配合外部 Alertmanager。
 
 ## 运维难度
 
@@ -129,7 +129,7 @@ health:
 
 ## 存疑（未验证）
 
-- [未验证] 截至 2026-06，约 75.1k GitHub star，最新发布 v13.0.2(2026-06-09);star 数和版本号对时间敏感、随版本变动，仅供参考。
+- [未验证] 截至 2026-06，约 75.1k GitHub star，最新发布 v13.0.2（2026-06-09）；star 数和版本号对时间敏感、随版本变动，仅供参考。
 - [未验证] 哪些功能属 OSS、哪些属 Grafana Enterprise/Cloud（细粒度 RBAC、报表、企业版数据源插件、某些 SSO/SAML 配置）在版本和层级间会移动——别假设某功能在免费构建里，先核对当前版本矩阵。
 - [推断] AGPL-3.0 的 copyleft 波及“通过网络提供的改动”是 AGPL 的一般性质；实际义务取决于你改了什么、如何分发/提供——这不是法律意见，请走审查。
 - [推断] 默认与支持的状态库、告警/Alertmanager 接法、最低运行时版本由当前发布文档决定且随时间变化；此处不钉死具体细节。

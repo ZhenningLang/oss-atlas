@@ -71,7 +71,7 @@ health:
 
 ## 何时使用
 
-你是产品工程师或设计师，已经常驻在某个编码 agent 里（Claude Code、Codex、Cursor、Copilot 等），希望它能*产出设计交付物*，而不只是写代码——一个可点击的移动端原型、一份路演 deck、一张品牌社交卡片——而又不想把你的 prompt 和素材都送进别人的云。你在意的是：一切跑在自己机器上、用自己的模型 key、产物是你能留存的纯 HTML/PDF/PPTX/MP4。Open Design 给你一个桌面版 "Studio":agent 读取 `DESIGN.md` 设计系统，在沙箱 iframe 里渲染原型，导出 deck、图像、dashboard 和 HyperFrames(HTML→MP4)——并自带 100+ Skills 与约 150 套品牌设计系统（Linear、Stripe、Apple、Notion 等）作为起点。
+你是产品工程师或设计师，已经常驻在某个编码 agent 里（Claude Code、Codex、Cursor、Copilot 等），希望它能*产出设计交付物*，而不只是写代码——一个可点击的移动端原型、一份路演 deck、一张品牌社交卡片——而又不想把你的 prompt 和素材都送进别人的云。你在意的是：一切跑在自己机器上、用自己的模型 key、产物是你能留存的纯 HTML/PDF/PPTX/MP4。Open Design 给你一个桌面版“Studio”：agent 读取 `DESIGN.md` 设计系统，在沙箱 iframe 里渲染原型，导出 deck、图像、dashboard 和 HyperFrames（HTML→MP4）——并自带 100+ Skills 与约 150 套品牌设计系统（Linear、Stripe、Apple、Notion 等）作为起点。
 
 当你想要一个能接入*你已有的任何 agent* 的统一设计面时，它同样合适。它不把你锁死在单一助手上，而是通过 MCP server 和 BYOK 代理（任意 OpenAI 兼容端点）对外暴露，因此同一套原型/deck 工作流可被 20+ CLI 调用。你在类浏览器的渲染器里做原型、调 Live Artifact 参数，然后导出文件就走——无需账号，没有按席位计费的 SaaS。
 
@@ -79,7 +79,7 @@ health:
 
 - **你想要托管、零配置的 SaaS。** 这是一个你需要安装并运行的桌面应用（Electron + 本地 Node daemon）。如果你更想登录一个网站、由厂商打理一切，那么专有的 Claude Design / 类似托管工具更契合——本项目是用这份便利换本地掌控。
 - **你需要真正的矢量设计 / 自由画布编辑。** 它生成的是*代码渲染*的产物（HTML/PPTX/MP4），不是可编辑的矢量文档。它定位为“生成侧的 Figma 替代”，但并非协作矢量编辑器——要逐像素手调、实时多人协作或精确矢量工作，Figma/Penpot 仍是该用的工具。
-- **早期成熟度 / 频繁变动。** 它仍是 pre-1.0(v0.11.0)，发版快、插件 "Bazaar" 持续扩张；Skills、插件格式和 agent 适配面都还在动。[推断] 锁定风险低（开放格式、Apache-2.0），但 minor 版本之间出现破坏性变更是有可能的。
+- **早期成熟度 / 频繁变动。** 它仍是 pre-1.0（v0.11.0），发版快、插件“Bazaar”持续扩张；Skills、插件格式和 agent 适配面都还在动。[推断] 锁定风险低（开放格式、Apache-2.0），但 minor 版本之间出现破坏性变更是有可能的。
 - **没有 GPU/视频预算却要大量 MP4。** HyperFrames（HTML→MP4）和视频生成依赖本地渲染加上你的 BYOK 模型花费；大批量视频既不免费也不即时。
 - **你无法或不愿管理模型 key。** BYOK 就是它的模式——没有内置的免费推理。没有 OpenAI 兼容端点/key，你就生成不了。
 - **团队级的生产设计系统治理。** 它是单用户的本地 studio；没有内置多人协作、评审流程或中心化资产治理。
@@ -99,8 +99,8 @@ health:
 ## 技术栈
 
 - **语言：** TypeScript（仓库主语言）。
-- **前端/Studio:** Next.js 16 App Router + React 18。[未验证] 具体框架版本来自 README，可能随版本变动。
-- **本地 daemon:** Node 24 · Express · SSE 流式 · `better-sqlite3` 存储项目/会话。
+- **前端/Studio：** Next.js 16 App Router + React 18。[未验证] 具体框架版本来自 README，可能随版本变动。
+- **本地 daemon：** Node 24 · Express · SSE 流式 · `better-sqlite3` 存储项目/会话。
 - **桌面外壳：** Electron + 沙箱 renderer；原型在沙箱 iframe / 仅回环的预览服务里渲染。
 - **集成：** MCP server + BYOK 代理，支持任意 OpenAI 兼容端点（发版说明称带 SSRF 防护）。
 - **内容：** 约 150 套 `DESIGN.md` 设计系统、100+ Skills、261 个官方插件；deck 模板/主题。
@@ -110,8 +110,8 @@ health:
 
 - **运行时：** 从源码运行需 Node ~24 与 pnpm（README 提到 pnpm 10.33.x）；打包好的桌面版（macOS / Windows / Linux AppImage）自带运行时，无需另装。
 - **模型：** 一个 OpenAI 兼容端点的 BYOK key——任何生成都必需；不内置推理。
-- **数据存储：** 本地 SQLite(`better-sqlite3`)；核心使用不需要外部数据库/服务。
-- **可选：** Docker Desktop（web/Docker 部署）或 Vercel(web)。[未验证] 视频/HyperFrame 导出可能拉取额外的本地渲染依赖——请对照当前文档核实。
+- **数据存储：** 本地 SQLite（`better-sqlite3`）；核心使用不需要外部数据库/服务。
+- **可选：** Docker Desktop（web/Docker 部署）或 Vercel（web）。[未验证] 视频/HyperFrame 导出可能拉取额外的本地渲染依赖——请对照当前文档核实。
 
 ## 运维难度
 

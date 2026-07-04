@@ -212,6 +212,25 @@ class QualityScanTest(unittest.TestCase):
 
             self.assertTrue(any(f.category == "indexed-page-marked-not-indexed" and "未收录" in f.evidence for f in result.findings))
 
+    def test_detects_plain_text_indexed_slug_marked_not_indexed(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            write_page(root, "categories/demo/yt-dlp.md", "## Comparison\n")
+            write_page(
+                root,
+                "categories/demo/youtube-dl.md",
+                """## Comparison
+
+| Alternative | In index | Our verdict |
+|---|---|---|
+| yt-dlp | 未收录 | Pick it by default. |
+""",
+            )
+
+            result = quality_scan.scan(root)
+
+            self.assertTrue(any(f.category == "indexed-page-marked-not-indexed" and "yt-dlp" in f.evidence for f in result.findings))
+
     def test_counts_health_unknown_axes_by_axis_and_reason(self) -> None:
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
@@ -323,6 +342,91 @@ class QualityScanTest(unittest.TestCase):
             result = quality_scan.scan(root)
 
             self.assertFalse(any(f.category == "health-prose-grade-drift" for f in result.findings))
+
+    def test_detects_health_prose_raw_drift_for_ttfr(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            write_page_with_health(
+                root,
+                "categories/demo/demo.md",
+                """## Health & viability
+
+- **Responsiveness**: Grade A — median first-response time 8.7 hours across 38 qualifying issues/PRs.
+""",
+                """    responsiveness:
+      grade: A
+      raw:
+        median_ttfr_hours: 12.6
+        qualifying_issues: 38
+""",
+            )
+
+            result = quality_scan.scan(root)
+
+            self.assertTrue(any(f.category == "health-prose-raw-drift" and "median_ttfr_hours=12.6" in f.message for f in result.findings))
+
+    def test_detects_chinese_health_prose_raw_drift_for_repo_age(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            write_page_with_health(
+                root,
+                "categories/demo/demo.zh.md",
+                """## 健康度与可持续性
+
+- **长青度**：Grade A——仓库已创建 2567 天。
+""",
+                """    longevity:
+      grade: A
+      raw:
+        repo_age_days: 2568
+""",
+            )
+
+            result = quality_scan.scan(root)
+
+            self.assertTrue(any(f.category == "health-prose-raw-drift" and "repo_age_days=2568" in f.message for f in result.findings))
+
+    def test_matching_health_prose_raw_value_is_not_reported(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            write_page_with_health(
+                root,
+                "categories/demo/demo.md",
+                """## Health & viability
+
+- **Longevity**: Grade A — 2,568 days old.
+""",
+                """    longevity:
+      grade: A
+      raw:
+        repo_age_days: 2568
+""",
+            )
+
+            result = quality_scan.scan(root)
+
+            self.assertFalse(any(f.category == "health-prose-raw-drift" for f in result.findings))
+
+    def test_health_prose_raw_drift_ignores_unrelated_numbers(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            write_page_with_health(
+                root,
+                "categories/demo/demo.md",
+                """## Health & viability
+
+- **Adoption**: Grade A — ~53k stars plus de-facto ecosystem status.
+""",
+                """    adoption:
+      grade: A
+      raw:
+        downloads_last_month: 80749282
+""",
+            )
+
+            result = quality_scan.scan(root)
+
+            self.assertFalse(any(f.category == "health-prose-raw-drift" for f in result.findings))
 
     def test_report_labels_reviewer_only_dimensions(self) -> None:
         with tempfile.TemporaryDirectory() as td:
