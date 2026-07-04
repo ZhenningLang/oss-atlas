@@ -87,12 +87,12 @@ UI UX Pro Max 就是把这种判断力装进 agent。你跑 `npm install -g ui-u
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| designer-skills | 未收录 | 当前页用于它的主场景；如果更看重“本 leaf 内的同类 UI/UX 设计 skill pack”，再选 designer-skills。 | 本 leaf 内的同类 UI/UX 设计 skill pack；对比点在于它是否带检索引擎 + 规则数据库，还是纯 prompt 指导。 |
-| stitch-skills | 未收录 | 当前页用于它的主场景；如果更看重“同 leaf 的设计 skill pack”，再选 stitch-skills。 | 同 leaf 的设计 skill pack；生成面不同——衡量哪个更贴合你的技术栈（HTML/Tailwind/React）和 harness。 |
-| taste-skill | 未收录 | 当前页用于它的主场景；如果更看重“同 leaf 中聚焦视觉*品味*/评审的 skill”，再选 taste-skill。 | 同 leaf 中聚焦视觉*品味*/评审的 skill；与本 pack 这类偏生成的 skill 是互补而非替代关系。 |
-| make-interfaces-feel-better | 未收录 | 当前页用于它的主场景；如果更看重“同 leaf 中针对已有界面打磨/手感的 skill”，再选 make-interfaces-feel-better。 | 同 leaf 中针对已有界面打磨/手感的 skill；范围比本 pack 的“产品类型→设计系统”流水线更窄。 |
-| Anthropic / 内置 agent skills 和 slash command | 未收录 | 当前页用于它的主场景；如果更看重“平台原生的 skill 生态”，再选 Anthropic / 内置 agent skills 和 slash command。 | 平台原生的 skill 生态；本项目是叠在其上的第三方 bundle，可能与原生设计助手重复或冲突。 |
-| 手写的项目 `DESIGN.md` 设计系统 | 未收录 | 当前页用于它的主场景；如果更看重“你自己维护的逐项目设计契约”，再选 手写的项目 DESIGN.md 设计系统。 | 你自己维护的逐项目设计契约；更贴合、更稳定，但需要你自己搭建并强制执行，而不是直接拿到一套 161 条规则的起点。 |
+| [designer-skills](designer-skills.zh.md) | ✅ | 需要本 leaf 内另一套 UI/UX 设计 skill pack，且偏纯 prompt 指导时，选 designer-skills。 | 本 leaf 内的同类 UI/UX 设计 skill pack；对比点在于它是否带检索引擎 + 规则数据库，还是纯 prompt 指导。 |
+| [stitch-skills](stitch-skills.zh.md) | ✅ | 同 leaf 设计包里，更需要设计生成/转换链路时，选 stitch-skills。 | 同 leaf 的设计 skill pack；生成面不同——衡量哪个更贴合你的技术栈（HTML/Tailwind/React）和 harness。 |
+| [taste-skill](taste-skill.zh.md) | ✅ | 只需要聚焦视觉*品味*/评审的 skill，而不是端到端规则库时，选 taste-skill。 | 同 leaf 中聚焦视觉*品味*/评审的 skill；与本 pack 这类偏生成的 skill 是互补而非替代关系。 |
+| [make-interfaces-feel-better](make-interfaces-feel-better.zh.md) | ✅ | 主要需求是已有界面的打磨/手感，而不是产品类型到设计系统流水线时，选 make-interfaces-feel-better。 | 同 leaf 中针对已有界面打磨/手感的 skill；范围比本 pack 的“产品类型→设计系统”流水线更窄。 |
+| Anthropic / 内置 agent skills 和 slash command | 未收录 | 只想用平台原生 skill/command，避免第三方 bundle 与原生设计助手重复时，选内置生态。 | 平台原生的 skill 生态；本项目是叠在其上的第三方 bundle，可能与原生设计助手重复或冲突。 |
+| 手写的项目 `DESIGN.md` 设计系统 | 未收录 | 需要逐项目、可强制执行且完全自维护的设计契约时，选手写 `DESIGN.md`。 | 你自己维护的逐项目设计契约；更贴合、更稳定，但需要你自己搭建并强制执行，而不是直接拿到一套 161 条规则的起点。 |
 
 ## 健康度与可持续性
 
