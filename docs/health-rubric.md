@@ -204,7 +204,7 @@ query($o:String!,$n:String!){ repository(owner:$o,name:$n){
 - `registry_lookup_failed` — packages.ecosyste.ms lookup transport or HTTP/API failure; this is a tool/data-source failure, not evidence of zero adoption.
 - `registry_no_counts` — a canonical package exists, but comparable dependency/download counts are unavailable. Maven/Go commonly hit this, but the condition is data-shape based rather than registry-name-only. If dependents ARE present → score from dependents, not `?`.
 - `ambiguous` — multiple plausible canonical packages, none clears the noise filter.
-- **A `tool`/`library` that merely fails lookup is NOT `?`** — it is **E** (measurably unadopted) or a manual-flag, never `?`. Archived repos keep their last computed tier with an `archived` flag, not `?`.
+- **A `tool`/`library` with a successful empty lookup is NOT `?`** — if packages.ecosyste.ms responds successfully and no canonical package clears the noise filter, score **E** (measurably unadopted) or manual-flag. Transport / HTTP / API failures are `registry_lookup_failed` (`?`), not evidence of zero adoption. Archived repos keep their last computed tier with an `archived` flag, not `?`.
 
 **Data source / exact calls**
 ```
