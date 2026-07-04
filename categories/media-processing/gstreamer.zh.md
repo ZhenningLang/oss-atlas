@@ -87,7 +87,7 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [FFmpeg](ffmpeg.md) | ✅ | 用 FFmpeg 做 CLI 批量转码、格式转换和通用编解码。 | FFmpeg 是通用 CLI + 库；GStreamer 是管线图框架。FFmpeg 擅长一次性变换，GStreamer 擅长实时、持久、嵌入应用的管线。GStreamer 常通过插件在底层使用 FFmpeg/libav 的编解码器。 |
+| [FFmpeg](ffmpeg.zh.md) | ✅ | 用 FFmpeg 做 CLI 批量转码、格式转换和通用编解码。 | FFmpeg 是通用 CLI + 库；GStreamer 是管线图框架。FFmpeg 擅长一次性变换，GStreamer 擅长实时、持久、嵌入应用的管线。GStreamer 常通过插件在底层使用 FFmpeg/libav 的编解码器。 |
 | HandBrake | 未收录 | 用 HandBrake 做面向终端用户的预设驱动转码（GUI + CLI）。 | 基于 FFmpeg/x264/x265；适合「rip 成 MP4/MKV」的体验，不是库或管线框架。 |
 | MLT / Shotcut | 未收录 | 用 MLT/Shotcut 做带时间线模型的 NLE 剪辑/合成。 | 面向编辑的多媒体框架；编解码实际由 FFmpeg 承担。需要编辑器而非实时管线时选它。 |
 | AWS Elemental MediaConvert | 未收录 | 用云转码服务做托管、弹性、按分钟计费的转码。 | SaaS，不是自托管框架。零运维但厂商锁定且按分钟收费。内部通常基于 FFmpeg。 |

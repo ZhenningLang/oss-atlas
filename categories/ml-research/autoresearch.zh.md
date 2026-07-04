@@ -90,7 +90,7 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [llm-circuit-finder](llm-circuit-finder.md) | ✅ | 当前页用于它的主场景；如果更看重“同样是小巧、自包含的研究 demo，但它探索的是在既有大模型上做*推理期*的层复制 / circuit 路由”，再选 llm-circuit-finder。 | 同样是小巧、自包含的研究 demo，但它探索的是在既有大模型上做*推理期*的层复制 / circuit 路由——没有训练循环、没有 agent 驱动的迭代；研究问题完全不同。 |
+| [llm-circuit-finder](llm-circuit-finder.zh.md) | ✅ | 需要小巧自包含、研究推理期层复制或 circuit 路由的 demo 时，选 llm-circuit-finder。 | 同样是小巧、自包含的研究 demo，但它探索的是在既有大模型上做*推理期*的层复制 / circuit 路由——没有训练循环、没有 agent 驱动的迭代；研究问题完全不同。 |
 | nanochat | 未收录 | 当前页用于它的主场景；如果更看重“本项目正是从这个完整单卡 GPT 训练项目简化而来”，再选 nanochat。 | 本项目正是从这个完整单卡 GPT 训练项目简化而来；它面向人类端到端训练一个真正的小型 ChatGPT clone，而非让 agent 在时间预算下改写它。 |
 | nanoGPT | 未收录 | 当前页用于它的主场景；如果更看重“极简 GPT 训练参考”，再选 nanoGPT。 | 极简 GPT 训练参考；教学型 baseline，靠手工编辑，没有 agentic-research 的框架，也没有固定预算的评测 harness。 |
 | AI-Scientist (Sakana) | 未收录 | 当前页用于它的主场景；如果更看重“一条更重的端到端「agent 做科研」流水线（想法→实验→论文撰写）”，再选 AI-Scientist (Sakana)。 | 一条更重的端到端「agent 做科研」流水线（想法→实验→论文撰写）；范围更广、活动部件远多于这个单文件训练循环。 |

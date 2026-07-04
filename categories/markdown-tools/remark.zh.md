@@ -94,7 +94,7 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [marked](../markdown-tools/marked.md) | ✅ | 当前页用于它的主场景；如果更看重「快速、零依赖、一次调用即可把 Markdown 解析成 HTML、API 面极小」，再选 marked。 | 快速、零依赖、一次调用即可把 Markdown 解析成 HTML、API 面极小；没有 AST 或插件管线，因此无法在渲染前 lint 或变换。 |
+| [marked](../markdown-tools/marked.zh.md) | ✅ | 需要快速、零依赖、一次调用把 Markdown 解析成 HTML 时，选 marked。 | 快速、零依赖、一次调用即可把 Markdown 解析成 HTML、API 面极小；没有 AST 或插件管线，因此无法在渲染前 lint 或变换。 |
 | markdown-it | 未收录 | 当前页用于它的主场景；如果更看重「CommonMark 严格、可插拔、插件目录庞大、API 比 remark 更简单」，再选 markdown-it。 | CommonMark 严格、可插拔、插件目录庞大；API 比 remark 简单，但仍缺乏 unified 的完整 AST 变换工具链。 |
 | micromark | 未收录 | 当前页用于它的主场景；如果更看重「remark 底下那个低层流式分词器（例如要自定义渲染器）」，再选 micromark。 | remark 底下那个低层流式分词器；正确且快速，但渲染和变换层要你自己搭建。 |
 | CommonMark 参考实现（commonmark.js） | 未收录 | 当前页用于它的主场景；如果更看重「规范自己的参考实现，用于一致性测试」，再选 commonmark.js。 | 规范自己的参考实现；是一致性标尺，但无插件生态，也未针对生产渲染做优化。 |

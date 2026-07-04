@@ -90,7 +90,7 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [Driver.js](driver-js.md) | ✅ | 使用本页针对的场景；当你需要一个极小、零依赖的引导库时选择 [Driver.js](driver-js.md)。 | 约 4KB 的零依赖核心；体积更小，但内置定位选项较少，API 也更简单。 |
+| [Driver.js](driver-js.zh.md) | ✅ | 需要一个极小、零依赖的引导库时，选 Driver.js。 | 约 4KB 的零依赖核心；体积更小，但内置定位选项较少，API 也更简单。 |
 | Intro.js | 未收录 | 使用本页针对的场景；当你想要“原版”引导库时选择 Intro.js。 | 原版引导库，使用广泛，但现代版本采用**双重授权**（非商业免费，商业付费）——这是 Shepherd.js（MIT）能够避免的真实的锁定/成本考量。 |
 | Reactour / react-joyride | 未收录 | 使用本页针对的场景；当你需要 React 专属的引导组件（原生 hooks/JSX）时选择它们。 | React 专属引导组件（hooks/JSX 原生）；在 React 内开发体验更好，但框架锁定，不如 Shepherd.js 的框架无关核心灵活。 |
 | Appcues / Userflow / Userpilot | 未收录 | 使用本页针对的场景；当你需要商业化的无代码 onboarding **平台**时选择它们。 | 商业无代码 onboarding **平台**——包含用户分群、分析、定向、清单、调研；不是开源仓库，需持续支付 SaaS 费用，但解决的是产品驱动增长问题，而非单纯的引导渲染。 |
