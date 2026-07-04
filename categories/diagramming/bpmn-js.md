@@ -95,11 +95,11 @@ You reach for the **viewer** build when you only need to render existing diagram
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| [flowchart.js](flowchart-js.md) | ✅ | Use this page for its stated niche; choose flowchart.js when you need tiny text-DSL-to-SVG flowchart renderer. | Tiny text-DSL-to-SVG flowchart renderer; great for simple non-standard flowcharts, but no BPMN semantics, no interactive editing, far smaller scope. |
-| [Mermaid](mermaid.md) | 未收录 | Use this page for its stated niche; choose Mermaid when you need broad text-to-diagram tool (incl. | Broad text-to-diagram tool (incl. a basic BPMN-ish flow), Markdown-native; not a true BPMN 2.0 modeler and not interactive editing. |
-| dmn-js / form-js (bpmn.io) | 未收录 | Use this page for its stated niche; choose dmn-js / form-js (bpmn.io) when you need sibling libraries for DMN decision tables and forms. | Sibling libraries for DMN decision tables and forms; same team and architecture, but different notations — complementary, not substitutes. |
-| jBPM / Flowable web modelers | 未收录 | Use this page for its stated niche; choose jBPM / Flowable web modelers when you need engine-bundled BPMN modelers tied to a specific Java process engine. | Engine-bundled BPMN modelers tied to a specific Java process engine; integrated execution but heavier and less embeddable as a standalone JS canvas. |
-| GoJS / mxGraph (draw.io) | 未收录 | Use this page for its stated niche; choose GoJS / mxGraph (draw.io) when you need general commercial/open diagramming canvases you'd build BPMN on top of yourself. | General commercial/open diagramming canvases you'd build BPMN on top of yourself; more generic, but you implement BPMN correctness, which bpmn-js gives for free. |
+| [flowchart.js](flowchart-js.md) | ✅ | Pick flowchart.js when you only need a tiny text-DSL-to-SVG renderer for simple non-standard flowcharts. | Tiny text-DSL-to-SVG flowchart renderer; great for simple non-standard flowcharts, but no BPMN semantics, no interactive editing, far smaller scope. |
+| [Mermaid](mermaid.md) | ✅ | Pick Mermaid when Markdown-native text diagrams matter more than true BPMN 2.0 modeling. | Broad text-to-diagram tool (including a basic BPMN-ish flow), Markdown-native; not a true BPMN 2.0 modeler and not interactive editing. |
+| dmn-js / form-js (bpmn.io) | 未收录 | Pick these sibling bpmn.io libraries when the notation is DMN decision tables or forms rather than BPMN process models. | Sibling libraries for DMN decision tables and forms; same team and architecture, but different notations — complementary, not substitutes. |
+| jBPM / Flowable web modelers | 未收录 | Pick engine-bundled modelers when tight coupling to a Java process engine is the point. | Engine-bundled BPMN modelers tied to a specific Java process engine; integrated execution but heavier and less embeddable as a standalone JS canvas. |
+| GoJS / mxGraph (draw.io) | 未收录 | Pick a generic diagramming canvas only when you are prepared to implement BPMN correctness yourself. | General commercial/open diagramming canvases you'd build BPMN on top of yourself; more generic, but you implement BPMN correctness, which bpmn-js gives for free. |
 
 ## Tech stack
 
@@ -120,7 +120,7 @@ You reach for the **viewer** build when you only need to render existing diagram
 
 ## Health & viability
 
-- **Responsiveness**: Grade B — median first-response time 25.5 hours across 3 qualifying issues/PRs.
+- **Responsiveness**: Grade A — median first-response time 25.5 hours across 3 qualifying issues/PRs.
 - **Maintenance (2026-06).** Last pushed 2026-06; latest tag v18.19.0 on a steady, frequent release cadence (~81 releases). Clearly **active**, not coasting; not archived. [推断]
 - **Governance / backing.** Maintained by the **bpmn.io team at Camunda** (an established workflow-automation vendor) — a multi-maintainer org-backed project (nikku, philippfromme, barmac, marstamm…), so bus factor is healthy. Direction follows Camunda's commercial interests, the main governance caveat. [推断]
 - **Age & Lindy verdict.** Created 2014-03, ~12 years old and **still actively shipping** — a **strong Lindy** signal; the canonical, long-proven open BPMN web canvas, not a newcomer. [推断]

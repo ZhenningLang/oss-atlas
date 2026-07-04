@@ -127,7 +127,7 @@ You're a content creator, educator, or solo developer who needs to produce short
 
 ## Health & viability
 
-- **Responsiveness**: Grade B.
+- **Responsiveness**: Grade A — median first-response time 29.1 hours across 29 qualifying issues/PRs.
 - **Maintenance**: Very active — daily commits, GitHub Trending recognition, rapid feature shipping since March 2026. The project is clearly in a high-velocity build phase.
 - **Governance / bus factor**: Single visible maintainer (`calesthio`) with a solo-dev model ("built nights and weekends"). While 28.8K stars and 3.2K forks suggest a large audience, the contribution distribution is likely heavily skewed toward one author. [推断]
 - **Backing & longevity**: ~3 months old (created March 2026) — extremely young on the Lindy scale. A viral star count does not equal proven survival. The project is pre-1.0 and the API surface (pipelines, tools, skill contracts) may shift significantly. [推断]

@@ -95,10 +95,10 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [Open Design](../ai-design-generation/open-design.md) | ✅ | 更轻量，local-first HTML→MP4 | Open Design 是桌面 studio，适合快速原型；OpenMontage 是完整管线系统，含研究、脚本和 12 条生产管线。 |
+| [Open Design](../ai-design-generation/open-design.zh.md) | ✅ | 更轻量、local-first，适合快速 HTML→MP4 原型。 | Open Design 是桌面 studio，适合快速原型；OpenMontage 是完整管线系统，含研究、脚本和 12 条生产管线。 |
 | Remotion | 未收录 | 仅渲染引擎，无 Agent 编排 | OpenMontage 将 Remotion 内嵌为两个渲染后端之一；若只需要程序化 React 视频合成，可直接用 Remotion。 |
 | HeyGen / Runway / Pika | 未收录 | 闭源 SaaS，一键生成 | 单片段生成更快，但无管线定制、无 Agent 审批门、无开源扩展性，且需持续订阅费用。 |
-| [FFmpeg](../media-processing/ffmpeg.md) | ✅ | 通用媒体处理 CLI | OpenMontage 依赖 FFmpeg 做编码与后期；FFmpeg 适合需要底层媒体操作而非端到端生产管线的场景。 |
+| [FFmpeg](../media-processing/ffmpeg.zh.md) | ✅ | 需要底层媒体处理 CLI，而不是端到端生产管线时，选 FFmpeg。 | OpenMontage 依赖 FFmpeg 做编码与后期；FFmpeg 适合需要底层媒体操作而非端到端生产管线的场景。 |
 | ComfyUI | 未收录 | 节点式图像/视频生成工作流 | 在自定义扩散管线与本地 GPU 推理上更灵活，但缺乏 Agent 编排、研究、脚本撰写和预算治理。 [推断] |
 
 ## 技术栈
@@ -127,10 +127,10 @@ health:
 
 ## 健康度与可持续性
 
-- **响应速度**：Grade B。
+- **响应速度**：Grade A——中位首次响应时间 29.1 小时，基于 29 个 qualifying issues/PRs。
 - **维护活跃度**：非常活跃——每日提交、上过 GitHub Trending、自 2026 年 3 月以来快速迭代功能。项目明显处于高速建设期。
 - **维护者分散度**：可见的核心维护者只有 `calesthio` 一人，采用个人开发者模式（"nights and weekends" 构建）。虽然 28.8K stars 和 3.2K forks 说明受众庞大，但贡献分布很可能高度集中于单一作者。 [推断]
-- **长青度与可持续性**：约 3 个月大（2026 年 3 月创建）——在 Lindy 尺度上极度年轻。病毒式星标不等于已验证的长期生存能力。项目处于 pre-1.0，管线接口、工具契约、技能格式都可能大幅变动。 [推断]
+- **长青度与可持续性**：Grade D——仓库创建约 96 天（2026 年 3 月创建），在 Lindy 尺度上极度年轻。病毒式星标不等于已验证的长期生存能力。项目处于 pre-1.0，管线接口、工具契约、技能格式都可能大幅变动。 [推断]
 - **采用广度**：3 个月内 28.8K stars 和 3.2K forks 属于病毒级关注度。超出演示和单个视频的实际生产级使用尚未验证——大多数用户可能处于“尝鲜”阶段，而非作为常规工作室运行。 [未验证]
 - **风险标志**：AGPL-3.0 许可证——强 copyleft，触发网络/SaaS 级病毒义务。对于希望嵌入或在其上构建服务的人来说，这是真实的采用约束。目前尚无重新授权历史（项目太年轻）。未观察到 open-core 功能限制或 CLA 要求。 [推断]
 

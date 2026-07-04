@@ -96,25 +96,25 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [FalkorDB](falkordb.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“真正的持久化图数据库（基于 Redis,Cypher）”，再选 FalkorDB。 | 真正的持久化图数据库（基于 Redis,Cypher）;graphify 可以往它 *推送*。需要常驻多查询图存储时用 FalkorDB，需要一次性抽取 + 面向 agent 查询时用 graphify。 |
-| [PageIndex](pageindex.zh.md) | 未收录 | 当前页用于它的主场景；如果更看重“面向长文档/PDF 的、基于推理的文档结构索引做 RAG”，再选 PageIndex。 | 面向长文档/PDF 的、基于推理的文档结构索引做 RAG；没有代码 AST 或调用图。是不同的问题：散文检索 vs 代码/实体图。 |
-| [code-review-graph](code-review-graph.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“窄域的 PR/code-review 图工作流”，再选 code-review-graph。 | 窄域的 PR/code-review 图工作流；graphify 是全仓库 + 多语言 + 多模态，范围更广。 |
-| Sourcegraph / SCIP | 未收录 | 当前页用于它的主场景；如果更看重“工业级精确代码智能（跨仓库、language server）”，再选 Sourcegraph / SCIP。 | 工业级精确代码智能（跨仓库、language server）；基础设施更重，且不是 agent-skill 形态。graphify 更轻、由 LLM 增强、能直接嵌进 agent 循环。 |
-| GitHub `code2graph` / 自写 tree-sitter 脚本 | 未收录 | 当前页用于它的主场景；如果更看重“自己搭 AST 图”，再选 GitHub code2graph / 自写 tree-sitter 脚本。 | 自己搭 AST 图；更可控，但查询、聚类、可视化和 agent 集成都得自己写。 |
+| [FalkorDB](falkordb.zh.md) | ✅ | 需要持久化图数据库，而不是一次性仓库抽取时，选 FalkorDB。 | 真正的持久化图数据库（基于 Redis、Cypher）；graphify 可以往它 *推送*。需要常驻多查询图存储时用 FalkorDB，需要一次性抽取 + 面向 agent 查询时用 graphify。 |
+| [PageIndex](pageindex.zh.md) | ✅ | 问题是长文档/PDF 的结构化检索，而不是代码/实体图抽取时，选 PageIndex。 | 面向长文档/PDF 的、基于推理的文档结构索引做 RAG；没有代码 AST 或调用图。是不同的问题：散文检索 vs 代码/实体图。 |
+| [code-review-graph](code-review-graph.zh.md) | ✅ | 只需要窄域 PR/code-review 图工作流时，选 code-review-graph。 | 窄域的 PR/code-review 图工作流；graphify 是全仓库 + 多语言 + 多模态，范围更广。 |
+| Sourcegraph / SCIP | 未收录 | 需要由 language server 支撑的跨仓库精确代码智能时，选 Sourcegraph/SCIP。 | 工业级精确代码智能（跨仓库、language server）；基础设施更重，且不是 agent-skill 形态。graphify 更轻、由 LLM 增强、能直接嵌进 agent 循环。 |
+| GitHub `code2graph` / 自写 tree-sitter 脚本 | 未收录 | 控制权比现成查询、聚类、可视化和 agent 集成更重要时，选自写 AST 图。 | 自己搭 AST 图；更可控，但查询、聚类、可视化和 agent 集成都得自己写。 |
 
 ## 技术栈
 
-- **语言：** Python（仓库统计 100%,2026-06）。
+- **语言：** Python（仓库统计 100%，2026-06）。
 - **解析：** tree-sitter，内置 36 种语法解析器（Python、TS/JS、Go、Rust、Java、C/C++、C#、Kotlin、Ruby、PHP、Swift、SQL、Terraform/HCL、Apex、CUDA 等）。
 - **图分析：** Leiden 社区检测（可选 extra；标注仅 Python < 3.13）。
 - **产物：** `graph.json`（完整图）、`graph.html`（交互可视化）、`GRAPH_REPORT.md`。
-- **接口：** CLI(`graphify extract|query|export|install`)、MCP server(`python -m graphify.serve`,stdio/HTTP)，以及装进多种 agent 的 `/graphify` skill。
-- **LLM 后端（用于非代码语义节点）:** Anthropic、OpenAI、Gemini、DeepSeek/Moonshot、Azure OpenAI、Bedrock，或本地 Ollama。
+- **接口：** CLI（`graphify extract|query|export|install`）、MCP server（`python -m graphify.serve`，stdio/HTTP），以及装进多种 agent 的 `/graphify` skill。
+- **LLM 后端（用于非代码语义节点）：** Anthropic、OpenAI、Gemini、DeepSeek/Moonshot、Azure OpenAI、Bedrock，或本地 Ollama。
 
 ## 依赖
 
 - **运行时：** Python 3.10+ [未验证]；通过 `uv tool install graphifyy`（推荐）、`pipx install graphifyy` 或 `pip install graphifyy` 安装。注意 PyPI 包名是 **`graphifyy`**（双 y），而 CLI 命令是 `graphify`。
-- **可选 extras(pip):** `pdf`、`office`(DOCX/XLSX)、`video`(faster-whisper + yt-dlp)、`neo4j`、`falkordb`、`postgres`、`terraform`、`ollama`、`openai`/`gemini`/`anthropic`/`bedrock`/`azure`、`sql`、`mcp`、`leiden`、`chinese`(jieba)、`all`。
+- **可选 extras（pip）：** `pdf`、`office`（DOCX/XLSX）、`video`（faster-whisper + yt-dlp）、`neo4j`、`falkordb`、`postgres`、`terraform`、`ollama`、`openai`/`gemini`/`anthropic`/`bedrock`/`azure`、`sql`、`mcp`、`leiden`、`chinese`（jieba）、`all`。
 - **外部服务：** 给非代码文件建图需要 LLM 后端（云 API key 或本地 Ollama）；纯代码 AST 抽取是本地的。可选的下游图数据库：Neo4j、FalkorDB、PostgreSQL 内省。
 - **安全提示：** v0.8.49 升级了 `starlette` 以修复 CVE-2026-48818 和 CVE-2026-54283（引自 release notes，见存疑）。
 
@@ -124,7 +124,7 @@ health:
 
 ## 健康度与可持续性
 
-- **响应速度**：Grade A——中位首次响应时间 28.6 小时，基于 17 个 qualifying issues/PRs。
+- **响应速度**：Grade A——中位首次响应时间 6.0 小时，基于 11 个 qualifying issues/PRs。
 - **维护——活跃。** 最后一次 push 在 2026-06，未归档，发版节奏极高（143+ 个 release，截至 2026-06 每周多次）[未验证]。这里的担忧不是活跃度，而是 churn：标志“还活着”的高速度，也意味着 CLI 表面和输出 schema 会在 minor 版本间变动，所以要 pin 版本。
 - **治理 / bus factor——单维护者规模，是个真实的标志。** 仓库为 **User** 所有（`safishamsi/graphify`），约 73k star[未验证]——star 与 bus-factor 的比值很高。没有基金会或厂商托底路线图；单个人的注意力就是依赖。`[推断]` 如果这位维护者停手，项目就会停滞。
 - **年龄与 Lindy——年轻、未经证明（创建于 2026-04，截至 2026-06 约 2 个月）。** 太新，还没挣到 Lindy 先验：一个仅几个月、单维护者的仓库上堆着大量 star，是热度而非履历。把它当作有潜力但未定型，而非可长期下注的安全选择。

@@ -96,11 +96,11 @@ It fits especially well when the graph spans more than just app code — graphif
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| [FalkorDB](falkordb.md) | ✅ | Use this page for its stated niche; choose FalkorDB when you need a real persistent graph database (Redis-based, Cypher). | A real persistent graph database (Redis-based, Cypher); graphify can *push* to it. Use FalkorDB when you need a live multi-query graph store, graphify when you want one-shot extraction + agent-facing query. |
-| [PageIndex](pageindex.md) | 未收录 | Use this page for its stated niche; choose PageIndex when you need reasoning-based document-structure indexing for RAG over long docs/PDFs. | Reasoning-based document-structure indexing for RAG over long docs/PDFs; no code AST or call-graph. Different problem: prose retrieval vs code/entity graph. |
-| [code-review-graph](code-review-graph.md) | ✅ | Use this page for its stated niche; choose code-review-graph when you need narrow PR/code-review graph workflow. | Narrow PR/code-review graph workflow; graphify is whole-repo + multi-language + multi-modal and broader in scope. |
-| Sourcegraph / SCIP | 未收录 | Use this page for its stated niche; choose Sourcegraph / SCIP when you need industrial-grade precise code intelligence (cross-repo, language servers). | Industrial-grade precise code intelligence (cross-repo, language servers); heavier infra and not agent-skill-shaped. graphify is lighter, LLM-augmented, drops into an agent loop. |
-| GitHub `code2graph` / tree-sitter scripts | 未收录 | Use this page for its stated niche; choose GitHub code2graph / tree-sitter scripts when you need roll-your-own AST graphs. | Roll-your-own AST graphs; more control, but you build query, clustering, viz, and agent integration yourself. |
+| [FalkorDB](falkordb.md) | ✅ | Pick FalkorDB when you need a persistent graph database, not one-shot repo extraction. | A real persistent graph database (Redis-based, Cypher); graphify can *push* to it. Use FalkorDB when you need a live multi-query graph store, graphify when you want one-shot extraction + agent-facing query. |
+| [PageIndex](pageindex.md) | ✅ | Pick PageIndex when the problem is long-document/PDF structure retrieval rather than code/entity graph extraction. | Reasoning-based document-structure indexing for RAG over long docs/PDFs; no code AST or call-graph. Different problem: prose retrieval vs code/entity graph. |
+| [code-review-graph](code-review-graph.md) | ✅ | Pick code-review-graph when you only need the narrow PR/code-review graph workflow. | Narrow PR/code-review graph workflow; graphify is whole-repo + multi-language + multi-modal and broader in scope. |
+| Sourcegraph / SCIP | 未收录 | Pick Sourcegraph/SCIP when you need precise cross-repo code intelligence backed by language servers. | Industrial-grade precise code intelligence (cross-repo, language servers); heavier infra and not agent-skill-shaped. graphify is lighter, LLM-augmented, drops into an agent loop. |
+| GitHub `code2graph` / tree-sitter scripts | 未收录 | Pick roll-your-own AST scripts when control matters more than bundled query, clustering, visualization, and agent integration. | Roll-your-own AST graphs; more control, but you build query, clustering, viz, and agent integration yourself. |
 
 ## Tech stack
 
@@ -124,7 +124,7 @@ It fits especially well when the graph spans more than just app code — graphif
 
 ## Health & viability
 
-- **Responsiveness**: Grade A — median first-response time 28.6 hours across 17 qualifying issues/PRs.
+- **Responsiveness**: Grade A — median first-response time 6.0 hours across 11 qualifying issues/PRs.
 - **Maintenance — active.** Last pushed 2026-06, not archived, very high release cadence (143+ releases, multiple per week as of 2026-06) [未验证]. Activity is not the worry here; churn is — the velocity that signals "alive" also means CLI surface and output schema move between minor versions, so pin a version.
 - **Governance / bus factor — single-maintainer-scale, a real flag.** The repo is **User**-owned (`safishamsi/graphify`) with ~73k stars [未验证] — a high star-to-bus-factor ratio. No foundation or vendor backs the roadmap; one person's attention is the dependency. `[推断]` If that maintainer stops, the project stalls.
 - **Age & Lindy — young, unproven (created 2026-04, ~2 months old as of 2026-06).** Too new to have earned a Lindy prior: heavy stars on a months-old single-maintainer repo are hype, not a track record. Treat it as promising-but-unsettled, not a safe long-term bet.
