@@ -259,6 +259,71 @@ class QualityScanTest(unittest.TestCase):
 
             self.assertTrue(any(f.category == "health-prose-grade-drift" and "Responsiveness" in f.evidence for f in result.findings))
 
+    def test_detects_chinese_health_prose_grade_drift(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            write_page_with_health(
+                root,
+                "categories/demo/demo.zh.md",
+                """## 健康度与可持续性
+
+- **响应速度**：Grade C，样本不足。
+""",
+                """    responsiveness:
+      grade: "?"
+      raw: {}
+  unknowns:
+    responsiveness: { reason: no_traffic }
+""",
+            )
+
+            result = quality_scan.scan(root)
+
+            self.assertTrue(any(f.category == "health-prose-grade-drift" and "响应速度" in f.evidence for f in result.findings))
+
+    def test_chinese_governance_line_with_maintainer_word_is_not_maintenance_drift(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            write_page_with_health(
+                root,
+                "categories/demo/demo.zh.md",
+                """## 健康度与可持续性
+
+- **治理集中度**：Grade B，若核心维护者退出，项目仍有多人维护。
+""",
+                """    maintenance:
+      grade: A
+      raw: {}
+    governance:
+      grade: B
+      raw: {}
+""",
+            )
+
+            result = quality_scan.scan(root)
+
+            self.assertFalse(any(f.category == "health-prose-grade-drift" for f in result.findings))
+
+    def test_matching_chinese_health_prose_grade_is_not_reported(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            write_page_with_health(
+                root,
+                "categories/demo/demo.zh.md",
+                """## 健康度与可持续性
+
+- **维护活跃度**：Grade A，提交活跃。
+""",
+                """    maintenance:
+      grade: A
+      raw: {}
+""",
+            )
+
+            result = quality_scan.scan(root)
+
+            self.assertFalse(any(f.category == "health-prose-grade-drift" for f in result.findings))
+
     def test_report_labels_reviewer_only_dimensions(self) -> None:
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)

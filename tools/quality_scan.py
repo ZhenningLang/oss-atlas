@@ -29,12 +29,12 @@ NOT_INDEXED_MARKERS = ["not indexed", "未收录"]
 LINK_RE = re.compile(r"\[([^\]]+)\]\(([^)]+)\)")
 HEALTH_AXES = ["maintenance", "responsiveness", "adoption", "longevity", "governance", "risk_license"]
 AXIS_LABELS = {
-    "maintenance": ["Maintenance", "维护"],
-    "responsiveness": ["Responsiveness", "响应"],
-    "adoption": ["Adoption", "采用"],
-    "longevity": ["Longevity", "长青"],
-    "governance": ["Governance", "Bus factor", "Bus Factor", "维护者"],
-    "risk_license": ["Risk", "License", "Risk/License", "许可"],
+    "maintenance": ["Maintenance", "维护活跃度"],
+    "responsiveness": ["Responsiveness", "响应速度", "响应性"],
+    "adoption": ["Adoption", "采用广度", "采用度"],
+    "longevity": ["Longevity", "长青度"],
+    "governance": ["Governance", "Bus factor", "Bus Factor", "治理集中度", "维护者分散度"],
+    "risk_license": ["Risk", "License", "Risk/License", "许可宽松度", "许可证风险"],
 }
 
 
