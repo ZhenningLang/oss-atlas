@@ -96,12 +96,12 @@ It's also a good fit when you expect to swap models often. Because DSPy routes c
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| [AgentScope](agentscope.md) | ✅ | Use this page for its stated niche; choose AgentScope when you need multi-agent runtime/messaging platform. | Multi-agent runtime/messaging platform; focuses on agent orchestration & coordination, not compiling/optimizing single LM programs against a metric. |
-| [Symphony](symphony.md) | ✅ | Use this page for its stated niche; choose Symphony when you need agent framework with a different orchestration model. | Agent framework with a different orchestration model; DSPy's distinctive feature is the optimizer layer, which most agent frameworks don't have. |
-| LangChain | 未收录 | Use this page for its stated niche; choose LangChain when you need far broader integration/chain/agent catalog and ecosystem. | Far broader integration/chain/agent catalog and ecosystem; prompts stay hand-authored. DSPy trades breadth for systematic prompt/weight optimization. |
-| LlamaIndex | 未收录 | Use this page for its stated niche; choose LlamaIndex when you need RAG/data-framework heavyweight with rich connectors and indices. | RAG/data-framework heavyweight with rich connectors and indices; DSPy is lighter on data plumbing but optimizes the reasoning program itself. |
-| TextGrad | 未收录 | Use this page for its stated niche; choose TextGrad when you need also optimizes LM pipelines, via "textual gradients" / backprop-through-text. | Also optimizes LM pipelines, via "textual gradients" / backprop-through-text; narrower module model than DSPy's signatures+optimizers. |
-| AdalFlow (LightRAG) | 未收录 | Use this page for its stated niche; choose AdalFlow (LightRAG) when you need "PyTorch-like" library for building & auto-optimizing LM apps. | "PyTorch-like" library for building & auto-optimizing LM apps; closest in philosophy (optimize, don't hand-prompt), smaller ecosystem. |
+| [AgentScope](agentscope.md) | ✅ | Pick AgentScope when you need a multi-agent runtime and messaging platform rather than prompt/program optimization. | Multi-agent runtime/messaging platform; focuses on agent orchestration & coordination, not compiling/optimizing single LM programs against a metric. |
+| [Symphony](symphony.md) | ✅ | Pick Symphony when you need a different agent orchestration model and not DSPy's optimizer layer. | Agent framework with a different orchestration model; DSPy's distinctive feature is the optimizer layer, which most agent frameworks don't have. |
+| [LangChain](langchain.md) | ✅ | Pick LangChain when ecosystem breadth and integrations matter more than systematic prompt/program optimization. | Far broader integration/chain/agent catalog and ecosystem; prompts stay hand-authored. DSPy trades breadth for systematic prompt/weight optimization. |
+| LlamaIndex | 未收录 | Pick LlamaIndex when RAG/data connectors and indices are the core need. | RAG/data-framework heavyweight with rich connectors and indices; DSPy is lighter on data plumbing but optimizes the reasoning program itself. |
+| TextGrad | 未收录 | Pick TextGrad when textual-gradient optimization is the mechanism you want to explore. | Also optimizes LM pipelines, via "textual gradients" / backprop-through-text; narrower module model than DSPy's signatures+optimizers. |
+| AdalFlow (LightRAG) | 未收录 | Pick AdalFlow when you want a smaller PyTorch-like LM app library with a similar optimize-don't-hand-prompt philosophy. | "PyTorch-like" library for building & auto-optimizing LM apps; closest in philosophy (optimize, don't hand-prompt), smaller ecosystem. |
 
 ## Tech stack
 
@@ -125,7 +125,7 @@ It's also a good fit when you expect to swap models often. Because DSPy routes c
 
 ## Health & viability
 
-- **Responsiveness**: Grade A — median first-response time 19.9 hours across 42 qualifying issues/PRs.
+- **Responsiveness**: Grade A — median first-response time 19.7 hours across 37 qualifying issues/PRs.
 - **Maintenance — active (as of 2026-06).** Last push 2026-06; latest release 3.2.1 (2026-05). Steady release flow on a v3.x line; not archived. Reads as healthily maintained, with 540+ open issues reflecting a large active user base rather than neglect.
 - **Governance & backing — org/academic-anchored.** Lives under `stanfordnlp` (Stanford NLP), a research-org owner rather than a single vendor or lone maintainer; provenance (the original DSP/DSPy papers) gives it academic credibility. Not foundation-governed, but the bus factor is broader than a personal repo. [推断]
 - **Age & Lindy — old(ish) and still active ⇒ strong prior.** Created 2023-01, ~3 years old (as of 2026-06) and still shipping. By age × still-active it clears the Lindy bar that the younger agent frameworks in this category do not — a comparatively safe long-term bet for the *paradigm*, even though the API churns within it.

@@ -93,10 +93,10 @@ You're an applied-AI engineer who's hit a wall hand-tuning a long skill/prompt d
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| DSPy | 未收录 | Use this page for its stated niche; choose DSPy when you need mature framework for programmatic prompt/pipeline optimization (compilers, teleprompters) over froze. | Mature framework for programmatic prompt/pipeline optimization (compilers, teleprompters) over frozen LLMs; broader and battle-tested, but optimizes prompts/programs rather than a single deployable skill doc. |
-| TextGrad | 未收录 | Use this page for its stated niche; choose TextGrad when you need "Backprop through text". | "Backprop through text" — optimizes prompts/text via natural-language gradients; similar text-space spirit, different update mechanism, not skill-doc-artifact-centric. |
-| PromptBreeder / APE / OPRO | 未收录 | Use this page for its stated niche; choose PromptBreeder / APE / OPRO when you need LLM-driven prompt-search/evolution methods. | LLM-driven prompt-search/evolution methods; overlap on automated prompt improvement, but typically prompt strings, not validation-gated reusable skill artifacts. |
-| Manual prompt engineering | 未收录 | Use this page for its stated niche; choose Manual prompt engineering when you need no tooling, full control, zero infra. | No tooling, full control, zero infra; but unmeasured, non-reproducible, and exactly the toil SkillOpt automates. |
+| [DSPy](dspy.md) | ✅ | Pick DSPy when you need a mature framework for optimizing LM programs and pipelines, not one deployable skill document. | Mature framework for programmatic prompt/pipeline optimization (compilers, teleprompters) over frozen LLMs; broader and battle-tested, but optimizes prompts/programs rather than a single deployable skill doc. |
+| TextGrad | 未收录 | Pick TextGrad when "backprop through text" and natural-language gradients are the mechanism you want. | "Backprop through text" — optimizes prompts/text via natural-language gradients; similar text-space spirit, different update mechanism, not skill-doc-artifact-centric. |
+| PromptBreeder / APE / OPRO | 未收录 | Pick these methods when you want LLM-driven prompt search/evolution rather than validation-gated reusable skills. | LLM-driven prompt-search/evolution methods; overlap on automated prompt improvement, but typically prompt strings, not validation-gated reusable skill artifacts. |
+| Manual prompt engineering | 未收录 | Pick manual prompting when no tooling, full control, and zero infra matter more than measurement and reproducibility. | No tooling, full control, zero infra; but unmeasured, non-reproducible, and exactly the toil SkillOpt automates. |
 
 ## Tech stack
 
@@ -119,7 +119,7 @@ You're an applied-AI engineer who's hit a wall hand-tuning a long skill/prompt d
 
 ## Health & viability
 
-- **Responsiveness**: Grade A — median first-response time 39.0 hours across 29 qualifying issues/PRs.
+- **Responsiveness**: Grade A — median first-response time 42.0 hours across 30 qualifying issues/PRs.
 - **Maintenance (2026-06).** Created 2026-05; last pushed/committed 2026-06 — very actively committed in its first weeks. v0.1.0. **Active** and **not archived**, but this is initial-release velocity, not a track record. [推断]
 - **Governance / backing.** Published under the **microsoft** org — strong institutional backing and a multi-contributor team (better bus factor than a solo repo). Caveat: Microsoft/MSR research repos vary widely in long-term support; org backing is not a maintenance guarantee. [推断]
 - **Age & Lindy verdict.** **~1 month old** (created 2026-05) — **no Lindy whatsoever**. Treat durability as entirely unproven; this is a fresh research artifact. [推断]

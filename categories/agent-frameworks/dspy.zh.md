@@ -96,17 +96,17 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [AgentScope](agentscope.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“多 agent 运行时/消息平台”，再选 AgentScope。 | 多 agent 运行时/消息平台；聚焦 agent 编排与协作，而非把单个 LM 程序对照指标编译/优化。 |
-| [Symphony](symphony.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“编排模型不同的 agent 框架”，再选 Symphony。 | 编排模型不同的 agent 框架；DSPy 的标志特性是优化器层，这是多数 agent 框架所没有的。 |
-| LangChain | 未收录 | 当前页用于它的主场景；如果更看重“集成/chain/agent 目录与生态广得多”，再选 LangChain。 | 集成/chain/agent 目录与生态广得多；提示词仍靠手写。DSPy 用广度换取系统化的提示词/权重优化。 |
-| LlamaIndex | 未收录 | 当前页用于它的主场景；如果更看重“RAG/数据框架重量级，连接器与索引丰富”，再选 LlamaIndex。 | RAG/数据框架重量级，连接器与索引丰富；DSPy 数据管线更轻，但优化的是推理程序本身。 |
-| TextGrad | 未收录 | 当前页用于它的主场景；如果更看重“同样优化 LM 流水线，走“文本梯度”/对文本反向传播”，再选 TextGrad。 | 同样优化 LM 流水线，走“文本梯度”/对文本反向传播；模块模型比 DSPy 的 signatures+optimizers 更窄。 |
-| AdalFlow(LightRAG) | 未收录 | 当前页用于它的主场景；如果更看重““类 PyTorch”的库，用来构建并自动优化 LM 应用”，再选 AdalFlow(LightRAG)。 | “类 PyTorch”的库，用来构建并自动优化 LM 应用；理念最接近（优化而非手写提示词），生态更小。 |
+| [AgentScope](agentscope.zh.md) | ✅ | 需要多 agent 运行时和消息平台，而不是 prompt/程序优化时，选 AgentScope。 | 多 agent 运行时/消息平台；聚焦 agent 编排与协作，而非把单个 LM 程序对照指标编译/优化。 |
+| [Symphony](symphony.zh.md) | ✅ | 需要另一种 agent 编排模型，而不是 DSPy 的优化器层时，选 Symphony。 | 编排模型不同的 agent 框架；DSPy 的标志特性是优化器层，这是多数 agent 框架所没有的。 |
+| [LangChain](langchain.zh.md) | ✅ | 生态广度和集成数量比系统化 prompt/程序优化更重要时，选 LangChain。 | 集成/chain/agent 目录与生态广得多；提示词仍靠手写。DSPy 用广度换取系统化的提示词/权重优化。 |
+| LlamaIndex | 未收录 | 核心需求是 RAG/数据连接器与索引时，选 LlamaIndex。 | RAG/数据框架重量级，连接器与索引丰富；DSPy 数据管线更轻，但优化的是推理程序本身。 |
+| TextGrad | 未收录 | 想探索“文本梯度”优化机制时，选 TextGrad。 | 同样优化 LM 流水线，走“文本梯度”/对文本反向传播；模块模型比 DSPy 的 signatures+optimizers 更窄。 |
+| AdalFlow（LightRAG） | 未收录 | 想要更小的类 PyTorch LM 应用库，且理念同样是优化而非手写提示词时，选 AdalFlow。 | “类 PyTorch”的库，用来构建并自动优化 LM 应用；理念最接近（优化而非手写提示词），生态更小。 |
 
 ## 技术栈
 
 - **语言：** Python（pyproject 要求 `>=3.10, <3.15`）。
-- **核心抽象：** `Signature`（带类型的 I/O 规格）、`Module`（`Predict`、`ChainOfThought`、`ReAct`、`ProgramOfThought` 等），以及优化器 / “teleprompter”(`BootstrapFewShot`、`MIPROv2`、`GEPA`、`BootstrapFinetune`、`COPRO`、`SIMBA`)[推断 — 具体集合随版本不同]。
+- **核心抽象：** `Signature`（带类型的 I/O 规格）、`Module`（`Predict`、`ChainOfThought`、`ReAct`、`ProgramOfThought` 等），以及优化器 / “teleprompter”（`BootstrapFewShot`、`MIPROv2`、`GEPA`、`BootstrapFinetune`、`COPRO`、`SIMBA`）[推断 — 具体集合随版本不同]。
 - **LM 网关：** LiteLLM，提供 provider 无关的访问（OpenAI、Anthropic、本地 vLLM/Ollama 等）。
 - **校验/序列化：** Pydantic v2、orjson、json-repair（把模型输出强转成带类型的字段）。
 - **缓存/健壮性：** diskcache + cachetools（LM 响应缓存）、tenacity（重试）、cloudpickle（程序序列化）。
@@ -125,7 +125,7 @@ health:
 
 ## 健康度与可持续性
 
-- **响应速度**：Grade A——中位首次响应时间 19.9 小时，基于 42 个 qualifying issues/PRs。
+- **响应速度**：Grade A——中位首次响应时间 19.7 小时，基于 37 个 qualifying issues/PRs。
 - **维护——活跃（截至 2026-06）。** 最后推送 2026-06；最新发布 3.2.1（2026-05）。在 v3.x 线上稳定出版本；未归档。读起来维护健康，540+ 未决 issue 反映的是庞大的活跃用户群而非疏于打理。
 - **治理与背书——组织 / 学术锚定。** 归在 `stanfordnlp`（斯坦福 NLP）名下，owner 是研究组织而非单一厂商或孤身维护者；其出身（最初的 DSP/DSPy 论文）带来学术可信度。虽非基金会治理，但 bus factor 比个人仓库更宽。[推断]
 - **年龄与 Lindy——较老且仍活跃 ⇒ 强先验。** 2023-01 创建，约 3 年（截至 2026-06）且仍在出版本。按「年龄 × 仍活跃」，它跨过了本类目里更年轻的 agent 框架跨不过的 Lindy 门槛——对这一*范式*而言是相对安全的长期押注，尽管其内部 API 仍在变动。

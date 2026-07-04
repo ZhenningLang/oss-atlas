@@ -10,9 +10,9 @@ maturity: v0.x, active, 181k stars (as of 2026-07)
 last_verified: 2026-07-01
 type: framework
 upstream:
-  pushed_at: 2026-07-01T09:44:42Z
-  default_branch: main
-  default_branch_sha: 0000000000000000000000000000000000000000
+  pushed_at: 2026-07-04T12:37:42Z
+  default_branch: dev
+  default_branch_sha: 7a8e7c88f495acf5af3e7584e8ec1dbab2fe04ec
   archived: false
 health:
   schema: 1
@@ -91,11 +91,11 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 | --- | --- | --- | --- |
-| [Open Interpreter](open-interpreter.zh.md) | ✅ | 带可切换 harness 的终端编码智能体，面向开源模型。 | Open Interpreter 是 Rust 重写，带 OS 沙箱执行；OpenCode 基于 TypeScript/npm，与 JS/TS 工作流更自然集成。 |
-| [Hermes Agent](hermes-agent.zh.md) | ✅ | Nous Research 出品的带学习循环的自我改进智能体。 | Hermes 侧重跨会话技能创建与个人成长；OpenCode 是专注的编码智能体，没有学习循环。 |
-| [AutoGPT](autogpt.zh.md) | ✅ | 用于自主工作流自动化的平台。 | AutoGPT 面向复杂多步自主任务；OpenCode 是终端结对编程助手。 |
-| Claude Code | 未收录 | Anthropic 出品的闭源终端编码智能体。 | 专有、无源码、需订阅；OpenCode 开源且 BYOK。 |
-| Gemini CLI | 未收录 | Google 出品的开源终端 AI 智能体。 | Apache-2.0，Google 背书；OpenCode 是 MIT，社区驱动。 |
+| [Open Interpreter](open-interpreter.zh.md) | ✅ | OS 沙箱执行和开源模型 harness 切换是重点时，选 Open Interpreter。 | Open Interpreter 是 Rust 重写，带 OS 沙箱执行；OpenCode 基于 TypeScript/npm，与 JS/TS 工作流更自然集成。 |
+| [Hermes Agent](hermes-agent.zh.md) | ✅ | 跨会话学习循环和技能创建比专注编码 agent 更重要时，选 Hermes。 | Hermes 侧重跨会话技能创建与个人成长；OpenCode 是专注的编码智能体，没有学习循环。 |
+| [AutoGPT](autogpt.zh.md) | ✅ | 需要复杂多步自主工作流自动化，而不是终端结对编程时，选 AutoGPT。 | AutoGPT 面向复杂多步自主任务；OpenCode 是终端结对编程助手。 |
+| Claude Code | 未收录 | 能接受专有、订阅绑定的终端 agent，并想要 Anthropic 托管体验时，选 Claude Code。 | 专有、无源码、需订阅；OpenCode 开源且 BYOK。 |
+| [Gemini CLI](gemini-cli.zh.md) | ✅ | Google 背书和 Apache-2.0 比 OpenCode 的 MIT/社区模式更重要时，选 Gemini CLI。 | Apache-2.0，Google 背书；OpenCode 是 MIT，社区驱动。 |
 
 ## 技术栈
 
@@ -117,9 +117,9 @@ health:
 
 ## 健康度与可持续性
 - **维护活跃度**：Grade A——最近 13 周中 13 周有提交；最后提交距今 0 天。
-- **响应速度**：Grade C——中位首次响应时间 360.0 小时，基于 0 个 qualifying issues/PRs。
-- **采用广度**：Grade C——npmjs.org 上月下载量 127,913（包名：@opencode-ai/cli-darwin-arm64）。
-- **长青度**：Grade C——仓库已创建 428 天。
+- **响应速度**：无法计算——no_traffic。
+- **采用广度**：Grade C——npmjs.org 上月下载量 138,309（包名：@opencode-ai/cli-linux-x64）。
+- **长青度**：Grade C——仓库已创建 429 天。
 - **治理集中度**：Grade A——前三贡献者占比 45.1%（?）。
 - **许可风险**：Grade A——MIT 许可证。
 ## 存疑（未验证）
