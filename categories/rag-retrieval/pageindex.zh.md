@@ -132,5 +132,5 @@ health:
 - [未验证] 98.7% FinanceBench 准确率与“显著优于向量 RAG”是项目自报数字；基准结果依赖具体设置，本页未独立复现。
 - [未验证] LiteLLM 多提供方路由、OpenAI Agents SDK 示例与视觉 RAG 均来自验证时的项目材料；依赖前请对照当前仓库核实。
 - [推断] 面向百万文档规模的 "PageIndex File System" 以及 Cloud/MCP/API/VPC 等似乎是与 OSS 仓库不同的托管产品能力；开源库面向单文档树——假定某能力在仓库里之前，先核实开源/托管的边界。
-- [未验证] 验证时 GitHub 无打 tag 的 release（latestRelease 为 null）;“版本”即默认分支当前内容，为可复现请 pin 到某个 commit。
+- [未验证] 验证时 GitHub 无打 tag 的 release（latestRelease 为 null）；“版本”即默认分支当前内容，为可复现请 pin 到某个 commit。
 - [未验证] 除 PDF/Markdown 外的确切必需 Python 依赖与支持的输入格式来自验证时的 README，可能变动。
