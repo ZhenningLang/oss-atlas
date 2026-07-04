@@ -87,11 +87,11 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [addyosmani/agent-skills](addyosmani-agent-skills.md) | ✅ | 当前页用于它的主场景；如果更看重“通用/偏 Web 的工程 skill 集合”，再选 addyosmani/agent-skills。 | 通用/偏 Web 的工程 skill 集合；编码通用性广，但非领域科学。本包窄聚焦于科学（组学、化学信息、实验室）且规模大得多。 |
-| [web-quality-skills](addyosmani-web-quality.md) | ✅ | 当前页用于它的主场景；如果更看重“偏 Web 性能/质量的 skill”，再选 web-quality-skills。 | 偏 Web 性能/质量的 skill；领域正交。按任务是前端质量还是湿实验/计算科学来选。 |
-| [Waza](waza.md) | ✅ | 当前页用于它的主场景；如果更看重“工程工作流 skill 包”，再选 Waza。 | 工程工作流 skill 包；同样是「把 skill 装进 agent」的形态，主题（非科学）不同。 |
-| [vercel-labs/agent-skills](vercel-agent-skills.md) | ✅ | 当前页用于它的主场景；如果更看重“厂商/Web 平台向的工程 skill”，再选 vercel-labs/agent-skills。 | 厂商/Web 平台向的工程 skill；适合 app/部署工作流，不适合生信或药物发现。 |
-| 自写逐库 prompt（自己写 SKILL.md） | 未收录 | 当前页用于它的主场景；如果更看重“控制力最大、无冗余面，但你得为每个库自行重建并维护整理好的文档，而不是装一个经审查的成套包”，再选 自写逐库 prompt（自己写 SKILL.md）。 | 控制力最大、无冗余面，但你得为每个库自行重建并维护整理好的文档，而不是装一个经审查的成套包。 |
+| [addyosmani/agent-skills](addyosmani-agent-skills.zh.md) | ✅ | 需要宽泛的软件工程能力、不是领域科学时，选 Addy Osmani 的大包。 | 通用/偏 Web 的工程 skill 集合；编码通用性广，但非领域科学。本包窄聚焦于科学（组学、化学信息、实验室）且规模大得多。 |
+| [web-quality-skills](addyosmani-web-quality.zh.md) | ✅ | 任务是前端质量、不是湿实验或计算科学时，选 web-quality-skills。 | 偏 Web 性能/质量的 skill；领域正交。按任务是前端质量还是湿实验/计算科学来选。 |
+| [Waza](waza.zh.md) | ✅ | 需要非科学主题的工程工作流习惯、且希望 surface 更小时，选 Waza。 | 工程工作流 skill 包；同样是「把 skill 装进 agent」的形态，主题（非科学）不同。 |
+| [vercel-labs/agent-skills](vercel-agent-skills.zh.md) | ✅ | 任务是 Web 平台上的 app/部署工作流时，选 Vercel Agent Skills。 | 厂商/Web 平台向的工程 skill；适合 app/部署工作流，不适合生信或药物发现。 |
+| 自写逐库 prompt（自己写 SKILL.md） | 未收录 | 只有当最大控制力与零冗余面值得你维护每个库的 prompt 时，才选自写。 | 控制力最大、无冗余面，但你得为每个库自行重建并维护整理好的文档，而不是装一个经审查的成套包。 |
 
 ## 健康度与可持续性
 
