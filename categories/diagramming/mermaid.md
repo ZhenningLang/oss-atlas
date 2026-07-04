@@ -95,12 +95,12 @@ You also reach for it when you're an agent or a tool generating diagrams program
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| Graphviz / DOT | 未收录 | Use this page for its stated niche; choose Graphviz / DOT when you need mature, scriptable graph **layout** engine with strong algorithms for large/dense graphs. | Mature, scriptable graph **layout** engine with strong algorithms for large/dense graphs; produces excellent auto-layout but DOT is lower-level and not natively rendered inline by docs platforms the way Mermaid is. |
-| PlantUML | 未收录 | Use this page for its stated niche; choose PlantUML when you need broader and stricter UML coverage (and more diagram types). | Broader and stricter UML coverage (and more diagram types); typically needs a Java runtime/server to render, vs Mermaid's pure-JS in-browser rendering and ubiquitous host support. |
-| D2 | 未收录 | Use this page for its stated niche; choose D2 when you need newer text-to-diagram language (Go) with multiple layout engines (incl. | Newer text-to-diagram language (Go) with multiple layout engines (incl. ELK/dagre) and a focus on cleaner layouts; smaller install base and far less built-in host-platform rendering than Mermaid. |
-| draw.io (diagrams.net) | 未收录 | Use this page for its stated niche; choose draw.io (diagrams.net) when you need full WYSIWYG canvas editor. | Full WYSIWYG canvas editor — pixel control and rich shapes — but diagrams are stored as XML/binary, not diffable plain text, and not auto-rendered from a fenced code block. |
-| Excalidraw | 未收录 | Use this page for its stated niche; choose Excalidraw when you need hand-drawn-style WYSIWYG whiteboard. | Hand-drawn-style WYSIWYG whiteboard; great for sketches and collaboration, not a text-to-diagram syntax and not version-control-diffable as source. |
-| flowchart.js | 未收录 | Use this page for its stated niche; choose flowchart.js when you need narrow JS library for flowcharts only. | Narrow JS library for flowcharts only; Mermaid covers far more diagram types and has vastly larger ecosystem/host support. |
+| Graphviz / DOT | 未收录 | Pick Graphviz when mature graph layout algorithms for large or dense graphs matter more than Markdown-native rendering. | Mature, scriptable graph **layout** engine with strong algorithms for large/dense graphs; produces excellent auto-layout but DOT is lower-level and not natively rendered inline by docs platforms the way Mermaid is. |
+| PlantUML | 未收录 | Pick PlantUML when you need broader, stricter UML coverage and can accept Java/server rendering. | Broader and stricter UML coverage (and more diagram types); typically needs a Java runtime/server to render, vs Mermaid's pure-JS in-browser rendering and ubiquitous host support. |
+| D2 | 未收录 | Pick D2 when its newer language and layout-engine choices matter more than Mermaid's host-platform ubiquity. | Newer text-to-diagram language (Go) with multiple layout engines (incl. ELK/dagre) and a focus on cleaner layouts; smaller install base and far less built-in host-platform rendering than Mermaid. |
+| draw.io (diagrams.net) | 未收录 | Pick draw.io when you need a full WYSIWYG canvas editor rather than version-control-friendly diagram source. | Full WYSIWYG canvas editor — pixel control and rich shapes — but diagrams are stored as XML/binary, not diffable plain text, and not auto-rendered from a fenced code block. |
+| [Excalidraw](../diagramming/excalidraw.md) | ✅ | Pick Excalidraw when hand-drawn whiteboarding and collaboration matter more than text-to-diagram syntax. | Hand-drawn-style WYSIWYG whiteboard; great for sketches and collaboration, not a text-to-diagram syntax and not version-control-diffable as source. |
+| [flowchart.js](flowchart-js.md) | ✅ | Pick flowchart.js only when you need a narrow flowchart-only JS library. | Narrow JS library for flowcharts only; Mermaid covers far more diagram types and has vastly larger ecosystem/host support. |
 
 ## Tech stack
 
@@ -122,7 +122,7 @@ You also reach for it when you're an agent or a tool generating diagrams program
 
 ## Health & viability
 
-- **Responsiveness**: Grade A — median first-response time 37.2 hours across 31 qualifying issues/PRs.
+- **Responsiveness**: Grade A — median first-response time 42.9 hours across 28 qualifying issues/PRs.
 - **Maintenance (2026-06).** Last pushed 2026-06 with recent releases (e.g. `@mermaid-js/tiny@11.16.0`, 2026-06-25) — **actively** maintained, not archived. [推断]
 - **Governance / bus factor.** Owned by the `mermaid-js` GitHub org (a multi-maintainer community project, not a lone-maintainer repo), which lowers bus-factor risk versus a single-author library. No single corporate owner. [推断]
 - **Age & Lindy verdict.** ~12 years old (created 2014-11) and still active ⇒ a **strong Lindy** signal; it's the de-facto text-to-diagram standard, embedded by GitHub/GitLab/Notion/Docusaurus/Obsidian. [推断]

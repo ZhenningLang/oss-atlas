@@ -87,11 +87,11 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| antfu/skills | 未收录 | 当前页用于它的主场景；如果更看重“另一份单作者个人 skill 集（偏 web / TS）”，再选 antfu/skills。 | 另一份单作者个人 skill 集（偏 web / TS）。重心不同——Dimillian 这份在 Swift / SwiftUI / Apple 平台上独有深度。 |
-| [wshobson/agents](../subagent-collections/wshobson-agents.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“大型 subagent 人格集”，再选 wshobson/agents。 | 大型 subagent 人格集；角色覆盖广但偏通才，无 Apple 平台专精。 |
-| awesome-claude-code-subagents | 未收录 | 当前页用于它的主场景；如果更看重“面向 Claude Code 的 subagent 目录”，再选 awesome-claude-code-subagents。 | 面向 Claude Code 的 subagent 目录；瞄准不同 harness，比本包广而浅，缺 Swift 深度。 |
-| karpathy-skills | 未收录 | 当前页用于它的主场景；如果更看重“来自另一位作者 / 领域的个人 skill 集”，再选 karpathy-skills。 | 来自另一位作者 / 领域的个人 skill 集；按你的活儿是否「Apple 味」来选——若不是，两份各自的专长都用不上。 |
-| 你 harness 自带的 review / simplify 命令 | 未收录 | 当前页用于它的主场景；如果更看重“Codex / Claude 本就内置通用 diff 评审与 simplify 流程”，再选 你 harness 自带的 review / simplify 命令。 | Codex / Claude 本就内置通用 diff 评审与 simplify 流程；本包里的通用 skill（`review-swarm`、`review-and-simplify-changes`）与之重叠——独有价值在 SwiftUI / iOS skill，不在通用那几个。 |
+| [antfu/skills](antfu-skills.zh.md) | ✅ | 缺的是 web/TypeScript 与 Vue/Vite/Nuxt 实践，而不是 Apple 平台技能时，选 antfu/skills。 | 另一份单作者个人 skill 集（偏 web / TS）。重心不同——Dimillian 这份在 Swift / SwiftUI / Apple 平台上独有深度。 |
+| [wshobson/agents](../subagent-collections/wshobson-agents.zh.md) | ✅ | 需要宽泛的 subagent 人格库，而不是 Apple 专项编码技能时，选 wshobson/agents。 | 大型 subagent 人格集；角色覆盖广但偏通才，无 Apple 平台专精。 |
+| awesome-claude-code-subagents | 未收录 | 要发现大量 Claude Code subagent，而不是采用一份 curated skill pack 时，选这个目录。 | 面向 Claude Code 的 subagent 目录；瞄准不同 harness，比本包广而浅，缺 Swift 深度。 |
+| [karpathy-skills](karpathy-skills.zh.md) | ✅ | 想要极小的通用 agent 纪律原则，而不是 SwiftUI/iOS 深度时，选 karpathy-skills。 | 来自另一位作者 / 领域的个人 skill 集；按你的活儿是否「Apple 味」来选——若不是，两份各自的专长都用不上。 |
+| 你 harness 自带的 review / simplify 命令 | 未收录 | 通用 diff 评审已经足够、且不需要 Dimillian 的 Apple 专项技能时，优先用内置命令。 | Codex / Claude 本就内置通用 diff 评审与 simplify 流程；本包里的通用 skill（`review-swarm`、`review-and-simplify-changes`）与之重叠——独有价值在 SwiftUI / iOS skill，不在通用那几个。 |
 
 ## 健康度与可持续性
 

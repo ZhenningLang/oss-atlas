@@ -90,10 +90,10 @@ You also use it when you want the *smallest* thing that works for a given Chines
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| [youtube-dl](youtube-dl.md) | ✅ | Use this page for its stated niche; choose youtube-dl when you need the classic Python downloader with a ~1000-site extractor catalog. | The classic Python downloader with a ~1000-site extractor catalog; far broader site coverage but slowed maintenance, and historically weaker/less-current on some Chinese hosts than you-get. |
-| yt-dlp | 未收录 | Use this page for its stated niche; choose yt-dlp when you need the actively-maintained youtube-dl fork. | The actively-maintained youtube-dl fork; the broadest catalog and fastest YouTube fixes, more options (SponsorBlock, format sorting, aria2c). Pick it for breadth and YouTube-critical jobs; you-get stays appealing for its small footprint and Chinese-site focus. |
-| lux | 未收录 | Use this page for its stated niche; choose lux when you need go single-binary downloader (formerly annie) with its own China-friendly site list. | Go single-binary downloader (formerly annie) with its own China-friendly site list; no Python runtime and fast, but a narrower, differently-curated catalog. |
-| cobalt | 未收录 | Use this page for its stated niche; choose cobalt when you need web/API-first downloader (self-hostable service). | Web/API-first downloader (self-hostable service); clean browser UX, but it's a service to run rather than a pip-installable CLI for scripting. |
+| [youtube-dl](youtube-dl.md) | ✅ | Pick youtube-dl when you need the classic broad Python extractor catalog and can tolerate slower upstream cadence. | The classic Python downloader with a ~1000-site extractor catalog; far broader site coverage but slowed maintenance, and historically weaker/less-current on some Chinese hosts than you-get. |
+| [yt-dlp](yt-dlp.md) | ✅ | Pick yt-dlp for breadth and YouTube-critical jobs where freshness matters more than you-get's small footprint. | The actively-maintained youtube-dl fork; the broadest catalog and fastest YouTube fixes, more options (SponsorBlock, format sorting, aria2c). Pick it for breadth and YouTube-critical jobs; you-get stays appealing for its small footprint and Chinese-site focus. |
+| [lux](lux.md) | ✅ | Pick lux when a Go single binary and its own China-friendly site list matter more than Python packaging. | Go single-binary downloader (formerly annie) with its own China-friendly site list; no Python runtime and fast, but a narrower, differently-curated catalog. |
+| [cobalt](cobalt.md) | ✅ | Pick cobalt when you want a self-hosted web/API downloader service instead of a scripting CLI. | Web/API-first downloader (self-hostable service); clean browser UX, but it's a service to run rather than a pip-installable CLI for scripting. |
 
 ## Tech stack
 

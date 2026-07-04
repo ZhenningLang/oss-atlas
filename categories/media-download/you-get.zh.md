@@ -90,10 +90,10 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [youtube-dl](youtube-dl.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“经典的 Python 下载器，约 1000 个站点的 extractor 目录”，再选 youtube-dl。 | 经典的 Python 下载器，约 1000 个站点的 extractor 目录；站点覆盖广得多，但维护放缓，且在部分中文站上历来比 you-get 更弱/更不及时。 |
-| yt-dlp | 未收录 | 当前页用于它的主场景；如果更看重“活跃维护的 youtube-dl 分叉”，再选 yt-dlp。 | 活跃维护的 youtube-dl 分叉；目录最广、YouTube 修复最快，选项更多（SponsorBlock、格式排序、aria2c）。要广度和 YouTube 关键任务选它；you-get 仍因体积小、聚焦中文站而有吸引力。 |
-| lux | 未收录 | 当前页用于它的主场景；如果更看重“Go 写的单二进制下载器（原名 annie），自带对中国友好的站点列表”，再选 lux。 | Go 写的单二进制下载器（原名 annie），自带对中国友好的站点列表；无需 Python 运行时、速度快，但目录更窄、收录取向不同。 |
-| cobalt | 未收录 | 当前页用于它的主场景；如果更看重“以 Web/API 为先的下载器（可自托管的服务）”，再选 cobalt。 | 以 Web/API 为先的下载器（可自托管的服务）；浏览器 UX 干净，但它是一个要跑的服务，而非可 pip 安装、便于脚本化的 CLI。 |
+| [youtube-dl](youtube-dl.zh.md) | ✅ | 需要经典、覆盖很广的 Python extractor 目录，且能接受上游节奏放缓时，选 youtube-dl。 | 经典的 Python 下载器，约 1000 个站点的 extractor 目录；站点覆盖广得多，但维护放缓，且在部分中文站上历来比 you-get 更弱/更不及时。 |
+| [yt-dlp](yt-dlp.zh.md) | ✅ | 要广度和 YouTube 关键任务的新鲜度，而不是 you-get 的小体积时，选 yt-dlp。 | 活跃维护的 youtube-dl 分叉；目录最广、YouTube 修复最快，选项更多（SponsorBlock、格式排序、aria2c）。要广度和 YouTube 关键任务选它；you-get 仍因体积小、聚焦中文站而有吸引力。 |
+| [lux](lux.zh.md) | ✅ | Go 单二进制和自带中国站点目录比 Python 包装更重要时，选 lux。 | Go 写的单二进制下载器（原名 annie），自带对中国友好的站点列表；无需 Python 运行时、速度快，但目录更窄、收录取向不同。 |
+| [cobalt](cobalt.zh.md) | ✅ | 想要自托管 Web/API 下载服务，而不是脚本型 CLI 时，选 cobalt。 | 以 Web/API 为先的下载器（可自托管的服务）；浏览器 UX 干净，但它是一个要跑的服务，而非可 pip 安装、便于脚本化的 CLI。 |
 
 ## 技术栈
 
@@ -105,7 +105,7 @@ health:
 ## 依赖
 
 - **运行时：** 抓取单文件流只硬性需要一个 Python 解释器。无服务、无数据库、无守护进程。
-- **可选二进制（你自己装）:** `ffmpeg`(≥1.0)——只要下载到的是需要合并的多段流就需要它，这相当常见；`rtmpdump` 处理 RTMP 流。
+- **可选二进制（你自己装）：** `ffmpeg`（≥1.0）——只要下载到的是需要合并的多段流就需要它，这相当常见；`rtmpdump` 处理 RTMP 流。
 - **网络：** 到目标站点的出站 HTTP(S)；登录受限内容可选配代理（`-x` / `--http-proxy`、SOCKS）和 cookie 文件。
 - **没有后端要跑：** 它执行完就退出——没东西要托管。
 
