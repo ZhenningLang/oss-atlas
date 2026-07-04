@@ -95,12 +95,12 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| vLLM | 未收录 | 当前页用于它的主场景；如果更看重“事实标准的开源 LLM 服务引擎（PagedAttention、continuous batching），社区与模型覆盖极大”，再选 vLLM。 | 事实标准的开源 LLM 服务引擎（PagedAttention、continuous batching），社区与模型覆盖极大；偏 NVIDIA、跨 CPU/AMD 的统一叙事较弱，也没有自己的 kernel 语言。 |
-| Text Generation Inference (TGI) | 未收录 | 当前页用于它的主场景；如果更看重“Hugging Face 的生产服务器，与 HF 生态贴合紧密”，再选 Text Generation Inference (TGI)。 | Hugging Face 的生产服务器，与 HF 生态贴合紧密；许可证历史有过反复（Apache→HFOIL→Apache），范围比一整套编译器+语言平台窄。 |
-| TensorRT-LLM | 未收录 | 当前页用于它的主场景；如果更看重“NVIDIA 自家引擎，在 NVIDIA 硬件上性能顶级”，再选 TensorRT-LLM。 | NVIDIA 自家引擎，在 NVIDIA 硬件上性能顶级；深度锁定 NVIDIA，构建/引擎编译流程更重，无跨厂商抽象。 |
-| [Ray Serve](ray-serve.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“通用 Python 模型服务/编排框架，负责扩展与组合服务”，再选 Ray Serve。 | 通用 Python 模型服务/编排框架，负责扩展与组合服务；不是手调的单模型推理引擎——是另一层。 |
-| 原生 PyTorch（配 Triton） | 未收录 | 当前页用于它的主场景；如果更看重“服务与自定义 kernel 两头都最默认、最可移植、最好招人的栈”，再选 原生 PyTorch（配 Triton）。 | 服务与自定义 kernel 两头都最默认、最可移植、最好招人的栈；性能要你自己拼，而不是买一个垂直整合的引擎。 |
-| [SGLang](sglang.zh.md) | ✅ | 当前页用于它的主场景；如果你需要带结构化生成和 RadixAttention 前缀缓存的 Python 原生开源服务引擎，再选 SGLang。 | 高吞吐服务引擎，带 RadixAttention 前缀缓存和结构化生成优化；比 vLLM 更新、生态更小，不是跨厂商编译器平台。 |
+| [vLLM](vllm.zh.md) | ✅ | 需要事实标准的开源 LLM 服务引擎和巨大模型覆盖时，选 vLLM。 | 事实标准的开源 LLM 服务引擎（PagedAttention、continuous batching），社区与模型覆盖极大；偏 NVIDIA、跨 CPU/AMD 的统一叙事较弱，也没有自己的 kernel 语言。 |
+| Text Generation Inference (TGI) | 未收录 | 需要 Hugging Face 生产服务器和紧密 HF 生态集成时，选 TGI。 | Hugging Face 的生产服务器，与 HF 生态贴合紧密；许可证历史有过反复（Apache→HFOIL→Apache），范围比一整套编译器+语言平台窄。 |
+| [TensorRT-LLM](tensorrt-llm.zh.md) | ✅ | 需要 NVIDIA 自家引擎并在 NVIDIA 硬件上压性能时，选 TensorRT-LLM。 | NVIDIA 自家引擎，在 NVIDIA 硬件上性能顶级；深度锁定 NVIDIA，构建/引擎编译流程更重，无跨厂商抽象。 |
+| [Ray Serve](ray-serve.zh.md) | ✅ | 需要通用 Python 模型服务编排、扩展和组合服务时，选 Ray Serve。 | 通用 Python 模型服务/编排框架，负责扩展与组合服务；不是手调的单模型推理引擎——是另一层。 |
+| 原生 PyTorch（配 Triton） | 未收录 | 更看重最默认、最可移植、最好招人的服务和 kernel 栈时，选原生 PyTorch。 | 服务与自定义 kernel 两头都最默认、最可移植、最好招人的栈；性能要你自己拼，而不是买一个垂直整合的引擎。 |
+| [SGLang](sglang.zh.md) | ✅ | 需要 Python 原生结构化生成和 RadixAttention 前缀缓存时，选 SGLang。 | 高吞吐服务引擎，带 RadixAttention 前缀缓存和结构化生成优化；比 vLLM 更新、生态更小，不是跨厂商编译器平台。 |
 
 ## 技术栈
 
