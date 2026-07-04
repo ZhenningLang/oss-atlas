@@ -18,8 +18,8 @@ health:
   schema: 1
   computed_at: 2026-07-03T08:27:30Z
   overall: B
-  overall_score: 3.33
-  scored_axes: 6
+  overall_score: 3.4
+  scored_axes: 5
   capped: false
   cap_reason: null
   needs_human_review: false
@@ -63,12 +63,10 @@ health:
         window_source: stats_contributors
         carve_out: null
     risk_license:
-      grade: A
-      raw:
-        spdx_id: Apache-2.0
-        permissiveness: permissive
-        relicense_36mo: false
-        content_license: null
+      grade: "?"
+      raw: {}
+  unknowns:
+    risk_license: { reason: custom_modified_license }
 ---
 
 # Dify
@@ -124,9 +122,9 @@ You're a product team that needs to ship AI-powered workflows fast without writi
 - **Adoption**: Grade D — 8,835 monthly downloads via npmjs.org (package: dify-client).
 - **Longevity**: Grade B — 1178 days old.
 - **Governance**: Grade A — top-3 contributor share 22.6% (?).
-- **Risk / License**: Cannot be scored — unknown.
+- **Risk / License**: Cannot be scored — custom_modified_license. Upstream `LICENSE` is a modified Apache License 2.0 with extra commercial-license conditions for multi-tenant service use and frontend logo/copyright removal; treat GitHub `NOASSERTION` as a real license-review signal, not a parser glitch.
 ## Caveats (unverified)
 
-- [未验证] The GitHub API reports `NOASSERTION` as the license; the actual license terms must be verified before commercial use.
+- [未验证] The GitHub API reports `NOASSERTION` as the license; direct `LICENSE` lookup on 2026-07-04 shows a modified Apache License 2.0 with additional terms around multi-tenant service use, frontend logo/copyright removal, contributor grants, and appearance-patent notice. Legal review is required before commercial redistribution or hosted multi-tenant use.
 - [未验证] The exact resource requirements for production self-hosting (CPU, RAM, disk) are not confirmed from official docs.
 - [推断] The 147k star count on a ~3-year-old repo may include significant hype-driven growth; organic enterprise adoption should be verified independently.

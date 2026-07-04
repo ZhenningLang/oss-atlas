@@ -18,8 +18,8 @@ health:
   schema: 1
   computed_at: 2026-07-03T08:27:30Z
   overall: B
-  overall_score: 3.33
-  scored_axes: 6
+  overall_score: 3.4
+  scored_axes: 5
   capped: false
   cap_reason: null
   needs_human_review: false
@@ -63,12 +63,10 @@ health:
         window_source: stats_contributors
         carve_out: null
     risk_license:
-      grade: A
-      raw:
-        spdx_id: Apache-2.0
-        permissiveness: permissive
-        relicense_36mo: false
-        content_license: null
+      grade: "?"
+      raw: {}
+  unknowns:
+    risk_license: { reason: custom_modified_license }
 ---
 
 # Dify
@@ -124,9 +122,9 @@ health:
 - **采用广度**：Grade D——npmjs.org 上月下载量 8,835（包名：dify-client）。
 - **长青度**：Grade B——仓库已创建 1178 天。
 - **治理集中度**：Grade A——前三贡献者占比 22.6%（?）。
-- **许可风险**：无法计算——unknown。
+- **许可风险**：无法计算——custom_modified_license。上游 `LICENSE` 是修改版 Apache License 2.0，额外加入多租户服务商用许可、前端 LOGO/版权信息不可移除等条件；应把 GitHub 的 `NOASSERTION` 当作真实的许可审查信号，而不是解析器误报。
 ## 存疑（未验证）
 
-- [未验证] GitHub API 返回的许可为 `NOASSERTION`，商用前必须核实实际许可条款。
+- [未验证] GitHub API 返回的许可为 `NOASSERTION`；2026-07-04 直接读取 `LICENSE` 显示其为修改版 Apache License 2.0，附加多租户服务使用、前端 LOGO/版权移除、贡献者授权与外观专利声明等条款。商业再分发或托管多租户使用前需要法律审查。
 - [未验证] 生产自托管所需的精确资源（CPU、内存、磁盘）尚未从官方文档确认。
 - [推断] 约 3 年的仓库拥有 147k star，可能包含大量炒作驱动的增长；有机的企业级采用需独立验证。
