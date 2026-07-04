@@ -54,6 +54,41 @@ health:
     return path
 
 
+def write_page_with_health(root: Path, rel: str, body: str, health_axes: str) -> Path:
+    path = root / rel
+    path.parent.mkdir(parents=True, exist_ok=True)
+    slug = path.name.removesuffix(".zh.md").removesuffix(".md")
+    path.write_text(
+        f"""---
+name: {slug}
+slug: {slug}
+repo: https://github.com/example/{slug}
+category: {path.parent.name}
+tags: [demo]
+language: Python
+license: MIT
+maturity: active
+last_verified: 2026-07-04
+type: tool
+upstream:
+  pushed_at: 2026-07-04T00:00:00Z
+  default_branch: main
+  default_branch_sha: 0123456789abcdef0123456789abcdef01234567
+  archived: false
+health:
+  schema: 1
+  axes:
+{health_axes}---
+
+# {slug}
+
+{body}
+""",
+        encoding="utf-8",
+    )
+    return path
+
+
 class QualityScanTest(unittest.TestCase):
     def test_detects_generic_templates_truncation_and_zero_sha(self) -> None:
         with tempfile.TemporaryDirectory() as td:
@@ -201,6 +236,28 @@ class QualityScanTest(unittest.TestCase):
             result = quality_scan.scan(root)
 
             self.assertEqual(result.health_unknowns[("maintenance", "no_traffic")], 1)
+
+    def test_detects_health_prose_grade_drift(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            write_page_with_health(
+                root,
+                "categories/demo/demo.md",
+                """## Health & viability
+
+- **Responsiveness**: Grade C — median first-response time 4.2 hours across 2 qualifying issues/PRs.
+""",
+                """    responsiveness:
+      grade: "?"
+      raw: {}
+  unknowns:
+    responsiveness: { reason: no_traffic }
+""",
+            )
+
+            result = quality_scan.scan(root)
+
+            self.assertTrue(any(f.category == "health-prose-grade-drift" and "Responsiveness" in f.evidence for f in result.findings))
 
     def test_report_labels_reviewer_only_dimensions(self) -> None:
         with tempfile.TemporaryDirectory() as td:

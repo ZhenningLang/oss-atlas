@@ -19,6 +19,7 @@ GENERIC_TEMPLATES = ["Use this page for its stated niche", "当前页用于它�
 TRUNCATION_FRAGMENTS = ["trac.", "(Node.", "and.", "per-har.", "before co."]
 KNOWN_CATEGORIES = [
     "generic-comparison-template",
+    "health-prose-grade-drift",
     "indexed-page-marked-not-indexed",
     "truncation-fragment",
     "zero-placeholder-upstream-sha",
@@ -27,6 +28,14 @@ KNOWN_CATEGORIES = [
 NOT_INDEXED_MARKERS = ["not indexed", "未收录"]
 LINK_RE = re.compile(r"\[([^\]]+)\]\(([^)]+)\)")
 HEALTH_AXES = ["maintenance", "responsiveness", "adoption", "longevity", "governance", "risk_license"]
+AXIS_LABELS = {
+    "maintenance": ["Maintenance", "维护"],
+    "responsiveness": ["Responsiveness", "响应"],
+    "adoption": ["Adoption", "采用"],
+    "longevity": ["Longevity", "长青"],
+    "governance": ["Governance", "Bus factor", "Bus Factor", "维护者"],
+    "risk_license": ["Risk", "License", "Risk/License", "许可"],
+}
 
 
 @dataclass(frozen=True)
@@ -174,6 +183,62 @@ def unknown_health_axes(text: str) -> Counter[tuple[str, str]]:
     return counts
 
 
+def health_axis_grades(text: str) -> dict[str, str]:
+    grades: dict[str, str] = {}
+    lines = text.splitlines()
+    for i, line in enumerate(lines):
+        stripped = line.strip()
+        axis = stripped[:-1] if stripped.endswith(":") else ""
+        if axis not in HEALTH_AXES:
+            continue
+        section_end = next(
+            (
+                j
+                for j in range(i + 1, len(lines))
+                if lines[j].startswith("    ") and not lines[j].startswith("      ") and lines[j].strip().endswith(":")
+            ),
+            len(lines),
+        )
+        for entry in lines[i + 1 : section_end]:
+            match = re.search(r"grade:\s*[\"']?([A-E?])[\"']?", entry.strip())
+            if match:
+                grades[axis] = match.group(1)
+                break
+    return grades
+
+
+def health_section_heading(page: Path) -> str:
+    return "## 健康度与可持续性" if page.name.endswith(ZH_SUFFIX) else "## Health & viability"
+
+
+def detect_health_prose_grade_drift(page: Path, text: str, root: Path) -> list[Finding]:
+    grades = health_axis_grades(text)
+    if not grades:
+        return []
+    findings: list[Finding] = []
+    heading = health_section_heading(page)
+    for line_no, line in section_lines(text, heading):
+        prose_grade = re.search(r"\bGrade\s+([A-E?])\b", line)
+        if not prose_grade:
+            continue
+        for axis, labels in AXIS_LABELS.items():
+            if any(label in line for label in labels):
+                frontmatter_grade = grades.get(axis)
+                if frontmatter_grade and frontmatter_grade != prose_grade.group(1):
+                    findings.append(
+                        Finding(
+                            "health-prose-grade-drift",
+                            "high",
+                            relpath(page, root),
+                            line_no,
+                            f"Health prose Grade {prose_grade.group(1)} disagrees with frontmatter {axis} grade {frontmatter_grade}.",
+                            line.strip(),
+                        )
+                    )
+                break
+    return findings
+
+
 def scan(root: Path | str) -> ScanResult:
     root = Path(root).resolve()
     pages = project_pages(root)
@@ -201,6 +266,7 @@ def scan(root: Path | str) -> ScanResult:
             )
 
         health_unknowns.update(unknown_health_axes(text))
+        findings.extend(detect_health_prose_grade_drift(page, text, root))
 
         if page.name.endswith(ZH_SUFFIX):
             for match in LINK_RE.finditer(body):
