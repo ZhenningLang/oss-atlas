@@ -201,7 +201,7 @@ query($o:String!,$n:String!){ repository(owner:$o,name:$n){
 
 **`?` rule** (require POSITIVE proof of no-package, so a real E can't be dodged by mislabeling `type`)
 - `no_package_structural` — `type ∈ {app, skill-pack, service, model}` AND `packages/lookup` returns zero entries clearing the noise filter AND GitHub "Used by" empty/unavailable. (model weights on HF Hub → `?` unless a pip/npm wrapper exists, in which case score the wrapper.)
-- `registry_lookup_failed` — packages.ecosyste.ms lookup transport failed; this is a tool/data-source failure, not evidence of zero adoption.
+- `registry_lookup_failed` — packages.ecosyste.ms lookup transport or HTTP/API failure; this is a tool/data-source failure, not evidence of zero adoption.
 - `registry_no_counts` — a canonical package exists, but comparable dependency/download counts are unavailable. Maven/Go commonly hit this, but the condition is data-shape based rather than registry-name-only. If dependents ARE present → score from dependents, not `?`.
 - `ambiguous` — multiple plausible canonical packages, none clears the noise filter.
 - **A `tool`/`library` that merely fails lookup is NOT `?`** — it is **E** (measurably unadopted) or a manual-flag, never `?`. Archived repos keep their last computed tier with an `archived` flag, not `?`.

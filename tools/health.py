@@ -823,6 +823,8 @@ def axis_responsiveness(repo: RepoData) -> Axis:
     if median_h < bands["D"]:
         return Axis("D", raw, evidence=f"median TTFR {median_h:.1f}h <{bands['D']}h -> D")
     return Axis("E", raw, evidence=f"median TTFR {median_h:.1f}h >={bands['D']}h -> E")
+
+
 def _band_label(band: str) -> str:
     return "relaxed_solo" if band == "relaxed" else "default"
 
@@ -913,8 +915,8 @@ def axis_adoption(repo: RepoData) -> Axis:
     status, data = http_get_json(url)
     archived = bool(repo.core.json.get("archived")) if isinstance(repo.core.json, dict) else False
 
-    if status == 0:
-        return Axis.unknown("registry_lookup_failed", evidence="? ecosyste.ms lookup transport error")
+    if status == 0 or status >= 400:
+        return Axis.unknown("registry_lookup_failed", evidence=f"? ecosyste.ms lookup HTTP {status}")
 
     candidates = data if isinstance(data, list) else []
     canonical = _select_canonical(candidates, repo.name)

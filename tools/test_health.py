@@ -180,6 +180,15 @@ class HealthMechanismTest(unittest.TestCase):
         self.assertEqual(axis.grade, "?")
         self.assertEqual(axis.reason, "registry_lookup_failed")
 
+    def test_adoption_lookup_http_failure_is_distinct_reason(self) -> None:
+        for status in (403, 429, 500):
+            with self.subTest(status=status), mock.patch("health.http_get_json", return_value=(status, None)):
+                axis = health.axis_adoption(FakeRepo("library"))
+
+            self.assertEqual(axis.grade, "?")
+            self.assertEqual(axis.reason, "registry_lookup_failed")
+            self.assertIn(f"HTTP {status}", axis.evidence)
+
     def test_adoption_ambiguous_candidates_remains_unknown(self) -> None:
         candidates = [{"name": "other", "downloads": 1, "rank": 1, "registry": "pypi.org"}]
         with mock.patch("health.http_get_json", return_value=(200, candidates)):
