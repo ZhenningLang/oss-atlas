@@ -490,6 +490,48 @@ class QualityScanTest(unittest.TestCase):
 
             self.assertFalse(any(f.category == "health-prose-raw-drift" for f in result.findings))
 
+    def test_ratio_raw_value_matches_percent_prose(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            write_page_with_health(
+                root,
+                "categories/demo/demo.md",
+                """## Health & viability
+
+- **Governance**: Grade A — top-3 contributor share 14.9%.
+""",
+                """    governance:
+      grade: A
+      raw:
+        top3_share: 0.149
+""",
+            )
+
+            result = quality_scan.scan(root)
+
+            self.assertFalse(any(f.category == "health-prose-raw-drift" for f in result.findings))
+
+    def test_chinese_ratio_raw_value_matches_percent_prose(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            write_page_with_health(
+                root,
+                "categories/demo/demo.zh.md",
+                """## 健康度与可持续性
+
+- **治理集中度**：Grade A——前三贡献者占比 14.9%。
+""",
+                """    governance:
+      grade: A
+      raw:
+        top3_share: 0.149
+""",
+            )
+
+            result = quality_scan.scan(root)
+
+            self.assertFalse(any(f.category == "health-prose-raw-drift" for f in result.findings))
+
     def test_report_labels_reviewer_only_dimensions(self) -> None:
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)

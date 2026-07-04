@@ -308,6 +308,13 @@ def numeric_variants(value: str) -> set[str]:
     if number.is_integer():
         variants.add(str(int(number)))
         variants.add(f"{int(number):,}")
+    if 0 < number < 1:
+        percent = number * 100
+        variants.add(f"{percent:.1f}")
+        variants.add(f"{percent:.1f}%")
+        if percent.is_integer():
+            variants.add(str(int(percent)))
+            variants.add(f"{int(percent)}%")
     return variants
 
 
