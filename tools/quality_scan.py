@@ -159,6 +159,8 @@ def is_table_separator(line: str) -> bool:
 def detects_partly_indexed_composite(source: Path, cells: list[str], indexed_targets: set[Path]) -> bool:
     if len(cells) < 2 or not any(marker in cells[1] for marker in INDEXED_MARKERS):
         return False
+    if any(marker in cells[1] for marker in NOT_INDEXED_MARKERS):
+        return False
     parts = split_composite_label(cells[0])
     if not parts:
         return False

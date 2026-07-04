@@ -249,6 +249,7 @@ class QualityScanTest(unittest.TestCase):
             result = quality_scan.scan(root)
 
             self.assertFalse(any(f.category == "indexed-page-marked-not-indexed" for f in result.findings))
+            self.assertFalse(any(f.category == "composite-alternative-partly-indexed" for f in result.findings))
 
     def test_detects_composite_alternative_partly_marked_indexed(self) -> None:
         with tempfile.TemporaryDirectory() as td:
