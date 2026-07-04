@@ -96,13 +96,13 @@ You're a Python ML engineer preprocessing video for a training pipeline: you nee
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| [FFmpeg](ffmpeg.md) | ✅ | Use this page for its stated niche; choose FFmpeg when you need the universal CLI or C libraries. | The universal CLI and C libraries; maximal power but steep API and no native Python frame access without wrapping it yourself. |
-| [ffmpeg-python](ffmpeg-python.md) | ✅ | Use this page for its stated niche; choose ffmpeg-python when you need readable Python filter-graph construction that shells out to the CLI. | Readable Python DAG construction that shells out to the ffmpeg CLI; no compilation but no in-process frame access either. |
-| MoviePy | 未收录 | Use this page for its stated niche; choose MoviePy when you need higher-level Python video editing with effects/compositing. | Higher-level Python video editing (effects, compositing, text) with a friendlier API; great for editing, less direct frame control. |
-| GStreamer | 未收录 | Use this page for its stated niche; choose GStreamer when you need a real-time pipeline framework for application-embedded media. | Pipeline-based multimedia framework for real-time apps; steeper learning curve, stronger in streaming/embedded than batch frame processing. |
-| HandBrake | 未收录 | Use this page for its stated niche; choose HandBrake when you need a preset-driven end-user transcoding app. | End-user transcoding app (GUI + CLI); far narrower than raw libav, not a library, and not for frame-level scripting. |
-| OpenCV | 未收录 | Use this page for its stated niche; choose OpenCV when you need computer-vision pipelines with its own video I/O. | Computer-vision library with its own video I/O; good for capture and simple read/write, but far narrower codec/format coverage than FFmpeg/libav. |
-| imageio-ffmpeg | 未收录 | Use this page for its stated niche; choose imageio-ffmpeg when you need a lightweight shim for reading video frames via FFmpeg in imageio. | Lightweight shim for reading video frames via FFmpeg in imageio; simpler but less control than PyAV's direct libav bindings. |
+| [FFmpeg](ffmpeg.md) | ✅ | Choose FFmpeg when you need the universal CLI or C libraries. | The universal CLI and C libraries; maximal power but steep API and no native Python frame access without wrapping it yourself. |
+| [ffmpeg-python](ffmpeg-python.md) | ✅ | Choose ffmpeg-python when you need readable Python filter-graph construction that shells out to the CLI. | Readable Python DAG construction that shells out to the ffmpeg CLI; no compilation but no in-process frame access either. |
+| [MoviePy](moviepy.md) | ✅ | Choose MoviePy when you need higher-level Python video editing with effects/compositing. | Higher-level Python video editing (effects, compositing, text) with a friendlier API; great for editing, less direct frame control. |
+| [GStreamer](gstreamer.md) | ✅ | Choose GStreamer when you need a real-time pipeline framework for application-embedded media. | Pipeline-based multimedia framework for real-time apps; steeper learning curve, stronger in streaming/embedded than batch frame processing. |
+| [HandBrake](handbrake.md) | ✅ | Choose HandBrake when you need a preset-driven end-user transcoding app. | End-user transcoding app (GUI + CLI); far narrower than raw libav, not a library, and not for frame-level scripting. |
+| OpenCV | 未收录 | Choose OpenCV when you need computer-vision pipelines with its own video I/O. | Computer-vision library with its own video I/O; good for capture and simple read/write, but far narrower codec/format coverage than FFmpeg/libav. |
+| imageio-ffmpeg | 未收录 | Choose imageio-ffmpeg when you need a lightweight shim for reading video frames via FFmpeg in imageio. | Lightweight shim for reading video frames via FFmpeg in imageio; simpler but less control than PyAV's direct libav bindings. |
 
 ## Health & viability
 
