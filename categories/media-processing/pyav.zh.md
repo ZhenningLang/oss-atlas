@@ -101,8 +101,8 @@ health:
 | [MoviePy](moviepy.zh.md) | ✅ | 需要更高层的 Python 视频编辑、特效或合成时，选 MoviePy。 | 更高层的 Python 视频编辑（特效、合成、文字），API 更友好；适合编辑，但直接帧控制力较弱。 |
 | [GStreamer](gstreamer.zh.md) | ✅ | 需要实时、嵌入应用的媒体管线框架时，选 GStreamer。 | 面向实时应用的管线式多媒体框架；学习曲线陡峭，在流式/嵌入式场景强于批量帧处理。 |
 | [HandBrake](handbrake.zh.md) | ✅ | 需要预设驱动的终端用户转码应用时，选 HandBrake。 | 终端用户转码应用（GUI + CLI）；远比原生 libav 窄，不是库，也不适合帧级脚本化。 |
-| OpenCV | 未收录 | 按本页所述场景用它；需要计算机视觉管线及其自有视频 I/O 时选 OpenCV。 | 计算机视觉库，自带视频 I/O；适合采集和简单读写，但编解码器/格式覆盖度远不及 FFmpeg/libav。 |
-| imageio-ffmpeg | 未收录 | 按本页所述场景用它；需要轻量 shim 在 imageio 中通过 FFmpeg 读取视频帧时选 imageio-ffmpeg。 | 在 imageio 中通过 FFmpeg 读取视频帧的轻量 shim；比 PyAV 的直接 libav 绑定更简单，但控制力更弱。 |
+| OpenCV | 未收录 | 需要计算机视觉管线及其自有视频 I/O 时，选 OpenCV。 | 计算机视觉库，自带视频 I/O；适合采集和简单读写，但编解码器/格式覆盖度远不及 FFmpeg/libav。 |
+| imageio-ffmpeg | 未收录 | 需要轻量 shim 在 imageio 中通过 FFmpeg 读取视频帧时，选 imageio-ffmpeg。 | 在 imageio 中通过 FFmpeg 读取视频帧的轻量 shim；比 PyAV 的直接 libav 绑定更简单，但控制力更弱。 |
 
 ## 健康度与可持续性
 
