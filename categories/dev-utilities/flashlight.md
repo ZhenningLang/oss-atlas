@@ -87,11 +87,11 @@ Realistically, in 2026 this is a **retro / legacy-machine** use case: a vintage 
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| Alfred | 未收录 | Use this page for its stated niche; choose Alfred when you need mature commercial macOS launcher with a huge workflow ecosystem. | Mature commercial macOS launcher with a huge workflow ecosystem; actively maintained, no SIP-disable/injection, but its own app (not the native Spotlight bar) and paid Powerpack for advanced features. |
-| Raycast | 未收录 | Use this page for its stated niche; choose Raycast when you need modern, actively developed launcher with extensions store and team features. | Modern, actively developed launcher with extensions store and team features; replaces Spotlight UX rather than injecting into it. |
-| LaunchBar | 未收录 | Use this page for its stated niche; choose LaunchBar when you need long-standing keyboard launcher. | Long-standing keyboard launcher; mature and supported, separate app, not a Spotlight plugin layer. |
-| nate-parrott/Flashlight (original) | 未收录 | Use this page for its stated niche; choose nate-parrott/Flashlight (original) when you need the upstream this descends from. | The upstream this descends from; also unmaintained — the fork chain (w0lfschild and others) exists precisely because the original stalled. |
-| macOS Spotlight (built-in) | 未收录 | Use this page for its stated niche; choose macOS Spotlight (built-in) when you need no install, supported, but the limited stock query/answer surface is exactly what Flashlight tried t. | No install, supported, but the limited stock query/answer surface is exactly what Flashlight tried to extend. |
+| Alfred | 未收录 | Choose Alfred when you need a mature commercial macOS launcher with a huge workflow ecosystem. | Mature commercial macOS launcher with a huge workflow ecosystem; actively maintained, no SIP-disable/injection, but its own app (not the native Spotlight bar) and paid Powerpack for advanced features. |
+| Raycast | 未收录 | Choose Raycast when you need a modern launcher with an extension store and team features. | Modern, actively developed launcher with extensions store and team features; replaces Spotlight UX rather than injecting into it. |
+| LaunchBar | 未收录 | Choose LaunchBar when you want a long-standing supported keyboard launcher as a separate app. | Long-standing keyboard launcher; mature and supported, separate app, not a Spotlight plugin layer. |
+| nate-parrott/Flashlight (original) | 未收录 | Choose the original Flashlight repo only when you specifically need the upstream this fork descends from. | The upstream this descends from; also unmaintained — the fork chain (w0lfschild and others) exists precisely because the original stalled. |
+| macOS Spotlight (built-in) | 未收录 | Choose built-in Spotlight when you want no install and can accept the limited stock query/answer surface. | No install, supported, but the limited stock query/answer surface is exactly what Flashlight tried to extend. |
 
 ## Tech stack
 

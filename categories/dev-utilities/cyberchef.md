@@ -93,11 +93,11 @@ You also reach for it when you want that same logic *repeatable*. A recipe seria
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| [DevToys](devtoys.md) | ✅ | Use this page for its stated niche; choose DevToys when you need native cross-platform desktop devtools palette (formatters, converters, generators). | Native cross-platform desktop devtools palette (formatters, converters, generators); a fixed tool list rather than CyberChef's chainable recipe pipeline + "Magic" auto-detection. |
-| [Cockpit](cockpit.md) | ✅ | Use this page for its stated niche; choose Cockpit when you need web UI for *server administration*, not data transformation. | Web UI for *server administration*, not data transformation — different problem entirely; listed only to disambiguate "web tool" overlap. |
-| CyberChef-server | 未收录 | Use this page for its stated niche; choose CyberChef-server when you need official Node wrapper exposing CyberChef recipes over HTTP for batch/automation. | Official Node wrapper exposing CyberChef recipes over HTTP for batch/automation; complements rather than replaces the app. |
-| Custom scripts (`openssl`/`xxd`/Python) | 未收录 | Use this page for its stated niche; choose Custom scripts (openssl/xxd/Python) when you need maximum control, scriptable, no UI. | Maximum control, scriptable, no UI; but you rewrite per-task and lose the live visual recipe + Magic detection. |
-| dCode / online decoders | 未收录 | Use this page for its stated niche; choose dCode / online decoders when you need browser convenience for single transforms. | Browser convenience for single transforms; data leaves your machine and no offline/self-host story — the privacy gap CyberChef closes. |
+| [DevToys](devtoys.md) | ✅ | Choose DevToys when you need a native cross-platform desktop devtools palette for formatters, converters, and generators. | Native cross-platform desktop devtools palette (formatters, converters, generators); a fixed tool list rather than CyberChef's chainable recipe pipeline + "Magic" auto-detection. |
+| [Cockpit](cockpit.md) | ✅ | Choose Cockpit when you need a web UI for *server administration*, not data transformation. | Web UI for *server administration*, not data transformation — different problem entirely; listed only to disambiguate "web tool" overlap. |
+| CyberChef-server | 未收录 | Choose CyberChef-server when you need the official Node wrapper exposing CyberChef recipes over HTTP. | Official Node wrapper exposing CyberChef recipes over HTTP for batch/automation; complements rather than replaces the app. |
+| Custom scripts (`openssl`/`xxd`/Python) | 未收录 | Choose custom scripts when you need maximum control, scriptability, and no UI. | Maximum control, scriptable, no UI; but you rewrite per-task and lose the live visual recipe + Magic detection. |
+| dCode / online decoders | 未收录 | Choose dCode or online decoders when browser convenience for one-off transforms outweighs offline privacy. | Browser convenience for single transforms; data leaves your machine and no offline/self-host story — the privacy gap CyberChef closes. |
 
 ## Tech stack
 

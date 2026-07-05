@@ -94,10 +94,10 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| Python `Faker` | 未收录 | 当前页用于它的主场景；如果更看重“Python 版的同一思路（JS Faker 的血缘就源自它）”，再选 Python Faker。 | Python 版的同一思路（JS Faker 的血缘就源自它）；当你的测试/seeder 是 Python 而非 JS 时用它。 |
-| Chance.js | 未收录 | 当前页用于它的主场景；如果更看重“更小、更老的随机生成工具”，再选 Chance.js。 | 更小、更老的随机生成工具；更轻、零依赖，但数据目录窄得多，也没有丰富的 locale 体系。 |
-| @ngneat/falso | 未收录 | 当前页用于它的主场景；如果更看重“现代、可 tree-shake 的 TS 假数据库，主打更轻、可逐个 import 的替代品”，再选 @ngneat/falso。 | 现代、可 tree-shake 的 TS 假数据库，主打更轻、可逐个 import 的替代品；locale/命名空间面比 Faker 小。 |
-| Mockaroo | 未收录 | 当前页用于它的主场景；如果更看重“托管 SaaS / schema 优先的 mock 数据生成器（导出 CSV/JSON/SQL）”，再选 Mockaroo。 | 托管 SaaS / schema 优先的 mock 数据生成器（导出 CSV/JSON/SQL）——不是进程内的库；适合一次性批量造数据，但它是个服务，不是你嵌进测试的仓库。 |
+| Python `Faker` | 未收录 | 测试或 seeder 是 Python 而不是 JavaScript 时，选 Python Faker。 | Python 版的同一思路（JS Faker 的血缘就源自它）；当你的测试/seeder 是 Python 而非 JS 时用它。 |
+| Chance.js | 未收录 | 需要更小、更老、目录更窄的随机生成工具时，选 Chance.js。 | 更小、更老的随机生成工具；更轻、零依赖，但数据目录窄得多，也没有丰富的 locale 体系。 |
+| @ngneat/falso | 未收录 | 需要现代、可 tree-shake 的 TypeScript 假数据生成库时，选 @ngneat/falso。 | 现代、可 tree-shake 的 TS 假数据库，主打更轻、可逐个 import 的替代品；locale/命名空间面比 Faker 小。 |
+| Mockaroo | 未收录 | 需要托管、schema 优先的 mock 数据导出，而不是进程内测试库时，选 Mockaroo。 | 托管 SaaS / schema 优先的 mock 数据生成器（导出 CSV/JSON/SQL）——不是进程内的库；适合一次性批量造数据，但它是个服务，不是你嵌进测试的仓库。 |
 
 ## 技术栈
 

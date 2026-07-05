@@ -95,11 +95,11 @@ You reach for it whenever the task is *programmatic font surgery*: subsetting fo
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| FontForge | 未收录 | Use this page for its stated niche; choose FontForge when you need full GUI/scriptable font editor (design + production). | Full GUI/scriptable font editor (design + production); much broader feature surface but heavier, C-based, and a different (editor) workflow than a clean Python library. |
-| HarfBuzz | 未收录 | Use this page for its stated niche; choose HarfBuzz when you need text shaping engine (text → positioned glyphs). | Text shaping engine (text → positioned glyphs); complementary, not a substitute — fontTools edits the font, HarfBuzz uses it to shape. |
-| FreeType | 未收录 | Use this page for its stated niche; choose FreeType when you need C rasterizer/loader for rendering glyphs at runtime. | C rasterizer/loader for rendering glyphs at runtime; about drawing pixels, not editing font files. |
-| Glyphs / RoboFont | 未收录 | Use this page for its stated niche; choose Glyphs / RoboFont when you need commercial macOS type-design apps. | Commercial macOS type-design apps; for drawing typefaces, often *use* fontTools under the hood for export. |
-| `woff2`/`sfnt2woff` CLIs | 未收录 | Use this page for its stated niche; choose woff2/sfnt2woff CLIs when you need single-purpose format converters. | Single-purpose format converters; fontTools covers the same conversions plus full table manipulation and subsetting. |
+| FontForge | 未收录 | Choose FontForge when you need a full GUI/scriptable font editor for design and production. | Full GUI/scriptable font editor (design + production); much broader feature surface but heavier, C-based, and a different (editor) workflow than a clean Python library. |
+| HarfBuzz | 未收录 | Choose HarfBuzz when you need a text shaping engine rather than a font-file editing library. | Text shaping engine (text → positioned glyphs); complementary, not a substitute — fontTools edits the font, HarfBuzz uses it to shape. |
+| FreeType | 未收录 | Choose FreeType when you need a C rasterizer/loader for rendering glyphs at runtime. | C rasterizer/loader for rendering glyphs at runtime; about drawing pixels, not editing font files. |
+| Glyphs / RoboFont | 未收录 | Choose Glyphs or RoboFont when you need commercial macOS type-design apps. | Commercial macOS type-design apps; for drawing typefaces, often *use* fontTools under the hood for export. |
+| `woff2`/`sfnt2woff` CLIs | 未收录 | Choose woff2/sfnt2woff CLIs when you only need single-purpose format conversion. | Single-purpose format converters; fontTools covers the same conversions plus full table manipulation and subsetting. |
 
 ## Tech stack
 

@@ -95,11 +95,11 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| FontForge | 未收录 | 当前页用于它的主场景；如果更看重“完整的 GUI/可脚本字体编辑器（设计＋生产）”，再选 FontForge。 | 完整的 GUI/可脚本字体编辑器（设计＋生产）；功能面宽得多但更重、基于 C，工作流（编辑器）与一个干净的 Python 库不同。 |
-| HarfBuzz | 未收录 | 当前页用于它的主场景；如果更看重“文本 shaping 引擎（文本→定位字形）”，再选 HarfBuzz。 | 文本 shaping 引擎（文本→定位字形）；互补而非替代——fontTools 改字体，HarfBuzz 用字体来 shaping。 |
-| FreeType | 未收录 | 当前页用于它的主场景；如果更看重“C 写的栅格器/加载器，用于运行时渲染字形”，再选 FreeType。 | C 写的栅格器/加载器，用于运行时渲染字形；关乎画像素，而非编辑字体文件。 |
-| Glyphs / RoboFont | 未收录 | 当前页用于它的主场景；如果更看重“商业 macOS 字体设计应用”，再选 Glyphs / RoboFont。 | 商业 macOS 字体设计应用；用于绘制字型，导出时往往*在底层用* fontTools。 |
-| `woff2`/`sfnt2woff` 等 CLI | 未收录 | 当前页用于它的主场景；如果更看重“单一用途的格式转换器”，再选 woff2/sfnt2woff 等 CLI。 | 单一用途的格式转换器；fontTools 覆盖同样的转换，外加完整的表操作与子集化。 |
+| FontForge | 未收录 | 需要完整 GUI/可脚本字体编辑器来做设计和生产时，选 FontForge。 | 完整的 GUI/可脚本字体编辑器（设计＋生产）；功能面宽得多但更重、基于 C，工作流（编辑器）与一个干净的 Python 库不同。 |
+| HarfBuzz | 未收录 | 需要文本 shaping 引擎，而不是字体文件编辑库时，选 HarfBuzz。 | 文本 shaping 引擎（文本→定位字形）；互补而非替代——fontTools 改字体，HarfBuzz 用字体来 shaping。 |
+| FreeType | 未收录 | 需要运行时渲染字形的 C 栅格器/加载器时，选 FreeType。 | C 写的栅格器/加载器，用于运行时渲染字形；关乎画像素，而非编辑字体文件。 |
+| Glyphs / RoboFont | 未收录 | 需要商业 macOS 字体设计应用时，选 Glyphs 或 RoboFont。 | 商业 macOS 字体设计应用；用于绘制字型，导出时往往*在底层用* fontTools。 |
+| `woff2`/`sfnt2woff` 等 CLI | 未收录 | 只需要单一用途的格式转换时，选 woff2/sfnt2woff 等 CLI。 | 单一用途的格式转换器；fontTools 覆盖同样的转换，外加完整的表操作与子集化。 |
 
 ## 技术栈
 

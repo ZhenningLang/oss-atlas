@@ -91,7 +91,7 @@ Visual Studio Code——一款轻量但强大的代码编辑器，兼具编辑�
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 | --- | --- | --- | --- |
-| Zed | 未收录 | 高性能原生代码编辑器，支持多人协作。 | Zed 更快、Rust 原生，但生态更小；VS Code 拥有最大的扩展市场。 |
+| [Zed](zed.zh.md) | ✅ | 高性能原生代码编辑器，支持多人协作。 | Zed 更快、Rust 原生，但生态更小；VS Code 拥有最大的扩展市场。 |
 | Sublime Text | 未收录 | 快速、轻量的专有编辑器。 | Sublime 更快更轻，但专有且收费；VS Code 免费开源。 |
 | Neovim | 未收录 | 带现代 Lua 配置的模态终端编辑器。 | Neovim 仅限终端，学习曲线陡峭；VS Code 以 GUI 优先，对新手友好。 |
 | IntelliJ IDEA | 未收录 | 面向 JVM 和 Android 的深度语言专用 IDE。 | IntelliJ 更重、聚焦 JVM；VS Code 更轻、语言无关。 |

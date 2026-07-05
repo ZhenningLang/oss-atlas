@@ -88,11 +88,11 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| Distroless（GoogleContainerTools） | 未收录 | 当前页用于它的主场景；如果更看重“你*拿来构建*的极小基础镜像”，再选 Distroless（GoogleContainerTools）。 | 你*拿来构建*的极小基础镜像——确定性、无运行时 tracing，但你得重构 Dockerfile（多阶段）并掌握源码。SlimToolkit 则是对已构建好的镜像做改造。 |
-| 多阶段 / 手工优化 Dockerfile | 未收录 | 当前页用于它的主场景；如果更看重“源头级修法：最小、最可预测、完全可控”，再选 多阶段 / 手工优化 Dockerfile。 | 源头级修法：最小、最可预测、完全可控——但前提是你掌握并能改每个构建。SlimToolkit 的卖点是“不改 Dockerfile”。 |
-| Trivy / Grype（扫描器） | 未收录 | 当前页用于它的主场景；如果更看重“发现并报告 CVE / 产出 SBOM”，再选 Trivy / Grype（扫描器）。 | 发现并报告 CVE / 产出 SBOM；它们*度量*攻击面，不*缩小*攻击面。互补，而非替代。 |
-| DockerSlim（前身） | 未收录 | 当前页用于它的主场景；如果更看重“不是另一个项目”，再选 DockerSlim（前身）。 | 不是另一个项目——DockerSlim 已改名为 Slim/SlimToolkit；同一套代码、同一套 `slim build` 流程。[推断] |
-| Docker `docker build --squash` / 层压平 | 未收录 | 当前页用于它的主场景；如果更看重“减少层数/重复，而非*内容*”，再选 Docker docker build --squash / 层压平。 | 减少层数/重复，而非*内容*——每个没用到的二进制都还在。机制不同，收益小得多。 |
+| Distroless（GoogleContainerTools） | 未收录 | 可以在极小基础镜像上重新构建，而不是缩减已有镜像时，选 Distroless。 | 你*拿来构建*的极小基础镜像——确定性、无运行时 tracing，但你得重构 Dockerfile（多阶段）并掌握源码。SlimToolkit 则是对已构建好的镜像做改造。 |
+| 多阶段 / 手工优化 Dockerfile | 未收录 | 掌握源码级构建且追求可预测最小镜像时，选多阶段或手工优化 Dockerfile。 | 源头级修法：最小、最可预测、完全可控——但前提是你掌握并能改每个构建。SlimToolkit 的卖点是“不改 Dockerfile”。 |
+| Trivy / Grype（扫描器） | 未收录 | 需要报告 CVE 或产出 SBOM，而不是缩减镜像时，选 Trivy 或 Grype。 | 发现并报告 CVE / 产出 SBOM；它们*度量*攻击面，不*缩小*攻击面。互补，而非替代。 |
+| DockerSlim（前身） | 未收录 | 把 DockerSlim 当作前身/命名历史，而不是另一个当前项目来选。 | 不是另一个项目——DockerSlim 已改名为 Slim/SlimToolkit；同一套代码、同一套 `slim build` 流程。[推断] |
+| Docker `docker build --squash` / 层压平 | 未收录 | 只需要减少层数而不是内容级最小化时，选层压平。 | 减少层数/重复，而非*内容*——每个没用到的二进制都还在。机制不同，收益小得多。 |
 
 ## 技术栈
 

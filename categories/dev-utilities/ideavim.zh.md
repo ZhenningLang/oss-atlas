@@ -93,10 +93,10 @@ JetBrains 系 IDE（IntelliJ IDEA、PyCharm、GoLand、WebStorm、Rider 等）�
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| VSCodeVim | 未收录 | 当前页用于它的主场景；如果更看重“VS Code 的 Vim 模拟”，再选 VSCodeVim。 | VS Code 的 Vim 模拟；同样的点子换个宿主——按你实际用哪个 IDE 来选，而非按插件。 |
-| vscode-neovim | 未收录 | 当前页用于它的主场景；如果更看重“在 VS Code 内嵌入一个*真* Neovim 实例，保真更高＋可用你的 Neovim 配置”，再选 vscode-neovim。 | 在 VS Code 内嵌入一个*真* Neovim 实例，保真更高＋可用你的 Neovim 配置；更重且仅限 VS Code，JetBrains 侧没有这种深度的对应物。 |
-| 真 Vim / Neovim | 未收录 | 当前页用于它的主场景；如果更看重“货真价实，拥有完整插件生态与 Lua/LSP”，再选 真 Vim / Neovim。 | 货真价实，拥有完整插件生态与 Lua/LSP；但你会失去 JetBrains 的集成重构/调试器/索引。 |
-| JetBrains 自带键位 | 未收录 | 当前页用于它的主场景；如果更看重“没有模拟层、完全受支持”，再选 JetBrains 自带键位。 | 没有模拟层、完全受支持；但没有 Vim 模式/motion——对 Vim 用户而言失去意义。 |
+| VSCodeVim | 未收录 | 编辑器是 VS Code 且只需要 Vim 模拟时，选 VSCodeVim。 | VS Code 的 Vim 模拟；同样的点子换个宿主——按你实际用哪个 IDE 来选，而非按插件。 |
+| vscode-neovim | 未收录 | 需要在 VS Code 内嵌入一个*真* Neovim 实例时，选 vscode-neovim。 | 在 VS Code 内嵌入一个*真* Neovim 实例，保真更高＋可用你的 Neovim 配置；更重且仅限 VS Code，JetBrains 侧没有这种深度的对应物。 |
+| 真 Vim / Neovim | 未收录 | 需要完整插件生态与 Lua/LSP，而不是 IDE 集成时，选真 Vim 或 Neovim。 | 货真价实，拥有完整插件生态与 Lua/LSP；但你会失去 JetBrains 的集成重构/调试器/索引。 |
+| JetBrains 自带键位 | 未收录 | 需要没有模拟层、完全受支持的设置时，选 JetBrains 自带键位。 | 没有模拟层、完全受支持；但没有 Vim 模式/motion——对 Vim 用户而言失去意义。 |
 
 ## 技术栈
 

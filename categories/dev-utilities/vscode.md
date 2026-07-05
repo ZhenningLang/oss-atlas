@@ -91,7 +91,7 @@ You're a developer who needs a fast, cross-platform code editor that supports do
 
 | Alternative | In index | Our verdict | Tradeoff |
 | --- | --- | --- | --- |
-| Zed | 未收录 | High-performance native code editor with multiplayer. | Zed is faster and Rust-native but has a smaller ecosystem; VS Code has the largest extension marketplace. |
+| [Zed](zed.md) | ✅ | High-performance native code editor with multiplayer. | Zed is faster and Rust-native but has a smaller ecosystem; VS Code has the largest extension marketplace. |
 | Sublime Text | 未收录 | Fast, lightweight proprietary editor. | Sublime is faster and lighter but proprietary and paid; VS Code is free and open-source. |
 | Neovim | 未收录 | Modal terminal editor with modern Lua configuration. | Neovim is terminal-only and has a steep learning curve; VS Code is GUI-first and beginner-friendly. |
 | IntelliJ IDEA | 未收录 | Deep language-specific IDE for JVM and Android. | IntelliJ is heavier and JVM-focused; VS Code is lighter and language-agnostic. |

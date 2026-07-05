@@ -94,10 +94,10 @@ You also reach for it to fill a seed script that pumps a few thousand fake order
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| Python `Faker` | 未收录 | Use this page for its stated niche; choose Python Faker when you need the same idea for Python (the JS Faker lineage descends from it). | The same idea for Python (the JS Faker lineage descends from it); use it when your tests/seeders are Python, not JS. |
-| Chance.js | 未收录 | Use this page for its stated niche; choose Chance.js when you need smaller, older random-generator utility. | Smaller, older random-generator utility; lighter and dependency-free but a much narrower data catalog and no rich locale system. |
-| @ngneat/falso | 未收录 | Use this page for its stated niche; choose @ngneat/falso when you need modern tree-shakeable TS fake-data library positioned as a lighter, individually-importable alternat. | Modern tree-shakeable TS fake-data library positioned as a lighter, individually-importable alternative; smaller locale/namespace surface than Faker. |
-| Mockaroo | 未收录 | Use this page for its stated niche; choose Mockaroo when you need hosted SaaS / schema-first mock-data generator (CSV/JSON/SQL export). | Hosted SaaS / schema-first mock-data generator (CSV/JSON/SQL export) — not an in-process library; good for one-off bulk datasets, but it's a service, not a repo you embed in tests. |
+| Python `Faker` | 未收录 | Choose Python Faker when your tests or seeders are Python rather than JavaScript. | The same idea for Python (the JS Faker lineage descends from it); use it when your tests/seeders are Python, not JS. |
+| Chance.js | 未收录 | Choose Chance.js when you need a smaller, older random-generator utility with a narrower catalog. | Smaller, older random-generator utility; lighter and dependency-free but a much narrower data catalog and no rich locale system. |
+| @ngneat/falso | 未收录 | Choose @ngneat/falso when you need a modern tree-shakeable TypeScript fake-data library. | Modern tree-shakeable TS fake-data library positioned as a lighter, individually-importable alternative; smaller locale/namespace surface than Faker. |
+| Mockaroo | 未收录 | Choose Mockaroo when you need hosted, schema-first mock-data export rather than an in-process test library. | Hosted SaaS / schema-first mock-data generator (CSV/JSON/SQL export) — not an in-process library; good for one-off bulk datasets, but it's a service, not a repo you embed in tests. |
 
 ## Tech stack
 

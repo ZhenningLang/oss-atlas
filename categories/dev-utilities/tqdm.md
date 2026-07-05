@@ -93,11 +93,11 @@ You also reach for it when you want the same progress feedback everywhere withou
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| rich.progress | 未收录 | Use this page for its stated niche; choose rich.progress when you need part of the `rich` library. | Part of the `rich` library — far fancier (colors, columns, multiple bars, spinners, tables) and great for polished CLIs; heavier dependency and more API surface than tqdm's one-call wrap. |
-| alive-progress | 未收录 | Use this page for its stated niche; choose alive-progress when you need animated, visually richer single-bar UX with live spinners. | Animated, visually richer single-bar UX with live spinners; smaller ecosystem and integration set than tqdm (no pandas/notebook/pipe story of the same breadth). |
-| progressbar2 | 未收录 | Use this page for its stated niche; choose progressbar2 when you need older, configurable progress-bar library. | Older, configurable progress-bar library; widget-based API is more verbose than `tqdm(iterable)`, smaller modern adoption. |
-| plain logging / `print` | 未收录 | Use this page for its stated niche; choose plain logging / print when you need zero dependency and trivially machine-parseable. | Zero dependency and trivially machine-parseable; no ETA/rate/in-place redraw, and noisy for interactive use — the right call for files/CI, the wrong one for a human watching a TTY. |
-| [Telegraf](telegraf.md) | ✅ | Use this page for its stated niche; choose Telegraf when you need a metrics collection/routing agent, not a progress bar. | A metrics collection/routing agent, not a progress bar — different job; use it when you need real telemetry rather than a human-facing meter. |
+| rich.progress | 未收录 | Choose rich.progress when you already use `rich` or need polished multi-column progress UI. | Part of the `rich` library — far fancier (colors, columns, multiple bars, spinners, tables) and great for polished CLIs; heavier dependency and more API surface than tqdm's one-call wrap. |
+| alive-progress | 未收录 | Choose alive-progress when you need animated, visually richer single-bar UX with live spinners. | Animated, visually richer single-bar UX with live spinners; smaller ecosystem and integration set than tqdm (no pandas/notebook/pipe story of the same breadth). |
+| progressbar2 | 未收录 | Choose progressbar2 when you need an older, configurable widget-style progress-bar library. | Older, configurable progress-bar library; widget-based API is more verbose than `tqdm(iterable)`, smaller modern adoption. |
+| plain logging / `print` | 未收录 | Choose plain logging or print when you need zero dependency and machine-parseable output. | Zero dependency and trivially machine-parseable; no ETA/rate/in-place redraw, and noisy for interactive use — the right call for files/CI, the wrong one for a human watching a TTY. |
+| [Telegraf](telegraf.md) | ✅ | Choose Telegraf when you need a metrics collection/routing agent instead of a human-facing progress bar. | A metrics collection/routing agent, not a progress bar — different job; use it when you need real telemetry rather than a human-facing meter. |
 
 ## Tech stack
 

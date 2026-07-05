@@ -88,12 +88,12 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [CyberChef](cyberchef.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“浏览器内运行，可串联的「recipe」管线，且密码学/取证深度更强”，再选 CyberChef。 | 浏览器内运行，可串联的「recipe」管线，且密码学/取证深度更强；有浏览器即可用。DevToys 是原生桌面应用，带 OS 集成、CLI 配套、默认离线安装，但工具多为一次性（无 recipe 编排图）。 |
-| [Cockpit](cockpit.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“面向 Linux 主机的 Web 服务器管理界面（服务、日志、存储）”，再选 Cockpit。 | 面向 Linux 主机的 Web 服务器管理界面（服务、日志、存储）；定位不同——远程主机管理 vs 本地开发字符串处理。 |
-| [Telegraf](telegraf.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“面向可观测性管线的指标/事件采集 agent”，再选 Telegraf。 | 面向可观测性管线的指标/事件采集 agent；不是交互式开发工具箱。 |
-| It-Tools | 未收录 | 当前页用于它的主场景；如果更看重“可自托管的 Web 应用，工具杂烩与 DevToys 高度相似”，再选 It-Tools。 | 可自托管的 Web 应用，工具杂烩与 DevToys 高度相似；任意浏览器 / Docker 即可跑。DevToys 是原生桌面 + 离线 + CLI;It-Tools 是 HTTP 上零安装。 |
-| DevUtils(macOS) | 未收录 | 当前页用于它的主场景；如果更看重“打磨精良的仅 macOS 原生等价物（付费）”，再选 DevUtils(macOS)。 | 打磨精良的仅 macOS 原生等价物（付费）;DevToys 免费、MIT、跨平台。 |
-| `jq` / `xxd` / `openssl`(CLI) | 未收录 | 当前页用于它的主场景；如果更看重“可脚本化的 Unix 原语，无 GUI”，再选 jq / xxd / openssl(CLI)。 | 可脚本化的 Unix 原语，无 GUI；更适合管线，不适合「我就想瞄一眼这玩意」。 |
+| [CyberChef](cyberchef.zh.md) | ✅ | 需要浏览器内运行、可串联的 recipe 管线和更深密码学/取证操作时，选 CyberChef。 | 浏览器内运行，可串联的「recipe」管线，且密码学/取证深度更强；有浏览器即可用。DevToys 是原生桌面应用，带 OS 集成、CLI 配套、默认离线安装，但工具多为一次性（无 recipe 编排图）。 |
+| [Cockpit](cockpit.zh.md) | ✅ | 需要面向 Linux 主机的 Web 服务器管理界面时，选 Cockpit。 | 面向 Linux 主机的 Web 服务器管理界面（服务、日志、存储）；定位不同——远程主机管理 vs 本地开发字符串处理。 |
+| [Telegraf](telegraf.zh.md) | ✅ | 需要面向可观测性管线的指标/事件采集 agent 时，选 Telegraf。 | 面向可观测性管线的指标/事件采集 agent；不是交互式开发工具箱。 |
+| It-Tools | 未收录 | 需要可自托管、工具杂烩与 DevToys 类似的 Web 应用时，选 It-Tools。 | 可自托管的 Web 应用，工具杂烩与 DevToys 高度相似；任意浏览器 / Docker 即可跑。DevToys 是原生桌面 + 离线 + CLI；It-Tools 是 HTTP 上零安装。 |
+| DevUtils(macOS) | 未收录 | 需要打磨精良的仅 macOS 原生等价物且接受付费时，选 DevUtils。 | 打磨精良的仅 macOS 原生等价物（付费）；DevToys 免费、MIT、跨平台。 |
+| `jq` / `xxd` / `openssl`(CLI) | 未收录 | 需要可脚本化、无 GUI 的 Unix 原语管线时，选 jq、xxd 或 openssl。 | 可脚本化的 Unix 原语，无 GUI；更适合管线，不适合「我就想瞄一眼这玩意」。 |
 
 ## 技术栈
 
