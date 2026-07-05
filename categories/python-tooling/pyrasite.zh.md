@@ -89,11 +89,11 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| py-spy | 未收录 | 当前页用于它的主场景；如果更看重“采样式 profiler，*不注入代码*就读取运行中的 Python 进程（无需 gdb、更安全）”，再选 py-spy。 | 采样式 profiler，*不注入代码*就读取运行中的 Python 进程（无需 gdb、更安全）；对“时间在哪/为何卡住”很好，但它只观察——不能在目标里跑任意代码。 |
-| pyrasite 对 gdb + python-gdb | 未收录 | 当前页用于它的主场景；如果更看重“裸 gdb 加 CPython helper 能 attach 并检查，但注入要你自己接线”，再选 pyrasite 对 gdb + python-gdb。 | 裸 gdb 加 CPython helper 能 attach 并检查，但注入要你自己接线；pyrasite 把“注入并跑片段”这套工作流打包好了。 |
-| manhole / remote pdb | 未收录 | 当前页用于它的主场景；如果更看重“你*事先*嵌入的库，往你的进程开一个调试 shell”，再选 manhole / remote pdb。 | 你*事先*嵌入的库，往你的进程开一个调试 shell；更干净更安全，但要预先埋点——对已经卡死的进程没用。 |
-| Austin | 未收录 | 当前页用于它的主场景；如果更看重“Python 的帧栈采样 profiler”，再选 Austin。 | Python 的帧栈采样 profiler；只观察、低开销、活跃维护——是 profiling 替代品，不是代码注入器。 |
-| 加日志后 reload/重启 | 未收录 | 当前页用于它的主场景；如果更看重““干脆重启它”的基线”，再选 加日志后 reload/重启。 | “干脆重启它”的基线；安全但丢掉活状态和当下的症状——这恰恰是 pyrasite 要避免的。 |
+| py-spy | 未收录 | 只观察式采样已经足够，且首要目标是避免代码注入时，选 py-spy。 | 对“时间在哪／为何卡住”很好，但不能在目标进程里跑任意代码。 |
+| pyrasite 对 gdb + python-gdb | 未收录 | 想要手工 attach／inspect 控制权，并能自己接好注入链路时，选裸 gdb 加 CPython helper。 | pyrasite 把“注入并跑片段”这套工作流打包好了；裸 gdb 更底层也更手工。 |
+| manhole / remote pdb | 未收录 | 可以事先嵌入调试 shell，而不是事后挂载时，选 manhole 或 remote pdb。 | 更干净也更安全，但对没有预埋、已经卡死的进程没用。 |
+| Austin | 未收录 | 任务是低开销帧栈 profiling，而不是活体执行代码时，选 Austin。 | 只观察且活跃维护，是 profiling 替代品，不是代码注入器。 |
+| 加日志后 reload/重启 | 未收录 | 保留活状态不如走安全运维路径重要时，选重启加日志。 | 安全，但会丢掉 pyrasite 想检查的当下症状。 |
 
 ## 技术栈
 

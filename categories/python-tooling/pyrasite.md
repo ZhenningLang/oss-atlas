@@ -89,11 +89,11 @@ You reach for it specifically when the alternative — kill and restart with mor
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| py-spy | 未收录 | Use this page for its stated niche; choose py-spy when you need sampling profiler that reads a running Python process *without injecting code* (no gdb, safer). | Sampling profiler that reads a running Python process *without injecting code* (no gdb, safer); great for "where's the time/why is it stuck," but it observes — it can't run arbitrary code in the target. |
-| pyrasite vs gdb + python-gdb | 未收录 | Use this page for its stated niche; choose pyrasite vs gdb + python-gdb when you need raw gdb with the CPython helpers can attach and inspect, but you wire up the injection yourself. | Raw gdb with the CPython helpers can attach and inspect, but you wire up the injection yourself; pyrasite packages the inject-and-run-snippet workflow. |
-| manhole / remote pdb | 未收录 | Use this page for its stated niche; choose manhole / remote pdb when you need libraries you embed *ahead of time* to open a debug shell into your process. | Libraries you embed *ahead of time* to open a debug shell into your process; cleaner and safer, but require pre-instrumentation — no good for a process already wedged. |
-| Austin | 未收录 | Use this page for its stated niche; choose Austin when you need frame-stack sampling profiler for Python. | Frame-stack sampling profiler for Python; observe-only, low overhead, actively maintained — a profiling alternative, not a code-injector. |
-| reload/restart with logging | 未收录 | Use this page for its stated niche; choose reload/restart with logging when you need the "just restart it" baseline. | The "just restart it" baseline; safe but loses live state and the in-the-moment symptom — exactly what pyrasite exists to avoid. |
+| py-spy | 未收录 | Choose py-spy when observe-only sampling is enough and avoiding code injection is the priority. | Great for "where's the time/why is it stuck," but it cannot run arbitrary code in the target. |
+| pyrasite vs gdb + python-gdb | 未收录 | Choose raw gdb plus CPython helpers when you want manual attach/inspect control and can wire the injection yourself. | Pyrasite packages the inject-and-run-snippet workflow; raw gdb is lower-level and more manual. |
+| manhole / remote pdb | 未收录 | Choose manhole or remote pdb when you can embed the debug shell ahead of time instead of attaching after the fact. | Cleaner and safer, but no help for an already-wedged process that lacks pre-instrumentation. |
+| Austin | 未收录 | Choose Austin when the job is low-overhead frame-stack profiling rather than live code execution. | Observe-only and actively maintained, but a profiling alternative rather than a code injector. |
+| reload/restart with logging | 未收录 | Choose restart-plus-logging when preserving live state is less important than staying on the safe operational path. | Safe, but it loses the in-the-moment symptom that pyrasite exists to inspect. |
 
 ## Tech stack
 

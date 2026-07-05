@@ -94,12 +94,12 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [pyrasite](pyrasite.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“同样经 gdb 挂到运行中的 Python 进程，但它*注入任意代码*（对象 dump、线程栈、反向 shell），而非给出打包好的按类型内存报告”，再选 pyrasite。 | 同样经 gdb 挂到运行中的 Python 进程，但它*注入任意代码*（对象 dump、线程栈、反向 shell），而非给出打包好的按类型内存报告；面更广、更危险，同样低节奏但**未归档**。 |
-| tracemalloc（标准库） | 未收录 | 当前页用于它的主场景；如果更看重“内置于 CPython”，再选 tracemalloc（标准库）。 | 内置于 CPython；*从你自己的进程内部*追踪分配并显示内存从何处分配——永久维护、无需 GDB，但要求你掌控／能埋点代码（无法挂到任意运行中的 PID）。 |
-| memray（Bloomberg） | 未收录 | 当前页用于它的主场景；如果更看重“活跃维护的原生内存 profiler，带火焰图和 live 模式”，再选 memray（Bloomberg）。 | 活跃维护的原生内存 profiler，带火焰图和 live 模式；当下 Python 内存工作的现代默认选择，但你用它自己的工具启动／挂载，而非读取任意 PID 的 ncurses 快照。 |
-| Pympler | 未收录 | 当前页用于它的主场景；如果更看重“memory-analyzer 自己依赖的对象内省库”，再选 Pympler。 | memory-analyzer 自己依赖的对象内省库；从你的进程内部给出按类型的对象大小／计数——有维护，但是个你嵌入的库，不是挂到 PID 的工具。 |
-| objgraph | 未收录 | 当前页用于它的主场景；如果更看重“这里的另一个依赖”，再选 objgraph。 | 这里的另一个依赖；从进程内部画对象引用图，追是什么让对象活着——有维护，但是进程内的，不是外部挂载。 |
-| guppy3 / heapy、Scalene | 未收录 | 当前页用于它的主场景；如果更看重“guppy3 ＝从进程内部做堆分析”，再选 guppy3 / heapy、Scalene。 | guppy3 ＝从进程内部做堆分析；Scalene ＝有维护的 CPU＋GPU＋内存 profiler。两者都是「内存去哪了」的有维护替代品，都不像 memory-analyzer 那样挂到一个外部的活 PID。 |
+| [pyrasite](pyrasite.zh.md) | ✅ | 需要向 Python 进程做活体代码注入，而不是打包好的按类型内存快照时，选 pyrasite。 | 它面更广也更危险：能跑对象 dump、线程栈或反向 shell；同样低节奏但**未归档**。 |
+| tracemalloc（标准库） | 未收录 | 你掌控代码，能从目标进程内部埋点追踪分配时，选 tracemalloc。 | 内置于 CPython 且有维护，但不能挂到任意已经运行的 PID。 |
+| memray（Bloomberg） | 未收录 | 活跃维护、火焰图和 live 模式比 ncurses 式堆快照更重要时，选 memray。 | 它是现代 Python 内存工作流，但你用它自己的启动／挂载工具，而不是 memory-analyzer 的 GDB 报告。 |
+| Pympler | 未收录 | 嵌入式库给出按类型对象大小／计数已经足够时，选 Pympler。 | 它是 memory-analyzer 的依赖之一，但运行在你掌控的代码内部，不是外部挂载工具。 |
+| objgraph | 未收录 | 主要诊断需求是在进程内部画引用图时，选 objgraph。 | 适合追是什么让对象活着，但它是进程内工具，不是外部 GDB 挂载。 |
+| guppy3 / heapy、Scalene | 未收录 | 进程内堆分析选 guppy3／heapy；需要有维护的 CPU／GPU／内存 profiler 时，选 Scalene。 | 两者都能回答“内存去哪了”，但都不匹配 memory-analyzer 的任意 live PID 快照主场。 |
 
 ## 技术栈
 

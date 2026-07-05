@@ -89,10 +89,10 @@ You reach for it specifically when the surrounding stack is already gevent-based
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| httpx | 未收录 | Use this page for its stated niche; choose httpx when you need modern sync+async client with HTTP/2. | Modern sync+async client with HTTP/2; the recommended path for new concurrent code, but requires `async`/`await` (or its sync client without the same concurrency model). |
-| aiohttp | 未收录 | Use this page for its stated niche; choose aiohttp when you need mature asyncio HTTP client/server. | Mature asyncio HTTP client/server; full async ecosystem, but a different programming model than drop-in `requests`. |
-| requests-futures | 未收录 | Use this page for its stated niche; choose requests-futures when you need also wraps `requests` for concurrency but via a `ThreadPoolExecutor` (real threads, no monkeypatchin. | Also wraps `requests` for concurrency but via a `ThreadPoolExecutor` (real threads, no monkeypatching) — simpler integration, different concurrency tradeoffs. |
-| `requests` + `concurrent.futures` | 未收录 | Use this page for its stated niche; choose requests + concurrent.futures when you need stdlib thread/process pools around plain `requests`. | Stdlib thread/process pools around plain `requests`; no extra dep and no monkeypatching, slightly more boilerplate than `map()`. |
+| httpx | 未收录 | Choose httpx for new code that can use a modern sync/async client and wants HTTP/2 support. | Better long-term path for concurrent HTTP, but async concurrency requires `async`/`await` rather than drop-in `requests` calls. |
+| aiohttp | 未收录 | Choose aiohttp when the app is already asyncio-native or also needs an async HTTP server stack. | Mature async ecosystem, but a different programming model than drop-in `requests`. |
+| requests-futures | 未收录 | Choose requests-futures when you want `requests` compatibility with real threads and no gevent monkeypatching. | Simpler integration for some apps, but thread-pool concurrency has different scaling and blocking tradeoffs. |
+| `requests` + `concurrent.futures` | 未收录 | Choose plain `requests` plus stdlib futures when an explicit small thread/process pool is clearer than another dependency. | No extra dep and no monkeypatching, with slightly more boilerplate than `grequests.map()`. |
 
 ## Tech stack
 

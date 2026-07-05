@@ -89,10 +89,10 @@ Requests + Gevent：用熟悉的 `requests` API 并发发出大量 HTTP 请求�
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| httpx | 未收录 | 当前页用于它的主场景；如果更看重“现代同步＋异步客户端，支持 HTTP/2”，再选 httpx。 | 现代同步＋异步客户端，支持 HTTP/2；新并发代码的推荐路线，但需要 `async`/`await`（其同步客户端则没有同样的并发模型）。 |
-| aiohttp | 未收录 | 当前页用于它的主场景；如果更看重“成熟的 asyncio HTTP 客户端/服务端”，再选 aiohttp。 | 成熟的 asyncio HTTP 客户端/服务端；完整异步生态，但编程模型与「drop-in `requests`」不同。 |
-| requests-futures | 未收录 | 当前页用于它的主场景；如果更看重“同样封装 `requests` 做并发，但走 `ThreadPoolExecutor`（真线程、无 monkeypatching）”，再选 requests-futures。 | 同样封装 `requests` 做并发，但走 `ThreadPoolExecutor`（真线程、无 monkeypatching）——集成更简单，并发取舍不同。 |
-| `requests` + `concurrent.futures` | 未收录 | 当前页用于它的主场景；如果更看重“标准库线程/进程池套在普通 `requests` 外”，再选 requests + concurrent.futures。 | 标准库线程/进程池套在普通 `requests` 外；无额外依赖、无 monkeypatching，比 `map()` 多一点样板代码。 |
+| httpx | 未收录 | 新代码可以接受现代同步／异步客户端，并且需要 HTTP/2 支持时，选 httpx。 | 更适合作为长期并发 HTTP 路线，但异步并发需要 `async`/`await`，不是 drop-in `requests` 调用。 |
+| aiohttp | 未收录 | 应用已经 asyncio-native，或还需要异步 HTTP 服务端栈时，选 aiohttp。 | 异步生态成熟，但编程模型与 drop-in `requests` 不同。 |
+| requests-futures | 未收录 | 想保留 `requests` 兼容性，同时用真实线程且不做 gevent monkeypatching 时，选 requests-futures。 | 对一些应用集成更简单，但线程池并发有不同的扩展和阻塞取舍。 |
+| `requests` + `concurrent.futures` | 未收录 | 显式的小型线程／进程池比再加一个依赖更清楚时，选普通 `requests` 加标准库 futures。 | 无额外依赖、无 monkeypatching，但比 `grequests.map()` 多一点样板代码。 |
 
 ## 技术栈
 

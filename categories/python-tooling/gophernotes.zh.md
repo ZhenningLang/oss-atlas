@@ -83,11 +83,11 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| Python（IPython）内核 | 未收录 | 当前页用于它的主场景；如果更看重“默认的 Jupyter 体验，带完整数据科学生态”，再选 Python（IPython）内核。 | 默认的 Jupyter 体验，带完整数据科学生态；如果你不是非要 Go，这是阻力最小的路。 |
-| gomacro（REPL） | 未收录 | 当前页用于它的主场景；如果更看重“gophernotes 依托的 Go 解释器/REPL”，再选 gomacro（REPL）。 | gophernotes 依托的 Go 解释器/REPL；适合终端里交互式 Go，但不是笔记本 UI。 |
-| Go Playground / `go run` | 未收录 | 当前页用于它的主场景；如果更看重“快速一次性跑 Go”，再选 Go Playground / go run。 | 快速一次性跑 Go；没有持久 cell 状态、没有笔记本散文交织——适合片段，不适合文学化文档。 |
-| Jupyter 多语言内核（如 Rust/JS 的） | 未收录 | 当前页用于它的主场景；如果更看重“其他语言“在 Jupyter 里跑语言 X”的同一思路”，再选 Jupyter 多语言内核（如 Rust/JS 的）。 | 其他语言“在 Jupyter 里跑语言 X”的同一思路；各自维护度和完整度参差——gophernotes 是 Go 那一份，带停滞维护的告诫。 |
-| Tour of Go / 交互文档 | 未收录 | 当前页用于它的主场景；如果更看重“精选的交互式 Go 学习，但内容固定”，再选 Tour of Go / 交互文档。 | 精选的交互式 Go 学习，但内容固定——不是你跑自己代码的内核。 |
+| Python（IPython）内核 | 未收录 | 并非必须用 Go，而是想要阻力最低的 Jupyter／数据科学生态时，选 Python 内核。 | 生态完整、默认支持强，但它不教学或执行 Go。 |
+| gomacro（REPL） | 未收录 | 终端里的交互式 Go 已经足够，笔记本 UI 反而多余时，选 gomacro。 | 它是 gophernotes 依托的解释器血统，但自身不是 Jupyter 内核体验。 |
+| Go Playground / `go run` | 未收录 | 只想快速跑一次性片段，不需要持久笔记本状态时，选 Go Playground 或 `go run`。 | 适合片段，不适合代码和文字交织的文档，也没有跨 cell 状态。 |
+| Jupyter 多语言内核（如 Rust/JS 的） | 未收录 | 真正需求是把 Rust、JavaScript 或其他语言放进 notebook 时，选对应 Jupyter 语言内核。 | 思路与 gophernotes 相同，但各语言内核的维护度和完整度不同。 |
+| Tour of Go / 交互文档 | 未收录 | 目标是跟随式学习，而不是运行自己的探索性 notebook 代码时，选 Tour of Go。 | 它是精选交互内容，但不是可复用内核。 |
 
 ## 技术栈
 
