@@ -91,11 +91,11 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [Airflow](../workflow-orchestration/airflow.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“Python 写的数据管线 DAG 编排器：依赖、回填、血缘、庞大的 operator 生态”，再选 Airflow。 | Python 写的数据管线 DAG 编排器：依赖、回填、血缘、庞大的 operator 生态。运维重得多，若你只是要跨服务的 cron 触发任务，属于杀鸡用牛刀。 |
-| Quartz | 未收录 | 当前页用于它的主场景；如果更看重“经典的可嵌入 Java 调度库”，再选 Quartz。 | 经典的可嵌入 Java 调度库；cron/trigger 模型强大，但**没有开箱即用的 admin UI、没有分布式调度器、没有运行控制台**——XXL-JOB 在精神上基本就是「Quartz + 一个管理平台」。 |
-| Elastic-Job（ShardingSphere ElasticJob） | 未收录 | 当前页用于它的主场景；如果更看重“Java 分布式调度器，基于 ZooKeeper 协调，**分片**能力强”，再选 Elastic-Job（ShardingSphere ElasticJob）。 | Java 分布式调度器，基于 ZooKeeper 协调，**分片**能力强；去中心化（无中心 admin），但基础设施依赖更重，搭建比 XXL-JOB 的 DB 背书 admin 更陡。 |
-| Spring Batch | 未收录 | 当前页用于它的主场景；如果更看重“一个批处理*框架*（分块 read/process/write、可重启），不是调度器”，再选 Spring Batch。 | 一个批处理*框架*（分块 read/process/write、可重启），不是调度器——你仍需要别的东西来触发它。是互补，不是替代。 |
-| PowerJob | 未收录 | 当前页用于它的主场景；如果更看重“较新的 Java 分布式调度/计算平台”，再选 PowerJob。 | 较新的 Java 分布式调度/计算平台；工作流/DAG 和 map-reduce 式执行更丰富，常被定位成更现代的 XXL-JOB 替代——装机量更小。[未验证] |
+| [Airflow](../workflow-orchestration/airflow.zh.md) | ✅ | Python 数据管线 DAG 编排、依赖、回填、血缘和 operator 生态最重要时，选 Airflow。 | 运维重得多；如果只是跨服务 cron 触发任务，属于杀鸡用牛刀。 |
+| Quartz | 未收录 | 需要嵌进应用里的 Java 调度库，而不是管理平台时，选 Quartz。 | cron/trigger 模型强大，但**没有开箱即用的 admin UI、没有分布式调度器、没有运行控制台**。XXL-JOB 在精神上更像「Quartz + 一个管理平台」。 |
+| Elastic-Job（ShardingSphere ElasticJob） | 未收录 | Java 分布式调度、强**分片**和 ZooKeeper 协调是硬需求时，选 Elastic-Job。 | 它去中心化，但基础设施依赖更重，搭建比 XXL-JOB 的 DB 背书 admin 更陡。 |
+| Spring Batch | 未收录 | 需求是分块 read/process/write 批处理和可重启性，而不是调度时，选 Spring Batch。 | 它是互补，不是替代；你仍需要别的东西来触发它。 |
+| PowerJob | 未收录 | 较新的 Java 分布式调度/计算平台、更多工作流/DAG 和 map-reduce 式执行，值得用更小装机量交换时，选 PowerJob。 | 它常被定位成更现代的 XXL-JOB 替代，但采用面更小。[未验证] |
 
 ## 技术栈
 
