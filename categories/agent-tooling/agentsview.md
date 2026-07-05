@@ -95,10 +95,10 @@ You reach for it specifically when you want **observability over your own agent 
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| Per-agent built-in history (Claude Code `/resume`, etc.) | 未收录 | Use this page for its stated niche; choose Per-agent built-in history (Claude Code /resume, etc.) when you need native and zero-install, but single-agent and no cross-tool search/cost rollup. | Native and zero-install, but single-agent and no cross-tool search/cost rollup — the gap AgentsView fills. |
-| ccusage / token-cost CLIs | 未收录 | Use this page for its stated niche; choose ccusage / token-cost CLIs when you need focused Claude Code/agent token-cost reporters. | Focused Claude Code/agent token-cost reporters; narrower scope (cost, often one agent) vs. AgentsView's search + analytics + multi-agent. |
-| Langfuse / Helicone / observability SaaS | 未收录 | Use this page for its stated niche; choose Langfuse / Helicone / observability SaaS when you need production LLM observability platforms (tracing, evals). | Production LLM observability platforms (tracing, evals); built for app pipelines and usually hosted/instrumented, not local-first browsing of *your own* coding-agent sessions. |
-| grep over `~/.claude` / session dirs | 未收录 | Use this page for its stated niche; choose grep over ~/.claude / session dirs when you need zero-dependency and fully local, but no UI, no token/cost math, no cross-agent normalization. | Zero-dependency and fully local, but no UI, no token/cost math, no cross-agent normalization. |
+| Per-agent built-in history (Claude Code `/resume`, etc.) | 未收录 | Choose built-in agent history when native zero-install recall is enough. | Native and zero-install, but single-agent and no cross-tool search/cost rollup — the gap AgentsView fills. |
+| ccusage / token-cost CLIs | 未收录 | Choose ccusage or token-cost CLIs when you only need focused agent cost reporting. | Focused Claude Code/agent token-cost reporters; narrower scope (cost, often one agent) vs. AgentsView's search + analytics + multi-agent. |
+| Langfuse / Helicone / observability SaaS | 未收录 | Choose Langfuse or Helicone when you need production LLM observability platforms. | Production LLM observability platforms (tracing, evals); built for app pipelines and usually hosted/instrumented, not local-first browsing of *your own* coding-agent sessions. |
+| grep over `~/.claude` / session dirs | 未收录 | Choose grep over local session dirs when zero-dependency local search is enough. | Zero-dependency and fully local, but no UI, no token/cost math, no cross-agent normalization. |
 
 ## Tech stack
 

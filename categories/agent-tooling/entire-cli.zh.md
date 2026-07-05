@@ -91,11 +91,11 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [beads](beads.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“解决的是相邻问题：依赖感知的*任务图* / 结构化 agent 记忆（接下来做什么、什么被阻塞），由版本化 SQL 支撑”，再选 beads。 | 解决的是相邻问题：依赖感知的*任务图* / 结构化 agent 记忆（接下来做什么、什么被阻塞），由版本化 SQL 支撑。Entire 捕获的是*已经发生了什么*（transcript/checkpoint）用于溯源与回滚——互补，而非替代。 |
-| [CCPM](ccpm.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“一套 Claude-Code 项目管理工作流（基于 GitHub Issues 的 spec/issue/多 agent 并行）”，再选 CCPM。 | 一套 Claude-Code 项目管理工作流（基于 GitHub Issues 的 spec/issue/多 agent 并行）。属于流程/协调层，不是会话 transcript 的捕获与回滚层。 |
-| 裸 Git + agent 自带的会话日志 | 未收录 | 当前页用于它的主场景；如果更看重“零额外工具，但 agent 日志按工具各自分散、不与 commit 索引、不可统一回滚，要么乱要么根本进不了仓库”，再选 裸 Git + agent 自带的会话日志。 | 零额外工具，但 agent 日志按工具各自分散、不与 commit 索引、不可统一回滚，要么乱要么根本进不了仓库。Entire 就是那个统一的捕获/索引层。 |
-| Specstory / agent transcript 导出工具 | 未收录 | 当前页用于它的主场景；如果更看重“其它工具也能持久化 agent 聊天 transcript，但通常是导出成文件/markdown，而非绑定到 commit 的 Git-checkpoint 溯源、且带回滚机制”，再选 Specstory / agent transcript 导出工具。 | 其它工具也能持久化 agent 聊天 transcript，但通常是导出成文件/markdown，而非绑定到 commit 的 Git-checkpoint 溯源、且带回滚机制。替换前先核对功能对齐度。 |
-| Reflog / `git stash` + 手动快照 | 未收录 | 当前页用于它的主场景；如果更看重“你本来就有的原生恢复原语，但它们只捕获工作树状态”，再选 Reflog / git stash + 手动快照。 | 你本来就有的原生恢复原语，但它们只捕获工作树状态——没有提示/回复/工具调用上下文、没有按会话索引、没有 agent 感知的脱敏。 |
+| [beads](beads.zh.md) | ✅ | 需要相邻的任务图/结构化记忆层时，选 beads。 | 解决的是相邻问题：依赖感知的*任务图* / 结构化 agent 记忆（接下来做什么、什么被阻塞），由版本化 SQL 支撑。Entire 捕获的是*已经发生了什么*（transcript/checkpoint）用于溯源与回滚——互补，而非替代。 |
+| [CCPM](ccpm.zh.md) | ✅ | 需要基于 spec/issue/多 agent 并行的 Claude-Code 项目管理流程时，选 CCPM。 | 一套 Claude-Code 项目管理工作流（基于 GitHub Issues 的 spec/issue/多 agent 并行）。属于流程/协调层，不是会话 transcript 的捕获与回滚层。 |
+| 裸 Git + agent 自带的会话日志 | 未收录 | 零额外工具比统一溯源更重要时，选裸 Git 加 agent 自带日志。 | 零额外工具，但 agent 日志按工具各自分散、不与 commit 索引、不可统一回滚，要么乱要么根本进不了仓库。Entire 就是那个统一的捕获/索引层。 |
+| Specstory / agent transcript 导出工具 | 未收录 | 导出的聊天记录已经够用时，选 Specstory 或其他 transcript 导出工具。 | 其它工具也能持久化 agent 聊天 transcript，但通常是导出成文件/markdown，而非绑定到 commit 的 Git-checkpoint 溯源、且带回滚机制。替换前先核对功能对齐度。 |
+| Reflog / `git stash` + 手动快照 | 未收录 | 原生工作树状态恢复已经够用时，选 reflog、git stash 或手动快照。 | 你本来就有的原生恢复原语，但它们只捕获工作树状态——没有提示/回复/工具调用上下文、没有按会话索引、没有 agent 感知的脱敏。 |
 
 ## 技术栈
 

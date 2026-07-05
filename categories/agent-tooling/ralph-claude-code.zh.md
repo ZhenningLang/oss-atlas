@@ -97,12 +97,12 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [beads](beads.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“一个持久化、带依赖关系的*任务图*（「该做什么」的存储）”，再选 beads。 | 一个持久化、带依赖关系的*任务图*（「该做什么」的存储）;Ralph 是「把它做掉的循环」。互补——Ralph 甚至能导入 beads 任务——而非互斥。 |
-| [CCPM](ccpm.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“在 Claude Code 之上做 spec/PRD 驱动的项目管理，带 GitHub issue 工作流”，再选 CCPM。 | 在 Claude Code 之上做 spec/PRD 驱动的项目管理，带 GitHub issue 工作流；偏重规划结构，而非 Ralph 那种带熔断器+速率限制的硬化无人值守跑循环。 |
-| [Entire](entire-cli.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“一个更宽的 agent 工作流 CLI”，再选 Entire。 | 一个更宽的 agent 工作流 CLI；在「驱动 agent」上有重叠，但编排模型与 Ralph 的单 prompt Bash 循环不同。 |
-| [Context Mode](context-mode.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“聚焦于为 agent 塑形上下文/记忆，而非带退出检测的自治完成循环”，再选 Context Mode。 | 聚焦于为 agent 塑形上下文/记忆，而非带退出检测的自治完成循环。 |
-| Geoffrey Huntley 的原版 Ralph(`while :; claude -p ...`) | 未收录 | 当前页用于它的主场景；如果更看重“原始技法就是一行 shell 循环”，再选 Geoffrey Huntley 的原版 Ralph(while :; claude -p ...)。 | 原始技法就是一行 shell 循环；本项目是那个想法加上退出闸门、速率限制、熔断器、监控、备份、沙箱——即裸循环缺的那层安全脚手架。 |
-| Aider `--auto` / OpenHands / SWE-agent | 未收录 | 当前页用于它的主场景；如果更看重“自带模型/循环的通用自治编码 agent”，再选 Aider --auto / OpenHands / SWE-agent。 | 自带模型/循环的通用自治编码 agent；不是 Claude-Code-CLI 套壳，也不围绕双条件 `EXIT_SIGNAL` 闸门构建。 |
+| [beads](beads.zh.md) | ✅ | 需要持久化、带依赖关系的“该做什么”任务图时，选 beads。 | 一个持久化、带依赖关系的*任务图*（「该做什么」的存储）；Ralph 是「把它做掉的循环」。互补——Ralph 甚至能导入 beads 任务——而非互斥。 |
+| [CCPM](ccpm.zh.md) | ✅ | 需要 Claude Code 之上的 spec/PRD 驱动项目管理时，选 CCPM。 | 在 Claude Code 之上做 spec/PRD 驱动的项目管理，带 GitHub issue 工作流；偏重规划结构，而非 Ralph 那种带熔断器+速率限制的硬化无人值守跑循环。 |
+| [Entire](entire-cli.zh.md) | ✅ | 需要更宽的 agent 工作流 CLI 时，选 Entire。 | 一个更宽的 agent 工作流 CLI；在「驱动 agent」上有重叠，但编排模型与 Ralph 的单 prompt Bash 循环不同。 |
+| [Context Mode](context-mode.zh.md) | ✅ | 需要上下文/记忆塑形而不是自治完成循环时，选 Context Mode。 | 聚焦于为 agent 塑形上下文/记忆，而非带退出检测的自治完成循环。 |
+| Geoffrey Huntley 的原版 Ralph(`while :; claude -p ...`) | 未收录 | 只需要一行 shell 循环原始技法时，选 Geoffrey Huntley 的原版 Ralph。 | 原始技法就是一行 shell 循环；本项目是那个想法加上退出闸门、速率限制、熔断器、监控、备份、沙箱——即裸循环缺的那层安全脚手架。 |
+| Aider `--auto` / OpenHands / SWE-agent | 未收录 | 需要自带循环的通用自治编码 agent 时，选 Aider、OpenHands 或 SWE-agent。 | 自带模型/循环的通用自治编码 agent；不是 Claude-Code-CLI 套壳，也不围绕双条件 `EXIT_SIGNAL` 闸门构建。 |
 
 ## 技术栈
 
