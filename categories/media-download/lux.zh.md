@@ -90,10 +90,10 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [youtube-dl](youtube-dl.zh.md) | 已收录 | 当前页用于它的主场景；如果更看重“Python CLI，拥有最大的遗留 extractor 目录（约 1000 站点）”，再选 youtube-dl。 | Python CLI，拥有最大的遗留 extractor 目录（约 1000 站点）；西方站点覆盖更广，但需要 Python 运行时，且其上游 tag 落后（yt-dlp 才是活跃路径）。lux 用「广度」换来「单 Go 二进制 + 更强中文站点支持」。 |
-| yt-dlp | 未收录 | 当前页用于它的主场景；如果更看重“事实上最活跃的下载器”，再选 yt-dlp。 | 事实上最活跃的下载器；extractor 覆盖最广、修复最快，基于 Python。当广度/时效比「交付单个静态二进制」更重要时选它。 |
-| [you-get](you-get.zh.md) | 已收录 | 当前页用于它的主场景；如果更看重“同样在中文站点（Bilibili 等）上很强的 Python 下载器”，再选 you-get。 | 同样在中文站点（Bilibili 等）上很强的 Python 下载器；与 lux 同一生态位，但用的是 Python 运行时而非 Go 二进制，且有自己另行维护的站点列表。 |
-| [cobalt](cobalt.zh.md) | 已收录 | 当前页用于它的主场景；如果更看重“以 Web/API 为先、可自托管的*服务*”，再选 cobalt。 | 以 Web/API 为先、可自托管的*服务*；浏览器友好、UX 干净，但它是一个要跑的服务器，而非你能丢进脚本的单个 CLI 二进制。 |
+| [youtube-dl](youtube-dl.zh.md) | ✅ | 需要拥有最大遗留 extractor 目录的 Python CLI 时，选 youtube-dl。 | Python CLI，拥有最大的遗留 extractor 目录（约 1000 站点）；西方站点覆盖更广，但需要 Python 运行时，且其上游 tag 落后（yt-dlp 才是活跃路径）。lux 用「广度」换来「单 Go 二进制 + 更强中文站点支持」。 |
+| [yt-dlp](yt-dlp.zh.md) | ✅ | 需要事实上最活跃、覆盖最广的下载器时，选 yt-dlp。 | 事实上最活跃的下载器；extractor 覆盖最广、修复最快，基于 Python。当广度/时效比「交付单个静态二进制」更重要时选它。 |
+| [you-get](you-get.zh.md) | ✅ | 需要同样擅长中文站点的 Python 下载器时，选 you-get。 | 同样在中文站点（Bilibili 等）上很强的 Python 下载器；与 lux 同一生态位，但用的是 Python 运行时而非 Go 二进制，且有自己另行维护的站点列表。 |
+| [cobalt](cobalt.zh.md) | ✅ | 需要 Web/API 优先、可自托管的下载服务时，选 cobalt。 | 以 Web/API 为先、可自托管的*服务*；浏览器友好、UX 干净，但它是一个要跑的服务器，而非你能丢进脚本的单个 CLI 二进制。 |
 
 ## 技术栈
 
