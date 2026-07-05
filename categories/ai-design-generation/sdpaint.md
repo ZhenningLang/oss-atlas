@@ -83,10 +83,10 @@ You reach for it specifically when you want **interactive scribble-driven genera
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| Krita + AI Diffusion plugin | 未收录 | Use this page for its stated niche; choose Krita + AI Diffusion plugin when you need full painting app with an SD plugin and live generation inside a real art tool. | Full painting app with an SD plugin and live generation inside a real art tool; far richer canvas, heavier setup, more actively developed. |
-| ComfyUI | 未收录 | Use this page for its stated niche; choose ComfyUI when you need node-graph SD front-end with huge flexibility and an active ecosystem. | Node-graph SD front-end with huge flexibility and an active ecosystem; powerful but not a draw-and-watch scribble loop. |
-| AUTOMATIC1111 WebUI (img2img / sketch tab) | 未收录 | Use this page for its stated niche; choose AUTOMATIC1111 WebUI (img2img / sketch tab) when you need the backend SdPaint sits on. | The backend SdPaint sits on; can do sketch→image in-browser, but the click-Generate loop is less immediate than live stroke streaming. |
-| ControlNet scribble in any SD UI | 未收录 | Use this page for its stated niche; choose ControlNet scribble in any SD UI when you need the underlying technique SdPaint wraps. | The underlying technique SdPaint wraps; available everywhere, but without SdPaint's real-time painting front-end. |
+| Krita + AI Diffusion plugin | 未收录 | Choose Krita with AI Diffusion when you need a full painting app with an SD plugin. | Full painting app with an SD plugin and live generation inside a real art tool; far richer canvas, heavier setup, more actively developed. |
+| ComfyUI | 未收录 | Choose ComfyUI when you need a flexible node-graph Stable Diffusion front-end. | Node-graph SD front-end with huge flexibility and an active ecosystem; powerful but not a draw-and-watch scribble loop. |
+| AUTOMATIC1111 WebUI (img2img / sketch tab) | 未收录 | Choose AUTOMATIC1111 when you need the backend SdPaint sits on. | The backend SdPaint sits on; can do sketch→image in-browser, but the click-Generate loop is less immediate than live stroke streaming. |
+| ControlNet scribble in any SD UI | 未收录 | Choose ControlNet scribble when you need the underlying technique without SdPaint's front-end. | The underlying technique SdPaint wraps; available everywhere, but without SdPaint's real-time painting front-end. |
 
 ## Tech stack
 

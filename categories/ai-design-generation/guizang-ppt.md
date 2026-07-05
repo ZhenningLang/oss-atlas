@@ -88,13 +88,13 @@ It fits best when you want a strong personal aesthetic baked in: Style A (electr
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| [guizang-social-card](guizang-social-card.md) | ✅ | Use this page for its stated niche; choose guizang-social-card when you need same author's sibling skill, but scoped to single social cards / covers rather than full multi-page. | Same author's sibling skill, but scoped to single social cards / covers rather than full multi-page decks; overlapping visual rules, narrower output. |
-| [html-anything](html-anything.md) | ✅ | Use this page for its stated niche; choose html-anything when you need general agent-driven HTML artifact generation. | General agent-driven HTML artifact generation; broader and unopinionated, so it lacks the locked deck layouts, Swiss validator, and cover/image workflow this skill ships. |
-| [open-design](open-design.md) | ✅ | Use this page for its stated niche; choose open-design when you need aimed at broader UI/design generation. | Aimed at broader UI/design generation; not a presentation-deck specialist with horizontal-swipe runtime and named slide layouts. |
-| [Impeccable](impeccable.md) | ✅ | Use this page for its stated niche; choose Impeccable when you need design-quality oriented generation. | Design-quality oriented generation; different surface — not a single-file HTML deck workflow. |
-| Slidev | 未收录 | Use this page for its stated niche; choose Slidev when you need developer-grade Markdown→HTML deck framework with build tooling, themes, and a dev server. | Developer-grade Markdown→HTML deck framework with build tooling, themes, and a dev server; more powerful/long-stable but not agent-driven and not opinionated about Swiss/editorial aesthetics. |
-| Marp | 未收录 | Use this page for its stated niche; choose Marp when you need markdown→slides (HTML/PDF/PPTX) with a clean ecosystem and exports this skill lacks. | Markdown→slides (HTML/PDF/PPTX) with a clean ecosystem and exports this skill lacks; far less visual flexibility per slide. |
-| Gamma / Tome | 未收录 | Use this page for its stated niche; choose Gamma / Tome when you need hosted AI deck SaaS, not a repo. | Hosted AI deck SaaS, not a repo — easier for non-agents, but closed, no single-file HTML artifact, no local agent control. |
+| [guizang-social-card](guizang-social-card.md) | ✅ | Choose guizang-social-card when you need single social cards/covers instead of full decks. | Same author's sibling skill, but scoped to single social cards / covers rather than full multi-page decks; overlapping visual rules, narrower output. |
+| [html-anything](html-anything.md) | ✅ | Choose html-anything when you need general agent-driven HTML artifact generation. | General agent-driven HTML artifact generation; broader and unopinionated, so it lacks the locked deck layouts, Swiss validator, and cover/image workflow this skill ships. |
+| [open-design](open-design.md) | ✅ | Choose open-design when you need broader UI/design generation rather than deck-specific output. | Aimed at broader UI/design generation; not a presentation-deck specialist with horizontal-swipe runtime and named slide layouts. |
+| [Impeccable](impeccable.md) | ✅ | Choose Impeccable when you need a design-quality harness layer rather than deck generation. | Design-quality oriented generation; different surface — not a single-file HTML deck workflow. |
+| Slidev | 未收录 | Choose Slidev when you need a developer-grade Markdown-to-HTML deck framework. | Developer-grade Markdown→HTML deck framework with build tooling, themes, and a dev server; more powerful/long-stable but not agent-driven and not opinionated about Swiss/editorial aesthetics. |
+| Marp | 未收录 | Choose Marp when you need Markdown-to-slides with HTML/PDF/PPTX exports. | Markdown→slides (HTML/PDF/PPTX) with a clean ecosystem and exports this skill lacks; far less visual flexibility per slide. |
+| Gamma / Tome | 未收录 | Choose Gamma or Tome when hosted AI deck SaaS is acceptable. | Hosted AI deck SaaS, not a repo — easier for non-agents, but closed, no single-file HTML artifact, no local agent control. |
 
 ## Health & viability
 

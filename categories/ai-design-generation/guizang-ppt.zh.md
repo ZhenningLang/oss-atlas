@@ -88,13 +88,13 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [guizang-social-card](guizang-social-card.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“同一作者的姊妹技能，但只聚焦单张社交卡片/封面，而非完整多页 deck”，再选 guizang-social-card。 | 同一作者的姊妹技能，但只聚焦单张社交卡片/封面，而非完整多页 deck；视觉规则有重叠，输出更窄。 |
-| [html-anything](html-anything.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“通用的 agent 驱动 HTML 产物生成”，再选 html-anything。 | 通用的 agent 驱动 HTML 产物生成；更宽、不带观点，因此没有这个技能内置的锁定 deck 版式、瑞士校验器和封面/配图流程。 |
-| [open-design](open-design.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“面向更宽的 UI/设计生成”，再选 open-design。 | 面向更宽的 UI/设计生成；不是带横向翻页运行时和具名版式的演示 deck 专才。 |
-| [Impeccable](impeccable.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“偏设计质量导向的生成”，再选 Impeccable。 | 偏设计质量导向的生成；切面不同——不是单文件 HTML deck 工作流。 |
-| Slidev | 未收录 | 当前页用于它的主场景；如果更看重“开发者级 Markdown→HTML deck 框架，带构建工具、主题和 dev server”，再选 Slidev。 | 开发者级 Markdown→HTML deck 框架，带构建工具、主题和 dev server；更强、更长期稳定，但不是 agent 驱动，也不对瑞士/杂志审美有观点。 |
-| Marp | 未收录 | 当前页用于它的主场景；如果更看重“Markdown→幻灯片（HTML/PDF/PPTX），生态干净、带这个技能缺的导出”，再选 Marp。 | Markdown→幻灯片（HTML/PDF/PPTX），生态干净、带这个技能缺的导出；但单页视觉灵活度远低。 |
-| Gamma / Tome | 未收录 | 当前页用于它的主场景；如果更看重“托管式 AI deck SaaS，不是仓库”，再选 Gamma / Tome。 | 托管式 AI deck SaaS，不是仓库——对非 agent 用户更省事，但封闭、无单文件 HTML 产物、无本地 agent 控制权。 |
+| [guizang-social-card](guizang-social-card.zh.md) | ✅ | 需要单张社交卡片/封面而不是完整 deck 时，选 guizang-social-card。 | 同一作者的姊妹技能，但只聚焦单张社交卡片/封面，而非完整多页 deck；视觉规则有重叠，输出更窄。 |
+| [html-anything](html-anything.zh.md) | ✅ | 需要通用的 agent 驱动 HTML 产物生成时，选 html-anything。 | 通用的 agent 驱动 HTML 产物生成；更宽、不带观点，因此没有这个技能内置的锁定 deck 版式、瑞士校验器和封面/配图流程。 |
+| [open-design](open-design.zh.md) | ✅ | 需要更宽的 UI/设计生成而非 deck 专项时，选 open-design。 | 面向更宽的 UI/设计生成；不是带横向翻页运行时和具名版式的演示 deck 专才。 |
+| [Impeccable](impeccable.zh.md) | ✅ | 需要设计质量 harness 层而非 deck 生成时，选 Impeccable。 | 偏设计质量导向的生成；切面不同——不是单文件 HTML deck 工作流。 |
+| Slidev | 未收录 | 需要开发者级 Markdown→HTML deck 框架时，选 Slidev。 | 开发者级 Markdown→HTML deck 框架，带构建工具、主题和 dev server；更强、更长期稳定，但不是 agent 驱动，也不对瑞士/杂志审美有观点。 |
+| Marp | 未收录 | 需要 Markdown→幻灯片且支持 HTML/PDF/PPTX 导出时，选 Marp。 | Markdown→幻灯片（HTML/PDF/PPTX），生态干净、带这个技能缺的导出；但单页视觉灵活度远低。 |
+| Gamma / Tome | 未收录 | 可接受托管式 AI deck SaaS 时，选 Gamma 或 Tome。 | 托管式 AI deck SaaS，不是仓库——对非 agent 用户更省事，但封闭、无单文件 HTML 产物、无本地 agent 控制权。 |
 
 ## 健康度与可持续性
 
