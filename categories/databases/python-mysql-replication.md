@@ -93,11 +93,11 @@ You reach for it as a **library, not a turnkey tool** — it gives you the parse
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| Debezium | 未收录 | Use this page for its stated niche; choose Debezium when you need full CDC platform (Kafka Connect) with connectors, schema history, exactly-once-ish delivery. | Full CDC platform (Kafka Connect) with connectors, schema history, exactly-once-ish delivery; far heavier — this library is the lightweight, code-it-yourself counterpart. |
-| Canal (Alibaba) | 未收录 | Use this page for its stated niche; choose Canal (Alibaba) when you need mature Java binlog CDC server. | Mature Java binlog CDC server; robust and active, but a server to operate, not a Python library you embed in your app. |
-| Maxwell's Daemon | 未收录 | Use this page for its stated niche; choose Maxwell's Daemon when you need reads MySQL binlog and emits JSON to Kafka/Kinesis/etc. | Reads MySQL binlog and emits JSON to Kafka/Kinesis/etc.; a ready daemon rather than a library, narrower output model. |
-| go-mysql (+ go-mysql-elasticsearch) | 未收录 | Use this page for its stated niche; choose go-mysql (+ go-mysql-elasticsearch) when you need the Go-ecosystem equivalent binlog library/tooling. | The Go-ecosystem equivalent binlog library/tooling; pick by language. |
-| Polling (SQLAlchemy / cron) | 未收录 | Use this page for its stated niche; choose Polling (SQLAlchemy / cron) when you need no binlog privileges needed and trivially simple, but misses deletes, adds query load, and lags. | No binlog privileges needed and trivially simple, but misses deletes, adds query load, and lags — the limitation CDC removes. |
+| Debezium | 未收录 | Choose Debezium when you need the full Kafka Connect CDC platform. | Full CDC platform (Kafka Connect) with connectors, schema history, exactly-once-ish delivery; far heavier — this library is the lightweight, code-it-yourself counterpart. |
+| Canal (Alibaba) | 未收录 | Choose Canal when you need a mature Java MySQL binlog CDC server. | Mature Java binlog CDC server; robust and active, but a server to operate, not a Python library you embed in your app. |
+| Maxwell's Daemon | 未收录 | Choose Maxwell's Daemon when you need a ready binlog-to-JSON daemon. | Reads MySQL binlog and emits JSON to Kafka/Kinesis/etc.; a ready daemon rather than a library, narrower output model. |
+| go-mysql (+ go-mysql-elasticsearch) | 未收录 | Choose go-mysql when you need the Go-ecosystem equivalent binlog library/tooling. | The Go-ecosystem equivalent binlog library/tooling; pick by language. |
+| Polling (SQLAlchemy / cron) | 未收录 | Choose polling when you lack binlog privileges and can accept missed deletes, load, and lag. | No binlog privileges needed and trivially simple, but misses deletes, adds query load, and lags — the limitation CDC removes. |
 
 ## Tech stack
 

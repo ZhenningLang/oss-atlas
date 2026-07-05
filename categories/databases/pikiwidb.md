@@ -87,11 +87,11 @@ You reach for it specifically when the dataset is **big and cost-sensitive** rat
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| Redis | 未收录 | Use this page for its stated niche; choose Redis when you need in-memory original. | In-memory original; lowest latency and richest command/module ecosystem, but bounded by RAM and expensive per-GB at large scale. PikiwiDB is the disk-backed capacity play, not a latency upgrade. |
-| KeyDB | 未收录 | Use this page for its stated niche; choose KeyDB when you need multithreaded Redis fork, still memory-resident. | Multithreaded Redis fork, still memory-resident; helps throughput, not the capacity-vs-RAM-cost problem PikiwiDB targets. |
-| Dragonfly | 未收录 | Use this page for its stated niche; choose Dragonfly when you need modern multithreaded Redis-compatible store. | Modern multithreaded Redis-compatible store; very high throughput but in-memory-first, BSL-licensed — different licensing and capacity model. |
-| SSDB | 未收录 | Use this page for its stated niche; choose SSDB when you need older LevelDB-backed Redis-ish disk store. | Older LevelDB-backed Redis-ish disk store; similar idea, smaller/aging community and weaker protocol fidelity than PikiwiDB. |
-| Kvrocks (Apache) | 未收录 | Use this page for its stated niche; choose Kvrocks (Apache) when you need rocksDB-backed, Redis-protocol, now an Apache project. | RocksDB-backed, Redis-protocol, now an Apache project; the closest direct competitor — weigh Apache governance vs PikiwiDB's OpenAtom/Qihoo backing. |
+| Redis | 未收录 | Choose Redis when you need the in-memory original with the richest ecosystem. | In-memory original; lowest latency and richest command/module ecosystem, but bounded by RAM and expensive per-GB at large scale. PikiwiDB is the disk-backed capacity play, not a latency upgrade. |
+| KeyDB | 未收录 | Choose KeyDB when you need a multithreaded Redis fork that stays memory-resident. | Multithreaded Redis fork, still memory-resident; helps throughput, not the capacity-vs-RAM-cost problem PikiwiDB targets. |
+| Dragonfly | 未收录 | Choose Dragonfly when you need a modern high-throughput Redis-compatible store. | Modern multithreaded Redis-compatible store; very high throughput but in-memory-first, BSL-licensed — different licensing and capacity model. |
+| SSDB | 未收录 | Choose SSDB when you need an older LevelDB-backed Redis-like disk store. | Older LevelDB-backed Redis-ish disk store; similar idea, smaller/aging community and weaker protocol fidelity than PikiwiDB. |
+| Kvrocks (Apache) | 未收录 | Choose Kvrocks when you need a RocksDB-backed Redis-protocol Apache project. | RocksDB-backed, Redis-protocol, now an Apache project; the closest direct competitor — weigh Apache governance vs PikiwiDB's OpenAtom/Qihoo backing. |
 
 ## Tech stack
 

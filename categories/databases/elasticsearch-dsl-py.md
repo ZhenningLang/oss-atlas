@@ -86,10 +86,10 @@ But for new code in 2026 you should **not install this package** — you install
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| `elasticsearch` (elasticsearch-py) | 未收录 | Use this page for its stated niche; choose elasticsearch (elasticsearch-py) when you need the official low-level client. | The official low-level client — and now the **home of this DSL** (`elasticsearch.dsl`). For new code this *is* the answer; the standalone repo is its archived ancestor. |
-| `opensearch-py` / opensearch-dsl-py | 未收录 | Use this page for its stated niche; choose opensearch-py / opensearch-dsl-py when you need the OpenSearch fork's clients. | The OpenSearch fork's clients; use these if you run OpenSearch rather than Elastic's distribution. |
-| Raw query dicts (no DSL) | 未收录 | Use this page for its stated niche; choose Raw query dicts (no DSL) when you need zero abstraction, fully version-agnostic, but verbose and refactor-hostile for complex queries. | Zero abstraction, fully version-agnostic, but verbose and refactor-hostile for complex queries — the pain the DSL exists to remove. |
-| Haystack / django-elasticsearch-dsl | 未收录 | Use this page for its stated niche; choose Haystack / django-elasticsearch-dsl when you need higher-level search framework / Django integration layered on top. | Higher-level search framework / Django integration layered on top; more opinionated, narrower than the raw DSL. |
+| `elasticsearch` (elasticsearch-py) | 未收录 | Choose elasticsearch-py when you need the official low-level client and current home of the DSL. | The official low-level client — and now the **home of this DSL** (`elasticsearch.dsl`). For new code this *is* the answer; the standalone repo is its archived ancestor. |
+| `opensearch-py` / opensearch-dsl-py | 未收录 | Choose OpenSearch clients when you run OpenSearch rather than Elastic's distribution. | The OpenSearch fork's clients; use these if you run OpenSearch rather than Elastic's distribution. |
+| Raw query dicts (no DSL) | 未收录 | Choose raw query dicts when zero abstraction and version-agnostic JSON matter most. | Zero abstraction, fully version-agnostic, but verbose and refactor-hostile for complex queries — the pain the DSL exists to remove. |
+| Haystack / django-elasticsearch-dsl | 未收录 | Choose Haystack or django-elasticsearch-dsl when you need a higher-level framework/integration layer. | Higher-level search framework / Django integration layered on top; more opinionated, narrower than the raw DSL. |
 
 ## Tech stack
 

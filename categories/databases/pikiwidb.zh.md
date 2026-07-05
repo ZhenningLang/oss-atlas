@@ -87,11 +87,11 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| Redis | 未收录 | 当前页用于它的主场景；如果更看重“内存原版”，再选 Redis。 | 内存原版；延迟最低、命令与模块生态最丰富，但受限于 RAM、大规模下每 GB 昂贵。PikiwiDB 是落盘的容量方案，不是延迟升级。 |
-| KeyDB | 未收录 | 当前页用于它的主场景；如果更看重“多线程 Redis 分叉，仍常驻内存”，再选 KeyDB。 | 多线程 Redis 分叉，仍常驻内存；提升吞吐而非 PikiwiDB 瞄准的容量对 RAM 成本问题。 |
-| Dragonfly | 未收录 | 当前页用于它的主场景；如果更看重“现代多线程 Redis 兼容存储”，再选 Dragonfly。 | 现代多线程 Redis 兼容存储；吞吐很高但内存优先、BSL 许可——许可与容量模型都不同。 |
-| SSDB | 未收录 | 当前页用于它的主场景；如果更看重“老牌 LevelDB 落盘的类 Redis 存储”，再选 SSDB。 | 老牌 LevelDB 落盘的类 Redis 存储；思路相似，但社区更小更老、协议保真度弱于 PikiwiDB。 |
-| Kvrocks（Apache） | 未收录 | 当前页用于它的主场景；如果更看重“RocksDB 落盘、Redis 协议，现为 Apache 项目”，再选 Kvrocks（Apache）。 | RocksDB 落盘、Redis 协议，现为 Apache 项目；最直接的竞品——权衡 Apache 治理 vs PikiwiDB 的 OpenAtom／Qihoo 背书。 |
+| Redis | 未收录 | 需要内存原版和最丰富生态时，选 Redis。 | 内存原版；延迟最低、命令与模块生态最丰富，但受限于 RAM、大规模下每 GB 昂贵。PikiwiDB 是落盘的容量方案，不是延迟升级。 |
+| KeyDB | 未收录 | 需要仍以内存为主的多线程 Redis 分叉时，选 KeyDB。 | 多线程 Redis 分叉，仍常驻内存；提升吞吐而非 PikiwiDB 瞄准的容量对 RAM 成本问题。 |
+| Dragonfly | 未收录 | 需要现代高吞吐 Redis 兼容存储时，选 Dragonfly。 | 现代多线程 Redis 兼容存储；吞吐很高但内存优先、BSL 许可——许可与容量模型都不同。 |
+| SSDB | 未收录 | 需要较老的 LevelDB 落盘类 Redis 存储时，选 SSDB。 | 老牌 LevelDB 落盘的类 Redis 存储；思路相似，但社区更小更老、协议保真度弱于 PikiwiDB。 |
+| Kvrocks（Apache） | 未收录 | 需要 RocksDB 落盘、Redis 协议的 Apache 项目时，选 Kvrocks。 | RocksDB 落盘、Redis 协议，现为 Apache 项目；最直接的竞品——权衡 Apache 治理 vs PikiwiDB 的 OpenAtom／Qihoo 背书。 |
 
 ## 技术栈
 

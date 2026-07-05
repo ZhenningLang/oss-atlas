@@ -86,11 +86,11 @@ It's most useful as a **developer/operator convenience GUI** for inspection and 
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| `zkCli.sh` (built-in) | 未收录 | Use this page for its stated niche; choose zkCli.sh (built-in) when you need ships with ZooKeeper, scriptable, always available. | Ships with ZooKeeper, scriptable, always available — but raw CLI, no tree visualization, slower for browsing/onboarding. |
-| ZooInspector | 未收录 | Use this page for its stated niche; choose ZooInspector when you need the classic Swing-based ZK GUI. | The classic Swing-based ZK GUI; older and clunkier UI, but historically the reference desktop inspector. |
-| zkui / zk-web | 未收录 | Use this page for its stated niche; choose zkui / zk-web when you need web-based ZooKeeper UIs (deploy as a service, multi-user) rather than a desktop app. | Web-based ZooKeeper UIs (deploy as a service, multi-user) rather than a desktop app; different deployment model. |
-| Apache Curator | 未收录 | Use this page for its stated niche; choose Apache Curator when you need a Java client *library* for programmatic ZK access (recipes, leader election). | A Java client *library* for programmatic ZK access (recipes, leader election) — for building, not for ad-hoc GUI inspection. |
-| Kafka KRaft / etcd | 未收录 | Use this page for its stated niche; choose Kafka KRaft / etcd when you need the strategic alternative: remove ZooKeeper from your stack entirely, making a ZK GUI moot. | The strategic alternative: remove ZooKeeper from your stack entirely, making a ZK GUI moot. |
+| `zkCli.sh` (built-in) | 未收录 | Choose zkCli.sh when you need the always-available scriptable ZooKeeper client. | Ships with ZooKeeper, scriptable, always available — but raw CLI, no tree visualization, slower for browsing/onboarding. |
+| ZooInspector | 未收录 | Choose ZooInspector when you need the classic Swing-based ZooKeeper GUI. | The classic Swing-based ZK GUI; older and clunkier UI, but historically the reference desktop inspector. |
+| zkui / zk-web | 未收录 | Choose zkui or zk-web when you need a web-based multi-user ZooKeeper UI. | Web-based ZooKeeper UIs (deploy as a service, multi-user) rather than a desktop app; different deployment model. |
+| Apache Curator | 未收录 | Choose Apache Curator when you need a Java client library for programmatic ZooKeeper access. | A Java client *library* for programmatic ZK access (recipes, leader election) — for building, not for ad-hoc GUI inspection. |
+| Kafka KRaft / etcd | 未收录 | Choose Kafka KRaft or etcd when the strategic answer is removing ZooKeeper from the stack. | The strategic alternative: remove ZooKeeper from your stack entirely, making a ZK GUI moot. |
 
 ## Tech stack
 

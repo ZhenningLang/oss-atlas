@@ -86,11 +86,11 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| `zkCli.sh`（内置） | 未收录 | 当前页用于它的主场景；如果更看重“随 ZooKeeper 自带、可脚本化、永远可用”，再选 zkCli.sh（内置）。 | 随 ZooKeeper 自带、可脚本化、永远可用——但是裸 CLI，无树可视化，浏览／带新人更慢。 |
-| ZooInspector | 未收录 | 当前页用于它的主场景；如果更看重“经典的基于 Swing 的 ZK GUI”，再选 ZooInspector。 | 经典的基于 Swing 的 ZK GUI；UI 更老更笨重，但历史上是参考级桌面查看器。 |
-| zkui / zk-web | 未收录 | 当前页用于它的主场景；如果更看重“基于 Web 的 ZooKeeper UI（部署为服务、多用户），而非桌面应用”，再选 zkui / zk-web。 | 基于 Web 的 ZooKeeper UI（部署为服务、多用户），而非桌面应用；部署模型不同。 |
-| Apache Curator | 未收录 | 当前页用于它的主场景；如果更看重“用于编程式访问 ZK 的 Java 客户端*库*（recipes、leader 选举）”，再选 Apache Curator。 | 用于编程式访问 ZK 的 Java 客户端*库*（recipes、leader 选举）——用于构建，而非临时 GUI 查看。 |
-| Kafka KRaft / etcd | 未收录 | 当前页用于它的主场景；如果更看重“战略替代：把 ZooKeeper 整个从你的技术栈里去掉，使 ZK GUI 失去意义”，再选 Kafka KRaft / etcd。 | 战略替代：把 ZooKeeper 整个从你的技术栈里去掉，使 ZK GUI 失去意义。 |
+| `zkCli.sh`（内置） | 未收录 | 需要永远可用、可脚本化的 ZooKeeper 自带客户端时，选 zkCli.sh。 | 随 ZooKeeper 自带、可脚本化、永远可用——但是裸 CLI，无树可视化，浏览／带新人更慢。 |
+| ZooInspector | 未收录 | 需要经典 Swing ZooKeeper GUI 时，选 ZooInspector。 | 经典的基于 Swing 的 ZK GUI；UI 更老更笨重，但历史上是参考级桌面查看器。 |
+| zkui / zk-web | 未收录 | 需要基于 Web、多用户的 ZooKeeper UI 时，选 zkui 或 zk-web。 | 基于 Web 的 ZooKeeper UI（部署为服务、多用户），而非桌面应用；部署模型不同。 |
+| Apache Curator | 未收录 | 需要编程式访问 ZooKeeper 的 Java 客户端库时，选 Apache Curator。 | 用于编程式访问 ZK 的 Java 客户端*库*（recipes、leader 选举）——用于构建，而非临时 GUI 查看。 |
+| Kafka KRaft / etcd | 未收录 | 战略答案是移除 ZooKeeper 时，选 Kafka KRaft 或 etcd。 | 战略替代：把 ZooKeeper 整个从你的技术栈里去掉，使 ZK GUI 失去意义。 |
 
 ## 技术栈
 

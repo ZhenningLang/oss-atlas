@@ -88,9 +88,9 @@ health:
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
 | Elasticsearch SQL / ES\|QL（X-Pack） | 未收录 | 只有需要这个旧插件时才看当前页；若 Elastic 一方 SQL/ES\|QL 已覆盖需求，优先用官方能力。 | Elastic 一方 SQL 与更新的 ES\|QL 管道语言，带 JDBC/ODBC；随引擎维护。本插件早于它且有重叠。 |
-| OpenSearch SQL 插件 | 未收录 | 当前页用于它的主场景；如果更看重“OpenSearch 分叉自己的 SQL/PPL 插件”，再选 OpenSearch SQL 插件。 | OpenSearch 分叉自己的 SQL/PPL 插件；若你跑 OpenSearch 而非 Elastic，这是对应答案。 |
-| 原生 Query DSL | 未收录 | 当前页用于它的主场景；如果更看重“能力与控制力最大、版本原生，但冗长 JSON 学习曲线陡”，再选 原生 Query DSL。 | 能力与控制力最大、版本原生，但冗长 JSON 学习曲线陡——正是本项目要消除的摩擦。 |
-| Presto/Trino + ES 连接器 | 未收录 | 当前页用于它的主场景；如果更看重“完整 ANSI-SQL 引擎，可把 ES 与其他源联邦”，再选 Presto/Trino + ES 连接器。 | 完整 ANSI-SQL 引擎，可把 ES 与其他源联邦；运维重得多，但有真正的 SQL 语义和跨存储 JOIN。 |
+| OpenSearch SQL 插件 | 未收录 | 跑 OpenSearch 且需要其 SQL/PPL 插件时，选 OpenSearch SQL。 | OpenSearch 分叉自己的 SQL/PPL 插件；若你跑 OpenSearch 而非 Elastic，这是对应答案。 |
+| 原生 Query DSL | 未收录 | 需要版本原生、控制力最大的查询能力时，选原生 Query DSL。 | 能力与控制力最大、版本原生，但冗长 JSON 学习曲线陡——正是本项目要消除的摩擦。 |
+| Presto/Trino + ES 连接器 | 未收录 | 需要能联邦 ES 与其他源的完整 ANSI-SQL 引擎时，选 Presto 或 Trino。 | 完整 ANSI-SQL 引擎，可把 ES 与其他源联邦；运维重得多，但有真正的 SQL 语义和跨存储 JOIN。 |
 
 ## 技术栈
 

@@ -93,11 +93,11 @@ MySQL 复制协议的纯 Python 实现（构建于 PyMySQL）：以伪从库身�
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| Debezium | 未收录 | 当前页用于它的主场景；如果更看重“完整 CDC 平台（Kafka Connect），带连接器、schema 历史、近似 exactly-once 投递”，再选 Debezium。 | 完整 CDC 平台（Kafka Connect），带连接器、schema 历史、近似 exactly-once 投递；重得多——本库是其轻量、自己写代码的对照面。 |
-| Canal（阿里） | 未收录 | 当前页用于它的主场景；如果更看重“成熟的 Java binlog CDC 服务端”，再选 Canal（阿里）。 | 成熟的 Java binlog CDC 服务端；稳健且活跃，但要运维一个服务端，而非你嵌进应用的 Python 库。 |
-| Maxwell's Daemon | 未收录 | 当前页用于它的主场景；如果更看重“读 MySQL binlog 并把 JSON 发往 Kafka/Kinesis 等”，再选 Maxwell's Daemon。 | 读 MySQL binlog 并把 JSON 发往 Kafka/Kinesis 等；是现成守护进程而非库，输出模型更窄。 |
-| go-mysql（+ go-mysql-elasticsearch） | 未收录 | 当前页用于它的主场景；如果更看重“Go 生态里等价的 binlog 库／工具”，再选 go-mysql（+ go-mysql-elasticsearch）。 | Go 生态里等价的 binlog 库／工具；按语言选。 |
-| 轮询（SQLAlchemy／cron） | 未收录 | 当前页用于它的主场景；如果更看重“不需 binlog 权限且极其简单，但漏掉删除、增加查询负载且有滞后”，再选 轮询（SQLAlchemy／cron）。 | 不需 binlog 权限且极其简单，但漏掉删除、增加查询负载且有滞后——正是 CDC 要消除的局限。 |
+| Debezium | 未收录 | 需要完整 Kafka Connect CDC 平台时，选 Debezium。 | 完整 CDC 平台（Kafka Connect），带连接器、schema 历史、近似 exactly-once 投递；重得多——本库是其轻量、自己写代码的对照面。 |
+| Canal（阿里） | 未收录 | 需要成熟的 Java MySQL binlog CDC 服务端时，选 Canal。 | 成熟的 Java binlog CDC 服务端；稳健且活跃，但要运维一个服务端，而非你嵌进应用的 Python 库。 |
+| Maxwell's Daemon | 未收录 | 需要现成的 binlog 到 JSON 守护进程时，选 Maxwell's Daemon。 | 读 MySQL binlog 并把 JSON 发往 Kafka/Kinesis 等；是现成守护进程而非库，输出模型更窄。 |
+| go-mysql（+ go-mysql-elasticsearch） | 未收录 | 需要 Go 生态里等价的 binlog 库/工具时，选 go-mysql。 | Go 生态里等价的 binlog 库／工具；按语言选。 |
+| 轮询（SQLAlchemy／cron） | 未收录 | 没有 binlog 权限且能接受漏删除、负载和延迟时，选轮询。 | 不需 binlog 权限且极其简单，但漏掉删除、增加查询负载且有滞后——正是 CDC 要消除的局限。 |
 
 ## 技术栈
 
