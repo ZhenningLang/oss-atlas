@@ -88,12 +88,12 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [Superpowers](superpowers.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“Claude Code 的 skill/plugin 集合，强调可复用的“skills””，再选 Superpowers。 | Claude Code 的 skill/plugin 集合，强调可复用的“skills”;“给 Claude Code 一整套能力电池”这个目标有重叠，打包方式不同（plugin/skills vs 安装式命令+persona 框架）。 |
-| [get-shit-done](get-shit-done.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“面向 agent 开发的有主见工作流/命令包”，再选 get-shit-done。 | 面向 agent 开发的有主见工作流/命令包；更窄、工作流优先，而非 SuperClaude 那种广覆盖的命令+agent+模式面。 |
-| [Compound Engineering](compound-engineering.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“让 agent 工作“复利累积”的方法论加插件”，再选 Compound Engineering。 | 让 agent 工作“复利累积”的方法论加插件；是带工具的开发*哲学*，而非配置注入框架。 |
-| [ECC](ecc.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“面向 agent 的上下文工程方法论”，再选 ECC。 | 面向 agent 的上下文工程方法论；偏概念/流程框架，而非可安装的命令套件。 |
-| [12-Factor Agents](12-factor-agents.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“构建可靠 LLM agent 的原则”，再选 12-Factor Agents。 | 构建可靠 LLM agent 的原则——是你读的规范/宣言，不是装进 Claude Code 的软件。 |
-| claude-code-templates / awesome-claude-code | 未收录 | 当前页用于它的主场景；如果更看重“面向 Claude Code 的社区配置/模板集合”，再选 claude-code-templates / awesome-claude-code。 | 面向 Claude Code 的社区配置/模板集合；更轻、按需复制粘贴，而非 SuperClaude 那种安装式、协调好的框架。 |
+| [Superpowers](superpowers.zh.md) | ✅ | 需要强调可复用 skills 的 Claude Code skill/plugin 集合时，选 Superpowers。 | Claude Code 的 skill/plugin 集合，强调可复用的“skills”；“给 Claude Code 一整套能力电池”这个目标有重叠，打包方式不同（plugin/skills vs 安装式命令+persona 框架）。 |
+| [get-shit-done](get-shit-done.zh.md) | ✅ | 需要面向 agent 开发的有主见工作流/命令包时，选 get-shit-done。 | 面向 agent 开发的有主见工作流/命令包；更窄、工作流优先，而非 SuperClaude 那种广覆盖的命令+agent+模式面。 |
+| [Compound Engineering](compound-engineering.zh.md) | ✅ | 需要让 agent 工作复利累积的方法论加插件时，选 Compound Engineering。 | 让 agent 工作“复利累积”的方法论加插件；是带工具的开发*哲学*，而非配置注入框架。 |
+| [ECC](ecc.zh.md) | ✅ | 需要上下文工程方法论，而不是可安装命令套件时，选 ECC。 | 面向 agent 的上下文工程方法论；偏概念/流程框架，而非可安装的命令套件。 |
+| [12-Factor Agents](12-factor-agents.zh.md) | ✅ | 需要构建可靠 LLM agent 的原则时，选 12-Factor Agents。 | 构建可靠 LLM agent 的原则——是你读的规范/宣言，不是装进 Claude Code 的软件。 |
+| claude-code-templates / awesome-claude-code | 未收录 | 需要面向 Claude Code 的社区配置/模板集合，并按需复制粘贴时，选这些社区集合。 | 面向 Claude Code 的社区配置/模板集合；更轻、按需复制粘贴，而非 SuperClaude 那种安装式、协调好的框架。 |
 
 ## 技术栈
 

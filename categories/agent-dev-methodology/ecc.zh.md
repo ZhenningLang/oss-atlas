@@ -96,12 +96,12 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [SuperClaude Framework](superclaude.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“同为聚焦 Claude 的配置框架（persona、command、MCP）”，再选 SuperClaude Framework。 | 同为聚焦 Claude 的配置框架（persona、command、MCP）；比 ECC 数百 skill + hook + 安全扫描 + 跨 harness 底座更窄、更轻。 |
-| [Superpowers](superpowers.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“面向 Claude Code 的精选 skill/插件集合”，再选 Superpowers。 | 面向 Claude Code 的精选 skill/插件集合；有重叠的 skill 库思路，但没有 ECC 的 memory/instinct hook、安全扫描器和多 harness 适配。 |
-| [Compound Engineering](compound-engineering.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“把一套特定「复利工作流」方法论编码成插件”，再选 Compound Engineering。 | 把一套特定「复利工作流」方法论编码成插件；相比 ECC 的 OS 式大捆绑，更有主张也更小。 |
-| [get-shit-done](get-shit-done.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“轻量的任务执行工作流包”，再选 get-shit-done。 | 轻量的任务执行工作流包；单一哲学，而非 ECC 的全家桶面。 |
-| [12-Factor Agents](12-factor-agents.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“provider 中立的 agent 构建*原则*（文档，而非装好的配置）”，再选 12-Factor Agents。 | provider 中立的 agent 构建*原则*（文档，而非装好的配置）；与 ECC 具体的 Claude Code harness 处于不同层。 |
-| dotfiles / 手搓 `~/.claude` | 未收录 | 当前页用于它的主场景；如果更看重“完全可控、面最小”，再选 dotfiles / 手搓 ~/.claude。 | 完全可控、面最小；代价是每个 skill/hook/rule 都得自己维护，而不是继承并更新一套精选栈。 |
+| [SuperClaude Framework](superclaude.zh.md) | ✅ | 需要更轻的 Claude 配置框架来管理 persona、command 和 MCP 时，选 SuperClaude Framework。 | 同为聚焦 Claude 的配置框架（persona、command、MCP）；比 ECC 数百 skill + hook + 安全扫描 + 跨 harness 底座更窄、更轻。 |
+| [Superpowers](superpowers.zh.md) | ✅ | 需要精选 Claude Code skill/插件集合，但不需要 ECC 的 hook 和 memory 底座时，选 Superpowers。 | 面向 Claude Code 的精选 skill/插件集合；有重叠的 skill 库思路，但没有 ECC 的 memory/instinct hook、安全扫描器和多 harness 适配。 |
+| [Compound Engineering](compound-engineering.zh.md) | ✅ | 需要更小、更聚焦的复利工作流方法论插件时，选 Compound Engineering。 | 把一套特定「复利工作流」方法论编码成插件；相比 ECC 的 OS 式大捆绑，更有主张也更小。 |
+| [get-shit-done](get-shit-done.zh.md) | ✅ | 需要轻量任务执行工作流包时，选 get-shit-done。 | 轻量的任务执行工作流包；单一哲学，而非 ECC 的全家桶面。 |
+| [12-Factor Agents](12-factor-agents.zh.md) | ✅ | 需要 provider 中立的 agent 构建*原则*，而不是装好的配置时，选 12-Factor Agents。 | provider 中立的 agent 构建*原则*（文档，而非装好的配置）；与 ECC 具体的 Claude Code harness 处于不同层。 |
+| dotfiles / 手搓 `~/.claude` | 未收录 | 需要完全可控、面最小且自己维护的配置时，选手搓 dotfiles。 | 完全可控、面最小；代价是每个 skill/hook/rule 都得自己维护，而不是继承并更新一套精选栈。 |
 
 ## 技术栈
 
