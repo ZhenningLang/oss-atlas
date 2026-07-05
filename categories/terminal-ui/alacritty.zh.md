@@ -97,7 +97,7 @@ health:
 | Kitty | 未收录 | 需要极简、原生性能 GPU 终端模拟时选 Alacritty；需要基于 GPU 的终端且支持 kitten（插件）和图像等高级功能时，再选 Kitty。 | Kitty 功能更多、有插件系统；Alacritty 更简单、更专注于原生性能。 |
 | iTerm2 | 未收录 | 需要跨平台、极简 GPU 终端模拟时选 Alacritty；需要最受欢迎的 macOS 终端且深度集成 macOS 和丰富功能时，再选 iTerm2。 | iTerm2 仅限 macOS、功能丰富；Alacritty 跨平台、极简。 |
 | Windows Terminal | 未收录 | 需要跨平台、极简 GPU 终端模拟时选 Alacritty；需要微软为 Windows 打造的现代终端且支持标签页和 GPU 加速时，再选 Windows Terminal。 | Windows Terminal 仅限 Windows、集成 WSL；Alacritty 跨平台、更简单。 |
-| Warp | 未收录 | 需要完全开源、极简、本地终端模拟时选 Alacritty；需要带 AI 功能和现代 UI 的终端时，再选 Warp。 | Warp 有 AI 功能和现代 UI；Alacritty 朴素、快速、完全本地。 |
+| [Warp](warp.zh.md) | ✅ | 需要完全开源、极简、本地终端模拟时选 Alacritty；需要带 AI 功能和现代 UI 的终端时，再选 Warp。 | Warp 有 AI 功能和现代 UI；Alacritty 朴素、快速、完全本地。 |
 
 ## 技术栈
 
