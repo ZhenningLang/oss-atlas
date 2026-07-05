@@ -96,11 +96,11 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [page-agent](page-agent.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“页面内 JS GUI agent，复用用户自己的浏览器会话、无后端、自然语言指令”，再选 page-agent。 | 页面内 JS GUI agent，复用用户自己的浏览器会话、无后端、自然语言指令。Agent Browser 则从 CLI/守护进程驱动外部 Chrome——更适合服务端/agent 自动化，更不适合嵌入活页面。 |
-| [Chrome DevTools MCP](chrome-devtools-mcp.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“Google 出的 MCP server，把 Chrome DevTools 暴露给 agent”，再选 Chrome DevTools MCP。 | Google 出的 MCP server，把 Chrome DevTools 暴露给 agent——仅 MCP、官方 DevTools 面。Agent Browser 是 CLI 优先*且*自带 MCP 模式，带 snapshot-ref 人体工学和常驻 Rust 守护进程。 |
-| [Cua](cua.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“computer-use agent 框架，驱动整个桌面/VM（基于视觉）”，再选 Cua。 | computer-use agent 框架，驱动整个桌面/VM（基于视觉）。Agent Browser 只管浏览器、基于 a11y 树——更轻更确定，但操作不了原生桌面应用。 |
-| Playwright / Puppeteer | 未收录 | 当前页用于它的主场景；如果更看重“成熟的 Node”，再选 Playwright / Puppeteer。 | 成熟的 Node.js 自动化库，跨浏览器、API 丰富——但你要以代码方式 import 并自己写/维护选择器；Agent Browser 是 CLI，带 LLM 友好的 refs 且无每命令启动开销。 |
-| browser-use | 未收录 | 当前页用于它的主场景；如果更看重“Python，视觉+DOM 浏览器 agent，自带 LLM 循环”，再选 browser-use。 | Python，视觉+DOM 浏览器 agent，自带 LLM 循环。Agent Browser 是更底层的 Rust CLI 原语（agent 循环你自己提供），shell 调用更快、MCP 原生。 |
+| [page-agent](page-agent.zh.md) | ✅ | 需要复用用户浏览器会话的页内 JS GUI agent 时，选 page-agent。 | 页面内 JS GUI agent，复用用户自己的浏览器会话、无后端、自然语言指令。Agent Browser 则从 CLI/守护进程驱动外部 Chrome——更适合服务端/agent 自动化，更不适合嵌入活页面。 |
+| [Chrome DevTools MCP](chrome-devtools-mcp.zh.md) | ✅ | 需要 Google 官方把 Chrome DevTools 暴露给 agent 的 MCP server 时，选 Chrome DevTools MCP。 | Google 出的 MCP server，把 Chrome DevTools 暴露给 agent——仅 MCP、官方 DevTools 面。Agent Browser 是 CLI 优先*且*自带 MCP 模式，带 snapshot-ref 人体工学和常驻 Rust 守护进程。 |
+| [Cua](cua.zh.md) | ✅ | 需要驱动整个桌面/VM 的 computer-use 框架时，选 Cua。 | computer-use agent 框架，驱动整个桌面/VM（基于视觉）。Agent Browser 只管浏览器、基于 a11y 树——更轻更确定，但操作不了原生桌面应用。 |
+| Playwright / Puppeteer | 未收录 | 需要成熟、代码优先的 Node 自动化库时，选 Playwright 或 Puppeteer。 | 成熟的 Node.js 自动化库，跨浏览器、API 丰富——但你要以代码方式 import 并自己写/维护选择器；Agent Browser 是 CLI，带 LLM 友好的 refs 且无每命令启动开销。 |
+| browser-use | 未收录 | 需要自带 LLM 循环的 Python 浏览器 agent 时，选 browser-use。 | Python，视觉+DOM 浏览器 agent，自带 LLM 循环。Agent Browser 是更底层的 Rust CLI 原语（agent 循环你自己提供），shell 调用更快、MCP 原生。 |
 
 ## 技术栈
 

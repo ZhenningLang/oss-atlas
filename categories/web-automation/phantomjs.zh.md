@@ -92,10 +92,10 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| Headless Chrome/Chromium + Puppeteer | 未收录 | 当前页用于它的主场景；如果更看重“标准替代方案：一个有人维护的现代 Chromium 引擎，由 Node”，再选 Headless Chrome/Chromium + Puppeteer。 | 标准替代方案：一个有人维护的现代 Chromium 引擎，由 Node.js 库通过 CDP 驱动——渲染准确、安全持续打补丁、生态庞大；单引擎（Chromium）且偏 Node，但这正是新工作的合理默认。 |
-| Playwright | 未收录 | 当前页用于它的主场景；如果更看重“现代跨引擎自动化（Chromium/Firefox/WebKit），带自动等待、网络拦截、tracing、多语言绑定”，再选 Playwright。 | 现代跨引擎自动化（Chromium/Firefox/WebKit），带自动等待、网络拦截、tracing、多语言绑定；PhantomJS 做的它都做，还多得多，且在积极维护——推荐的现代选择。 |
-| [Selenium](selenium.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“W3C WebDriver 跨浏览器框架，驱动*真实*浏览器（含 headless Chrome），支持多语言”，再选 Selenium。 | W3C WebDriver 跨浏览器框架，驱动*真实*浏览器（含 headless Chrome），支持多语言；更重、更底层，但在需要跨浏览器广度时，它是基于标准、仍然活跃的那个选项。 |
-| [Chrome DevTools MCP](chrome-devtools-mcp.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“把 Chrome DevTools（trace、网络、堆）通过 MCP 暴露给 agent，作用在一个活的 Chromium 上”，再选 Chrome DevTools MCP。 | 把 Chrome DevTools（trace、网络、堆）通过 MCP 暴露给 agent，作用在一个活的 Chromium 上；一个有人维护、面向 agent 的 Chrome 工具——活儿不同（调试/测量），但建立在 PhantomJS 所缺的现代引擎之上。 |
+| Headless Chrome/Chromium + Puppeteer | 未收录 | 需要有人维护的现代 Chromium 标准替代方案时，选 Headless Chrome/Chromium + Puppeteer。 | 标准替代方案：一个有人维护的现代 Chromium 引擎，由 Node.js 库通过 CDP 驱动——渲染准确、安全持续打补丁、生态庞大；单引擎（Chromium）且偏 Node，但这正是新工作的合理默认。 |
+| Playwright | 未收录 | 需要带自动等待、tracing 和多语言绑定的现代跨引擎自动化时，选 Playwright。 | 现代跨引擎自动化（Chromium/Firefox/WebKit），带自动等待、网络拦截、tracing、多语言绑定；PhantomJS 做的它都做，还多得多，且在积极维护——推荐的现代选择。 |
+| [Selenium](selenium.zh.md) | ✅ | 需要基于标准的 W3C WebDriver 跨真实浏览器框架时，选 Selenium。 | W3C WebDriver 跨浏览器框架，驱动*真实*浏览器（含 headless Chrome），支持多语言；更重、更底层，但在需要跨浏览器广度时，它是基于标准、仍然活跃的那个选项。 |
+| [Chrome DevTools MCP](chrome-devtools-mcp.zh.md) | ✅ | agent 需要在活 Chromium 上使用 trace、网络或堆工具时，选 Chrome DevTools MCP。 | 把 Chrome DevTools（trace、网络、堆）通过 MCP 暴露给 agent，作用在一个活的 Chromium 上；一个有人维护、面向 agent 的 Chrome 工具——活儿不同（调试/测量），但建立在 PhantomJS 所缺的现代引擎之上。 |
 
 ## 技术栈
 
