@@ -95,11 +95,11 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| Cline | 未收录 | 当前页用于它的主场景；如果更看重“开源 VS Code 编码 agent”，再选 Cline。 | 开源 VS Code 编码 agent；属于 Kilo Code 的血统 [推断]。在 IDE 内的 agent 循环相似；Kilo 在其上叠加了模式/编排和自家模型市场。想要更精简的上游就直接对比。 |
-| Roo Code | 未收录 | 当前页用于它的主场景；如果更看重“Kilo Code 由其衍生而来的开源 VS Code agent [推断]”，再选 Roo Code。 | Kilo Code 由其衍生而来的开源 VS Code agent [推断]；模式模型重叠。Kilo 是更进一步、有组织背书的延续——但 Roo Code 本身仍是活跃项目。 |
-| Cursor | 未收录 | 当前页用于它的主场景；如果更看重“闭源的 AI 优先*编辑器*（一个 VS Code 分叉），不是扩展”，再选 Cursor。 | 闭源的 AI 优先*编辑器*（一个 VS Code 分叉），不是扩展；集成很深、付费订阅，没有「按供应商原价的 BYOK」这份开放性。更精致，更不开放。 |
-| GitHub Copilot | 未收录 | 当前页用于它的主场景；如果更看重“闭源、微软背书的补全+对话+agent，在 VS Code/JetBrains 里”，再选 GitHub Copilot。 | 闭源、微软背书的补全+对话+agent，在 VS Code/JetBrains 里；装机量巨大、稳定，厂商托管定价，没有自带 key 的多供应商模型。 |
-| [oh-my-claudecode](oh-my-claudecode.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“架在 Anthropic Claude Code CLI *之上*的编排层（team 流水线、模型路由、tmux）”，再选 oh-my-claudecode。 | 架在 Anthropic Claude Code CLI *之上*的编排层（team 流水线、模型路由、tmux）。Kilo Code 是独立的、在 IDE 内的 agent，不是包另一个 agent CLI 的壳。 |
+| Cline | 未收录 | 想要更精简的开源 VS Code coding-agent 上游时，选 Cline。 | 开源 VS Code 编码 agent；属于 Kilo Code 的血统 [推断]。在 IDE 内的 agent 循环相似；Kilo 在其上叠加了模式/编排和自家模型市场。想要更精简的上游就直接对比。 |
+| Roo Code | 未收录 | 想要 Kilo Code 衍生自的活跃开源 VS Code agent 时，选 Roo Code。 | Kilo Code 由其衍生而来的开源 VS Code agent [推断]；模式模型重叠。Kilo 是更进一步、有组织背书的延续——但 Roo Code 本身仍是活跃项目。 |
+| Cursor | 未收录 | 需要闭源 AI 优先*编辑器*，而不是扩展时，选 Cursor。 | 闭源的 AI 优先*编辑器*（一个 VS Code 分叉），不是扩展；集成很深、付费订阅，没有「按供应商原价的 BYOK」这份开放性。更精致，更不开放。 |
+| GitHub Copilot | 未收录 | 需要微软背书的闭源补全+对话+agent，覆盖 VS Code/JetBrains 时，选 GitHub Copilot。 | 闭源、微软背书的补全+对话+agent，在 VS Code/JetBrains 里；装机量巨大、稳定，厂商托管定价，没有自带 key 的多供应商模型。 |
+| [oh-my-claudecode](oh-my-claudecode.zh.md) | ✅ | 需要架在 Anthropic Claude Code CLI 之上的编排层时，选 oh-my-claudecode。 | 架在 Anthropic Claude Code CLI *之上*的编排层（team 流水线、模型路由、tmux）。Kilo Code 是独立的、在 IDE 内的 agent，不是包另一个 agent CLI 的壳。 |
 
 ## 技术栈
 

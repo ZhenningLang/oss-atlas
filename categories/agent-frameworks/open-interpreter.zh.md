@@ -101,11 +101,11 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| OpenAI Codex CLI | 未收录 | 当前页用于它的主场景；如果更看重“Open Interpreter fork 的**上游**”，再选 OpenAI Codex CLI。 | Open Interpreter fork 的**上游**。规范、团队更大、主线更快；为 OpenAI 模型调优。Open Interpreter 在其上加了可切换的低成本模型 harness 层，并跟踪 Codex 的 `main`。 |
-| Claude Code / 类似厂商编码 CLI | 未收录 | 当前页用于它的主场景；如果更看重“打磨良好、有厂商背书的终端编码 agent，绑定特定模型家族”，再选 Claude Code / 类似厂商编码 CLI。 | 打磨良好、有厂商背书的终端编码 agent，绑定特定模型家族；更开箱即用，但并不围绕「为任意便宜 / 开源模型模拟 harness」来设计。 |
-| aider | 未收录 | 当前页用于它的主场景；如果更看重“成熟、模型无关的终端结对编程工具，聚焦多 provider 下 git 感知的编辑”，再选 aider。 | 成熟、模型无关的终端结对编程工具，聚焦多 provider 下 git 感知的编辑；更轻、更长寿，但不是 Codex 衍生的沙箱化、可切 harness 的运行时。 |
-| [smolagents](smolagents.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“一个用来构建「代码动作」agent 的极小*库*，由你内嵌并据为己有”，再选 smolagents。 | 一个用来构建「代码动作」agent 的极小*库*，由你内嵌并据为己有——光谱的另一端：你写循环，而 Open Interpreter 是一个完整的终端编码 agent 应用。 |
-| endolith/open-interpreter（老的 Python OI） | 未收录 | 当前页用于它的主场景；如果更看重“**原版** Python「自然语言操作电脑」REPL，现由社区维护”，再选 endolith/open-interpreter（老的 Python OI）。 | **原版** Python「自然语言操作电脑」REPL，现由社区维护。如果你真正想要的是这个老 Python 工具就选它；预期社区节奏的维护。 |
+| OpenAI Codex CLI | 未收录 | 想要 Open Interpreter fork 的规范上游时，选 OpenAI Codex CLI。 | Open Interpreter fork 的**上游**。规范、团队更大、主线更快；为 OpenAI 模型调优。Open Interpreter 在其上加了可切换的低成本模型 harness 层，并跟踪 Codex 的 `main`。 |
+| Claude Code / 类似厂商编码 CLI | 未收录 | 需要打磨良好、绑定特定模型家族的厂商终端编码 agent 时，选 Claude Code 或同类 CLI。 | 打磨良好、有厂商背书的终端编码 agent，绑定特定模型家族；更开箱即用，但并不围绕「为任意便宜 / 开源模型模拟 harness」来设计。 |
+| aider | 未收录 | 需要成熟、模型无关、git 感知的终端结对编程工具时，选 aider。 | 成熟、模型无关的终端结对编程工具，聚焦多 provider 下 git 感知的编辑；更轻、更长寿，但不是 Codex 衍生的沙箱化、可切 harness 的运行时。 |
+| [smolagents](smolagents.zh.md) | ✅ | 需要构建“代码动作”agent 的极小*库*，且由你内嵌和掌控时，选 smolagents。 | 一个用来构建「代码动作」agent 的极小*库*，由你内嵌并据为己有——光谱的另一端：你写循环，而 Open Interpreter 是一个完整的终端编码 agent 应用。 |
+| endolith/open-interpreter（老的 Python OI） | 未收录 | 需要原版 Python“自然语言操作电脑”REPL 时，选老的 Python Open Interpreter。 | **原版** Python「自然语言操作电脑」REPL，现由社区维护。如果你真正想要的是这个老 Python 工具就选它；预期社区节奏的维护。 |
 
 ## 技术栈
 

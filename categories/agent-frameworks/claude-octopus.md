@@ -91,12 +91,12 @@ It fits best when you treat the extra models as a *review/research panel* layere
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| [oh-my-claudecode](oh-my-claudecode.md) | ✅ | Use this page for its stated niche; choose oh-my-claudecode when you need also a Claude Code enhancement layer (config/skills/quality-of-life), but not built around multi-mod. | Also a Claude Code enhancement layer (config/skills/quality-of-life), but not built around multi-model fan-out + consensus; Octopus's whole premise is *other* models reviewing Claude. |
-| [DSPy](dspy.md) | ✅ | Use this page for its stated niche; choose DSPy when you need programmatic prompt/pipeline optimization framework, model-agnostic and library-shaped. | Programmatic prompt/pipeline optimization framework, model-agnostic and library-shaped; you write Python, not slash commands. Different layer entirely — compilation vs. an in-harness review panel. |
-| [AgentScope](agentscope.md) | ✅ | Use this page for its stated niche; choose AgentScope when you need general multi-agent runtime/library you build apps on. | General multi-agent runtime/library you build apps on; not a Claude-Code-bound plugin and not opinionated about "blindspot consensus." |
-| [Symphony](symphony.md) | ✅ | Use this page for its stated niche; choose Symphony when you need openAI's multi-agent orchestration. | OpenAI's multi-agent orchestration; vendor-anchored on OpenAI rather than Claude, framework not plugin. |
-| [openfang](openfang.md) | ✅ | Use this page for its stated niche; choose openfang when you need sibling agent framework with a different orchestration model. | Sibling agent framework with a different orchestration model; compare scope before picking. |
-| crystal / claude-squad | 未收录 | Use this page for its stated niche; choose crystal / claude-squad when you need run multiple parallel Claude Code *sessions/worktrees*. | Run multiple parallel Claude Code *sessions/worktrees*; parallelism is across Claude instances, not across *different vendors' models* reviewing one task. |
+| [oh-my-claudecode](oh-my-claudecode.md) | ✅ | Choose oh-my-claudecode when you need a Claude Code enhancement layer not centered on multi-model review. | Also a Claude Code enhancement layer (config/skills/quality-of-life), but not built around multi-model fan-out + consensus; Octopus's whole premise is *other* models reviewing Claude. |
+| [DSPy](dspy.md) | ✅ | Choose DSPy when you need a model-agnostic, library-shaped prompt/pipeline optimization framework. | Programmatic prompt/pipeline optimization framework, model-agnostic and library-shaped; you write Python, not slash commands. Different layer entirely — compilation vs. an in-harness review panel. |
+| [AgentScope](agentscope.md) | ✅ | Choose AgentScope when you need a general multi-agent runtime/library to build apps on. | General multi-agent runtime/library you build apps on; not a Claude-Code-bound plugin and not opinionated about "blindspot consensus." |
+| [Symphony](symphony.md) | ✅ | Choose Symphony when you need tracker-driven orchestration for coding-agent runs. | OpenAI's multi-agent orchestration; vendor-anchored on OpenAI rather than Claude, framework not plugin. |
+| [openfang](openfang.md) | ✅ | Choose openfang when you need a sibling agent framework with a different orchestration model. | Sibling agent framework with a different orchestration model; compare scope before picking. |
+| crystal / claude-squad | 未收录 | Choose crystal or claude-squad when you need multiple parallel Claude Code sessions/worktrees. | Run multiple parallel Claude Code *sessions/worktrees*; parallelism is across Claude instances, not across *different vendors' models* reviewing one task. |
 
 ## Tech stack
 

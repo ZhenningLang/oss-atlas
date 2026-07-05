@@ -96,11 +96,11 @@ Parlant 正是为这条线设计的。你不再把一切塞进一个 prompt，�
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [AgentScope](agentscope.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“通用多智能体服务框架（service/权限/沙箱/可观测）”，再选 AgentScope。 | 通用多智能体服务框架（service/权限/沙箱/可观测）；走「信任模型」的循环，不是 guardrails 优先的会话模型。要编排/服务 agent 选 AgentScope，要约束一个面向客户的 agent 选 Parlant。 |
-| [smolagents](smolagents.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“极简、代码优先的 agent 库”，再选 smolagents。 | 极简、代码优先的 agent 库——面小，适合简单/自治循环；没有内建的行为规则/guardrail 层，所以高风险的守轨控制要你自己扛。 |
-| Rasa | 未收录 | 当前页用于它的主场景；如果更看重“成熟的开源对话式 AI/聊天机器人框架（intents/stories/对话管理）”，再选 Rasa。 | 成熟的开源对话式 AI/聊天机器人框架（intents/stories/对话管理）；更偏经典 NLU 流水线，运维更重，LLM 原生的 guideline 建模更弱。 |
-| LangGraph | 未收录 | 当前页用于它的主场景；如果更看重“图/状态机式编排，控制流显式、生态庞大”，再选 LangGraph。 | 图/状态机式编排，控制流显式、生态庞大；guardrail 要你自己搭，而非开箱即得一个 guideline 执行模型。 |
-| Guidance / Guardrails（AI） | 未收录 | 当前页用于它的主场景；如果更看重“输出约束 / 结构化生成库（约束单次 LLM 调用的格式/合法性）”，再选 Guidance / Guardrails（AI）。 | 输出约束 / 结构化生成库（约束单次 LLM 调用的格式/合法性）；比 Parlant 跨多轮对话的会话级行为控制更窄。 |
+| [AgentScope](agentscope.zh.md) | ✅ | 需要带 service、权限、沙箱和可观测能力的通用多智能体服务框架时，选 AgentScope。 | 通用多智能体服务框架（service/权限/沙箱/可观测）；走「信任模型」的循环，不是 guardrails 优先的会话模型。要编排/服务 agent 选 AgentScope，要约束一个面向客户的 agent 选 Parlant。 |
+| [smolagents](smolagents.zh.md) | ✅ | 需要极简、代码优先的 agent 库时，选 smolagents。 | 极简、代码优先的 agent 库——面小，适合简单/自治循环；没有内建的行为规则/guardrail 层，所以高风险的守轨控制要你自己扛。 |
+| Rasa | 未收录 | 需要成熟的开源对话式 AI/聊天机器人框架时，选 Rasa。 | 成熟的开源对话式 AI/聊天机器人框架（intents/stories/对话管理）；更偏经典 NLU 流水线，运维更重，LLM 原生的 guideline 建模更弱。 |
+| LangGraph | 未收录 | 需要控制流显式、生态庞大的图/状态机式编排时，选 LangGraph。 | 图/状态机式编排，控制流显式、生态庞大；guardrail 要你自己搭，而非开箱即得一个 guideline 执行模型。 |
+| Guidance / Guardrails（AI） | 未收录 | 只需要约束单次结构化生成输出时，选 Guidance 或 Guardrails。 | 输出约束 / 结构化生成库（约束单次 LLM 调用的格式/合法性）；比 Parlant 跨多轮对话的会话级行为控制更窄。 |
 
 ## 技术栈
 
