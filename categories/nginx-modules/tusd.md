@@ -91,13 +91,13 @@ You're building a web or mobile app where users upload large files — videos, h
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| [nginx-upload-module](nginx-upload-module.md) | ✅ | Use this page for its stated niche; choose nginx-upload-module when you need NGINX itself to stream multipart uploads to disk at the edge — but it is an aging C fork with low activity. | NGINX streams uploads to disk directly; no separate service. But it's a low-activity third-party C module you compile into NGINX, with limited resumable support compared to the full tus protocol. |
-| NGINX `client_body_*` buffering + app handling | 未收录 | Use this page for its stated niche; choose NGINX client-body buffering when you want first-party, no-extra-module handling. | First-party, no extra module — NGINX buffers the body and your app parses it. Simpler, but your app still processes the upload and you build resumability yourself. |
-| Direct-to-S3 presigned uploads | 未收录 | Use this page for its stated niche; choose direct-to-S3 when you can bypass your servers entirely for the bytes. | Bypasses your servers entirely; best scalability. But ties you to AWS SDK/client logic and doesn't give you an open, cross-vendor resumable protocol. |
-| Application framework upload handling (Django/Rails/Express) | 未收录 | Use this page for its stated niche; choose framework upload handling when uploads are small, rare, and your team has no ops bandwidth. | Zero infra beyond your app. But the app server absorbs slow-client cost and you build resumability/retry yourself. |
+| [nginx-upload-module](nginx-upload-module.md) | ✅ | Choose nginx-upload-module when NGINX itself must stream multipart uploads to disk at the edge. | No separate service, but it is a low-activity third-party C module with less resumable-upload depth than full tus. |
+| NGINX `client_body_*` buffering + app handling | 未收录 | Choose built-in NGINX buffering when first-party, no-module handling is enough. | Simpler, but your app still processes uploads and you build resumability yourself. |
+| Direct-to-S3 presigned uploads | 未收录 | Choose direct-to-S3 when bypassing your servers for the bytes is more valuable than an open resumable protocol. | Best scalability, but ties client logic to object storage rather than a cross-vendor tus server. |
+| Application framework upload handling (Django/Rails/Express) | 未收录 | Choose framework upload handling when uploads are small, rare, and ops bandwidth is the binding constraint. | Zero infra beyond your app, but slow clients and retries land on the app server. |
 | tus JavaScript client (tus-js-client) | 未收录 | This is the *client* companion, not a server alternative. You use tus-js-client in the browser to talk to tusd. | A client library, not a substitute. It pairs with tusd (or any tus server). |
-| Uppy | 未收录 | Use this page for its stated niche; choose Uppy when you need a full-featured upload widget with UI, but tusd is the *server* it can talk to. | A polished upload widget with many plugins; often used with tusd as the backend. Not a server replacement. |
-| Resumable.js | 未收录 | Use this page for its stated niche; choose Resumable.js when you need an older, simpler resumable upload library with wider legacy browser support. | Older library, not a protocol reference implementation. Less active ecosystem than tus. |
+| Uppy | 未收录 | Choose Uppy when the missing piece is the browser upload UI, not the resumable upload server. | Polished widget with many plugins; often pairs with tusd, but is not a server replacement. |
+| Resumable.js | 未收录 | Choose Resumable.js when an older, simpler resumable upload library and legacy browser support are enough. | Older library, not a protocol reference implementation, with a less active ecosystem than tus. |
 
 ## Tech stack
 
