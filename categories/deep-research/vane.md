@@ -91,12 +91,12 @@ You're also a good fit if you previously ran Perplexica and want the maintained 
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| [deep-research](deep-research.md) | ✅ | Use this page for its stated niche; choose deep-research when you need minimal TypeScript deep-research *engine/SDK* you call from code and tune (breadth/depth). | Minimal TypeScript deep-research *engine/SDK* you call from code and tune (breadth/depth); Vane is a full self-hosted UI product, not a library to embed. |
-| [local-deep-research](local-deep-research.md) | ✅ | Use this page for its stated niche; choose local-deep-research when you need python, leans local-first and can research a local corpus offline. | Python, leans local-first and can research a local corpus offline; Vane always hits the live web via SearxNG and ships as a polished web app. |
-| [Agent-Reach](agent-reach.md) | ✅ | Use this page for its stated niche; choose Agent-Reach when you need different niche (agent reach/outreach-style automation). | Different niche (agent reach/outreach-style automation); not a SearxNG answering engine. Compare only if you conflated the two. |
-| Perplexica | 未收录 | Use this page for its stated niche; choose Perplexica when you need vane's direct predecessor by the same author. | Vane's direct predecessor by the same author; same SearxNG+RAG core. Choosing Vane = choosing the maintained continuation. |
-| GPT Researcher | 未收录 | Use this page for its stated niche; choose GPT Researcher when you need python autonomous research agent that writes long reports. | Python autonomous research agent that writes long reports; more report-generation, less interactive cited-answer UX, no built-in chat product. |
-| Morphic / Perplexity (hosted) | 未收录 | Use this page for its stated niche; choose Morphic / Perplexity (hosted) when you need hosted/proprietary answer engines. | Hosted/proprietary answer engines; no self-hosting or provider choice, opposite of Vane's privacy/self-host pitch. |
+| [deep-research](deep-research.md) | ✅ | Choose deep-research when you need a minimal TypeScript engine/SDK you call from code. | Minimal TypeScript deep-research *engine/SDK* you call from code and tune (breadth/depth); Vane is a full self-hosted UI product, not a library to embed. |
+| [local-deep-research](local-deep-research.md) | ✅ | Choose local-deep-research when local-first Python/offline corpus research matters. | Python, leans local-first and can research a local corpus offline; Vane always hits the live web via SearxNG and ships as a polished web app. |
+| [Agent-Reach](agent-reach.md) | ✅ | Choose Agent-Reach when you mean reach/outreach-style automation rather than an answering engine. | Different niche (agent reach/outreach-style automation); not a SearxNG answering engine. Compare only if you conflated the two. |
+| Perplexica | 未收录 | Choose Perplexica when you need Vane's direct predecessor by the same author. | Vane's direct predecessor by the same author; same SearxNG+RAG core. Choosing Vane = choosing the maintained continuation. |
+| GPT Researcher | 未收录 | Choose GPT Researcher when you need an autonomous Python research agent that writes long reports. | Python autonomous research agent that writes long reports; more report-generation, less interactive cited-answer UX, no built-in chat product. |
+| Morphic / Perplexity (hosted) | 未收录 | Choose Morphic or Perplexity when you need hosted/proprietary answer engines. | Hosted/proprietary answer engines; no self-hosting or provider choice, opposite of Vane's privacy/self-host pitch. |
 
 ## Tech stack
 

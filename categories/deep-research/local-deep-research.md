@@ -96,11 +96,11 @@ You're also a good fit if your research is *academic or technical* rather than o
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| [deep-research](deep-research.md) | ✅ | Use this page for its stated niche; choose deep-research when you need minimal TypeScript script you embed/own end-to-end. | Minimal TypeScript script you embed/own end-to-end; you wire your own LLM+search keys. Far lighter than LDR, but no UI, no local-LLM/privacy bundle, no academic-source connectors or encrypted multi-user store. |
-| [Vane](vane.md) | ✅ | Use this page for its stated niche; choose Vane when you need another self-hosted research/search agent. | Another self-hosted research/search agent; overlapping "run it yourself" goal. Compare on source connectors, local-LLM support and report quality for your stack. |
-| [Agent-Reach](agent-reach.md) | ✅ | Use this page for its stated niche; choose Agent-Reach when you need focuses on agent outreach/reach over web sources. | Focuses on agent outreach/reach over web sources; adjacent but a different deliverable than LDR's cited research reports. |
-| GPT Researcher | 未收录 | Use this page for its stated niche; choose GPT Researcher when you need popular Python deep-research agent with web UI and report export. | Popular Python deep-research agent with web UI and report export; cloud-LLM-first by default. LDR leans harder into fully-local + encryption + academic connectors. |
-| Perplexity / OpenAI Deep Research | 未收录 | Use this page for its stated niche; choose Perplexity / OpenAI Deep Research when you need hosted SaaS, strong quality and zero ops. | Hosted SaaS, strong quality and zero ops — but your queries and context leave your machine, the opposite of LDR's premise. |
+| [deep-research](deep-research.md) | ✅ | Choose deep-research when you want a minimal TypeScript script you embed and own end-to-end. | Minimal TypeScript script you embed/own end-to-end; you wire your own LLM+search keys. Far lighter than LDR, but no UI, no local-LLM/privacy bundle, no academic-source connectors or encrypted multi-user store. |
+| [Vane](vane.md) | ✅ | Choose Vane when you need another self-hosted research/search agent. | Another self-hosted research/search agent; overlapping "run it yourself" goal. Compare on source connectors, local-LLM support and report quality for your stack. |
+| [Agent-Reach](agent-reach.md) | ✅ | Choose Agent-Reach when the deliverable is web/social reach rather than cited reports. | Focuses on agent outreach/reach over web sources; adjacent but a different deliverable than LDR's cited research reports. |
+| GPT Researcher | 未收录 | Choose GPT Researcher when you need a popular Python deep-research agent with web UI/report export. | Popular Python deep-research agent with web UI and report export; cloud-LLM-first by default. LDR leans harder into fully-local + encryption + academic connectors. |
+| Perplexity / OpenAI Deep Research | 未收录 | Choose hosted research SaaS when quality and zero ops outweigh privacy/local control. | Hosted SaaS, strong quality and zero ops — but your queries and context leave your machine, the opposite of LDR's premise. |
 
 ## Tech stack
 
