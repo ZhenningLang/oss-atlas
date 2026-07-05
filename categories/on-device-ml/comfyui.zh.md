@@ -93,10 +93,10 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [Stable Diffusion WebUI](stable-diffusion-webui.zh.md) | ✅ | 当前页用于它的主场景；如果更看重「更简单、更传统的 Stable Diffusion Web UI」，再选 Stable Diffusion WebUI。 | 更简单、更传统的 Stable Diffusion 标签页式 Web UI，带内置扩展；对初学者更友好，但模块化程度不如 ComfyUI 的节点图。 |
-| InvokeAI | 未收录 | 当前页用于它的主场景；如果更看重「面向艺术家的精致画布，统一生成与编辑」，再选 InvokeAI。 | 面向艺术家的精致画布，生成与编辑在同一视图；UX 更流畅，但开放度与可定制性不如 ComfyUI。 |
-| Fooocus | 未收录 | 当前页用于它的主场景；如果更看重「类 Midjourney 的极简本地提示词生图体验」，再选 Fooocus。 | 受 Midjourney 启发的极简提示词生图 UI；快速出图不错，但灵活度远不如 ComfyUI 的节点图。 |
-| Diffusers（Hugging Face） | 未收录 | 当前页用于它的主场景；如果更看重「用 Python 库程序化编排扩散管线，不需要 GUI」，再选 Diffusers。 | 用于程序化编写扩散管线的 Python 库；无 GUI，面向开发自己工具的人。 |
+| [Stable Diffusion WebUI](stable-diffusion-webui.zh.md) | ✅ | 需要更简单、传统标签页式 UI 时，选 Stable Diffusion WebUI。 | 更简单、更传统的 Stable Diffusion 标签页式 Web UI，带内置扩展；对初学者更友好，但模块化程度不如 ComfyUI 的节点图。 |
+| InvokeAI | 未收录 | 需要面向艺术家的精致画布时，选 InvokeAI。 | 面向艺术家的精致画布，生成与编辑在同一视图；UX 更流畅，但开放度与可定制性不如 ComfyUI。 |
+| Fooocus | 未收录 | 需要极简本地提示词生图体验时，选 Fooocus。 | 受 Midjourney 启发的极简提示词生图 UI；快速出图不错，但灵活度远不如 ComfyUI 的节点图。 |
+| Diffusers（Hugging Face） | 未收录 | 需要 Python 库而不是 GUI 时，选 Diffusers。 | 用于程序化编写扩散管线的 Python 库；无 GUI，面向开发自己工具的人。 |
 
 ## 技术栈
 

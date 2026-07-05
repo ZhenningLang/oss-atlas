@@ -93,10 +93,10 @@ You're a digital artist or AI researcher who wants to generate, edit, and upscal
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| [Stable Diffusion WebUI](stable-diffusion-webui.md) | ✅ | Use this page for its stated niche; choose Stable Diffusion WebUI when you want a simpler, more conventional tabbed web UI for Stable Diffusion. | Simpler tabbed web UI for Stable Diffusion with built-in extensions; easier for beginners but less modular than ComfyUI's node graph. |
-| InvokeAI | 未收录 | Use this page for its stated niche; choose InvokeAI when you want a polished, artist-focused canvas with unified generation and editing. | Polished artist-focused canvas with generation and editing in one view; smoother UX but less open/customizable than ComfyUI. |
-| Fooocus | 未收录 | Use this page for its stated niche; choose Fooocus when you want a "Midjourney-like" minimal prompt-to-image experience locally. | Minimal prompt-to-image UI inspired by Midjourney; great for quick results but far less flexible than ComfyUI's node graph. |
-| Diffusers (Hugging Face) | 未收录 | Use this page for its stated niche; choose Diffusers when you need a Python library for programmatic diffusion pipelines, not a GUI. | Python library for scripting diffusion pipelines programmatically; no GUI, intended for developers building their own tools. |
+| [Stable Diffusion WebUI](stable-diffusion-webui.md) | ✅ | Choose Stable Diffusion WebUI when you want a simpler conventional tabbed UI. | Simpler tabbed web UI for Stable Diffusion with built-in extensions; easier for beginners but less modular than ComfyUI's node graph. |
+| InvokeAI | 未收录 | Choose InvokeAI when you want a polished artist-focused canvas. | Polished artist-focused canvas with generation and editing in one view; smoother UX but less open/customizable than ComfyUI. |
+| Fooocus | 未收录 | Choose Fooocus when you want a minimal local prompt-to-image experience. | Minimal prompt-to-image UI inspired by Midjourney; great for quick results but far less flexible than ComfyUI's node graph. |
+| Diffusers (Hugging Face) | 未收录 | Choose Diffusers when you need a Python library, not a GUI. | Python library for scripting diffusion pipelines programmatically; no GUI, intended for developers building their own tools. |
 
 ## Tech stack
 
