@@ -87,12 +87,12 @@ Agent Lightning 正是为此而生。它把 agent 执行建模为马尔可夫决
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [LLaMA-Factory](llamafactory.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“在数据集上做广覆盖的 SFT/DPO/PPO 微调，统一配置/UI”，再选 LLaMA-Factory。 | 在数据集上做广覆盖的 SFT/DPO/PPO 微调，统一配置/UI；不是为把一个在线多步 agent 解耦成 RL transition 而设计。 |
-| [Unsloth](unsloth.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“快速、省显存的单卡 SFT/LoRA”，再选 Unsloth。 | 快速、省显存的单卡 SFT/LoRA；是优化*内核/训练器*，不是 agent rollout 的 RL 编排器。 |
-| [ART](art.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“同样是面向 agent 的 RL，但是更有主张、更顺手的单循环体验”，再选 ART。 | 同样是面向 agent 的 RL，但是更有主张、更顺手的单循环体验；Agent Lightning 强调框架无关的解耦 + 可插拔后端。 |
-| verl | 未收录 | 当前页用于它的主场景；如果更看重“Agent Lightning 所依赖的底层分布式 RL 引擎”，再选 verl。 | Agent Lightning 所依赖的底层分布式 RL 引擎；强大，但要你把训练表达成它的生成循环，而不是包住一个原生 agent。 |
-| HF TRL | 未收录 | 当前页用于它的主场景；如果更看重“成熟的 PPO/GRPO/DPO 库”，再选 HF TRL。 | 成熟的 PPO/GRPO/DPO 库；以数据集/循环为中心，开箱没有 agent 执行解耦或多步信用分配。 |
-| OpenAI Agents SDK / LangChain（单用） | 未收录 | 当前页用于它的主场景；如果更看重“用来构建和运行 agent，但不会从 rollout 训练底层模型”，再选 OpenAI Agents SDK / LangChain（单用）。 | 用来构建和运行 agent，但不会从 rollout 训练底层模型——Agent Lightning 叠在它们之上让它们变得可训练。 |
+| [LLaMA-Factory](llamafactory.zh.md) | ✅ | 需要在数据集上做广覆盖 SFT/DPO/PPO 微调，并使用统一配置/UI 时，选 LLaMA-Factory。 | 它擅长数据集微调，不是为在线多步 agent rollout 设计。 |
+| [Unsloth](unsloth.zh.md) | ✅ | 快速、省显存的单卡 SFT/LoRA 是瓶颈时，选 Unsloth。 | 它是优化*内核/训练器*，不是 agent rollout 的 RL 编排器。 |
+| [ART](art.zh.md) | ✅ | 同样需要面向 agent 的 RL，但更偏好有主张的单循环体验时，选 ART。 | Agent Lightning 强调框架无关的解耦和可插拔后端；ART 更偏易用体验。 |
+| verl | 未收录 | 需要 Agent Lightning 所依赖的底层分布式 RL 引擎时，选 verl。 | 它很强，但要你把训练表达成它的生成循环，而不是包住一个原生 agent。 |
+| HF TRL | 未收录 | 需要成熟的 PPO/GRPO/DPO 库做数据集或循环中心训练时，选 HF TRL。 | 开箱没有 agent 执行解耦或多步信用分配。 |
+| OpenAI Agents SDK / [LangChain](../agent-frameworks/langchain.zh.md)（单用） | 部分已收录 | 只需要构建和运行 agent，而不是从 rollout 训练底层模型时，选单独的 agent 框架。 | Agent Lightning 叠在 agent 执行之上，让 rollout 可训练；普通框架止步于编排。OpenAI Agents SDK 未单独收录。 |
 
 ## 技术栈
 

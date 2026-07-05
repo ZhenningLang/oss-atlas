@@ -99,7 +99,7 @@ You're a content creator, educator, or solo developer who needs to produce short
 | Remotion | 未收录 | Pick Remotion directly when programmatic React video composition is enough and agent orchestration is unnecessary. | OpenMontage embeds Remotion as one of two render backends; use Remotion directly if you only need programmatic React video composition. |
 | HeyGen / Runway / Pika | 未收录 | Pick closed SaaS tools when speed for a single generated clip matters more than pipeline control and OSS extensibility. | Faster for a single clip, but no pipeline customization, no agent approval gates, no open-source extensibility, and ongoing subscription costs. |
 | [FFmpeg](../media-processing/ffmpeg.md) | ✅ | Pick FFmpeg when you need low-level media manipulation rather than an end-to-end production pipeline. | OpenMontage depends on FFmpeg for encoding and post-production; FFmpeg is the right tool when you need low-level media manipulation, not an end-to-end production pipeline. |
-| ComfyUI | 未收录 | Pick ComfyUI when bespoke node-based diffusion workflows and local GPU inference matter more than agentic production governance. | More flexible for bespoke diffusion pipelines and local GPU inference, but lacks agentic orchestration, research, scripting, and budget governance. |
+| [ComfyUI](../on-device-ml/comfyui.md) | ✅ | Pick ComfyUI when bespoke node-based diffusion workflows and local GPU inference matter more than agentic production governance. | More flexible for bespoke diffusion pipelines and local GPU inference, but lacks agentic orchestration, research, scripting, and budget governance. |
 
 ## Tech stack
 

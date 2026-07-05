@@ -93,11 +93,11 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [Celery](celery.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“架在 Kombu *之上*的任务队列”，再选 Celery。 | 架在 Kombu *之上*的任务队列；“跑某个 job”用 Celery，需要裸 broker 抽象时用 Kombu。不是替代品——是更高的一层。 |
-| py-amqp / pika | 未收录 | 当前页用于它的主场景；如果更看重“更底层的纯 AMQP 客户端”，再选 py-amqp / pika。 | 更底层的纯 AMQP 客户端；抽象更少、无多 broker 可移植性，但若你只会用 RabbitMQ，活动部件更少。 |
-| aio-pika | 未收录 | 当前页用于它的主场景；如果更看重“面向 `asyncio` 的 async 原生 AMQP 客户端”，再选 aio-pika。 | 面向 `asyncio` 的 async 原生 AMQP 客户端；async 体验更好，仅支持 RabbitMQ，范围比 Kombu 的多传输模型窄。 |
-| confluent-kafka-python / kafka-python | 未收录 | 当前页用于它的主场景；如果更看重“面向日志结构化流的 Kafka 客户端”，再选 confluent-kafka-python / kafka-python。 | 面向日志结构化流的 Kafka 客户端；语义不同（重放、分区、consumer group）——你要的是流而非 broker 时才对。 |
-| NATS / Redis Streams（直连） | 未收录 | 当前页用于它的主场景；如果更看重“直接对接某一个系统”，再选 NATS / Redis Streams（直连）。 | 直接对接某一个系统；如果你已认定它就更简单，但没有 broker 无关层。 |
+| [Celery](celery.zh.md) | ✅ | 需要架在 Kombu *之上*的任务队列，而不是裸 broker 抽象时，选 Celery。 | “跑某个 job”用 Celery；需要传输层 broker 抽象时用 Kombu。不是替代品，而是更高一层。 |
+| py-amqp / pika | 未收录 | 需要更底层的纯 AMQP 客户端时，选 py-amqp 或 pika。 | 抽象更少、无多 broker 可移植性，但若你只会用 RabbitMQ，活动部件更少。 |
+| aio-pika | 未收录 | 需要面向 `asyncio` 的 async 原生 AMQP 客户端时，选 aio-pika。 | async 体验更好，仅支持 RabbitMQ，范围比 Kombu 的多传输模型窄。 |
+| confluent-kafka-python / [kafka-python](../kafka-tools/kafka-python.zh.md) | 部分已收录 | 需要日志结构化流而不是 broker 抽象时，选 Kafka 客户端。 | 语义不同：重放、分区、consumer group。confluent-kafka-python 未单独收录。 |
+| NATS / Redis Streams（直连） | 未收录 | 已认定某一个 broker 或 stream 系统时，选直连客户端。 | 单系统下更简单，但没有 broker 无关层。 |
 
 ## 技术栈
 

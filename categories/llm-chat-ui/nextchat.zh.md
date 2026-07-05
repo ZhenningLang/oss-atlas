@@ -91,11 +91,11 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| LibreChat | 未收录 | 当前页用于它的主场景；如果更看重“完整的多用户平台”，再选 LibreChat。 | 完整的多用户平台——账号、多种鉴权后端、RAG、assistants、代码解释器；能力强得多，也重得多。NextChat 是更轻的单次部署客户端，不是团队平台。 |
-| Lobe Chat | 未收录 | 当前页用于它的主场景；如果更看重“同样精致的多服务商自部署 UI，带插件、知识库，以及（在其云/DB 模式下）多用户”，再选 Lobe Chat。 | 同样精致的多服务商自部署 UI，带插件、知识库，以及（在其云/DB 模式下）多用户；功能面更宽，开启这些后更重。NextChat 保持极简、浏览器本地。 |
-| Open WebUI | 未收录 | 当前页用于它的主场景；如果更看重“自部署 UI，在 Ollama/本地模型上很强，内建 RBAC、用户和 pipelines”，再选 Open WebUI。 | 自部署 UI，在 Ollama/本地模型上很强，内建 RBAC、用户和 pipelines；需要服务器 + 数据库。NextChat 用静态/Vercel 部署换掉了这层，没有后端要运维。 |
-| [HiveChat](../team-chat/hivechat.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“管理员托管的团队聊天：按组的模型权限、token 配额、Postgres 支撑的用户账号”，再选 HiveChat。 | 管理员托管的团队聊天：按组的模型权限、token 配额、Postgres 支撑的用户账号。正是 NextChat 社区版有意不去做的那个团队治理答案。 |
-| ChatGPT / Claude.ai（商业 SaaS） | 未收录 | 当前页用于它的主场景；如果更看重“零运维、厂商托管、锁定单一模型家族，数据由服务商持有”，再选 ChatGPT / Claude.ai（商业 SaaS）。 | 零运维、厂商托管、锁定单一模型家族，数据由服务商持有。NextChat 用这份便利换来了自部署、多服务商选择和 key/数据掌控。 |
+| LibreChat | 未收录 | 需要完整多用户平台，而不是轻量单次部署客户端时，选 LibreChat。 | 账号、多种鉴权后端、RAG、assistants、代码解释器；能力强得多，也重得多。NextChat 是更轻的客户端，不是团队平台。 |
+| Lobe Chat | 未收录 | 需要精致的多服务商 UI、插件、知识库和可选多用户模式时，选 Lobe Chat。 | 功能面更宽，开启 cloud/DB 功能后更重。NextChat 保持极简、浏览器本地。 |
+| [Open WebUI](open-webui.zh.md) | ✅ | Ollama/本地模型服务、RBAC、用户和 pipelines 比静态/Vercel 式客户端更重要时，选 Open WebUI。 | 它是强本地模型场景的自部署 UI，但需要服务器和数据库。NextChat 用这些能力换来了更简单的部署和更少后端运维。 |
+| [HiveChat](../team-chat/hivechat.zh.md) | ✅ | 需要管理员托管的团队聊天、按组模型权限、token 配额和 Postgres 用户账号时，选 HiveChat。 | HiveChat 正是 NextChat 社区版有意不去做的团队治理答案。 |
+| ChatGPT / Claude.ai（商业 SaaS） | 未收录 | 零运维厂商托管比自部署和服务商选择更重要时，选商业 SaaS。 | 锁定单一模型家族，数据由服务商持有。NextChat 用这份便利换来了自部署、多服务商选择和 key/数据掌控。 |
 
 ## 技术栈
 
@@ -132,4 +132,4 @@ health:
 - [未验证]「纯前端部署 key 暴露」这一提醒反映的是浏览器直连服务商的静态部署的一般机理；确切的暴露程度取决于你的部署拓扑（服务端代理 vs. 直连），请审计你自己的配置而非默认假设。
 - [未验证] 项目宣传有一个带权限控制的收费企业版（business@nextchat.dev）；它独立于这个 MIT 开源仓库，其条款未在此核实。
 - [推断]「社区版是单用户形态」是从「只有 `CODE` 密码的访问模型 + 浏览器本地存储」推断出来的，而非来自某个文档化的并发用户硬上限。
-- [推断] 对比结论（LibreChat/Lobe Chat/Open WebUI 更宽或更重）反映的是一般项目定位，而非实测的正面对决；此处只有 HiveChat 被收录。
+- [推断] 对比结论（LibreChat/Lobe Chat/Open WebUI 更宽或更重）反映的是一般项目定位，而非实测的正面对决；此处 Open WebUI 和 HiveChat 已收录，LibreChat 与 Lobe Chat 未收录。

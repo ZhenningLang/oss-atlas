@@ -97,8 +97,8 @@ It shines as a *building block*: it's the transcript-fetch layer under a larger 
 |---|---|---|---|
 | [yt-dlp](yt-dlp.md) (`--write-auto-subs`) | ✅ | Choose yt-dlp when you need a broader downloader that can also pull subtitle tracks. | The heavyweight downloader can also pull subtitle tracks; far broader (media + subs from many sites) but heavier and CLI-oriented — this library is a focused, in-process Python call for transcripts only. |
 | YouTube Data API v3 (Captions) | 未收录 | Choose YouTube Data API captions when you need the official contractual API and have the required ownership/OAuth. | Official and contractual, but requires OAuth and (for caption *download*) channel ownership — you generally can't pull arbitrary third-party caption text, which is exactly this library's niche. |
-| Selenium / Playwright scraping | 未收录 | Choose browser scraping when you need to drive the real player despite the cost and brittleness. | Drives a real browser, so it survives some changes the player itself survives, but it's slow, resource-heavy, and brittle — this library avoids the browser entirely. |
-| OpenAI Whisper (transcribe audio) | 未收录 | Choose Whisper when you need to generate a transcript from audio with no caption track. | Generates a transcript from the audio when no caption track exists; far more compute and not timestamp-aligned to YouTube's own captions, but works on videos with captions disabled. |
+| [Selenium](../web-automation/selenium.md) / Playwright scraping | 部分已收录 | Choose browser scraping when you must drive the real player despite the cost and brittleness. | A real browser survives some changes the player itself survives, but it is slow, resource-heavy, and brittle. This library avoids the browser entirely. Playwright is not indexed separately. |
+| [Whisper](../media-processing/whisper.md) (transcribe audio) | ✅ | Choose Whisper when you need to generate a transcript from audio with no caption track. | Generates a transcript from the audio when no caption track exists; far more compute and not timestamp-aligned to YouTube's own captions, but works on videos with captions disabled. |
 
 ## Tech stack
 

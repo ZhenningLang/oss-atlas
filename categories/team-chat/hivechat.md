@@ -88,11 +88,11 @@ HiveChat is built for exactly this shape. You deploy it once (Docker Compose wit
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| LibreChat | 未收录 | Use this page for its stated niche; choose LibreChat when you need far more mature, larger feature surface (RAG, assistants, code interpreter, many auth backends), MIT. | Far more mature, larger feature surface (RAG, assistants, code interpreter, many auth backends), MIT-licensed; heavier to operate and not as opinionated toward the small-team admin-quota flow. |
-| Open WebUI | 未收录 | Use this page for its stated niche; choose Open WebUI when you need popular self-hosted UI strong on Ollama/local models with RBAC and pipelines. | Popular self-hosted UI strong on Ollama/local models with RBAC and pipelines; broader and more active, but its sweet spot is local-model serving rather than HiveChat's multi-cloud-provider + per-group quota framing. |
-| Lobe Chat | 未收录 | Use this page for its stated niche; choose Lobe Chat when you need polished UI, plugins, multi-provider, can self-host. | Polished UI, plugins, multi-provider, can self-host; oriented to personal/prosumer use more than centralized admin-managed team governance with token quotas. |
-| Chatbox / Cherry Studio | 未收录 | Use this page for its stated niche; choose Chatbox / Cherry Studio when you need desktop, single-user clients that bring-your-own-key per person. | Desktop, single-user clients that bring-your-own-key per person; no central admin, groups, quotas, or shared server. |
-| ChatGPT Team / Claude Team (SaaS) | 未收录 | Use this page for its stated niche; choose ChatGPT Team / Claude Team (SaaS) when you need managed, zero-ops, vendor-locked to one model family. | Managed, zero-ops, vendor-locked to one model family; HiveChat trades that convenience for self-hosting, multi-provider choice, and key/data control. |
+| LibreChat | 未收录 | Choose LibreChat when you need a more mature, larger feature surface with RAG, assistants, code interpreter, and many auth backends. | MIT-licensed and broader, but heavier to operate and less opinionated toward HiveChat's small-team admin-quota flow. |
+| [Open WebUI](../llm-chat-ui/open-webui.md) | ✅ | Choose Open WebUI when local-model serving, RBAC, and pipelines matter more than multi-cloud provider quotas. | Broader and more active, but its sweet spot is Ollama/local-model serving rather than HiveChat's per-group quota framing. |
+| Lobe Chat | 未收录 | Choose Lobe Chat when you need a polished multi-provider UI with plugins and self-hosting for personal/prosumer use. | Less centered on centralized admin-managed team governance with token quotas. |
+| Chatbox / Cherry Studio | 未收录 | Choose desktop clients when each person brings their own key and central governance is unnecessary. | No central admin, groups, quotas, or shared server. |
+| ChatGPT Team / Claude Team (SaaS) | 未收录 | Choose managed SaaS teams when zero-ops and a single model family are acceptable. | HiveChat trades that convenience for self-hosting, multi-provider choice, and key/data control. |
 
 ## Tech stack
 
@@ -128,5 +128,5 @@ HiveChat is built for exactly this shape. You deploy it once (Docker Compose wit
 - [未验证] Version is `0.1.0` from `package.json`; the repo publishes **no** git tags or GitHub releases, so there is no semver release history to anchor maturity — treat "active" cautiously given the last push predates this verification.
 - [未验证] License is Apache-2.0 **with additional commercial conditions** (the `LICENSE` file restricts building/distributing derivative works without a separate commercial license); the SPDX frontmatter says `Apache-2.0` for tooling, but the real terms are not plain Apache-2.0 — read `LICENSE` before any commercial/derivative use.
 - [未验证] The exact list of supported model providers, auth integrations (Feishu/DingTalk/WeWork), and capabilities (MCP SSE, image understanding, web search) is taken from the README; verify each against the current code/admin UI before relying on it.
-- [推断] Comparison verdicts (LibreChat/Open WebUI/Lobe Chat being broader or more mature, desktop clients lacking central admin) reflect general project positioning, not a benchmarked head-to-head; none of these alternatives is indexed here yet.
+- [推断] Comparison verdicts (LibreChat/Open WebUI/Lobe Chat being broader or more mature, desktop clients lacking central admin) reflect general project positioning, not a benchmarked head-to-head; Open WebUI is indexed here, while LibreChat, Lobe Chat, desktop clients, and SaaS team products are not.
 - [推断] "Small-to-medium team" sizing (≈5–50 people) is illustrative framing, not a documented hard limit; no published scale/load numbers were found.
