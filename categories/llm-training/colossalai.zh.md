@@ -93,11 +93,11 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| DeepSpeed | 未收录 | 当前页用于它的主场景；如果更看重“参考级的 ZeRO / offload 栈（微软）”，再选 DeepSpeed。 | 参考级的 ZeRO / offload 栈（微软）；生产履历最深、生态最广。Colossal-AI 在 ZeRO + offload 上高度重叠，并加上自己的张量 / 流水线 / 序列并行 plugin 和 Booster API；在 DeepSpeed 已经跑起来的地方，它是更稳的默认。 |
-| Megatron-LM | 未收录 | 当前页用于它的主场景；如果更看重“NVIDIA 面向超大 transformer 预训练的高性能张量 + 流水线并行”，再选 Megatron-LM。 | NVIDIA 面向超大 transformer 预训练的高性能张量 + 流水线并行；规模化吞吐属顶级，但更底层、更定制。Colossal-AI 想在类似思路之上提供更友好、更可组合的 plugin 面。 |
-| PyTorch FSDP | 未收录 | 当前页用于它的主场景；如果更看重“内置于 PyTorch 的全分片数据并行”，再选 PyTorch FSDP。 | 内置于 PyTorch 的全分片数据并行——不用额外框架、原生、支持良好。Colossal-AI 提供更宽的并行菜单（张量 / 流水线 / 序列 + Gemini offload），超出 FSDP 的纯切分，代价是多一个依赖。 |
-| [LlamaFactory](llamafactory.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“配置 / UI 驱动、覆盖 100+ 模型的微调（分布式靠包装 DeepSpeed/FSDP）”，再选 LlamaFactory。 | 配置 / UI 驱动、覆盖 100+ 模型的微调（分布式靠包装 DeepSpeed/FSDP）。它更高层、对 SFT/LoRA 更开箱即用；Colossal-AI 是面向大规模 / 全参训练的更底层分布式引擎，而非微调前端。 |
-| [Unsloth](unsloth.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“靠自定义核在单卡上做 LoRA/QLoRA 提速、省显存”，再选 Unsloth。 | 靠自定义核在单卡上做 LoRA/QLoRA 提速、省显存。处在光谱另一端：一张卡 vs Colossal-AI 的多卡集群切分——完全是两个问题。 |
+| DeepSpeed | 未收录 | Microsoft ZeRO/offload 栈已经是生产默认时，选 DeepSpeed。 | DeepSpeed 的部署履历更深；Colossal-AI 在 ZeRO/offload 上重叠，但加入自己的 plugin 和 Booster 面。 |
+| Megatron-LM | 未收录 | 超大 transformer 预训练需要更底层的 NVIDIA 风格张量与流水线并行时，选 Megatron-LM。 | 规模化吞吐强，但更定制；Colossal-AI 试图在类似思路之上提供更可组合的接口。 |
+| PyTorch FSDP | 未收录 | 原生全分片数据并行已经足够，且避免额外框架更重要时，选 PyTorch FSDP。 | 它内置在 PyTorch 里；Colossal-AI 额外提供张量／流水线／序列并行和 Gemini offload，代价是多一个依赖。 |
+| [LlamaFactory](llamafactory.zh.md) | ✅ | 需求是更高层的配置／UI 微调，而不是分布式训练引擎时，选 LlamaFactory。 | 它对 SFT/LoRA 工作流更开箱即用，并包装分布式后端；Colossal-AI 是面向大规模或全参训练的更底层基础设施。 |
+| [Unsloth](unsloth.zh.md) | ✅ | 单卡 LoRA/QLoRA 提速和省显存就是全部问题时，选 Unsloth。 | 它处在光谱另一端：一张卡和自定义 kernel，对比 Colossal-AI 的多卡切分机器。 |
 
 ## 技术栈
 

@@ -96,13 +96,13 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [Unsloth](unsloth.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“自定义 kernel 让单卡更快、更省显存”，再选 Unsloth。 | 自定义 kernel 让单卡更快、更省显存；模型/方法覆盖更窄，多卡能力弱于 LlamaFactory 那套覆盖广但更重的分发。 |
-| [ART](art.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“面向 agent 的 RL（GRPO 式 rollout）训练智能体”，再选 ART。 | 面向 agent 的 RL（GRPO 式 rollout）训练智能体；与 LlamaFactory 的 SFT/偏好微调定位是不同的问题。 |
-| [Agent Lightning](agent-lightning.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“从智能体自身执行轨迹 / RL 训练”，再选 Agent Lightning。 | 从智能体自身执行轨迹 / RL 训练；不是通用的 SFT/LoRA 工具箱。 |
-| axolotl | 未收录 | 当前页用于它的主场景；如果更看重“YAML 驱动、天生多卡优先，开箱即带 FSDP/DeepSpeed”，再选 axolotl。 | YAML 驱动、天生多卡优先，开箱即带 FSDP/DeepSpeed；偏好可复现的生产训练。LlamaFactory 多了 Web UI 和更广的零代码面。 |
-| torchtune | 未收录 | 当前页用于它的主场景；如果更看重“精简、原生 PyTorch、端到端自己掌控”，再选 torchtune。 | 精简、原生 PyTorch、端到端自己掌控；开箱即用程度更低，无 Web UI。 |
-| HF TRL | 未收录 | 当前页用于它的主场景；如果更看重“LlamaFactory 自身构建其上的更底层 SFT/DPO/PPO 库”，再选 HF TRL。 | LlamaFactory 自身构建其上的更底层 SFT/DPO/PPO 库；更可控、需更多接线。 |
-| Swift(ModelScope) | 未收录 | 当前页用于它的主场景；如果更看重“ModelScope 生态里覆盖同样很广的微调框架”，再选 Swift(ModelScope)。 | ModelScope 生态里覆盖同样很广的微调框架；定位有重叠。 |
+| [Unsloth](unsloth.zh.md) | ✅ | 单卡速度和省显存比广泛模型／方法覆盖更重要时，选 Unsloth。 | 工作流更窄，多卡故事更弱，但自定义 kernel 的 LoRA/QLoRA 效率更强。 |
+| [ART](art.zh.md) | ✅ | 目标是带 GRPO 式 rollout 的 agentic RL，而不是 SFT 或偏好微调时，选 ART。 | 它解决的是从 rollout 训练 agent，不是通用微调工作台。 |
+| [Agent Lightning](agent-lightning.zh.md) | ✅ | 需要从现有 agent 自身执行轨迹中训练时，选 Agent Lightning。 | 它是 agent-RL 基础设施，不是通用 SFT/LoRA 工具箱。 |
+| axolotl | 未收录 | 需要 YAML 驱动、多卡优先，并开箱带 FSDP/DeepSpeed 的生产训练时，选 axolotl。 | 它更偏可复现生产运行；LlamaFactory 多了 Web UI 和更广的零代码面。 |
+| torchtune | 未收录 | 精简、原生 PyTorch、端到端自己掌控，比大型框架更重要时，选 torchtune。 | 开箱能力更少、无 Web UI，但更容易推理。 |
+| HF TRL | 未收录 | 想要底层 SFT/DPO/PPO trainer，并愿意自己接线时，选 HF TRL。 | 比 LlamaFactory 更可控、抽象更少，但集成工作更多。 |
+| Swift(ModelScope) | 未收录 | ModelScope 生态更契合，且同样需要广覆盖微调框架时，选 Swift。 | 覆盖面与 LlamaFactory 重叠；生态偏好是决定性取舍。 |
 
 ## 技术栈
 
