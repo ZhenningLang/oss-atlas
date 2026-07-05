@@ -84,9 +84,9 @@ Realistically that is the *only* defensible use today: reading it as a historica
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| Appium | 未收录 | Use this page for its stated niche; choose Appium when you need a maintained, general mobile-UI automation framework (Android/iOS) with element selectors instead of. | A maintained, general mobile-UI automation framework (Android/iOS) with element selectors instead of hardcoded pixels — the right tool if you actually need robust device automation. |
-| Plain ADB + a script | 未收录 | Use this page for its stated niche; choose Plain ADB + a script when you need the underlying mechanism Douyin-Bot demonstrates. | The underlying mechanism Douyin-Bot demonstrates; if you only want screencap + input events, raw `adb` is more transparent and isn't tied to a dead cloud API. |
-| airtest / Poco (NetEase) | 未收录 | Use this page for its stated niche; choose airtest / Poco (NetEase) when you need image-recognition-based game/app UI automation with an IDE. | Image-recognition-based game/app UI automation with an IDE; a maintained Chinese-ecosystem alternative for coordinate/image-driven device automation. |
+| Appium | 未收录 | Choose Appium when robust mobile UI automation and element selectors matter. | A maintained, general mobile-UI automation framework (Android/iOS) with element selectors instead of hardcoded pixels — the right tool if you actually need robust device automation. |
+| Plain ADB + a script | 未收录 | Choose raw ADB when you only need the screencap/input mechanism Douyin-Bot demonstrates. | The underlying mechanism Douyin-Bot demonstrates; if you only want screencap + input events, raw `adb` is more transparent and isn't tied to a dead cloud API. |
+| airtest / Poco (NetEase) | 未收录 | Choose airtest or Poco when image-recognition UI automation with an IDE is the target. | Image-recognition-based game/app UI automation with an IDE; a maintained Chinese-ecosystem alternative for coordinate/image-driven device automation. |
 
 ## Tech stack
 
