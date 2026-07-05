@@ -93,12 +93,12 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| trafilatura | 未收录 | 当前页用于它的主场景；如果更看重“专注正文 + 元数据提取”，再选 trafilatura。 | 专注正文 + 元数据提取；通常提取更强更干净且维护活跃——如今做「只要正文」往往是更好的默认选项。 |
-| readability-lxml | 未收录 | 当前页用于它的主场景；如果更看重“Arc90 Readability 的移植”，再选 readability-lxml。 | Arc90 Readability 的移植；只做正文提取（无作者/日期/头图/NLP），面更小、更简单。 |
-| boilerpipe | 未收录 | 当前页用于它的主场景；如果更看重“较老的 Java 样板剥离算法（带 Python 封装）”，再选 boilerpipe。 | 较老的 Java 样板剥离算法（带 Python 封装）；历史上有影响力，但有 JVM 依赖且偏老。 |
-| Scrapy + 定制 | 未收录 | 当前页用于它的主场景；如果更看重“完整爬取框架”，再选 Scrapy + 定制。 | 完整爬取框架——你自己写提取规则，但能拿到队列、并发、重试、管线；当你需要的是*爬虫*而非单 URL 提取器时的正解。 |
-| Goose3 | 未收录 | 当前页用于它的主场景；如果更看重“Goose 文章提取器的 Python 移植”，再选 Goose3。 | Goose 文章提取器的 Python 移植；和 newspaper 同一生态位（正文/元数据/头图），启发式不同——可直接拿来做基准对比的同类。 |
-| newspaper4k | 未收录 | 当前页用于它的主场景；如果更看重“正是本项目维护中的分叉”，再选 newspaper4k。 | 正是本项目维护中的分叉；同一 API 血统，修 bug、跟进 Python 版本——推荐的继任者。 |
+| trafilatura | 未收录 | 需要维护活跃、专注正文和元数据提取的工具时，选 trafilatura。 | 专注正文 + 元数据提取；通常提取更强更干净且维护活跃——如今做「只要正文」往往是更好的默认选项。 |
+| readability-lxml | 未收录 | 需要 Arc90 Readability 移植版且只做正文提取时，选 readability-lxml。 | Arc90 Readability 的移植；只做正文提取（无作者/日期/头图/NLP），面更小、更简单。 |
+| [boilerpipe](boilerpipe.zh.md) | ✅ | 需要较老的 Java 样板剥离算法及 Python 封装时，选 boilerpipe。 | 较老的 Java 样板剥离算法（带 Python 封装）；历史上有影响力，但有 JVM 依赖且偏老。 |
+| Scrapy + 定制 | 未收录 | 需要完整爬取框架时，选 Scrapy 加自写提取规则。 | 完整爬取框架——你自己写提取规则，但能拿到队列、并发、重试、管线；当你需要的是*爬虫*而非单 URL 提取器时的正解。 |
+| Goose3 | 未收录 | 需要 Goose 文章提取器的 Python 移植版时，选 Goose3。 | Goose 文章提取器的 Python 移植；和 newspaper 同一生态位（正文/元数据/头图），启发式不同——可直接拿来做基准对比的同类。 |
+| newspaper4k | 未收录 | 需要本项目维护中的分叉时，选 newspaper4k。 | 正是本项目维护中的分叉；同一 API 血统，修 bug、跟进 Python 版本——推荐的继任者。 |
 
 ## 技术栈
 

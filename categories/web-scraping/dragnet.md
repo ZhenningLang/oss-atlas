@@ -90,11 +90,11 @@ You reach for it specifically when you have (or can label) training data and wan
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| [python-readability](python-readability.md) | ✅ | Use this page for its stated niche; choose python-readability when you need lxml heuristic extractor. | lxml heuristic extractor; far lighter and easier to install, no ML training — but no learned/comment separation. |
-| [Readability.js](readability-js.md) | ✅ | Use this page for its stated niche; choose Readability.js when you need mozilla's JS reader-view engine. | Mozilla's JS reader-view engine; different language, heuristic not ML, no comment extraction. |
-| [boilerpipe](boilerpipe.md) | ✅ | Use this page for its stated niche; choose boilerpipe when you need java boilerplate-removal algorithms (one of dragnet's inspirations). | Java boilerplate-removal algorithms (one of dragnet's inspirations); classic but the repo is effectively abandoned. |
-| trafilatura | 未收录 | Use this page for its stated niche; choose trafilatura when you need modern, actively maintained Python extractor with strong benchmarks, metadata, and crawl support. | Modern, actively maintained Python extractor with strong benchmarks, metadata, and crawl support; usually the better default now — heuristic + rules rather than a trainable ML model. |
-| Mozilla fathom / custom ML | 未收录 | Use this page for its stated niche; choose Mozilla fathom / custom ML when you need roll-your-own learned extraction. | Roll-your-own learned extraction; more control, far more work than adopting dragnet's models. |
+| [python-readability](python-readability.md) | ✅ | Choose python-readability when you need a lighter lxml heuristic extractor. | lxml heuristic extractor; far lighter and easier to install, no ML training — but no learned/comment separation. |
+| [Readability.js](readability-js.md) | ✅ | Choose Readability.js when you need Mozilla's JavaScript reader-view engine. | Mozilla's JS reader-view engine; different language, heuristic not ML, no comment extraction. |
+| [boilerpipe](boilerpipe.md) | ✅ | Choose boilerpipe when you need classic Java boilerplate-removal algorithms. | Java boilerplate-removal algorithms (one of dragnet's inspirations); classic but the repo is effectively abandoned. |
+| trafilatura | 未收录 | Choose trafilatura when you need a modern maintained Python extractor with benchmarks, metadata, and crawl support. | Modern, actively maintained Python extractor with strong benchmarks, metadata, and crawl support; usually the better default now — heuristic + rules rather than a trainable ML model. |
+| Mozilla fathom / custom ML | 未收录 | Choose Mozilla fathom or custom ML when you need roll-your-own learned extraction. | Roll-your-own learned extraction; more control, far more work than adopting dragnet's models. |
 
 ## Tech stack
 

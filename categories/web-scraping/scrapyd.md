@@ -91,10 +91,10 @@ You're a data engineer who has written a handful of Scrapy spiders that work fin
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| [SpiderKeeper](spiderkeeper.md) | ✅ | Use this page for its stated niche; choose SpiderKeeper when you need not a competitor. | Not a competitor — a Flask admin **UI on top of** Scrapyd (deploy, periodic scheduling, dashboard). Older/staler; complements Scrapyd rather than replacing it. |
-| ScrapydWeb / Gerapy | 未收录 | Use this page for its stated niche; choose ScrapydWeb / Gerapy when you need also admin UIs over Scrapyd: ScrapydWeb adds multi-node/log-parsing/alerts. | Also admin UIs over Scrapyd: ScrapydWeb adds multi-node/log-parsing/alerts; Gerapy is Django+Vue and more modern. Both call Scrapyd's API, not replacements for the daemon. |
-| Zyte Scrapy Cloud | 未收录 | Use this page for its stated niche; choose Zyte Scrapy Cloud when you need commercial managed SaaS for Scrapy (no self-hosting). | Commercial managed SaaS for Scrapy (no self-hosting); removes ops at the cost of vendor lock-in and per-usage pricing. |
-| Apache Airflow / Celery / cron | 未收录 | Use this page for its stated niche; choose Apache Airflow / Celery / cron when you need general-purpose schedulers. | General-purpose schedulers — broader scope, but no Scrapy-native eggify/deploy/version model; you build the spider-running glue yourself. |
+| [SpiderKeeper](spiderkeeper.md) | ✅ | Choose SpiderKeeper when you need a Flask admin UI on top of Scrapyd. | Not a competitor — a Flask admin **UI on top of** Scrapyd (deploy, periodic scheduling, dashboard). Older/staler; complements Scrapyd rather than replacing it. |
+| ScrapydWeb / Gerapy | 未收录 | Choose ScrapydWeb or Gerapy when you need richer admin UIs over Scrapyd. | Also admin UIs over Scrapyd: ScrapydWeb adds multi-node/log-parsing/alerts; Gerapy is Django+Vue and more modern. Both call Scrapyd's API, not replacements for the daemon. |
+| Zyte Scrapy Cloud | 未收录 | Choose Zyte Scrapy Cloud when you need commercial managed SaaS for Scrapy. | Commercial managed SaaS for Scrapy (no self-hosting); removes ops at the cost of vendor lock-in and per-usage pricing. |
+| Apache Airflow / Celery / cron | 未收录 | Choose Airflow, Celery, or cron when you need general-purpose scheduling rather than Scrapy-native deployment. | General-purpose schedulers — broader scope, but no Scrapy-native eggify/deploy/version model; you build the spider-running glue yourself. |
 
 ## Tech stack
 

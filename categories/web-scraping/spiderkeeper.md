@@ -81,10 +81,10 @@ You're running a small crawl operation on Scrapyd and you're tired of `curl`-ing
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| [Scrapyd](scrapyd.md) | ✅ | Use this page for its stated niche; choose Scrapyd when you need the daemon SpiderKeeper wraps. | The daemon SpiderKeeper wraps — actively maintained, org-backed. SpiderKeeper is a UI *on top of* it, not an alternative to it. |
-| Gerapy | 未收录 | Use this page for its stated niche; choose Gerapy when you need django + Vue dashboard for distributed Scrapy management. | Django + Vue dashboard for distributed Scrapy management; more modern and generally the recommended successor in this niche today. |
-| ScrapydWeb | 未收录 | Use this page for its stated niche; choose ScrapydWeb when you need more featureful web UI over Scrapyd (multi-node, log parsing, email alerts), but itself also fairly. | More featureful web UI over Scrapyd (multi-node, log parsing, email alerts), but itself also fairly stale. |
-| Zyte Scrapy Cloud | 未收录 | Use this page for its stated niche; choose Zyte Scrapy Cloud when you need commercial hosted alternative. | Commercial hosted alternative — no self-hosting of the scrapyd+UI stack, at the cost of vendor lock-in and pricing. |
+| [Scrapyd](scrapyd.md) | ✅ | Choose Scrapyd when you need the daemon SpiderKeeper wraps. | The daemon SpiderKeeper wraps — actively maintained, org-backed. SpiderKeeper is a UI *on top of* it, not an alternative to it. |
+| Gerapy | 未收录 | Choose Gerapy when you need a Django + Vue dashboard for distributed Scrapy management. | Django + Vue dashboard for distributed Scrapy management; more modern and generally the recommended successor in this niche today. |
+| ScrapydWeb | 未收录 | Choose ScrapydWeb when you need a more featureful web UI over Scrapyd. | More featureful web UI over Scrapyd (multi-node, log parsing, email alerts), but itself also fairly stale. |
+| Zyte Scrapy Cloud | 未收录 | Choose Zyte Scrapy Cloud when you need a commercial hosted alternative. | Commercial hosted alternative — no self-hosting of the scrapyd+UI stack, at the cost of vendor lock-in and pricing. |
 
 ## Tech stack
 

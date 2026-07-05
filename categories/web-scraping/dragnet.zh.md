@@ -90,11 +90,11 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [python-readability](python-readability.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“lxml 启发式抽取器”，再选 python-readability。 | lxml 启发式抽取器；轻得多、好装得多、无 ML 训练——但没有学习式/评论分离。 |
-| [Readability.js](readability-js.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“Mozilla 的 JS reader-view 引擎”，再选 Readability.js。 | Mozilla 的 JS reader-view 引擎；语言不同、启发式而非 ML、无评论抽取。 |
-| [boilerpipe](boilerpipe.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“Java 样板移除算法（dragnet 的灵感来源之一）”，再选 boilerpipe。 | Java 样板移除算法（dragnet 的灵感来源之一）；经典但仓库实际已废弃。 |
-| trafilatura | 未收录 | 当前页用于它的主场景；如果更看重“现代、活跃维护的 Python 抽取器，基准强、带元数据和爬取支持”，再选 trafilatura。 | 现代、活跃维护的 Python 抽取器，基准强、带元数据和爬取支持；如今通常是更好的默认——启发式 + 规则而非可训练 ML 模型。 |
-| Mozilla fathom / 自建 ML | 未收录 | 当前页用于它的主场景；如果更看重“自己搓学习式抽取”，再选 Mozilla fathom / 自建 ML。 | 自己搓学习式抽取；控制更多，但比采用 dragnet 的模型工作量大得多。 |
+| [python-readability](python-readability.zh.md) | ✅ | 需要更轻的 lxml 启发式抽取器时，选 python-readability。 | lxml 启发式抽取器；轻得多、好装得多、无 ML 训练——但没有学习式/评论分离。 |
+| [Readability.js](readability-js.zh.md) | ✅ | 需要 Mozilla 的 JavaScript reader-view 引擎时，选 Readability.js。 | Mozilla 的 JS reader-view 引擎；语言不同、启发式而非 ML、无评论抽取。 |
+| [boilerpipe](boilerpipe.zh.md) | ✅ | 需要经典 Java 样板移除算法时，选 boilerpipe。 | Java 样板移除算法（dragnet 的灵感来源之一）；经典但仓库实际已废弃。 |
+| trafilatura | 未收录 | 需要现代、活跃维护、带元数据和爬取支持的 Python 抽取器时，选 trafilatura。 | 现代、活跃维护的 Python 抽取器，基准强、带元数据和爬取支持；如今通常是更好的默认——启发式 + 规则而非可训练 ML 模型。 |
+| Mozilla fathom / 自建 ML | 未收录 | 需要自己构建学习式抽取时，选 Mozilla fathom 或自建 ML。 | 自己搓学习式抽取；控制更多，但比采用 dragnet 的模型工作量大得多。 |
 
 ## 技术栈
 
