@@ -129,5 +129,3 @@ You especially reach for it when the sources are **Chinese sites** — Bilibili,
 - [推断] Single-maintainer/bus-factor judgment is inferred from the `User`-owned repo and the contributor-concentration figures (iawia002 ~497 vs next ~14); re-verify the contributor graph if this is load-bearing.
 - [未验证] FFmpeg dependency for merging/conversion and the parallel multi-segment download claim come from project docs; confirm against the current README and your own run if either is load-bearing.
 - [推断] License is MIT per the repo metadata; confirm the LICENSE file if license terms are load-bearing for your use.
-</content>
-</invoke>
