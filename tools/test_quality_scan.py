@@ -231,6 +231,68 @@ class QualityScanTest(unittest.TestCase):
 
             self.assertTrue(any(f.category == "indexed-page-marked-not-indexed" and "yt-dlp" in f.evidence for f in result.findings))
 
+    def test_detects_plain_text_indexed_alias_marked_not_indexed(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            write_page(root, "categories/demo/antfu-skills.md", "## Comparison\n")
+            write_page(
+                root,
+                "categories/demo/source.md",
+                """## Comparison
+
+| Alternative | In index | Our verdict |
+|---|---|---|
+| antfu/skills | 未收录 | Personal skill collection. |
+""",
+            )
+
+            result = quality_scan.scan(root)
+
+            self.assertTrue(any(f.category == "indexed-page-marked-not-indexed" and "antfu/skills" in f.evidence for f in result.findings))
+
+    def test_detects_aggregate_plain_text_indexed_alternatives_marked_not_indexed(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            write_page(root, "categories/demo/dimillian-skills.md", "## Comparison\n")
+            write_page(root, "categories/demo/gstack.md", "## Comparison\n")
+            write_page(
+                root,
+                "categories/demo/source.md",
+                """## Comparison
+
+| Alternative | In index | Our verdict |
+|---|---|---|
+| Dimillian/Skills, gstack (other personal collections) | 未收录 | Same genre. |
+""",
+            )
+
+            result = quality_scan.scan(root)
+
+            self.assertTrue(
+                any(f.category == "indexed-page-marked-not-indexed" and "Dimillian/Skills" in f.evidence for f in result.findings)
+            )
+
+    def test_does_not_flag_short_global_plain_text_slug_collision(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            write_page(root, "categories/web-ui/react.md", "## Comparison\n")
+            write_page(
+                root,
+                "categories/ai-code-review/react-doctor.md",
+                """## Comparison
+
+| Alternative | In index | Our verdict |
+|---|---|---|
+| eslint-plugin-react-hooks / react | 未收录 | Canonical linting rules for React hooks. |
+""",
+            )
+
+            result = quality_scan.scan(root)
+
+            self.assertFalse(
+                any(f.category == "indexed-page-marked-not-indexed" and "eslint-plugin-react-hooks" in f.evidence for f in result.findings)
+            )
+
     def test_mixed_comparison_status_row_does_not_mark_indexed_link_unindexed(self) -> None:
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)

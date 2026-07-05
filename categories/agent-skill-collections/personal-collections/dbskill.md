@@ -85,10 +85,10 @@ You reach for it when you want this *specific author's* methodology — the fram
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| [antfu/skills](antfu-skills.md) | ✅ | Use this page for its stated niche; choose antfu/skills when you need a maintainer's personal coding/devtools skills. | A maintainer's personal coding/devtools skills; engineering-flavored, English-first. dbskill is a domain pack for business diagnosis, not code workflow. |
-| [Dimillian/Skills](dimillian-skills.md) | ✅ | Use this page for its stated niche; choose Dimillian/Skills when you need personal skills from an iOS/Swift developer. | Personal skills from an iOS/Swift developer; software-focused. Disjoint domain — pick by whether you want coding help or business coaching. |
-| [awesome-claude-code-subagents](../subagent-collections/awesome-claude-code-subagents.md) | ✅ | Use this page for its stated niche; choose awesome-claude-code-subagents when you need a large broad subagent collection across many technical roles. | A large broad subagent collection across many technical roles; breadth over a single opinionated voice. dbskill is one author's deep, narrow business methodology. |
-| Generic LLM business-coaching prompts | 未收录 | Use this page for its stated niche; choose Generic LLM business-coaching prompts when you need ad-hoc prompts have no curated framework, case library, or persistence. | Ad-hoc prompts have no curated framework, case library, or persistence; dbskill ships ~4k knowledge atoms and state commands behind a coherent author voice. |
+| [antfu/skills](antfu-skills.md) | ✅ | Choose antfu/skills when you need personal coding/devtools skills rather than business diagnosis. | A maintainer's personal coding/devtools skills; engineering-flavored, English-first. dbskill is a domain pack for business diagnosis, not code workflow. |
+| [Dimillian/Skills](dimillian-skills.md) | ✅ | Choose Dimillian/Skills when you need iOS/Swift developer workflow skills. | Personal skills from an iOS/Swift developer; software-focused. Disjoint domain — pick by whether you want coding help or business coaching. |
+| [awesome-claude-code-subagents](../subagent-collections/awesome-claude-code-subagents.md) | ✅ | Choose awesome-claude-code-subagents when you need broad technical-role subagent coverage. | A large broad subagent collection across many technical roles; breadth over a single opinionated voice. dbskill is one author's deep, narrow business methodology. |
+| Generic LLM business-coaching prompts | 未收录 | Choose ad-hoc prompts only when you do not need a curated framework or persistent author voice. | Ad-hoc prompts have no curated framework, case library, or persistence; dbskill ships ~4k knowledge atoms and state commands behind a coherent author voice. |
 
 ## Health & viability
 

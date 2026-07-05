@@ -87,12 +87,12 @@ TÂCHES（glittercowboy）的个人化、带主观偏好的 Claude Code 扩展�
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [antfu/skills](antfu-skills.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“另一份个人 Claude Code skill 合集”，再选 antfu/skills。 | 另一份个人 Claude Code skill 合集；偏具体的编写/开发 skill，而非用来造新扩展的元生成器。 |
-| [Dimillian/Skills](dimillian-skills.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“偏向特定技术栈/工作流的个人 skill 集”，再选 Dimillian/Skills。 | 偏向特定技术栈/工作流的个人 skill 集；TÂCHES 更「广而浅」，聚焦给 Claude Code 扩展本身搭脚手架。 |
-| [wshobson/agents](../subagent-collections/wshobson-agents.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“大量现成领域 subagent 库”，再选 wshobson/agents。 | 大量现成领域 subagent 库；TÂCHES 只带 3 个审计 subagent 外加生成器来「造」你自己的。要人设广度选 wshobson，要编写扩展选 TÂCHES。 |
-| [awesome-claude-code-subagents](../subagent-collections/awesome-claude-code-subagents.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“体量大的 subagent 精选目录（偏消费）”，再选 awesome-claude-code-subagents。 | 体量大的 subagent 精选目录（偏消费）；TÂCHES 是小而杂的个人组合（命令+skill+审计器），偏生成。 |
-| [shaping-skills](shaping-skills.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“偏方法论形态的 skill 包”，再选 shaping-skills。 | 偏方法论形态的 skill 包；TÂCHES 不是单一方法论，更像一袋编写工具加思考框架。 |
-| Anthropic 官方 Claude Code skills / 内置命令 | 未收录 | 当前页用于它的主场景；如果更看重“平台原生生态”，再选 Anthropic 官方 Claude Code skills / 内置命令。 | 平台原生生态；TÂCHES 是叠在其上的第三方个人合集，可能与原生命令重复或冲突。 |
+| [antfu/skills](antfu-skills.zh.md) | ✅ | 需要具体编写/开发 skill，而不是扩展生成器时，选 antfu/skills。 | 另一份个人 Claude Code skill 合集；偏具体的编写/开发 skill，而非用来造新扩展的元生成器。 |
+| [Dimillian/Skills](dimillian-skills.zh.md) | ✅ | 特定技术栈/工作流的个人 skill 集更贴合时，选 Dimillian/Skills。 | 偏向特定技术栈/工作流的个人 skill 集；TÂCHES 更「广而浅」，聚焦给 Claude Code 扩展本身搭脚手架。 |
+| [wshobson/agents](../subagent-collections/wshobson-agents.zh.md) | ✅ | 需要现成领域 subagent 的广度时，选 wshobson/agents。 | 大量现成领域 subagent 库；TÂCHES 只带 3 个审计 subagent 外加生成器来「造」你自己的。要人设广度选 wshobson，要编写扩展选 TÂCHES。 |
+| [awesome-claude-code-subagents](../subagent-collections/awesome-claude-code-subagents.zh.md) | ✅ | 需要偏消费的大型 subagent 精选目录时，选 awesome-claude-code-subagents。 | 体量大的 subagent 精选目录（偏消费）；TÂCHES 是小而杂的个人组合（命令+skill+审计器），偏生成。 |
+| [shaping-skills](shaping-skills.zh.md) | ✅ | 需要单一方法论形态的 skill 包时，选 shaping-skills。 | 偏方法论形态的 skill 包；TÂCHES 不是单一方法论，更像一袋编写工具加思考框架。 |
+| Anthropic 官方 Claude Code skills / 内置命令 | 未收录 | 平台原生行为更重要时，选官方 Claude Code skills 或内置命令。 | 平台原生生态；TÂCHES 是叠在其上的第三方个人合集，可能与原生命令重复或冲突。 |
 
 ## 健康度与可持续性
 

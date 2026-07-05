@@ -31,6 +31,7 @@ NOT_INDEXED_MARKERS = ["not indexed", "未收录"]
 INDEXED_MARKERS = ["✅", "已收录"]
 PARTIALLY_INDEXED_MARKERS = ["partly indexed", "partially indexed", "部分已收录"]
 LINK_RE = re.compile(r"\[([^\]]+)\]\(([^)]+)\)")
+MIN_GLOBAL_PLAIN_SLUG_LENGTH = 7
 HEALTH_AXES = ["maintenance", "responsiveness", "adoption", "longevity", "governance", "risk_license"]
 AXIS_LABELS = {
     "maintenance": ["Maintenance", "维护活跃度"],
@@ -129,6 +130,33 @@ def slugify_label(label: str) -> str:
     plain = plain.lower().replace("_", "-")
     plain = re.sub(r"[^a-z0-9]+", "-", plain).strip("-")
     return plain
+
+
+def slugify_candidate_label(label: str) -> str:
+    plain = re.sub(r"`([^`]+)`", r"\1", label).strip()
+    plain = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", plain).strip()
+    plain = re.sub(r"\([^)]*\)", "", plain).strip()
+    plain = re.sub(r"（[^）]*）", "", plain).strip()
+    plain = plain.lower().replace("_", "-")
+    plain = re.sub(r"[^a-z0-9]+", "-", plain).strip("-")
+    return plain
+
+
+def alternative_candidate_slugs(label: str) -> set[str]:
+    plain = re.sub(r"`([^`]+)`", r"\1", label).strip()
+    plain = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", plain).strip()
+    chunks = [plain]
+    for comma_part in re.split(r"\s*[,，;；]\s*", plain):
+        chunks.append(comma_part)
+        chunks.extend(part.strip() for part in re.split(r"\s+/\s+", comma_part) if part.strip())
+    return {slug for chunk in chunks if (slug := slugify_candidate_label(chunk))}
+
+
+def is_indexed_plain_candidate(source: Path, candidate_slug: str, indexed_targets: set[Path], indexed_slug_set: set[str]) -> bool:
+    sibling = source.with_name(f"{candidate_slug}.md").resolve()
+    if sibling in indexed_targets:
+        return True
+    return len(candidate_slug) >= MIN_GLOBAL_PLAIN_SLUG_LENGTH and candidate_slug in indexed_slug_set
 
 
 def split_composite_label(label: str) -> list[str]:
@@ -498,10 +526,10 @@ def scan(root: Path | str) -> ScanResult:
             ]
             indexed_plain_target = False
             if len(cells) >= 2 and not LINK_RE.search(cells[0]):
-                candidate_slug = slugify_label(cells[0])
-                if candidate_slug:
-                    sibling = page.with_name(f"{candidate_slug}.md").resolve()
-                    indexed_plain_target = sibling in indexed_targets or candidate_slug in indexed_slug_set
+                for candidate_slug in alternative_candidate_slugs(cells[0]):
+                    if is_indexed_plain_candidate(page, candidate_slug, indexed_targets, indexed_slug_set):
+                        indexed_plain_target = True
+                        break
             status_cell = cells[1] if len(cells) >= 2 else ""
             if (
                 (linked_indexed_targets or indexed_plain_target)
@@ -514,7 +542,7 @@ def scan(root: Path | str) -> ScanResult:
                         "high",
                         rel,
                         line_no,
-                        "Comparison row marks a linked existing indexed page as not indexed.",
+                        "Comparison row marks an existing indexed page as not indexed.",
                         line.strip(),
                     )
                 )
