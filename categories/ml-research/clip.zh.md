@@ -93,11 +93,11 @@ OpenAI 官方的 CLIP（Contrastive Language-Image Pre-training）原始参考�
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| OpenCLIP | 未收录 | 当前页用于它的主场景；如果更看重“带训练代码和一大堆 checkpoint（很多在 LAION/DataComp 上训练）的开源复现”，再选 OpenCLIP。 | 带训练代码和一大堆 checkpoint（很多在 LAION/DataComp 上训练）的开源复现；当你需要更多或更强的 CLIP 模型、或想自己训练时的事实标准——严格比这个参考仓库更宽。 |
-| Hugging Face `transformers` 里的 CLIP | 未收录 | 当前页用于它的主场景；如果更看重“把同一批 OpenAI 权重包进一个有维护、开箱即用的 API（processor、`from_pretrained`、pipeline）”，再选 Hugging Face transformers 里的 CLIP。 | 把同一批 OpenAI 权重包进一个有维护、开箱即用的 API（processor、`from_pretrained`、pipeline）；更易集成、更易跟进，代价是更重的 `transformers` 依赖。 |
-| SigLIP | 未收录 | 当前页用于它的主场景；如果更看重“用 sigmoid loss 训练的更新图文模型”，再选 SigLIP。 | 用 sigmoid loss 训练的更新图文模型；零样本精度通常更高、在规模上更好，但属于不同模型家族——一般通过 OpenCLIP 或 `transformers` 用，而不是这个仓库。 |
-| EVA-CLIP | 未收录 | 当前页用于它的主场景；如果更看重“放大的 CLIP，训练配方改良、backbone 更大”，再选 EVA-CLIP。 | 放大的 CLIP，训练配方改良、backbone 更大；精度上限更高，权重和算力更重。 |
-| BLIP / BLIP-2 | 未收录 | 当前页用于它的主场景；如果更看重“*生成*文本的视觉语言模型（看图说话、VQA）”，再选 BLIP / BLIP-2。 | *生成*文本的视觉语言模型（看图说话、VQA）；解决的是和 CLIP 对比式 embedding/检索不同的问题——不是即插即换的替代。 |
+| OpenCLIP | 未收录 | 需要开源训练代码和大规模 checkpoint zoo 时，选 OpenCLIP。 | 带训练代码和一大堆 checkpoint（很多在 LAION/DataComp 上训练）的开源复现；当你需要更多或更强的 CLIP 模型、或想自己训练时的事实标准——严格比这个参考仓库更宽。 |
+| Hugging Face `transformers` 里的 CLIP | 未收录 | 想把 OpenAI CLIP 权重放进有维护、开箱即用的 API 时，选 Hugging Face transformers。 | 把同一批 OpenAI 权重包进一个有维护、开箱即用的 API（processor、`from_pretrained`、pipeline）；更易集成、更易跟进，代价是更重的 `transformers` 依赖。 |
+| SigLIP | 未收录 | 需要用 sigmoid loss 训练的更新图文模型时，选 SigLIP。 | 用 sigmoid loss 训练的更新图文模型；零样本精度通常更高、在规模上更好，但属于不同模型家族——一般通过 OpenCLIP 或 `transformers` 用，而不是这个仓库。 |
+| EVA-CLIP | 未收录 | 需要训练配方改良、backbone 更大的放大版 CLIP 时，选 EVA-CLIP。 | 放大的 CLIP，训练配方改良、backbone 更大；精度上限更高，权重和算力更重。 |
+| BLIP / BLIP-2 | 未收录 | 需要能生成文本的视觉语言模型时，选 BLIP 或 BLIP-2。 | *生成*文本的视觉语言模型（看图说话、VQA）；解决的是和 CLIP 对比式 embedding/检索不同的问题——不是即插即换的替代。 |
 
 ## 技术栈
 
