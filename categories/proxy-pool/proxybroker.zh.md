@@ -89,10 +89,10 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [Scylla](scylla.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“一个更长寿的智能代理池，带网页 UI、JSON API 和质量打分”，再选 Scylla。 | 一个更长寿的智能代理池，带网页 UI、JSON API 和质量打分——比 ProxyBroker 的 CLI 更像一个可运行的*服务*，也维护得更近，尽管同样不常发版。 |
-| [haipproxy](haipproxy.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“分布式 Scrapy+Redis 代理池，面向大型爬虫的高可用”，再选 haipproxy。 | 分布式 Scrapy+Redis 代理池，面向大型爬虫的高可用——重得多（需要 Redis、Scrapy）且自身也长期休眠，但为规模而非单个 CLI 设计。 |
-| 付费代理供应商（Bright Data、Oxylabs……） | 未收录 | 当前页用于它的主场景；如果更看重“商业住宅/数据中心池，自带 SLA、鉴权和轮换”，再选 付费代理供应商（Bright Data、Oxylabs……）。 | 商业住宅/数据中心池，自带 SLA、鉴权和轮换——真正的生产答案；只有当「免费 + 用完即弃」可接受时，ProxyBroker 才说得通。 |
-| scrapy-rotating-proxies / 代理中间件 | 未收录 | 当前页用于它的主场景；如果更看重“在 Scrapy 内轮换*你提供的列表*的库中间件”，再选 scrapy-rotating-proxies / 代理中间件。 | 在 Scrapy 内轮换*你提供的列表*的库中间件；是互补而非竞争——它不收割代理，只消费代理。 |
+| [Scylla](scylla.zh.md) | ✅ | 需要带 UI/API 的常驻代理池服务时，选 Scylla。 | 一个更长寿的智能代理池，带网页 UI、JSON API 和质量打分——比 ProxyBroker 的 CLI 更像一个可运行的*服务*，也维护得更近，尽管同样不常发版。 |
+| [haipproxy](haipproxy.zh.md) | ✅ | 分布式 Scrapy+Redis 规模比一次性 CLI 简洁更重要时，选 haipproxy。 | 分布式 Scrapy+Redis 代理池，面向大型爬虫的高可用——重得多（需要 Redis、Scrapy）且自身也长期休眠，但为规模而非单个 CLI 设计。 |
+| 付费代理供应商（Bright Data、Oxylabs……） | 未收录 | 需要商业 SLA、鉴权和托管轮换时，选付费代理供应商。 | 商业住宅/数据中心池，自带 SLA、鉴权和轮换——真正的生产答案；只有当「免费 + 用完即弃」可接受时，ProxyBroker 才说得通。 |
+| scrapy-rotating-proxies / 代理中间件 | 未收录 | 已有代理列表、只需要在 Scrapy 内轮换时，选 Scrapy 代理中间件。 | 在 Scrapy 内轮换*你提供的列表*的库中间件；是互补而非竞争——它不收割代理，只消费代理。 |
 
 ## 技术栈
 

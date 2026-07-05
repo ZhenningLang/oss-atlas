@@ -96,11 +96,11 @@ It shines when you need to inspect *and* rewrite at once: reproduce a production
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| Charles | 未收录 | Use this page for its stated niche; choose Charles when you need paid native desktop proxy. | Paid native desktop proxy; mature, polished GUI for capture/rewrite/throttle, but commercial license and not config-file-driven like whistle's rule syntax. |
-| Fiddler | 未收录 | Use this page for its stated niche; choose Fiddler when you need long-standing Windows-first debugging proxy (Fiddler Classic / Everywhere). | Long-standing Windows-first debugging proxy (Fiddler Classic / Everywhere); rich .NET ecosystem and FiddlerScript, but heavier and partly commercial/closed. |
-| mitmproxy | 未收录 | Use this page for its stated niche; choose mitmproxy when you need open-source (MIT-ish) Python proxy with a strong scripting/addon API and CLI/TUI. | Open-source (MIT-ish) Python proxy with a strong scripting/addon API and CLI/TUI; better for programmable interception, less of a point-and-click rule UI. |
-| anyproxy | 未收录 | Use this page for its stated niche; choose anyproxy when you need alibaba's Node. | Alibaba's Node.js HTTP/HTTPS proxy with JS rule files; closer in spirit to whistle but smaller community and you write rules in JS rather than whistle's line syntax. |
-| Proxyman | 未收录 | Use this page for its stated niche; choose Proxyman when you need modern native macOS/cross-platform debugging proxy with a slick GUI. | Modern native macOS/cross-platform debugging proxy with a slick GUI; freemium/commercial, app-based rather than a web-UI + npm tool. |
+| Charles | 未收录 | Choose Charles when you need a polished paid native desktop proxy. | Paid native desktop proxy; mature, polished GUI for capture/rewrite/throttle, but commercial license and not config-file-driven like whistle's rule syntax. |
+| Fiddler | 未收录 | Choose Fiddler when Windows-first debugging proxy heritage and .NET scripting matter. | Long-standing Windows-first debugging proxy (Fiddler Classic / Everywhere); rich .NET ecosystem and FiddlerScript, but heavier and partly commercial/closed. |
+| mitmproxy | 未收录 | Choose mitmproxy when programmable Python interception is the priority. | Open-source (MIT-ish) Python proxy with a strong scripting/addon API and CLI/TUI; better for programmable interception, less of a point-and-click rule UI. |
+| [anyproxy](anyproxy.md) | ✅ | Choose AnyProxy when you prefer Alibaba's Node.js proxy and JS rule files. | Alibaba's Node.js HTTP/HTTPS proxy with JS rule files; closer in spirit to whistle but smaller community and you write rules in JS rather than whistle's line syntax. |
+| Proxyman | 未收录 | Choose Proxyman when a modern native GUI matters more than npm/web-UI operation. | Modern native macOS/cross-platform debugging proxy with a slick GUI; freemium/commercial, app-based rather than a web-UI + npm tool. |
 
 ## Tech stack
 
