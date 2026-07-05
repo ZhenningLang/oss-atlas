@@ -94,10 +94,10 @@ You reach for it specifically when your target is the interactive *click-select*
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| [Cap](capjs.md) | ✅ | Use this page for its stated niche; choose Cap when you need a CAPTCHA *generation/challenge* system (proof-of-work, server-side). | A CAPTCHA *generation/challenge* system (proof-of-work, server-side) — the opposite side of the problem; not a solver. Listed here to disambiguate "captcha" tooling, not as a substitute. |
-| ddddocr | 未收录 | Use this page for its stated niche; choose ddddocr when you need popular Chinese general OCR/CAPTCHA library with detection + classification + slide-match. | Popular Chinese general OCR/CAPTCHA library with detection + classification + slide-match; broader coverage, also a solver — often the first thing to try for mixed CAPTCHA types. |
-| Commercial solving services (打码平台) | 未收录 | Use this page for its stated niche; choose Commercial solving services (打码平台) when you need human/hybrid CAPTCHA-solving APIs. | Human/hybrid CAPTCHA-solving APIs; pay-per-solve, no model to host, but ongoing cost, third-party dependency, and the same legal questions. |
-| Roll-your-own YOLO + Siamese | 未收录 | Use this page for its stated niche; choose Roll-your-own YOLO + Siamese when you need full control and clean licensing, but you build, label, and train the whole pipeline this repo alrea. | Full control and clean licensing, but you build, label, and train the whole pipeline this repo already assembles. |
+| [Cap](capjs.md) | ✅ | Choose Cap when you need a CAPTCHA *generation/challenge* system rather than a solver. | Proof-of-work and server-side challenge flow, the opposite side of the problem. Listed to disambiguate "captcha" tooling, not as a substitute. |
+| ddddocr | 未收录 | Choose ddddocr when you need a popular Chinese general OCR/CAPTCHA library with detection, classification, and slide-match coverage. | Broader solver coverage and often the first thing to try for mixed CAPTCHA types; use only in authorized settings. |
+| Commercial solving services (打码平台) | 未收录 | Choose commercial solving services when a human/hybrid CAPTCHA-solving API is acceptable. | Pay-per-solve and no model to host, but ongoing cost, third-party dependency, and the same legal questions. |
+| Roll-your-own YOLO + Siamese | 未收录 | Choose a custom YOLO + Siamese pipeline when clean licensing and full control matter more than using this repo as-is. | You build, label, and train the whole pipeline this repo already assembles. |
 
 ## Tech stack
 
