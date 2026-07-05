@@ -116,6 +116,10 @@ def canonical_target(path: Path) -> Path:
     return path.resolve()
 
 
+def indexed_slugs(pages: list[Path]) -> set[str]:
+    return {base_slug(page.name) for page in pages}
+
+
 def slugify_label(label: str) -> str:
     plain = re.sub(r"`([^`]+)`", r"\1", label).strip()
     plain = re.sub(r"\[[^\]]+\]\([^)]+\)", "", plain).strip()
@@ -157,7 +161,7 @@ def is_table_separator(line: str) -> bool:
     return bool(cells) and all(cell and set(cell) <= set("-: ") and cell.count("-") >= 3 for cell in cells)
 
 
-def detects_partly_indexed_composite(source: Path, cells: list[str], indexed_targets: set[Path]) -> bool:
+def detects_partly_indexed_composite(source: Path, cells: list[str], indexed_targets: set[Path], indexed_slug_set: set[str]) -> bool:
     if len(cells) < 2 or not any(marker in cells[1] for marker in INDEXED_MARKERS):
         return False
     if any(marker in cells[1] for marker in NOT_INDEXED_MARKERS):
@@ -185,7 +189,7 @@ def detects_partly_indexed_composite(source: Path, cells: list[str], indexed_tar
             continue
         if slug in linked_slugs:
             covered += 1
-        elif source.with_name(f"{slug}.md").resolve() in indexed_targets:
+        elif source.with_name(f"{slug}.md").resolve() in indexed_targets or slug in indexed_slug_set:
             covered += 1
         else:
             uncovered += 1
@@ -415,6 +419,7 @@ def scan(root: Path | str) -> ScanResult:
     root = Path(root).resolve()
     pages = project_pages(root)
     indexed_targets = {canonical_target(page) for page in pages}
+    indexed_slug_set = indexed_slugs(pages)
     english_canonical_page_count = sum(1 for page in pages if not page.name.endswith(ZH_SUFFIX))
     findings: list[Finding] = []
     health_unknowns: Counter[tuple[str, str]] = Counter()
@@ -475,7 +480,7 @@ def scan(root: Path | str) -> ScanResult:
                         fragment,
                     )
                 )
-            if detects_partly_indexed_composite(page, cells, indexed_targets):
+            if detects_partly_indexed_composite(page, cells, indexed_targets, indexed_slug_set):
                 findings.append(
                     Finding(
                         "composite-alternative-partly-indexed",
@@ -496,7 +501,7 @@ def scan(root: Path | str) -> ScanResult:
                 candidate_slug = slugify_label(cells[0])
                 if candidate_slug:
                     sibling = page.with_name(f"{candidate_slug}.md").resolve()
-                    indexed_plain_target = sibling in indexed_targets
+                    indexed_plain_target = sibling in indexed_targets or candidate_slug in indexed_slug_set
             status_cell = cells[1] if len(cells) >= 2 else ""
             if (
                 (linked_indexed_targets or indexed_plain_target)

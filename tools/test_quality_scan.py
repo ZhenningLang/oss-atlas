@@ -289,6 +289,44 @@ class QualityScanTest(unittest.TestCase):
 
             self.assertFalse(any(f.category == "composite-alternative-partly-indexed" for f in result.findings))
 
+    def test_detects_cross_category_composite_plain_slug_marked_unindexed(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            write_page(root, "categories/llm-training/unsloth.md", "## Comparison\n")
+            write_page(
+                root,
+                "categories/on-device-ml/bitnet.md",
+                """## Comparison
+
+| Alternative | In index | Our verdict |
+|---|---|---|
+| Unsloth / GPTQ-AWQ stacks | 未收录 | Mixed row. |
+""",
+            )
+
+            result = quality_scan.scan(root)
+
+            self.assertTrue(any(f.category == "indexed-page-marked-not-indexed" and "Unsloth" in f.evidence for f in result.findings))
+
+    def test_partially_indexed_status_allows_cross_category_composite_plain_slug(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            write_page(root, "categories/llm-training/unsloth.md", "## Comparison\n")
+            write_page(
+                root,
+                "categories/on-device-ml/bitnet.md",
+                """## Comparison
+
+| Alternative | In index | Our verdict |
+|---|---|---|
+| Unsloth / GPTQ-AWQ stacks | 部分已收录 | Mixed row. |
+""",
+            )
+
+            result = quality_scan.scan(root)
+
+            self.assertFalse(any(f.category == "indexed-page-marked-not-indexed" for f in result.findings))
+
     def test_counts_health_unknown_axes_by_axis_and_reason(self) -> None:
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
