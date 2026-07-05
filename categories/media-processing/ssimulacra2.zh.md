@@ -86,12 +86,12 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 | --- | --- | --- | --- |
-| [VMAF](../media-processing/vmaf.zh.md) | ✅ | 在本页适用范围内选本页；需要业界标准感知视频指标时选 VMAF。 | 业界标准的视频指标，采用广泛，带时间池化与多模型；SSIMULACRA2 仅限图像且更年轻。 |
-| PSNR / SSIM（独立版） | 未收录 | 在本页适用范围内选本页；需要简单、快速的信号保真度指标时选 PSNR / SSIM。 | 经典指标，计算廉价且随处可见，但与感知质量相关性差。SSIMULACRA2 专为更好的人类相关性设计。 |
-| Butteraugli | 未收录 | 在本页适用范围内选本页；需要 Google 的 JPEG XL 生态系统感知指标时选 Butteraugli。 | Google 来自 JPEG XL 生态系统的感知指标；血统相似，但评分模型与实现不同。 |
-| DSSIM | 未收录 | 在本页适用范围内选本页；需要独立结构差异指标时选 DSSIM。 | 基于 SSIM 的结构差异指标；比 SSIMULACRA2 的多尺度 XYB 方法更简单、更古老。 |
-| AVQT | 未收录 | 在本页适用范围内选本页；需要 Apple 的专有感知指标时选 AVQT。 | Apple 的专有视频质量指标；闭源实现，目标相近但生态不同。 |
-| Netflix VMAF 云/SaaS 评分服务 | 未收录 | 在本页适用范围内选本页；需要托管质量评分服务时选 Netflix VMAF 云/SaaS。 | 托管质量评分服务；比自己跑指标更方便，但有供应商依赖。 |
+| [VMAF](vmaf.zh.md) | ✅ | 需要业界标准感知视频指标时，选 VMAF。 | 业界标准的视频指标，采用广泛，带时间池化与多模型；SSIMULACRA2 仅限图像且更年轻。 |
+| PSNR / SSIM（独立版） | 未收录 | 需要简单、快速的信号保真度指标时，选 PSNR 或 SSIM。 | 经典指标，计算廉价且随处可见，但与感知质量相关性差。SSIMULACRA2 专为更好的人类相关性设计。 |
+| Butteraugli | 未收录 | 需要 Google 的 JPEG XL 生态系统感知指标时，选 Butteraugli。 | Google 来自 JPEG XL 生态系统的感知指标；血统相似，但评分模型与实现不同。 |
+| DSSIM | 未收录 | 需要独立结构差异指标时，选 DSSIM。 | 基于 SSIM 的结构差异指标；比 SSIMULACRA2 的多尺度 XYB 方法更简单、更古老。 |
+| AVQT | 未收录 | 需要 Apple 的专有感知指标时，选 AVQT。 | Apple 的专有视频质量指标；闭源实现，目标相近但生态不同。 |
+| Netflix VMAF 云/SaaS 评分服务 | 未收录 | 需要托管质量评分服务时，选 Netflix VMAF 云/SaaS。 | 托管质量评分服务；比自己跑指标更方便，但有供应商依赖。 |
 
 ## 技术栈
 

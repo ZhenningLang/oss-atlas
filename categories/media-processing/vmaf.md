@@ -96,11 +96,11 @@ You also use it when you need *more than one* metric from a single, optimized im
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| PSNR / SSIM (standalone) | 未收录 | Use this page for its stated niche; choose PSNR / SSIM (standalone) when you need classic signal-fidelity metrics. | Classic signal-fidelity metrics; cheap and ubiquitous but correlate poorly with perceived quality — VMAF exists precisely because they fall short (and libvmaf includes them anyway). |
-| [FFmpeg](ffmpeg.md) | ✅ | Use this page for its stated niche; choose FFmpeg when you need integrates `libvmaf` as a filter. | Integrates `libvmaf` as a filter — for most users *the* way you actually run VMAF in a pipeline; FFmpeg is the host, VMAF is the metric engine inside it. |
-| SSIMULACRA2 | 未收录 | Use this page for its stated niche; choose SSIMULACRA2 when you need a newer open perceptual metric (from the JPEG XL ecosystem) gaining traction for image/video quality. | A newer open perceptual metric (from the JPEG XL ecosystem) gaining traction for image/video quality; alternative perceptual scorer, different model lineage. |
-| Netflix VMAF cloud/SaaS scorers | 未收录 | Use this page for its stated niche; choose Netflix VMAF cloud/SaaS scorers when you need hosted quality-scoring services. | Hosted quality-scoring services; not a repo — convenience over running libvmaf yourself, with vendor dependence. |
-| AVQT / proprietary metrics | 未收录 | Use this page for its stated niche; choose AVQT / proprietary metrics when you need vendor perceptual metrics (e. | Vendor perceptual metrics (e.g. Apple's AVQT); comparable goal, closed implementations and ecosystems. |
+| PSNR / SSIM (standalone) | 未收录 | Choose PSNR or SSIM when you need classic, cheap signal-fidelity baselines. | Classic signal-fidelity metrics; cheap and ubiquitous but correlate poorly with perceived quality — VMAF exists precisely because they fall short (and libvmaf includes them anyway). |
+| [FFmpeg](ffmpeg.md) | ✅ | Choose FFmpeg when you need to run `libvmaf` as a filter inside a media pipeline. | Integrates `libvmaf` as a filter — for most users *the* way you actually run VMAF in a pipeline; FFmpeg is the host, VMAF is the metric engine inside it. |
+| [SSIMULACRA2](ssimulacra2.md) | ✅ | Choose SSIMULACRA2 when you need a newer open perceptual metric from the JPEG XL ecosystem. | A newer open perceptual metric (from the JPEG XL ecosystem) gaining traction for image/video quality; alternative perceptual scorer, different model lineage. |
+| Netflix VMAF cloud/SaaS scorers | 未收录 | Choose hosted VMAF scorers when you prefer a managed quality-scoring service over running libvmaf. | Hosted quality-scoring services; not a repo — convenience over running libvmaf yourself, with vendor dependence. |
+| AVQT / proprietary metrics | 未收录 | Choose AVQT or proprietary metrics when your workflow requires vendor perceptual metrics. | Vendor perceptual metrics (e.g. Apple's AVQT); comparable goal, closed implementations and ecosystems. |
 
 ## Tech stack
 
