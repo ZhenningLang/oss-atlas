@@ -96,12 +96,12 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [paperless-ngx](paperless-ngx.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“真正的 DMS：对扫描件做 OCR + 全文内容检索 + 自动打标，但是一套多容器的 Django/Postgres/Redis 栈”，再选 paperless-ngx。 | 真正的 DMS：对扫描件做 OCR + 全文内容检索 + 自动打标，但是一套多容器的 Django/Postgres/Redis 栈。copyparty 完全没有这套 OCR/全文检索流水线；它是轻得多的文件服务器，不是文档归档库。 |
-| [Twake Drive](twake-drive.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“协同云盘，带文档编辑、分享和更丰富的权限模型”，再选 Twake Drive。 | 协同云盘，带文档编辑、分享和更丰富的权限模型；运维更重。copyparty 是单文件的文件传输/分发，没有协同编辑，也没有按文档的 ACL。 |
-| Nextcloud | 未收录 | 当前页用于它的主场景；如果更看重“完整自托管「云」（文件、同步客户端、应用、分享、可经插件加 OCR），但是很重的 PHP/DB/Redis 栈”，再选 Nextcloud。 | 完整自托管「云」（文件、同步客户端、应用、分享、可经插件加 OCR），但是很重的 PHP/DB/Redis 栈。copyparty 轻得多、起得快得多，但没有双向同步，也没有应用生态。 |
-| Seafile | 未收录 | 当前页用于它的主场景；如果更看重“基于块的同步分享，增量同步强、客户端齐全”，再选 Seafile。 | 基于块的同步分享，增量同步强、客户端齐全。copyparty 胜在便携/零依赖和协议广度（WebDAV/FTP/SFTP/TFTP/SMB），但没有真正的同步。 |
-| Filebrowser | 未收录 | 当前页用于它的主场景；如果更看重“同类的轻量单二进制 Web 文件管理器（Go）”，再选 Filebrowser。 | 同类的轻量单二进制 Web 文件管理器（Go）。协议面更窄，没有 `up2k` 式的加速断点续传，也没有媒体索引；但更易理解。 |
-| MinIO | 未收录 | 当前页用于它的主场景；如果更看重“S3 兼容对象存储，面向程序/应用访问”，再选 MinIO。 | S3 兼容对象存储，面向程序/应用访问。形态完全不同——copyparty 是面向人的多协议文件服务器，不是对象存储。 |
+| [paperless-ngx](paperless-ngx.zh.md) | ✅ | 当任务是扫描件 OCR、自动打标和文档全文检索时，选 paperless-ngx；当决定性需求是轻量上传下载、多协议文件服务或作为接收前门时，保留 copyparty。 | 真正的 DMS：对扫描件做 OCR + 全文内容检索 + 自动打标，但是一套多容器的 Django/Postgres/Redis 栈。copyparty 完全没有这套 OCR/全文检索流水线；它是轻得多的文件服务器，不是文档归档库。 |
+| [Twake Drive](twake-drive.zh.md) | ✅ | 当团队网盘、文档编辑、分享和更丰富权限值得承担平台重量时，选 Twake Drive；当只需要独立文件投递、传输和分发且不想绑定套件时，保留 copyparty。 | 协同云盘，带文档编辑、分享和更丰富的权限模型；运维更重。copyparty 是单文件的文件传输/分发，没有协同编辑，也没有按文档的 ACL。 |
+| Nextcloud | 未收录 | 当你需要完整自托管云形态，包括同步客户端、应用、分享和协作能力时，选 Nextcloud；当便携性、协议广度和不依赖数据库比应用生态更重要时，保留 copyparty。 | 完整自托管「云」（文件、同步客户端、应用、分享、可经插件加 OCR），但是很重的 PHP/DB/Redis 栈。copyparty 轻得多、起得快得多，但没有双向同步，也没有应用生态。 |
+| Seafile | 未收录 | 当可靠双向同步、增量同步和客户端应用是硬需求时，选 Seafile；当场景是临时上传和多协议文件服务、且明确不需要同步时，保留 copyparty。 | 基于块的同步分享，增量同步强、客户端齐全。copyparty 胜在便携/零依赖和协议广度（WebDAV/FTP/SFTP/TFTP/SMB），但没有真正的同步。 |
+| Filebrowser | 未收录 | 当一个更简单的 Go 单二进制 Web 文件管理器已经够用时，选 Filebrowser；当加速断点续传、协议广度或媒体索引才是决定性功能时，保留 copyparty。 | 同类的轻量单二进制 Web 文件管理器（Go）。协议面更窄，没有 `up2k` 式的加速断点续传，也没有媒体索引；但更易理解。 |
+| MinIO | 未收录 | 当程序和应用需要 S3 兼容对象存储时，选 MinIO；当需求是面向人的浏览器、WebDAV、FTP 或 SFTP 文件分享和接收时，保留 copyparty。 | S3 兼容对象存储，面向程序/应用访问。形态完全不同——copyparty 是面向人的多协议文件服务器，不是对象存储。 |
 
 ## 技术栈
 
