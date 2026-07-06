@@ -88,12 +88,12 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [Superpowers](superpowers.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“Claude Code 的 skill/plugin 集合，强调可复用的“skills””，再选 Superpowers。 | Claude Code 的 skill/plugin 集合，强调可复用的“skills”;“给 Claude Code 一整套能力电池”这个目标有重叠，打包方式不同（plugin/skills vs 安装式命令+persona 框架）。 |
-| [get-shit-done](get-shit-done.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“面向 agent 开发的有主见工作流/命令包”，再选 get-shit-done。 | 面向 agent 开发的有主见工作流/命令包；更窄、工作流优先，而非 SuperClaude 那种广覆盖的命令+agent+模式面。 |
-| [Compound Engineering](compound-engineering.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“让 agent 工作“复利累积”的方法论加插件”，再选 Compound Engineering。 | 让 agent 工作“复利累积”的方法论加插件；是带工具的开发*哲学*，而非配置注入框架。 |
-| [ECC](ecc.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“面向 agent 的上下文工程方法论”，再选 ECC。 | 面向 agent 的上下文工程方法论；偏概念/流程框架，而非可安装的命令套件。 |
-| [12-Factor Agents](12-factor-agents.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“构建可靠 LLM agent 的原则”，再选 12-Factor Agents。 | 构建可靠 LLM agent 的原则——是你读的规范/宣言，不是装进 Claude Code 的软件。 |
-| claude-code-templates / awesome-claude-code | 未收录 | 当前页用于它的主场景；如果更看重“面向 Claude Code 的社区配置/模板集合”，再选 claude-code-templates / awesome-claude-code。 | 面向 Claude Code 的社区配置/模板集合；更轻、按需复制粘贴，而非 SuperClaude 那种安装式、协调好的框架。 |
+| [Superpowers](superpowers.zh.md) | ✅ | 需要强调可复用 skills 的 Claude Code skill/plugin 集合时，选 Superpowers。 | Claude Code 的 skill/plugin 集合，强调可复用的“skills”；“给 Claude Code 一整套能力电池”这个目标有重叠，打包方式不同（plugin/skills vs 安装式命令+persona 框架）。 |
+| [get-shit-done](get-shit-done.zh.md) | ✅ | 需要面向 agent 开发的有主见工作流/命令包时，选 get-shit-done。 | 面向 agent 开发的有主见工作流/命令包；更窄、工作流优先，而非 SuperClaude 那种广覆盖的命令+agent+模式面。 |
+| [Compound Engineering](compound-engineering.zh.md) | ✅ | 需要让 agent 工作复利累积的方法论加插件时，选 Compound Engineering。 | 让 agent 工作“复利累积”的方法论加插件；是带工具的开发*哲学*，而非配置注入框架。 |
+| [ECC](ecc.zh.md) | ✅ | 需要上下文工程方法论，而不是可安装命令套件时，选 ECC。 | 面向 agent 的上下文工程方法论；偏概念/流程框架，而非可安装的命令套件。 |
+| [12-Factor Agents](12-factor-agents.zh.md) | ✅ | 需要构建可靠 LLM agent 的原则时，选 12-Factor Agents。 | 构建可靠 LLM agent 的原则——是你读的规范/宣言，不是装进 Claude Code 的软件。 |
+| claude-code-templates / awesome-claude-code | 未收录 | 需要面向 Claude Code 的社区配置/模板集合，并按需复制粘贴时，选这些社区集合。 | 面向 Claude Code 的社区配置/模板集合；更轻、按需复制粘贴，而非 SuperClaude 那种安装式、协调好的框架。 |
 
 ## 技术栈
 
@@ -116,7 +116,7 @@ health:
 
 ## 健康度与可持续性
 
-- **响应速度**：Grade C——中位首次响应时间 97.8 小时，基于 2 个 qualifying issues/PRs。
+- **响应速度**：无法计算——no_traffic。
 - **维护（2026-06）：** 活跃维护——仓库 push 于 2026-06-13，最新 release v4.3.0（2026-03-22），未归档。v4 是近期重写、已宣布 v5（TypeScript 插件），因此推进很快、并非 coasting——但安装布局会在 v4→v5 过渡中变化。
 - **治理与背书：** Organization 持有（SuperClaude-Org）——是社区/组织结构而非单一账号，这在 bus-factor 上比单用户仓库略好。未公布基金会或商业厂商背书；实质上是社区维护的框架。
 - **年龄与 Lindy（2026-06）：** 创建于 2025-06，约 1 岁，约 23k star。年轻，且正处重写中段（v4 刚出、v5 已宣布），意味着你今天采用的契约可能熬不过下一个大版本。Lindy 裁决：**按年龄看属未经验证**——现在可用，但请 pin 版本，并预期命令/agent 名册与安装模型的抖动。

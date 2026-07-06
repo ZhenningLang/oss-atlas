@@ -96,11 +96,11 @@ You also use it when you need *more than one* metric from a single, optimized im
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| PSNR / SSIM (standalone) | 未收录 | Use this page for its stated niche; choose PSNR / SSIM (standalone) when you need classic signal-fidelity metrics. | Classic signal-fidelity metrics; cheap and ubiquitous but correlate poorly with perceived quality — VMAF exists precisely because they fall short (and libvmaf includes them anyway). |
-| [FFmpeg](ffmpeg.md) | ✅ | Use this page for its stated niche; choose FFmpeg when you need integrates `libvmaf` as a filter. | Integrates `libvmaf` as a filter — for most users *the* way you actually run VMAF in a pipeline; FFmpeg is the host, VMAF is the metric engine inside it. |
-| SSIMULACRA2 | 未收录 | Use this page for its stated niche; choose SSIMULACRA2 when you need a newer open perceptual metric (from the JPEG XL ecosystem) gaining traction for image/video quality. | A newer open perceptual metric (from the JPEG XL ecosystem) gaining traction for image/video quality; alternative perceptual scorer, different model lineage. |
-| Netflix VMAF cloud/SaaS scorers | 未收录 | Use this page for its stated niche; choose Netflix VMAF cloud/SaaS scorers when you need hosted quality-scoring services. | Hosted quality-scoring services; not a repo — convenience over running libvmaf yourself, with vendor dependence. |
-| AVQT / proprietary metrics | 未收录 | Use this page for its stated niche; choose AVQT / proprietary metrics when you need vendor perceptual metrics (e. | Vendor perceptual metrics (e.g. Apple's AVQT); comparable goal, closed implementations and ecosystems. |
+| PSNR / SSIM (standalone) | 未收录 | Choose PSNR or SSIM when you need classic, cheap signal-fidelity baselines. | Classic signal-fidelity metrics; cheap and ubiquitous but correlate poorly with perceived quality — VMAF exists precisely because they fall short (and libvmaf includes them anyway). |
+| [FFmpeg](ffmpeg.md) | ✅ | Choose FFmpeg when you need to run `libvmaf` as a filter inside a media pipeline. | Integrates `libvmaf` as a filter — for most users *the* way you actually run VMAF in a pipeline; FFmpeg is the host, VMAF is the metric engine inside it. |
+| [SSIMULACRA2](ssimulacra2.md) | ✅ | Choose SSIMULACRA2 when you need a newer open perceptual metric from the JPEG XL ecosystem. | A newer open perceptual metric (from the JPEG XL ecosystem) gaining traction for image/video quality; alternative perceptual scorer, different model lineage. |
+| Netflix VMAF cloud/SaaS scorers | 未收录 | Choose hosted VMAF scorers when you prefer a managed quality-scoring service over running libvmaf. | Hosted quality-scoring services; not a repo — convenience over running libvmaf yourself, with vendor dependence. |
+| AVQT / proprietary metrics | 未收录 | Choose AVQT or proprietary metrics when your workflow requires vendor perceptual metrics. | Vendor perceptual metrics (e.g. Apple's AVQT); comparable goal, closed implementations and ecosystems. |
 
 ## Tech stack
 
@@ -122,12 +122,12 @@ You also use it when you need *more than one* metric from a single, optimized im
 
 ## Health & viability
 
-- **Responsiveness**: Grade B — median first-response time 41.2 hours across 4 qualifying issues/PRs.
-- **Maintenance (2026-06).** **Active.** libvmaf v3.2.0 released 2026-06-20, v3.1.0 in 2026-04, last push 2026-06-23; a new **v1 model set** announced 2026-06 — clearly under ongoing development, not coasting. Not archived.
-- **Governance / backing.** Owned by **Netflix** (an `Organization` account) with a multi-engineer contributor history (`li-zhi`, `christosbampis`, et al.); strong institutional backing and a clear roadmap. The flip side is single-vendor stewardship — Netflix's priorities drive direction. [推断]
-- **Age & Lindy verdict.** Created 2016-02, ~10 years old and **still actively shipping** ⇒ **strong Lindy**; it's the mature, standard perceptual metric, not a newcomer, and its standardization in AOM CTC entrenches it further.
-- **Adoption & ecosystem.** Industry-standard for codec evaluation (AOM CTC), integrated into FFmpeg, used across the encoding community; Emmy-recognized. Adoption is broad and sticky. [推断]
-- **Risk flags.** A 2020 **relicense** (Apache-2.0 → BSD+Patent) — a more permissive move with an express patent grant, but a license-history fact to note. Single-vendor (Netflix) governance is the main bus-factor consideration, mitigated by the strong institutional backing. [推断]
+- **Maintenance**: Grade A — 11/13 active weeks in trailing 13; last commit 3 days ago.
+- **Responsiveness**: Grade A — median first-response time 41.2 hours across 4 qualifying issues/PRs.
+- **Adoption**: Grade D — 97,260 monthly downloads via formulae.brew.sh (package: libvmaf).
+- **Longevity**: Grade A — 3798 days old.
+- **Governance**: Grade C — top-3 contributor share 85.9% (?).
+- **Risk / License**: Grade A — BSD-3-Clause license.
 
 ## Caveats (unverified)
 

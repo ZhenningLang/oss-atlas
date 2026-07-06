@@ -90,11 +90,11 @@ You reach for it as a **study reference or a starting template**, not as a maint
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| [Cap](capjs.md) | ✅ | Use this page for its stated niche; choose Cap when you need a CAPTCHA *generator/challenge* system, not a solver. | A CAPTCHA *generator/challenge* system, not a solver — the opposite side; included only to disambiguate "captcha" tooling. |
-| [Text_select_captcha](text-select-captcha.md) | ✅ | Use this page for its stated niche; choose Textselectcaptcha when you need solves *click/text-select* CAPTCHAs (YOLO + Siamese), a harder interactive family. | Solves *click/text-select* CAPTCHAs (YOLO + Siamese), a harder interactive family; this repo only does fixed-length text-in-image classification. |
-| ddddocr | 未收录 | Use this page for its stated niche; choose ddddocr when you need maintained, ready-to-use OCR/CAPTCHA library covering many types. | Maintained, ready-to-use OCR/CAPTCHA library covering many types; far more practical today than a 2020 tutorial — prefer it for real work. |
-| CRNN + CTC implementations | 未收录 | Use this page for its stated niche; choose CRNN + CTC implementations when you need the standard for *variable-length* text recognition. | The standard for *variable-length* text recognition; more capable but more to learn/build than this multi-head fixed-length toy. |
-| Your own modern PyTorch baseline | 未收录 | Use this page for its stated niche; choose Your own modern PyTorch baseline when you need same approach on current PyTorch. | Same approach on current PyTorch; cleaner than reviving abandoned code, but you write it from scratch (this repo is the reference). |
+| [Cap](capjs.md) | ✅ | Choose Cap when you need a CAPTCHA *generator/challenge* system rather than a solver. | Opposite side of the problem; included only to disambiguate "captcha" tooling. |
+| [Text_select_captcha](text-select-captcha.md) | ✅ | Choose Text_select_captcha when your target is click/text-select CAPTCHA solving rather than fixed-length text-in-image classification. | YOLO + Siamese pipeline for a harder interactive family; this repo only handles fixed positions and known character count. |
+| ddddocr | 未收录 | Choose ddddocr when you need a maintained, ready-to-use OCR/CAPTCHA library covering many types. | Far more practical today than reviving a 2020 tutorial; use only where you have authorization to solve the CAPTCHA. |
+| CRNN + CTC implementations | 未收录 | Choose CRNN + CTC when variable-length text recognition is the real requirement. | More capable for variable length, but more to learn and build than this multi-head fixed-length reference. |
+| Your own modern PyTorch baseline | 未收录 | Choose a fresh PyTorch baseline when you want the same fixed-length idea on current tooling. | Cleaner than reviving abandoned code, but you write it from scratch and use this repo only as a reference. |
 
 ## Tech stack
 

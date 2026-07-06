@@ -88,11 +88,11 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [designer-skills](designer-skills.md) | ✅ | 当前页用于它的主场景；如果更看重“同 leaf 的姊妹 design-taste 包”，再选 designer-skills。 | 同 leaf 的姊妹 design-taste 包；按各自覆盖的美学变体、支持的 harness，以及协议是否贴合你的输出风格来选。 |
-| [stitch-skills](stitch-skills.md) | ✅ | 当前页用于它的主场景；如果更看重“同 design leaf 的姊妹 skill 包”，再选 stitch-skills。 | 同 design leaf 的姊妹 skill 包；目标同样是「改进 agent 的 UI 输出」，但 skill 原语不同——按安装目标与变体覆盖度来选。 |
-| [ui-ux-pro-max](ui-ux-pro-max.md) | ✅ | 当前页用于它的主场景；如果更看重“偏向更宽泛 UI/UX 指导的姊妹包”，再选 ui-ux-pro-max。 | 偏向更宽泛 UI/UX 指导的姊妹包；Taste-Skill 更窄，聚焦 anti-slop 前端生成，并带可调的 variance / motion / density 旋钮。 |
-| make-interfaces-feel-better | 未收录 | 当前页用于它的主场景；如果更看重“被列为 leaf 姊妹但尚无页面”，再选 make-interfaces-feel-better。 | 被列为 leaf 姊妹但尚无页面；按它强调交互打磨、还是 Taste-Skill 的生成期美学来对比。 |
-| Anthropic / 内置 agent skills | 未收录 | 当前页用于它的主场景；如果更看重“宿主 harness 自带的 skill 生态”，再选 Anthropic / 内置 agent skills。 | 宿主 harness 自带的 skill 生态；Taste-Skill 是叠加其上的第三方包，可能与原生设计 skill 重复或冲突。 |
+| [designer-skills](designer-skills.zh.md) | ✅ | 需要同 leaf 里覆盖更广的 design-taste 包时，选 designer-skills。 | 同 leaf 的姊妹 design-taste 包；按各自覆盖的美学变体、支持的 harness，以及协议是否贴合你的输出风格来选。 |
+| [stitch-skills](stitch-skills.zh.md) | ✅ | 想要同 design leaf 下更偏设计生成/转换链路的 skill 包时，选 stitch-skills。 | 同 design leaf 的姊妹 skill 包；目标同样是「改进 agent 的 UI 输出」，但 skill 原语不同——按安装目标与变体覆盖度来选。 |
+| [ui-ux-pro-max](ui-ux-pro-max.zh.md) | ✅ | 需要更宽泛 UI/UX 指导，而不是窄 anti-slop 生成期美学时，选 ui-ux-pro-max。 | 偏向更宽泛 UI/UX 指导的姊妹包；Taste-Skill 更窄，聚焦 anti-slop 前端生成，并带可调的 variance / motion / density 旋钮。 |
+| [make-interfaces-feel-better](make-interfaces-feel-better.zh.md) | ✅ | 主要问题是交互打磨和手感细节，而不是生成期美学方向时，选 make-interfaces-feel-better。 | 同 leaf 的细节打磨 skill；按它强调交互打磨，还是 Taste-Skill 的生成期美学来对比。 |
+| Anthropic / 内置 agent skills | 未收录 | 只想使用宿主 harness 自带 skill，避免第三方设计包重叠时，选内置 agent skills。 | 宿主 harness 自带的 skill 生态；Taste-Skill 是叠加其上的第三方包，可能与原生设计 skill 重复或冲突。 |
 
 ## 健康度与可持续性
 

@@ -91,12 +91,12 @@ It's a strong fit when "similarity ≠ relevance" is your actual pain and your c
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| [FalkorDB](falkordb.md) | ✅ | Use this page for its stated niche; choose FalkorDB when you need property-graph DB for GraphRAG (vector + multi-hop traversal). | Property-graph DB for GraphRAG (vector + multi-hop traversal); PageIndex is a per-document reasoning tree, not a graph store — different retrieval primitive. |
-| [graphify](graphify.md) | ✅ | Use this page for its stated niche; choose graphify when you need builds a knowledge graph from code/docs. | Builds a knowledge graph from code/docs; PageIndex builds a hierarchical ToC tree of one document and reasons over it — no entity graph. |
-| [code-review-graph](code-review-graph.md) | ✅ | Use this page for its stated niche; choose code-review-graph when you need domain-specific code-review graph. | Domain-specific code-review graph; orthogonal to document tree retrieval. |
-| LlamaIndex | 未收录 | Use this page for its stated niche; choose LlamaIndex when you need general RAG framework with many indices incl. | General RAG framework with many indices incl. a tree/summary index; far broader and embedding-centric, where PageIndex is a focused vectorless reasoning index. |
-| RAPTOR | 未收录 | Use this page for its stated niche; choose RAPTOR when you need recursive clustering + summarization tree for retrieval, but still embedding-retrieved at query time. | Recursive clustering + summarization tree for retrieval, but still embedding-retrieved at query time; PageIndex navigates the tree by LLM reasoning instead of vector search. |
-| pgvector / Qdrant | 未收录 | Use this page for its stated niche; choose pgvector / Qdrant when you need classic embedding + ANN vector retrieval. | Classic embedding + ANN vector retrieval; cheaper at scale and breadth, but exactly the "similarity ≠ relevance" failure mode PageIndex is built to avoid. |
+| [FalkorDB](falkordb.md) | ✅ | Pick FalkorDB when you need a persistent property graph for GraphRAG, not a per-document reasoning tree. | Property-graph DB for GraphRAG (vector + multi-hop traversal); PageIndex is a per-document reasoning tree, not a graph store — different retrieval primitive. |
+| [graphify](graphify.md) | ✅ | Pick graphify when the goal is a code/docs knowledge graph rather than one document's table-of-contents tree. | Builds a knowledge graph from code/docs; PageIndex builds a hierarchical ToC tree of one document and reasons over it — no entity graph. |
+| [code-review-graph](code-review-graph.md) | ✅ | Pick code-review-graph when the target is a domain-specific code-review graph. | Domain-specific code-review graph; orthogonal to document tree retrieval. |
+| LlamaIndex | 未收录 | Pick LlamaIndex when you need a broad RAG framework with many index types rather than one vectorless reasoning index. | General RAG framework with many indices incl. a tree/summary index; far broader and embedding-centric, where PageIndex is a focused vectorless reasoning index. |
+| RAPTOR | 未收录 | Pick RAPTOR when recursive clustering plus summarization trees and embedding-time retrieval are the desired design. | Recursive clustering + summarization tree for retrieval, but still embedding-retrieved at query time; PageIndex navigates the tree by LLM reasoning instead of vector search. |
+| pgvector / Qdrant | 未收录 | Pick a vector store when classic embedding + ANN retrieval is sufficient and cheaper at scale. | Classic embedding + ANN vector retrieval; cheaper at scale and breadth, but exactly the "similarity ≠ relevance" failure mode PageIndex is built to avoid. |
 
 ## Tech stack
 
@@ -120,7 +120,7 @@ It's a strong fit when "similarity ≠ relevance" is your actual pain and your c
 
 ## Health & viability
 
-- **Responsiveness**: Grade A — median first-response time 35.2 hours across 16 qualifying issues/PRs.
+- **Responsiveness**: Grade B — median first-response time 51.7 hours across 16 qualifying issues/PRs.
 - **Maintenance — active.** Default branch last pushed 2026-06, not archived, but there is **no tagged release** at all — "version" is whatever `main` holds, so pin a commit for reproducibility. Active development without semver means you track a moving target. `[未验证]`
 - **Governance / backing — single vendor (Vectify AI).** **Organization**-owned (`VectifyAI/PageIndex`), ~33k stars [未验证]. The roadmap is vendor-driven, and the open repo is the *indexing core* of a larger commercial offering (hosted PageIndex Cloud/MCP/API/VPC) — so the OSS surface is a loss-leader for the product, with the usual open-core risk that the best features land in the hosted tier. `[推断]`
 - **Age & Lindy — young, ~1 year (created 2025-04).** Old enough to have shipped real benchmarks (98.7% FinanceBench, self-reported [未验证]) but not long enough to be a Lindy-safe bet; APIs/CLI flags can shift release-to-release. Treat as a promising young library, not a settled standard.

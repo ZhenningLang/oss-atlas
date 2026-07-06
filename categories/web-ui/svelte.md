@@ -10,9 +10,9 @@ maturity: v5.x, active, ~82k stars (as of 2026-07)
 last_verified: 2026-07-01
 type: framework
 upstream:
-  pushed_at: 2026-07-01T00:00:00Z
+  pushed_at: 2026-07-03T14:17:03Z
   default_branch: main
-  default_branch_sha: 0000000000000000000000000000000000000000
+  default_branch_sha: b1cadd1eae6a709fc5bdc596256b617986a71aaf
   archived: false
 health:
   schema: 1
@@ -96,10 +96,10 @@ You're a small-to-medium team building a web application where performance and b
 
 | Alternative | In index | Our verdict | Tradeoff |
 | --- | --- | --- | --- |
-| React | 未收录 | The dominant UI library with the largest ecosystem and job market. | React has vastly more libraries and a larger hiring pool; Svelte is faster and simpler for small-to-medium apps with smaller bundles. |
-| Vue.js | 未收录 | Progressive framework with a gentle learning curve and strong ecosystem. | Vue is easier to hire for and has more third-party integrations; Svelte compiles to smaller bundles and has less runtime overhead. |
+| [React](react.md) | ✅ | Choose React when you need the dominant UI library with the largest ecosystem and job market. | React has vastly more libraries and a larger hiring pool; Svelte is faster and simpler for small-to-medium apps with smaller bundles. |
+| [Vue.js](vue.md) | ✅ | Choose Vue when you need a progressive framework with a gentle learning curve and strong ecosystem. | Vue is easier to hire for and has more third-party integrations; Svelte compiles to smaller bundles and has less runtime overhead. |
 | [Angular](angular.md) | ✅ | Enterprise-grade, opinionated framework with deep TypeScript integration. | Angular ships everything built-in for large teams; Svelte is lighter and faster but lacks enterprise tooling depth and CLI scaffolding. |
-| Next.js | 未收录 | Full-stack React framework with best-in-class SSR/SSG and Vercel integration. | Next.js dominates the React meta-framework space; SvelteKit is the Svelte equivalent but has a smaller ecosystem and fewer integrations. |
+| [Next.js](nextjs.md) | ✅ | Choose Next.js when you need the dominant React meta-framework with mature SSR/SSG and Vercel integration. | Next.js dominates the React meta-framework space; SvelteKit is the Svelte equivalent but has a smaller ecosystem and fewer integrations. |
 | SvelteKit | 未收录 | The official meta-framework built on Svelte (like Next.js for React). | SvelteKit is the natural pairing for full-stack Svelte; use Svelte alone only when you do not need SSR, routing, or a backend. |
 | Solid.js | 未收录 | Fine-grained reactive UI library with no virtual DOM and excellent performance. | Solid is even more performance-focused with a smaller community; Svelte has a larger ecosystem, SvelteKit, and a gentler learning curve. |
 

@@ -94,10 +94,10 @@ Apache Thrift 的纯 Python 实现：运行时直接加载 `.thrift` 文件、�
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| thriftpy2 | 未收录 | 当前页用于它的主场景；如果更看重“同一组织维护的后继者”，再选 thriftpy2。 | 同一组织维护的后继者——同样运行时加载 `.thrift` 模型、支持当前 Python、2026 年仍活跃。离开本仓库的直接理由。 |
-| Apache Thrift（官方 `thrift` Python 库） | 未收录 | 当前页用于它的主场景；如果更看重“标准、多语言、基金会治理”，再选 Apache Thrift（官方 thrift Python 库）。 | 标准、多语言、基金会治理；需要一步代码生成、更重，但它是参考实现且广受支持。 |
-| gRPC + Protocol Buffers | 未收录 | 当前页用于它的主场景；如果更看重“不同的 IDL/线协议（HTTP/2、protobuf）”，再选 gRPC + Protocol Buffers。 | 不同的 IDL/线协议（HTTP/2、protobuf）；生态与工具链大得多，是现代新 RPC 的常见选择，但与 Thrift 不兼容。 |
-| Apache Avro | 未收录 | 当前页用于它的主场景；如果更看重“基于 schema 的序列化且带 RPC”，再选 Apache Avro。 | 基于 schema 的序列化且带 RPC；schema 用 JSON 定义，在数据/Hadoop 生态里很强；与 Thrift 线协议不兼容。 |
+| thriftpy2 | 未收录 | 需要维护中的运行时加载 `.thrift` 后继者，并正在离开这个归档仓库时，选 thriftpy2。 | 模型相同且支持当前 Python，是直接迁移目标。 |
+| Apache Thrift（官方 `thrift` Python 库） | 未收录 | 标准多语言 stub 和基金会治理比运行时 IDL 加载更重要时，选官方 Apache Thrift。 | 代码生成让它更重，但它是参考实现且广受支持。 |
+| gRPC + Protocol Buffers | 未收录 | 新 RPC 设计不需要兼容 Thrift 线协议时，选 gRPC 和 Protocol Buffers。 | 它有更大的现代 HTTP/2/protobuf 生态，但这是迁移到另一套协议。 |
+| Apache Avro | 未收录 | 数据／Hadoop 生态中的 schema 序列化是决定性约束时，选 Avro。 | JSON 定义 schema 且支持 RPC，但不兼容 Thrift 线协议。 |
 
 ## 技术栈
 
@@ -118,12 +118,12 @@ Apache Thrift 的纯 Python 实现：运行时直接加载 `.thrift` 文件、�
 
 ## 健康度与可持续性
 
-- **响应速度**：Grade E。
-- **维护（2026-06）。** **已废弃 / 已归档。** 最后发布 `v0.3.9` 在 2016-08，最后 push 在 2018-12，仓库在 GitHub 上标记为 `archived`。README 明确弃用它、改荐 thriftpy2。[推断]
-- **治理 / bus factor。** 归在 `Thriftpy` GitHub 组织下（Organization 所有者），最初创建于 eleme。维护精力已完全转移到 thriftpy2 仓库；这个仓库什么都收不到。[推断]
-- **年龄 × Lindy。** 2014-02 创建（约 12 岁）但**已不再活跃**——一个长期*被废弃*的项目不通过 Lindy 检验，而非通过它。这里的长寿是历史，不是安全信号。[推断]
-- **后继者健康度。** **thriftpy2**（同组织）是活着的延续：2026-06 仍有 push、未归档、约 587 star、约 43 个 open issue——若你想押这个家族，押它。[未验证]
-- **风险标记。** 弃用通知（明确）、归档仓库、Python 2 时代代码、过时的钉死异步依赖。无 relicense 历史（全程 MIT）。主要风险就是它已到生命终点。
+- **维护活跃度**：Grade B——最近 13 周中 1 周有提交；最后提交距今 1 天。
+- **响应速度**：无法计算——no_traffic。
+- **采用广度**：Grade C——pypi.org 上月下载量 19,000（包名：thriftpy）。
+- **长青度**：Grade A——仓库已创建 4525 天。
+- **治理集中度**：Grade D——前三贡献者占比 1.0（100.0%）（?）。
+- **许可风险**：Grade A——MIT 许可证。
 
 ## 存疑（未验证）
 

@@ -89,11 +89,11 @@ You also reach for it when you want the *fun* layer: scrolling banners, sprites,
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| Textual | 未收录 | Use this page for its stated niche; choose Textual when you need modern async, CSS-styled, mouse-first TUI framework (Textualize). | Modern async, CSS-styled, mouse-first TUI framework (Textualize); much richer widget/styling model and active backing, but heavier and a different programming model than asciimatics' curses-like API. |
-| urwid | 未收录 | Use this page for its stated niche; choose urwid when you need long-established Python console UI library with a flexible widget/layout system. | Long-established Python console UI library with a flexible widget/layout system; Unix-focused (weaker Windows story) and no animation engine. |
-| rich | 未收录 | Use this page for its stated niche; choose rich when you need styled terminal *output* (tables, markup, progress, syntax). | Styled terminal *output* (tables, markup, progress, syntax) — not a full-screen UI/event loop; complementary, not a substitute for interactive screens. |
-| blessed / curses (stdlib) | 未收录 | Use this page for its stated niche; choose blessed / curses (stdlib) when you need lower-level terminal control. | Lower-level terminal control; `curses` is Unix-only, `blessed` is a friendlier wrapper — neither ships widgets or an animation framework. |
-| prompt_toolkit | 未收录 | Use this page for its stated niche; choose prompttoolkit when you need powerful for interactive prompts/REPLs and some full-screen apps. | Powerful for interactive prompts/REPLs and some full-screen apps; strong line-editing, but a different focus (input) and no ASCII-effects engine. |
+| Textual | 未收录 | Choose Textual when you need a modern async, CSS-styled, mouse-first TUI framework. | Modern async, CSS-styled, mouse-first TUI framework (Textualize); much richer widget/styling model and active backing, but heavier and a different programming model than asciimatics' curses-like API. |
+| urwid | 未收录 | Choose urwid when you need a long-established Python console UI library with flexible widgets and layouts. | Long-established Python console UI library with a flexible widget/layout system; Unix-focused (weaker Windows story) and no animation engine. |
+| rich | 未收录 | Choose rich when you need styled terminal *output* such as tables, markup, progress, or syntax highlighting. | Styled terminal *output* (tables, markup, progress, syntax) — not a full-screen UI/event loop; complementary, not a substitute for interactive screens. |
+| blessed / curses (stdlib) | 未收录 | Choose blessed or curses when you need lower-level terminal control instead of a widget/animation framework. | Lower-level terminal control; `curses` is Unix-only, `blessed` is a friendlier wrapper — neither ships widgets or an animation framework. |
+| prompt_toolkit | 未收录 | Choose prompt_toolkit when you need powerful interactive prompts, REPLs, or input-heavy full-screen apps. | Powerful for interactive prompts/REPLs and some full-screen apps; strong line-editing, but a different focus (input) and no ASCII-effects engine. |
 
 ## Tech stack
 
@@ -114,7 +114,7 @@ You also reach for it when you want the *fun* layer: scrolling banners, sprites,
 
 ## Health & viability
 
-- **Responsiveness**: Grade C — median first-response time 244.0 hours across 1 qualifying issues/PRs.
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (2026-06).** Last pushed 2025-06; commits continue but cadence is modest. Releases are tagged (1.15.x line). Reads as **maintained but slow-moving**, not abandoned — not archived. [推断]
 - **Governance / bus factor.** A single-maintainer project (Peter Brittain) on a personal account with a long tail of occasional contributors; roadmap depends largely on one person. That's the main governance risk for a long-term dependency. [推断]
 - **Age & Lindy verdict.** ~11 years old (created 2015-04) and still receiving commits ⇒ a **strong Lindy** signal: a mature, stable library that has long since found its shape, not a hyped newcomer. [推断]

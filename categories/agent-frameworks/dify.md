@@ -10,16 +10,16 @@ maturity: v0.x, active, 147k stars (as of 2026-07)
 last_verified: 2026-07-01
 type: framework
 upstream:
-  pushed_at: 2026-07-01T10:38:29Z
+  pushed_at: 2026-07-04T10:43:04Z
   default_branch: main
-  default_branch_sha: 0000000000000000000000000000000000000000
+  default_branch_sha: 2e1ab194b718dea0ec364d3f1ae94fa0dd45e9e3
   archived: false
 health:
   schema: 1
   computed_at: 2026-07-03T08:27:30Z
   overall: B
-  overall_score: 3.33
-  scored_axes: 6
+  overall_score: 3.4
+  scored_axes: 5
   capped: false
   cap_reason: null
   needs_human_review: false
@@ -63,12 +63,10 @@ health:
         window_source: stats_contributors
         carve_out: null
     risk_license:
-      grade: A
-      raw:
-        spdx_id: Apache-2.0
-        permissiveness: permissive
-        relicense_36mo: false
-        content_license: null
+      grade: "?"
+      raw: {}
+  unknowns:
+    risk_license: { reason: custom_modified_license }
 ---
 
 # Dify
@@ -92,11 +90,11 @@ You're a product team that needs to ship AI-powered workflows fast without writi
 
 | Alternative | In index | Our verdict | Tradeoff |
 | --- | --- | --- | --- |
-| [LangChain](langchain.md) | ✅ | Lower-level agent-engineering library. | LangChain is code-first and framework-shaped; Dify is a visual platform with built-in RAG and deployment. |
-| [n8n](../workflow-orchestration/n8n.md) | ✅ | General workflow automation with AI nodes. | n8n is broader business-process automation; Dify is purpose-built for LLM and agent workflows. |
-| [LangFlow](langflow.md) | 未收录 | Visual builder for AI agents and workflows. | Similar visual approach; LangFlow is Python-first and MIT-licensed, while Dify has more mature deployment and RBAC features. |
-| [AutoGPT](autogpt.md) | ✅ | Autonomous continuous agent platform. | AutoGPT targets fully autonomous long-running agents; Dify focuses on orchestrated, human-designed workflows. |
-| CrewAI / LlamaIndex | 未收录 | Specialized agent frameworks. | CrewAI is multi-agent team-oriented; LlamaIndex is RAG-first. Dify bundles both concerns into one platform. |
+| [LangChain](langchain.md) | ✅ | Pick LangChain when a code-first agent/RAG library is preferable to a visual deployment platform. | LangChain is code-first and framework-shaped; Dify is a visual platform with built-in RAG and deployment. |
+| [n8n](../workflow-orchestration/n8n.md) | ✅ | Pick n8n when the workflow is broader business automation with some AI nodes. | n8n is broader business-process automation; Dify is purpose-built for LLM and agent workflows. |
+| [LangFlow](langflow.md) | ✅ | Pick LangFlow when a Python-first MIT visual builder is preferred over Dify's fuller platform/RBAC stack. | Similar visual approach; LangFlow is Python-first and MIT-licensed, while Dify has more mature deployment and RBAC features. |
+| [AutoGPT](autogpt.md) | ✅ | Pick AutoGPT when the goal is fully autonomous long-running agents rather than designed workflows. | AutoGPT targets fully autonomous long-running agents; Dify focuses on orchestrated, human-designed workflows. |
+| CrewAI / LlamaIndex | 未收录 | Pick specialized frameworks when you want multi-agent teams or RAG-first plumbing without Dify's bundled platform. | CrewAI is multi-agent team-oriented; LlamaIndex is RAG-first. Dify bundles both concerns into one platform. |
 
 ## Tech stack
 
@@ -120,13 +118,13 @@ You're a product team that needs to ship AI-powered workflows fast without writi
 
 ## Health & viability
 - **Maintenance**: Grade A — 13/13 active weeks in trailing 13; last commit 0 days ago.
-- **Responsiveness**: Grade A — median first-response time 0.2 hours across 18 qualifying issues/PRs.
+- **Responsiveness**: Grade A — median first-response time 0.0 hours across 15 qualifying issues/PRs.
 - **Adoption**: Grade D — 8,835 monthly downloads via npmjs.org (package: dify-client).
-- **Longevity**: Grade B — 1177 days old.
+- **Longevity**: Grade B — 1178 days old.
 - **Governance**: Grade A — top-3 contributor share 22.6% (?).
-- **Risk / License**: Cannot be scored — unknown.
+- **Risk / License**: Cannot be scored — custom_modified_license. Upstream `LICENSE` is a modified Apache License 2.0 with extra commercial-license conditions for multi-tenant service use and frontend logo/copyright removal; treat GitHub `NOASSERTION` as a real license-review signal, not a parser glitch.
 ## Caveats (unverified)
 
-- [未验证] The GitHub API reports `NOASSERTION` as the license; the actual license terms must be verified before commercial use.
+- [未验证] The GitHub API reports `NOASSERTION` as the license; direct `LICENSE` lookup on 2026-07-04 shows a modified Apache License 2.0 with additional terms around multi-tenant service use, frontend logo/copyright removal, contributor grants, and appearance-patent notice. Legal review is required before commercial redistribution or hosted multi-tenant use.
 - [未验证] The exact resource requirements for production self-hosting (CPU, RAM, disk) are not confirmed from official docs.
 - [推断] The 147k star count on a ~3-year-old repo may include significant hype-driven growth; organic enterprise adoption should be verified independently.

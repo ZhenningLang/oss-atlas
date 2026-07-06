@@ -90,11 +90,11 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| E2B（firecracker 沙箱） | 未收录 | 当前页用于它的主场景；如果更看重“流行的托管+开源沙箱 SDK，做 agent 代码执行”，再选 E2B（firecracker 沙箱）。 | 流行的托管+开源沙箱 SDK，做 agent 代码执行；托管云开箱即用，但自托管与多运行时广度有别——OpenSandbox 更突出 K8s 规模 + 多种安全运行时。 |
-| Daytona | 未收录 | 当前页用于它的主场景；如果更看重“面向 agent 的开发环境/沙箱运行时”，再选 Daytona。 | 面向 agent 的开发环境/沙箱运行时；用例重叠，编排和功能侧重不同。 |
-| gVisor / Kata / Firecracker（单用） | 未收录 | 当前页用于它的主场景；如果更看重“隔离原语本身”，再选 gVisor / Kata / Firecracker（单用）。 | 隔离原语本身——OpenSandbox 在其之上做编排；直接用它们意味着沙箱生命周期/API/调度都得你自己搭。 |
-| 普通 Docker / containerd | 未收录 | 当前页用于它的主场景；如果更看重“无处不在且可信，但给你的是一个容器，不是沙箱协议、凭据保险库、出口策略或多语言 SDK 面”，再选 普通 Docker / containerd。 | 无处不在且可信，但给你的是一个容器，不是沙箱协议、凭据保险库、出口策略或多语言 SDK 面。 |
-| Jupyter Kernel Gateway / nsjail | 未收录 | 当前页用于它的主场景；如果更看重“更窄、单一用途的代码执行/隔离工具”，再选 Jupyter Kernel Gateway / nsjail。 | 更窄、单一用途的代码执行/隔离工具；不太算面向 agent 的平台。 |
+| E2B（firecracker 沙箱） | 未收录 | 需要流行的托管加开源 agent 代码执行沙箱 SDK 时，选 E2B。 | 流行的托管+开源沙箱 SDK，做 agent 代码执行；托管云开箱即用，但自托管与多运行时广度有别——OpenSandbox 更突出 K8s 规模 + 多种安全运行时。 |
+| Daytona | 未收录 | 需要面向 agent 的开发环境/沙箱运行时时，选 Daytona。 | 面向 agent 的开发环境/沙箱运行时；用例重叠，编排和功能侧重不同。 |
+| gVisor / Kata / Firecracker（单用） | 未收录 | 只需要隔离原语本身时，选 gVisor、Kata 或 Firecracker。 | 隔离原语本身——OpenSandbox 在其之上做编排；直接用它们意味着沙箱生命周期/API/调度都得你自己搭。 |
+| 普通 Docker / containerd | 未收录 | 普通容器已经够用时，选 Docker 或 containerd。 | 无处不在且可信，但给你的是一个容器，不是沙箱协议、凭据保险库、出口策略或多语言 SDK 面。 |
+| Jupyter Kernel Gateway / nsjail | 未收录 | 需要更窄的代码执行/隔离工具时，选 Jupyter Kernel Gateway 或 nsjail。 | 更窄、单一用途的代码执行/隔离工具；不太算面向 agent 的平台。 |
 
 ## 技术栈
 

@@ -95,15 +95,15 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| unstructured.io | 未收录 | 当前页用于它的主场景；如果更看重“面向 RAG 摄取、广受欢迎的多格式文档加载器，partitioner 众多”，再选 unstructured.io。 | 面向 RAG 摄取、广受欢迎的多格式文档加载器，partitioner 众多；开源核心 + 商用 API/服务层——能力切分与授权方式都和 Docling 的单一 MIT 库不同。 |
-| LlamaParse | 未收录 | 当前页用于它的主场景；如果更看重“托管解析服务（LlamaIndex），在复杂 PDF/表格上很强”，再选 LlamaParse。 | 托管解析服务（LlamaIndex），在复杂 PDF/表格上很强；但它是按量计费的 SaaS、数据会出你的边界，而 Docling 完全本地/进程内运行。 |
-| Marker | 未收录 | 当前页用于它的主场景；如果更看重“同样用深度学习版面模型的 PDF→Markdown 转换器”，再选 Marker。 | 同样用深度学习版面模型的 PDF→Markdown 转换器；gen-AI 目标相近，但输入格式范围比 Docling 的 PDF/Office/HTML/图片更窄。 |
-| PyMuPDF / pdfplumber | 未收录 | 当前页用于它的主场景；如果更看重“快、轻、无重模型的底层 PDF 文本/几何抽取”，再选 PyMuPDF / pdfplumber。 | 快、轻、无重模型的底层 PDF 文本/几何抽取；版面/表格逻辑得你自己写——开箱保真度更低，但体积小得多。 |
-| [PageIndex](../rag-retrieval/pageindex.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“是文档之上的检索/推理层，不是解析器”，再选 PageIndex。 | 是文档之上的检索/推理层，不是解析器——互补而非替代；Docling 产出的正是它建索引的结构化文本。 |
+| unstructured.io | 未收录 | 想要更大的 RAG loader 生态，并能接受开源核心 + 商业服务层切分时，选 unstructured.io。 | 面向 RAG 摄取、广受欢迎的多格式文档加载器，partitioner 众多；开源核心 + 商用 API/服务层——能力切分与授权方式都和 Docling 的单一 MIT 库不同。 |
+| LlamaParse | 未收录 | 可以接受 SaaS 定价和数据边界取舍，且需要复杂 PDF/表格托管解析时，选 LlamaParse。 | 托管解析服务（LlamaIndex），在复杂 PDF/表格上很强；但它是按量计费的 SaaS、数据会出你的边界，而 Docling 完全本地/进程内运行。 |
+| Marker | 未收录 | PDF→Markdown 和 DL 版面模型已足够、不需要 Docling 更广输入范围时，选 Marker。 | 同样用深度学习版面模型的 PDF→Markdown 转换器；gen-AI 目标相近，但输入格式范围比 Docling 的 PDF/Office/HTML/图片更窄。 |
+| PyMuPDF / pdfplumber | 未收录 | 速度和轻量体积比内建版面/表格保真更重要时，选底层 PDF 库。 | 快、轻、无重模型的底层 PDF 文本/几何抽取；版面/表格逻辑得你自己写——开箱保真度更低，但体积小得多。 |
+| [PageIndex](../rag-retrieval/pageindex.zh.md) | ✅ | 需要在已解析文档之上做检索/推理，而不是解析本身时，选 PageIndex。 | 是文档之上的检索/推理层，不是解析器——互补而非替代；Docling 产出的正是它建索引的结构化文本。 |
 
 ## 技术栈
 
-- **语言：** Python(`pip install docling`)，提供 `DocumentConverter` API 和一个 CLI。
+- **语言：** Python（`pip install docling`），提供 `DocumentConverter` API 和一个 CLI。
 - **核心模型：** 每种输入都归一到统一的 `DoclingDocument`（版面、阅读顺序、表格、图片、列表、标题），再序列化为 Markdown / HTML / 无损 JSON / DocTags。
 - **ML 模型：** 版面分析和表格结构还原跑视觉/DL 模型；可选的视觉语言模型路径（如 IBM 的 GraniteDocling）以及处理音频输入的 ASR 模型。[未验证]
 - **输入/输出：** 解析 PDF、DOCX、PPTX、XLSX、HTML、EPUB、图片（PNG/TIFF/JPEG）等；导出 Markdown、HTML、JSON、DocTags。
@@ -113,16 +113,16 @@ health:
 
 - **运行时：** 一个 Python 环境（较新的 Python 3.x）；用 pip/uv 安装。
 - **ML 模型权重：** 版面和表格结构模型在首次使用时下载并缓存到本地；这是一次性网络拉取，且占用可观磁盘空间。
-- **OCR 引擎（给扫描件）:** 可插拔的 OCR 后端——如 EasyOCR（偏默认）和 Tesseract——在页面是图片/扫描件时启用；具体集合和默认值随版本变化。[未验证]
+- **OCR 引擎（给扫描件）：** 可插拔的 OCR 后端——如 EasyOCR（偏默认）和 Tesseract——在页面是图片/扫描件时启用；具体集合和默认值随版本变化。[未验证]
 - **硬件：** 可纯 CPU 运行，但版面/表格/VLM 推理在 GPU 上明显更快；大语料的吞吐由模型推理主导。
 
 ## 运维难度
 
-**作为库，低到中。** 没有服务要部署、没有数据存储要运维——就是在你现有的摄取作业里 `pip install docling`，顺路径几行代码（`DocumentConverter().convert(source)` → `.export_to_markdown()`）。中等的部分在环境和算力：首次运行会下载模型权重（体积、离线/隔离网环境的准备都要规划）,OCR 后端带各自的系统级依赖，而批量转换大语料是 GPU-vs-CPU 和并行度的问题，不是一个配置开关。如果你还跑那个可选的 API/MCP server，那就是在库之上多了个要运维的服务。
+**作为库，低到中。** 没有服务要部署、没有数据存储要运维——就是在你现有的摄取作业里 `pip install docling`，顺路径几行代码（`DocumentConverter().convert(source)` → `.export_to_markdown()`）。中等的部分在环境和算力：首次运行会下载模型权重（体积、离线/隔离网环境的准备都要规划），OCR 后端带各自的系统级依赖，而批量转换大语料是 GPU-vs-CPU 和并行度的问题，不是一个配置开关。如果你还跑那个可选的 API/MCP server，那就是在库之上多了个要运维的服务。
 
 ## 健康度与可持续性
 
-- **响应速度**：Grade A——中位首次响应时间 0.3 小时，基于 54 个 qualifying issues/PRs。
+- **响应速度**：Grade A——中位首次响应时间 0.5 小时，基于 56 个 qualifying issues/PRs。
 - **维护（2026-06）。** 最后 push 于 2026-06，发布非常频繁（v2.107.0，2026-06-24）——**高度活跃**，未归档。[推断]
 - **治理 / 背书。** 这里最强的信号：**由 IBM 发起，托管在 LF AI & Data 基金会下**——基金会治理加上大厂出身，比单人维护的仓库根基稳得多，降低了 bus-factor 和弃坑风险。[推断]
 - **年龄与 Lindy 判断。** 仅约 2 年（2024-07 创建）⇒ **年轻**，*单看年龄* Lindy 先验偏弱——但密集的发布节奏、基金会背书和约 62k star 是抵消信号。应把它当作快速崛起、背书良好的项目，而非久经沙场的老将。[推断]

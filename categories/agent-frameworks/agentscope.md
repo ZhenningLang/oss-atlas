@@ -96,13 +96,13 @@ The other moment AgentScope fits is when you want a composable, event-driven age
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| [DSPy](dspy.md) | ✅ | Use this page for its stated niche; choose DSPy when you need declarative prompt/pipeline *optimization* (compile + tune programs). | Declarative prompt/pipeline *optimization* (compile + tune programs); not a multi-agent serving runtime. Reach for it to tune quality, not to orchestrate/serve agents. |
-| [openfang](openfang.md) | ✅ | Use this page for its stated niche; choose openfang when you need sibling agent framework in this index. | Sibling agent framework in this index; different design point — compare scope/maturity before choosing. [未验证] |
-| [Symphony](symphony.md) | ✅ | Use this page for its stated niche; choose Symphony when you need sibling multi-agent framework in this index. | Sibling multi-agent framework in this index; overlapping "orchestrate multiple agents" goal, different ergonomics. [未验证] |
-| [claude-octopus](claude-octopus.md) | ✅ | Use this page for its stated niche; choose claude-octopus when you need sibling in this index, oriented around Claude-style multi-agent workflows. | Sibling in this index, oriented around Claude-style multi-agent workflows; narrower model focus than AgentScope's multi-provider serving. |
-| LangGraph | 未收录 | Use this page for its stated niche; choose LangGraph when you need graph/state-machine orchestration with a large ecosystem and explicit control flow. | Graph/state-machine orchestration with a large ecosystem and explicit control flow; heavier, more opinionated than AgentScope's "trust the model" loop. |
-| AutoGen | 未收录 | Use this page for its stated niche; choose AutoGen when you need mature conversation-driven multi-agent framework. | Mature conversation-driven multi-agent framework; comparable multi-agent scope, different abstractions and a larger community footprint. |
-| CrewAI | 未收录 | Use this page for its stated niche; choose CrewAI when you need role/crew-based agent orchestration with strong DX. | Role/crew-based agent orchestration with strong DX; less emphasis on the service/permission/sandbox/observability stack AgentScope ships. |
+| [DSPy](dspy.md) | ✅ | Choose DSPy when you need declarative prompt/pipeline *optimization* rather than multi-agent serving. | Declarative prompt/pipeline *optimization* (compile + tune programs); not a multi-agent serving runtime. Reach for it to tune quality, not to orchestrate/serve agents. |
+| [openfang](openfang.md) | ✅ | Choose openfang when you want another indexed agent framework with a more OS-shaped runtime. | Sibling agent framework in this index; different design point — compare scope/maturity before choosing. [未验证] |
+| [Symphony](symphony.md) | ✅ | Choose Symphony when you need an indexed multi-agent framework focused on scheduling autonomous coding runs. | Sibling multi-agent framework in this index; overlapping "orchestrate multiple agents" goal, different ergonomics. [未验证] |
+| [claude-octopus](claude-octopus.md) | ✅ | Choose claude-octopus when you need a Claude-style multi-agent workflow sibling. | Sibling in this index, oriented around Claude-style multi-agent workflows; narrower model focus than AgentScope's multi-provider serving. |
+| LangGraph | 未收录 | Choose LangGraph when you need graph/state-machine orchestration with a large ecosystem and explicit control flow. | Graph/state-machine orchestration with a large ecosystem and explicit control flow; heavier, more opinionated than AgentScope's "trust the model" loop. |
+| AutoGen | 未收录 | Choose AutoGen when you need a mature conversation-driven multi-agent framework. | Mature conversation-driven multi-agent framework; comparable multi-agent scope, different abstractions and a larger community footprint. |
+| CrewAI | 未收录 | Choose CrewAI when role/crew-based agent orchestration and strong DX matter more than AgentScope's serving stack. | Role/crew-based agent orchestration with strong DX; less emphasis on the service/permission/sandbox/observability stack AgentScope ships. |
 
 ## Tech stack
 
@@ -127,7 +127,7 @@ The other moment AgentScope fits is when you want a composable, event-driven age
 
 ## Health & viability
 
-- **Responsiveness**: Grade B — median first-response time 53.8 hours across 34 qualifying issues/PRs.
+- **Responsiveness**: Grade A — median first-response time 30.8 hours across 36 qualifying issues/PRs.
 - **Maintenance (2026-06):** actively maintained — default branch pushed 2026-06-25, latest release v2.0.2 (2026-06-16), not archived. A healthy open-issue count (~262) against steady releases reads as a live, engaged project rather than a stalled one.
 - **Governance & backing:** Organization-owned (`agentscope-ai`), with DashScope (Alibaba's model platform) as the default/first-class backend — i.e. a real org with vendor adjacency behind it rather than a lone maintainer, a better bus-factor position than single-user repos. It is not under a neutral foundation (Apache/LF/CNCF), so treat governance as vendor-adjacent stewardship (see Caveats for what is unconfirmed).
 - **Age & Lindy (2026-06):** created 2024-01, ~2.5 years old — the **oldest and most established** project in this chunk, and still actively shipping. Lindy verdict: **age × still-active is favorable** (a multi-year, maintained framework). The caveat is the recent **v2.0 rewrite**: the *project* is Lindy-strong, but the *2.x API surface* is young, so community recipes and third-party integrations are still thinner than the project's age suggests.

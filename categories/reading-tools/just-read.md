@@ -96,11 +96,11 @@ You also reach for it when you want per-site control: Just Read lets you save cu
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| Built-in browser Reader Mode (Firefox/Safari/Edge) | 未收录 | Use this page for its stated niche; choose Built-in browser Reader Mode (Firefox/Safari/Edge) when you need zero install, baked into the browser. | Zero install, baked into the browser; far less customizable, no per-site selectors, no editing/highlighting/summaries. |
-| Mozilla Readability (library) | 未收录 | Use this page for its stated niche; choose Mozilla Readability (library) when you need the open-source MPL parsing engine behind many reader modes. | The open-source MPL parsing engine behind many reader modes; a library to build on, not a ready-to-use extension. |
-| Postlight Reader (ex-Mercury) | 未收录 | Use this page for its stated niche; choose Postlight Reader (ex-Mercury) when you need open-source readability extension/parser. | Open-source readability extension/parser; cleaner licensing story, but less actively maintained and fewer edit/highlight features. |
-| Pocket / Instapaper / Wallabag | 未收录 | Use this page for its stated niche; choose Pocket / Instapaper / Wallabag when you need read-it-later services with durable cross-device libraries. | Read-it-later services with durable cross-device libraries; heavier (account + backend) and aimed at saving, not in-place reformatting (Wallabag is self-hostable). |
-| Reader View extensions (various) | 未收录 | Use this page for its stated niche; choose Reader View extensions (various) when you need many small clones exist. | Many small clones exist; vary widely in parsing quality, licensing, and trustworthiness — Just Read's edge is its customization and selector memory. |
+| Built-in browser Reader Mode (Firefox/Safari/Edge) | 未收录 | Choose the built-in reader mode when zero install and browser-native trust matter more than customization; choose Just Read when per-site selectors, editing, highlighting, or summaries justify an extension. | Zero install, baked into the browser; far less customizable, no per-site selectors, no editing/highlighting/summaries. |
+| Mozilla Readability (library) | 未收录 | Choose Mozilla Readability when you are building your own parser or reader mode; choose Just Read when you need a ready-to-use browser extension despite its EULA/source-available status. | The open-source MPL parsing engine behind many reader modes; a library to build on, not a ready-to-use extension. |
+| Postlight Reader (ex-Mercury) | 未收录 | Choose Postlight Reader when cleaner open-source licensing matters more than active feature work; choose Just Read when selector memory and edit/highlight features are worth the licensing tradeoff. | Open-source readability extension/parser; cleaner licensing story, but less actively maintained and fewer edit/highlight features. |
+| Pocket / Instapaper / Wallabag | 未收录 | Choose Pocket, Instapaper, or Wallabag when the job is a durable read-it-later library; choose Just Read for immediate in-place article cleanup without building an archive workflow. | Read-it-later services with durable cross-device libraries; heavier (account + backend) and aimed at saving, not in-place reformatting (Wallabag is self-hostable). |
+| Reader View extensions (various) | 未收录 | Choose another reader extension only after checking parsing quality, license, and trust surface; choose Just Read when customization and saved selectors are the decisive feature. | Many small clones exist; vary widely in parsing quality, licensing, and trustworthiness — Just Read's edge is its customization and selector memory. |
 
 ## Tech stack
 
@@ -121,7 +121,7 @@ You also reach for it when you want per-site control: Just Read lets you save cu
 
 ## Health & viability
 
-- **Responsiveness**: Grade B — median first-response time 9.6 hours across 3 qualifying issues/PRs.
+- **Responsiveness**: Grade A — median first-response time 9.6 hours across 3 qualifying issues/PRs.
 - **Maintenance (2026-06).** Last pushed 2026-05 with commits through March–May 2026 — **actively maintained**. Not archived. [推断]
 - **Governance / bus factor.** Single-maintainer (`ZachSaucier` is effectively the only contributor) and a **User**-owned repo with a hosted commercial side (justread.link) — a clear single-point-of-failure both for the code and for the Premium service. **Flagged.** [推断]
 - **Age & Lindy verdict.** Created 2015-10 (~10 years) and still active ⇒ a reasonable Lindy signal for a personal project; it has survived a decade of free-time maintenance, which is itself a positive durability indicator. [推断]

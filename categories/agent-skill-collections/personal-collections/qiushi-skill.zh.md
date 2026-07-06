@@ -88,12 +88,12 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [antfu/skills](antfu-skills.md) | ✅ | 当前页用于它的主场景；如果更看重“偏任务向的个人 skill 集（构建/仓库杂务），不是思维方法论”，再选 antfu/skills。 | 偏任务向的个人 skill 集（构建/仓库杂务），不是思维方法论；互补而非替代——Qiushi 塑形*如何推理*，antfu 的塑形*如何做具体活儿*。 |
-| [Dimillian/Skills](dimillian-skills.md) | ✅ | 当前页用于它的主场景；如果更看重“另一份偏特定技术栈/工作流的个人收藏”，再选 Dimillian/Skills。 | 另一份偏特定技术栈/工作流的个人收藏；作为「某人的 skill 包」有重叠，但不在方法论/纪律这条轴上。 |
-| [gstack](gstack.md) | ✅ | 当前页用于它的主场景；如果更看重“个人 harness 配置集”，再选 gstack。 | 个人 harness 配置集；同 leaf、不同意图——配置/工具 vs. 一条认知方法主干。 |
-| [wshobson/agents](../subagent-collections/wshobson-agents.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“大型 subagent 人格库（角色专家）”，再选 wshobson/agents。 | 大型 subagent 人格库（角色专家）。Qiushi 是一小组*思维方法*，不是一排领域 agent——宜组合而非二选一。 |
-| [awesome-claude-code-subagents](../subagent-collections/awesome-claude-code-subagents.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“广度优先的 subagent 目录”，再选 awesome-claude-code-subagents。 | 广度优先的 subagent 目录；Qiushi 在单一方法论上做深度。按你需要「多人格」还是「一条有纪律的循环」来选。 |
-| Superpowers / 通用 SDLC 方法论包 | 未收录 | 当前页用于它的主场景；如果更看重“brainstorm→plan→TDD→verify 类方法论插件占据同一个「把纪律做成 skill」的位置”，再选 Superpowers / 通用 SDLC 方法论包。 | brainstorm→plan→TDD→verify 类方法论插件占据同一个「把纪律做成 skill」的位置；Qiushi 的不同在于以矛盾分析与优先级排序打头，而非测试先行的生命周期。 |
+| [antfu/skills](antfu-skills.zh.md) | ✅ | 需要构建或仓库杂务等任务型个人 skill 时，选 antfu/skills。 | 偏任务向的个人 skill 集（构建/仓库杂务），不是思维方法论；互补而非替代——Qiushi 塑形*如何推理*，antfu 的塑形*如何做具体活儿*。 |
+| [Dimillian/Skills](dimillian-skills.zh.md) | ✅ | 任务贴近特定技术栈或工作流收藏，而非方法论纪律时，选 Dimillian/Skills。 | 另一份偏特定技术栈/工作流的个人收藏；作为「某人的 skill 包」有重叠，但不在方法论/纪律这条轴上。 |
+| [gstack](gstack.zh.md) | ✅ | 需要个人 Claude Code harness 配置集，而不是认知方法主干时，选 gstack。 | 个人 harness 配置集；同 leaf、不同意图——配置/工具 vs. 一条认知方法主干。 |
+| [wshobson/agents](../subagent-collections/wshobson-agents.zh.md) | ✅ | 需要大型角色专家 subagent 库时，选 wshobson/agents。 | 大型 subagent 人格库（角色专家）。Qiushi 是一小组*思维方法*，不是一排领域 agent——宜组合而非二选一。 |
+| [awesome-claude-code-subagents](../subagent-collections/awesome-claude-code-subagents.zh.md) | ✅ | 需要广度优先的 subagent 目录时，选 awesome-claude-code-subagents。 | 广度优先的 subagent 目录；Qiushi 在单一方法论上做深度。按你需要「多人格」还是「一条有纪律的循环」来选。 |
+| [Superpowers](../../agent-dev-methodology/superpowers.zh.md) | ✅ | 需要 brainstorm→plan→TDD→verify 的通用 SDLC 方法论包时，选 Superpowers。 | brainstorm→plan→TDD→verify 类方法论插件占据同一个「把纪律做成 skill」的位置；Qiushi 的不同在于以矛盾分析与优先级排序打头，而非测试先行的生命周期。 |
 
 ## 健康度与可持续性
 

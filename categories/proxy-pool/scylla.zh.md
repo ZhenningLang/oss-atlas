@@ -83,10 +83,10 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [ProxyBroker](proxybroker.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“一个 CLI 优先的 finder/checker/server，而非 UI+API 服务”，再选 ProxyBroker。 | 一个 CLI 优先的 finder/checker/server，而非 UI+API 服务；更休眠、更易在现代 Python 上崩，但快速收割时调用更轻。 |
-| [haipproxy](haipproxy.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“为爬虫规模的高可用而建的分布式 Scrapy+Redis 池”，再选 haipproxy。 | 为爬虫规模的高可用而建的分布式 Scrapy+Redis 池；基建重得多（需 Redis）且同样长期休眠，对照 Scylla 的单服务简洁。 |
-| 付费代理供应商（Bright Data、Oxylabs……） | 未收录 | 当前页用于它的主场景；如果更看重“带 SLA、鉴权、住宅 IP 和轮换的商业池”，再选 付费代理供应商（Bright Data、Oxylabs……）。 | 带 SLA、鉴权、住宅 IP 和轮换的商业池——生产答案；只有当「免费 + 自托管」可接受时 Scylla 才合适。 |
-| proxy_pool（jhao104） | 未收录 | 当前页用于它的主场景；如果更看重“另一个流行的自托管免费代理池，爬取/校验/API 形态相似（Redis 支撑）”，再选 proxypool（jhao104）。 | 另一个流行的自托管免费代理池，爬取/校验/API 形态相似（Redis 支撑）；生态位相近，栈和维护状态不同。[未验证] |
+| [ProxyBroker](proxybroker.zh.md) | ✅ | CLI 优先的 finder/checker/server 比常驻服务更轻时，选 ProxyBroker。 | 一个 CLI 优先的 finder/checker/server，而非 UI+API 服务；更休眠、更易在现代 Python 上崩，但快速收割时调用更轻。 |
+| [haipproxy](haipproxy.zh.md) | ✅ | 分布式 Scrapy+Redis 高可用比单服务简洁更重要时，选 haipproxy。 | 为爬虫规模的高可用而建的分布式 Scrapy+Redis 池；基建重得多（需 Redis）且同样长期休眠，对照 Scylla 的单服务简洁。 |
+| 付费代理供应商（Bright Data、Oxylabs……） | 未收录 | 需要生产 SLA、鉴权、住宅 IP 和轮换时，选付费代理供应商。 | 带 SLA、鉴权、住宅 IP 和轮换的商业池——生产答案；只有当「免费 + 自托管」可接受时 Scylla 才合适。 |
+| [proxy_pool（jhao104）](proxy-pool.zh.md) | ✅ | 想要 Redis 支撑、形态相近但更简单的免费代理池时，选 proxy_pool。 | 另一个流行的自托管免费代理池，爬取/校验/API 形态相似（Redis 支撑）；生态位相近，栈和维护状态不同。[未验证] |
 
 ## 技术栈
 

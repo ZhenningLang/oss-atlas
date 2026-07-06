@@ -83,12 +83,12 @@ It also fits when you need a self-hosted, no-license-cost alternative to commerc
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| kafbat/kafka-ui | 未收录 | Use this page for its stated niche; choose kafbat/kafka-ui when you need the **maintained community fork** of this exact project. | The **maintained community fork** of this exact project — same UI, ongoing releases; for new installs it's generally the better choice than the stalled upstream. |
-| Conduktor | 未收录 | Use this page for its stated niche; choose Conduktor when you need polished desktop/web Kafka platform. | Polished desktop/web Kafka platform; richer features and enterprise governance, but freemium/commercial — not a fully-open self-hosted OSS UI. |
-| Confluent Control Center | 未收录 | Use this page for its stated niche; choose Confluent Control Center when you need deep, enterprise-grade monitoring/governance in the Confluent Platform. | Deep, enterprise-grade monitoring/governance in the Confluent Platform; commercial and tied to that ecosystem, far heavier than a single-container UI. |
-| AKHQ | 未收录 | Use this page for its stated niche; choose AKHQ when you need open-source (Apache-2. | Open-source (Apache-2.0) Kafka web UI with similar scope (topics, consumers, Connect, schema registry, ACLs); a direct OSS substitute, different stack/UX. |
-| Redpanda Console | 未收录 | Use this page for its stated niche; choose Redpanda Console when you need open-source Kafka/Redpanda UI (Go). | Open-source Kafka/Redpanda UI (Go); clean, fast, works with vanilla Kafka too; some advanced features gated toward Redpanda's commercial tier. |
-| kafka-python admin CLI | 未收录 | Use this page for its stated niche; choose kafka-python admin CLI when you need CLI, not a UI. | CLI, not a UI — scriptable/headless admin; complements rather than replaces a dashboard. |
+| kafbat/kafka-ui | 未收录 | Choose kafbat/kafka-ui for new deployments or upgrades because it is the maintained continuation; use this page mainly to understand the stalled Provectus upstream and migration risk. | The **maintained community fork** of this exact project — same UI, ongoing releases; for new installs it's generally the better choice than the stalled upstream. |
+| Conduktor | 未收录 | Choose Conduktor when polished UX, enterprise governance, and commercial support outweigh fully open self-hosting; choose kafka-ui only when an OSS browser UI is enough. | Polished desktop/web Kafka platform; richer features and enterprise governance, but freemium/commercial — not a fully-open self-hosted OSS UI. |
+| Confluent Control Center | 未收录 | Choose Confluent Control Center when you are already in Confluent Platform and need deep enterprise monitoring or governance; choose kafka-ui for a lighter standalone dashboard. | Deep, enterprise-grade monitoring/governance in the Confluent Platform; commercial and tied to that ecosystem, far heavier than a single-container UI. |
+| AKHQ | 未收录 | Choose AKHQ when you want a direct Apache-2.0 OSS Kafka web UI substitute with active enough maintenance and a different stack/UX; avoid stalled kafka-ui upstream for fresh installs unless compatibility is proven. | Open-source (Apache-2.0) Kafka web UI with similar scope (topics, consumers, Connect, schema registry, ACLs); a direct OSS substitute, different stack/UX. |
+| Redpanda Console | 未收录 | Choose Redpanda Console for a Go-based Kafka/Redpanda UI, especially in Redpanda environments; choose kafka-ui only when its Java/Spring stack and feature set fit your existing deployment. | Open-source Kafka/Redpanda UI (Go); clean, fast, works with vanilla Kafka too; some advanced features gated toward Redpanda's commercial tier. |
+| kafka-python admin CLI | 未收录 | Treat kafka-python admin CLI as complementary: use it for scriptable or headless admin, and kafka-ui for human browsing and team dashboards. | CLI, not a UI — scriptable/headless admin; complements rather than replaces a dashboard. |
 
 ## Tech stack
 
@@ -110,7 +110,7 @@ It also fits when you need a self-hosted, no-license-cost alternative to commerc
 
 ## Health & viability
 
-- **Responsiveness**: Grade C — median first-response time 4.4 hours across 1 qualifying issues/PRs.
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (2026-06) — upstream stalled.** `provectus/kafka-ui` last released v0.7.2 in **2024-04** and last pushed **2024-07**; ~2 years without a release at time of writing. The API does **not** flag it `archived`, but it reads as **dormant**, not active. Active development continued in the community fork **`kafbat/kafka-ui`** (pushed 2026-06). This is the dominant verdict: treat the upstream as frozen. [推断]
 - **Governance / backing.** `Organization`-owned (Provectus, a consulting company); the README states it stays free/open-source with no paid tier. But a single-vendor-curated OSS project that the vendor stops shipping is exactly the bus-factor scenario that played out — the community had to fork to keep it alive. [推断]
 - **Age × Lindy.** Created 2019-11 (~6–7 years). Moderate age, but the *upstream's* Lindy is undercut by the maintenance halt — old-and-stalled fails the "still active" test. The **fork** carries the Lindy forward, not this repo. [推断]

@@ -93,12 +93,12 @@ It shines when the input is *article-shaped* and you want one general extractor 
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| trafilatura | 未收录 | Use this page for its stated niche; choose trafilatura when you need focused main-text + metadata extractor. | Focused main-text + metadata extractor; generally stronger/cleaner extraction and active maintenance — often the better default today for "just the text". |
-| readability-lxml | 未收录 | Use this page for its stated niche; choose readability-lxml when you need port of Arc90 Readability. | Port of Arc90 Readability; main-content extraction only (no authors/date/image/NLP), smaller surface, simpler. |
-| boilerpipe | 未收录 | Use this page for its stated niche; choose boilerpipe when you need older Java boilerplate-removal algorithm (with Python wrappers). | Older Java boilerplate-removal algorithm (with Python wrappers); historically influential, but JVM dependency and aging. |
-| Scrapy + custom | 未收录 | Use this page for its stated niche; choose Scrapy + custom when you need full crawling framework. | Full crawling framework — you write extraction rules but get queuing, concurrency, retries, pipelines; the right tool when you need a *crawler*, not a one-URL extractor. |
-| Goose3 | 未收录 | Use this page for its stated niche; choose Goose3 when you need python port of Goose article extractor. | Python port of Goose article extractor; same niche as newspaper (text/metadata/top-image), different heuristics — a direct peer to benchmark against. |
-| newspaper4k | 未收录 | Use this page for its stated niche; choose newspaper4k when you need the actively-maintained fork of this very project. | The actively-maintained fork of this very project; same API lineage, bug fixes and Python-version updates — the recommended successor. |
+| trafilatura | 未收录 | Choose trafilatura when you need focused main-text plus metadata extraction with active maintenance. | Focused main-text + metadata extractor; generally stronger/cleaner extraction and active maintenance — often the better default today for "just the text". |
+| readability-lxml | 未收录 | Choose readability-lxml when you need the Arc90 Readability port for main-content extraction only. | Port of Arc90 Readability; main-content extraction only (no authors/date/image/NLP), smaller surface, simpler. |
+| [boilerpipe](boilerpipe.md) | ✅ | Choose boilerpipe when you need an older Java boilerplate-removal algorithm with Python wrappers. | Older Java boilerplate-removal algorithm (with Python wrappers); historically influential, but JVM dependency and aging. |
+| Scrapy + custom | 未收录 | Choose Scrapy plus custom extraction rules when you need a full crawling framework. | Full crawling framework — you write extraction rules but get queuing, concurrency, retries, pipelines; the right tool when you need a *crawler*, not a one-URL extractor. |
+| Goose3 | 未收录 | Choose Goose3 when you need a Python port of the Goose article extractor. | Python port of Goose article extractor; same niche as newspaper (text/metadata/top-image), different heuristics — a direct peer to benchmark against. |
+| newspaper4k | 未收录 | Choose newspaper4k when you need the actively maintained fork of this project. | The actively-maintained fork of this very project; same API lineage, bug fixes and Python-version updates — the recommended successor. |
 
 ## Tech stack
 

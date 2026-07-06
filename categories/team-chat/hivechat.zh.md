@@ -88,11 +88,11 @@ HiveChat 正是为这个形态设计的。你部署一次（Docker Compose 自�
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| LibreChat | 未收录 | 当前页用于它的主场景；如果更看重“成熟得多、功能面更大（RAG、assistants、代码解释器、多种认证后端），MIT 许可”，再选 LibreChat。 | 成熟得多、功能面更大（RAG、assistants、代码解释器、多种认证后端），MIT 许可；但运维更重，也不像 HiveChat 那样专门对准小团队的管理员-配额流程。 |
-| Open WebUI | 未收录 | 当前页用于它的主场景；如果更看重“流行的自托管 UI，在 Ollama/本地模型上很强，带 RBAC 和 pipeline，更广也更活跃”，再选 Open WebUI。 | 流行的自托管 UI，在 Ollama/本地模型上很强，带 RBAC 和 pipeline，更广也更活跃；但其甜点区是本地模型服务，而非 HiveChat 的「多家云供应商 + 分组配额」定位。 |
-| Lobe Chat | 未收录 | 当前页用于它的主场景；如果更看重“UI 精致、有插件、多供应商、可自托管”，再选 Lobe Chat。 | UI 精致、有插件、多供应商、可自托管；更偏个人/进阶玩家，而非以 token 配额做集中式管理员治理的团队场景。 |
-| Chatbox / Cherry Studio | 未收录 | 当前页用于它的主场景；如果更看重“桌面、单用户客户端，每人各自带 key”，再选 Chatbox / Cherry Studio。 | 桌面、单用户客户端，每人各自带 key；没有中心管理员、分组、配额或共享服务端。 |
-| ChatGPT Team / Claude Team（SaaS） | 未收录 | 当前页用于它的主场景；如果更看重“托管、零运维、锁定单一模型家族”，再选 ChatGPT Team / Claude Team（SaaS）。 | 托管、零运维、锁定单一模型家族；HiveChat 用自托管、多供应商选择和密钥/数据掌控换取这份便利的反面。 |
+| LibreChat | 未收录 | 需要更成熟、更大功能面，包括 RAG、assistants、代码解释器和多种认证后端时，选 LibreChat。 | MIT 许可且功能更广，但运维更重，也不如 HiveChat 专注小团队管理员-配额流程。 |
+| [Open WebUI](../llm-chat-ui/open-webui.zh.md) | ✅ | 本地模型服务、RBAC 和 pipelines 比多云供应商配额更重要时，选 Open WebUI。 | 更广也更活跃，但甜点区是 Ollama/本地模型服务，而不是 HiveChat 的按组配额定位。 |
+| Lobe Chat | 未收录 | 需要面向个人/进阶玩家的精致多服务商 UI、插件和自托管时，选 Lobe Chat。 | 不那么围绕 token 配额做集中式管理员团队治理。 |
+| Chatbox / Cherry Studio | 未收录 | 每个人各自带 key，且不需要中心治理时，选桌面客户端。 | 没有中心管理员、分组、配额或共享服务端。 |
+| ChatGPT Team / Claude Team（SaaS） | 未收录 | 能接受零运维和锁定单一模型家族时，选托管团队 SaaS。 | HiveChat 用自托管、多供应商选择和密钥/数据掌控换取这份便利的反面。 |
 
 ## 技术栈
 
@@ -128,5 +128,5 @@ HiveChat 正是为这个形态设计的。你部署一次（Docker Compose 自�
 - [未验证] 版本 `0.1.0` 取自 `package.json`；仓库**没有**任何 git tag 或 GitHub release，因此没有 semver 发布历史可锚定成熟度——考虑到最后一次 push 早于本次核实，「active」应谨慎看待。
 - [未验证] 许可证是 Apache-2.0 **外加商业附加条款**（`LICENSE` 文件限制未经另行商业授权时构建/分发衍生作品）；frontmatter 为工具链写 `Apache-2.0`，但真实条款并非纯 Apache-2.0——商用/衍生前请先读 `LICENSE`。
 - [未验证] 所支持的模型供应商清单、认证集成（飞书/钉钉/企业微信）与能力（MCP SSE、图片理解、网络搜索）均取自 README；依赖前请对照当前代码/管理后台核实。
-- [推断] 对比结论（LibreChat/Open WebUI/Lobe Chat 更广或更成熟、桌面客户端缺中心管理）反映的是项目大致定位，不是基准化的正面对比；这些替代品目前都未在本索引中收录。
+- [推断] 对比结论（LibreChat/Open WebUI/Lobe Chat 更广或更成熟、桌面客户端缺中心管理）反映的是项目大致定位，不是基准化的正面对比；Open WebUI 已收录，LibreChat、Lobe Chat、桌面客户端和团队 SaaS 未收录。
 - [推断] 「中小团队」规模（约 5–50 人）是示意性框定，不是文档明确的硬上限；未找到公开的规模/负载数据。

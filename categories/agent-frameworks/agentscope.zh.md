@@ -96,13 +96,13 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [DSPy](dspy.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“声明式的 prompt/流水线*优化*（编译 + 调优程序）”，再选 DSPy。 | 声明式的 prompt/流水线*优化*（编译 + 调优程序）；不是多智能体服务运行时。用它提质量，而不是用它编排/服务 agent。 |
-| [openfang](openfang.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“本索引内的同类 agent 框架”，再选 openfang。 | 本索引内的同类 agent 框架；设计取向不同——选型前对比 scope/成熟度。[未验证] |
-| [Symphony](symphony.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“本索引内的同类多智能体框架”，再选 Symphony。 | 本索引内的同类多智能体框架；“编排多个 agent”目标有重叠，工效学不同。[未验证] |
-| [claude-octopus](claude-octopus.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“本索引内的同类项目，围绕 Claude 式多智能体工作流”，再选 claude-octopus。 | 本索引内的同类项目，围绕 Claude 式多智能体工作流；模型聚焦比 AgentScope 的多 provider 服务更窄。 |
-| LangGraph | 未收录 | 当前页用于它的主场景；如果更看重“图/状态机式编排，生态庞大、控制流显式”，再选 LangGraph。 | 图/状态机式编排，生态庞大、控制流显式；比 AgentScope“信任模型”的循环更重、更有主张。 |
-| AutoGen | 未收录 | 当前页用于它的主场景；如果更看重“成熟的对话驱动多智能体框架”，再选 AutoGen。 | 成熟的对话驱动多智能体框架；多智能体 scope 可比，抽象不同、社区盘子更大。 |
-| CrewAI | 未收录 | 当前页用于它的主场景；如果更看重“角色/crew 式 agent 编排，DX 很好”，再选 CrewAI。 | 角色/crew 式 agent 编排，DX 很好；不像 AgentScope 那样强调 service/权限/沙箱/可观测这整套栈。 |
+| [DSPy](dspy.zh.md) | ✅ | 需要声明式 prompt/流水线*优化*，而不是多智能体服务运行时时，选 DSPy。 | 声明式的 prompt/流水线*优化*（编译 + 调优程序）；不是多智能体服务运行时。用它提质量，而不是用它编排/服务 agent。 |
+| [openfang](openfang.zh.md) | ✅ | 想要另一个已收录、运行时更像 OS 的 agent 框架时，选 openfang。 | 本索引内的同类 agent 框架；设计取向不同——选型前对比 scope/成熟度。[未验证] |
+| [Symphony](symphony.zh.md) | ✅ | 需要聚焦自治 coding agent 运行调度的同类框架时，选 Symphony。 | 本索引内的同类多智能体框架；“编排多个 agent”目标有重叠，工效学不同。[未验证] |
+| [claude-octopus](claude-octopus.zh.md) | ✅ | 需要围绕 Claude 式多智能体工作流的同类项目时，选 claude-octopus。 | 本索引内的同类项目，围绕 Claude 式多智能体工作流；模型聚焦比 AgentScope 的多 provider 服务更窄。 |
+| LangGraph | 未收录 | 需要生态庞大、控制流显式的图/状态机式编排时，选 LangGraph。 | 图/状态机式编排，生态庞大、控制流显式；比 AgentScope“信任模型”的循环更重、更有主张。 |
+| AutoGen | 未收录 | 需要成熟的对话驱动多智能体框架时，选 AutoGen。 | 成熟的对话驱动多智能体框架；多智能体 scope 可比，抽象不同、社区盘子更大。 |
+| CrewAI | 未收录 | 角色/crew 式 agent 编排和强 DX 比 AgentScope 的服务栈更重要时，选 CrewAI。 | 角色/crew 式 agent 编排，DX 很好；不像 AgentScope 那样强调 service/权限/沙箱/可观测这整套栈。 |
 
 ## 技术栈
 
@@ -127,7 +127,7 @@ health:
 
 ## 健康度与可持续性
 
-- **响应速度**：Grade B——中位首次响应时间 53.8 小时，基于 34 个 qualifying issues/PRs。
+- **响应速度**：Grade A——中位首次响应时间 30.8 小时，基于 36 个 qualifying issues/PRs。
 - **维护（2026-06）：** 活跃维护——默认分支 push 于 2026-06-25，最新 release v2.0.2（2026-06-16），未归档。健康的 open issue 数（约 262）配合稳定发版，读作一个有人投入的活项目，而非停滞。
 - **治理与背书：** Organization 持有（`agentscope-ai`），以 DashScope（阿里巴巴的模型平台）为默认/一等公民后端——即背后有一个贴近厂商的真实组织，而非单一维护者，bus-factor 上比单用户仓库更稳。它不在中立基金会（Apache/LF/CNCF）之下，故把治理当作贴近厂商的托管来看待（未经确认之处见存疑）。
 - **年龄与 Lindy（2026-06）：** 创建于 2024-01，约 2.5 岁——本批中**最老、最成熟**的项目，且仍在活跃发版。Lindy 裁决：**年龄 × 仍活跃，偏有利**（一个多年、有维护的框架）。需注意的是近期的 **v2.0 重写**：*项目*在 Lindy 上很强，但 *2.x API 面*年轻，因此社区配方和第三方集成仍比项目年龄所暗示的稀薄。

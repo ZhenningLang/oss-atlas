@@ -93,10 +93,10 @@ You also reach for it for one-off "feature spotlight" moments — you shipped a 
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| [Shepherd.js](shepherd-js.md) | ✅ | Use this page for its stated niche; choose [Shepherd.js](shepherd-js.md) when you need a robust OSS tour library with more built-in step/positioning options and a richer API. | Heavier bundle (~20KB+ gzipped due to Floating UI dependency) vs Driver.js's ~4KB dependency-free core; more features and better positioning robustness. |
-| [Intro.js](../web-ui/intro-js.md) | ✅ | Use this page for its stated niche; choose Intro.js when you want the original tour library with extensive docs and framework-agnostic support — but you accept AGPL-3.0 for non-commercial use or must purchase a commercial license. | The original tour library; widely used but its modern usage is **dual-licensed** (free for non-commercial, paid commercial license) — a real lock-in/cost consideration Driver.js (MIT) avoids (license terms in Caveats). |
-| Reactour / react-joyride | 未收录 | Use this page for its stated niche; choose Reactour / react-joyride when you need react-specific tour components (hooks/JSX-native). | React-specific tour components (hooks/JSX-native); nicer DX inside React, but framework-locked vs Driver.js's framework-agnostic vanilla core. |
-| Appcues / Userflow / Userpilot | 未收录 | Use this page for its stated niche; choose Appcues / Userflow / Userpilot when you need commercial no-code onboarding **platforms**. | Commercial no-code onboarding **platforms** — segmentation, analytics, targeting, checklists, surveys; not open-source repos, recurring SaaS cost, but solve product-led-growth, not just tour rendering. |
+| [Shepherd.js](shepherd-js.md) | ✅ | Choose Shepherd.js when you need a robust OSS tour library with more built-in step/positioning options and a richer API. | Heavier bundle (~20KB+ gzipped due to Floating UI dependency) vs Driver.js's ~4KB dependency-free core; more features and better positioning robustness. |
+| [Intro.js](intro-js.md) | ✅ | Choose Intro.js when you want the original tour library and accept AGPL-3.0 for non-commercial use or a paid commercial license. | The original tour library; widely used but its modern usage is **dual-licensed** (free for non-commercial, paid commercial license) — a real lock-in/cost consideration Driver.js (MIT) avoids (license terms in Caveats). |
+| Reactour / react-joyride | 未收录 | Choose Reactour / react-joyride when you need React-specific tour components with hooks or JSX-native APIs. | React-specific tour components (hooks/JSX-native); nicer DX inside React, but framework-locked vs Driver.js's framework-agnostic vanilla core. |
+| Appcues / Userflow / Userpilot | 未收录 | Choose Appcues, Userflow, or Userpilot when you need commercial no-code onboarding **platforms**. | Commercial no-code onboarding **platforms** — segmentation, analytics, targeting, checklists, surveys; not open-source repos, recurring SaaS cost, but solve product-led-growth, not just tour rendering. |
 
 ## Tech stack
 
@@ -117,7 +117,7 @@ You also reach for it for one-off "feature spotlight" moments — you shipped a 
 
 ## Health & viability
 
-- **Responsiveness**: Grade D — median first-response time 1735.8 hours across 4 qualifying issues/PRs.
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (2026-06).** Pushed 2026-06-27; latest release v1.6.0 on 2026-06-25, with 1.5.0/1.4.0 earlier in 2026 — **active and shipping**, not coasting. Not archived. [推断]
 - **Governance / bus factor.** The repo owner is a **`User` account, not an organization** — `nilbuild`, which is the renamed personal account of the original author Kamran Ahmed (`kamranahmedse`). One contributor holds ~521 commits while the next contributors sit at ~3 each ⇒ effectively a **single-maintainer project — a real bus-factor flag**. MIT-licensed and dependency-free, so a fork is cheap if maintenance ever lapses, but the roadmap follows one person. [推断]
 - **Age & Lindy verdict.** Created 2018-03 (~8 years old) and **still actively released** ⇒ a **solid Lindy** signal — a long-proven, widely-adopted tour library rather than a hyped newcomer. Use age × still-active: the bus-factor flag is the offsetting risk, not the age. [推断]

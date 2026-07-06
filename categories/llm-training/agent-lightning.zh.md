@@ -87,12 +87,12 @@ Agent Lightning 正是为此而生。它把 agent 执行建模为马尔可夫决
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [LLaMA-Factory](llamafactory.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“在数据集上做广覆盖的 SFT/DPO/PPO 微调，统一配置/UI”，再选 LLaMA-Factory。 | 在数据集上做广覆盖的 SFT/DPO/PPO 微调，统一配置/UI；不是为把一个在线多步 agent 解耦成 RL transition 而设计。 |
-| [Unsloth](unsloth.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“快速、省显存的单卡 SFT/LoRA”，再选 Unsloth。 | 快速、省显存的单卡 SFT/LoRA；是优化*内核/训练器*，不是 agent rollout 的 RL 编排器。 |
-| [ART](art.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“同样是面向 agent 的 RL，但是更有主张、更顺手的单循环体验”，再选 ART。 | 同样是面向 agent 的 RL，但是更有主张、更顺手的单循环体验；Agent Lightning 强调框架无关的解耦 + 可插拔后端。 |
-| verl | 未收录 | 当前页用于它的主场景；如果更看重“Agent Lightning 所依赖的底层分布式 RL 引擎”，再选 verl。 | Agent Lightning 所依赖的底层分布式 RL 引擎；强大，但要你把训练表达成它的生成循环，而不是包住一个原生 agent。 |
-| HF TRL | 未收录 | 当前页用于它的主场景；如果更看重“成熟的 PPO/GRPO/DPO 库”，再选 HF TRL。 | 成熟的 PPO/GRPO/DPO 库；以数据集/循环为中心，开箱没有 agent 执行解耦或多步信用分配。 |
-| OpenAI Agents SDK / LangChain（单用） | 未收录 | 当前页用于它的主场景；如果更看重“用来构建和运行 agent，但不会从 rollout 训练底层模型”，再选 OpenAI Agents SDK / LangChain（单用）。 | 用来构建和运行 agent，但不会从 rollout 训练底层模型——Agent Lightning 叠在它们之上让它们变得可训练。 |
+| [LLaMA-Factory](llamafactory.zh.md) | ✅ | 需要在数据集上做广覆盖 SFT/DPO/PPO 微调，并使用统一配置/UI 时，选 LLaMA-Factory。 | 它擅长数据集微调，不是为在线多步 agent rollout 设计。 |
+| [Unsloth](unsloth.zh.md) | ✅ | 快速、省显存的单卡 SFT/LoRA 是瓶颈时，选 Unsloth。 | 它是优化*内核/训练器*，不是 agent rollout 的 RL 编排器。 |
+| [ART](art.zh.md) | ✅ | 同样需要面向 agent 的 RL，但更偏好有主张的单循环体验时，选 ART。 | Agent Lightning 强调框架无关的解耦和可插拔后端；ART 更偏易用体验。 |
+| verl | 未收录 | 需要 Agent Lightning 所依赖的底层分布式 RL 引擎时，选 verl。 | 它很强，但要你把训练表达成它的生成循环，而不是包住一个原生 agent。 |
+| HF TRL | 未收录 | 需要成熟的 PPO/GRPO/DPO 库做数据集或循环中心训练时，选 HF TRL。 | 开箱没有 agent 执行解耦或多步信用分配。 |
+| OpenAI Agents SDK / [LangChain](../agent-frameworks/langchain.zh.md)（单用） | 部分已收录 | 只需要构建和运行 agent，而不是从 rollout 训练底层模型时，选单独的 agent 框架。 | Agent Lightning 叠在 agent 执行之上，让 rollout 可训练；普通框架止步于编排。OpenAI Agents SDK 未单独收录。 |
 
 ## 技术栈
 
@@ -116,12 +116,12 @@ Agent Lightning 正是为此而生。它把 agent 执行建模为马尔可夫决
 
 ## 健康度与可持续性
 
-- **响应速度**：Grade C——中位首次响应时间 73.4 小时，基于 1 个 qualifying issues/PRs。
-- **维护——活跃（截至 2026-06）。** 仓库 2026-04 有推送；发布 v0.x，近期有 v0.3.0（据称 2025 年底）。处于 1.0 之前，API 变动快、dashboard 仍是预览版、后端可插拔——是活的、在动的，但 minor 之间预期会有破坏性变更。未归档。[未验证]
-- **治理与背书——微软（企业研究）。** 由 `microsoft` 以 Organization 持有。大厂背书意味着真实的工程投入，对存续是利好；相对的风险是，企业研究型仓库一旦研究兴趣转移就可能被降级或归档——微软此前确有退役此类项目的先例。路线图由厂商掌控。[推断]
-- **年龄与 Lindy——年轻 / 未经检验。** 创建于 2025-06，约 1 年。太新，没有 Lindy 履历；这笔押注靠的是微软持续投入和 agent-RL 领域成熟，而非长寿。请锁版本，并当作早期项目对待。
-- **采用与生态。** 约 17k star 快速积累，agent 框架集成广（LangChain、AutoGen、CrewAI、AgentScope、OpenAI Agents SDK）；但框架无关、多后端的设计意味着 tracer + store + 训练后端 + serving 要你自己拼——采用深度（生产用户）未经核实。
-- **风险标记——v0.x churn + 多后端拼装。** MIT，不断言重新授权/CVE 历史。真正的标记是 v0.x 的 API 不稳定、对快速演进的 RL 栈（VERL/vLLM/SGLang）的依赖，以及上文提到的企业研究弃坑风险。
+- **维护活跃度**：Grade C——最近 13 周中 1 周有提交；最后提交距今 65 天。
+- **响应速度**：无法计算——no_traffic。
+- **采用广度**：无法计算——ambiguous。
+- **长青度**：Grade C——仓库已创建 380 天。
+- **治理集中度**：Grade D——前三贡献者占比 85.2%（?）。
+- **许可风险**：Grade A——MIT 许可证。
 
 ## 存疑（未验证）
 

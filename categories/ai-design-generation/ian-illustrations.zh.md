@@ -88,12 +88,12 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [guizang-social-card](guizang-social-card.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“生成精修的社交/金句卡片（常走可编辑模板），不是手绘的正文解释草图”，再选 guizang-social-card。 | 生成精修的社交/金句卡片（常走可编辑模板），不是手绘的正文解释草图；视觉调性不同。 |
-| [guizang-ppt](guizang-ppt.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“做幻灯片 deck（结构化、多页）”，再选 guizang-ppt。 | 做幻灯片 deck（结构化、多页）；本 skill 只做单概念正文配图，并拒绝做 deck。 |
-| [html-anything](html-anything.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“产出可编辑、可托管的 HTML/CSS 产物”，再选 html-anything。 | 产出可编辑、可托管的 HTML/CSS 产物；本 skill 产出固定画风的扁平 PNG。 |
-| [open-design](open-design.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“偏向可复用的 UI/设计系统产物”，再选 open-design。 | 偏向可复用的 UI/设计系统产物；与「固定 IP 的中文配图嗓音」是正交诉求。 |
-| [impeccable](impeccable.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“生成目标不同（设计类产物），而非固定 IP 的中文插画风格”，再选 impeccable。 | 生成目标不同（设计类产物），而非固定 IP 的中文插画风格。 |
-| nano-banana / gpt-image 提示词包 | 未收录 | 当前页用于它的主场景；如果更看重“通用出图提示词集合给你裸的模型访问，但没有本 skill 的文章分析、shot list、一致 IP 这一层”，再选 nano-banana / gpt-image 提示词包。 | 通用出图提示词集合给你裸的模型访问，但没有本 skill 的文章分析、shot list、一致 IP 这一层。 |
+| [guizang-social-card](guizang-social-card.zh.md) | ✅ | 需要精修社交/金句卡片而非手绘正文解释草图时，选 guizang-social-card。 | 生成精修的社交/金句卡片（常走可编辑模板），不是手绘的正文解释草图；视觉调性不同。 |
+| [guizang-ppt](guizang-ppt.zh.md) | ✅ | 需要结构化多页幻灯片 deck 时，选 guizang-ppt。 | 做幻灯片 deck（结构化、多页）；本 skill 只做单概念正文配图，并拒绝做 deck。 |
+| [html-anything](html-anything.zh.md) | ✅ | 需要可编辑、可托管的 HTML/CSS 产物时，选 html-anything。 | 产出可编辑、可托管的 HTML/CSS 产物；本 skill 产出固定画风的扁平 PNG。 |
+| [open-design](open-design.zh.md) | ✅ | 需要可复用 UI/设计系统产物时，选 open-design。 | 偏向可复用的 UI/设计系统产物；与「固定 IP 的中文配图嗓音」是正交诉求。 |
+| [impeccable](impeccable.zh.md) | ✅ | 目标是通用设计产物而非固定中文插画 voice 时，选 impeccable。 | 生成目标不同（设计类产物），而非固定 IP 的中文插画风格。 |
+| nano-banana / gpt-image 提示词包 | 未收录 | 裸模型访问已经足够时，选通用出图提示词包。 | 通用出图提示词集合给你裸的模型访问，但没有本 skill 的文章分析、shot list、一致 IP 这一层。 |
 
 ## 健康度与可持续性
 

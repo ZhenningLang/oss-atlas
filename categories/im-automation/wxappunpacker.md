@@ -90,9 +90,9 @@ But note what you're actually reaching for: **not this repo.** `xdmjun/wxappUnpa
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| qwerty472123/wxappUnpacker (upstream) | 未收录 | Use this page for its stated niche; choose qwerty472123/wxappUnpacker (upstream) when you need the original lineage. | The original lineage; more complete than this gutted fork, but **archived/read-only since 2020** — also unmaintained, just not deleted. |
-| Other live forks (SangeCoder / PyCoreDev / yangyang5214) | 未收录 | Use this page for its stated niche; choose Other live forks (SangeCoder / PyCoreDev / yangyang5214) when you need where working code survives. | Where working code survives; PyCoreDev (2023-02) retains full code + `package.json`. None are large or clearly maintained — pick by recency and read the diff yourself. |
-| Custom unpack scripts | 未收录 | Use this page for its stated niche; choose Custom unpack scripts when you need the `. | The `.wxapkg` format is documented enough that ad-hoc scripts exist; viable if you only need asset extraction, not full source restore. |
+| qwerty472123/wxappUnpacker (upstream) | 未收录 | Choose upstream when original lineage and more complete archived code matter. | The original lineage; more complete than this gutted fork, but **archived/read-only since 2020** — also unmaintained, just not deleted. |
+| Other live forks (SangeCoder / PyCoreDev / yangyang5214) | 未收录 | Choose live forks when working code survival matters more than this gutted repo. | Where working code survives; PyCoreDev (2023-02) retains full code + `package.json`. None are large or clearly maintained — pick by recency and read the diff yourself. |
+| Custom unpack scripts | 未收录 | Choose custom scripts when you only need asset extraction from `.wxapkg`. | The `.wxapkg` format is documented enough that ad-hoc scripts exist; viable if you only need asset extraction, not full source restore. |
 
 ## Tech stack
 

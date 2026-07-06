@@ -91,13 +91,13 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| GRASS GIS | 未收录 | 当前页用于它的主场景；如果更看重“强大的栅格/地理分析引擎和拓扑模型”，再选 GRASS GIS。 | 强大的栅格/地理分析引擎和拓扑模型；UI 更陡峭，常作为 Processing provider 在 QGIS 里**被调用**而非独立使用。 |
-| SAGA GIS | 未收录 | 当前页用于它的主场景；如果更看重“地形/栅格分析库和模块很强”，再选 SAGA GIS。 | 地形/栅格分析库和模块很强；制图与通用编辑较弱；同样被封装进 QGIS Processing。 |
-| GDAL/OGR | 未收录 | 当前页用于它的主场景；如果更看重“QGIS 自身依赖的底层 I/O + 栅格/矢量转换库”，再选 GDAL/OGR。 | QGIS 自身依赖的底层 I/O + 栅格/矢量转换库；是 CLI/库而非桌面应用——脚本化 ETL 选它，交互式制图不选它。 |
-| GeoServer | 未收录 | 当前页用于它的主场景；如果更看重“面向发布的 Java OGC 服务端（WMS/WFS/WCS）”，再选 GeoServer。 | 面向发布的 Java OGC 服务端（WMS/WFS/WCS）；在发布侧与 QGIS Server 重叠，但没有桌面端的制作/分析 GUI。 |
-| MapServer | 未收录 | 当前页用于它的主场景；如果更看重“快速、成熟的 C 语言 OGC 地图服务端”，再选 MapServer。 | 快速、成熟的 C 语言 OGC 地图服务端；仅做发布、用 mapfile 配置；对标 QGIS Server，而非桌面端。 |
-| GeoPandas / Shapely | 未收录 | 当前页用于它的主场景；如果更看重“面向代码优先/可复现流水线的 Python 原生矢量分析”，再选 GeoPandas / Shapely。 | 面向代码优先/可复现流水线的 Python 原生矢量分析；没有 GUI、没有制图打印排版、不以栅格为先。 |
-| ArcGIS Pro (Esri) | 未收录 | 当前页用于它的主场景；如果更看重“专有商业桌面 GIS”，再选 ArcGIS Pro (Esri)。 | 专有商业桌面 GIS；厂商支持/生态更广但有授权成本——QGIS 主要替代的就是这个商业方案。 |
+| GRASS GIS | 未收录 | 当你要深度栅格分析和拓扑重工作流时，选 GRASS GIS；当桌面制图、编辑和更友好的插件/处理外壳更重要时，选 QGIS。 | 强大的栅格/地理分析引擎和拓扑模型；UI 更陡峭，常作为 Processing provider 在 QGIS 里**被调用**而非独立使用。 |
+| SAGA GIS | 未收录 | 当地形和栅格分析模块是中心时，选 SAGA；当还需要通用桌面 GIS、制图和编辑时，选 QGIS。 | 地形/栅格分析库和模块很强；制图与通用编辑较弱；同样被封装进 QGIS Processing。 |
+| GDAL/OGR | 未收录 | 当你要脚本化 ETL、格式转换和适合 CI 的代码路径时，选 GDAL/OGR；当你要交互式桌面制图、工程编排和可视化分析时，选 QGIS。 | QGIS 自身依赖的底层 I/O + 栅格/矢量转换库；是 CLI/库而非桌面应用——脚本化 ETL 选它，交互式制图不选它。 |
+| GeoServer | 未收录 | 当需求是 OGC 发布服务端时，选 GeoServer；当你需要桌面制作/分析，或要把 QGIS Server 绑定到 QGIS 工程时，选 QGIS。 | 面向发布的 Java OGC 服务端（WMS/WFS/WCS）；在发布侧与 QGIS Server 重叠，但没有桌面端的制作/分析 GUI。 |
+| MapServer | 未收录 | 当你要成熟快速、用 mapfile 配置的 OGC 发布服务时，选 MapServer；当要桌面 GIS 流程或作者已维护 QGIS 工程时，选 QGIS。 | 快速、成熟的 C 语言 OGC 地图服务端；仅做发布、用 mapfile 配置；对标 QGIS Server，而非桌面端。 |
+| GeoPandas / Shapely | 未收录 | 当你要 Python 原生、可复现的矢量流水线时，选 GeoPandas 和 Shapely；当 GUI 编辑、制图排版或栅格优先流程更重要时，选 QGIS。 | 面向代码优先/可复现流水线的 Python 原生矢量分析；没有 GUI、没有制图打印排版、不以栅格为先。 |
+| ArcGIS Pro (Esri) | 未收录 | 当专有 Esri 生态支持、扩展或格式是硬要求时，选 ArcGIS Pro；当开源桌面 GIS 和较低授权成本是决定因素时，选 QGIS。 | 专有商业桌面 GIS；厂商支持/生态更广但有授权成本——QGIS 主要替代的就是这个商业方案。 |
 
 ## 技术栈
 

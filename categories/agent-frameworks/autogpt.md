@@ -115,10 +115,10 @@ You are a developer or team that needs to automate complex, multi-step tasks wit
 **High**. Self-hosting the AutoGPT platform requires multiple services (backend, frontend, database, Redis), environment configuration, and ongoing monitoring. The system is resource-intensive and agents can fail in unexpected ways, requiring human oversight.
 
 ## Health & viability
-- **Maintenance**: Grade A — 13/13 active weeks in trailing 13; last commit 7 days ago.
-- **Responsiveness**: Grade B — median first-response time 48.1 hours across 29 qualifying issues/PRs.
+- **Maintenance**: Grade A — 12/13 active weeks in trailing 13; last commit 8 days ago.
+- **Responsiveness**: Grade A — median first-response time 47.7 hours across 28 qualifying issues/PRs.
 - **Adoption**: Cannot be scored — unknown.
-- **Longevity**: Grade B — 1204 days old.
+- **Longevity**: Grade B — 1205 days old.
 - **Governance**: Grade A — top-3 contributor share 56.2% (?).
 - **Risk / License**: Cannot be scored — unknown.
 ## Caveats (unverified)

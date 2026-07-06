@@ -94,10 +94,10 @@ In practice today, that pitch lives on in **thriftpy2**, the maintained fork. Yo
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| thriftpy2 | 未收录 | Use this page for its stated niche; choose thriftpy2 when you need the maintained successor by the same org. | The maintained successor by the same org — same runtime-load-`.thrift` model, current Python, active in 2026. The drop-in reason to leave this repo. |
-| Apache Thrift (official `thrift` Python lib) | 未收录 | Use this page for its stated niche; choose Apache Thrift (official thrift Python lib) when you need canonical, multi-language, foundation-governed. | Canonical, multi-language, foundation-governed; requires a code-generation build step and is heavier, but is the reference implementation and broadly supported. |
-| gRPC + Protocol Buffers | 未收录 | Use this page for its stated niche; choose gRPC + Protocol Buffers when you need different IDL/wire protocol (HTTP/2, protobuf). | Different IDL/wire protocol (HTTP/2, protobuf); far larger ecosystem and tooling, the common modern choice for new RPC, but not Thrift-compatible. |
-| Apache Avro | 未收录 | Use this page for its stated niche; choose Apache Avro when you need schema-based serialization with RPC. | Schema-based serialization with RPC; JSON-defined schemas, strong in data/Hadoop ecosystems; not wire-compatible with Thrift. |
+| thriftpy2 | 未收录 | Choose thriftpy2 when you need the maintained runtime-load-`.thrift` successor and are leaving this archived repo. | Same model with current Python support; the direct migration target. |
+| Apache Thrift (official `thrift` Python lib) | 未收录 | Choose official Apache Thrift when canonical multi-language stubs and foundation governance matter more than runtime IDL loading. | Heavier because of code generation, but broadly supported and the reference implementation. |
+| gRPC + Protocol Buffers | 未收录 | Choose gRPC and Protocol Buffers for new RPC designs that do not need Thrift wire compatibility. | Larger modern ecosystem over HTTP/2/protobuf, but it is a migration to a different protocol. |
+| Apache Avro | 未收录 | Choose Avro when schema-based serialization in data/Hadoop ecosystems is the deciding constraint. | JSON-defined schemas and RPC support, but not wire-compatible with Thrift. |
 
 ## Tech stack
 
@@ -118,12 +118,12 @@ In practice today, that pitch lives on in **thriftpy2**, the maintained fork. Yo
 
 ## Health & viability
 
-- **Responsiveness**: Grade E.
-- **Maintenance (2026-06).** **Abandoned / archived.** Last release `v0.3.9` 2016-08, last push 2018-12, repo flagged `archived` on GitHub. The README explicitly deprecates it in favor of thriftpy2. [推断]
-- **Governance / bus factor.** Lives under the `Thriftpy` GitHub org (Organization owner), originally created at eleme. Maintainer effort has fully moved to the thriftpy2 repo; this one receives nothing. [推断]
-- **Age × Lindy.** Created 2014-02 (~12 years old) but **not still active** — a long-*abandoned* project fails the Lindy test rather than passing it. Longevity here is history, not a safety signal. [推断]
-- **Successor health.** **thriftpy2** (same org) is the live continuation: pushed 2026-06, not archived, ~587 stars, ~43 open issues — the bet to make if you want this family. [未验证]
-- **Risk flags.** Deprecation notice (explicit), archived repo, Python 2-era code, obsolete pinned async deps. No relicense history (MIT throughout). The dominant risk is simply that it is end-of-life.
+- **Maintenance**: Grade B — 1/13 active weeks in trailing 13; last commit 1 day ago.
+- **Responsiveness**: Cannot be scored — no_traffic.
+- **Adoption**: Grade C — 19,000 monthly downloads via pypi.org (package: thriftpy).
+- **Longevity**: Grade A — 4525 days old.
+- **Governance**: Grade D — top-3 contributor share 1.0 (100.0%) (?).
+- **Risk / License**: Grade A — MIT license.
 
 ## Caveats (unverified)
 

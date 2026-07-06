@@ -84,12 +84,12 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [page-agent](page-agent.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“页面内 JS GUI agent，在用户自己的浏览器里把 DOM 当文本操作”，再选 page-agent。 | 页面内 JS GUI agent，在用户自己的浏览器里把 DOM 当文本操作——无 VM、无视觉，远更便宜更快，但仅限 web、碰不到原生桌面应用。 |
-| [Chrome DevTools MCP](chrome-devtools-mcp.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“通过 MCP 用 DevTools 协议暴露真实 Chrome”，再选 Chrome DevTools MCP。 | 通过 MCP 用 DevTools 协议暴露真实 Chrome——擅长浏览器调试/自动化，但范围限于 Chrome，不是整桌面沙箱。 |
-| [Agent Browser](agent-browser.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“面向 agent 的无头浏览器自动化 CLI”，再选 Agent Browser。 | 面向 agent 的无头浏览器自动化 CLI——轻量的 web 任务执行器；无 OS 级控制、无 VM 隔离。 |
-| OpenAI Operator / Anthropic computer use | 未收录 | 当前页用于它的主场景；如果更看重“托管的视觉 computer-use agent”，再选 OpenAI Operator / Anthropic computer use。 | 托管的视觉 computer-use agent——开箱即用但闭源、绑定单一模型厂商；Cua 是可自托管的开源基础设施层（且能通过 liteLLM *运行*这些模型）。 |
-| OSWorld / WebArena（评测基准） | 未收录 | 当前页用于它的主场景；如果更看重“Cua-Bench 对接的评测环境”，再选 OSWorld / WebArena（评测基准）。 | Cua-Bench 对接的评测环境——它们给 agent 打分；Cua 提供被打分的可运行沙箱 + agent。 |
-| E2B / Daytona（开发沙箱） | 未收录 | 当前页用于它的主场景；如果更看重“面向 agent 的代码执行沙箱”，再选 E2B / Daytona（开发沙箱）。 | 面向 agent 的代码执行沙箱——在 VM 隔离上有重叠，但定位是跑代码，不是截图驱动 GUI 桌面。 |
+| [page-agent](page-agent.zh.md) | ✅ | 只需要用户浏览器内的 DOM-as-text 自动化时，选 page-agent。 | 页面内 JS GUI agent，在用户自己的浏览器里把 DOM 当文本操作——无 VM、无视觉，远更便宜更快，但仅限 web、碰不到原生桌面应用。 |
+| [Chrome DevTools MCP](chrome-devtools-mcp.zh.md) | ✅ | 需要通过 MCP 暴露 DevTools 协议上的真实 Chrome 时，选 Chrome DevTools MCP。 | 通过 MCP 用 DevTools 协议暴露真实 Chrome——擅长浏览器调试/自动化，但范围限于 Chrome，不是整桌面沙箱。 |
+| [Agent Browser](agent-browser.zh.md) | ✅ | 需要轻量的 agent 无头浏览器自动化 CLI 时，选 Agent Browser。 | 面向 agent 的无头浏览器自动化 CLI——轻量的 web 任务执行器；无 OS 级控制、无 VM 隔离。 |
+| OpenAI Operator / Anthropic computer use | 未收录 | 可接受托管闭源视觉 computer-use agent 时，选 OpenAI Operator 或 Anthropic computer use。 | 托管的视觉 computer-use agent——开箱即用但闭源、绑定单一模型厂商；Cua 是可自托管的开源基础设施层（且能通过 liteLLM *运行*这些模型）。 |
+| OSWorld / WebArena（评测基准） | 未收录 | 需要评测环境而不是可运行沙箱时，选 OSWorld 或 WebArena。 | Cua-Bench 对接的评测环境——它们给 agent 打分；Cua 提供被打分的可运行沙箱 + agent。 |
+| E2B / Daytona（开发沙箱） | 未收录 | 需要面向 agent 的代码执行沙箱时，选 E2B 或 Daytona。 | 面向 agent 的代码执行沙箱——在 VM 隔离上有重叠，但定位是跑代码，不是截图驱动 GUI 桌面。 |
 
 ## 技术栈
 
@@ -113,7 +113,7 @@ health:
 
 ## 健康度与可持续性
 
-- **响应速度**：Grade B——中位首次响应时间 66.6 小时，基于 15 个 qualifying issues/PRs。
+- **响应速度**：Grade A——中位首次响应时间 1.5 小时，基于 12 个 qualifying issues/PRs。
 - **维护——多包并行、活跃。** 最后一次 push 在 2026-06，未归档；monorepo 的各包（cua-agent v0.8.4、cua-sandbox v0.1.17、cua-cloud、cua-driver-rs v0.6.8、cua-bench）均在 2026-06 更新。活跃，但你要跟踪**多条独立版本线**，且 `cua-driver-rs`/Linux 驱动标注为 pre-release。`[未验证]`
 - **治理 / 背书——单一创业公司（trycua）。** 仓库为 **Organization** 所有（`trycua/cua`），约 19k star[未验证]。背后是一家风投阶段公司（cua.ai 托管产品的母体）——比单个维护者好，但其寿命系于这家公司的存续与融资。`[推断]`
 - **年龄与 Lindy——年轻（创建于 2025-01，截至 2026-06 约 1.5 年）。** 够久到能展示真实的基准集成（OSWorld/ScreenSpot/Windows Arena），但众多 `v0.x` 包标志着 API 仍在稳定前；尚无 Lindy 先验。预期破坏性变更；按包 pin 版本。

@@ -96,7 +96,7 @@ You're a developer who spends most of your day in a terminal and wants a modern,
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| Alacritty | 未收录 | Use Warp for an AI-native, IDE-like terminal experience; choose Alacritty when you want a fast, cross-platform, OpenGL terminal emulator that is fully open source. | Fully open source and minimal, but no native AI features, no command blocks, and no built-in shell intelligence. |
+| [Alacritty](alacritty.md) | ✅ | Use Warp for an AI-native, IDE-like terminal experience; choose Alacritty when you want a fast, cross-platform, OpenGL terminal emulator that is fully open source. | Fully open source and minimal, but no native AI features, no command blocks, and no built-in shell intelligence. |
 | iTerm2 | 未收录 | Use Warp for an AI-native, modern terminal across macOS and Linux; choose iTerm2 when you want the most popular macOS terminal with deep macOS integration and no AI-centric design. | macOS-only, not open source, but mature and feature-rich without the AI-centric design of Warp. |
 | Tabby | 未收录 | Use Warp for a polished, commercially supported AI terminal; choose Tabby when you want a modern, open-source terminal with SSH client and serial support. | Open source and cross-platform, with some modern UI features, but less AI-native than Warp. |
 | [asciimatics](asciimatics.md) | ✅ | A Python TUI library for building terminal UIs, not a terminal emulator. | This is a library for building TUIs, not a standalone terminal app — different category. |

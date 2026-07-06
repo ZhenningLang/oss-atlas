@@ -87,12 +87,12 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [Agent Skills (addyosmani)](addyosmani-agent-skills.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“同作者更宽的通用 agent-skills 包”，再选 Agent Skills (addyosmani)。 | 同作者更宽的通用 agent-skills 包；本包是窄的 web 质量垂类。想要通用 + web 质量都覆盖可两个都装，但留意路由重叠。 |
-| [Scientific Agent Skills](scientific-agent-skills.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“面向科研 / 工程工作流的姊妹技能包，与 web 质量无关”，再选 Scientific Agent Skills。 | 面向科研 / 工程工作流的姊妹技能包，与 web 质量无关 —— 互补，不同领域。 |
-| [Waza](waza.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“本 leaf 下另一个工程技能集”，再选 Waza。 | 本 leaf 下另一个工程技能集；按各自实际覆盖的生命周期阶段比较。 |
-| [Vercel Agent Skills](vercel-agent-skills.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“Vercel 的 agent-skills 集，偏部署 / Next”，再选 Vercel Agent Skills。 | Vercel 的 agent-skills 集，偏部署 / Next.js；在 web 性能上有重叠，但围绕其平台组织。 |
-| Lighthouse CI / WebPageTest | 未收录 | 当前页用于它的主场景；如果更看重“真正的测量 + CI 卡门工具（不是技能包）”，再选 Lighthouse CI / WebPageTest。 | 真正的测量 + CI 卡门工具（不是技能包）。需要数字和卡构建的预算时用它们；本包是解释并修复的建议层，不是仪表。 |
-| 自己把规则粘进上下文 | n/a | 当前页用于它的主场景；如果更看重“零安装、完全可控，但很烦且会过期”，再选 自己把规则粘进上下文。 | 零安装、完全可控，但很烦且会过期；这个包的全部价值就是把清单打包成可即时加载。 |
+| [Agent Skills (addyosmani)](addyosmani-agent-skills.zh.md) | ✅ | 需要通用工程覆盖、而不只是 web 质量时，选 Addy Osmani 的大包。 | 同作者更宽的通用 agent-skills 包；本包是窄的 web 质量垂类。想要通用 + web 质量都覆盖可两个都装，但留意路由重叠。 |
+| [Scientific Agent Skills](scientific-agent-skills.zh.md) | ✅ | 问题是科研或研究工程、不是 web 质量时，选 Scientific Agent Skills。 | 面向科研 / 工程工作流的姊妹技能包，与 web 质量无关——互补，不同领域。 |
+| [Waza](waza.zh.md) | ✅ | 需要通用工程习惯包、不是 web 质量规则时，选 Waza。 | 本 leaf 下另一个工程技能集；按各自实际覆盖的生命周期阶段比较。 |
+| [Vercel Agent Skills](vercel-agent-skills.zh.md) | ✅ | 部署与 Next.js/Vercel 平台规则重要时，选 Vercel Agent Skills。 | Vercel 的 agent-skills 集，偏部署 / Next.js；在 web 性能上有重叠，但围绕其平台组织。 |
+| Lighthouse CI / WebPageTest | 未收录 | 需要真实指标、CI 预算和构建卡门时，选测量工具。 | 真正的测量 + CI 卡门工具（不是技能包）。需要数字和卡构建的预算时用它们；本包是解释并修复的建议层，不是仪表。 |
+| 自己把规则粘进上下文 | n/a | 只有当零安装和完全可控比清单过期风险更重要时，才选手动提示。 | 零安装、完全可控，但很烦且会过期；这个包的全部价值就是把清单打包成可即时加载。 |
 
 ## 健康度与可持续性
 

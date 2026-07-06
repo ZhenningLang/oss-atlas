@@ -83,10 +83,10 @@ This is the right reach when you want a *queryable, always-on* free-proxy pool w
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| [ProxyBroker](proxybroker.md) | ✅ | Use this page for its stated niche; choose ProxyBroker when you need a CLI-first finder/checker/server rather than a UI+API service. | A CLI-first finder/checker/server rather than a UI+API service; more dormant and more prone to modern-Python breakage, but lighter to invoke for a quick harvest. |
-| [haipproxy](haipproxy.md) | ✅ | Use this page for its stated niche; choose haipproxy when you need distributed Scrapy+Redis pool built for high-availability at crawler scale. | Distributed Scrapy+Redis pool built for high-availability at crawler scale; much heavier infra (Redis required) and also long-dormant, vs Scylla's single-service simplicity. |
-| Paid proxy providers (Bright Data, Oxylabs, …) | 未收录 | Use this page for its stated niche; choose Paid proxy providers (Bright Data, Oxylabs, …) when you need commercial pools with SLAs, auth, residential IPs, and rotation. | Commercial pools with SLAs, auth, residential IPs, and rotation — the production answer; Scylla only fits when free + self-hosted is acceptable. |
-| proxy_pool (jhao104) | 未收录 | Use this page for its stated niche; choose proxypool (jhao104) when you need another popular self-hosted free-proxy pool with a similar crawl/validate/API shape (Redis-backed). | Another popular self-hosted free-proxy pool with a similar crawl/validate/API shape (Redis-backed); comparable niche, different stack and maintenance status. [未验证] |
+| [ProxyBroker](proxybroker.md) | ✅ | Choose ProxyBroker when a CLI-first finder/checker/server is lighter than a standing service. | A CLI-first finder/checker/server rather than a UI+API service; more dormant and more prone to modern-Python breakage, but lighter to invoke for a quick harvest. |
+| [haipproxy](haipproxy.md) | ✅ | Choose haipproxy when distributed Scrapy+Redis availability matters more than single-service simplicity. | Distributed Scrapy+Redis pool built for high-availability at crawler scale; much heavier infra (Redis required) and also long-dormant, vs Scylla's single-service simplicity. |
+| Paid proxy providers (Bright Data, Oxylabs, …) | 未收录 | Choose paid providers when production SLAs, auth, residential IPs, and rotation are required. | Commercial pools with SLAs, auth, residential IPs, and rotation — the production answer; Scylla only fits when free + self-hosted is acceptable. |
+| [proxy_pool (jhao104)](proxy-pool.md) | ✅ | Choose proxy_pool when you want a Redis-backed free-proxy pool with a simpler comparable shape. | Another popular self-hosted free-proxy pool with a similar crawl/validate/API shape (Redis-backed); comparable niche, different stack and maintenance status. [未验证] |
 
 ## Tech stack
 

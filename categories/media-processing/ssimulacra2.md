@@ -86,12 +86,12 @@ You also use it when you want a lightweight, self-contained tool with no model f
 
 | Alternative | In index | Our verdict | Tradeoff |
 | --- | --- | --- | --- |
-| [VMAF](../media-processing/vmaf.md) | ✅ | Use this page for its stated niche; choose VMAF when you need the industry-standard perceptual video metric. | Industry-standard video metric with broad adoption, temporal pooling, and multiple models; SSIMULACRA2 is image-only and younger. |
-| PSNR / SSIM (standalone) | 未收录 | Use this page for its stated niche; choose PSNR / SSIM (standalone) when you need simple, fast signal-fidelity metrics. | Classic metrics; cheap and ubiquitous but correlate poorly with perceived quality. SSIMULACRA2 is specifically designed for better human correlation. |
-| Butteraugli | 未收录 | Use this page for its stated niche; choose Butteraugli when you need Google's perceptual metric from the JPEG XL ecosystem. | Google's perceptual metric from the JPEG XL ecosystem; similar lineage but different scoring model and implementation. |
-| DSSIM | 未收录 | Use this page for its stated niche; choose DSSIM when you need a standalone structural dissimilarity metric. | Structural dissimilarity metric based on SSIM; simpler and older than SSIMULACRA2's multiscale XYB approach. |
-| AVQT | 未收录 | Use this page for its stated niche; choose AVQT when you need Apple's proprietary perceptual metric. | Apple's proprietary video quality metric; closed implementation, comparable goal but different ecosystem. |
-| Netflix VMAF cloud/SaaS scorers | 未收录 | Use this page for its stated niche; choose Netflix VMAF cloud/SaaS scorers when you need hosted quality scoring. | Hosted quality-scoring services; convenience over running metrics yourself, with vendor dependence. |
+| [VMAF](vmaf.md) | ✅ | Choose VMAF when you need the industry-standard perceptual video metric. | Industry-standard video metric with broad adoption, temporal pooling, and multiple models; SSIMULACRA2 is image-only and younger. |
+| PSNR / SSIM (standalone) | 未收录 | Choose PSNR or SSIM when you need simple, fast signal-fidelity metrics. | Classic metrics; cheap and ubiquitous but correlate poorly with perceived quality. SSIMULACRA2 is specifically designed for better human correlation. |
+| Butteraugli | 未收录 | Choose Butteraugli when you need Google's perceptual metric from the JPEG XL ecosystem. | Google's perceptual metric from the JPEG XL ecosystem; similar lineage but different scoring model and implementation. |
+| DSSIM | 未收录 | Choose DSSIM when you need a standalone structural dissimilarity metric. | Structural dissimilarity metric based on SSIM; simpler and older than SSIMULACRA2's multiscale XYB approach. |
+| AVQT | 未收录 | Choose AVQT when you need Apple's proprietary perceptual metric. | Apple's proprietary video quality metric; closed implementation, comparable goal but different ecosystem. |
+| Netflix VMAF cloud/SaaS scorers | 未收录 | Choose hosted VMAF scorers when you need managed quality scoring. | Hosted quality-scoring services; convenience over running metrics yourself, with vendor dependence. |
 
 ## Tech stack
 

@@ -94,10 +94,10 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| OpenAI / Gemini "Deep Research" | 未收录 | 当前页用于它的主场景；如果更看重“托管、开箱即用、质量强、无需自己跑 GPU”，再选 OpenAI / Gemini "Deep Research"。 | 托管、开箱即用、质量强、无需自己跑 GPU；但闭源、按用量付费、不能自托管或控制模型——与 MiroThinker 取舍相反。 |
-| GPT-Researcher | 未收录 | 当前页用于它的主场景；如果更看重“轻量的开源研究 agent，编排一个冻结的 LLM API + 网络工具”，再选 GPT-Researcher。 | 轻量的开源研究 agent，编排一个冻结的 LLM API + 网络工具；跑起来便宜得多（无自托管权重），但没有自己的微调模型或基准调优框架。 |
-| smolagents / LangGraph + 工具 | 未收录 | 当前页用于它的主场景；如果更看重“你在其上自行组装研究循环的通用 agent 框架”，再选 smolagents / LangGraph + 工具。 | 你在其上自行组装研究循环的通用 agent 框架；更灵活、模型无关，但研究管线和调优要你自己搭。 |
-| Open Deep Research（HF） | 未收录 | 当前页用于它的主场景；如果更看重“在 API 模型上对 deep-research agent 的开源复现”，再选 Open Deep Research（HF）。 | 在 API 模型上对 deep-research agent 的开源复现；开源精神相近，但栈不同，且（通常）没有自托管的微调权重。 |
+| OpenAI / Gemini "Deep Research" | 未收录 | 需要托管、开箱即用、无需 GPU 的强质量方案时，选 OpenAI/Gemini Deep Research。 | 托管、开箱即用、质量强、无需自己跑 GPU；但闭源、按用量付费、不能自托管或控制模型——与 MiroThinker 取舍相反。 |
+| GPT-Researcher | 未收录 | 需要轻量开源 agent 编排 LLM API 和网络工具时，选 GPT-Researcher。 | 轻量的开源研究 agent，编排一个冻结的 LLM API + 网络工具；跑起来便宜得多（无自托管权重），但没有自己的微调模型或基准调优框架。 |
+| [smolagents](../agent-frameworks/smolagents.zh.md) / LangGraph + 工具 | 部分已收录 | 想自行组装研究循环时，选 smolagents 或 LangGraph。 | 你在其上自行组装研究循环的通用 agent 框架；更灵活、模型无关，但研究管线和调优要你自己搭。 |
+| Open Deep Research（HF） | 未收录 | 需要 API 模型上的 deep-research agent 开源复现时，选 Open Deep Research。 | 在 API 模型上对 deep-research agent 的开源复现；开源精神相近，但栈不同，且（通常）没有自托管的微调权重。 |
 
 ## 技术栈
 
@@ -120,7 +120,7 @@ health:
 
 ## 健康度与可持续性
 
-- **响应速度**：Grade C——中位首次响应时间 178.4 小时，基于 5 个 qualifying issues/PRs。
+- **响应速度**：Grade B——中位首次响应时间 145.8 小时，基于 4 个 qualifying issues/PRs。
 - **维护（2026-06）。** 最后 push 于 2026-04（最新提交约 2026-04）；v1.x 模型线显示持续迭代。**活跃**且**未归档**，但节奏与年轻代码库意味着 churn。[推断]
 - **治理 / 背书。** 有组织背书（**MiroMindAI**，miromind.ai），多贡献者——bus factor 比单人仓库好，但它是一家公司的研究项目；寿命取决于这家公司的持续投入。[推断]
 - **年龄与 Lindy 判断。** 2025-08 创建，**不到 1 年**——**尚无 Lindy**。一个很年轻的仓库上有高 star（约 8.3k）是热度/势能信号，而非耐久性证明；可持续性视为未经验证。[推断]

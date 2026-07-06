@@ -84,12 +84,12 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [guizang-ppt](guizang-ppt.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“同作者的同门 skill，定位是完整多页横滑幻灯片而非单张卡片/封面”，再选 guizang-ppt。 | 同作者的同门 skill，定位是完整多页横滑幻灯片而非单张卡片/封面；视觉规则有重叠，产物形态不同。 |
-| [html-anything](html-anything.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“通用的 agent 驱动 HTML 产物生成”，再选 html-anything。 | 通用的 agent 驱动 HTML 产物生成；更宽泛、不带主张，因此缺少这个 skill 自带的锁定卡片版式、Swiss 校验器、平台画布尺寸和图片取材流程。 |
-| [open-design](open-design.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“面向更宽的 UI/设计生成”，再选 open-design。 | 面向更宽的 UI/设计生成；不是带平台精确海报尺寸和渲染成 PNG 管线的社交卡片专家。 |
-| [Impeccable](impeccable.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“偏设计质量导向的生成”，再选 Impeccable。 | 偏设计质量导向的生成；面不同——不是带 Playwright 校验器的单文件 HTML 卡片工作流。 |
-| Canva / 稿定设计 | 未收录 | 当前页用于它的主场景；如果更看重“托管模板 SaaS，不是仓库”，再选 Canva / 稿定设计。 | 托管模板 SaaS，不是仓库——对非 agent 用户更易上手、素材库更丰富，但封闭、无本地 agent 控制、无单文件 HTML 产物，视觉严谨度也低得多。 |
-| Figma + 插件 | 未收录 | 当前页用于它的主场景；如果更看重“完整设计控制与协作，但纯手动”，再选 Figma + 插件。 | 完整设计控制与协作，但纯手动；没有 agent 驱动的 7 步流程、没有自动取材，也不是你能 vendor 的仓库。 |
+| [guizang-ppt](guizang-ppt.zh.md) | ✅ | 需要完整多页横滑幻灯片而非单张卡片时，选 guizang-ppt。 | 同作者的同门 skill，定位是完整多页横滑幻灯片而非单张卡片/封面；视觉规则有重叠，产物形态不同。 |
+| [html-anything](html-anything.zh.md) | ✅ | 需要通用的 agent 驱动 HTML 产物生成时，选 html-anything。 | 通用的 agent 驱动 HTML 产物生成；更宽泛、不带主张，因此缺少这个 skill 自带的锁定卡片版式、Swiss 校验器、平台画布尺寸和图片取材流程。 |
+| [open-design](open-design.zh.md) | ✅ | 需要更宽的 UI/设计生成而非社交卡片专项时，选 open-design。 | 面向更宽的 UI/设计生成；不是带平台精确海报尺寸和渲染成 PNG 管线的社交卡片专家。 |
+| [Impeccable](impeccable.zh.md) | ✅ | 需要设计质量 harness 层而非卡片生成时，选 Impeccable。 | 偏设计质量导向的生成；面不同——不是带 Playwright 校验器的单文件 HTML 卡片工作流。 |
+| Canva / 稿定设计 | 未收录 | 需要托管模板 SaaS 而不是仓库时，选 Canva 或稿定设计。 | 托管模板 SaaS，不是仓库——对非 agent 用户更易上手、素材库更丰富，但封闭、无本地 agent 控制、无单文件 HTML 产物，视觉严谨度也低得多。 |
+| Figma + 插件 | 未收录 | 需要完整的手工设计控制与协作时，选 Figma 加插件。 | 完整设计控制与协作，但纯手动；没有 agent 驱动的 7 步流程、没有自动取材，也不是你能 vendor 的仓库。 |
 
 ## 健康度与可持续性
 

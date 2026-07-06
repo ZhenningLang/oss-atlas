@@ -90,10 +90,10 @@ It's the right reach when you want a *scriptable, reproducible* Reddit archive �
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| gallery-dl | 未收录 | Use this page for its stated niche; choose gallery-dl when you need broad multi-site media downloader (Reddit among many). | Broad multi-site media downloader (Reddit among many); strong for *files* across the web, but weaker at Reddit-specific metadata/comment archiving and the three-mode download/archive/clone model. |
-| redditdownloader (shadowmoose) | 未收录 | Use this page for its stated niche; choose redditdownloader (shadowmoose) when you need another dedicated Reddit downloader with a web UI. | Another dedicated Reddit downloader with a web UI; more approachable for non-CLI users, but BDFR's scriptable CLI + YAML config suits automation better. [未验证] |
-| Pushshift dumps / PRAW scripts | 未收录 | Use this page for its stated niche; choose Pushshift dumps / PRAW scripts when you need going straight to data dumps or the API yourself bypasses tooling and the ~1000 cap (dumps) but is r. | Going straight to data dumps or the API yourself bypasses tooling and the ~1000 cap (dumps) but is roll-your-own — BDFR packages resolvers, dedup, naming, and logging for you. |
-| yt-dlp (directly) | 未收录 | Use this page for its stated niche; choose yt-dlp (directly) when you need BDFR *uses* yt-dlp under the hood for hosted media. | BDFR *uses* yt-dlp under the hood for hosted media; calling yt-dlp directly works for individual links but lacks Reddit-source enumeration, metadata archiving, and dedup. |
+| gallery-dl | 未收录 | Choose gallery-dl when you need a broad multi-site media downloader that includes Reddit. | Broad multi-site media downloader (Reddit among many); strong for *files* across the web, but weaker at Reddit-specific metadata/comment archiving and the three-mode download/archive/clone model. |
+| redditdownloader (shadowmoose) | 未收录 | Choose redditdownloader when you need another dedicated Reddit downloader with a web UI. | Another dedicated Reddit downloader with a web UI; more approachable for non-CLI users, but BDFR's scriptable CLI + YAML config suits automation better. [未验证] |
+| Pushshift dumps / PRAW scripts | 未收录 | Choose Pushshift dumps or PRAW scripts when you want to bypass tooling and build directly on data/API access. | Going straight to data dumps or the API yourself bypasses tooling and the ~1000 cap (dumps) but is roll-your-own — BDFR packages resolvers, dedup, naming, and logging for you. |
+| [yt-dlp](yt-dlp.md) (directly) | ✅ | Choose yt-dlp directly when you only need to download individual hosted-media links. | BDFR *uses* yt-dlp under the hood for hosted media; calling yt-dlp directly works for individual links but lacks Reddit-source enumeration, metadata archiving, and dedup. |
 
 ## Tech stack
 
@@ -115,12 +115,12 @@ It's the right reach when you want a *scriptable, reproducible* Reddit archive �
 
 ## Health & viability
 
-- **Responsiveness**: Grade C — median first-response time 10.7 hours across 1 qualifying issues/PRs.
-- **Maintenance (2026-06).** Last push 2026-04, so the repo is **not abandoned** — but the last *tagged release* (v2.6.2) is from 2023-01, so the release cadence has effectively stalled even as commits trickle in. Treat it as "maintained but unreleased," a yellow flag. Not archived.
-- **Governance / bus factor.** A small contributor group (project changed hands from the original author aliparlakci to Serene-Arc and others). Real bus-factor risk: a handful of maintainers, no foundation backing. [推断]
-- **Age & Lindy verdict.** ~8 years old (created 2018-06) but with a stalled release line ⇒ Lindy is **mixed**: long-lived and still committed-to, yet the lack of recent releases tempers the "still-active" half of age × still-active.
-- **Adoption.** ~2.6k stars and an AUR package indicate a real user base for Reddit archiving, though smaller than general-purpose downloaders. [未验证]
-- **Risk flags.** GPL-3.0 (copyleft — relevant if you embed it). The standing risks are the stalled releases, the hard ~1000-post API ceiling, and resolver fragility against changing host APIs — not licensing surprises.
+- **Maintenance**: Grade E — 0/13 active weeks in trailing 13; last commit 1250 days ago.
+- **Responsiveness**: Cannot be scored — no_traffic.
+- **Adoption**: Grade E — no registry package/download signal recorded.
+- **Longevity**: Grade E — 2941 days old.
+- **Governance**: Cannot be scored — unattributable.
+- **Risk / License**: Grade C — GPL-3.0 license.
 
 ## Caveats (unverified)
 

@@ -93,12 +93,12 @@ As the app grows you lean on the rest of the framework: `beat` for cron-like per
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| RQ (Redis Queue) | 未收录 | Use this page for its stated niche; choose RQ (Redis Queue) when you need minimal Redis-only Python queue. | Minimal Redis-only Python queue; dead-simple to run and read, but no broker choice, weaker scheduling/routing, and less throughput tuning than Celery. |
-| Dramatiq | 未收录 | Use this page for its stated niche; choose Dramatiq when you need modern Python task queue (RabbitMQ/Redis) positioned as a simpler, more reliable Celery alternative. | Modern Python task queue (RabbitMQ/Redis) positioned as a simpler, more reliable Celery alternative; smaller ecosystem and fewer canvas/workflow primitives. |
-| arq | 未收录 | Use this page for its stated niche; choose arq when you need asyncio-native, Redis-based, very lightweight. | asyncio-native, Redis-based, very lightweight; great for async apps, but minimal feature set vs Celery's routing/beat/canvas. |
-| [Airflow](../workflow-orchestration/airflow.md) | ✅ | Use this page for its stated niche; choose Airflow when you need scheduler for dependency-aware multi-step DAG **workflows** with lineage and a UI. | Scheduler for dependency-aware multi-step DAG **workflows** with lineage and a UI — different job: data-pipeline orchestration, not low-latency background task offload. |
-| [XXL-JOB](xxl-job.md) | ✅ | Use this page for its stated niche; choose XXL-JOB when you need JVM-ecosystem distributed scheduler with a built-in admin dashboard. | JVM-ecosystem distributed scheduler with a built-in admin dashboard; the Java-world answer, not a fit for a Python codebase. |
-| Sidekiq / BullMQ | 未收录 | Use this page for its stated niche; choose Sidekiq / BullMQ when you need the Ruby (Sidekiq) and Node (BullMQ) equivalents. | The Ruby (Sidekiq) and Node (BullMQ) equivalents; same problem shape, different language ecosystem. |
+| RQ (Redis Queue) | 未收录 | Choose RQ when Redis-only simplicity matters more than broker choice, routing, scheduling, and throughput tuning. | Dead-simple to run and read, but narrower than Celery's broker/backend and workflow surface. |
+| Dramatiq | 未收录 | Choose Dramatiq when you want a modern Python task queue with RabbitMQ/Redis support and fewer Celery-era foot-guns. | Smaller ecosystem and fewer canvas/workflow primitives than Celery. |
+| arq | 未收录 | Choose arq when your app is already asyncio-first and a lightweight Redis queue is enough. | Good async ergonomics, but minimal compared with Celery's routing, beat, and canvas. |
+| [Airflow](../workflow-orchestration/airflow.md) | ✅ | Choose Airflow when dependency-aware multi-step DAG **workflows**, lineage, backfills, and UI matter more than low-latency task offload. | Data-pipeline orchestration, not a direct background-job queue. |
+| [XXL-JOB](xxl-job.md) | ✅ | Choose XXL-JOB when a JVM/Spring distributed scheduler with built-in admin dashboard is the requirement. | The Java-world scheduler answer; not a natural fit for a Python codebase. |
+| Sidekiq / BullMQ | 未收录 | Choose Sidekiq or BullMQ when the same background-job problem lives in Ruby or Node instead of Python. | Same problem shape, different language ecosystem. |
 
 ## Tech stack
 

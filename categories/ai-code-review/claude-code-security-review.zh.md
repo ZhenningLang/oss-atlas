@@ -95,12 +95,12 @@ Anthropic 出的 AI 安全审查器：一个 GitHub Action（外加 Claude Code 
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [open-code-review](open-code-review.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“阿里出的基于 LLM 的代码审查器，面向 GitLab / 编码风格 + 质量”，再选 open-code-review。 | 阿里出的基于 LLM 的代码审查器，面向 GitLab / 编码风格 + 质量；本工具则是安全专用，且是 Claude/GitHub-Actions 原生。 |
-| [react-doctor](react-doctor.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“React 专用的性能/正确性诊断，不是安全审查器”，再选 react-doctor。 | React 专用的性能/正确性诊断，不是安全审查器；完全是另一类问题。 |
-| Semgrep | 未收录 | 当前页用于它的主场景；如果更看重“确定性、基于规则的 SAST，带 SARIF 和庞大的社区规则集”，再选 Semgrep。 | 确定性、基于规则的 SAST，带 SARIF 和庞大的社区规则集；快、免费、可复现——但被模式绑死，在逻辑/上下文型 bug 上更弱。 |
-| GitHub CodeQL | 未收录 | 当前页用于它的主场景；如果更看重“深度数据流/污点分析，原生 code-scanning UI，对公开仓库免费”，再选 GitHub CodeQL。 | 深度数据流/污点分析，原生 code-scanning UI，对公开仓库免费；按语言、配置更重，无 LLM 修复文字。 |
-| Claude Code GitHub Action（通用版） | 未收录 | 当前页用于它的主场景；如果更看重“Anthropic 通用的 Claude Action，面向 PR/编码”，再选 Claude Code GitHub Action（通用版）。 | Anthropic 通用的 Claude Action，面向 PR/编码；并未专门做安全审计或 finding 过滤。 |
-| Snyk Code | 未收录 | 当前页用于它的主场景；如果更看重“商业 ML/SAST，带托管面板和依赖扫描”，再选 Snyk Code。 | 商业 ML/SAST，带托管面板和依赖扫描；是托管 SaaS，而非单仓库开源 Action。 |
+| [open-code-review](open-code-review.zh.md) | ✅ | 当你要通用 LLM PR 审查、GitLab 集成或编码质量反馈时，选 open-code-review；当闸门必须是 Claude/GitHub Actions 原生且专注安全时，选本工具。 | 阿里出的基于 LLM 的代码审查器，面向 GitLab / 编码风格 + 质量；本工具则是安全专用，且是 Claude/GitHub-Actions 原生。 |
+| [react-doctor](react-doctor.zh.md) | ✅ | 当你要确定性的 React 性能、正确性、可访问性和 agent 易错诊断时，选 react-doctor；当审查目标是跨 PR diff 的漏洞推理时，选本工具。 | React 专用的性能/正确性诊断，不是安全审查器；完全是另一类问题。 |
+| Semgrep | 未收录 | 当可复现规则 ID、SARIF、本地免费运行和社区规则更重要时，选 Semgrep；当缺口是对可信 PR diff 做逻辑层安全推理时，选本工具。 | 确定性、基于规则的 SAST，带 SARIF 和庞大的社区规则集；快、免费、可复现——但被模式绑死，在逻辑/上下文型 bug 上更弱。 |
+| GitHub CodeQL | 未收录 | 当你需要 GitHub 原生 code scanning 和深度数据流/污点分析时，选 CodeQL；当你想要 Claude 对改动行给出评论和修复文字时，选本工具。 | 深度数据流/污点分析，原生 code-scanning UI，对公开仓库免费；按语言、配置更重，无 LLM 修复文字。 |
+| Claude Code GitHub Action（通用版） | 未收录 | 当你要通用 PR 协助或编码任务时，选通用 Claude Code Action；当你明确需要安全审计 prompt 和 finding 过滤时，选本工具。 | Anthropic 通用的 Claude Action，面向 PR/编码；并未专门做安全审计或 finding 过滤。 |
+| Snyk Code | 未收录 | 当需求包含商业托管安全面板和依赖扫描时，选 Snyk Code；当你要的是由 Claude 评论驱动的单仓库开源 Action 时，选本工具。 | 商业 ML/SAST，带托管面板和依赖扫描；是托管 SaaS，而非单仓库开源 Action。 |
 
 ## 技术栈
 

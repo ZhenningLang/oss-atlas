@@ -83,12 +83,12 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| kafbat/kafka-ui | 未收录 | 当前页用于它的主场景；如果更看重“正是本项目的**维护中社区分叉**”，再选 kafbat/kafka-ui。 | 正是本项目的**维护中社区分叉**——同一套 UI、持续发布；对新装而言通常比停滞的上游更优。 |
-| Conduktor | 未收录 | 当前页用于它的主场景；如果更看重“打磨精良的桌面/Web Kafka 平台”，再选 Conduktor。 | 打磨精良的桌面/Web Kafka 平台；功能更丰富、有企业治理，但 freemium/商业——不是完全开源的自托管 OSS UI。 |
-| Confluent Control Center | 未收录 | 当前页用于它的主场景；如果更看重“Confluent Platform 里深度的企业级监控/治理”，再选 Confluent Control Center。 | Confluent Platform 里深度的企业级监控/治理；商业且绑定该生态，比一个单容器 UI 重得多。 |
-| AKHQ | 未收录 | 当前页用于它的主场景；如果更看重“开源（Apache-2”，再选 AKHQ。 | 开源（Apache-2.0）的 Kafka Web UI，范围相近（topic、消费者、Connect、schema registry、ACL）；是直接的 OSS 替代，栈/UX 不同。 |
-| Redpanda Console | 未收录 | 当前页用于它的主场景；如果更看重“开源 Kafka/Redpanda UI（Go）”，再选 Redpanda Console。 | 开源 Kafka/Redpanda UI（Go）；干净、快、也能对接原生 Kafka；部分高级功能向 Redpanda 商业版倾斜。 |
-| kafka-python admin CLI | 未收录 | 当前页用于它的主场景；如果更看重“是 CLI 而非 UI”，再选 kafka-python admin CLI。 | 是 CLI 而非 UI——可脚本化/无头管理；与看板互补而非替代。 |
+| kafbat/kafka-ui | 未收录 | 新部署或升级时选 kafbat/kafka-ui，因为它是维护中的延续；当前页主要用于理解停滞的 Provectus 上游和迁移风险。 | 正是本项目的**维护中社区分叉**——同一套 UI、持续发布；对新装而言通常比停滞的上游更优。 |
+| Conduktor | 未收录 | 当打磨过的体验、企业治理和商业支持比完全开源自托管更重要时，选 Conduktor；当一个 OSS 浏览器 UI 已经够用时，才考虑 kafka-ui。 | 打磨精良的桌面/Web Kafka 平台；功能更丰富、有企业治理，但 freemium/商业——不是完全开源的自托管 OSS UI。 |
+| Confluent Control Center | 未收录 | 当你已经在 Confluent Platform 内，且需要深度企业监控或治理时，选 Confluent Control Center；当只要更轻的独立看板时，选 kafka-ui。 | Confluent Platform 里深度的企业级监控/治理；商业且绑定该生态，比一个单容器 UI 重得多。 |
+| AKHQ | 未收录 | 当你要一个 Apache-2.0 的直接 OSS Kafka Web UI 替代，且接受不同栈和 UX 时，选 AKHQ；新装时不要默认押停滞的 kafka-ui 上游，除非已证明兼容。 | 开源（Apache-2.0）的 Kafka Web UI，范围相近（topic、消费者、Connect、schema registry、ACL）；是直接的 OSS 替代，栈/UX 不同。 |
+| Redpanda Console | 未收录 | 当你要基于 Go 的 Kafka/Redpanda UI，尤其在 Redpanda 环境里时，选 Redpanda Console；只有 Java/Spring 栈和现有功能面合适时，才选 kafka-ui。 | 开源 Kafka/Redpanda UI（Go）；干净、快、也能对接原生 Kafka；部分高级功能向 Redpanda 商业版倾斜。 |
+| kafka-python admin CLI | 未收录 | kafka-python admin CLI 是互补项：脚本化或无头管理用它；人工浏览和团队看板用 kafka-ui。 | 是 CLI 而非 UI——可脚本化/无头管理；与看板互补而非替代。 |
 
 ## 技术栈
 
@@ -110,7 +110,7 @@ health:
 
 ## 健康度与可持续性
 
-- **响应速度**：Grade C——中位首次响应时间 4.4 小时，基于 1 个 qualifying issues/PRs。
+- **响应速度**：无法计算——no_traffic。
 - **维护（2026-06）——上游停滞。** `provectus/kafka-ui` 最后发布 v0.7.2 在 **2024-04**，最后 push 在 **2024-07**；截至撰写已约 2 年没有发布。API 并**未**把它标记为 `archived`，但它读起来是**休眠**而非活跃。活跃开发在社区分叉 **`kafbat/kafka-ui`** 中延续（2026-06 有 push）。这是主导结论：把上游当作冻结。[推断]
 - **治理 / 背书。** `Organization` 所有（Provectus，一家咨询公司）；README 声称保持免费/开源、无付费档。但一个由单一厂商策划的 OSS 项目在厂商停更后，正是那种已经上演的 bus-factor 情形——社区不得不分叉来续命。[推断]
 - **年龄 × Lindy。** 2019-11 创建（约 6–7 年）。年龄中等，但*上游的* Lindy 被维护停摆削弱——老而停滞过不了「仍活跃」这一关。把 Lindy 往前延续的是**分叉**，不是这个仓库。[推断]

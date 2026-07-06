@@ -87,12 +87,12 @@ Agent Lightning is built for exactly this. It models agent execution as a Markov
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| [LLaMA-Factory](llamafactory.md) | ✅ | Use this page for its stated niche; choose LLaMA-Factory when you need broad SFT/DPO/PPO fine-tuning over datasets with a unified config/UI. | Broad SFT/DPO/PPO fine-tuning over datasets with a unified config/UI; not built for decoupling a live multi-step agent into RL transitions. |
-| [Unsloth](unsloth.md) | ✅ | Use this page for its stated niche; choose Unsloth when you need fast, memory-efficient single-GPU SFT/LoRA. | Fast, memory-efficient single-GPU SFT/LoRA; an optimization *kernel/trainer*, not an agent-rollout RL orchestrator. |
-| [ART](art.md) | ✅ | Use this page for its stated niche; choose ART when you need also RL for agents, but a more opinionated, ergonomic single-loop experience. | Also RL for agents, but a more opinionated, ergonomic single-loop experience; Agent Lightning emphasizes framework-agnostic decoupling + pluggable backends. |
-| verl | 未收录 | Use this page for its stated niche; choose verl when you need the underlying distributed RL engine Agent Lightning builds on. | The underlying distributed RL engine Agent Lightning builds on; powerful but expects you to express training as its generation loop rather than wrap a native agent. |
-| HF TRL | 未收录 | Use this page for its stated niche; choose HF TRL when you need mature PPO/GRPO/DPO library. | Mature PPO/GRPO/DPO library; dataset/loop-centric, no agent-execution decoupling or multi-step credit assignment out of the box. |
-| OpenAI Agents SDK / LangChain (alone) | 未收录 | Use this page for its stated niche; choose OpenAI Agents SDK / LangChain (alone) when you need build and run agents, but don't train the underlying model from rollouts. | Build and run agents, but don't train the underlying model from rollouts — Agent Lightning sits on top to make them trainable. |
+| [LLaMA-Factory](llamafactory.md) | ✅ | Choose LLaMA-Factory when you need broad SFT/DPO/PPO fine-tuning over datasets with a unified config/UI. | Broad dataset fine-tuning, not live multi-step agent rollouts. |
+| [Unsloth](unsloth.md) | ✅ | Choose Unsloth when fast, memory-efficient single-GPU SFT/LoRA is the bottleneck. | An optimization *kernel/trainer*, not an agent-rollout RL orchestrator. |
+| [ART](art.md) | ✅ | Choose ART when you also need RL for agents, but prefer a more opinionated single-loop experience. | Agent Lightning emphasizes framework-agnostic decoupling plus pluggable backends; ART optimizes for ergonomics. |
+| verl | 未收录 | Choose verl when you need the underlying distributed RL engine Agent Lightning builds on. | Powerful, but expects you to express training as its generation loop rather than wrap a native agent. |
+| HF TRL | 未收录 | Choose HF TRL when you need a mature PPO/GRPO/DPO library for dataset- or loop-centric training. | No agent-execution decoupling or multi-step credit assignment out of the box. |
+| OpenAI Agents SDK / [LangChain](../agent-frameworks/langchain.md) (alone) | 部分已收录 | Choose agent frameworks alone when you only need to build and run agents, not train the underlying model from rollouts. | Agent Lightning sits on top of agent execution to make rollouts trainable; plain frameworks stop at orchestration. OpenAI Agents SDK is not indexed separately. |
 
 ## Tech stack
 
@@ -116,12 +116,12 @@ Agent Lightning is built for exactly this. It models agent execution as a Markov
 
 ## Health & viability
 
-- **Responsiveness**: Grade C — median first-response time 73.4 hours across 1 qualifying issues/PRs.
-- **Maintenance — active (as of 2026-06).** Repo pushed 2026-04; shipping v0.x with a recent v0.3.0 (reported late 2025). Pre-1.0 with fast API churn, a preview dashboard, and swappable backends — alive and moving, but expect breaking changes between minors. Not archived. [未验证]
-- **Governance & backing — Microsoft (corporate research).** Organization-owned under `microsoft`. Big-vendor backing means real engineering capacity and is a longevity positive; the offsetting risk is that corporate research repos can be deprioritized or archived once the research interest moves on — Microsoft has retired such projects before. Roadmap is vendor-controlled. [推断]
-- **Age & Lindy — young / unproven.** Created 2025-06, ~1 year old. Too new to have a Lindy track record; the bet rests on Microsoft's continued investment and the agent-RL space maturing, not on longevity. Pin versions and treat it as early-stage.
-- **Adoption & ecosystem.** ~17k stars quickly accrued and broad agent-framework integrations (LangChain, AutoGen, CrewAI, AgentScope, OpenAI Agents SDK); but the framework-agnostic, multi-backend design means you assemble tracer + store + training backend + serving yourself — adoption depth (production users) is unverified.
-- **Risk flags — v0.x churn + multi-backend assembly.** MIT, no relicense/CVE history asserted. The real flags are API instability at v0.x and dependency on a fast-moving RL stack (VERL/vLLM/SGLang), plus corporate-research abandonment risk noted above.
+- **Maintenance**: Grade C — 1/13 active weeks in trailing 13; last commit 65 days ago.
+- **Responsiveness**: Cannot be scored — no_traffic.
+- **Adoption**: Cannot be scored — ambiguous.
+- **Longevity**: Grade C — 380 days old.
+- **Governance**: Grade D — top-3 contributor share 85.2% (?).
+- **Risk / License**: Grade A — MIT license.
 
 ## Caveats (unverified)
 

@@ -96,12 +96,12 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [beads](beads.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“面向 agent 的依赖感知、版本化任务/issue **图**（Dolt 支撑）”，再选 beads。 | 面向 agent 的依赖感知、版本化任务/issue **图**（Dolt 支撑）。解决的是「哪些工作就绪且跨会话被记住」，不是「把原始工具输出挡在上下文外」。互补而非替代。 |
-| [CCPM](ccpm.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“一套 Claude-Code 的 spec→issue PM 工作流（用 GitHub Issues 当后端）”，再选 CCPM。 | 一套 Claude-Code 的 spec→issue PM 工作流（用 GitHub Issues 当后端）。管的是**做什么**；Context Mode 管的是**多少数据进窗口**。不同层。 |
-| [Planning with Files](planning-with-files.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“基于文件的规划/状态约定（磁盘上的 markdown 计划）”，再选 Planning with Files。 | 基于文件的规划/状态约定（磁盘上的 markdown 计划）。轻量、与工具无关；没有沙箱、FTS5 检索或 hook 强制路由。 |
-| Token-Saver-MCP / MCP 输出截断类 server | 未收录 | 当前页用于它的主场景；如果更看重“同样压缩工具 payload 的其它 MCP server”，再选 Token-Saver-MCP / MCP 输出截断类 server。 | 同样压缩工具 payload 的其它 MCP server；更窄（截断/摘要）且通常单平台，相比之下 Context Mode 是 execute 沙箱 + 会话连续性 + 17 平台路由。 |
-| agent 内置 compaction（`/compact`、自动摘要） | 未收录 | 当前页用于它的主场景；如果更看重“免费、零安装，但是有损摘要，没有结构化事件账本、没有 FTS5 检索、没有工具输出沙箱”，再选 agent 内置 compaction（/compact、自动摘要）。 | 免费、零安装，但是有损摘要，没有结构化事件账本、没有 FTS5 检索、没有工具输出沙箱——正是 Context Mode 瞄准的缺口。 |
-| RAG / 向量记忆库（如 Mem0、Letta） | 未收录 | 当前页用于它的主场景；如果更看重“用 embedding 做持久的跨会话**语义**记忆”，再选 RAG / 向量记忆库（如 Mem0、Letta）。 | 用 embedding 做持久的跨会话**语义**记忆；更重、需 server/DB 支撑，面向长期知识——Context Mode 的 FTS5 库是每项目、本地优先、为会话内恢复调校的。 |
+| [beads](beads.zh.md) | ✅ | 需要面向 agent 的依赖感知、版本化任务图时，选 beads。 | 面向 agent 的依赖感知、版本化任务/issue **图**（Dolt 支撑）。解决的是「哪些工作就绪且跨会话被记住」，不是「把原始工具输出挡在上下文外」。互补而非替代。 |
+| [CCPM](ccpm.zh.md) | ✅ | 需要 Claude-Code spec→issue 项目管理工作流时，选 CCPM。 | 一套 Claude-Code 的 spec→issue PM 工作流（用 GitHub Issues 当后端）。管的是**做什么**；Context Mode 管的是**多少数据进窗口**。不同层。 |
+| [Planning with Files](planning-with-files.zh.md) | ✅ | 基于 markdown 文件的规划/状态约定已经够用时，选 Planning with Files。 | 基于文件的规划/状态约定（磁盘上的 markdown 计划）。轻量、与工具无关；没有沙箱、FTS5 检索或 hook 强制路由。 |
+| Token-Saver-MCP / MCP 输出截断类 server | 未收录 | 只需要压缩工具 payload 时，选 Token-Saver-MCP 或同类 MCP server。 | 同样压缩工具 payload 的其它 MCP server；更窄（截断/摘要）且通常单平台，相比之下 Context Mode 是 execute 沙箱 + 会话连续性 + 17 平台路由。 |
+| agent 内置 compaction（`/compact`、自动摘要） | 未收录 | 免费零安装的摘要压缩已经够用时，选 agent 内置 compaction。 | 免费、零安装，但是有损摘要，没有结构化事件账本、没有 FTS5 检索、没有工具输出沙箱——正是 Context Mode 瞄准的缺口。 |
+| RAG / 向量记忆库（如 Mem0、Letta） | 未收录 | 需要 embedding 驱动的持久跨会话语义记忆时，选 RAG 或向量记忆库。 | 用 embedding 做持久的跨会话**语义**记忆；更重、需 server/DB 支撑，面向长期知识——Context Mode 的 FTS5 库是每项目、本地优先、为会话内恢复调校的。 |
 
 ## 技术栈
 

@@ -96,7 +96,7 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| Alacritty | 未收录 | 需要 AI 原生、IDE 般终端体验时选 Warp；需要快速、跨平台、OpenGL 终端模拟器且完全开源时，再选 Alacritty。 | 完全开源且极简，但没有原生 AI 功能、没有命令块、没有内置 shell 智能。 |
+| [Alacritty](alacritty.zh.md) | ✅ | 需要 AI 原生、IDE 般终端体验时选 Warp；需要快速、跨平台、OpenGL 终端模拟器且完全开源时，再选 Alacritty。 | 完全开源且极简，但没有原生 AI 功能、没有命令块、没有内置 shell 智能。 |
 | iTerm2 | 未收录 | 需要 AI 原生、跨 macOS 和 Linux 的现代终端时选 Warp；需要最受欢迎的 macOS 终端且深度集成 macOS、没有 AI 中心设计时，再选 iTerm2。 | 仅限 macOS，不是开源软件，但成熟且功能丰富，没有 Warp 那种 AI 中心设计。 |
 | Tabby | 未收录 | 需要 polished、商业支持的 AI 终端时选 Warp；需要现代开源终端且带 SSH 客户端和串口支持时，再选 Tabby。 | 开源且跨平台，带一些现代 UI 功能，但不如 Warp 那么原生面向 AI。 |
 | [asciimatics](asciimatics.zh.md) | ✅ | 用于构建终端 UI 的 Python TUI 库，不是终端模拟器。 | 这是构建 TUI 的库，不是独立终端应用——不同类别。 |

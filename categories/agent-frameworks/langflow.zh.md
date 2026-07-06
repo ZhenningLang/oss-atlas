@@ -10,9 +10,9 @@ maturity: v1.x, active, 150k stars (as of 2026-07)
 last_verified: 2026-07-01
 type: framework
 upstream:
-  pushed_at: 2026-07-01T10:21:48Z
+  pushed_at: 2026-07-04T03:07:49Z
   default_branch: main
-  default_branch_sha: 0000000000000000000000000000000000000000
+  default_branch_sha: 315cc41b43c446bfb0e63d420ca55021f6f8987e
   archived: false
 health:
   schema: 1
@@ -93,12 +93,12 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [LangChain](langchain.zh.md) | 未收录 | 用于构建自定义智能体的底层 Python/JS 框架。 | LangChain 是编码库；Langflow 是在类似概念之上的可视化层。代码优先团队偏爱 LangChain；可视化优先团队偏爱 Langflow。 |
-| [n8n](../workflow-orchestration/n8n.zh.md) | ✅ | fair-code 工作流自动化，带 400+ 集成和 AI 节点。 | n8n 是通用自动化加 AI 能力；Langflow 专为 LLM/智能体工作流设计，模型和向量库集成更深。 |
-| Dify | 未收录 | 面向生产级智能体工作流开发的平台。 | 类似的可视化构建器，企业 RBAC 和云服务更强；Langflow 是完全 MIT 许可，更开放于社区驱动的定制。 |
-| [AutoGPT](autogpt.zh.md) | ✅ | 用于自主持续运行 AI 智能体的平台。 | AutoGPT 面向自主任务执行；Langflow 面向组合式、可交互、带人工监督的工作流。 |
-| CrewAI | 未收录 | 面向多智能体角色化团队的框架。 | CrewAI 是代码优先、基于角色的多智能体编排；Langflow 是可视化流式编排。 |
-| Flowise | 未收录 | 开源可视化 LLM 工作流构建器（与 Langflow 类似）。 | 功能集非常相似；截至 2026-07，Langflow 社区更大、GitHub 更活跃。 |
+| [LangChain](langchain.zh.md) | ✅ | 代码优先的自定义 agent 开发比可视化画布更合适时，选 LangChain。 | LangChain 是编码库；Langflow 是在类似概念之上的可视化层。代码优先团队偏爱 LangChain；可视化优先团队偏爱 Langflow。 |
+| [n8n](../workflow-orchestration/n8n.zh.md) | ✅ | 广泛工作流自动化和集成比 LLM 原生流程编排更重要时，选 n8n。 | n8n 是通用自动化加 AI 能力；Langflow 专为 LLM/智能体工作流设计，模型和向量库集成更深。 |
+| [Dify](dify.zh.md) | ✅ | 生产平台能力、RBAC 和云选项比 Langflow 的 MIT/社区定制更重要时，选 Dify。 | 类似的可视化构建器，企业 RBAC 和云服务更强；Langflow 是完全 MIT 许可，更开放于社区驱动的定制。 |
+| [AutoGPT](autogpt.zh.md) | ✅ | 目标是自主、持续的任务执行时，选 AutoGPT。 | AutoGPT 面向自主任务执行；Langflow 面向组合式、可交互、带人工监督的工作流。 |
+| CrewAI | 未收录 | 核心抽象是代码优先、基于角色的多 agent 团队时，选 CrewAI。 | CrewAI 是代码优先、基于角色的多智能体编排；Langflow 是可视化流式编排。 |
+| Flowise | 未收录 | 想要相近的可视化 LLM 构建器，且其生态更适配你的栈时，选 Flowise。 | 功能集非常相似；截至 2026-07，Langflow 社区更大、GitHub 更活跃。 |
 
 ## 技术栈
 
@@ -122,8 +122,8 @@ health:
 
 ## 健康度与可持续性
 - **维护活跃度**：Grade A——最近 13 周中 13 周有提交；最后提交距今 1 天。
-- **响应速度**：Grade A——中位首次响应时间 17.1 小时，基于 56 个 qualifying issues/PRs。
-- **采用广度**：Grade C——pypi.org 上月下载量 90,552（包名：langflow-base）。
+- **响应速度**：Grade A——中位首次响应时间 16.9 小时，基于 55 个 qualifying issues/PRs。
+- **采用广度**：Grade C——pypi.org 上月下载量 92,752（包名：langflow-base）。
 - **长青度**：Grade B——仓库已创建 1240 天。
 - **治理集中度**：Grade A——前三贡献者占比 34.6%（?）。
 - **许可风险**：Grade A——MIT 许可证。

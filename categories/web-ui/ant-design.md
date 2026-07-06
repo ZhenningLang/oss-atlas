@@ -125,12 +125,13 @@ You're building a data-dense admin dashboard, an internal operations tool, or a 
 - Monitoring for accessibility issues in complex components (tables, forms) that may need manual ARIA adjustments
 
 ## Health & viability
-- **Maintenance**: Grade A — 13/13 active weeks in trailing 13; last commit 0 days ago.
+- **Maintenance**: Grade A — 13/13 active weeks in trailing 13; last commit 1 day ago.
 - **Responsiveness**: Grade A — median first-response time 0.1 hours across 40 qualifying issues/PRs.
-- **Adoption**: Grade A — 10,718,402 monthly downloads via npmjs.org (package: antd).
-- **Longevity**: Grade A — 4087 days old.
+- **Adoption**: Cannot be scored — registry_no_counts.
+- **Longevity**: Grade A — 4088 days old.
 - **Governance**: Grade A — top-3 contributor share 52.0% (?).
 - **Risk / License**: Grade A — MIT license.
+
 ## Caveats (unverified)
 
 - [未验证] The exact proportion of Ant Design's user base in China versus the rest of the world has not been verified.

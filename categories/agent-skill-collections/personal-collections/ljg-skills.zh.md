@@ -88,11 +88,11 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [pua](pua.zh.md) ✅ | 已收录 | 当前页用于它的主场景；如果更看重“另一个单人维护的中文技能合集”，再选 pua ✅。 | 另一个单人维护的中文技能合集；侧重点和约定不同。同一类型（一个人精选的中文技能），按作者方法和领域是否对你胃口来选。 |
-| [qiushi-skill](qiushi-skill.zh.md) ✅ | 已收录 | 当前页用于它的主场景；如果更看重“单人维护的中文技能集”，再选 qiushi-skill ✅。 | 单人维护的中文技能集；同为个人合集，有自己的任务覆盖。ljg-skills 主打阅读/知识提炼和视觉卡片。 |
-| [antfu/skills](antfu-skills.zh.md) ✅ | 已收录 | 当前页用于它的主场景；如果更看重“同样是维护者个人包，但面向 Vue/Vite 前端*工程*栈”，再选 antfu/skills ✅。 | 同样是维护者个人包，但面向 Vue/Vite 前端*工程*栈——领域相反。按你需要代码约定还是知识工作方法来选。 |
-| [Dimillian/Skills](dimillian-skills.zh.md) ✅ | 已收录 | 当前页用于它的主场景；如果更看重“偏 Swift/Apple 开发的个人合集”，再选 Dimillian/Skills ✅。 | 偏 Swift/Apple 开发的个人合集。同为「一个人的技能」类型，领域（代码）不同。 |
-| Anthropic 官方技能 / 内置 slash 命令 | 未收录 | 当前页用于它的主场景；如果更看重“平台自带的技能生态”，再选 Anthropic 官方技能 / 内置 slash 命令。 | 平台自带的技能生态；ljg-skills 是叠在上面的第三方精选包，可能与原生技能重复或冲突。 |
+| [pua](pua.zh.md) ✅ | 已收录 | 需要另一个带“坚持”人设的单人中文技能合集时，选 pua。 | 另一个单人维护的中文技能合集；侧重点和约定不同。同一类型（一个人精选的中文技能），按作者方法和领域是否对你胃口来选。 |
+| [qiushi-skill](qiushi-skill.zh.md) ✅ | 已收录 | 需要另一个有独立任务覆盖的中文 skill 集时，选 qiushi-skill。 | 单人维护的中文技能集；同为个人合集，有自己的任务覆盖。ljg-skills 主打阅读/知识提炼和视觉卡片。 |
+| [antfu/skills](antfu-skills.zh.md) ✅ | 已收录 | Vue/Vite 前端工程约定比知识工作方法更重要时，选 antfu/skills。 | 同样是维护者个人包，但面向 Vue/Vite 前端*工程*栈——领域相反。按你需要代码约定还是知识工作方法来选。 |
+| [Dimillian/Skills](dimillian-skills.zh.md) ✅ | 已收录 | 真实需求是 Swift/Apple 开发约定时，选 Dimillian/Skills。 | 偏 Swift/Apple 开发的个人合集。同为「一个人的技能」类型，领域（代码）不同。 |
+| Anthropic 官方技能 / 内置 slash 命令 | 未收录 | 需要平台自己的技能生态时，选官方技能或内置 slash 命令。 | 平台自带的技能生态；ljg-skills 是叠在上面的第三方精选包，可能与原生技能重复或冲突。 |
 
 ## 健康度与可持续性
 

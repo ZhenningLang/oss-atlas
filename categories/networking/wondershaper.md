@@ -90,11 +90,11 @@ It fits ad-hoc and lightweight-persistent QoS on a *single host's* adapter: thro
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| raw `tc` (iproute2) | 未收录 | Use this page for its stated niche; choose raw tc (iproute2) when you need full control over qdiscs/classes/filters (HTB, HFSC, cake, fq_codel). | Full control over qdiscs/classes/filters (HTB, HFSC, cake, fq_codel) — maximally flexible, but a steep DSL; wondershaper is just a friendly wrapper over it. |
-| `cake` / SQM (OpenWrt) | 未收录 | Use this page for its stated niche; choose cake / SQM (OpenWrt) when you need modern bufferbloat-killing shaper. | Modern bufferbloat-killing shaper; best latency-under-load, but typically lives on a router/OpenWrt, not a quick per-host script. |
-| `tcconfig` (Python) | 未收录 | Use this page for its stated niche; choose tcconfig (Python) when you need python CLI/lib over tc with richer rules (per-IP/port, netem loss/delay). | Python CLI/lib over tc with richer rules (per-IP/port, netem loss/delay) — more featureful and scriptable, but a Python dependency vs one Bash file. |
-| `trickle` | 未收录 | Use this page for its stated niche; choose trickle when you need userspace per-process bandwidth limiter (LD_PRELOAD). | Userspace per-process bandwidth limiter (LD_PRELOAD) — shapes a single command without root/tc, but per-process and not a NIC-wide cap. |
-| Linux `tc` + `fq_codel` by hand | 未收录 | Use this page for its stated niche; choose Linux tc + fqcodel by hand when you need same engine, current qdiscs, no wrapper. | Same engine, current qdiscs, no wrapper — more correct for bufferbloat but more to write. |
+| raw `tc` (iproute2) | 未收录 | Choose raw `tc` when full qdisc/class/filter control is worth dealing with the steep traffic-control DSL. | Most flexible; wondershaper is only a friendly wrapper over this engine. |
+| `cake` / SQM (OpenWrt) | 未收录 | Choose cake or SQM when bufferbloat latency under load is the main problem and the shaper can live on the router. | Better for router/OpenWrt setups, not a quick per-host script. |
+| `tcconfig` (Python) | 未收录 | Choose `tcconfig` when richer scripted rules such as per-IP, per-port, loss, or delay matter more than one Bash file. | More featureful over `tc`, but brings a Python dependency. |
+| `trickle` | 未收录 | Choose `trickle` when you only need to limit one userspace process and want to avoid root-level `tc`. | LD_PRELOAD per-process shaping, not a NIC-wide cap. |
+| Linux `tc` + `fq_codel` by hand | 未收录 | Choose hand-written `tc` plus `fq_codel` when current qdiscs and correctness matter more than wrapper convenience. | Same engine with less abstraction, but more configuration to write. |
 
 ## Tech stack
 

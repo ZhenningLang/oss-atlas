@@ -94,11 +94,11 @@ Realistically that's the only safe use today. The login flows these scripts targ
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| Playwright / Selenium | 未收录 | Use this page for its stated niche; choose Playwright / Selenium when you need drive a real browser to log in (handles JS, modern auth) instead of replaying raw HTTP. | Drive a real browser to log in (handles JS, modern auth) instead of replaying raw HTTP; heavier but actually works on today's sites. |
-| Scrapy | 未收录 | Use this page for its stated niche; choose Scrapy when you need a maintained crawling framework with a login middleware pattern. | A maintained crawling framework with a login middleware pattern; you write the auth, but everything around it is production-grade. |
-| [requests-html](requests-html.md) | ✅ | Use this page for its stated niche; choose requests-html when you need maintained-ish requests + JS-rendering scraper. | Maintained-ish requests + JS-rendering scraper; a real building block, where fuck-login is just example scripts. |
-| [newspaper](newspaper.md) | ✅ | Use this page for its stated niche; choose newspaper when you need article extraction, not login automation. | Article extraction, not login automation — different job; listed to show this category's maintained members. |
-| DrissionPage | 未收录 | Use this page for its stated niche; choose DrissionPage when you need modern Chinese-ecosystem browser-automation/scraping lib. | Modern Chinese-ecosystem browser-automation/scraping lib; a living alternative for the same "log in to a CN site then scrape" goal. |
+| Playwright / [Selenium](../web-automation/selenium.md) | 部分已收录 | Choose Playwright or Selenium when you need a real browser to handle JS and modern auth. | Drive a real browser to log in instead of replaying raw HTTP; heavier but more viable on modern sites. Playwright is not indexed separately. |
+| Scrapy | 未收录 | Choose Scrapy when you need a maintained crawling framework with a login middleware pattern. | A maintained crawling framework with a login middleware pattern; you write the auth, but everything around it is production-grade. |
+| [requests-html](requests-html.md) | ✅ | Choose requests-html when you need a maintained-ish requests + JS-rendering scraper building block. | Maintained-ish requests + JS-rendering scraper; a real building block, where fuck-login is just example scripts. |
+| [newspaper](newspaper.md) | ✅ | Choose newspaper when you need article extraction, not login automation. | Article extraction, not login automation — different job; listed to show this category's maintained members. |
+| DrissionPage | 未收录 | Choose DrissionPage when you need a modern Chinese-ecosystem browser-automation/scraping library. | Modern Chinese-ecosystem browser-automation/scraping lib; a living alternative for the same "log in to a CN site then scrape" goal. |
 
 ## Tech stack
 

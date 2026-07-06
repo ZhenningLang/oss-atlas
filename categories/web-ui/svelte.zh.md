@@ -10,9 +10,9 @@ maturity: v5.x, active, ~82k stars (as of 2026-07)
 last_verified: 2026-07-01
 type: framework
 upstream:
-  pushed_at: 2026-07-01T00:00:00Z
+  pushed_at: 2026-07-03T14:17:03Z
   default_branch: main
-  default_branch_sha: 0000000000000000000000000000000000000000
+  default_branch_sha: b1cadd1eae6a709fc5bdc596256b617986a71aaf
   archived: false
 health:
   schema: 1
@@ -96,10 +96,10 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 | --- | --- | --- | --- |
-| React | 未收录 | 占据主导地位的 UI 库，生态最大，就业市场最广。 | React 的库和招聘池 vastly 更大；Svelte 对中小型应用更快、更简单，包体积更小。 |
-| Vue.js | 未收录 | 渐进式框架，学习曲线温和，生态强劲。 | Vue 更容易招到人，第三方集成更多；Svelte 编译出的包更小，运行时开销更低。 |
-| [Angular](angular.md) | ✅ | 企业级、有主见的框架，与 TypeScript 深度集成。 | Angular 为大型团队内置了一切；Svelte 更轻更快，但缺乏企业级工具深度和 CLI 脚手架。 |
-| Next.js | 未收录 | 全栈 React 框架，SSR/SSG 一流，与 Vercel 深度集成。 | Next.js 主导 React meta-framework 领域；SvelteKit 是 Svelte 的对应方案，但生态和集成更小。 |
+| [React](react.zh.md) | ✅ | 需要生态最大、招聘池最广的主流 UI 库时，选 React。 | React 的库和招聘池 vastly 更大；Svelte 对中小型应用更快、更简单，包体积更小。 |
+| [Vue.js](vue.zh.md) | ✅ | 需要渐进式框架、温和学习曲线和更强第三方集成时，选 Vue。 | Vue 更容易招到人，第三方集成更多；Svelte 编译出的包更小，运行时开销更低。 |
+| [Angular](angular.zh.md) | ✅ | 企业级、有主见的框架，与 TypeScript 深度集成。 | Angular 为大型团队内置了一切；Svelte 更轻更快，但缺乏企业级工具深度和 CLI 脚手架。 |
+| [Next.js](nextjs.zh.md) | ✅ | 需要全栈 React、成熟 SSR/SSG 和 Vercel 深度集成时，选 Next.js。 | Next.js 主导 React meta-framework 领域；SvelteKit 是 Svelte 的对应方案，但生态和集成更小。 |
 | SvelteKit | 未收录 | 基于 Svelte 构建的官方 meta-framework（类似 React 的 Next.js）。 | SvelteKit 是全栈 Svelte 的自然搭档；仅在不需要 SSR、路由或后端时才单独用 Svelte。 |
 | Solid.js | 未收录 | 细粒度响应式 UI 库，无虚拟 DOM，性能极佳。 | Solid 更聚焦性能，社区更小；Svelte 生态更大，有 SvelteKit，学习曲线更温和。 |
 

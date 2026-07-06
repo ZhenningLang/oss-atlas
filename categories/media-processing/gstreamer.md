@@ -88,8 +88,8 @@ You also reach for it when you're a desktop developer building a GTK media playe
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
 | [FFmpeg](ffmpeg.md) | ✅ | Use FFmpeg for CLI batch transcoding, format conversion, and universal decode/encode. | FFmpeg is the universal CLI + library; GStreamer is a pipeline graph framework. FFmpeg excels at one-shot transformations; GStreamer excels at real-time, persistent, application-embedded pipelines. GStreamer often uses FFmpeg/libav codecs under the hood via plugins. |
-| HandBrake | 未收录 | Use HandBrake for end-user preset-driven transcoding (GUI + CLI). | Built on FFmpeg/x264/x265; great for "rip to MP4/MKV" UX, not a library or pipeline framework. |
-| MLT / Shotcut | 未收录 | Use MLT/Shotcut for NLE editing/compositing with a timeline model. | Multimedia framework for editing; sits above FFmpeg for codec work. Reach for it when you need an editor, not a real-time pipeline. |
+| [HandBrake](handbrake.md) | ✅ | Use HandBrake for end-user preset-driven transcoding (GUI + CLI). | Built on FFmpeg/x264/x265; great for "rip to MP4/MKV" UX, not a library or pipeline framework. |
+| [MLT](mlt.md) / Shotcut | 部分已收录 | Use MLT/Shotcut for NLE editing/compositing with a timeline model. | Multimedia framework for editing; sits above FFmpeg for codec work. Reach for it when you need an editor, not a real-time pipeline. |
 | AWS Elemental MediaConvert | 未收录 | Use cloud transcoders for managed, elastic, pay-per-minute transcoding. | SaaS, not a self-hosted framework. Zero ops but vendor lock-in and per-minute cost. Often FFmpeg-derived internally. |
 | VLC | 未收录 | Use VLC for a standalone media player with broad format support. | End-user player, not a framework for building your own app. |
 | JACK / PulseAudio | 未收录 | Use JACK/PulseAudio for Linux desktop audio routing and pro-audio low-latency. | Audio servers, not video pipelines. GStreamer can use them as sinks but is a higher-level processing framework. |

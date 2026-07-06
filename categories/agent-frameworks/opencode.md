@@ -10,9 +10,9 @@ maturity: v0.x, active, 181k stars (as of 2026-07)
 last_verified: 2026-07-01
 type: framework
 upstream:
-  pushed_at: 2026-07-01T09:44:42Z
-  default_branch: main
-  default_branch_sha: 0000000000000000000000000000000000000000
+  pushed_at: 2026-07-04T12:37:42Z
+  default_branch: dev
+  default_branch_sha: 7a8e7c88f495acf5af3e7584e8ec1dbab2fe04ec
   archived: false
 health:
   schema: 1
@@ -91,11 +91,11 @@ You are a developer who wants AI-assisted coding but refuses to be locked into a
 
 | Alternative | In index | Our verdict | Tradeoff |
 | --- | --- | --- | --- |
-| [Open Interpreter](open-interpreter.md) | ✅ | Terminal coding agent with swappable harnesses for open models. | Open Interpreter is a Rust rewrite with OS sandbox execution; OpenCode is TypeScript/npm-based and integrates more naturally into JS/TS workflows. |
-| [Hermes Agent](hermes-agent.md) | ✅ | Self-improving AI agent with a learning loop from Nous Research. | Hermes focuses on skill creation and personal growth across sessions; OpenCode is a focused coding agent without a learning loop. |
-| [AutoGPT](autogpt.md) | ✅ | Platform for autonomous workflow automation. | AutoGPT targets complex multi-step autonomous tasks; OpenCode is a terminal pair-programmer for code. |
-| Claude Code | 未收录 | Closed-source terminal coding agent from Anthropic. | Proprietary, no source access, subscription-bound; OpenCode is open-source and BYOK. |
-| Gemini CLI | 未收录 | Google's open-source terminal AI agent. | Apache-2.0, backed by Google; OpenCode is MIT and community-driven. |
+| [Open Interpreter](open-interpreter.md) | ✅ | Pick Open Interpreter when OS sandbox execution and open-model harness swapping are the priorities. | Open Interpreter is a Rust rewrite with OS sandbox execution; OpenCode is TypeScript/npm-based and integrates more naturally into JS/TS workflows. |
+| [Hermes Agent](hermes-agent.md) | ✅ | Pick Hermes when a cross-session learning loop and skill creation matter more than a focused coding agent. | Hermes focuses on skill creation and personal growth across sessions; OpenCode is a focused coding agent without a learning loop. |
+| [AutoGPT](autogpt.md) | ✅ | Pick AutoGPT for complex multi-step autonomous workflow automation rather than terminal pair-programming. | AutoGPT targets complex multi-step autonomous tasks; OpenCode is a terminal pair-programmer for code. |
+| Claude Code | 未收录 | Pick Claude Code when you accept a proprietary subscription-bound terminal agent for Anthropic's managed experience. | Proprietary, no source access, subscription-bound; OpenCode is open-source and BYOK. |
+| [Gemini CLI](gemini-cli.md) | ✅ | Pick Gemini CLI when Google backing and Apache-2.0 matter more than OpenCode's MIT/community model. | Apache-2.0, backed by Google; OpenCode is MIT and community-driven. |
 
 ## Tech stack
 
@@ -117,9 +117,9 @@ You are a developer who wants AI-assisted coding but refuses to be locked into a
 
 ## Health & viability
 - **Maintenance**: Grade A — 13/13 active weeks in trailing 13; last commit 0 days ago.
-- **Responsiveness**: Grade C — median first-response time 360.0 hours across 0 qualifying issues/PRs.
-- **Adoption**: Grade C — 127,913 monthly downloads via npmjs.org (package: @opencode-ai/cli-darwin-arm64).
-- **Longevity**: Grade C — 428 days old.
+- **Responsiveness**: Cannot be scored — no_traffic.
+- **Adoption**: Grade C — 138,309 monthly downloads via npmjs.org (package: @opencode-ai/cli-linux-x64).
+- **Longevity**: Grade C — 429 days old.
 - **Governance**: Grade A — top-3 contributor share 45.1% (?).
 - **Risk / License**: Grade A — MIT license.
 ## Caveats (unverified)

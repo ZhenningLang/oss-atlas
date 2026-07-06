@@ -90,10 +90,10 @@ You also reach for it when you want a *small JSON API* in front of media extract
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| [youtube-dl](youtube-dl.md) | ✅ | Use this page for its stated niche; choose youtube-dl when you need python CLI / library driven by ~1000 per-site extractors. | Python CLI / library driven by ~1000 per-site extractors; built for scripting and pipelines, no service to run — but a command-line tool, not a browser UI, and its upstream release cadence has slowed (yt-dlp is the active successor). |
-| yt-dlp | 未收录 | Use this page for its stated niche; choose yt-dlp when you need the actively-maintained youtube-dl fork. | The actively-maintained youtube-dl fork; the de-facto CLI for YouTube extraction with the broadest, fastest-updated site support. A scriptable binary, not a hosted UI/API service like cobalt. |
-| you-get | 未收录 | Use this page for its stated niche; choose you-get when you need python command-line downloader with its own site list. | Python command-line downloader with its own site list; simpler UX than yt-dlp but a smaller, less-actively-tracked extractor catalog — still a CLI, not a web service. |
-| gallery-dl | 未收录 | Use this page for its stated niche; choose gallery-dl when you need specializes in *image/gallery* sites (boorus, social-media galleries) rather than video/audio. | Specializes in *image/gallery* sites (boorus, social-media galleries) rather than video/audio; complementary to cobalt, not a substitute. |
+| [youtube-dl](youtube-dl.md) | ✅ | Pick youtube-dl when you need a local Python CLI/library workflow instead of a hosted web/API service. | Python CLI / library driven by ~1000 per-site extractors; built for scripting and pipelines, no service to run — but a command-line tool, not a browser UI, and its upstream release cadence has slowed (yt-dlp is the active successor). |
+| [yt-dlp](yt-dlp.md) | ✅ | Pick yt-dlp when broad, fast-updated CLI extraction matters more than a browser UI. | The actively-maintained youtube-dl fork; the de-facto CLI for YouTube extraction with the broadest, fastest-updated site support. A scriptable binary, not a hosted UI/API service like cobalt. |
+| [you-get](you-get.md) | ✅ | Pick you-get when you want a simpler Python CLI with its own site catalog. | Python command-line downloader with its own site list; simpler UX than yt-dlp but a smaller, less-actively-tracked extractor catalog — still a CLI, not a web service. |
+| gallery-dl | 未收录 | Pick gallery-dl when the target is image/gallery sites rather than video/audio web downloads. | Specializes in *image/gallery* sites (boorus, social-media galleries) rather than video/audio; complementary to cobalt, not a substitute. |
 
 ## Tech stack
 
@@ -115,7 +115,7 @@ You also reach for it when you want a *small JSON API* in front of media extract
 
 ## Health & viability
 
-- **Responsiveness**: Grade A — median first-response time 117.2 hours across 8 qualifying issues/PRs.
+- **Responsiveness**: Grade A — median first-response time 36.6 hours across 7 qualifying issues/PRs.
 - **Maintenance — active (last push ~2026-04, as of 2026-06).** Not archived; ongoing development consistent with chasing site-player changes (an extractor-style downloader has to stay current to keep working) [未验证]. Treat continued activity as load-bearing for this tool class — a stale extractor silently breaks.
 - **Governance & backing.** `Org`-owned (`imputnet/cobalt`) — a small team/org behind a public-instance product, not a foundation and not a large vendor [推断]. Roadmap and the official public instance sit with that team; self-hosting insulates you from any single instance going away, which is the main resilience lever here.
 - **Age & Lindy verdict — mid-young (created 2022-07, ~4y).** Old enough to have proven the product and accumulated ~41k stars, young enough that there's no decade-long track record; a reasonable-but-not-bulletproof bet whose real fragility is per-site extractor breakage, not project death [推断].

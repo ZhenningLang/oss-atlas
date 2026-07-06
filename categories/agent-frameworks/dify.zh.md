@@ -10,16 +10,16 @@ maturity: v0.x, active, 147k stars (as of 2026-07)
 last_verified: 2026-07-01
 type: framework
 upstream:
-  pushed_at: 2026-07-01T10:38:29Z
+  pushed_at: 2026-07-04T10:43:04Z
   default_branch: main
-  default_branch_sha: 0000000000000000000000000000000000000000
+  default_branch_sha: 2e1ab194b718dea0ec364d3f1ae94fa0dd45e9e3
   archived: false
 health:
   schema: 1
   computed_at: 2026-07-03T08:27:30Z
   overall: B
-  overall_score: 3.33
-  scored_axes: 6
+  overall_score: 3.4
+  scored_axes: 5
   capped: false
   cap_reason: null
   needs_human_review: false
@@ -63,12 +63,10 @@ health:
         window_source: stats_contributors
         carve_out: null
     risk_license:
-      grade: A
-      raw:
-        spdx_id: Apache-2.0
-        permissiveness: permissive
-        relicense_36mo: false
-        content_license: null
+      grade: "?"
+      raw: {}
+  unknowns:
+    risk_license: { reason: custom_modified_license }
 ---
 
 # Dify
@@ -92,11 +90,11 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 | --- | --- | --- | --- |
-| [LangChain](langchain.zh.md) | ✅ | 底层 agent 工程库。 | LangChain 是代码优先的框架；Dify 是带内置 RAG 与部署能力的可视化平台。 |
-| [n8n](../workflow-orchestration/n8n.zh.md) | ✅ | 通用工作流自动化，带 AI 节点。 | n8n 面向更广泛的业务流程自动化；Dify 专为 LLM 和 agent 工作流打造。 |
-| [LangFlow](langflow.zh.md) | 未收录 | AI agent 与 workflow 可视化构建器。 | 两者都走可视化路线；LangFlow 偏 Python 优先且 MIT 许可，Dify 的部署功能和 RBAC 更成熟。 |
-| [AutoGPT](autogpt.zh.md) | ✅ | 自治持续运行 agent 平台。 | AutoGPT 面向完全自主的长期运行 agent；Dify 聚焦有人参与设计的编排式工作流。 |
-| CrewAI / LlamaIndex | 未收录 | 专业化 agent 框架。 | CrewAI 偏重多 agent 团队协作；LlamaIndex 偏重 RAG。Dify 把两者整合到一个平台。 |
+| [LangChain](langchain.zh.md) | ✅ | 需要代码优先的 agent/RAG 库，而不是可视化部署平台时，选 LangChain。 | LangChain 是代码优先的框架；Dify 是带内置 RAG 与部署能力的可视化平台。 |
+| [n8n](../workflow-orchestration/n8n.zh.md) | ✅ | 工作流是更广泛的业务自动化，只顺带使用 AI 节点时，选 n8n。 | n8n 面向更广泛的业务流程自动化；Dify 专为 LLM 和 agent 工作流打造。 |
+| [LangFlow](langflow.zh.md) | ✅ | 偏好 Python-first、MIT 许可的可视化构建器，而不是更完整的平台/RBAC 栈时，选 LangFlow。 | 两者都走可视化路线；LangFlow 偏 Python 优先且 MIT 许可，Dify 的部署功能和 RBAC 更成熟。 |
+| [AutoGPT](autogpt.zh.md) | ✅ | 目标是完全自主、长时间运行的 agent，而不是人工设计的工作流时，选 AutoGPT。 | AutoGPT 面向完全自主的长期运行 agent；Dify 聚焦有人参与设计的编排式工作流。 |
+| CrewAI / LlamaIndex | 未收录 | 想要多 agent 团队或 RAG-first 管道，且不需要 Dify 的整合平台时，选这些专项框架。 | CrewAI 偏重多 agent 团队协作；LlamaIndex 偏重 RAG。Dify 把两者整合到一个平台。 |
 
 ## 技术栈
 
@@ -120,13 +118,13 @@ health:
 
 ## 健康度与可持续性
 - **维护活跃度**：Grade A——最近 13 周中 13 周有提交；最后提交距今 0 天。
-- **响应速度**：Grade A——中位首次响应时间 0.2 小时，基于 18 个 qualifying issues/PRs。
+- **响应速度**：Grade A——中位首次响应时间 0.0 小时，基于 15 个 qualifying issues/PRs。
 - **采用广度**：Grade D——npmjs.org 上月下载量 8,835（包名：dify-client）。
-- **长青度**：Grade B——仓库已创建 1177 天。
+- **长青度**：Grade B——仓库已创建 1178 天。
 - **治理集中度**：Grade A——前三贡献者占比 22.6%（?）。
-- **许可风险**：无法计算——unknown。
+- **许可风险**：无法计算——custom_modified_license。上游 `LICENSE` 是修改版 Apache License 2.0，额外加入多租户服务商用许可、前端 LOGO/版权信息不可移除等条件；应把 GitHub 的 `NOASSERTION` 当作真实的许可审查信号，而不是解析器误报。
 ## 存疑（未验证）
 
-- [未验证] GitHub API 返回的许可为 `NOASSERTION`，商用前必须核实实际许可条款。
+- [未验证] GitHub API 返回的许可为 `NOASSERTION`；2026-07-04 直接读取 `LICENSE` 显示其为修改版 Apache License 2.0，附加多租户服务使用、前端 LOGO/版权移除、贡献者授权与外观专利声明等条款。商业再分发或托管多租户使用前需要法律审查。
 - [未验证] 生产自托管所需的精确资源（CPU、内存、磁盘）尚未从官方文档确认。
 - [推断] 约 3 年的仓库拥有 147k star，可能包含大量炒作驱动的增长；有机的企业级采用需独立验证。

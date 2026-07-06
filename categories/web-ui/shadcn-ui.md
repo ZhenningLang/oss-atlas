@@ -10,9 +10,9 @@ maturity: active, ~117.7k stars (as of 2026-07)
 last_verified: 2026-07-01
 type: library
 upstream:
-  pushed_at: 2026-06-30T06:34:55Z
+  pushed_at: 2026-07-03T12:29:04Z
   default_branch: main
-  default_branch_sha: 0000000000000000000000000000000000000000
+  default_branch_sha: d0fae528221011f75a8c64a917073904c2847493
   archived: false
 health:
   schema: 1
@@ -96,11 +96,11 @@ You also reach for it when you want a design system that stays in your repo, not
 
 | Alternative | In index | Our verdict | Tradeoff |
 | --- | --- | --- | --- |
-| Material UI (MUI) | 未收录 | Use this page for its stated niche; choose MUI when you need a comprehensive, Google-Material-themed component library with a large enterprise ecosystem. | Comprehensive Google-Material-themed React component library with enterprise adoption and paid support; heavier and more opinionated than shadcn/ui. |
-| Chakra UI | 未收录 | Use this page for its stated niche; choose Chakra UI when you want a simpler, styled-system-based React component library with good DX. | Simple, styled-system-based React library with good DX and a consistent theme API; less customizable at the file level than shadcn/ui's copy-and-own model. |
-| Ant Design | 未收录 | Use this page for its stated niche; choose Ant Design when you need a full-featured enterprise UI framework with many built-in components. | Full-featured enterprise UI framework with a vast component set and Chinese-first community; heavier and less Tailwind-native than shadcn/ui. |
-| Radix UI | 未收录 | Use this page for its stated niche; choose Radix UI when you need headless, unstyled primitives and plan to build your own styling layer from scratch. | Headless, unstyled accessibility primitives; shadcn/ui builds on Radix and adds Tailwind styling and a distribution workflow. |
-| Headless UI | 未收录 | Use this page for its stated niche; choose Headless UI when you want Tailwind-compatible, unstyled components from the Tailwind team. | Tailwind-team-authored unstyled components; fewer primitives than Radix and no built-in "copy to own" distribution system. |
+| Material UI (MUI) | 未收录 | Choose MUI when you need a comprehensive Google-Material-themed component library with a large enterprise ecosystem. | Comprehensive Google-Material-themed React component library with enterprise adoption and paid support; heavier and more opinionated than shadcn/ui. |
+| Chakra UI | 未收录 | Choose Chakra UI when you want a simpler, styled-system-based React component library with good DX. | Simple, styled-system-based React library with good DX and a consistent theme API; less customizable at the file level than shadcn/ui's copy-and-own model. |
+| [Ant Design](ant-design.md) | ✅ | Choose Ant Design when you need a full-featured enterprise UI framework with many built-in components. | Full-featured enterprise UI framework with a vast component set and Chinese-first community; heavier and less Tailwind-native than shadcn/ui. |
+| Radix UI | 未收录 | Choose Radix UI when you need headless, unstyled primitives and plan to build your own styling layer from scratch. | Headless, unstyled accessibility primitives; shadcn/ui builds on Radix and adds Tailwind styling and a distribution workflow. |
+| Headless UI | 未收录 | Choose Headless UI when you want Tailwind-compatible, unstyled components from the Tailwind team. | Tailwind-team-authored unstyled components; fewer primitives than Radix and no built-in "copy to own" distribution system. |
 
 ## Tech stack
 

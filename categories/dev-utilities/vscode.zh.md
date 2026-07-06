@@ -91,7 +91,7 @@ Visual Studio Code——一款轻量但强大的代码编辑器，兼具编辑�
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 | --- | --- | --- | --- |
-| Zed | 未收录 | 高性能原生代码编辑器，支持多人协作。 | Zed 更快、Rust 原生，但生态更小；VS Code 拥有最大的扩展市场。 |
+| [Zed](zed.zh.md) | ✅ | 高性能原生代码编辑器，支持多人协作。 | Zed 更快、Rust 原生，但生态更小；VS Code 拥有最大的扩展市场。 |
 | Sublime Text | 未收录 | 快速、轻量的专有编辑器。 | Sublime 更快更轻，但专有且收费；VS Code 免费开源。 |
 | Neovim | 未收录 | 带现代 Lua 配置的模态终端编辑器。 | Neovim 仅限终端，学习曲线陡峭；VS Code 以 GUI 优先，对新手友好。 |
 | IntelliJ IDEA | 未收录 | 面向 JVM 和 Android 的深度语言专用 IDE。 | IntelliJ 更重、聚焦 JVM；VS Code 更轻、语言无关。 |
@@ -116,9 +116,9 @@ Visual Studio Code——一款轻量但强大的代码编辑器，兼具编辑�
 
 ## 健康度与可持续性
 - **维护活跃度**：Grade A——最近 13 周中 13 周有提交；最后提交距今 0 天。
-- **响应速度**：Grade C——中位首次响应时间 1080.0 小时，基于 0 个 qualifying issues/PRs。
+- **响应速度**：无法计算——no_traffic。
 - **采用广度**：Grade D——npmjs.org 上月下载量 2,672（包名：@theia/vscode-builtin-fsharp）。
-- **长青度**：Grade A——仓库已创建 3955 天。
+- **长青度**：Grade A——仓库已创建 3956 天。
 - **治理集中度**：Grade A——前三贡献者占比 18.1%（?）。
 - **许可风险**：Grade A——MIT 许可证。
 ## 存疑（未验证）

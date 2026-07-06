@@ -96,11 +96,11 @@ page-agent 是阿里开源的「页内 GUI agent」JS 库：把 AI agent 直接�
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| browser-use | 未收录 | 当前页用于它的主场景；如果更看重“Python、服务端、具备视觉能力（截图）的浏览器 agent”，再选 browser-use。 | Python、服务端、具备视觉能力（截图）的浏览器 agent —— 基础设施更重（需要真实/headless 浏览器），但能超越 DOM 文本工作、且不依赖客户端；page-agent 称其为灵感来源。 |
-| Playwright / Puppeteer | 未收录 | 当前页用于它的主场景；如果更看重“更底层、代码驱动、支持 headless 的自动化”，再选 Playwright / Puppeteer。 | 更底层、代码驱动、支持 headless 的自动化 —— 确定性强且强大，但你要自己写选择器/脚本（不是自然语言），且在 DOM 变化时会失效。 |
-| Selenium | 未收录 | 当前页用于它的主场景；如果更看重“成熟、普及的跨浏览器自动化”，再选 Selenium。 | 成熟、普及的跨浏览器自动化 —— 但纯手工、冗长、基于选择器，没有自然语言层。 |
-| UiPath / Automation Anywhere (RPA) | 未收录 | 当前页用于它的主场景；如果更看重“带治理能力的企业级桌面+Web RPA”，再选 UiPath / Automation Anywhere (RPA)。 | 带治理能力的企业级桌面+Web RPA —— 但闭源、昂贵、有厂商锁定，相比一段 JS 片段过于笨重。 |
-| Computer-use agents (Anthropic computer use / OpenAI Operator) | 未收录 | 当前页用于它的主场景；如果更看重“基于视觉、驱动真实屏幕/浏览器的 agent”，再选 Computer-use agents (Anthropic computer use / OpenAI Operator)。 | 基于视觉、驱动真实屏幕/浏览器的 agent —— 能处理任意像素 UI，但更慢、更贵，且需要一个受控的浏览器/VM，而非页内片段。 |
+| browser-use | 未收录 | 需要 Python 服务端且具备视觉能力的浏览器 agent 时，选 browser-use。 | Python、服务端、具备视觉能力（截图）的浏览器 agent —— 基础设施更重（需要真实/headless 浏览器），但能超越 DOM 文本工作、且不依赖客户端；page-agent 称其为灵感来源。 |
+| Playwright / Puppeteer | 未收录 | 需要更底层、代码驱动、支持 headless 的自动化时，选 Playwright 或 Puppeteer。 | 更底层、代码驱动、支持 headless 的自动化 —— 确定性强且强大，但你要自己写选择器/脚本（不是自然语言），且在 DOM 变化时会失效。 |
+| [Selenium](selenium.zh.md) | ✅ | 需要成熟、普及的跨浏览器自动化时，选 Selenium。 | 成熟、普及的跨浏览器自动化 —— 但纯手工、冗长、基于选择器，没有自然语言层。 |
+| UiPath / Automation Anywhere (RPA) | 未收录 | 需要带治理能力的企业级桌面+Web RPA 时，选 UiPath 或 Automation Anywhere。 | 带治理能力的企业级桌面+Web RPA —— 但闭源、昂贵、有厂商锁定，相比一段 JS 片段过于笨重。 |
+| Computer-use agents (Anthropic computer use / OpenAI Operator) | 未收录 | 需要基于视觉驱动真实屏幕/浏览器的 agent 时，选 computer-use agents。 | 基于视觉、驱动真实屏幕/浏览器的 agent —— 能处理任意像素 UI，但更慢、更贵，且需要一个受控的浏览器/VM，而非页内片段。 |
 
 ## 技术栈
 

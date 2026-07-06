@@ -84,12 +84,12 @@ You reach for **Cua**. You spin up an ephemeral sandbox with one async call — 
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| [page-agent](page-agent.md) | ✅ | Use this page for its stated niche; choose page-agent when you need in-page JS GUI agent driving the DOM as text inside the user's own browser. | In-page JS GUI agent driving the DOM as text inside the user's own browser — no VM, no vision, far cheaper/faster, but web-only and can't touch native desktop apps. |
-| [Chrome DevTools MCP](chrome-devtools-mcp.md) | ✅ | Use this page for its stated niche; choose Chrome DevTools MCP when you need exposes a real Chrome via DevTools Protocol over MCP. | Exposes a real Chrome via DevTools Protocol over MCP — strong for browser debugging/automation, but Chrome-scoped, not a full-desktop sandbox. |
-| [Agent Browser](agent-browser.md) | ✅ | Use this page for its stated niche; choose Agent Browser when you need headless browser automation CLI for agents. | Headless browser automation CLI for agents — lightweight web-task runner; no OS-level control or VM isolation. |
-| OpenAI Operator / Anthropic computer use | 未收录 | Use this page for its stated niche; choose OpenAI Operator / Anthropic computer use when you need hosted vision computer-use agents. | Hosted vision computer-use agents — turnkey but proprietary, tied to one model vendor; Cua is the open self-hostable infra layer (and can *run* such models via liteLLM). |
-| OSWorld / WebArena (benchmarks) | 未收录 | Use this page for its stated niche; choose OSWorld / WebArena (benchmarks) when you need evaluation environments Cua-Bench targets. | Evaluation environments Cua-Bench targets — they grade agents; Cua provides the runnable sandbox + agent that gets graded. |
-| E2B / Daytona (dev sandboxes) | 未收录 | Use this page for its stated niche; choose E2B / Daytona (dev sandboxes) when you need code-execution sandboxes for agents. | Code-execution sandboxes for agents — overlap on VM isolation, but oriented at running code, not screenshot-driving a GUI desktop. |
+| [page-agent](page-agent.md) | ✅ | Choose page-agent when you only need in-page DOM-as-text automation in the user's browser. | In-page JS GUI agent driving the DOM as text inside the user's own browser — no VM, no vision, far cheaper/faster, but web-only and can't touch native desktop apps. |
+| [Chrome DevTools MCP](chrome-devtools-mcp.md) | ✅ | Choose Chrome DevTools MCP when you need a real Chrome exposed via DevTools Protocol over MCP. | Exposes a real Chrome via DevTools Protocol over MCP — strong for browser debugging/automation, but Chrome-scoped, not a full-desktop sandbox. |
+| [Agent Browser](agent-browser.md) | ✅ | Choose Agent Browser when you need a lightweight headless browser automation CLI for agents. | Headless browser automation CLI for agents — lightweight web-task runner; no OS-level control or VM isolation. |
+| OpenAI Operator / Anthropic computer use | 未收录 | Choose hosted computer-use products when turnkey proprietary vision agents are acceptable. | Hosted vision computer-use agents — turnkey but proprietary, tied to one model vendor; Cua is the open self-hostable infra layer (and can *run* such models via liteLLM). |
+| OSWorld / WebArena (benchmarks) | 未收录 | Choose OSWorld or WebArena when you need evaluation environments rather than a runnable sandbox. | Evaluation environments Cua-Bench targets — they grade agents; Cua provides the runnable sandbox + agent that gets graded. |
+| E2B / Daytona (dev sandboxes) | 未收录 | Choose E2B or Daytona when you need code-execution sandboxes for agents. | Code-execution sandboxes for agents — overlap on VM isolation, but oriented at running code, not screenshot-driving a GUI desktop. |
 
 ## Tech stack
 
@@ -113,7 +113,7 @@ You reach for **Cua**. You spin up an ephemeral sandbox with one async call — 
 
 ## Health & viability
 
-- **Responsiveness**: Grade B — median first-response time 66.6 hours across 15 qualifying issues/PRs.
+- **Responsiveness**: Grade A — median first-response time 1.5 hours across 12 qualifying issues/PRs.
 - **Maintenance — active across many packages.** Last pushed 2026-06, not archived; the monorepo's packages (cua-agent v0.8.4, cua-sandbox v0.1.17, cua-cloud, cua-driver-rs v0.6.8, cua-bench) were all updated 2026-06. Active, but you track **several independent version streams**, and `cua-driver-rs`/Linux drivers are flagged pre-release. `[未验证]`
 - **Governance / backing — single startup (trycua).** **Organization**-owned (`trycua/cua`), ~19k stars [未验证]. Backed by one venture-stage company behind the cua.ai hosted product — better than a lone maintainer, but its longevity is tied to that company's survival and funding. `[推断]`
 - **Age & Lindy — young (created 2025-01, ~1.5 years as of 2026-06).** Old enough to show real benchmark integration (OSWorld/ScreenSpot/Windows Arena) but the many `v0.x` packages signal a pre-stable API; no Lindy prior yet. Expect breaking changes; pin per-package versions.

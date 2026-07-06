@@ -87,10 +87,10 @@ Anthropic 官方的一组 plugin/skill 合集，面向**知识工作**——文�
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [Anthropic Skills](anthropic-skills.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“Anthropic 独立的 *skills* 仓库（自包含的 `SKILL”，再选 Anthropic Skills。 | Anthropic 独立的 *skills* 仓库（自包含的 `SKILL.md` 目录），更广、不限于知识工作——含文档 skill，但也含前端/画布/MCP 编写。要通用 skill 基线用它；要专门的知识工作切片用本仓库。 |
-| [Claude Plugins（官方）](claude-plugins-official.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“Anthropic 第一方的 *Claude Code* 插件市场，偏写代码（LSP、code-review、PR/commit 包）”，再选 Claude Plugins（官方）。 | Anthropic 第一方的 *Claude Code* 插件市场，偏写代码（LSP、code-review、PR/commit 包）。本仓库面向知识工作；按你的任务是办公/沟通/调研还是开发者工作流来选。 |
-| 第三方/社区知识工作合集 | 未收录 | 当前页用于它的主场景；如果更看重“更大、迭代更快的办公/沟通合集，但没有 Anthropic 的精选与 provenance 保证”，再选 第三方/社区知识工作合集。 | 更大、迭代更快的办公/沟通合集，但没有 Anthropic 的精选与 provenance 保证。本仓库是第一方基线；社区合集在更高信任成本下做延伸。 |
-| 自己写 skill/plugin | 不适用 | 当前页用于它的主场景；如果更看重“贴合度最高、零外部依赖，但放弃厂商维护的知识工作构件与已知 provenance”，再选 自己写 skill/plugin。 | 贴合度最高、零外部依赖，但放弃厂商维护的知识工作构件与已知 provenance。 |
+| [Anthropic Skills](anthropic-skills.zh.md) | ✅ | 需要更广的独立 skills 基线时，选 Anthropic Skills。 | Anthropic 独立的 *skills* 仓库（自包含的 `SKILL.md` 目录），更广、不限于知识工作——含文档 skill，但也含前端/画布/MCP 编写。要通用 skill 基线用它；要专门的知识工作切片用本仓库。 |
+| [Claude Plugins（官方）](claude-plugins-official.zh.md) | ✅ | 写代码相关的第一方插件覆盖更重要时，选 Claude Plugins。 | Anthropic 第一方的 *Claude Code* 插件市场，偏写代码（LSP、code-review、PR/commit 包）。本仓库面向知识工作；按你的任务是办公/沟通/调研还是开发者工作流来选。 |
+| 第三方/社区知识工作合集 | 未收录 | 更大、迭代更快比第一方来源担保更重要时，选社区知识工作合集。 | 更大、迭代更快的办公/沟通合集，但没有 Anthropic 的精选与 provenance 保证。本仓库是第一方基线；社区合集在更高信任成本下做延伸。 |
+| 自己写 skill/plugin | 不适用 | 最高贴合度比厂商维护的知识工作构件更重要时，选自写 skill/plugin。 | 贴合度最高、零外部依赖，但放弃厂商维护的知识工作构件与已知 provenance。 |
 
 ## 健康度与可持续性
 

@@ -87,10 +87,10 @@ You reach for it specifically when your output language is Chinese and you'd rat
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| `blader/humanizer` (upstream) | 未收录 | Use this page for its stated niche; choose blader/humanizer (upstream) when you need the English original this repo translates. | The English original this repo translates. Pick upstream for English copy; pick Humanizer-zh for Chinese-language tells and examples. |
-| [Baoyu Skills](baoyu-skills.md) | ✅ | Use this page for its stated niche; choose Baoyu Skills when you need a broader Chinese-author skill collection (translation / markdown / content-gen helpers) rather than. | A broader Chinese-author skill collection (translation / markdown / content-gen helpers) rather than a single de-slop rubric. Compare on whether you want one focused humanize skill or a multi-skill writing bundle. |
-| Hand-written de-slop prompt in `CLAUDE.md` | 未收录 | Use this page for its stated niche; choose Hand-written de-slop prompt in CLAUDE.md when you need a few inline rules you maintain yourself: zero install and fully yours, but you re-derive and re-tun. | A few inline rules you maintain yourself: zero install and fully yours, but you re-derive and re-tune the pattern list instead of inheriting a vetted ~24-item checklist. |
-| Wikipedia "Signs of AI writing" guide | 未收录 | Use this page for its stated niche; choose Wikipedia "Signs of AI writing" guide when you need the reference source behind the rubric. | The reference source behind the rubric — a human-readable guide, not an installable skill. Use it to audit or extend the checklist, not to run edits. |
+| `blader/humanizer` (upstream) | 未收录 | Choose the upstream project when English copy and the original rubric matter. | The English original this repo translates. Pick upstream for English copy; pick Humanizer-zh for Chinese-language tells and examples. |
+| [Baoyu Skills](baoyu-skills.md) | ✅ | Choose Baoyu Skills when you need a broader Chinese writing/translation skill bundle. | A broader Chinese-author skill collection (translation / markdown / content-gen helpers) rather than a single de-slop rubric. Compare on whether you want one focused humanize skill or a multi-skill writing bundle. |
+| Hand-written de-slop prompt in `CLAUDE.md` | 未收录 | Choose a hand-written prompt when a few maintained inline rules are enough. | A few inline rules you maintain yourself: zero install and fully yours, but you re-derive and re-tune the pattern list instead of inheriting a vetted ~24-item checklist. |
+| Wikipedia "Signs of AI writing" guide | 未收录 | Choose the Wikipedia guide when you need the reference source, not an installable skill. | The reference source behind the rubric — a human-readable guide, not an installable skill. Use it to audit or extend the checklist, not to run edits. |
 
 ## Health & viability
 

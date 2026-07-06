@@ -91,12 +91,12 @@ ART 正是为这种场景而生。你把 agent 代码继续留在 Python 里，�
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [Unsloth](unsloth.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“更快/更省的 LoRA 微调内核（ART 底层就在用它）”，再选 Unsloth。 | 更快/更省的 LoRA 微调内核（ART 底层就在用它）。Unsloth 是训练效率层；ART 在其上加了 agentic GRPO 循环 + RULER 奖励编排。只做 SFT/单轮 GRPO 用 Unsloth；多步 agent 用 ART。 |
-| [agent-lightning](agent-lightning.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“微软的框架，以最小代码改动 RL 训练 agent，将 agent 执行与训练解耦”，再选 agent-lightning。 | 微软的框架，以最小代码改动 RL 训练 agent，将 agent 执行与训练解耦。概念上最接近的同类；在集成方式和奖励工具上有差异——ART 的招牌差异化是内置的 RULER 零标注奖励。 |
-| [LLaMA-Factory](llamafactory.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“覆盖众多模型的 SFT/DPO/PPO 微调工具箱，走配置/UI 工作流”，再选 LLaMA-Factory。 | 覆盖众多模型的 SFT/DPO/PPO 微调工具箱，走配置/UI 工作流。通用微调广度更强；在 ART 专精的「从 rollout 训练已部署多步 agent」这条循环上更弱。 |
-| HF TRL | 未收录 | 当前页用于它的主场景；如果更看重“ART（及其他工具）所构建于其上的底层 GRPO/PPO/DPO 训练库”，再选 HF TRL。 | ART（及其他工具）所构建于其上的底层 GRPO/PPO/DPO 训练库。控制力和通用性更强，但 agent rollout 循环、奖励函数和推理服务都得你自己拼。 |
-| verl | 未收录 | 当前页用于它的主场景；如果更看重“面向大规模训练的高吞吐分布式 RLHF/RL 库”，再选 verl。 | 面向大规模训练的高吞吐分布式 RLHF/RL 库。扩展性更强但运维更重；不聚焦单工程师「给我的 agent 埋点」的易用性。 |
-| torchtune | 未收录 | 当前页用于它的主场景；如果更看重“PyTorch 原生的微调/RL 配方（ART 训练栈中有用到）”，再选 torchtune。 | PyTorch 原生的微调/RL 配方（ART 训练栈中有用到）。是构件，而非 agent-RL 框架。 |
+| [Unsloth](unsloth.zh.md) | ✅ | 需求是更快的单卡 LoRA／SFT 或单轮 GRPO，而不是多步 agent rollout 循环时，选 Unsloth。 | Unsloth 是 ART 底层使用的训练效率层；ART 额外加入 agentic GRPO 与 RULER 奖励编排。 |
+| [agent-lightning](agent-lightning.zh.md) | ✅ | 给现有 agent 做最小代码改动的 RL 比 ART 内置 RULER 奖励路径更重要时，选 agent-lightning。 | 它是概念上最接近的同类：都从执行中训练 agent，但集成方式和奖励工具不同。 |
+| [LLaMA-Factory](llamafactory.zh.md) | ✅ | 想通过配置和 UI 工作流覆盖广泛模型的 SFT/DPO/PPO 微调时，选 LLaMA-Factory。 | 通用微调广度更强；在 ART 专精的已部署多步 agent rollout 循环上更弱。 |
+| HF TRL | 未收录 | 想要底层 GRPO/PPO/DPO trainer，且能自己接 agent rollout 循环时，选 HF TRL。 | 控制力和通用性更强，但奖励、推理服务和编排都要自己拼。 |
+| verl | 未收录 | 大规模训练下的高吞吐分布式 RLHF/RL 是主需求时，选 verl。 | 扩展性更强但运维更重，也不聚焦单工程师给 agent 埋点的易用性。 |
+| torchtune | 未收录 | PyTorch 原生微调／RL 配方已经足够，完整 agent-RL 框架反而过重时，选 torchtune。 | 它是这个生态里的构件，而不是完整的 agent-rollout 训练框架。 |
 
 ## 技术栈
 

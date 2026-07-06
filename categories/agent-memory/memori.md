@@ -95,12 +95,12 @@ It's a fit when you want memory that's keyed on *what agents do*, not just chat 
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| [Mem0](mem0.md) | ✅ | Use this page for its stated niche; choose Mem0 when you need the most-cited agent-memory layer. | The most-cited agent-memory layer; add/search API over a vector store, broad self-host story. Memori leans on automatic client interception + structured entity/process state and an opinionated cloud, vs Mem0's more explicit, datastore-flexible retrieval. |
-| [claude-subconscious](claude-subconscious.md) | ✅ | Use this page for its stated niche; choose claude-subconscious when you need a Claude-specific background-memory experiment (Letta lineage). | A Claude-specific background-memory experiment (Letta lineage); narrower scope than Memori's multi-provider, multi-framework infrastructure. |
-| Letta (MemGPT) | 未收录 | Use this page for its stated niche; choose Letta (MemGPT) when you need agent runtime with a memory-management OS (tiered context, self-editing memory). | Agent runtime with a memory-management OS (tiered context, self-editing memory); a heavier stateful-agent server, not a drop-in client wrapper. |
-| Zep | 未收录 | Use this page for its stated niche; choose Zep when you need temporal knowledge-graph memory service with a strong self-host/OSS core. | Temporal knowledge-graph memory service with a strong self-host/OSS core; comparable structured-memory ambition, different graph-first model. |
-| LangMem (LangChain) | 未收录 | Use this page for its stated niche; choose LangMem (LangChain) when you need memory utilities tied to the LangGraph/LangChain stack. | Memory utilities tied to the LangGraph/LangChain stack; less standalone than Memori's framework-agnostic pitch. |
-| plain vector DB (pgvector / Chroma) | 未收录 | Use this page for its stated niche; choose plain vector DB (pgvector / Chroma) when you need you own the schema and retrieval. | You own the schema and retrieval; no augmentation, no entity model, no cloud — maximum control, maximum wiring. |
+| [Mem0](mem0.md) | ✅ | Choose Mem0 when explicit add/search APIs and broad self-hosting matter more. | The most-cited agent-memory layer; add/search API over a vector store, broad self-host story. Memori leans on automatic client interception + structured entity/process state and an opinionated cloud, vs Mem0's more explicit, datastore-flexible retrieval. |
+| [claude-subconscious](claude-subconscious.md) | ✅ | Choose claude-subconscious when you specifically want a Claude/Letta background-memory experiment. | A Claude-specific background-memory experiment (Letta lineage); narrower scope than Memori's multi-provider, multi-framework infrastructure. |
+| Letta (MemGPT) | 未收录 | Choose Letta when you need a memory-management OS inside a stateful agent runtime. | Agent runtime with a memory-management OS (tiered context, self-editing memory); a heavier stateful-agent server, not a drop-in client wrapper. |
+| Zep | 未收录 | Choose Zep when temporal knowledge-graph memory is the main architecture bet. | Temporal knowledge-graph memory service with a strong self-host/OSS core; comparable structured-memory ambition, different graph-first model. |
+| LangMem (LangChain) | 未收录 | Choose LangMem when your memory utilities should stay tied to LangGraph/LangChain. | Memory utilities tied to the LangGraph/LangChain stack; less standalone than Memori's framework-agnostic pitch. |
+| plain vector DB (pgvector / Chroma) | 未收录 | Choose a plain vector DB when owning schema and retrieval outweighs augmentation features. | You own the schema and retrieval; no augmentation, no entity model, no cloud — maximum control, maximum wiring. |
 
 ## Tech stack
 

@@ -91,11 +91,11 @@ You also reach for it as a shareable team deployment in the cheap-and-cheerful s
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| LibreChat | 未收录 | Use this page for its stated niche; choose LibreChat when you need full multi-user platform. | Full multi-user platform — accounts, many auth backends, RAG, assistants, code interpreter; far more capable and far heavier to run. NextChat is a lighter single-deploy client, not a team platform. |
-| Lobe Chat | 未收录 | Use this page for its stated niche; choose Lobe Chat when you need comparable polished multi-provider self-hosted UI with plugins, knowledge base, and (in its cloud/DB. | Comparable polished multi-provider self-hosted UI with plugins, knowledge base, and (in its cloud/DB mode) multi-user; broader feature surface, heavier when you turn those on. NextChat stays minimal and browser-local. |
-| Open WebUI | 未收录 | Use this page for its stated niche; choose Open WebUI when you need self-hosted UI strong on Ollama/local models with built-in RBAC, users, and pipelines. | Self-hosted UI strong on Ollama/local models with built-in RBAC, users, and pipelines; needs a server + database. NextChat trades that for a static/Vercel deploy with no backend to operate. |
-| [HiveChat](../team-chat/hivechat.md) | ✅ | Use this page for its stated niche; choose HiveChat when you need admin-managed team chat: per-group model access, token quotas, Postgres-backed user accounts. | Admin-managed team chat: per-group model access, token quotas, Postgres-backed user accounts. The team-governance answer NextChat's community edition deliberately is not. |
-| ChatGPT / Claude.ai (commercial SaaS) | 未收录 | Use this page for its stated niche; choose ChatGPT / Claude.ai (commercial SaaS) when you need zero-ops, vendor-managed, locked to one model family, with the provider holding your data. | Zero-ops, vendor-managed, locked to one model family, with the provider holding your data. NextChat trades that convenience for self-hosting, multi-provider choice, and key/data control. |
+| LibreChat | 未收录 | Choose LibreChat when you need a full multi-user platform rather than a lightweight single-deploy client. | Accounts, many auth backends, RAG, assistants, and code interpreter; far more capable and far heavier to run. NextChat is a lighter client, not a team platform. |
+| Lobe Chat | 未收录 | Choose Lobe Chat when you want a polished multi-provider UI with plugins, knowledge base, and optional multi-user modes. | Broader feature surface and heavier once cloud/DB features are enabled. NextChat stays minimal and browser-local. |
+| [Open WebUI](open-webui.md) | ✅ | Choose Open WebUI when Ollama/local-model serving, RBAC, users, and pipelines matter more than a static/Vercel-style client. | Strong self-hosted UI for local models, but it needs a server and database. NextChat trades those features for simpler deployment and less backend operation. |
+| [HiveChat](../team-chat/hivechat.md) | ✅ | Choose HiveChat when you need admin-managed team chat with per-group model access, token quotas, and Postgres-backed user accounts. | HiveChat is the team-governance answer NextChat's community edition deliberately is not. |
+| ChatGPT / Claude.ai (commercial SaaS) | 未收录 | Choose commercial SaaS when zero-ops vendor management is more important than self-hosting and provider choice. | Locked to one model family with the provider holding your data; NextChat trades that convenience for self-hosting, multi-provider choice, and key/data control. |
 
 ## Tech stack
 
@@ -118,7 +118,7 @@ You also reach for it as a shareable team deployment in the cheap-and-cheerful s
 
 ## Health & viability
 
-- **Responsiveness**: Grade B — median first-response time 113.2 hours across 4 qualifying issues/PRs.
+- **Responsiveness**: Grade A — median first-response time 113.2 hours across 4 qualifying issues/PRs.
 - **Maintenance — active but coasting on releases (as of 2026-06).** Repo pushed 2026-05, so the codebase is alive; but the latest tagged release (v2.16.1) is reported 2025-07-29 — roughly a year stale, so you'd be tracking a fast-moving `main` rather than cut releases. Not archived. [未验证]
 - **Governance & bus factor — single-vendor, open-core-adjacent.** Organization-owned (the ChatGPTNextWeb / NextChat org), so not literally a single User repo, but it is effectively one vendor's project, and that vendor monetizes a separate paid Enterprise Edition. The OSS community edition's roadmap is theirs to set; treat governance as vendor-controlled, not foundation-style. [推断]
 - **Age & Lindy — moderate.** Created 2023-03, ~3 years old and still maintained; old enough to have outlived the first wave of ChatGPT-clone UIs, young enough that this category churns fast. A reasonable but not blue-chip Lindy bet — its durability rests on the vendor's continued interest. [推断]
@@ -132,4 +132,4 @@ You also reach for it as a shareable team deployment in the cheap-and-cheerful s
 - [未验证] The "key-exposure on pure-frontend deploys" caution reflects how a browser-to-provider static deploy works in general; the exact exposure depends on your deployment topology (server-side proxy vs. direct), so audit your own setup rather than assuming.
 - [未验证] A paid Enterprise Edition with permission control is advertised by the project (business@nextchat.dev); it is separate from this MIT open-source repo and its terms were not verified here.
 - [推断] "Single-user-shaped community edition" is inferred from the `CODE`-password-only access model and browser-local storage, not from a documented hard limit on concurrent users.
-- [推断] Comparison verdicts (LibreChat/Lobe Chat/Open WebUI being broader or heavier) reflect general project positioning, not a benchmarked head-to-head; only HiveChat is indexed here.
+- [推断] Comparison verdicts (LibreChat/Lobe Chat/Open WebUI being broader or heavier) reflect general project positioning, not a benchmarked head-to-head; Open WebUI and HiveChat are indexed here, while LibreChat and Lobe Chat are not.

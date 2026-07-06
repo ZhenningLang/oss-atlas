@@ -90,11 +90,11 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| pywinauto | 未收录 | 当前页用于它的主场景；如果更看重“仅 Windows，驱动 UI Automation / Win32 无障碍树”，再选 pywinauto。 | 仅 Windows，驱动 UI Automation / Win32 无障碍树——元素感知，比点像素稳健得多，但不跨平台、API 更陡。 |
-| AutoHotkey | 未收录 | 当前页用于它的主场景；如果更看重“仅 Windows 的脚本语言，专为热键/宏与 GUI 自动化打造”，再选 AutoHotkey。 | 仅 Windows 的脚本语言，专为热键/宏与 GUI 自动化打造；非常成熟，但是自家语言、没有原生跨平台/Python 路线。 |
-| SikuliX | 未收录 | 当前页用于它的主场景；如果更看重“基于 Java 的图像识别自动化（OCR + 模板匹配）”，再选 SikuliX。 | 基于 Java 的图像识别自动化（OCR + 模板匹配）；和 PyAutoGUI 一样跨平台，但更重（JVM）、偏 IDE 中心。 |
-| Selenium / Playwright | 未收录 | 当前页用于它的主场景；如果更看重“DOM 级浏览器自动化”，再选 Selenium / Playwright。 | DOM 级浏览器自动化——当目标是网页而非原生桌面程序时的正确工具。 |
-| pynput | 未收录 | 当前页用于它的主场景；如果更看重“更底层的跨平台输入控制/监听（含全局热键监听）”，再选 pynput。 | 更底层的跨平台输入控制/监听（含全局热键监听）；没有截图/图像定位，范围比 PyAutoGUI 小。 |
+| pywinauto | 未收录 | 只做 Windows 且需要 UI Automation / Win32 无障碍树时，选 pywinauto。 | 元素感知，比点像素稳健得多，但不跨平台、API 更陡。 |
+| AutoHotkey | 未收录 | 需要 Windows 优先、专为热键、宏与 GUI 自动化打造的脚本语言时，选 AutoHotkey。 | Windows 自动化上非常成熟，但它是自家语言，没有原生跨平台/Python 路线。 |
+| SikuliX | 未收录 | 能接受基于 Java 的图像识别自动化、OCR 和模板匹配时，选 SikuliX。 | 和 PyAutoGUI 一样跨平台，但因 JVM 更重，也更偏 IDE 中心。 |
+| [Selenium](../web-automation/selenium.zh.md) / Playwright | 部分已收录 | 目标是网页，且 DOM 级浏览器自动化比桌面像素控制更重要时，选 Selenium 或 Playwright。 | 浏览器自动化能检查 DOM 状态并等待页面事件；PyAutoGUI 更适合原生桌面表面和像素级控制。 |
+| pynput | 未收录 | 需要更底层的跨平台输入控制或全局热键监听时，选 pynput。 | 没有截图/图像定位层；它范围比 PyAutoGUI 小，聚焦输入事件。 |
 
 ## 技术栈
 

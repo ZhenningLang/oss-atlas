@@ -96,9 +96,9 @@ You're a design system lead at a company whose products span multiple frontend f
 
 | Alternative | In index | Our verdict | Tradeoff |
 | --- | --- | --- | --- |
-| React | 未收录 | The most popular UI library with a vast ecosystem and JSX-based component model. | React has a larger ecosystem and job market; Lit is framework-agnostic and based on standards, making it ideal for design systems that must work everywhere. |
-| Vue.js | 未收录 | Progressive framework with a gentler learning curve and excellent documentation. | Vue is easier to learn and has a richer ecosystem; Lit is smaller and more interoperable but requires Web Components knowledge. |
-| Svelte | 未收录 | Compile-time framework with minimal runtime and no virtual DOM. | Svelte compiles away its framework; Lit is a runtime library that leverages browser standards. Both are small, but Svelte is a full framework. |
+| [React](react.md) | ✅ | Choose React when you need the largest UI ecosystem and JSX-based application components. | React has a larger ecosystem and job market; Lit is framework-agnostic and based on standards, making it ideal for design systems that must work everywhere. |
+| [Vue.js](vue.md) | ✅ | Choose Vue when you need a progressive app framework with a gentler learning curve and richer ecosystem. | Vue is easier to learn and has a richer ecosystem; Lit is smaller and more interoperable but requires Web Components knowledge. |
+| [Svelte](svelte.md) | ✅ | Choose Svelte when you want compile-time app components with minimal runtime and no virtual DOM. | Svelte compiles away its framework; Lit is a runtime library that leverages browser standards. Both are small, but Svelte is a full framework. |
 | [Angular](angular.md) | ✅ | Comprehensive, opinionated enterprise framework with TypeScript and DI. | Angular is a full-stack framework for large SPAs; Lit is a lightweight library for building reusable components, not full apps. |
 | Stencil | 未收录 | Ionic's Web Components compiler — compiles to standards-compliant custom elements. | Stencil is a compile-time toolchain; Lit is a runtime library. Stencil is better for generating component libraries from decorated classes; Lit is simpler for direct use. |
 | Native `<template>` / hand-written DOM | 未收录 | Browser-native approach with zero dependencies but no reactivity or DX. | Native DOM is verbose and error-prone; Lit gives you reactive templates and a component base class with minimal overhead. |

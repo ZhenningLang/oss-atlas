@@ -93,11 +93,11 @@ You also reach for it when you want a cheap pre-check: `isProbablyReaderable(doc
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| [python-readability](python-readability.md) | ✅ | Use this page for its stated niche; choose python-readability when you need lxml-based Python port of the same arc90 lineage. | lxml-based Python port of the same arc90 lineage; choose by language (Python pipeline) — heuristics and output differ from the JS engine. |
-| [dragnet](dragnet.md) | ✅ | Use this page for its stated niche; choose dragnet when you need ML-model content extraction (Python). | ML-model content extraction (Python); can outperform on some pages but is heavier, has aging dependencies, and is less maintained. |
-| [boilerpipe](boilerpipe.md) | ✅ | Use this page for its stated niche; choose boilerpipe when you need classic Java boilerplate-removal algorithms. | Classic Java boilerplate-removal algorithms; mature ideas but the repo is effectively abandoned (last pushed 2018). |
-| trafilatura | 未收录 | Use this page for its stated niche; choose trafilatura when you need python extraction library with strong benchmark results, metadata, and crawl support. | Python extraction library with strong benchmark results, metadata, and crawl support; often the modern Python default — different language, broader scope. |
-| Mercury / Postlight Parser | 未收录 | Use this page for its stated niche; choose Mercury / Postlight Parser when you need node article parser that also fetched pages. | Node article parser that also fetched pages; historically popular but maintenance has been uneven. |
+| [python-readability](python-readability.md) | ✅ | Choose python-readability when you need the lxml-based Python port of the same Arc90 lineage. | lxml-based Python port of the same arc90 lineage; choose by language (Python pipeline) — heuristics and output differ from the JS engine. |
+| [dragnet](dragnet.md) | ✅ | Choose dragnet when you need ML-model content extraction in Python. | ML-model content extraction (Python); can outperform on some pages but is heavier, has aging dependencies, and is less maintained. |
+| [boilerpipe](boilerpipe.md) | ✅ | Choose boilerpipe when you need classic Java boilerplate-removal algorithms. | Classic Java boilerplate-removal algorithms; mature ideas but the repo is effectively abandoned (last pushed 2018). |
+| trafilatura | 未收录 | Choose trafilatura when you need a Python extractor with strong benchmarks, metadata, and crawl support. | Python extraction library with strong benchmark results, metadata, and crawl support; often the modern Python default — different language, broader scope. |
+| Mercury / Postlight Parser | 未收录 | Choose Mercury/Postlight Parser when you need a Node article parser that also fetches pages. | Node article parser that also fetched pages; historically popular but maintenance has been uneven. |
 
 ## Tech stack
 

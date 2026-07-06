@@ -88,11 +88,11 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| Distroless（GoogleContainerTools） | 未收录 | 当前页用于它的主场景；如果更看重“你*拿来构建*的极小基础镜像”，再选 Distroless（GoogleContainerTools）。 | 你*拿来构建*的极小基础镜像——确定性、无运行时 tracing，但你得重构 Dockerfile（多阶段）并掌握源码。SlimToolkit 则是对已构建好的镜像做改造。 |
-| 多阶段 / 手工优化 Dockerfile | 未收录 | 当前页用于它的主场景；如果更看重“源头级修法：最小、最可预测、完全可控”，再选 多阶段 / 手工优化 Dockerfile。 | 源头级修法：最小、最可预测、完全可控——但前提是你掌握并能改每个构建。SlimToolkit 的卖点是“不改 Dockerfile”。 |
-| Trivy / Grype（扫描器） | 未收录 | 当前页用于它的主场景；如果更看重“发现并报告 CVE / 产出 SBOM”，再选 Trivy / Grype（扫描器）。 | 发现并报告 CVE / 产出 SBOM；它们*度量*攻击面，不*缩小*攻击面。互补，而非替代。 |
-| DockerSlim（前身） | 未收录 | 当前页用于它的主场景；如果更看重“不是另一个项目”，再选 DockerSlim（前身）。 | 不是另一个项目——DockerSlim 已改名为 Slim/SlimToolkit；同一套代码、同一套 `slim build` 流程。[推断] |
-| Docker `docker build --squash` / 层压平 | 未收录 | 当前页用于它的主场景；如果更看重“减少层数/重复，而非*内容*”，再选 Docker docker build --squash / 层压平。 | 减少层数/重复，而非*内容*——每个没用到的二进制都还在。机制不同，收益小得多。 |
+| Distroless（GoogleContainerTools） | 未收录 | 可以在极小基础镜像上重新构建，而不是缩减已有镜像时，选 Distroless。 | 你*拿来构建*的极小基础镜像——确定性、无运行时 tracing，但你得重构 Dockerfile（多阶段）并掌握源码。SlimToolkit 则是对已构建好的镜像做改造。 |
+| 多阶段 / 手工优化 Dockerfile | 未收录 | 掌握源码级构建且追求可预测最小镜像时，选多阶段或手工优化 Dockerfile。 | 源头级修法：最小、最可预测、完全可控——但前提是你掌握并能改每个构建。SlimToolkit 的卖点是“不改 Dockerfile”。 |
+| Trivy / Grype（扫描器） | 未收录 | 需要报告 CVE 或产出 SBOM，而不是缩减镜像时，选 Trivy 或 Grype。 | 发现并报告 CVE / 产出 SBOM；它们*度量*攻击面，不*缩小*攻击面。互补，而非替代。 |
+| DockerSlim（前身） | 未收录 | 把 DockerSlim 当作前身/命名历史，而不是另一个当前项目来选。 | 不是另一个项目——DockerSlim 已改名为 Slim/SlimToolkit；同一套代码、同一套 `slim build` 流程。[推断] |
+| Docker `docker build --squash` / 层压平 | 未收录 | 只需要减少层数而不是内容级最小化时，选层压平。 | 减少层数/重复，而非*内容*——每个没用到的二进制都还在。机制不同，收益小得多。 |
 
 ## 技术栈
 
@@ -114,7 +114,7 @@ health:
 
 ## 健康度与可持续性
 
-- **响应速度**：Grade C——中位首次响应时间 268.3 小时，基于 2 个 qualifying issues/PRs。
+- **响应速度**：无法计算——no_traffic。
 - **维护（2026-06）。** 仓库**未归档**，默认分支有提交进到 2026-03，但这些近期提交大多是 CI/依赖 bump（dependabot），外加一条 "tmp disable github actions" 提交——而**最后一个打 tag 的 release 是 2024-02 的 v1.40.11**，约 2.4 年的发布断档。读起来像**有人维护但在吃老本**：活着、没废弃，但没在按节奏发功能版本。[推断]
 - **治理 / bus factor。** **CNCF Sandbox** 项目（README 中确认），有一份列了两位 maintainer 的 `MAINTAINERS.md`——但创建者 **Kyle Quest（@kcq）**约 816 次提交，下一位人类贡献者远远落后，且 `GOVERNANCE.md` 里直接写着 "TBD"。所以 Sandbox 身份带来的是生态可见度，**而非**深厚的、基金会运营的治理梯队——bus factor 集中在一个人身上。[推断]
 - **背书与长期性。** 据 README 由 **Root.io（前身 Slim.AI）**支持；一家商业厂商的兴趣是长期性加分，但也把势头绑在了那家公司的优先级上。[推断]

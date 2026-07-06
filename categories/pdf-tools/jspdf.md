@@ -97,11 +97,11 @@ The same library fits when you already have styled HTML and want a PDF that look
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| [PDF.js](../pdf-tools/pdfjs.md) | ✅ | Use this page for its stated niche; choose PDF.js when you need to render or read existing PDFs in the browser. | A renderer/viewer, not a generator — complementary. PDF.js displays PDFs; jsPDF builds them. |
-| pdf-lib | 未收录 | Use this page for its stated niche; choose pdf-lib when you need to create AND modify PDFs in JS (forms, merge, draw) without native deps. | JS library to create and modify PDFs — covers the edit/modify case jsPDF doesn't handle. |
-| PyMuPDF / pdfplumber | 未收录 | Use this page for its stated niche; choose PyMuPDF / pdfplumber when you need fast server-side PDF text/table extraction or rendering. | Python libraries for server-side PDF work; not a browser generator. |
-| [Docling](../document-parsing/docling.md) | ✅ | Use this page for its stated niche; choose Docling when you need layout-aware document parsing into structured output for AI/RAG. | A parser, not a generator — it reads documents into structured Markdown/JSON, never creates them. |
-| Native `<embed>` / browser PDF plugin | 未收录 | Use this page for its stated niche; choose native embed when you only need to display an existing PDF with zero integration work. | Zero-dependency display, but no generation, no programmatic control, and inconsistent across browsers. |
+| [PDF.js](pdfjs.md) | ✅ | Choose PDF.js when you need to render or read existing PDFs in the browser. | A renderer/viewer, not a generator — complementary. PDF.js displays PDFs; jsPDF builds them. |
+| [pdf-lib](pdf-lib.md) | ✅ | Choose pdf-lib when you need to create AND modify PDFs in JS, including forms, merging, and drawing, without native deps. | JS library to create and modify PDFs — covers the edit/modify case jsPDF doesn't handle. |
+| PyMuPDF / pdfplumber | 未收录 | Choose PyMuPDF / pdfplumber when you need fast server-side PDF text/table extraction or rendering. | Python libraries for server-side PDF work; not a browser generator. |
+| [Docling](../document-parsing/docling.md) | ✅ | Choose Docling when you need layout-aware document parsing into structured output for AI/RAG. | A parser, not a generator — it reads documents into structured Markdown/JSON, never creates them. |
+| Native `<embed>` / browser PDF plugin | 未收录 | Choose native embed when you only need to display an existing PDF with zero integration work. | Zero-dependency display, but no generation, no programmatic control, and inconsistent across browsers. |
 
 ## Tech stack
 

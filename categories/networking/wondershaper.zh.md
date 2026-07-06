@@ -90,11 +90,11 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| 裸 `tc`（iproute2） | 未收录 | 当前页用于它的主场景；如果更看重“对 qdisc/class/filter（HTB、HFSC、cake、fq_codel）完全控制”，再选 裸 tc（iproute2）。 | 对 qdisc/class/filter（HTB、HFSC、cake、fq_codel）完全控制——最灵活，但 DSL 陡峭；wondershaper 不过是它上面友好的封装。 |
-| `cake` / SQM（OpenWrt） | 未收录 | 当前页用于它的主场景；如果更看重“现代的杀 bufferbloat 整形器”，再选 cake / SQM（OpenWrt）。 | 现代的杀 bufferbloat 整形器；负载下延迟最佳，但通常跑在路由器/OpenWrt 上，不是一个按主机的快脚本。 |
-| `tcconfig`（Python） | 未收录 | 当前页用于它的主场景；如果更看重“tc 之上的 Python CLI/库，规则更丰富（按 IP/端口、netem 丢包/延迟）”，再选 tcconfig（Python）。 | tc 之上的 Python CLI/库，规则更丰富（按 IP/端口、netem 丢包/延迟）——更有料更可脚本化，但带一个 Python 依赖 vs 一个 Bash 文件。 |
-| `trickle` | 未收录 | 当前页用于它的主场景；如果更看重“用户态按进程带宽限制器（LD_PRELOAD）”，再选 trickle。 | 用户态按进程带宽限制器（LD_PRELOAD）——无需 root/tc 就能给单条命令整形，但是按进程，不是网卡级上限。 |
-| 手写 Linux `tc` + `fq_codel` | 未收录 | 当前页用于它的主场景；如果更看重“同一引擎、当前 qdisc、无封装”，再选 手写 Linux tc + fqcodel。 | 同一引擎、当前 qdisc、无封装——对 bufferbloat 更正确但要多写。 |
+| 裸 `tc`（iproute2） | 未收录 | 完整 qdisc/class/filter 控制值得你直接面对陡峭 traffic-control DSL 时，选裸 `tc`。 | 最灵活；wondershaper 只是这个引擎上的友好封装。 |
+| `cake` / SQM（OpenWrt） | 未收录 | 主要问题是负载下 bufferbloat 延迟，且整形器可以放在路由器上时，选 cake 或 SQM。 | 更适合路由器／OpenWrt 设置，不是按主机的快脚本。 |
+| `tcconfig`（Python） | 未收录 | 按 IP、端口、丢包或延迟等更丰富的脚本化规则比一个 Bash 文件更重要时，选 `tcconfig`。 | 它在 `tc` 之上功能更丰富，但会引入 Python 依赖。 |
+| `trickle` | 未收录 | 只需要限制一个用户态进程，并且想避开 root 级 `tc` 时，选 `trickle`。 | 这是 LD_PRELOAD 的按进程整形，不是网卡级上限。 |
+| 手写 Linux `tc` + `fq_codel` | 未收录 | 当前 qdisc 和正确性比封装便利更重要时，选手写 `tc` 加 `fq_codel`。 | 同一引擎、抽象更少，但要写更多配置。 |
 
 ## 技术栈
 

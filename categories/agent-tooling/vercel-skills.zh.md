@@ -96,12 +96,12 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [Planning with Files](planning-with-files.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“一个 skill-pack（内容）”，再选 Planning with Files。 | 一个 skill-pack（内容）——正是 Skills 要安装的*那类东西*，不是竞品。用 Skills 把这样的包送进你的 agent。 |
-| [Context Mode](context-mode.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“同样是 skill-pack / 工作流内容，不是安装器”，再选 Context Mode。 | 同样是 skill-pack / 工作流内容，不是安装器。正交关系：Skills 是投递机制，这是被投递的载荷。 |
-| [beads](beads.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“不同层：给 agent 的持久任务/记忆*状态*，而非 skill 分发”，再选 beads。 | 不同层：给 agent 的持久任务/记忆*状态*，而非 skill 分发。你可能两个都装——它们不重叠。 |
-| Claude Code 插件市场（`.claude-plugin/marketplace.json`） | 未收录 | 当前页用于它的主场景；如果更看重“Claude Code 原生的插件/市场机制”，再选 Claude Code 插件市场（.claude-plugin/marketplace.json）。 | Claude Code 原生的插件/市场机制；更丰富（命令、hooks、MCP）但仅限 Claude Code。Skills 转而面向跨 70+ agent 的 `SKILL.md` 包。 |
-| git submodule / 手工 `cp` | 未收录 | 当前页用于它的主场景；如果更看重“零新依赖、完全透明，但没有跨 agent 路径解析、没有发现注册表、没有批量 `update`”，再选 git submodule / 手工 cp。 | 零新依赖、完全透明，但没有跨 agent 路径解析、没有发现注册表、没有批量 `update`——正是 Skills 取代的手工流程。 |
-| 用 npm / pnpm 打包一个 skill 目录 | 未收录 | 当前页用于它的主场景；如果更看重“复用 JS 包生态（有真正的版本管理 + lockfile），但 skills 不是 npm 形态，你得按 agent 手工摆放文件”，再选 用 npm / pnpm 打包一个 skill 目录。 | 复用 JS 包生态（有真正的版本管理 + lockfile），但 skills 不是 npm 形态，你得按 agent 手工摆放文件；Skills 是为 `SKILL.md` 布局专门做的。 |
+| [Planning with Files](planning-with-files.zh.md) | ✅ | 需要 skill-pack 内容而非安装器时，选 Planning with Files。 | 一个 skill-pack（内容）——正是 Skills 要安装的*那类东西*，不是竞品。用 Skills 把这样的包送进你的 agent。 |
+| [Context Mode](context-mode.zh.md) | ✅ | 需要工作流内容而非 skill 分发机制时，选 Context Mode。 | 同样是 skill-pack / 工作流内容，不是安装器。正交关系：Skills 是投递机制，这是被投递的载荷。 |
+| [beads](beads.zh.md) | ✅ | 需要 agent 的持久任务/记忆状态，而不是 skill 分发时，选 beads。 | 不同层：给 agent 的持久任务/记忆*状态*，而非 skill 分发。你可能两个都装——它们不重叠。 |
+| Claude Code 插件市场（`.claude-plugin/marketplace.json`） | 未收录 | 需要 Claude Code 原生插件分发时，选 Claude Code 插件市场。 | Claude Code 原生的插件/市场机制；更丰富（命令、hooks、MCP）但仅限 Claude Code。Skills 转而面向跨 70+ agent 的 `SKILL.md` 包。 |
+| git submodule / 手工 `cp` | 未收录 | 零新依赖和完全透明最重要时，选 git submodule 或手工复制。 | 零新依赖、完全透明，但没有跨 agent 路径解析、没有发现注册表、没有批量 `update`——正是 Skills 取代的手工流程。 |
+| 用 npm / pnpm 打包一个 skill 目录 | 未收录 | 想复用 JS 包生态的版本管理和 lockfile 时，选 npm/pnpm 打包。 | 复用 JS 包生态（有真正的版本管理 + lockfile），但 skills 不是 npm 形态，你得按 agent 手工摆放文件；Skills 是为 `SKILL.md` 布局专门做的。 |
 
 ## 技术栈
 

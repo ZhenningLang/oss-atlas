@@ -90,10 +90,10 @@ It's also a clean reference implementation to read or fork when you want to *stu
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| [llm-circuit-finder](llm-circuit-finder.md) | ✅ | Use this page for its stated niche; choose llm-circuit-finder when you need also a small self-contained research demo, but explores *inference-time* layer-duplication / circuit. | Also a small self-contained research demo, but explores *inference-time* layer-duplication / circuit routing on existing large models — no training loop, no agent-driven iteration; different research question entirely. |
-| nanochat | 未收录 | Use this page for its stated niche; choose nanochat when you need the full single-GPU GPT training project this is simplified from. | The full single-GPU GPT training project this is simplified from; meant for humans to train a real small ChatGPT clone end-to-end, not for an agent to mutate under a time budget. |
-| nanoGPT | 未收录 | Use this page for its stated niche; choose nanoGPT when you need minimal GPT training reference. | Minimal GPT training reference; pedagogical baseline you edit by hand, with no agentic-research framing or fixed-budget evaluation harness. |
-| AI-Scientist (Sakana) | 未收录 | Use this page for its stated niche; choose AI-Scientist (Sakana) when you need a heavier end-to-end "agent does science" pipeline (idea→experiment→paper write-up). | A heavier end-to-end "agent does science" pipeline (idea→experiment→paper write-up); broader scope and far more moving parts than this single-file training loop. |
+| [llm-circuit-finder](llm-circuit-finder.md) | ✅ | Choose llm-circuit-finder when you need a small demo of inference-time layer-duplication/circuit routing. | Also a small self-contained research demo, but explores *inference-time* layer-duplication / circuit routing on existing large models — no training loop, no agent-driven iteration; different research question entirely. |
+| nanochat | 未收录 | Choose nanochat when you need the full single-GPU GPT training project this is simplified from. | The full single-GPU GPT training project this is simplified from; meant for humans to train a real small ChatGPT clone end-to-end, not for an agent to mutate under a time budget. |
+| nanoGPT | 未收录 | Choose nanoGPT when you need a minimal GPT training reference. | Minimal GPT training reference; pedagogical baseline you edit by hand, with no agentic-research framing or fixed-budget evaluation harness. |
+| AI-Scientist (Sakana) | 未收录 | Choose AI-Scientist when you need a heavier idea-to-experiment-to-paper agent-science pipeline. | A heavier end-to-end "agent does science" pipeline (idea→experiment→paper write-up); broader scope and far more moving parts than this single-file training loop. |
 
 ## Tech stack
 

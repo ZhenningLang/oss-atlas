@@ -95,12 +95,12 @@ Mem0 is built for exactly this. You call `m.add(messages, user_id=...)` after a 
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| [Memori](memori.md) | ✅ | Use this page for its stated niche; choose Memori when you need SQL-first / database-native memory (queryable, auditable, no vector store required). | SQL-first / database-native memory (queryable, auditable, no vector store required); Mem0 leans vector + LLM extraction and is more "drop-in" but less inspectable. |
-| [claude-subconscious](claude-subconscious.md) | ✅ | Use this page for its stated niche; choose claude-subconscious when you need a Claude-specific subconscious/reflection memory experiment. | A Claude-specific subconscious/reflection memory experiment; Mem0 is general-purpose and LLM-agnostic across many providers. |
-| Zep / Graphiti | 未收录 | Use this page for its stated niche; choose Zep / Graphiti when you need temporal knowledge-graph memory with bi-temporal edges and explicit invalidation. | Temporal knowledge-graph memory with bi-temporal edges and explicit invalidation; stronger at evolving/contradicting facts where Mem0's ADD-only model accumulates. |
-| Letta (MemGPT) | 未收录 | Use this page for its stated niche; choose Letta (MemGPT) when you need agent runtime with self-editing memory + a stateful server, not just a library. | Agent runtime with self-editing memory + a stateful server, not just a library; heavier, owns the agent loop rather than slotting under yours. |
-| LangMem (LangChain) | 未收录 | Use this page for its stated niche; choose LangMem (LangChain) when you need memory utilities tied to the LangChain/LangGraph ecosystem. | Memory utilities tied to the LangChain/LangGraph ecosystem; Mem0 is framework-neutral. |
-| Plain pgvector + your own extraction | 未收录 | Use this page for its stated niche; choose Plain pgvector + your own extraction when you need full control, no extra dependency or platform. | Full control, no extra dependency or platform; you build and maintain the extraction prompts, schema, and retrieval that Mem0 gives you out of the box. |
+| [Memori](memori.md) | ✅ | Choose Memori when database-native auditability matters more than drop-in vector memory. | SQL-first / database-native memory (queryable, auditable, no vector store required); Mem0 leans vector + LLM extraction and is more "drop-in" but less inspectable. |
+| [claude-subconscious](claude-subconscious.md) | ✅ | Choose claude-subconscious when you want a Claude-specific hook memory experiment. | A Claude-specific subconscious/reflection memory experiment; Mem0 is general-purpose and LLM-agnostic across many providers. |
+| Zep / Graphiti | 未收录 | Choose Zep or Graphiti when temporal graph memory and explicit invalidation are central. | Temporal knowledge-graph memory with bi-temporal edges and explicit invalidation; stronger at evolving/contradicting facts where Mem0's ADD-only model accumulates. |
+| Letta (MemGPT) | 未收录 | Choose Letta when you need a stateful agent runtime, not just a memory library. | Agent runtime with self-editing memory + a stateful server, not just a library; heavier, owns the agent loop rather than slotting under yours. |
+| LangMem (LangChain) | 未收录 | Choose LangMem when your memory layer should stay inside LangChain/LangGraph. | Memory utilities tied to the LangChain/LangGraph ecosystem; Mem0 is framework-neutral. |
+| Plain pgvector + your own extraction | 未收录 | Choose plain pgvector when full schema and retrieval control outweigh Mem0's packaged layer. | Full control, no extra dependency or platform; you build and maintain the extraction prompts, schema, and retrieval that Mem0 gives you out of the box. |
 
 ## Tech stack
 

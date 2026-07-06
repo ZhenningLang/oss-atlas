@@ -96,11 +96,11 @@ You also use it when the source isn't YouTube at all — the value is the extrac
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| yt-dlp | 未收录 | Use this page for its stated niche; choose yt-dlp when you need the actively-maintained fork of youtube-dl. | The actively-maintained fork of youtube-dl; faster extractor fixes, more options (SponsorBlock, better format sorting, aria2c integration), drop-in compatible CLI. For YouTube specifically it is the de-facto successor — pick it unless you have a reason to pin upstream. |
-| you-get | 未收录 | Use this page for its stated niche; choose you-get when you need python downloader with its own site list. | Python downloader with its own site list; simpler UX, smaller/less-actively-tracked extractor catalog than youtube-dl/yt-dlp. |
-| lux | 未收录 | Use this page for its stated niche; choose lux when you need go single-binary downloader (formerly annie). | Go single-binary downloader (formerly annie); no Python runtime, fast, but a narrower and differently-curated site list. |
-| cobalt | 未收录 | Use this page for its stated niche; choose cobalt when you need web/API-first downloader (self-hostable service). | Web/API-first downloader (self-hostable service); browser-friendly and clean UX, but it's a service to run, not a pip-installable CLI for scripting. |
-| gallery-dl | 未收录 | Use this page for its stated niche; choose gallery-dl when you need specializes in *image/gallery* sites (boorus, social media galleries) rather than video. | Specializes in *image/gallery* sites (boorus, social media galleries) rather than video; complementary, not a substitute for video extraction. |
+| [yt-dlp](yt-dlp.md) | ✅ | Pick yt-dlp by default for YouTube-focused work unless you have a compatibility reason to pin original youtube-dl. | The actively-maintained fork of youtube-dl; faster extractor fixes, more options (SponsorBlock, better format sorting, aria2c integration), drop-in compatible CLI. For YouTube specifically it is the de-facto successor — pick it unless you have a reason to pin upstream. |
+| [you-get](you-get.md) | ✅ | Pick you-get when you want a simpler Python downloader with its own narrower site catalog. | Python downloader with its own site list; simpler UX, smaller/less-actively-tracked extractor catalog than youtube-dl/yt-dlp. |
+| [lux](lux.md) | ✅ | Pick lux when a Go single binary matters more than youtube-dl's Python ecosystem and extractor breadth. | Go single-binary downloader (formerly annie); no Python runtime, fast, but a narrower and differently-curated site list. |
+| [cobalt](cobalt.md) | ✅ | Pick cobalt when you want a self-hosted web/API service rather than a local CLI. | Web/API-first downloader (self-hostable service); browser-friendly and clean UX, but it's a service to run, not a pip-installable CLI for scripting. |
+| gallery-dl | 未收录 | Pick gallery-dl when the target is image/gallery sites rather than video extraction. | Specializes in *image/gallery* sites (boorus, social media galleries) rather than video; complementary, not a substitute for video extraction. |
 
 ## Tech stack
 

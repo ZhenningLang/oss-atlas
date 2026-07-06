@@ -95,11 +95,11 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| Playwright | 未收录 | 当前页用于它的主场景；如果更看重“现代跨浏览器（Chromium/Firefox/WebKit）自动化，带自动等待、网络拦截、tracing 和顺手的 API”，再选 Playwright。 | 现代跨浏览器（Chromium/Firefox/WebKit）自动化，带自动等待、网络拦截、tracing 和顺手的 API；单一代码库的开发体验好得多，但生态更新更窄，也不是 Selenium 所锚定的 W3C WebDriver 标准。 |
-| Cypress | 未收录 | 当前页用于它的主场景；如果更看重“对开发者友好的浏览器内 E2E，带时间旅行调试和自动重试”，再选 Cypress。 | 对开发者友好的浏览器内 E2E，带时间旅行调试和自动重试；Web 应用开发体验极佳，但历来偏 Chromium，运行在浏览器事件循环内（多标签/跨域有架构限制），且只支持 JS/TS。 |
-| Puppeteer | 未收录 | 当前页用于它的主场景；如果更看重“更底层的 Chrome/CDP 自动化库（Node”，再选 Puppeteer。 | 更底层的 Chrome/CDP 自动化库（Node.js）；做 Chrome 脚本/抓取很好，但单引擎，不是跨浏览器、多语言的 WebDriver 框架。 |
-| [Agent Browser](agent-browser.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“Rust 写的 CLI/守护进程，通过 CDP 驱动 Chrome 给 AI agent 用，带稳定的 a11y 树 ref”，再选 Agent Browser。 | Rust 写的 CLI/守护进程，通过 CDP 驱动 Chrome 给 AI agent 用，带稳定的 a11y 树 ref；是 agent 原语，不是跨浏览器测试框架——活儿不同。 |
-| [Chrome DevTools MCP](chrome-devtools-mcp.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“把 Chrome DevTools（trace、网络、堆）通过 MCP 暴露给 agent 的服务器”，再选 Chrome DevTools MCP。 | 把 Chrome DevTools（trace、网络、堆）通过 MCP 暴露给 agent 的服务器；调试/测量深度强但只在 Chrome 上，不是可移植的跨浏览器测试自动化。 |
+| Playwright | 未收录 | 当现代自动等待、trace，以及一套代码覆盖 Chromium/Firefox/WebKit 比 WebDriver 标准更重要时，选 Playwright。 | 现代跨浏览器（Chromium/Firefox/WebKit）自动化，带自动等待、网络拦截、tracing 和顺手的 API；单一代码库的开发体验好得多，但生态更新更窄，也不是 Selenium 所锚定的 W3C WebDriver 标准。 |
+| Cypress | 未收录 | 做 Web 应用、接受只用 JS/TS，且最看重开发者体验时，选 Cypress。 | 对开发者友好的浏览器内 E2E，带时间旅行调试和自动重试；Web 应用开发体验极佳，但历来偏 Chromium，运行在浏览器事件循环内（多标签/跨域有架构限制），且只支持 JS/TS。 |
+| Puppeteer | 未收录 | 需要 Node.js 里的底层 Chrome/CDP 脚本能力，而不是可移植跨浏览器覆盖时，选 Puppeteer。 | 更底层的 Chrome/CDP 自动化库（Node.js）；做 Chrome 脚本/抓取很好，但单引擎，不是跨浏览器、多语言的 WebDriver 框架。 |
+| [Agent Browser](agent-browser.zh.md) | ✅ | 任务是让 AI agent 通过稳定 a11y 树 ref 控制页面时，选 Agent Browser。 | Rust 写的 CLI/守护进程，通过 CDP 驱动 Chrome 给 AI agent 用，带稳定的 a11y 树 ref；是 agent 原语，不是跨浏览器测试框架——活儿不同。 |
+| [Chrome DevTools MCP](chrome-devtools-mcp.zh.md) | ✅ | 需要把 Chrome trace、网络、控制台和堆诊断暴露给 agent 时，选 Chrome DevTools MCP。 | 把 Chrome DevTools（trace、网络、堆）通过 MCP 暴露给 agent 的服务器；调试/测量深度强但只在 Chrome 上，不是可移植的跨浏览器测试自动化。 |
 
 ## 技术栈
 
@@ -121,11 +121,11 @@ health:
 
 ## 健康度与可持续性
 
-- **响应速度**：Grade A——中位首次响应时间 8.7 小时，基于 38 个 qualifying issues/PRs。
+- **响应速度**：Grade A——中位首次响应时间 12.6 小时，基于 38 个 qualifying issues/PRs。
 - **维护（2026-06）** —— 最近推送在 2026-06，未归档，持续交付 v4.x 线（v4.45.0）；一个紧跟浏览器/WebDriver 目标演进、持续发版的项目，即**活跃**而非停滞滑行。`[推断]`
 - **治理与 bus factor** —— 归属 **SeleniumHQ** 组织（`Organization` 所有），是历史悠久的社区/多贡献者项目，而非某一个人或单一厂商的产品；它所锚定的 W3C 标准 WebDriver 协议进一步降低了任何单一所有者依赖的风险。`[推断]`
 - **年龄与 Lindy** —— 约 2013-01 创建，到 2026-06 约 13 岁且仍在积极发版：教科书式的**强 Lindy**下注——既长寿*又*仍活跃，叠加深厚的生态惯性（云 Grid、CI 集成、多年问答），使它成为稳妥默认项。`[推断]`
-- **采用与生态** —— 事实上的跨浏览器自动化标准：官方驱动实现紧随其后，托管 Grid（BrowserStack/Sauce Labs/LambdaTest）在其之上构建，约 34k star 反映的是根深蒂固的采用而非炒作。`[未验证]`
+- **采用与生态** —— 自动化的 registry/dependent graph 把这一轴评为 E，但这个口径会低估分散在多语言绑定、浏览器驱动、托管 Grid 和 CI 集成里的 WebDriver 生态。人工阅读时应把 Selenium 视为深度扎根的生态，而不是只按包依赖图理解。`[推断]`
 - **风险标记** —— Apache-2.0，未见 relicense / open-core 历史；实际风险在于**不写规范等待就抖动**和 **Grid 运维负担**，而非项目可持续性。`[未验证]`
 
 ## 存疑（未验证）

@@ -116,6 +116,7 @@ Fallback when `stats/participation` stays 202: `gh api 'repos/{o}/{r}/commits?si
 **Qualifying-issue & first-response hardening**
 - An issue qualifies if `createdAt` ∈ window AND author is human.
 - A "first response" comment is excluded if its author matches the bot regex (§1.3) **OR** its body is a near-duplicate template across the window (shingle/Jaccard similarity ≥ 0.8 to another first-response in the window) — defeats a human-named auto-ack service account. **Documented as best-effort heuristic, not a guarantee.**
+- If the qualifying issue sample is <3, PR review/comment response is used as a fallback signal. PR fallback uses the same sample floors as issues: default A still requires ≥5 qualifying responses; B requires ≥3. The persisted `qualifying_issues` raw field is historical: when `source: pr`, it means qualifying PRs.
 
 **Exact tiers** (type-aware bands; bands chosen to fit this index's solo-tool / skill-pack makeup, not a Western team-OSS SLA)
 
@@ -134,8 +135,10 @@ Relaxed bands for `type ∈ {tool, app}` (solo / hobby cadence is healthy, not "
 **`?` rule** (checked BEFORE A–E — it is a gate)
 - `issues_disabled` — `hasIssuesEnabled == false`.
 - `no_traffic` — <3 issues AND <3 PRs opened in trailing 365d (empty denominator — absence of demand, not slow).
+- `no_window_signal` — traffic exists in the trailing year, but the seeded 90-day sample has no qualifying issue or PR response. This is unknown, not a fabricated slow-response grade.
 - `too_young` — repo `created_at` < 180d AND thin traffic (distinct from `no_traffic`; youth never reads as E or as a strength).
 - `type_na` — `type ∈ {skill-pack, model}` (canonical contribution channel is not issues/PRs).
+- `github_unavailable` — the GraphQL call or repository node is unavailable; this is a tool/data-source failure, not evidence of no traffic.
 - `mirror` — read-only mirror / PRs disabled with issues empty.
 - `vendor_support_elsewhere` — issues enabled but ignored *by policy* (vendor drop). If "ignored by policy" cannot be distinguished from "ignored by neglect," route to `?`, **not E**.
 
@@ -144,7 +147,7 @@ Relaxed bands for `type ∈ {tool, app}` (solo / hobby cadence is healthy, not "
 POST https://api.github.com/graphql
 query($o:String!,$n:String!){ repository(owner:$o,name:$n){
   hasIssuesEnabled isArchived createdAt
-  issues(last:60, orderBy:{field:CREATED_AT,direction:DESC}){ nodes{
+  issues(first:60, orderBy:{field:CREATED_AT,direction:DESC}){ nodes{
     number createdAt closedAt author{login}
     comments(first:5){nodes{createdAt author{login} bodyText}}
     timelineItems(first:10, itemTypes:[LABELED_EVENT,ASSIGNED_EVENT,CLOSED_EVENT]){
@@ -153,8 +156,13 @@ query($o:String!,$n:String!){ repository(owner:$o,name:$n){
         ... on AssignedEvent{createdAt actor{login}}
         ... on ClosedEvent{createdAt actor{login}}}}
   }}
+  pullRequests(first:30, orderBy:{field:CREATED_AT,direction:DESC}){ nodes{
+    createdAt author{login}
+    reviews(first:10){nodes{createdAt author{login}}}
+    comments(first:10){nodes{createdAt author{login}}}
+  }}
 }}
-# in code: keep issues with createdAt in the offset 90d window; TTFR_i = min(first non-author/non-bot comment, first label, first assign, close) − createdAt; report median.
+# in code: keep issues with createdAt in the offset 90d window; TTFR_i = min(first non-author/non-bot comment, first label, first assign, close) − createdAt; if issue sample is <3, use PR review/comment response as the fallback signal; report median and source.
 ```
 
 **Gameability resistance**
@@ -193,9 +201,10 @@ query($o:String!,$n:String!){ repository(owner:$o,name:$n){
 
 **`?` rule** (require POSITIVE proof of no-package, so a real E can't be dodged by mislabeling `type`)
 - `no_package_structural` — `type ∈ {app, skill-pack, service, model}` AND `packages/lookup` returns zero entries clearing the noise filter AND GitHub "Used by" empty/unavailable. (model weights on HF Hub → `?` unless a pip/npm wrapper exists, in which case score the wrapper.)
-- `registry_no_counts` — Maven/Go where the registry exposes no downloads AND ecosyste.ms returns no `dependent_repos_count`. (If dependents ARE present → score from dependents, not `?`.)
+- `registry_lookup_failed` — packages.ecosyste.ms lookup transport or HTTP/API failure; this is a tool/data-source failure, not evidence of zero adoption.
+- `registry_no_counts` — a canonical package exists, but comparable dependency/download counts are unavailable. Maven/Go commonly hit this, but the condition is data-shape based rather than registry-name-only. If dependents ARE present → score from dependents, not `?`.
 - `ambiguous` — multiple plausible canonical packages, none clears the noise filter.
-- **A `tool`/`library` that merely fails lookup is NOT `?`** — it is **E** (measurably unadopted) or a manual-flag, never `?`. Archived repos keep their last computed tier with an `archived` flag, not `?`.
+- **A `tool`/`library` with a successful empty lookup is NOT `?`** — if packages.ecosyste.ms responds successfully and no canonical package clears the noise filter, score **E** (measurably unadopted) or manual-flag. Transport / HTTP / API failures are `registry_lookup_failed` (`?`), not evidence of zero adoption. Archived repos keep their last computed tier with an `archived` flag, not `?`.
 
 **Data source / exact calls**
 ```
@@ -528,8 +537,8 @@ health:
 
 **Reason-code enums** (the `unknowns.<axis>.reason` value):
 - maintenance: `repo_404_or_private | empty_repo | recency_unreadable`
-- responsiveness: `issues_disabled | no_traffic | too_young | type_na | mirror | vendor_support_elsewhere`
-- adoption: `no_package_structural | registry_no_counts | ambiguous`
+- responsiveness: `issues_disabled | no_traffic | no_window_signal | too_young | type_na | github_unavailable | mirror | vendor_support_elsewhere`
+- adoption: `no_package_structural | registry_lookup_failed | registry_no_counts | ambiguous`
 - longevity: `not_found | no_activity_signal | not_a_repo`
 - governance: `fork | unattributable | empty_or_gated`
 - risk_license: `repo_unreachable | license_unparsed`

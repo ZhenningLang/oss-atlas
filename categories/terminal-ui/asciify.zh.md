@@ -90,11 +90,11 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| ascii-magic | 未收录 | 当前页用于它的主场景；如果更看重“有维护的 Python 库，做图片→ASCII，支持彩色/HTML/终端输出”，再选 ascii-magic。 | 有维护的 Python 库，做图片→ASCII，支持彩色/HTML/终端输出；许可清晰、功能丰富得多——实际的替代品。 |
-| jp2a | 未收录 | 当前页用于它的主场景；如果更看重“快速的 C CLI，把 JPEG/PNG 转 ASCII 并支持彩色”，再选 jp2a。 | 快速的 C CLI，把 JPEG/PNG 转 ASCII 并支持彩色；单二进制、成熟，但不是 Python API。 |
-| chafa | 未收录 | 当前页用于它的主场景；如果更看重“强大的终端图形/ASCII/Unicode 图像渲染器（C）”，再选 chafa。 | 强大的终端图形/ASCII/Unicode 图像渲染器（C）；处理彩色、动画和众多终端——更重、能力强得多。 |
-| [art](art.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“从*文字*生成 ASCII 艺术（figlet 风格），不是图片”，再选 art。 | 从*文字*生成 ASCII 艺术（figlet 风格），不是图片——输入相反；不是替代品。 |
-| Pillow + ~20 行 | 未收录 | 当前页用于它的主场景；如果更看重“asciify 自身体现的 DIY 路线”，再选 Pillow + ~20 行。 | asciify 自身体现的 DIY 路线；既然 asciify 无许可，基于 Pillow 自己写往往是更干净、法律更清晰的选择。 |
+| ascii-magic | 未收录 | 需要有维护的 Python 图片→ASCII 库，且支持彩色、HTML、终端输出时，选 ascii-magic。 | 有维护的 Python 库，做图片→ASCII，支持彩色/HTML/终端输出；许可清晰、功能丰富得多——实际的替代品。 |
+| jp2a | 未收录 | 需要快速的 C CLI 把 JPEG/PNG 转成彩色 ASCII 时，选 jp2a。 | 快速的 C CLI，把 JPEG/PNG 转 ASCII 并支持彩色；单二进制、成熟，但不是 Python API。 |
+| chafa | 未收录 | 需要强大的终端图形、ASCII 或 Unicode 图像渲染器时，选 chafa。 | 强大的终端图形/ASCII/Unicode 图像渲染器（C）；处理彩色、动画和众多终端——更重、能力强得多。 |
+| [art](art.zh.md) | ✅ | 需要从*文字*生成 ASCII 艺术而不是处理图片时，选 art。 | 从*文字*生成 ASCII 艺术（figlet 风格），不是图片——输入相反；不是替代品。 |
+| Pillow + ~20 行 | 未收录 | 想走 asciify 自身体现的 DIY 路线时，选 Pillow 加一小段自写脚本。 | asciify 自身体现的 DIY 路线；既然 asciify 无许可，基于 Pillow 自己写往往是更干净、法律更清晰的选择。 |
 
 ## 技术栈
 

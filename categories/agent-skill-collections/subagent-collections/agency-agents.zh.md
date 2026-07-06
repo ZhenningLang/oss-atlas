@@ -87,10 +87,10 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [wshobson/agents](wshobson-agents.md) | ✅ | 当前页用于它的主场景；如果更看重“另一个大型 Claude Code subagent 集合，偏编码”，再选 wshobson/agents。 | 另一个大型 Claude Code subagent 集合，偏编码。Agency-Agents 更广（还含 16 个非编码部门）且带多工具转换器；wshobson 更聚焦工程角色。按你要跨域广度还是更紧凑的纯开发集来选。 |
-| [awesome-claude-code-subagents](awesome-claude-code-subagents.md) | ✅ | 当前页用于它的主场景；如果更看重“同 leaf 下另一个大型精选 subagent 目录”，再选 awesome-claude-code-subagents。 | 同 leaf 下另一个大型精选 subagent 目录。按策展理念、以及你真正想装多少人格 vs 仅浏览来对比。 |
-| [antfu/skills](../personal-collections/antfu-skills.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“个人 *skills* 集合（任务工作流），不是角色人格”，再选 antfu/skills。 | 个人 *skills* 集合（任务工作流），不是角色人格——消费单位不同。skills 解决「怎么做 X」，人格解决「扮演 Y」。 |
-| Anthropic 官方/内置 agent 示例 | 未收录 | 当前页用于它的主场景；如果更看重“平台自带的 subagent 示例”，再选 Anthropic 官方/内置 agent 示例。 | 平台自带的 subagent 示例；Agency-Agents 是第三方批量目录叠在其上，名称与角色可能与原生重叠或重复。 |
+| [wshobson/agents](wshobson-agents.zh.md) | ✅ | 需要更聚焦工程角色的 Claude Code subagent 集合时，选 wshobson/agents。 | 另一个大型 Claude Code subagent 集合，偏编码。Agency-Agents 更广（还含 16 个非编码部门）且带多工具转换器；wshobson 更聚焦工程角色。按你要跨域广度还是更紧凑的纯开发集来选。 |
+| [awesome-claude-code-subagents](awesome-claude-code-subagents.zh.md) | ✅ | 需要同 leaf 下的大型精选 subagent 目录时，选 awesome-claude-code-subagents。 | 同 leaf 下另一个大型精选 subagent 目录。按策展理念、以及你真正想装多少人格 vs 仅浏览来对比。 |
+| [antfu/skills](../personal-collections/antfu-skills.zh.md) | ✅ | 需要个人 skills 工作流而不是角色人格时，选 antfu/skills。 | 个人 *skills* 集合（任务工作流），不是角色人格——消费单位不同。skills 解决「怎么做 X」，人格解决「扮演 Y」。 |
+| Anthropic 官方/内置 agent 示例 | 未收录 | 只需要平台自带的 subagent 示例时，选 Anthropic 官方或内置示例。 | 平台自带的 subagent 示例；Agency-Agents 是第三方批量目录叠在其上，名称与角色可能与原生重叠或重复。 |
 
 ## 健康度与可持续性
 

@@ -93,10 +93,10 @@ You also reach for it in a batch/automation context — a media server (it's the
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| alass | 未收录 | Use this page for its stated niche; choose alass when you need rust subtitle aligner that explicitly handles *split* synchronization (variable offsets across the f. | Rust subtitle aligner that explicitly handles *split* synchronization (variable offsets across the file) — stronger for ad-break/scene desync, ffsubsync's known weak spot. |
-| Bazarr | 未收录 | Use this page for its stated niche; choose Bazarr when you need a subtitle *management* service for Sonarr/Radarr that finds and downloads subs (and can call ffsubs. | A subtitle *management* service for Sonarr/Radarr that finds and downloads subs (and can call ffsubsync to sync) — orchestration layer, not the alignment algorithm itself. |
-| Subtitle Edit (sync features) | 未收录 | Use this page for its stated niche; choose Subtitle Edit (sync features) when you need full GUI subtitle editor with manual + automatic sync, OCR, and format conversion. | Full GUI subtitle editor with manual + automatic sync, OCR, and format conversion; far broader, but interactive and Windows-centric rather than a scriptable one-shot CLI. |
-| OpenAI Whisper | 未收录 | Use this page for its stated niche; choose OpenAI Whisper when you need generates subtitles from audio (transcription), a different job. | Generates subtitles from audio (transcription), a different job — useful when you have *no* subtitle file; overkill and lossy when you already have correct text that's merely mistimed. |
+| alass | 未收录 | Choose alass when you need a Rust subtitle aligner that explicitly handles split synchronization. | Rust subtitle aligner that explicitly handles *split* synchronization (variable offsets across the file) — stronger for ad-break/scene desync, ffsubsync's known weak spot. |
+| Bazarr | 未收录 | Choose Bazarr when you need a subtitle management service around Sonarr/Radarr, not just alignment. | A subtitle *management* service for Sonarr/Radarr that finds and downloads subs (and can call ffsubsync to sync) — orchestration layer, not the alignment algorithm itself. |
+| Subtitle Edit (sync features) | 未收录 | Choose Subtitle Edit when you need a full GUI subtitle editor with manual and automatic sync. | Full GUI subtitle editor with manual + automatic sync, OCR, and format conversion; far broader, but interactive and Windows-centric rather than a scriptable one-shot CLI. |
+| OpenAI Whisper | 未收录 | Choose OpenAI Whisper when you need to generate subtitles from audio, not retime an existing subtitle file. | Generates subtitles from audio (transcription), a different job — useful when you have *no* subtitle file; overkill and lossy when you already have correct text that's merely mistimed. |
 
 ## Tech stack
 
@@ -119,12 +119,12 @@ You also reach for it in a batch/automation context — a media server (it's the
 
 ## Health & viability
 
-- **Responsiveness**: Grade C — median first-response time 202.0 hours across 1 qualifying issues/PRs.
-- **Maintenance (2026-06).** Last push 2026-06; v0.5.0 was tagged 2026-06-17, with prior releases through 2024–2025 — **active**, releasing on an irregular but live cadence. Not archived.
-- **Governance / bus factor.** Single-maintainer project (smacke) with a handful of outside contributors (some from the Bazarr/subliminal ecosystem). Bus-factor risk is real: the roadmap and releases hinge on one person. [推断]
-- **Age & Lindy verdict.** ~7 years old (created 2019-02) and still shipping ⇒ a **moderate-to-strong Lindy** signal — long enough to be proven for its narrow job, and it remains the de-facto open-source audio sync tool.
-- **Adoption.** ~7.8k stars and used as the sync engine in downstream media tooling (Bazarr/Plex-adjacent workflows) — healthy adoption for a single-purpose utility. [未验证]
-- **Risk flags.** No relicense history; MIT throughout. The main fragility is bus factor (one maintainer) and the unaddressed "splits within content" limitation, not licensing or governance.
+- **Maintenance**: Grade B — 3/13 active weeks in trailing 13; last commit 16 days ago.
+- **Responsiveness**: Cannot be scored — no_traffic.
+- **Adoption**: Grade D — 17,416 monthly downloads via pypi.org (package: ffsubsync).
+- **Longevity**: Grade A — 2686 days old.
+- **Governance**: Grade C — top-3 contributor share 91.8% (?).
+- **Risk / License**: Grade A — MIT license.
 
 ## Caveats (unverified)
 

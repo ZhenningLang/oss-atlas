@@ -97,11 +97,11 @@ It fits best when you already live inside the Letta ecosystem (or want an excuse
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| [Mem0](mem0.md) | ✅ | Use this page for its stated niche; choose Mem0 when you need framework-agnostic memory **library/API** you embed in your own agent (Python/TS, any LLM). | Framework-agnostic memory **library/API** you embed in your own agent (Python/TS, any LLM); not a Claude Code plugin and not a background "whisper" agent. Pick it for portable, production-oriented memory. |
-| [Memori](memori.md) | ✅ | Use this page for its stated niche; choose Memori when you need SQL-native open-source memory engine for agents. | SQL-native open-source memory engine for agents; also LLM/framework-agnostic and self-hostable. Different shape: a memory backend, not a Claude-Code-bound plugin. |
-| Letta Code | 未收录 | Use this page for its stated niche; choose Letta Code when you need the production sibling from the same team. | The production sibling from the same team — a full coding agent on the Letta platform. The README explicitly recommends it over this demo for real use. |
-| CLAUDE.md (built-in) | 未收录 | Use this page for its stated niche; choose CLAUDE.md (built-in) when you need manual, deterministic, zero-dependency project memory. | Manual, deterministic, zero-dependency project memory. No background learning or cross-project brain; you curate it by hand. Claude Subconscious explicitly avoids writing here. |
-| [Cipher](https://github.com/campfirein/cipher) | 未收录 | Use this page for its stated niche; choose Cipher when you need MCP-based memory layer for coding agents (works across IDEs/CLIs via MCP). | MCP-based memory layer for coding agents (works across IDEs/CLIs via MCP); broader client support than a single-tool plugin. |
+| [Mem0](mem0.md) | ✅ | Choose Mem0 when portable application memory matters more than a Claude Code plugin. | Framework-agnostic memory **library/API** you embed in your own agent (Python/TS, any LLM); not a Claude Code plugin and not a background "whisper" agent. Pick it for portable, production-oriented memory. |
+| [Memori](memori.md) | ✅ | Choose Memori when you need a SQL-native memory backend rather than Claude-Code-bound hooks. | SQL-native open-source memory engine for agents; also LLM/framework-agnostic and self-hostable. Different shape: a memory backend, not a Claude-Code-bound plugin. |
+| Letta Code | 未收录 | Choose Letta Code when you want the team's full coding-agent product instead of this demo. | The production sibling from the same team — a full coding agent on the Letta platform. The README explicitly recommends it over this demo for real use. |
+| CLAUDE.md (built-in) | 未收录 | Choose CLAUDE.md when manual, deterministic project memory is enough. | Manual, deterministic, zero-dependency project memory. No background learning or cross-project brain; you curate it by hand. Claude Subconscious explicitly avoids writing here. |
+| [Cipher](https://github.com/campfirein/cipher) | 未收录 | Choose Cipher when MCP-based memory across IDEs and CLIs matters more than Claude-only hooks. | MCP-based memory layer for coding agents (works across IDEs/CLIs via MCP); broader client support than a single-tool plugin. |
 
 ## Tech stack
 

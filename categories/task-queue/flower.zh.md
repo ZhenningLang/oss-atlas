@@ -90,11 +90,11 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [Celery](celery.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“Flower 所监控的任务框架”，再选 Celery。 | Flower 所监控的任务框架；Celery 自带的 `inspect`/`control` CLI 给的是裸访问但无 UI。Flower 是*为* Celery 配的看板，不是替代品。 |
-| Prometheus + Grafana（celery-exporter） | 未收录 | 当前页用于它的主场景；如果更看重“在长期指标、告警和统一看板上更好”，再选 Prometheus + Grafana（celery-exporter）。 | 在长期指标、告警和统一看板上更好；运维更重，且无实时逐任务下钻或 worker 控制。常与 Flower *并用*。 |
-| Celery `events`/`inspect` CLI | 未收录 | 当前页用于它的主场景；如果更看重“内建于 Celery，零额外进程”，再选 Celery events/inspect CLI。 | 内建于 Celery，零额外进程；仅限终端，无 Web UI、无 REST API、无一眼总览的集群视图。 |
-| [Apache Airflow](../workflow-orchestration/airflow.zh.md) UI | ✅ | 当前页用于它的主场景；如果更看重“是 DAG 编排器的 UI，不是 Celery 任务监控”，再选 Apache Airflow UI。 | 是 DAG 编排器的 UI，不是 Celery 任务监控——面向不同模型的不同工具（定时工作流 vs. 临时任务）。 |
-| Datadog / Sentry / 商业 APM | 未收录 | 当前页用于它的主场景；如果更看重“带告警和追踪的完整可观测性”，再选 Datadog / Sentry / 商业 APM。 | 带告警和追踪的完整可观测性；付费、更重，且不像 Flower 那样为 Celery 量身打造。 |
+| [Celery](celery.zh.md) | ✅ | 需要任务框架本身，而不是监控它的看板时，选 Celery。 | Celery 自带的 `inspect`/`control` CLI 给的是裸访问但无 UI。Flower 是*为* Celery 配的看板，不是替代品。 |
+| Prometheus + [Grafana](../observability/grafana.zh.md)（celery-exporter） | 部分已收录 | 长期指标、告警和统一看板比实时任务控制更重要时，选 Prometheus/Grafana。 | 运维更重，且无实时逐任务下钻或 worker 控制。Grafana 已收录；Prometheus 和 celery-exporter 未收录。常与 Flower *并用*。 |
+| Celery `events`/`inspect` CLI | 未收录 | 零额外进程比 Web UI 和 REST API 更重要时，选 Celery 内置 CLI。 | 仅限终端，也没有一眼总览的集群视图。 |
+| [Apache Airflow](../workflow-orchestration/airflow.zh.md) UI | ✅ | 你在运营定时 DAG 工作流，而不是监控临时 Celery 任务时，选 Airflow UI。 | 模型不同：定时工作流 vs. 后台任务队列。 |
+| Datadog / Sentry / 商业 APM | 未收录 | 追踪、告警和全局可观测性比 Celery 专用看板更重要时，选商业 APM。 | 付费、更重，但覆盖面比 Flower 更广。 |
 
 ## 技术栈
 

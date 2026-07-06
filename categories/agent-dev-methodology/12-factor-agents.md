@@ -87,13 +87,13 @@ You reach for it when you want principles to guide a hand-rolled or thinly-frame
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| [Compound Engineering](compound-engineering.md) | ✅ | Use this page for its stated niche; choose Compound Engineering when you need a workflow/plugin methodology for AI-assisted dev. | A workflow/plugin methodology for AI-assisted dev; more about the human+agent build loop than 12-factor's architecture-of-the-agent principles. |
-| [ECC](ecc.md) | ✅ | Use this page for its stated niche; choose ECC when you need context-engineering oriented methodology. | Context-engineering oriented methodology; overlaps on "own your context" but is its own framing, not the 12-factor checklist. |
-| [Superpowers](superpowers.md) | ✅ | Use this page for its stated niche; choose Superpowers when you need an installable skills/prompt pack for a coding agent. | An installable skills/prompt pack for a coding agent — concrete commands, not upstream design principles. |
-| [SuperClaude Framework](superclaude.md) | ✅ | Use this page for its stated niche; choose SuperClaude Framework when you need a configuration framework that injects personas/commands into Claude. | A configuration framework that injects personas/commands into Claude; operational, not a methodology essay. |
-| [get-shit-done](get-shit-done.md) | ✅ | Use this page for its stated niche; choose get-shit-done when you need a spec-driven workflow pack you install. | A spec-driven workflow pack you install; prescribes a process, where 12-factor prescribes agent architecture. |
-| Anthropic "Building effective agents" guide | 未收录 | Use this page for its stated niche; choose Anthropic "Building effective agents" guide when you need a vendor essay arguing for simple, composable patterns over frameworks. | A vendor essay arguing for simple, composable patterns over frameworks; similar spirit, different (and shorter) taxonomy. Hosted article, not a repo. |
-| Heroku 12-Factor App | 未收录 | Use this page for its stated niche; choose Heroku 12-Factor App when you need the original SaaS-app methodology this borrows its name/format from. | The original SaaS-app methodology this borrows its name/format from; about apps, not agents. |
+| [Compound Engineering](compound-engineering.md) | ✅ | Choose Compound Engineering when you need a runnable workflow/plugin methodology for AI-assisted development. | A workflow/plugin methodology for AI-assisted dev; more about the human+agent build loop than 12-factor's architecture-of-the-agent principles. |
+| [ECC](ecc.md) | ✅ | Choose ECC when context-engineering discipline is the main method you want to install or follow. | Context-engineering oriented methodology; overlaps on "own your context" but is its own framing, not the 12-factor checklist. |
+| [Superpowers](superpowers.md) | ✅ | Choose Superpowers when you need an installable skills/prompt pack for a coding agent. | An installable skills/prompt pack for a coding agent — concrete commands, not upstream design principles. |
+| [SuperClaude Framework](superclaude.md) | ✅ | Choose SuperClaude Framework when you need a configuration framework that injects personas/commands into Claude. | A configuration framework that injects personas/commands into Claude; operational, not a methodology essay. |
+| [get-shit-done](get-shit-done.md) | ✅ | Choose get-shit-done when you need an installed, spec-driven workflow pack. | A spec-driven workflow pack you install; prescribes a process, where 12-factor prescribes agent architecture. |
+| Anthropic "Building effective agents" guide | 未收录 | Choose Anthropic's guide when you want a vendor essay on simple, composable agent patterns rather than a repo. | A vendor essay arguing for simple, composable patterns over frameworks; similar spirit, different (and shorter) taxonomy. Hosted article, not a repo. |
+| Heroku 12-Factor App | 未收录 | Choose Heroku 12-Factor App when you need the original SaaS-app methodology this borrows its name/format from. | The original SaaS-app methodology this borrows its name/format from; about apps, not agents. |
 
 ## Health & viability
 

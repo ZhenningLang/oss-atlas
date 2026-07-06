@@ -95,11 +95,11 @@ You reach for **Selenium WebDriver**. You write the test once against the WebDri
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| Playwright | 未收录 | Use this page for its stated niche; choose Playwright when you need modern cross-browser (Chromium/Firefox/WebKit) automation with auto-wait, network interception, trac. | Modern cross-browser (Chromium/Firefox/WebKit) automation with auto-wait, network interception, tracing, and ergonomic APIs; far better single-codebase DX, but a newer/narrower ecosystem and not the W3C-WebDriver standard Selenium anchors. |
-| Cypress | 未收录 | Use this page for its stated niche; choose Cypress when you need developer-friendly in-browser E2E with time-travel debugging and auto-retry. | Developer-friendly in-browser E2E with time-travel debugging and auto-retry; excellent DX for web apps, but historically Chromium-centric, runs inside the browser's event loop (architectural limits on multi-tab/cross-origin), JS/TS only. |
-| Puppeteer | 未收录 | Use this page for its stated niche; choose Puppeteer when you need lower-level Chrome/CDP automation library (Node. | Lower-level Chrome/CDP automation library (Node.js); great for Chrome scripting/scraping, but single-engine and not a cross-browser, multi-language WebDriver framework. |
-| [Agent Browser](agent-browser.md) | ✅ | Use this page for its stated niche; choose Agent Browser when you need rust CLI/daemon that drives Chrome over CDP for AI agents with stable a11y-tree refs. | Rust CLI/daemon that drives Chrome over CDP for AI agents with stable a11y-tree refs; an agent primitive, not a cross-browser test framework — different job. |
-| [Chrome DevTools MCP](chrome-devtools-mcp.md) | ✅ | Use this page for its stated niche; choose Chrome DevTools MCP when you need MCP server exposing Chrome DevTools (traces, network, heap) to agents. | MCP server exposing Chrome DevTools (traces, network, heap) to agents; debugging/measuring depth on Chrome only, not portable cross-browser test automation. |
+| Playwright | 未收录 | Pick Playwright when modern auto-waiting, tracing, and one-codebase Chromium/Firefox/WebKit automation matter more than the WebDriver standard. | Modern cross-browser (Chromium/Firefox/WebKit) automation with auto-wait, network interception, tracing, and ergonomic APIs; far better single-codebase DX, but a newer/narrower ecosystem and not the W3C-WebDriver standard Selenium anchors. |
+| Cypress | 未收录 | Pick Cypress for developer-friendly in-browser E2E on web apps, especially when JS/TS-only is acceptable. | Developer-friendly in-browser E2E with time-travel debugging and auto-retry; excellent DX for web apps, but historically Chromium-centric, runs inside the browser's event loop (architectural limits on multi-tab/cross-origin), JS/TS only. |
+| Puppeteer | 未收录 | Pick Puppeteer for lower-level Chrome/CDP scripting in Node.js, not for portable cross-browser WebDriver coverage. | Lower-level Chrome/CDP automation library (Node.js); great for Chrome scripting/scraping, but single-engine and not a cross-browser, multi-language WebDriver framework. |
+| [Agent Browser](agent-browser.md) | ✅ | Pick Agent Browser when the job is AI-agent page control via stable accessibility-tree refs. | Rust CLI/daemon that drives Chrome over CDP for AI agents with stable a11y-tree refs; an agent primitive, not a cross-browser test framework — different job. |
+| [Chrome DevTools MCP](chrome-devtools-mcp.md) | ✅ | Pick Chrome DevTools MCP when you need agent-accessible Chrome traces, network, console, and heap diagnostics. | MCP server exposing Chrome DevTools (traces, network, heap) to agents; debugging/measuring depth on Chrome only, not portable cross-browser test automation. |
 
 ## Tech stack
 
@@ -121,11 +121,11 @@ You reach for **Selenium WebDriver**. You write the test once against the WebDri
 
 ## Health & viability
 
-- **Responsiveness**: Grade A — median first-response time 8.7 hours across 38 qualifying issues/PRs.
+- **Responsiveness**: Grade A — median first-response time 12.6 hours across 38 qualifying issues/PRs.
 - **Maintenance (2026-06)** — last pushed 2026-06, not archived, shipping the v4.x line (v4.45.0); a continuously released project tracking evolving browser/WebDriver targets, i.e. **active**, not coasting. `[推断]`
 - **Governance & bus factor** — lives under the **SeleniumHQ** org (`Organization`-owned), a long-standing community/multi-contributor project rather than one person or a single vendor's product; the W3C-standard WebDriver protocol it anchors further de-risks any single-owner dependency. `[推断]`
 - **Age & Lindy** — created ~2013-01, so ~13 years old (2026-06) and still actively shipping: a textbook **strong-Lindy** bet — long-lived *and* still-active, with deep ecosystem inertia (cloud grids, CI integrations, years of Q&A) that makes it the safe default. `[推断]`
-- **Adoption & ecosystem** — the de-facto cross-browser automation standard: official driver implementations track it, hosted grids (BrowserStack/Sauce Labs/LambdaTest) build on it, and ~34k stars reflect entrenched adoption rather than hype. `[未验证]`
+- **Adoption & ecosystem** — the automated registry/dependent graph scores this axis as E, but that metric undercounts a multi-language WebDriver ecosystem whose usage is spread across bindings, browser drivers, hosted grids, and CI integrations. Human review should treat Selenium as deeply entrenched despite the package-graph score. `[推断]`
 - **Risk flags** — Apache-2.0, no relicense/open-core history seen; the practical risk is **flakiness without disciplined waits** and **Grid ops burden**, not project viability. `[未验证]`
 
 ## Caveats (unverified)

@@ -88,9 +88,9 @@ You reach for it specifically as a **translation/convenience layer**: SELECT/WHE
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
 | Elasticsearch SQL / ES\|QL (X-Pack) | 未收录 | Use this page only for the legacy plugin; prefer Elastic's first-party SQL/ES\|QL when it covers your needs. | Elastic's first-party SQL and the newer ES\|QL pipe language, with JDBC/ODBC; maintained with the engine. This plugin predates and overlaps it. |
-| OpenSearch SQL plugin | 未收录 | Use this page for its stated niche; choose OpenSearch SQL plugin when you need the OpenSearch fork's own SQL/PPL plugin. | The OpenSearch fork's own SQL/PPL plugin; the analogous answer if you run OpenSearch instead of Elastic. |
-| Native Query DSL | 未收录 | Use this page for its stated niche; choose Native Query DSL when you need maximum power and control, version-native, but verbose JSON with a steep learning curve. | Maximum power and control, version-native, but verbose JSON with a steep learning curve — the friction this project removes. |
-| Presto/Trino + ES connector | 未收录 | Use this page for its stated niche; choose Presto/Trino + ES connector when you need full ANSI-SQL engine that can federate ES with other sources. | Full ANSI-SQL engine that can federate ES with other sources; far heavier to operate, but real SQL semantics and JOINs across stores. |
+| OpenSearch SQL plugin | 未收录 | Choose OpenSearch SQL when you run OpenSearch and need its own SQL/PPL plugin. | The OpenSearch fork's own SQL/PPL plugin; the analogous answer if you run OpenSearch instead of Elastic. |
+| Native Query DSL | 未收录 | Choose native Query DSL when you need maximum version-native power and control. | Maximum power and control, version-native, but verbose JSON with a steep learning curve — the friction this project removes. |
+| Presto/Trino + ES connector | 未收录 | Choose Presto or Trino when you need a full ANSI-SQL engine federating ES with other sources. | Full ANSI-SQL engine that can federate ES with other sources; far heavier to operate, but real SQL semantics and JOINs across stores. |
 
 ## Tech stack
 

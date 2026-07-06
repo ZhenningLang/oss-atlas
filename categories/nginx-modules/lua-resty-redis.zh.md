@@ -87,11 +87,11 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [lua-nginx-module](lua-nginx-module.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“本驱动*跑在其上*的模块（提供 cosocket API）”，再选 lua-nginx-module。 | 本驱动*跑在其上*的模块（提供 cosocket API）——基础，不是替代。 |
-| lua-resty-redis-cluster | 未收录 | 当前页用于它的主场景；如果更看重“在本驱动之上加 Redis Cluster 槽位路由的社区库”，再选 lua-resty-redis-cluster。 | 在本驱动之上加 Redis Cluster 槽位路由的社区库——单节点不够用时的去处。 |
-| OpenResty 套件里的 resty.redis | 未收录 | 当前页用于它的主场景；如果更看重“与 OpenResty 内置的同一个库”，再选 OpenResty 套件里的 resty.redis。 | 与 OpenResty 内置的同一个库——通常你就是这么拿到它的，与 ngx_lua 版本匹配。 |
-| 阻塞式 Lua Redis 客户端（redis-lua） | 未收录 | 当前页用于它的主场景；如果更看重“在普通 Lua 里能用但会**阻塞**”，再选 阻塞式 Lua Redis 客户端（redis-lua）。 | 在普通 Lua 里能用但会**阻塞**——在 NGINX worker 里不可用；设计目标相反。 |
-| 网关原生 Redis 插件（Kong/APISIX） | 未收录 | 当前页用于它的主场景；如果更看重“更高层的限流/缓存插件，底下常用本驱动”，再选 网关原生 Redis 插件（Kong/APISIX）。 | 更高层的限流/缓存插件，底下常用本驱动；产品功能 vs 裸驱动。 |
+| [lua-nginx-module](lua-nginx-module.zh.md) | ✅ | 不要把 lua-nginx-module 当 Redis 客户端；需要本驱动依赖的 ngx_lua 运行时和 cosocket API 时才选它。 | 它是基础而非替代品：没有 ngx_lua/OpenResty，本驱动无处运行。 |
+| lua-resty-redis-cluster | 未收录 | Redis Cluster 槽位路由是硬需求时，在本驱动之上选 cluster wrapper。 | 单节点 lua-resty-redis 更简单；cluster 路由会多一层社区实现。 |
+| OpenResty 套件里的 resty.redis | 未收录 | 与 ngx_lua 版本匹配比直接 vendor 本仓库更重要时，选 OpenResty 内置副本。 | 这通常是生产里拿到本库的方式。 |
+| 阻塞式 Lua Redis 客户端（redis-lua） | 未收录 | 只在 NGINX worker 之外的普通 Lua 程序里，才选阻塞式 Lua 客户端。 | 它会阻塞，正好违背 NGINX 内所需的非阻塞 cosocket 设计。 |
+| 网关原生 Redis 插件（Kong/APISIX） | 未收录 | 想要限流／缓存等网关产品功能，而不是裸 Redis 驱动时，选网关原生插件。 | 更高层的功能层，底下常用这类驱动。 |
 
 ## 技术栈
 

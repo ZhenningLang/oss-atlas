@@ -96,10 +96,10 @@ health:
 |---|---|---|---|
 | [FFmpeg](ffmpeg.zh.md) | ✅ | 当你需要通用引擎、最大速度或完整编解码器控制时选 FFmpeg——代价是手搓命令。 | 底层通用引擎；能力与速度最大，但 CLI 语法陡峭，复杂图的 `-filter_complex` 几乎是只写不可读。 |
 | [ffmpeg-python](ffmpeg-python.zh.md) | ✅ | 当你想用 Python 搭建 FFmpeg 滤镜图的 DAG、而非更高层的视频编辑抽象时选 ffmpeg-python。 | 对 FFmpeg CLI 滤镜图的薄 Python 封装；更接近 FFmpeg 的概念，「视频剪辑感」弱于 MoviePy。 |
-| PyAV | 未收录 | 当你需要进程内 libav* 绑定来做按帧访问或自定义编解码管线时选 PyAV。 | 对 libav* 库的 Pythonic 绑定——进程内帧访问，不靠外部进程；安装更重，比 MoviePy 更底层。 |
-| HandBrake | 未收录 | 当你需要 GUI 或预设驱动的批量编码器（自带质量调优），而非程序化编辑时选 HandBrake。 | 桌面/预设批量编码器，质量预设优秀；不是可编程的编辑库。 |
-| GStreamer | 未收录 | 当你需要流媒体框架与管线图和插件生态，而非简单 Python 脚本时选 GStreamer。 | 工业级流媒体框架；学习曲线陡峭，对简单片段编辑是杀鸡用牛刀。 |
-| MLT / Shotcut | 未收录 | 当你需要专业非线性剪辑引擎（带时间线支持），而非快速 Python 脚本时选 MLT。 | 专业 NLE 引擎（MLT）与 GUI（Shotcut）；重量级，面向时间线，不适合轻量脚本化。 |
+| [PyAV](pyav.zh.md) | ✅ | 当你需要进程内 libav* 绑定来做按帧访问或自定义编解码管线时选 PyAV。 | 对 libav* 库的 Pythonic 绑定——进程内帧访问，不靠外部进程；安装更重，比 MoviePy 更底层。 |
+| [HandBrake](handbrake.zh.md) | ✅ | 当你需要 GUI 或预设驱动的批量编码器（自带质量调优），而非程序化编辑时选 HandBrake。 | 桌面/预设批量编码器，质量预设优秀；不是可编程的编辑库。 |
+| [GStreamer](gstreamer.zh.md) | ✅ | 当你需要流媒体框架与管线图和插件生态，而非简单 Python 脚本时选 GStreamer。 | 工业级流媒体框架；学习曲线陡峭，对简单片段编辑是杀鸡用牛刀。 |
+| [MLT](mlt.zh.md) / Shotcut | 部分已收录 | 当你需要专业非线性剪辑引擎（带时间线支持），而非快速 Python 脚本时选 MLT。 | 专业 NLE 引擎（MLT）与 GUI（Shotcut）；重量级，面向时间线，不适合轻量脚本化。 |
 | OpenCV | 未收录 | 当计算机视觉或帧级图像处理是主要任务、视频只是副产品时选 OpenCV。 | 计算机视觉优先；能读写视频，但缺乏剪辑、过渡、合成层等编辑概念。 |
 
 ## 技术栈

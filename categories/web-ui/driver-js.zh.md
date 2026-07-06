@@ -93,10 +93,10 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| Shepherd.js | 未收录 | 当前页用于它的主场景；如果更看重“类似的开源引导库，内置的步骤/定位选项更多、API 更丰富”，再选 Shepherd.js。 | 类似的开源引导库，内置的步骤/定位选项更多、API 更丰富；但更重（用 Floating UI / popper 风格定位），bundle 比 Driver.js 零依赖的内核大。 |
-| [Intro.js](../web-ui/intro-js.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“最早的引导库，文档丰富、框架无关”，再选 Intro.js——但你要接受非商用 AGPL-3.0 或购买商业授权。 | 最早的引导库；用得很广，但其现代用法是**双协议授权**（非商用免费、商用需付费）——这是个实打实的锁定/成本考量，而 Driver.js（MIT）没有（授权条款见存疑）。 |
-| Reactour / react-joyride | 未收录 | 当前页用于它的主场景；如果更看重“React 专属的引导组件（hooks/JSX 原生）”，再选 Reactour / react-joyride。 | React 专属的引导组件（hooks/JSX 原生）；在 React 内 DX 更好，但被框架锁定，对比 Driver.js 框架无关的原生内核。 |
-| Appcues / Userflow / Userpilot | 未收录 | 当前页用于它的主场景；如果更看重“商业的无代码 onboarding **平台**”，再选 Appcues / Userflow / Userpilot。 | 商业的无代码 onboarding **平台**——分层、分析、定向、checklist、问卷；不是开源仓库，有持续的 SaaS 订阅成本，但解决的是 product-led-growth，而不只是引导渲染。 |
+| [Shepherd.js](shepherd-js.zh.md) | ✅ | 需要更健壮的开源引导库、更多内置步骤/定位选项和更丰富 API 时，选 Shepherd.js。 | 类似的开源引导库，内置的步骤/定位选项更多、API 更丰富；但更重（用 Floating UI / popper 风格定位），bundle 比 Driver.js 零依赖的内核大。 |
+| [Intro.js](intro-js.zh.md) | ✅ | 想用最早的引导库且接受非商用 AGPL-3.0 或商业授权时，选 Intro.js。 | 最早的引导库；用得很广，但其现代用法是**双协议授权**（非商用免费、商用需付费）——这是个实打实的锁定/成本考量，而 Driver.js（MIT）没有（授权条款见存疑）。 |
+| Reactour / react-joyride | 未收录 | 需要 React 专属的 hooks 或 JSX 原生引导组件时，选 Reactour / react-joyride。 | React 专属的引导组件（hooks/JSX 原生）；在 React 内 DX 更好，但被框架锁定，对比 Driver.js 框架无关的原生内核。 |
+| Appcues / Userflow / Userpilot | 未收录 | 需要商业无代码 onboarding **平台**时，选 Appcues、Userflow 或 Userpilot。 | 商业的无代码 onboarding **平台**——分层、分析、定向、checklist、问卷；不是开源仓库，有持续的 SaaS 订阅成本，但解决的是 product-led-growth，而不只是引导渲染。 |
 
 ## 技术栈
 
@@ -117,7 +117,7 @@ health:
 
 ## 健康度与可持续性
 
-- **响应速度**：Grade D——中位首次响应时间 1735.8 小时，基于 4 个 qualifying issues/PRs。
+- **响应速度**：无法计算——no_traffic。
 - **维护（2026-06）。** 最后 push 于 2026-06-27；最新版本 v1.6.0 发布于 2026-06-25，1.5.0/1.4.0 也在 2026 年内——**活跃且在持续发版**，并非吃老本。未归档。[推断]
 - **治理 / bus factor。** 仓库 owner 是一个 **`User` 账号，而非组织**——`nilbuild`，即原作者 Kamran Ahmed（`kamranahmedse`）改名后的个人账号。一名贡献者握有约 521 次提交，而紧随其后的贡献者各自只有约 3 次⇒实质上是**单维护者项目——一个实打实的 bus-factor 风险标记**。MIT 授权且零依赖，所以一旦维护停摆，fork 的代价很低，但路线图跟随一个人。[推断]
 - **年龄与 Lindy 判断。** 2018-03 创建（约 8 年）且**仍在活跃发版**⇒ 一个**扎实的 Lindy** 信号——一个久经验证、被广泛采用的引导库，而非被炒作的新秀。用年龄 × 仍活跃来看：bus-factor 标记才是对冲风险，年龄本身不是。[推断]

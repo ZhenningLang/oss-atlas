@@ -97,7 +97,7 @@ health:
 | [MarkItDown](markitdown.zh.md) | ✅ | 轻量级 Python 库，将办公文档转为 Markdown。 | MarkItDown 更简单、更快、更便宜，适合基础文档；olmOCR 能处理 MarkItDown 无法应对的复杂版面、公式和手写体。 |
 | Marker | 未收录 | 面向学术论文优化的快速 PDF 转 Markdown 工具。 | Marker 专攻学术论文，使用规则式启发式；olmOCR 用 VLM 覆盖更广文档类型，但计算成本更高。 |
 | LlamaParse | 未收录 | LlamaIndex 出品的解析服务，托管 API。 | 基于云端，需 API key，无需 GPU；olmOCR 是自托管开源方案，但需要 GPU 基础设施。 |
-| Tesseract / OCRmyPDF | 未收录 | 传统 OCR 引擎，用于文本提取。 | 纯 OCR 工具只提取文本，不理解版面、表格或阅读顺序；olmOCR 的 VLM 提供语义理解。 |
+| [Tesseract](../ocr/tesseract.zh.md) / OCRmyPDF | 部分已收录 | 只需要普通文本提取，版面语义不是重点时，选传统 OCR 引擎。 | 纯 OCR 工具只提取文本，不理解版面、表格或阅读顺序；olmOCR 的 VLM 提供语义理解。OCRmyPDF 未单独收录。 |
 | PyMuPDF | 未收录 | 底层 Python PDF 库，用于提取和操控。 | 直接 PDF 页面操控库，非高级 Markdown 转换器；更强大但需要更多代码，且不理解语义。 |
 
 ## 技术栈
@@ -120,10 +120,10 @@ health:
 **中。**需要 GPU 配置与模型权重管理。推理流水线比纯 Python 库更复杂。模型加载后批处理较直接，但你需要管理 GPU 内存、模型下载/缓存，并可能需要为吞吐量对文档排队。README 声称每百万页不到 200 美元，暗示批量效率较高，但达到该效率需要调优 batch size 和 GPU 利用率。
 
 ## 健康度与可持续性
-- **维护活跃度**：Grade C——最近 13 周中 0 周有提交；最后提交距今 99 天。
-- **响应速度**：Grade D——中位首次响应时间 4380.0 小时，基于 0 个 qualifying issues/PRs。
+- **维护活跃度**：Grade C——最近 13 周中 0 周有提交；最后提交距今 100 天。
+- **响应速度**：无法计算——no_traffic。
 - **采用广度**：Grade C——pypi.org 上月下载量 22,800（包名：olmocr）。
-- **长青度**：Grade B——仓库已创建 653 天。
+- **长青度**：Grade B——仓库已创建 654 天。
 - **治理集中度**：Grade D——前三贡献者占比 99.1%（?）。
 - **许可风险**：Grade A——Apache-2.0 许可证。
 ## 存疑（未验证）

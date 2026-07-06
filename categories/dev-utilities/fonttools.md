@@ -95,11 +95,11 @@ You reach for it whenever the task is *programmatic font surgery*: subsetting fo
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| FontForge | 未收录 | Use this page for its stated niche; choose FontForge when you need full GUI/scriptable font editor (design + production). | Full GUI/scriptable font editor (design + production); much broader feature surface but heavier, C-based, and a different (editor) workflow than a clean Python library. |
-| HarfBuzz | 未收录 | Use this page for its stated niche; choose HarfBuzz when you need text shaping engine (text → positioned glyphs). | Text shaping engine (text → positioned glyphs); complementary, not a substitute — fontTools edits the font, HarfBuzz uses it to shape. |
-| FreeType | 未收录 | Use this page for its stated niche; choose FreeType when you need C rasterizer/loader for rendering glyphs at runtime. | C rasterizer/loader for rendering glyphs at runtime; about drawing pixels, not editing font files. |
-| Glyphs / RoboFont | 未收录 | Use this page for its stated niche; choose Glyphs / RoboFont when you need commercial macOS type-design apps. | Commercial macOS type-design apps; for drawing typefaces, often *use* fontTools under the hood for export. |
-| `woff2`/`sfnt2woff` CLIs | 未收录 | Use this page for its stated niche; choose woff2/sfnt2woff CLIs when you need single-purpose format converters. | Single-purpose format converters; fontTools covers the same conversions plus full table manipulation and subsetting. |
+| FontForge | 未收录 | Choose FontForge when you need a full GUI/scriptable font editor for design and production. | Full GUI/scriptable font editor (design + production); much broader feature surface but heavier, C-based, and a different (editor) workflow than a clean Python library. |
+| HarfBuzz | 未收录 | Choose HarfBuzz when you need a text shaping engine rather than a font-file editing library. | Text shaping engine (text → positioned glyphs); complementary, not a substitute — fontTools edits the font, HarfBuzz uses it to shape. |
+| FreeType | 未收录 | Choose FreeType when you need a C rasterizer/loader for rendering glyphs at runtime. | C rasterizer/loader for rendering glyphs at runtime; about drawing pixels, not editing font files. |
+| Glyphs / RoboFont | 未收录 | Choose Glyphs or RoboFont when you need commercial macOS type-design apps. | Commercial macOS type-design apps; for drawing typefaces, often *use* fontTools under the hood for export. |
+| `woff2`/`sfnt2woff` CLIs | 未收录 | Choose woff2/sfnt2woff CLIs when you only need single-purpose format conversion. | Single-purpose format converters; fontTools covers the same conversions plus full table manipulation and subsetting. |
 
 ## Tech stack
 
@@ -120,7 +120,7 @@ You reach for it whenever the task is *programmatic font surgery*: subsetting fo
 
 ## Health & viability
 
-- **Responsiveness**: Grade B — median first-response time 1.6 hours across 4 qualifying issues/PRs.
+- **Responsiveness**: Grade A — median first-response time 1.2 hours across 4 qualifying issues/PRs.
 - **Maintenance (2026-06).** Very active: v4.63.0 released 2026-05, last push 2026-06, on a steady frequent minor-release cadence. Not archived — clearly maintained, not coasting. [推断]
 - **Governance / bus factor.** Lives under the `fonttools` **GitHub organization** with a long contributor history led by Behdad Esfahbod and Cosimo Lupo (anthrotype) among hundreds of contributors — multi-maintainer, not a single point of failure; healthier bus factor than most font tools. [推断]
 - **Age & Lindy.** Created 2013 on GitHub but the codebase's lineage (Just van Rossum's TTX/fontTools) predates that by years; ~13+ years here and **still actively shipping** ⇒ a **strong Lindy** signal — it is the established standard, not a newcomer. [推断]

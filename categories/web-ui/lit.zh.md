@@ -96,9 +96,9 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 | --- | --- | --- | --- |
-| React | 未收录 | 最流行的 UI 库，生态庞大，基于 JSX 的组件模型。 | React 生态和就业市场更大；Lit 基于标准、框架无关，适合必须在各处工作的设计系统。 |
-| Vue.js | 未收录 | 渐进式框架，学习曲线温和，文档优秀。 | Vue 更容易上手，生态更丰富；Lit 更小巧、更具互操作性，但需要 Web Components 知识。 |
-| Svelte | 未收录 | 编译时框架，运行时极小，无虚拟 DOM。 | Svelte 将框架编译掉；Lit 是利用浏览器标准的运行时库。两者都很小，但 Svelte 是完整框架。 |
+| [React](react.zh.md) | ✅ | 需要最大 UI 生态和基于 JSX 的应用组件时，选 React。 | React 生态和就业市场更大；Lit 基于标准、框架无关，适合必须在各处工作的设计系统。 |
+| [Vue.js](vue.zh.md) | ✅ | 需要渐进式应用框架、温和学习曲线和更丰富生态时，选 Vue。 | Vue 更容易上手，生态更丰富；Lit 更小巧、更具互操作性，但需要 Web Components 知识。 |
+| [Svelte](svelte.zh.md) | ✅ | 需要编译时应用组件、极小运行时和无虚拟 DOM 时，选 Svelte。 | Svelte 将框架编译掉；Lit 是利用浏览器标准的运行时库。两者都很小，但 Svelte 是完整框架。 |
 | [Angular](angular.zh.md) | ✅ | 全面的、有主见的企业级框架，带 TypeScript 和依赖注入。 | Angular 是面向大型 SPA 的全栈框架；Lit 是构建可复用组件的轻量级库，不是完整应用框架。 |
 | Stencil | 未收录 | Ionic 的 Web Components 编译器——编译为标准兼容的自定义元素。 | Stencil 是编译时工具链；Lit 是运行时库。Stencil 更适合从装饰类生成组件库；Lit 更适合直接使用。 |
 | 原生 `<template>` / 手写 DOM | 未收录 | 零依赖的浏览器原生方案，但无响应式和开发者体验。 | 原生 DOM 冗长且容易出错；Lit 在极小开销下提供响应式模板和组件基类。 |

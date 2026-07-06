@@ -87,13 +87,13 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [Compound Engineering](compound-engineering.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“一套面向 AI 辅助开发的工作流/插件方法论”，再选 Compound Engineering。 | 一套面向 AI 辅助开发的工作流/插件方法论；更关注人+agent 的构建循环，而非 12-factor 那种“agent 自身架构”的原则。 |
-| [ECC](ecc.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“偏 context engineering 的方法论”，再选 ECC。 | 偏 context engineering 的方法论；在“掌控上下文”上有重叠，但是另一套框定，不是 12-factor 清单。 |
-| [Superpowers](superpowers.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“给 coding agent 的可安装技能/prompt 包”，再选 Superpowers。 | 给 coding agent 的可安装技能/prompt 包——具体命令，而非上游设计原则。 |
-| [SuperClaude Framework](superclaude.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“往 Claude 注入人设/命令的配置框架”，再选 SuperClaude Framework。 | 往 Claude 注入人设/命令的配置框架；偏操作落地，不是方法论文集。 |
-| [get-shit-done](get-shit-done.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“一个你要安装的 spec 驱动工作流包”，再选 get-shit-done。 | 一个你要安装的 spec 驱动工作流包；规定的是流程，而 12-factor 规定的是 agent 架构。 |
-| Anthropic《Building effective agents》指南 | 未收录 | 当前页用于它的主场景；如果更看重“一篇厂商文章，主张用简单可组合的模式而非框架”，再选 Anthropic《Building effective agents》指南。 | 一篇厂商文章，主张用简单可组合的模式而非框架；精神相近，但分类更短、更不同。是托管文章，不是仓库。 |
-| Heroku 12-Factor App | 未收录 | 当前页用于它的主场景；如果更看重“本项目借其名称/格式的 SaaS 应用原始方法论”，再选 Heroku 12-Factor App。 | 本项目借其名称/格式的 SaaS 应用原始方法论；讲的是应用，不是 agent。 |
+| [Compound Engineering](compound-engineering.zh.md) | ✅ | 需要可运行的 AI 辅助开发工作流/插件方法论时，选 Compound Engineering。 | 一套面向 AI 辅助开发的工作流/插件方法论；更关注人+agent 的构建循环，而非 12-factor 那种“agent 自身架构”的原则。 |
+| [ECC](ecc.zh.md) | ✅ | 主要想安装或遵循 context engineering 纪律时，选 ECC。 | 偏 context engineering 的方法论；在“掌控上下文”上有重叠，但是另一套框定，不是 12-factor 清单。 |
+| [Superpowers](superpowers.zh.md) | ✅ | 需要给 coding agent 安装技能/prompt 包时，选 Superpowers。 | 给 coding agent 的可安装技能/prompt 包——具体命令，而非上游设计原则。 |
+| [SuperClaude Framework](superclaude.zh.md) | ✅ | 需要往 Claude 注入人设/命令的配置框架时，选 SuperClaude Framework。 | 往 Claude 注入人设/命令的配置框架；偏操作落地，不是方法论文集。 |
+| [get-shit-done](get-shit-done.zh.md) | ✅ | 需要可安装的 spec 驱动工作流包时，选 get-shit-done。 | 一个你要安装的 spec 驱动工作流包；规定的是流程，而 12-factor 规定的是 agent 架构。 |
+| Anthropic《Building effective agents》指南 | 未收录 | 想读厂商文章，了解简单可组合 agent 模式而不是选仓库时，选 Anthropic 指南。 | 一篇厂商文章，主张用简单可组合的模式而非框架；精神相近，但分类更短、更不同。是托管文章，不是仓库。 |
+| Heroku 12-Factor App | 未收录 | 需要本项目借其名称/格式的 SaaS 应用原始方法论时，选 Heroku 12-Factor App。 | 本项目借其名称/格式的 SaaS 应用原始方法论；讲的是应用，不是 agent。 |
 
 ## 健康度与可持续性
 

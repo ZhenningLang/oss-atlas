@@ -38,7 +38,9 @@ import argparse
 import datetime as dt
 import hashlib
 import json
+import os
 import re
+import shutil
 import subprocess
 import sys
 import time
@@ -68,7 +70,7 @@ AI_COMMITTERS = {"claude", "ampagent", "devin", "cursor-agent", "copilot", "swee
 # 2.2 responsiveness — type-aware TTFR bands, in HOURS (and qualifying-issue floors).
 RESP_BANDS = {
     "default": {  # library, framework, service
-        "A": 48, "A_min_issues": 3,
+        "A": 48, "A_min_issues": 5,
         "B": 7 * 24, "B_min_issues": 3,
         "C": 30 * 24,
         "D": 180 * 24,
@@ -196,8 +198,12 @@ def gh_api(path: str, *, method: str = "GET", fields: dict | None = None,
     Never raises on an API error — returns a GhResult with the real status code so the
     caller can degrade to "?" with a reason. (A nonzero gh exit on 4xx/5xx is expected.)
     """
+    gh_bin = resolve_gh_cli()
+    if gh_bin is None:
+        return GhResult(0, json.dumps({"_transport_error": "gh CLI not found; set OSS_ATLAS_GH or put gh on PATH"}))
+
     if graphql:
-        cmd = ["/opt/homebrew/bin/gh", "api", "graphql", "-f", f"query={path}"]
+        cmd = [gh_bin, "api", "graphql", "-f", f"query={path}"]
         for k, v in (fields or {}).items():
             cmd += ["-f", f"{k}={v}"]
         try:
@@ -208,7 +214,7 @@ def gh_api(path: str, *, method: str = "GET", fields: dict | None = None,
         return GhResult(status, proc.stdout or proc.stderr)
 
     # REST: use -i to read the status line, then split headers from body.
-    cmd = ["/opt/homebrew/bin/gh", "api", "-i", "-X", method, path]
+    cmd = [gh_bin, "api", "-i", "-X", method, path]
     for k, v in (fields or {}).items():
         cmd += ["-f", f"{k}={v}"]
     try:
@@ -224,6 +230,18 @@ def gh_api(path: str, *, method: str = "GET", fields: dict | None = None,
         status = int(m.group(1)) if m else 502
         body = body or err
     return GhResult(status, body)
+
+
+def resolve_gh_cli() -> str | None:
+    """Resolve the GitHub CLI used by the scorer.
+
+    `OSS_ATLAS_GH` is an explicit override for non-standard installs and tests.
+    Otherwise use PATH discovery so the scorer works outside Apple Silicon Homebrew.
+    """
+    override = os.environ.get("OSS_ATLAS_GH")
+    if override:
+        return override
+    return shutil.which("gh")
 
 
 def _split_http(raw: str) -> tuple[int, str]:
@@ -535,7 +553,11 @@ RESP_GRAPHQL = """query($o:String!,$n:String!){ repository(owner:$o,name:$n){
         ... on AssignedEvent{createdAt actor{login}}
         ... on ClosedEvent{createdAt actor{login}}}}
   }}
-  pullRequests(first:30, orderBy:{field:CREATED_AT,direction:DESC}){ nodes{ createdAt } }
+  pullRequests(first:30, orderBy:{field:CREATED_AT,direction:DESC}){ nodes{
+    createdAt author{login}
+    reviews(first:10){nodes{createdAt author{login}}}
+    comments(first:10){nodes{createdAt author{login}}}
+  }}
 }}"""
 
 
@@ -568,11 +590,11 @@ def axis_responsiveness(repo: RepoData) -> Axis:
     res = gh_api(RESP_GRAPHQL, graphql=True,
                  fields={"o": repo.owner, "n": repo.name})
     if not res.ok or not isinstance(res.json, dict):
-        return Axis.unknown("no_traffic", evidence=f"? GraphQL HTTP {res.status}")
+        return Axis.unknown("github_unavailable", evidence=f"? GraphQL HTTP {res.status}")
     data = res.json.get("data") or {}
     r = data.get("repository")
     if not isinstance(r, dict):
-        return Axis.unknown("no_traffic", evidence="? GraphQL repository null")
+        return Axis.unknown("github_unavailable", evidence="? GraphQL repository null")
 
     if r.get("hasIssuesEnabled") is False:
         return Axis.unknown("issues_disabled", evidence="hasIssuesEnabled=false")
@@ -763,6 +785,8 @@ def axis_responsiveness(repo: RepoData) -> Axis:
 
     raw = {
         "median_ttfr_hours": _round(median_h, 1) if median_h is not None else None,
+        # Historical key name kept for frontmatter compatibility. When source == "pr",
+        # this count is qualifying PRs rather than issues.
         "qualifying_issues": qualifying,
         "band": _band_label(band),
         "window_offset_days": offset,
@@ -776,8 +800,8 @@ def axis_responsiveness(repo: RepoData) -> Axis:
     if median_h is None:
         if zero_response:
             return Axis("E", raw, evidence="no in-window issues + zero-response on old issues -> E")
-        return Axis.unknown("no_traffic", raw=raw,
-                            evidence="traffic present but 0 qualifying issues in window -> no_traffic")
+        return Axis.unknown("no_window_signal", raw=raw,
+                            evidence="traffic present but no qualifying issue/PR response in sampled window -> no_window_signal")
 
     # A-E by median TTFR with type-aware bands.
     if maintenance_signal == "inferred":
@@ -789,15 +813,18 @@ def axis_responsiveness(repo: RepoData) -> Axis:
         else:
             return Axis("E", raw, evidence=f"inferred from {inferred_from} -> E")
 
+    sample_label = "issues" if source == "issue" else "PRs"
     if median_h < bands["A"] and qualifying >= bands["A_min_issues"]:
-        return Axis("A", raw, evidence=f"median TTFR {median_h:.1f}h <{bands['A']}h & {qualifying}>={bands['A_min_issues']} issues -> A")
+        return Axis("A", raw, evidence=f"median TTFR {median_h:.1f}h <{bands['A']}h & {qualifying}>={bands['A_min_issues']} {sample_label} -> A")
     if median_h < bands["B"] and qualifying >= bands["B_min_issues"]:
-        return Axis("B", raw, evidence=f"median TTFR {median_h:.1f}h <{bands['B']}h & {qualifying}>={bands['B_min_issues']} issues -> B")
+        return Axis("B", raw, evidence=f"median TTFR {median_h:.1f}h <{bands['B']}h & {qualifying}>={bands['B_min_issues']} {sample_label} -> B")
     if median_h < bands["C"]:
         return Axis("C", raw, evidence=f"median TTFR {median_h:.1f}h <{bands['C']}h -> C")
     if median_h < bands["D"]:
         return Axis("D", raw, evidence=f"median TTFR {median_h:.1f}h <{bands['D']}h -> D")
     return Axis("E", raw, evidence=f"median TTFR {median_h:.1f}h >={bands['D']}h -> E")
+
+
 def _band_label(band: str) -> str:
     return "relaxed_solo" if band == "relaxed" else "default"
 
@@ -888,8 +915,8 @@ def axis_adoption(repo: RepoData) -> Axis:
     status, data = http_get_json(url)
     archived = bool(repo.core.json.get("archived")) if isinstance(repo.core.json, dict) else False
 
-    if status == 0:
-        return Axis.unknown("registry_no_counts", evidence="? ecosyste.ms lookup transport error")
+    if status == 0 or status >= 400:
+        return Axis.unknown("registry_lookup_failed", evidence=f"? ecosyste.ms lookup HTTP {status}")
 
     candidates = data if isinstance(data, list) else []
     canonical = _select_canonical(candidates, repo.name)
@@ -899,7 +926,7 @@ def axis_adoption(repo: RepoData) -> Axis:
         if repo.type in ADOPTION_NO_PACKAGE_TYPES:
             return Axis.unknown("no_package_structural",
                                 evidence=f"type {repo.type} & no canonical package -> no_package_structural")
-        # tool/library/framework that fails lookup is measurably unadopted -> E (spec §2.3).
+        # A successful empty lookup for package-relevant types is measurably unadopted -> E (spec §2.3).
         if candidates:
             return Axis.unknown("ambiguous",
                                 evidence=f"{len(candidates)} candidates, none clears noise filter -> ambiguous")
@@ -912,12 +939,11 @@ def axis_adoption(repo: RepoData) -> Axis:
 
     registry = _registry_name(canonical)
     pkg_name = canonical.get("name")
-    dep_repos = canonical.get("dependent_repos_count")
+    dep_repos_raw = canonical.get("dependent_repos_count")
     downloads = canonical.get("downloads")
-    if dep_repos is None:
-        dep_repos = 0
+    dep_repos = int(dep_repos_raw) if dep_repos_raw is not None else None
 
-    graph_tier = graph_tier_from_dependents(int(dep_repos))
+    graph_tier = graph_tier_from_dependents(dep_repos) if dep_repos is not None else None
     volume_tier = volume_tier_from_downloads(downloads, registry or "")
 
     # Go importers fallback (no download counts): map importers to the dependents column.
@@ -925,19 +951,21 @@ def axis_adoption(repo: RepoData) -> Axis:
         importers = _go_importers(pkg_name)
         if importers is not None:
             graph_tier = tier_max(graph_tier, graph_tier_from_dependents(importers))
-            dep_repos = max(int(dep_repos), importers)
+            dep_repos = max(dep_repos or 0, importers)
+
+    if dep_repos is None and volume_tier is None:
+        return Axis.unknown("registry_no_counts",
+                            raw={"registry": registry, "canonical_package": pkg_name},
+                            evidence="? canonical package exists but comparable dependents/download counts unavailable")
 
     tier = tier_max(graph_tier, volume_tier)
 
     # E guard: only if dep_repos == 0 AND downloads below E-floor (AND on both).
     e_floor = (ADOPTION_VOLUME_ANCHORS.get(registry or "") or (0, 0, 0, 0))[3]
-    if int(dep_repos) == 0 and downloads is not None and downloads < e_floor:
+    if dep_repos == 0 and downloads is not None and downloads < e_floor:
         tier = "E"
-    elif int(dep_repos) == 0 and downloads is None and volume_tier is None:
-        # zero dependents, no volume signal at all -> degrade rather than force E.
-        if graph_tier == "E":
-            tier = "E"
-
+    elif dep_repos == 0 and downloads is None and volume_tier is None and graph_tier == "E":
+        tier = "E"
     # Mandatory cross-check for A/B results.
     divergence = None
     needs_review = False
@@ -954,9 +982,9 @@ def axis_adoption(repo: RepoData) -> Axis:
     raw = {
         "registry": registry,
         "canonical_package": pkg_name,
-        "dependent_repos_count": int(dep_repos),
+        "dependent_repos_count": dep_repos,
         "downloads_last_month": downloads,
-        "graph_tier": graph_tier,
+        "graph_tier": graph_tier if graph_tier else "?",
         "volume_tier": volume_tier if volume_tier else "?",
         "cross_check_divergence": divergence,
     }
@@ -1485,7 +1513,7 @@ AXIS_ORDER = ["maintenance", "responsiveness", "adoption", "longevity",
               "governance", "risk_license"]
 RAW_KEY_ORDER = {
     "maintenance": ["archived", "last_commit_age_days", "active_weeks_13", "carve_out"],
-    "responsiveness": ["median_ttfr_hours", "qualifying_issues", "band", "window_offset_days"],
+    "responsiveness": ["median_ttfr_hours", "qualifying_issues", "band", "window_offset_days", "source", "inferred"],
     "adoption": ["registry", "canonical_package", "dependent_repos_count",
                  "downloads_last_month", "graph_tier", "volume_tier",
                  "cross_check_divergence", "archived"],

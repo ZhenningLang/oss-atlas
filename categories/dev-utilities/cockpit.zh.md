@@ -91,12 +91,12 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| Webmin | 未收录 | 当前页用于它的主场景；如果更看重“更老、更广的 Perl 控制面板，覆盖多种服务（邮件、DNS、Apache、BIND）且支持多种 init”，再选 Webmin。 | 更老、更广的 Perl 控制面板，覆盖多种服务（邮件、DNS、Apache、BIND）且支持多种 init；更重、更不“实时会话”——Cockpit 更精简、systemd 原生，反映实时 OS 状态。 |
-| cPanel / Plesk | 未收录 | 当前页用于它的主场景；如果更看重“商业虚拟主机控制面板（虚拟主机、邮件、计费、分销账号）”，再选 cPanel / Plesk。 | 商业虚拟主机控制面板（虚拟主机、邮件、计费、分销账号）；解决的是托管业务问题，不是裸操作系统管理。闭源且收费。 |
-| Ansible / Salt / Puppet | 未收录 | 当前页用于它的主场景；如果更看重“面向机群的声明式配置管理，无 agent（Ansible）或有 agent，带版本控制和幂等性”，再选 Ansible / Salt / Puppet。 | 面向机群的声明式配置管理，无 agent（Ansible）或有 agent，带版本控制和幂等性；规模上来后的正确工具，但没有用于临时单机排障的实时交互 UI。 |
-| Portainer | 未收录 | 当前页用于它的主场景；如果更看重“专注 Docker/Kubernetes 容器管理的 Web UI”，再选 Portainer。 | 专注 Docker/Kubernetes 容器管理的 Web UI;Cockpit 的容器视图（Podman）只是众多标签页之一，不是产品全部。 |
-| Grafana + Prometheus | 未收录 | 当前页用于它的主场景；如果更看重“面向机群的指标/告警可观测性仪表盘”，再选 Grafana + Prometheus。 | 面向机群的指标/告警可观测性仪表盘；以只读监控为主，而 Cockpit 是对单台主机的动手管理。 |
-| [DevToys](devtoys.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“桌面端的开发者离线格式/编解码/转换工具箱”，再选 DevToys。 | 桌面端的开发者离线格式/编解码/转换工具箱——是不相干的问题；列在这里只因同属本分类，并非替代品。 |
+| Webmin | 未收录 | 需要更老、更广的 Perl 控制面板，覆盖多种服务和 init 系统时，选 Webmin。 | 更老、更广的 Perl 控制面板，覆盖多种服务（邮件、DNS、Apache、BIND）且支持多种 init；更重、更不“实时会话”——Cockpit 更精简、systemd 原生，反映实时 OS 状态。 |
+| cPanel / Plesk | 未收录 | 需要商业虚拟主机控制面板，覆盖虚拟主机、邮件、计费和分销账号时，选 cPanel / Plesk。 | 商业虚拟主机控制面板（虚拟主机、邮件、计费、分销账号）；解决的是托管业务问题，不是裸操作系统管理。闭源且收费。 |
+| Ansible / Salt / Puppet | 未收录 | 需要面向机群、带版本控制和幂等性的声明式配置管理时，选 Ansible、Salt 或 Puppet。 | 面向机群的声明式配置管理，无 agent（Ansible）或有 agent，带版本控制和幂等性；规模上来后的正确工具，但没有用于临时单机排障的实时交互 UI。 |
+| Portainer | 未收录 | 任务专门是 Docker/Kubernetes 容器 Web UI 管理时，选 Portainer。 | 专注 Docker/Kubernetes 容器管理的 Web UI；Cockpit 的容器视图（Podman）只是众多标签页之一，不是产品全部。 |
+| Grafana + Prometheus | 未收录 | 需要面向机群的指标/告警可观测性仪表盘时，选 Grafana + Prometheus。 | 面向机群的指标/告警可观测性仪表盘；以只读监控为主，而 Cockpit 是对单台主机的动手管理。 |
+| [DevToys](devtoys.zh.md) | ✅ | 需要桌面端开发者离线格式、编解码和转换工具箱时，选 DevToys。 | 桌面端的开发者离线格式/编解码/转换工具箱——是不相干的问题；列在这里只因同属本分类，并非替代品。 |
 
 ## 技术栈
 

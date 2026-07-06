@@ -87,11 +87,11 @@ You also reach for it when you want pretrained models you can both *use* and *re
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| NeMo (NVIDIA) | 未收录 | Use this page for its stated niche; choose NeMo (NVIDIA) when you need larger, GPU/scale-oriented conversational-AI toolkit with strong ASR/TTS and NVIDIA tooling. | Larger, GPU/scale-oriented conversational-AI toolkit with strong ASR/TTS and NVIDIA tooling; heavier and more NVIDIA-centric than SpeechBrain's lighter research framing. |
-| ESPnet | 未收录 | Use this page for its stated niche; choose ESPnet when you need end-to-end speech-processing toolkit with deep ASR/TTS recipe coverage and a strong research lineage. | End-to-end speech-processing toolkit with deep ASR/TTS recipe coverage and a strong research lineage; powerful but historically a steeper, Kaldi-flavored learning curve. |
-| Hugging Face Transformers (audio) | 未收录 | Use this page for its stated niche; choose Hugging Face Transformers (audio) when you need great for using/fine-tuning pretrained audio models (Whisper, Wav2Vec2). | Great for using/fine-tuning pretrained audio models (Whisper, Wav2Vec2); not a full recipe/training framework spanning separation, enhancement, diarization the way SpeechBrain is. |
-| Kaldi | 未收录 | Use this page for its stated niche; choose Kaldi when you need the classic, highly optimized ASR toolkit. | The classic, highly optimized ASR toolkit; far steeper, C++/shell-heavy, not PyTorch-native — chosen for maximal control, not ergonomics. |
-| faster-whisper / Whisper | 未收录 | Use this page for its stated niche; choose faster-whisper / Whisper when you need inference-focused ASR. | Inference-focused ASR; excellent if you only transcribe, but not a multi-task training toolkit. |
+| NeMo (NVIDIA) | 未收录 | Choose NeMo when you need a larger, GPU/scale-oriented conversational-AI toolkit with NVIDIA tooling. | Strong ASR/TTS and NVIDIA integration, but heavier and more vendor-centric than SpeechBrain's lighter research framing. |
+| ESPnet | 未收录 | Choose ESPnet when you need end-to-end speech processing with deep ASR/TTS recipe coverage and research lineage. | Powerful, but historically steeper and more Kaldi-flavored than SpeechBrain. |
+| Hugging Face Transformers (audio) | 未收录 | Choose Transformers audio models when using or fine-tuning pretrained Whisper/Wav2Vec2-style models is enough. | Excellent model access, but not a full recipe/training framework spanning separation, enhancement, and diarization. |
+| Kaldi | 未收录 | Choose Kaldi when you need the classic, highly optimized ASR toolkit and accept C++/shell-heavy workflows. | Maximizes control, not ergonomics; it is far steeper and not PyTorch-native. |
+| faster-whisper / [Whisper](../media-processing/whisper.md) | 部分已收录 | Choose inference-focused Whisper stacks when transcription is the job, not multi-task speech training. | Excellent if you only transcribe, but not a multi-task training toolkit. faster-whisper is not indexed separately. |
 
 ## Tech stack
 
@@ -113,7 +113,7 @@ You also reach for it when you want pretrained models you can both *use* and *re
 
 ## Health & viability
 
-- **Responsiveness**: Grade C — median first-response time 128.8 hours across 2 qualifying issues/PRs.
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (2026-06).** Last pushed 2026-06; v1.1.0 released 2026-03 on the `develop` branch with steady activity — **active**, not coasting. Not archived. [推断]
 - **Governance / bus factor.** A research-community project driven by a recognizable maintainer group (academic/lab-affiliated core contributors) rather than a single person — broader bus factor than a solo project, but still community/academic-funded rather than a foundation. [未验证]
 - **Age × Lindy (2026-06).** Created 2020-04 — ~6 years old and **still actively shipping** ⇒ a **moderate-to-strong Lindy** signal for a research toolkit; it has outlived the typical academic-repo half-life. [推断]

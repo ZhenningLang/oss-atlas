@@ -10,9 +10,9 @@ maturity: v1.x, active, 150k stars (as of 2026-07)
 last_verified: 2026-07-01
 type: framework
 upstream:
-  pushed_at: 2026-07-01T10:21:48Z
+  pushed_at: 2026-07-04T03:07:49Z
   default_branch: main
-  default_branch_sha: 0000000000000000000000000000000000000000
+  default_branch_sha: 315cc41b43c446bfb0e63d420ca55021f6f8987e
   archived: false
 health:
   schema: 1
@@ -93,12 +93,12 @@ You're a developer or AI engineer who needs to prototype and deploy LLM-powered 
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| [LangChain](langchain.md) | 未收录 | Lower-level Python/JS framework for building custom agents. | LangChain is a library to code with; Langflow is a visual layer on top of similar concepts. Code-first teams prefer LangChain; visual-first teams prefer Langflow. |
-| [n8n](../workflow-orchestration/n8n.md) | ✅ | Fair-code workflow automation with 400+ integrations and AI nodes. | n8n is general-purpose automation with AI bolted on; Langflow is purpose-built for LLM/agent workflows with deeper model and vector-DB integration. |
-| Dify | 未收录 | Production-ready platform for agentic workflow development. | Similar visual builder with stronger enterprise RBAC and cloud offering; Langflow is fully MIT-licensed and more open to community-driven customization. |
-| [AutoGPT](autogpt.md) | ✅ | Platform for autonomous continuous AI agents. | AutoGPT targets autonomous task execution; Langflow targets composed, interactive workflows with human oversight. |
-| CrewAI | 未收录 | Framework for multi-agent role-based teams. | CrewAI is code-first role-based multi-agent orchestration; Langflow is visual flow-based orchestration. |
-| Flowise | 未收录 | Open-source visual LLM workflow builder (similar to Langflow). | Very similar feature set; Langflow has a larger community and more active GitHub presence as of 2026-07. |
+| [LangChain](langchain.md) | ✅ | Pick LangChain when code-first custom agent development is preferable to a visual canvas. | LangChain is a library to code with; Langflow is a visual layer on top of similar concepts. Code-first teams prefer LangChain; visual-first teams prefer Langflow. |
+| [n8n](../workflow-orchestration/n8n.md) | ✅ | Pick n8n when broad workflow automation and integrations matter more than LLM-native flow composition. | n8n is general-purpose automation with AI bolted on; Langflow is purpose-built for LLM/agent workflows with deeper model and vector-DB integration. |
+| [Dify](dify.md) | ✅ | Pick Dify when production platform features, RBAC, and cloud options outweigh Langflow's MIT/community customization. | Similar visual builder with stronger enterprise RBAC and cloud offering; Langflow is fully MIT-licensed and more open to community-driven customization. |
+| [AutoGPT](autogpt.md) | ✅ | Pick AutoGPT when the target is autonomous continuous task execution. | AutoGPT targets autonomous task execution; Langflow targets composed, interactive workflows with human oversight. |
+| CrewAI | 未收录 | Pick CrewAI when code-first role-based multi-agent teams are the core abstraction. | CrewAI is code-first role-based multi-agent orchestration; Langflow is visual flow-based orchestration. |
+| Flowise | 未收录 | Pick Flowise when you want a similar visual LLM builder and its ecosystem fits your stack better. | Very similar feature set; Langflow has a larger community and more active GitHub presence as of 2026-07. |
 
 ## Tech stack
 
@@ -122,8 +122,8 @@ You're a developer or AI engineer who needs to prototype and deploy LLM-powered 
 
 ## Health & viability
 - **Maintenance**: Grade A — 13/13 active weeks in trailing 13; last commit 1 days ago.
-- **Responsiveness**: Grade A — median first-response time 17.1 hours across 56 qualifying issues/PRs.
-- **Adoption**: Grade C — 90,552 monthly downloads via pypi.org (package: langflow-base).
+- **Responsiveness**: Grade A — median first-response time 16.9 hours across 55 qualifying issues/PRs.
+- **Adoption**: Grade C — 92,752 monthly downloads via pypi.org (package: langflow-base).
 - **Longevity**: Grade B — 1240 days old.
 - **Governance**: Grade A — top-3 contributor share 34.6% (?).
 - **Risk / License**: Grade A — MIT license.

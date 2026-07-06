@@ -88,11 +88,11 @@ You reach for it when you want the size and attack-surface win *now*, on images 
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| Distroless (GoogleContainerTools) | 未收录 | Use this page for its stated niche; choose Distroless (GoogleContainerTools) when you need minimal base images you *build on*. | Minimal base images you *build on* — deterministic, no runtime tracing, but you must restructure the Dockerfile (multi-stage) and own the source. SlimToolkit retrofits an already-built image instead. |
-| Multi-stage / hand-optimized Dockerfile | 未收录 | Use this page for its stated niche; choose Multi-stage / hand-optimized Dockerfile when you need the source-level fix: smallest, most predictable, fully under your control. | The source-level fix: smallest, most predictable, fully under your control — but requires owning and editing every build. SlimToolkit's pitch is "no Dockerfile change." |
-| Trivy / Grype (scanners) | 未收录 | Use this page for its stated niche; choose Trivy / Grype (scanners) when you need find and report CVEs / produce SBOMs. | Find and report CVEs / produce SBOMs; they *measure* attack surface, they don't *shrink* it. Complementary, not a substitute. |
-| DockerSlim (predecessor) | 未收录 | Use this page for its stated niche; choose DockerSlim (predecessor) when you need not a separate project. | Not a separate project — DockerSlim was renamed to Slim/SlimToolkit; the same codebase, same `slim build` flow. [推断] |
-| Docker `docker build --squash` / layer flattening | 未收录 | Use this page for its stated niche; choose Docker docker build --squash / layer flattening when you need reduces layer count/dup, not the *contents*. | Reduces layer count/dup, not the *contents* — keeps every unused binary. Different mechanism, far smaller win. |
+| Distroless (GoogleContainerTools) | 未收录 | Choose Distroless when you can rebuild on minimal base images instead of shrinking an existing image. | Minimal base images you *build on* — deterministic, no runtime tracing, but you must restructure the Dockerfile (multi-stage) and own the source. SlimToolkit retrofits an already-built image instead. |
+| Multi-stage / hand-optimized Dockerfile | 未收录 | Choose a multi-stage or hand-optimized Dockerfile when you own the source-level build and want predictability. | The source-level fix: smallest, most predictable, fully under your control — but requires owning and editing every build. SlimToolkit's pitch is "no Dockerfile change." |
+| Trivy / Grype (scanners) | 未收录 | Choose Trivy or Grype when you need to report CVEs or produce SBOMs rather than shrink images. | Find and report CVEs / produce SBOMs; they *measure* attack surface, they don't *shrink* it. Complementary, not a substitute. |
+| DockerSlim (predecessor) | 未收录 | Treat DockerSlim as the predecessor/name history, not a separate current project choice. | Not a separate project — DockerSlim was renamed to Slim/SlimToolkit; the same codebase, same `slim build` flow. [推断] |
+| Docker `docker build --squash` / layer flattening | 未收录 | Choose layer flattening when you only need fewer layers, not content-level minimization. | Reduces layer count/dup, not the *contents* — keeps every unused binary. Different mechanism, far smaller win. |
 
 ## Tech stack
 
@@ -114,7 +114,7 @@ You reach for it when you want the size and attack-surface win *now*, on images 
 
 ## Health & viability
 
-- **Responsiveness**: Grade C — median first-response time 268.3 hours across 2 qualifying issues/PRs.
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (2026-06).** Repo is **not archived** and the default branch shows commits into 2026-03, but those recent commits are largely CI/dependency bumps (dependabot) plus a "tmp disable github actions" commit — and the **last tagged release is v1.40.11 from 2024-02**, a ~2.4-year release gap. Reads as **maintained-but-coasting**: alive, not abandoned, but not shipping feature releases at cadence. [推断]
 - **Governance / bus factor.** **CNCF Sandbox** project (confirmed in README) with a `MAINTAINERS.md` listing two maintainers — but creator **Kyle Quest (@kcq)** has ~816 commits, the next human contributor is far behind, and `GOVERNANCE.md` literally says "TBD". So Sandbox status gives ecosystem visibility, **not** a deep, foundation-run governance bench — bus factor is concentrated on one person. [推断]
 - **Backing & longevity.** Backed by **Root.io (formerly Slim.AI)** per the README; a commercial vendor's interest is a longevity plus but also ties momentum to that company's priorities. [推断]

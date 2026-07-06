@@ -95,12 +95,12 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| Numba | 未收录 | 当前页用于它的主场景；如果更看重“经装饰器对数值 Python 做基于 LLVM 的 JIT”，再选 Numba。 | 经装饰器对数值 Python 做基于 LLVM 的 JIT；无单独 C 构建，对数组/循环核函数极好，但范围更窄（数值、不能封 C++）且是运行时 JIT 模型。 |
-| PyPy | 未收录 | 当前页用于它的主场景；如果更看重“带追踪 JIT 的另一种 Python 解释器”，再选 PyPy。 | 带追踪 JIT 的另一种 Python 解释器；可不改代码加速整程序，但 C 扩展兼容性和生态契合可能是坑。 |
-| pybind11 / nanobind | 未收录 | 当前页用于它的主场景；如果更看重“header-only 的 C++ ↔ Python 绑定库”，再选 pybind11 / nanobind。 | header-only 的 C++ ↔ Python 绑定库；当你的代码已经是 C++ 时理想，但你写的是 C++ 而非 Python 超集。 |
-| cffi / ctypes | 未收录 | 当前页用于它的主场景；如果更看重“不编译自定义扩展就从 Python 调 C”，再选 cffi / ctypes。 | 不编译自定义扩展就从 Python 调 C；薄 FFI 更简单，但没有编译级速度的 Python，静态类型也比 Cython 弱。 |
-| mypyc | 未收录 | 当前页用于它的主场景；如果更看重“用 mypy 的类型把带标注的 Python 编译成 C”，再选 mypyc。 | 用 mypy 的类型把带标注的 Python 编译成 C；更接近“编译我的 Python”且用标准类型，但比 Cython 更年轻更窄。 |
-| Rust + PyO3 | 未收录 | 当前页用于它的主场景；如果更看重“用 Rust 写热点组件并绑定到 Python”，再选 Rust + PyO3。 | 用 Rust 写热点组件并绑定到 Python；内存安全且快，但是另一种语言和工具链，不同于 Python 超集路线。 |
+| Numba | 未收录 | 数组／循环核函数比扩展 ABI 或 C/C++ 封装更重要，且想用装饰器式数值 JIT 时，选 Numba。 | 无单独 C 构建，对数值核函数很强，但范围更窄，并且绑定运行时 JIT 模型。 |
+| PyPy | 未收录 | 想先试整程序无改代码 JIT，而不是手工 Cython 化局部模块时，选 PyPy。 | 可加速整程序，但 C 扩展兼容性和生态契合可能是坑。 |
+| pybind11 / nanobind | 未收录 | 性能关键代码已经是 C++，Python 只需要绑定层时，选 pybind11 或 nanobind。 | 很适合 C++ 库，但你写的是 C++，不是 Python 超集。 |
+| cffi / ctypes | 未收录 | 只是薄薄调用 C，编译自定义 CPython 扩展反而过重时，选 cffi 或 ctypes。 | 薄 FFI 更简单，但没有编译级速度的 Python，静态类型也比 Cython 弱。 |
+| mypyc | 未收录 | 标准类型标注的 Python 是源码真相，不能接受 Cython 专用语法时，选 mypyc。 | 更接近“编译我的 Python”且用标准类型，但比 Cython 更年轻更窄。 |
+| Rust + PyO3 | 未收录 | 热点组件应改写成 Rust，而不是保留在 Python 超集语言里时，选 Rust + PyO3。 | 内存安全且快，但会引入另一种语言和工具链。 |
 
 ## 技术栈
 

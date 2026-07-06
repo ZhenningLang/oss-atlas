@@ -97,7 +97,7 @@ You're a machine learning researcher or data engineer preparing a large-scale co
 | [MarkItDown](markitdown.md) | ✅ | Lightweight Python library converting office documents to Markdown. | MarkItDown is simpler, faster, and cheaper for basic documents; olmOCR handles complex layouts, equations, and handwriting that MarkItDown cannot. |
 | Marker | 未收录 | Fast PDF-to-Markdown converter optimized for academic papers. | Marker specializes in academic papers with rule-based heuristics; olmOCR uses a VLM for broader document types but at higher compute cost. |
 | LlamaParse | 未收录 | Hosted document parsing API from LlamaIndex. | Cloud-based, API-key required, no GPU needed; olmOCR is self-hosted and open-source but requires GPU infrastructure. |
-| Tesseract / OCRmyPDF | 未收录 | Traditional OCR engines for text extraction. | Pure OCR tools extract text but don't understand layout, tables, or reading order; olmOCR's VLM provides semantic understanding. |
+| [Tesseract](../ocr/tesseract.md) / OCRmyPDF | 部分已收录 | Choose traditional OCR engines when plain text extraction is enough and layout semantics are secondary. | Pure OCR tools extract text but do not understand layout, tables, or reading order; olmOCR's VLM provides semantic understanding. OCRmyPDF is not indexed separately. |
 | PyMuPDF | 未收录 | Low-level Python PDF library for extraction and manipulation. | A library for direct PDF page manipulation, not a high-level Markdown converter; more powerful but requires more code and does not understand semantics. |
 
 ## Tech stack
@@ -121,13 +121,12 @@ You're a machine learning researcher or data engineer preparing a large-scale co
 
 ## Health & viability
 
-- **Responsiveness**: Grade D — inferred from maintenance activity (no direct issue/PR response data).
-- **Maintenance:** Active — last push 2026-03-25, v0.4.0 released 2025-10 with a new model release. The Allen Institute for AI (AI2) has a strong track record in open-source ML research. [未验证]
-- **Governance:** Organization-owned (`allenai`), a well-known research nonprofit with substantial funding and a history of maintaining open-source projects (OLMo, etc.). [推断]
-- **Backing:** AI2 (Allen Institute for AI) — a nonprofit research institute with consistent funding and a strong commitment to open science. [推断]
-- **Age & Lindy:** Created 2024-09 (~10 months old as of 2026-07). Young but backed by an established institution. The VLM approach to document parsing is a growing trend, but the project's youth means APIs and model versions may shift. [推断]
-- **Adoption:** 18.3k stars is solid for a specialized research tool, indicating genuine interest in the ML dataset-preparation community. [推断]
-- **Risk flags:** Apache-2.0 is clean and permissive. The main risk is the model dependency — the quality and availability of the olmOCR-2-7B model weights are tied to AI2's HuggingFace presence. Also, the project is pre-1.0 and the VLM inference cost may not scale for all use cases. The GPU requirement is a hardware barrier that excludes CPU-only environments.
+- **Maintenance**: Grade C — 0/13 active weeks in trailing 13; last commit 100 days ago.
+- **Responsiveness**: Cannot be scored — no_traffic.
+- **Adoption**: Grade C — 22,800 monthly downloads via pypi.org (package: olmocr).
+- **Longevity**: Grade B — 654 days old.
+- **Governance**: Grade D — top-3 contributor share 99.1% (?).
+- **Risk / License**: Grade A — Apache-2.0 license.
 
 ## Caveats (unverified)
 

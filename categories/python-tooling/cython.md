@@ -95,12 +95,12 @@ You also reach for Cython when you need to **wrap a C or C++ library** and expos
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| Numba | 未收录 | Use this page for its stated niche; choose Numba when you need LLVM-based JIT for numeric Python via a decorator. | LLVM-based JIT for numeric Python via a decorator; no separate C build, great for array/loop kernels, but narrower scope (numeric, no C++ wrapping) and runtime-JIT model. |
-| PyPy | 未收录 | Use this page for its stated niche; choose PyPy when you need an alternative Python interpreter with a tracing JIT. | An alternative Python interpreter with a tracing JIT; can speed whole programs with no code changes, but C-extension compatibility and ecosystem fit can be the catch. |
-| pybind11 / nanobind | 未收录 | Use this page for its stated niche; choose pybind11 / nanobind when you need header-only C++ ↔ Python binding libraries. | Header-only C++ ↔ Python binding libraries; ideal when your code is already C++, but you write C++, not a Python superset. |
-| cffi / ctypes | 未收录 | Use this page for its stated niche; choose cffi / ctypes when you need call C from Python without compiling a custom extension. | Call C from Python without compiling a custom extension; simpler for thin FFI but no compiled-speed Python and weaker static typing than Cython. |
-| mypyc | 未收录 | Use this page for its stated niche; choose mypyc when you need compiles type-annotated Python to C using mypy types. | Compiles type-annotated Python to C using mypy types; closer to "compile my Python" with standard typing, but younger and narrower than Cython. |
-| Rust + PyO3 | 未收录 | Use this page for its stated niche; choose Rust + PyO3 when you need write the hot component in Rust and bind to Python. | Write the hot component in Rust and bind to Python; memory-safe and fast, but a different language and toolchain than the Python-superset approach. |
+| Numba | 未收录 | Choose Numba for decorator-based numeric JIT when array/loop kernels matter more than extension ABI or C/C++ wrapping. | No separate C build and strong for numeric kernels, but narrower in scope and tied to a runtime-JIT model. |
+| PyPy | 未收录 | Choose PyPy for whole-program no-code-change JIT experiments before hand-Cythonizing targeted modules. | Can speed whole programs, but C-extension compatibility and ecosystem fit can be the catch. |
+| pybind11 / nanobind | 未收录 | Choose pybind11 or nanobind when the performance-critical code is already C++ and Python only needs bindings. | Ideal for C++ libraries, but you write C++, not a Python superset. |
+| cffi / ctypes | 未收录 | Choose cffi or ctypes for thin C FFI when compiling a custom CPython extension would be unnecessary overhead. | Simpler for calling C, but no compiled-speed Python and weaker static typing than Cython. |
+| mypyc | 未收录 | Choose mypyc when standard type-annotated Python is the source of truth and Cython-specific syntax is unacceptable. | Closer to "compile my Python" with standard typing, but younger and narrower than Cython. |
+| Rust + PyO3 | 未收录 | Choose Rust + PyO3 when the hot component should be rewritten in Rust rather than kept in a Python-superset language. | Memory-safe and fast, but it brings a different language and toolchain. |
 
 ## Tech stack
 

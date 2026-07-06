@@ -10,9 +10,9 @@ maturity: v7.x, active, ~22k stars (as of 2026-07)
 last_verified: 2026-07-01
 type: library
 upstream:
-  pushed_at: 2026-07-01T00:00:00Z
-  default_branch: main
-  default_branch_sha: 0000000000000000000000000000000000000000
+  pushed_at: 2026-01-04T18:23:52Z
+  default_branch: master
+  default_branch_sha: b50a24316febe87e9ee430542587c6ece5ab4cad
   archived: false
 health:
   schema: 1
@@ -94,11 +94,11 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [Driver.js](../web-ui/driver-js.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“MIT 授权、更轻、零依赖”，再选 Driver.js。 | MIT 授权，包体积更小（约 5KB），零依赖；但内置功能和定位选项比 Intro.js 少。 |
-| Shepherd.js | 未收录 | 当前页用于它的主场景；如果更看重“MIT 授权、API 更丰富、定位选项更多”，再选 Shepherd.js。 | MIT 授权，内置步骤/定位选项更多、API 更丰富；用 Floating UI / popper 风格定位，比 Driver.js 更重。 |
-| Reactour / react-joyride | 未收录 | 当前页用于它的主场景；如果更看重“React 专属的引导组件（hooks/JSX 原生）”，再选 Reactour / react-joyride。 | React 专属组件（hooks/JSX 原生）；在 React 内 DX 更好，但被框架锁定，对比 Intro.js 的 vanilla 内核。 |
-| Appcues / Userflow / Userpilot | 未收录 | 当前页用于它的主场景；如果更看重“商业的无代码 onboarding **平台**”，再选 Appcues / Userflow / Userpilot。 | 商业平台——分层、分析、定向、checklist、问卷；不是开源仓库，有持续的 SaaS 订阅成本。 |
-| Bootstrap Tour | 未收录 | 当前页用于它的主场景；Bootstrap Tour 已弃用，请勿使用。 | 已弃用；曾是依赖 Bootstrap 的引导插件，现已不再维护。 |
+| [Driver.js](driver-js.zh.md) | ✅ | 需要 MIT 授权、更轻、零依赖的替代品时，选 Driver.js。 | MIT 授权，包体积更小（约 5KB），零依赖；但内置功能和定位选项比 Intro.js 少。 |
+| [Shepherd.js](shepherd-js.zh.md) | ✅ | 需要 MIT 授权、API 更丰富、定位选项更多的引导库时，选 Shepherd.js。 | MIT 授权，内置步骤/定位选项更多、API 更丰富；用 Floating UI / popper 风格定位，比 Driver.js 更重。 |
+| Reactour / react-joyride | 未收录 | 需要 React 专属的 hooks 或 JSX 原生引导组件时，选 Reactour / react-joyride。 | React 专属组件（hooks/JSX 原生）；在 React 内 DX 更好，但被框架锁定，对比 Intro.js 的 vanilla 内核。 |
+| Appcues / Userflow / Userpilot | 未收录 | 需要商业无代码 onboarding **平台**时，选 Appcues、Userflow 或 Userpilot。 | 商业平台——分层、分析、定向、checklist、问卷；不是开源仓库，有持续的 SaaS 订阅成本。 |
+| Bootstrap Tour | 未收录 | 新项目不要选 Bootstrap Tour；它已弃用且不再维护。 | 已弃用；曾是依赖 Bootstrap 的引导插件，现已不再维护。 |
 
 ## 技术栈
 

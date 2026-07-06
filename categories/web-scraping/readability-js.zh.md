@@ -93,11 +93,11 @@ Firefox Reader View 背后那个 readability 库的独立版本——给它一�
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [python-readability](python-readability.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“基于 lxml 的同一 arc90 血统 Python 移植”，再选 python-readability。 | 基于 lxml 的同一 arc90 血统 Python 移植；按语言选（Python 管线）——启发式与输出和 JS 引擎有别。 |
-| [dragnet](dragnet.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“ML 模型做正文抽取（Python）”，再选 dragnet。 | ML 模型做正文抽取（Python）；在某些页面上可胜出，但更重、依赖老化、维护较少。 |
-| [boilerpipe](boilerpipe.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“经典 Java 样板移除算法”，再选 boilerpipe。 | 经典 Java 样板移除算法；思想成熟，但仓库实际已废弃（最后 push 2018）。 |
-| trafilatura | 未收录 | 当前页用于它的主场景；如果更看重“Python 抽取库，基准结果强、带元数据和爬取支持”，再选 trafilatura。 | Python 抽取库，基准结果强、带元数据和爬取支持；常是现代 Python 默认——语言不同、范围更广。 |
-| Mercury / Postlight Parser | 未收录 | 当前页用于它的主场景；如果更看重“Node 文章解析器，也会抓页面”，再选 Mercury / Postlight Parser。 | Node 文章解析器，也会抓页面；历史上流行但维护起伏不定。 |
+| [python-readability](python-readability.zh.md) | ✅ | 需要同一 Arc90 血统的 lxml-based Python 移植时，选 python-readability。 | 基于 lxml 的同一 arc90 血统 Python 移植；按语言选（Python 管线）——启发式与输出和 JS 引擎有别。 |
+| [dragnet](dragnet.zh.md) | ✅ | 需要 Python 里的 ML 模型正文抽取时，选 dragnet。 | ML 模型做正文抽取（Python）；在某些页面上可胜出，但更重、依赖老化、维护较少。 |
+| [boilerpipe](boilerpipe.zh.md) | ✅ | 需要经典 Java 样板移除算法时，选 boilerpipe。 | 经典 Java 样板移除算法；思想成熟，但仓库实际已废弃（最后 push 2018）。 |
+| trafilatura | 未收录 | 需要带强基准、元数据和爬取支持的 Python 抽取库时，选 trafilatura。 | Python 抽取库，基准结果强、带元数据和爬取支持；常是现代 Python 默认——语言不同、范围更广。 |
+| Mercury / Postlight Parser | 未收录 | 需要会抓页面的 Node 文章解析器时，选 Mercury/Postlight Parser。 | Node 文章解析器，也会抓页面；历史上流行但维护起伏不定。 |
 
 ## 技术栈
 

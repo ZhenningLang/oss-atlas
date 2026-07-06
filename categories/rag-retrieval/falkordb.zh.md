@@ -91,12 +91,12 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [graphify](graphify.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“轻量的代码/文档转图构建器”，再选 graphify。 | 轻量的代码/文档转图构建器；FalkorDB 是存储+查询引擎，graphify 在其上游做建图——互补，而非替代。 |
-| [code-review-graph](code-review-graph.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“领域专用（代码评审）图工具”，再选 code-review-graph。 | 领域专用（代码评审）图工具；FalkorDB 是你会拿来构建这类工具的通用图数据库。 |
-| [PageIndex](pageindex.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“基于推理的文档树 / 检索索引，不是图数据库”，再选 PageIndex。 | 基于推理的文档树 / 检索索引，不是图数据库——检索原语不同（层级索引 vs 属性图）。 |
-| Neo4j | 未收录 | 当前页用于它的主场景；如果更看重“业界标准的属性图，生态最大（Bolt、GDS、APOC）”，再选 Neo4j。 | 业界标准的属性图，生态最大（Bolt、GDS、APOC）；更重，GPLv3/商业许可。FalkorDB 在稀疏矩阵遍历上更快、可嵌入 Redis，但更年轻且为 SSPL。 |
-| Memgraph | 未收录 | 当前页用于它的主场景；如果更看重“内存型、兼容 Cypher、偏流式的图数据库”，再选 Memgraph。 | 内存型、兼容 Cypher、偏流式的图数据库；BSL 许可。和 FalkorDB 的内存型定位有重叠，但没有 Redis 模块这套模型。 |
-| Neptune(AWS) | 未收录 | 当前页用于它的主场景；如果更看重“托管的多模型（Gremlin/openCypher/SPARQL）图服务”，再选 Neptune(AWS)。 | 托管的多模型（Gremlin/openCypher/SPARQL）图服务；不可自托管，绑定 AWS。FalkorDB 可自托管、贴近开源。 |
+| [graphify](graphify.zh.md) | ✅ | 需要轻量代码/文档建图，而不是图数据库本身时，选 graphify。 | 轻量的代码/文档转图构建器；FalkorDB 是存储+查询引擎，graphify 在其上游做建图——互补，而非替代。 |
+| [code-review-graph](code-review-graph.zh.md) | ✅ | 需要专门的 PR/code-review 图工具时，选 code-review-graph。 | 领域专用（代码评审）图工具；FalkorDB 是你会拿来构建这类工具的通用图数据库。 |
+| [PageIndex](pageindex.zh.md) | ✅ | 检索原语是推理文档树，而不是属性图数据库时，选 PageIndex。 | 基于推理的文档树 / 检索索引，不是图数据库——检索原语不同（层级索引 vs 属性图）。 |
+| Neo4j | 未收录 | 最大属性图生态比 Redis 嵌入或稀疏矩阵速度更重要时，选 Neo4j。 | 业界标准的属性图，生态最大（Bolt、GDS、APOC）；更重，GPLv3/商业许可。FalkorDB 在稀疏矩阵遍历上更快、可嵌入 Redis，但更年轻且为 SSPL。 |
+| Memgraph | 未收录 | 想要内存型 Cypher 图数据库，但不想继承 Redis 模块模型时，选 Memgraph。 | 内存型、兼容 Cypher、偏流式的图数据库；BSL 许可。和 FalkorDB 的内存型定位有重叠，但没有 Redis 模块这套模型。 |
+| Neptune（AWS） | 未收录 | 想要 AWS 托管图服务，且接受云锁定胜过自托管时，选 Neptune。 | 托管的多模型（Gremlin/openCypher/SPARQL）图服务；不可自托管，绑定 AWS。FalkorDB 可自托管、贴近开源。 |
 
 ## 技术栈
 
@@ -104,20 +104,20 @@ health:
 - **图引擎：** [GraphBLAS](https://github.com/DrTimothyAldenDavis/GraphBLAS) 稀疏邻接矩阵表示；查询执行表达为线性代数。
 - **宿主：** Redis 模块（通过 `loadmodule` / `MODULE LOAD` 加载）；最新版本需要 Redis 7.4。
 - **查询语言：** OpenCypher 加专有扩展；索引：向量（相似）、全文、范围。
-- **构建：** CMake + Make,`deps/` 下 vendored 子模块。
-- **客户端（官方）:** Java、Python、Node.js、Rust、Go、C#；社区 SDK（Ruby、PHP、Elixir 等）。
+- **构建：** CMake + Make，`deps/` 下 vendored 子模块。
+- **客户端（官方）：** Java、Python、Node.js、Rust、Go、C#；社区 SDK（Ruby、PHP、Elixir 等）。
 - **上层：** GraphRAG-SDK（独立的 Apache-2.0 Python 仓库），做 LLM 驱动的建图/检索。
 
 ## 依赖
 
 - **运行时：** Redis 7.4（宿主进程）；加载进去的 FalkorDB 模块二进制。
-- **从源码：** `git clone --recurse-submodules`、C/C++ 工具链（gcc/clang）、CMake、Make;GraphBLAS 等依赖以子模块 vendored。
+- **从源码：** `git clone --recurse-submodules`、C/C++ 工具链（gcc/clang）、CMake、Make；GraphBLAS 等依赖以子模块 vendored。
 - **最省事路径：** 官方 Docker 镜像（`docker run -p 6379:6379 -p 3000:3000 falkordb/falkordb`），打包引擎 + 浏览器 UI（3000 端口）。
-- **用于 GraphRAG:** Python GraphRAG-SDK 加一个 LLM 提供方，做实体/关系抽取。
+- **用于 GraphRAG：** Python GraphRAG-SDK 加一个 LLM 提供方，做实体/关系抽取。
 
 ## 运维难度
 
-**低到中。** Docker 让单节点变得很简单——一个容器就给你引擎、持久化和一个 Web UI。日常运维基本就是 Redis 运维：RDB/AOF 持久化、`maxmemory` 调参、复制。难度升到**中**的场景：(a) 为自定义平台从源码编译（子模块 + GraphBLAS 构建）,(b) 需要 HA/复制拓扑，或 (c) 把大图压向单节点内存上限——因为没有内置的水平图分片。内存容量规划是主要的容量考量。
+**低到中。** Docker 让单节点变得很简单——一个容器就给你引擎、持久化和一个 Web UI。日常运维基本就是 Redis 运维：RDB/AOF 持久化、`maxmemory` 调参、复制。难度升到**中**的场景：（a）为自定义平台从源码编译（子模块 + GraphBLAS 构建），（b）需要 HA/复制拓扑，或（c）把大图压向单节点内存上限——因为没有内置的水平图分片。内存容量规划是主要的容量考量。
 
 ## 健康度与可持续性
 

@@ -83,11 +83,11 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [dragnet](dragnet.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“引 boilerpipe 为灵感的 Python ML 抽取器”，再选 dragnet。 | 引 boilerpipe 为灵感的 Python ML 抽取器；可训练、识评论，但同样低活跃、依赖老化。 |
-| [python-readability](python-readability.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“lxml 启发式抽取器（Python）”，再选 python-readability。 | lxml 启发式抽取器（Python）；更轻、仍算有维护——但非 JVM。 |
-| [Readability.js](readability-js.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“Mozilla 的 JS reader-view 引擎”，再选 Readability.js。 | Mozilla 的 JS reader-view 引擎；活跃维护，但是 JavaScript 且需要 DOM。 |
-| Apache Tika | 未收录 | 当前页用于它的主场景；如果更看重“JVM 内容检测/抽取框架（多种格式，不只 HTML 文章抽取）”，再选 Apache Tika。 | JVM 内容检测/抽取框架（多种格式，不只 HTML 文章抽取）；活跃维护、宽广得多——更重、侧重不同。 |
-| trafilatura | 未收录 | 当前页用于它的主场景；如果更看重“现代、有维护的 Python 抽取器，基准强、带元数据”，再选 trafilatura。 | 现代、有维护的 Python 抽取器，基准强、带元数据；如今通常是更好的默认——语言不同。 |
+| [dragnet](dragnet.zh.md) | ✅ | 需要引 boilerpipe 为灵感的 Python ML 抽取器时，选 dragnet。 | 引 boilerpipe 为灵感的 Python ML 抽取器；可训练、识评论，但同样低活跃、依赖老化。 |
+| [python-readability](python-readability.zh.md) | ✅ | 需要没有 JVM 依赖的 Python/lxml 启发式抽取器时，选 python-readability。 | lxml 启发式抽取器（Python）；更轻、仍算有维护——但非 JVM。 |
+| [Readability.js](readability-js.zh.md) | ✅ | 需要 Mozilla 的 JavaScript reader-view 引擎时，选 Readability.js。 | Mozilla 的 JS reader-view 引擎；活跃维护，但是 JavaScript 且需要 DOM。 |
+| Apache Tika | 未收录 | 需要覆盖多格式的 JVM 内容检测/抽取框架时，选 Apache Tika。 | JVM 内容检测/抽取框架（多种格式，不只 HTML 文章抽取）；活跃维护、宽广得多——更重、侧重不同。 |
+| trafilatura | 未收录 | 需要现代、有维护、基准强且带元数据的 Python 抽取器时，选 trafilatura。 | 现代、有维护的 Python 抽取器，基准强、带元数据；如今通常是更好的默认——语言不同。 |
 
 ## 技术栈
 

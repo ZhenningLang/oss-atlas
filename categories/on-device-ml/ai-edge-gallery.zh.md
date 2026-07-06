@@ -91,12 +91,12 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [LiteRT-LM](litert-lm.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“Gallery 所展示的真正端侧**运行时层**（C++/Kotlin 绑定）”，再选 LiteRT-LM。 | Gallery 所展示的真正端侧**运行时层**（C++/Kotlin 绑定）。要*构建* App 选它；要在构建前*评估*选 Gallery。 |
-| [BitNet](bitnet.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“面向 1-bit/三值 LLM 的研究型**推理框架**（极致 CPU 效率），不是打磨过的 demo App”，再选 BitNet。 | 面向 1-bit/三值 LLM 的研究型**推理框架**（极致 CPU 效率），不是打磨过的 demo App——所处层次不同、模型集窄得多。 |
-| [TimesFM](timesfm.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“一个时间序列**基础模型**，不是 LLM 聊天展示”，再选 TimesFM。 | 一个时间序列**基础模型**，不是 LLM 聊天展示——同属端侧 ML 但任务完全不同。 |
-| Ollama | 未收录 | 当前页用于它的主场景；如果更看重“桌面/服务器本地 LLM 运行器，GGUF 目录巨大且带 API”，再选 Ollama。 | 桌面/服务器本地 LLM 运行器，GGUF 目录巨大且带 API；在笔记本/服务器上很棒，但不是移动/Android 优先的端侧展示。 |
-| LM Studio | 未收录 | 当前页用于它的主场景；如果更看重“打磨精良的桌面 GUI 本地 LLM（闭源 App）”，再选 LM Studio。 | 打磨精良的桌面 GUI 本地 LLM（闭源 App）；模型选择更广，但仅桌面、非移动端侧。 |
-| MediaPipe LLM Inference Studio(Google) | 未收录 | 当前页用于它的主场景；如果更看重“同一团队更早的端侧 LLM demo/工具路径”，再选 MediaPipe LLM Inference Studio(Google)。 | 同一团队更早的端侧 LLM demo/工具路径；意图重叠，方向上已被基于 LiteRT 的 Gallery 取代。 |
+| [LiteRT-LM](litert-lm.zh.md) | ✅ | 需要 Gallery 展示的真正端侧运行时层时，选 LiteRT-LM。 | Gallery 所展示的真正端侧**运行时层**（C++/Kotlin 绑定）。要*构建* App 选它；要在构建前*评估*选 Gallery。 |
+| [BitNet](bitnet.zh.md) | ✅ | 需要面向 1-bit/三值 LLM 的研究型推理框架时，选 BitNet。 | 面向 1-bit/三值 LLM 的研究型**推理框架**（极致 CPU 效率），不是打磨过的 demo App——所处层次不同、模型集窄得多。 |
+| [TimesFM](timesfm.zh.md) | ✅ | 任务是时间序列预测而不是 LLM 聊天展示时，选 TimesFM。 | 一个时间序列**基础模型**，不是 LLM 聊天展示——同属端侧 ML 但任务完全不同。 |
+| Ollama | 未收录 | 需要桌面/服务器本地 LLM 运行器、GGUF 目录和 API 时，选 Ollama。 | 桌面/服务器本地 LLM 运行器，GGUF 目录巨大且带 API；在笔记本/服务器上很棒，但不是移动/Android 优先的端侧展示。 |
+| LM Studio | 未收录 | 需要打磨精良的桌面本地 LLM GUI 时，选 LM Studio。 | 打磨精良的桌面 GUI 本地 LLM（闭源 App）；模型选择更广，但仅桌面、非移动端侧。 |
+| MediaPipe LLM Inference Studio(Google) | 未收录 | 需要同一团队更早的端侧 LLM demo/工具路径时，选 MediaPipe LLM Inference Studio。 | 同一团队更早的端侧 LLM demo/工具路径；意图重叠，方向上已被基于 LiteRT 的 Gallery 取代。 |
 
 ## 技术栈
 

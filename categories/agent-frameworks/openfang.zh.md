@@ -91,13 +91,13 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [DSPy](dspy.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“一个用于“编程”（并优化）LLM 管线的 Python 框架”，再选 DSPy。 | 一个用于“编程”（并优化）LLM 管线的 Python 框架；你把它嵌进自己的应用。OpenFang 是反过来的：一个自己掌管调度与执行的自治运行时/OS，而非你去调用的库。 |
-| [AgentScope](agentscope.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“面向开发者、用显式控制构建/编排多智能体应用的框架”，再选 AgentScope。 | 面向开发者、用显式控制构建/编排多智能体应用的框架；OpenFang 用这份控制权，换来一个内置渠道与护栏、按计划驱动、开箱即用的 OS。 |
-| [Symphony](symphony.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“本类目同门”，再选 Symphony。 | 本类目同门；编排哲学不同——选智能体框架时可直接对比。 |
-| [claude-octopus](claude-octopus.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“同门”，再选 claude-octopus。 | 同门；更窄的、以 Claude 为中心的工具，对比 OpenFang 那套覆盖广的 27 provider、OS 形态的范围。 |
-| LangGraph | 未收录 | 当前页用于它的主场景；如果更看重“在你自己服务里做有状态、交互式智能体图的 Python 默认选择”，再选 LangGraph。 | 在你自己服务里做有状态、交互式智能体图的 Python 默认选择；无内置调度器/渠道/二进制分发。OpenFang 把这一切反转成独立 OS。 |
-| OpenClaw | 未收录 | 当前页用于它的主场景；如果更看重“OpenFang 给自己设的对标对象，并提供从它迁移的路径”，再选 OpenClaw。 | OpenFang 给自己设的对标对象，并提供从它迁移的路径；OpenFang 声称体积更小、有 OS 叙事。请自行核实该对比。 |
-| CrewAI / AutoGen | 未收录 | 当前页用于它的主场景；如果更看重“面向角色/会话的多智能体 Python 框架，用于应用内工作流”，再选 CrewAI / AutoGen。 | 面向角色/会话的多智能体 Python 框架，用于应用内工作流；不是单二进制自治运行时。 |
+| [DSPy](dspy.zh.md) | ✅ | 需要用于“编程”和优化 LLM 管线的 Python 框架时，选 DSPy。 | 一个用于“编程”（并优化）LLM 管线的 Python 框架；你把它嵌进自己的应用。OpenFang 是反过来的：一个自己掌管调度与执行的自治运行时/OS，而非你去调用的库。 |
+| [AgentScope](agentscope.zh.md) | ✅ | 需要面向开发者、显式控制多智能体应用的框架时，选 AgentScope。 | 面向开发者、用显式控制构建/编排多智能体应用的框架；OpenFang 用这份控制权，换来一个内置渠道与护栏、按计划驱动、开箱即用的 OS。 |
+| [Symphony](symphony.zh.md) | ✅ | 需要由跟踪器驱动 coding-agent 编排的同类框架时，选 Symphony。 | 本类目同门；编排哲学不同——选智能体框架时可直接对比。 |
+| [claude-octopus](claude-octopus.zh.md) | ✅ | 需要更窄的 Claude-centric 同类项目时，选 claude-octopus。 | 同门；更窄的、以 Claude 为中心的工具，对比 OpenFang 那套覆盖广的 27 provider、OS 形态的范围。 |
+| LangGraph | 未收录 | 需要在自有服务里构建有状态、交互式智能体图时，选 LangGraph。 | 在你自己服务里做有状态、交互式智能体图的 Python 默认选择；无内置调度器/渠道/二进制分发。OpenFang 把这一切反转成独立 OS。 |
+| [OpenClaw](openclaw.zh.md) | ✅ | 需要 OpenFang 给自己设的对标对象及迁移来源时，选 OpenClaw。 | OpenFang 给自己设的对标对象，并提供从它迁移的路径；OpenFang 声称体积更小、有 OS 叙事。请自行核实该对比。 |
+| CrewAI / AutoGen | 未收录 | 需要面向角色/会话的 Python 多智能体框架来做应用内工作流时，选 CrewAI 或 AutoGen。 | 面向角色/会话的多智能体 Python 框架，用于应用内工作流；不是单二进制自治运行时。 |
 
 ## 技术栈
 

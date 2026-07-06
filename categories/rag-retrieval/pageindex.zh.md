@@ -85,25 +85,25 @@ health:
 - **短文档、无结构或扁平文档。** 全部价值都在那棵目录树上。一篇没有有意义章节层级的文档（聊天记录、扁平 CSV、一页备忘）给推理器无可导航之物；普通切块就够了。
 - **你想要生产级的“Cloud / MCP / API”管线，而非这个仓库。** Vectify 主推托管版 PageIndex 平台（Chat、MCP、托管 API、VPC/本地部署）。OSS 仓库是索引内核，不是那套服务——别把仓库当成托管产品。[未验证]
 - **你需要图数据库或跨语料的多跳实体遍历。** PageIndex 索引的是单篇文档的结构，不是知识图谱。要做跨语料的实体/关系遍历，见 [FalkorDB](falkordb.zh.md) 或下面的图构建工具。
-- **成熟度 / 稳定性风险。** 没有打 tag 的 release,MIT 但年轻；API 和 CLI 参数可能随版本变动。
+- **成熟度 / 稳定性风险。** 没有打 tag 的 release，MIT 但年轻；API 和 CLI 参数可能随版本变动。
 
 ## 横向对比
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [FalkorDB](falkordb.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“面向 GraphRAG 的属性图数据库（向量 + 多跳遍历）”，再选 FalkorDB。 | 面向 GraphRAG 的属性图数据库（向量 + 多跳遍历）;PageIndex 是单文档推理树，不是图存储——检索原语不同。 |
-| [graphify](graphify.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“从代码/文档构建知识图谱”，再选 graphify。 | 从代码/文档构建知识图谱；PageIndex 为单篇文档构建层级目录树并在其上推理——没有实体图。 |
-| [code-review-graph](code-review-graph.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“专做 code-review 的图工具”，再选 code-review-graph。 | 专做 code-review 的图工具；与文档树检索正交。 |
-| LlamaIndex | 未收录 | 当前页用于它的主场景；如果更看重“通用 RAG 框架，含多种索引（包括树/摘要索引）”，再选 LlamaIndex。 | 通用 RAG 框架，含多种索引（包括树/摘要索引）；覆盖广得多且以嵌入为中心，而 PageIndex 是聚焦的无向量推理索引。 |
-| RAPTOR | 未收录 | 当前页用于它的主场景；如果更看重“递归聚类 + 摘要构建检索树，但查询时仍靠嵌入检索”，再选 RAPTOR。 | 递归聚类 + 摘要构建检索树，但查询时仍靠嵌入检索；PageIndex 改为用 LLM 推理导航这棵树，而非向量搜索。 |
-| pgvector / Qdrant | 未收录 | 当前页用于它的主场景；如果更看重“经典的嵌入 + ANN 向量检索”，再选 pgvector / Qdrant。 | 经典的嵌入 + ANN 向量检索；在规模与广度上更便宜，但正是 PageIndex 要规避的“相似 ≠ 相关”失败模式。 |
+| [FalkorDB](falkordb.zh.md) | ✅ | 需要 GraphRAG 的持久化属性图，而不是单文档推理树时，选 FalkorDB。 | 面向 GraphRAG 的属性图数据库（向量 + 多跳遍历）；PageIndex 是单文档推理树，不是图存储——检索原语不同。 |
+| [graphify](graphify.zh.md) | ✅ | 目标是代码/文档知识图谱，而不是单篇文档的目录树时，选 graphify。 | 从代码/文档构建知识图谱；PageIndex 为单篇文档构建层级目录树并在其上推理——没有实体图。 |
+| [code-review-graph](code-review-graph.zh.md) | ✅ | 目标是专门的 code-review 图时，选 code-review-graph。 | 专做 code-review 的图工具；与文档树检索正交。 |
+| LlamaIndex | 未收录 | 需要包含多种索引类型的通用 RAG 框架，而不是单一无向量推理索引时，选 LlamaIndex。 | 通用 RAG 框架，含多种索引（包括树/摘要索引）；覆盖广得多且以嵌入为中心，而 PageIndex 是聚焦的无向量推理索引。 |
+| RAPTOR | 未收录 | 需要递归聚类 + 摘要树，并在查询时仍走嵌入检索时，选 RAPTOR。 | 递归聚类 + 摘要构建检索树，但查询时仍靠嵌入检索；PageIndex 改为用 LLM 推理导航这棵树，而非向量搜索。 |
+| pgvector / Qdrant | 未收录 | 经典嵌入 + ANN 向量检索已经足够、且更重视规模成本时，选向量库。 | 经典的嵌入 + ANN 向量检索；在规模与广度上更便宜，但正是 PageIndex 要规避的“相似 ≠ 相关”失败模式。 |
 
 ## 技术栈
 
 - **语言：** Python。
 - **建索引：** 把 PDF / Markdown 解析成层级树（章、节、节点摘要），形如一份目录。
 - **检索：** 在树上做 LLM 推理（导航并下钻），而非向量相似度——无嵌入模型、无 ANN 索引。
-- **LLM 接入：** 默认 OpenAI(`OPENAI_API_KEY`)；经 LiteLLM 支持多家（README 声称的多家路由）。
+- **LLM 接入：** 默认 OpenAI（`OPENAI_API_KEY`）；经 LiteLLM 支持多家（README 声称的多家路由）。
 - **入口：** `python3 run_pageindex.py --pdf_path <doc>`，可配模型、页/token 上限、节点 ID/摘要等选项。
 - **较新的相邻示例：** 经 OpenAI Agents SDK 的 agent 化无向量 RAG；基于页面图像的视觉 RAG。
 
@@ -120,7 +120,7 @@ health:
 
 ## 健康度与可持续性
 
-- **响应速度**：Grade A——中位首次响应时间 35.2 小时，基于 16 个 qualifying issues/PRs。
+- **响应速度**：Grade B——中位首次响应时间 51.7 小时，基于 16 个 qualifying issues/PRs。
 - **维护——活跃。** 默认分支最后一次 push 在 2026-06，未归档，但**完全没有打 tag 的 release**——“版本”即 `main` 当前内容，为可复现请 pin 到某个 commit。没有 semver 的活跃开发，意味着你跟的是一个移动靶。`[未验证]`
 - **治理 / 背书——单一厂商（Vectify AI）。** 仓库为 **Organization** 所有（`VectifyAI/PageIndex`），约 33k star[未验证]。路线图由厂商驱动，且开源仓库是更大商业产品（托管版 PageIndex Cloud/MCP/API/VPC）的*索引内核*——于是 OSS 表面是产品的引流位，带着典型的 open-core 风险：最好的能力落在托管层。`[推断]`
 - **年龄与 Lindy——年轻，约 1 年（创建于 2025-04）。** 够久到能跑出真实基准（98.7% FinanceBench，自报[未验证]），但还不够久到成为 Lindy 意义上的安全选择；API/CLI 参数可能随版本变动。当作有潜力的年轻库，而非已定型的标准。
@@ -128,9 +128,9 @@ health:
 
 ## 存疑（未验证）
 
-- [未验证] 截至 2026-06,star 约 33.4k——GitHub star 不可靠且对时间敏感，仅供参考。
+- [未验证] 截至 2026-06，star 约 33.4k——GitHub star 不可靠且对时间敏感，仅供参考。
 - [未验证] 98.7% FinanceBench 准确率与“显著优于向量 RAG”是项目自报数字；基准结果依赖具体设置，本页未独立复现。
 - [未验证] LiteLLM 多提供方路由、OpenAI Agents SDK 示例与视觉 RAG 均来自验证时的项目材料；依赖前请对照当前仓库核实。
 - [推断] 面向百万文档规模的 "PageIndex File System" 以及 Cloud/MCP/API/VPC 等似乎是与 OSS 仓库不同的托管产品能力；开源库面向单文档树——假定某能力在仓库里之前，先核实开源/托管的边界。
-- [未验证] 验证时 GitHub 无打 tag 的 release（latestRelease 为 null）;“版本”即默认分支当前内容，为可复现请 pin 到某个 commit。
+- [未验证] 验证时 GitHub 无打 tag 的 release（latestRelease 为 null）；“版本”即默认分支当前内容，为可复现请 pin 到某个 commit。
 - [未验证] 除 PDF/Markdown 外的确切必需 Python 依赖与支持的输入格式来自验证时的 README，可能变动。

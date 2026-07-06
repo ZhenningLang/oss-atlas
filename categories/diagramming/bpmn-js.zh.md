@@ -95,11 +95,11 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [flowchart.js](flowchart-js.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“极小的文本 DSL 转 SVG 流程图渲染器”，再选 flowchart.js。 | 极小的文本 DSL 转 SVG 流程图渲染器；做简单非标准流程图很好，但没有 BPMN 语义、不能交互编辑、范围小得多。 |
-| [Mermaid](mermaid.zh.md) | 未收录 | 当前页用于它的主场景；如果更看重“广义的文本转图工具（含一种基础的类 BPMN 流程），Markdown 原生”，再选 Mermaid。 | 广义的文本转图工具（含一种基础的类 BPMN 流程），Markdown 原生；但不是真正的 BPMN 2.0 建模器，也不做交互编辑。 |
-| dmn-js / form-js（bpmn.io） | 未收录 | 当前页用于它的主场景；如果更看重“做 DMN 决策表和表单的兄弟库”，再选 dmn-js / form-js（bpmn.io）。 | 做 DMN 决策表和表单的兄弟库；同团队同架构，但记法不同——互补而非替代。 |
-| jBPM / Flowable 自带 Web 建模器 | 未收录 | 当前页用于它的主场景；如果更看重“与特定 Java 流程引擎绑定的引擎内置 BPMN 建模器”，再选 jBPM / Flowable 自带 Web 建模器。 | 与特定 Java 流程引擎绑定的引擎内置 BPMN 建模器；集成了执行，但更重，作为独立 JS 画布更难嵌入。 |
-| GoJS / mxGraph（draw.io） | 未收录 | 当前页用于它的主场景；如果更看重“你需要自己在其上搭 BPMN 的通用商业/开源图画布”，再选 GoJS / mxGraph（draw.io）。 | 你需要自己在其上搭 BPMN 的通用商业/开源图画布；更通用，但 BPMN 的正确性要你自己实现，而 bpmn-js 直接给你。 |
+| [flowchart.js](flowchart-js.zh.md) | ✅ | 只需要一个极小的文本 DSL 到 SVG 渲染器来画简单非标准流程图时，选 flowchart.js。 | 极小的文本 DSL 转 SVG 流程图渲染器；做简单非标准流程图很好，但没有 BPMN 语义、不能交互编辑、范围小得多。 |
+| [Mermaid](mermaid.zh.md) | ✅ | Markdown 原生文本图比真正的 BPMN 2.0 建模更重要时，选 Mermaid。 | 广义的文本转图工具（含一种基础的类 BPMN 流程），Markdown 原生；但不是真正的 BPMN 2.0 建模器，也不做交互编辑。 |
+| dmn-js / form-js（bpmn.io） | 未收录 | 记法是 DMN 决策表或表单，而不是 BPMN 流程模型时，选这些 bpmn.io 兄弟库。 | 做 DMN 决策表和表单的兄弟库；同团队同架构，但记法不同——互补而非替代。 |
+| jBPM / Flowable 自带 Web 建模器 | 未收录 | 关键需求是绑定某个 Java 流程引擎时，选引擎自带建模器。 | 与特定 Java 流程引擎绑定的引擎内置 BPMN 建模器；集成了执行，但更重，作为独立 JS 画布更难嵌入。 |
+| GoJS / mxGraph（draw.io） | 未收录 | 只有准备自己实现 BPMN 正确性时，才选通用图画布。 | 你需要自己在其上搭 BPMN 的通用商业/开源图画布；更通用，但 BPMN 的正确性要你自己实现，而 bpmn-js 直接给你。 |
 
 ## 技术栈
 
@@ -120,7 +120,7 @@ health:
 
 ## 健康度与可持续性
 
-- **响应速度**：Grade B——中位首次响应时间 25.5 小时，基于 3 个 qualifying issues/PRs。
+- **响应速度**：Grade A——中位首次响应时间 25.5 小时，基于 3 个 qualifying issues/PRs。
 - **维护（2026-06）。** 最后 push 于 2026-06；最新 tag v18.19.0，发布节奏稳定且频繁（约 81 个 release）。明显**活跃**而非吃老本；未归档。[推断]
 - **治理 / 背书。** 由 **Camunda 旗下 bpmn.io 团队**维护（一家成熟的工作流自动化厂商）——多维护者、有组织背书的项目（nikku、philippfromme、barmac、marstamm……），bus factor 健康。方向跟随 Camunda 的商业利益，是主要的治理顾虑。[推断]
 - **年龄与 Lindy 判断。** 2014-03 创建，约 12 年且**仍在活跃发布**——**强 Lindy** 信号；是 Web 上正统、久经验证的开源 BPMN 画布，而非新秀。[推断]

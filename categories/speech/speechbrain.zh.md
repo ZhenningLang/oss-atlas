@@ -87,11 +87,11 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| NeMo（NVIDIA） | 未收录 | 当前页用于它的主场景；如果更看重“更大、面向 GPU/规模的对话式 AI 工具箱，ASR/TTS 强且带 NVIDIA 工具链”，再选 NeMo（NVIDIA）。 | 更大、面向 GPU/规模的对话式 AI 工具箱，ASR/TTS 强且带 NVIDIA 工具链；比 SpeechBrain 更重、更以 NVIDIA 为中心。 |
-| ESPnet | 未收录 | 当前页用于它的主场景；如果更看重“端到端语音处理工具箱，ASR/TTS recipe 覆盖很深、研究血统强”，再选 ESPnet。 | 端到端语音处理工具箱，ASR/TTS recipe 覆盖很深、研究血统强；强大但历来学习曲线更陡、带 Kaldi 味。 |
-| Hugging Face Transformers（音频） | 未收录 | 当前页用于它的主场景；如果更看重“用/微调预训练音频模型（Whisper、Wav2Vec2）很好”，再选 Hugging Face Transformers（音频）。 | 用/微调预训练音频模型（Whisper、Wav2Vec2）很好；但不像 SpeechBrain 那样是横跨分离、增强、说话人分割的完整 recipe/训练框架。 |
-| Kaldi | 未收录 | 当前页用于它的主场景；如果更看重“经典、高度优化的 ASR 工具箱”，再选 Kaldi。 | 经典、高度优化的 ASR 工具箱；陡峭得多、C++/shell 为主、非 PyTorch 原生——为极致控制而非易用而选。 |
-| faster-whisper / Whisper | 未收录 | 当前页用于它的主场景；如果更看重“聚焦推理的 ASR”，再选 faster-whisper / Whisper。 | 聚焦推理的 ASR；只转写时极佳，但不是多任务训练工具箱。 |
+| NeMo（NVIDIA） | 未收录 | 需要更大、面向 GPU/规模的对话式 AI 工具箱和 NVIDIA 工具链时，选 NeMo。 | ASR/TTS 强且带 NVIDIA 集成，但比 SpeechBrain 更重、更偏厂商生态。 |
+| ESPnet | 未收录 | 需要端到端语音处理、深 ASR/TTS recipe 覆盖和研究血统时，选 ESPnet。 | 很强，但历来学习曲线更陡，也更带 Kaldi 味。 |
+| Hugging Face Transformers（音频） | 未收录 | 使用或微调 Whisper/Wav2Vec2 这类预训练音频模型已经足够时，选 Transformers 音频模型。 | 模型获取极方便，但不是横跨分离、增强、说话人分割的完整 recipe/训练框架。 |
+| Kaldi | 未收录 | 需要经典、高度优化的 ASR 工具箱，并能接受 C++/shell-heavy 工作流时，选 Kaldi。 | 它追求极致控制而非易用；学习曲线陡，且不是 PyTorch 原生。 |
+| faster-whisper / [Whisper](../media-processing/whisper.zh.md) | 部分已收录 | 只做转写而非多任务语音训练时，选聚焦推理的 Whisper 技术栈。 | 只转写时极佳，但不是多任务训练工具箱。faster-whisper 未单独收录。 |
 
 ## 技术栈
 
@@ -113,7 +113,7 @@ health:
 
 ## 健康度与可持续性
 
-- **响应速度**：Grade C——中位首次响应时间 128.8 小时，基于 2 个 qualifying issues/PRs。
+- **响应速度**：无法计算——no_traffic。
 - **维护（2026-06）。** 最后 push 于 2026-06；v1.1.0 于 2026-03 在 `develop` 分支发布且活动稳定——处于**活跃**而非吃老本。未归档。[推断]
 - **治理 / bus factor。** 一个研究社区项目，由一个可辨识的维护者群体（学术/实验室关联的核心贡献者）而非单人驱动——bus factor 比单人项目宽，但仍是社区/学术资助而非基金会。[未验证]
 - **年龄 × Lindy（2026-06）。** 2020-04 创建——约 6 岁且**仍在活跃发布**⇒ 对一个研究工具箱而言是**中到强 Lindy** 信号；它已熬过典型学术仓库的半衰期。[推断]

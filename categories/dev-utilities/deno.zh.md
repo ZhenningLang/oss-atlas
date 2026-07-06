@@ -94,7 +94,7 @@ health:
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 | --- | --- | --- | --- |
 | Node.js | 未收录 | 现任 JS/TS 运行时，拥有最大的生态。 | Node.js 拥有最深的 npm 生态和最广泛的托管支持；Deno 提供更干净、更安全的开发者体验，但社区更小。 |
-| Bun | 未收录 | 快速的全能 JS 运行时，内置打包器和包管理器。 | Bun 也很快且将 TypeScript 视为一等公民，但比 Deno 更年轻、未经充分检验。 |
+| [Bun](bun.zh.md) | ✅ | 快速的全能 JS 运行时，内置打包器和包管理器。 | Bun 也很快且将 TypeScript 视为一等公民，但比 Deno 更年轻、未经充分检验。 |
 | [Supabase](../databases/supabase.zh.md) | ✅ | 使用 Deno 作为边缘函数运行时。 | 不是运行时本身的对比，但展示了 Deno 在无服务器边缘场景的生产级使用。 |
 | Wasmer / Wasmtime | 未收录 | 纯 WebAssembly 运行时。 | 这些是用于 Wasm 模块的，不是 JS/TS 应用；Deno 可以运行 Wasm，但主要是 JS 运行时。 |
 

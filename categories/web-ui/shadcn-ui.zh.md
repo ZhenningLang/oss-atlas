@@ -10,9 +10,9 @@ maturity: active, ~117.7k stars (as of 2026-07)
 last_verified: 2026-07-01
 type: library
 upstream:
-  pushed_at: 2026-06-30T06:34:55Z
+  pushed_at: 2026-07-03T12:29:04Z
   default_branch: main
-  default_branch_sha: 0000000000000000000000000000000000000000
+  default_branch_sha: d0fae528221011f75a8c64a917073904c2847493
   archived: false
 health:
   schema: 1
@@ -96,11 +96,11 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 | --- | --- | --- | --- |
-| Material UI（MUI） | 未收录 | 当前页用于它的主场景；如果更看重「全面、Google Material 主题的组件库，拥有庞大企业生态」，再选 MUI。 | 全面、Google-Material 主题的 React 组件库，企业采用广泛，有付费支持；比 shadcn/ui 更重、更有主见。 |
-| Chakra UI | 未收录 | 当前页用于它的主场景；如果更看重「更简单、基于 styled-system 的 React 组件库，DX 好」，再选 Chakra UI。 | 简单、基于 styled-system 的 React 库，DX 好，主题 API 一致；文件级可定制性不如 shadcn/ui 的复制-拥有模式。 |
-| Ant Design | 未收录 | 当前页用于它的主场景；如果更看重「全功能企业级 UI 框架，内置组件极多」，再选 Ant Design。 | 全功能企业级 UI 框架，组件集庞大，社区以中文为先；比 shadcn/ui 更重，也不那么 Tailwind 原生。 |
-| Radix UI | 未收录 | 当前页用于它的主场景；如果更看重「无样式、headless 原语，计划从零自建样式层」，再选 Radix UI。 | 无样式、headless 无障碍原语；shadcn/ui 在 Radix 之上加了 Tailwind 样式和分发工作流。 |
-| Headless UI | 未收录 | 当前页用于它的主场景；如果更看重「Tailwind 团队出品的无样式组件」，再选 Headless UI。 | Tailwind 团队维护的无样式组件；原语比 Radix 少，没有内置的「复制到自有」分发系统。 |
+| Material UI（MUI） | 未收录 | 需要全面、Google Material 主题且拥有庞大企业生态的组件库时，选 MUI。 | 全面、Google-Material 主题的 React 组件库，企业采用广泛，有付费支持；比 shadcn/ui 更重、更有主见。 |
+| Chakra UI | 未收录 | 需要更简单、基于 styled-system 且 DX 好的 React 组件库时，选 Chakra UI。 | 简单、基于 styled-system 的 React 库，DX 好，主题 API 一致；文件级可定制性不如 shadcn/ui 的复制-拥有模式。 |
+| [Ant Design](ant-design.zh.md) | ✅ | 需要全功能企业级 UI 框架和大量内置组件时，选 Ant Design。 | 全功能企业级 UI 框架，组件集庞大，社区以中文为先；比 shadcn/ui 更重，也不那么 Tailwind 原生。 |
+| Radix UI | 未收录 | 需要无样式、headless 原语，并计划从零自建样式层时，选 Radix UI。 | 无样式、headless 无障碍原语；shadcn/ui 在 Radix 之上加了 Tailwind 样式和分发工作流。 |
+| Headless UI | 未收录 | 需要 Tailwind 团队出品的无样式组件时，选 Headless UI。 | Tailwind 团队维护的无样式组件；原语比 Radix 少，没有内置的「复制到自有」分发系统。 |
 
 ## 技术栈
 

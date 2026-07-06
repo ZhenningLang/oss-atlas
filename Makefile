@@ -37,7 +37,7 @@ upstream-check:
 	python3 tools/upstream_snapshot.py --page "$(PAGE)" --check
 
 test:
-	python3 -m unittest tools/test_health_backfill.py tools/test_lint.py tools/test_upstream_snapshot.py
+	python3 -m unittest tools/test_health.py tools/test_health_backfill.py tools/test_lint.py tools/test_quality_scan.py tools/test_upstream_snapshot.py
 
 install-hooks:
 	git config core.hooksPath scripts/hooks

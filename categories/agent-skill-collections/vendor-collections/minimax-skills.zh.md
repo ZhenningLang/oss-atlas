@@ -87,10 +87,10 @@ MiniMax 官方公开的约 16 个 Agent Skill 集合 —— 覆盖前端 / 全�
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [Anthropic Skills](anthropic-skills.md) | ✅ | 当前页用于它的主场景；如果更看重“Anthropic 一手成包（文档编辑、前端/画布、MCP/skill 编写）”，再选 Anthropic Skills。 | Anthropic 一手成包（文档编辑、前端/画布、MCP/skill 编写）。Claude 格式贴合度更高、领域更窄。MiniMax 多了移动端/shader 开发 + MiniMax 专属媒体/多模态 skill。 |
-| [Claude Plugins（官方）](claude-plugins-official.md) | ✅ | 当前页用于它的主场景；如果更看重“Anthropic 官方*插件*市场（commands/agents/hooks/MCP，不只是 skill）”，再选 Claude Plugins（官方）。 | Anthropic 官方*插件*市场（commands/agents/hooks/MCP，不只是 skill）。插件面更广、仅限 Claude。MiniMax 是聚焦 skill、跨 harness 的厂商成包。 |
-| aws-agent-plugins | 未收录 | 当前页用于它的主场景；如果更看重“另一个厂商/官方插件集合”，再选 aws-agent-plugins。 | 另一个厂商/官方插件集合；按各自支持哪些 harness、以及你需要云专属还是媒体/开发通用型 skill 来取舍。 |
-| 自己搭 `skills/` 目录 | 未收录 | 当前页用于它的主场景；如果更看重“完全可控、零锁定、无维护 bus-factor 风险”，再选 自己搭 skills/ 目录。 | 完全可控、零锁定、无维护 bus-factor 风险 —— 但每个 skill 都得自己写自己维护。MiniMax 用这点换一个现成、厂商维护的成包。 |
+| [Anthropic Skills](anthropic-skills.zh.md) | ✅ | 需要 Claude 格式贴合度更高的一方通用 skill 时，选 Anthropic Skills。 | Anthropic 一手成包（文档编辑、前端/画布、MCP/skill 编写）。Claude 格式贴合度更高、领域更窄。MiniMax 多了移动端/shader 开发 + MiniMax 专属媒体/多模态 skill。 |
+| [Claude Plugins（官方）](claude-plugins-official.zh.md) | ✅ | 需要 commands、agents、hooks、MCP 都覆盖的官方插件市场时，选 Claude Plugins。 | Anthropic 官方*插件*市场（commands/agents/hooks/MCP，不只是 skill）。插件面更广、仅限 Claude。MiniMax 是聚焦 skill、跨 harness 的厂商成包。 |
+| [aws-agent-plugins](aws-agent-plugins.zh.md) | ✅ | 需要 AWS 云架构、部署、运维领域深度时，选 aws-agent-plugins。 | 另一个厂商/官方插件集合；按各自支持哪些 harness、以及你需要云专属还是媒体/开发通用型 skill 来取舍。 |
+| 自己搭 `skills/` 目录 | 未收录 | 需要完全可控、零锁定且愿意自行维护每个 skill 时，选自建目录。 | 完全可控、零锁定、无维护 bus-factor 风险 —— 但每个 skill 都得自己写自己维护。MiniMax 用这点换一个现成、厂商维护的成包。 |
 
 ## 健康度与可持续性
 

@@ -89,11 +89,11 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| Textual | 未收录 | 当前页用于它的主场景；如果更看重“现代异步、CSS 样式、鼠标优先的 TUI 框架（Textualize）”，再选 Textual。 | 现代异步、CSS 样式、鼠标优先的 TUI 框架（Textualize）；widget/样式模型丰富得多、背书活跃，但更重，编程模型也与 asciimatics 类 curses 的 API 不同。 |
-| urwid | 未收录 | 当前页用于它的主场景；如果更看重“老牌 Python 控制台 UI 库，widget/布局系统灵活”，再选 urwid。 | 老牌 Python 控制台 UI 库，widget/布局系统灵活；偏 Unix（Windows 支持弱），且无动画引擎。 |
-| rich | 未收录 | 当前页用于它的主场景；如果更看重“带样式的终端*输出*（表格、标记、进度、语法）”，再选 rich。 | 带样式的终端*输出*（表格、标记、进度、语法）——不是全屏 UI/事件循环；与之互补，不能替代交互屏。 |
-| blessed / curses（标准库） | 未收录 | 当前页用于它的主场景；如果更看重“更底层的终端控制”，再选 blessed / curses（标准库）。 | 更底层的终端控制；`curses` 仅 Unix，`blessed` 是更友好的封装——两者都不带 widget 或动画框架。 |
-| prompt_toolkit | 未收录 | 当前页用于它的主场景；如果更看重“擅长交互式提示/REPL 和部分全屏应用，行编辑很强，但侧重点不同（输入），也没有 ASCII 特效引擎”，再选 prompttoolkit。 | 擅长交互式提示/REPL 和部分全屏应用，行编辑很强，但侧重点不同（输入），也没有 ASCII 特效引擎。 |
+| Textual | 未收录 | 需要现代异步、CSS 样式、鼠标优先的 TUI 框架时，选 Textual。 | 现代异步、CSS 样式、鼠标优先的 TUI 框架（Textualize）；widget/样式模型丰富得多、背书活跃，但更重，编程模型也与 asciimatics 类 curses 的 API 不同。 |
+| urwid | 未收录 | 需要老牌 Python 控制台 UI 库和灵活 widget/布局系统时，选 urwid。 | 老牌 Python 控制台 UI 库，widget/布局系统灵活；偏 Unix（Windows 支持弱），且无动画引擎。 |
+| rich | 未收录 | 需要表格、标记、进度、语法高亮等带样式终端*输出*时，选 rich。 | 带样式的终端*输出*（表格、标记、进度、语法）——不是全屏 UI/事件循环；与之互补，不能替代交互屏。 |
+| blessed / curses（标准库） | 未收录 | 需要更底层的终端控制，而不是 widget/动画框架时，选 blessed 或 curses。 | 更底层的终端控制；`curses` 仅 Unix，`blessed` 是更友好的封装——两者都不带 widget 或动画框架。 |
+| prompt_toolkit | 未收录 | 需要强交互提示、REPL 或输入密集型全屏应用时，选 prompt_toolkit。 | 擅长交互式提示/REPL 和部分全屏应用，行编辑很强，但侧重点不同（输入），也没有 ASCII 特效引擎。 |
 
 ## 技术栈
 
@@ -114,7 +114,7 @@ health:
 
 ## 健康度与可持续性
 
-- **响应速度**：Grade C——中位首次响应时间 244.0 小时，基于 1 个 qualifying issues/PRs。
+- **响应速度**：无法计算——no_traffic。
 - **维护（2026-06）。** 最后 push 于 2025-06；提交仍在持续但节奏不快。版本有打 tag（1.15.x 线）。读作**有维护但推进缓慢**，并非废弃——未归档。[推断]
 - **治理 / bus factor。** 单一维护者项目（Peter Brittain），托管在个人账号下，外加一条偶发贡献者的长尾；路线图很大程度取决于一个人。这是长期依赖的主要治理风险。[推断]
 - **年龄与 Lindy 判断。** 约 11 年（2015-04 创建）且仍在收到提交⇒ **强 Lindy** 信号：一个成熟稳定、早已定型的库，而非被炒作的新秀。[推断]

@@ -96,11 +96,11 @@ GitHub 出品的开源工具包，帮助你上手 Spec-Driven Development——�
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [12-Factor Agents](12-factor-agents.zh.md) | ✅ | 当前页用于它的主场景；如果更看重「生产级 agent 的高层级设计原则，而非日常编码阶段的 spec 方法论」，再选 12-Factor Agents。 | 生产级 agent 架构的高层级设计原则；比 Spec Kit 更抽象，对日常编码工作流的指导性更弱。 |
-| [Superpowers](superpowers.zh.md) | ✅ | 当前页用于它的主场景；如果更看重「即插即用的头脑风暴→计划→TDD→验证 SDLC 方法论，装进 coding agent」，再选 Superpowers。 | 即插即用的头脑风暴→计划→TDD→验证 SDLC 方法论，面向 Claude Code；目标有重叠，但打包方式不同（skill/plugin vs CLI 工具包）。 |
-| [get-shit-done](get-shit-done.zh.md) | ✅ | 当前页用于它的主场景；如果更看重「有主见的阶段管线，每阶段用全新上下文对抗 context rot」，再选 get-shit-done。 | 有主见的阶段管线，每阶段全新上下文；工作流聚焦更窄，不如 Spec Kit 的 spec-driven 开发工具包 broad。 |
-| [Compound Engineering](compound-engineering.zh.md) | ✅ | 当前页用于它的主场景；如果更看重「 turnkey 循环，把经验跨会话沉淀复用」，再选 Compound Engineering。 | 即插即用的 brainstorm→plan→work→review→compound 循环，带会话沉淀；更侧重迭代改进，而非 spec 编写。 |
-| [ECC](ecc.zh.md) | ✅ | 当前页用于它的主场景；如果更看重「开箱即全的 Claude Code 底座，含 skill、agent、hook、memory 和安全扫描」，再选 ECC。 | 开箱即全的 Claude Code 底座，功能面 broad；方法论层只是更大 agent 基础设施的一部分。 |
+| [12-Factor Agents](12-factor-agents.zh.md) | ✅ | 想要生产级 agent 的高层级设计原则，而非日常编码阶段的 spec 方法论时，选 12-Factor Agents。 | 生产级 agent 架构的高层级设计原则；比 Spec Kit 更抽象，对日常编码工作流的指导性更弱。 |
+| [Superpowers](superpowers.zh.md) | ✅ | 想把即插即用的头脑风暴→计划→TDD→验证 SDLC 方法论装进 coding agent 时，选 Superpowers。 | 即插即用的头脑风暴→计划→TDD→验证 SDLC 方法论，面向 Claude Code；目标有重叠，但打包方式不同（skill/plugin vs CLI 工具包）。 |
+| [get-shit-done](get-shit-done.zh.md) | ✅ | 想用有主见的阶段管线，并用每阶段全新上下文对抗 context rot 时，选 get-shit-done。 | 有主见的阶段管线，每阶段全新上下文；工作流聚焦更窄，不如 Spec Kit 的 spec-driven 开发工具包 broad。 |
+| [Compound Engineering](compound-engineering.zh.md) | ✅ | 想要能跨 coding-agent 会话沉淀经验的 turnkey 循环时，选 Compound Engineering。 | 即插即用的 brainstorm→plan→work→review→compound 循环，带会话沉淀；更侧重迭代改进，而非 spec 编写。 |
+| [ECC](ecc.zh.md) | ✅ | 想要开箱即全的 Claude Code 底座，含 skill、agent、hook、memory 和安全扫描时，选 ECC。 | 开箱即全的 Claude Code 底座，功能面 broad；方法论层只是更大 agent 基础设施的一部分。 |
 
 ## 健康度与可持续性
 - **维护活跃度**：Grade A——最近 13 周中 13 周有提交；最后提交距今 0 天。

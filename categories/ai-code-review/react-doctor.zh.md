@@ -96,11 +96,11 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [open-code-review](open-code-review.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“LLM 驱动、语言无关的 PR 审查（阿里巴巴）”，再选 open-code-review。 | LLM 驱动、语言无关的 PR 审查（阿里巴巴）；用自然语言推理逻辑。React Doctor 是确定性、仅限 React、基于规则——可重复但没有语义判断。 |
-| [claude-code-security-review](claude-code-security-review.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“基于 Claude、聚焦安全的审查（Anthropic）”，再选 claude-code-security-review。 | 基于 Claude、聚焦安全的审查（Anthropic）；深入、语言无关的漏洞推理。React Doctor 是覆盖面广的 React linter，不是专门的安全分析器。 |
-| eslint-plugin-react-hooks / react | 未收录 | 当前页用于它的主场景；如果更看重“React 官方 lint 规则”，再选 eslint-plugin-react-hooks / react。 | React 官方 lint 规则；React Doctor 与之有重叠，但额外提供 agent-skill 工作流、oxlint 插件，以及超出官方集的「agent 易犯错」规则。 |
-| oxlint | 未收录 | 当前页用于它的主场景；如果更看重“React Doctor 为之提供插件的高速 Rust linter”，再选 oxlint。 | React Doctor 为之提供插件的高速 Rust linter;oxlint 是引擎/宿主，React Doctor 供给面向 agent 的 React 专属规则包。 |
-| Biome | 未收录 | 当前页用于它的主场景；如果更看重“一体化的 Rust 格式化+lint”，再选 Biome。 | 一体化的 Rust 格式化+lint;JS/TS lint 覆盖广，但不专门针对「抓 agent 写的 React 反模式」。 |
+| [open-code-review](open-code-review.zh.md) | ✅ | 当你需要语言无关的 LLM 对 PR 逻辑做语义判断时，选 open-code-review；当闸门必须是可重复的 React 专属 agent 易错规则时，选 React Doctor。 | LLM 驱动、语言无关的 PR 审查（阿里巴巴）；用自然语言推理逻辑。React Doctor 是确定性、仅限 React、基于规则——可重复但没有语义判断。 |
+| [claude-code-security-review](claude-code-security-review.zh.md) | ✅ | 当安全漏洞推理是首要任务时，选 claude-code-security-review；当目标是覆盖 React lint、性能、可访问性和正确性时，选 React Doctor。 | 基于 Claude、聚焦安全的审查（Anthropic）；深入、语言无关的漏洞推理。React Doctor 是覆盖面广的 React linter，不是专门的安全分析器。 |
+| eslint-plugin-react-hooks / react | 未收录 | 当你只要官方 React lint 规则和最小概念表面积时，选官方插件；当 agent-skill 工作流和额外的 agent 易错规则才是价值时，选 React Doctor。 | React 官方 lint 规则；React Doctor 与之有重叠，但额外提供 agent-skill 工作流、oxlint 插件，以及超出官方集的「agent 易犯错」规则。 |
+| oxlint | 未收录 | 当需求只是高速 Rust linter 宿主时，选 oxlint；当你需要能经 oxlint 运行的 React 专属规则包时，选 React Doctor。 | React Doctor 为之提供插件的高速 Rust linter;oxlint 是引擎/宿主，React Doctor 供给面向 agent 的 React 专属规则包。 |
+| Biome | 未收录 | 当你需要 JS/TS 一体化格式化和广覆盖 lint 时，选 Biome；当决定性需求是抓 agent 写出的 React 反模式时，选 React Doctor。 | 一体化的 Rust 格式化+lint;JS/TS lint 覆盖广，但不专门针对「抓 agent 写的 React 反模式」。 |
 
 ## 技术栈
 

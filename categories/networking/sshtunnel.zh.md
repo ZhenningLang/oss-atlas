@@ -93,10 +93,10 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [Paramiko](paramiko.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“sshtunnel 封装的引擎”，再选 Paramiko。 | sshtunnel 封装的引擎——完整的 SSH/SFTP/传输控制，但转发和上下文管理器的人体工学要你自己实现。 |
-| 原生 `ssh -L` / `autossh` | 未收录 | 当前页用于它的主场景；如果更看重“OpenSSH 客户端（可选自动重连）”，再选 原生 ssh -L / autossh。 | OpenSSH 客户端（可选自动重连）——稳、快、config 完全还原，但它是要管理的 subprocess，不是 Python 内的对象。 |
-| `subprocess` + `ssh` | 未收录 | 当前页用于它的主场景；如果更看重“零额外依赖，但你得自己解析文本、管理子进程和就绪状态”，再选 subprocess + ssh。 | 零额外依赖，但你得自己解析文本、管理子进程和就绪状态。 |
-| AsyncSSH（转发 API） | 未收录 | 当前页用于它的主场景；如果更看重“asyncio 原生 SSH，自带转发”，再选 AsyncSSH（转发 API）。 | asyncio 原生 SSH，自带转发；更适合 async 代码库，API 不同，比一个薄封装更重。 |
+| [Paramiko](paramiko.zh.md) | ✅ | 需要完整 SSH/SFTP/传输控制，而不是 sshtunnel 的转发便利封装时，直接选 Paramiko。 | 底层是同一个引擎，但转发和生命周期的人体工学要你自己实现。 |
+| 原生 `ssh -L` / `autossh` | 未收录 | 持久隧道需要 config 完整还原、速度和可选自动重连时，选原生 OpenSSH 或 autossh。 | 更适合生产，但它是要管理的进程，不是 Python 内对象。 |
+| `subprocess` + `ssh` | 未收录 | 零 Python 依赖值得你自己管理进程就绪状态时，选 `subprocess` 加 `ssh`。 | 保留 OpenSSH 行为，但文本解析、子进程生命周期和失败处理都归你。 |
+| AsyncSSH（转发 API） | 未收录 | 代码库已经 asyncio-native，且 SSH 转发应留在事件循环里时，选 AsyncSSH。 | API 不同，也比薄 Paramiko 封装更重，但更适合异步应用。 |
 
 ## 技术栈
 

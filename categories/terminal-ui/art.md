@@ -89,11 +89,11 @@ You reach for it when ASCII-art *text* is the deliverable: banners, splash scree
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| pyfiglet | 未收录 | Use this page for its stated niche; choose pyfiglet when you need pure-Python port of FIGlet with the canonical figlet font set. | Pure-Python port of FIGlet with the canonical figlet font set; the standard if you specifically want FIGlet fonts/compatibility, narrower scope (no decor/art-piece catalog). |
-| figlet / toilet (CLI) | 未收录 | Use this page for its stated niche; choose figlet / toilet (CLI) when you need the classic C banner generators. | The classic C banner generators; require a system binary and aren't a Python API — fine for shell use, awkward to embed. |
-| [asciify](asciify.md) | ✅ | Use this page for its stated niche; choose asciify when you need converts *images* to ASCII. | Converts *images* to ASCII — a different input entirely (raster, not text); complementary, not a substitute. |
-| rich (figlet/markup) | 未收录 | Use this page for its stated niche; choose rich (figlet/markup) when you need styling library that can render large text and styled output as part of a bigger toolkit. | Styling library that can render large text and styled output as part of a bigger toolkit; broader but heavier if you only want art text. |
-| ascii-magic / cowsay | 未收录 | Use this page for its stated niche; choose ascii-magic / cowsay when you need niche art generators (images / speech-bubble characters). | Niche art generators (images / speech-bubble characters); narrower and stylistically specific. |
+| pyfiglet | 未收录 | Choose pyfiglet when you need a pure-Python FIGlet port with the canonical figlet font set. | Pure-Python port of FIGlet with the canonical figlet font set; the standard if you specifically want FIGlet fonts/compatibility, narrower scope (no decor/art-piece catalog). |
+| figlet / toilet (CLI) | 未收录 | Choose figlet / toilet when you need the classic C banner generators from shell scripts. | The classic C banner generators; require a system binary and aren't a Python API — fine for shell use, awkward to embed. |
+| [asciify](asciify.md) | ✅ | Choose asciify when your input is an *image* that needs ASCII conversion. | Converts *images* to ASCII — a different input entirely (raster, not text); complementary, not a substitute. |
+| rich (figlet/markup) | 未收录 | Choose rich when large text is only one part of a broader styled terminal-output toolkit. | Styling library that can render large text and styled output as part of a bigger toolkit; broader but heavier if you only want art text. |
+| ascii-magic / cowsay | 未收录 | Choose ascii-magic / cowsay when you need niche image-art or speech-bubble character generators. | Niche art generators (images / speech-bubble characters); narrower and stylistically specific. |
 
 ## Tech stack
 
