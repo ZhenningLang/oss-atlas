@@ -118,7 +118,7 @@ You also reach for Kombu when you're building framework-level infrastructure rat
 
 ## Health & viability
 
-- **Responsiveness**: Grade C — median first-response time 89.3 hours across 1 qualifying issues/PRs.
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (2026-06).** Last pushed 2026-06-27; v5.6.2 released 2025-12 with a steady minor/patch cadence through 2025 — **active**, not coasting. Not archived. [推断]
 - **Governance / bus factor.** Lives under the **celery** GitHub organization with multiple long-term maintainers (ask, auvipy, thedrow, matusvalo, …), not a single-maintainer project — a healthier bus factor than a solo repo, though still community-run rather than foundation-governed. [推断]
 - **Age & Lindy verdict.** Created 2010-06, ~16 years old and **still actively shipping** ⇒ a **strong Lindy** signal; it has been the broker layer under Celery for over a decade. [推断]

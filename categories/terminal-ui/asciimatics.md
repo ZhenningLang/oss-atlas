@@ -114,7 +114,7 @@ You also reach for it when you want the *fun* layer: scrolling banners, sprites,
 
 ## Health & viability
 
-- **Responsiveness**: Grade C — median first-response time 244.0 hours across 1 qualifying issues/PRs.
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (2026-06).** Last pushed 2025-06; commits continue but cadence is modest. Releases are tagged (1.15.x line). Reads as **maintained but slow-moving**, not abandoned — not archived. [推断]
 - **Governance / bus factor.** A single-maintainer project (Peter Brittain) on a personal account with a long tail of occasional contributors; roadmap depends largely on one person. That's the main governance risk for a long-term dependency. [推断]
 - **Age & Lindy verdict.** ~11 years old (created 2015-04) and still receiving commits ⇒ a **strong Lindy** signal: a mature, stable library that has long since found its shape, not a hyped newcomer. [推断]

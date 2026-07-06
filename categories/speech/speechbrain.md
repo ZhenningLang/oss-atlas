@@ -113,7 +113,7 @@ You also reach for it when you want pretrained models you can both *use* and *re
 
 ## Health & viability
 
-- **Responsiveness**: Grade C — median first-response time 128.8 hours across 2 qualifying issues/PRs.
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (2026-06).** Last pushed 2026-06; v1.1.0 released 2026-03 on the `develop` branch with steady activity — **active**, not coasting. Not archived. [推断]
 - **Governance / bus factor.** A research-community project driven by a recognizable maintainer group (academic/lab-affiliated core contributors) rather than a single person — broader bus factor than a solo project, but still community/academic-funded rather than a foundation. [未验证]
 - **Age × Lindy (2026-06).** Created 2020-04 — ~6 years old and **still actively shipping** ⇒ a **moderate-to-strong Lindy** signal for a research toolkit; it has outlived the typical academic-repo half-life. [推断]

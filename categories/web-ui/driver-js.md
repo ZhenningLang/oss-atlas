@@ -117,7 +117,7 @@ You also reach for it for one-off "feature spotlight" moments — you shipped a 
 
 ## Health & viability
 
-- **Responsiveness**: Grade D — median first-response time 1735.8 hours across 4 qualifying issues/PRs.
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (2026-06).** Pushed 2026-06-27; latest release v1.6.0 on 2026-06-25, with 1.5.0/1.4.0 earlier in 2026 — **active and shipping**, not coasting. Not archived. [推断]
 - **Governance / bus factor.** The repo owner is a **`User` account, not an organization** — `nilbuild`, which is the renamed personal account of the original author Kamran Ahmed (`kamranahmedse`). One contributor holds ~521 commits while the next contributors sit at ~3 each ⇒ effectively a **single-maintainer project — a real bus-factor flag**. MIT-licensed and dependency-free, so a fork is cheap if maintenance ever lapses, but the roadmap follows one person. [推断]
 - **Age & Lindy verdict.** Created 2018-03 (~8 years old) and **still actively released** ⇒ a **solid Lindy** signal — a long-proven, widely-adopted tour library rather than a hyped newcomer. Use age × still-active: the bus-factor flag is the offsetting risk, not the age. [推断]
