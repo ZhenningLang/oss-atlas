@@ -121,13 +121,12 @@ You're a machine learning researcher or data engineer preparing a large-scale co
 
 ## Health & viability
 
-- **Responsiveness**: Grade D — inferred from maintenance activity (no direct issue/PR response data).
-- **Maintenance:** Active — last push 2026-03-25, v0.4.0 released 2025-10 with a new model release. The Allen Institute for AI (AI2) has a strong track record in open-source ML research. [未验证]
-- **Governance:** Organization-owned (`allenai`), a well-known research nonprofit with substantial funding and a history of maintaining open-source projects (OLMo, etc.). [推断]
-- **Backing:** AI2 (Allen Institute for AI) — a nonprofit research institute with consistent funding and a strong commitment to open science. [推断]
-- **Age & Lindy:** Created 2024-09 (~10 months old as of 2026-07). Young but backed by an established institution. The VLM approach to document parsing is a growing trend, but the project's youth means APIs and model versions may shift. [推断]
-- **Adoption:** 18.3k stars is solid for a specialized research tool, indicating genuine interest in the ML dataset-preparation community. [推断]
-- **Risk flags:** Apache-2.0 is clean and permissive. The main risk is the model dependency — the quality and availability of the olmOCR-2-7B model weights are tied to AI2's HuggingFace presence. Also, the project is pre-1.0 and the VLM inference cost may not scale for all use cases. The GPU requirement is a hardware barrier that excludes CPU-only environments.
+- **Maintenance**: Grade C — 0/13 active weeks in trailing 13; last commit 100 days ago.
+- **Responsiveness**: Cannot be scored — no_traffic.
+- **Adoption**: Grade C — 22,800 monthly downloads via pypi.org (package: olmocr).
+- **Longevity**: Grade B — 654 days old.
+- **Governance**: Grade D — top-3 contributor share 99.1% (?).
+- **Risk / License**: Grade A — Apache-2.0 license.
 
 ## Caveats (unverified)
 

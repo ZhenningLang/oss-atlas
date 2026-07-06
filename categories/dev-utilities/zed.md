@@ -116,11 +116,11 @@ You're choosing a code editor and raw performance, modern UX, and team collabora
 
 ## Health & viability
 - **Maintenance**: Grade A — 13/13 active weeks in trailing 13; last commit 0 days ago.
-- **Responsiveness**: Grade C — median first-response time 1080.0 hours across 0 qualifying issues/PRs.
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Adoption**: Grade B — 812,610 monthly downloads via crates.io (package: zed_extension_api).
-- **Longevity**: Grade A — 1959 days old.
+- **Longevity**: Grade A — 1960 days old.
 - **Governance**: Grade A — top-3 contributor share 18.9% (?).
-- **Risk / License**: Cannot be scored — unknown.
+- **Risk / License**: Grade A — Apache-2.0 license.
 ## Caveats (unverified)
 
 - [未验证] The exact GPU requirements for GPUI on older integrated graphics have not been tested across all platforms.

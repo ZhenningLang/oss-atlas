@@ -110,7 +110,7 @@ It also fits when you need a self-hosted, no-license-cost alternative to commerc
 
 ## Health & viability
 
-- **Responsiveness**: Grade C — median first-response time 4.4 hours across 1 qualifying issues/PRs.
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (2026-06) — upstream stalled.** `provectus/kafka-ui` last released v0.7.2 in **2024-04** and last pushed **2024-07**; ~2 years without a release at time of writing. The API does **not** flag it `archived`, but it reads as **dormant**, not active. Active development continued in the community fork **`kafbat/kafka-ui`** (pushed 2026-06). This is the dominant verdict: treat the upstream as frozen. [推断]
 - **Governance / backing.** `Organization`-owned (Provectus, a consulting company); the README states it stays free/open-source with no paid tier. But a single-vendor-curated OSS project that the vendor stops shipping is exactly the bus-factor scenario that played out — the community had to fork to keep it alive. [推断]
 - **Age × Lindy.** Created 2019-11 (~6–7 years). Moderate age, but the *upstream's* Lindy is undercut by the maintenance halt — old-and-stalled fails the "still active" test. The **fork** carries the Lindy forward, not this repo. [推断]
