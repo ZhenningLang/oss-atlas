@@ -126,7 +126,7 @@ health:
 - **维护活跃度**：Grade A——最近 13 周中 10 周有提交；最后提交距今 7 天。
 - **响应速度**：Grade A——中位首次响应时间 3.6 小时，基于 23 个 qualifying issues/PRs。
 - **采用广度**：Grade D——npmjs.org 上月下载量 6,431（包名：byterover-cli）。
-- **长青度**：Grade C——仓库已创建 378 天。
+- **长青度**：Grade C——仓库已创建 379 天。
 - **治理集中度**：Grade A——前三贡献者占比 63.4%（?）。
 - **许可风险**：Grade E——NOASSERTION 许可证。
 ## 存疑（未验证）

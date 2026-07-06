@@ -116,9 +116,9 @@ You're choosing a code search tool for daily use across large codebases and spee
 
 ## Health & viability
 - **Maintenance**: Grade B — 5/13 active weeks in trailing 13; last commit 1 days ago.
-- **Responsiveness**: Grade A — median first-response time 87.1 hours across 18 qualifying issues/PRs.
+- **Responsiveness**: Grade A — median first-response time 54.5 hours across 16 qualifying issues/PRs.
 - **Adoption**: Grade D — 13,080,989 monthly downloads via conda-forge.org (package: ripgrep).
-- **Longevity**: Grade A — 3766 days old.
+- **Longevity**: Grade A — 3,767 days old.
 - **Governance**: Grade D — top-3 contributor share 93.1% (?).
 - **Risk / License**: Grade A — Unlicense license.
 ## Caveats (unverified)

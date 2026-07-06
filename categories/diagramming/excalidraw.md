@@ -121,7 +121,7 @@ You're a product manager or designer who needs to quickly whiteboard an architec
 
 ## Health & viability
 - **Maintenance**: Grade A — 13/13 active weeks in trailing 13; last commit 3 days ago.
-- **Responsiveness**: Grade A — median first-response time 29.1 hours across 24 qualifying issues/PRs.
+- **Responsiveness**: Grade A — median first-response time 23.5 hours across 22 qualifying issues/PRs.
 - **Adoption**: Grade B — 1,390,033 monthly downloads via npmjs.org (package: @excalidraw/excalidraw).
 - **Longevity**: Grade A — 2374 days old.
 - **Governance**: Grade B — top-3 contributor share 83.5% (?).

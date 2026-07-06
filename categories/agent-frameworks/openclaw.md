@@ -116,8 +116,8 @@ You are a privacy-conscious professional who wants a single AI assistant that fo
 - **Maintenance**: Grade A — 13/13 active weeks in trailing 13; last commit 0 days ago. This is a measured value, reliable.
 - **Responsiveness**: Grade ? — 0 qualifying issues/PRs in window; no direct response-speed data. Maintenance=A only means the repo is still committing code; it says nothing about issue-response speed. If the repo has closed its issue tracker or uses Discord/forums, responsiveness is simply unmeasurable via GitHub data alone.
 - **Adoption**: Grade A — 14,326,323 monthly downloads via npmjs.org (package: openclaw).
-- **Longevity**: Grade C — 220 days old. No proven long-term track record; weak Lindy prior.
-- **Governance**: Grade B — top-3 contributor share 75.3%, concentration risk exists; top-1 at 52.8%, so a core maintainer departure could significantly slow the project.
+- **Longevity**: Grade C — 221 days old. No proven long-term track record; weak Lindy prior.
+- **Governance**: Grade B — top-3 contributor share 75.2%, concentration risk exists; top-1 at 52.8%, so a core maintainer departure could significantly slow the project.
 - **Risk / License**: Grade A — MIT license. [已验证] 2026-07-03: GitHub API returns `NOASSERTION`, but the LICENSE file body is standard MIT ("Permission is hereby granted..." complete paragraph). Recognition failure caused by a trailing third-party notice pointer. No relicense history.
 
 ## Caveats (unverified)

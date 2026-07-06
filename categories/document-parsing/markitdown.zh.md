@@ -118,9 +118,9 @@ health:
 
 ## 健康度与可持续性
 - **维护活跃度**：Grade B——最近 13 周中 3 周有提交；最后提交距今 37 天。
-- **响应速度**：Grade A——中位首次响应时间 35.8 小时，基于 33 个 qualifying issues/PRs。
-- **采用广度**：Grade A——pypi.org 上月下载量 10,760,192（包名：markitdown）。
-- **长青度**：Grade C——仓库已创建 596 天。
+- **响应速度**：Grade A——中位首次响应时间 37.3 小时，基于 32 个 qualifying issues/PRs。
+- **采用广度**：Grade A——pypi.org 上月下载量 10,869,537（包名：markitdown）。
+- **长青度**：Grade C——仓库已创建 597 天。
 - **治理集中度**：Grade A——前三贡献者占比 53.6%（?）。
 - **许可风险**：Grade A——MIT 许可证。
 ## 存疑（未验证）

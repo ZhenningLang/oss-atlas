@@ -133,9 +133,9 @@ health:
 
 ## 健康度与可持续性
 - **维护活跃度**：Grade A——最近 13 周中 13 周有提交；最后提交距今 1 天。
-- **响应速度**：Grade A——中位首次响应时间 0.0 小时，基于 20 个 qualifying issues/PRs。
-- **采用广度**：Grade A——npmjs.org 上月下载量 23,110,942（包名：@angular/core）。
-- **长青度**：Grade A——仓库已创建 4305 天。
+- **响应速度**：Grade A——中位首次响应时间 0.0 小时，基于 18 个 qualifying issues/PRs。
+- **采用广度**：Grade A——npmjs.org 上月下载量 24,664,067（包名：@angular/core）。
+- **长青度**：Grade A——仓库已创建 4,306 天。
 - **治理集中度**：Grade A——前三贡献者占比 36.8%（?）。
 - **许可风险**：Grade A——MIT 许可证。
 ## 存疑（未验证）

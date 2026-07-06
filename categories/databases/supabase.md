@@ -119,9 +119,9 @@ You're building a web or mobile application and need a backend that handles auth
 
 ## Health & viability
 - **Maintenance**: Grade A — 13/13 active weeks in trailing 13; last commit 0 days ago.
-- **Responsiveness**: Grade A — median first-response time 2.5 hours across 24 qualifying issues/PRs.
+- **Responsiveness**: Grade A — median first-response time 0.8 hours across 23 qualifying issues/PRs.
 - **Adoption**: Cannot be scored — unknown.
-- **Longevity**: Grade A — 2455 days old.
+- **Longevity**: Grade A — 2,456 days old.
 - **Governance**: Grade A — top-3 contributor share 26.8% (?).
 - **Risk / License**: Grade A — Apache-2.0 license.
 ## Caveats (unverified)

@@ -114,9 +114,9 @@ You're a developer or power user who needs a flexible, rule-based proxy client o
 
 ## Health & viability
 - **Maintenance**: Grade A — 13/13 active weeks in trailing 13; last commit 0 days ago.
-- **Responsiveness**: Grade A — median first-response time 0.8 hours across 33 qualifying issues/PRs.
+- **Responsiveness**: Grade A — median first-response time 0.8 hours across 29 qualifying issues/PRs.
 - **Adoption**: Cannot be scored — unknown.
-- **Longevity**: Grade B — 954 days old.
+- **Longevity**: Grade B — 955 days old.
 - **Governance**: Grade B — top-3 contributor share 86.1% (?).
 - **Risk / License**: Grade C — GPL-3.0 license.
 ## Caveats (unverified)

@@ -133,9 +133,9 @@ You're an enterprise team building a large, complex web application with dozens 
 
 ## Health & viability
 - **Maintenance**: Grade A — 13/13 active weeks in trailing 13; last commit 1 days ago.
-- **Responsiveness**: Grade A — median first-response time 0.0 hours across 20 qualifying issues/PRs.
-- **Adoption**: Grade A — 23,110,942 monthly downloads via npmjs.org (package: @angular/core).
-- **Longevity**: Grade A — 4305 days old.
+- **Responsiveness**: Grade A — median first-response time 0.0 hours across 18 qualifying issues/PRs.
+- **Adoption**: Grade A — 24,664,067 monthly downloads via npmjs.org (package: @angular/core).
+- **Longevity**: Grade A — 4,306 days old.
 - **Governance**: Grade A — top-3 contributor share 36.8% (?).
 - **Risk / License**: Grade A — MIT license.
 ## Caveats (unverified)

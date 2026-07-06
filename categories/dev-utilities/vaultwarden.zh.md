@@ -120,8 +120,8 @@ health:
 ## 健康度与可持续性
 - **维护活跃度**：Grade A——最近 13 周中 7 周有提交；最后提交距今 27 天。
 - **响应速度**：Grade A——中位首次响应时间 0.7 小时，基于 29 个 qualifying issues/PRs。
-- **采用广度**：Grade D——crates.io 上月下载量 2,726（包名：vaultwarden）。
-- **长青度**：Grade A——仓库已创建 3057 天。
+- **采用广度**：Grade D——crates.io 上月下载量 2,730（包名：vaultwarden）。
+- **长青度**：Grade A——仓库已创建 3,058 天。
 - **治理集中度**：Grade A——前三贡献者占比 70.4%（?）。
 - **许可风险**：Grade D——AGPL-3.0 许可证。
 ## 存疑（未验证）

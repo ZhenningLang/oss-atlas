@@ -116,9 +116,9 @@ health:
 
 ## 健康度与可持续性
 - **维护活跃度**：Grade B——最近 13 周中 5 周有提交；最后提交距今 1 天。
-- **响应速度**：Grade A——中位首次响应时间 87.1 小时，基于 18 个 qualifying issues/PRs。
+- **响应速度**：Grade A——中位首次响应时间 54.5 小时，基于 16 个 qualifying issues/PRs。
 - **采用广度**：Grade D——conda-forge.org 上月下载量 13,080,989（包名：ripgrep）。
-- **长青度**：Grade A——仓库已创建 3766 天。
+- **长青度**：Grade A——仓库已创建 3,767 天。
 - **治理集中度**：Grade D——前三贡献者占比 93.1%（?）。
 - **许可风险**：Grade A——Unlicense 许可证。
 ## 存疑（未验证）

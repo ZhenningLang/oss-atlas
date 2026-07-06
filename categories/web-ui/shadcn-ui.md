@@ -123,9 +123,9 @@ You also reach for it when you want a design system that stays in your repo, not
 
 ## Health & viability
 - **Maintenance**: Grade A — 13/13 active weeks in trailing 13; last commit 0 days ago.
-- **Responsiveness**: Grade A — median first-response time 14.7 hours across 28 qualifying issues/PRs.
+- **Responsiveness**: Grade A — median first-response time 15.3 hours across 28 qualifying issues/PRs.
 - **Adoption**: Grade A — 18,842,516 monthly downloads via npmjs.org (package: shadcn).
-- **Longevity**: Grade B — 1275 days old.
+- **Longevity**: Grade B — 1,276 days old.
 - **Governance**: Cannot be scored — unknown.
 - **Risk / License**: Grade A — MIT license.
 ## Caveats (unverified)

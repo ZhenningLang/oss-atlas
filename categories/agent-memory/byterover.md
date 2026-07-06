@@ -126,7 +126,7 @@ You're a developer who runs AI coding agents across multiple sessions and keeps 
 - **Maintenance**: Grade A — 10/13 active weeks in trailing 13; last commit 7 days ago.
 - **Responsiveness**: Grade A — median first-response time 3.6 hours across 23 qualifying issues/PRs.
 - **Adoption**: Grade D — 6,431 monthly downloads via npmjs.org (package: byterover-cli).
-- **Longevity**: Grade C — 378 days old.
+- **Longevity**: Grade C — 379 days old.
 - **Governance**: Grade A — top-3 contributor share 63.4% (?).
 - **Risk / License**: Grade E — NOASSERTION license.
 ## Caveats (unverified)

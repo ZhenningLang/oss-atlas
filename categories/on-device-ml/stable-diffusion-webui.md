@@ -113,9 +113,9 @@ You're a creator, researcher, or developer who wants to generate images from tex
 
 ## Health & viability
 - **Maintenance**: Grade D — 0/13 active weeks in trailing 13; last commit 705 days ago.
-- **Responsiveness**: Grade A — median first-response time 69.5 hours across 12 qualifying issues/PRs.
+- **Responsiveness**: Grade A — median first-response time 29.3 hours across 11 qualifying issues/PRs.
 - **Adoption**: Cannot be scored — unknown.
-- **Longevity**: Grade D — 1410 days old.
+- **Longevity**: Grade D — 1,411 days old.
 - **Governance**: Cannot be scored — unknown.
 - **Risk / License**: Grade D — AGPL-3.0 license.
 ## Caveats (unverified)

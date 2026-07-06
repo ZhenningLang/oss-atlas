@@ -117,9 +117,9 @@ You're a developer who spends hours in the terminal every day and wants the fast
 
 ## Health & viability
 - **Maintenance**: Grade A — 7/13 active weeks in trailing 13; last commit 10 days ago.
-- **Responsiveness**: Grade A — median first-response time 1.6 hours across 54 qualifying issues/PRs.
+- **Responsiveness**: Grade A — median first-response time 1.5 hours across 55 qualifying issues/PRs.
 - **Adoption**: Grade B — 520,819 monthly downloads via crates.io (package: alacritty_terminal).
-- **Longevity**: Grade A — 3787 days old.
+- **Longevity**: Grade A — 3,788 days old.
 - **Governance**: Grade C — top-3 contributor share 93.3% (?).
 - **Risk / License**: Grade A — Apache-2.0 license.
 ## Caveats (unverified)

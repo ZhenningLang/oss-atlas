@@ -119,9 +119,9 @@ You're choosing a JavaScript/TypeScript runtime for a new server-side project or
 
 ## Health & viability
 - **Maintenance**: Grade A — 13/13 active weeks in trailing 13; last commit 0 days ago.
-- **Responsiveness**: Grade A — median first-response time 7.3 hours across 37 qualifying issues/PRs.
+- **Responsiveness**: Grade A — median first-response time 3.8 hours across 36 qualifying issues/PRs.
 - **Adoption**: Grade A — 5,934,345 monthly downloads via crates.io (package: deno_core).
-- **Longevity**: Grade A — 2971 days old.
+- **Longevity**: Grade A — 2,972 days old.
 - **Governance**: Grade A — top-3 contributor share 59.4% (?).
 - **Risk / License**: Grade A — MIT license.
 ## Caveats (unverified)
