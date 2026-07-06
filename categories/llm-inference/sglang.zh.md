@@ -83,10 +83,10 @@ health:
 
 ## 何时不用
 
-- **你需要最广泛的模型覆盖和最大的社区生态。** vLLM 有更广泛的模型支持、更多集成和更大的贡献者群体；SGLang 的生态更小、更年轻。[推断]
+- **你需要最广泛的模型覆盖和最大的社区生态。** vLLM 有更广泛的模型支持、更多集成和更大的贡献者群体；SGLang 的生态更小、更年轻。
 - **你想要一个简单、单二进制的本地推理工具。** SGLang 是一个面向数据中心的 CUDA kernel 服务引擎，带多进程架构；对于单台 Mac 或笔记本，Ollama 或 llama.cpp 要轻量得多。
-- **你需要久经检验的生产级稳定性。** SGLang 约 2024 年创立，目前仍在 v0.4.x；vLLM 有约 2.5 年的生产级锤炼和更大的实战检验足迹。[推断]
-- **你想要基础服务的最小运维复杂度。** SGLang 的高级功能（RadixAttention、结构化生成 kernel）增加了配置面；对于「在一台 GPU 上服务一个模型」这种简单场景，vLLM 或 TGI 可能更容易部署和调优。[推断]
+- **你需要久经检验的生产级稳定性。** SGLang 约 2024 年创立，目前仍在 v0.4.x；vLLM 有约 2.5 年的生产级锤炼和更大的实战检验足迹。
+- **你想要基础服务的最小运维复杂度。** SGLang 的高级功能（RadixAttention、结构化生成 kernel）增加了配置面；对于「在一台 GPU 上服务一个模型」这种简单场景，vLLM 或 TGI 可能更容易部署和调优。
 - **你需要非 NVIDIA 硬件作为一等公民。** SGLang 围绕 NVIDIA 构建（CUDA kernel、Triton）；AMD 和 Intel GPU 支持较新、较不成熟。[未验证]
 - **你需要通用的请求编排 / 多模型路由。** SGLang 是推理引擎，不是编排层；对于多模型 A/B 测试、金丝雀发布或自动扩缩容，你仍然需要在前面叠加 Kubernetes、Ray Serve 或代理层。
 
@@ -108,14 +108,14 @@ health:
 - **CUDA C++ / Triton** — 用于注意力和 KV 缓存管理的自定义 GPU 内核；RadixAttention 的前缀感知块复用以优化 CUDA 实现。
 - **PyTorch** — 底层张量框架；模型通过 PyTorch 加载，并经由自定义 SGLang 注意力内核执行。
 - **OpenAI 兼容 API** — 基于 FastAPI 的服务器，暴露 `/v1/completions`、`/v1/chat/completions` 和 `/v1/embeddings`，实现与 OpenAI 客户端的即插即用兼容。
-- **结构化生成引擎** — 原生 kernel 级支持 JSON 模式、正则约束和工具调用 schema 强制。[未验证]
+- **结构化生成引擎** — 原生 kernel 级支持 JSON 模式、正则约束和工具调用 schema 强制。
 - **分布式原语** — 张量并行和流水线并行，支持多 GPU 和多节点部署。
 
 ## 依赖
 
 - **硬件** — NVIDIA GPU 是主要目标（CUDA 11.8+ / 12.1+）；AMD 支持存在但较新。服务器级 GPU（A100、H100、A10、L4 等）是典型部署目标。纯 CPU 推理不是性能重点。
 - **GPU 驱动与运行时** — 主机上需要 NVIDIA GPU 驱动、CUDA toolkit 和 cuDNN；Python 包捆绑了大部分 CUDA 内核，但主机必须提供驱动/运行时栈。
-- **运行时环境** — Python 3.9+；通过 `pip` 或预构建 Docker 容器安装。该包体积庞大（约数 GB 的 CUDA wheel 和 PyTorch）。[推断]
+- **运行时环境** — Python 3.9+；通过 `pip` 或预构建 Docker 容器安装。该包体积庞大（约数 GB 的 CUDA wheel 和 PyTorch）。
 - **模型** — 你自带 Hugging Face 兼容模型（safetensors 或 PyTorch checkpoint）；SGLang 通过自动 Hugging Face `transformers` 配置检测支持数千种模型。[推断]
 - **外部服务（可选）** — 对于生产服务，通常需要在前面放置负载均衡器或反向代理（nginx、Envoy、Kubernetes ingress）；SGLang 本身是单进程服务器，不原生处理 TLS、认证或多节点路由。[推断]
 
@@ -125,8 +125,8 @@ health:
 
 1. **GPU 集群管理** — 驱动版本、CUDA 兼容性、显存调优和多 GPU 拓扑（NVLink、PCIe）都是你的责任。单个 SGLang 实例通常独占一个或多个 GPU；你管理实例密度，而非引擎本身。
 2. **模型生命周期与磁盘** — 模型权重体积巨大（数十到数百 GB）；冷启动下载时间、磁盘缓存管理和跨集群的版本升级都是显著的运维工作。
-3. **吞吐与延迟调优** — SGLang 暴露大量相互作用的参数（batch size、调度策略、RadixAttention 缓存设置），以非直观的方式交互。为你的特定工作负载分布获取最佳吞吐需要基准测试和迭代；默认值偏保守，通常会在 GPU 上留下余量。[推断]
-4. **版本迭代速度** — 非常活跃的开发和频繁发布意味着保持最新需要定期升级，且 API 表面会变动。如果你需要一个「部署后不管」、12 个月稳定表面的推理运行时，SGLang 的速度是负担。[推断]
+3. **吞吐与延迟调优** — SGLang 暴露大量相互作用的参数（batch size、调度策略、RadixAttention 缓存设置），以非直观的方式交互。为你的特定工作负载分布获取最佳吞吐需要基准测试和迭代；默认值偏保守，通常会在 GPU 上留下余量。
+4. **版本迭代速度** — 非常活跃的开发和频繁发布意味着保持最新需要定期升级，且 API 表面会变动。如果你需要一个「部署后不管」、12 个月稳定表面的推理运行时，SGLang 的速度是负担。
 5. **无内置高可用或多节点路由** — 你以每个 GPU/节点一个状态化进程的方式运行 SGLang。高可用、自动扩缩容、请求路由和模型 A/B 测试由外部基础设施（Kubernetes、代理或 Ray Serve 等服务框架）处理，而非 SGLang 本身。
 
 ## 健康度与可持续性

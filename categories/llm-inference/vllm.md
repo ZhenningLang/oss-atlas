@@ -87,9 +87,9 @@ You also reach for vLLM when you need tensor-parallel or pipeline-parallel multi
 
 - **You need to run on non-NVIDIA hardware as a first-class citizen.** vLLM is deeply NVIDIA-centric (custom CUDA kernels, CUTLASS, Triton). AMD and Intel GPU support exists but is newer, less mature, and lacks the same performance tuning depth. For AMD-first or Intel-first deployments, the maturity gap is real. [未验证]
 - **You want a simple, single-binary local inference tool.** vLLM is a large, complex Python codebase with heavy PyTorch/CUDA dependencies and a long dependency tree. For a single Mac or a laptop, Ollama or llama.cpp are far lighter and easier to install. vLLM is a datacenter serving engine, not a desktop convenience tool.
-- **You need deep custom kernel modifications without CUDA expertise.** vLLM's performance comes from hand-tuned CUDA kernels and attention implementations. If you need to modify the attention mechanism or add a custom kernel, you are writing CUDA C++ and integrating with vLLM's kernel dispatch layer — a steep learning curve compared to a pure-Python framework. [推断]
+- **You need deep custom kernel modifications without CUDA expertise.** vLLM's performance comes from hand-tuned CUDA kernels and attention implementations. If you need to modify the attention mechanism or add a custom kernel, you are writing CUDA C++ and integrating with vLLM's kernel dispatch layer — a steep learning curve compared to a pure-Python framework.
 - **You want a unified serving + orchestration + multi-model routing layer.** vLLM is the inference engine, not the orchestration framework. For multi-model A/B testing, canary deployments, request-level routing, or autoscaling across a fleet, you will still need a separate layer (Kubernetes, Ray Serve, or a proxy like BentoML) in front of vLLM. It does not replace a serving platform.
-- **Latency is more critical than throughput.** vLLM optimizes for **throughput** (requests per second, GPU utilization). For ultra-low-latency interactive use cases where every millisecond of time-to-first-token matters, NVIDIA's **TensorRT-LLM** or hand-tuned custom engines often win because they compile a static graph and fuse operators more aggressively; vLLM's dynamic scheduling and Python overhead add latency. [推断]
+- **Latency is more critical than throughput.** vLLM optimizes for **throughput** (requests per second, GPU utilization). For ultra-low-latency interactive use cases where every millisecond of time-to-first-token matters, NVIDIA's **TensorRT-LLM** or hand-tuned custom engines often win because they compile a static graph and fuse operators more aggressively; vLLM's dynamic scheduling and Python overhead add latency.
 - **You want to avoid fast-moving breakage.** vLLM ships at a furious pace (10+ commits/day, frequent minor releases). New features land quickly, but APIs shift, default behaviors change, and model-support compatibility moves fast. If you need a "set it and forget it" inference runtime with a 12-month stable surface, vLLM's velocity is a liability, not a feature. [推断]
 
 ## Comparison
@@ -111,14 +111,14 @@ You also reach for vLLM when you need tensor-parallel or pipeline-parallel multi
 - **PyTorch** — the underlying tensor framework; models are loaded via PyTorch and run through custom vLLM attention kernels that replace standard PyTorch attention.
 - **OpenAI-compatible API** — a FastAPI-based server exposing `/v1/completions`, `/v1/chat/completions`, and `/v1/embeddings` for drop-in compatibility with OpenAI clients.
 - **Distributed primitives** — tensor parallelism and pipeline parallelism via PyTorch distributed; supports multi-GPU and multi-node deployments.
-- **Prefix caching** — an optional layer that caches the KV blocks of common prefixes (e.g., system prompts) to avoid recomputation on cache hits. [未验证]
+- **Prefix caching** — an optional layer that caches the KV blocks of common prefixes (e.g., system prompts) to avoid recomputation on cache hits.
 
 ## Dependencies
 
-- **Hardware** — NVIDIA GPUs are the primary target (CUDA 11.8+ / 12.1+); AMD (ROCm) and Intel support are newer. Server-class GPUs (A100, H100, A10, L4, etc.) are the typical deployment target. CPU-only inference exists but is not the performance story. [未验证]
+- **Hardware** — NVIDIA GPUs are the primary target (CUDA 11.8+ / 12.1+); AMD (ROCm) and Intel support are newer. Server-class GPUs (A100, H100, A10, L4, etc.) are the typical deployment target. CPU-only inference exists but is not the performance story.
 - **GPU drivers & runtime** — NVIDIA GPU drivers, CUDA toolkit, and cuDNN on the host; the Python package bundles most CUDA kernels but the host must provide the driver/runtime stack.
-- **Runtime environment** — Python 3.9–3.12; installed via `pip` (e.g., `pip install vllm`) or prebuilt Docker containers (`vllm/vllm-openai`). The package is heavy (~GBs of CUDA wheels and PyTorch). [推断]
-- **Models** — you bring Hugging Face-compatible models (safetensors or PyTorch checkpoints); vLLM supports thousands of models via automatic Hugging Face `transformers` config detection and manual model-card registration. [推断]
+- **Runtime environment** — Python 3.9–3.12; installed via `pip` (e.g., `pip install vllm`) or prebuilt Docker containers (`vllm/vllm-openai`). The package is heavy (~GBs of CUDA wheels and PyTorch).
+- **Models** — you bring Hugging Face-compatible models (safetensors or PyTorch checkpoints); vLLM supports thousands of models via automatic Hugging Face `transformers` config detection and manual model-card registration.
 - **External services (optional)** — for production serving you typically place a load balancer or reverse proxy (nginx, Envoy, Kubernetes ingress) in front; vLLM itself is a single-process server and does not handle TLS, auth, or multi-node routing natively. [推断]
 
 ## Ops difficulty
@@ -127,8 +127,8 @@ You also reach for vLLM when you need tensor-parallel or pipeline-parallel multi
 
 1. **GPU fleet management** — driver versions, CUDA compatibility, memory tuning, and multi-GPU topology (NVLink, PCIe) are your responsibility. A single vLLM instance typically owns one or more GPUs exclusively; you manage instance density, not the engine.
 2. **Model lifecycle & disk** — model weights are large (tens to hundreds of GB); cold-start download times, disk cache management, and version upgrades across a fleet are significant operational work.
-3. **Throughput vs. latency tuning** — vLLM exposes many knobs (max_num_seqs, max_num_batched_tokens, block size, scheduling policy) that interact in non-obvious ways. Getting the best throughput for your specific workload distribution requires benchmarking and iteration; defaults are conservative and often leave GPU headroom on the table. [推断]
-4. **Version velocity** — with 10+ commits/day and frequent releases, staying current means regular upgrades, and the API surface shifts (new arguments, changed defaults, deprecated features). You will be upgrading vLLM regularly if you want bug fixes and new model support. [推断]
+3. **Throughput vs. latency tuning** — vLLM exposes many knobs (max_num_seqs, max_num_batched_tokens, block size, scheduling policy) that interact in non-obvious ways. Getting the best throughput for your specific workload distribution requires benchmarking and iteration; defaults are conservative and often leave GPU headroom on the table.
+4. **Version velocity** — with 10+ commits/day and frequent releases, staying current means regular upgrades, and the API surface shifts (new arguments, changed defaults, deprecated features). You will be upgrading vLLM regularly if you want bug fixes and new model support.
 5. **No built-in HA or multi-node routing** — you run vLLM as a stateful process per GPU/node. High availability, autoscaling, request routing, and model A/B testing are handled by external infrastructure (Kubernetes, a proxy, or a serving framework like Ray Serve), not by vLLM itself.
 
 ## Health & viability

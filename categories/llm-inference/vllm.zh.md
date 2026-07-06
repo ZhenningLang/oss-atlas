@@ -87,9 +87,9 @@ health:
 
 - **你需要非 NVIDIA 硬件作为一等公民。** vLLM 深度围绕 NVIDIA 构建（自定义 CUDA 内核、CUTLASS、Triton）。AMD 和 Intel GPU 支持存在，但较新、较不成熟，且缺乏同等深度的性能调优。对于以 AMD 或 Intel 为主的部署，成熟度差距是真实存在的。[未验证]
 - **你想要一个简单、单二进制的本地推理工具。** vLLM 是一个庞大复杂的 Python 代码库，依赖沉重的 PyTorch/CUDA 和很长的依赖链。对于单台 Mac 或笔记本，Ollama 或 llama.cpp 要轻量得多、也更容易安装。vLLM 是数据中心服务引擎，不是桌面便利工具。
-- **你需要深入定制内核但又没有 CUDA 经验。** vLLM 的性能来自手工调优的 CUDA 内核和注意力实现。如果你需要修改注意力机制或添加自定义内核，你要写 CUDA C++ 并与 vLLM 的内核分发层集成——相比纯 Python 框架，学习曲线陡峭得多。[推断]
+- **你需要深入定制内核但又没有 CUDA 经验。** vLLM 的性能来自手工调优的 CUDA 内核和注意力实现。如果你需要修改注意力机制或添加自定义内核，你要写 CUDA C++ 并与 vLLM 的内核分发层集成——相比纯 Python 框架，学习曲线陡峭得多。
 - **你需要统一的服务 + 编排 + 多模型路由层。** vLLM 是推理引擎，不是编排框架。对于多模型 A/B 测试、金丝雀发布、请求级路由或跨集群的自动扩缩容，你仍然需要在 vLLM 前面叠加一层（Kubernetes、Ray Serve 或 BentoML 等代理）。它不能替代一个完整的 serving 平台。
-- **延迟比吞吐更重要。** vLLM 优化的是**吞吐**（每秒请求数、GPU 利用率）。对于超低延迟的交互式场景，每一毫秒的 time-to-first-token 都至关重要，NVIDIA 的 **TensorRT-LLM** 或手工调优的定制引擎通常更优，因为它们编译静态图、更激进地融合算子；vLLM 的动态调度与 Python 开销会增加延迟。[推断]
+- **延迟比吞吐更重要。** vLLM 优化的是**吞吐**（每秒请求数、GPU 利用率）。对于超低延迟的交互式场景，每一毫秒的 time-to-first-token 都至关重要，NVIDIA 的 **TensorRT-LLM** 或手工调优的定制引擎通常更优，因为它们编译静态图、更激进地融合算子；vLLM 的动态调度与 Python 开销会增加延迟。
 - **你想避免快速迭代带来的破坏。** vLLM 的迭代速度极快（每天 10+ 次提交，频繁的小版本发布）。新功能快速落地，但 API 会变动、默认行为会改变、模型支持兼容性也快速演进。如果你需要一个“部署后不管”、12 个月稳定表面的推理运行时，vLLM 的速度是负担而非优势。[推断]
 
 ## 横向对比
@@ -111,14 +111,14 @@ health:
 - **PyTorch** — 底层张量框架；模型通过 PyTorch 加载，并经由自定义 vLLM 注意力内核执行，这些内核替代了标准 PyTorch 注意力。
 - **OpenAI 兼容 API** — 基于 FastAPI 的服务器，暴露 `/v1/completions`、`/v1/chat/completions` 和 `/v1/embeddings`，实现与 OpenAI 客户端的即插即用兼容。
 - **分布式原语** — 通过 PyTorch distributed 实现张量并行和流水线并行；支持多 GPU 和多节点部署。
-- **前缀缓存** — 可选层，缓存常见前缀（如系统 prompt）的 KV 块，以避免缓存命中时的重复计算。[未验证]
+- **前缀缓存** — 可选层，缓存常见前缀（如系统 prompt）的 KV 块，以避免缓存命中时的重复计算。
 
 ## 依赖
 
-- **硬件** — NVIDIA GPU 是主要目标（CUDA 11.8+ / 12.1+）；AMD（ROCm）和 Intel 支持较新。服务器级 GPU（A100、H100、A10、L4 等）是典型部署目标。纯 CPU 推理存在，但不是性能重点。[未验证]
+- **硬件** — NVIDIA GPU 是主要目标（CUDA 11.8+ / 12.1+）；AMD（ROCm）和 Intel 支持较新。服务器级 GPU（A100、H100、A10、L4 等）是典型部署目标。纯 CPU 推理存在，但不是性能重点。
 - **GPU 驱动与运行时** — 主机上需要 NVIDIA GPU 驱动、CUDA toolkit 和 cuDNN；Python 包捆绑了大部分 CUDA 内核，但主机必须提供驱动/运行时栈。
-- **运行时环境** — Python 3.9–3.12；通过 `pip` 安装（如 `pip install vllm`）或预构建 Docker 容器（`vllm/vllm-openai`）。该包体积庞大（约数 GB 的 CUDA wheel 和 PyTorch）。[推断]
-- **模型** — 你自带 Hugging Face 兼容模型（safetensors 或 PyTorch checkpoint）；vLLM 通过自动 Hugging Face `transformers` 配置检测和手动模型卡注册支持数千种模型。[推断]
+- **运行时环境** — Python 3.9–3.12；通过 `pip` 安装（如 `pip install vllm`）或预构建 Docker 容器（`vllm/vllm-openai`）。该包体积庞大（约数 GB 的 CUDA wheel 和 PyTorch）。
+- **模型** — 你自带 Hugging Face 兼容模型（safetensors 或 PyTorch checkpoint）；vLLM 通过自动 Hugging Face `transformers` 配置检测和手动模型卡注册支持数千种模型。
 - **外部服务（可选）** — 对于生产服务，通常需要在前面放置负载均衡器或反向代理（nginx、Envoy、Kubernetes ingress）；vLLM 本身是单进程服务器，不原生处理 TLS、认证或多节点路由。[推断]
 
 ## 运维难度
@@ -127,8 +127,8 @@ health:
 
 1. **GPU 集群管理** — 驱动版本、CUDA 兼容性、内存调优和多 GPU 拓扑（NVLink、PCIe）都是你的责任。单个 vLLM 实例通常独占一个或多个 GPU；你管理实例密度，而非引擎本身。
 2. **模型生命周期与磁盘** — 模型权重体积巨大（数十到数百 GB）；冷启动下载时间、磁盘缓存管理和跨集群的版本升级都是显著的运维工作。
-3. **吞吐与延迟调优** — vLLM 暴露大量相互作用的参数（`max_num_seqs`、`max_num_batched_tokens`、块大小、调度策略），以非直观的方式交互。为你的特定工作负载分布获取最佳吞吐需要基准测试和迭代；默认值偏保守，通常会在 GPU 上留下余量。[推断]
-4. **版本迭代速度** — 每天 10+ 次提交、频繁发布，保持最新意味着定期升级，且 API 表面会变动（新参数、默认行为改变、废弃特性）。如果你需要 bug 修复和新模型支持，你会经常升级 vLLM。[推断]
+3. **吞吐与延迟调优** — vLLM 暴露大量相互作用的参数（`max_num_seqs`、`max_num_batched_tokens`、块大小、调度策略），以非直观的方式交互。为你的特定工作负载分布获取最佳吞吐需要基准测试和迭代；默认值偏保守，通常会在 GPU 上留下余量。
+4. **版本迭代速度** — 每天 10+ 次提交、频繁发布，保持最新意味着定期升级，且 API 表面会变动（新参数、默认行为改变、废弃特性）。如果你需要 bug 修复和新模型支持，你会经常升级 vLLM。
 5. **无内置高可用或多节点路由** — 你以每个 GPU/节点一个状态化进程的方式运行 vLLM。高可用、自动扩缩容、请求路由和模型 A/B 测试由外部基础设施（Kubernetes、代理或 Ray Serve 等服务框架）处理，而非 vLLM 本身。
 
 ## 健康度与可持续性
