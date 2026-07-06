@@ -101,7 +101,7 @@ You also reach for it when building a speech-enabled application pipeline — yo
 | Wav2Vec 2.0 / HuBERT | 未收录 | Use Whisper when you need end-to-end multilingual transcription + translation out of the box; choose Wav2Vec 2.0 when you need fine-grained phonetic analysis or custom-domain fine-tuning with Meta's research tooling. | Meta's research speech models; excellent for academic and fine-tuning workflows but not a turnkey transcription product. |
 | DeepSpeech (Mozilla) | 未收录 | Use Whisper; DeepSpeech is effectively abandoned since Mozilla stepped back. | Mozilla's older English-centric ASR project. Do not start new projects on it. |
 | pyannote.audio | 未收录 | Use Whisper when you need transcription text; use pyannote.audio when you need speaker diarization. They are complementary, not substitutes. | Speaker diarization toolkit (who spoke when), not transcription. Often used together with Whisper. |
-| ffsubsync | ✅ | Use Whisper when you need to generate subtitles from audio; use ffsubsync when you already have a subtitle file with correct text but wrong timing. | [→](../media-processing/ffsubsync.md) |
+| ffsubsync | ✅ | Use Whisper when you need to generate subtitles from audio; use ffsubsync when you already have a subtitle file with correct text but wrong timing. | [→](ffsubsync.md) |
 
 ## Tech stack
 

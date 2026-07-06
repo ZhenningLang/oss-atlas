@@ -95,7 +95,7 @@ health:
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
 | [markdown-it](markdown-it.zh.md) | ✅ | 需要 CommonMark 严格、可插拔架构和丰富插件生态时，选 markdown-it。 | CommonMark 严格、可插拔架构，插件生态丰富；API 更重、比 marked 略慢，但当规范一致和插件重要时它是首选。 |
-| [remark](../markdown-tools/remark.zh.md) | ✅ | 需要完整 mdast AST 管线来解析、变换、lint、序列化 Markdown/MDX 时，选 remark。 | 完整的 mdast AST 管线，能解析、变换、lint、序列化（Markdown、MDX）；强大得多也重得多——是工具链，不是一次调用的渲染器。 |
+| [remark](remark.zh.md) | ✅ | 需要完整 mdast AST 管线来解析、变换、lint、序列化 Markdown/MDX 时，选 remark。 | 完整的 mdast AST 管线，能解析、变换、lint、序列化（Markdown、MDX）；强大得多也重得多——是工具链，不是一次调用的渲染器。 |
 | [micromark](micromark.zh.md) | ✅ | 需要 remark 底层的 CommonMark/GFM 分词器并自建渲染层时，选 micromark。 | remark 底下那个低层 CommonMark/GFM 分词器；正确、面向流式，但渲染层要你自己搭。 |
 | [CommonMark](commonmark.zh.md) | ✅ | 需要规范自己的参考实现作为一致性标尺时，选 CommonMark。 | 规范自己的参考实现；是一致性标尺，但 GFM 便利特性更少，也未针对生产渲染做优化。 |
 

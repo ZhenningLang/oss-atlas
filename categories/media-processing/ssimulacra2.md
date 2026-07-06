@@ -75,7 +75,7 @@ You also use it when you want a lightweight, self-contained tool with no model f
 
 ## When NOT to use
 
-- **Video quality assessment.** SSIMULACRA2 is image-only. For video, use [VMAF](../media-processing/vmaf.md) or per-frame SSIMULACRA2 — but per-frame aggregation loses temporal pooling nuance. [推断]
+- **Video quality assessment.** SSIMULACRA2 is image-only. For video, use [VMAF](vmaf.md) or per-frame SSIMULACRA2 — but per-frame aggregation loses temporal pooling nuance. [推断]
 - **You need a symmetric metric.** SSIMULACRA2(a, b) ≠ SSIMULACRA2(b, a) — the order matters because smoothing and ringing artifacts are weighted differently. [推断]
 - **You need an industry-standard metric with broad adoption.** VMAF is the de-facto standard for video; SSIMULACRA2 is newer, smaller (~200 stars), and less battle-tested in production pipelines. [推断]
 - **You're working in a CI pipeline that needs compiled binaries.** The C++ implementation requires compilation; there's no pre-built package ecosystem on par with libvmaf.

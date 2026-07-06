@@ -91,7 +91,7 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 | --- | --- | --- | --- |
-| [Angular](../web-ui/angular.zh.md) | ✅ | 全栈 TypeScript 框架，内置深度的企业级工具链和强 opinionated 设计。 | Angular 自带更多内置功能，且不限于 React 生态；Next.js 主导 React SSR/SSG 细分领域，并拥有更大的 React 就业市场。 |
+| [Angular](angular.zh.md) | ✅ | 全栈 TypeScript 框架，内置深度的企业级工具链和强 opinionated 设计。 | Angular 自带更多内置功能，且不限于 React 生态；Next.js 主导 React SSR/SSG 细分领域，并拥有更大的 React 就业市场。 |
 | [React](react.zh.md) | ✅ | 只需要 UI 库，而不需要 Next.js 路由、SSR 或全栈约定时，选 React。 | 纯 React 提供最大灵活性和更小的包体积；Next.js 提供路由、SSR 和全栈约定，但增加了复杂度。 |
 | [Vue.js](vue.zh.md) | ✅ | 需要更容易增量采纳的非 React 渐进式框架时，选 Vue。 | Vue 是框架无关的，更容易增量采纳；Next.js 仅支持 React，且更 opinionated。 |
 | [Svelte](svelte.zh.md) | ✅ | 需要编译时组件模型且不想投入 React 生态时，选 Svelte。 | Svelte 对组件密集型中小应用更轻量、更简单；Next.js 拥有庞大得多的生态和更深的就业市场。 |

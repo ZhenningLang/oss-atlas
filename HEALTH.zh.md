@@ -11,7 +11,7 @@
 
 ## Open Interpreter — 总评 A
 
-[![Open Interpreter 健康度雷达](assets/health/open-interpreter.zh.svg)](categories/agent-frameworks/open-interpreter.zh.md)
+[![Open Interpreter 健康度雷达](assets/health/open-interpreter.zh.svg)](categories/agent-frameworks/coding-agents/open-interpreter.zh.md)
 
 ## Agent Orchestrator — 总评 B
 

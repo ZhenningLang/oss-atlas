@@ -99,7 +99,7 @@ health:
 | PlantUML | 未收录 | 需要更广、更严格的 UML 覆盖，并能接受 Java/服务端渲染时，选 PlantUML。 | UML 覆盖更广更严（图类型也更多）；通常需要 Java 运行时/服务来渲染，而 Mermaid 是纯 JS 浏览器内渲染、宿主支持无处不在。 |
 | D2 | 未收录 | D2 的新语言和布局引擎选择比 Mermaid 的宿主平台普及度更重要时，选 D2。 | 较新的文本转图语言（Go），有多种布局引擎（含 ELK/dagre）、追求更干净的排版；安装量小得多，内建宿主平台渲染远不如 Mermaid。 |
 | draw.io（diagrams.net） | 未收录 | 需要完整所见即所得画布，而不是可版本控制的图源码时，选 draw.io。 | 完整的所见即所得画布编辑器——像素级控制、丰富图形——但图存为 XML/二进制，不是可 diff 的纯文本，也不会从围栏块自动渲染。 |
-| [Excalidraw](../diagramming/excalidraw.zh.md) | ✅ | 手绘风白板和协作比文本转图语法更重要时，选 Excalidraw。 | 手绘风的所见即所得白板；适合草图和协作，不是文本转图语法，源文件也不能在版本库里 diff。 |
+| [Excalidraw](excalidraw.zh.md) | ✅ | 手绘风白板和协作比文本转图语法更重要时，选 Excalidraw。 | 手绘风的所见即所得白板；适合草图和协作，不是文本转图语法，源文件也不能在版本库里 diff。 |
 | [flowchart.js](flowchart-js.zh.md) | ✅ | 只需要一个窄的流程图 JS 库时，才选 flowchart.js。 | 只做流程图的窄 JS 库；Mermaid 覆盖的图类型多得多，生态/宿主支持也大得多。 |
 
 ## 技术栈
