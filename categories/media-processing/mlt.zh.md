@@ -10,9 +10,9 @@ maturity: v7.30.x, active, ~1.5k stars (as of 2026-07)
 last_verified: 2026-07-01
 type: framework
 upstream:
-  pushed_at: 2026-07-01T00:00:00Z
+  pushed_at: 2026-07-03T22:11:16Z
   default_branch: master
-  default_branch_sha: 0000000000000000000000000000000000000000
+  default_branch_sha: 76be5018b717d353459db4258093aff8c7d1ec7a
   archived: false
 health:
   schema: 1
@@ -83,7 +83,7 @@ health:
 ## 何时不用
 
 - **你需要一个开箱即用的视频剪辑软件。** MLT 是框架，不是应用。如果你想打开就能剪辑，直接用 Shotcut、Kdenlive 或其他 NLE，而不是直接使用 MLT。
-- **你只需要批量转码或格式转换。** MLT 会增加你根本不需要的时间线复杂度。对于纯解码/编码/转码，直接用 [FFmpeg](../media-processing/ffmpeg.zh.md)——它更快、更简单，社区支持也广得多。
+- **你只需要批量转码或格式转换。** MLT 会增加你根本不需要的时间线复杂度。对于纯解码/编码/转码，直接用 [FFmpeg](ffmpeg.zh.md)——它更快、更简单，社区支持也广得多。
 - **你需要实时流处理或持久化媒体管线。** MLT 面向离线/顺序时间线渲染，而非实时流处理。实时管线请考虑 GStreamer。
 - **你想要一个原生 Python、友好的视频编辑 API。** MLT 的主要接口是 C++ 加 XML 项目描述。如果以 Python 优先的编程化剪辑为目标，考虑 MoviePy 或 PyAV。
 - **你在构建专有闭源产品，需要对 LGPL 链接边界有绝对把握。** MLT 采用 LGPL-2.1+；虽然以库形式链接通常被 LGPL 允许，但动态链接与静态链接的边界以及插件-滤镜组合必须针对你的具体分发模式进行审查。若许可纯净度是硬约束，请先与法务核实。 [未验证]
@@ -93,7 +93,7 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [FFmpeg](../media-processing/ffmpeg.zh.md) | ✅ | 用 FFmpeg 做原始解码/编码/转码/滤镜管线；用 MLT 当需要在其之上叠加时间线语义时。 | 通用媒体瑞士军刀；API 陡峭，且有 LGPL/GPL 构建授权陷阱。MLT 坐在它之上，提供编辑级时间线语义。 |
+| [FFmpeg](ffmpeg.zh.md) | ✅ | 用 FFmpeg 做原始解码/编码/转码/滤镜管线；用 MLT 当需要在其之上叠加时间线语义时。 | 通用媒体瑞士军刀；API 陡峭，且有 LGPL/GPL 构建授权陷阱。MLT 坐在它之上，提供编辑级时间线语义。 |
 | [GStreamer](gstreamer.zh.md) | ✅ | 用 GStreamer 做实时、持久化、嵌入应用的管线；用 MLT 做离线时间线式剪辑/合成。 | 面向实时/流媒体与嵌入应用的管线/元件图框架；编程模型更重，但实时场景更灵活。 |
 | [HandBrake](handbrake.zh.md) | ✅ | 用 HandBrake 做终端用户预设驱动转码；用 MLT 做程序化时间线编辑。 | 预设驱动的 GUI 与 CLI，用于翻录/转码为现代 MP4/MKV；终端用户应用，不是库，远比原生 FFmpeg 窄。 |
 | [MoviePy](moviepy.zh.md) | ✅ | 用 MoviePy 做友好的 Python API 批量视频编辑；用 MLT 做需要编辑精度的 C++ 时间线框架。 | 友好的 Python API 用于程序化视频编辑——剪辑、合成、文字、特效——但纯离线批处理，对大文件比原生 FFmpeg 慢。 |

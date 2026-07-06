@@ -10,9 +10,9 @@ maturity: v15.x, active, ~7k stars (as of 2026-07)
 last_verified: 2026-07-01
 type: tool
 upstream:
-  pushed_at: 2026-07-01T00:00:00Z
+  pushed_at: 2026-07-01T11:01:38Z
   default_branch: main
-  default_branch_sha: 0000000000000000000000000000000000000000
+  default_branch_sha: 334415d7552f2ffa359a23efc100345e7ed7a9f7
   archived: false
 health:
   schema: 1
@@ -94,7 +94,7 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [marked](../markdown-tools/marked.zh.md) | ✅ | 需要快速、零依赖、一次调用把 Markdown 解析成 HTML 时，选 marked。 | 快速、零依赖、一次调用即可把 Markdown 解析成 HTML、API 面极小；没有 AST 或插件管线，因此无法在渲染前 lint 或变换。 |
+| [marked](marked.zh.md) | ✅ | 需要快速、零依赖、一次调用把 Markdown 解析成 HTML 时，选 marked。 | 快速、零依赖、一次调用即可把 Markdown 解析成 HTML、API 面极小；没有 AST 或插件管线，因此无法在渲染前 lint 或变换。 |
 | [markdown-it](markdown-it.zh.md) | ✅ | 需要 CommonMark 严格、可插拔、插件目录庞大且 API 更简单时，选 markdown-it。 | CommonMark 严格、可插拔、插件目录庞大；API 比 remark 简单，但仍缺乏 unified 的完整 AST 变换工具链。 |
 | [micromark](micromark.zh.md) | ✅ | 需要 remark 底层的流式分词器并自建渲染/变换层时，选 micromark。 | remark 底下那个低层流式分词器；正确且快速，但渲染和变换层要你自己搭建。 |
 | [CommonMark](commonmark.zh.md) | ✅ | 需要规范自己的参考实现来做一致性测试时，选 CommonMark。 | 规范自己的参考实现；是一致性标尺，但无插件生态，也未针对生产渲染做优化。 |

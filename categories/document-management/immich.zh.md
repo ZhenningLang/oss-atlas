@@ -10,9 +10,9 @@ maturity: v1.x, stable, 104.8k stars (as of 2026-07)
 last_verified: 2026-07-01
 type: app
 upstream:
-  pushed_at: 2026-07-01T08:56:34Z
+  pushed_at: 2026-07-06T09:03:33Z
   default_branch: main
-  default_branch_sha: 0000000000000000000000000000000000000000
+  default_branch_sha: 103585ceb972abf34d64918f43687df5daadc17a
   archived: false
 health:
   schema: 1
@@ -131,9 +131,9 @@ health:
 
 ## 健康度与可持续性
 - **维护活跃度**：Grade A——最近 13 周中 13 周有提交；最后提交距今 1 天。
-- **响应速度**：Grade A——中位首次响应时间 2.0 小时，基于 31 个 qualifying issues/PRs。
+- **响应速度**：Grade A——中位首次响应时间 10.4 小时，基于 9 个 qualifying issues/PRs。
 - **采用广度**：Grade D——npmjs.org 上月下载量 6,496（包名：@immich/cli）。
-- **长青度**：Grade A——仓库已创建 1610 天。
+- **长青度**：Grade A——仓库已创建 1,611 天。
 - **治理集中度**：Grade A——前三贡献者占比 27.3%（?）。
 - **许可风险**：Grade E——AGPL-3.0 许可证。
 ## 存疑（未验证）

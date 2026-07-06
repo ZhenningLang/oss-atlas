@@ -85,9 +85,9 @@ You're a content creator, educator, or solo developer who needs to produce short
 ## When NOT to use
 
 - You need professional film post-production with frame-level manual control — use DaVinci Resolve or Premiere Pro instead. OpenMontage is agent-orchestrated, not a traditional NLE.
-- You want a one-click web UI or SaaS without touching code or a coding agent — OpenMontage is a repo-first system that runs inside your AI coding assistant. [未验证]
+- You want a one-click web UI or SaaS without touching code or a coding agent — OpenMontage is a repo-first system that runs inside your AI coding assistant.
 - The AGPL-3.0 strong copyleft is a deal-breaker for embedding into a closed-source product or service.
-- You need a stable, battle-tested toolchain with a multi-year track record — this project is ~3 months old and pre-1.0; APIs, pipelines, and skills may change rapidly. [推断]
+- You need a stable, battle-tested toolchain with a multi-year track record — this project is ~3 months old and pre-1.0; APIs, pipelines, and skills may change rapidly.
 - Your primary need is simple image-to-video or text-to-video generation without a full production pipeline (scripting, research, music, subtitles) — a standalone video model API or ComfyUI may be simpler and cheaper.
 - Windows is your primary dev environment and you can't tolerate occasional Node.js toolchain quirks (`npx --yes npm install` may be needed as a fallback). [未验证]
 

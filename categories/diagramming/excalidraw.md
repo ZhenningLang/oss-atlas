@@ -10,9 +10,9 @@ maturity: active, ~126.5k stars (as of 2026-07)
 last_verified: 2026-07-01
 type: library
 upstream:
-  pushed_at: 2026-07-01T10:17:35Z
-  default_branch: main
-  default_branch_sha: 0000000000000000000000000000000000000000
+  pushed_at: 2026-07-05T20:21:54Z
+  default_branch: master
+  default_branch_sha: 9357f98a9b6c4f8af3ada6ccce38e54330f2627c
   archived: false
 health:
   schema: 1
@@ -121,7 +121,7 @@ You're a product manager or designer who needs to quickly whiteboard an architec
 
 ## Health & viability
 - **Maintenance**: Grade A — 13/13 active weeks in trailing 13; last commit 3 days ago.
-- **Responsiveness**: Grade A — median first-response time 29.1 hours across 24 qualifying issues/PRs.
+- **Responsiveness**: Grade A — median first-response time 23.5 hours across 22 qualifying issues/PRs.
 - **Adoption**: Grade B — 1,390,033 monthly downloads via npmjs.org (package: @excalidraw/excalidraw).
 - **Longevity**: Grade A — 2374 days old.
 - **Governance**: Grade B — top-3 contributor share 83.5% (?).

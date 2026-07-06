@@ -10,9 +10,9 @@ maturity: v1.17.x, maintenance mode (original author stepped back, community mai
 last_verified: 2026-07-01
 type: library
 upstream:
-  pushed_at: 2026-07-01T00:00:00Z
-  default_branch: main
-  default_branch_sha: 0000000000000000000000000000000000000000
+  pushed_at: 2024-07-17T12:18:51Z
+  default_branch: master
+  default_branch_sha: 93dd36e85aa659a3bca09867d2d8fac172501fbe
   archived: false
 health:
   schema: 1
@@ -122,7 +122,7 @@ The same library is your tool when you need to surgically modify existing PDFs c
 - **Maintenance (2026-07):** v1.17.x is the latest major line; the original author (Hopding) has stepped back from active development, and the project is in community maintenance mode. PRs are reviewed and merged, but the pace is slower than peak. [推断]
 - **Governance / bus factor:** single original author who has stepped back; no foundation or committed vendor owns the roadmap. Community maintenance keeps it alive, but governance is informal and the bus factor is low. [推断]
 - **Backing & longevity:** no corporate or foundation backing; survival depends on sustained community interest and fork activity. The project has been around since ~2018 (~8 years), giving it moderate Lindy signal, but the maintenance-mode status weakens the "still-active" multiplier. [推断]
-- **Adoption:** ~9k stars (as of 2026-07) with steady use in JS/TS ecosystems for client-side PDF generation; notable dependents include form-filling and invoice-generation tools. [未验证]
+- **Adoption:** ~9k stars (as of 2026-07) with steady use in JS/TS ecosystems for client-side PDF generation; 2,364 dependent repositories; notable dependents include form-filling and invoice-generation tools. [未验证]
 - **Risk flags:** MIT license (no relicense risk); no open-core gating or CLA. The main risk is maintenance velocity: bugs and spec-compliance gaps may linger longer than in an actively driven project. Forks exist but none has clearly emerged as the canonical successor. [推断]
 
 ## Caveats (unverified)

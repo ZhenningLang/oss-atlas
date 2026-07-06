@@ -91,7 +91,7 @@ health:
 | Firebase | 未收录 | Google 的托管后端即服务（BaaS）。 | Firebase 完全托管且拥有更广泛的移动端 SDK 生态，但将你锁定在专有 NoSQL（Firestore）和 Google 平台。Supabase 提供开源 Postgres 并避免厂商锁定。 |
 | Appwrite | 未收录 | 开源 Firebase 替代方案，支持更广泛的客户端语言。 | Appwrite 也是开源的，且开箱支持更多客户端语言；Supabase 与 Postgres 集成更深，生态更成熟。 |
 | Hasura | 未收录 | 基于 Postgres 的自动生成 GraphQL API。 | Hasura 非常适合纯 GraphQL API，但缺乏 Supabase 打包的内置身份认证、存储和边缘函数。 |
-| [Deno](../dev-utilities/deno.zh.md) | ✅ | Supabase 使用 Deno 作为边缘函数运行时。 | 不是直接竞争对手——Deno 是 Supabase 边缘函数的运行时，展示了 Supabase 在生产中对 Deno 的依赖。 |
+| [Deno](../dev-utilities/editors-and-runtimes/deno.zh.md) | ✅ | Supabase 使用 Deno 作为边缘函数运行时。 | 不是直接竞争对手——Deno 是 Supabase 边缘函数的运行时，展示了 Supabase 在生产中对 Deno 的依赖。 |
 | 自托管 Postgres + PostgREST + Keycloak | 未收录 | DIY 堆栈，匹配 Supabase 的组件。 | 更灵活且完全自主管理，但相比 Supabase 集成平台，需要显著更多的搭建和持续维护。 |
 
 ## 技术栈
@@ -119,9 +119,9 @@ health:
 
 ## 健康度与可持续性
 - **维护活跃度**：Grade A——最近 13 周中 13 周有提交；最后提交距今 0 天。
-- **响应速度**：Grade A——中位首次响应时间 2.5 小时，基于 24 个 qualifying issues/PRs。
+- **响应速度**：Grade A——中位首次响应时间 0.8 小时，基于 23 个 qualifying issues/PRs。
 - **采用广度**：无法计算——unknown。
-- **长青度**：Grade A——仓库已创建 2455 天。
+- **长青度**：Grade A——仓库已创建 2,456 天。
 - **治理集中度**：Grade A——前三贡献者占比 26.8%（?）。
 - **许可风险**：Grade A——Apache-2.0 许可证。
 ## 存疑（未验证）

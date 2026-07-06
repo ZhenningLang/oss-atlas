@@ -10,9 +10,9 @@ maturity: v15.x, stable, ~138k stars (as of 2026-07)
 last_verified: 2026-07-01
 type: framework
 upstream:
-  pushed_at: 2026-07-01T00:00:00Z
+  pushed_at: 2026-07-06T08:21:40Z
   default_branch: canary
-  default_branch_sha: 0000000000000000000000000000000000000000
+  default_branch_sha: 00598045032a0e5b313de7b6ef0af60ed9390c2a
   archived: false
 health:
   schema: 1
@@ -91,7 +91,7 @@ You're a product team building a modern web application that needs to balance SE
 
 | Alternative | In index | Our verdict | Tradeoff |
 | --- | --- | --- | --- |
-| [Angular](../web-ui/angular.md) | ✅ | Full-stack TypeScript framework with deep enterprise tooling and strong opinions. | Angular ships more built-in features and is framework-agnostic of React; Next.js dominates the React SSR/SSG niche and has a larger React job market. |
+| [Angular](angular.md) | ✅ | Full-stack TypeScript framework with deep enterprise tooling and strong opinions. | Angular ships more built-in features and is framework-agnostic of React; Next.js dominates the React SSR/SSG niche and has a larger React job market. |
 | [React](react.md) | ✅ | Choose React alone when you want the UI library without Next.js routing, SSR, or full-stack conventions. | React alone gives you maximum flexibility and smaller bundles; Next.js gives you routing, SSR, and full-stack conventions but adds complexity. |
 | [Vue.js](vue.md) | ✅ | Choose Vue when you want a progressive non-React framework that is easier to adopt incrementally. | Vue is framework-agnostic and easier to adopt incrementally; Next.js is React-only and more opinionated. |
 | [Svelte](svelte.md) | ✅ | Choose Svelte when you want the compile-time component model without committing to React. | Svelte is leaner and simpler for component-heavy small-to-medium apps; Next.js has a vastly larger ecosystem and job market. |

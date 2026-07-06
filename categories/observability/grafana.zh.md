@@ -79,21 +79,21 @@ health:
 
 你是 SRE 或平台工程师，手上的技术栈已经散落到一堆存储里：指标在 Prometheus、日志在 Loki、追踪在 Tempo 或 Jaeger、业务数据在某个 Postgres，可能旁边还有云厂商的指标。每个都自带一套 UI，值班轮到你时，凌晨三点你在四个控制台之间切标签页，试图把一次延迟尖刺、一行日志和一次发布对上号。你架一个 Grafana，把每个后端加成一个数据源，搭几张看板——一个指标面板、一个日志面板、一个 trace 视图并排压在同一个时间范围上：点一下尖刺，跳到那个时间窗的日志，顺着 trace ID 追下去。采集和存储原地不动，Grafana 是这一切前面那块统一的查询与可视化窗口。
 
-当你希望看板和告警规则进版本库、而不是靠手点出来时，你也会选它。看板是 JSON，数据源和告警规则可以从文件 provision，整套东西还能用变量做模板，一张看板服务所有环境。它是采集器（如 [Telegraf](../dev-utilities/telegraf.zh.md)）或抓取器（如 Prometheus）下游事实上的可视化层——那些负责把数据送进存储，Grafana 是你团队真正盯着看的那块。
+当你希望看板和告警规则进版本库、而不是靠手点出来时，你也会选它。看板是 JSON，数据源和告警规则可以从文件 provision，整套东西还能用变量做模板，一张看板服务所有环境。它是采集器（如 [Telegraf](../dev-utilities/ops-infra/telegraf.zh.md)）或抓取器（如 Prometheus）下游事实上的可视化层——那些负责把数据送进存储，Grafana 是你团队真正盯着看的那块。
 
 ## 何时不用
 
 - **你以为它是数据库。** 不是。Grafana 只在一个小型关系库（SQLite/Postgres/MySQL）里存看板、用户和告警配置——你真正的时序、日志、追踪数据活在 Prometheus/Loki/Elasticsearch 等里，那些你还得自己跑、自己付钱。上 Grafana 不会缩小你的存储开销，只会在上面再加一层查询层。
 - **你想要开箱即用的一体化监控产品。** Datadog、New Relic 或 Grafana 自家的 Grafana Cloud 这类托管 SaaS 把采集+存储+UI+告警打包成一张账单、零基础设施；自托管 Grafana 只是前端，默认这些后端由你来运维。
 - **你的活是 BI / SQL 分析与报表。** Grafana 是时序与运维看板形状的；要做即席 SQL 探索、交叉表报表、业务看板，Apache Superset（`未收录`）或 Metabase 这类 BI 工具更合适。
-- **你需要一个指标采集器或 agent。** Grafana 不抓主机、不 tail 日志——那是 [Telegraf](../dev-utilities/telegraf.zh.md)、Prometheus exporter、Grafana Alloy 或 OTel Collector 的活。Grafana 处在送数据那一环的下游。
+- **你需要一个指标采集器或 agent。** Grafana 不抓主机、不 tail 日志——那是 [Telegraf](../dev-utilities/ops-infra/telegraf.zh.md)、Prometheus exporter、Grafana Alloy 或 OTel Collector 的活。Grafana 处在送数据那一环的下游。
 - **AGPL-3.0 和 Enterprise 功能闸门对你是问题。** Grafana 2021 年从 Apache-2.0 改成 AGPL-3.0。[推断] 如果你把改过的 Grafana 作为网络服务的一部分嵌入或对外暴露，AGPL 的 copyleft 可能波及你的改动——放进 SaaS 前先走法务。若干企业功能（细粒度 RBAC、报表、企业版数据源插件、某些配置下的 SSO/SAML）被圈在商业版 Grafana Enterprise / Cloud 里，不在 OSS 构建中。[未验证]
 
 ## 横向对比
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [Telegraf](../dev-utilities/telegraf.zh.md) | ✅ | 缺的是指标采集/路由，而不是看板可视化时，选 Telegraf。 | 是*采集/路由 agent*，不是可视化层——它把指标送进存储，Grafana 把它们读出来。互补而非互替，常一起用。 |
+| [Telegraf](../dev-utilities/ops-infra/telegraf.zh.md) | ✅ | 缺的是指标采集/路由，而不是看板可视化时，选 Telegraf。 | 是*采集/路由 agent*，不是可视化层——它把指标送进存储，Grafana 把它们读出来。互补而非互替，常一起用。 |
 | Kibana | 未收录 | 技术栈明确围绕 Elasticsearch/OpenSearch 时，选 Kibana。 | 与 Elasticsearch/OpenSearch 紧耦合；做日志搜索和 Elastic 栈极强，但作为多后端看板工具，比 Grafana 数据源中立的模型窄。 |
 | Datadog / Grafana Cloud | 未收录 | 想让采集、存储、看板和告警都由托管套件代管时，选托管方案。 | 托管一体化（采集+存储+看板+告警）；零基础设施，但按主机/按指标计费且厂商绑定，对比自托管 Grafana 自己跑后端。 |
 | Apache Superset | 未收录 | 任务是面向数仓和关系库的 BI/SQL 分析时，选 Superset。 | 面向数仓和 SQL 库的 BI/SQL 分析看板；探索式报表和图表更强，运维时序、日志/追踪关联和值班告警更弱。 |

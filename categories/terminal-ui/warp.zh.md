@@ -11,9 +11,9 @@ maturity: active, ~62k stars (as of 2026-07)
 last_verified: 2026-07-01
 type: tool
 upstream:
-  pushed_at: 2026-07-01T06:16:34Z
-  default_branch: main
-  default_branch_sha: 0000000000000000000000000000000000000000
+  pushed_at: 2026-07-06T05:28:06Z
+  default_branch: master
+  default_branch_sha: b7430f40a9ef73a534f97bbc815944ebf17eedf8
   archived: false
 health:
   schema: 1
@@ -122,9 +122,9 @@ health:
 
 ## 健康度与可持续性
 - **维护活跃度**：Grade A——最近 13 周中 10 周有提交；最后提交距今 0 天。
-- **响应速度**：Grade A——中位首次响应时间 0.0 小时，基于 35 个 qualifying issues/PRs。
+- **响应速度**：Grade A——中位首次响应时间 0.0 小时，基于 31 个 qualifying issues/PRs。
 - **采用广度**：Grade E。
-- **长青度**：Grade A——仓库已创建 1820 天。
+- **长青度**：Grade A——仓库已创建 1,821 天。
 - **治理集中度**：无法计算——unknown。
 - **许可风险**：Grade D——AGPL-3.0 许可证。
 ## 存疑（未验证）

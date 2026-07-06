@@ -12,7 +12,7 @@ type: tool
 upstream:
   pushed_at: 2026-03-25T17:52:37Z
   default_branch: main
-  default_branch_sha: 0000000000000000000000000000000000000000
+  default_branch_sha: f7cfe4c22098b154c76b6ec950d1c0a464eecf8d
   archived: false
 health:
   schema: 1

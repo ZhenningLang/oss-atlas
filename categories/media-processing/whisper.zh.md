@@ -10,9 +10,9 @@ maturity: v20231117 (no semver), active, ~82k stars (as of 2026-07)
 last_verified: 2026-07-01
 type: model
 upstream:
-  pushed_at: 2026-07-01T00:00:00Z
+  pushed_at: 2026-04-15T16:32:15Z
   default_branch: main
-  default_branch_sha: 0000000000000000000000000000000000000000
+  default_branch_sha: 04f449b8a437f1bbd3dba5c9f826aca972e7709a
   archived: false
 health:
   schema: 1
@@ -101,7 +101,7 @@ OpenAI 的通用自动语音识别模型，支持 99 种语言的转写与英译
 | Wav2Vec 2.0 / HuBERT | 未收录 | 需要开箱即用的端到端多语言转写+翻译时用 Whisper；需要精细语音分析或基于 Meta 研究工具做领域微调时选 Wav2Vec 2.0。 | Meta 的研究级语音模型；在学术和微调工作流中表现优秀，但不是 turnkey 转写产品。 |
 | DeepSpeech（Mozilla） | 未收录 | 用 Whisper；DeepSpeech 在 Mozilla 退出后已基本废弃。 | Mozilla 早期的英语中心 ASR 项目。不要在新项目上用它。 |
 | pyannote.audio | 未收录 | 需要转写文本时用 Whisper；需要说话人分离时用 pyannote.audio。两者互补，不是替代品。 | 说话人分离工具包（谁在何时说话），不负责转写。通常与 Whisper 配合使用。 |
-| ffsubsync | ✅ | 需要从音频生成字幕时用 Whisper；已有正确文本但时间轴错误时用 ffsubsync。 | [→](../media-processing/ffsubsync.zh.md) |
+| ffsubsync | ✅ | 需要从音频生成字幕时用 Whisper；已有正确文本但时间轴错误时用 ffsubsync。 | [→](ffsubsync.zh.md) |
 
 ## 技术栈
 

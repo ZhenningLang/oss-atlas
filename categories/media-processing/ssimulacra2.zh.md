@@ -75,7 +75,7 @@ health:
 
 ## 何时不用
 
-- **视频质量评估。** SSIMULACRA2 仅限图像。视频请用 [VMAF](../media-processing/vmaf.zh.md) 或逐帧 SSIMULACRA2——但逐帧聚合会丢失时间池化（temporal pooling）的细微差别。[推断]
+- **视频质量评估。** SSIMULACRA2 仅限图像。视频请用 [VMAF](vmaf.zh.md) 或逐帧 SSIMULACRA2——但逐帧聚合会丢失时间池化（temporal pooling）的细微差别。[推断]
 - **你需要对称指标。** SSIMULACRA2(a, b) ≠ SSIMULACRA2(b, a)——顺序很重要，因为平滑伪影与振铃伪影的权重不同。[推断]
 - **你需要行业广泛采用的标准指标。** VMAF 是视频领域的事实标准；SSIMULACRA2 更新、规模更小（约 200 stars），在生产管线中尚未经充分检验。[推断]
 - **你在 CI 管线中需要预编译二进制。** C++ 实现需要编译；其预构建包生态尚不如 libvmaf 成熟。

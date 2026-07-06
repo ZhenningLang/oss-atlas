@@ -10,9 +10,9 @@ maturity: "v0.4.x, very active, ~25k stars (as of 2026-07)"
 last_verified: 2026-07-01
 type: tool
 upstream:
-  pushed_at: 2026-07-01T00:00:00Z
+  pushed_at: 2026-07-06T09:10:17Z
   default_branch: main
-  default_branch_sha: 0000000000000000000000000000000000000000
+  default_branch_sha: 80decc78ec226ec168977406277fec707c96b718
   archived: false
 health:
   schema: 1
@@ -83,10 +83,10 @@ You're a backend engineer building an AI agent platform that needs to serve LLMs
 
 ## When NOT to use
 
-- **You need the widest model coverage and largest community ecosystem.** vLLM has broader model support, more integrations, and a larger contributor base; SGLang's ecosystem is smaller and newer. [推断]
+- **You need the widest model coverage and largest community ecosystem.** vLLM has broader model support, more integrations, and a larger contributor base; SGLang's ecosystem is smaller and newer.
 - **You want a simple, single-binary local inference tool.** SGLang is a datacenter serving engine with CUDA kernels and a multi-process architecture; for a laptop or single Mac, Ollama or llama.cpp are far lighter.
-- **You need production-grade stability from a long-proven codebase.** SGLang was founded ~2024 and is still in v0.4.x; vLLM has ~2.5 years of production hardening and a larger battle-tested footprint. [推断]
-- **You want minimal operational complexity for basic serving.** SGLang's advanced features (RadixAttention, structured generation kernels) add configuration surface; for a straightforward "serve one model on one GPU" use case, vLLM or TGI may be simpler to deploy and tune. [推断]
+- **You need production-grade stability from a long-proven codebase.** SGLang was founded ~2024 and is still in v0.4.x; vLLM has ~2.5 years of production hardening and a larger battle-tested footprint.
+- **You want minimal operational complexity for basic serving.** SGLang's advanced features (RadixAttention, structured generation kernels) add configuration surface; for a straightforward "serve one model on one GPU" use case, vLLM or TGI may be simpler to deploy and tune.
 - **You need non-NVIDIA hardware as a first-class citizen.** SGLang is NVIDIA-centric (CUDA kernels, Triton); AMD and Intel GPU support is newer and less mature. [未验证]
 - **You need general request orchestration / multi-model routing.** SGLang is the inference engine, not the orchestration layer; for multi-model A/B testing, canary deployments, or autoscaling, you still need Kubernetes, Ray Serve, or a proxy in front.
 
@@ -108,14 +108,14 @@ You're a backend engineer building an AI agent platform that needs to serve LLMs
 - **CUDA C++ / Triton** — custom GPU kernels for attention and KV cache management; RadixAttention's prefix-aware block reuse is implemented in optimized CUDA.
 - **PyTorch** — the underlying tensor framework; models are loaded via PyTorch and run through custom SGLang attention kernels.
 - **OpenAI-compatible API** — a FastAPI-based server exposing `/v1/completions`, `/v1/chat/completions`, and `/v1/embeddings` for drop-in compatibility with OpenAI clients.
-- **Structured generation engine** — native kernel-level support for JSON-mode, regex constraints, and tool-call schema enforcement. [未验证]
+- **Structured generation engine** — native kernel-level support for JSON-mode, regex constraints, and tool-call schema enforcement.
 - **Distributed primitives** — tensor parallelism and pipeline parallelism for multi-GPU and multi-node deployments.
 
 ## Dependencies
 
 - **Hardware** — NVIDIA GPUs are the primary target (CUDA 11.8+ / 12.1+); AMD support exists but is newer. Server-class GPUs (A100, H100, A10, L4, etc.) are the typical deployment target. CPU-only inference is not the performance story.
 - **GPU drivers & runtime** — NVIDIA GPU drivers, CUDA toolkit, and cuDNN on the host; the Python package bundles most CUDA kernels but the host must provide the driver/runtime stack.
-- **Runtime environment** — Python 3.9+; installed via `pip` or prebuilt Docker containers. The package is heavy (~GBs of CUDA wheels and PyTorch). [推断]
+- **Runtime environment** — Python 3.9+; installed via `pip` or prebuilt Docker containers. The package is heavy (~GBs of CUDA wheels and PyTorch).
 - **Models** — you bring Hugging Face-compatible models (safetensors or PyTorch checkpoints); SGLang supports thousands of models via automatic Hugging Face `transformers` config detection. [推断]
 - **External services (optional)** — for production serving you typically place a load balancer or reverse proxy (nginx, Envoy, Kubernetes ingress) in front; SGLang itself is a single-process server and does not handle TLS, auth, or multi-node routing natively. [推断]
 
@@ -125,8 +125,8 @@ You're a backend engineer building an AI agent platform that needs to serve LLMs
 
 1. **GPU fleet management** — driver versions, CUDA compatibility, memory tuning, and multi-GPU topology (NVLink, PCIe) are your responsibility. A single SGLang instance typically owns one or more GPUs exclusively; you manage instance density, not the engine.
 2. **Model lifecycle & disk** — model weights are large (tens to hundreds of GB); cold-start download times, disk cache management, and version upgrades across a fleet are significant operational work.
-3. **Throughput vs. latency tuning** — SGLang exposes many knobs (batch size, scheduling policy, RadixAttention cache settings) that interact in non-obvious ways. Getting the best throughput for your specific workload distribution requires benchmarking and iteration; defaults are conservative and often leave GPU headroom on the table. [推断]
-4. **Version velocity** — with very active development and frequent releases, staying current means regular upgrades, and the API surface shifts. If you need a "set it and forget it" inference runtime with a 12-month stable surface, SGLang's velocity is a liability. [推断]
+3. **Throughput vs. latency tuning** — SGLang exposes many knobs (batch size, scheduling policy, RadixAttention cache settings) that interact in non-obvious ways. Getting the best throughput for your specific workload distribution requires benchmarking and iteration; defaults are conservative and often leave GPU headroom on the table.
+4. **Version velocity** — with very active development and frequent releases, staying current means regular upgrades, and the API surface shifts. If you need a "set it and forget it" inference runtime with a 12-month stable surface, SGLang's velocity is a liability.
 5. **No built-in HA or multi-node routing** — you run SGLang as a stateful process per GPU/node. High availability, autoscaling, request routing, and model A/B testing are handled by external infrastructure (Kubernetes, a proxy, or a serving framework like Ray Serve), not by SGLang itself.
 
 ## Health & viability

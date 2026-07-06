@@ -11,8 +11,8 @@ last_verified: 2026-07-01
 type: tool
 upstream:
   pushed_at: 2026-06-22T14:16:02Z
-  default_branch: main
-  default_branch_sha: 0000000000000000000000000000000000000000
+  default_branch: master
+  default_branch_sha: bdb72b32eeb074e3a0b8559d8ccac458237474a3
   archived: false
 health:
   schema: 1
@@ -117,9 +117,9 @@ health:
 
 ## 健康度与可持续性
 - **维护活跃度**：Grade A——最近 13 周中 7 周有提交；最后提交距今 10 天。
-- **响应速度**：Grade A——中位首次响应时间 1.6 小时，基于 54 个 qualifying issues/PRs。
+- **响应速度**：Grade A——中位首次响应时间 1.5 小时，基于 55 个 qualifying issues/PRs。
 - **采用广度**：Grade B——crates.io 上月下载量 520,819（包名：alacritty_terminal）。
-- **长青度**：Grade A——仓库已创建 3787 天。
+- **长青度**：Grade A——仓库已创建 3,788 天。
 - **治理集中度**：Grade C——前三贡献者占比 93.3%（?）。
 - **许可风险**：Grade A——Apache-2.0 许可证。
 ## 存疑（未验证）

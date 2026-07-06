@@ -10,9 +10,9 @@ maturity: v0.x, active, 144k stars (as of 2026-07)
 last_verified: 2026-07-01
 type: app
 upstream:
-  pushed_at: 2026-07-01T08:41:05Z
+  pushed_at: 2026-07-02T17:38:23Z
   default_branch: main
-  default_branch_sha: 0000000000000000000000000000000000000000
+  default_branch_sha: ecd48e2f718220a6400ecf49eafd4867a38feb10
   archived: false
 health:
   schema: 1
@@ -118,7 +118,7 @@ health:
 
 ## 健康度与可持续性
 - **维护活跃度**：Grade A——最近 13 周中 13 周有提交；最后提交距今 1 天。
-- **响应速度**：Grade A——中位首次响应时间 0.0 小时，基于 20 个 qualifying issues/PRs。
+- **响应速度**：Grade A——中位首次响应时间 0.0 小时，基于 25 个 qualifying issues/PRs。
 - **采用广度**：Grade B——pypi.org 上月下载量 1,635,855（包名：open-webui）。
 - **长青度**：Grade B——仓库已创建 1000 天。
 - **治理集中度**：Grade C——前三贡献者占比 83.7%（?）。

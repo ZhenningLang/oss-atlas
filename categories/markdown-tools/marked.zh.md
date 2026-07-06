@@ -95,7 +95,7 @@ health:
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
 | [markdown-it](markdown-it.zh.md) | ✅ | 需要 CommonMark 严格、可插拔架构和丰富插件生态时，选 markdown-it。 | CommonMark 严格、可插拔架构，插件生态丰富；API 更重、比 marked 略慢，但当规范一致和插件重要时它是首选。 |
-| [remark](../markdown-tools/remark.zh.md) | ✅ | 需要完整 mdast AST 管线来解析、变换、lint、序列化 Markdown/MDX 时，选 remark。 | 完整的 mdast AST 管线，能解析、变换、lint、序列化（Markdown、MDX）；强大得多也重得多——是工具链，不是一次调用的渲染器。 |
+| [remark](remark.zh.md) | ✅ | 需要完整 mdast AST 管线来解析、变换、lint、序列化 Markdown/MDX 时，选 remark。 | 完整的 mdast AST 管线，能解析、变换、lint、序列化（Markdown、MDX）；强大得多也重得多——是工具链，不是一次调用的渲染器。 |
 | [micromark](micromark.zh.md) | ✅ | 需要 remark 底层的 CommonMark/GFM 分词器并自建渲染层时，选 micromark。 | remark 底下那个低层 CommonMark/GFM 分词器；正确、面向流式，但渲染层要你自己搭。 |
 | [CommonMark](commonmark.zh.md) | ✅ | 需要规范自己的参考实现作为一致性标尺时，选 CommonMark。 | 规范自己的参考实现；是一致性标尺，但 GFM 便利特性更少，也未针对生产渲染做优化。 |
 
@@ -118,7 +118,7 @@ health:
 
 ## 健康度与可持续性
 
-- **响应速度**：Grade A——中位首次响应时间 7.0 小时，基于 19 个 qualifying issues/PRs。
+- **响应速度**：Grade A——中位首次响应时间 6.6 小时，基于 18 个 qualifying issues/PRs。
 - **维护——活跃（最近一次 push 在 2026-06）。** v18.x 线持续规律发布（v18.0.5，日期 2026-06-04）；对一个范围被刻意做小、已经稳定的成熟解析器而言，这是一个健康、issue 数很低的仓库（约 36k star 下约 16 个 open issue）[未验证]。
 - **治理与 bus factor。** `Org` 所有（`markedjs/`）——是一个维护者团队/组织而非单人，相对单作者库降低了 bus factor 风险 [推断]。长期运行的社区项目，非厂商掌控；没有锁特性的商业层。
 - **年龄与 Lindy 判断——老且仍活跃 ⇒ 强 Lindy。** 创建于 2011 年（约 15 岁），到 2026 年仍在发版：教科书式的「年龄 × 仍活跃」信号。一个 15 岁仍在出版本的解析器，在这一类里几乎是最稳的寿命押注；不过 API 跨大版本有变动，请锁定并跟踪大版本。

@@ -10,9 +10,9 @@ maturity: v0.x, active, 144k stars (as of 2026-07)
 last_verified: 2026-07-01
 type: app
 upstream:
-  pushed_at: 2026-07-01T08:41:05Z
+  pushed_at: 2026-07-02T17:38:23Z
   default_branch: main
-  default_branch_sha: 0000000000000000000000000000000000000000
+  default_branch_sha: ecd48e2f718220a6400ecf49eafd4867a38feb10
   archived: false
 health:
   schema: 1
@@ -118,7 +118,7 @@ You're a privacy-conscious developer or small team who wants a self-hosted chat 
 
 ## Health & viability
 
-- **Responsiveness**: Grade A — median first-response time 1.8 hours across 15 qualifying issues.
+- **Responsiveness**: Grade A — median first-response time 0.0 hours across 25 qualifying issues.
 - **Maintenance**: Very active — pushed daily as of 2026-07, with a responsive issue tracker (242 open issues). [推断]
 - **Governance**: Owned by the open-webui organization; appears to have a dedicated team with reasonable bus factor.
 - **Backing**: No major corporate backing visible; community-driven with active Discord and sponsor program. [未验证]

@@ -10,9 +10,9 @@ maturity: v1.x, stable, 104.8k stars (as of 2026-07)
 last_verified: 2026-07-01
 type: app
 upstream:
-  pushed_at: 2026-07-01T08:56:34Z
+  pushed_at: 2026-07-06T09:03:33Z
   default_branch: main
-  default_branch_sha: 0000000000000000000000000000000000000000
+  default_branch_sha: 103585ceb972abf34d64918f43687df5daadc17a
   archived: false
 health:
   schema: 1
@@ -131,9 +131,9 @@ You're a privacy-conscious user with thousands of photos and videos scattered ac
 
 ## Health & viability
 - **Maintenance**: Grade A — 13/13 active weeks in trailing 13; last commit 1 days ago.
-- **Responsiveness**: Grade A — median first-response time 2.0 hours across 31 qualifying issues/PRs.
+- **Responsiveness**: Grade A — median first-response time 10.4 hours across 9 qualifying issues/PRs.
 - **Adoption**: Grade D — 6,496 monthly downloads via npmjs.org (package: @immich/cli).
-- **Longevity**: Grade A — 1610 days old.
+- **Longevity**: Grade A — 1,611 days old.
 - **Governance**: Grade A — top-3 contributor share 27.3% (?).
 - **Risk / License**: Grade E — AGPL-3.0 license.
 ## Caveats (unverified)

@@ -10,9 +10,9 @@ maturity: v1.x, active, 142k stars (as of 2026-07)
 last_verified: 2026-07-01
 type: service
 upstream:
-  pushed_at: 2026-07-01T07:40:07Z
+  pushed_at: 2026-07-06T07:42:51Z
   default_branch: main
-  default_branch_sha: 0000000000000000000000000000000000000000
+  default_branch_sha: 84d736273d3165cb4da718b6b75a5d966dc7fd5d
   archived: false
 health:
   schema: 1
@@ -122,7 +122,7 @@ health:
 - **维护活跃度**：Grade A——最近 13 周中 13 周有提交；最后提交距今 1 天。
 - **响应速度**：Grade B——中位首次响应时间 147.3 小时，基于 37 个 qualifying issues/PRs。
 - **采用广度**：Grade A——pypi.org 上月下载量 5,804,535（包名：firecrawl-py）。
-- **长青度**：Grade B——仓库已创建 808 天。
+- **长青度**：Grade B——仓库已创建 809 天。
 - **治理集中度**：Grade A——前三贡献者占比 59.1%（?）。
 - **许可风险**：Grade D——AGPL-3.0 许可证。
 ## 存疑（未验证）

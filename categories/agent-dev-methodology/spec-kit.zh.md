@@ -10,9 +10,9 @@ maturity: active, ~116.8k stars (as of 2026-07)
 last_verified: 2026-07-01
 type: skill-pack
 upstream:
-  pushed_at: 2026-07-01T01:09:03Z
+  pushed_at: 2026-07-02T21:53:31Z
   default_branch: main
-  default_branch_sha: 0000000000000000000000000000000000000000
+  default_branch_sha: bba473c223dc298fb76ecf8f87f86d5d2b8ed11c
   archived: false
 health:
   schema: 1

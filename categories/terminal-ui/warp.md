@@ -11,9 +11,9 @@ maturity: active, ~62k stars (as of 2026-07)
 last_verified: 2026-07-01
 type: tool
 upstream:
-  pushed_at: 2026-07-01T06:16:34Z
-  default_branch: main
-  default_branch_sha: 0000000000000000000000000000000000000000
+  pushed_at: 2026-07-06T05:28:06Z
+  default_branch: master
+  default_branch_sha: b7430f40a9ef73a534f97bbc815944ebf17eedf8
   archived: false
 health:
   schema: 1
@@ -122,9 +122,9 @@ You're a developer who spends most of your day in a terminal and wants a modern,
 
 ## Health & viability
 - **Maintenance**: Grade A — 10/13 active weeks in trailing 13; last commit 0 days ago.
-- **Responsiveness**: Grade A — median first-response time 0.0 hours across 35 qualifying issues/PRs.
+- **Responsiveness**: Grade A — median first-response time 0.0 hours across 31 qualifying issues/PRs.
 - **Adoption**: Grade E.
-- **Longevity**: Grade A — 1820 days old.
+- **Longevity**: Grade A — 1,821 days old.
 - **Governance**: Cannot be scored — unknown.
 - **Risk / License**: Grade D — AGPL-3.0 license.
 ## Caveats (unverified)

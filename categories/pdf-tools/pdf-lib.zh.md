@@ -10,9 +10,9 @@ maturity: v1.17.x, maintenance mode (original author stepped back, community mai
 last_verified: 2026-07-01
 type: library
 upstream:
-  pushed_at: 2026-07-01T00:00:00Z
-  default_branch: main
-  default_branch_sha: 0000000000000000000000000000000000000000
+  pushed_at: 2024-07-17T12:18:51Z
+  default_branch: master
+  default_branch_sha: 93dd36e85aa659a3bca09867d2d8fac172501fbe
   archived: false
 health:
   schema: 1

@@ -14,7 +14,7 @@ The full index is backfilled. A `?` axis means the signal is unobtainable or not
 
 ## Open Interpreter — overall A
 
-[![Open Interpreter health radar](assets/health/open-interpreter.svg)](categories/agent-frameworks/open-interpreter.md)
+[![Open Interpreter health radar](assets/health/open-interpreter.svg)](categories/agent-frameworks/coding-agents/open-interpreter.md)
 
 ## Agent Orchestrator — overall B
 

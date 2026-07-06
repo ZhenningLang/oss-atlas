@@ -80,15 +80,15 @@ health:
 
 ## 何时使用
 
-你是一名内容创作者、教育工作者或独立开发者，需要制作短视频——解说视频、社交切片、产品预告、纪录片蒙太奇或动画故事——但你没有视频制作团队，也不会用 After Effects。你手头有一台 AI 编程助手（Claude Code、Cursor、Copilot、Windsurf 或 Codex），并且愿意为 API 调用支付少量费用。OpenMontage 让你用自然语言描述想要的视频——“做一个 60 秒关于神经网络工作原理的动画解说”——Agent 便会自动编排整条生产管线：先用实时网页搜索研究主题，再撰写脚本，生成或检索视觉素材（AI 图像、库存 footage、档案素材），用 TTS 配音，自动寻找免版税音乐，烧录逐词字幕，最后通过 Remotion 或 HyperFrames 渲染成片。你在每一个创意决策点都保持控制权，Agent 在调用付费 API 之前会先给出成本估算并等待你的批准。 [推断]
+你是一名内容创作者、教育工作者或独立开发者，需要制作短视频——解说视频、社交切片、产品预告、纪录片蒙太奇或动画故事——但你没有视频制作团队，也不会用 After Effects。你手头有一台 AI 编程助手（Claude Code、Cursor、Copilot、Windsurf 或 Codex），并且愿意为 API 调用支付少量费用。OpenMontage 让你用自然语言描述想要的视频——“做一个 60 秒关于神经网络工作原理的动画解说”——Agent 便会自动编排整条生产管线：先用实时网页搜索研究主题，再撰写脚本，生成或检索视觉素材（AI 图像、库存 footage、档案素材），用 TTS 配音，自动寻找免版税音乐，烧录逐词字幕，最后通过 Remotion 或 HyperFrames 渲染成片。你在每一个创意决策点都保持控制权，Agent 在调用付费 API 之前会先给出成本估算并等待你的批准。
 
 ## 何时不用
 
-- 你需要专业电影级后期制作和逐帧手动控制——请用 DaVinci Resolve 或 Premiere Pro。OpenMontage 是 Agent 编排的，不是传统 NLE。 [未验证]
-- 你想要一键即用的 Web UI 或 SaaS，不想接触代码或编程助手——OpenMontage 是 repo-first 的系统，运行在你的 AI 编程助手内部。 [未验证]
+- 你需要专业电影级后期制作和逐帧手动控制——请用 DaVinci Resolve 或 Premiere Pro。OpenMontage 是 Agent 编排的，不是传统 NLE。
+- 你想要一键即用的 Web UI 或 SaaS，不想接触代码或编程助手——OpenMontage 是 repo-first 的系统，运行在你的 AI 编程助手内部。
 - AGPL-3.0 强 copyleft 对你来说是 deal-breaker，你需要将其嵌入闭源产品或服务中。
-- 你需要稳定、经过多年验证的工具链——本项目仅约 3 个月大且 pre-1.0，API、管线、技能契约都可能快速变化。 [推断]
-- 你的需求只是简单的图生视频或文生视频，不需要完整的生产管线（脚本、研究、音乐、字幕）——独立视频模型 API 或 ComfyUI 可能更简单、更便宜。 [推断]
+- 你需要稳定、经过多年验证的工具链——本项目仅约 3 个月大且 pre-1.0，API、管线、技能契约都可能快速变化。
+- 你的需求只是简单的图生视频或文生视频，不需要完整的生产管线（脚本、研究、音乐、字幕）——独立视频模型 API 或 ComfyUI 可能更简单、更便宜。
 - Windows 是你的主力开发环境，且你无法容忍 Node.js 工具链偶尔出现的异常（可能需要 `npx --yes npm install` 作为回退）。 [未验证]
 
 ## 横向对比
@@ -99,7 +99,7 @@ health:
 | Remotion | 未收录 | 只需要程序化 React 视频合成、不需要 Agent 编排时，直接选 Remotion。 | OpenMontage 将 Remotion 内嵌为两个渲染后端之一；若只需要程序化 React 视频合成，可直接用 Remotion。 |
 | HeyGen / Runway / Pika | 未收录 | 单个生成片段的速度比管线控制和开源扩展性更重要时，选闭源 SaaS。 | 单片段生成更快，但无管线定制、无 Agent 审批门、无开源扩展性，且需持续订阅费用。 |
 | [FFmpeg](../media-processing/ffmpeg.zh.md) | ✅ | 需要底层媒体处理 CLI，而不是端到端生产管线时，选 FFmpeg。 | OpenMontage 依赖 FFmpeg 做编码与后期；FFmpeg 适合需要底层媒体操作而非端到端生产管线的场景。 |
-| [ComfyUI](../on-device-ml/comfyui.zh.md) | ✅ | 自定义节点式扩散工作流和本地 GPU 推理比 Agent 化生产治理更重要时，选 ComfyUI。 | 在自定义扩散管线与本地 GPU 推理上更灵活，但缺乏 Agent 编排、研究、脚本撰写和预算治理。 [推断] |
+| [ComfyUI](../on-device-ml/comfyui.zh.md) | ✅ | 自定义节点式扩散工作流和本地 GPU 推理比 Agent 化生产治理更重要时，选 ComfyUI。 | 在自定义扩散管线与本地 GPU 推理上更灵活，但缺乏 Agent 编排、研究、脚本撰写和预算治理。 |
 
 ## 技术栈
 
@@ -119,11 +119,11 @@ health:
 - 系统级安装的 FFmpeg（macOS: `brew install ffmpeg`；Linux: `sudo apt install ffmpeg`）。
 - 可选但推荐：Apple Silicon Mac 或 NVIDIA GPU，用于本地视频生成（WAN 2.1、Hunyuan、CogVideo、LTX-Video）。
 - 可选的云供应商 API key：FAL（FLUX + 视频）、Pexels/Pixabay/Unsplash（库存素材）、Suno/ElevenLabs（音乐/语音）、OpenAI/xAI/Google（图像/TTS）。
-- 一个 AI 编程助手（Claude Code、Cursor、Copilot、Windsurf 或 Codex）——Agent 本身就是编排器；没有独立 GUI 或 Web UI。 [推断]
+- 一个 AI 编程助手（Claude Code、Cursor、Copilot、Windsurf 或 Codex）——Agent 本身就是编排器；没有独立 GUI 或 Web UI。
 
 ## 运维难度
 
-**中等。** 安装方式是 `make setup`（或手动 `pip install` + `npm install` + `pip install piper-tts`）。你需要同时维护 Python 与 Node.js 双运行时，以及系统 FFmpeg 二进制。零 API key 路径可以运行基础解说视频和免费库存 footage，但解锁完整能力（AI 生成视频片段、高级 TTS、定制音乐）意味着管理 5–10 个 API key 及其预算。每次生产运行都是一个本地项目文件夹（`projects/<name>/`），内含检查点、决策日志和渲染输出——没有托管服务，因此你需要自行管理磁盘空间和输出文件。内置的质量门与自审会在你见到成品前拦截许多失败，但理解该选哪条管线、该配置哪个供应商，需要先阅读 Agent Guide。 [推断]
+**中等。** 安装方式是 `make setup`（或手动 `pip install` + `npm install` + `pip install piper-tts`）。你需要同时维护 Python 与 Node.js 双运行时，以及系统 FFmpeg 二进制。零 API key 路径可以运行基础解说视频和免费库存 footage，但解锁完整能力（AI 生成视频片段、高级 TTS、定制音乐）意味着管理 5–10 个 API key 及其预算。每次生产运行都是一个本地项目文件夹（`projects/<name>/`），内含检查点、决策日志和渲染输出——没有托管服务，因此你需要自行管理磁盘空间和输出文件。内置的质量门与自审会在你见到成品前拦截许多失败，但理解该选哪条管线、该配置哪个供应商，需要先阅读 Agent Guide。
 
 ## 健康度与可持续性
 

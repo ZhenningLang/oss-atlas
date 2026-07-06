@@ -92,28 +92,28 @@ skill 从 `raw.githubusercontent.com/ZhenningLang/oss-atlas/main/` 拉取页面�
 
 | 项目 | 何时用 | 许可 | 健康度 | 页面 |
 | --- | --- | --- | --- | --- |
-| **DSPy** | 你有评测数据和指标、想让优化器编译提示词而非手工调时。 | MIT | A（6/6） | [中](categories/agent-frameworks/dspy.zh.md) · [EN](categories/agent-frameworks/dspy.md) |
-| **AgentScope** | 要把多智能体 LLM 应用作为生产服务交付，需要沙箱工具、权限闸门、tracing 和人工介入时。 | Apache-2.0 | B（6/6） | [中](categories/agent-frameworks/agentscope.zh.md) · [EN](categories/agent-frameworks/agentscope.md) |
-| **OpenFang** | 想用单个自托管 Rust 二进制、让自治智能体按计划 7×24 无人值守干活时。 | Apache-2.0 OR MIT | B（5/6） | [中](categories/agent-frameworks/openfang.zh.md) · [EN](categories/agent-frameworks/openfang.md) |
-| **Symphony** | 你的 Linear 待办和 Codex agent 需要一个自托管编排器、按 issue 跑隔离自治实现运行时。 | Apache-2.0 | B（5/6） | [中](categories/agent-frameworks/symphony.zh.md) · [EN](categories/agent-frameworks/symphony.md) |
-| **Claude Octopus** | 你以 Claude Code 为主力、想让其他 AI 模型在交付前交叉评审任务、揭出盲点时。 | MIT | C（6/6） | [中](categories/agent-frameworks/claude-octopus.zh.md) · [EN](categories/agent-frameworks/claude-octopus.md) |
-| **oh-my-claudecode** | 你常驻 Claude Code、需要多阶段 agent 团队加模型路由和 tmux 并行编排时。 | MIT | B（5/6） | [中](categories/agent-frameworks/oh-my-claudecode.zh.md) · [EN](categories/agent-frameworks/oh-my-claudecode.md) |
-| **smolagents** | 当你想要 Hugging Face 出的极简、透明、写代码行动的 agent 循环时用它——不是重型生产 agent 操作系统。 | Apache-2.0 | B（6/6） | [中](categories/agent-frameworks/smolagents.zh.md) · [EN](categories/agent-frameworks/smolagents.md) |
-| **Kilo Code** | 当你想要一个开源、BYOK、在 VS Code 内的编码 agent（带规划与模式）时用它——是终端用户工具，不是构建 agent 的库。 | MIT | B（6/6） | [中](categories/agent-frameworks/kilocode.zh.md) · [EN](categories/agent-frameworks/kilocode.md) |
-| **Parlant** | 当你要构建一个必须靠行为准则严格守规的对客 agent 时用它——简单或自由式 agent 用它过重。 | Apache-2.0 | B（6/6） | [中](categories/agent-frameworks/parlant.zh.md) · [EN](categories/agent-frameworks/parlant.md) |
-| **SkillOpt** | 当你要针对可打分基准、为冻结的 LLM 优化 Agent 的自然语言技能文档时用它——但没有可靠评测来把关每次编辑，方法就毫无信号，且它还是全新的 v0.1.0。 | MIT | B（6/6） | [中](categories/agent-frameworks/skillopt.zh.md) · [EN](categories/agent-frameworks/skillopt.md) |
-| **Open Interpreter** | 当你想要一个 Codex-fork 的终端编码 agent、带为低成本／开源模型（DeepSeek、Kimi、Qwen）调过的可切换 harness 时用它——不是老的 Python REPL（那个已迁到社区 fork），而且它是几周大的 0.0.x 重写、会执行代码。 | Apache-2.0 | A（6/6） | [中](categories/agent-frameworks/open-interpreter.zh.md) · [EN](categories/agent-frameworks/open-interpreter.md) |
-| **Codex** | 当你想要一个轻量级、由 OpenAI 支持的终端编码智能体，能编辑文件、运行测试并提交变更时用它——但需要 OpenAI API 访问权限和网络连接。 | Apache-2.0 | ?（0/6） | [中](categories/agent-frameworks/codex.zh.md) · [EN](categories/agent-frameworks/codex.md) |
-| **OpenClaw** | 在自有设备上跨 20 余条消息渠道运行的个人 AI 助手——但极其年轻，毫无 Lindy 记录。 | MIT | ?（0/6） | [中](categories/agent-frameworks/openclaw.zh.md) · [EN](categories/agent-frameworks/openclaw.md) |
-| **CC Switch** | 跨平台桌面管理器，统一管理多个 AI 编码智能体（Claude Code、Codex、Gemini CLI 等），支持提供商路由和 MCP——但不足一岁，单人维护，bus factor 为 1。 | MIT | ?（0/6） | [中](categories/agent-frameworks/cc-switch.zh.md) · [EN](categories/agent-frameworks/cc-switch.md) |
-| **Hermes Agent** | Nous Research 构建的带学习循环的自我改进 AI 智能体——但不足一岁，学习循环稳定性未经检验。 | MIT | ?（0/6） | [中](categories/agent-frameworks/hermes-agent.zh.md) · [EN](categories/agent-frameworks/hermes-agent.md) |
-| **AutoGPT** | 用于创建、部署和管理持续运行 AI 智能体以自动化复杂工作流的平台——但未声明许可，且自托管需要大量资源。 | NOASSERTION | ?（0/6） | [中](categories/agent-frameworks/autogpt.zh.md) · [EN](categories/agent-frameworks/autogpt.md) |
-| **Dify** | 生产就绪的、用于构建 agentic 工作流的低代码可视化平台，内置 RAG 与 MCP 支持——但商用前请核实许可。 | NOASSERTION | ?（0/6） | [中](categories/agent-frameworks/dify.zh.md) · [EN](categories/agent-frameworks/dify.md) |
-| **LangChain** | 代码优先的 LLM agent、工具与记忆组合框架，集成生态庞大——但简单单 prompt 应用别用它。 | MIT | ?（0/6） | [中](categories/agent-frameworks/langchain.zh.md) · [EN](categories/agent-frameworks/langchain.md) |
-| **OpenCode** | 开源终端 AI 编码智能体，可编辑文件、执行命令——但极其年轻（2025-04 创建），无 Lindy 记录。 | MIT | ?（0/6） | [中](categories/agent-frameworks/opencode.zh.md) · [EN](categories/agent-frameworks/opencode.md) |
-| **Langflow** | 可视化拖拽平台，用于构建和部署 LLM 工作流与智能体，内置 API 和 MCP 服务器——但可视化流比代码更难做 diff/审查。 | MIT | ?（0/6） | [中](categories/agent-frameworks/langflow.zh.md) · [EN](categories/agent-frameworks/langflow.md) |
-| **Gemini CLI** | 基于 Google Gemini 模型的开源终端 AI 智能体，带免费层、内置工具和 MCP 支持——但仅限 Google 模型，且非常年轻。 | Apache-2.0 | ?（0/6） | [中](categories/agent-frameworks/gemini-cli.zh.md) · [EN](categories/agent-frameworks/gemini-cli.md) |
-| **RTK** | 在 shell 输出到达 AI 智能体前进行压缩的 CLI 代理，可减少 60–90% 的 token 成本——但极其年轻（6 个月），star 数高得可疑。 | Apache-2.0 | ?（0/6） | [中](categories/agent-frameworks/rtk.zh.md) · [EN](categories/agent-frameworks/rtk.md) |
+| **DSPy** | 你有评测数据和指标、想让优化器编译提示词而非手工调时。 | MIT | A（6/6） | [中](categories/agent-frameworks/workflow-builders/dspy.zh.md) · [EN](categories/agent-frameworks/workflow-builders/dspy.md) |
+| **AgentScope** | 要把多智能体 LLM 应用作为生产服务交付，需要沙箱工具、权限闸门、tracing 和人工介入时。 | Apache-2.0 | B（6/6） | [中](categories/agent-frameworks/agent-runtimes/agentscope.zh.md) · [EN](categories/agent-frameworks/agent-runtimes/agentscope.md) |
+| **OpenFang** | 想用单个自托管 Rust 二进制、让自治智能体按计划 7×24 无人值守干活时。 | Apache-2.0 OR MIT | B（5/6） | [中](categories/agent-frameworks/agent-runtimes/openfang.zh.md) · [EN](categories/agent-frameworks/agent-runtimes/openfang.md) |
+| **Symphony** | 你的 Linear 待办和 Codex agent 需要一个自托管编排器、按 issue 跑隔离自治实现运行时。 | Apache-2.0 | B（5/6） | [中](categories/agent-frameworks/agent-runtimes/symphony.zh.md) · [EN](categories/agent-frameworks/agent-runtimes/symphony.md) |
+| **Claude Octopus** | 你以 Claude Code 为主力、想让其他 AI 模型在交付前交叉评审任务、揭出盲点时。 | MIT | C（6/6） | [中](categories/agent-frameworks/coding-agents/claude-octopus.zh.md) · [EN](categories/agent-frameworks/coding-agents/claude-octopus.md) |
+| **oh-my-claudecode** | 你常驻 Claude Code、需要多阶段 agent 团队加模型路由和 tmux 并行编排时。 | MIT | B（5/6） | [中](categories/agent-frameworks/coding-agents/oh-my-claudecode.zh.md) · [EN](categories/agent-frameworks/coding-agents/oh-my-claudecode.md) |
+| **smolagents** | 当你想要 Hugging Face 出的极简、透明、写代码行动的 agent 循环时用它——不是重型生产 agent 操作系统。 | Apache-2.0 | B（6/6） | [中](categories/agent-frameworks/agent-runtimes/smolagents.zh.md) · [EN](categories/agent-frameworks/agent-runtimes/smolagents.md) |
+| **Kilo Code** | 当你想要一个开源、BYOK、在 VS Code 内的编码 agent（带规划与模式）时用它——是终端用户工具，不是构建 agent 的库。 | MIT | B（6/6） | [中](categories/agent-frameworks/coding-agents/kilocode.zh.md) · [EN](categories/agent-frameworks/coding-agents/kilocode.md) |
+| **Parlant** | 当你要构建一个必须靠行为准则严格守规的对客 agent 时用它——简单或自由式 agent 用它过重。 | Apache-2.0 | B（6/6） | [中](categories/agent-frameworks/agent-runtimes/parlant.zh.md) · [EN](categories/agent-frameworks/agent-runtimes/parlant.md) |
+| **SkillOpt** | 当你要针对可打分基准、为冻结的 LLM 优化 Agent 的自然语言技能文档时用它——但没有可靠评测来把关每次编辑，方法就毫无信号，且它还是全新的 v0.1.0。 | MIT | B（6/6） | [中](categories/agent-frameworks/workflow-builders/skillopt.zh.md) · [EN](categories/agent-frameworks/workflow-builders/skillopt.md) |
+| **Open Interpreter** | 当你想要一个 Codex-fork 的终端编码 agent、带为低成本／开源模型（DeepSeek、Kimi、Qwen）调过的可切换 harness 时用它——不是老的 Python REPL（那个已迁到社区 fork），而且它是几周大的 0.0.x 重写、会执行代码。 | Apache-2.0 | A（6/6） | [中](categories/agent-frameworks/coding-agents/open-interpreter.zh.md) · [EN](categories/agent-frameworks/coding-agents/open-interpreter.md) |
+| **Codex** | 当你想要一个轻量级、由 OpenAI 支持的终端编码智能体，能编辑文件、运行测试并提交变更时用它——但需要 OpenAI API 访问权限和网络连接。 | Apache-2.0 | ?（0/6） | [中](categories/agent-frameworks/coding-agents/codex.zh.md) · [EN](categories/agent-frameworks/coding-agents/codex.md) |
+| **OpenClaw** | 在自有设备上跨 20 余条消息渠道运行的个人 AI 助手——但极其年轻，毫无 Lindy 记录。 | MIT | ?（0/6） | [中](categories/agent-frameworks/agent-runtimes/openclaw.zh.md) · [EN](categories/agent-frameworks/agent-runtimes/openclaw.md) |
+| **CC Switch** | 跨平台桌面管理器，统一管理多个 AI 编码智能体（Claude Code、Codex、Gemini CLI 等），支持提供商路由和 MCP——但不足一岁，单人维护，bus factor 为 1。 | MIT | ?（0/6） | [中](categories/agent-frameworks/coding-agents/cc-switch.zh.md) · [EN](categories/agent-frameworks/coding-agents/cc-switch.md) |
+| **Hermes Agent** | Nous Research 构建的带学习循环的自我改进 AI 智能体——但不足一岁，学习循环稳定性未经检验。 | MIT | ?（0/6） | [中](categories/agent-frameworks/agent-runtimes/hermes-agent.zh.md) · [EN](categories/agent-frameworks/agent-runtimes/hermes-agent.md) |
+| **AutoGPT** | 用于创建、部署和管理持续运行 AI 智能体以自动化复杂工作流的平台——但未声明许可，且自托管需要大量资源。 | NOASSERTION | ?（0/6） | [中](categories/agent-frameworks/workflow-builders/autogpt.zh.md) · [EN](categories/agent-frameworks/workflow-builders/autogpt.md) |
+| **Dify** | 生产就绪的、用于构建 agentic 工作流的低代码可视化平台，内置 RAG 与 MCP 支持——但商用前请核实许可。 | NOASSERTION | ?（0/6） | [中](categories/agent-frameworks/workflow-builders/dify.zh.md) · [EN](categories/agent-frameworks/workflow-builders/dify.md) |
+| **LangChain** | 代码优先的 LLM agent、工具与记忆组合框架，集成生态庞大——但简单单 prompt 应用别用它。 | MIT | ?（0/6） | [中](categories/agent-frameworks/workflow-builders/langchain.zh.md) · [EN](categories/agent-frameworks/workflow-builders/langchain.md) |
+| **OpenCode** | 开源终端 AI 编码智能体，可编辑文件、执行命令——但极其年轻（2025-04 创建），无 Lindy 记录。 | MIT | ?（0/6） | [中](categories/agent-frameworks/coding-agents/opencode.zh.md) · [EN](categories/agent-frameworks/coding-agents/opencode.md) |
+| **Langflow** | 可视化拖拽平台，用于构建和部署 LLM 工作流与智能体，内置 API 和 MCP 服务器——但可视化流比代码更难做 diff/审查。 | MIT | ?（0/6） | [中](categories/agent-frameworks/workflow-builders/langflow.zh.md) · [EN](categories/agent-frameworks/workflow-builders/langflow.md) |
+| **Gemini CLI** | 基于 Google Gemini 模型的开源终端 AI 智能体，带免费层、内置工具和 MCP 支持——但仅限 Google 模型，且非常年轻。 | Apache-2.0 | ?（0/6） | [中](categories/agent-frameworks/coding-agents/gemini-cli.zh.md) · [EN](categories/agent-frameworks/coding-agents/gemini-cli.md) |
+| **RTK** | 在 shell 输出到达 AI 智能体前进行压缩的 CLI 代理，可减少 60–90% 的 token 成本——但极其年轻（6 个月），star 数高得可疑。 | Apache-2.0 | ?（0/6） | [中](categories/agent-frameworks/coding-agents/rtk.zh.md) · [EN](categories/agent-frameworks/coding-agents/rtk.md) |
 
 ### agent-memory
 
@@ -186,27 +186,27 @@ skill 从 `raw.githubusercontent.com/ZhenningLang/oss-atlas/main/` 拉取页面�
 
 | 项目 | 何时用 | 许可 | 健康度 | 页面 |
 | --- | --- | --- | --- | --- |
-| **DevToys** | 想把 Base64/JSON/哈希/diff 等开发小工具离线本地化、收进一个跨平台桌面应用、不再用不可信在线网站时，用它。 | MIT | B（4/6） | [中](categories/dev-utilities/devtoys.zh.md) · [EN](categories/dev-utilities/devtoys.md) |
-| **CyberChef** | 当你需要在浏览器里离线串联编解码、加解密、压缩和数据分析变换、且数据不能外发时用它。 | Apache-2.0 | B（6/6） | [中](categories/dev-utilities/cyberchef.zh.md) · [EN](categories/dev-utilities/cyberchef.md) |
-| **Cockpit** | 当你需要为少数几台 Linux 服务器用浏览器做 systemd 原生的图形化管理时用它。 | LGPL-2.1-or-later | D（5/6） | [中](categories/dev-utilities/cockpit.zh.md) · [EN](categories/dev-utilities/cockpit.md) |
-| **Telegraf** | 当你需要一个插件驱动的 agent 把异构指标/日志统一采集并路由到多种后端时用它。 | MIT | A（5/6） | [中](categories/dev-utilities/telegraf.zh.md) · [EN](categories/dev-utilities/telegraf.md) |
-| **OpenZL** | 当你要把 TB 级的某种高度结构化/数值格式压得比通用 zstd 更狠时使用。 | BSD-3-Clause | B（4/6） | [中](categories/dev-utilities/openzl.zh.md) · [EN](categories/dev-utilities/openzl.md) |
-| **Certbot** | 当系统管理员要自动签发并续期免费 Let's Encrypt TLS 证书时用它——不过反向代理自带的自动 TLS 常让它显得多余。 | Apache-2.0 | A（5/6） | [中](categories/dev-utilities/certbot.zh.md) · [EN](categories/dev-utilities/certbot.md) |
-| **tqdm** | 当你想给 Python 循环/CLI/notebook 加一个快速、低开销的进度条时用它。 | MPL-2.0 AND MIT | B（5/6） | [中](categories/dev-utilities/tqdm.zh.md) · [EN](categories/dev-utilities/tqdm.md) |
-| **SlimToolkit** | 当你想在不重写 Dockerfile 的情况下自动瘦身并加固臃肿的容器镜像时用它——注意它可能删掉运行时动态加载的文件。 | Apache-2.0 | B（5/6） | [中](categories/dev-utilities/slim.zh.md) · [EN](categories/dev-utilities/slim.md) |
-| **Faker (faker-js)** | 当你需要在 JS/TS 里生成逼真的假/mock 数据（姓名、地址、金融…）用于测试和填充时用它。 | MIT | A（5/6） | [中](categories/dev-utilities/faker-js.zh.md) · [EN](categories/dev-utilities/faker-js.md) |
-| **fontTools** | 当你需要对字体做程序化处理——子集化网页字体、转格式、查改表——时用它——但它只编辑字体文件，不绘制字形也不做文字排版。 | MIT | A（6/6） | [中](categories/dev-utilities/fonttools.zh.md) · [EN](categories/dev-utilities/fonttools.md) |
-| **Flashlight** | 当你在维护一台 10.10–10.15 的老 macOS、想给 Spotlight 加插件时用它——但它自 2020 年起已弃，且需关闭 SIP，日常机器上别碰。 | MIT AND GPL-2.0-only (component split) | E（3/6） | [中](categories/dev-utilities/flashlight.zh.md) · [EN](categories/dev-utilities/flashlight.md) |
-| **IdeaVim** | 当你离不开 JetBrains IDE、又想要 Vim 的动作、模式和 `.ideavimrc` 时用它——但它只是 Vim 子集的模拟，重度用户会撞上还原度的缺口。 | MIT | B（5/6） | [中](categories/dev-utilities/ideavim.zh.md) · [EN](categories/dev-utilities/ideavim.md) |
-| **VS Code** | 快速、跨平台、具备智能补全、调试功能和最大扩展市场的代码编辑器——但它是 Electron 应用，且分发版包含微软遥测。 | MIT | ?（0/6） | [中](categories/dev-utilities/vscode.zh.md) · [EN](categories/dev-utilities/vscode.md) |
-| **Clash Verge Rev** | 现代化跨平台 GUI 代理客户端，支持基于规则的路由、内置 mihomo 内核和 TUN 模式——但仅限桌面端且为 GPL-3.0 许可。 | GPL-3.0 | ?（0/6） | [中](categories/dev-utilities/clash-verge-rev.zh.md) · [EN](categories/dev-utilities/clash-verge-rev.md) |
-| **RustDesk** | 开源跨平台自托管远程桌面，用于访问自己的机器——但需要自己管理中继服务器或接受 P2P 局限。 | AGPL-3.0 | ?（0/6） | [中](categories/dev-utilities/rustdesk.zh.md) · [EN](categories/dev-utilities/rustdesk.md) |
-| **Tauri** | 用 Rust 和操作系统原生 Webview 构建小巧、快速、安全的跨平台桌面与移动应用，替代 Electron。 | Apache-2.0 | ?（0/6） | [中](categories/dev-utilities/tauri.zh.md) · [EN](categories/dev-utilities/tauri.md) |
-| **Deno** | 具备安全默认设置、内置工具链和原生 TypeScript 支持的现代 JavaScript/TypeScript 运行时——无需 node_modules，但生态比 Node.js 小。 | MIT | ?（0/6） | [中](categories/dev-utilities/deno.zh.md) · [EN](categories/dev-utilities/deno.md) |
-| **Vaultwarden** | 非官方 Bitwarden 兼容服务器，用 Rust 编写，用于自托管密码管理——非官方、AGPL-3.0、单人核心维护者。 | AGPL-3.0 | ?（0/6） | [中](categories/dev-utilities/vaultwarden.zh.md) · [EN](categories/dev-utilities/vaultwarden.md) |
-| **Zed** | 由 Atom 创作者打造的高性能原生代码编辑器，支持实时多人协作——但扩展生态远小于 VS Code，仅约 4 年历史。 | NOASSERTION | ?（0/6） | [中](categories/dev-utilities/zed.zh.md) · [EN](categories/dev-utilities/zed.md) |
-| **ripgrep** | 快速、感知 gitignore 的面向行搜索工具，跨平台支持一流；10 年历史，Lindy 信号强劲，单人维护但可靠性高。 | Unlicense | ?（0/6） | [中](categories/dev-utilities/ripgrep.zh.md) · [EN](categories/dev-utilities/ripgrep.md) |
-| **Bun** | 一款极速一体化 JavaScript/TypeScript 工具集（运行时、打包器、测试运行器、包管理器）集成在单个二进制文件中——但商用前请核实自定义许可证。 | NOASSERTION | ?（0/6） | [中](categories/dev-utilities/bun.zh.md) · [EN](categories/dev-utilities/bun.md) |
+| **DevToys** | 想把 Base64/JSON/哈希/diff 等开发小工具离线本地化、收进一个跨平台桌面应用、不再用不可信在线网站时，用它。 | MIT | B（4/6） | [中](categories/dev-utilities/data-tools/devtoys.zh.md) · [EN](categories/dev-utilities/data-tools/devtoys.md) |
+| **CyberChef** | 当你需要在浏览器里离线串联编解码、加解密、压缩和数据分析变换、且数据不能外发时用它。 | Apache-2.0 | B（6/6） | [中](categories/dev-utilities/data-tools/cyberchef.zh.md) · [EN](categories/dev-utilities/data-tools/cyberchef.md) |
+| **Cockpit** | 当你需要为少数几台 Linux 服务器用浏览器做 systemd 原生的图形化管理时用它。 | LGPL-2.1-or-later | D（5/6） | [中](categories/dev-utilities/ops-infra/cockpit.zh.md) · [EN](categories/dev-utilities/ops-infra/cockpit.md) |
+| **Telegraf** | 当你需要一个插件驱动的 agent 把异构指标/日志统一采集并路由到多种后端时用它。 | MIT | A（5/6） | [中](categories/dev-utilities/ops-infra/telegraf.zh.md) · [EN](categories/dev-utilities/ops-infra/telegraf.md) |
+| **OpenZL** | 当你要把 TB 级的某种高度结构化/数值格式压得比通用 zstd 更狠时使用。 | BSD-3-Clause | B（4/6） | [中](categories/dev-utilities/data-tools/openzl.zh.md) · [EN](categories/dev-utilities/data-tools/openzl.md) |
+| **Certbot** | 当系统管理员要自动签发并续期免费 Let's Encrypt TLS 证书时用它——不过反向代理自带的自动 TLS 常让它显得多余。 | Apache-2.0 | A（5/6） | [中](categories/dev-utilities/ops-infra/certbot.zh.md) · [EN](categories/dev-utilities/ops-infra/certbot.md) |
+| **tqdm** | 当你想给 Python 循环/CLI/notebook 加一个快速、低开销的进度条时用它。 | MPL-2.0 AND MIT | B（5/6） | [中](categories/dev-utilities/data-tools/tqdm.zh.md) · [EN](categories/dev-utilities/data-tools/tqdm.md) |
+| **SlimToolkit** | 当你想在不重写 Dockerfile 的情况下自动瘦身并加固臃肿的容器镜像时用它——注意它可能删掉运行时动态加载的文件。 | Apache-2.0 | B（5/6） | [中](categories/dev-utilities/ops-infra/slim.zh.md) · [EN](categories/dev-utilities/ops-infra/slim.md) |
+| **Faker (faker-js)** | 当你需要在 JS/TS 里生成逼真的假/mock 数据（姓名、地址、金融…）用于测试和填充时用它。 | MIT | A（5/6） | [中](categories/dev-utilities/data-tools/faker-js.zh.md) · [EN](categories/dev-utilities/data-tools/faker-js.md) |
+| **fontTools** | 当你需要对字体做程序化处理——子集化网页字体、转格式、查改表——时用它——但它只编辑字体文件，不绘制字形也不做文字排版。 | MIT | A（6/6） | [中](categories/dev-utilities/data-tools/fonttools.zh.md) · [EN](categories/dev-utilities/data-tools/fonttools.md) |
+| **Flashlight** | 当你在维护一台 10.10–10.15 的老 macOS、想给 Spotlight 加插件时用它——但它自 2020 年起已弃，且需关闭 SIP，日常机器上别碰。 | MIT AND GPL-2.0-only (component split) | E（3/6） | [中](categories/dev-utilities/data-tools/flashlight.zh.md) · [EN](categories/dev-utilities/data-tools/flashlight.md) |
+| **IdeaVim** | 当你离不开 JetBrains IDE、又想要 Vim 的动作、模式和 `.ideavimrc` 时用它——但它只是 Vim 子集的模拟，重度用户会撞上还原度的缺口。 | MIT | B（5/6） | [中](categories/dev-utilities/editors-and-runtimes/ideavim.zh.md) · [EN](categories/dev-utilities/editors-and-runtimes/ideavim.md) |
+| **VS Code** | 快速、跨平台、具备智能补全、调试功能和最大扩展市场的代码编辑器——但它是 Electron 应用，且分发版包含微软遥测。 | MIT | ?（0/6） | [中](categories/dev-utilities/editors-and-runtimes/vscode.zh.md) · [EN](categories/dev-utilities/editors-and-runtimes/vscode.md) |
+| **Clash Verge Rev** | 现代化跨平台 GUI 代理客户端，支持基于规则的路由、内置 mihomo 内核和 TUN 模式——但仅限桌面端且为 GPL-3.0 许可。 | GPL-3.0 | ?（0/6） | [中](categories/dev-utilities/ops-infra/clash-verge-rev.zh.md) · [EN](categories/dev-utilities/ops-infra/clash-verge-rev.md) |
+| **RustDesk** | 开源跨平台自托管远程桌面，用于访问自己的机器——但需要自己管理中继服务器或接受 P2P 局限。 | AGPL-3.0 | ?（0/6） | [中](categories/dev-utilities/ops-infra/rustdesk.zh.md) · [EN](categories/dev-utilities/ops-infra/rustdesk.md) |
+| **Tauri** | 用 Rust 和操作系统原生 Webview 构建小巧、快速、安全的跨平台桌面与移动应用，替代 Electron。 | Apache-2.0 | ?（0/6） | [中](categories/dev-utilities/editors-and-runtimes/tauri.zh.md) · [EN](categories/dev-utilities/editors-and-runtimes/tauri.md) |
+| **Deno** | 具备安全默认设置、内置工具链和原生 TypeScript 支持的现代 JavaScript/TypeScript 运行时——无需 node_modules，但生态比 Node.js 小。 | MIT | ?（0/6） | [中](categories/dev-utilities/editors-and-runtimes/deno.zh.md) · [EN](categories/dev-utilities/editors-and-runtimes/deno.md) |
+| **Vaultwarden** | 非官方 Bitwarden 兼容服务器，用 Rust 编写，用于自托管密码管理——非官方、AGPL-3.0、单人核心维护者。 | AGPL-3.0 | ?（0/6） | [中](categories/dev-utilities/ops-infra/vaultwarden.zh.md) · [EN](categories/dev-utilities/ops-infra/vaultwarden.md) |
+| **Zed** | 由 Atom 创作者打造的高性能原生代码编辑器，支持实时多人协作——但扩展生态远小于 VS Code，仅约 4 年历史。 | NOASSERTION | ?（0/6） | [中](categories/dev-utilities/editors-and-runtimes/zed.zh.md) · [EN](categories/dev-utilities/editors-and-runtimes/zed.md) |
+| **ripgrep** | 快速、感知 gitignore 的面向行搜索工具，跨平台支持一流；10 年历史，Lindy 信号强劲，单人维护但可靠性高。 | Unlicense | ?（0/6） | [中](categories/dev-utilities/data-tools/ripgrep.zh.md) · [EN](categories/dev-utilities/data-tools/ripgrep.md) |
+| **Bun** | 一款极速一体化 JavaScript/TypeScript 工具集（运行时、打包器、测试运行器、包管理器）集成在单个二进制文件中——但商用前请核实自定义许可证。 | NOASSERTION | ?（0/6） | [中](categories/dev-utilities/editors-and-runtimes/bun.zh.md) · [EN](categories/dev-utilities/editors-and-runtimes/bun.md) |
 ### frontend-animation
 
 | 项目 | 何时用 | 许可 | 健康度 | 页面 |

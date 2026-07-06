@@ -92,7 +92,7 @@ Agent Lightning 正是为此而生。它把 agent 执行建模为马尔可夫决
 | [ART](art.zh.md) | ✅ | 同样需要面向 agent 的 RL，但更偏好有主张的单循环体验时，选 ART。 | Agent Lightning 强调框架无关的解耦和可插拔后端；ART 更偏易用体验。 |
 | verl | 未收录 | 需要 Agent Lightning 所依赖的底层分布式 RL 引擎时，选 verl。 | 它很强，但要你把训练表达成它的生成循环，而不是包住一个原生 agent。 |
 | HF TRL | 未收录 | 需要成熟的 PPO/GRPO/DPO 库做数据集或循环中心训练时，选 HF TRL。 | 开箱没有 agent 执行解耦或多步信用分配。 |
-| OpenAI Agents SDK / [LangChain](../agent-frameworks/langchain.zh.md)（单用） | 部分已收录 | 只需要构建和运行 agent，而不是从 rollout 训练底层模型时，选单独的 agent 框架。 | Agent Lightning 叠在 agent 执行之上，让 rollout 可训练；普通框架止步于编排。OpenAI Agents SDK 未单独收录。 |
+| OpenAI Agents SDK / [LangChain](../agent-frameworks/workflow-builders/langchain.zh.md)（单用） | 部分已收录 | 只需要构建和运行 agent，而不是从 rollout 训练底层模型时，选单独的 agent 框架。 | Agent Lightning 叠在 agent 执行之上，让 rollout 可训练；普通框架止步于编排。OpenAI Agents SDK 未单独收录。 |
 
 ## 技术栈
 

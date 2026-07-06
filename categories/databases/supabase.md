@@ -91,7 +91,7 @@ You're building a web or mobile application and need a backend that handles auth
 | Firebase | 未收录 | Google's managed backend-as-a-service (BaaS). | Firebase is fully managed and has a broader mobile SDK ecosystem, but it locks you into proprietary NoSQL (Firestore) and Google's platform. Supabase gives you open-source Postgres and avoids vendor lock-in. |
 | Appwrite | 未收录 | Open-source Firebase alternative with broader language support. | Appwrite is also open-source and supports more client languages out of the box; Supabase has deeper Postgres integration and a more mature ecosystem. |
 | Hasura | 未收录 | Auto-generated GraphQL API over Postgres. | Hasura is excellent for GraphQL-only APIs but lacks the built-in auth, storage, and edge functions that Supabase bundles. |
-| [Deno](../dev-utilities/deno.md) | ✅ | Supabase uses Deno for edge functions. | Not a direct competitor — Deno is the runtime for Supabase edge functions, showing Supabase's production reliance on Deno. |
+| [Deno](../dev-utilities/editors-and-runtimes/deno.md) | ✅ | Supabase uses Deno for edge functions. | Not a direct competitor — Deno is the runtime for Supabase edge functions, showing Supabase's production reliance on Deno. |
 | Self-hosted Postgres + PostgREST + Keycloak | 未收录 | DIY stack matching Supabase's components. | More flexible and fully self-managed, but requires significantly more setup and ongoing maintenance than Supabase's integrated platform. |
 
 ## Tech stack
@@ -119,9 +119,9 @@ You're building a web or mobile application and need a backend that handles auth
 
 ## Health & viability
 - **Maintenance**: Grade A — 13/13 active weeks in trailing 13; last commit 0 days ago.
-- **Responsiveness**: Grade A — median first-response time 2.5 hours across 24 qualifying issues/PRs.
+- **Responsiveness**: Grade A — median first-response time 0.8 hours across 23 qualifying issues/PRs.
 - **Adoption**: Cannot be scored — unknown.
-- **Longevity**: Grade A — 2455 days old.
+- **Longevity**: Grade A — 2,456 days old.
 - **Governance**: Grade A — top-3 contributor share 26.8% (?).
 - **Risk / License**: Grade A — Apache-2.0 license.
 ## Caveats (unverified)

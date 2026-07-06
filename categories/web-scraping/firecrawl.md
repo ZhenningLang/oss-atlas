@@ -10,9 +10,9 @@ maturity: v1.x, active, 142k stars (as of 2026-07)
 last_verified: 2026-07-01
 type: service
 upstream:
-  pushed_at: 2026-07-01T07:40:07Z
+  pushed_at: 2026-07-06T07:42:51Z
   default_branch: main
-  default_branch_sha: 0000000000000000000000000000000000000000
+  default_branch_sha: 84d736273d3165cb4da718b6b75a5d966dc7fd5d
   archived: false
 health:
   schema: 1
@@ -122,7 +122,7 @@ You're building an AI agent or data pipeline that needs to ingest web content at
 - **Maintenance**: Grade A — 13/13 active weeks in trailing 13; last commit 1 days ago.
 - **Responsiveness**: Grade B — median first-response time 147.3 hours across 37 qualifying issues/PRs.
 - **Adoption**: Grade A — 5,804,535 monthly downloads via pypi.org (package: firecrawl-py).
-- **Longevity**: Grade B — 808 days old.
+- **Longevity**: Grade B — 809 days old.
 - **Governance**: Grade A — top-3 contributor share 59.1% (?).
 - **Risk / License**: Grade D — AGPL-3.0 license.
 ## Caveats (unverified)

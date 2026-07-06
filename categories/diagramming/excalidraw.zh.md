@@ -10,9 +10,9 @@ maturity: active, ~126.5k stars (as of 2026-07)
 last_verified: 2026-07-01
 type: library
 upstream:
-  pushed_at: 2026-07-01T10:17:35Z
-  default_branch: main
-  default_branch_sha: 0000000000000000000000000000000000000000
+  pushed_at: 2026-07-05T20:21:54Z
+  default_branch: master
+  default_branch_sha: 9357f98a9b6c4f8af3ada6ccce38e54330f2627c
   archived: false
 health:
   schema: 1
@@ -121,7 +121,7 @@ health:
 
 ## 健康度与可持续性
 - **维护活跃度**：Grade A——最近 13 周中 13 周有提交；最后提交距今 3 天。
-- **响应速度**：Grade A——中位首次响应时间 29.1 小时，基于 24 个 qualifying issues/PRs。
+- **响应速度**：Grade A——中位首次响应时间 23.5 小时，基于 22 个 qualifying issues/PRs。
 - **采用广度**：Grade B——npmjs.org 上月下载量 1,390,033（包名：@excalidraw/excalidraw）。
 - **长青度**：Grade A——仓库已创建 2374 天。
 - **治理集中度**：Grade B——前三贡献者占比 83.5%（?）。

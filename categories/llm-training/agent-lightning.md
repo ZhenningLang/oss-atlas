@@ -92,7 +92,7 @@ Agent Lightning is built for exactly this. It models agent execution as a Markov
 | [ART](art.md) | ✅ | Choose ART when you also need RL for agents, but prefer a more opinionated single-loop experience. | Agent Lightning emphasizes framework-agnostic decoupling plus pluggable backends; ART optimizes for ergonomics. |
 | verl | 未收录 | Choose verl when you need the underlying distributed RL engine Agent Lightning builds on. | Powerful, but expects you to express training as its generation loop rather than wrap a native agent. |
 | HF TRL | 未收录 | Choose HF TRL when you need a mature PPO/GRPO/DPO library for dataset- or loop-centric training. | No agent-execution decoupling or multi-step credit assignment out of the box. |
-| OpenAI Agents SDK / [LangChain](../agent-frameworks/langchain.md) (alone) | 部分已收录 | Choose agent frameworks alone when you only need to build and run agents, not train the underlying model from rollouts. | Agent Lightning sits on top of agent execution to make rollouts trainable; plain frameworks stop at orchestration. OpenAI Agents SDK is not indexed separately. |
+| OpenAI Agents SDK / [LangChain](../agent-frameworks/workflow-builders/langchain.md) (alone) | 部分已收录 | Choose agent frameworks alone when you only need to build and run agents, not train the underlying model from rollouts. | Agent Lightning sits on top of agent execution to make rollouts trainable; plain frameworks stop at orchestration. OpenAI Agents SDK is not indexed separately. |
 
 ## Tech stack
 

@@ -10,9 +10,9 @@ maturity: v1.26.x, very active, ~25 years old (as of 2026-07)
 last_verified: 2026-07-01
 type: framework
 upstream:
-  pushed_at: 2026-07-01T00:00:00Z
+  pushed_at: 2026-07-06T07:52:56Z
   default_branch: main
-  default_branch_sha: 0000000000000000000000000000000000000000
+  default_branch_sha: f3213d6ad0999944f4eae4a0d024d5ffe817e336
   archived: false
 health:
   schema: 1
