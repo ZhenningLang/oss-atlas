@@ -37,6 +37,8 @@ def gated_finding_counts(result: quality_scan.ScanResult) -> Counter[str]:
 
 
 def scan_check(result: quality_scan.ScanResult) -> CheckResult:
+    if result.project_page_count == 0:
+        return CheckResult("Scan gated findings", False, "0 project pages scanned for the requested scope")
     counts = gated_finding_counts(result)
     if not counts:
         return CheckResult("Scan gated findings", True, "0 gated deterministic findings")

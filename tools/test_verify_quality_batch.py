@@ -73,6 +73,25 @@ class VerifyQualityBatchTest(unittest.TestCase):
             self.assertIn("Final: PASS", clean.stdout)
             self.assertNotIn("categories/outside/bad.md", clean_report.read_text(encoding="utf-8"))
 
+    def test_non_project_scope_fails_instead_of_passing_empty_scan(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            init_git_repo(root)
+            write_page(root, "categories/clean/clean.md", "## Comparison\n")
+            (root / "README.md").write_text("# Not a project page\n", encoding="utf-8")
+            (root / "categories" / "clean" / "INDEX.md").write_text("# Index\n", encoding="utf-8")
+            commit_all(root)
+
+            for scope in ("README.md", "categories/clean/INDEX.md"):
+                report = root / f"{scope.replace('/', '-')}.md"
+                completed = run_verifier(root, "--scope", scope, "--report", str(report))
+
+                self.assertNotEqual(completed.returncode, 0, completed.stdout + completed.stderr)
+                self.assertTrue(report.exists())
+                self.assertIn("Scan gated findings: FAIL", completed.stdout)
+                self.assertIn("0 project pages scanned", completed.stdout)
+                self.assertIn("Final: FAIL", completed.stdout)
+
     def test_required_gated_categories_match_scanner_constant(self) -> None:
         self.assertEqual(quality_scan.GATED_DETERMINISTIC_CATEGORIES, REQUIRED_GATED_CATEGORIES)
         self.assertEqual(verify_quality_batch.GATED_CATEGORIES, REQUIRED_GATED_CATEGORIES)
