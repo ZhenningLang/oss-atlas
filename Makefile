@@ -1,4 +1,4 @@
-.PHONY: lint cards health health-backfill upstream-snapshot upstream-check test quality-scan quality-scan-changed quality-batch install-hooks help
+.PHONY: lint cards health health-audit health-backfill upstream-snapshot upstream-check test quality-scan quality-scan-changed quality-batch install-hooks help
 
 help:
 	@echo "oss-atlas make targets:"
@@ -6,6 +6,7 @@ help:
 	@echo "  make cards          regenerate ALL health radar SVGs from frontmatter (offline)"
 	@echo "  make health PAGE=…  (re)score one page via GitHub/registry APIs and write its health: block"
 	@echo "                      e.g. make health PAGE=categories/python-tooling/memory-analyzer.md"
+	@echo "  make health-audit   offline audit of all '?' radar axes (reason distribution + flags)"
 	@echo "  make health-backfill ARGS='--limit 5'  dry-run/apply/resume Phase 1 health backfill"
 	@echo "  make upstream-snapshot PAGE=…  refresh cheap GitHub upstream snapshot for one page"
 	@echo "  make upstream-check PAGE=…  compare stored upstream snapshot with GitHub without writing"
@@ -28,6 +29,9 @@ health:
 	python3 tools/health.py --page "$(PAGE)" --write
 	python3 tools/health_card.py "$(PAGE)" "$(basename $(PAGE)).zh.md"
 
+health-audit:
+	python3 tools/health_audit.py $(ARGS)
+
 health-backfill:
 	python3 tools/health_backfill.py $(ARGS)
 
@@ -40,7 +44,7 @@ upstream-check:
 	python3 tools/upstream_snapshot.py --page "$(PAGE)" --check
 
 test:
-	python3 -m unittest tools/test_health.py tools/test_health_backfill.py tools/test_lint.py tools/test_quality_scan.py tools/test_upstream_snapshot.py tools/test_verify_quality_batch.py
+	python3 -m unittest tools/test_health.py tools/test_health_audit.py tools/test_health_backfill.py tools/test_lint.py tools/test_quality_scan.py tools/test_upstream_snapshot.py tools/test_verify_quality_batch.py
 
 quality-scan:
 	python3 tools/quality_scan.py

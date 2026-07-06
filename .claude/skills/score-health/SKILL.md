@@ -1,7 +1,7 @@
 ---
 name: score-health
 description: 当维护者要给某个选型页计算/重算「健康度雷达」、解释某轴档位为何如此、重试 ? 轴、或批量回填全索引时使用；封装 tools/health.py 评分引擎 + 卡片生成，按 docs/health-rubric.md 的客观阈值出分。不用于新增项目（用 add-project，它已内置评分）或刷新事实（用 sync-entry，它会顺带重算）。
-argument-hint: <项目 slug | --explain <slug> | --retry <slug> | --backfill>
+argument-hint: <项目 slug | --explain <slug> | --retry <slug> | --backfill | --audit>
 metadata:
   internal: true
 ---
@@ -31,7 +31,11 @@ python3 tools/health_card.py "$PAGE" "${PAGE%.md}.zh.md" # regenerate EN + ZH ca
 python3 tools/lint.py                                    # must be 0 errors
 ```
 Re-scoring bumps `computed_at`. Grades may legitimately move as live data shifts (e.g. an A/B
-knife-edge on responsiveness) — that's real, not a bug.
+knife-edge on responsiveness) — that's real, not a bug. `--write` prints a
+`grade changes vs previous block` diff to stderr; **when any grade moved, re-read the page's prose
+`## Health & viability` (+ zh sibling)** and reconcile it — the radar is machine-refreshed but that
+section is hand-written, and they drift silently otherwise. A maintenance/overall drop also means
+re-checking the abandonment flag in `When NOT to use`.
 
 ### 2. Explain a grade (`--explain <slug>`)
 Answer "why is axis X a D?" with evidence, not vibes:
@@ -62,6 +66,19 @@ State lives at `.health-backfill/state.json` by default. Use `--state <path>` fo
 `--sleep` to slow down under GitHub secondary rate limits, and `--timeout/--retries` for flaky
 network calls. A GitHub token must be present (`gh auth status`); unauthenticated 60/hr dies early.
 
+### 5. Audit all `?` axes (`--audit`)
+`?` is first-class, but at index scale nobody re-reads 300 pages to check each one. The offline
+auditor scans every page's persisted `unknowns:` reasons and classifies them:
+```bash
+python3 tools/health_audit.py            # human-readable report (also: make health-audit)
+python3 tools/health_audit.py --json     # machine-readable
+```
+It buckets each reason per `docs/health-rubric.md` §5.2 — **structural** (leave `?`),
+**transient** (re-run mode 1 on that page), **needs_review** (human check; some codes double as
+the scorer's exception fallback and can mask a crash) — and flags **enum_drift** (a reason not in
+the rubric enums) and **missing_reason** (a `?` with no recorded reason: malformed block, re-score
+it). Offline and sub-second; run it after a backfill or periodically.
+
 ## Discipline
 - **Machine SSOT, not hand-grades.** Don't touch the `health:` block or the SVGs by hand — re-run
   the scorer/generator. The pre-commit hook (`make install-hooks`) regenerates cards + lints, but
@@ -69,8 +86,11 @@ network calls. A GitHub token must be present (`gh auth status`); unauthenticate
 - **Both languages, every time.** After `--write`, regenerate **both** `<slug>.svg` and
   `<slug>.zh.svg` (cards are language-separated; never mix scripts on a card).
 - **`?` is first-class.** Never coerce `?` to a grade or average it as 0/A.
-- **Freshness.** Re-scoring updates `computed_at`. For broader fact rot (license, maturity, prose),
-  that's [`sync-entry`](../sync-entry/SKILL.md)'s job — it calls this skill as one of its steps.
+- **Freshness.** Re-scoring updates `computed_at`; `lint.py` WARNs when a page's `computed_at`
+  exceeds `STALE_DAYS` — treat those warnings as the re-score worklist (maintenance/longevity decay
+  with elapsed time even when upstream is unchanged). For broader fact rot (license, maturity,
+  prose), that's [`sync-entry`](../sync-entry/SKILL.md)'s job — it calls this skill as one of its
+  steps, including on its `unchanged_upstream` fast path.
 
 ## Relationship to other skills
 - `add-project` — runs this automatically when a new project is added (compute on add).

@@ -1672,6 +1672,37 @@ def splice_health_block(text: str, health_block: str) -> str:
     return "---" + new_fm + text[end:]
 
 
+def extract_grades(text: str) -> dict[str, str]:
+    """Read {axis: grade, 'overall': grade} from a page's existing health: block.
+
+    Empty dict when the page has no parseable block (fresh page). Used by --write to
+    report grade changes so the operator reconciles the prose `## Health & viability`
+    section — the radar is machine-refreshed but that section is hand-written, and they
+    drift silently otherwise.
+    """
+    if not text.startswith("---"):
+        return {}
+    end = text.find("\n---", 3)
+    if end == -1:
+        return {}
+    m = re.search(r"(?ms)^health:\n(.*?)(?=^\S|\Z)", text[3:end])
+    if not m:
+        return {}
+    block = m.group(0)
+    out: dict[str, str] = {}
+    om = re.search(r"(?m)^  overall:\s*(\S+)", block)
+    if om:
+        out["overall"] = om.group(1).strip("\"'")
+    for am in re.finditer(r"(?m)^    (\w+):\n      grade:\s*(\S+)", block):
+        out[am.group(1)] = am.group(2).strip("\"'")
+    return out
+
+
+def grade_changes(old: dict[str, str], new: dict[str, str]) -> list[tuple[str, str, str]]:
+    """Return [(key, old_grade, new_grade)] for grades that moved (keys present in both)."""
+    return [(k, old[k], new[k]) for k in new if k in old and old[k] != new[k]]
+
+
 def write_to_pages(en_page: Path, health_block: str) -> list[Path]:
     written = []
     zh_page = en_page.with_name(en_page.name[: -len(".md")] + ".zh.md")
@@ -1733,9 +1764,22 @@ def main() -> int:
     if args.write:
         if page is None:
             sys.exit("--write requires --page")
+        old_grades = extract_grades(page.read_text(encoding="utf-8"))
         written = write_to_pages(page, block)
         for p in written:
             print(f"wrote health: block to {p}", file=sys.stderr)
+        new_grades = {n: axes[n].grade for n in AXIS_ORDER}
+        new_grades["overall"] = agg["overall"]
+        changes = grade_changes(old_grades, new_grades)
+        if changes:
+            print("grade changes vs previous block:", file=sys.stderr)
+            for key, old_g, new_g in changes:
+                print(f"  {key}: {old_g} -> {new_g}", file=sys.stderr)
+            print("reconcile prose: re-read '## Health & viability' (+ zh sibling) — and the"
+                  " 'When NOT to use' abandonment flag if maintenance/overall dropped.",
+                  file=sys.stderr)
+        elif old_grades:
+            print("grades unchanged vs previous block", file=sys.stderr)
     else:
         sys.stdout.write(block)
 

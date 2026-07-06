@@ -31,45 +31,21 @@ Author one conformant selection page. The contract is `tools/schema.md`; read it
    genuinely doesn't fit — then also add a row to root `INDEX.md` **and** `INDEX.zh.md`.
 
 4. **Write the bilingual pair** `categories/<category>/<slug>.md` (English) **and**
-   `categories/<category>/<slug>.zh.md` (Chinese) per schema:
-    - Frontmatter (identical in both): `name, slug(==base filename), repo, category(==leaf dir), tags,
-      language, license, maturity(dated), last_verified(today), type`, plus the required
-      `upstream:` snapshot and `health:` radar block.
-   - `type` ∈ `tool | library | app | framework | service | model | skill-pack` — it decides which
-     sections are required.
-   - `# <name>` + one-line TL;DR in that file's language.
-   - Sections (all types): English `When to use / When NOT to use / Comparison`; Chinese
-     `何时使用 / 何时不用 / 横向对比`. **Non-`skill-pack` also add**: `Tech stack / Dependencies /
-     Ops difficulty` (`技术栈 / 依赖 / 运维难度`). A `skill-pack` omits those three. Each file is
-     monolingual — no language mixing.
-   - Write "When to use" / "何时使用" as a **User Story** (second-person scenario: who you are,
-     what you're doing, the problem you hit, how this tool resolves it) — not a feature list.
-     **Crucially, define the choice against alternatives**: the User Story must explain *why you pick
-     this over its closest substitutes*. State the deciding tradeoff (e.g., model-agnostic vs.
-     vendor-locked, self-hosted vs. SaaS, code-first vs. no-code). Generic claims like "fast" or
-     "open-source" are insufficient — every competitor can say that. See `tools/schema.md`.
-   - Make the "when NOT to use" section the strongest: concrete anti-patterns, scale ceilings,
-     lock-in, maintenance/abandonment risk. **Each anti-pattern must name a substitute**: "If you need Z,
-     use Y instead of X, because..." Never just say "this doesn't do Z" — always point the agent to the
-     right alternative. This is the section agents most need.
-   - **Health & viability** (`健康度与可持续性`) — required for **all types** (skill-pack included).
-     A short dated, labeled verdict on whether it's worth betting on: maintenance/cadence,
-     governance & bus factor, backing org, **age as a Lindy prior (age × still-active)**, adoption/
-     ecosystem, risk flags (relicense/open-core/CVE). See `tools/schema.md` §7. Judgment, not a
-     number dump — volatile numbers stay in `maturity`/Caveats.
-   - In Comparison, name 3–5 real substitutes; `未收录` for ones not in the index, relative link
-     for ones that are. Follow `tools/schema.md` `Verdict quality contract`: each `Our verdict` /
-     `我们的评价` cell must name the scenario, the choice, and the decisive tradeoff. Do not use
-     template verdicts such as `Use this page for its stated niche.` / `当前页用于它的主场景。` or vague
-     claims such as `best`, `good choice`, or `open-source alternative`.
-   - **Caveats ledger (all types):** end every page with `## Caveats (unverified)` /
-     `## 存疑（未验证）` — one `[未验证]`/`[推断]` bullet per unverified fact. In the prose above,
-     keep inline labels to the **load-bearing/contested few** (≤3; the linter WARNs above that);
-     the full uncertainty list lives in this ledger, not sprinkled across the body.
-
-   - **Chinese punctuation (`.zh.md`)**: use fullwidth `，；：！？（）`, never the ASCII forms next
-     to Chinese characters (the classic slip is `,` between two 汉字 where it must be `，`). Code,
-     link targets, URLs, and frontmatter stay ASCII. The linter ERRORs on violations.
+   `categories/<category>/<slug>.zh.md` (Chinese). All writing rules live in `tools/schema.md` —
+   follow it, don't re-derive from memory. Checklist of its load-bearing parts:
+   - **Frontmatter** (§1) — identical in both siblings, incl. the `upstream:` and `health:` blocks;
+     `type` decides which H2 sections are required (§2 table). Each file is monolingual.
+   - **When to use** — a User Story that defines the choice against substitutes (§2
+     `"When to use" is a User Story`).
+   - **When NOT to use** — the strongest section; each anti-pattern names a substitute (§2
+     `"When NOT to use" names substitutes`).
+   - **Comparison** — 3–5 real substitutes, `未收录` for unindexed ones; verdicts per §2
+     `Verdict quality contract` (no template/vague verdicts).
+   - **Health & viability** — required for all types; dated, labeled judgment per §7.
+   - **Truth labeling + Caveats ledger** (§3) — inline labels only on the load-bearing few;
+     everything unverified gets a ledger bullet.
+   - **Chinese punctuation** in `.zh.md` (§6) — fullwidth next to 汉字; lint ERRORs on violations.
+   Model the negative-space writing on the golden examples listed in §2.
 
 5. **Wire it in.** Add the project to its `categories/<category>/INDEX.md` **and** `INDEX.zh.md`
    (one-liner + comparison-matrix row in each, including `Health` / `健康度`) **and to the README

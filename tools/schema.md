@@ -124,9 +124,22 @@ illustrative, but the tool's role in it must be accurate — never invent capabi
 doesn't otherwise support. "When NOT to use" stays a sharp bulleted list (it's the decisive
 filter); only "When to use" is narrative.
 
+**Crucially, the User Story must define the choice against alternatives** — explain *why you pick
+this over its closest substitutes*, stating the deciding tradeoff (e.g. model-agnostic vs.
+vendor-locked, self-hosted vs. SaaS, code-first vs. no-code). Generic claims like "fast" or
+"open-source" are insufficient — every competitor can say that.
+
+### "When NOT to use" names substitutes
+
+Make this the strongest section: concrete anti-patterns, scale ceilings, lock-in,
+maintenance/abandonment risk. **Each anti-pattern must name a substitute**: "If you need Z, use Y
+instead of X, because…". Never just say "this doesn't do Z" — always point the agent to the right
+alternative. This is the section agents most need.
+
 ### Comparison rules
 
-- The `## Comparison` table compares against **real** substitute projects.
+- The `## Comparison` table compares against **real** substitute projects — name **3–5** of the
+  closest ones.
 - A row may reference a project **not yet indexed** — mark it `未收录` / `not indexed`. This is allowed and expected (the index grows over time); it keeps comparisons honest instead of dangling.
 - When a substitute *is* indexed, link it relatively: `[name](../<category>/<slug>.md)`.
 - The table must carry the index's own judgment as a first-class column. English pages use

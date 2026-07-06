@@ -215,5 +215,49 @@ class HealthMechanismTest(unittest.TestCase):
         self.assertNotIn("dependent_repos_count", axis.raw)
 
 
+PAGE_WITH_BLOCK = """---
+name: Demo
+health:
+  schema: 1
+  computed_at: 2026-07-01T00:00:00Z
+  overall: B
+  axes:
+    maintenance:
+      grade: A
+      raw: {}
+    responsiveness:
+      grade: "?"
+      raw: {}
+type: tool
+---
+
+# Demo
+"""
+
+
+class GradeChangeReportTest(unittest.TestCase):
+    def test_extract_grades_reads_overall_and_axes(self) -> None:
+        grades = health.extract_grades(PAGE_WITH_BLOCK)
+        self.assertEqual(grades["overall"], "B")
+        self.assertEqual(grades["maintenance"], "A")
+        self.assertEqual(grades["responsiveness"], "?")
+
+    def test_extract_grades_stops_at_next_top_level_key(self) -> None:
+        # `type: tool` after the health block must not pollute the result.
+        grades = health.extract_grades(PAGE_WITH_BLOCK)
+        self.assertNotIn("type", grades)
+
+    def test_extract_grades_on_fresh_page_is_empty(self) -> None:
+        self.assertEqual(health.extract_grades("---\nname: Demo\n---\n\n# Demo\n"), {})
+
+    def test_grade_changes_reports_only_moved_grades(self) -> None:
+        old = {"overall": "A", "maintenance": "A", "adoption": "C"}
+        new = {"overall": "B", "maintenance": "A", "adoption": "C", "longevity": "A"}
+        self.assertEqual(health.grade_changes(old, new), [("overall", "A", "B")])
+
+    def test_grade_changes_empty_old_reports_nothing(self) -> None:
+        self.assertEqual(health.grade_changes({}, {"overall": "A"}), [])
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -45,8 +45,14 @@ upstream:
 - If `archived`, `default_branch`, or `default_branch_sha` changed, do a full re-verify.
 - Treat `pushed_at` as a cheap hint, not the sole gate: GitHub updates it for non-default-branch
   pushes and tag/bot activity. The default-branch SHA is the stronger reread trigger.
-- If the cheap probe matches the stored snapshot, skip the full reread and report `unchanged_upstream`;
-  do not silently bump `last_verified` as if prose/facts were reread.
+- If the cheap probe matches the stored snapshot, skip the full **prose/fact reread** and report
+  `unchanged_upstream`; do not silently bump `last_verified` as if prose/facts were reread.
+- **`unchanged_upstream` does NOT skip the health re-score.** Maintenance/longevity are functions
+  of elapsed time: a repo that goes quiet keeps the same `default_branch_sha` forever while its
+  real grade decays from A toward D — the quiet case is exactly the one that needs re-scoring.
+  Always run step 8 (re-score + regenerate cards) for a stale entry, even when upstream is
+  unchanged. The scorer is cheap (a handful of API calls); `lint.py` warns when a page's
+  `computed_at` exceeds `STALE_DAYS`.
 
 Use the read-only compare mode for the probe:
 
@@ -64,8 +70,9 @@ It prints `unchanged_upstream` or `changed_upstream`, writes nothing, exits `0` 
 > frontmatter**. Apply every fact/frontmatter change to both files, and update both bodies if a
 > material fact moved. `last_verified` must match across the pair.
 
-1. **Cheap upstream probe**: compare `upstream` frontmatter against GitHub repo state. Stop here if
-   the stale entry is unchanged upstream.
+1. **Cheap upstream probe**: compare `upstream` frontmatter against GitHub repo state. If unchanged,
+   skip steps 2–7 (prose/facts) but **still do steps 8–9** — health grades decay with elapsed time
+   even when upstream is frozen.
 2. **Refetch the source of truth**: GitHub repo page, latest release, README, last-commit date.
 3. **Diff the facts** against frontmatter + body:
    - license, primary language, latest version / `maturity`, dependencies, tech stack.
@@ -90,6 +97,10 @@ It prints `unchanged_upstream` or `changed_upstream`, writes nothing, exits `0` 
    `python3 tools/health.py --page <page> --write && python3 tools/health_card.py <page>`
    This recomputes the 6 axes from live data, rewrites the identical `health:` block into both
    siblings (bumping its `computed_at`), and regenerates the card. See `docs/health-rubric.md`.
+   The scorer prints a `grade changes vs previous block` diff to stderr — if any grade moved,
+   reconcile the hand-written `## Health & viability` prose (both languages) with the new radar,
+   and re-check the abandonment flag (step 5) when maintenance/overall dropped. This applies on
+   the `unchanged_upstream` fast path too.
 9. **Validate**: run structural lint, then run a scoped or changed-only quality scan for the pages
    updated in this sync:
    - `python3 tools/lint.py`.

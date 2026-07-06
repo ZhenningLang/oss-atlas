@@ -129,6 +129,39 @@ class LintContractTest(unittest.TestCase):
 
             self.assertTrue(any("health: missing required frontmatter block" in e for e in rep.errors))
 
+    def test_stale_health_computed_at_is_a_warning(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            rep = lint.Report()
+            page = root / "categories" / "demo" / "demo.md"
+            page.parent.mkdir(parents=True)
+            page.write_text(page_text(), encoding="utf-8")
+            (root / "assets" / "health").mkdir(parents=True)
+            (root / "assets" / "health" / "demo.svg").write_text("<svg />", encoding="utf-8")
+
+            # HEALTH_BLOCK's computed_at is 2026-06-29; 91 days later crosses STALE_DAYS=90.
+            lint.check_page(page, page.parent, root, set(), rep, lint.dt.date(2026, 9, 28))
+            self.assertTrue(any("health: computed_at 2026-06-29 is 91d old" in w for w in rep.warnings))
+
+            fresh = lint.Report()
+            lint.check_page(page, page.parent, root, set(), fresh, lint.dt.date(2026, 9, 27))
+            self.assertFalse(any("health: computed_at" in w for w in fresh.warnings))
+
+    def test_malformed_health_computed_at_is_an_error(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            rep = lint.Report()
+            page = root / "categories" / "demo" / "demo.md"
+            page.parent.mkdir(parents=True)
+            broken = page_text().replace("computed_at: 2026-06-29T00:00:00Z", "computed_at: yesterday")
+            page.write_text(broken, encoding="utf-8")
+            (root / "assets" / "health").mkdir(parents=True)
+            (root / "assets" / "health" / "demo.svg").write_text("<svg />", encoding="utf-8")
+
+            lint.check_page(page, page.parent, root, set(), rep, lint.dt.date(2026, 6, 29))
+
+            self.assertTrue(any("health: computed_at missing or not an ISO UTC timestamp" in e for e in rep.errors))
+
     def test_comparison_requires_our_verdict_column(self) -> None:
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)

@@ -22,6 +22,8 @@ Checks (ERROR = non-zero exit; WARNING = printed, exit still 0):
   - skill-pack pages must OMIT Tech stack / Dependencies / Ops difficulty (not pad them) -> ERROR if present
   - last_verified parses; staleness > STALE_DAYS -> WARNING
   - every page has a health radar frontmatter block + card embed -> ERROR if absent/malformed
+  - health computed_at parses; staleness > STALE_DAYS -> WARNING (time-decay axes rot even
+    when upstream is unchanged — a quiet repo decays while its SHA never moves)
   - every page has an upstream snapshot for cheap stale checks -> ERROR if absent/malformed
   - page Comparison tables include an explicit Our verdict / 我们的评价 column -> ERROR if absent
   - every page: a Caveats ledger section (## Caveats (unverified) / ## 存疑（未验证）) -> ERROR if absent
@@ -296,11 +298,13 @@ def check_summary_health_columns(path: Path, rep: Report) -> None:
                 rep.error(path, f"summary table must include '{required}' column")
 
 
-def check_health_block(path: Path, text: str, base: str, zh: bool, root: Path, duplicate_bases: set[str], rep: Report) -> None:
+def check_health_block(path: Path, text: str, base: str, zh: bool, root: Path, duplicate_bases: set[str], rep: Report, today: dt.date) -> None:
     """Validate a frontmatter `health:` radar block + its SVG card, if present.
 
     Validates shape (overall +
     6 axis grades in A–E/?), that the SVG card exists, and that it is embedded.
+    Also warns when computed_at is older than STALE_DAYS: maintenance/longevity are
+    functions of elapsed time, so grades rot even when the upstream repo is unchanged.
     """
     if not text.startswith("---"):
         return
@@ -313,6 +317,14 @@ def check_health_block(path: Path, text: str, base: str, zh: bool, root: Path, d
         return
     block_m = re.search(r"(?ms)^health:\n(.*)\Z", fmtext)
     block = block_m.group(0) if block_m else ""
+
+    computed = re.search(r"(?m)^\s{2}computed_at:\s*(\S+)\s*$", block)
+    if not computed or not re.match(r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$", computed.group(1)):
+        rep.error(path, "health: computed_at missing or not an ISO UTC timestamp")
+    else:
+        age = (today - dt.date.fromisoformat(computed.group(1)[:10])).days
+        if age > STALE_DAYS:
+            rep.warn(path, f"health: computed_at {computed.group(1)[:10]} is {age}d old (> {STALE_DAYS}); grades decay with time — run score-health or sync-entry")
 
     overall = re.search(r"(?m)^\s+overall:\s*(\S+)\s*$", block)
     if not overall or overall.group(1).strip("\"'") not in GRADES:
@@ -465,7 +477,7 @@ def check_page(path: Path, category_dir: Path, root: Path, duplicate_bases: set[
         if normalized_frontmatter(text) != normalized_frontmatter(zh_text):
             rep.error(path, f"frontmatter drift vs {sibling.name} (must be identical)")
 
-    check_health_block(path, text, base, zh, root, duplicate_bases, rep)
+    check_health_block(path, text, base, zh, root, duplicate_bases, rep, today)
     check_upstream_block(path, text, rep)
 
     for link in md_links(text):
