@@ -114,7 +114,7 @@ health:
 
 ## 健康度与可持续性
 
-- **响应速度**：Grade C——中位首次响应时间 268.3 小时，基于 2 个 qualifying issues/PRs。
+- **响应速度**：无法计算——no_traffic。
 - **维护（2026-06）。** 仓库**未归档**，默认分支有提交进到 2026-03，但这些近期提交大多是 CI/依赖 bump（dependabot），外加一条 "tmp disable github actions" 提交——而**最后一个打 tag 的 release 是 2024-02 的 v1.40.11**，约 2.4 年的发布断档。读起来像**有人维护但在吃老本**：活着、没废弃，但没在按节奏发功能版本。[推断]
 - **治理 / bus factor。** **CNCF Sandbox** 项目（README 中确认），有一份列了两位 maintainer 的 `MAINTAINERS.md`——但创建者 **Kyle Quest（@kcq）**约 816 次提交，下一位人类贡献者远远落后，且 `GOVERNANCE.md` 里直接写着 "TBD"。所以 Sandbox 身份带来的是生态可见度，**而非**深厚的、基金会运营的治理梯队——bus factor 集中在一个人身上。[推断]
 - **背书与长期性。** 据 README 由 **Root.io（前身 Slim.AI）**支持；一家商业厂商的兴趣是长期性加分，但也把势头绑在了那家公司的优先级上。[推断]

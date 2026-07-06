@@ -114,7 +114,7 @@ You reach for it when you want the size and attack-surface win *now*, on images 
 
 ## Health & viability
 
-- **Responsiveness**: Grade C — median first-response time 268.3 hours across 2 qualifying issues/PRs.
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (2026-06).** Repo is **not archived** and the default branch shows commits into 2026-03, but those recent commits are largely CI/dependency bumps (dependabot) plus a "tmp disable github actions" commit — and the **last tagged release is v1.40.11 from 2024-02**, a ~2.4-year release gap. Reads as **maintained-but-coasting**: alive, not abandoned, but not shipping feature releases at cadence. [推断]
 - **Governance / bus factor.** **CNCF Sandbox** project (confirmed in README) with a `MAINTAINERS.md` listing two maintainers — but creator **Kyle Quest (@kcq)** has ~816 commits, the next human contributor is far behind, and `GOVERNANCE.md` literally says "TBD". So Sandbox status gives ecosystem visibility, **not** a deep, foundation-run governance bench — bus factor is concentrated on one person. [推断]
 - **Backing & longevity.** Backed by **Root.io (formerly Slim.AI)** per the README; a commercial vendor's interest is a longevity plus but also ties momentum to that company's priorities. [推断]

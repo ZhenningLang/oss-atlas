@@ -117,7 +117,7 @@ You also reach for it when you want the same progress feedback everywhere withou
 
 ## Health & viability
 
-- **Responsiveness**: Grade C — median first-response time 511.3 hours across 2 qualifying issues/PRs.
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (2026-06).** Repo pushed 2026-06 with a recent release (v4.68.3, 2026-06-17) — **active**, not abandoned. The release cadence is mature/slow (the API has long been stable), which is appropriate for a library this widely depended-on. [推断]
 - **Governance / bus factor.** Owned by the `tqdm` **organization** (not a personal account) with a broad contributor base over its lifetime; historically associated with a primary maintainer (Casper da Costa-Luis), so concentration of core knowledge is a mild bus-factor consideration, partly offset by org ownership and many contributors. [推断]
 - **Age & Lindy verdict.** Created 2015-06, ~11 years old and **still actively shipping** ⇒ a **strong Lindy** signal — a stable, ubiquitous primitive, not a hyped newcomer; the wrap-an-iterable API has been backward-compatible for years. [推断]
