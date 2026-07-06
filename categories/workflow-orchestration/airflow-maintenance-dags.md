@@ -90,10 +90,10 @@ You reach for it specifically when you want **proven, copy-in maintenance recipe
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| [Apache Airflow](airflow.md) built-in `db clean` | ✅ | Use this page for its stated niche; choose Apache Airflow built-in db clean when you need recent Airflow ships an official `airflow db clean` CLI for metadata cleanup. | Recent Airflow ships an official `airflow db clean` CLI for metadata cleanup — first-party and version-matched; prefer it where available, and use these DAGs for cases it doesn't cover (logs, zombies). |
-| Hand-rolled cleanup DAGs/scripts | 未收录 | Use this page for its stated niche; choose Hand-rolled cleanup DAGs/scripts when you need full control, exactly your schema. | Full control, exactly your schema; but you write, test, and maintain destructive SQL yourself — this repo is the proven starting point. |
-| Platform retention (MWAA/Composer settings) | 未收录 | Use this page for its stated niche; choose Platform retention (MWAA/Composer settings) when you need managed services expose their own log/metadata retention knobs. | Managed services expose their own log/metadata retention knobs; less flexible but supported and safer than custom DELETEs. |
-| OS-level logrotate / cron | 未收录 | Use this page for its stated niche; choose OS-level logrotate / cron when you need handles log files outside Airflow, but can't safely prune the metadata DB or kill zombie tasks the w. | Handles log files outside Airflow, but can't safely prune the metadata DB or kill zombie tasks the way an Airflow-aware DAG can. |
+| [Apache Airflow](airflow.md) built-in `db clean` | ✅ | Prefer Airflow's built-in `db clean` when it covers metadata cleanup; use these DAGs for Airflow-aware gaps such as task-log files or zombie tasks. | Recent Airflow ships an official `airflow db clean` CLI for metadata cleanup — first-party and version-matched; prefer it where available, and use these DAGs for cases it doesn't cover (task-log files, zombies). |
+| Hand-rolled cleanup DAGs/scripts | 未收录 | Choose hand-rolled scripts only when your schema and deletion policy need full custom control. | Full control, exactly your schema; but you write, test, and maintain destructive SQL yourself — this repo is the proven starting point. |
+| Platform retention (MWAA/Composer settings) | 未收录 | Choose managed-service retention knobs when supported safety matters more than custom cleanup coverage. | Managed services expose their own log/metadata retention knobs; less flexible but supported and safer than custom DELETEs. |
+| OS-level logrotate / cron | 未收录 | Choose logrotate or cron for non-Airflow log files, not for metadata pruning or zombie-task cleanup. | Handles log files outside Airflow, but can't safely prune the metadata DB or kill zombie tasks the way an Airflow-aware DAG can. |
 
 ## Tech stack
 
