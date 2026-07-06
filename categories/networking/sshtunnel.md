@@ -93,10 +93,10 @@ It shines for throwaway automation and data scripts: a one-off migration that mu
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| [Paramiko](paramiko.md) | ✅ | Use this page for its stated niche; choose Paramiko when you need the engine sshtunnel wraps. | The engine sshtunnel wraps — full SSH/SFTP/transport control, but you implement the forwarding/context-manager ergonomics yourself. |
-| native `ssh -L` / `autossh` | 未收录 | Use this page for its stated niche; choose native ssh -L / autossh when you need openSSH client (optionally auto-reconnecting). | OpenSSH client (optionally auto-reconnecting) — robust, fast, full config fidelity, but it's a subprocess to manage, not an in-Python object. |
-| `subprocess` + `ssh` | 未收录 | Use this page for its stated niche; choose subprocess + ssh when you need zero extra deps, but you parse text and manage the child process / readiness yourself. | Zero extra deps, but you parse text and manage the child process / readiness yourself. |
-| AsyncSSH (forwarding API) | 未收录 | Use this page for its stated niche; choose AsyncSSH (forwarding API) when you need asyncio-native SSH with its own forwarding. | asyncio-native SSH with its own forwarding; better for async codebases, different API, heavier than a thin wrapper. |
+| [Paramiko](paramiko.md) | ✅ | Choose Paramiko directly when you need full SSH/SFTP/transport control rather than sshtunnel's forwarding convenience wrapper. | Same engine underneath, but you implement forwarding and lifecycle ergonomics yourself. |
+| native `ssh -L` / `autossh` | 未收录 | Choose native OpenSSH or autossh for durable tunnels that need config fidelity, speed, and optional auto-reconnect. | More robust for production, but managed as a process rather than an in-Python object. |
+| `subprocess` + `ssh` | 未收录 | Choose `subprocess` plus `ssh` when zero Python dependencies are worth managing process readiness yourself. | Keeps OpenSSH behavior, but you own text parsing, child lifecycle, and failure handling. |
+| AsyncSSH (forwarding API) | 未收录 | Choose AsyncSSH when the codebase is asyncio-native and SSH forwarding should live inside the event loop. | Different API and heavier than a thin Paramiko wrapper, but a better fit for async applications. |
 
 ## Tech stack
 

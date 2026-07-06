@@ -94,10 +94,10 @@ In practice today, that pitch lives on in **thriftpy2**, the maintained fork. Yo
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| thriftpy2 | 未收录 | Use this page for its stated niche; choose thriftpy2 when you need the maintained successor by the same org. | The maintained successor by the same org — same runtime-load-`.thrift` model, current Python, active in 2026. The drop-in reason to leave this repo. |
-| Apache Thrift (official `thrift` Python lib) | 未收录 | Use this page for its stated niche; choose Apache Thrift (official thrift Python lib) when you need canonical, multi-language, foundation-governed. | Canonical, multi-language, foundation-governed; requires a code-generation build step and is heavier, but is the reference implementation and broadly supported. |
-| gRPC + Protocol Buffers | 未收录 | Use this page for its stated niche; choose gRPC + Protocol Buffers when you need different IDL/wire protocol (HTTP/2, protobuf). | Different IDL/wire protocol (HTTP/2, protobuf); far larger ecosystem and tooling, the common modern choice for new RPC, but not Thrift-compatible. |
-| Apache Avro | 未收录 | Use this page for its stated niche; choose Apache Avro when you need schema-based serialization with RPC. | Schema-based serialization with RPC; JSON-defined schemas, strong in data/Hadoop ecosystems; not wire-compatible with Thrift. |
+| thriftpy2 | 未收录 | Choose thriftpy2 when you need the maintained runtime-load-`.thrift` successor and are leaving this archived repo. | Same model with current Python support; the direct migration target. |
+| Apache Thrift (official `thrift` Python lib) | 未收录 | Choose official Apache Thrift when canonical multi-language stubs and foundation governance matter more than runtime IDL loading. | Heavier because of code generation, but broadly supported and the reference implementation. |
+| gRPC + Protocol Buffers | 未收录 | Choose gRPC and Protocol Buffers for new RPC designs that do not need Thrift wire compatibility. | Larger modern ecosystem over HTTP/2/protobuf, but it is a migration to a different protocol. |
+| Apache Avro | 未收录 | Choose Avro when schema-based serialization in data/Hadoop ecosystems is the deciding constraint. | JSON-defined schemas and RPC support, but not wire-compatible with Thrift. |
 
 ## Tech stack
 

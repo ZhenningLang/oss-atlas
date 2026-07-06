@@ -93,10 +93,10 @@ It's also the substrate under much of the Python networking/security ecosystem: 
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| `socket.getaddrinfo` (stdlib) | 未收录 | Use this page for its stated niche; choose socket.getaddrinfo (stdlib) when you need zero deps, uses OS resolver + `/etc/hosts`. | Zero deps, uses OS resolver + `/etc/hosts`; but only basic A/AAAA forward/reverse lookups — no record types, custom servers, DNSSEC, or encrypted transports. |
-| `dig` / `drill` / `kdig` (CLI) | 未收录 | Use this page for its stated niche; choose dig / drill / kdig (CLI) when you need interactive/debug DNS from the shell, full-featured. | Interactive/debug DNS from the shell, full-featured; but a subprocess to parse, not a typed in-Python API. |
-| aiodns / pycares | 未收录 | Use this page for its stated niche; choose aiodns / pycares when you need async DNS via the C-Ares library. | Async DNS via the C-Ares library — fast async resolution, but a thin lookup layer, not the full message/zone/DNSSEC toolkit. |
-| `getdns` Python bindings | 未收录 | Use this page for its stated niche; choose getdns Python bindings when you need bindings to the getdns C library with stub-resolver/DNSSEC features. | Bindings to the getdns C library with stub-resolver/DNSSEC features; native dep and smaller Python ecosystem than dnspython. |
+| `socket.getaddrinfo` (stdlib) | 未收录 | Choose `socket.getaddrinfo` when zero dependencies and OS resolver behavior matter more than DNS protocol control. | Uses `/etc/hosts` and system config, but only covers basic forward host-to-address lookups. |
+| `dig` / `drill` / `kdig` (CLI) | 未收录 | Choose CLI tools when the job is interactive DNS debugging from a shell, not in-process Python logic. | Full-featured for humans, but a subprocess to parse rather than a typed Python API. |
+| aiodns / pycares | 未收录 | Choose aiodns or pycares when async lookup speed is enough and you do not need dnspython's full record/message model. | Thin C-Ares lookup layer, not a zone/DNSSEC/custom-message toolkit. |
+| `getdns` Python bindings | 未收录 | Choose getdns bindings when stub-resolver and DNSSEC features from the getdns C library justify a native dependency. | Smaller Python ecosystem than dnspython and more native-library coupling. |
 
 ## Tech stack
 
