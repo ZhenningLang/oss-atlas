@@ -116,7 +116,7 @@ It also fits when you want behavioral *modes* layered on top of the raw model: a
 
 ## Health & viability
 
-- **Responsiveness**: Grade C — median first-response time 97.8 hours across 2 qualifying issues/PRs.
+- **Responsiveness**: Cannot be scored — no_traffic.
 - **Maintenance (2026-06):** actively maintained — repo pushed 2026-06-13, latest release v4.3.0 (2026-03-22), not archived. v4 is a recent rewrite and a v5 (TypeScript plugin) is announced, so it's moving fast, not coasting — but the install layout can shift across the v4→v5 transition.
 - **Governance & backing:** Organization-owned (SuperClaude-Org) — a community/org structure rather than a lone account, which is a modestly better bus-factor signal than a single-user repo. No foundation or commercial vendor backing is published; effectively a community-maintained framework.
 - **Age & Lindy (2026-06):** created 2025-06, ~1 year old, ~23k stars. Young, and mid-rewrite (v4 fresh, v5 announced) means the contract you adopt today may not survive the next major. Lindy verdict: **unproven by age** — usable now, but pin versions and expect command/agent-roster and install-model churn.
