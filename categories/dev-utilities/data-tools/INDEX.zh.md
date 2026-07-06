@@ -15,6 +15,9 @@
 | **fontTools** | 当你需要对字体做程序化处理——子集化网页字体、转格式、查改表——时用它——但它只编辑字体文件，不绘制字形也不做文字排版。 | A（6/6） | [→](fonttools.zh.md) |
 | **Flashlight** | 当你在维护一台 10.10–10.15 的老 macOS、想给 Spotlight 加插件时用它——但它自 2020 年起已弃，且需关闭 SIP，日常机器上别碰。 | E（3/6） | [→](flashlight.zh.md) |
 | **ripgrep** | 当你需要一个快速、智能、跨平台的搜索工具，默认遵守 gitignore，且在 Windows、macOS 和 Linux 上行为一致时用它。 | ?（0/6） | [→](ripgrep.zh.md) |
+| **fzf** | :cherry_blossom: A command-line fuzzy finder | ?（0/6） | [→](fzf.zh.md) |
+| **jq** | Command-line JSON processor | ?（0/6） | [→](jq.zh.md) |
+
 
 ## 对比矩阵
 

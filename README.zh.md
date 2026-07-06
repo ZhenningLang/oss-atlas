@@ -66,6 +66,7 @@ skill 从 `raw.githubusercontent.com/ZhenningLang/oss-atlas/main/` 拉取页面�
 | **MiniCPM-V** | 当你需要小体积、可在端侧/边缘运行的多模态（图像+视频）理解时用它——注意逐权重许可。 | Apache-2.0 | A（4/6） | [中](categories/on-device-ml/minicpm-v.zh.md) · [EN](categories/on-device-ml/minicpm-v.md) |
 | **Stable Diffusion WebUI** | 当你想在自有 GPU 上用本地 Web GUI 进行 Stable Diffusion 图像生成、编辑和超分时用它——但需要技术 setup 和 NVIDIA GPU。 | AGPL-3.0 | ?（0/6） | [中](categories/on-device-ml/stable-diffusion-webui.zh.md) · [EN](categories/on-device-ml/stable-diffusion-webui.md) |
 | **ComfyUI** | 最强大、最模块化的扩散模型 GUI，带节点图界面，用于在本地构建复杂工作流——但学习曲线陡峭，需要大量 GPU 资源。 | GPL-3.0 | ?（0/6） | [中](categories/on-device-ml/comfyui.zh.md) · [EN](categories/on-device-ml/comfyui.md) |
+| **MLX / mlx-lm** | Run LLMs with MLX | MIT | ?（0/6） | [EN](categories/on-device-ml/mlx-mlx-lm.md) · [中](categories/on-device-ml/mlx-mlx-lm.zh.md) |
 
 ### web-automation
 
@@ -78,6 +79,10 @@ skill 从 `raw.githubusercontent.com/ZhenningLang/oss-atlas/main/` 拉取页面�
 | **Selenium** | 当你需要跨浏览器、跨语言的 WebDriver 自动化时用它——现代单浏览器体验 Playwright/Cypress 更顺手。 | Apache-2.0 | B（6/6） | [中](categories/web-automation/selenium.zh.md) · [EN](categories/web-automation/selenium.md) |
 | **PhantomJS** | 新项目别用——已归档、停更的可脚本化无头浏览器；改用 Puppeteer/Playwright 的无头 Chrome 或 Selenium。 | BSD-3-Clause | D（5/6） | [中](categories/web-automation/phantomjs.zh.md) · [EN](categories/web-automation/phantomjs.md) |
 | **Selenium Wire** | 当遗留的 Selenium 测试套件需要读取或改写浏览器后台 HTTP 流量时用它——但它已归档，新项目应改用 Selenium 4 原生 CDP/BiDi 或 Playwright。 | MIT | D（5/6） | [中](categories/web-automation/selenium-wire.zh.md) · [EN](categories/web-automation/selenium-wire.md) |
+| **browser-use** | 🌐 Make websites accessible for AI agents. Automate tasks online with ease. | MIT | ?（0/6） | [EN](categories/web-automation/browser-use.md) · [中](categories/web-automation/browser-use.zh.md) |
+| **Playwright** | Playwright is a framework for Web Testing and Automation. It allows testing Chromium, Firefox and WebKit with a single API. | Apache-2.0 | ?（0/6） | [EN](categories/web-automation/playwright.md) · [中](categories/web-automation/playwright.zh.md) |
+| **Puppeteer** | JavaScript API for Chrome and Firefox | Apache-2.0 | ?（0/6） | [EN](categories/web-automation/puppeteer.md) · [中](categories/web-automation/puppeteer.zh.md) |
+
 ### llm-training
 
 | 项目 | 何时用 | 许可 | 健康度 | 页面 |
@@ -87,6 +92,10 @@ skill 从 `raw.githubusercontent.com/ZhenningLang/oss-atlas/main/` 拉取页面�
 | **ART (Agent Reinforcement Trainer)** | 当 Python 命令行需要纯 Python 的 figlet 风格 ASCII 文字横幅、且不依赖系统二进制时用它——但它只做文字转艺术字（不做图片转 ASCII），也不与 figlet 字体完全一致。 | Apache-2.0 | B（5/6） | [中](categories/llm-training/art.zh.md) · [EN](categories/llm-training/art.md) |
 | **Agent Lightning** | 微软出品的强化学习/优化训练器，把 agent 执行与训练后端解耦，几乎零改动地优化任意框架（LangChain、AutoGen、OpenAI SDK 等）构建的 agent。 | MIT | C（5/6） | [中](categories/llm-training/agent-lightning.zh.md) · [EN](categories/llm-training/agent-lightning.md) |
 | **Colossal-AI** | 当你需要用张量/流水线/ZeRO 并行在多 GPU 上训练/微调大模型时用它——单卡 LoRA 用它是杀鸡用牛刀。 | Apache-2.0 | B（5/6） | [中](categories/llm-training/colossalai.zh.md) · [EN](categories/llm-training/colossalai.md) |
+| **Hugging Face TRL** | Train transformer language models with reinforcement learning. | Apache-2.0 | ?（0/6） | [EN](categories/llm-training/trl.md) · [中](categories/llm-training/trl.zh.md) |
+| **torchtune** | PyTorch native post-training library | BSD-3-Clause | ?（0/6） | [EN](categories/llm-training/torchtune.md) · [中](categories/llm-training/torchtune.zh.md) |
+| **Axolotl** | Go ahead and axolotl questions | Apache-2.0 | ?（0/6） | [EN](categories/llm-training/axolotl.md) · [中](categories/llm-training/axolotl.zh.md) |
+| **verl** | verl/HybridFlow: A Flexible and Efficient RL Post-Training Framework | Apache-2.0 | ?（0/6） | [EN](categories/llm-training/verl.md) · [中](categories/llm-training/verl.zh.md) |
 
 ### agent-frameworks
 
@@ -114,6 +123,17 @@ skill 从 `raw.githubusercontent.com/ZhenningLang/oss-atlas/main/` 拉取页面�
 | **Langflow** | 可视化拖拽平台，用于构建和部署 LLM 工作流与智能体，内置 API 和 MCP 服务器——但可视化流比代码更难做 diff/审查。 | MIT | ?（0/6） | [中](categories/agent-frameworks/workflow-builders/langflow.zh.md) · [EN](categories/agent-frameworks/workflow-builders/langflow.md) |
 | **Gemini CLI** | 基于 Google Gemini 模型的开源终端 AI 智能体，带免费层、内置工具和 MCP 支持——但仅限 Google 模型，且非常年轻。 | Apache-2.0 | ?（0/6） | [中](categories/agent-frameworks/coding-agents/gemini-cli.zh.md) · [EN](categories/agent-frameworks/coding-agents/gemini-cli.md) |
 | **RTK** | 在 shell 输出到达 AI 智能体前进行压缩的 CLI 代理，可减少 60–90% 的 token 成本——但极其年轻（6 个月），star 数高得可疑。 | Apache-2.0 | ?（0/6） | [中](categories/agent-frameworks/coding-agents/rtk.zh.md) · [EN](categories/agent-frameworks/coding-agents/rtk.md) |
+| **CrewAI** | Framework for orchestrating role-playing, autonomous AI agents. By fostering collaborative intelligence, CrewAI empowers agents to work together seamlessly, tackling complex tasks. | MIT | ?（0/6） | [EN](categories/agent-frameworks/agent-runtimes/crewai.md) · [中](categories/agent-frameworks/agent-runtimes/crewai.zh.md) |
+| **LangGraph** | Build resilient agents. | MIT | ?（0/6） | [EN](categories/agent-frameworks/agent-runtimes/langgraph.md) · [中](categories/agent-frameworks/agent-runtimes/langgraph.zh.md) |
+| **LlamaIndex** | LlamaIndex is the leading document agent and OCR platform | MIT | ?（0/6） | [EN](categories/agent-frameworks/workflow-builders/llamaindex.md) · [中](categories/agent-frameworks/workflow-builders/llamaindex.zh.md) |
+| **AutoGen** | A programming framework for agentic AI | CC-BY-4.0 | ?（0/6） | [EN](categories/agent-frameworks/agent-runtimes/autogen.md) · [中](categories/agent-frameworks/agent-runtimes/autogen.zh.md) |
+| **Pydantic AI** | AI Agent Framework, the Pydantic way | MIT | ?（0/6） | [EN](categories/agent-frameworks/agent-runtimes/pydantic-ai.md) · [中](categories/agent-frameworks/agent-runtimes/pydantic-ai.zh.md) |
+| **OpenAI Agents SDK** | A lightweight, powerful framework for multi-agent workflows | MIT | ?（0/6） | [EN](categories/agent-frameworks/agent-runtimes/openai-agents-sdk.md) · [中](categories/agent-frameworks/agent-runtimes/openai-agents-sdk.zh.md) |
+| **aider** | aider is AI pair programming in your terminal | Apache-2.0 | ?（0/6） | [EN](categories/agent-frameworks/coding-agents/aider.md) · [中](categories/agent-frameworks/coding-agents/aider.zh.md) |
+| **Cline** | Autonomous coding agent as an SDK, IDE extension, or CLI assistant. | Apache-2.0 | ?（0/6） | [EN](categories/agent-frameworks/coding-agents/cline.md) · [中](categories/agent-frameworks/coding-agents/cline.zh.md) |
+| **SWE-agent** | SWE-agent takes a GitHub issue and tries to automatically fix it, using your LM of choice. It can also be employed for offensive cybersecurity or competitive coding challenges. [NeurIPS 2024] | MIT | ?（0/6） | [EN](categories/agent-frameworks/coding-agents/swe-agent.md) · [中](categories/agent-frameworks/coding-agents/swe-agent.zh.md) |
+| **Flowise** | Build AI Agents, Visually | NOASSERTION | ?（0/6） | [EN](categories/agent-frameworks/workflow-builders/flowise.md) · [中](categories/agent-frameworks/workflow-builders/flowise.zh.md) |
+| **OpenHands** | 🙌 OpenHands: AI-Driven Development | NOASSERTION | ?（0/6） | [EN](categories/agent-frameworks/coding-agents/openhands.md) · [中](categories/agent-frameworks/coding-agents/openhands.zh.md) |
 
 ### agent-memory
 
@@ -124,6 +144,11 @@ skill 从 `raw.githubusercontent.com/ZhenningLang/oss-atlas/main/` 拉取页面�
 | **Claude Subconscious** | 当你想让一个后台 Letta agent 通过 hook 给 Claude Code 加上跨会话记忆时使用（仅 demo，非生产）。 | MIT | C（6/6） | [中](categories/agent-memory/claude-subconscious.zh.md) · [EN](categories/agent-memory/claude-subconscious.md) |
 | **claude-mem** | 当你的编码 agent 跨会话丢失上下文、你想要本地 hook/MCP 捕获并压缩后再注入的记忆时用它（star 数存疑）。 | Apache-2.0 | B（6/6） | [中](categories/agent-memory/claude-mem.zh.md) · [EN](categories/agent-memory/claude-mem.md) |
 | **ByteRover CLI** | 当你想要一款可移植的、带 git 式版本控制和云同步的结构化编码 agent 记忆层时用它——但它极其年轻（2025-06 创建），且许可情况模糊。 | NOASSERTION | ?（0/6） | [中](categories/agent-memory/byterover.zh.md) · [EN](categories/agent-memory/byterover.md) |
+| **Letta (MemGPT)** | Platform for stateful agents: AI with advanced memory that can learn and self-improve over time. | Apache-2.0 | ?（0/6） | [EN](categories/agent-memory/letta.md) · [中](categories/agent-memory/letta.zh.md) |
+| **Zep** | Zep \| Examples, Integrations, & More | Apache-2.0 | ?（0/6） | [EN](categories/agent-memory/zep.md) · [中](categories/agent-memory/zep.zh.md) |
+| **Graphiti** | Build Real-Time Knowledge Graphs for AI Agents | Apache-2.0 | ?（0/6） | [EN](categories/agent-memory/graphiti.md) · [中](categories/agent-memory/graphiti.zh.md) |
+| **LangMem** | 当你需要在 agent-memory 方向评估 LangMem 时用它。 | MIT | ?（0/6） | [EN](categories/agent-memory/langmem.md) · [中](categories/agent-memory/langmem.zh.md) |
+| **Cognee** | Cognee is the open-source AI memory platform for agents. Give your AI agents persistent long-term memory across sessions with a self-hosted knowledge graph engine. | Apache-2.0 | ?（0/6） | [EN](categories/agent-memory/cognee.md) · [中](categories/agent-memory/cognee.zh.md) |
 
 ### deep-research
 
@@ -134,6 +159,11 @@ skill 从 `raw.githubusercontent.com/ZhenningLang/oss-atlas/main/` 拉取页面�
 | **Local Deep Research** | 当你需要一个自托管、可纯本地运行的深度研究 agent、把敏感查询留在自己机器上时用它。 | MIT | B（6/6） | [中](categories/deep-research/local-deep-research.zh.md) · [EN](categories/deep-research/local-deep-research.md) |
 | **Agent-Reach** | 当你的 agent 需要免付费 API 地读取和搜索网页与社交平台内容时用它。 | MIT | B（5/6） | [中](categories/deep-research/agent-reach.zh.md) · [EN](categories/deep-research/agent-reach.md) |
 | **MiroThinker** | 当你想要一个可在自有 GPU 上研究改造的自托管开源深研 Agent 时用它——但它要 GPU 集群加付费外部 API，且不到一岁、毫无 Lindy 沉淀。 | Apache-2.0 | C（6/6） | [中](categories/deep-research/mirothinker.zh.md) · [EN](categories/deep-research/mirothinker.md) |
+| **GPT Researcher** | An autonomous agent that conducts deep research on any data using any LLM providers | Apache-2.0 | ?（0/6） | [EN](categories/deep-research/gpt-researcher.md) · [中](categories/deep-research/gpt-researcher.zh.md) |
+| **Open Deep Research** | 当你需要在 deep-research 方向评估 Open Deep Research 时用它。 | MIT | ?（0/6） | [EN](categories/deep-research/open-deep-research.md) · [中](categories/deep-research/open-deep-research.zh.md) |
+| **STORM** | An LLM-powered knowledge curation system that researches a topic and generates a full-length report with citations. | MIT | ?（0/6） | [EN](categories/deep-research/storm.md) · [中](categories/deep-research/storm.zh.md) |
+| **node-DeepResearch** | Keep searching, reading webpages, reasoning until it finds the answer (or exceeding the token budget) | Apache-2.0 | ?（0/6） | [EN](categories/deep-research/node-deepresearch.md) · [中](categories/deep-research/node-deepresearch.zh.md) |
+
 ### ai-code-review
 
 | 项目 | 何时用 | 许可 | 健康度 | 页面 |
@@ -141,6 +171,9 @@ skill 从 `raw.githubusercontent.com/ZhenningLang/oss-atlas/main/` 拉取页面�
 | **Open Code Review** | 想在 CI 里对 Git diff 拿到精确行级 LLM review 评论、又不被噪声淹没时用它。 | Apache-2.0 | B（6/6） | [中](categories/ai-code-review/open-code-review.zh.md) · [EN](categories/ai-code-review/open-code-review.md) |
 | **Claude Code Security Review** | 当你想用 Claude 在可信 PR 上做上下文感知的安全审查、且接受按 token 计费与非确定性结果时使用。 | MIT | C（5/6） | [中](categories/ai-code-review/claude-code-security-review.zh.md) · [EN](categories/ai-code-review/claude-code-security-review.md) |
 | **React Doctor** | 当 coding agent 在写 React、你想要对 React 特有反模式做确定性、可重复的检查时用它。 | LicenseRef-Modified-MIT | B（5/6） | [中](categories/ai-code-review/react-doctor.zh.md) · [EN](categories/ai-code-review/react-doctor.md) |
+| **PR-Agent** | 🚀 PR Agent: The Original Open-Source PR Reviewer.  This project It is not the Qodo free tier. | Apache-2.0 | ?（0/6） | [EN](categories/ai-code-review/pr-agent.md) · [中](categories/ai-code-review/pr-agent.zh.md) |
+| **Metis** | Metis is an open-source, AI-driven tool for deep security code review | Apache-2.0 | ?（0/6） | [EN](categories/ai-code-review/metis.md) · [中](categories/ai-code-review/metis.zh.md) |
+| **OpenReview** | An open-source, self-hosted AI code review bot powered by Vercel. | NOASSERTION | ?（0/6） | [EN](categories/ai-code-review/openreview.md) · [中](categories/ai-code-review/openreview.zh.md) |
 
 ### rag-retrieval
 
@@ -153,12 +186,22 @@ skill 从 `raw.githubusercontent.com/ZhenningLang/oss-atlas/main/` 拉取页面�
 | **Understand-Anything** | 当你想把任意代码库变成可探索、可提问的知识图谱给 agent 用时用它——比 graphify 更年轻、未经检验。 | MIT | B（6/6） | [中](categories/rag-retrieval/understand-anything.zh.md) · [EN](categories/rag-retrieval/understand-anything.md) |
 | **FAISS** | 当你需要一个快速的进程内 ANN 向量索引来检索 embedding 时用它——是库，不是托管向量数据库。 | MIT | A（6/6） | [中](categories/rag-retrieval/faiss.zh.md) · [EN](categories/rag-retrieval/faiss.md) |
 | **text2vec** | 当你要为中文语义检索或 FAQ 匹配快速拿到句向量、只想一行 pip 装好时用它——它只是编码器，向量索引（FAISS／Milvus）得自己配。 | Apache-2.0 | C（5/6） | [中](categories/rag-retrieval/text2vec.zh.md) · [EN](categories/rag-retrieval/text2vec.md) |
+| **SCIP** | SCIP Code Intelligence Protocol | Apache-2.0 | ?（0/6） | [EN](categories/rag-retrieval/scip.md) · [中](categories/rag-retrieval/scip.zh.md) |
+| **Milvus** | Milvus is a high-performance, cloud-native vector database built for scalable vector ANN search | Apache-2.0 | ?（0/6） | [EN](categories/rag-retrieval/milvus.md) · [中](categories/rag-retrieval/milvus.zh.md) |
+| **Sourcegraph** | Code AI platform with Code Search & Cody | NOASSERTION | ?（0/6） | [EN](categories/rag-retrieval/sourcegraph.md) · [中](categories/rag-retrieval/sourcegraph.zh.md) |
+
 ### llm-eval
 
 | 项目 | 何时用 | 许可 | 健康度 | 页面 |
 | --- | --- | --- | --- | --- |
 | **promptfoo** | 当你要用声明式 YAML 给自己的 LLM 应用做评测+红队并接进 CI 时用它。 | MIT | A（6/6） | [中](categories/llm-eval/promptfoo.zh.md) · [EN](categories/llm-eval/promptfoo.md) |
 | **Pezzo** | 当小团队想要一个自托管的统一控制台来做 prompt 版本管理加成本／延迟可观测时用它——但它自 2025 年中起疑似停更，请做好自己维护的准备。 | Apache-2.0 | C（4/6） | [中](categories/llm-eval/pezzo.zh.md) · [EN](categories/llm-eval/pezzo.md) |
+| **DeepEval** | The LLM Evaluation Framework | Apache-2.0 | ?（0/6） | [EN](categories/llm-eval/deepeval.md) · [中](categories/llm-eval/deepeval.zh.md) |
+| **Ragas** | Supercharge Your LLM Application Evaluations 🚀 | Apache-2.0 | ?（0/6） | [EN](categories/llm-eval/ragas.md) · [中](categories/llm-eval/ragas.zh.md) |
+| **garak** | the LLM vulnerability scanner | Apache-2.0 | ?（0/6） | [EN](categories/llm-eval/garak.md) · [中](categories/llm-eval/garak.zh.md) |
+| **Giskard OSS** | 🐢 Open-Source Evaluation & Testing library for LLM Agents | Apache-2.0 | ?（0/6） | [EN](categories/llm-eval/giskard.md) · [中](categories/llm-eval/giskard.zh.md) |
+| **Langfuse** | 🪢 Open source AI engineering platform: LLM evals, observability, metrics, prompt management, playground, datasets. Integrates with OpenTelemetry, LangChain, OpenAI SDK, LiteLLM, and more. 🍊YC W23 | NOASSERTION | ?（0/6） | [EN](categories/llm-eval/langfuse.md) · [中](categories/llm-eval/langfuse.zh.md) |
+
 ### agent-dev-methodology
 
 | 项目 | 何时用 | 许可 | 健康度 | 页面 |
@@ -207,6 +250,9 @@ skill 从 `raw.githubusercontent.com/ZhenningLang/oss-atlas/main/` 拉取页面�
 | **Zed** | 由 Atom 创作者打造的高性能原生代码编辑器，支持实时多人协作——但扩展生态远小于 VS Code，仅约 4 年历史。 | NOASSERTION | ?（0/6） | [中](categories/dev-utilities/editors-and-runtimes/zed.zh.md) · [EN](categories/dev-utilities/editors-and-runtimes/zed.md) |
 | **ripgrep** | 快速、感知 gitignore 的面向行搜索工具，跨平台支持一流；10 年历史，Lindy 信号强劲，单人维护但可靠性高。 | Unlicense | ?（0/6） | [中](categories/dev-utilities/data-tools/ripgrep.zh.md) · [EN](categories/dev-utilities/data-tools/ripgrep.md) |
 | **Bun** | 一款极速一体化 JavaScript/TypeScript 工具集（运行时、打包器、测试运行器、包管理器）集成在单个二进制文件中——但商用前请核实自定义许可证。 | NOASSERTION | ?（0/6） | [中](categories/dev-utilities/editors-and-runtimes/bun.zh.md) · [EN](categories/dev-utilities/editors-and-runtimes/bun.md) |
+| **fzf** | :cherry_blossom: A command-line fuzzy finder | MIT | ?（0/6） | [EN](categories/dev-utilities/data-tools/fzf.md) · [中](categories/dev-utilities/data-tools/fzf.zh.md) |
+| **jq** | Command-line JSON processor | NOASSERTION | ?（0/6） | [EN](categories/dev-utilities/data-tools/jq.md) · [中](categories/dev-utilities/data-tools/jq.zh.md) |
+
 ### frontend-animation
 
 | 项目 | 何时用 | 许可 | 健康度 | 页面 |
@@ -339,12 +385,18 @@ skill 从 `raw.githubusercontent.com/ZhenningLang/oss-atlas/main/` 拉取页面�
 | 项目 | 何时用 | 许可 | 健康度 | 页面 |
 | --- | --- | --- | --- | --- |
 | **Grafana** | 当你需要在 Prometheus/Loki/Elasticsearch 等多数据源之上加一层统一看板和告警时用它——它做可视化，不做存储。 | AGPL-3.0 | B（5/6） | [中](categories/observability/grafana.zh.md) · [EN](categories/observability/grafana.md) |
+| **Prometheus** | The Prometheus monitoring system and time series database. | Apache-2.0 | ?（0/6） | [EN](categories/observability/prometheus.md) · [中](categories/observability/prometheus.zh.md) |
+| **OpenTelemetry Collector** | OpenTelemetry Collector | Apache-2.0 | ?（0/6） | [EN](categories/observability/opentelemetry-collector.md) · [中](categories/observability/opentelemetry-collector.zh.md) |
+| **Loki** | Like Prometheus, but for logs. | AGPL-3.0 | ?（0/6） | [EN](categories/observability/loki.md) · [中](categories/observability/loki.zh.md) |
+| **Jaeger** | CNCF Jaeger, a Distributed Tracing Platform | Apache-2.0 | ?（0/6） | [EN](categories/observability/jaeger.md) · [中](categories/observability/jaeger.zh.md) |
 
 ### data-visualization
 
 | 项目 | 何时用 | 许可 | 健康度 | 页面 |
 | --- | --- | --- | --- | --- |
 | **Apache Superset** | 当你想要在数据仓库之上自托管 SQL BI 看板与探索时用它——不是基础设施指标/可观测性。 | Apache-2.0 | A（6/6） | [中](categories/data-visualization/superset.zh.md) · [EN](categories/data-visualization/superset.md) |
+| **Evidence** | Business intelligence as code: build fast, interactive data visualizations in SQL and markdown | MIT | ?（0/6） | [EN](categories/data-visualization/evidence.md) · [中](categories/data-visualization/evidence.zh.md) |
+| **Metabase** | The easy-to-use open source Business Intelligence and Embedded Analytics tool that lets everyone work with data :bar_chart: | NOASSERTION | ?（0/6） | [EN](categories/data-visualization/metabase.md) · [中](categories/data-visualization/metabase.zh.md) |
 
 ### ocr
 
@@ -360,6 +412,8 @@ skill 从 `raw.githubusercontent.com/ZhenningLang/oss-atlas/main/` 拉取页面�
 | **Docling** | 当你需要把杂乱的 PDF/DOCX/PPTX 解析成干净的结构化 Markdown/JSON 以喂给 RAG 时用它——是解析器，不是文档管理系统。 | MIT | A（5/6） | [中](categories/document-parsing/docling.zh.md) · [EN](categories/document-parsing/docling.md) |
 | **MarkItDown** | 当你需要一个轻量级 Python 库把各类办公文档和文件转成 Markdown 以喂给 LLM 时用它——比 Docling 更简单，但对版面感知较弱。 | MIT | ?（0/6） | [中](categories/document-parsing/markitdown.zh.md) · [EN](categories/document-parsing/markitdown.md) |
 | **olmOCR** | 当你需要把带公式、表格、手写体和多栏版面的复杂 PDF 转成干净 Markdown 以用于 LLM 训练数据集时用它——需要 GPU。 | Apache-2.0 | ?（0/6） | [中](categories/document-parsing/olmocr.zh.md) · [EN](categories/document-parsing/olmocr.md) |
+| **Marker** | Convert PDF to markdown + JSON quickly with high accuracy | GPL-3.0 | ?（0/6） | [EN](categories/document-parsing/marker.md) · [中](categories/document-parsing/marker.zh.md) |
+| **unstructured** | Convert documents to structured data effortlessly. Unstructured is open-source ETL solution for transforming complex documents into clean, structured formats for language models.  Visit our website to learn more about our enterprise grade Platform product for production grade workflows, partitioning, enrichments, chunking and embedding. | Apache-2.0 | ?（0/6） | [EN](categories/document-parsing/unstructured.md) · [中](categories/document-parsing/unstructured.zh.md) |
 
 ### diagramming
 
@@ -380,6 +434,8 @@ skill 从 `raw.githubusercontent.com/ZhenningLang/oss-atlas/main/` 拉取页面�
 | **youtube-transcript-api** | 当你想免密钥地为 RAG／摘要管线取回带时间戳的 YouTube 字幕时用它——但它依赖未公开接口、随时可能失效，且云端／机房 IP 现已必须配付费住宅代理。 | MIT | A（6/6） | [中](categories/media-download/youtube-transcript-api.zh.md) · [EN](categories/media-download/youtube-transcript-api.md) |
 | **bulk-downloader-for-reddit** | 当你想通过 OAuth 做可脚本化、可复现的 Reddit 文件加元数据归档时用它——但 Reddit 约 1000 帖的列表上限无法绕过，且发布自 2023 年初已停滞（GPL-3.0）。 | GPL-3.0 | D（5/6） | [中](categories/media-download/bulk-downloader-for-reddit.zh.md) · [EN](categories/media-download/bulk-downloader-for-reddit.md) |
 | **yt-dlp** | 当你需要一个活跃维护的 CLI 从 YouTube 和数千站点下载音视频时用它——youtube-dl 的事实继任者，修复更快、功能更多。 | Unlicense | ?（0/6） | [中](categories/media-download/yt-dlp.zh.md) · [EN](categories/media-download/yt-dlp.md) |
+| **gallery-dl** | Command-line program to download image galleries and collections from several image hosting sites | GPL-2.0 | ?（0/6） | [EN](categories/media-download/gallery-dl.md) · [中](categories/media-download/gallery-dl.zh.md) |
+
 ### media-processing
 
 | 项目 | 何时用 | 许可 | 健康度 | 页面 |
@@ -396,6 +452,9 @@ skill 从 `raw.githubusercontent.com/ZhenningLang/oss-atlas/main/` 拉取页面�
 | **GStreamer** | 当你需要实时、持久、嵌入应用的音视频管线框架而非 CLI 工具时用它——但要接受陡峭的学习曲线和插件依赖管理。 | LGPL-2.1-or-later | — | [中](categories/media-processing/gstreamer.zh.md) · [EN](categories/media-processing/gstreamer.md) |
 | **MLT** | 当你需要构建自定义视频编辑器或需要时间线模型的自动化剪辑管线时用它——但它是框架，不是开箱即用的 NLE，且底层编解码工作委托给 FFmpeg。 | LGPL-2.1-or-later | — | [中](categories/media-processing/mlt.zh.md) · [EN](categories/media-processing/mlt.md) |
 | **OpenAI Whisper** | 当你需要通用的多语言语音转文字转写或从音视频英译时用它——但它默认不是实时系统，大模型在 CPU 上很慢，且对非语音内容会幻觉。 | MIT | — | [中](categories/media-processing/whisper.zh.md) · [EN](categories/media-processing/whisper.md) |
+| **sharp** | High performance Node.js image processing, the fastest module to resize JPEG, PNG, WebP, AVIF and TIFF images. Uses the libvips library. | Apache-2.0 | ?（0/6） | [EN](categories/media-processing/sharp.md) · [中](categories/media-processing/sharp.zh.md) |
+| **ImageMagick** | ImageMagick is a free, open-source software suite for creating, editing, converting, and displaying images. It supports 200+ formats and offers powerful command-line tools and APIs for automation, scripting, and integration across platforms. | NOASSERTION | ?（0/6） | [EN](categories/media-processing/imagemagick.md) · [中](categories/media-processing/imagemagick.zh.md) |
+
 ### video-production
 
 | 项目 | 何时用 | 许可 | 健康度 | 页面 |
@@ -407,6 +466,7 @@ skill 从 `raw.githubusercontent.com/ZhenningLang/oss-atlas/main/` 拉取页面�
 | --- | --- | --- | --- | --- |
 | **NextChat** | 当你想要一个私有、可自部署、跨 web/桌面/移动 的多 provider AI 聊天前端时用它——不是多用户 RBAC 团队平台。 | MIT | B（5/6） | [中](categories/llm-chat-ui/nextchat.zh.md) · [EN](categories/llm-chat-ui/nextchat.md) |
 | **Open WebUI** | 自托管 AI 聊天平台，内置 RAG、支持 Ollama、可离线运行——但默认偏单用户。 | NOASSERTION | ?（0/6） | [中](categories/llm-chat-ui/open-webui.zh.md) · [EN](categories/llm-chat-ui/open-webui.md) |
+| **LibreChat** | Enhanced ChatGPT Clone: Features Agents, MCP, Skills, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Presets, open-source for self-hosting. Active | MIT | ?（0/6） | [EN](categories/llm-chat-ui/librechat.md) · [中](categories/llm-chat-ui/librechat.zh.md) |
 
 ### markdown-tools
 
@@ -418,6 +478,9 @@ skill 从 `raw.githubusercontent.com/ZhenningLang/oss-atlas/main/` 拉取页面�
 | **remark** | 当你需要完整的 mdast AST 管线来解析、变换、lint 和序列化 Markdown 时用它——但它是工具链，不是一次调用的渲染器。 | MIT | — | [中](categories/markdown-tools/remark.zh.md) · [EN](categories/markdown-tools/remark.md) |
 | **markdown-it** | 当你需要一个严格遵循 CommonMark/GFM、可插拔的 JS Markdown→HTML 解析器时用它——但插件生态会增加体积，且处理不受信任内容时仍需消毒。 | MIT | — | [中](categories/markdown-tools/markdown-it.zh.md) · [EN](categories/markdown-tools/markdown-it.md) |
 | **micromark** | 当你需要一个低层、面向流式处理的 JS CommonMark/GFM 分词器时用它——remark 的底层引擎——但渲染层要你自己搭。 | MIT | — | [中](categories/markdown-tools/micromark.zh.md) · [EN](categories/markdown-tools/micromark.md) |
+| **Pandoc** | Universal markup converter | GPL-2.0 | ?（0/6） | [EN](categories/markdown-tools/pandoc.md) · [中](categories/markdown-tools/pandoc.zh.md) |
+| **Goldmark** | :trophy: A markdown parser written in Go. Easy to extend, standard(CommonMark) compliant, well structured. | MIT | ?（0/6） | [EN](categories/markdown-tools/goldmark.md) · [中](categories/markdown-tools/goldmark.zh.md) |
+| **markdownlint** | A Node.js style checker and lint tool for Markdown/CommonMark files. | MIT | ?（0/6） | [EN](categories/markdown-tools/markdownlint.md) · [中](categories/markdown-tools/markdownlint.zh.md) |
 
 ### pdf-tools
 
@@ -426,6 +489,10 @@ skill 从 `raw.githubusercontent.com/ZhenningLang/oss-atlas/main/` 拉取页面�
 | **PDF.js** | 当你需要在浏览器/Node 里渲染或读取 PDF（Firefox 的引擎）时用它——它不创建也不编辑 PDF。 | Apache-2.0 | A（6/6） | [中](categories/pdf-tools/pdfjs.zh.md) · [EN](categories/pdf-tools/pdfjs.md) |
 | **pdf-lib** | 当你需要在 JS/TS 里创建或修改 PDF——在浏览器、Node、Deno 或 React Native 中——且不需要原生依赖时用它。 | MIT | — | [中](categories/pdf-tools/pdf-lib.zh.md) · [EN](categories/pdf-tools/pdf-lib.md) |
 | **jsPDF** | 当你需要在浏览器里从 HTML、文本和图形生成客户端 PDF——它只创建不编辑已有 PDF——时用它。 | MIT | — | [中](categories/pdf-tools/jspdf.zh.md) · [EN](categories/pdf-tools/jspdf.md) |
+| **PyMuPDF** | PyMuPDF is a high performance Python library for data extraction, analysis, conversion & manipulation of PDF (and other) documents. | AGPL-3.0 | ?（0/6） | [EN](categories/pdf-tools/pymupdf.md) · [中](categories/pdf-tools/pymupdf.zh.md) |
+| **pdfplumber** | Plumb a PDF for detailed information about each char, rectangle, line, et cetera — and easily extract text and tables. | MIT | ?（0/6） | [EN](categories/pdf-tools/pdfplumber.md) · [中](categories/pdf-tools/pdfplumber.zh.md) |
+| **OCRmyPDF** | OCRmyPDF adds an OCR text layer to scanned PDF files, allowing them to be searched | MPL-2.0 | ?（0/6） | [EN](categories/pdf-tools/ocrmypdf.md) · [中](categories/pdf-tools/ocrmypdf.zh.md) |
+| **qpdf** | qpdf: A content-preserving PDF document transformer | Apache-2.0 | ?（0/6） | [EN](categories/pdf-tools/qpdf.md) · [中](categories/pdf-tools/qpdf.zh.md) |
 
 ### workflow-orchestration
 
@@ -435,6 +502,11 @@ skill 从 `raw.githubusercontent.com/ZhenningLang/oss-atlas/main/` 拉取页面�
 | **Gaia** | 当作只读参考研究「流水线即编译插件」设计时用它——仓库已归档废弃，绝不可用于新的生产部署。 | Apache-2.0 | D（5/6） | [中](categories/workflow-orchestration/gaia.zh.md) · [EN](categories/workflow-orchestration/gaia.md) |
 | **Airflow Maintenance DAGs** | 当自管 Airflow 需要现成 DAG 清理元数据库行和陈旧日志时用它——它执行依赖版本内部结构的破坏性删除，先 dry-run 并备份。 | Apache-2.0 | D（4/6） | [中](categories/workflow-orchestration/airflow-maintenance-dags.zh.md) · [EN](categories/workflow-orchestration/airflow-maintenance-dags.md) |
 | **n8n** | 一款 fair-code 工作流自动化平台，原生支持 AI 能力——结合可视化搭建与自定义代码，可自托管或上云，内置 400 余种集成。 | NOASSERTION (fair-code) | ?（0/6） | [中](categories/workflow-orchestration/n8n.zh.md) · [EN](categories/workflow-orchestration/n8n.md) |
+| **Argo Workflows** | Workflow Engine for Kubernetes | Apache-2.0 | ?（0/6） | [EN](categories/workflow-orchestration/argo-workflows.md) · [中](categories/workflow-orchestration/argo-workflows.zh.md) |
+| **Prefect** | Prefect is a workflow orchestration framework for building resilient data pipelines in Python. | Apache-2.0 | ?（0/6） | [EN](categories/workflow-orchestration/prefect.md) · [中](categories/workflow-orchestration/prefect.zh.md) |
+| **Dagster** | An orchestration platform for the development, production, and observation of data assets. | Apache-2.0 | ?（0/6） | [EN](categories/workflow-orchestration/dagster.md) · [中](categories/workflow-orchestration/dagster.zh.md) |
+| **Temporal** | Temporal service | MIT | ?（0/6） | [EN](categories/workflow-orchestration/temporal.md) · [中](categories/workflow-orchestration/temporal.zh.md) |
+
 ### llm-inference
 
 | 项目 | 何时用 | 许可 | 健康度 | 页面 |
@@ -445,6 +517,11 @@ skill 从 `raw.githubusercontent.com/ZhenningLang/oss-atlas/main/` 拉取页面�
 | **vLLM** | 当你想要事实上的开源 LLM 服务引擎，带 PagedAttention、连续批处理和 OpenAI 兼容 API 时用它——接受 NVIDIA 主导的 GPU 运维和快速迭代的代码库。 | Apache-2.0 | — | [中](categories/llm-inference/vllm.zh.md) · [EN](categories/llm-inference/vllm.md) |
 | **SGLang** | 当你需要带 RadixAttention 前缀缓存和结构化生成的快速 LLM 服务引擎——适合工具调用型 agent 和 JSON 模式 API——并接受比 vLLM 更年轻、更小的生态时用它。 | Apache-2.0 | — | [中](categories/llm-inference/sglang.zh.md) · [EN](categories/llm-inference/sglang.md) |
 | **Ray Serve** | 当你需要通用、可扩展的 Python 模型服务框架，支持多模型组合和自动扩缩容时用它——但要接受 Ray 的运维复杂性和学习曲线。 | Apache-2.0 | — | [中](categories/llm-inference/ray-serve.zh.md) · [EN](categories/llm-inference/ray-serve.md) |
+| **llama.cpp** | LLM inference in C/C++ | MIT | ?（0/6） | [EN](categories/llm-inference/llama-cpp.md) · [中](categories/llm-inference/llama-cpp.zh.md) |
+| **Ollama** | Get up and running with Kimi-K2.6, GLM-5.1, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models. | MIT | ?（0/6） | [EN](categories/llm-inference/ollama.md) · [中](categories/llm-inference/ollama.zh.md) |
+| **BentoML** | The easiest way to serve AI apps and models - Build Model Inference APIs, Job queues, LLM apps, Multi-model pipelines, and more! | Apache-2.0 | ?（0/6） | [EN](categories/llm-inference/bentoml.md) · [中](categories/llm-inference/bentoml.zh.md) |
+| **LMDeploy** | LMDeploy is a toolkit for compressing, deploying, and serving LLMs. | Apache-2.0 | ?（0/6） | [EN](categories/llm-inference/lmdeploy.md) · [中](categories/llm-inference/lmdeploy.zh.md) |
+| **Text Generation Inference (TGI)** | Large Language Model Text Generation Inference | Apache-2.0 | ?（0/6） | [EN](categories/llm-inference/text-generation-inference.md) · [中](categories/llm-inference/text-generation-inference.zh.md) |
 
 ### task-queue
 
@@ -478,6 +555,14 @@ skill 从 `raw.githubusercontent.com/ZhenningLang/oss-atlas/main/` 拉取页面�
 | **Lit** | 当你需要一套轻量、基于标准的 Web Components，能在任何框架中工作时用它——但你要接受生态较小，且需要学习 Web Components。 | BSD-3-Clause | ?（0/6） | [中](categories/web-ui/lit.zh.md) · [EN](categories/web-ui/lit.md) |
 | **React** | 当你想要最流行的 UI 库，带庞大生态、深厚的人才池和声明式组件模型时用它——但你要接受需要自己组合路由、状态管理和构建管线。 | MIT | A（6/6） | [中](categories/web-ui/react.zh.md) · [EN](categories/web-ui/react.md) |
 | **Next.js** | 当你想要一个全栈 React 框架，内置 SSR、SSG、基于文件的路由和 API 路由时用它——但你要接受 Vercel 对路线图的影响，以及比纯 React 更强的主见架构。 | MIT | ?（0/6） | [中](categories/web-ui/nextjs.zh.md) · [EN](categories/web-ui/nextjs.md) |
+| **SvelteKit** | web development, streamlined | MIT | ?（0/6） | [EN](categories/web-ui/sveltekit.md) · [中](categories/web-ui/sveltekit.zh.md) |
+| **Reactour** | Tourist Guide into your React Components | MIT | ?（0/6） | [EN](categories/web-ui/reactour.md) · [中](categories/web-ui/reactour.zh.md) |
+| **react-joyride** | Create guided tours in your apps | MIT | ?（0/6） | [EN](categories/web-ui/react-joyride.md) · [中](categories/web-ui/react-joyride.zh.md) |
+| **Material UI (MUI)** | Material UI: Comprehensive React component library that implements Google's Material Design. Free forever. | MIT | ?（0/6） | [EN](categories/web-ui/material-ui.md) · [中](categories/web-ui/material-ui.zh.md) |
+| **Chakra UI** | Chakra UI is a component system for building SaaS products with speed ⚡️ | MIT | ?（0/6） | [EN](categories/web-ui/chakra-ui.md) · [中](categories/web-ui/chakra-ui.zh.md) |
+| **Radix UI Primitives** | Radix Primitives is an open-source UI component library for building high-quality, accessible design systems and web apps. Maintained by @workos. | MIT | ?（0/6） | [EN](categories/web-ui/radix-ui.md) · [中](categories/web-ui/radix-ui.zh.md) |
+| **Nuxt** | the full-stack Vue framework | MIT | ?（0/6） | [EN](categories/web-ui/nuxt.md) · [中](categories/web-ui/nuxt.zh.md) |
+| **Astro** | The web framework for content-driven websites. ⭐️ Star to support our work! | NOASSERTION | ?（0/6） | [EN](categories/web-ui/astro.md) · [中](categories/web-ui/astro.zh.md) |
 
 ### proxy-pool
 
@@ -493,6 +578,8 @@ skill 从 `raw.githubusercontent.com/ZhenningLang/oss-atlas/main/` 拉取页面�
 | --- | --- | --- | --- | --- |
 | **whistle** | 当 web/移动开发者要通过规则化 Web UI 抓取、检查、改写并 mock HTTP(S)/WebSocket 流量时用它——是开发调试代理，不是生产网关或爬虫代理池。 | MIT | B（6/6） | [中](categories/debugging-proxy/whistle.zh.md) · [EN](categories/debugging-proxy/whistle.md) |
 | **AnyProxy** | 当你想用纯 JS 规则脚本化地拦截并改写 HTTP/HTTPS 流量、需要一个 Node.js MITM 代理时用它——但 master 自 2020 年已冻结，新项目请优先选 whistle。 | Apache-2.0 | C（4/6） | [中](categories/debugging-proxy/anyproxy.zh.md) · [EN](categories/debugging-proxy/anyproxy.md) |
+| **mitmproxy** | An interactive TLS-capable intercepting HTTP proxy for penetration testers and software developers. | MIT | ?（0/6） | [EN](categories/debugging-proxy/mitmproxy.md) · [中](categories/debugging-proxy/mitmproxy.zh.md) |
+
 ### web-scraping
 
 | 项目 | 何时用 | 许可 | 健康度 | 页面 |
@@ -500,7 +587,7 @@ skill 从 `raw.githubusercontent.com/ZhenningLang/oss-atlas/main/` 拉取页面�
 | **newspaper** | 用来从新闻 URL 批量提取正文、作者和元数据——但原版（newspaper3k）已陈旧，活跃路径是 newspaper4k 分叉。 | MIT | B（5/6） | [中](categories/web-scraping/newspaper.zh.md) · [EN](categories/web-scraping/newspaper.md) |
 | **requests-html** | 可作为小型 requests + HTML 解析脚本参考——基本停更（~2 年没动），JS 渲染路径脆弱；新项目优先 Playwright + parsel。 | MIT | D（3/6） | [中](categories/web-scraping/requests-html.zh.md) · [EN](categories/web-scraping/requests-html.md) |
 | **Firecrawl** | 规模化搜索、抓取网页并提取干净 Markdown 或结构化数据的 API——但 AGPL-3.0 可能限制商用。 | AGPL-3.0 | ?（0/6） | [中](categories/web-scraping/firecrawl.zh.md) · [EN](categories/web-scraping/firecrawl.md) |
-
+| **trafilatura** | Python & Command-line tool to gather text and metadata on the Web: Crawling, scraping, extraction, output as CSV, JSON, HTML, MD, TXT, XML | Apache-2.0 | ?（0/6） | [EN](categories/web-scraping/trafilatura.md) · [中](categories/web-scraping/trafilatura.zh.md) |
 
 ### auth
 
@@ -508,6 +595,9 @@ skill 从 `raw.githubusercontent.com/ZhenningLang/oss-atlas/main/` 拉取页面�
 | --- | --- | --- | --- | --- |
 | **Authomatic** | 当需要框架无关的 Python 应用通过 OAuth1／OAuth2／OpenID 实现轻量「用 X 登录」、且会话持久化自己负责时用它——但它迭代缓慢，而认证库修复迟缓本身就是安全风险。 | MIT | C（5/6） | [中](categories/auth/authomatic.zh.md) · [EN](categories/auth/authomatic.md) |
 | **django-rules** | 当 Django 的对象级权限是由逻辑（谓词）计算得出、而非存储授权、且不想加数据库表时用它——但若管理员需在运行时为单个对象分配权限，则应改用 django-guardian。 | MIT | B（5/6） | [中](categories/auth/django-rules.zh.md) · [EN](categories/auth/django-rules.md) |
+| **Keycloak** | Open Source Identity and Access Management For Modern Applications and Services | Apache-2.0 | ?（0/6） | [EN](categories/auth/keycloak.md) · [中](categories/auth/keycloak.zh.md) |
+| **Casbin** | Apache Casbin: an authorization library that supports access control models like ACL, RBAC, ABAC. | Apache-2.0 | ?（0/6） | [EN](categories/auth/casbin.md) · [中](categories/auth/casbin.zh.md) |
+| **OpenFGA** | A high performance and flexible authorization/permission engine built for developers and inspired by Google Zanzibar | Apache-2.0 | ?（0/6） | [EN](categories/auth/openfga.md) · [中](categories/auth/openfga.zh.md) |
 
 ### databases
 
@@ -521,6 +611,11 @@ skill 从 `raw.githubusercontent.com/ZhenningLang/oss-atlas/main/` 拉取页面�
 | **PrettyZoo** | 当你在开发或故障排查时想用友好的桌面 GUI 浏览并轻量编辑 ZooKeeper znode 树时用它——但它自 2023 年起已归档，新 JDK／macOS 可能跑不起来且无上游修复。 | Apache-2.0 | D（4/6） | [中](categories/databases/prettyzoo.zh.md) · [EN](categories/databases/prettyzoo.md) |
 | **RDR** | 当 Redis 触发 maxmemory 告警、需要离线快速按前缀分析 RDB 快照时用它——但内存数字是近似值，且项目已停滞（v0.0.1，2019 年）。 | Apache-2.0 | D（3/6） | [中](categories/databases/rdr.zh.md) · [EN](categories/databases/rdr.md) |
 | **Supabase** | 基于 PostgreSQL 构建的开源 Firebase 替代方案，包含身份认证、自动生成 API、实时订阅、边缘函数和向量存储——但它与 Postgres 深度绑定。 | Apache-2.0 | ?（0/6） | [中](categories/databases/supabase.zh.md) · [EN](categories/databases/supabase.md) |
+| **DuckDB** | DuckDB is an analytical in-process SQL database management system | MIT | ?（0/6） | [EN](categories/databases/duckdb.md) · [中](categories/databases/duckdb.zh.md) |
+| **ClickHouse** | ClickHouse® is a real-time analytics database management system | Apache-2.0 | ?（0/6） | [EN](categories/databases/clickhouse.md) · [中](categories/databases/clickhouse.zh.md) |
+| **DBeaver** | Free universal database tool and SQL client | Apache-2.0 | ?（0/6） | [EN](categories/databases/dbeaver.md) · [中](categories/databases/dbeaver.zh.md) |
+| **Debezium** | Change data capture for a variety of databases. Please log issues at https://github.com/debezium/dbz/issues. | Apache-2.0 | ?（0/6） | [EN](categories/databases/debezium.md) · [中](categories/databases/debezium.zh.md) |
+| **Valkey** | A flexible distributed key-value database that is optimized for caching and other realtime workloads. | BSD-3-Clause | ?（0/6） | [EN](categories/databases/valkey.md) · [中](categories/databases/valkey.zh.md) |
 
 ### desktop-automation
 
@@ -577,6 +672,7 @@ skill 从 `raw.githubusercontent.com/ZhenningLang/oss-atlas/main/` 拉取页面�
 | --- | --- | --- | --- | --- |
 | **NetNewsWire** | 当你在 Mac／iPhone 上读大量订阅、想要一个快速无广告、数据自己掌控的原生 RSS 客户端时用它——但它仅限 Apple 平台，别处一概不支持。 | MIT | B（5/6） | [中](categories/reading-tools/netnewswire.zh.md) · [EN](categories/reading-tools/netnewswire.md) |
 | **Just Read** | 当你想在浏览器里按自己的方式清掉文章的广告与杂乱、还能按站点记忆选择器时用它——但它是 EULA 授权的源码，并非真正的开源。 | Unlicensed (EULA) | D（6/6） | [中](categories/reading-tools/just-read.zh.md) · [EN](categories/reading-tools/just-read.md) |
+| **FreshRSS** | A free, self-hostable news aggregator… | AGPL-3.0 | ?（0/6） | [EN](categories/reading-tools/freshrss.md) · [中](categories/reading-tools/freshrss.zh.md) |
 
 ### speech
 
@@ -637,6 +733,8 @@ categories/<分类>/<子类>/INDEX.md …           # 更深的节点 —— 树
 
 `categories/` 是一棵**递归、自平衡的树**：某个分类项目过多时会拆成子分类（linter 告警，
 `refactor-index` 执行拆分）。英文是 agent 默认读取的 canonical 路径，`.zh.md` 是同一内容的中文版。
+| **Rich** | Rich is a Python library for rich text and beautiful formatting in the terminal. | MIT | ?（0/6） | [EN](categories/terminal-ui/rich.md) · [中](categories/terminal-ui/rich.zh.md) |
+| **Textual** | The lean application framework for Python.  Build sophisticated user interfaces with a simple Python API. Run your apps in the terminal and a web browser. | MIT | ?（0/6） | [EN](categories/terminal-ui/textual.md) · [中](categories/terminal-ui/textual.zh.md) |
 
 ### 一个项目页的结构
 

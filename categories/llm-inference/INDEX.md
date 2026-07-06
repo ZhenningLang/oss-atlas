@@ -13,6 +13,12 @@
 | **vLLM** | Use it when you want the de-facto open-source LLM serving engine with PagedAttention, continuous batching, and an OpenAI-compatible API — accepting NVIDIA-centric GPU ops and a fast-moving codebase. | — | [→](vllm.md) |
 | **SGLang** | Use it when you need a fast LLM serving engine with RadixAttention prefix caching and structured generation — ideal for tool-using agents and JSON-mode APIs — accepting a younger, smaller ecosystem than vLLM. | — | [→](sglang.md) |
 | **Ray Serve** | Use it when you need a general-purpose, scalable Python model-serving framework with multi-model composition and autoscaling — but accept Ray's operational complexity and learning curve. | — | [→](ray-serve.md) |
+| **llama.cpp** | LLM inference in C/C++ | ? (0/6) | [→](llama-cpp.md) |
+| **Ollama** | Get up and running with Kimi-K2.6, GLM-5.1, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models. | ? (0/6) | [→](ollama.md) |
+| **BentoML** | The easiest way to serve AI apps and models - Build Model Inference APIs, Job queues, LLM apps, Multi-model pipelines, and more! | ? (0/6) | [→](bentoml.md) |
+| **LMDeploy** | LMDeploy is a toolkit for compressing, deploying, and serving LLMs. | ? (0/6) | [→](lmdeploy.md) |
+| **Text Generation Inference (TGI)** | Large Language Model Text Generation Inference | ? (0/6) | [→](text-generation-inference.md) |
+
 
 ## Comparison matrix
 

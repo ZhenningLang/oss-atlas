@@ -11,6 +11,11 @@
 | **Gaia** | 当作只读参考研究「流水线即编译插件」设计时用它——仓库已归档废弃，绝不可用于新的生产部署。 | D（5/6） | [→](gaia.zh.md) |
 | **Airflow Maintenance DAGs** | 当自管 Airflow 需要现成 DAG 清理元数据库行和陈旧日志时用它——它执行依赖版本内部结构的破坏性删除，先 dry-run 并备份。 | D（4/6） | [→](airflow-maintenance-dags.zh.md) |
 | **n8n** | 当你需要一款可视化优先、内置 400 余种集成、原生支持 AI、且可自托管的工作流自动化平台时用它——但不适合亚秒级实时流处理，且许可并非完全无限制的开源。 | ?（0/6） | [→](n8n.zh.md) |
+| **Argo Workflows** | Workflow Engine for Kubernetes | ?（0/6） | [→](argo-workflows.zh.md) |
+| **Prefect** | Prefect is a workflow orchestration framework for building resilient data pipelines in Python. | ?（0/6） | [→](prefect.zh.md) |
+| **Dagster** | An orchestration platform for the development, production, and observation of data assets. | ?（0/6） | [→](dagster.zh.md) |
+| **Temporal** | Temporal service | ?（0/6） | [→](temporal.zh.md) |
+
 
 ## 对比矩阵
 

@@ -10,6 +10,11 @@
 | **PDF.js** | 当你需要在浏览器/Node 里渲染或读取 PDF（Firefox 的引擎）时用它——它不创建也不编辑 PDF。 | A（6/6） | [→](pdfjs.zh.md) |
 | **pdf-lib** | 当你需要在 JS/TS 里创建或修改 PDF——在浏览器、Node、Deno 或 React Native 中——且不需要原生依赖时用它。 | — | [→](pdf-lib.zh.md) |
 | **jsPDF** | 当你需要在浏览器里从 HTML、文本和图形生成客户端 PDF——它只创建不编辑已有 PDF——时用它。 | — | [→](jspdf.zh.md) |
+| **PyMuPDF** | PyMuPDF is a high performance Python library for data extraction, analysis, conversion & manipulation of PDF (and other) documents. | ?（0/6） | [→](pymupdf.zh.md) |
+| **pdfplumber** | Plumb a PDF for detailed information about each char, rectangle, line, et cetera — and easily extract text and tables. | ?（0/6） | [→](pdfplumber.zh.md) |
+| **OCRmyPDF** | OCRmyPDF adds an OCR text layer to scanned PDF files, allowing them to be searched | ?（0/6） | [→](ocrmypdf.zh.md) |
+| **qpdf** | qpdf: A content-preserving PDF document transformer | ?（0/6） | [→](qpdf.zh.md) |
+
 
 ## 对比矩阵
 

@@ -9,6 +9,8 @@
 | --- | --- | --- | --- |
 | **NextChat** | Use it when you want a private, self-deployable multi-provider AI chat UI across web/desktop/mobile — not a multi-user RBAC team platform. | B (5/6) | [→](nextchat.md) |
 | **Open WebUI** | Use it when you want a self-hosted AI chat platform with built-in RAG, Ollama support, and offline operation — but it's single-user-shaped by default. | ? (0/6) | [→](open-webui.md) |
+| **LibreChat** | Enhanced ChatGPT Clone: Features Agents, MCP, Skills, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Presets, open-source for self-hosting. Active | ? (0/6) | [→](librechat.md) |
+
 
 ## Comparison matrix
 

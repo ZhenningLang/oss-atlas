@@ -18,6 +18,15 @@
 | **Shepherd.js** | 当你想要一个稳健、框架无关的产品引导库，支持高级定位和复杂多步骤 onboarding 时用它——但你要接受比 Driver.js 更大的包体积。 | ?（0/6） | [→](shepherd-js.zh.md) |
 | **Lit** | 当你需要一套轻量、基于标准的 Web Components，能在任何框架中工作时用它——但你要接受生态较小，且需要学习 Web Components。 | ?（0/6） | [→](lit.zh.md) |
 | **Intro.js** | 当你想要一个成熟、框架无关、文档详尽的产品引导库时用它——但你要接受非商用 AGPL-3.0，或必须购买商业授权。 | ?（0/6） | [→](intro-js.zh.md) |
+| **SvelteKit** | web development, streamlined | ?（0/6） | [→](sveltekit.zh.md) |
+| **Reactour** | Tourist Guide into your React Components | ?（0/6） | [→](reactour.zh.md) |
+| **react-joyride** | Create guided tours in your apps | ?（0/6） | [→](react-joyride.zh.md) |
+| **Material UI (MUI)** | Material UI: Comprehensive React component library that implements Google's Material Design. Free forever. | ?（0/6） | [→](material-ui.zh.md) |
+| **Chakra UI** | Chakra UI is a component system for building SaaS products with speed ⚡️ | ?（0/6） | [→](chakra-ui.zh.md) |
+| **Radix UI Primitives** | Radix Primitives is an open-source UI component library for building high-quality, accessible design systems and web apps. Maintained by @workos. | ?（0/6） | [→](radix-ui.zh.md) |
+| **Nuxt** | the full-stack Vue framework | ?（0/6） | [→](nuxt.zh.md) |
+| **Astro** | The web framework for content-driven websites. ⭐️ Star to support our work! | ?（0/6） | [→](astro.zh.md) |
+
 
 ## 对比矩阵
 

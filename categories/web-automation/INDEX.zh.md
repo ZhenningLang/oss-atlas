@@ -14,6 +14,10 @@
 | **Selenium** | 当你需要跨浏览器、跨语言的 WebDriver 自动化时用它——现代单浏览器体验 Playwright/Cypress 更顺手。 | B（6/6） | [→](selenium.zh.md) |
 | **PhantomJS** | 新项目别用——已归档、停更的可脚本化无头浏览器；改用 Puppeteer/Playwright 的无头 Chrome 或 Selenium。 | D（5/6） | [→](phantomjs.zh.md) |
 | **Selenium Wire** | 当遗留的 Selenium 测试套件需要读取或改写浏览器后台 HTTP 流量时用它——但它已归档，新项目应改用 Selenium 4 原生 CDP/BiDi 或 Playwright。 | D（5/6） | [→](selenium-wire.zh.md) |
+| **browser-use** | 🌐 Make websites accessible for AI agents. Automate tasks online with ease. | ?（0/6） | [→](browser-use.zh.md) |
+| **Playwright** | Playwright is a framework for Web Testing and Automation. It allows testing Chromium, Firefox and WebKit with a single API. | ?（0/6） | [→](playwright.zh.md) |
+| **Puppeteer** | JavaScript API for Chrome and Firefox | ?（0/6） | [→](puppeteer.zh.md) |
+
 
 ## 对比矩阵
 

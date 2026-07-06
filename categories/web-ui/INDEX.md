@@ -18,6 +18,15 @@
 | **Shepherd.js** | Use it when you want a robust, framework-agnostic product tour library with advanced positioning and multi-step onboarding — but you accept a heavier bundle than Driver.js. | ? (0/6) | [→](shepherd-js.md) |
 | **Lit** | Use it when you need lightweight, standards-based web components that work across any framework — but you accept a smaller ecosystem and the need to learn Web Components. | ? (0/6) | [→](lit.md) |
 | **Intro.js** | Use it when you want a mature, framework-agnostic product tour library with extensive documentation — but you accept AGPL-3.0 for non-commercial use or must purchase a commercial license. | ? (0/6) | [→](intro-js.md) |
+| **SvelteKit** | web development, streamlined | ? (0/6) | [→](sveltekit.md) |
+| **Reactour** | Tourist Guide into your React Components | ? (0/6) | [→](reactour.md) |
+| **react-joyride** | Create guided tours in your apps | ? (0/6) | [→](react-joyride.md) |
+| **Material UI (MUI)** | Material UI: Comprehensive React component library that implements Google's Material Design. Free forever. | ? (0/6) | [→](material-ui.md) |
+| **Chakra UI** | Chakra UI is a component system for building SaaS products with speed ⚡️ | ? (0/6) | [→](chakra-ui.md) |
+| **Radix UI Primitives** | Radix Primitives is an open-source UI component library for building high-quality, accessible design systems and web apps. Maintained by @workos. | ? (0/6) | [→](radix-ui.md) |
+| **Nuxt** | the full-stack Vue framework | ? (0/6) | [→](nuxt.md) |
+| **Astro** | The web framework for content-driven websites. ⭐️ Star to support our work! | ? (0/6) | [→](astro.md) |
+
 
 ## Comparison matrix
 

@@ -12,6 +12,12 @@
 | **Claude Subconscious** | Use it when you want a background Letta agent to give Claude Code cross-session memory via hooks. | C (6/6) | [→](claude-subconscious.md) |
 | **claude-mem** | Use it when your coding agent loses context across sessions and you want local hook/MCP-captured memory compressed and injected back in. | B (6/6) | [→](claude-mem.md) |
 | **ByteRover CLI** | Use it when you want a portable, structured memory layer for coding agents with git-like versioning and cloud sync — but it is extremely young (2025-06) and the license is ambiguous. | ? (0/6) | [→](byterover.md) |
+| **Letta (MemGPT)** | Platform for stateful agents: AI with advanced memory that can learn and self-improve over time. | ? (0/6) | [→](letta.md) |
+| **Zep** | Zep \| Examples, Integrations, & More | ? (0/6) | [→](zep.md) |
+| **Graphiti** | Build Real-Time Knowledge Graphs for AI Agents | ? (0/6) | [→](graphiti.md) |
+| **LangMem** | Use it when you need LangMem for the agent-memory category. | ? (0/6) | [→](langmem.md) |
+| **Cognee** | Cognee is the open-source AI memory platform for agents. Give your AI agents persistent long-term memory across sessions with a self-hosted knowledge graph engine. | ? (0/6) | [→](cognee.md) |
+
 
 ## Comparison matrix
 

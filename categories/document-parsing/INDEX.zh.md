@@ -10,6 +10,9 @@
 | **Docling** | 当你需要把杂乱的 PDF/DOCX/PPTX 解析成干净的结构化 Markdown/JSON 以喂给 RAG 时用它——是解析器，不是文档管理系统。 | A（5/6） | [→](docling.zh.md) |
 | **MarkItDown** | 当你需要一个轻量级 Python 库把各类办公文档和文件转成 Markdown 以喂给 LLM 时用它——比 Docling 更简单，但对版面感知较弱。 | ?（0/6） | [→](markitdown.zh.md) |
 | **olmOCR** | 当你需要把带公式、表格、手写体和多栏版面的复杂 PDF 转成干净 Markdown 以用于 LLM 训练数据集时用它——需要 GPU。 | ?（0/6） | [→](olmocr.zh.md) |
+| **Marker** | Convert PDF to markdown + JSON quickly with high accuracy | ?（0/6） | [→](marker.zh.md) |
+| **unstructured** | Convert documents to structured data effortlessly. Unstructured is open-source ETL solution for transforming complex documents into clean, structured formats for language models.  Visit our website to learn more about our enterprise grade Platform product for production grade workflows, partitioning, enrichments, chunking and embedding. | ?（0/6） | [→](unstructured.zh.md) |
+
 
 ## 对比矩阵
 

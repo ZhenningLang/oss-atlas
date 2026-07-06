@@ -13,6 +13,10 @@
 | **remark** | 当你需要完整的 mdast AST 管线来解析、变换、lint 和序列化 Markdown 时用它——但它是工具链，不是一次调用的渲染器。 | — | [→](remark.zh.md) |
 | **markdown-it** | 当你需要一个严格遵循 CommonMark/GFM、可插拔的 JS Markdown→HTML 解析器时用它——但插件生态会增加体积，且处理不受信任内容时仍需消毒。 | — | [→](markdown-it.zh.md) |
 | **micromark** | 当你需要一个低层、面向流式处理的 JS CommonMark/GFM 分词器时用它——remark 的底层引擎——但渲染层要你自己搭。 | — | [→](micromark.zh.md) |
+| **Pandoc** | Universal markup converter | ?（0/6） | [→](pandoc.zh.md) |
+| **Goldmark** | :trophy: A markdown parser written in Go. Easy to extend, standard(CommonMark) compliant, well structured. | ?（0/6） | [→](goldmark.zh.md) |
+| **markdownlint** | A Node.js style checker and lint tool for Markdown/CommonMark files. | ?（0/6） | [→](markdownlint.zh.md) |
+
 
 ## 对比矩阵
 

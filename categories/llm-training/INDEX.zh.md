@@ -12,6 +12,11 @@
 | **ART (Agent Reinforcement Trainer)** | 通过客户端-服务端循环用 GRPO 强化学习训练多步 LLM agent，并用 RULER（LLM 充当裁判）实现零标注奖励生成。 | B（5/6） | [→](art.zh.md) |
 | **Agent Lightning** | 微软出品的强化学习/优化训练器，把 agent 执行与训练后端解耦，几乎零改动地优化任意框架（LangChain、AutoGen、OpenAI SDK 等）构建的 agent。 | C（5/6） | [→](agent-lightning.zh.md) |
 | **Colossal-AI** | 当你需要用张量/流水线/ZeRO 并行在多 GPU 上训练/微调大模型时用它——单卡 LoRA 用它是杀鸡用牛刀。 | B（5/6） | [→](colossalai.zh.md) |
+| **Hugging Face TRL** | Train transformer language models with reinforcement learning. | ?（0/6） | [→](trl.zh.md) |
+| **torchtune** | PyTorch native post-training library | ?（0/6） | [→](torchtune.zh.md) |
+| **Axolotl** | Go ahead and axolotl questions | ?（0/6） | [→](axolotl.zh.md) |
+| **verl** | verl/HybridFlow: A Flexible and Efficient RL Post-Training Framework | ?（0/6） | [→](verl.zh.md) |
+
 
 ## 对比矩阵
 

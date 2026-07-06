@@ -14,6 +14,8 @@
 | **youtube-transcript-api** | Use it when you need timestamped YouTube transcripts key-free for a RAG/summarization pipeline — but it rides an undocumented endpoint that can break anytime, and cloud/datacenter IPs now require paid residential proxies. | A (6/6) | [→](youtube-transcript-api.md) |
 | **bulk-downloader-for-reddit** | Use it when you want a scriptable, reproducible Reddit archive of files plus metadata via OAuth — but Reddit's ~1000-post listing cap is unbypassable, and releases have stalled since early 2023 (GPL-3.0). | D (5/6) | [→](bulk-downloader-for-reddit.md) |
 | **yt-dlp** | Use it when you need an actively maintained CLI to download video & audio from YouTube and thousands of other sites — the de-facto successor to youtube-dl with faster fixes and more features. | ? (0/6) | [→](yt-dlp.md) |
+| **gallery-dl** | Command-line program to download image galleries and collections from several image hosting sites | ? (0/6) | [→](gallery-dl.md) |
+
 
 ## Comparison matrix
 

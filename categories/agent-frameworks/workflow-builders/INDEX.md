@@ -13,6 +13,9 @@
 | **Dify** | Use it when you want a production-ready visual platform for building agentic workflows with low-code, RAG, and MCP support — but verify the license before commercial use. | ? (0/6) | [→](dify.md) |
 | **LangChain** | Use it when you need a code-first framework to compose LLM agents, tools, and memory with a vast integration ecosystem — but avoid for simple single-prompt apps. | ? (0/6) | [→](langchain.md) |
 | **Langflow** | Use it when you want a visual drag-and-drop platform to build and deploy LLM workflows and agents with built-in API and MCP servers — but visual flows are harder to diff/review than code. | ? (0/6) | [→](langflow.md) |
+| **LlamaIndex** | LlamaIndex is the leading document agent and OCR platform | ? (0/6) | [→](llamaindex.md) |
+| **Flowise** | Build AI Agents, Visually | ? (0/6) | [→](flowise.md) |
+
 
 ## Comparison matrix
 

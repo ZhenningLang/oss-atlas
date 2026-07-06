@@ -15,6 +15,12 @@
 | **PrettyZoo** | 当你在开发或故障排查时想用友好的桌面 GUI 浏览并轻量编辑 ZooKeeper znode 树时用它——但它自 2023 年起已归档，新 JDK／macOS 可能跑不起来且无上游修复。 | D（4/6） | [→](prettyzoo.zh.md) |
 | **RDR** | 当 Redis 触发 maxmemory 告警、需要离线快速按前缀分析 RDB 快照时用它——但内存数字是近似值，且项目已停滞（v0.0.1，2019 年）。 | D（3/6） | [→](rdr.zh.md) |
 | **Supabase** | 当你想要一个基于 PostgreSQL 构建的开源 Firebase 替代方案，包含身份认证、自动生成 API、实时订阅、边缘函数和向量存储时用它——但它与 Postgres 深度绑定。 | ?（0/6） | [→](supabase.zh.md) |
+| **DuckDB** | DuckDB is an analytical in-process SQL database management system | ?（0/6） | [→](duckdb.zh.md) |
+| **ClickHouse** | ClickHouse® is a real-time analytics database management system | ?（0/6） | [→](clickhouse.zh.md) |
+| **DBeaver** | Free universal database tool and SQL client | ?（0/6） | [→](dbeaver.zh.md) |
+| **Debezium** | Change data capture for a variety of databases. Please log issues at https://github.com/debezium/dbz/issues. | ?（0/6） | [→](debezium.zh.md) |
+| **Valkey** | A flexible distributed key-value database that is optimized for caching and other realtime workloads. | ?（0/6） | [→](valkey.zh.md) |
+
 
 ## 对比矩阵
 

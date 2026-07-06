@@ -69,6 +69,7 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **MiniCPM-V** | Use it when you need efficient on-device/edge multimodal (image+video) understanding with a small footprint — verify the per-weight license. | Apache-2.0 | A (4/6) | [EN](categories/on-device-ml/minicpm-v.md) · [中](categories/on-device-ml/minicpm-v.zh.md) |
 | **Stable Diffusion WebUI** | Use it when you want a local web-based GUI for Stable Diffusion image generation, editing, and upscaling on your own GPU — but it requires technical setup and an NVIDIA GPU. | AGPL-3.0 | ? (0/6) | [EN](categories/on-device-ml/stable-diffusion-webui.md) · [中](categories/on-device-ml/stable-diffusion-webui.zh.md) |
 | **ComfyUI** | The most powerful and modular diffusion model GUI with a node-graph interface for building complex workflows locally — but it has a steep learning curve and requires significant GPU resources. | GPL-3.0 | ? (0/6) | [EN](categories/on-device-ml/comfyui.md) · [中](categories/on-device-ml/comfyui.zh.md) |
+| **MLX / mlx-lm** | Run LLMs with MLX | MIT | ? (0/6) | [EN](categories/on-device-ml/mlx-mlx-lm.md) · [中](categories/on-device-ml/mlx-mlx-lm.zh.md) |
 
 ### web-automation
 
@@ -81,6 +82,10 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **Selenium** | Use it when you need cross-browser WebDriver automation across a browser/language matrix — Playwright/Cypress are nicer for modern single-browser DX. | Apache-2.0 | B (6/6) | [EN](categories/web-automation/selenium.md) · [中](categories/web-automation/selenium.zh.md) |
 | **PhantomJS** | Avoid for new work — an archived, abandoned scriptable headless browser; use headless Chrome (Puppeteer/Playwright) or Selenium instead. | BSD-3-Clause | D (5/6) | [EN](categories/web-automation/phantomjs.md) · [中](categories/web-automation/phantomjs.zh.md) |
 | **Selenium Wire** | Use it when a legacy Selenium suite needs to read or modify the browser's background HTTP traffic — but it's archived, so new projects should use Selenium 4's native CDP/BiDi or Playwright. | MIT | D (5/6) | [EN](categories/web-automation/selenium-wire.md) · [中](categories/web-automation/selenium-wire.zh.md) |
+| **browser-use** | 🌐 Make websites accessible for AI agents. Automate tasks online with ease. | MIT | ? (0/6) | [EN](categories/web-automation/browser-use.md) · [中](categories/web-automation/browser-use.zh.md) |
+| **Playwright** | Playwright is a framework for Web Testing and Automation. It allows testing Chromium, Firefox and WebKit with a single API. | Apache-2.0 | ? (0/6) | [EN](categories/web-automation/playwright.md) · [中](categories/web-automation/playwright.zh.md) |
+| **Puppeteer** | JavaScript API for Chrome and Firefox | Apache-2.0 | ? (0/6) | [EN](categories/web-automation/puppeteer.md) · [中](categories/web-automation/puppeteer.zh.md) |
+
 ### llm-training
 
 | Project | Use when | License | Health | Page |
@@ -90,6 +95,10 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **ART (Agent Reinforcement Trainer)** | Use it when a Python CLI needs pure-Python figlet-style ASCII text banners with no system binaries — but it's text-to-art only (not image-to-ASCII) and won't match figlet's exact fonts. | Apache-2.0 | B (5/6) | [EN](categories/llm-training/art.md) · [中](categories/llm-training/art.zh.md) |
 | **Agent Lightning** | Microsoft RL/optimization trainer that improves agents built in any framework (LangChain, AutoGen, OpenAI SDK…) with near-zero code changes by decoupling agent execution from the training backend. | MIT | C (5/6) | [EN](categories/llm-training/agent-lightning.md) · [中](categories/llm-training/agent-lightning.zh.md) |
 | **Colossal-AI** | Use it when you must train/fine-tune large models across many GPUs with tensor/pipeline/ZeRO parallelism — overkill for single-GPU LoRA. | Apache-2.0 | B (5/6) | [EN](categories/llm-training/colossalai.md) · [中](categories/llm-training/colossalai.zh.md) |
+| **Hugging Face TRL** | Train transformer language models with reinforcement learning. | Apache-2.0 | ? (0/6) | [EN](categories/llm-training/trl.md) · [中](categories/llm-training/trl.zh.md) |
+| **torchtune** | PyTorch native post-training library | BSD-3-Clause | ? (0/6) | [EN](categories/llm-training/torchtune.md) · [中](categories/llm-training/torchtune.zh.md) |
+| **Axolotl** | Go ahead and axolotl questions | Apache-2.0 | ? (0/6) | [EN](categories/llm-training/axolotl.md) · [中](categories/llm-training/axolotl.zh.md) |
+| **verl** | verl/HybridFlow: A Flexible and Efficient RL Post-Training Framework | Apache-2.0 | ? (0/6) | [EN](categories/llm-training/verl.md) · [中](categories/llm-training/verl.zh.md) |
 
 ### agent-frameworks
 
@@ -117,6 +126,17 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **Langflow** | A visual drag-and-drop platform for building and deploying LLM workflows and agents with built-in API and MCP servers — but visual flows are harder to diff/review than code. | MIT | ? (0/6) | [EN](categories/agent-frameworks/workflow-builders/langflow.md) · [中](categories/agent-frameworks/workflow-builders/langflow.zh.md) |
 | **Gemini CLI** | An open-source AI agent that brings Gemini power into your terminal with a free tier, built-in tools, and MCP support — but it's Google-only and very young. | Apache-2.0 | ? (0/6) | [EN](categories/agent-frameworks/coding-agents/gemini-cli.md) · [中](categories/agent-frameworks/coding-agents/gemini-cli.zh.md) |
 | **RTK** | A CLI proxy that compresses shell output before it reaches AI agents, reducing token costs by 60–90% — but extremely young (6 months) with a suspiciously high star count. | Apache-2.0 | ? (0/6) | [EN](categories/agent-frameworks/coding-agents/rtk.md) · [中](categories/agent-frameworks/coding-agents/rtk.zh.md) |
+| **CrewAI** | Framework for orchestrating role-playing, autonomous AI agents. By fostering collaborative intelligence, CrewAI empowers agents to work together seamlessly, tackling complex tasks. | MIT | ? (0/6) | [EN](categories/agent-frameworks/agent-runtimes/crewai.md) · [中](categories/agent-frameworks/agent-runtimes/crewai.zh.md) |
+| **LangGraph** | Build resilient agents. | MIT | ? (0/6) | [EN](categories/agent-frameworks/agent-runtimes/langgraph.md) · [中](categories/agent-frameworks/agent-runtimes/langgraph.zh.md) |
+| **LlamaIndex** | LlamaIndex is the leading document agent and OCR platform | MIT | ? (0/6) | [EN](categories/agent-frameworks/workflow-builders/llamaindex.md) · [中](categories/agent-frameworks/workflow-builders/llamaindex.zh.md) |
+| **AutoGen** | A programming framework for agentic AI | CC-BY-4.0 | ? (0/6) | [EN](categories/agent-frameworks/agent-runtimes/autogen.md) · [中](categories/agent-frameworks/agent-runtimes/autogen.zh.md) |
+| **Pydantic AI** | AI Agent Framework, the Pydantic way | MIT | ? (0/6) | [EN](categories/agent-frameworks/agent-runtimes/pydantic-ai.md) · [中](categories/agent-frameworks/agent-runtimes/pydantic-ai.zh.md) |
+| **OpenAI Agents SDK** | A lightweight, powerful framework for multi-agent workflows | MIT | ? (0/6) | [EN](categories/agent-frameworks/agent-runtimes/openai-agents-sdk.md) · [中](categories/agent-frameworks/agent-runtimes/openai-agents-sdk.zh.md) |
+| **aider** | aider is AI pair programming in your terminal | Apache-2.0 | ? (0/6) | [EN](categories/agent-frameworks/coding-agents/aider.md) · [中](categories/agent-frameworks/coding-agents/aider.zh.md) |
+| **Cline** | Autonomous coding agent as an SDK, IDE extension, or CLI assistant. | Apache-2.0 | ? (0/6) | [EN](categories/agent-frameworks/coding-agents/cline.md) · [中](categories/agent-frameworks/coding-agents/cline.zh.md) |
+| **SWE-agent** | SWE-agent takes a GitHub issue and tries to automatically fix it, using your LM of choice. It can also be employed for offensive cybersecurity or competitive coding challenges. [NeurIPS 2024] | MIT | ? (0/6) | [EN](categories/agent-frameworks/coding-agents/swe-agent.md) · [中](categories/agent-frameworks/coding-agents/swe-agent.zh.md) |
+| **Flowise** | Build AI Agents, Visually | NOASSERTION | ? (0/6) | [EN](categories/agent-frameworks/workflow-builders/flowise.md) · [中](categories/agent-frameworks/workflow-builders/flowise.zh.md) |
+| **OpenHands** | 🙌 OpenHands: AI-Driven Development | NOASSERTION | ? (0/6) | [EN](categories/agent-frameworks/coding-agents/openhands.md) · [中](categories/agent-frameworks/coding-agents/openhands.zh.md) |
 
 ### agent-memory
 
@@ -127,6 +147,11 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **Claude Subconscious** | Use it when you want a background Letta agent to give Claude Code cross-session memory via hooks. | MIT | C (6/6) | [EN](categories/agent-memory/claude-subconscious.md) · [中](categories/agent-memory/claude-subconscious.zh.md) |
 | **claude-mem** | Use it when your coding agent loses context across sessions and you want local hook/MCP-captured memory compressed and injected back in. | Apache-2.0 | B (6/6) | [EN](categories/agent-memory/claude-mem.md) · [中](categories/agent-memory/claude-mem.zh.md) |
 | **ByteRover CLI** | Use it when you want a portable, structured memory layer for coding agents with git-like versioning and cloud sync — but it is extremely young (2025-06) and the license is ambiguous. | NOASSERTION | ? (0/6) | [EN](categories/agent-memory/byterover.md) · [中](categories/agent-memory/byterover.zh.md) |
+| **Letta (MemGPT)** | Platform for stateful agents: AI with advanced memory that can learn and self-improve over time. | Apache-2.0 | ? (0/6) | [EN](categories/agent-memory/letta.md) · [中](categories/agent-memory/letta.zh.md) |
+| **Zep** | Zep \| Examples, Integrations, & More | Apache-2.0 | ? (0/6) | [EN](categories/agent-memory/zep.md) · [中](categories/agent-memory/zep.zh.md) |
+| **Graphiti** | Build Real-Time Knowledge Graphs for AI Agents | Apache-2.0 | ? (0/6) | [EN](categories/agent-memory/graphiti.md) · [中](categories/agent-memory/graphiti.zh.md) |
+| **LangMem** | Use it when you need LangMem in the agent-memory area. | MIT | ? (0/6) | [EN](categories/agent-memory/langmem.md) · [中](categories/agent-memory/langmem.zh.md) |
+| **Cognee** | Cognee is the open-source AI memory platform for agents. Give your AI agents persistent long-term memory across sessions with a self-hosted knowledge graph engine. | Apache-2.0 | ? (0/6) | [EN](categories/agent-memory/cognee.md) · [中](categories/agent-memory/cognee.zh.md) |
 
 ### deep-research
 
@@ -137,6 +162,11 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **Local Deep Research** | Use it when you need a self-hosted, fully-local deep-research agent that keeps sensitive queries on your own machine. | MIT | B (6/6) | [EN](categories/deep-research/local-deep-research.md) · [中](categories/deep-research/local-deep-research.zh.md) |
 | **Agent-Reach** | Use it when your agent needs to read and search web plus social platforms without paid APIs. | MIT | B (5/6) | [EN](categories/deep-research/agent-reach.md) · [中](categories/deep-research/agent-reach.zh.md) |
 | **MiroThinker** | Use it when you want a self-hosted, open-weights deep-research agent you can study and extend on your own GPUs — but it needs a GPU cluster plus paid external APIs and is under a year old with no Lindy. | Apache-2.0 | C (6/6) | [EN](categories/deep-research/mirothinker.md) · [中](categories/deep-research/mirothinker.zh.md) |
+| **GPT Researcher** | An autonomous agent that conducts deep research on any data using any LLM providers | Apache-2.0 | ? (0/6) | [EN](categories/deep-research/gpt-researcher.md) · [中](categories/deep-research/gpt-researcher.zh.md) |
+| **Open Deep Research** | Use it when you need Open Deep Research in the deep-research area. | MIT | ? (0/6) | [EN](categories/deep-research/open-deep-research.md) · [中](categories/deep-research/open-deep-research.zh.md) |
+| **STORM** | An LLM-powered knowledge curation system that researches a topic and generates a full-length report with citations. | MIT | ? (0/6) | [EN](categories/deep-research/storm.md) · [中](categories/deep-research/storm.zh.md) |
+| **node-DeepResearch** | Keep searching, reading webpages, reasoning until it finds the answer (or exceeding the token budget) | Apache-2.0 | ? (0/6) | [EN](categories/deep-research/node-deepresearch.md) · [中](categories/deep-research/node-deepresearch.zh.md) |
+
 ### ai-code-review
 
 | Project | Use when | License | Health | Page |
@@ -144,6 +174,9 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **Open Code Review** | Use it when you want precise, line-level LLM review comments on Git diffs in CI without PR noise. | Apache-2.0 | B (6/6) | [EN](categories/ai-code-review/open-code-review.md) · [中](categories/ai-code-review/open-code-review.zh.md) |
 | **Claude Code Security Review** | Use it when you want LLM-driven, context-aware security review on trusted PRs via a GitHub Action. | MIT | C (5/6) | [EN](categories/ai-code-review/claude-code-security-review.md) · [中](categories/ai-code-review/claude-code-security-review.zh.md) |
 | **React Doctor** | Use it when a coding agent writes React and you want deterministic, repeatable checks for React-specific anti-patterns. | LicenseRef-Modified-MIT | B (5/6) | [EN](categories/ai-code-review/react-doctor.md) · [中](categories/ai-code-review/react-doctor.zh.md) |
+| **PR-Agent** | 🚀 PR Agent: The Original Open-Source PR Reviewer.  This project It is not the Qodo free tier. | Apache-2.0 | ? (0/6) | [EN](categories/ai-code-review/pr-agent.md) · [中](categories/ai-code-review/pr-agent.zh.md) |
+| **Metis** | Metis is an open-source, AI-driven tool for deep security code review | Apache-2.0 | ? (0/6) | [EN](categories/ai-code-review/metis.md) · [中](categories/ai-code-review/metis.zh.md) |
+| **OpenReview** | An open-source, self-hosted AI code review bot powered by Vercel. | NOASSERTION | ? (0/6) | [EN](categories/ai-code-review/openreview.md) · [中](categories/ai-code-review/openreview.zh.md) |
 
 ### rag-retrieval
 
@@ -156,12 +189,22 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **Understand-Anything** | Use it when you want any codebase turned into an explorable, queryable knowledge graph for an agent — younger and less proven than graphify. | MIT | B (6/6) | [EN](categories/rag-retrieval/understand-anything.md) · [中](categories/rag-retrieval/understand-anything.zh.md) |
 | **FAISS** | Use it when you need a fast in-process ANN vector index for embeddings — a library, not a managed vector DB. | MIT | A (6/6) | [EN](categories/rag-retrieval/faiss.md) · [中](categories/rag-retrieval/faiss.zh.md) |
 | **text2vec** | Use it when you need Chinese-first sentence embeddings for semantic search or FAQ matching from a single pip install — it's only the encoder, so bring your own vector index (FAISS/Milvus). | Apache-2.0 | C (5/6) | [EN](categories/rag-retrieval/text2vec.md) · [中](categories/rag-retrieval/text2vec.zh.md) |
+| **SCIP** | SCIP Code Intelligence Protocol | Apache-2.0 | ? (0/6) | [EN](categories/rag-retrieval/scip.md) · [中](categories/rag-retrieval/scip.zh.md) |
+| **Milvus** | Milvus is a high-performance, cloud-native vector database built for scalable vector ANN search | Apache-2.0 | ? (0/6) | [EN](categories/rag-retrieval/milvus.md) · [中](categories/rag-retrieval/milvus.zh.md) |
+| **Sourcegraph** | Code AI platform with Code Search & Cody | NOASSERTION | ? (0/6) | [EN](categories/rag-retrieval/sourcegraph.md) · [中](categories/rag-retrieval/sourcegraph.zh.md) |
+
 ### llm-eval
 
 | Project | Use when | License | Health | Page |
 | --- | --- | --- | --- | --- |
 | **promptfoo** | Use it when you need declarative YAML evals plus red-teaming for your LLM app in CI. | MIT | A (6/6) | [EN](categories/llm-eval/promptfoo.md) · [中](categories/llm-eval/promptfoo.zh.md) |
 | **Pezzo** | Use it when a small team wants one self-hosted control plane for prompt versioning plus cost/latency observability — but it looks stalled since mid-2025, so assume you'll maintain it yourself. | Apache-2.0 | C (4/6) | [EN](categories/llm-eval/pezzo.md) · [中](categories/llm-eval/pezzo.zh.md) |
+| **DeepEval** | The LLM Evaluation Framework | Apache-2.0 | ? (0/6) | [EN](categories/llm-eval/deepeval.md) · [中](categories/llm-eval/deepeval.zh.md) |
+| **Ragas** | Supercharge Your LLM Application Evaluations 🚀 | Apache-2.0 | ? (0/6) | [EN](categories/llm-eval/ragas.md) · [中](categories/llm-eval/ragas.zh.md) |
+| **garak** | the LLM vulnerability scanner | Apache-2.0 | ? (0/6) | [EN](categories/llm-eval/garak.md) · [中](categories/llm-eval/garak.zh.md) |
+| **Giskard OSS** | 🐢 Open-Source Evaluation & Testing library for LLM Agents | Apache-2.0 | ? (0/6) | [EN](categories/llm-eval/giskard.md) · [中](categories/llm-eval/giskard.zh.md) |
+| **Langfuse** | 🪢 Open source AI engineering platform: LLM evals, observability, metrics, prompt management, playground, datasets. Integrates with OpenTelemetry, LangChain, OpenAI SDK, LiteLLM, and more. 🍊YC W23 | NOASSERTION | ? (0/6) | [EN](categories/llm-eval/langfuse.md) · [中](categories/llm-eval/langfuse.zh.md) |
+
 ### agent-dev-methodology
 
 | Project | Use when | License | Health | Page |
@@ -210,6 +253,9 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **Zed** | A high-performance, native code editor with real-time multiplayer collaboration from the creators of Atom — but far smaller extension ecosystem than VS Code and only ~4 years old. | NOASSERTION | ? (0/6) | [EN](categories/dev-utilities/editors-and-runtimes/zed.md) · [中](categories/dev-utilities/editors-and-runtimes/zed.zh.md) |
 | **ripgrep** | A fast, gitignore-aware line-oriented search tool with first-class cross-platform support; 10 years old with strong Lindy signal and single-maintainer reliability. | Unlicense | ? (0/6) | [EN](categories/dev-utilities/data-tools/ripgrep.md) · [中](categories/dev-utilities/data-tools/ripgrep.zh.md) |
 | **Bun** | An incredibly fast all-in-one JavaScript/TypeScript toolkit (runtime, bundler, test runner, package manager) in a single binary — but verify the custom license before commercial use. | NOASSERTION | ? (0/6) | [EN](categories/dev-utilities/editors-and-runtimes/bun.md) · [中](categories/dev-utilities/editors-and-runtimes/bun.zh.md) |
+| **fzf** | :cherry_blossom: A command-line fuzzy finder | MIT | ? (0/6) | [EN](categories/dev-utilities/data-tools/fzf.md) · [中](categories/dev-utilities/data-tools/fzf.zh.md) |
+| **jq** | Command-line JSON processor | NOASSERTION | ? (0/6) | [EN](categories/dev-utilities/data-tools/jq.md) · [中](categories/dev-utilities/data-tools/jq.zh.md) |
+
 ### frontend-animation
 
 | Project | Use when | License | Health | Page |
@@ -342,12 +388,18 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | Project | Use when | License | Health | Page |
 | --- | --- | --- | --- | --- |
 | **Grafana** | Use it when you need one dashboard + alerting layer over Prometheus/Loki/Elasticsearch and other sources — it visualizes, it doesn't store. | AGPL-3.0 | B (5/6) | [EN](categories/observability/grafana.md) · [中](categories/observability/grafana.zh.md) |
+| **Prometheus** | The Prometheus monitoring system and time series database. | Apache-2.0 | ? (0/6) | [EN](categories/observability/prometheus.md) · [中](categories/observability/prometheus.zh.md) |
+| **OpenTelemetry Collector** | OpenTelemetry Collector | Apache-2.0 | ? (0/6) | [EN](categories/observability/opentelemetry-collector.md) · [中](categories/observability/opentelemetry-collector.zh.md) |
+| **Loki** | Like Prometheus, but for logs. | AGPL-3.0 | ? (0/6) | [EN](categories/observability/loki.md) · [中](categories/observability/loki.zh.md) |
+| **Jaeger** | CNCF Jaeger, a Distributed Tracing Platform | Apache-2.0 | ? (0/6) | [EN](categories/observability/jaeger.md) · [中](categories/observability/jaeger.zh.md) |
 
 ### data-visualization
 
 | Project | Use when | License | Health | Page |
 | --- | --- | --- | --- | --- |
 | **Apache Superset** | Use it when you want self-hosted SQL BI dashboards and exploration over a warehouse — not infra metrics/observability. | Apache-2.0 | A (6/6) | [EN](categories/data-visualization/superset.md) · [中](categories/data-visualization/superset.zh.md) |
+| **Evidence** | Business intelligence as code: build fast, interactive data visualizations in SQL and markdown | MIT | ? (0/6) | [EN](categories/data-visualization/evidence.md) · [中](categories/data-visualization/evidence.zh.md) |
+| **Metabase** | The easy-to-use open source Business Intelligence and Embedded Analytics tool that lets everyone work with data :bar_chart: | NOASSERTION | ? (0/6) | [EN](categories/data-visualization/metabase.md) · [中](categories/data-visualization/metabase.zh.md) |
 
 ### ocr
 
@@ -363,6 +415,8 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **Docling** | Use it when you must parse messy PDF/DOCX/PPTX into clean structured Markdown/JSON for RAG ingestion — a parser, not a DMS. | MIT | A (5/6) | [EN](categories/document-parsing/docling.md) · [中](categories/document-parsing/docling.zh.md) |
 | **MarkItDown** | Use it when you need a lightweight Python library to convert various office documents and files to Markdown for LLM ingestion — simpler than Docling but less layout-aware. | MIT | ? (0/6) | [EN](categories/document-parsing/markitdown.md) · [中](categories/document-parsing/markitdown.zh.md) |
 | **olmOCR** | Use it when you must convert complex PDFs with equations, tables, handwriting, and multi-column layouts into clean Markdown for LLM training datasets — requires a GPU. | Apache-2.0 | ? (0/6) | [EN](categories/document-parsing/olmocr.md) · [中](categories/document-parsing/olmocr.zh.md) |
+| **Marker** | Convert PDF to markdown + JSON quickly with high accuracy | GPL-3.0 | ? (0/6) | [EN](categories/document-parsing/marker.md) · [中](categories/document-parsing/marker.zh.md) |
+| **unstructured** | Convert documents to structured data effortlessly. Unstructured is open-source ETL solution for transforming complex documents into clean, structured formats for language models.  Visit our website to learn more about our enterprise grade Platform product for production grade workflows, partitioning, enrichments, chunking and embedding. | Apache-2.0 | ? (0/6) | [EN](categories/document-parsing/unstructured.md) · [中](categories/document-parsing/unstructured.zh.md) |
 
 ### diagramming
 
@@ -383,6 +437,8 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **youtube-transcript-api** | Use it when you need timestamped YouTube transcripts key-free for a RAG/summarization pipeline — but it rides an undocumented endpoint that can break anytime, and cloud/datacenter IPs now require paid residential proxies. | MIT | A (6/6) | [EN](categories/media-download/youtube-transcript-api.md) · [中](categories/media-download/youtube-transcript-api.zh.md) |
 | **bulk-downloader-for-reddit** | Use it when you want a scriptable, reproducible Reddit archive of files plus metadata via OAuth — but Reddit's ~1000-post listing cap is unbypassable, and releases have stalled since early 2023 (GPL-3.0). | GPL-3.0 | D (5/6) | [EN](categories/media-download/bulk-downloader-for-reddit.md) · [中](categories/media-download/bulk-downloader-for-reddit.zh.md) |
 | **yt-dlp** | Use it when you need an actively maintained CLI to download video & audio from YouTube and thousands of other sites — the de-facto successor to youtube-dl with faster fixes and more features. | Unlicense | ? (0/6) | [EN](categories/media-download/yt-dlp.md) · [中](categories/media-download/yt-dlp.zh.md) |
+| **gallery-dl** | Command-line program to download image galleries and collections from several image hosting sites | GPL-2.0 | ? (0/6) | [EN](categories/media-download/gallery-dl.md) · [中](categories/media-download/gallery-dl.zh.md) |
+
 ### media-processing
 
 | Project | Use when | License | Health | Page |
@@ -399,6 +455,9 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **GStreamer** | Use it when you need a real-time, persistent, application-embedded audio/video pipeline framework — not a CLI tool — but accept a steep learning curve and plugin-dependency management. | LGPL-2.1-or-later | — | [EN](categories/media-processing/gstreamer.md) · [中](categories/media-processing/gstreamer.zh.md) |
 | **MLT** | Use it when you're building a custom video editor or automated editing pipeline that needs a timeline model — but it's a framework, not a ready-to-use NLE, and delegates all codec work to FFmpeg. | LGPL-2.1-or-later | — | [EN](categories/media-processing/mlt.md) · [中](categories/media-processing/mlt.zh.md) |
 | **OpenAI Whisper** | Use it when you need general-purpose multilingual speech-to-text transcription or translation to English from audio/video files — but it's not real-time by default, large models are slow on CPU, and it hallucinates on non-speech content. | MIT | — | [EN](categories/media-processing/whisper.md) · [中](categories/media-processing/whisper.zh.md) |
+| **sharp** | High performance Node.js image processing, the fastest module to resize JPEG, PNG, WebP, AVIF and TIFF images. Uses the libvips library. | Apache-2.0 | ? (0/6) | [EN](categories/media-processing/sharp.md) · [中](categories/media-processing/sharp.zh.md) |
+| **ImageMagick** | ImageMagick is a free, open-source software suite for creating, editing, converting, and displaying images. It supports 200+ formats and offers powerful command-line tools and APIs for automation, scripting, and integration across platforms. | NOASSERTION | ? (0/6) | [EN](categories/media-processing/imagemagick.md) · [中](categories/media-processing/imagemagick.zh.md) |
+
 ### video-production
 
 | Project | Use when | License | Health | Page |
@@ -410,6 +469,7 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | --- | --- | --- | --- | --- |
 | **NextChat** | Use it when you want a private, self-deployable multi-provider AI chat UI across web/desktop/mobile — not a multi-user RBAC team platform. | MIT | B (5/6) | [EN](categories/llm-chat-ui/nextchat.md) · [中](categories/llm-chat-ui/nextchat.zh.md) |
 | **Open WebUI** | A self-hosted AI chat platform with built-in RAG, Ollama support, and offline operation — but it's single-user-shaped by default. | NOASSERTION | ? (0/6) | [EN](categories/llm-chat-ui/open-webui.md) · [中](categories/llm-chat-ui/open-webui.zh.md) |
+| **LibreChat** | Enhanced ChatGPT Clone: Features Agents, MCP, Skills, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Presets, open-source for self-hosting. Active | MIT | ? (0/6) | [EN](categories/llm-chat-ui/librechat.md) · [中](categories/llm-chat-ui/librechat.zh.md) |
 
 ### markdown-tools
 
@@ -421,6 +481,9 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **remark** | Use it when you need a full mdast AST pipeline for parsing, transforming, linting, and serializing Markdown — but it's a toolchain, not a one-call renderer. | MIT | — | [EN](categories/markdown-tools/remark.md) · [中](categories/markdown-tools/remark.zh.md) |
 | **markdown-it** | Use it when you need a strict CommonMark/GFM-compliant, pluggable Markdown→HTML parser in JS — but the plugin ecosystem adds weight and you must still sanitize untrusted input. | MIT | — | [EN](categories/markdown-tools/markdown-it.md) · [中](categories/markdown-tools/markdown-it.zh.md) |
 | **micromark** | Use it when you need a low-level, streaming-friendly CommonMark/GFM tokenizer in JS — the engine underneath remark — but you must build the rendering layer yourself. | MIT | — | [EN](categories/markdown-tools/micromark.md) · [中](categories/markdown-tools/micromark.zh.md) |
+| **Pandoc** | Universal markup converter | GPL-2.0 | ? (0/6) | [EN](categories/markdown-tools/pandoc.md) · [中](categories/markdown-tools/pandoc.zh.md) |
+| **Goldmark** | :trophy: A markdown parser written in Go. Easy to extend, standard(CommonMark) compliant, well structured. | MIT | ? (0/6) | [EN](categories/markdown-tools/goldmark.md) · [中](categories/markdown-tools/goldmark.zh.md) |
+| **markdownlint** | A Node.js style checker and lint tool for Markdown/CommonMark files. | MIT | ? (0/6) | [EN](categories/markdown-tools/markdownlint.md) · [中](categories/markdown-tools/markdownlint.zh.md) |
 
 ### pdf-tools
 
@@ -429,6 +492,10 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **PDF.js** | Use it when you need to render or read PDFs in the browser/Node (Firefox's engine) — it doesn't create or edit PDFs. | Apache-2.0 | A (6/6) | [EN](categories/pdf-tools/pdfjs.md) · [中](categories/pdf-tools/pdfjs.zh.md) |
 | **pdf-lib** | Use it when you need to create or modify PDFs in JS/TS — in the browser, Node, Deno, or React Native — without native dependencies. | MIT | — | [EN](categories/pdf-tools/pdf-lib.md) · [中](categories/pdf-tools/pdf-lib.zh.md) |
 | **jsPDF** | Use it when you need client-side PDF generation from HTML, text, and graphics in the browser — it's creation-only, not for editing existing PDFs. | MIT | — | [EN](categories/pdf-tools/jspdf.md) · [中](categories/pdf-tools/jspdf.zh.md) |
+| **PyMuPDF** | PyMuPDF is a high performance Python library for data extraction, analysis, conversion & manipulation of PDF (and other) documents. | AGPL-3.0 | ? (0/6) | [EN](categories/pdf-tools/pymupdf.md) · [中](categories/pdf-tools/pymupdf.zh.md) |
+| **pdfplumber** | Plumb a PDF for detailed information about each char, rectangle, line, et cetera — and easily extract text and tables. | MIT | ? (0/6) | [EN](categories/pdf-tools/pdfplumber.md) · [中](categories/pdf-tools/pdfplumber.zh.md) |
+| **OCRmyPDF** | OCRmyPDF adds an OCR text layer to scanned PDF files, allowing them to be searched | MPL-2.0 | ? (0/6) | [EN](categories/pdf-tools/ocrmypdf.md) · [中](categories/pdf-tools/ocrmypdf.zh.md) |
+| **qpdf** | qpdf: A content-preserving PDF document transformer | Apache-2.0 | ? (0/6) | [EN](categories/pdf-tools/qpdf.md) · [中](categories/pdf-tools/qpdf.zh.md) |
 
 ### workflow-orchestration
 
@@ -438,6 +505,11 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **Gaia** | Use it when studying the "pipelines-as-compiled-plugins" design as a read-only reference — the repo is archived and abandoned, never pick it for new production work. | Apache-2.0 | D (5/6) | [EN](categories/workflow-orchestration/gaia.md) · [中](categories/workflow-orchestration/gaia.zh.md) |
 | **Airflow Maintenance DAGs** | Use it when self-managed Airflow needs proven copy-in DAGs to clean metadata-DB rows and stale logs — they run destructive DELETEs tied to version-specific internals, so dry-run and back up first. | Apache-2.0 | D (4/6) | [EN](categories/workflow-orchestration/airflow-maintenance-dags.md) · [中](categories/workflow-orchestration/airflow-maintenance-dags.zh.md) |
 | **n8n** | A fair-code workflow automation platform with native AI capabilities — combine visual building with custom code, self-host or use the cloud, with 400+ integrations. | NOASSERTION (fair-code) | ? (0/6) | [EN](categories/workflow-orchestration/n8n.md) · [中](categories/workflow-orchestration/n8n.zh.md) |
+| **Argo Workflows** | Workflow Engine for Kubernetes | Apache-2.0 | ? (0/6) | [EN](categories/workflow-orchestration/argo-workflows.md) · [中](categories/workflow-orchestration/argo-workflows.zh.md) |
+| **Prefect** | Prefect is a workflow orchestration framework for building resilient data pipelines in Python. | Apache-2.0 | ? (0/6) | [EN](categories/workflow-orchestration/prefect.md) · [中](categories/workflow-orchestration/prefect.zh.md) |
+| **Dagster** | An orchestration platform for the development, production, and observation of data assets. | Apache-2.0 | ? (0/6) | [EN](categories/workflow-orchestration/dagster.md) · [中](categories/workflow-orchestration/dagster.zh.md) |
+| **Temporal** | Temporal service | MIT | ? (0/6) | [EN](categories/workflow-orchestration/temporal.md) · [中](categories/workflow-orchestration/temporal.zh.md) |
+
 ### llm-inference
 
 | Project | Use when | License | Health | Page |
@@ -448,6 +520,11 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **vLLM** | Use it when you want the de-facto open-source LLM serving engine with PagedAttention, continuous batching, and an OpenAI-compatible API — accepting NVIDIA-centric GPU ops and a fast-moving codebase. | Apache-2.0 | — | [EN](categories/llm-inference/vllm.md) · [中](categories/llm-inference/vllm.zh.md) |
 | **SGLang** | Use it when you need a fast LLM serving engine with RadixAttention prefix caching and structured generation — ideal for tool-using agents and JSON-mode APIs — accepting a younger, smaller ecosystem than vLLM. | Apache-2.0 | — | [EN](categories/llm-inference/sglang.md) · [中](categories/llm-inference/sglang.zh.md) |
 | **Ray Serve** | Use it when you need a general-purpose, scalable Python model-serving framework with multi-model composition and autoscaling — but accept Ray's operational complexity and learning curve. | Apache-2.0 | — | [EN](categories/llm-inference/ray-serve.md) · [中](categories/llm-inference/ray-serve.zh.md) |
+| **llama.cpp** | LLM inference in C/C++ | MIT | ? (0/6) | [EN](categories/llm-inference/llama-cpp.md) · [中](categories/llm-inference/llama-cpp.zh.md) |
+| **Ollama** | Get up and running with Kimi-K2.6, GLM-5.1, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models. | MIT | ? (0/6) | [EN](categories/llm-inference/ollama.md) · [中](categories/llm-inference/ollama.zh.md) |
+| **BentoML** | The easiest way to serve AI apps and models - Build Model Inference APIs, Job queues, LLM apps, Multi-model pipelines, and more! | Apache-2.0 | ? (0/6) | [EN](categories/llm-inference/bentoml.md) · [中](categories/llm-inference/bentoml.zh.md) |
+| **LMDeploy** | LMDeploy is a toolkit for compressing, deploying, and serving LLMs. | Apache-2.0 | ? (0/6) | [EN](categories/llm-inference/lmdeploy.md) · [中](categories/llm-inference/lmdeploy.zh.md) |
+| **Text Generation Inference (TGI)** | Large Language Model Text Generation Inference | Apache-2.0 | ? (0/6) | [EN](categories/llm-inference/text-generation-inference.md) · [中](categories/llm-inference/text-generation-inference.zh.md) |
 
 ### task-queue
 
@@ -481,6 +558,14 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **Lit** | Use it when you need lightweight, standards-based web components that work across any framework — but you accept a smaller ecosystem and the need to learn Web Components. | BSD-3-Clause | ? (0/6) | [EN](categories/web-ui/lit.md) · [中](categories/web-ui/lit.zh.md) |
 | **React** | Use it when you want the most popular UI library with a vast ecosystem, deep hiring pool, and declarative component model — but you accept the need to assemble your own routing, state management, and build pipeline. | MIT | A (6/6) | [EN](categories/web-ui/react.md) · [中](categories/web-ui/react.zh.md) |
 | **Next.js** | Use it when you want a full-stack React framework with SSR, SSG, file-based routing, and API routes built in — but you accept Vercel's influence on the roadmap and a more opinionated architecture than plain React. | MIT | ? (0/6) | [EN](categories/web-ui/nextjs.md) · [中](categories/web-ui/nextjs.zh.md) |
+| **SvelteKit** | web development, streamlined | MIT | ? (0/6) | [EN](categories/web-ui/sveltekit.md) · [中](categories/web-ui/sveltekit.zh.md) |
+| **Reactour** | Tourist Guide into your React Components | MIT | ? (0/6) | [EN](categories/web-ui/reactour.md) · [中](categories/web-ui/reactour.zh.md) |
+| **react-joyride** | Create guided tours in your apps | MIT | ? (0/6) | [EN](categories/web-ui/react-joyride.md) · [中](categories/web-ui/react-joyride.zh.md) |
+| **Material UI (MUI)** | Material UI: Comprehensive React component library that implements Google's Material Design. Free forever. | MIT | ? (0/6) | [EN](categories/web-ui/material-ui.md) · [中](categories/web-ui/material-ui.zh.md) |
+| **Chakra UI** | Chakra UI is a component system for building SaaS products with speed ⚡️ | MIT | ? (0/6) | [EN](categories/web-ui/chakra-ui.md) · [中](categories/web-ui/chakra-ui.zh.md) |
+| **Radix UI Primitives** | Radix Primitives is an open-source UI component library for building high-quality, accessible design systems and web apps. Maintained by @workos. | MIT | ? (0/6) | [EN](categories/web-ui/radix-ui.md) · [中](categories/web-ui/radix-ui.zh.md) |
+| **Nuxt** | the full-stack Vue framework | MIT | ? (0/6) | [EN](categories/web-ui/nuxt.md) · [中](categories/web-ui/nuxt.zh.md) |
+| **Astro** | The web framework for content-driven websites. ⭐️ Star to support our work! | NOASSERTION | ? (0/6) | [EN](categories/web-ui/astro.md) · [中](categories/web-ui/astro.zh.md) |
 
 ### proxy-pool
 
@@ -496,6 +581,8 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | --- | --- | --- | --- | --- |
 | **whistle** | Use it when a web/mobile dev must capture, inspect, rewrite, and mock HTTP(S)/WebSocket traffic via a rule-based web UI — a dev proxy, not a production gateway or scraping pool. | MIT | B (6/6) | [EN](categories/debugging-proxy/whistle.md) · [中](categories/debugging-proxy/whistle.zh.md) |
 | **AnyProxy** | Use it when you want a scriptable Node.js MITM proxy to inspect and rewrite HTTP/HTTPS traffic in plain JS rules — but master is frozen since 2020, so prefer whistle for new work. | Apache-2.0 | C (4/6) | [EN](categories/debugging-proxy/anyproxy.md) · [中](categories/debugging-proxy/anyproxy.zh.md) |
+| **mitmproxy** | An interactive TLS-capable intercepting HTTP proxy for penetration testers and software developers. | MIT | ? (0/6) | [EN](categories/debugging-proxy/mitmproxy.md) · [中](categories/debugging-proxy/mitmproxy.zh.md) |
+
 ### web-scraping
 
 | Project | Use when | License | Health | Page |
@@ -503,7 +590,7 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **newspaper** | Use it to bulk-extract article text, authors, and metadata from news URLs — but the original (newspaper3k) is stale; the live path is the newspaper4k fork. | MIT | B (5/6) | [EN](categories/web-scraping/newspaper.md) · [中](categories/web-scraping/newspaper.zh.md) |
 | **requests-html** | Study it for tiny requests + HTML-parsing scripts — effectively unmaintained (~2y idle), the JS-render path is fragile; prefer Playwright + parsel for new work. | MIT | D (3/6) | [EN](categories/web-scraping/requests-html.md) · [中](categories/web-scraping/requests-html.zh.md) |
 | **Firecrawl** | The API to search, scrape, and extract clean Markdown or structured data from the web at scale — but AGPL-3.0 may limit commercial use. | AGPL-3.0 | ? (0/6) | [EN](categories/web-scraping/firecrawl.md) · [中](categories/web-scraping/firecrawl.zh.md) |
-
+| **trafilatura** | Python & Command-line tool to gather text and metadata on the Web: Crawling, scraping, extraction, output as CSV, JSON, HTML, MD, TXT, XML | Apache-2.0 | ? (0/6) | [EN](categories/web-scraping/trafilatura.md) · [中](categories/web-scraping/trafilatura.zh.md) |
 
 ### auth
 
@@ -511,6 +598,9 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | --- | --- | --- | --- | --- |
 | **Authomatic** | Use it when a framework-agnostic Python app needs thin "sign in with X" via OAuth1/OAuth2/OpenID, leaving session persistence to you — but it's low-velocity and an auth lib's slow fix cadence is a security risk. | MIT | C (5/6) | [EN](categories/auth/authomatic.md) · [中](categories/auth/authomatic.zh.md) |
 | **django-rules** | Use it when Django object-level permissions are computed from logic (predicates), not stored grants, with no DB tables — but if admins must assign per-object permissions at runtime you need django-guardian instead. | MIT | B (5/6) | [EN](categories/auth/django-rules.md) · [中](categories/auth/django-rules.zh.md) |
+| **Keycloak** | Open Source Identity and Access Management For Modern Applications and Services | Apache-2.0 | ? (0/6) | [EN](categories/auth/keycloak.md) · [中](categories/auth/keycloak.zh.md) |
+| **Casbin** | Apache Casbin: an authorization library that supports access control models like ACL, RBAC, ABAC. | Apache-2.0 | ? (0/6) | [EN](categories/auth/casbin.md) · [中](categories/auth/casbin.zh.md) |
+| **OpenFGA** | A high performance and flexible authorization/permission engine built for developers and inspired by Google Zanzibar | Apache-2.0 | ? (0/6) | [EN](categories/auth/openfga.md) · [中](categories/auth/openfga.zh.md) |
 
 ### databases
 
@@ -524,6 +614,11 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **PrettyZoo** | Use it when you need a friendly desktop GUI to browse and lightly edit a ZooKeeper znode tree during dev or incident triage — but it's archived since 2023, so new JDK/macOS may break it with no upstream fix. | Apache-2.0 | D (4/6) | [EN](categories/databases/prettyzoo.md) · [中](categories/databases/prettyzoo.zh.md) |
 | **RDR** | Use it when a Redis instance trips its maxmemory alarm and you need offline, fast per-prefix analysis of an RDB snapshot — but figures are approximate and the tool is coasting (v0.0.1, 2019). | Apache-2.0 | D (3/6) | [EN](categories/databases/rdr.md) · [中](categories/databases/rdr.zh.md) |
 | **Supabase** | The open-source Firebase alternative built on PostgreSQL with auth, auto-generated APIs, realtime, edge functions, and vector storage — but it's deeply tied to Postgres. | Apache-2.0 | ? (0/6) | [EN](categories/databases/supabase.md) · [中](categories/databases/supabase.zh.md) |
+| **DuckDB** | DuckDB is an analytical in-process SQL database management system | MIT | ? (0/6) | [EN](categories/databases/duckdb.md) · [中](categories/databases/duckdb.zh.md) |
+| **ClickHouse** | ClickHouse® is a real-time analytics database management system | Apache-2.0 | ? (0/6) | [EN](categories/databases/clickhouse.md) · [中](categories/databases/clickhouse.zh.md) |
+| **DBeaver** | Free universal database tool and SQL client | Apache-2.0 | ? (0/6) | [EN](categories/databases/dbeaver.md) · [中](categories/databases/dbeaver.zh.md) |
+| **Debezium** | Change data capture for a variety of databases. Please log issues at https://github.com/debezium/dbz/issues. | Apache-2.0 | ? (0/6) | [EN](categories/databases/debezium.md) · [中](categories/databases/debezium.zh.md) |
+| **Valkey** | A flexible distributed key-value database that is optimized for caching and other realtime workloads. | BSD-3-Clause | ? (0/6) | [EN](categories/databases/valkey.md) · [中](categories/databases/valkey.zh.md) |
 
 ### desktop-automation
 
@@ -580,6 +675,7 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | --- | --- | --- | --- | --- |
 | **NetNewsWire** | Use it when you read many feeds on Mac/iPhone and want a fast, ad-free native RSS client you own — but only on Apple platforms, never elsewhere. | MIT | B (5/6) | [EN](categories/reading-tools/netnewswire.md) · [中](categories/reading-tools/netnewswire.zh.md) |
 | **Just Read** | Use it when you want to strip ads and clutter from an article in-browser, your way, with per-site selectors — but it's EULA-licensed source, not real OSS. | Unlicensed (EULA) | D (6/6) | [EN](categories/reading-tools/just-read.md) · [中](categories/reading-tools/just-read.zh.md) |
+| **FreshRSS** | A free, self-hostable news aggregator… | AGPL-3.0 | ? (0/6) | [EN](categories/reading-tools/freshrss.md) · [中](categories/reading-tools/freshrss.zh.md) |
 
 ### speech
 
@@ -646,6 +742,8 @@ categories/<cat>/<subcat>/INDEX.md …          # deeper nodes — the tree self
 `categories/` is a **recursive, self-balancing tree**: when a category gets too many projects it
 splits into sub-categories (the linter WARNs; `refactor-index` does the split). English is the
 agent-canonical path; the `.zh.md` sibling is the same content in Chinese.
+| **Rich** | Rich is a Python library for rich text and beautiful formatting in the terminal. | MIT | ? (0/6) | [EN](categories/terminal-ui/rich.md) · [中](categories/terminal-ui/rich.zh.md) |
+| **Textual** | The lean application framework for Python.  Build sophisticated user interfaces with a simple Python API. Run your apps in the terminal and a web browser. | MIT | ? (0/6) | [EN](categories/terminal-ui/textual.md) · [中](categories/terminal-ui/textual.zh.md) |
 
 ### Anatomy of a project page
 

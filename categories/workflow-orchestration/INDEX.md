@@ -11,6 +11,11 @@
 | **Gaia** | Use it when studying the "pipelines-as-compiled-plugins" design as a read-only reference — the repo is archived and abandoned, never pick it for new production work. | D (5/6) | [→](gaia.md) |
 | **Airflow Maintenance DAGs** | Use it when self-managed Airflow needs proven copy-in DAGs to clean metadata-DB rows and stale logs — they run destructive DELETEs tied to version-specific internals, so dry-run and back up first. | D (4/6) | [→](airflow-maintenance-dags.md) |
 | **n8n** | Use it when you need a visual-first workflow automation platform with 400+ integrations, native AI capabilities, and the option to self-host — but not for sub-second real-time streaming or fully unrestricted open-source use. | ? (0/6) | [→](n8n.md) |
+| **Argo Workflows** | Workflow Engine for Kubernetes | ? (0/6) | [→](argo-workflows.md) |
+| **Prefect** | Prefect is a workflow orchestration framework for building resilient data pipelines in Python. | ? (0/6) | [→](prefect.md) |
+| **Dagster** | An orchestration platform for the development, production, and observation of data assets. | ? (0/6) | [→](dagster.md) |
+| **Temporal** | Temporal service | ? (0/6) | [→](temporal.md) |
+
 
 ## Comparison matrix
 

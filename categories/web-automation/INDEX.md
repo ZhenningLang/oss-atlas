@@ -14,6 +14,10 @@
 | **Selenium** | Use it when you need cross-browser WebDriver automation across a browser/language matrix — Playwright/Cypress are nicer for modern single-browser DX. | B (6/6) | [→](selenium.md) |
 | **PhantomJS** | Avoid for new work — an archived, abandoned scriptable headless browser; use headless Chrome (Puppeteer/Playwright) or Selenium instead. | D (5/6) | [→](phantomjs.md) |
 | **Selenium Wire** | Use it when a legacy Selenium suite needs to read or modify the browser's background HTTP traffic — but it's archived, so new projects should use Selenium 4's native CDP/BiDi or Playwright. | D (5/6) | [→](selenium-wire.md) |
+| **browser-use** | 🌐 Make websites accessible for AI agents. Automate tasks online with ease. | ? (0/6) | [→](browser-use.md) |
+| **Playwright** | Playwright is a framework for Web Testing and Automation. It allows testing Chromium, Firefox and WebKit with a single API. | ? (0/6) | [→](playwright.md) |
+| **Puppeteer** | JavaScript API for Chrome and Firefox | ? (0/6) | [→](puppeteer.md) |
+
 
 ## Comparison matrix
 

@@ -14,6 +14,12 @@
 | **Parlant** | 当你要构建一个必须靠行为准则严格守规的对客 agent 时用它——简单或自由式 agent 用它过重。 | B（6/6） | [→](parlant.zh.md) |
 | **OpenClaw** | 当你想要一款在自有设备上运行、跨 20 余条消息渠道应答你的个人 AI 助手时用它——但它极其年轻，毫无 Lindy 记录。 | ?（0/6） | [→](openclaw.zh.md) |
 | **Hermes Agent** | 当你想要一个带学习循环、能从经验中创建技能、可在 5 美元 VPS 上运行的自我改进 AI 智能体时用它——但它不足一岁，学习循环的稳定性未经检验。 | ?（0/6） | [→](hermes-agent.zh.md) |
+| **CrewAI** | Framework for orchestrating role-playing, autonomous AI agents. By fostering collaborative intelligence, CrewAI empowers agents to work together seamlessly, tackling complex tasks. | ?（0/6） | [→](crewai.zh.md) |
+| **LangGraph** | Build resilient agents. | ?（0/6） | [→](langgraph.zh.md) |
+| **AutoGen** | A programming framework for agentic AI | ?（0/6） | [→](autogen.zh.md) |
+| **Pydantic AI** | AI Agent Framework, the Pydantic way | ?（0/6） | [→](pydantic-ai.zh.md) |
+| **OpenAI Agents SDK** | A lightweight, powerful framework for multi-agent workflows | ?（0/6） | [→](openai-agents-sdk.zh.md) |
+
 
 ## 对比矩阵
 

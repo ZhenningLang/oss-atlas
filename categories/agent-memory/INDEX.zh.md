@@ -12,6 +12,12 @@
 | **Claude Subconscious** | 当你想让一个后台 Letta agent 通过 hook 给 Claude Code 加上跨会话记忆时使用（仅 demo，非生产）。 | C（6/6） | [→](claude-subconscious.zh.md) |
 | **claude-mem** | 当你的编码 agent 跨会话丢失上下文、你想要本地 hook/MCP 捕获并压缩后再注入的记忆时用它（star 数存疑）。 | B（6/6） | [→](claude-mem.zh.md) |
 | **ByteRover CLI** | 当你想要一款可移植的、带 git 式版本控制和云同步的结构化编码 agent 记忆层时用它——但它极其年轻（2025-06 创建），且许可情况模糊。 | ?（0/6） | [→](byterover.zh.md) |
+| **Letta (MemGPT)** | Platform for stateful agents: AI with advanced memory that can learn and self-improve over time. | ?（0/6） | [→](letta.zh.md) |
+| **Zep** | Zep \| Examples, Integrations, & More | ?（0/6） | [→](zep.zh.md) |
+| **Graphiti** | Build Real-Time Knowledge Graphs for AI Agents | ?（0/6） | [→](graphiti.zh.md) |
+| **LangMem** | 当你需要在 `agent-memory` 分类中评估 LangMem 时用它。 | ?（0/6） | [→](langmem.zh.md) |
+| **Cognee** | Cognee is the open-source AI memory platform for agents. Give your AI agents persistent long-term memory across sessions with a self-hosted knowledge graph engine. | ?（0/6） | [→](cognee.zh.md) |
+
 
 ## 对比矩阵
 

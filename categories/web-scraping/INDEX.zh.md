@@ -19,6 +19,8 @@
 | **Scrapyd** | 当你需要把本地 Scrapy 爬虫部署到服务器、通过 HTTP API 做定时与多版本调度时用它——但它只能跑 Scrapy 且默认无鉴权，暴露 6800 端口前务必先加认证。 | B（5/6） | [→](scrapyd.zh.md) |
 | **SpiderKeeper** | 当运行 Scrapyd 的小团队想要最简单的浏览器面板来部署和定时调度爬虫时用它——但它自 2023 年已停更且默认 admin/admin 鉴权，切勿暴露在不可信网络。 | E（3/6） | [→](spiderkeeper.zh.md) |
 | **Firecrawl** | 当你需要一款 API 来规模化搜索、抓取网页并提取干净 Markdown 或结构化数据时用它——但 AGPL-3.0 可能限制商用。 | ?（0/6） | [→](firecrawl.zh.md) |
+| **trafilatura** | Python & Command-line tool to gather text and metadata on the Web: Crawling, scraping, extraction, output as CSV, JSON, HTML, MD, TXT, XML | ?（0/6） | [→](trafilatura.zh.md) |
+
 
 ## 对比矩阵
 

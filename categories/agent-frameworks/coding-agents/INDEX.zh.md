@@ -16,6 +16,11 @@
 | **Gemini CLI** | 基于 Google Gemini 模型的开源终端 AI 智能体，带免费层、内置工具和 MCP 支持；非常年轻（2025-04 创建）且仅限 Google 模型。 | ?（0/6） | [→](gemini-cli.zh.md) |
 | **CC Switch** | 当你同时使用多种 AI 编码智能体（Claude Code、Codex、Gemini CLI、OpenClaw、OpenCode、Hermes Agent）并希望有一个统一的桌面控制平面进行提供商路由和 MCP 支持时用它——但它不足一岁，且为单人维护。 | ?（0/6） | [→](cc-switch.zh.md) |
 | **RTK** | 当你使用基于 CLI 的 AI 编码智能体，想在常见 shell 命令上减少 60–90% 的 LLM token 消耗时用它——但它仅约 6 个月大，且 star 数高得可疑。 | ?（0/6） | [→](rtk.zh.md) |
+| **aider** | aider is AI pair programming in your terminal | ?（0/6） | [→](aider.zh.md) |
+| **Cline** | Autonomous coding agent as an SDK, IDE extension, or CLI assistant. | ?（0/6） | [→](cline.zh.md) |
+| **SWE-agent** | SWE-agent takes a GitHub issue and tries to automatically fix it, using your LM of choice. It can also be employed for offensive cybersecurity or competitive coding challenges. [NeurIPS 2024] | ?（0/6） | [→](swe-agent.zh.md) |
+| **OpenHands** | 🙌 OpenHands: AI-Driven Development | ?（0/6） | [→](openhands.zh.md) |
+
 
 ## 对比矩阵
 

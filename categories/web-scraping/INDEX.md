@@ -19,6 +19,8 @@
 | **Scrapyd** | Use it when you need to deploy local Scrapy spiders to a server and drive scheduled, versioned crawls over an HTTP API — but it only runs Scrapy and ships unauthenticated, so add auth before exposing port 6800. | B (5/6) | [→](scrapyd.md) |
 | **SpiderKeeper** | Use it when a small team running Scrapyd wants the simplest browser dashboard to deploy and cron-schedule spiders — but it's stale since 2023 with default admin/admin auth, so don't expose it untrusted. | E (3/6) | [→](spiderkeeper.md) |
 | **Firecrawl** | Use it when you need an API to search, scrape, and extract clean Markdown or structured data from the web at scale — but AGPL-3.0 may limit commercial use. | ? (0/6) | [→](firecrawl.md) |
+| **trafilatura** | Python & Command-line tool to gather text and metadata on the Web: Crawling, scraping, extraction, output as CSV, JSON, HTML, MD, TXT, XML | ? (0/6) | [→](trafilatura.md) |
+
 
 ## Comparison matrix
 

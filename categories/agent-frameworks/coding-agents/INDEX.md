@@ -16,6 +16,11 @@
 | **Gemini CLI** | Open-source terminal AI agent powered by Google's Gemini models with free tier, built-in tools, and MCP support; very young (created 2025-04) and Google-only. | ? (0/6) | [→](gemini-cli.md) |
 | **CC Switch** | Use it when you juggle multiple AI coding agents (Claude Code, Codex, Gemini CLI, OpenClaw, OpenCode, Hermes Agent) and want a single desktop control plane with provider routing and MCP support. | ? (0/6) | [→](cc-switch.md) |
 | **RTK** | Use it when you use CLI-based AI coding agents and want to reduce LLM token consumption by 60–90% on common shell commands — but it's only ~6 months old and the star count is suspiciously high. | ? (0/6) | [→](rtk.md) |
+| **aider** | aider is AI pair programming in your terminal | ? (0/6) | [→](aider.md) |
+| **Cline** | Autonomous coding agent as an SDK, IDE extension, or CLI assistant. | ? (0/6) | [→](cline.md) |
+| **SWE-agent** | SWE-agent takes a GitHub issue and tries to automatically fix it, using your LM of choice. It can also be employed for offensive cybersecurity or competitive coding challenges. [NeurIPS 2024] | ? (0/6) | [→](swe-agent.md) |
+| **OpenHands** | 🙌 OpenHands: AI-Driven Development | ? (0/6) | [→](openhands.md) |
+
 
 ## Comparison matrix
 

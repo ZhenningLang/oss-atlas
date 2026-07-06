@@ -13,6 +13,12 @@
 | **vLLM** | 当你想要事实上的开源 LLM 服务引擎，带 PagedAttention、连续批处理和 OpenAI 兼容 API 时用它——接受 NVIDIA 主导的 GPU 运维和快速迭代的代码库。 | — | [→](vllm.zh.md) |
 | **SGLang** | 当你需要带 RadixAttention 前缀缓存和结构化生成的快速 LLM 服务引擎——适合工具调用型 agent 和 JSON 模式 API——并接受比 vLLM 更年轻、更小的生态时用它。 | — | [→](sglang.zh.md) |
 | **Ray Serve** | 当你需要通用、可扩展的 Python 模型服务框架，支持多模型组合和自动扩缩容时用它——但要接受 Ray 的运维复杂性和学习曲线。 | — | [→](ray-serve.zh.md) |
+| **llama.cpp** | LLM inference in C/C++ | ?（0/6） | [→](llama-cpp.zh.md) |
+| **Ollama** | Get up and running with Kimi-K2.6, GLM-5.1, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models. | ?（0/6） | [→](ollama.zh.md) |
+| **BentoML** | The easiest way to serve AI apps and models - Build Model Inference APIs, Job queues, LLM apps, Multi-model pipelines, and more! | ?（0/6） | [→](bentoml.zh.md) |
+| **LMDeploy** | LMDeploy is a toolkit for compressing, deploying, and serving LLMs. | ?（0/6） | [→](lmdeploy.zh.md) |
+| **Text Generation Inference (TGI)** | Large Language Model Text Generation Inference | ?（0/6） | [→](text-generation-inference.zh.md) |
+
 
 ## 对比矩阵
 

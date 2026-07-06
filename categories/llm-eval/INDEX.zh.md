@@ -9,6 +9,12 @@
 | --- | --- | --- | --- |
 | **promptfoo** | 当你要用声明式 YAML 给自己的 LLM 应用做评测+红队并接进 CI 时用它。 | A（6/6） | [→](promptfoo.zh.md) |
 | **Pezzo** | 当小团队想要一个自托管的统一控制台来做 prompt 版本管理加成本／延迟可观测时用它——但它自 2025 年中起疑似停更，请做好自己维护的准备。 | C（4/6） | [→](pezzo.zh.md) |
+| **DeepEval** | The LLM Evaluation Framework | ?（0/6） | [→](deepeval.zh.md) |
+| **Ragas** | Supercharge Your LLM Application Evaluations 🚀 | ?（0/6） | [→](ragas.zh.md) |
+| **garak** | the LLM vulnerability scanner | ?（0/6） | [→](garak.zh.md) |
+| **Giskard OSS** | 🐢 Open-Source Evaluation & Testing library for LLM Agents | ?（0/6） | [→](giskard.zh.md) |
+| **Langfuse** | 🪢 Open source AI engineering platform: LLM evals, observability, metrics, prompt management, playground, datasets. Integrates with OpenTelemetry, LangChain, OpenAI SDK, LiteLLM, and more. 🍊YC W23 | ?（0/6） | [→](langfuse.zh.md) |
+
 
 ## 对比矩阵
 

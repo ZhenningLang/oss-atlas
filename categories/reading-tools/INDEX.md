@@ -9,6 +9,8 @@
 | --- | --- | --- | --- |
 | **NetNewsWire** | Use it when you read many feeds on Mac/iPhone and want a fast, ad-free native RSS client you own — but only on Apple platforms, never elsewhere. | B (5/6) | [→](netnewswire.md) |
 | **Just Read** | Use it when you want to strip ads and clutter from an article in-browser, your way, with per-site selectors — but it's EULA-licensed source, not real OSS. | D (6/6) | [→](just-read.md) |
+| **FreshRSS** | A free, self-hostable news aggregator… | ? (0/6) | [→](freshrss.md) |
+
 
 ## Comparison matrix
 

@@ -9,6 +9,8 @@
 | --- | --- | --- | --- |
 | **NetNewsWire** | 当你在 Mac／iPhone 上读大量订阅、想要一个快速无广告、数据自己掌控的原生 RSS 客户端时用它——但它仅限 Apple 平台，别处一概不支持。 | B（5/6） | [→](netnewswire.zh.md) |
 | **Just Read** | 当你想在浏览器里按自己的方式清掉文章的广告与杂乱、还能按站点记忆选择器时用它——但它是 EULA 授权的源码，并非真正的开源。 | D（6/6） | [→](just-read.zh.md) |
+| **FreshRSS** | A free, self-hostable news aggregator… | ?（0/6） | [→](freshrss.zh.md) |
+
 
 ## 对比矩阵
 

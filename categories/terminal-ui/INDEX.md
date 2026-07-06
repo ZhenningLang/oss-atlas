@@ -14,6 +14,9 @@
 | **asciify** | Use it as a minimal, legible copy-paste reference for the image-to-ASCII algorithm — but it ships NO license (all rights reserved), is unmaintained since 2022, so never vendor it into a product. | E (4/6) | [→](asciify.md) |
 | **Warp** | Use it when you want a modern, AI-powered terminal with command blocks and integrated coding agents — but the GitHub repo is issues-only; the product is proprietary closed-source. | ? (0/6) | [→](warp.md) |
 | **Alacritty** | Use it when you want a fast, GPU-accelerated, cross-platform terminal emulator with sensible defaults — but it explicitly lacks tabs, splits, and ligatures, and requires OpenGL 3.3+. | ? (0/6) | [→](alacritty.md) |
+| **Rich** | Rich is a Python library for rich text and beautiful formatting in the terminal. | ? (0/6) | [→](rich.md) |
+| **Textual** | The lean application framework for Python.  Build sophisticated user interfaces with a simple Python API. Run your apps in the terminal and a web browser. | ? (0/6) | [→](textual.md) |
+
 
 ## Comparison matrix
 

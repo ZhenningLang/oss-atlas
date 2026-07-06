@@ -14,6 +14,8 @@
 | **MiniCPM-V** | 当你需要小体积、可在端侧/边缘运行的多模态（图像+视频）理解时用它——注意逐权重许可。 | A（4/6） | [→](minicpm-v.zh.md) |
 | **Stable Diffusion WebUI** | 当你想在自有 GPU 上用本地 Web GUI 进行 Stable Diffusion 图像生成、编辑和超分时用它——但需要技术 setup 和 NVIDIA GPU。 | ?（0/6） | [→](stable-diffusion-webui.zh.md) |
 | **ComfyUI** | 当你想要一个模块化的节点图界面来在本地构建复杂扩散模型工作流时用它——但学习曲线陡峭，且需要大量 GPU 资源。 | ?（0/6） | [→](comfyui.zh.md) |
+| **MLX / mlx-lm** | Run LLMs with MLX | ?（0/6） | [→](mlx-mlx-lm.zh.md) |
+
 
 ## 对比矩阵
 

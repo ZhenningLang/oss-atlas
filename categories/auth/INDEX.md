@@ -9,6 +9,10 @@
 | --- | --- | --- | --- |
 | **Authomatic** | Use it when a framework-agnostic Python app needs thin "sign in with X" via OAuth1/OAuth2/OpenID, leaving session persistence to you — but it's low-velocity and an auth lib's slow fix cadence is a security risk. | C (5/6) | [→](authomatic.md) |
 | **django-rules** | Use it when Django object-level permissions are computed from logic (predicates), not stored grants, with no DB tables — but if admins must assign per-object permissions at runtime you need django-guardian instead. | B (5/6) | [→](django-rules.md) |
+| **Keycloak** | Open Source Identity and Access Management For Modern Applications and Services | ? (0/6) | [→](keycloak.md) |
+| **Casbin** | Apache Casbin: an authorization library that supports access control models like ACL, RBAC, ABAC. | ? (0/6) | [→](casbin.md) |
+| **OpenFGA** | A high performance and flexible authorization/permission engine built for developers and inspired by Google Zanzibar | ? (0/6) | [→](openfga.md) |
+
 
 ## Comparison matrix
 

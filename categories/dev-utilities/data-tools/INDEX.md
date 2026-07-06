@@ -15,6 +15,9 @@
 | **fontTools** | Use it when you need programmatic font surgery — subset webfonts, convert formats, inspect/patch tables — but it edits font files, it won't design glyphs or shape text. | A (6/6) | [→](fonttools.md) |
 | **Flashlight** | Use it when you're keeping a vintage macOS 10.10–10.15 machine and want Spotlight plugins — but it's abandoned since 2020 and requires disabling SIP, avoid on real machines. | E (3/6) | [→](flashlight.md) |
 | **ripgrep** | Use it when you need a fast, smart, cross-platform search tool that respects gitignore by default and works identically on Windows, macOS, and Linux. | ? (0/6) | [→](ripgrep.md) |
+| **fzf** | :cherry_blossom: A command-line fuzzy finder | ? (0/6) | [→](fzf.md) |
+| **jq** | Command-line JSON processor | ? (0/6) | [→](jq.md) |
+
 
 ## Comparison matrix
 

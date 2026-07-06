@@ -10,6 +10,9 @@
 | **Docling** | Use it when you must parse messy PDF/DOCX/PPTX into clean structured Markdown/JSON for RAG ingestion — a parser, not a DMS. | A (5/6) | [→](docling.md) |
 | **MarkItDown** | Use it when you need a lightweight Python library to convert various office documents and files to Markdown for LLM ingestion — simpler than Docling but less layout-aware. | ? (0/6) | [→](markitdown.md) |
 | **olmOCR** | Use it when you must convert complex PDFs with equations, tables, handwriting, and multi-column layouts into clean Markdown for LLM training datasets — requires a GPU. | ? (0/6) | [→](olmocr.md) |
+| **Marker** | Convert PDF to markdown + JSON quickly with high accuracy | ? (0/6) | [→](marker.md) |
+| **unstructured** | Convert documents to structured data effortlessly. Unstructured is open-source ETL solution for transforming complex documents into clean, structured formats for language models.  Visit our website to learn more about our enterprise grade Platform product for production grade workflows, partitioning, enrichments, chunking and embedding. | ? (0/6) | [→](unstructured.md) |
+
 
 ## Comparison matrix
 

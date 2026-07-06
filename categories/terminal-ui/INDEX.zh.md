@@ -14,6 +14,9 @@
 | **asciify** | 当你只想要一份极简易读、可复制粘贴的图片转 ASCII 算法参考时用它——但它没有任何许可证（默认保留所有权利），自 2022 年起无人维护，切勿将其并入产品。 | E（4/6） | [→](asciify.zh.md) |
 | **Warp** | 当你想要一个带命令块和集成编码 agent 的现代 AI 终端时用它——但这个 GitHub 仓库仅用于 issue，产品是专有闭源软件。 | ?（0/6） | [→](warp.zh.md) |
 | **Alacritty** | 当你想要一个快速、GPU 加速、跨平台的终端模拟器，具备合理的默认设置时用它——但它明确不支持标签页、分屏和连字，且需要 OpenGL 3.3+。 | ?（0/6） | [→](alacritty.zh.md) |
+| **Rich** | Rich is a Python library for rich text and beautiful formatting in the terminal. | ?（0/6） | [→](rich.zh.md) |
+| **Textual** | The lean application framework for Python.  Build sophisticated user interfaces with a simple Python API. Run your apps in the terminal and a web browser. | ?（0/6） | [→](textual.zh.md) |
+
 
 ## 对比矩阵
 

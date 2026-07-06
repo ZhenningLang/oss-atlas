@@ -15,6 +15,12 @@
 | **PrettyZoo** | Use it when you need a friendly desktop GUI to browse and lightly edit a ZooKeeper znode tree during dev or incident triage — but it's archived since 2023, so new JDK/macOS may break it with no upstream fix. | D (4/6) | [→](prettyzoo.md) |
 | **RDR** | Use it when a Redis instance trips its maxmemory alarm and you need offline, fast per-prefix analysis of an RDB snapshot — but figures are approximate and the tool is coasting (v0.0.1, 2019). | D (3/6) | [→](rdr.md) |
 | **Supabase** | Use it when you want an open-source Firebase alternative built on PostgreSQL with auth, auto-generated APIs, realtime, edge functions, and vector storage — but it's deeply tied to Postgres. | ? (0/6) | [→](supabase.md) |
+| **DuckDB** | DuckDB is an analytical in-process SQL database management system | ? (0/6) | [→](duckdb.md) |
+| **ClickHouse** | ClickHouse® is a real-time analytics database management system | ? (0/6) | [→](clickhouse.md) |
+| **DBeaver** | Free universal database tool and SQL client | ? (0/6) | [→](dbeaver.md) |
+| **Debezium** | Change data capture for a variety of databases. Please log issues at https://github.com/debezium/dbz/issues. | ? (0/6) | [→](debezium.md) |
+| **Valkey** | A flexible distributed key-value database that is optimized for caching and other realtime workloads. | ? (0/6) | [→](valkey.md) |
+
 
 ## Comparison matrix
 

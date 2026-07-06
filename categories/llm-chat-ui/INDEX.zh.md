@@ -9,6 +9,8 @@
 | --- | --- | --- | --- |
 | **NextChat** | 当你想要一个私有、可自部署、跨 web/桌面/移动 的多 provider AI 聊天前端时用它——不是多用户 RBAC 团队平台。 | B（5/6） | [→](nextchat.zh.md) |
 | **Open WebUI** | 当你想要一个自托管 AI 聊天平台，内置 RAG、支持 Ollama、可完全离线运行时用它——但默认偏单用户。 | ?（0/6） | [→](open-webui.zh.md) |
+| **LibreChat** | Enhanced ChatGPT Clone: Features Agents, MCP, Skills, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Presets, open-source for self-hosting. Active | ?（0/6） | [→](librechat.zh.md) |
+
 
 ## 对比矩阵
 

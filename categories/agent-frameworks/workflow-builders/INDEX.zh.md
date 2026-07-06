@@ -13,6 +13,9 @@
 | **Dify** | 当你想要一个生产就绪的、用于构建 agentic 工作流的低代码可视化平台，内置 RAG 与 MCP 支持时用它——但商用前请核实许可。 | ?（0/6） | [→](dify.zh.md) |
 | **LangChain** | 当你需要一个代码优先的框架来组合 LLM agent、工具与记忆，并拥有庞大的集成生态时用它——但简单单 prompt 应用别用它。 | ?（0/6） | [→](langchain.zh.md) |
 | **Langflow** | 可视化拖拽平台，用于构建和部署 LLM 工作流与智能体，内置 API 和 MCP 服务器；可视化流比代码更难做 diff/审查。 | ?（0/6） | [→](langflow.zh.md) |
+| **LlamaIndex** | LlamaIndex is the leading document agent and OCR platform | ?（0/6） | [→](llamaindex.zh.md) |
+| **Flowise** | Build AI Agents, Visually | ?（0/6） | [→](flowise.zh.md) |
+
 
 ## 对比矩阵
 

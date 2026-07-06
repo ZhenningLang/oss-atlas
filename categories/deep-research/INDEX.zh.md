@@ -12,6 +12,11 @@
 | **Local Deep Research** | 当你需要一个自托管、可纯本地运行的深度研究 agent、把敏感查询留在自己机器上时用它。 | B（6/6） | [→](local-deep-research.zh.md) |
 | **Agent-Reach** | 当你的 agent 需要免付费 API 地读取和搜索网页与社交平台内容时用它。 | B（5/6） | [→](agent-reach.zh.md) |
 | **MiroThinker** | 当你想要一个可在自有 GPU 上研究改造的自托管开源深研 Agent 时用它——但它要 GPU 集群加付费外部 API，且不到一岁、毫无 Lindy 沉淀。 | C（6/6） | [→](mirothinker.zh.md) |
+| **GPT Researcher** | An autonomous agent that conducts deep research on any data using any LLM providers | ?（0/6） | [→](gpt-researcher.zh.md) |
+| **Open Deep Research** | 当你需要在 `deep-research` 分类中评估 Open Deep Research 时用它。 | ?（0/6） | [→](open-deep-research.zh.md) |
+| **STORM** | An LLM-powered knowledge curation system that researches a topic and generates a full-length report with citations. | ?（0/6） | [→](storm.zh.md) |
+| **node-DeepResearch** | Keep searching, reading webpages, reasoning until it finds the answer (or exceeding the token budget) | ?（0/6） | [→](node-deepresearch.zh.md) |
+
 
 ## 对比矩阵
 

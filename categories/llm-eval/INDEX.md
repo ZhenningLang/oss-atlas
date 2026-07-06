@@ -9,6 +9,12 @@
 | --- | --- | --- | --- |
 | **promptfoo** | Use it when you need declarative YAML evals plus red-teaming for your LLM app in CI. | A (6/6) | [→](promptfoo.md) |
 | **Pezzo** | Use it when a small team wants one self-hosted control plane for prompt versioning plus cost/latency observability — but it looks stalled since mid-2025, so assume you'll maintain it yourself. | C (4/6) | [→](pezzo.md) |
+| **DeepEval** | The LLM Evaluation Framework | ? (0/6) | [→](deepeval.md) |
+| **Ragas** | Supercharge Your LLM Application Evaluations 🚀 | ? (0/6) | [→](ragas.md) |
+| **garak** | the LLM vulnerability scanner | ? (0/6) | [→](garak.md) |
+| **Giskard OSS** | 🐢 Open-Source Evaluation & Testing library for LLM Agents | ? (0/6) | [→](giskard.md) |
+| **Langfuse** | 🪢 Open source AI engineering platform: LLM evals, observability, metrics, prompt management, playground, datasets. Integrates with OpenTelemetry, LangChain, OpenAI SDK, LiteLLM, and more. 🍊YC W23 | ? (0/6) | [→](langfuse.md) |
+
 
 ## Comparison matrix
 

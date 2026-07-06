@@ -13,6 +13,10 @@
 | **remark** | Use it when you need a full mdast AST pipeline for parsing, transforming, linting, and serializing Markdown — but it's a toolchain, not a one-call renderer. | — | [→](remark.md) |
 | **markdown-it** | Use it when you need a strict CommonMark/GFM-compliant, pluggable Markdown→HTML parser in JS — but the plugin ecosystem adds weight and you must still sanitize untrusted input. | — | [→](markdown-it.md) |
 | **micromark** | Use it when you need a low-level, streaming-friendly CommonMark/GFM tokenizer in JS — the engine underneath remark — but you must build the rendering layer yourself. | — | [→](micromark.md) |
+| **Pandoc** | Universal markup converter | ? (0/6) | [→](pandoc.md) |
+| **Goldmark** | :trophy: A markdown parser written in Go. Easy to extend, standard(CommonMark) compliant, well structured. | ? (0/6) | [→](goldmark.md) |
+| **markdownlint** | A Node.js style checker and lint tool for Markdown/CommonMark files. | ? (0/6) | [→](markdownlint.md) |
+
 
 ## Comparison matrix
 
