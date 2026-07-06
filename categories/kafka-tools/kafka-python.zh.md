@@ -95,11 +95,11 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| confluent-kafka-python | 未收录 | 当前页用于它的主场景；如果更看重“官方 Confluent 客户端，封装 `librdkafka`（C）”，再选 confluent-kafka-python。 | 官方 Confluent 客户端，封装 `librdkafka`（C）——吞吐/延迟最佳、协议覆盖最快，但需要原生库，可移植性不如纯 Python 那么轻易。 |
-| aiokafka | 未收录 | 当前页用于它的主场景；如果更看重“原生 `asyncio` Kafka 客户端（脱胎于 kafka-python 一脉）”，再选 aiokafka。 | 原生 `asyncio` Kafka 客户端（脱胎于 kafka-python 一脉）；async 优先应用的正确选择，面比同步客户端窄。 |
-| [kafka-ui](kafka-ui.zh.md) | ✅ | 当前页用于它的主场景；如果更看重“是集群管理的 Web UI，而非客户端库”，再选 kafka-ui。 | 是集群管理的 Web UI，而非客户端库——互补而非竞争；完全不同的活。 |
-| Java/Scala 官方客户端 | 未收录 | 当前页用于它的主场景；如果更看重“参考实现，特性一等支持且带 Kafka Streams，但仅限 JVM”，再选 Java/Scala 官方客户端。 | 参考实现，特性一等支持且带 Kafka Streams，但仅限 JVM——对 Python 服务不是选项。 |
-| Sarama（Go） | 未收录 | 当前页用于它的主场景；如果更看重“成熟的纯 Go Kafka 客户端”，再选 Sarama（Go）。 | 成熟的纯 Go Kafka 客户端；同样「无原生依赖」的卖点，但面向 Go 而非 Python。 |
+| confluent-kafka-python | 未收录 | 当吞吐、延迟、Confluent 生态集成或最快协议覆盖最重要时，选 confluent-kafka-python；当纯 Python 可移植性和安装简单才是硬约束时，选 kafka-python。 | 官方 Confluent 客户端，封装 `librdkafka`（C）——吞吐/延迟最佳、协议覆盖最快，但需要原生库，可移植性不如纯 Python 那么轻易。 |
+| aiokafka | 未收录 | 当 async 优先的 Python 服务需要原生 `asyncio` API 时，选 aiokafka；当需求是同步消费者、生产者和管理脚本时，选 kafka-python。 | 原生 `asyncio` Kafka 客户端（脱胎于 kafka-python 一脉）；async 优先应用的正确选择，面比同步客户端窄。 |
+| [kafka-ui](kafka-ui.zh.md) | ✅ | kafka-ui 是互补项：人要浏览和管理集群时选它；要嵌入 Python 生产者、消费者或脚本时，仍选 kafka-python。 | 是集群管理的 Web UI，而非客户端库——互补而非竞争；完全不同的活。 |
+| Java/Scala 官方客户端 | 未收录 | 当服务在 JVM 上、需要参考客户端行为或 Kafka Streams 时，选 Java/Scala 官方客户端；当应用边界是 Python 且不能接受 JVM 客户端时，选 kafka-python。 | 参考实现，特性一等支持且带 Kafka Streams，但仅限 JVM——对 Python 服务不是选项。 |
+| Sarama（Go） | 未收录 | 当 Go 服务需要成熟、无原生依赖的 Kafka 客户端时，选 Sarama；当你要在 Python 里获得同类可移植性取舍时，选 kafka-python。 | 成熟的纯 Go Kafka 客户端；同样「无原生依赖」的卖点，但面向 Go 而非 Python。 |
 
 ## 技术栈
 
