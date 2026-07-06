@@ -122,12 +122,12 @@ You also use it when you need *more than one* metric from a single, optimized im
 
 ## Health & viability
 
-- **Responsiveness**: Grade B — median first-response time 41.2 hours across 4 qualifying issues/PRs.
-- **Maintenance (2026-06).** **Active.** libvmaf v3.2.0 released 2026-06-20, v3.1.0 in 2026-04, last push 2026-06-23; a new **v1 model set** announced 2026-06 — clearly under ongoing development, not coasting. Not archived.
-- **Governance / backing.** Owned by **Netflix** (an `Organization` account) with a multi-engineer contributor history (`li-zhi`, `christosbampis`, et al.); strong institutional backing and a clear roadmap. The flip side is single-vendor stewardship — Netflix's priorities drive direction. [推断]
-- **Age & Lindy verdict.** Created 2016-02, ~10 years old and **still actively shipping** ⇒ **strong Lindy**; it's the mature, standard perceptual metric, not a newcomer, and its standardization in AOM CTC entrenches it further.
-- **Adoption & ecosystem.** Industry-standard for codec evaluation (AOM CTC), integrated into FFmpeg, used across the encoding community; Emmy-recognized. Adoption is broad and sticky. [推断]
-- **Risk flags.** A 2020 **relicense** (Apache-2.0 → BSD+Patent) — a more permissive move with an express patent grant, but a license-history fact to note. Single-vendor (Netflix) governance is the main bus-factor consideration, mitigated by the strong institutional backing. [推断]
+- **Maintenance**: Grade A — 11/13 active weeks in trailing 13; last commit 3 days ago.
+- **Responsiveness**: Grade A — median first-response time 41.2 hours across 4 qualifying issues/PRs.
+- **Adoption**: Grade D — 97,260 monthly downloads via formulae.brew.sh (package: libvmaf).
+- **Longevity**: Grade A — 3798 days old.
+- **Governance**: Grade C — top-3 contributor share 85.9% (?).
+- **Risk / License**: Grade A — BSD-3-Clause license.
 
 ## Caveats (unverified)
 

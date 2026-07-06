@@ -125,10 +125,10 @@ You're a digital artist or AI researcher who wants to generate, edit, and upscal
 
 ## Health & viability
 - **Maintenance**: Grade A — 13/13 active weeks in trailing 13; last commit 0 days ago.
-- **Responsiveness**: Grade C — median first-response time 1080.0 hours across 0 qualifying issues/PRs.
-- **Adoption**: Grade E.
+- **Responsiveness**: Cannot be scored — no_traffic.
+- **Adoption**: Grade E — no registry package/download signal recorded.
 - **Longevity**: Grade A — 1263 days old.
-- **Governance**: Grade A — top-3 contributor share 62.3% (?).
+- **Governance**: Grade A — top-3 contributor share 62.4% (?).
 - **Risk / License**: Grade C — GPL-3.0 license.
 ## Caveats (unverified)
 

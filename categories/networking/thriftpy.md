@@ -118,12 +118,12 @@ In practice today, that pitch lives on in **thriftpy2**, the maintained fork. Yo
 
 ## Health & viability
 
-- **Responsiveness**: Grade E.
-- **Maintenance (2026-06).** **Abandoned / archived.** Last release `v0.3.9` 2016-08, last push 2018-12, repo flagged `archived` on GitHub. The README explicitly deprecates it in favor of thriftpy2. [推断]
-- **Governance / bus factor.** Lives under the `Thriftpy` GitHub org (Organization owner), originally created at eleme. Maintainer effort has fully moved to the thriftpy2 repo; this one receives nothing. [推断]
-- **Age × Lindy.** Created 2014-02 (~12 years old) but **not still active** — a long-*abandoned* project fails the Lindy test rather than passing it. Longevity here is history, not a safety signal. [推断]
-- **Successor health.** **thriftpy2** (same org) is the live continuation: pushed 2026-06, not archived, ~587 stars, ~43 open issues — the bet to make if you want this family. [未验证]
-- **Risk flags.** Deprecation notice (explicit), archived repo, Python 2-era code, obsolete pinned async deps. No relicense history (MIT throughout). The dominant risk is simply that it is end-of-life.
+- **Maintenance**: Grade B — 1/13 active weeks in trailing 13; last commit 1 day ago.
+- **Responsiveness**: Cannot be scored — no_traffic.
+- **Adoption**: Grade C — 19,000 monthly downloads via pypi.org (package: thriftpy).
+- **Longevity**: Grade A — 4525 days old.
+- **Governance**: Grade D — top-3 contributor share 1.0 (100.0%) (?).
+- **Risk / License**: Grade A — MIT license.
 
 ## Caveats (unverified)
 
