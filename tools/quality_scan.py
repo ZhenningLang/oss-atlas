@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import argparse
 import re
+import subprocess
 from collections import Counter
 from dataclasses import dataclass
 from pathlib import Path
@@ -27,6 +28,13 @@ KNOWN_CATEGORIES = [
     "zero-placeholder-upstream-sha",
     "zh-link-to-english-sibling",
 ]
+GATED_DETERMINISTIC_CATEGORIES = {
+    "composite-alternative-partly-indexed",
+    "generic-comparison-template",
+    "indexed-page-marked-not-indexed",
+    "truncation-fragment",
+    "zh-link-to-english-sibling",
+}
 NOT_INDEXED_MARKERS = ["not indexed", "未收录"]
 INDEXED_MARKERS = ["✅", "已收录"]
 PARTIALLY_INDEXED_MARKERS = ["partly indexed", "partially indexed", "部分已收录"]
@@ -76,6 +84,10 @@ class ScanResult:
     health_unknowns: Counter[tuple[str, str]]
     project_page_count: int
     english_canonical_page_count: int
+    indexed_project_page_count: int
+    scan_mode: str = "all"
+    scope_paths: tuple[str, ...] = ()
+    changed_candidate_count: int = 0
 
 
 def is_project_page(path: Path) -> bool:
@@ -87,6 +99,57 @@ def project_pages(root: Path) -> list[Path]:
     if not categories.exists():
         return []
     return sorted(path for path in categories.rglob("*.md") if is_project_page(path))
+
+
+def is_project_page_under_root(path: Path, root: Path) -> bool:
+    categories = root / "categories"
+    try:
+        path.relative_to(categories)
+    except ValueError:
+        return False
+    return path.exists() and path.is_file() and is_project_page(path)
+
+
+def normalize_scope_path(root: Path, scope: Path | str) -> Path:
+    path = Path(scope)
+    if not path.is_absolute():
+        path = root / path
+    return path.resolve()
+
+
+def resolve_scope_paths(root: Path, scopes: list[Path | str] | tuple[Path | str, ...]) -> list[Path]:
+    selected: set[Path] = set()
+    for scope in scopes:
+        scope_path = normalize_scope_path(root, scope)
+        if not scope_path.exists():
+            raise FileNotFoundError(f"Scope path does not exist: {scope}")
+        if scope_path.is_file():
+            if is_project_page_under_root(scope_path, root):
+                selected.add(scope_path)
+            continue
+        if scope_path.is_dir():
+            selected.update(path for path in scope_path.rglob("*.md") if is_project_page_under_root(path, root))
+            continue
+        raise ValueError(f"Scope path is not a file or directory: {scope}")
+    return sorted(selected)
+
+
+def git_changed_markdown_candidates(root: Path) -> list[Path]:
+    commands = [
+        ["git", "-C", str(root), "diff", "--name-only", "--diff-filter=ACMRTUXB", "HEAD", "--", "*.md"],
+        ["git", "-C", str(root), "ls-files", "--others", "--exclude-standard", "--", "*.md"],
+    ]
+    candidates: set[Path] = set()
+    for command in commands:
+        completed = subprocess.run(command, check=True, text=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        for line in completed.stdout.splitlines():
+            if line.strip():
+                candidates.add((root / line.strip()).resolve())
+    return sorted(candidates)
+
+
+def changed_project_pages(root: Path) -> list[Path]:
+    return sorted(path for path in git_changed_markdown_candidates(root) if is_project_page_under_root(path, root))
 
 
 def relpath(path: Path, root: Path) -> str:
@@ -443,11 +506,28 @@ def detect_health_prose_raw_drift(page: Path, text: str, root: Path) -> list[Fin
     return findings
 
 
-def scan(root: Path | str) -> ScanResult:
+def scan(root: Path | str, *, scope_paths: list[Path | str] | tuple[Path | str, ...] | None = None, changed_only: bool = False) -> ScanResult:
     root = Path(root).resolve()
-    pages = project_pages(root)
-    indexed_targets = {canonical_target(page) for page in pages}
-    indexed_slug_set = indexed_slugs(pages)
+    if scope_paths and changed_only:
+        raise ValueError("--scope and --changed-only cannot be combined")
+    all_pages = project_pages(root)
+    if changed_only:
+        pages = changed_project_pages(root)
+        scan_mode = "changed-only"
+        changed_candidate_count = len(git_changed_markdown_candidates(root))
+        rendered_scope_paths: tuple[str, ...] = ()
+    elif scope_paths:
+        pages = resolve_scope_paths(root, scope_paths)
+        scan_mode = "scoped"
+        changed_candidate_count = 0
+        rendered_scope_paths = tuple(relpath(normalize_scope_path(root, scope), root) for scope in scope_paths)
+    else:
+        pages = all_pages
+        scan_mode = "all"
+        changed_candidate_count = 0
+        rendered_scope_paths = ()
+    indexed_targets = {canonical_target(page) for page in all_pages}
+    indexed_slug_set = indexed_slugs(all_pages)
     english_canonical_page_count = sum(1 for page in pages if not page.name.endswith(ZH_SUFFIX))
     findings: list[Finding] = []
     health_unknowns: Counter[tuple[str, str]] = Counter()
@@ -552,6 +632,10 @@ def scan(root: Path | str) -> ScanResult:
         health_unknowns=health_unknowns,
         project_page_count=len(pages),
         english_canonical_page_count=english_canonical_page_count,
+        indexed_project_page_count=len(all_pages),
+        scan_mode=scan_mode,
+        scope_paths=rendered_scope_paths,
+        changed_candidate_count=changed_candidate_count,
     )
 
 
@@ -568,8 +652,12 @@ def render_report(result: ScanResult, root: Path | str) -> str:
         "Count scope: deterministic finding counts are page-level over English canonical pages plus Chinese mirrors unless explicitly labeled otherwise.",
         "Truncation fragments are high-confidence only: comparison-row hits with non-alphanumeric boundaries around the sampled fragment.",
         f"Root: `{root}`",
+        f"Scan mode: {result.scan_mode}",
+        f"Scope paths: {', '.join(f'`{path}`' for path in result.scope_paths) if result.scope_paths else '(none)' }",
+        f"Changed markdown candidates: {result.changed_candidate_count}",
         f"Project pages scanned: {result.project_page_count}",
         f"English canonical pages scanned: {result.english_canonical_page_count}",
+        f"Whole-repo indexed project page universe: {result.indexed_project_page_count}",
         "",
         "## Summary counts",
         "",
@@ -623,19 +711,42 @@ def render_report(result: ScanResult, root: Path | str) -> str:
     return "\n".join(lines)
 
 
+def has_gated_findings(result: ScanResult) -> bool:
+    return any(finding.category in GATED_DETERMINISTIC_CATEGORIES for finding in result.findings)
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Report deterministic oss-atlas quality signals.")
     parser.add_argument("--root", default=".", help="Repository root to scan.")
     parser.add_argument("--report", help="Optional Markdown report path to write.")
+    parser.add_argument("--scope", action="append", default=[], help="Project page file or directory to scan. Repeatable.")
+    parser.add_argument(
+        "--changed-only",
+        action="store_true",
+        help="Scan existing changed project pages from git HEAD: staged, unstaged, untracked, and rename destinations; deleted paths are excluded.",
+    )
+    parser.add_argument(
+        "--fail-on-any-scoped",
+        action="store_true",
+        help="Exit non-zero for scoped or changed-only scans with gated deterministic findings.",
+    )
     args = parser.parse_args()
 
+    if args.scope and args.changed_only:
+        parser.error("--scope and --changed-only cannot be combined")
+    if args.fail_on_any_scoped and not (args.scope or args.changed_only):
+        parser.error("--fail-on-any-scoped requires --scope or --changed-only")
+
     root = Path(args.root).resolve()
-    report = render_report(scan(root), root)
+    result = scan(root, scope_paths=args.scope, changed_only=args.changed_only)
+    report = render_report(result, root)
     if args.report:
         report_path = Path(args.report)
         report_path.parent.mkdir(parents=True, exist_ok=True)
         report_path.write_text(report, encoding="utf-8")
     print(report)
+    if args.fail_on_any_scoped and has_gated_findings(result):
+        return 1
     return 0
 
 

@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import sys
+import subprocess
 import tempfile
 import unittest
 from pathlib import Path
@@ -89,7 +90,233 @@ health:
     return path
 
 
+def git(root: Path, *args: str) -> subprocess.CompletedProcess[str]:
+    return subprocess.run(
+        ["git", "-C", str(root), *args],
+        check=True,
+        text=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+    )
+
+
+def init_git_repo(root: Path) -> None:
+    git(root, "init")
+    git(root, "config", "user.email", "test@example.com")
+    git(root, "config", "user.name", "Quality Scan Test")
+
+
+def commit_all(root: Path, message: str = "initial") -> None:
+    git(root, "add", "categories")
+    git(root, "commit", "-m", message)
+
+
+def run_quality_scan_cli(root: Path, *args: str) -> subprocess.CompletedProcess[str]:
+    return subprocess.run(
+        [sys.executable, str(Path(quality_scan.__file__).resolve()), "--root", str(root), *args],
+        text=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+    )
+
+
 class QualityScanTest(unittest.TestCase):
+    def test_scope_file_limits_findings_to_scoped_page(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            scoped = write_page(root, "categories/demo/scoped.md", "Use this page for its stated niche.\n")
+            write_page(root, "categories/demo/out-of-scope.md", "Use this page for its stated niche.\n")
+
+            result = quality_scan.scan(root, scope_paths=[scoped])
+
+            self.assertEqual({finding.path for finding in result.findings}, {"categories/demo/scoped.md"})
+            self.assertEqual(result.project_page_count, 1)
+            self.assertEqual(result.indexed_project_page_count, 2)
+
+    def test_scope_directory_limits_findings_to_directory_pages(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            write_page(root, "categories/selected/one.md", "Use this page for its stated niche.\n")
+            write_page(root, "categories/selected/two.md", "Use this page for its stated niche.\n")
+            write_page(root, "categories/sibling/other.md", "Use this page for its stated niche.\n")
+
+            result = quality_scan.scan(root, scope_paths=[root / "categories" / "selected"])
+
+            self.assertEqual(
+                {finding.path for finding in result.findings},
+                {"categories/selected/one.md", "categories/selected/two.md"},
+            )
+            self.assertEqual(result.project_page_count, 2)
+            self.assertEqual(result.indexed_project_page_count, 3)
+
+    def test_repeatable_scope_scans_union_of_selected_pages(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            first = write_page(root, "categories/first/one.md", "Use this page for its stated niche.\n")
+            write_page(root, "categories/second/two.md", "Use this page for its stated niche.\n")
+            write_page(root, "categories/third/three.md", "Use this page for its stated niche.\n")
+
+            result = quality_scan.scan(root, scope_paths=[first, root / "categories" / "second"])
+
+            self.assertEqual(
+                {finding.path for finding in result.findings},
+                {"categories/first/one.md", "categories/second/two.md"},
+            )
+            self.assertEqual(result.project_page_count, 2)
+            self.assertEqual(result.indexed_project_page_count, 3)
+
+    def test_scoped_scan_uses_all_pages_as_indexed_universe(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            write_page(root, "categories/target/long-target.md", "## Comparison\n")
+            source = write_page(
+                root,
+                "categories/source/source.md",
+                """## Comparison
+
+| Alternative | In index | Our verdict |
+|---|---|---|
+| Long Target | not indexed | Long Target is outside this scan scope but still indexed. |
+""",
+            )
+
+            result = quality_scan.scan(root, scope_paths=[source])
+
+            self.assertTrue(any(f.category == "indexed-page-marked-not-indexed" for f in result.findings))
+            self.assertEqual({finding.path for finding in result.findings}, {"categories/source/source.md"})
+
+    def test_changed_only_clean_worktree_scans_no_pages(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            init_git_repo(root)
+            write_page(root, "categories/demo/demo.md", "Use this page for its stated niche.\n")
+            commit_all(root)
+
+            result = quality_scan.scan(root, changed_only=True)
+
+            self.assertEqual(result.project_page_count, 0)
+            self.assertEqual(result.findings, [])
+            self.assertEqual(result.indexed_project_page_count, 1)
+
+    def test_changed_only_includes_staged_unstaged_and_untracked_project_pages(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            init_git_repo(root)
+            staged = write_page(root, "categories/demo/staged.md", "## Comparison\n")
+            unstaged = write_page(root, "categories/demo/unstaged.md", "## Comparison\n")
+            write_page(root, "categories/demo/unchanged.md", "Use this page for its stated niche.\n")
+            commit_all(root)
+
+            staged.write_text(staged.read_text(encoding="utf-8") + "Use this page for its stated niche.\n", encoding="utf-8")
+            git(root, "add", "categories/demo/staged.md")
+            unstaged.write_text(unstaged.read_text(encoding="utf-8") + "Use this page for its stated niche.\n", encoding="utf-8")
+            write_page(root, "categories/demo/untracked.md", "Use this page for its stated niche.\n")
+            (root / "notes.md").write_text("Use this page for its stated niche.\n", encoding="utf-8")
+
+            result = quality_scan.scan(root, changed_only=True)
+
+            self.assertEqual(
+                {finding.path for finding in result.findings if finding.category == "generic-comparison-template"},
+                {"categories/demo/staged.md", "categories/demo/unstaged.md", "categories/demo/untracked.md"},
+            )
+            self.assertEqual(result.project_page_count, 3)
+
+    def test_changed_only_excludes_deleted_markdown_project_pages(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            init_git_repo(root)
+            deleted = write_page(root, "categories/demo/deleted.md", "Use this page for its stated niche.\n")
+            commit_all(root)
+            deleted.unlink()
+
+            result = quality_scan.scan(root, changed_only=True)
+
+            self.assertEqual(result.project_page_count, 0)
+            self.assertEqual(result.findings, [])
+
+    def test_changed_only_scans_rename_destination_not_deleted_source(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            init_git_repo(root)
+            write_page(root, "categories/demo/old.md", "Use this page for its stated niche.\n")
+            commit_all(root)
+
+            git(root, "mv", "categories/demo/old.md", "categories/demo/new.md")
+            result = quality_scan.scan(root, changed_only=True)
+
+            self.assertEqual({finding.path for finding in result.findings}, {"categories/demo/new.md"})
+
+    def test_changed_only_gate_exits_nonzero_for_gated_finding(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            init_git_repo(root)
+            page = write_page(root, "categories/demo/demo.md", "## Comparison\n")
+            commit_all(root)
+            page.write_text(page.read_text(encoding="utf-8") + "Use this page for its stated niche.\n", encoding="utf-8")
+
+            result = run_quality_scan_cli(root, "--changed-only", "--fail-on-any-scoped")
+
+            self.assertNotEqual(result.returncode, 0, result.stdout + result.stderr)
+            self.assertIn("generic-comparison-template", result.stdout)
+
+    def test_changed_only_gate_exits_zero_without_gated_finding(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            init_git_repo(root)
+            page = write_page(root, "categories/demo/demo.md", "## Comparison\n")
+            commit_all(root)
+            page.write_text(page.read_text(encoding="utf-8") + "\nAdditional non-gated prose.\n", encoding="utf-8")
+
+            result = run_quality_scan_cli(root, "--changed-only", "--fail-on-any-scoped")
+
+            self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+
+    def test_changed_only_gate_exits_zero_for_non_gated_finding(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            init_git_repo(root)
+            page = write_page(root, "categories/demo/demo.md", "## Comparison\n")
+            commit_all(root)
+            page.write_text(page.read_text(encoding="utf-8").replace("default_branch_sha: 0123456789abcdef0123456789abcdef01234567", f"default_branch_sha: {ZERO_SHA}"), encoding="utf-8")
+
+            result = run_quality_scan_cli(root, "--changed-only", "--fail-on-any-scoped")
+
+            self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+            self.assertIn("zero-placeholder-upstream-sha", result.stdout)
+
+    def test_scoped_gate_exits_nonzero_for_gated_finding(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            scoped = write_page(root, "categories/demo/scoped.md", "Use this page for its stated niche.\n")
+            write_page(root, "categories/demo/out-of-scope.md", "Use this page for its stated niche.\n")
+
+            result = run_quality_scan_cli(root, "--scope", str(scoped), "--fail-on-any-scoped")
+
+            self.assertNotEqual(result.returncode, 0, result.stdout + result.stderr)
+            self.assertIn("categories/demo/scoped.md", result.stdout)
+            self.assertNotIn("categories/demo/out-of-scope.md", result.stdout)
+
+    def test_scoped_gate_exits_zero_without_gated_finding(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            scoped = write_page(root, "categories/demo/scoped.md", "## Comparison\n")
+            write_page(root, "categories/demo/out-of-scope.md", "Use this page for its stated niche.\n")
+
+            result = run_quality_scan_cli(root, "--scope", str(scoped), "--fail-on-any-scoped")
+
+            self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+            self.assertNotIn("categories/demo/out-of-scope.md", result.stdout)
+
+    def test_default_cli_remains_report_only_when_findings_exist(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            write_page(root, "categories/demo/demo.md", "Use this page for its stated niche.\n")
+
+            result = run_quality_scan_cli(root)
+
+            self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+            self.assertIn("generic-comparison-template", result.stdout)
+
     def test_detects_generic_templates_truncation_and_zero_sha(self) -> None:
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
