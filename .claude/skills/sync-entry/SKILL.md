@@ -78,7 +78,11 @@ It prints `unchanged_upstream` or `changed_upstream`, writes nothing, exits `0` 
    - maintainer notice of deprecation.
    Treat single-maintainer / young projects as higher abandonment risk.
 6. **Re-judge if facts moved materially.** A new major version can invalidate "when not to use"
-   (e.g. a missing feature now exists). Don't just bump the date over stale judgment.
+   (e.g. a missing feature now exists). Don't just bump the date over stale judgment. If you touch `## Comparison` / `## 横向对比`, or if a material fact changes a comparison choice, follow
+   `tools/schema.md` `Verdict quality contract`: each `Our verdict` / `我们的评价` cell must name the
+   scenario, the choice, and the decisive tradeoff. Do not keep or introduce template verdicts such
+   as `Use this page for its stated niche.` / `当前页用于它的主场景。` or vague claims such as `best`,
+   `good choice`, or `open-source alternative`.
 7. **Update `upstream` and bump `last_verified` to today.** Only after actually re-checking — never
    bump blindly.
 8. **Re-score the health radar.** Health grades go stale like any
@@ -86,7 +90,15 @@ It prints `unchanged_upstream` or `changed_upstream`, writes nothing, exits `0` 
    `python3 tools/health.py --page <page> --write && python3 tools/health_card.py <page>`
    This recomputes the 6 axes from live data, rewrites the identical `health:` block into both
    siblings (bumping its `computed_at`), and regenerates the card. See `docs/health-rubric.md`.
-9. **Lint**: `python3 tools/lint.py`.
+9. **Validate**: run structural lint, then run a scoped or changed-only quality scan for the pages
+   updated in this sync:
+   - `python3 tools/lint.py`.
+   - Either scope the exact bilingual pair:
+     `python3 tools/quality_scan.py --scope categories/<cat>/<slug>.md --scope categories/<cat>/<slug>.zh.md --fail-on-any-scoped`
+   - Or, when the updated pages are the relevant markdown changes in the worktree, use changed-only:
+     `python3 tools/quality_scan.py --changed-only --fail-on-any-scoped`
+   A scanner PASS is deterministic triage, **not semantic approval**. Before finishing, still read
+   touched Comparison verdicts, When NOT to use, and Caveats for specific, true judgment.
 
 ## Discipline
 

@@ -58,7 +58,10 @@ Author one conformant selection page. The contract is `tools/schema.md`; read it
      ecosystem, risk flags (relicense/open-core/CVE). See `tools/schema.md` §7. Judgment, not a
      number dump — volatile numbers stay in `maturity`/Caveats.
    - In Comparison, name 3–5 real substitutes; `未收录` for ones not in the index, relative link
-     for ones that are.
+     for ones that are. Follow `tools/schema.md` `Verdict quality contract`: each `Our verdict` /
+     `我们的评价` cell must name the scenario, the choice, and the decisive tradeoff. Do not use
+     template verdicts such as `Use this page for its stated niche.` / `当前页用于它的主场景。` or vague
+     claims such as `best`, `good choice`, or `open-source alternative`.
    - **Caveats ledger (all types):** end every page with `## Caveats (unverified)` /
      `## 存疑（未验证）` — one `[未验证]`/`[推断]` bullet per unverified fact. In the prose above,
      keep inline labels to the **load-bearing/contested few** (≤3; the linter WARNs above that);
@@ -91,7 +94,15 @@ Author one conformant selection page. The contract is `tools/schema.md`; read it
       `![<name> — 健康度雷达](../../assets/health/<slug>.zh.svg)` (ZH).
    See `docs/health-rubric.md` for the rubric (A–E + `?`; `?` is first-class, never a low score).
 
-8. **Lint.** `python3 tools/lint.py` — fix every ERROR before finishing.
+8. **Validate.** Run structural lint, then run a scoped or changed-only quality scan for the pages
+   just written:
+   - `python3 tools/lint.py` — fix every ERROR before finishing.
+   - Either scope the exact bilingual pair:
+     `python3 tools/quality_scan.py --scope categories/<category>/<slug>.md --scope categories/<category>/<slug>.zh.md --fail-on-any-scoped`
+   - Or, when the new pages are the relevant markdown changes in the worktree, use changed-only:
+     `python3 tools/quality_scan.py --changed-only --fail-on-any-scoped`
+   A scanner PASS is deterministic triage, **not semantic approval**. Before finishing, still read
+   the Comparison verdicts, When NOT to use, and Caveats ledger for specific, true judgment.
 
 ## Quality bar
 

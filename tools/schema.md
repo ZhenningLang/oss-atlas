@@ -135,6 +135,46 @@ filter); only "When to use" is narrative.
 - GitHub Markdown tables are **not sortable** by a header syntax. The separator row only controls
   alignment (`:---`, `:---:`, `---:`); do not invent pseudo-sortable Markdown attributes.
 
+#### Verdict quality contract
+
+The `Our verdict` / `我们的评价` cell is a decision sentence, not a label. It must name the
+scenario, the preferred choice, and the decisive tradeoff that makes that choice better than the
+alternative. The `Tradeoff` / `取舍` cell must complement the verdict by spelling out what is gained
+and what is paid, not by repeating the same sentence.
+
+Bad verdicts are generic, template-shaped, or non-decisions. Do not write phrases like:
+
+- `Use this page for its stated niche.`
+- `当前页用于它的主场景。`
+- `Best for most users.`
+- `Good choice for open-source teams.`
+- `Open-source alternative.`
+- `适合它的目标场景。`
+- `Similar to <alternative>.`
+- `Use X when you need X.`
+
+Good decision sentences have this shape:
+
+- English: `When you need a self-hosted workflow engine with code-reviewable DAGs, pick this;
+  pick Airflow when Python-first scheduling and its larger operator ecosystem matter more.`
+- English complementary row: `Our verdict: choose this for lightweight embedded search inside an
+  app process. Tradeoff: lower operational overhead, but fewer distributed-cluster controls than
+  Elasticsearch.`
+- English archived/stale row: `Treat this archived project as a pattern source only; choose a
+  maintained fork for production because dependency and security fixes now depend on the fork.`
+- Chinese：`如果你要低运维成本的嵌入式搜索，选本页项目；如果你需要成熟的分布式集群控制，选 Elasticsearch，因为它牺牲部署简单性换来更完整的运维能力。`
+- Chinese complementary row：`我们的评价：适合把规则引擎嵌入已有服务。取舍：减少独立服务运维，但规则发布、回滚和审计要由宿主系统承担。`
+- Chinese archived/stale row：`该项目已归档，只把它当作设计参考；生产环境应选择仍维护的替代品，因为依赖修复和安全响应不再来自原仓库。`
+
+For archived, stale, or apparently abandoned projects, the verdict must surface that status as a
+selection blocker or a pattern-source caveat when it materially affects the choice. Date and label
+that judgment according to the truth-labeling rules.
+
+`tools/lint.py` and `tools/quality_scan.py` can only catch deterministic shape and triage signals.
+A clean lint or quality scan result is **not semantic approval** of the comparison verdict; the
+writer or reviewer must still read the row and judge whether the scenario, choice, and tradeoff are
+specific and true.
+
 ### Golden examples (reference these when writing a page)
 
 The linter checks shape, not quality. For the *negative-space* writing it can't enforce — a sharp
