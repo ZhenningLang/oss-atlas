@@ -95,11 +95,11 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| pygame-ce（社区版） | 未收录 | 当前页用于它的主场景；如果更看重“同一个库的社区分叉，发布节奏更快、SDL 支持更新”，再选 pygame-ce（社区版）。 | 同一个库的社区分叉，发布节奏更快、SDL 支持更新；API 兼容到选择主要在于维护速度和你的教程以哪个为目标。[未验证] |
-| pyglet | 未收录 | 当前页用于它的主场景；如果更看重“纯 Python、基于 OpenGL 的窗口/多媒体库”，再选 pyglet。 | 纯 Python、基于 OpenGL 的窗口/多媒体库；不依赖 SDL，经 OpenGL 支持 3D，但教学社区比 pygame 小。 |
-| Arcade | 未收录 | 当前页用于它的主场景；如果更看重“基于 OpenGL 的现代 Python 2D 游戏库，OO API 更干净，内置 tilemap/物理辅助”，再选 Arcade。 | 基于 OpenGL 的现代 Python 2D 游戏库，OO API 更干净，内置 tilemap/物理辅助；更年轻、生态更小。 |
-| Godot | 未收录 | 当前页用于它的主场景；如果更看重“一个完整的开源游戏*引擎*（编辑器、场景、2D 加 3D、GDScript/C#）”，再选 Godot。 | 一个完整的开源游戏*引擎*（编辑器、场景、2D 加 3D、GDScript/C#）；能力强得多但是完全另一种要学的工具——对“画个矩形让它动”而言杀鸡用牛刀。 |
-| Raylib（加 python 绑定） | 未收录 | 当前页用于它的主场景；如果更看重“简单的 C 游戏库，带多语言绑定”，再选 Raylib（加 python 绑定）。 | 简单的 C 游戏库，带多语言绑定；很易上手，但生态不同，没有 pygame 那样的 Python 教程引力。 |
+| pygame-ce（社区版） | 未收录 | 当更快发布、更新 SDL 支持或教程兼容性指向分叉时，选 pygame-ce；当原始包名和长期生态对课程或依赖链更稳时，选 pygame。 | 同一个库的社区分叉，发布节奏更快、SDL 支持更新；API 兼容到选择主要在于维护速度和你的教程以哪个为目标。[未验证] |
+| pyglet | 未收录 | 当 OpenGL 优先的窗口、多媒体或轻量 3D 支持更重要时，选 pyglet；当 SDL 支撑的 2D 教学材料和初学者生态更重要时，选 pygame。 | 纯 Python、基于 OpenGL 的窗口/多媒体库；不依赖 SDL，经 OpenGL 支持 3D，但教学社区比 pygame 小。 |
+| Arcade | 未收录 | 当你要更干净的现代 Python 2D API、tilemap 和物理辅助时，选 Arcade；当你要低层经典 API 和更大的教程库时，选 pygame。 | 基于 OpenGL 的现代 Python 2D 游戏库，OO API 更干净，内置 tilemap/物理辅助；更年轻、生态更小。 |
+| Godot | 未收录 | 当你需要带编辑器、场景、2D/3D 和资源流程的真正引擎时，选 Godot；当任务是 Python 优先的小型 2D 项目或教学循环时，选 pygame。 | 一个完整的开源游戏*引擎*（编辑器、场景、2D 加 3D、GDScript/C#）；能力强得多但是完全另一种要学的工具——对“画个矩形让它动”而言杀鸡用牛刀。 |
+| Raylib（加 python 绑定） | 未收录 | 当简单 C 游戏库和多语言绑定更合适时，选 Raylib；当 Python 教程引力和 SDL 风格 2D 工作流是决定因素时，选 pygame。 | 简单的 C 游戏库，带多语言绑定；很易上手，但生态不同，没有 pygame 那样的 Python 教程引力。 |
 
 ## 技术栈
 
