@@ -10,9 +10,9 @@ maturity: v0.x, active, 94.8k stars (as of 2026-07)
 last_verified: 2026-07-01
 type: framework
 upstream:
-  pushed_at: 2026-07-01T09:13:07Z
+  pushed_at: 2026-07-06T08:28:04Z
   default_branch: main
-  default_branch_sha: 0000000000000000000000000000000000000000
+  default_branch_sha: be33f80bc65159c094ecd06bf155afa3061ce23d
   archived: false
 health:
   schema: 1

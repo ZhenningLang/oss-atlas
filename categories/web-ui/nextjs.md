@@ -10,9 +10,9 @@ maturity: v15.x, stable, ~138k stars (as of 2026-07)
 last_verified: 2026-07-01
 type: framework
 upstream:
-  pushed_at: 2026-07-01T00:00:00Z
+  pushed_at: 2026-07-06T08:21:40Z
   default_branch: canary
-  default_branch_sha: 0000000000000000000000000000000000000000
+  default_branch_sha: 00598045032a0e5b313de7b6ef0af60ed9390c2a
   archived: false
 health:
   schema: 1

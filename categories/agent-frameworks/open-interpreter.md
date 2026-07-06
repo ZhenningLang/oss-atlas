@@ -12,9 +12,9 @@ last_verified: 2026-07-01
 type: framework
 aka: [oi, interpreter]
 upstream:
-  pushed_at: 2026-06-20T01:29:50Z
+  pushed_at: 2026-07-06T01:41:29Z
   default_branch: main
-  default_branch_sha: 0000000000000000000000000000000000000000
+  default_branch_sha: f3db7fff78125b0d6595e46bcbf43929b1c862a7
   archived: false
 health:
   schema: 1

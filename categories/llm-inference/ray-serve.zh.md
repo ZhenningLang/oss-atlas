@@ -10,9 +10,9 @@ maturity: v2.42.x (Ray), active, ~38k stars (as of 2026-07)
 last_verified: 2026-07-01
 type: framework
 upstream:
-  pushed_at: 2026-07-01T00:00:00Z
-  default_branch: main
-  default_branch_sha: 0000000000000000000000000000000000000000
+  pushed_at: 2026-07-06T07:50:36Z
+  default_branch: master
+  default_branch_sha: c6bf61e70e12ce3a192d30b4426480ecfa702370
   archived: false
 health:
   schema: 1

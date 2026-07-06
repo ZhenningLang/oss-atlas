@@ -10,9 +10,9 @@ maturity: v20231117 (no semver), active, ~82k stars (as of 2026-07)
 last_verified: 2026-07-01
 type: model
 upstream:
-  pushed_at: 2026-07-01T00:00:00Z
+  pushed_at: 2026-04-15T16:32:15Z
   default_branch: main
-  default_branch_sha: 0000000000000000000000000000000000000000
+  default_branch_sha: 04f449b8a437f1bbd3dba5c9f826aca972e7709a
   archived: false
 health:
   schema: 1

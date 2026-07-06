@@ -11,8 +11,8 @@ last_verified: 2026-07-01
 type: tool
 upstream:
   pushed_at: 2026-06-22T14:16:02Z
-  default_branch: main
-  default_branch_sha: 0000000000000000000000000000000000000000
+  default_branch: master
+  default_branch_sha: bdb72b32eeb074e3a0b8559d8ccac458237474a3
   archived: false
 health:
   schema: 1

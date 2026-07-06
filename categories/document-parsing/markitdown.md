@@ -12,7 +12,7 @@ type: library
 upstream:
   pushed_at: 2026-06-24T15:32:46Z
   default_branch: main
-  default_branch_sha: 0000000000000000000000000000000000000000
+  default_branch_sha: e144e0a2be95b34df17433bac904e635f2c5e551
   archived: false
 health:
   schema: 1
