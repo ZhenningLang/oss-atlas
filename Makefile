@@ -1,4 +1,4 @@
-.PHONY: lint cards health health-backfill upstream-snapshot upstream-check test install-hooks help
+.PHONY: lint cards health health-backfill upstream-snapshot upstream-check test quality-scan quality-scan-changed quality-batch install-hooks help
 
 help:
 	@echo "oss-atlas make targets:"
@@ -10,6 +10,9 @@ help:
 	@echo "  make upstream-snapshot PAGE=…  refresh cheap GitHub upstream snapshot for one page"
 	@echo "  make upstream-check PAGE=…  compare stored upstream snapshot with GitHub without writing"
 	@echo "  make test           run stdlib tool tests"
+	@echo "  make quality-scan   run all-repo quality scan in report-only mode"
+	@echo "  make quality-scan-changed  run changed-only quality scan as a local gate"
+	@echo "  make quality-batch SCOPE=... REPORT=... [FULL=1]  verify scoped quality batch"
 	@echo "  make install-hooks  point git at scripts/hooks (offline pre-commit: refresh cards + lint)"
 
 lint:
@@ -38,6 +41,17 @@ upstream-check:
 
 test:
 	python3 -m unittest tools/test_health.py tools/test_health_backfill.py tools/test_lint.py tools/test_quality_scan.py tools/test_upstream_snapshot.py tools/test_verify_quality_batch.py
+
+quality-scan:
+	python3 tools/quality_scan.py
+
+quality-scan-changed:
+	python3 tools/quality_scan.py --changed-only --fail-on-any-scoped
+
+quality-batch:
+	@test -n "$(SCOPE)" || { echo "usage: make quality-batch SCOPE=categories/<cat-or-page> REPORT=/tmp/quality-batch.md [FULL=1]"; exit 2; }
+	@test -n "$(REPORT)" || { echo "usage: make quality-batch SCOPE=categories/<cat-or-page> REPORT=/tmp/quality-batch.md [FULL=1]"; exit 2; }
+	python3 tools/verify_quality_batch.py --scope "$(SCOPE)" --report "$(REPORT)" $(if $(FULL),--full,)
 
 install-hooks:
 	git config core.hooksPath scripts/hooks
