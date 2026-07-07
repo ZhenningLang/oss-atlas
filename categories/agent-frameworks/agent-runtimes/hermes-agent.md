@@ -92,9 +92,9 @@ You are a solo developer or small team running AI agents on a $5 VPS or a GPU cl
 | --- | --- | --- | --- |
 | [OpenClaw](openclaw.md) | ✅ | Personal assistant focused on multi-channel ubiquity. | OpenClaw is a ready-to-run messaging assistant; Hermes is a learning framework you extend. |
 | [AutoGPT](../workflow-builders/autogpt.md) | ✅ | Autonomous workflow platform with deployment focus. | AutoGPT targets autonomous task execution and deployment; Hermes targets self-improvement through learning. |
-| [OpenCode](../coding-agents/opencode.md) | ✅ | Model-agnostic terminal coding agent. | OpenCode is for coding in the terminal; Hermes is a general conversational agent with a learning loop. |
+| [OpenCode](../coding-agents/terminal-agents/opencode.md) | ✅ | Model-agnostic terminal coding agent. | OpenCode is for coding in the terminal; Hermes is a general conversational agent with a learning loop. |
 | [LangChain](../workflow-builders/langchain.md) | ✅ | Lower-level framework for building custom agent pipelines. | LangChain is a toolkit for building from scratch; Hermes is a higher-level agent with built-in memory and skill synthesis. |
-| CrewAI | 未收录 | Multi-agent orchestration framework. | CrewAI focuses on multi-agent teams; Hermes focuses on single-agent self-improvement. |
+| [CrewAI](crewai.md) | ✅ | Multi-agent orchestration framework. | CrewAI focuses on multi-agent teams; Hermes focuses on single-agent self-improvement. |
 
 ## Tech stack
 

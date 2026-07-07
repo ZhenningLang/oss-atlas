@@ -92,9 +92,9 @@ Nous Research 构建的自我改进 AI 智能体。它是唯一内置学习循�
 | --- | --- | --- | --- |
 | [OpenClaw](openclaw.zh.md) | ✅ | 侧重多渠道无处不在的个人助手。 | OpenClaw 是开箱即用的消息助手；Hermes 是可扩展的学习框架。 |
 | [AutoGPT](../workflow-builders/autogpt.zh.md) | ✅ | 面向部署的自主工作流平台。 | AutoGPT 面向自主任务执行与部署；Hermes 面向通过学习实现自我改进。 |
-| [OpenCode](../coding-agents/opencode.zh.md) | ✅ | 模型无关的终端编码智能体。 | OpenCode 用于终端编码；Hermes 是带学习循环的通用对话智能体。 |
+| [OpenCode](../coding-agents/terminal-agents/opencode.zh.md) | ✅ | 模型无关的终端编码智能体。 | OpenCode 用于终端编码；Hermes 是带学习循环的通用对话智能体。 |
 | [LangChain](../workflow-builders/langchain.zh.md) | ✅ | 构建自定义智能体管线的底层框架。 | LangChain 是从头搭建的工具包；Hermes 是内置记忆与技能合成的高级智能体。 |
-| CrewAI | 未收录 | 多智能体编排框架。 | CrewAI 聚焦多智能体团队；Hermes 聚焦单智能体自我改进。 |
+| [CrewAI](crewai.zh.md) | ✅ | 多智能体编排框架。 | CrewAI 聚焦多智能体团队；Hermes 聚焦单智能体自我改进。 |
 
 ## 技术栈
 

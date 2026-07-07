@@ -95,11 +95,11 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| LangGraph | 未收录 | 需要基于图的编排，带持久状态、检查点和人在环时，选 LangGraph。 | 基于图的编排（节点/边、持久状态、检查点、人在环）；处理复杂有状态工作流强得多，但更重、要学的抽象也更多。smolagents 把这些全部换成一个极小可读的循环。 |
+| [LangGraph](langgraph.zh.md) | ✅ | 需要基于图的编排，带持久状态、检查点和人在环时，选 LangGraph。 | 基于图的编排（节点/边、持久状态、检查点、人在环）；处理复杂有状态工作流强得多，但更重、要学的抽象也更多。smolagents 把这些全部换成一个极小可读的循环。 |
 | [AgentScope](agentscope.zh.md) | ✅ | 需要带消息传递、可观测性和部署能力的多 agent 运行时/平台时，选 AgentScope。 | 多 agent 运行时/平台（消息传递、可观测性、部署）；是一个生产级「agent OS」，而 smolagents 是你内嵌并据为己有的单循环库。 |
 | [DSPy](../workflow-builders/dspy.zh.md) | ✅ | 需要对照指标编译/优化 LM 程序时，选 DSPy。 | *对照指标编译/优化* LM 程序；范式不同——smolagents 只跑一个「代码动作」循环，不优化提示词或权重。 |
-| CrewAI | 未收录 | 需要基于角色/crew 的多 agent 编排和更高层团队模型时，选 CrewAI。 | 基于角色/crew 的多 agent 编排，走更高层的「一队 agent」模型；比 smolagents 单一透明循环更有结构、也更有主张。 |
-| Pydantic AI | 未收录 | 需要类型安全、以 Pydantic 为中心的结构化输出框架时，选 Pydantic AI。 | 类型安全、以 Pydantic 为中心的 agent 框架，强调结构化/被校验的输出；smolagents 则倾向「代码即动作」，而非 schema 校验式的工具调用。 |
+| [CrewAI](crewai.zh.md) | ✅ | 需要基于角色/crew 的多 agent 编排和更高层团队模型时，选 CrewAI。 | 基于角色/crew 的多 agent 编排，走更高层的「一队 agent」模型；比 smolagents 单一透明循环更有结构、也更有主张。 |
+| [Pydantic AI](pydantic-ai.zh.md) | ✅ | 需要类型安全、以 Pydantic 为中心的结构化输出框架时，选 Pydantic AI。 | 类型安全、以 Pydantic 为中心的 agent 框架，强调结构化/被校验的输出；smolagents 则倾向「代码即动作」，而非 schema 校验式的工具调用。 |
 
 ## 技术栈
 

@@ -89,7 +89,7 @@ health:
 | [deep-research](deep-research.zh.md) | ✅ | 需要真正的迭代式研究 agent 时，选 deep-research。 | 真正的迭代式研究 *agent*（扇出搜索 → 阅读 → 递归深挖 → 出报告）。Agent-Reach 恰是它缺的接入层；是栈的不同层，不是替代关系。 |
 | [local-deep-research](local-deep-research.zh.md) | ✅ | 需要隐私优先、带综合和引用、本地 LLM 支持的研究助手时，选 local-deep-research。 | 隐私优先的本地研究助手，带综合 + 引用，支持本地 LLM。做的是 Agent-Reach 跳过的推理；配对用，而非二选一。 |
 | [Vane](vane.zh.md) | ✅ | 需要聚焦综合的研究/搜索 agent 时，选 Vane。 | 聚焦综合的研究 / 搜索 agent。同样是「负责思考」的对照——Agent-Reach 负责触达，不负责推理。 |
-| [Firecrawl](../web-scraping/firecrawl.zh.md) | ✅ | 需要网页抓取转 markdown 加爬取 API 时，选 Firecrawl。 | 托管 / 开源的网页抓取转 markdown + 爬取 API；单源网页提取更干净、有真 API，但付费且仅限网页——没有 Twitter/Reddit/Bilibili/小红书的社交触达。 |
+| [Firecrawl](../web-scraping/crawling-tools/firecrawl.zh.md) | ✅ | 需要网页抓取转 markdown 加爬取 API 时，选 Firecrawl。 | 托管 / 开源的网页抓取转 markdown + 爬取 API；单源网页提取更干净、有真 API，但付费且仅限网页——没有 Twitter/Reddit/Bilibili/小红书的社交触达。 |
 | Exa / Tavily / SearXNG | 未收录 | 需要语义搜索、agent 搜索或自托管元搜索后端时，选这些搜索后端。 | 搜索后端（语义 / agent 搜索 / 自托管元搜索）。Agent-Reach 实际就经 MCP 包了 Exa；它们给你搜索，但没有逐平台的社交爬取栈。 |
 
 ## 技术栈

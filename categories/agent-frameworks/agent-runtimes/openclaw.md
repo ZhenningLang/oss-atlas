@@ -92,7 +92,7 @@ You are a privacy-conscious professional who wants a single AI assistant that fo
 | --- | --- | --- | --- |
 | [Hermes Agent](hermes-agent.md) | ✅ | Self-improving agent with a learning loop from Nous Research. | Hermes focuses on skill evolution and memory; OpenClaw focuses on multi-channel ubiquity and conversational reach. |
 | [AutoGPT](../workflow-builders/autogpt.md) | ✅ | Complex workflow-automation platform with deployment UI. | AutoGPT targets autonomous multi-step task execution; OpenClaw is a lightweight personal chat assistant. |
-| [OpenCode](../coding-agents/opencode.md) | ✅ | Model-agnostic terminal coding agent. | OpenCode is for software engineering in the shell; OpenClaw is a general messaging chatbot. |
+| [OpenCode](../coding-agents/terminal-agents/opencode.md) | ✅ | Model-agnostic terminal coding agent. | OpenCode is for software engineering in the shell; OpenClaw is a general messaging chatbot. |
 | [LangChain](../workflow-builders/langchain.md) | ✅ | Lower-level framework for building custom agent pipelines. | LangChain is a library you build on; OpenClaw is a ready-to-run personal assistant app. |
 | Claude / ChatGPT native apps | 未收录 | Closed-source cloud-only assistants. | Proprietary and require internet; OpenClaw is self-hosted, MIT-licensed, and channel-agnostic. |
 

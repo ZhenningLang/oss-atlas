@@ -95,9 +95,9 @@ health:
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| Playwright | 未收录 | 当现代自动等待、trace，以及一套代码覆盖 Chromium/Firefox/WebKit 比 WebDriver 标准更重要时，选 Playwright。 | 现代跨浏览器（Chromium/Firefox/WebKit）自动化，带自动等待、网络拦截、tracing 和顺手的 API；单一代码库的开发体验好得多，但生态更新更窄，也不是 Selenium 所锚定的 W3C WebDriver 标准。 |
+| [Playwright](playwright.zh.md) | ✅ | 当现代自动等待、trace，以及一套代码覆盖 Chromium/Firefox/WebKit 比 WebDriver 标准更重要时，选 Playwright。 | 现代跨浏览器（Chromium/Firefox/WebKit）自动化，带自动等待、网络拦截、tracing 和顺手的 API；单一代码库的开发体验好得多，但生态更新更窄，也不是 Selenium 所锚定的 W3C WebDriver 标准。 |
 | Cypress | 未收录 | 做 Web 应用、接受只用 JS/TS，且最看重开发者体验时，选 Cypress。 | 对开发者友好的浏览器内 E2E，带时间旅行调试和自动重试；Web 应用开发体验极佳，但历来偏 Chromium，运行在浏览器事件循环内（多标签/跨域有架构限制），且只支持 JS/TS。 |
-| Puppeteer | 未收录 | 需要 Node.js 里的底层 Chrome/CDP 脚本能力，而不是可移植跨浏览器覆盖时，选 Puppeteer。 | 更底层的 Chrome/CDP 自动化库（Node.js）；做 Chrome 脚本/抓取很好，但单引擎，不是跨浏览器、多语言的 WebDriver 框架。 |
+| [Puppeteer](puppeteer.zh.md) | ✅ | 需要 Node.js 里的底层 Chrome/CDP 脚本能力，而不是可移植跨浏览器覆盖时，选 Puppeteer。 | 更底层的 Chrome/CDP 自动化库（Node.js）；做 Chrome 脚本/抓取很好，但单引擎，不是跨浏览器、多语言的 WebDriver 框架。 |
 | [Agent Browser](agent-browser.zh.md) | ✅ | 任务是让 AI agent 通过稳定 a11y 树 ref 控制页面时，选 Agent Browser。 | Rust 写的 CLI/守护进程，通过 CDP 驱动 Chrome 给 AI agent 用，带稳定的 a11y 树 ref；是 agent 原语，不是跨浏览器测试框架——活儿不同。 |
 | [Chrome DevTools MCP](chrome-devtools-mcp.zh.md) | ✅ | 需要把 Chrome trace、网络、控制台和堆诊断暴露给 agent 时，选 Chrome DevTools MCP。 | 把 Chrome DevTools（trace、网络、堆）通过 MCP 暴露给 agent 的服务器；调试/测量深度强但只在 Chrome 上，不是可移植的跨浏览器测试自动化。 |
 

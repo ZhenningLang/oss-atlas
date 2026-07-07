@@ -90,7 +90,7 @@ health:
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
 | [whistle](whistle.zh.md) | ✅ | 需要活跃维护的 Node.js MITM 代理默认选择时，选 whistle。 | 活跃维护的 Node.js MITM 调试代理；规则系统更丰富、持续发布——同细分里新工作的更优默认。 |
-| mitmproxy | 未收录 | Python 脚本能力和 CLI/TUI/web UI 比 Node.js 规则更重要时，选 mitmproxy。 | Python，活跃维护，强脚本 + TUI/web UI；若你不绑死 Node.js，这是可编程 MITM 代理的首选。 |
+| [mitmproxy](mitmproxy.zh.md) | ✅ | Python 脚本能力和 CLI/TUI/web UI 比 Node.js 规则更重要时，选 mitmproxy。 | Python，活跃维护，强脚本 + TUI/web UI；若你不绑死 Node.js，这是可编程 MITM 代理的首选。 |
 | Charles / Fiddler | 未收录 | 成熟桌面 GUI 调试体验是优先项时，选 Charles 或 Fiddler。 | 成熟的商业/免费 GUI 调试代理；UX 打磨好但闭源，不像 AnyProxy 规则文件那样能用 JS 脚本化。 |
 | Proxyman | 未收录 | 现代 macOS/跨平台 GUI 打磨最重要时，选 Proxyman。 | 现代 macOS/跨平台 GUI 代理；UX 很好，freemium，不是你内嵌的 Node.js 库。 |
 

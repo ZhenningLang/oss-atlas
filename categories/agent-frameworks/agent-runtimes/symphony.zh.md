@@ -96,7 +96,7 @@ OpenAI 出品的长驻编排器：轮询 issue 跟踪器（Linear），为每个
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
 | [openfang](openfang.zh.md) | ✅ | 需要同属“一队自治 coding agent”赛道但栈不同的方案时，选 openfang。 | 同属「一队自治 coding agent」的赛道；栈与集成假设不同——选型前先比跟踪器、隔离模型和 agent 后端。 |
-| [claude-octopus](../coding-agents/claude-octopus.zh.md) | ✅ | 需要并行运行多个 Claude Code agent 时，选 claude-octopus。 | 并行编排多个 Claude Code agent；Symphony 以 Codex 为中心、由跟踪器（Linear）驱动，所以选择往往取决于你已经标准化了哪个 agent CLI。 |
+| [claude-octopus](../coding-agents/orchestration-and-review/claude-octopus.zh.md) | ✅ | 需要并行运行多个 Claude Code agent 时，选 claude-octopus。 | 并行编排多个 Claude Code agent；Symphony 以 Codex 为中心、由跟踪器（Linear）驱动，所以选择往往取决于你已经标准化了哪个 agent CLI。 |
 | [AgentScope](agentscope.zh.md) | ✅ | 需要构建 agent 应用的通用多 agent 运行时/框架时，选 AgentScope。 | 用于构建 agent 应用的通用多 agent 运行时/框架；Symphony 更窄——是「队列→工作区→agent 运行」的编排器，不是用来组合 agent 的框架。 |
 | [DSPy](../workflow-builders/dspy.zh.md) | ✅ | 需要编程/优化 LLM 流水线，而不是调度整次实现运行时，选 DSPy。 | 编排/优化 LLM 流水线；是正交问题——DSPy 构建 agent 的推理，Symphony 调度并隔离整次实现运行。 |
 | Devin / Cognition（托管） | 未收录 | 可接受托管自治工程师 SaaS 时，选 Devin/Cognition。 | 托管「自治工程师」SaaS，卖点类似「管理工作」；闭源、不能自托管、不能 fork。Symphony 开源可自托管，但处于预览阶段。 |

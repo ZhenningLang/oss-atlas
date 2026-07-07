@@ -90,7 +90,7 @@ It's a reasonable pick when you specifically want a *scriptable* Node.js proxy w
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
 | [whistle](whistle.md) | ✅ | Choose whistle when you need the actively maintained Node.js MITM proxy default. | The actively-maintained Node.js MITM debugging proxy; richer rule system and ongoing releases — the better default for new work in this niche. |
-| mitmproxy | 未收录 | Choose mitmproxy when Python scripting plus CLI/TUI/web UI matter more than Node.js rules. | Python, actively maintained, powerful scripting + TUI/web UI; the go-to programmable MITM proxy if you're not tied to Node.js. |
+| [mitmproxy](mitmproxy.md) | ✅ | Choose mitmproxy when Python scripting plus CLI/TUI/web UI matter more than Node.js rules. | Python, actively maintained, powerful scripting + TUI/web UI; the go-to programmable MITM proxy if you're not tied to Node.js. |
 | Charles / Fiddler | 未收录 | Choose Charles or Fiddler when mature desktop GUI debugging is the priority. | Mature commercial/freeware GUI debugging proxies; polished UX but closed-source and not scriptable in JS the way AnyProxy's rule files are. |
 | Proxyman | 未收录 | Choose Proxyman when modern macOS/cross-platform GUI polish matters most. | Modern macOS/cross-platform GUI proxy; great UX, freemium, not a Node.js library you embed. |
 

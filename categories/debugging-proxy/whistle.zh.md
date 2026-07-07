@@ -98,7 +98,7 @@ health:
 |---|---|---|---|
 | Charles | 未收录 | 需要打磨成熟的付费原生桌面代理时，选 Charles。 | 付费原生桌面代理；抓包/改写/限速的 GUI 成熟、打磨度高，但需商业授权，且不像 whistle 那样由配置文件规则驱动。 |
 | Fiddler | 未收录 | Windows 优先的老牌调试代理和 .NET 脚本生态更重要时，选 Fiddler。 | 老牌、Windows 优先的调试代理（Fiddler Classic / Everywhere）；.NET 生态丰富、有 FiddlerScript，但更重，且部分商业/闭源。 |
-| mitmproxy | 未收录 | 可编程 Python 拦截是优先项时，选 mitmproxy。 | 开源 Python 代理，脚本/插件 API 强，带 CLI/TUI；更适合可编程拦截，少了点点即用的规则 UI。 |
+| [mitmproxy](mitmproxy.zh.md) | ✅ | 可编程 Python 拦截是优先项时，选 mitmproxy。 | 开源 Python 代理，脚本/插件 API 强，带 CLI/TUI；更适合可编程拦截，少了点点即用的规则 UI。 |
 | [anyproxy](anyproxy.zh.md) | ✅ | 更偏好阿里的 Node.js 代理和 JS 规则文件时，选 AnyProxy。 | 阿里的 Node.js HTTP/HTTPS 代理，用 JS 规则文件；气质上更接近 whistle，但社区更小，且规则写在 JS 里而非 whistle 的行语法。 |
 | Proxyman | 未收录 | 现代原生 GUI 比 npm/web-UI 运行方式更重要时，选 Proxyman。 | 现代原生 macOS/跨平台调试代理，GUI 精致；freemium/商业，是应用形态而非 web-UI + npm 工具。 |
 

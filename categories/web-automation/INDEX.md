@@ -30,7 +30,7 @@
 | [Selenium](selenium.md) | ✅ | B (6/6) | Use it when you need cross-browser WebDriver automation across a browser/language matrix — Playwright/Cypress are nicer for modern single-browser DX. |
 | [PhantomJS](phantomjs.md) | ✅ | D (5/6) | Avoid for new work — an archived, abandoned scriptable headless browser; use headless Chrome (Puppeteer/Playwright) or Selenium instead. |
 | [Selenium Wire](selenium-wire.md) | ✅ | D (5/6) | Use it when a legacy Selenium suite needs to read or modify the browser's background HTTP traffic — but it's archived, so new projects should use Selenium 4's native CDP/BiDi or Playwright. |
-| Playwright / Puppeteer | 未收录 | — | Lower-level browser automation libraries named across the pages. |
+| [Playwright](playwright.md) / Puppeteer | partly indexed | — | Lower-level browser automation libraries named across the pages. |
 
 ## What belongs here
 

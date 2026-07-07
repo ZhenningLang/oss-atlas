@@ -105,35 +105,35 @@ skill 从 `raw.githubusercontent.com/ZhenningLang/oss-atlas/main/` 拉取页面�
 | **AgentScope** | 要把多智能体 LLM 应用作为生产服务交付，需要沙箱工具、权限闸门、tracing 和人工介入时。 | Apache-2.0 | B（6/6） | [中](categories/agent-frameworks/agent-runtimes/agentscope.zh.md) · [EN](categories/agent-frameworks/agent-runtimes/agentscope.md) |
 | **OpenFang** | 想用单个自托管 Rust 二进制、让自治智能体按计划 7×24 无人值守干活时。 | Apache-2.0 OR MIT | B（5/6） | [中](categories/agent-frameworks/agent-runtimes/openfang.zh.md) · [EN](categories/agent-frameworks/agent-runtimes/openfang.md) |
 | **Symphony** | 你的 Linear 待办和 Codex agent 需要一个自托管编排器、按 issue 跑隔离自治实现运行时。 | Apache-2.0 | B（5/6） | [中](categories/agent-frameworks/agent-runtimes/symphony.zh.md) · [EN](categories/agent-frameworks/agent-runtimes/symphony.md) |
-| **Claude Octopus** | 你以 Claude Code 为主力、想让其他 AI 模型在交付前交叉评审任务、揭出盲点时。 | MIT | C（6/6） | [中](categories/agent-frameworks/coding-agents/claude-octopus.zh.md) · [EN](categories/agent-frameworks/coding-agents/claude-octopus.md) |
-| **oh-my-claudecode** | 你常驻 Claude Code、需要多阶段 agent 团队加模型路由和 tmux 并行编排时。 | MIT | B（5/6） | [中](categories/agent-frameworks/coding-agents/oh-my-claudecode.zh.md) · [EN](categories/agent-frameworks/coding-agents/oh-my-claudecode.md) |
+| **Claude Octopus** | 你以 Claude Code 为主力、想让其他 AI 模型在交付前交叉评审任务、揭出盲点时。 | MIT | C（6/6） | [中](categories/agent-frameworks/coding-agents/orchestration-and-review/claude-octopus.zh.md) · [EN](categories/agent-frameworks/coding-agents/orchestration-and-review/claude-octopus.md) |
+| **oh-my-claudecode** | 你常驻 Claude Code、需要多阶段 agent 团队加模型路由和 tmux 并行编排时。 | MIT | B（5/6） | [中](categories/agent-frameworks/coding-agents/orchestration-and-review/oh-my-claudecode.zh.md) · [EN](categories/agent-frameworks/coding-agents/orchestration-and-review/oh-my-claudecode.md) |
 | **smolagents** | 当你想要 Hugging Face 出的极简、透明、写代码行动的 agent 循环时用它——不是重型生产 agent 操作系统。 | Apache-2.0 | B（6/6） | [中](categories/agent-frameworks/agent-runtimes/smolagents.zh.md) · [EN](categories/agent-frameworks/agent-runtimes/smolagents.md) |
-| **Kilo Code** | 当你想要一个开源、BYOK、在 VS Code 内的编码 agent（带规划与模式）时用它——是终端用户工具，不是构建 agent 的库。 | MIT | B（6/6） | [中](categories/agent-frameworks/coding-agents/kilocode.zh.md) · [EN](categories/agent-frameworks/coding-agents/kilocode.md) |
+| **Kilo Code** | 当你想要一个开源、BYOK、在 VS Code 内的编码 agent（带规划与模式）时用它——是终端用户工具，不是构建 agent 的库。 | MIT | B（6/6） | [中](categories/agent-frameworks/coding-agents/ide-agents/kilocode.zh.md) · [EN](categories/agent-frameworks/coding-agents/ide-agents/kilocode.md) |
 | **Parlant** | 当你要构建一个必须靠行为准则严格守规的对客 agent 时用它——简单或自由式 agent 用它过重。 | Apache-2.0 | B（6/6） | [中](categories/agent-frameworks/agent-runtimes/parlant.zh.md) · [EN](categories/agent-frameworks/agent-runtimes/parlant.md) |
 | **SkillOpt** | 当你要针对可打分基准、为冻结的 LLM 优化 Agent 的自然语言技能文档时用它——但没有可靠评测来把关每次编辑，方法就毫无信号，且它还是全新的 v0.1.0。 | MIT | B（6/6） | [中](categories/agent-frameworks/workflow-builders/skillopt.zh.md) · [EN](categories/agent-frameworks/workflow-builders/skillopt.md) |
-| **Open Interpreter** | 当你想要一个 Codex-fork 的终端编码 agent、带为低成本／开源模型（DeepSeek、Kimi、Qwen）调过的可切换 harness 时用它——不是老的 Python REPL（那个已迁到社区 fork），而且它是几周大的 0.0.x 重写、会执行代码。 | Apache-2.0 | A（6/6） | [中](categories/agent-frameworks/coding-agents/open-interpreter.zh.md) · [EN](categories/agent-frameworks/coding-agents/open-interpreter.md) |
-| **Codex** | 当你想要一个轻量级、由 OpenAI 支持的终端编码智能体，能编辑文件、运行测试并提交变更时用它——但需要 OpenAI API 访问权限和网络连接。 | Apache-2.0 | ?（0/6） | [中](categories/agent-frameworks/coding-agents/codex.zh.md) · [EN](categories/agent-frameworks/coding-agents/codex.md) |
+| **Open Interpreter** | 当你想要一个 Codex-fork 的终端编码 agent、带为低成本／开源模型（DeepSeek、Kimi、Qwen）调过的可切换 harness 时用它——不是老的 Python REPL（那个已迁到社区 fork），而且它是几周大的 0.0.x 重写、会执行代码。 | Apache-2.0 | A（6/6） | [中](categories/agent-frameworks/coding-agents/terminal-agents/open-interpreter.zh.md) · [EN](categories/agent-frameworks/coding-agents/terminal-agents/open-interpreter.md) |
+| **Codex** | 当你想要一个轻量级、由 OpenAI 支持的终端编码智能体，能编辑文件、运行测试并提交变更时用它——但需要 OpenAI API 访问权限和网络连接。 | Apache-2.0 | ?（0/6） | [中](categories/agent-frameworks/coding-agents/terminal-agents/codex.zh.md) · [EN](categories/agent-frameworks/coding-agents/terminal-agents/codex.md) |
 | **OpenClaw** | 在自有设备上跨 20 余条消息渠道运行的个人 AI 助手——但极其年轻，毫无 Lindy 记录。 | MIT | ?（0/6） | [中](categories/agent-frameworks/agent-runtimes/openclaw.zh.md) · [EN](categories/agent-frameworks/agent-runtimes/openclaw.md) |
-| **CC Switch** | 跨平台桌面管理器，统一管理多个 AI 编码智能体（Claude Code、Codex、Gemini CLI 等），支持提供商路由和 MCP——但不足一岁，单人维护，bus factor 为 1。 | MIT | ?（0/6） | [中](categories/agent-frameworks/coding-agents/cc-switch.zh.md) · [EN](categories/agent-frameworks/coding-agents/cc-switch.md) |
+| **CC Switch** | 跨平台桌面管理器，统一管理多个 AI 编码智能体（Claude Code、Codex、Gemini CLI 等），支持提供商路由和 MCP——但不足一岁，单人维护，bus factor 为 1。 | MIT | ?（0/6） | [中](categories/agent-frameworks/coding-agents/orchestration-and-review/cc-switch.zh.md) · [EN](categories/agent-frameworks/coding-agents/orchestration-and-review/cc-switch.md) |
 | **Hermes Agent** | Nous Research 构建的带学习循环的自我改进 AI 智能体——但不足一岁，学习循环稳定性未经检验。 | MIT | ?（0/6） | [中](categories/agent-frameworks/agent-runtimes/hermes-agent.zh.md) · [EN](categories/agent-frameworks/agent-runtimes/hermes-agent.md) |
 | **AutoGPT** | 用于创建、部署和管理持续运行 AI 智能体以自动化复杂工作流的平台——但未声明许可，且自托管需要大量资源。 | NOASSERTION | ?（0/6） | [中](categories/agent-frameworks/workflow-builders/autogpt.zh.md) · [EN](categories/agent-frameworks/workflow-builders/autogpt.md) |
 | **Dify** | 生产就绪的、用于构建 agentic 工作流的低代码可视化平台，内置 RAG 与 MCP 支持——但商用前请核实许可。 | NOASSERTION | ?（0/6） | [中](categories/agent-frameworks/workflow-builders/dify.zh.md) · [EN](categories/agent-frameworks/workflow-builders/dify.md) |
 | **LangChain** | 代码优先的 LLM agent、工具与记忆组合框架，集成生态庞大——但简单单 prompt 应用别用它。 | MIT | ?（0/6） | [中](categories/agent-frameworks/workflow-builders/langchain.zh.md) · [EN](categories/agent-frameworks/workflow-builders/langchain.md) |
-| **OpenCode** | 开源终端 AI 编码智能体，可编辑文件、执行命令——但极其年轻（2025-04 创建），无 Lindy 记录。 | MIT | ?（0/6） | [中](categories/agent-frameworks/coding-agents/opencode.zh.md) · [EN](categories/agent-frameworks/coding-agents/opencode.md) |
+| **OpenCode** | 开源终端 AI 编码智能体，可编辑文件、执行命令——但极其年轻（2025-04 创建），无 Lindy 记录。 | MIT | ?（0/6） | [中](categories/agent-frameworks/coding-agents/terminal-agents/opencode.zh.md) · [EN](categories/agent-frameworks/coding-agents/terminal-agents/opencode.md) |
 | **Langflow** | 可视化拖拽平台，用于构建和部署 LLM 工作流与智能体，内置 API 和 MCP 服务器——但可视化流比代码更难做 diff/审查。 | MIT | ?（0/6） | [中](categories/agent-frameworks/workflow-builders/langflow.zh.md) · [EN](categories/agent-frameworks/workflow-builders/langflow.md) |
-| **Gemini CLI** | 基于 Google Gemini 模型的开源终端 AI 智能体，带免费层、内置工具和 MCP 支持——但仅限 Google 模型，且非常年轻。 | Apache-2.0 | ?（0/6） | [中](categories/agent-frameworks/coding-agents/gemini-cli.zh.md) · [EN](categories/agent-frameworks/coding-agents/gemini-cli.md) |
-| **RTK** | 在 shell 输出到达 AI 智能体前进行压缩的 CLI 代理，可减少 60–90% 的 token 成本——但极其年轻（6 个月），star 数高得可疑。 | Apache-2.0 | ?（0/6） | [中](categories/agent-frameworks/coding-agents/rtk.zh.md) · [EN](categories/agent-frameworks/coding-agents/rtk.md) |
+| **Gemini CLI** | 基于 Google Gemini 模型的开源终端 AI 智能体，带免费层、内置工具和 MCP 支持——但仅限 Google 模型，且非常年轻。 | Apache-2.0 | ?（0/6） | [中](categories/agent-frameworks/coding-agents/terminal-agents/gemini-cli.zh.md) · [EN](categories/agent-frameworks/coding-agents/terminal-agents/gemini-cli.md) |
+| **RTK** | 在 shell 输出到达 AI 智能体前进行压缩的 CLI 代理，可减少 60–90% 的 token 成本——但极其年轻（6 个月），star 数高得可疑。 | Apache-2.0 | ?（0/6） | [中](categories/agent-frameworks/coding-agents/orchestration-and-review/rtk.zh.md) · [EN](categories/agent-frameworks/coding-agents/orchestration-and-review/rtk.md) |
 | **CrewAI** | Framework for orchestrating role-playing, autonomous AI agents. By fostering collaborative intelligence, CrewAI empowers agents to work together seamlessly, tackling complex tasks. | MIT | ?（0/6） | [EN](categories/agent-frameworks/agent-runtimes/crewai.md) · [中](categories/agent-frameworks/agent-runtimes/crewai.zh.md) |
 | **LangGraph** | Build resilient agents. | MIT | ?（0/6） | [EN](categories/agent-frameworks/agent-runtimes/langgraph.md) · [中](categories/agent-frameworks/agent-runtimes/langgraph.zh.md) |
 | **LlamaIndex** | LlamaIndex is the leading document agent and OCR platform | MIT | ?（0/6） | [EN](categories/agent-frameworks/workflow-builders/llamaindex.md) · [中](categories/agent-frameworks/workflow-builders/llamaindex.zh.md) |
 | **AutoGen** | A programming framework for agentic AI | CC-BY-4.0 | ?（0/6） | [EN](categories/agent-frameworks/agent-runtimes/autogen.md) · [中](categories/agent-frameworks/agent-runtimes/autogen.zh.md) |
 | **Pydantic AI** | AI Agent Framework, the Pydantic way | MIT | ?（0/6） | [EN](categories/agent-frameworks/agent-runtimes/pydantic-ai.md) · [中](categories/agent-frameworks/agent-runtimes/pydantic-ai.zh.md) |
 | **OpenAI Agents SDK** | A lightweight, powerful framework for multi-agent workflows | MIT | ?（0/6） | [EN](categories/agent-frameworks/agent-runtimes/openai-agents-sdk.md) · [中](categories/agent-frameworks/agent-runtimes/openai-agents-sdk.zh.md) |
-| **aider** | aider is AI pair programming in your terminal | Apache-2.0 | ?（0/6） | [EN](categories/agent-frameworks/coding-agents/aider.md) · [中](categories/agent-frameworks/coding-agents/aider.zh.md) |
-| **Cline** | Autonomous coding agent as an SDK, IDE extension, or CLI assistant. | Apache-2.0 | ?（0/6） | [EN](categories/agent-frameworks/coding-agents/cline.md) · [中](categories/agent-frameworks/coding-agents/cline.zh.md) |
-| **SWE-agent** | SWE-agent takes a GitHub issue and tries to automatically fix it, using your LM of choice. It can also be employed for offensive cybersecurity or competitive coding challenges. [NeurIPS 2024] | MIT | ?（0/6） | [EN](categories/agent-frameworks/coding-agents/swe-agent.md) · [中](categories/agent-frameworks/coding-agents/swe-agent.zh.md) |
+| **aider** | aider is AI pair programming in your terminal | Apache-2.0 | ?（0/6） | [EN](categories/agent-frameworks/coding-agents/terminal-agents/aider.md) · [中](categories/agent-frameworks/coding-agents/terminal-agents/aider.zh.md) |
+| **Cline** | Autonomous coding agent as an SDK, IDE extension, or CLI assistant. | Apache-2.0 | ?（0/6） | [EN](categories/agent-frameworks/coding-agents/ide-agents/cline.md) · [中](categories/agent-frameworks/coding-agents/ide-agents/cline.zh.md) |
+| **SWE-agent** | SWE-agent takes a GitHub issue and tries to automatically fix it, using your LM of choice. It can also be employed for offensive cybersecurity or competitive coding challenges. [NeurIPS 2024] | MIT | ?（0/6） | [EN](categories/agent-frameworks/coding-agents/orchestration-and-review/swe-agent.md) · [中](categories/agent-frameworks/coding-agents/orchestration-and-review/swe-agent.zh.md) |
 | **Flowise** | Build AI Agents, Visually | NOASSERTION | ?（0/6） | [EN](categories/agent-frameworks/workflow-builders/flowise.md) · [中](categories/agent-frameworks/workflow-builders/flowise.zh.md) |
-| **OpenHands** | 🙌 OpenHands: AI-Driven Development | NOASSERTION | ?（0/6） | [EN](categories/agent-frameworks/coding-agents/openhands.md) · [中](categories/agent-frameworks/coding-agents/openhands.zh.md) |
+| **OpenHands** | 🙌 OpenHands: AI-Driven Development | NOASSERTION | ?（0/6） | [EN](categories/agent-frameworks/coding-agents/orchestration-and-review/openhands.md) · [中](categories/agent-frameworks/coding-agents/orchestration-and-review/openhands.zh.md) |
 
 ### agent-memory
 
@@ -440,20 +440,20 @@ skill 从 `raw.githubusercontent.com/ZhenningLang/oss-atlas/main/` 拉取页面�
 
 | 项目 | 何时用 | 许可 | 健康度 | 页面 |
 | --- | --- | --- | --- | --- |
-| **FFmpeg** | 当你需要在管线里解码/编码/转码/滤镜处理几乎任何音视频时用它——注意 LGPL→GPL 的构建授权陷阱。 | LGPL-2.1-or-later | A（3/6） | [中](categories/media-processing/ffmpeg.zh.md) · [EN](categories/media-processing/ffmpeg.md) |
-| **HandBrake** | 当你需要预设驱动的 GUI 或 CLI 将视频转码/翻录为现代 MP4/MKV 配合 H.264/H.265 时用它——但它是终端用户应用，不是库，且远比原生 FFmpeg 窄。 | GPL-2.0-or-later | — | [中](categories/media-processing/handbrake.zh.md) · [EN](categories/media-processing/handbrake.md) |
-| **ffmpeg-python** | 当你想用 Python 编排复杂的 FFmpeg 滤镜图、把不可读的 -filter_complex 字符串换成可读的 DAG 代码时用它——但它自 2024 年起停更、仅单人维护，且仍依赖系统已装 ffmpeg 二进制。 | Apache-2.0 | C（4/6） | [中](categories/media-processing/ffmpeg-python.zh.md) · [EN](categories/media-processing/ffmpeg-python.md) |
-| **PyAV** | 当你需要在 Python 中以进程内方式把视频/音频帧作为 NumPy 数组进行程序化访问时用它——但它比 CLI 包装器更底层、安装更重（需要针对 FFmpeg 头文件编译 Cython 扩展）。 | MIT | — | [中](categories/media-processing/pyav.zh.md) · [EN](categories/media-processing/pyav.md) |
-| **VMAF** | 当你在调编码档位、需要用业界通用的 0—100 感知分对比编解码器与预设时用它——但它只支持全参考，且选错模型会悄悄让跨版本对比失效。 | BSD-2-Clause-Patent | B（5/6） | [中](categories/media-processing/vmaf.zh.md) · [EN](categories/media-processing/vmaf.md) |
-| **SSIMULACRA2** | 当你需要对比图像编解码器（JPEG XL、AVIF、WebP）并需要一个与人类主观评分相关的感知质量分时用它——但它仅限图像，非对称，且采用度不及 VMAF。 | MIT | — | [中](categories/media-processing/ssimulacra2.zh.md) · [EN](categories/media-processing/ssimulacra2.md) |
-| **m3u8** | 当你需要把 HLS 的 .m3u8 清单当作带类型的对象模型来解析或改写、而非正则硬抠时用它——但它仅限 Python 与 HLS，且自 2025 年起沉寂，最新的 rfc8216bis 标签可能滞后。 | MIT | C（3/6） | [中](categories/media-processing/m3u8.zh.md) · [EN](categories/media-processing/m3u8.md) |
-| **ffsubsync** | 当字幕整体存在恒定偏移、你想用一条命令做 FFT 音频对齐而不手动设同步点时用它——但它修不了内容内部的逐行／变动漂移，且仅单人维护。 | MIT | B（6/6） | [中](categories/media-processing/ffsubsync.zh.md) · [EN](categories/media-processing/ffsubsync.md) |
-| **MoviePy** | 当你想用友好的 Python API 做程序化视频编辑——剪辑、合成、文字、特效——时用它——但它是纯离线批处理，对大文件比原生 FFmpeg 慢，且维护速度已从巅峰期下降。 | MIT | ?（0/6） | [中](categories/media-processing/moviepy.zh.md) · [EN](categories/media-processing/moviepy.md) |
-| **GStreamer** | 当你需要实时、持久、嵌入应用的音视频管线框架而非 CLI 工具时用它——但要接受陡峭的学习曲线和插件依赖管理。 | LGPL-2.1-or-later | — | [中](categories/media-processing/gstreamer.zh.md) · [EN](categories/media-processing/gstreamer.md) |
-| **MLT** | 当你需要构建自定义视频编辑器或需要时间线模型的自动化剪辑管线时用它——但它是框架，不是开箱即用的 NLE，且底层编解码工作委托给 FFmpeg。 | LGPL-2.1-or-later | — | [中](categories/media-processing/mlt.zh.md) · [EN](categories/media-processing/mlt.md) |
-| **OpenAI Whisper** | 当你需要通用的多语言语音转文字转写或从音视频英译时用它——但它默认不是实时系统，大模型在 CPU 上很慢，且对非语音内容会幻觉。 | MIT | — | [中](categories/media-processing/whisper.zh.md) · [EN](categories/media-processing/whisper.md) |
-| **sharp** | High performance Node.js image processing, the fastest module to resize JPEG, PNG, WebP, AVIF and TIFF images. Uses the libvips library. | Apache-2.0 | ?（0/6） | [EN](categories/media-processing/sharp.md) · [中](categories/media-processing/sharp.zh.md) |
-| **ImageMagick** | ImageMagick is a free, open-source software suite for creating, editing, converting, and displaying images. It supports 200+ formats and offers powerful command-line tools and APIs for automation, scripting, and integration across platforms. | NOASSERTION | ?（0/6） | [EN](categories/media-processing/imagemagick.md) · [中](categories/media-processing/imagemagick.zh.md) |
+| **FFmpeg** | 当你需要在管线里解码/编码/转码/滤镜处理几乎任何音视频时用它——注意 LGPL→GPL 的构建授权陷阱。 | LGPL-2.1-or-later | A（3/6） | [中](categories/media-processing/video-audio/ffmpeg.zh.md) · [EN](categories/media-processing/video-audio/ffmpeg.md) |
+| **HandBrake** | 当你需要预设驱动的 GUI 或 CLI 将视频转码/翻录为现代 MP4/MKV 配合 H.264/H.265 时用它——但它是终端用户应用，不是库，且远比原生 FFmpeg 窄。 | GPL-2.0-or-later | — | [中](categories/media-processing/video-audio/handbrake.zh.md) · [EN](categories/media-processing/video-audio/handbrake.md) |
+| **ffmpeg-python** | 当你想用 Python 编排复杂的 FFmpeg 滤镜图、把不可读的 -filter_complex 字符串换成可读的 DAG 代码时用它——但它自 2024 年起停更、仅单人维护，且仍依赖系统已装 ffmpeg 二进制。 | Apache-2.0 | C（4/6） | [中](categories/media-processing/video-audio/ffmpeg-python.zh.md) · [EN](categories/media-processing/video-audio/ffmpeg-python.md) |
+| **PyAV** | 当你需要在 Python 中以进程内方式把视频/音频帧作为 NumPy 数组进行程序化访问时用它——但它比 CLI 包装器更底层、安装更重（需要针对 FFmpeg 头文件编译 Cython 扩展）。 | MIT | — | [中](categories/media-processing/video-audio/pyav.zh.md) · [EN](categories/media-processing/video-audio/pyav.md) |
+| **VMAF** | 当你在调编码档位、需要用业界通用的 0—100 感知分对比编解码器与预设时用它——但它只支持全参考，且选错模型会悄悄让跨版本对比失效。 | BSD-2-Clause-Patent | B（5/6） | [中](categories/media-processing/quality-metrics/vmaf.zh.md) · [EN](categories/media-processing/quality-metrics/vmaf.md) |
+| **SSIMULACRA2** | 当你需要对比图像编解码器（JPEG XL、AVIF、WebP）并需要一个与人类主观评分相关的感知质量分时用它——但它仅限图像，非对称，且采用度不及 VMAF。 | MIT | — | [中](categories/media-processing/quality-metrics/ssimulacra2.zh.md) · [EN](categories/media-processing/quality-metrics/ssimulacra2.md) |
+| **m3u8** | 当你需要把 HLS 的 .m3u8 清单当作带类型的对象模型来解析或改写、而非正则硬抠时用它——但它仅限 Python 与 HLS，且自 2025 年起沉寂，最新的 rfc8216bis 标签可能滞后。 | MIT | C（3/6） | [中](categories/media-processing/video-audio/m3u8.zh.md) · [EN](categories/media-processing/video-audio/m3u8.md) |
+| **ffsubsync** | 当字幕整体存在恒定偏移、你想用一条命令做 FFT 音频对齐而不手动设同步点时用它——但它修不了内容内部的逐行／变动漂移，且仅单人维护。 | MIT | B（6/6） | [中](categories/media-processing/video-audio/ffsubsync.zh.md) · [EN](categories/media-processing/video-audio/ffsubsync.md) |
+| **MoviePy** | 当你想用友好的 Python API 做程序化视频编辑——剪辑、合成、文字、特效——时用它——但它是纯离线批处理，对大文件比原生 FFmpeg 慢，且维护速度已从巅峰期下降。 | MIT | ?（0/6） | [中](categories/media-processing/video-audio/moviepy.zh.md) · [EN](categories/media-processing/video-audio/moviepy.md) |
+| **GStreamer** | 当你需要实时、持久、嵌入应用的音视频管线框架而非 CLI 工具时用它——但要接受陡峭的学习曲线和插件依赖管理。 | LGPL-2.1-or-later | — | [中](categories/media-processing/video-audio/gstreamer.zh.md) · [EN](categories/media-processing/video-audio/gstreamer.md) |
+| **MLT** | 当你需要构建自定义视频编辑器或需要时间线模型的自动化剪辑管线时用它——但它是框架，不是开箱即用的 NLE，且底层编解码工作委托给 FFmpeg。 | LGPL-2.1-or-later | — | [中](categories/media-processing/video-audio/mlt.zh.md) · [EN](categories/media-processing/video-audio/mlt.md) |
+| **OpenAI Whisper** | 当你需要通用的多语言语音转文字转写或从音视频英译时用它——但它默认不是实时系统，大模型在 CPU 上很慢，且对非语音内容会幻觉。 | MIT | — | [中](categories/media-processing/video-audio/whisper.zh.md) · [EN](categories/media-processing/video-audio/whisper.md) |
+| **sharp** | High performance Node.js image processing, the fastest module to resize JPEG, PNG, WebP, AVIF and TIFF images. Uses the libvips library. | Apache-2.0 | ?（0/6） | [EN](categories/media-processing/image-processing/sharp.md) · [中](categories/media-processing/image-processing/sharp.zh.md) |
+| **ImageMagick** | ImageMagick is a free, open-source software suite for creating, editing, converting, and displaying images. It supports 200+ formats and offers powerful command-line tools and APIs for automation, scripting, and integration across platforms. | NOASSERTION | ?（0/6） | [EN](categories/media-processing/image-processing/imagemagick.md) · [中](categories/media-processing/image-processing/imagemagick.zh.md) |
 
 ### video-production
 
@@ -544,25 +544,25 @@ skill 从 `raw.githubusercontent.com/ZhenningLang/oss-atlas/main/` 拉取页面�
 
 | 项目 | 何时用 | 许可 | 健康度 | 页面 |
 | --- | --- | --- | --- | --- |
-| **Driver.js** | 当你想在网页上加一个极简、无依赖的产品引导/功能高亮时用它——不是完整的 onboarding 平台。 | MIT | B（6/6） | [中](categories/web-ui/driver-js.zh.md) · [EN](categories/web-ui/driver-js.md) |
-| **Shepherd.js** | 当你想要一个稳健、框架无关的产品引导库，支持高级定位和复杂多步骤 onboarding 时用它——但你要接受比 Driver.js 更大的包体积。 | MIT | ?（0/6） | [中](categories/web-ui/shepherd-js.zh.md) · [EN](categories/web-ui/shepherd-js.md) |
-| **Intro.js** | 当你想要一个成熟、框架无关、文档详尽的产品引导库时用它——但你要接受非商用 AGPL-3.0，或必须购买商业授权。 | AGPL-3.0 | ?（0/6） | [中](categories/web-ui/intro-js.zh.md) · [EN](categories/web-ui/intro-js.md) |
-| **Vue.js** | 当你想要一个渐进式、易于上手的 JavaScript 框架，带优秀文档、温和学习曲线和可增量采纳的架构时用它——但你要接受它在西方就业市场比 React 小，且没有 mega-corporate 背书。 | MIT | ?（0/6） | [中](categories/web-ui/vue.zh.md) · [EN](categories/web-ui/vue.md) |
-| **Svelte** | 当你想要一个编译时前端框架，带小包体积、无虚拟 DOM 和可读性强的语法时用它——但你要接受它的生态和就业市场比 React 或 Vue 小。 | MIT | ?（0/6） | [中](categories/web-ui/svelte.zh.md) · [EN](categories/web-ui/svelte.md) |
-| **shadcn/ui** | 一套精心设计、无障碍的 React 组件，复制进项目并完全拥有——但它需要 React 和 Tailwind CSS。 | MIT | ?（0/6） | [中](categories/web-ui/shadcn-ui.zh.md) · [EN](categories/web-ui/shadcn-ui.md) |
-| **Angular** | 当你需要一个成熟、opinionated、带依赖注入和强类型的全栈框架，用于企业级大规模 web 应用时用它——但它很重，小项目用它过度。 | MIT | ?（0/6） | [中](categories/web-ui/angular.zh.md) · [EN](categories/web-ui/angular.md) |
-| **Ant Design** | 当你想要一套完整、生产就绪、带企业级设计规范、主题化和无障碍支持的 React UI 组件库时用它——但它仅限 React，且设计风格明显偏「中式企业风」。 | MIT | ?（0/6） | [中](categories/web-ui/ant-design.zh.md) · [EN](categories/web-ui/ant-design.md) |
-| **Lit** | 当你需要一套轻量、基于标准的 Web Components，能在任何框架中工作时用它——但你要接受生态较小，且需要学习 Web Components。 | BSD-3-Clause | ?（0/6） | [中](categories/web-ui/lit.zh.md) · [EN](categories/web-ui/lit.md) |
-| **React** | 当你想要最流行的 UI 库，带庞大生态、深厚的人才池和声明式组件模型时用它——但你要接受需要自己组合路由、状态管理和构建管线。 | MIT | A（6/6） | [中](categories/web-ui/react.zh.md) · [EN](categories/web-ui/react.md) |
-| **Next.js** | 当你想要一个全栈 React 框架，内置 SSR、SSG、基于文件的路由和 API 路由时用它——但你要接受 Vercel 对路线图的影响，以及比纯 React 更强的主见架构。 | MIT | ?（0/6） | [中](categories/web-ui/nextjs.zh.md) · [EN](categories/web-ui/nextjs.md) |
-| **SvelteKit** | web development, streamlined | MIT | ?（0/6） | [EN](categories/web-ui/sveltekit.md) · [中](categories/web-ui/sveltekit.zh.md) |
-| **Reactour** | Tourist Guide into your React Components | MIT | ?（0/6） | [EN](categories/web-ui/reactour.md) · [中](categories/web-ui/reactour.zh.md) |
-| **react-joyride** | Create guided tours in your apps | MIT | ?（0/6） | [EN](categories/web-ui/react-joyride.md) · [中](categories/web-ui/react-joyride.zh.md) |
-| **Material UI (MUI)** | Material UI: Comprehensive React component library that implements Google's Material Design. Free forever. | MIT | ?（0/6） | [EN](categories/web-ui/material-ui.md) · [中](categories/web-ui/material-ui.zh.md) |
-| **Chakra UI** | Chakra UI is a component system for building SaaS products with speed ⚡️ | MIT | ?（0/6） | [EN](categories/web-ui/chakra-ui.md) · [中](categories/web-ui/chakra-ui.zh.md) |
-| **Radix UI Primitives** | Radix Primitives is an open-source UI component library for building high-quality, accessible design systems and web apps. Maintained by @workos. | MIT | ?（0/6） | [EN](categories/web-ui/radix-ui.md) · [中](categories/web-ui/radix-ui.zh.md) |
-| **Nuxt** | the full-stack Vue framework | MIT | ?（0/6） | [EN](categories/web-ui/nuxt.md) · [中](categories/web-ui/nuxt.zh.md) |
-| **Astro** | The web framework for content-driven websites. ⭐️ Star to support our work! | NOASSERTION | ?（0/6） | [EN](categories/web-ui/astro.md) · [中](categories/web-ui/astro.zh.md) |
+| **Driver.js** | 当你想在网页上加一个极简、无依赖的产品引导/功能高亮时用它——不是完整的 onboarding 平台。 | MIT | B（6/6） | [中](categories/web-ui/product-tours/driver-js.zh.md) · [EN](categories/web-ui/product-tours/driver-js.md) |
+| **Shepherd.js** | 当你想要一个稳健、框架无关的产品引导库，支持高级定位和复杂多步骤 onboarding 时用它——但你要接受比 Driver.js 更大的包体积。 | MIT | ?（0/6） | [中](categories/web-ui/product-tours/shepherd-js.zh.md) · [EN](categories/web-ui/product-tours/shepherd-js.md) |
+| **Intro.js** | 当你想要一个成熟、框架无关、文档详尽的产品引导库时用它——但你要接受非商用 AGPL-3.0，或必须购买商业授权。 | AGPL-3.0 | ?（0/6） | [中](categories/web-ui/product-tours/intro-js.zh.md) · [EN](categories/web-ui/product-tours/intro-js.md) |
+| **Vue.js** | 当你想要一个渐进式、易于上手的 JavaScript 框架，带优秀文档、温和学习曲线和可增量采纳的架构时用它——但你要接受它在西方就业市场比 React 小，且没有 mega-corporate 背书。 | MIT | ?（0/6） | [中](categories/web-ui/frameworks/vue.zh.md) · [EN](categories/web-ui/frameworks/vue.md) |
+| **Svelte** | 当你想要一个编译时前端框架，带小包体积、无虚拟 DOM 和可读性强的语法时用它——但你要接受它的生态和就业市场比 React 或 Vue 小。 | MIT | ?（0/6） | [中](categories/web-ui/frameworks/svelte.zh.md) · [EN](categories/web-ui/frameworks/svelte.md) |
+| **shadcn/ui** | 一套精心设计、无障碍的 React 组件，复制进项目并完全拥有——但它需要 React 和 Tailwind CSS。 | MIT | ?（0/6） | [中](categories/web-ui/component-libraries/shadcn-ui.zh.md) · [EN](categories/web-ui/component-libraries/shadcn-ui.md) |
+| **Angular** | 当你需要一个成熟、opinionated、带依赖注入和强类型的全栈框架，用于企业级大规模 web 应用时用它——但它很重，小项目用它过度。 | MIT | ?（0/6） | [中](categories/web-ui/frameworks/angular.zh.md) · [EN](categories/web-ui/frameworks/angular.md) |
+| **Ant Design** | 当你想要一套完整、生产就绪、带企业级设计规范、主题化和无障碍支持的 React UI 组件库时用它——但它仅限 React，且设计风格明显偏「中式企业风」。 | MIT | ?（0/6） | [中](categories/web-ui/component-libraries/ant-design.zh.md) · [EN](categories/web-ui/component-libraries/ant-design.md) |
+| **Lit** | 当你需要一套轻量、基于标准的 Web Components，能在任何框架中工作时用它——但你要接受生态较小，且需要学习 Web Components。 | BSD-3-Clause | ?（0/6） | [中](categories/web-ui/frameworks/lit.zh.md) · [EN](categories/web-ui/frameworks/lit.md) |
+| **React** | 当你想要最流行的 UI 库，带庞大生态、深厚的人才池和声明式组件模型时用它——但你要接受需要自己组合路由、状态管理和构建管线。 | MIT | A（6/6） | [中](categories/web-ui/frameworks/react.zh.md) · [EN](categories/web-ui/frameworks/react.md) |
+| **Next.js** | 当你想要一个全栈 React 框架，内置 SSR、SSG、基于文件的路由和 API 路由时用它——但你要接受 Vercel 对路线图的影响，以及比纯 React 更强的主见架构。 | MIT | ?（0/6） | [中](categories/web-ui/frameworks/nextjs.zh.md) · [EN](categories/web-ui/frameworks/nextjs.md) |
+| **SvelteKit** | web development, streamlined | MIT | ?（0/6） | [EN](categories/web-ui/frameworks/sveltekit.md) · [中](categories/web-ui/frameworks/sveltekit.zh.md) |
+| **Reactour** | Tourist Guide into your React Components | MIT | ?（0/6） | [EN](categories/web-ui/product-tours/reactour.md) · [中](categories/web-ui/product-tours/reactour.zh.md) |
+| **react-joyride** | Create guided tours in your apps | MIT | ?（0/6） | [EN](categories/web-ui/product-tours/react-joyride.md) · [中](categories/web-ui/product-tours/react-joyride.zh.md) |
+| **Material UI (MUI)** | Material UI: Comprehensive React component library that implements Google's Material Design. Free forever. | MIT | ?（0/6） | [EN](categories/web-ui/component-libraries/material-ui.md) · [中](categories/web-ui/component-libraries/material-ui.zh.md) |
+| **Chakra UI** | Chakra UI is a component system for building SaaS products with speed ⚡️ | MIT | ?（0/6） | [EN](categories/web-ui/component-libraries/chakra-ui.md) · [中](categories/web-ui/component-libraries/chakra-ui.zh.md) |
+| **Radix UI Primitives** | Radix Primitives is an open-source UI component library for building high-quality, accessible design systems and web apps. Maintained by @workos. | MIT | ?（0/6） | [EN](categories/web-ui/component-libraries/radix-ui.md) · [中](categories/web-ui/component-libraries/radix-ui.zh.md) |
+| **Nuxt** | the full-stack Vue framework | MIT | ?（0/6） | [EN](categories/web-ui/frameworks/nuxt.md) · [中](categories/web-ui/frameworks/nuxt.zh.md) |
+| **Astro** | The web framework for content-driven websites. ⭐️ Star to support our work! | NOASSERTION | ?（0/6） | [EN](categories/web-ui/frameworks/astro.md) · [中](categories/web-ui/frameworks/astro.zh.md) |
 
 ### proxy-pool
 
@@ -584,10 +584,10 @@ skill 从 `raw.githubusercontent.com/ZhenningLang/oss-atlas/main/` 拉取页面�
 
 | 项目 | 何时用 | 许可 | 健康度 | 页面 |
 | --- | --- | --- | --- | --- |
-| **newspaper** | 用来从新闻 URL 批量提取正文、作者和元数据——但原版（newspaper3k）已陈旧，活跃路径是 newspaper4k 分叉。 | MIT | B（5/6） | [中](categories/web-scraping/newspaper.zh.md) · [EN](categories/web-scraping/newspaper.md) |
-| **requests-html** | 可作为小型 requests + HTML 解析脚本参考——基本停更（~2 年没动），JS 渲染路径脆弱；新项目优先 Playwright + parsel。 | MIT | D（3/6） | [中](categories/web-scraping/requests-html.zh.md) · [EN](categories/web-scraping/requests-html.md) |
-| **Firecrawl** | 规模化搜索、抓取网页并提取干净 Markdown 或结构化数据的 API——但 AGPL-3.0 可能限制商用。 | AGPL-3.0 | ?（0/6） | [中](categories/web-scraping/firecrawl.zh.md) · [EN](categories/web-scraping/firecrawl.md) |
-| **trafilatura** | Python & Command-line tool to gather text and metadata on the Web: Crawling, scraping, extraction, output as CSV, JSON, HTML, MD, TXT, XML | Apache-2.0 | ?（0/6） | [EN](categories/web-scraping/trafilatura.md) · [中](categories/web-scraping/trafilatura.zh.md) |
+| **newspaper** | 用来从新闻 URL 批量提取正文、作者和元数据——但原版（newspaper3k）已陈旧，活跃路径是 newspaper4k 分叉。 | MIT | B（5/6） | [中](categories/web-scraping/article-extraction/newspaper.zh.md) · [EN](categories/web-scraping/article-extraction/newspaper.md) |
+| **requests-html** | 可作为小型 requests + HTML 解析脚本参考——基本停更（~2 年没动），JS 渲染路径脆弱；新项目优先 Playwright + parsel。 | MIT | D（3/6） | [中](categories/web-scraping/crawling-tools/requests-html.zh.md) · [EN](categories/web-scraping/crawling-tools/requests-html.md) |
+| **Firecrawl** | 规模化搜索、抓取网页并提取干净 Markdown 或结构化数据的 API——但 AGPL-3.0 可能限制商用。 | AGPL-3.0 | ?（0/6） | [中](categories/web-scraping/crawling-tools/firecrawl.zh.md) · [EN](categories/web-scraping/crawling-tools/firecrawl.md) |
+| **trafilatura** | Python & Command-line tool to gather text and metadata on the Web: Crawling, scraping, extraction, output as CSV, JSON, HTML, MD, TXT, XML | Apache-2.0 | ?（0/6） | [EN](categories/web-scraping/article-extraction/trafilatura.md) · [中](categories/web-scraping/article-extraction/trafilatura.zh.md) |
 
 ### auth
 
@@ -603,19 +603,19 @@ skill 从 `raw.githubusercontent.com/ZhenningLang/oss-atlas/main/` 拉取页面�
 
 | 项目 | 何时用 | 许可 | 健康度 | 页面 |
 | --- | --- | --- | --- | --- |
-| **PikiwiDB** | 当大规模 Redis 数据集撑爆内存、内存成本成为主要负担时用它——RocksDB 落盘、兼容 Redis 协议，单节点可存数百 GB；但它以延迟换容量，若每次操作都要微秒级则不合适。 | BSD-3-Clause | B（5/6） | [中](categories/databases/pikiwidb.zh.md) · [EN](categories/databases/pikiwidb.md) |
-| **elasticsearch-dsl-py** | 当你维护仍锁定独立 elasticsearch-dsl 包的旧 Python 代码时才用它——任何新项目它都已归档，请改装 elasticsearch>=8.18 并使用 elasticsearch.dsl。 | Apache-2.0 | D（4/6） | [中](categories/databases/elasticsearch-dsl-py.zh.md) · [EN](categories/databases/elasticsearch-dsl-py.md) |
-| **elasticsearch-sql** | 当熟悉 SQL 的团队想免学 JSON Query DSL 直接查 Elasticsearch 时用它——但 Elastic 官方的 SQL／ES\|QL 已与之重叠，能覆盖你的需求时优先用官方特性。 | Apache-2.0 | [中](categories/databases/elasticsearch-sql.zh.md) · [EN](categories/databases/elasticsearch-sql.md) |
-| **go-mysql-elasticsearch** | 当你想用单个 Go 二进制 tail MySQL binlog、单向中等规模同步到 Elasticsearch 时用它——但它自 2023 年起无人维护、无任何发布，请当作 fork 自管的项目对待。 | MIT | D（3/6） | [中](categories/databases/go-mysql-elasticsearch.zh.md) · [EN](categories/databases/go-mysql-elasticsearch.md) |
-| **python-mysql-replication** | 当你想用纯 Python 原语把 MySQL binlog 流式解析成带类型的事件、自建可控 CDC 循环时用它——但 checkpoint、去重和精确一次投递全得你自己负责。 | Apache-2.0 | D（5/6） | [中](categories/databases/python-mysql-replication.zh.md) · [EN](categories/databases/python-mysql-replication.md) |
-| **PrettyZoo** | 当你在开发或故障排查时想用友好的桌面 GUI 浏览并轻量编辑 ZooKeeper znode 树时用它——但它自 2023 年起已归档，新 JDK／macOS 可能跑不起来且无上游修复。 | Apache-2.0 | D（4/6） | [中](categories/databases/prettyzoo.zh.md) · [EN](categories/databases/prettyzoo.md) |
-| **RDR** | 当 Redis 触发 maxmemory 告警、需要离线快速按前缀分析 RDB 快照时用它——但内存数字是近似值，且项目已停滞（v0.0.1，2019 年）。 | Apache-2.0 | D（3/6） | [中](categories/databases/rdr.zh.md) · [EN](categories/databases/rdr.md) |
-| **Supabase** | 基于 PostgreSQL 构建的开源 Firebase 替代方案，包含身份认证、自动生成 API、实时订阅、边缘函数和向量存储——但它与 Postgres 深度绑定。 | Apache-2.0 | ?（0/6） | [中](categories/databases/supabase.zh.md) · [EN](categories/databases/supabase.md) |
-| **DuckDB** | DuckDB is an analytical in-process SQL database management system | MIT | ?（0/6） | [EN](categories/databases/duckdb.md) · [中](categories/databases/duckdb.zh.md) |
-| **ClickHouse** | ClickHouse® is a real-time analytics database management system | Apache-2.0 | ?（0/6） | [EN](categories/databases/clickhouse.md) · [中](categories/databases/clickhouse.zh.md) |
-| **DBeaver** | Free universal database tool and SQL client | Apache-2.0 | ?（0/6） | [EN](categories/databases/dbeaver.md) · [中](categories/databases/dbeaver.zh.md) |
-| **Debezium** | Change data capture for a variety of databases. Please log issues at https://github.com/debezium/dbz/issues. | Apache-2.0 | ?（0/6） | [EN](categories/databases/debezium.md) · [中](categories/databases/debezium.zh.md) |
-| **Valkey** | A flexible distributed key-value database that is optimized for caching and other realtime workloads. | BSD-3-Clause | ?（0/6） | [EN](categories/databases/valkey.md) · [中](categories/databases/valkey.zh.md) |
+| **PikiwiDB** | 当大规模 Redis 数据集撑爆内存、内存成本成为主要负担时用它——RocksDB 落盘、兼容 Redis 协议，单节点可存数百 GB；但它以延迟换容量，若每次操作都要微秒级则不合适。 | BSD-3-Clause | B（5/6） | [中](categories/databases/database-engines/pikiwidb.zh.md) · [EN](categories/databases/database-engines/pikiwidb.md) |
+| **elasticsearch-dsl-py** | 当你维护仍锁定独立 elasticsearch-dsl 包的旧 Python 代码时才用它——任何新项目它都已归档，请改装 elasticsearch>=8.18 并使用 elasticsearch.dsl。 | Apache-2.0 | D（4/6） | [中](categories/databases/database-clients/elasticsearch-dsl-py.zh.md) · [EN](categories/databases/database-clients/elasticsearch-dsl-py.md) |
+| **elasticsearch-sql** | 当熟悉 SQL 的团队想免学 JSON Query DSL 直接查 Elasticsearch 时用它——但 Elastic 官方的 SQL／ES\|QL 已与之重叠，能覆盖你的需求时优先用官方特性。 | Apache-2.0 | [中](categories/databases/database-clients/elasticsearch-sql.zh.md) · [EN](categories/databases/database-clients/elasticsearch-sql.md) |
+| **go-mysql-elasticsearch** | 当你想用单个 Go 二进制 tail MySQL binlog、单向中等规模同步到 Elasticsearch 时用它——但它自 2023 年起无人维护、无任何发布，请当作 fork 自管的项目对待。 | MIT | D（3/6） | [中](categories/databases/data-sync/go-mysql-elasticsearch.zh.md) · [EN](categories/databases/data-sync/go-mysql-elasticsearch.md) |
+| **python-mysql-replication** | 当你想用纯 Python 原语把 MySQL binlog 流式解析成带类型的事件、自建可控 CDC 循环时用它——但 checkpoint、去重和精确一次投递全得你自己负责。 | Apache-2.0 | D（5/6） | [中](categories/databases/data-sync/python-mysql-replication.zh.md) · [EN](categories/databases/data-sync/python-mysql-replication.md) |
+| **PrettyZoo** | 当你在开发或故障排查时想用友好的桌面 GUI 浏览并轻量编辑 ZooKeeper znode 树时用它——但它自 2023 年起已归档，新 JDK／macOS 可能跑不起来且无上游修复。 | Apache-2.0 | D（4/6） | [中](categories/databases/database-clients/prettyzoo.zh.md) · [EN](categories/databases/database-clients/prettyzoo.md) |
+| **RDR** | 当 Redis 触发 maxmemory 告警、需要离线快速按前缀分析 RDB 快照时用它——但内存数字是近似值，且项目已停滞（v0.0.1，2019 年）。 | Apache-2.0 | D（3/6） | [中](categories/databases/database-clients/rdr.zh.md) · [EN](categories/databases/database-clients/rdr.md) |
+| **Supabase** | 基于 PostgreSQL 构建的开源 Firebase 替代方案，包含身份认证、自动生成 API、实时订阅、边缘函数和向量存储——但它与 Postgres 深度绑定。 | Apache-2.0 | ?（0/6） | [中](categories/databases/database-engines/supabase.zh.md) · [EN](categories/databases/database-engines/supabase.md) |
+| **DuckDB** | DuckDB is an analytical in-process SQL database management system | MIT | ?（0/6） | [EN](categories/databases/database-engines/duckdb.md) · [中](categories/databases/database-engines/duckdb.zh.md) |
+| **ClickHouse** | ClickHouse® is a real-time analytics database management system | Apache-2.0 | ?（0/6） | [EN](categories/databases/database-engines/clickhouse.md) · [中](categories/databases/database-engines/clickhouse.zh.md) |
+| **DBeaver** | Free universal database tool and SQL client | Apache-2.0 | ?（0/6） | [EN](categories/databases/database-clients/dbeaver.md) · [中](categories/databases/database-clients/dbeaver.zh.md) |
+| **Debezium** | Change data capture for a variety of databases. Please log issues at https://github.com/debezium/dbz/issues. | Apache-2.0 | ?（0/6） | [EN](categories/databases/data-sync/debezium.md) · [中](categories/databases/data-sync/debezium.zh.md) |
+| **Valkey** | A flexible distributed key-value database that is optimized for caching and other realtime workloads. | BSD-3-Clause | ?（0/6） | [EN](categories/databases/database-engines/valkey.md) · [中](categories/databases/database-engines/valkey.zh.md) |
 
 ### desktop-automation
 
@@ -693,15 +693,15 @@ skill 从 `raw.githubusercontent.com/ZhenningLang/oss-atlas/main/` 拉取页面�
 | **Alacritty** | 快速、GPU 加速的 OpenGL 终端模拟器，具备合理的默认设置；设计上不支持标签页、分屏和连字——复用请配合 tmux。 | Apache-2.0 | ?（0/6） | [中](categories/terminal-ui/alacritty.zh.md) · [EN](categories/terminal-ui/alacritty.md) |
 
 分类顺序见 [INDEX.zh.md](INDEX.zh.md)。
-| **Readability.js** | 当你需要用 Firefox 阅读视图那套久经考验的引擎，把网页剥离成纯文章（标题、作者、正文）时用它——但它只解析你传入的 DOM，不会抓取 URL，也不会渲染重 JS 的 SPA。 | Apache-2.0 | [中](categories/web-scraping/readability-js.zh.md) · [EN](categories/web-scraping/readability-js.md) |
-| **python-readability** | 当你的 Python 流水线需要从已抓取的 HTML 中用 lxml 快速抽取正文、不依赖浏览器或 Node 时用它——但它单人维护、更新缓慢，而 trafilatura 在抽取基准上往往得分更高。 | Apache-2.0 | [中](categories/web-scraping/python-readability.zh.md) · [EN](categories/web-scraping/python-readability.md) |
-| **dragnet** | 当你有标注数据、想要一个可训练、还能把正文与用户评论分离的 ML 抽取器时用它——但它近乎停滞，依赖锁死老旧（scikit-learn<0.21、ftfy<5），在现代技术栈上安装会很痛苦。 | MIT | [中](categories/web-scraping/dragnet.zh.md) · [EN](categories/web-scraping/dragnet.md) |
-| **boilerpipe** | 当你确实需要一个 JVM 原生、依赖轻量、基于经典算法的正文抽取器时用它——但仓库实际上已废弃（末次提交 2018-01），内置依赖陈旧，且不会再有安全修复。 | Apache-2.0 | [中](categories/web-scraping/boilerpipe.zh.md) · [EN](categories/web-scraping/boilerpipe.md) |
-| **fuck-login** | 当你想读 2016 年代「如何脚本化登录（CSRF／RSA／验证码）」的示例代码时用它——但它自 2018 年起已废弃、无许可证，脚本如今基本失效。 | NONE | [中](categories/web-scraping/fuck-login.zh.md) · [EN](categories/web-scraping/fuck-login.md) |
-| **gopup** | 当你想一行代码把中国公开数据（搜索指数、CPI、Shibor）拉进 pandas DataFrame 做学术研究时用它——但它自 2023 年起停更、无许可证，源站一变接口就失效。 | NONE | [中](categories/web-scraping/gopup.zh.md) · [EN](categories/web-scraping/gopup.md) |
-| **PRAW** | 当你的数据源就是 Reddit、想走官方 OAuth 合规路径并自带限速处理时用它——但真正的边界是 Reddit 自家的 API 条款、配额与定价，而非这个库。 | BSD-2-Clause | [中](categories/web-scraping/praw.zh.md) · [EN](categories/web-scraping/praw.md) |
-| **Scrapyd** | 当你需要把本地 Scrapy 爬虫部署到服务器、通过 HTTP API 做定时与多版本调度时用它——但它只能跑 Scrapy 且默认无鉴权，暴露 6800 端口前务必先加认证。 | BSD-3-Clause | [中](categories/web-scraping/scrapyd.zh.md) · [EN](categories/web-scraping/scrapyd.md) |
-| **SpiderKeeper** | 当运行 Scrapyd 的小团队想要最简单的浏览器面板来部署和定时调度爬虫时用它——但它自 2023 年已停更且默认 admin/admin 鉴权，切勿暴露在不可信网络。 | MIT | [中](categories/web-scraping/spiderkeeper.zh.md) · [EN](categories/web-scraping/spiderkeeper.md) |
+| **Readability.js** | 当你需要用 Firefox 阅读视图那套久经考验的引擎，把网页剥离成纯文章（标题、作者、正文）时用它——但它只解析你传入的 DOM，不会抓取 URL，也不会渲染重 JS 的 SPA。 | Apache-2.0 | [中](categories/web-scraping/article-extraction/readability-js.zh.md) · [EN](categories/web-scraping/article-extraction/readability-js.md) |
+| **python-readability** | 当你的 Python 流水线需要从已抓取的 HTML 中用 lxml 快速抽取正文、不依赖浏览器或 Node 时用它——但它单人维护、更新缓慢，而 trafilatura 在抽取基准上往往得分更高。 | Apache-2.0 | [中](categories/web-scraping/article-extraction/python-readability.zh.md) · [EN](categories/web-scraping/article-extraction/python-readability.md) |
+| **dragnet** | 当你有标注数据、想要一个可训练、还能把正文与用户评论分离的 ML 抽取器时用它——但它近乎停滞，依赖锁死老旧（scikit-learn<0.21、ftfy<5），在现代技术栈上安装会很痛苦。 | MIT | [中](categories/web-scraping/article-extraction/dragnet.zh.md) · [EN](categories/web-scraping/article-extraction/dragnet.md) |
+| **boilerpipe** | 当你确实需要一个 JVM 原生、依赖轻量、基于经典算法的正文抽取器时用它——但仓库实际上已废弃（末次提交 2018-01），内置依赖陈旧，且不会再有安全修复。 | Apache-2.0 | [中](categories/web-scraping/article-extraction/boilerpipe.zh.md) · [EN](categories/web-scraping/article-extraction/boilerpipe.md) |
+| **fuck-login** | 当你想读 2016 年代「如何脚本化登录（CSRF／RSA／验证码）」的示例代码时用它——但它自 2018 年起已废弃、无许可证，脚本如今基本失效。 | NONE | [中](categories/web-scraping/crawling-tools/fuck-login.zh.md) · [EN](categories/web-scraping/crawling-tools/fuck-login.md) |
+| **gopup** | 当你想一行代码把中国公开数据（搜索指数、CPI、Shibor）拉进 pandas DataFrame 做学术研究时用它——但它自 2023 年起停更、无许可证，源站一变接口就失效。 | NONE | [中](categories/web-scraping/crawling-tools/gopup.zh.md) · [EN](categories/web-scraping/crawling-tools/gopup.md) |
+| **PRAW** | 当你的数据源就是 Reddit、想走官方 OAuth 合规路径并自带限速处理时用它——但真正的边界是 Reddit 自家的 API 条款、配额与定价，而非这个库。 | BSD-2-Clause | [中](categories/web-scraping/crawling-tools/praw.zh.md) · [EN](categories/web-scraping/crawling-tools/praw.md) |
+| **Scrapyd** | 当你需要把本地 Scrapy 爬虫部署到服务器、通过 HTTP API 做定时与多版本调度时用它——但它只能跑 Scrapy 且默认无鉴权，暴露 6800 端口前务必先加认证。 | BSD-3-Clause | [中](categories/web-scraping/crawling-tools/scrapyd.zh.md) · [EN](categories/web-scraping/crawling-tools/scrapyd.md) |
+| **SpiderKeeper** | 当运行 Scrapyd 的小团队想要最简单的浏览器面板来部署和定时调度爬虫时用它——但它自 2023 年已停更且默认 admin/admin 鉴权，切勿暴露在不可信网络。 | MIT | [中](categories/web-scraping/crawling-tools/spiderkeeper.zh.md) · [EN](categories/web-scraping/crawling-tools/spiderkeeper.md) |
 ## 为什么做这个
 
 多数开源 README 是营销：讲它能干啥、为啥好，却**不**告诉你何时*不该*用、和替代怎么比、运维成本多少。

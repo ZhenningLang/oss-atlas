@@ -95,7 +95,7 @@ You're choosing a JavaScript/TypeScript runtime for a new server-side project or
 | --- | --- | --- | --- |
 | Node.js | 未收录 | The incumbent JS/TS runtime with the largest ecosystem. | Node.js has the deepest npm ecosystem and broadest hosting support; Deno offers a cleaner, more secure developer experience but a smaller community. |
 | [Bun](bun.md) | ✅ | Fast all-in-one JS runtime with bundler and package manager built in. | Bun is faster and also treats TypeScript as first-class, but it is younger and less proven than Deno. |
-| [Supabase](../../databases/supabase.md) | ✅ | Uses Deno for edge functions. | Not a runtime comparison per se, but demonstrates Deno's production use in serverless edge contexts. |
+| [Supabase](../../databases/database-engines/supabase.md) | ✅ | Uses Deno for edge functions. | Not a runtime comparison per se, but demonstrates Deno's production use in serverless edge contexts. |
 | Wasmer / Wasmtime | 未收录 | Pure WebAssembly runtimes. | These are for Wasm modules, not JS/TS applications; Deno can run Wasm but is primarily a JS runtime. |
 
 ## Tech stack

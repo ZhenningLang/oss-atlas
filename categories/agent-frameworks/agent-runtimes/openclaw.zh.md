@@ -92,7 +92,7 @@ health:
 | --- | --- | --- | --- |
 | [Hermes Agent](hermes-agent.zh.md) | ✅ | Nous Research 出品的带学习循环的自我改进智能体。 | Hermes 侧重技能进化与记忆；OpenClaw 侧重多渠道无处不在与对话触达。 |
 | [AutoGPT](../workflow-builders/autogpt.zh.md) | ✅ | 复杂的工作流自动化平台，带部署 UI。 | AutoGPT 面向自主多步任务执行；OpenClaw 是轻量个人聊天助手。 |
-| [OpenCode](../coding-agents/opencode.zh.md) | ✅ | 模型无关的终端编码智能体。 | OpenCode 用于 shell 中的软件工程；OpenClaw 是通用消息聊天机器人。 |
+| [OpenCode](../coding-agents/terminal-agents/opencode.zh.md) | ✅ | 模型无关的终端编码智能体。 | OpenCode 用于 shell 中的软件工程；OpenClaw 是通用消息聊天机器人。 |
 | [LangChain](../workflow-builders/langchain.zh.md) | ✅ | 构建自定义智能体管线的底层框架。 | LangChain 是供你构建的库；OpenClaw 是开箱即用的个人助手应用。 |
 | Claude / ChatGPT 原生应用 | 未收录 | 闭源、纯云端的助手。 | 专有且需联网；OpenClaw 可自托管、MIT 许可、不绑定渠道。 |
 

@@ -94,8 +94,8 @@ health:
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
 | [Selenium](selenium.zh.md)（4.x 原生 CDP/BiDi） | ✅ | 想要有人维护的网络拦截能力，而不是冻结的 MITM wrapper 时，选 Selenium 4 原生 CDP/BiDi。 | 它封装的底座库；Selenium 4 现已提供原生 CDP/BiDi 网络拦截——是拿回 selenium-wire 大部分能力的有人维护方式，无需 MITM 代理。[推断] |
-| Playwright | 未收录 | 新项目需要内建请求/响应拦截和活跃维护时，选 Playwright。 | 现代、活跃维护的浏览器自动化，内建一等的请求/响应拦截（`page.route`、响应体）；最强的“新项目”替代。 |
-| mitmproxy | 未收录 | 需要超出单个 Selenium 浏览器会话的代理级捕获和脚本能力时，选 mitmproxy。 | 有人维护的独立 MITM 代理，带完整脚本 API；更重、不与 Selenium 耦合，但当你需要真正的代理级捕获时是对的工具。 |
+| [Playwright](playwright.zh.md) | ✅ | 新项目需要内建请求/响应拦截和活跃维护时，选 Playwright。 | 现代、活跃维护的浏览器自动化，内建一等的请求/响应拦截（`page.route`、响应体）；最强的“新项目”替代。 |
+| [mitmproxy](../debugging-proxy/mitmproxy.zh.md) | ✅ | 需要超出单个 Selenium 浏览器会话的代理级捕获和脚本能力时，选 mitmproxy。 | 有人维护的独立 MITM 代理，带完整脚本 API；更重、不与 Selenium 耦合，但当你需要真正的代理级捕获时是对的工具。 |
 | Browser MITM Proxy / BrowserMob Proxy | 未收录 | 只有必须维持旧式 Selenium HAR 代理流程时，才选这些工具。 | 给 Selenium 做 HAR 捕获的更老的代理方案（BrowserMob 是 Java）；思路类似，同样在老化。 |
 
 ## 技术栈

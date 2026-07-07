@@ -30,7 +30,7 @@
 | [Selenium](selenium.zh.md) | ✅ | B（6/6） | 当你需要跨浏览器、跨语言的 WebDriver 自动化时用它——现代单浏览器体验 Playwright/Cypress 更顺手。 |
 | [PhantomJS](phantomjs.zh.md) | ✅ | D（5/6） | 新项目别用——已归档、停更的可脚本化无头浏览器；改用 Puppeteer/Playwright 的无头 Chrome 或 Selenium。 |
 | [Selenium Wire](selenium-wire.zh.md) | ✅ | D（5/6） | 当遗留的 Selenium 测试套件需要读取或改写浏览器后台 HTTP 流量时用它——但它已归档，新项目应改用 Selenium 4 原生 CDP/BiDi 或 Playwright。 |
-| Playwright / Puppeteer | 未收录 | — | 各页对比里点到的更底层浏览器自动化库。 |
+| [Playwright](playwright.zh.md) / Puppeteer | 部分已收录 | — | 各页对比里点到的更底层浏览器自动化库。 |
 
 ## 什么该放这里
 

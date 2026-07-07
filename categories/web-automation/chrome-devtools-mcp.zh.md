@@ -100,9 +100,9 @@ health:
 | [page-agent](page-agent.zh.md) | ✅ | 需要页内 JS GUI agent 而不是 DevTools 访问时，选 page-agent。 | 页内 JS GUI agent（DOM 即文本，无 headless 浏览器、无后端）；做 NL 表单/流程自动化很强，但**无法**录 trace、在 CDP 层检查网络、或抓堆快照。 |
 | [Agent Browser](agent-browser.zh.md) | ✅ | 需要 Vercel-labs 面向 agent 的 CLI 浏览器自动化时，选 Agent Browser。 | Vercel-labs 的面向 agent 的浏览器自动化；“为 agent 驱动浏览器”这一目标重叠——栈/手感不同，DevTools 协议面没这么全。 |
 | [Cua](cua.zh.md) | ✅ | 需要驱动整个桌面的沙箱 VM computer-use agent 时，选 Cua。 | computer-use / 沙箱 VM agent，驱动整个桌面而非仅 Chrome；更广（任意应用、像素 UI）但更重，且在 Web 性能/网络上不是 DevTools 级。 |
-| Playwright(+ MCP) | 未收录 | 需要跨浏览器、确定性的可移植自动化/CI 时，选 Playwright。 | 跨浏览器（Chromium/Firefox/WebKit）、确定性、可代码或 MCP 驱动、支持 headless；做可移植自动化/CI 的首选。Chrome DevTools MCP 是用广度换 Chrome 原生 DevTools 深度（trace、Lighthouse、堆、CrUX）。 |
-| Puppeteer | 未收录 | 需要这台 server 所基于的底层 Chrome/CDP 库时，选 Puppeteer。 | 这台服务器所基于的更底层 Chrome/CDP 自动化库；脚本你自己写，没有 MCP/agent 层，也没有打磨过的性能洞察工具。 |
-| browser-use | 未收录 | 需要 Python、具视觉能力的自主浏览器 agent 时，选 browser-use。 | Python、具视觉能力的自主浏览器 agent；更偏“agent 自己决定做什么”而非“给 agent 精确的 DevTools 工具”，且在性能/网络检查上不是 DevTools 协议级。 |
+| [Playwright](playwright.zh.md)(+ MCP) | ✅ | 需要跨浏览器、确定性的可移植自动化/CI 时，选 Playwright。 | 跨浏览器（Chromium/Firefox/WebKit）、确定性、可代码或 MCP 驱动、支持 headless；做可移植自动化/CI 的首选。Chrome DevTools MCP 是用广度换 Chrome 原生 DevTools 深度（trace、Lighthouse、堆、CrUX）。 |
+| [Puppeteer](puppeteer.zh.md) | ✅ | 需要这台 server 所基于的底层 Chrome/CDP 库时，选 Puppeteer。 | 这台服务器所基于的更底层 Chrome/CDP 自动化库；脚本你自己写，没有 MCP/agent 层，也没有打磨过的性能洞察工具。 |
+| [browser-use](browser-use.zh.md) | ✅ | 需要 Python、具视觉能力的自主浏览器 agent 时，选 browser-use。 | Python、具视觉能力的自主浏览器 agent；更偏“agent 自己决定做什么”而非“给 agent 精确的 DevTools 工具”，且在性能/网络检查上不是 DevTools 协议级。 |
 
 ## 技术栈
 

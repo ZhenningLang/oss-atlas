@@ -3,38 +3,14 @@
 > 分类节点。数据库与数据库工具——客户端、GUI、同步，以及 Redis/ES 兼容存储。
 > ← 返回[分类路由](../../INDEX.zh.md) · English: [INDEX.md](INDEX.md)
 
-## 本分类项目
+## 子分类
 
-| 项目 | 何时用 | 健康度 | 页面 |
-| --- | --- | --- | --- |
-| **PikiwiDB** | 当大规模 Redis 数据集撑爆内存、内存成本成为主要负担时用它——RocksDB 落盘、兼容 Redis 协议，单节点可存数百 GB；但它以延迟换容量，若每次操作都要微秒级则不合适。 | B（5/6） | [→](pikiwidb.zh.md) |
-| **elasticsearch-dsl-py** | 当你维护仍锁定独立 elasticsearch-dsl 包的旧 Python 代码时才用它——任何新项目它都已归档，请改装 elasticsearch>=8.18 并使用 elasticsearch.dsl。 | D（4/6） | [→](elasticsearch-dsl-py.zh.md) |
-| **elasticsearch-sql** | 当熟悉 SQL 的团队想免学 JSON Query DSL 直接查 Elasticsearch 时用它——但 Elastic 官方的 SQL／ES\|QL 已与之重叠，能覆盖你的需求时优先用官方特性。 | [→](elasticsearch-sql.zh.md) |
-| **go-mysql-elasticsearch** | 当你想用单个 Go 二进制 tail MySQL binlog、单向中等规模同步到 Elasticsearch 时用它——但它自 2023 年起无人维护、无任何发布，请当作 fork 自管的项目对待。 | D（3/6） | [→](go-mysql-elasticsearch.zh.md) |
-| **python-mysql-replication** | 当你想用纯 Python 原语把 MySQL binlog 流式解析成带类型的事件、自建可控 CDC 循环时用它——但 checkpoint、去重和精确一次投递全得你自己负责。 | D（5/6） | [→](python-mysql-replication.zh.md) |
-| **PrettyZoo** | 当你在开发或故障排查时想用友好的桌面 GUI 浏览并轻量编辑 ZooKeeper znode 树时用它——但它自 2023 年起已归档，新 JDK／macOS 可能跑不起来且无上游修复。 | D（4/6） | [→](prettyzoo.zh.md) |
-| **RDR** | 当 Redis 触发 maxmemory 告警、需要离线快速按前缀分析 RDB 快照时用它——但内存数字是近似值，且项目已停滞（v0.0.1，2019 年）。 | D（3/6） | [→](rdr.zh.md) |
-| **Supabase** | 当你想要一个基于 PostgreSQL 构建的开源 Firebase 替代方案，包含身份认证、自动生成 API、实时订阅、边缘函数和向量存储时用它——但它与 Postgres 深度绑定。 | ?（0/6） | [→](supabase.zh.md) |
-| **DuckDB** | DuckDB is an analytical in-process SQL database management system | ?（0/6） | [→](duckdb.zh.md) |
-| **ClickHouse** | ClickHouse® is a real-time analytics database management system | ?（0/6） | [→](clickhouse.zh.md) |
-| **DBeaver** | Free universal database tool and SQL client | ?（0/6） | [→](dbeaver.zh.md) |
-| **Debezium** | Change data capture for a variety of databases. Please log issues at https://github.com/debezium/dbz/issues. | ?（0/6） | [→](debezium.zh.md) |
-| **Valkey** | A flexible distributed key-value database that is optimized for caching and other realtime workloads. | ?（0/6） | [→](valkey.zh.md) |
-
-
-## 对比矩阵
-
-| 选项 | 是否收录 | 健康度 | 一句话取舍 |
-| --- | --- | --- | --- |
-| [PikiwiDB](pikiwidb.zh.md) | ✅ | B（5/6） | 当大规模 Redis 数据集撑爆内存、内存成本成为主要负担时用它——RocksDB 落盘、兼容 Redis 协议，单节点可存数百 GB；但它以延迟换容量，若每次操作都要微秒级则不合适。 |
-| [elasticsearch-dsl-py](elasticsearch-dsl-py.zh.md) | ✅ | D（4/6） | 当你维护仍锁定独立 elasticsearch-dsl 包的旧 Python 代码时才用它——任何新项目它都已归档，请改装 elasticsearch>=8.18 并使用 elasticsearch.dsl。 |
-| [elasticsearch-sql](elasticsearch-sql.zh.md) | ✅ | 当熟悉 SQL 的团队想免学 JSON Query DSL 直接查 Elasticsearch 时用它——但 Elastic 官方的 SQL／ES\|QL 已与之重叠，能覆盖你的需求时优先用官方特性。 |
-| [go-mysql-elasticsearch](go-mysql-elasticsearch.zh.md) | ✅ | D（3/6） | 当你想用单个 Go 二进制 tail MySQL binlog、单向中等规模同步到 Elasticsearch 时用它——但它自 2023 年起无人维护、无任何发布，请当作 fork 自管的项目对待。 |
-| [python-mysql-replication](python-mysql-replication.zh.md) | ✅ | D（5/6） | 当你想用纯 Python 原语把 MySQL binlog 流式解析成带类型的事件、自建可控 CDC 循环时用它——但 checkpoint、去重和精确一次投递全得你自己负责。 |
-| [PrettyZoo](prettyzoo.zh.md) | ✅ | D（4/6） | 当你在开发或故障排查时想用友好的桌面 GUI 浏览并轻量编辑 ZooKeeper znode 树时用它——但它自 2023 年起已归档，新 JDK／macOS 可能跑不起来且无上游修复。 |
-| [RDR](rdr.zh.md) | ✅ | D（3/6） | 当 Redis 触发 maxmemory 告警、需要离线快速按前缀分析 RDB 快照时用它——但内存数字是近似值，且项目已停滞（v0.0.1，2019 年）。 |
-| [Supabase](supabase.zh.md) | ✅ | ?（0/6） | 基于 PostgreSQL 构建的开源 Firebase 替代方案，包含身份认证、自动生成 API、实时订阅、边缘函数和向量存储；与 Postgres 深度绑定。 |
+| 分类 | 何时用 | 路由 |
+|---|---|---|
+| **database-engines** | 数据库引擎与可自建数据库服务。 | [→](database-engines/INDEX.zh.md) |
+| **database-clients** | 数据库客户端、GUI、查询层与检查工具。 | [→](database-clients/INDEX.zh.md) |
+| **data-sync** | CDC、复制与数据库同步工具。 | [→](data-sync/INDEX.zh.md) |
 
 ## 什么该放这里
 
-数据库及其**周边工具**——客户端、管理 GUI、同步/复制、RDB 分析。不含 RAG 向量库（见 `rag-retrieval`）。
+数据库与数据库工具——客户端、GUI、同步，以及 Redis/ES 兼容存储。
