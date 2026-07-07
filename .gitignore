@@ -13,3 +13,5 @@ node_modules/
 memory_telemetry.jsonl
 .agent-state/
 .health-backfill/
+memory/
+
