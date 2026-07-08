@@ -673,6 +673,10 @@ The complete index, grouped by category. Each project has an English page (`<slu
 
 | Project | Use when | License | Health | Page |
 | --- | --- | --- | --- | --- |
+| **Read Frog** | Use it when you want a feature-rich open-source immersive/bilingual translation extension with BYOK AI providers, local Ollama/custom endpoints, TTS, and YouTube subtitle translation. | GPL-3.0 | B (6/6) | [EN](categories/reading-tools/read-frog.md) · [中](categories/reading-tools/read-frog.zh.md) |
+| **FluentRead** | Use it when you want a Chinese-first open immersive-translation browser extension with many engines, bilingual/full-page translation, and Ollama/custom OpenAI-compatible setup. | GPL-3.0 | C (6/6) | [EN](categories/reading-tools/fluentread.md) · [中](categories/reading-tools/fluentread.zh.md) |
+| **Margin Read** | Use it when MIT licensing, explicit BYOK/local endpoint support, and a written privacy threat model matter more than feature completeness. | MIT | C (5/6) | [EN](categories/reading-tools/margin-read.md) · [中](categories/reading-tools/margin-read.zh.md) |
+| **Pair Translate** | Use it when you want a lighter bilingual webpage translator with direct provider requests, LLM templates, and Chrome/Firefox/Edge distribution. | GPL-3.0 | C (5/6) | [EN](categories/reading-tools/pair-translate.md) · [中](categories/reading-tools/pair-translate.zh.md) |
 | **NetNewsWire** | Use it when you read many feeds on Mac/iPhone and want a fast, ad-free native RSS client you own — but only on Apple platforms, never elsewhere. | MIT | B (5/6) | [EN](categories/reading-tools/netnewswire.md) · [中](categories/reading-tools/netnewswire.zh.md) |
 | **Just Read** | Use it when you want to strip ads and clutter from an article in-browser, your way, with per-site selectors — but it's EULA-licensed source, not real OSS. | Unlicensed (EULA) | D (6/6) | [EN](categories/reading-tools/just-read.md) · [中](categories/reading-tools/just-read.zh.md) |
 | **FreshRSS** | A free, self-hostable news aggregator… | AGPL-3.0 | ? (0/6) | [EN](categories/reading-tools/freshrss.md) · [中](categories/reading-tools/freshrss.zh.md) |

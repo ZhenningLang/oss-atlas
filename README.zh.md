@@ -670,6 +670,10 @@ skill 从 `raw.githubusercontent.com/ZhenningLang/oss-atlas/main/` 拉取页面�
 
 | 项目 | 何时用 | 许可 | 健康度 | 页面 |
 | --- | --- | --- | --- | --- |
+| **Read Frog** | 当你想要功能丰富的开源沉浸式／双语翻译扩展，且需要 BYOK AI provider、本地 Ollama／自定义端点、TTS 和 YouTube 字幕翻译时用它。 | GPL-3.0 | B（6/6） | [中](categories/reading-tools/read-frog.zh.md) · [EN](categories/reading-tools/read-frog.md) |
+| **FluentRead** | 当你想要中文优先、支持许多引擎的开源沉浸式翻译浏览器扩展，带双语／全文翻译和 Ollama／自定义 OpenAI-compatible 设置时用它。 | GPL-3.0 | C（6/6） | [中](categories/reading-tools/fluentread.zh.md) · [EN](categories/reading-tools/fluentread.md) |
+| **Margin Read** | 当 MIT 许可、明确 BYOK／本地端点支持和写清楚的隐私 threat model 比功能完整度更重要时用它。 | MIT | C（5/6） | [中](categories/reading-tools/margin-read.zh.md) · [EN](categories/reading-tools/margin-read.md) |
+| **Pair Translate** | 当你想要更轻量的双语网页翻译器，支持 direct provider requests、LLM 模板和 Chrome／Firefox／Edge 分发时用它。 | GPL-3.0 | C（5/6） | [中](categories/reading-tools/pair-translate.zh.md) · [EN](categories/reading-tools/pair-translate.md) |
 | **NetNewsWire** | 当你在 Mac／iPhone 上读大量订阅、想要一个快速无广告、数据自己掌控的原生 RSS 客户端时用它——但它仅限 Apple 平台，别处一概不支持。 | MIT | B（5/6） | [中](categories/reading-tools/netnewswire.zh.md) · [EN](categories/reading-tools/netnewswire.md) |
 | **Just Read** | 当你想在浏览器里按自己的方式清掉文章的广告与杂乱、还能按站点记忆选择器时用它——但它是 EULA 授权的源码，并非真正的开源。 | Unlicensed (EULA) | D（6/6） | [中](categories/reading-tools/just-read.zh.md) · [EN](categories/reading-tools/just-read.md) |
 | **FreshRSS** | A free, self-hostable news aggregator… | AGPL-3.0 | ?（0/6） | [EN](categories/reading-tools/freshrss.md) · [中](categories/reading-tools/freshrss.zh.md) |
