@@ -137,6 +137,8 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **SWE-agent** | SWE-agent takes a GitHub issue and tries to automatically fix it, using your LM of choice. It can also be employed for offensive cybersecurity or competitive coding challenges. [NeurIPS 2024] | MIT | ? (0/6) | [EN](categories/agent-frameworks/coding-agents/orchestration-and-review/swe-agent.md) · [中](categories/agent-frameworks/coding-agents/orchestration-and-review/swe-agent.zh.md) |
 | **Flowise** | Build AI Agents, Visually | NOASSERTION | ? (0/6) | [EN](categories/agent-frameworks/workflow-builders/flowise.md) · [中](categories/agent-frameworks/workflow-builders/flowise.zh.md) |
 | **OpenHands** | 🙌 OpenHands: AI-Driven Development | NOASSERTION | ? (0/6) | [EN](categories/agent-frameworks/coding-agents/orchestration-and-review/openhands.md) · [中](categories/agent-frameworks/coding-agents/orchestration-and-review/openhands.zh.md) |
+| **T3 Code** | Use it when one local GUI should drive already authenticated Codex, Claude, Cursor, and OpenCode CLIs. | MIT | ? (0/6) | [EN](categories/agent-frameworks/coding-agents/terminal-agents/t3code.md) · [中](categories/agent-frameworks/coding-agents/terminal-agents/t3code.zh.md) |
+| **Background Agents (Open-Inspect)** | Use it when one trusted organization needs self-hosted background coding-agent sandboxes, integrations, and automation. | MIT | ? (0/6) | [EN](categories/agent-frameworks/coding-agents/orchestration-and-review/background-agents.md) · [中](categories/agent-frameworks/coding-agents/orchestration-and-review/background-agents.zh.md) |
 
 ### agent-memory
 
@@ -327,6 +329,7 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **Stitch Skills** | A library of Agent Skills (open standard) that drive Google's Stitch MCP server to generate UI screens, convert code↔design, extract DESIGN.md, and export React/React Native/shadcn components. | Apache-2.0 | B (4/6) | [EN](categories/agent-skill-collections/design/stitch-skills.md) · [中](categories/agent-skill-collections/design/stitch-skills.zh.md) |
 | **Taste-Skill** | A portable, framework-agnostic agent skill pack that gives coding agents visual taste — stopping generic AI-slop frontends and pushing intentional layout, typography, motion, and spacing. | MIT | B (4/6) | [EN](categories/agent-skill-collections/design/taste-skill.md) · [中](categories/agent-skill-collections/design/taste-skill.zh.md) |
 | **UI UX Pro Max Skill** | A design-intelligence skill pack that gives a coding agent UI/UX taste via a local CSV-backed retrieval engine (style/palette/font/rule databases) plus a pre-delivery accessibility checklist, installed across many agent harnesses. | MIT | B (4/6) | [EN](categories/agent-skill-collections/design/ui-ux-pro-max.md) · [中](categories/agent-skill-collections/design/ui-ux-pro-max.zh.md) |
+| **Hallmark** | Use it when a Claude Code, Cursor, or Codex agent needs an opinionated anti-slop design brief, audit, redesign, or study workflow. | MIT | ? (0/6) | [EN](categories/agent-skill-collections/design/hallmark.md) · [中](categories/agent-skill-collections/design/hallmark.zh.md) |
 
 #### agent-skill-collections / writing
 
@@ -334,6 +337,7 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | --- | --- | --- | --- | --- |
 | **Baoyu Skills** | A 20+ skill pack for coding agents (translation, markdown/HTML formatting, transcript/URL capture, image/diagram/slide generation), installable into Claude Code, Codex, and other skill-capable harnesses. | MIT | B (4/6) | [EN](categories/agent-skill-collections/writing/baoyu-skills.md) · [中](categories/agent-skill-collections/writing/baoyu-skills.zh.md) |
 | **Humanizer-zh** | A single Chinese Claude Code skill that rewrites text to strip ~24 tell-tale AI-writing patterns; a localization of blader/humanizer. | MIT | C (4/6) | [EN](categories/agent-skill-collections/writing/humanizer-zh.md) · [中](categories/agent-skill-collections/writing/humanizer-zh.zh.md) |
+| **Webnovel Writer** | Use it when a Claude Code serial novel needs chapters, facts, retrieval, reviews, and summaries to stay consistent over a long run. | GPL-3.0 | ? (0/6) | [EN](categories/agent-skill-collections/writing/webnovel-writer.md) · [中](categories/agent-skill-collections/writing/webnovel-writer.zh.md) |
 
 #### agent-skill-collections / security
 

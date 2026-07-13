@@ -9,6 +9,7 @@
 | --- | --- | --- | --- |
 | **Baoyu Skills** | 宝玉出品的 20+ 个 coding agent 技能合集（翻译、markdown/HTML 排版、字幕与网页抓取、图片/图表/幻灯片生成），可装入 Claude Code、Codex 等支持 skill 的 harness。 | B（4/6） | [→](baoyu-skills.zh.md) |
 | **Humanizer-zh** | 一个简体中文 Claude Code 单技能，按约 24 条清单改写掉文本里的 AI 痕迹，是 blader/humanizer 的本地化版。 | C（4/6） | [→](humanizer-zh.zh.md) |
+| **Webnovel Writer** | 当 Claude Code 连载小说需要让章节、事实、检索、审查和摘要在长期写作中保持一致时用它。 | ?（0/6） | [→](webnovel-writer.zh.md) |
 
 ## 对比矩阵
 
@@ -16,6 +17,7 @@
 | --- | --- | --- | --- |
 | [Baoyu Skills](baoyu-skills.zh.md) | ✅ | B（4/6） | 宝玉出品的 20+ 个 coding agent 技能合集（翻译、markdown/HTML 排版、字幕与网页抓取、图片/图表/幻灯片生成），可装入 Claude Code、Codex 等支持 skill 的 harness。 |
 | [Humanizer-zh](humanizer-zh.zh.md) | ✅ | C（4/6） | 一个简体中文 Claude Code 单技能，按约 24 条清单改写掉文本里的 AI 痕迹，是 blader/humanizer 的本地化版。 |
+| [Webnovel Writer](webnovel-writer.zh.md) | ✅ | ?（0/6） | 面向长篇连载的有状态 Claude Code 流程，不是通用桌面编辑器或一次性起草提示词。 |
 
 ## 什么该放这里
 

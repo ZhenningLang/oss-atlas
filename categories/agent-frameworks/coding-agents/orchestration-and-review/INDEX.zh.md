@@ -13,6 +13,7 @@
 | **OpenHands** | 🙌 OpenHands: AI-Driven Development | A （4/6） | [→](openhands.zh.md) |
 | **RTK** | 高性能 CLI 代理，在命令输出到达 LLM 上下文前先过滤和压缩，对常见开发命令可减少 60–90% 的 token 消耗，开销低于 10 毫秒。 | B （5/6） | [→](rtk.zh.md) |
 | **SWE-agent** | SWE-agent takes a GitHub issue and tries to automatically fix it, using your LM of choice. It can also be employed for offensive cybersecurity or competitive coding challenges. [NeurIPS 2024] | A （5/6） | [→](swe-agent.zh.md) |
+| **Background Agents（Open-Inspect）** | 当一个可信组织需要自托管的后台 coding-agent 沙箱、集成和自动化时用它。 | ?（0/6） | [→](background-agents.zh.md) |
 
 ## 什么该放这里
 

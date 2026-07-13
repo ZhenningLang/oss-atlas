@@ -134,6 +134,8 @@ skill 从 `raw.githubusercontent.com/ZhenningLang/oss-atlas/main/` 拉取页面�
 | **SWE-agent** | SWE-agent takes a GitHub issue and tries to automatically fix it, using your LM of choice. It can also be employed for offensive cybersecurity or competitive coding challenges. [NeurIPS 2024] | MIT | ?（0/6） | [EN](categories/agent-frameworks/coding-agents/orchestration-and-review/swe-agent.md) · [中](categories/agent-frameworks/coding-agents/orchestration-and-review/swe-agent.zh.md) |
 | **Flowise** | Build AI Agents, Visually | NOASSERTION | ?（0/6） | [EN](categories/agent-frameworks/workflow-builders/flowise.md) · [中](categories/agent-frameworks/workflow-builders/flowise.zh.md) |
 | **OpenHands** | 🙌 OpenHands: AI-Driven Development | NOASSERTION | ?（0/6） | [EN](categories/agent-frameworks/coding-agents/orchestration-and-review/openhands.md) · [中](categories/agent-frameworks/coding-agents/orchestration-and-review/openhands.zh.md) |
+| **T3 Code** | 当一个本地 GUI 要驱动已经认证的 Codex、Claude、Cursor、OpenCode CLI 时用它。 | MIT | ?（0/6） | [中](categories/agent-frameworks/coding-agents/terminal-agents/t3code.zh.md) · [EN](categories/agent-frameworks/coding-agents/terminal-agents/t3code.md) |
+| **Background Agents（Open-Inspect）** | 当一个可信组织需要自托管的后台 coding-agent 沙箱、集成和自动化时用它。 | MIT | ?（0/6） | [中](categories/agent-frameworks/coding-agents/orchestration-and-review/background-agents.zh.md) · [EN](categories/agent-frameworks/coding-agents/orchestration-and-review/background-agents.md) |
 
 ### agent-memory
 
@@ -324,6 +326,7 @@ skill 从 `raw.githubusercontent.com/ZhenningLang/oss-atlas/main/` 拉取页面�
 | **Stitch Skills** | 一套遵循 Agent Skills 开放标准的技能库，驱动 Google 的 Stitch MCP server 生成 UI 屏幕、在代码与设计间双向转换、抽取 DESIGN.md，并导出 React/React Native/shadcn 组件。 | Apache-2.0 | B（4/6） | [中](categories/agent-skill-collections/design/stitch-skills.zh.md) · [EN](categories/agent-skill-collections/design/stitch-skills.md) |
 | **Taste-Skill** | 一套可移植、与框架无关的 agent skill 包，给 coding agent 注入审美，阻止千篇一律的 AI-slop 前端，转而产出有意图的布局、排版、动效与留白。 | MIT | B（4/6） | [中](categories/agent-skill-collections/design/taste-skill.zh.md) · [EN](categories/agent-skill-collections/design/taste-skill.md) |
 | **UI UX Pro Max Skill** | 一个设计智能 skill pack，通过本地 CSV 检索引擎（风格/配色/字体/规则数据库）和交付前可访问性清单给 coding agent 注入 UI/UX 品味，可装入多种 agent harness。 | MIT | B（4/6） | [中](categories/agent-skill-collections/design/ui-ux-pro-max.zh.md) · [EN](categories/agent-skill-collections/design/ui-ux-pro-max.md) |
+| **Hallmark** | 当 Claude Code、Cursor、Codex agent 需要有主张的反 AI 味设计 brief、审计、重设计或研究流程时用它。 | MIT | ?（0/6） | [中](categories/agent-skill-collections/design/hallmark.zh.md) · [EN](categories/agent-skill-collections/design/hallmark.md) |
 
 #### agent-skill-collections / writing
 
@@ -331,6 +334,7 @@ skill 从 `raw.githubusercontent.com/ZhenningLang/oss-atlas/main/` 拉取页面�
 | --- | --- | --- | --- | --- |
 | **Baoyu Skills** | 宝玉出品的 20+ 个 coding agent 技能合集（翻译、markdown/HTML 排版、字幕与网页抓取、图片/图表/幻灯片生成），可装入 Claude Code、Codex 等支持 skill 的 harness。 | MIT | B（4/6） | [中](categories/agent-skill-collections/writing/baoyu-skills.zh.md) · [EN](categories/agent-skill-collections/writing/baoyu-skills.md) |
 | **Humanizer-zh** | 一个简体中文 Claude Code 单技能，按约 24 条清单改写掉文本里的 AI 痕迹，是 blader/humanizer 的本地化版。 | MIT | C（4/6） | [中](categories/agent-skill-collections/writing/humanizer-zh.zh.md) · [EN](categories/agent-skill-collections/writing/humanizer-zh.md) |
+| **Webnovel Writer** | 当 Claude Code 连载小说需要让章节、事实、检索、审查和摘要在长期写作中保持一致时用它。 | GPL-3.0 | ?（0/6） | [中](categories/agent-skill-collections/writing/webnovel-writer.zh.md) · [EN](categories/agent-skill-collections/writing/webnovel-writer.md) |
 
 #### agent-skill-collections / security
 

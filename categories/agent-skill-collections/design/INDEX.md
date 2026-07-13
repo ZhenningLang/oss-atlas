@@ -12,6 +12,7 @@
 | **Stitch Skills** | A library of Agent Skills (open standard) that drive Google's Stitch MCP server to generate UI screens, convert code↔design, extract DESIGN.md, and export React/React Native/shadcn components. | B (4/6) | [→](stitch-skills.md) |
 | **Taste-Skill** | A portable, framework-agnostic agent skill pack that gives coding agents visual taste — stopping generic AI-slop frontends and pushing intentional layout, typography, motion, and spacing. | B (4/6) | [→](taste-skill.md) |
 | **UI UX Pro Max Skill** | A design-intelligence skill pack that gives a coding agent UI/UX taste via a local CSV-backed retrieval engine (style/palette/font/rule databases) plus a pre-delivery accessibility checklist, installed across many agent harnesses. | B (4/6) | [→](ui-ux-pro-max.md) |
+| **Hallmark** | Use it when a Claude Code, Cursor, or Codex agent needs an opinionated anti-slop design brief, audit, redesign, or study workflow. | ? (0/6) | [→](hallmark.md) |
 
 ## Comparison matrix
 
@@ -22,6 +23,7 @@
 | [Stitch Skills](stitch-skills.md) | ✅ | B (4/6) | A library of Agent Skills (open standard) that drive Google's Stitch MCP server to generate UI screens, convert code↔design, extract DESIGN.md, and export React/React Native/shadcn components. |
 | [Taste-Skill](taste-skill.md) | ✅ | B (4/6) | A portable, framework-agnostic agent skill pack that gives coding agents visual taste — stopping generic AI-slop frontends and pushing intentional layout, typography, motion, and spacing. |
 | [UI UX Pro Max Skill](ui-ux-pro-max.md) | ✅ | B (4/6) | A design-intelligence skill pack that gives a coding agent UI/UX taste via a local CSV-backed retrieval engine (style/palette/font/rule databases) plus a pre-delivery accessibility checklist, installed across many agent harnesses. |
+| [Hallmark](hallmark.md) | ✅ | ? (0/6) | Opinionated design skill with build, audit, redesign, and study verbs; advisory guidance, not a component library or deterministic linter. |
 
 ## What belongs here
 

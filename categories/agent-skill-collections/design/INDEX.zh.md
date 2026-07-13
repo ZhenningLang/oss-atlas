@@ -12,6 +12,7 @@
 | **Stitch Skills** | 一套遵循 Agent Skills 开放标准的技能库，驱动 Google 的 Stitch MCP server 生成 UI 屏幕、在代码与设计间双向转换、抽取 DESIGN.md，并导出 React/React Native/shadcn 组件。 | B（4/6） | [→](stitch-skills.zh.md) |
 | **Taste-Skill** | 一套可移植、与框架无关的 agent skill 包，给 coding agent 注入审美，阻止千篇一律的 AI-slop 前端，转而产出有意图的布局、排版、动效与留白。 | B（4/6） | [→](taste-skill.zh.md) |
 | **UI UX Pro Max Skill** | 一个设计智能 skill pack，通过本地 CSV 检索引擎（风格/配色/字体/规则数据库）和交付前可访问性清单给 coding agent 注入 UI/UX 品味，可装入多种 agent harness。 | B（4/6） | [→](ui-ux-pro-max.zh.md) |
+| **Hallmark** | 当 Claude Code、Cursor、Codex agent 需要有主张的反 AI 味设计 brief、审计、重设计或研究流程时用它。 | ?（0/6） | [→](hallmark.zh.md) |
 
 ## 对比矩阵
 
@@ -22,6 +23,7 @@
 | [Stitch Skills](stitch-skills.zh.md) | ✅ | B（4/6） | 一套遵循 Agent Skills 开放标准的技能库，驱动 Google 的 Stitch MCP server 生成 UI 屏幕、在代码与设计间双向转换、抽取 DESIGN.md，并导出 React/React Native/shadcn 组件。 |
 | [Taste-Skill](taste-skill.zh.md) | ✅ | B（4/6） | 一套可移植、与框架无关的 agent skill 包，给 coding agent 注入审美，阻止千篇一律的 AI-slop 前端，转而产出有意图的布局、排版、动效与留白。 |
 | [UI UX Pro Max Skill](ui-ux-pro-max.zh.md) | ✅ | B（4/6） | 一个设计智能 skill pack，通过本地 CSV 检索引擎（风格/配色/字体/规则数据库）和交付前可访问性清单给 coding agent 注入 UI/UX 品味，可装入多种 agent harness。 |
+| [Hallmark](hallmark.zh.md) | ✅ | ?（0/6） | 带 build、audit、redesign、study 动词的有主张设计技能；是建议式指导，不是组件库或确定性 linter。 |
 
 ## 什么该放这里
 
