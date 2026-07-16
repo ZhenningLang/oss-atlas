@@ -1,58 +1,65 @@
 ---
 name: project-harvester
-version: 1.0.0
+version: 1.1.0
 category: oss-atlas-maintainer
 metadata:
   internal: true
   description: >
     Manually-triggered batch harvester for GitHub repositories. One trigger = one wave.
     Collects a batch of GitHub repos via search API, deduplicates against existing index,
-    filters for quality signals, infers categories, and (optionally) creates full bilingual
-    project pages for selected candidates. Designed to be run via a manual cron job.
+    filters for software-project signals, and produces a classification report for review.
+    Selected candidates are handed off to the add-project skill; this skill does not create pages.
 ---
 
 # Project Harvester — Batch Discovery Skill
 
-> One trigger = one wave. Collect → dedupe → filter → infer category → report → create.
+> One trigger = one wave. Scope → collect → dedupe → filter → classify → report → stop for review.
 
 ## Purpose
 
 When the oss-atlas index needs new entries, this skill automates the heavy lifting of
-finding GitHub repos that are **not already indexed**, filtering out noise, and surfacing
-candidates with enough metadata to decide whether to add them.
+finding GitHub repos that are **not already indexed**, filtering out non-software resource
+collections by default, and surfacing candidates with enough metadata to decide whether to add them.
 
 ## Prerequisites
 
-- `gh` CLI installed and authenticated (`gh auth status` passes), OR a `GITHUB_TOKEN` env var.
+- `GITHUB_TOKEN` or `GH_TOKEN` for authenticated GitHub API access. Without one, the script uses
+  GitHub's lower unauthenticated rate limit.
 - Python 3.9+ with standard library only (no pip deps needed for the harvester core).
 - The oss-atlas repo checked out locally at `{workspace}`.
 
-## Trigger Modes
+## Supported Modes
 
 | Mode | What it does | When to use |
 |------|-------------|-------------|
-| **Search mode** (default) | GitHub Search API with configurable query | You have a domain/keyword in mind |
-| **Trending mode** | GitHub Trending (daily/weekly) for a language | You want to see what's organically hot |
-| **Backfill mode** | Read a list of repos from a file, batch-score | You have a curated candidate list from another source (e.g., Awesome list, Reddit thread) |
+| **Search** | GitHub Search API with an explicit domain query | You know the software domain to expand |
+| **Wave** | Search → dedupe → filter → classification task → preliminary report | You want one auditable discovery wave |
+| **Existing JSON pipeline** | Run `dedupe`, `filter`, `classify`, and `report` separately | You already have repository metadata in the harvester JSON shape |
+
+`trending`, `backfill`, `create-page`, `--auto-create`, and `--git-commit` are not implemented by
+`tools/harvest.py`; do not instruct users or agents to run them.
 
 ## Wave Workflow (Search Mode — default)
 
-### Step 1: Configure the wave
+### Step 1: Lock the discovery scope
 
-Decide the search parameters. Default for a "general quality" wave:
+The user must specify a software domain, task, or category to expand. A language-only or generic
+high-star query is not a valid scope because it is dominated by awesome lists, learning material,
+and generic resources.
+
+If the user says only "run project-harvester", stop and ask for one discovery target. Offer 2-3
+repo-relevant options based on the current index, such as `agent-governance`, `web-automation`, or
+`document-parsing`. Do not silently choose a generic Python/JavaScript query.
+
+Build a domain-specific GitHub query:
 
 ```yaml
-query_template: "language:{lang} stars:>1000 pushed:>2026-01-01 sort:stars"
+query_template: "topic:{domain} pushed:>2026-01-01"
 per_page: 20           # GitHub API max = 100
-lang_rotation:         # Rotate through languages to get diversity
-  - python
-  - rust
-  - typescript
-  - go
-  - ""
-min_stars: 100
+min_stars: 0           # low-star real projects remain eligible
 exclude_forks: true
 exclude_archived: true
+include_resource_collections: false
 ```
 
 ### Step 2: Collect raw candidates
@@ -62,7 +69,7 @@ Run the harvester core script:
 ```bash
 cd {workspace}
 python3 tools/harvest.py search \
-  --query "language:python stars:>1000 pushed:>2026-01-01 sort:stars" \
+  --query "topic:agent-governance pushed:>2026-01-01" \
   --per-page 20 \
   --output /tmp/harvest-wave-N.json
 ```
@@ -99,25 +106,31 @@ python3 tools/harvest.py dedupe \
 
 Output: only repos not already in the index.
 
-### Step 4: Quality filter & tier-zero scoring
+### Step 4: Software-project filter
 
 Apply a lightweight gate (no health.py yet — that comes later when creating the page):
 
 ```bash
 python3 tools/harvest.py filter \
   --input /tmp/harvest-wave-N-new.json \
-  --min-stars 100 \
-  --require-license \
+  --min-stars 0 \
   --exclude-archived \
+  --exclude-forks \
   --output /tmp/harvest-wave-N-filtered.json
 ```
 
 Quality signals checked at this stage (cheap, no extra API calls):
 - `stars >= min_stars`
-- `license != null` (GitHub detects one)
+- `license != null` only when `--require-license` is explicitly passed
 - `archived == false`
 - `fork == false` (optional)
 - `description` is non-empty
+- resource collections are excluded by default: awesome lists, book lists, tutorial collections,
+  interview-prep corpora, and similar learning/reference repositories
+
+Use `--include-resource-collections` only when the user explicitly asks to discover those repository
+types. Star count is not a quality gate for oss-atlas inclusion; keep `--min-stars 0` unless the user
+requests a popularity threshold.
 
 ### Step 5: Agent semantic classification (no keyword matching)
 
@@ -171,28 +184,10 @@ The user decides:
 - **"Skip this wave"** → discard, end
 - **"Create a new category for #2"** → create category first, then proceed
 
-### Step 8: Create full project pages (for selected candidates)
+### Step 8: Hand selected candidates to `add-project`
 
-For each selected repo, spawn a **sub-agent** (or sequential in-conversation) to execute the `add-project` workflow:
-
-```bash
-# For each selected repo:
-python3 tools/harvest.py create-page \
-  --repo owner/repo \
-  --category inferred-category \
-  --index-root categories/ \
-  --workspace {workspace}
-```
-
-This internal step:
-1. Runs `tools/health.py --repo owner/repo --type inferred-type` to generate the health block
-2. Runs `tools/health_card.py` to generate the SVG
-3. Fetches the repo README via GitHub API for content reference
-4. Uses LLM to write the bilingual body (When to use / When NOT / Comparison / Tech stack / Dependencies / Ops difficulty / Health & viability / Caveats)
-5. Writes `categories/{cat}/{slug}.md` and `categories/{cat}/{slug}.zh.md`
-6. Updates `categories/{cat}/INDEX.md` and `categories/{cat}/INDEX.zh.md`
-7. Updates root `INDEX.md` and `INDEX.zh.md`
-8. Updates `README.md` and `README.zh.md`
+`tools/harvest.py` does not create pages. For each user-approved repository, invoke the repository's
+internal `add-project` skill and pass the repo URL plus the reviewed category decision.
 
 **Important:** The agent-generated body sections are **drafts**. The sub-agent must label unverified claims with `[未验证]` / `[推断]` and populate the `Caveats` ledger. Human review of the drafted pages is encouraged before final commit.
 
@@ -228,27 +223,35 @@ git commit -m "harvest: wave N — add K projects from {search_query}"
 
 ---
 
-## One-Command Shortcut (Power User)
+## One-Command Discovery Wave
 
-For experienced maintainers who trust the defaults:
+After the discovery scope is explicit:
 
 ```bash
 cd {workspace}
 python3 tools/harvest.py wave \
-  --query "language:python stars:>1000 pushed:>2026-01-01 sort:stars" \
+  --query "topic:agent-governance pushed:>2026-01-01" \
   --per-page 15 \
-  --auto-create \
-  --git-commit
+  --min-stars 0 \
+  --output /tmp/harvest-agent-governance.md
 ```
 
-This runs Steps 1–10 in sequence, with `--auto-create` bypassing the human review gate (use with caution; `--git-commit` requires `git` configured).
+This stops after producing JSON, a classification task, and a preliminary report. Agent semantic
+classification and human approval remain required before `add-project` runs.
 
 ---
 
 ## Caveats & Limits
 
-- **Classification is heuristic.** The keyword-based category inference can misplace repos (e.g., a "Python CLI tool for video processing" might be mapped to `media-processing` or `python-tooling`). Always review the suggested category.
+- **Search scope controls the result more than filtering.** A generic language/high-star query will
+  still produce generic repositories; always use a task/domain-specific query.
+- **Resource filtering is heuristic.** Default filtering catches common awesome-list, book-list,
+  tutorial, and learning-resource signals. It can produce false positives or miss unusual resource
+  collections; inspect the report.
+- **Classification is agent-reviewed.** `tools/harvest.py` generates a classification task but does
+  not assign categories itself. Always review the final category decision.
 - **Health scoring is as good as the data.** `health.py` needs `gh` auth. If rate-limited, some axes will be `?` — the page is still valid, but re-run `sync-entry` later to fill gaps.
-- **Page drafting is AI-generated.** The `When to use` / `When NOT` / `Comparison` sections are synthesized from the README and a web search. They may contain unverified claims. Always review the `Caveats` ledger before committing.
+- **Delegated page drafting is AI-generated.** After user approval, `add-project` synthesizes the
+  selection page from upstream evidence. Review its `Caveats` ledger before committing.
 - **Language detection is GitHub's.** Repos with mixed languages or mis-detected primary language may get wrong `language` frontmatter. Verify.
 - **No dependency analysis.** The harvester does not clone repos or run dependency scanners. `Dependencies` and `Tech stack` sections are inferred from README mentions and may be incomplete.

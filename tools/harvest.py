@@ -2,7 +2,7 @@
 """
 oss-atlas project harvester — batch discovery and intake automation.
 
-One trigger = one wave. Collect → dedupe → filter → classify → report → create.
+One trigger = one wave. Collect → dedupe → filter → classify → report.
 
 Usage:
   python3 tools/harvest.py search --query "language:python stars:>1000" --per-page 20 --output wave.json
@@ -10,9 +10,9 @@ Usage:
   python3 tools/harvest.py filter --input wave-new.json --min-stars 100 --output wave-filt.json
   python3 tools/harvest.py classify --input wave-filt.json --category-index categories/ --output wave-cls.json
   python3 tools/harvest.py report --input wave-cls.json --output wave-report.md
-  python3 tools/harvest.py wave --query "..." --per-page 15 --auto-create --git-commit
+  python3 tools/harvest.py wave --query "topic:llm-inference stars:>1000 pushed:>2026-01-01" --per-page 15
 
-Requires: Python 3.9+ (stdlib only). GitHub auth via GITHUB_TOKEN env or gh CLI.
+Requires: Python 3.9+ (stdlib only). GitHub auth via GITHUB_TOKEN or GH_TOKEN.
 """
 
 from __future__ import annotations
@@ -70,6 +70,51 @@ def search_repos(query: str, per_page: int = 20) -> list[dict]:
     return results
 
 
+QUERY_QUALIFIERS = {
+    "archived",
+    "created",
+    "fork",
+    "forks",
+    "in",
+    "is",
+    "language",
+    "license",
+    "mirror",
+    "org",
+    "pushed",
+    "size",
+    "sort",
+    "stars",
+    "topic",
+    "user",
+}
+
+
+def validate_discovery_query(query: str) -> None:
+    """Reject generic language/popularity searches without a domain signal."""
+    quoted = re.findall(r'"([^"\n]+)"', query)
+    if any(len(term.split()) >= 2 for term in quoted):
+        return
+    terms = re.findall(r"\b[a-zA-Z][a-zA-Z0-9_-]*\b", re.sub(r'"[^"\n]+"', "", query))
+    free_terms = [
+        term
+        for term in terms
+        if term.lower() not in QUERY_QUALIFIERS
+        and not re.fullmatch(
+            r"(?:python|javascript|typescript|rust|go|java|c|cpp)",
+            term,
+            re.IGNORECASE,
+        )
+        and not re.fullmatch(r"\d{4}-\d{2}-\d{2}|\d+", term)
+    ]
+    topic_values = re.findall(r"\btopic:([^\s]+)", query, re.IGNORECASE)
+    if free_terms or topic_values:
+        return
+    raise ValueError(
+        "discovery query needs a domain or task signal; language/high-star-only searches are not allowed"
+    )
+
+
 def _read_repo_from_frontmatter(path: Path) -> str | None:
     """Parse a .md file, extract repo: from YAML frontmatter."""
     text = path.read_text(encoding="utf-8")
@@ -119,7 +164,47 @@ def dedupe_candidates(candidates: list[dict], index_root: Path) -> list[dict]:
     return new
 
 
-def filter_candidates(candidates: list[dict], min_stars: int, require_license: bool, exclude_archived: bool, exclude_forks: bool) -> list[dict]:
+RESOURCE_COLLECTION_TOPICS = {
+    "awesome",
+    "books",
+    "education",
+    "interview",
+    "interview-practice",
+    "interview-questions",
+    "learn",
+    "list",
+    "lists",
+    "practice",
+    "resource",
+    "resources",
+    "tutorial",
+    "tutorials",
+}
+RESOURCE_COLLECTION_RE = re.compile(
+    r"\b(?:awesome|curated|collective|opinionated)\s+list\b|"
+    r"\blist\s+of\b|\bprogramming\s+books?\b|\bproject-based\s+tutorials?\b|"
+    r"\blearn\s+how\s+to\b",
+    re.IGNORECASE,
+)
+
+
+def is_resource_collection(candidate: dict) -> bool:
+    """Return true for lists, learning corpora, and reference collections."""
+    description = candidate.get("description") or ""
+    if RESOURCE_COLLECTION_RE.search(description):
+        return True
+    topics = {str(topic).lower() for topic in candidate.get("topics") or []}
+    return len(topics & RESOURCE_COLLECTION_TOPICS) >= 2
+
+
+def filter_candidates(
+    candidates: list[dict],
+    min_stars: int,
+    require_license: bool,
+    exclude_archived: bool,
+    exclude_forks: bool,
+    include_resource_collections: bool = False,
+) -> list[dict]:
     """Apply lightweight quality gate."""
     out = []
     for c in candidates:
@@ -132,6 +217,8 @@ def filter_candidates(candidates: list[dict], min_stars: int, require_license: b
         if exclude_forks and c.get("fork"):
             continue
         if not c.get("description"):
+            continue
+        if not include_resource_collections and is_resource_collection(c):
             continue
         out.append(c)
     return out
@@ -162,7 +249,7 @@ def generate_classify_report(candidates: list[dict], index_root: Path) -> str:
     # Load all category definitions
     cats = {}
     for idx in index_root.rglob("INDEX.md"):
-        cat = idx.parent.name
+        cat = idx.parent.relative_to(index_root).as_posix()
         text = idx.read_text(encoding="utf-8")
         definition = ""
         for header in ("## What belongs here", "## 什么该放这里"):
@@ -176,7 +263,7 @@ def generate_classify_report(candidates: list[dict], index_root: Path) -> str:
         # Collect 1-3 example project names from existing pages
         examples = []
         for md in sorted(idx.parent.rglob("*.md")):
-            if md.name in ("INDEX.md", "INDEX.zh.md"):
+            if md.name in ("INDEX.md", "INDEX.zh.md") or md.name.endswith(".zh.md"):
                 continue
             text2 = md.read_text(encoding="utf-8")
             if not text2.startswith("---"):
@@ -274,11 +361,18 @@ def generate_report(candidates: list[dict]) -> str:
             cat = "(awaiting agent review)"
         desc = (c.get("description") or "")[:60].replace("|", "\\|")
         lines.append(f"| {i} | {c['repo']} | {stars} | {lang} | {lic} | {cat} | {desc} |")
-    lines += ["", "## Next Steps", "", "Select which candidates to add, then run:", "", "```bash", "python3 tools/harvest.py create-page --repo <owner/repo> --category <cat>", "```", ""]
+    lines += [
+        "",
+        "## Next Steps",
+        "",
+        "Review the candidates and classifications. For selected repositories, run the repository's internal `add-project` skill; `harvest.py` does not create pages.",
+        "",
+    ]
     return "\n".join(lines)
 
 
 def _cmd_search(args):
+    validate_discovery_query(args.query)
     results = search_repos(args.query, args.per_page)
     Path(args.output).write_text(json.dumps(results, indent=2, ensure_ascii=False), encoding="utf-8")
     print(f"Collected {len(results)} candidates → {args.output}")
@@ -293,7 +387,14 @@ def _cmd_dedupe(args):
 
 def _cmd_filter(args):
     data = json.loads(Path(args.input).read_text(encoding="utf-8"))
-    filt = filter_candidates(data, args.min_stars, args.require_license, args.exclude_archived, args.exclude_forks)
+    filt = filter_candidates(
+        data,
+        args.min_stars,
+        args.require_license,
+        args.exclude_archived,
+        args.exclude_forks,
+        args.include_resource_collections,
+    )
     Path(args.output).write_text(json.dumps(filt, indent=2, ensure_ascii=False), encoding="utf-8")
     print(f"Filtered: {len(data)} → {len(filt)} passed quality gate")
 
@@ -327,6 +428,7 @@ def _cmd_finalize(args):
 
 def _cmd_wave(args):
     """One-shot: search → dedupe → filter → classify (agent review) → report."""
+    validate_discovery_query(args.query)
     print("=== Step 1: Search ===")
     results = search_repos(args.query, args.per_page)
     print(f"  {len(results)} candidates")
@@ -336,7 +438,14 @@ def _cmd_wave(args):
     print(f"  {len(new)} new ({len(results) - len(new)} already indexed)")
 
     print("=== Step 3: Filter ===")
-    filt = filter_candidates(new, args.min_stars, args.require_license, args.exclude_archived, args.exclude_forks)
+    filt = filter_candidates(
+        new,
+        args.min_stars,
+        args.require_license,
+        args.exclude_archived,
+        args.exclude_forks,
+        args.include_resource_collections,
+    )
     print(f"  {len(filt)} passed quality gate")
 
     if not filt:
@@ -390,10 +499,11 @@ def main(argv=None):
     # filter
     fp = sub.add_parser("filter", help="Apply quality gate")
     fp.add_argument("--input", required=True)
-    fp.add_argument("--min-stars", type=int, default=100)
+    fp.add_argument("--min-stars", type=int, default=0)
     fp.add_argument("--require-license", action="store_true")
     fp.add_argument("--exclude-archived", action="store_true")
     fp.add_argument("--exclude-forks", action="store_true")
+    fp.add_argument("--include-resource-collections", action="store_true")
     fp.add_argument("--output", required=True)
     fp.set_defaults(func=_cmd_filter)
 
@@ -415,10 +525,11 @@ def main(argv=None):
     wp.add_argument("--query", required=True)
     wp.add_argument("--per-page", type=int, default=15)
     wp.add_argument("--index-root", default="categories")
-    wp.add_argument("--min-stars", type=int, default=100)
-    wp.add_argument("--require-license", action="store_true", default=True)
+    wp.add_argument("--min-stars", type=int, default=0)
+    wp.add_argument("--require-license", action="store_true")
     wp.add_argument("--exclude-archived", action="store_true", default=True)
     wp.add_argument("--exclude-forks", action="store_true", default=True)
+    wp.add_argument("--include-resource-collections", action="store_true")
     wp.add_argument("--output", default="/tmp/harvest-wave-report.md")
     wp.set_defaults(func=_cmd_wave)
 
