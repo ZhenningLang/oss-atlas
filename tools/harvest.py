@@ -23,6 +23,7 @@ import os
 import re
 import sys
 import urllib.error
+import urllib.parse
 import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
@@ -85,6 +86,25 @@ def _read_repo_from_frontmatter(path: Path) -> str | None:
     return None
 
 
+def _repo_key(value: str | None) -> str | None:
+    """Normalize GitHub repo references to owner/repo for dedupe."""
+    if not value:
+        return None
+    value = value.strip().strip('"\'')
+    if not value:
+        return None
+    match = re.search(r"github\.com[:/]([^/]+)/([^/#?]+)", value, re.IGNORECASE)
+    if match:
+        owner, repo = match.group(1), match.group(2)
+    else:
+        parts = value.split("/")
+        if len(parts) < 2:
+            return None
+        owner, repo = parts[0], parts[1]
+    repo = repo.removesuffix(".git")
+    return f"{owner.lower()}/{repo.lower()}"
+
+
 def dedupe_candidates(candidates: list[dict], index_root: Path) -> list[dict]:
     """Filter out repos already present in the index."""
     existing: set[str] = set()
@@ -92,9 +112,10 @@ def dedupe_candidates(candidates: list[dict], index_root: Path) -> list[dict]:
         if md.name in ("INDEX.md", "INDEX.zh.md"):
             continue
         repo = _read_repo_from_frontmatter(md)
-        if repo:
-            existing.add(repo)
-    new = [c for c in candidates if c.get("repo") not in existing]
+        key = _repo_key(repo)
+        if key:
+            existing.add(key)
+    new = [c for c in candidates if _repo_key(c.get("repo") or c.get("html_url")) not in existing]
     return new
 
 
