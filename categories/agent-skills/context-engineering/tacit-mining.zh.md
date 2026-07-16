@@ -16,7 +16,7 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-16T08:16:13Z
+  computed_at: 2026-07-16T10:14:43Z
   overall: D
   overall_score: 1.25
   scored_axes: 4
@@ -70,36 +70,38 @@ Let AI truly understand you. A Claude Code skill that extracts tacit knowledge t
 
 ## 何时使用
 
-你正在评估 `context-engineering` 方向的任务，需要把一个真实仓库纳入 oss-atlas 候选，而不是只在 backlog 里看到一个名字。当上游描述贴合任务、许可证和维护画像经核验后可接受，并且采用公共项目比自写一次性方案更合适时，可以把 tacit-mining 纳入候选。
+你想让 agent 通过结构化对话理解用户自己的隐性判断规则：写作品味、选题直觉、产品判断、审美和读者感知。目标是**当前用户自己的隐性决策标准**，而不是公开 persona 或通用记忆库时，选 tacit-mining。
 
-这是用户指定 backlog 的首版 intake 页面。用它来完成路由和邻近方案对比；在高风险场景依赖它之前，请重新阅读上游 README、许可证、示例和 release 历史。
+上游 skill 基于 Polanyi 隐性知识理论，以及 CDM、Laddering、Repertory Grid 方法。它围绕具体事件和选择提问、teachback 复述确认，把 confirmed / fuzzy 规则存到 `memory/tacit/`，并更新隐性知识地图。
 
 ## 何时不用
 
-- **你今天就需要深度审过的 atlas 页面。** 在本页完成完整语义复核前，优先选横向对比表里更早收录、约束更清楚的页面。
-- **许可证是硬约束。** GitHub 返回 `NOASSERTION`；商用、再分发或 vendoring 前必须检查仓库内许可证文件。
-- **维护风险不可接受。** 如果项目很年轻、单人维护、star 少、没有版本线或长期安静，请选同分类里更成熟的替代品。
-- **你的任务需要更窄的替代品。** 如果另一个页面的“何时不用”已经点名你的约束，优先用那个页面，而不是这个首版入口。
-- **你无法核验上游工作流。** 在检查 README、脚本、依赖和外部 API 要求前，不要安装、运行或 vendor 这个仓库。
+- **许可证必须清晰。** README 写 MIT，但已核验根目录没有 `LICENSE` 文件；上游补 license 前，复用应保守处理。
+- **你需要 persona 或专家模仿。** 用 [nuwa-skill](nuwa-skill.zh.md) 或 [soul.md](soul-md.zh.md)；tacit-mining 是提取用户自己的 tacit rules。
+- **你不能存个人 memory 文件。** 工作流会写 `memory/tacit/` fragments 和 map，这是敏感用户偏好数据。
+- **你只需要快速 prompt tuning。** 隐性知识挖掘是访谈循环，不是一条 prompt 优化器。
+- **用户不想接受内省式追问。** 方法依赖 5-8 轮具体事件 probing 和纠正。
 
 ## 横向对比
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| 本叶子已收录技能 | ✅ | 如果已有更深审过的页面已经点名你的任务和约束，优先选它。 | 本页是首版 intake；已有页面的“何时不用”可能更锋利。 |
-| 自写 SKILL.md | 未收录 | 当任务很窄、私有或强绑定某个仓库约定时，自写 skill。 | 自写更贴本地上下文，但失去上游维护和社区示例。 |
+| [nuwa-skill](nuwa-skill.zh.md) | ✅ | 想把公开人物或主题蒸馏成 reusable perspective skill 时选 nuwa。 | nuwa 面向公开来源 persona / thinking extraction；tacit-mining 面向当前用户隐藏标准。 |
+| [soul.md](soul-md.zh.md) | ✅ | 已有 identity / source 文件，想做持久 persona package 时选 soul.md。 | soul.md 包装 identity；tacit-mining 通过对话抽取用户规则。 |
+| [NotebookLM Claude Code Skill](notebooklm-skill.zh.md) | ✅ | 问题是从上传文档里取回有来源依据的答案时选 NotebookLM。 | NotebookLM 做 retrieval；tacit-mining 做访谈并写 memory fragments。 |
+| 手工访谈笔记 | 未收录 | 数据敏感性不允许自动写 memory 时用手工笔记。 | 更安全、更易审阅，但失去 agent automation 和 map updates。 |
 
 
 ## 健康度与可持续性
 
-- **维护快照（2026-07-16）：** GitHub 返回 `archived=false`，`pushed_at=2026-04-08T10:52:37Z`。
-- **采用快照：** 2026-07 约 68 个 GitHub stars；这是有噪声的信号，低 star 项目只要是真实且相关，也会被纳入。
-- **许可证快照：** GitHub 元数据返回 `NOASSERTION`；许可证关键时仍需人工核验许可证文件。
-- **Lindy / 治理：** 本次 intake 未完整复核。长期采用前，请继续检查项目年龄、owner 类型、贡献者集中度、release 和 issue 响应。
-- **风险信号：** 本页来自 2026-07-16 backlog 的首版生成；语义对比和依赖复核刻意保守。
+- **维护快照（2026-07-16）：** GitHub 返回 `archived=false`，`pushed_at=2026-04-08T10:52:37Z`；health 将维护评为 C。
+- **采用快照：** 2026-07 约 68 个 GitHub stars；低采用不影响收录，但应视为风险信号。
+- **许可证快照：** `NOASSERTION`；README 写 MIT，但已核验根目录只有 `README.md`、`SKILL.md` 和 `banner.jpg`，没有根目录 `LICENSE`。
+- **Lindy / 治理：** 项目年轻，health 中 longevity 为 C；单维护者集中，governance 为 D。
+- **风险信号：** 会存储敏感用户判断数据，而且可能从少量访谈轮次过拟合。
 
 ## 存疑（未验证）
 
-- [未验证] 本页依据公开 GitHub 元数据和用户提供的 intake 清单生成；上游 README、文档、示例、release 和依赖清单仍需深度复核。
-- [未验证] 许可证、安装命令、支持的 harness 和运行时要求可能与 GitHub 元数据不同；使用前请在仓库中核验。
-- [推断] 横向对比表先从邻近 atlas 分类出发，并不是完整替代品综述；读完上游项目和相邻方案后应继续细化。
+- [未验证] README 写 MIT，但已核验 tree 中没有根目录 `LICENSE` 文件。
+- [未验证] 访谈方法读自 README / `SKILL.md`，本次没有和用户实际跑一轮。
+- [推断] 最适合同意参与的用户做 preference / tacit-rule extraction，不适合 persona 克隆或通用知识 retrieval。

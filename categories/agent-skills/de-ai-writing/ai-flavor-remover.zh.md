@@ -3,12 +3,12 @@ name: ai-flavor-remover
 slug: ai-flavor-remover
 repo: https://github.com/hylarucoder/ai-flavor-remover
 category: de-ai-writing
-tags: [agent-skill, de-ai-writing, ai-flavor-remover, skill-pack]
+tags: [de-ai-writing, prompt, ai-flavor-remover, gemini]
 language: Unknown
 license: NOASSERTION
 maturity: active, ~1,093 stars (as of 2026-07)
 last_verified: 2026-07-16
-type: skill-pack
+type: tool
 upstream:
   pushed_at: 2025-04-02T14:35:03Z
   default_branch: main
@@ -16,12 +16,12 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-16T08:08:18Z
+  computed_at: 2026-07-16T09:37:08Z
   overall: D
-  overall_score: 0.67
-  scored_axes: 3
-  capped: false
-  cap_reason: null
+  overall_score: 0.5
+  scored_axes: 4
+  capped: true
+  cap_reason: "source-available/no-license: NONE"
   needs_human_review: false
   axes:
     maintenance:
@@ -35,14 +35,22 @@ health:
       grade: "?"
       raw: {}
     adoption:
-      grade: "?"
-      raw: {}
+      grade: E
+      raw:
+        registry: null
+        canonical_package: null
+        dependent_repos_count: 0
+        downloads_last_month: null
+        graph_tier: E
+        volume_tier: null
+        cross_check_divergence: null
+        archived: false
     longevity:
       grade: D
       raw:
         repo_age_days: 470
         last_commit_age_days: 470
-        cohort: skill-pack
+        cohort: tool
     governance:
       grade: "?"
       raw: {}
@@ -54,48 +62,64 @@ health:
         relicense_36mo: false
         content_license: null
   unknowns:
-    responsiveness: { reason: type_na }
-    adoption: { reason: no_package_structural }
+    responsiveness: { reason: no_traffic }
     governance: { reason: unattributable }
 ---
 # ai-flavor-remover
 
-AI 味去除 - 仅在 Gemini 2.5 Pro 上测试通过
+一个用于去除“AI 味”的中文单文件 prompt 片段；上游 README 明确说只在 Gemini 2.5 Pro 上测试过。
 
 ![ai-flavor-remover — 健康度雷达](../../../assets/health/ai-flavor-remover.zh.svg)
 
 ## 何时使用
 
-你正在评估 `de-ai-writing` 方向的任务，需要把一个真实仓库纳入 oss-atlas 候选，而不是只在 backlog 里看到一个名字。当上游描述贴合任务、许可证和维护画像经核验后可接受，并且采用公共项目比自写一次性方案更合适时，可以把 ai-flavor-remover 纳入候选。
+你只想要一个最轻量的中文去 AI 味 prompt，直接复制到推理模型里试，并且接受上游“仅在 Gemini 2.5 Pro 上测试过”的限制时，可以参考 ai-flavor-remover。它更像 prompt 标本或快速实验，不是可安装的 Claude / Codex skill。
 
-这是用户指定 backlog 的首版 intake 页面。用它来完成路由和邻近方案对比；在高风险场景依赖它之前，请重新阅读上游 README、许可证、示例和 release 历史。
+本页仍收录它，是因为它是真实仓库且与去 AI 写作相关；但只读上游核验只看到 `README.md`，没有 `SKILL.md`、references 目录或安装 metadata。
 
 ## 何时不用
 
-- **你今天就需要深度审过的 atlas 页面。** 在本页完成完整语义复核前，优先选横向对比表里更早收录、约束更清楚的页面。
-- **许可证是硬约束。** GitHub 返回 `NOASSERTION`；商用、再分发或 vendoring 前必须检查仓库内许可证文件。
-- **维护风险不可接受。** 如果项目很年轻、单人维护、star 少、没有版本线或长期安静，请选同分类里更成熟的替代品。
-- **你的任务需要更窄的替代品。** 如果另一个页面的“何时不用”已经点名你的约束，优先用那个页面，而不是这个首版入口。
-- **你无法核验上游工作流。** 在检查 README、脚本、依赖和外部 API 要求前，不要安装、运行或 vendor 这个仓库。
+- **你需要真正的 SKILL.md 包。** 选 [shuorenhua](shuorenhua.zh.md)、[Humanizer-zh](humanizer-zh.zh.md)、[humanizer](humanizer.zh.md) 或 [stop-slop](stop-slop.zh.md)；这个仓库是 README prompt，不是可安装 skill-pack。
+- **许可证必须明确。** 只读上游核验没有发现 `LICENSE` 文件，GitHub metadata 也没有解析出许可证。
+- **你不用 Gemini 2.5 Pro 或同类推理模型。** 上游 README 只声称 Gemini 2.5 Pro 测试。
+- **你需要 protected spans、示例、benchmark 或 harness 安装文档。** 该仓库没有较完整 de-AI skill 的结构。
 
 ## 横向对比
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| 本叶子已收录技能 | ✅ | 如果已有更深审过的页面已经点名你的任务和约束，优先选它。 | 本页是首版 intake；已有页面的“何时不用”可能更锋利。 |
-| 自写 SKILL.md | 未收录 | 当任务很窄、私有或强绑定某个仓库约定时，自写 skill。 | 自写更贴本地上下文，但失去上游维护和社区示例。 |
+| [shuorenhua](shuorenhua.zh.md) | ✅ | 需要可安装的中文去 AI 味 skill、protected spans 和多 harness 文档时选 shuorenhua。 | shuorenhua 是真正的 skill-pack；ai-flavor-remover 是极简 prompt 片段。 |
+| [Humanizer-zh](humanizer-zh.zh.md) | ✅ | 需要 Claude Code 中文 humanizer skill 时选 Humanizer-zh。 | Humanizer-zh 有 `SKILL.md` 和 MIT license；ai-flavor-remover 没有 license 文件，也没有 `SKILL.md`。 |
+| [humanizer](humanizer.zh.md) | ✅ | 英文上游 skill 选 humanizer。 | humanizer 可安装、结构完整；ai-flavor-remover 是 Gemini 测过的 prompt。 |
+| 自写 prompt | 未收录 | 这个 prompt 过于主观或许可证不清时，自写本地 prompt。 | 同样轻量，但不依赖一个无明确许可证的仓库。 |
+
+## 技术栈
+
+- **README prompt**——只读上游核验只发现 `README.md`，不是 package 或多文件 skill。
+- **无检测到的语言运行时**——GitHub 没有返回主要语言。
+- **模型假设**——上游说明只在 Gemini 2.5 Pro 上测试过。
+
+## 依赖
+
+- **推理模型聊天会话**——把 prompt 粘进模型；没有 installer 或 runtime。
+- **无 `SKILL.md` harness 依赖**——它不是 Agent Skills 包。
+- **许可证不确定**——没有找到 license 文件，redistribution / vendoring 需要谨慎。
+
+## 运维难度
+
+**试用低，标准化高。** 复制 prompt 很容易；团队内可复现较难，因为没有 package 结构、版本化示例或 harness contract。
 
 
 ## 健康度与可持续性
 
-- **维护快照（2026-07-16）：** GitHub 返回 `archived=false`，`pushed_at=2025-04-02T14:35:03Z`。
-- **采用快照：** 2026-07 约 1,093 个 GitHub stars；这是有噪声的信号，低 star 项目只要是真实且相关，也会被纳入。
-- **许可证快照：** GitHub 元数据返回 `NOASSERTION`；许可证关键时仍需人工核验许可证文件。
-- **Lindy / 治理：** 本次 intake 未完整复核。长期采用前，请继续检查项目年龄、owner 类型、贡献者集中度、release 和 issue 响应。
-- **风险信号：** 本页来自 2026-07-16 backlog 的首版生成；语义对比和依赖复核刻意保守。
+- **维护快照（2026-07-16）：** GitHub 返回 `archived=false`，`pushed_at=2025-04-02T14:35:03Z`；health 将维护评为 D。
+- **采用快照：** 2026-07 约 1,093 个 GitHub stars，但仓库没有 package 结构，也没有可安装 skill artifact。
+- **许可证快照：** `NOASSERTION`；只读上游核验没有发现 license 文件。
+- **Lindy / 治理：** 单文件 prompt 仓库且近期无活动；更适合作为示例，而不是基础设施。
+- **风险信号：** 作者自述的 detector / 改善效果和 Gemini-only 测试，本次没有独立复现。
 
 ## 存疑（未验证）
 
-- [未验证] 本页依据公开 GitHub 元数据和用户提供的 intake 清单生成；上游 README、文档、示例、release 和依赖清单仍需深度复核。
-- [未验证] 许可证、安装命令、支持的 harness 和运行时要求可能与 GitHub 元数据不同；使用前请在仓库中核验。
-- [推断] 横向对比表先从邻近 atlas 分类出发，并不是完整替代品综述；读完上游项目和相邻方案后应继续细化。
+- [未验证] 上游效果声明，包括 AI 检测器分数变化，本次没有复现。
+- [未验证] 只读上游核验没有找到 license 文件；法律复用不清楚。
+- [推断] 因为它只是 prompt 片段，更适合作为私有 prompt 灵感，而不是 OSS 依赖。

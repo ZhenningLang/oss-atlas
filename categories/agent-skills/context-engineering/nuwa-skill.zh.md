@@ -5,7 +5,7 @@ repo: https://github.com/alchaincyf/nuwa-skill
 category: context-engineering
 tags: [agent-skill, context-engineering, nuwa-skill, skill-pack]
 language: Python
-license: NOASSERTION
+license: MIT
 maturity: active, ~28,015 stars (as of 2026-07)
 last_verified: 2026-07-16
 type: skill-pack
@@ -16,7 +16,7 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-16T08:07:43Z
+  computed_at: 2026-07-16T10:14:43Z
   overall: B
   overall_score: 2.75
   scored_axes: 4
@@ -70,36 +70,38 @@ health:
 
 ## 何时使用
 
-你正在评估 `context-engineering` 方向的任务，需要把一个真实仓库纳入 oss-atlas 候选，而不是只在 backlog 里看到一个名字。当上游描述贴合任务、许可证和维护画像经核验后可接受，并且采用公共项目比自写一次性方案更合适时，可以把 nuwa-skill 纳入候选。
+你想让 agent 把公开人物、专家、创始人、作家、老师或某个领域人格蒸馏成可安装 Agent Skill：心智模型、决策启发式、表达 DNA、价值观、反模式和明确诚实边界。输入材料公开、可溯源，而且足够支撑 perspective skill，而不是浅层角色扮演 prompt 时，选 nuwa-skill。
 
-这是用户指定 backlog 的首版 intake 页面。用它来完成路由和邻近方案对比；在高风险场景依赖它之前，请重新阅读上游 README、许可证、示例和 release 历史。
+它适合“蒸馏 Paul Graham”“做一个张小龙视角 skill”“做一个费曼式解释 skill”这类任务。上游描述了六路研究、心智模型三重验证、生成 `SKILL.md`、人物 / 主题 skill 示例、保真度评分卡，以及通过 `npx skills add alchaincyf/nuwa-skill` 跨 runtime 安装。
 
 ## 何时不用
 
-- **你今天就需要深度审过的 atlas 页面。** 在本页完成完整语义复核前，优先选横向对比表里更早收录、约束更清楚的页面。
-- **许可证是硬约束。** GitHub 返回 `NOASSERTION`；商用、再分发或 vendoring 前必须检查仓库内许可证文件。
-- **维护风险不可接受。** 如果项目很年轻、单人维护、star 少、没有版本线或长期安静，请选同分类里更成熟的替代品。
-- **你的任务需要更窄的替代品。** 如果另一个页面的“何时不用”已经点名你的约束，优先用那个页面，而不是这个首版入口。
-- **你无法核验上游工作流。** 在检查 README、脚本、依赖和外部 API 要求前，不要安装、运行或 vendor 这个仓库。
+- **你要蒸馏未经同意的私人个体。** 不要把私人对话、员工记录或个人写作变成 persona skill，除非有明确权利和授权。
+- **你需要忠实复制某人的真实想法。** Nuwa 只能从可得材料推断，不能验证私人想法、直觉或未来立场变化。
+- **你只是想提取用户自己的偏好。** 目标是当前用户隐性知识时，用 [tacit-mining](tacit-mining.zh.md) 或 memory / voice 工作流。
+- **你需要有引用的稳定知识库，而不是人格。** 来源依据比视角模拟更重要时，用 [NotebookLM Claude Code Skill](notebooklm-skill.zh.md)。
+- **你只需要一个小型本地 style guide。** 自写 `SKILL.md` 或 voice guide 比完整多 agent 研究 / 蒸馏流程更小。
 
 ## 横向对比
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| 本叶子已收录技能 | ✅ | 如果已有更深审过的页面已经点名你的任务和约束，优先选它。 | 本页是首版 intake；已有页面的“何时不用”可能更锋利。 |
-| 自写 SKILL.md | 未收录 | 当任务很窄、私有或强绑定某个仓库约定时，自写 skill。 | 自写更贴本地上下文，但失去上游维护和社区示例。 |
+| [soul.md](soul-md.zh.md) | ✅ | 已有某个人的原始资料，想把它打包为 digital identity 文件层级时选 soul.md。 | soul.md 是单个 identity 的模板 / runtime；nuwa-skill 是研究与蒸馏 pipeline。 |
+| [tacit-mining](tacit-mining.zh.md) | ✅ | 通过对话提取当前用户自己的隐性判断规则时选 tacit-mining。 | tacit-mining 挖一个用户的 tacit knowledge；nuwa 面向公开人物或主题。 |
+| [NotebookLM Claude Code Skill](notebooklm-skill.zh.md) | ✅ | 交付物是从上传文档里取回带引用答案时选 NotebookLM。 | NotebookLM 是 retrieval-grounded；nuwa 生成会外推的 perspective skill。 |
+| 自写 persona prompt | 未收录 | persona 很窄、source 要求低时手写 prompt。 | 更快更便宜，但缺少 nuwa 的研究、验证、示例和诚实边界结构。 |
 
 
 ## 健康度与可持续性
 
-- **维护快照（2026-07-16）：** GitHub 返回 `archived=false`，`pushed_at=2026-07-02T03:11:38Z`。
-- **采用快照：** 2026-07 约 28,015 个 GitHub stars；这是有噪声的信号，低 star 项目只要是真实且相关，也会被纳入。
-- **许可证快照：** GitHub 元数据返回 `NOASSERTION`；许可证关键时仍需人工核验许可证文件。
-- **Lindy / 治理：** 本次 intake 未完整复核。长期采用前，请继续检查项目年龄、owner 类型、贡献者集中度、release 和 issue 响应。
-- **风险信号：** 本页来自 2026-07-16 backlog 的首版生成；语义对比和依赖复核刻意保守。
+- **维护快照（2026-07-16）：** GitHub 返回 `archived=false`，`pushed_at=2026-07-02T03:11:38Z`；health 将维护评为 A。
+- **采用快照：** 2026-07 约 28,015 个 GitHub stars；对年轻 skill 是强关注信号，但不是 persona fidelity 证明。
+- **许可证快照：** 只读上游核验确认 README 和根目录 `LICENSE` 均为 MIT。
+- **Lindy / 治理：** health 中 longevity 为 C；因项目年轻且维护者集中，governance 为 D。
+- **风险信号：** persona 蒸馏可能夸大保真度、误处理私人 / 来源材料，或在忽略诚实边界时产出误导性“专家”回答。
 
 ## 存疑（未验证）
 
-- [未验证] 本页依据公开 GitHub 元数据和用户提供的 intake 清单生成；上游 README、文档、示例、release 和依赖清单仍需深度复核。
-- [未验证] 许可证、安装命令、支持的 harness 和运行时要求可能与 GitHub 元数据不同；使用前请在仓库中核验。
-- [推断] 横向对比表先从邻近 atlas 分类出发，并不是完整替代品综述；读完上游项目和相邻方案后应继续细化。
+- [未验证] 上游 fidelity scorecards 和示例质量读自 README，本次没有独立复现。
+- [未验证] 生成的 perspective skill 可能外推到来源材料之外；依赖前应检查诚实边界和来源透明度。
+- [推断] 最适合公开人物或主题蒸馏，不适合私人雇员克隆或合规级专家建议。

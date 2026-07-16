@@ -17,6 +17,14 @@
 | **MoviePy** | 一个用于程序化视频编辑的 Python 库——剪辑、拼接、合成、文字叠加、特效——在底层拼装 FFmpeg 命令，但对外提供更高层、更友好的 API。 | B （5/6） | [→](moviepy.zh.md) |
 | **PyAV** | 面向 FFmpeg 的 libav* 库的 Pythonic 绑定——在进程内完成解码/编码，可逐帧访问 NumPy 数组和 Python bytes，无需生成子进程。 | A （6/6） | [→](pyav.zh.md) |
 | **OpenAI Whisper** | OpenAI 的通用自动语音识别模型，支持 99 种语言的转写与英译，提供多种尺寸/质量权衡。 | B （5/6） | [→](whisper.zh.md) |
+| **claude-video** | 面向 agent 的 `/watch` 工作流：下载视频、抽帧、获取字幕 / 转录，并把视觉 / 音频证据交给 Claude 或其他 skill host。 | C（4/6） | [→](claude-video.zh.md) |
+
+## 对比矩阵
+
+| 选项 | 是否收录 | 健康度 | 一句话取舍 |
+| --- | --- | --- | --- |
+| [claude-video](claude-video.zh.md) | ✅ | C（4/6） | 面向 agent 的视频理解 helper；视频生产 / 剪辑看 FFmpeg / MoviePy，只转录看 Whisper。 |
+
 
 ## 什么该放这里
 

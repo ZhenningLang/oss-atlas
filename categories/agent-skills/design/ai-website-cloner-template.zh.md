@@ -5,7 +5,7 @@ repo: https://github.com/JCodesMore/ai-website-cloner-template
 category: design
 tags: [agent-skill, design, ai-website-cloner-template, skill-pack]
 language: TypeScript
-license: NOASSERTION
+license: MIT
 maturity: active, ~28,523 stars (as of 2026-07)
 last_verified: 2026-07-16
 type: skill-pack
@@ -16,7 +16,7 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-16T08:13:14Z
+  computed_at: 2026-07-16T10:33:32Z
   overall: B
   overall_score: 2.5
   scored_axes: 4
@@ -70,36 +70,38 @@ Clone any website with one command using AI coding agents
 
 ## 何时使用
 
-你正在评估 `design` 方向的任务，需要把一个真实仓库纳入 oss-atlas 候选，而不是只在 backlog 里看到一个名字。当上游描述贴合任务、许可证和维护画像经核验后可接受，并且采用公共项目比自写一次性方案更合适时，可以把 ai-website-cloner-template 纳入候选。
+你拥有或获授权重建一个线上网站，并想让 AI coding agent 把它逆向成现代 Next.js codebase。目标 workflow 是截图 / design-token 侦察、资产提取、component specs、parallel builders、组装，以及和原站做 visual QA 时，选 ai-website-cloner-template。
 
-这是用户指定 backlog 的首版 intake 页面。用它来完成路由和邻近方案对比；在高风险场景依赖它之前，请重新阅读上游 README、许可证、示例和 release 历史。
+这个 template 面向 Next.js 16、React 19、TypeScript strict、shadcn/ui、Tailwind CSS v4 和多 agent 编码工作流。它暴露 `/clone-website <target-url...>`，并以 `AGENTS.md` 作为 Claude Code、Codex CLI、OpenCode、Copilot、Cursor、Windsurf、Gemini CLI、Cline、Roo Code、Continue、Amazon Q、Augment Code、Aider 等 agent 的说明 SSOT。
 
 ## 何时不用
 
-- **你今天就需要深度审过的 atlas 页面。** 在本页完成完整语义复核前，优先选横向对比表里更早收录、约束更清楚的页面。
-- **许可证是硬约束。** GitHub 返回 `NOASSERTION`；商用、再分发或 vendoring 前必须检查仓库内许可证文件。
-- **维护风险不可接受。** 如果项目很年轻、单人维护、star 少、没有版本线或长期安静，请选同分类里更成熟的替代品。
-- **你的任务需要更窄的替代品。** 如果另一个页面的“何时不用”已经点名你的约束，优先用那个页面，而不是这个首版入口。
-- **你无法核验上游工作流。** 在检查 README、脚本、依赖和外部 API 要求前，不要安装、运行或 vendor 这个仓库。
+- **你不拥有或未获授权复刻目标站点。** 上游 README 明确排除 phishing、impersonation、冒充他人设计，以及违反服务条款的用途。
+- **你只是找设计灵感。** 用 [Hallmark](hallmark.zh.md)、[Taste-Skill](taste-skill.zh.md) 或 study workflow，而不是复制品牌资产、文案和布局。
+- **你需要 framework-neutral 输出。** 这个 template 强绑定 Next.js、React、shadcn/ui 和 Tailwind CSS。
+- **你不能运行 browser-backed agent workflow。** 重建依赖截图、computed styles、交互、资产和视觉对比。
+- **你需要 pixel-perfect 法务 / 合规签核。** 生成代码只能当起点；上线前仍要审品牌 / IP 权利、可访问性、安全和响应式行为。
 
 ## 横向对比
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| 本叶子已收录技能 | ✅ | 如果已有更深审过的页面已经点名你的任务和约束，优先选它。 | 本页是首版 intake；已有页面的“何时不用”可能更锋利。 |
-| 自写 SKILL.md | 未收录 | 当任务很窄、私有或强绑定某个仓库约定时，自写 skill。 | 自写更贴本地上下文，但失去上游维护和社区示例。 |
+| [Hallmark](hallmark.zh.md) | ✅ | 需要 anti-slop design direction、audit、redesign 或 study，但不复制线上站点时选 Hallmark。 | Hallmark 更适合灵感和重设计；ai-website-cloner-template 重建具体网站。 |
+| [Stitch Skills](stitch-skills.zh.md) | ✅ | 想通过 Stitch MCP 生成 UI screens 或 code/design handoff 时选 Stitch。 | Stitch 生成 screen；这个 template 把目标站点迁移 / 重建成 Next.js 项目。 |
+| [huashu-design](huashu-design.zh.md) | ✅ | 需要 HTML-native prototypes、slides、motion 和信息图时选 huashu-design。 | huashu-design 创造新 artifact；这个 template 克隆 / 迁移现有网页。 |
+| 手工重建 | 未收录 | IP、可访问性或业务逻辑需要精确人工判断时手工重建。 | 更慢，但比自动 cloning 更能降低法律和质量风险。 |
 
 
 ## 健康度与可持续性
 
-- **维护快照（2026-07-16）：** GitHub 返回 `archived=false`，`pushed_at=2026-07-04T06:49:18Z`。
-- **采用快照：** 2026-07 约 28,523 个 GitHub stars；这是有噪声的信号，低 star 项目只要是真实且相关，也会被纳入。
-- **许可证快照：** GitHub 元数据返回 `NOASSERTION`；许可证关键时仍需人工核验许可证文件。
-- **Lindy / 治理：** 本次 intake 未完整复核。长期采用前，请继续检查项目年龄、owner 类型、贡献者集中度、release 和 issue 响应。
-- **风险信号：** 本页来自 2026-07-16 backlog 的首版生成；语义对比和依赖复核刻意保守。
+- **维护快照（2026-07-16）：** GitHub 返回 `archived=false`，`pushed_at=2026-07-04T06:49:18Z`；health 将维护评为 B。
+- **采用快照：** 2026-07 约 28,523 个 GitHub stars；对年轻 template 是强关注信号，但不证明每个目标站都能安全重建。
+- **许可证快照：** 已从 upstream README badge、README license section 和根目录 `LICENSE` 核验 MIT。
+- **Lindy / 治理：** health 中 longevity 为 C；项目年轻且贡献集中，governance 为 D。
+- **风险信号：** 法律授权、目标站条款、浏览器访问、资产权利和生成后的 QA，比 template 本身更关键。
 
 ## 存疑（未验证）
 
-- [未验证] 本页依据公开 GitHub 元数据和用户提供的 intake 清单生成；上游 README、文档、示例、release 和依赖清单仍需深度复核。
-- [未验证] 许可证、安装命令、支持的 harness 和运行时要求可能与 GitHub 元数据不同；使用前请在仓库中核验。
-- [推断] 横向对比表先从邻近 atlas 分类出发，并不是完整替代品综述；读完上游项目和相邻方案后应继续细化。
+- [未验证] Demo 质量读自上游 README / demo assets，本次没有本地复现。
+- [未验证] 不同 agent 的浏览器访问、截图质量和 parallel worktree 处理能力会不同。
+- [推断] 最适合获授权的网站迁移 / 重建，不适合设计抄袭或 phishing。

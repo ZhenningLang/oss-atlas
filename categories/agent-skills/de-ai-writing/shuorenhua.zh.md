@@ -5,7 +5,7 @@ repo: https://github.com/MrGeDiao/shuorenhua
 category: de-ai-writing
 tags: [agent-skill, de-ai-writing, shuorenhua, skill-pack]
 language: Python
-license: NOASSERTION
+license: MIT
 maturity: active, ~736 stars (as of 2026-07)
 last_verified: 2026-07-16
 type: skill-pack
@@ -16,7 +16,7 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-16T08:07:57Z
+  computed_at: 2026-07-16T09:37:08Z
   overall: B
   overall_score: 2.75
   scored_axes: 4
@@ -70,36 +70,38 @@ health:
 
 ## 何时使用
 
-你正在评估 `de-ai-writing` 方向的任务，需要把一个真实仓库纳入 oss-atlas 候选，而不是只在 backlog 里看到一个名字。当上游描述贴合任务、许可证和维护画像经核验后可接受，并且采用公共项目比自写一次性方案更合适时，可以把 shuorenhua 纳入候选。
+你用 LLM 写中文产品文案、README、release note、issue 回复、状态更新或社媒内容，但输出总是像通用 AI：过度圆滑、责任主体被抹掉、模板腔重，或把原来的观点磨平。需要一个**中文优先**的改写 skill，先保事实，再按场景去 AI 味，并尽量保护命令、代码、术语、人名和责任表达时，选 shuorenhua。
 
-这是用户指定 backlog 的首版 intake 页面。用它来完成路由和邻近方案对比；在高风险场景依赖它之前，请重新阅读上游 README、许可证、示例和 release 历史。
+当你不想只靠一条临时 prompt，而是要跨 Codex、Claude Code、Cursor、ChatGPT 或自建 agent 复用时，也适合选它。上游 README 给出多 harness 用法，仓库包含 `SKILL.md`、`references/`、`install/`、`evals/`，并有 Claude Code plugin 与 Codex 使用说明。
 
 ## 何时不用
 
-- **你今天就需要深度审过的 atlas 页面。** 在本页完成完整语义复核前，优先选横向对比表里更早收录、约束更清楚的页面。
-- **许可证是硬约束。** GitHub 返回 `NOASSERTION`；商用、再分发或 vendoring 前必须检查仓库内许可证文件。
-- **维护风险不可接受。** 如果项目很年轻、单人维护、star 少、没有版本线或长期安静，请选同分类里更成熟的替代品。
-- **你的任务需要更窄的替代品。** 如果另一个页面的“何时不用”已经点名你的约束，优先用那个页面，而不是这个首版入口。
-- **你无法核验上游工作流。** 在检查 README、脚本、依赖和外部 API 要求前，不要安装、运行或 vendor 这个仓库。
+- **你要清理英文文本。** 优先用 [humanizer](humanizer.zh.md) 或 [stop-slop](stop-slop.zh.md)；shuorenhua 的主场是中文语境和中文 AI 痕迹。
+- **你要复刻品牌 voice 或某个作者文风。** 选私有 voice guide 或 [De-AI-Prompt-Enhancer-Writer-Booster-SKILL](de-ai-prompt-enhancer-writer-booster-skill.zh.md)；shuorenhua 更偏通用中文保真改写，不是作者风格克隆器。
+- **文本主体是代码、日志、shell 命令、API 名、配置或法律措辞。** 上游强调 protected spans，但风格 skill 仍不适合整段重写机器校验或法律敏感内容。
+- **真实需求是事实核查。** 这是风格 / 改写 skill，不是查证系统。
+- **你要证明它能骗过 AI 检测器。** 上游目标是改善表达，不是规避检测；评测声明仍需独立复核。
 
 ## 横向对比
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| 本叶子已收录技能 | ✅ | 如果已有更深审过的页面已经点名你的任务和约束，优先选它。 | 本页是首版 intake；已有页面的“何时不用”可能更锋利。 |
-| 自写 SKILL.md | 未收录 | 当任务很窄、私有或强绑定某个仓库约定时，自写 skill。 | 自写更贴本地上下文，但失去上游维护和社区示例。 |
+| [Humanizer-zh](humanizer-zh.zh.md) | ✅ | 需要更轻量的中文 humanizer checklist 时选 Humanizer-zh。 | Humanizer-zh 更接近上游 humanizer 的中文翻译；shuorenhua 更强调场景分流、保护片段和多 harness 文档。 |
+| [humanizer](humanizer.zh.md) | ✅ | 英文去 AI 味时选 humanizer。 | humanizer 是英文上游风格 skill；shuorenhua 是中文优先，并更明确保护工程文本。 |
+| [De-AI-Prompt-Enhancer-Writer-Booster-SKILL](de-ai-prompt-enhancer-writer-booster-skill.zh.md) | ✅ | 需要作者风格复现时选它。 | OUBIGFA 更个人风格化；shuorenhua 更通用，适合中文保真改写。 |
+| 自写 voice guide | 未收录 | 单个品牌或作者 voice 必须精确复现时自写。 | 私有 guide 更贴一个 voice；shuorenhua 更通用、可复用。 |
 
 
 ## 健康度与可持续性
 
-- **维护快照（2026-07-16）：** GitHub 返回 `archived=false`，`pushed_at=2026-07-16T01:30:25Z`。
-- **采用快照：** 2026-07 约 736 个 GitHub stars；这是有噪声的信号，低 star 项目只要是真实且相关，也会被纳入。
-- **许可证快照：** GitHub 元数据返回 `NOASSERTION`；许可证关键时仍需人工核验许可证文件。
-- **Lindy / 治理：** 本次 intake 未完整复核。长期采用前，请继续检查项目年龄、owner 类型、贡献者集中度、release 和 issue 响应。
-- **风险信号：** 本页来自 2026-07-16 backlog 的首版生成；语义对比和依赖复核刻意保守。
+- **维护快照（2026-07-16）：** GitHub 返回 `archived=false`，`pushed_at=2026-07-16T01:30:25Z`；health 将维护评为 A。
+- **采用快照：** 2026-07 约 736 个 GitHub stars；项目仍很年轻且单作者集中，不要把 star 当作改写质量证明。
+- **许可证快照：** 只读上游核验确认 GitHub metadata 和根目录 `LICENSE` 均为 MIT。
+- **Lindy / 治理：** 创建于 2026，health 显示维护者集中，因此活跃但没有 Lindy 履历。
+- **风险信号：** 上游有 benchmark / eval 声明；本次只核验到相关目录存在，未审计每个 case 的质量。
 
 ## 存疑（未验证）
 
-- [未验证] 本页依据公开 GitHub 元数据和用户提供的 intake 清单生成；上游 README、文档、示例、release 和依赖清单仍需深度复核。
-- [未验证] 许可证、安装命令、支持的 harness 和运行时要求可能与 GitHub 元数据不同；使用前请在仓库中核验。
-- [推断] 横向对比表先从邻近 atlas 分类出发，并不是完整替代品综述；读完上游项目和相邻方案后应继续细化。
+- [未验证] 上游 README 提到 80 case benchmark 和场景样例；本次只核验到 docs / evals 目录存在，没有审计评测质量。
+- [未验证] 没有本地执行所有 harness 的安装流程；依赖 Codex / Claude Code / Cursor 自动加载前仍需试装。
+- [推断] 因为它中文优先，可能更适合中文社媒 / 产品表达，不一定适合英文技术文档。

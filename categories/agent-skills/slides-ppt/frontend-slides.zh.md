@@ -5,7 +5,7 @@ repo: https://github.com/zarazhangrui/frontend-slides
 category: slides-ppt
 tags: [agent-skill, slides-ppt, frontend-slides, skill-pack]
 language: JavaScript
-license: NOASSERTION
+license: MIT
 maturity: active, ~25,713 stars (as of 2026-07)
 last_verified: 2026-07-16
 type: skill-pack
@@ -16,7 +16,7 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-16T08:14:14Z
+  computed_at: 2026-07-16T10:03:51Z
   overall: B
   overall_score: 2.75
   scored_axes: 4
@@ -70,36 +70,38 @@ Create beautiful slides on the web using a coding agent's frontend skills
 
 ## 何时使用
 
-你正在评估 `slides-ppt` 方向的任务，需要把一个真实仓库纳入 oss-atlas 候选，而不是只在 backlog 里看到一个名字。当上游描述贴合任务、许可证和维护画像经核验后可接受，并且采用公共项目比自写一次性方案更合适时，可以把 frontend-slides 纳入候选。
+你想让 coding agent 用前端能力创建**单文件网页演示文稿**，或把已有 PowerPoint 转成浏览器可看的 slideshow。用户可以从生成的视觉预览里选方向，最终产物可以是 HTML 而不是原生 PowerPoint 时，选 frontend-slides。
 
-这是用户指定 backlog 的首版 intake 页面。用它来完成路由和邻近方案对比；在高风险场景依赖它之前，请重新阅读上游 README、许可证、示例和 release 历史。
+它打包为 Claude Code plugin，也可被其他能读取 `SKILL.md` 和支持文件的 coding agent 使用。上游 README 强调新 deck 的零依赖单 HTML 输出、视觉风格发现、PPT 内容提取、bold template 预览、Vercel 部署和 Playwright PDF 导出。
 
 ## 何时不用
 
-- **你今天就需要深度审过的 atlas 页面。** 在本页完成完整语义复核前，优先选横向对比表里更早收录、约束更清楚的页面。
-- **许可证是硬约束。** GitHub 返回 `NOASSERTION`；商用、再分发或 vendoring 前必须检查仓库内许可证文件。
-- **维护风险不可接受。** 如果项目很年轻、单人维护、star 少、没有版本线或长期安静，请选同分类里更成熟的替代品。
-- **你的任务需要更窄的替代品。** 如果另一个页面的“何时不用”已经点名你的约束，优先用那个页面，而不是这个首版入口。
-- **你无法核验上游工作流。** 在检查 README、脚本、依赖和外部 API 要求前，不要安装、运行或 vendor 这个仓库。
+- **你需要原生可编辑 `.pptx`。** 用 [ppt-master](ppt-master.zh.md)；frontend-slides 生成网页 slides，也能把 PowerPoint 内容转成网页，但不是 PowerPoint-native 编辑 / 导出管线。
+- **你需要大型静态模板 / runtime 库。** [html-ppt-skill](html-ppt-skill.zh.md) 内置更多主题、布局、动画和 presenter mode。
+- **你不能使用有文件系统和 shell 权限的本地 coding agent。** 该 skill 需要创建文件，并可选运行 PPT 提取、部署和 PDF 导出脚本。
+- **你只接受确定的企业模板。** 风格发现适合探索，但严格品牌 deck 可能需要锁定模板系统。
+- **你想要通用视觉产物生成器。** slides 只是多种 artifact 之一时，看 [HTML Anything](../../ai-design-generation/html-anything.zh.md) 或 [huashu-design](../design/huashu-design.zh.md)。
 
 ## 横向对比
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| [Guizang PPT Skill](guizang-ppt.zh.md) | ✅ | 能接受强审美约束的单文件 HTML deck 时选 Guizang PPT；当可编辑 PowerPoint 或另一种 deck 流程是硬约束时再选本页项目。 | Guizang 更有主张且已审过；本页扩展 deck skill 选择面，但仍需更深复核。 |
-| [HTML Anything](../../ai-design-generation/html-anything.zh.md) | ✅ | 需要宽口径 Markdown 到 HTML 产物时选 HTML Anything；整个任务都是演示文稿时选专门的 slide skill。 | 更宽的产物覆盖 vs 更窄的 deck 专用约束。 |
+| [ppt-master](ppt-master.zh.md) | ✅ | 必须产出原生可编辑 PowerPoint 时选 ppt-master。 | ppt-master 更重，偏 Python / PPTX；frontend-slides 更适合网页 deck。 |
+| [html-ppt-skill](html-ppt-skill.zh.md) | ✅ | 需要更丰富的静态 deck runtime、大量内建模板和 presenter mode 时选它。 | html-ppt-skill 更模板 / runtime 重；frontend-slides 聚焦视觉发现和单 HTML 输出。 |
+| [Guizang PPT Skill](guizang-ppt.zh.md) | ✅ | 有主张的文章转 HTML 翻页 deck 选 Guizang。 | Guizang 更受约束；frontend-slides 更通用，覆盖 web presentation creation 和 PPT conversion。 |
+| Slidev / Marp | 未收录 | 需要 Markdown-first developer decks 和成熟生态时选它们。 | 成熟且确定，但 agent-guided 和视觉预览驱动较弱。 |
 
 
 ## 健康度与可持续性
 
-- **维护快照（2026-07-16）：** GitHub 返回 `archived=false`，`pushed_at=2026-06-23T20:08:19Z`。
-- **采用快照：** 2026-07 约 25,713 个 GitHub stars；这是有噪声的信号，低 star 项目只要是真实且相关，也会被纳入。
-- **许可证快照：** GitHub 元数据返回 `NOASSERTION`；许可证关键时仍需人工核验许可证文件。
-- **Lindy / 治理：** 本次 intake 未完整复核。长期采用前，请继续检查项目年龄、owner 类型、贡献者集中度、release 和 issue 响应。
-- **风险信号：** 本页来自 2026-07-16 backlog 的首版生成；语义对比和依赖复核刻意保守。
+- **维护快照（2026-07-16）：** GitHub 返回 `archived=false`，`pushed_at=2026-06-23T20:08:19Z`；health 将维护评为 B。
+- **采用快照：** 2026-07 约 25,713 个 GitHub stars；这对年轻 skill 是强关注，但不能替代本地输出验收。
+- **许可证快照：** 只读上游核验确认 README 和根目录 `LICENSE` 均为 MIT。
+- **Lindy / 治理：** 项目年轻，health 中 longevity 为 C、governance 为 C；有用，但还不是长期 deck 标准。
+- **风险信号：** 输出质量取决于模型、选定视觉预览、本地浏览器行为，以及受众是否接受 HTML 输出。
 
 ## 存疑（未验证）
 
-- [未验证] 本页依据公开 GitHub 元数据和用户提供的 intake 清单生成；上游 README、文档、示例、release 和依赖清单仍需深度复核。
-- [未验证] 许可证、安装命令、支持的 harness 和运行时要求可能与 GitHub 元数据不同；使用前请在仓库中核验。
-- [推断] 横向对比表先从邻近 atlas 分类出发，并不是完整替代品综述；读完上游项目和相邻方案后应继续细化。
+- [未验证] PPT conversion 质量和视觉保真没有用真实 `.pptx` 本地测试。
+- [未验证] Vercel deploy 和 PDF export 脚本读自上游文档，本次没有执行。
+- [推断] 它最适合 web-first presentation creation，不是原生 PowerPoint 生产。

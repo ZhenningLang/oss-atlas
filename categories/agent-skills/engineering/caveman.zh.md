@@ -3,10 +3,10 @@ name: caveman
 slug: caveman
 repo: https://github.com/JuliusBrussee/caveman
 category: engineering
-tags: [agent-skill, engineering, caveman, skill-pack]
+tags: [agent-skill, engineering, brevity, token-efficiency, skill-pack]
 language: JavaScript
-license: NOASSERTION
-maturity: active, ~89,979 stars (as of 2026-07)
+license: MIT
+maturity: active, ~90,035 stars (as of 2026-07)
 last_verified: 2026-07-16
 type: skill-pack
 upstream:
@@ -16,7 +16,7 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-16T08:12:45Z
+  computed_at: 2026-07-16T11:03:40Z
   overall: B
   overall_score: 3.0
   scored_axes: 4
@@ -64,42 +64,44 @@ health:
 ---
 # caveman
 
-🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman
+一个 prompt 与安装器技能包，让多种 coding agent 用刻意简短的“caveman”风格回答，同时保留代码、命令和错误信息。
 
 ![caveman — 健康度雷达](../../../assets/health/caveman.zh.svg)
 
 ## 何时使用
 
-你正在评估 `engineering` 方向的任务，需要把一个真实仓库纳入 oss-atlas 候选，而不是只在 backlog 里看到一个名字。当上游描述贴合任务、许可证和维护画像经核验后可接受，并且采用公共项目比自写一次性方案更合适时，可以把 caveman 纳入候选。
+你在使用 coding agent，痛点不是它不会写代码，而是它在可见回复里塞了太多铺垫、免责声明和长段解释；你仍然要求代码块、shell 命令、错误信息和技术判断保持原样。此时可以选 caveman：它把一套简短表达规则装进 Claude Code、Codex、Gemini、Cursor、Windsurf、Cline、Copilot 等多种 agent，并提供不同简短等级。
 
-这是用户指定 backlog 的首版 intake 页面。用它来完成路由和邻近方案对比；在高风险场景依赖它之前，请重新阅读上游 README、许可证、示例和 release 历史。
+关键取舍是范围。caveman 改的是 agent 的“嘴”，不是推理循环、规划器、工具或记忆系统；如果你只想要低摩擦的简短表达覆盖层，而不是完整工程 harness，它更合适。
 
 ## 何时不用
 
-- **你今天就需要深度审过的 atlas 页面。** 在本页完成完整语义复核前，优先选横向对比表里更早收录、约束更清楚的页面。
-- **许可证是硬约束。** GitHub 返回 `NOASSERTION`；商用、再分发或 vendoring 前必须检查仓库内许可证文件。
-- **维护风险不可接受。** 如果项目很年轻、单人维护、star 少、没有版本线或长期安静，请选同分类里更成熟的替代品。
-- **你的任务需要更窄的替代品。** 如果另一个页面的“何时不用”已经点名你的约束，优先用那个页面，而不是这个首版入口。
-- **你无法核验上游工作流。** 在检查 README、脚本、依赖和外部 API 要求前，不要安装、运行或 vendor 这个仓库。
+- **你需要更强工程流程，而不是更短表达。** 用 [mattpocock/skills](mattpocock-skills.zh.md) 处理 TDD、bug 诊断、spec、review 和架构纪律；caveman 主要约束回复风格。
+- **你需要在 agent 读取前压缩上下文。** 如果问题是记忆、检索、context degradation 或 prompt surface 设计，用 [Agent Skills for Context Engineering](../context-engineering/context-engineering-skills.zh.md) 这类 context-engineering 技能；caveman 的主场是输出简短。
+- **你需要把降本当作合同指标。** README 自己说明 caveman 主要压缩输出 token，会增加输入 token 开销，已很简短的工作负载可能净负；把它用于成本承诺前，应在自己的 harness 上测量。
+- **团队不接受运行日志里的玩笑人设。** 直接写本地简短回复规则或用常规 reviewer skill；caveman 的“原始人”语气在合规评审或客户可见 transcript 里可能分散注意力。
+- **你要完整替换 coding agent。** 评估 Caveman Code（未收录）或其他 coding-agent harness；本仓库只是 skill/plugin 覆盖层。
 
 ## 横向对比
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| 本叶子已收录技能 | ✅ | 如果已有更深审过的页面已经点名你的任务和约束，优先选它。 | 本页是首版 intake；已有页面的“何时不用”可能更锋利。 |
-| 自写 SKILL.md | 未收录 | 当任务很窄、私有或强绑定某个仓库约定时，自写 skill。 | 自写更贴本地上下文，但失去上游维护和社区示例。 |
+| [mattpocock/skills](mattpocock-skills.zh.md) | ✅ | 如果失败模式是工程纪律不足，选 mattpocock/skills；只有主要收益是缩短 agent 输出时，才选 caveman。 | mattpocock/skills 改工作流质量门；caveman 更轻，但不提供 TDD 或 review 流程。 |
+| [Agent Skills for Context Engineering](../context-engineering/context-engineering-skills.zh.md) | ✅ | 如果瓶颈是上下文设计、记忆或评测，选 context-engineering 包；如果只要回复风格覆盖层，选 caveman。 | context-engineering 覆盖更广也更重；caveman 安装快，但只处理啰嗦问题。 |
+| 自写简短回复规则 | 未收录 | 如果团队需要中性语气或严格 house style，写本地规则；如果需要安装矩阵和预设命令，选 caveman。 | 本地规则更好治理，但没有 caveman 的命令、统计和多 agent 安装覆盖。 |
+| Caveman Code | 未收录 | 如果你要完整的简短 coding agent，评估 Caveman Code；如果只想改变现有 agent 的输出风格，选本页项目。 | 完整 agent 替换会改变更多行为；caveman 是更小、更可逆的覆盖层。 |
 
 
 ## 健康度与可持续性
 
-- **维护快照（2026-07-16）：** GitHub 返回 `archived=false`，`pushed_at=2026-07-03T11:10:42Z`。
-- **采用快照：** 2026-07 约 89,979 个 GitHub stars；这是有噪声的信号，低 star 项目只要是真实且相关，也会被纳入。
-- **许可证快照：** GitHub 元数据返回 `NOASSERTION`；许可证关键时仍需人工核验许可证文件。
-- **Lindy / 治理：** 本次 intake 未完整复核。长期采用前，请继续检查项目年龄、owner 类型、贡献者集中度、release 和 issue 响应。
-- **风险信号：** 本页来自 2026-07-16 backlog 的首版生成；语义对比和依赖复核刻意保守。
+- **维护快照（2026-07-16）：** GitHub 返回 `archived=false`，`pushed_at=2026-07-03T11:10:42Z`；健康度评分器看到近期活动，maintenance 为 `A`。
+- **采用快照：** GitHub API 在 2026-07 返回约 90,035 个 star，对年轻 skill-pack 来说异常高；这代表关注度强，不等于你的工作负载一定适配。
+- **许可证快照：** 根目录 `LICENSE` 为 MIT，GitHub 元数据也返回 MIT。
+- **Lindy / 治理：** health block 中仓库年龄只有约 3 个月，longevity 仍为 `C`；治理比许多单作者 skill-pack 稍好，因为评分器 12 个月窗口里的贡献者集中度较低。
+- **风险信号：** README 的输出 token 节省是项目方基准；整场会话是否省 token 取决于你的 prompt 大小、输入 token 开销，以及 agent 原本有多简短。
 
 ## 存疑（未验证）
 
-- [未验证] 本页依据公开 GitHub 元数据和用户提供的 intake 清单生成；上游 README、文档、示例、release 和依赖清单仍需深度复核。
-- [未验证] 许可证、安装命令、支持的 harness 和运行时要求可能与 GitHub 元数据不同；使用前请在仓库中核验。
-- [推断] 横向对比表先从邻近 atlas 分类出发，并不是完整替代品综述；读完上游项目和相邻方案后应继续细化。
+- [未验证] README 中的输出 token 节省和技术准确性示例未经 oss-atlas 独立基准验证；用于成本测算前请在自己的 session 上测试。
+- [未验证] 宽泛安装矩阵未在本地逐项执行；团队采用前请验证自己的具体 agent 路径。
+- [推断] 很高的 star 数代表关注度，但不能证明长期维护或适合合规沟通。

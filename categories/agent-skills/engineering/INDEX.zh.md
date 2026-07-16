@@ -12,12 +12,9 @@
 | **Scientific Agent Skills** | 一个大型 skill 包（约 147 个 skill），把 coding agent 变成生物、化学、医学、药物发现领域的科研助手——每个 skill 用一份带文档的 SKILL.md 封装一个科学 Python 库或数据库，按需加载。 | B（4/6） | [→](scientific-agent-skills.zh.md) |
 | **Vercel Agent Skills** | Vercel 官方 agent-skill 包——按需安装的 React/Next.js/Vercel 部署、Web 设计与文档审查指南，采用 agentskills.io/skills.sh 格式。 | B（4/6） | [→](vercel-agent-skills.zh.md) |
 | **Waza** | 一套精简的八个「工程习惯」skill 集合（规划、设计、评审、调试、写作、调研、读取、审计），coding agent 可按需加载，覆盖 Claude Code、Codex、Cursor。 | B（4/6） | [→](waza.zh.md) |
-| **skills** | Based on The Minimalist Entrepreneur by Sahil Lavingia | ?（0/6） | [→](slavingia-skills.zh.md) |
-| **canghe-skills** | 苍何的技能skills仓库，搜集好用的 skills，辅助提效 | ?（0/6） | [→](canghe-skills.zh.md) |
-| **cangjie-skill** | 把书、长视频、播客等高价值内容蒸馏成可执行的 Agent Skills | ?（0/6） | [→](cangjie-skill.zh.md) |
-| **skills** | Skills for Real Engineers. Straight from my .claude directory. | ?（0/6） | [→](mattpocock-skills.zh.md) |
-| **skills** | Browser automation CLI built for AI agents. Break through anti-bot walls, hand off to humans across platforms when stuck. Parallel multi-task execution, independent multi-session operation, isolated multi-account browsing. | ?（0/6） | [→](browser-act-skills.zh.md) |
-| **caveman** | 🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman | ?（0/6） | [→](caveman.zh.md) |
+| **mattpocock/skills** | Matt Pocock 的工程 skill 包，面向 Claude Code 和 skills.sh，覆盖 grilling、domain docs、TDD、bug 诊断、架构、review、tickets 和实现流程。 | B（4/6） | [→](mattpocock-skills.zh.md) |
+| **BrowserAct Skills** | 面向 BrowserAct 的 agent 浏览器自动化技能包：索引式浏览器控制、stealth/private session、远程人工接管，以及 Skill Forge 抓取工作流。 | B（4/6） | [→](browser-act-skills.zh.md) |
+| **caveman** | 一个 prompt 与安装器技能包，让多种 coding agent 用刻意简短的“caveman”风格回答，同时保留代码、命令和错误信息。 | B（4/6） | [→](caveman.zh.md) |
 
 
 ## 对比矩阵
@@ -29,12 +26,9 @@
 | [Scientific Agent Skills](scientific-agent-skills.zh.md) | ✅ | B（4/6） | 一个大型 skill 包（约 147 个 skill），把 coding agent 变成生物、化学、医学、药物发现领域的科研助手——每个 skill 用一份带文档的 SKILL.md 封装一个科学 Python 库或数据库，按需加载。 |
 | [Vercel Agent Skills](vercel-agent-skills.zh.md) | ✅ | B（4/6） | Vercel 官方 agent-skill 包——按需安装的 React/Next.js/Vercel 部署、Web 设计与文档审查指南，采用 agentskills.io/skills.sh 格式。 |
 | [Waza](waza.zh.md) | ✅ | B（4/6） | 一套精简的八个「工程习惯」skill 集合（规划、设计、评审、调试、写作、调研、读取、审计），coding agent 可按需加载，覆盖 Claude Code、Codex、Cursor。 |
-| [skills](slavingia-skills.zh.md) | ✅ | ?（0/6） | Based on The Minimalist Entrepreneur by Sahil Lavingia |
-| [canghe-skills](canghe-skills.zh.md) | ✅ | ?（0/6） | 苍何的技能skills仓库，搜集好用的 skills，辅助提效 |
-| [cangjie-skill](cangjie-skill.zh.md) | ✅ | ?（0/6） | 把书、长视频、播客等高价值内容蒸馏成可执行的 Agent Skills |
-| [skills](mattpocock-skills.zh.md) | ✅ | ?（0/6） | Skills for Real Engineers. Straight from my .claude directory. |
-| [skills](browser-act-skills.zh.md) | ✅ | ?（0/6） | Browser automation CLI built for AI agents. Break through anti-bot walls, hand off to humans across platforms when stuck. Parallel multi-task execution, independent multi-session operation, isolated multi-account browsing. |
-| [caveman](caveman.zh.md) | ✅ | ?（0/6） | 🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman |
+| [mattpocock/skills](mattpocock-skills.zh.md) | ✅ | B（4/6） | 面向需求 grilling、domain docs、TDD、bug 诊断、架构、review、tickets 和实现流程的工程过程包。 |
+| [BrowserAct Skills](browser-act-skills.zh.md) | ✅ | B（4/6） | 带索引动作、stealth/private session、远程接管和 Skill Forge 的 agent 浏览器自动化层；确定性测试仍用 Playwright。 |
+| [caveman](caveman.zh.md) | ✅ | B（4/6） | 给现有 agent 加简短表达覆盖层；改变回复风格，不改变工程流程或上下文设计。 |
 
 
 ## 什么该放这里

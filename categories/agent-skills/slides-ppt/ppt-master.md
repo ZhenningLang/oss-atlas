@@ -5,7 +5,7 @@ repo: https://github.com/hugohe3/ppt-master
 category: slides-ppt
 tags: [agent-skill, slides-ppt, ppt-master, skill-pack]
 language: Python
-license: NOASSERTION
+license: MIT
 maturity: active, ~39,357 stars (as of 2026-07)
 last_verified: 2026-07-16
 type: skill-pack
@@ -16,10 +16,10 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-16T08:13:52Z
+  computed_at: 2026-07-16T10:03:51Z
   overall: B
-  overall_score: 2.75
-  scored_axes: 4
+  overall_score: 3.33
+  scored_axes: 3
   capped: false
   cap_reason: null
   needs_human_review: false
@@ -44,13 +44,8 @@ health:
         last_commit_age_days: 0
         cohort: skill-pack
     governance:
-      grade: D
-      raw:
-        active_maintainers_12mo: 16
-        top1_share: 0.966
-        top3_share: 0.984
-        window_source: stats_contributors
-        carve_out: null
+      grade: "?"
+      raw: {}
     risk_license:
       grade: A
       raw:
@@ -61,6 +56,7 @@ health:
   unknowns:
     responsiveness: { reason: type_na }
     adoption: { reason: no_package_structural }
+    governance: { reason: empty_or_gated }
 ---
 # ppt-master
 
@@ -70,36 +66,38 @@ AI generates a real, editable PowerPoint from any document — native shapes & a
 
 ## When to use
 
-You're evaluating a task in the `slides-ppt` area and want a real repository in the oss-atlas shortlist rather than an untracked name from a backlog. Reach for ppt-master when the upstream description matches the job, when its license and maintenance profile are acceptable after verification, and when adopting a public project is preferable to writing a local one-off.
+You need an agent workflow that turns documents, notes, web pages, references, or an existing `.pptx` into a **real editable PowerPoint file**, not a web deck or one-image-per-slide export. Choose ppt-master when the output must open in PowerPoint with editable text boxes, shapes, charts/tables, transitions, optional animations, speaker notes, and optional audio narration.
 
-This is a first-pass intake page for a user-requested backlog item. Use it to route selection and compare nearby options, then reread the upstream README, license, examples, and release history before relying on it for high-stakes work.
+It fits AI IDE workflows where an agent can read/write files and run commands locally: Claude Code, Cursor, VS Code + Copilot, Codex-style CLIs, and similar agents. The upstream README is explicit that PPT Master owns the workflow, not the model quality ceiling; good results depend on a capable model, local Python setup, source materials, and human polish after export.
 
 ## When NOT to use
 
-- **You need a deeply reviewed atlas page today.** Prefer an older in-index page from the comparison table until this entry has had a full semantic review.
-- **License is a hard constraint.** GitHub reported `NOASSERTION`; inspect the repository license files before commercial use, redistribution, or vendoring.
-- **Maintenance risk is unacceptable.** If the project is young, single-maintainer, low-star, unversioned, or quiet, choose a more established substitute in the same category.
-- **Your task needs a narrower substitute.** If another page's `When NOT to use` section names your exact constraint, prefer that page over this first-pass entry.
-- **You cannot verify the upstream workflow.** Do not install, run, or vendor this repo before checking its README, scripts, dependencies, and any external API requirements.
+- **You only need a web presentation.** Use [frontend-slides](frontend-slides.md), [html-ppt-skill](html-ppt-skill.md), or [Guizang PPT Skill](guizang-ppt.md); ppt-master's core promise is native editable PPTX.
+- **You expect a perfect deck without review.** Upstream warns it is a tool, not a wishing well; the deck is editable because polishing remains part of the workflow.
+- **Your environment cannot run Python or allow an agent to write files and execute scripts.** The documented setup requires Python 3.10+, `pip install -r requirements.txt`, source files, and local exports.
+- **You cannot send source content to an AI model.** Most processing is local, but the agent/model still sees the material needed to design the deck.
+- **You need a fixed developer deck framework.** Slidev/Marp-style frameworks are better when developers want versioned Markdown source and deterministic build output.
 
 ## Comparison
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| [Guizang PPT Skill](guizang-ppt.md) | ✅ | Choose Guizang PPT when a constrained single-file HTML deck with strong art direction is acceptable; choose this page when editable PowerPoint or a different deck workflow is the key constraint. | Guizang is opinionated and already reviewed; this entry expands the deck-skill surface but needs deeper review. |
-| [HTML Anything](../../ai-design-generation/html-anything.md) | ✅ | Choose HTML Anything for broad Markdown-to-HTML artifacts; choose a slide-specific skill when the whole job is a presentation deck. | Broader artifact coverage vs narrower deck-specific constraints. |
+| [frontend-slides](frontend-slides.md) | ✅ | Choose frontend-slides for single-file HTML decks and PPT-to-web conversion. | frontend-slides optimizes web presentations; ppt-master optimizes native editable `.pptx`. |
+| [html-ppt-skill](html-ppt-skill.md) | ✅ | Choose html-ppt-skill for static HTML/CSS/JS decks with many themes, layouts, animations, and presenter mode. | html-ppt-skill is a deck runtime/template studio; ppt-master is a document-to-editable-PowerPoint workflow. |
+| [Guizang PPT Skill](guizang-ppt.md) | ✅ | Choose Guizang PPT for an article-to-single-file HTML swipe deck with strong art direction. | Guizang is narrower and more editorial; ppt-master is heavier but creates editable PowerPoint. |
+| Slidev / Marp | 未收录 | Choose these when Markdown-as-source and deterministic developer builds matter most. | More mature deck frameworks, but less agent-native and not focused on editable PPTX output. |
 
 
 ## Health & viability
 
-- **Maintenance snapshot (2026-07-16):** GitHub reports `archived=false` and `pushed_at=2026-07-16T03:51:31Z`.
-- **Adoption snapshot:** ~39,357 GitHub stars as of 2026-07; this is a noisy signal and low-star projects are still included when the repository is real and relevant.
-- **License snapshot:** `NOASSERTION` from GitHub metadata; manual license-file review remains required when license matters.
-- **Lindy / governance:** not fully reviewed in this intake pass. Check age, owner type, contributor concentration, releases, and issue response before long-term adoption.
-- **Risk flags:** first-pass page generated from the 2026-07-16 backlog; semantic comparison and dependency review are intentionally conservative.
+- **Maintenance snapshot (2026-07-16):** GitHub reports `archived=false` and `pushed_at=2026-07-16T03:51:31Z`; health scores maintenance as A.
+- **Adoption snapshot:** ~39,357 GitHub stars as of 2026-07, but the project is young and attention is not the same as long-term deck quality.
+- **License snapshot:** MIT verified from upstream README and root `LICENSE` in the read-only upstream check.
+- **Lindy / governance:** health longevity is C; governance is unknown in the recomputed health block (`empty_or_gated`) despite visible sponsor/community interest.
+- **Risk flags:** quality depends heavily on model capability, local setup, source-material quality, and post-generation human editing.
 
 ## Caveats (unverified)
 
-- [未验证] This page is generated from public GitHub metadata plus the user-provided intake list; upstream README, docs, examples, releases, and dependency manifests still need deeper review.
-- [未验证] License, install commands, supported harnesses, and runtime requirements may differ from GitHub metadata; verify them in the repository before use.
-- [推断] The comparison table starts from nearby atlas categories rather than a complete substitute survey; refine it after reading the full upstream project and adjacent alternatives.
+- [未验证] Example decks and model recommendations were read from upstream docs but not reproduced locally.
+- [未验证] Native chart/table export behavior was not tested in PowerPoint in this pass.
+- [推断] It is the strongest fit in this leaf when `.pptx` editability is mandatory, but overkill for web-only slide decks.

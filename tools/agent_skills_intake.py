@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build an auditable intake report for the 2026-07-16 agent-skills backlog."""
+"""Build an auditable intake report for agent-skills backlog URLs."""
 from __future__ import annotations
 
 import argparse
@@ -15,7 +15,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 TODAY = dt.date.today().isoformat()
 
-URLS = [
+DEFAULT_URLS = [
     "https://github.com/slavingia/skills",
     "https://github.com/freestylefly/canghe-skills",
     "https://github.com/op7418/guizang-ppt-skill",
@@ -555,13 +555,41 @@ def update_readme(item: dict) -> None:
         path.write_text(s, encoding="utf-8")
 
 
-def load_payload() -> dict:
-    path = ROOT / "reports/agent-skills-intake-2026-07-16.json"
+def read_urls(path: str | None = None, use_stdin: bool = False) -> list[str]:
+    if path and use_stdin:
+        raise ValueError("choose either --input-file or --stdin, not both")
+    if use_stdin:
+        raw = sys.stdin.read()
+    elif path:
+        raw = Path(path).read_text(encoding="utf-8")
+    else:
+        return list(DEFAULT_URLS)
+    urls: list[str] = []
+    for line in raw.splitlines():
+        line = line.strip()
+        if not line or line.startswith("#"):
+            continue
+        m = re.search(r"https://github\.com/\S+", line)
+        if m:
+            urls.append(m.group(0).rstrip(").,;"))
+    if not urls:
+        raise ValueError("no GitHub URLs found in input")
+    return urls
+
+
+def report_paths(prefix: str) -> tuple[Path, Path]:
+    reports = ROOT / "reports"
+    reports.mkdir(exist_ok=True)
+    return reports / f"{prefix}.json", reports / f"{prefix}.md"
+
+
+def load_payload(payload_path: str | None = None, prefix: str = "agent-skills-intake-2026-07-16") -> dict:
+    path = Path(payload_path) if payload_path else report_paths(prefix)[0]
     return json.loads(path.read_text(encoding="utf-8"))
 
 
-def apply_pages(limit: int | None = None) -> int:
-    payload = load_payload()
+def apply_pages(limit: int | None = None, payload_path: str | None = None, prefix: str = "agent-skills-intake-2026-07-16") -> int:
+    payload = load_payload(payload_path, prefix)
     items = [i for i in payload["items"] if i.get("status") == "candidate"]
     normalize_candidates(items)
     if limit:
@@ -677,12 +705,12 @@ def normalize_candidates(rows: list[dict]) -> None:
         item["type"] = project_type(cat, item["repo"], item.get("github", {}).get("description", ""))
 
 
-def build_report() -> int:
+def build_report(urls: list[str], prefix: str) -> int:
     seen: set[str] = set()
     existing = existing_repo_map()
     rows = []
     duplicates = []
-    for raw_url in URLS:
+    for raw_url in urls:
         key, repo, subpath = repo_key(raw_url)
         if key in seen:
             duplicates.append(raw_url)
@@ -718,18 +746,15 @@ def build_report() -> int:
         })
         rows.append(item)
 
-    reports = ROOT / "reports"
-    reports.mkdir(exist_ok=True)
-    json_path = reports / "agent-skills-intake-2026-07-16.json"
-    md_path = reports / "agent-skills-intake-2026-07-16.md"
-    payload = {"generated_at": TODAY, "input_count": len(URLS), "duplicate_inputs": duplicates, "items": rows}
+    json_path, md_path = report_paths(prefix)
+    payload = {"generated_at": TODAY, "input_count": len(urls), "duplicate_inputs": duplicates, "items": rows}
     json_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
 
     lines = [
         "# Agent Skills Intake — 2026-07-16",
         "",
         f"Generated: {TODAY}",
-        f"Input URLs: {len(URLS)}",
+        f"Input URLs: {len(urls)}",
         f"Unique repos: {len(seen)}",
         f"Duplicate input URLs: {len(duplicates)}",
         "",
@@ -752,7 +777,7 @@ def build_report() -> int:
     md_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
     print(f"wrote {json_path}")
     print(f"wrote {md_path}")
-    print(f"summary input={len(URLS)} unique={len(seen)} duplicates={len(duplicates)} items={len(rows)}")
+    print(f"summary input={len(urls)} unique={len(seen)} duplicates={len(duplicates)} items={len(rows)}")
     return 0
 
 
@@ -760,10 +785,15 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--apply", action="store_true")
     parser.add_argument("--limit", type=int)
+    parser.add_argument("--input-file", help="file containing GitHub URLs, one per line or embedded in text")
+    parser.add_argument("--stdin", action="store_true", help="read GitHub URLs from stdin")
+    parser.add_argument("--report-prefix", default="agent-skills-intake-2026-07-16", help="output prefix under reports/ without extension")
+    parser.add_argument("--payload", help="JSON payload to use with --apply; defaults to reports/<report-prefix>.json")
     args = parser.parse_args()
     if args.apply:
-        return apply_pages(args.limit)
-    return build_report()
+        return apply_pages(args.limit, args.payload, args.report_prefix)
+    urls = read_urls(args.input_file, args.stdin)
+    return build_report(urls, args.report_prefix)
 
 
 if __name__ == "__main__":

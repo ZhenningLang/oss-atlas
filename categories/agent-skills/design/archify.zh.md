@@ -5,7 +5,7 @@ repo: https://github.com/tt-a1i/archify
 category: design
 tags: [agent-skill, design, archify, skill-pack]
 language: JavaScript
-license: NOASSERTION
+license: MIT
 maturity: active, ~5,339 stars (as of 2026-07)
 last_verified: 2026-07-16
 type: skill-pack
@@ -16,7 +16,7 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-16T08:11:46Z
+  computed_at: 2026-07-16T10:33:32Z
   overall: B
   overall_score: 2.75
   scored_axes: 4
@@ -70,36 +70,39 @@ Any agent Skill: generate beautiful architecture diagrams with dark/light theme 
 
 ## 何时使用
 
-你正在评估 `design` 方向的任务，需要把一个真实仓库纳入 oss-atlas 候选，而不是只在 backlog 里看到一个名字。当上游描述贴合任务、许可证和维护画像经核验后可接受，并且采用公共项目比自写一次性方案更合适时，可以把 archify 纳入候选。
+你需要让 agent 把一段自然语言系统、工作流、时序、数据流或生命周期描述，转成漂亮的技术图表 artifact。交付物需要是自包含 HTML 图表，并带暗 / 亮主题切换、PNG / JPEG / WebP / SVG 导出、PNG 复制到剪贴板、typed JSON IR 和 renderer-backed validation 时，选 archify。
 
-这是用户指定 backlog 的首版 intake 页面。用它来完成路由和邻近方案对比；在高风险场景依赖它之前，请重新阅读上游 README、许可证、示例和 release 历史。
+它最适合架构概览、CI/CD 工作流、请求时序、PII / 数据血缘图、runbook、生命周期 / 状态机视图，以及可放进 README 或 slides 的技术沟通材料。可通过 `npx skills add tt-a1i/archify -g` 安装，也支持 Claude Code、Codex CLI、opencode 等 skill-capable harness 的技能目录。
 
 ## 何时不用
 
-- **你今天就需要深度审过的 atlas 页面。** 在本页完成完整语义复核前，优先选横向对比表里更早收录、约束更清楚的页面。
-- **许可证是硬约束。** GitHub 返回 `NOASSERTION`；商用、再分发或 vendoring 前必须检查仓库内许可证文件。
-- **维护风险不可接受。** 如果项目很年轻、单人维护、star 少、没有版本线或长期安静，请选同分类里更成熟的替代品。
-- **你的任务需要更窄的替代品。** 如果另一个页面的“何时不用”已经点名你的约束，优先用那个页面，而不是这个首版入口。
-- **你无法核验上游工作流。** 在检查 README、脚本、依赖和外部 API 要求前，不要安装、运行或 vendor 这个仓库。
+- **你需要通用图表编辑器。** 人类需要 WYSIWYG 编辑时，用 Excalidraw、diagrams.net 或 Figma，而不是 agent 生成 HTML artifact。
+- **你需要 Mermaid 作为交换格式。** Archify 明确不是 Mermaid theme / parser；文本图表可移植性比精致导出更重要时，用 Mermaid 或 PlantUML。
+- **你需要确定性的架构发现。** Agent 仍然要先读懂仓库或系统；信任图表前应配合代码阅读、日志或文档。
+- **你需要严格品牌视觉系统。** Archify 使用自己的 renderer 和 themes；公司视觉规范很严时，可能需要自定义 renderer 或人工设计复核。
+- **你的环境不能运行本地 Node / 浏览器检查。** 完整流程用 bundled validators、renderers 和 artifact checks；纯 Project Knowledge 上传会退化成 prompt-driven guidance。
 
 ## 横向对比
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| 本叶子已收录技能 | ✅ | 如果已有更深审过的页面已经点名你的任务和约束，优先选它。 | 本页是首版 intake；已有页面的“何时不用”可能更锋利。 |
-| 自写 SKILL.md | 未收录 | 当任务很窄、私有或强绑定某个仓库约定时，自写 skill。 | 自写更贴本地上下文，但失去上游维护和社区示例。 |
+| [huashu-design](huashu-design.zh.md) | ✅ | 需要更宽的 HTML-native 视觉 artifact、slides、motion 和信息图时选 huashu-design。 | huashu-design 更宽；archify 专注 typed renderer 技术图表。 |
+| [Stitch Skills](stitch-skills.zh.md) | ✅ | 目标是通过 Stitch MCP 生成 UI screen 或 code/design handoff 时选 Stitch。 | Stitch 面向产品 UI；archify 面向架构和工作流沟通。 |
+| [Mermaid](../../diagramming/mermaid.zh.md) | ✅ | 图表必须保持纯文本、可 diff、Markdown 原生时选 Mermaid。 | Mermaid 更便携更紧凑；archify artifact 更精致，导出控制更强。 |
+| [Excalidraw](../../diagramming/excalidraw.zh.md) | ✅ | 人类需要手绘风协作白板时选 Excalidraw。 | Excalidraw 更适合手工草图；archify 更适合 agent 快速产出技术图。 |
+| draw.io / diagrams.net | 未收录 | 需要完整 WYSIWYG 图表画布时选 draw.io。 | 手工编辑器更适合细调；archify 保持 agent-generated 和 export-ready。 |
 
 
 ## 健康度与可持续性
 
-- **维护快照（2026-07-16）：** GitHub 返回 `archived=false`，`pushed_at=2026-07-15T16:29:36Z`。
-- **采用快照：** 2026-07 约 5,339 个 GitHub stars；这是有噪声的信号，低 star 项目只要是真实且相关，也会被纳入。
-- **许可证快照：** GitHub 元数据返回 `NOASSERTION`；许可证关键时仍需人工核验许可证文件。
-- **Lindy / 治理：** 本次 intake 未完整复核。长期采用前，请继续检查项目年龄、owner 类型、贡献者集中度、release 和 issue 响应。
-- **风险信号：** 本页来自 2026-07-16 backlog 的首版生成；语义对比和依赖复核刻意保守。
+- **维护快照（2026-07-16）：** GitHub 返回 `archived=false`，`pushed_at=2026-07-15T16:29:36Z`；health 将维护评为 A。
+- **采用快照：** 2026-07 约 5,339 个 GitHub stars；这是有用关注信号，但项目仍很年轻。
+- **许可证快照：** 只读上游核验确认 README 和根目录 `LICENSE` 均为 MIT。
+- **Lindy / 治理：** health 中 longevity 为 C；项目年轻且贡献集中，governance 为 D。
+- **风险信号：** 输出准确性依赖 agent 对系统的理解和本地验证 loop，不只依赖 renderer。
 
 ## 存疑（未验证）
 
-- [未验证] 本页依据公开 GitHub 元数据和用户提供的 intake 清单生成；上游 README、文档、示例、release 和依赖清单仍需深度复核。
-- [未验证] 许可证、安装命令、支持的 harness 和运行时要求可能与 GitHub 元数据不同；使用前请在仓库中核验。
-- [推断] 横向对比表先从邻近 atlas 分类出发，并不是完整替代品综述；读完上游项目和相邻方案后应继续细化。
+- [未验证] 图表质量读自 README / examples，本次没有本地复现。
+- [未验证] 不同 harness 的行为会受 sandbox、Node 和浏览器可用性影响。
+- [推断] 最适合技术沟通 artifact，不是通用 UI 设计或手工图表编辑。

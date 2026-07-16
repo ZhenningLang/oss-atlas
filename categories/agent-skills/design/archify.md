@@ -5,7 +5,7 @@ repo: https://github.com/tt-a1i/archify
 category: design
 tags: [agent-skill, design, archify, skill-pack]
 language: JavaScript
-license: NOASSERTION
+license: MIT
 maturity: active, ~5,339 stars (as of 2026-07)
 last_verified: 2026-07-16
 type: skill-pack
@@ -16,7 +16,7 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-16T08:11:46Z
+  computed_at: 2026-07-16T10:33:32Z
   overall: B
   overall_score: 2.75
   scored_axes: 4
@@ -70,36 +70,39 @@ Any agent Skill: generate beautiful architecture diagrams with dark/light theme 
 
 ## When to use
 
-You're evaluating a task in the `design` area and want a real repository in the oss-atlas shortlist rather than an untracked name from a backlog. Reach for archify when the upstream description matches the job, when its license and maintenance profile are acceptable after verification, and when adopting a public project is preferable to writing a local one-off.
+You need an agent to turn a plain-English system, workflow, sequence, data-flow, or lifecycle description into a polished technical diagram artifact. Choose archify when the deliverable is a self-contained HTML diagram with dark/light theme toggle, PNG/JPEG/WebP/SVG export, clipboard PNG copy, typed JSON IR, and renderer-backed validation.
 
-This is a first-pass intake page for a user-requested backlog item. Use it to route selection and compare nearby options, then reread the upstream README, license, examples, and release history before relying on it for high-stakes work.
+It is strongest for architecture overviews, CI/CD workflows, request sequences, PII/data-lineage diagrams, runbooks, lifecycle/state-machine views, and README/slides-ready technical communication. It can be installed through `npx skills add tt-a1i/archify -g` or used through supported agent skill directories for Claude Code, Codex CLI, opencode, and related skill-capable harnesses.
 
 ## When NOT to use
 
-- **You need a deeply reviewed atlas page today.** Prefer an older in-index page from the comparison table until this entry has had a full semantic review.
-- **License is a hard constraint.** GitHub reported `NOASSERTION`; inspect the repository license files before commercial use, redistribution, or vendoring.
-- **Maintenance risk is unacceptable.** If the project is young, single-maintainer, low-star, unversioned, or quiet, choose a more established substitute in the same category.
-- **Your task needs a narrower substitute.** If another page's `When NOT to use` section names your exact constraint, prefer that page over this first-pass entry.
-- **You cannot verify the upstream workflow.** Do not install, run, or vendor this repo before checking its README, scripts, dependencies, and any external API requirements.
+- **You need a general-purpose diagram editor.** Use Excalidraw, diagrams.net, or Figma when humans need WYSIWYG editing rather than agent-generated HTML artifacts.
+- **You need Mermaid as the interchange format.** Archify explicitly is not a Mermaid theme/parser; use Mermaid or PlantUML when text diagram portability matters more than polished export.
+- **You need deterministic architecture discovery.** The agent still has to understand the repository or system; pair it with code reading, logs, or docs before trusting the diagram.
+- **You need brand-governed visual design.** Archify ships its own renderer and themes; strict corporate visual systems may need a custom renderer or manual design pass.
+- **Your environment cannot run local Node/browser checks.** The full workflow uses bundled validators, renderers, and artifact checks; a pure project-knowledge upload is reduced to prompt-driven guidance.
 
 ## Comparison
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| Existing skills in this leaf | ✅ | Prefer a more deeply reviewed in-index page when it already names your exact task and constraints. | This page is first-pass intake; existing pages may have sharper when-not guidance. |
-| Custom SKILL.md | 未收录 | Write a custom skill when the task is narrow, private, or tightly bound to one repository's conventions. | Custom skills fit local context better but lose upstream maintenance and community examples. |
+| [huashu-design](huashu-design.md) | ✅ | Choose huashu-design for broad HTML-native visual artifacts, slides, motion, and infographics. | huashu-design is wider; archify is specialized for technical diagrams with typed renderers. |
+| [Stitch Skills](stitch-skills.md) | ✅ | Choose Stitch when the target is UI screen generation or code/design handoff through Google's Stitch MCP. | Stitch targets product UI; archify targets architecture and workflow communication. |
+| [Mermaid](../../diagramming/mermaid.md) | ✅ | Choose Mermaid when diagrams must remain plain-text, diffable, and Markdown-native. | Mermaid is portable and compact; archify gives richer artifacts and export controls. |
+| [Excalidraw](../../diagramming/excalidraw.md) | ✅ | Choose Excalidraw when humans need hand-drawn collaborative whiteboarding. | Excalidraw is better for manual sketching; archify is faster for agent-produced technical diagrams. |
+| draw.io / diagrams.net | not indexed | Choose draw.io when a full WYSIWYG diagramming canvas is required. | Manual editors have better hand-tuning; archify keeps diagrams agent-generated and export-ready. |
 
 
 ## Health & viability
 
-- **Maintenance snapshot (2026-07-16):** GitHub reports `archived=false` and `pushed_at=2026-07-15T16:29:36Z`.
-- **Adoption snapshot:** ~5,339 GitHub stars as of 2026-07; this is a noisy signal and low-star projects are still included when the repository is real and relevant.
-- **License snapshot:** `NOASSERTION` from GitHub metadata; manual license-file review remains required when license matters.
-- **Lindy / governance:** not fully reviewed in this intake pass. Check age, owner type, contributor concentration, releases, and issue response before long-term adoption.
-- **Risk flags:** first-pass page generated from the 2026-07-16 backlog; semantic comparison and dependency review are intentionally conservative.
+- **Maintenance snapshot (2026-07-16):** GitHub reports `archived=false` and `pushed_at=2026-07-15T16:29:36Z`; health scores maintenance as A.
+- **Adoption snapshot:** ~5,339 GitHub stars as of 2026-07; useful attention signal, but the project is still young.
+- **License snapshot:** MIT verified from upstream README and root `LICENSE` in the read-only upstream check.
+- **Lindy / governance:** health longevity is C and governance is D because the repo is young and contribution is concentrated.
+- **Risk flags:** output accuracy depends on the agent's system understanding and local validation loop, not only on the renderer.
 
 ## Caveats (unverified)
 
-- [未验证] This page is generated from public GitHub metadata plus the user-provided intake list; upstream README, docs, examples, releases, and dependency manifests still need deeper review.
-- [未验证] License, install commands, supported harnesses, and runtime requirements may differ from GitHub metadata; verify them in the repository before use.
-- [推断] The comparison table starts from nearby atlas categories rather than a complete substitute survey; refine it after reading the full upstream project and adjacent alternatives.
+- [未验证] Diagram quality was read from README/examples and not reproduced locally in this pass.
+- [未验证] Supported-agent behavior can differ by harness, sandbox, and Node/browser availability.
+- [推断] Best fit is technical communication artifacts, not generic UI design or hand-authored diagramming.

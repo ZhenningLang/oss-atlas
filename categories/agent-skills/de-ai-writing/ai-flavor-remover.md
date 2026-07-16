@@ -3,12 +3,12 @@ name: ai-flavor-remover
 slug: ai-flavor-remover
 repo: https://github.com/hylarucoder/ai-flavor-remover
 category: de-ai-writing
-tags: [agent-skill, de-ai-writing, ai-flavor-remover, skill-pack]
+tags: [de-ai-writing, prompt, ai-flavor-remover, gemini]
 language: Unknown
 license: NOASSERTION
 maturity: active, ~1,093 stars (as of 2026-07)
 last_verified: 2026-07-16
-type: skill-pack
+type: tool
 upstream:
   pushed_at: 2025-04-02T14:35:03Z
   default_branch: main
@@ -16,12 +16,12 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-16T08:08:18Z
+  computed_at: 2026-07-16T09:37:08Z
   overall: D
-  overall_score: 0.67
-  scored_axes: 3
-  capped: false
-  cap_reason: null
+  overall_score: 0.5
+  scored_axes: 4
+  capped: true
+  cap_reason: "source-available/no-license: NONE"
   needs_human_review: false
   axes:
     maintenance:
@@ -35,14 +35,22 @@ health:
       grade: "?"
       raw: {}
     adoption:
-      grade: "?"
-      raw: {}
+      grade: E
+      raw:
+        registry: null
+        canonical_package: null
+        dependent_repos_count: 0
+        downloads_last_month: null
+        graph_tier: E
+        volume_tier: null
+        cross_check_divergence: null
+        archived: false
     longevity:
       grade: D
       raw:
         repo_age_days: 470
         last_commit_age_days: 470
-        cohort: skill-pack
+        cohort: tool
     governance:
       grade: "?"
       raw: {}
@@ -54,48 +62,64 @@ health:
         relicense_36mo: false
         content_license: null
   unknowns:
-    responsiveness: { reason: type_na }
-    adoption: { reason: no_package_structural }
+    responsiveness: { reason: no_traffic }
     governance: { reason: unattributable }
 ---
 # ai-flavor-remover
 
-AI 味去除 - 仅在 Gemini 2.5 Pro 上测试通过
+Single-file Chinese prompt snippet for removing “AI flavor”, with the upstream README saying it was only tested on Gemini 2.5 Pro.
 
 ![ai-flavor-remover — health radar](../../../assets/health/ai-flavor-remover.svg)
 
 ## When to use
 
-You're evaluating a task in the `de-ai-writing` area and want a real repository in the oss-atlas shortlist rather than an untracked name from a backlog. Reach for ai-flavor-remover when the upstream description matches the job, when its license and maintenance profile are acceptable after verification, and when adopting a public project is preferable to writing a local one-off.
+You want the lightest possible Chinese de-AI prompt to paste into a reasoning model, and you explicitly accept the upstream constraint that it was only tested on Gemini 2.5 Pro. Use ai-flavor-remover as a prompt specimen or quick experiment, not as an installable Claude/Codex skill.
 
-This is a first-pass intake page for a user-requested backlog item. Use it to route selection and compare nearby options, then reread the upstream README, license, examples, and release history before relying on it for high-stakes work.
+It belongs here only as a real repository relevant to de-AI writing; the upstream tree contains only `README.md` in the read-only check, with no `SKILL.md`, no references directory, and no install metadata.
 
 ## When NOT to use
 
-- **You need a deeply reviewed atlas page today.** Prefer an older in-index page from the comparison table until this entry has had a full semantic review.
-- **License is a hard constraint.** GitHub reported `NOASSERTION`; inspect the repository license files before commercial use, redistribution, or vendoring.
-- **Maintenance risk is unacceptable.** If the project is young, single-maintainer, low-star, unversioned, or quiet, choose a more established substitute in the same category.
-- **Your task needs a narrower substitute.** If another page's `When NOT to use` section names your exact constraint, prefer that page over this first-pass entry.
-- **You cannot verify the upstream workflow.** Do not install, run, or vendor this repo before checking its README, scripts, dependencies, and any external API requirements.
+- **You need a real SKILL.md package.** Use [shuorenhua](shuorenhua.md), [Humanizer-zh](humanizer-zh.md), [humanizer](humanizer.md), or [stop-slop](stop-slop.md); this repo is a README prompt, not an installable skill pack.
+- **License clarity matters.** The read-only upstream check found no `LICENSE` file and GitHub metadata has no parsed license.
+- **You are not using Gemini 2.5 Pro or a comparable reasoning model.** The upstream README only claims Gemini 2.5 Pro testing.
+- **You need protected spans, examples, benchmark cases, or harness install docs.** This repo does not provide the structure that larger de-AI skills provide.
 
 ## Comparison
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| Existing skills in this leaf | ✅ | Prefer a more deeply reviewed in-index page when it already names your exact task and constraints. | This page is first-pass intake; existing pages may have sharper when-not guidance. |
-| Custom SKILL.md | 未收录 | Write a custom skill when the task is narrow, private, or tightly bound to one repository's conventions. | Custom skills fit local context better but lose upstream maintenance and community examples. |
+| [shuorenhua](shuorenhua.md) | ✅ | Choose shuorenhua for an installable Chinese de-AI skill with protected spans and multi-harness docs. | shuorenhua is a real skill pack; ai-flavor-remover is a minimal prompt snippet. |
+| [Humanizer-zh](humanizer-zh.md) | ✅ | Choose Humanizer-zh for a Claude Code Chinese humanizer skill. | Humanizer-zh has `SKILL.md` and MIT license; ai-flavor-remover has no license file and no SKILL.md. |
+| [humanizer](humanizer.md) | ✅ | Choose humanizer for the English upstream skill. | humanizer is installable and structured; ai-flavor-remover is a Gemini-tested prompt. |
+| Paste-your-own prompt | 未收录 | Use your own prompt when this prompt is too opinionated or license is unclear. | Same lightweight workflow without depending on an unlicensed repo. |
+
+## Tech stack
+
+- **README prompt** — the read-only upstream check found only `README.md`, not a package or multi-file skill.
+- **No detected language runtime** — GitHub reports no primary language.
+- **Model assumption** — upstream says it was tested only on Gemini 2.5 Pro.
+
+## Dependencies
+
+- **Reasoning-model chat session** — you paste the prompt into a model; there is no installer or runtime.
+- **No `SKILL.md` harness dependency** — this is not an Agent Skills package.
+- **License uncertainty** — no license file was found, so redistribution/vendoring needs caution.
+
+## Ops difficulty
+
+**Low to try, high to standardize.** Pasting the prompt is easy; making it reproducible across teams is harder because there is no package structure, versioned examples, or harness contract.
 
 
 ## Health & viability
 
-- **Maintenance snapshot (2026-07-16):** GitHub reports `archived=false` and `pushed_at=2025-04-02T14:35:03Z`.
-- **Adoption snapshot:** ~1,093 GitHub stars as of 2026-07; this is a noisy signal and low-star projects are still included when the repository is real and relevant.
-- **License snapshot:** `NOASSERTION` from GitHub metadata; manual license-file review remains required when license matters.
-- **Lindy / governance:** not fully reviewed in this intake pass. Check age, owner type, contributor concentration, releases, and issue response before long-term adoption.
-- **Risk flags:** first-pass page generated from the 2026-07-16 backlog; semantic comparison and dependency review are intentionally conservative.
+- **Maintenance snapshot (2026-07-16):** GitHub reports `archived=false` and `pushed_at=2025-04-02T14:35:03Z`; health scores maintenance as D.
+- **Adoption snapshot:** ~1,093 GitHub stars as of 2026-07, but the repository has no package structure and no installable skill artifacts.
+- **License snapshot:** `NOASSERTION`; the read-only upstream check found no license file.
+- **Lindy / governance:** single-file prompt repo with no recent activity; use as an example, not as infrastructure.
+- **Risk flags:** author-reported detector/improvement claims and Gemini-only testing were not independently reproduced.
 
 ## Caveats (unverified)
 
-- [未验证] This page is generated from public GitHub metadata plus the user-provided intake list; upstream README, docs, examples, releases, and dependency manifests still need deeper review.
-- [未验证] License, install commands, supported harnesses, and runtime requirements may differ from GitHub metadata; verify them in the repository before use.
-- [推断] The comparison table starts from nearby atlas categories rather than a complete substitute survey; refine it after reading the full upstream project and adjacent alternatives.
+- [未验证] Upstream effect claims, including any AI-detector score changes, were not reproduced.
+- [未验证] No license file was found during the read-only upstream check; legal reuse is unclear.
+- [推断] Because it is only a prompt snippet, it is better treated as inspiration for a private prompt than as an OSS dependency.

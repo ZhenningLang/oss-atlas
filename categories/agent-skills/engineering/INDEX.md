@@ -12,12 +12,9 @@
 | **Scientific Agent Skills** | A large skill pack (~147 skills) that turns a coding agent into a research assistant for biology, chemistry, medicine, and drug discovery — each skill wraps a scientific Python library or database with a documented SKILL.md loaded on demand. | B (4/6) | [→](scientific-agent-skills.md) |
 | **Vercel Agent Skills** | Vercel's official agent-skill pack — install-on-demand React/Next.js/Vercel deploy, web-design, and docs audit guides in the agentskills.io/skills.sh format. | B (4/6) | [→](vercel-agent-skills.md) |
 | **Waza** | A compact collection of eight "engineering habit" skills (plan, design, review, debug, write, research, read, audit) a coding agent loads on demand across Claude Code, Codex, and Cursor. | B (4/6) | [→](waza.md) |
-| **skills** | Based on The Minimalist Entrepreneur by Sahil Lavingia | ? (0/6) | [→](slavingia-skills.md) |
-| **canghe-skills** | 苍何的技能skills仓库，搜集好用的 skills，辅助提效 | ? (0/6) | [→](canghe-skills.md) |
-| **cangjie-skill** | 把书、长视频、播客等高价值内容蒸馏成可执行的 Agent Skills | ? (0/6) | [→](cangjie-skill.md) |
-| **skills** | Skills for Real Engineers. Straight from my .claude directory. | ? (0/6) | [→](mattpocock-skills.md) |
-| **skills** | Browser automation CLI built for AI agents. Break through anti-bot walls, hand off to humans across platforms when stuck. Parallel multi-task execution, independent multi-session operation, isolated multi-account browsing. | ? (0/6) | [→](browser-act-skills.md) |
-| **caveman** | 🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman | ? (0/6) | [→](caveman.md) |
+| **mattpocock/skills** | Matt Pocock's engineering skill pack for Claude Code and skills.sh: grilling, domain docs, TDD, bug diagnosis, architecture, review, tickets, and implementation flow. | B (4/6) | [→](mattpocock-skills.md) |
+| **BrowserAct Skills** | Agent-facing browser automation skill pack for BrowserAct: indexed browser control, stealth/private sessions, remote human handoff, and Skill Forge scraping workflows. | B (4/6) | [→](browser-act-skills.md) |
+| **caveman** | Prompt and installer pack that makes many coding agents answer in deliberately terse "caveman" style while preserving code, commands, and errors. | B (4/6) | [→](caveman.md) |
 
 
 ## Comparison matrix
@@ -29,12 +26,9 @@
 | [Scientific Agent Skills](scientific-agent-skills.md) | ✅ | B (4/6) | A large skill pack (~147 skills) that turns a coding agent into a research assistant for biology, chemistry, medicine, and drug discovery — each skill wraps a scientific Python library or database with a documented SKILL.md loaded on demand. |
 | [Vercel Agent Skills](vercel-agent-skills.md) | ✅ | B (4/6) | Vercel's official agent-skill pack — install-on-demand React/Next.js/Vercel deploy, web-design, and docs audit guides in the agentskills.io/skills.sh format. |
 | [Waza](waza.md) | ✅ | B (4/6) | A compact collection of eight "engineering habit" skills (plan, design, review, debug, write, research, read, audit) a coding agent loads on demand across Claude Code, Codex, and Cursor. |
-| [skills](slavingia-skills.md) | ✅ | ? (0/6) | Based on The Minimalist Entrepreneur by Sahil Lavingia |
-| [canghe-skills](canghe-skills.md) | ✅ | ? (0/6) | 苍何的技能skills仓库，搜集好用的 skills，辅助提效 |
-| [cangjie-skill](cangjie-skill.md) | ✅ | ? (0/6) | 把书、长视频、播客等高价值内容蒸馏成可执行的 Agent Skills |
-| [skills](mattpocock-skills.md) | ✅ | ? (0/6) | Skills for Real Engineers. Straight from my .claude directory. |
-| [skills](browser-act-skills.md) | ✅ | ? (0/6) | Browser automation CLI built for AI agents. Break through anti-bot walls, hand off to humans across platforms when stuck. Parallel multi-task execution, independent multi-session operation, isolated multi-account browsing. |
-| [caveman](caveman.md) | ✅ | ? (0/6) | 🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman |
+| [mattpocock/skills](mattpocock-skills.md) | ✅ | B (4/6) | Engineering process pack for requirements grilling, domain docs, TDD, bug diagnosis, architecture, review, tickets, and implementation flow. |
+| [BrowserAct Skills](browser-act-skills.md) | ✅ | B (4/6) | Agent browser automation layer with indexed actions, stealth/private sessions, remote handoff, and Skill Forge; use Playwright for deterministic tests. |
+| [caveman](caveman.md) | ✅ | B (4/6) | Brevity overlay for existing agents; changes response style, not engineering process or context design. |
 
 
 ## What belongs here

@@ -1,12 +1,12 @@
 ---
-name: skills
+name: BrowserAct Skills
 slug: browser-act-skills
 repo: https://github.com/browser-act/skills
 category: engineering
-tags: [agent-skill, engineering, browser-act-skills, skill-pack]
+tags: [agent-skill, browser-automation, scraping, remote-assist, skill-pack]
 language: Python
-license: NOASSERTION
-maturity: active, ~4,440 stars (as of 2026-07)
+license: MIT
+maturity: active, ~4,449 stars (as of 2026-07)
 last_verified: 2026-07-16
 type: skill-pack
 upstream:
@@ -16,10 +16,10 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-16T08:12:16Z
+  computed_at: 2026-07-16T11:03:51Z
   overall: B
-  overall_score: 3.33
-  scored_axes: 3
+  overall_score: 2.75
+  scored_axes: 4
   capped: false
   cap_reason: null
   needs_human_review: false
@@ -44,8 +44,13 @@ health:
         last_commit_age_days: 2
         cohort: skill-pack
     governance:
-      grade: "?"
-      raw: {}
+      grade: D
+      raw:
+        active_maintainers_12mo: 5
+        top1_share: 0.889
+        top3_share: 0.971
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
       grade: A
       raw:
@@ -56,46 +61,47 @@ health:
   unknowns:
     responsiveness: { reason: type_na }
     adoption: { reason: no_package_structural }
-    governance: { reason: empty_or_gated }
 ---
-# skills
+# BrowserAct Skills
 
-Browser automation CLI built for AI agents. Break through anti-bot walls, hand off to humans across platforms when stuck. Parallel multi-task execution, independent multi-session operation, isolated multi-account browsing.
+Agent-facing browser automation skill pack for BrowserAct: indexed browser control, stealth/private sessions, remote human handoff, and Skill Forge scraping workflows.
 
 ![browser-act-skills — health radar](../../../assets/health/browser-act-skills.svg)
 
 ## When to use
 
-You're evaluating a task in the `engineering` area and want a real repository in the oss-atlas shortlist rather than an untracked name from a backlog. Reach for skills when the upstream description matches the job, when its license and maintenance profile are acceptable after verification, and when adopting a public project is preferable to writing a local one-off.
+You're building or operating an agent that must use a real browser rather than a DOM-only library: logged-in pages, anti-bot friction, multi-session browsing, remote human takeover, or repeatable extraction workflows. Pick BrowserAct Skills when you want an LLM-oriented CLI and skill instructions: `state` returns indexed elements, actions target those indexes, and the skill exposes browser modes, remote assist, stealth extraction, and Skill Forge.
 
-This is a first-pass intake page for a user-requested backlog item. Use it to route selection and compare nearby options, then reread the upstream README, license, examples, and release history before relying on it for high-stakes work.
+The deciding tradeoff versus plain Playwright is that BrowserAct optimizes for agent operation and handoff, not for a stable developer-authored test suite. Use it when the browser is part of an agent workflow; use Playwright when you are writing deterministic tests or automation code.
 
 ## When NOT to use
 
-- **You need a deeply reviewed atlas page today.** Prefer an older in-index page from the comparison table until this entry has had a full semantic review.
-- **License is a hard constraint.** GitHub reported `NOASSERTION`; inspect the repository license files before commercial use, redistribution, or vendoring.
-- **Maintenance risk is unacceptable.** If the project is young, single-maintainer, low-star, unversioned, or quiet, choose a more established substitute in the same category.
-- **Your task needs a narrower substitute.** If another page's `When NOT to use` section names your exact constraint, prefer that page over this first-pass entry.
-- **You cannot verify the upstream workflow.** Do not install, run, or vendor this repo before checking its README, scripts, dependencies, and any external API requirements.
+- **You need deterministic browser tests.** Use [Playwright](../../web-automation/playwright.md) for CI tests, trace viewer, fixtures, and code-first browser automation; BrowserAct is shaped for agent-driven sessions.
+- **You cannot accept managed-service or paid-feature coupling.** The README says core automation is free, but stealth browsers beyond the first five and managed proxies are paid; choose Playwright or a self-hosted browser stack if that boundary is unacceptable.
+- **Your target site forbids scraping or automation.** Use the site's official API or seek explicit permission instead of BrowserAct; anti-blocking features do not remove legal, contractual, or ethical constraints.
+- **You do not want user browser state touched.** Use privacy-mode Playwright profiles or a disposable browser environment; BrowserAct supports Chrome login reuse and profile import, which must be governed carefully.
+- **You only need static page-to-Markdown fetching.** Use a narrower URL-to-Markdown skill or document parser; BrowserAct's stealth/session stack is overkill for public static pages.
 
 ## Comparison
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| Existing skills in this leaf | ✅ | Prefer a more deeply reviewed in-index page when it already names your exact task and constraints. | This page is first-pass intake; existing pages may have sharper when-not guidance. |
-| Custom SKILL.md | 未收录 | Write a custom skill when the task is narrow, private, or tightly bound to one repository's conventions. | Custom skills fit local context better but lose upstream maintenance and community examples. |
+| [Playwright](../../web-automation/playwright.md) | ✅ | For test suites and developer-authored automation, pick Playwright; for agent sessions that need indexed actions, handoff, and stealth modes, pick BrowserAct Skills. | BrowserAct adds agent UX and service features; Playwright is more standard and easier to reason about in CI. |
+| [Puppeteer](../../web-automation/puppeteer.md) | ✅ | For simple Node.js browser scripts, Puppeteer may be enough; pick BrowserAct when agent-readable state, session naming, or human handoff matter. | Puppeteer is lighter and familiar; BrowserAct has more workflow surface and external feature boundaries. |
+| Browserbase / hosted browser services | 未收录 | For hosted browser infrastructure, evaluate Browserbase-style services; pick BrowserAct when its skill/CLI workflow and free local modes fit better. | Hosted browsers reduce local setup but introduce stronger vendor dependency. |
+| Custom site scraper skill | 未收录 | For one stable target with known APIs, write a custom skill; pick BrowserAct Skill Forge when you want an agent to discover and package the scraping flow. | Custom scrapers are narrower and easier to audit; Skill Forge is faster for exploratory extraction. |
 
 
 ## Health & viability
 
-- **Maintenance snapshot (2026-07-16):** GitHub reports `archived=false` and `pushed_at=2026-07-14T09:53:38Z`.
-- **Adoption snapshot:** ~4,440 GitHub stars as of 2026-07; this is a noisy signal and low-star projects are still included when the repository is real and relevant.
-- **License snapshot:** `NOASSERTION` from GitHub metadata; manual license-file review remains required when license matters.
-- **Lindy / governance:** not fully reviewed in this intake pass. Check age, owner type, contributor concentration, releases, and issue response before long-term adoption.
-- **Risk flags:** first-pass page generated from the 2026-07-16 backlog; semantic comparison and dependency review are intentionally conservative.
+- **Maintenance snapshot (2026-07-16):** GitHub reports `archived=false` and `pushed_at=2026-07-14T09:53:38Z`; the health scorer grades maintenance `A`.
+- **Adoption snapshot:** GitHub API reports ~4,449 stars as of 2026-07, plus a public docs/community surface in the README; adoption axis remains `?` because this is not a package-download style project.
+- **License snapshot:** root `LICENSE` is MIT and GitHub metadata reports MIT.
+- **Lindy / governance:** the repo is young, so longevity is `C`; governance is `D` in the health block because the scorer sees concentrated contributions.
+- **Risk flags:** anti-blocking, remote assist, profile import, proxies, cookies, and third-party sites create operational and policy risk; require explicit authorization and secret handling in real use.
 
 ## Caveats (unverified)
 
-- [未验证] This page is generated from public GitHub metadata plus the user-provided intake list; upstream README, docs, examples, releases, and dependency manifests still need deeper review.
-- [未验证] License, install commands, supported harnesses, and runtime requirements may differ from GitHub metadata; verify them in the repository before use.
-- [推断] The comparison table starts from nearby atlas categories rather than a complete substitute survey; refine it after reading the full upstream project and adjacent alternatives.
+- [未验证] The stealth and anti-bot claims were read from the README but not independently tested against target websites.
+- [未验证] Pricing and free-tier boundaries may change; verify BrowserAct's current service terms before relying on managed proxies or stealth-browser quotas.
+- [推断] BrowserAct is best treated as an agent browser workflow layer rather than a replacement for deterministic browser test frameworks.

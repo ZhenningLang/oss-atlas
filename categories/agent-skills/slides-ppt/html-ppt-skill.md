@@ -5,7 +5,7 @@ repo: https://github.com/lewislulu/html-ppt-skill
 category: slides-ppt
 tags: [agent-skill, slides-ppt, html-ppt-skill, skill-pack]
 language: HTML
-license: NOASSERTION
+license: MIT
 maturity: active, ~7,185 stars (as of 2026-07)
 last_verified: 2026-07-16
 type: skill-pack
@@ -16,7 +16,7 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-16T08:14:34Z
+  computed_at: 2026-07-16T10:03:51Z
   overall: B
   overall_score: 2.75
   scored_axes: 4
@@ -64,42 +64,44 @@ health:
 ---
 # html-ppt-skill
 
-HTML PPT Studio — AgentSkill with 24 themes, 31 layouts, 20+ animations for building professional HTML presentations
+HTML PPT Studio — AgentSkill with 36 themes, 15 full-deck templates, 31 layouts, 47 animations, and presenter mode for building professional static HTML presentations.
 
 ![html-ppt-skill — health radar](../../../assets/health/html-ppt-skill.svg)
 
 ## When to use
 
-You're evaluating a task in the `slides-ppt` area and want a real repository in the oss-atlas shortlist rather than an untracked name from a backlog. Reach for html-ppt-skill when the upstream description matches the job, when its license and maintenance profile are acceptable after verification, and when adopting a public project is preferable to writing a local one-off.
+You want an agent skill that gives a coding agent a ready-made HTML presentation studio: themes, layouts, animations, full-deck templates, presenter mode, and static HTML/CSS/JS runtime. Choose html-ppt-skill when the output can be an HTML deck and the main need is rich slide-building primitives rather than native `.pptx` editability.
 
-This is a first-pass intake page for a user-requested backlog item. Use it to route selection and compare nearby options, then reread the upstream README, license, examples, and release history before relying on it for high-stakes work.
+It is strong for presentation authors who want a large palette: 36 CSS-token themes, 15 full-deck templates, 31 single-page layouts, 27 CSS animations, 20 canvas FX modules, and presenter mode with current/next-slide previews, speaker script, and timer.
 
 ## When NOT to use
 
-- **You need a deeply reviewed atlas page today.** Prefer an older in-index page from the comparison table until this entry has had a full semantic review.
-- **License is a hard constraint.** GitHub reported `NOASSERTION`; inspect the repository license files before commercial use, redistribution, or vendoring.
-- **Maintenance risk is unacceptable.** If the project is young, single-maintainer, low-star, unversioned, or quiet, choose a more established substitute in the same category.
-- **Your task needs a narrower substitute.** If another page's `When NOT to use` section names your exact constraint, prefer that page over this first-pass entry.
-- **You cannot verify the upstream workflow.** Do not install, run, or vendor this repo before checking its README, scripts, dependencies, and any external API requirements.
+- **You need editable PowerPoint output.** Use [ppt-master](ppt-master.md); html-ppt-skill is a static HTML deck system.
+- **You want a minimal one-off web deck.** [frontend-slides](frontend-slides.md) may be lighter if you do not need a large built-in template/runtime catalog.
+- **You need a locked article-to-swipe-deck editorial workflow.** [Guizang PPT Skill](guizang-ppt.md) is more constrained and opinionated.
+- **You cannot accept CDN/webfont/JavaScript presentation behavior.** The project is static HTML/CSS/JS and may use optional webfonts/highlight.js/chart.js style dependencies.
+- **Your team standardizes on Markdown deck frameworks.** Slidev/Marp may be easier to version and review in developer workflows.
 
 ## Comparison
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| [Guizang PPT Skill](guizang-ppt.md) | ✅ | Choose Guizang PPT when a constrained single-file HTML deck with strong art direction is acceptable; choose this page when editable PowerPoint or a different deck workflow is the key constraint. | Guizang is opinionated and already reviewed; this entry expands the deck-skill surface but needs deeper review. |
-| [HTML Anything](../../ai-design-generation/html-anything.md) | ✅ | Choose HTML Anything for broad Markdown-to-HTML artifacts; choose a slide-specific skill when the whole job is a presentation deck. | Broader artifact coverage vs narrower deck-specific constraints. |
+| [frontend-slides](frontend-slides.md) | ✅ | Choose frontend-slides for visual-preview-driven web deck generation and PPT-to-web conversion. | frontend-slides is lighter and more guided; html-ppt-skill has the larger built-in deck runtime/catalog. |
+| [ppt-master](ppt-master.md) | ✅ | Choose ppt-master when the deliverable must be a native editable `.pptx`. | ppt-master is PowerPoint-native; html-ppt-skill is HTML-native. |
+| [Guizang PPT Skill](guizang-ppt.md) | ✅ | Choose Guizang PPT for tightly constrained article-to-HTML swipe decks. | Guizang has a stronger editorial funnel; html-ppt-skill is a broader template studio. |
+| Slidev / Marp | 未收录 | Choose these when Markdown source and mature developer tooling matter most. | They are mature frameworks, but not packaged as an AgentSkill with this many built-in visual primitives. |
 
 
 ## Health & viability
 
-- **Maintenance snapshot (2026-07-16):** GitHub reports `archived=false` and `pushed_at=2026-04-26T07:13:39Z`.
-- **Adoption snapshot:** ~7,185 GitHub stars as of 2026-07; this is a noisy signal and low-star projects are still included when the repository is real and relevant.
-- **License snapshot:** `NOASSERTION` from GitHub metadata; manual license-file review remains required when license matters.
-- **Lindy / governance:** not fully reviewed in this intake pass. Check age, owner type, contributor concentration, releases, and issue response before long-term adoption.
-- **Risk flags:** first-pass page generated from the 2026-07-16 backlog; semantic comparison and dependency review are intentionally conservative.
+- **Maintenance snapshot (2026-07-16):** GitHub reports `archived=false` and `pushed_at=2026-04-26T07:13:39Z`; health scores maintenance as B.
+- **Adoption snapshot:** ~7,185 GitHub stars as of 2026-07; relevant, but still a young skill with limited longevity evidence.
+- **License snapshot:** MIT verified from upstream README and root `LICENSE` in the read-only upstream check.
+- **Lindy / governance:** health longevity is C and governance is C; not abandoned, but not old enough to be a stable presentation standard.
+- **Risk flags:** the large catalog is an advantage, but also increases the chance of visual inconsistency unless the agent selects and applies templates carefully.
 
 ## Caveats (unverified)
 
-- [未验证] This page is generated from public GitHub metadata plus the user-provided intake list; upstream README, docs, examples, releases, and dependency manifests still need deeper review.
-- [未验证] License, install commands, supported harnesses, and runtime requirements may differ from GitHub metadata; verify them in the repository before use.
-- [推断] The comparison table starts from nearby atlas categories rather than a complete substitute survey; refine it after reading the full upstream project and adjacent alternatives.
+- [未验证] Presenter mode and animation behavior were read from docs but not executed in a browser in this pass.
+- [未验证] The exact theme/template counts come from upstream README and may drift as the repo evolves.
+- [推断] Best fit is HTML-native deck production when a rich built-in visual catalog matters more than PowerPoint editability.

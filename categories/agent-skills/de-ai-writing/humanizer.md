@@ -4,8 +4,8 @@ slug: humanizer
 repo: https://github.com/blader/humanizer
 category: de-ai-writing
 tags: [agent-skill, de-ai-writing, humanizer, skill-pack]
-language: Unknown
-license: NOASSERTION
+language: Markdown
+license: MIT
 maturity: active, ~29,415 stars (as of 2026-07)
 last_verified: 2026-07-16
 type: skill-pack
@@ -16,7 +16,7 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-16T08:08:44Z
+  computed_at: 2026-07-16T09:37:08Z
   overall: B
   overall_score: 3.0
   scored_axes: 4
@@ -28,7 +28,7 @@ health:
       grade: B
       raw:
         archived: false
-        last_commit_age_days: 16
+        last_commit_age_days: 17
         active_weeks_13: 5
         carve_out: null
     responsiveness:
@@ -41,7 +41,7 @@ health:
       grade: C
       raw:
         repo_age_days: 179
-        last_commit_age_days: 16
+        last_commit_age_days: 17
         cohort: skill-pack
     governance:
       grade: B
@@ -70,36 +70,37 @@ Claude Code skill that removes signs of AI-generated writing from text
 
 ## When to use
 
-You're evaluating a task in the `de-ai-writing` area and want a real repository in the oss-atlas shortlist rather than an untracked name from a backlog. Reach for humanizer when the upstream description matches the job, when its license and maintenance profile are acceptable after verification, and when adopting a public project is preferable to writing a local one-off.
+You are editing English prose that reads like generic AI output and want a portable, installable agent skill rather than another inline prompt. Choose humanizer when the target language is English, you want the upstream rubric behind the Chinese Humanizer-zh page, and your harness can load skill-style Markdown instructions or Claude Code plugins.
 
-This is a first-pass intake page for a user-requested backlog item. Use it to route selection and compare nearby options, then reread the upstream README, license, examples, and release history before relying on it for high-stakes work.
+It is useful when you want more than a short “remove AI tone” prompt: upstream includes `SKILL.md`, plugin metadata, install commands via `npx skills add blader/humanizer`, Claude Code plugin install docs, false-positive guidance, and a draft→audit→final rewrite loop.
 
 ## When NOT to use
 
-- **You need a deeply reviewed atlas page today.** Prefer an older in-index page from the comparison table until this entry has had a full semantic review.
-- **License is a hard constraint.** GitHub reported `NOASSERTION`; inspect the repository license files before commercial use, redistribution, or vendoring.
-- **Maintenance risk is unacceptable.** If the project is young, single-maintainer, low-star, unversioned, or quiet, choose a more established substitute in the same category.
-- **Your task needs a narrower substitute.** If another page's `When NOT to use` section names your exact constraint, prefer that page over this first-pass entry.
-- **You cannot verify the upstream workflow.** Do not install, run, or vendor this repo before checking its README, scripts, dependencies, and any external API requirements.
+- **Your target text is Chinese.** Use [Humanizer-zh](humanizer-zh.md) for the localized checklist or [shuorenhua](shuorenhua.md) for Chinese-first scene rules and protected spans.
+- **You want a very strict, minimal rubric.** [stop-slop](stop-slop.md) is shorter and more forceful; humanizer is broader and more cautious.
+- **You must preserve a formal, academic, legal, or technical register.** Humanizer includes false-positive guidance, but de-AI skills can still over-edit useful formal structure.
+- **You need brand voice cloning.** Use a private voice guide or an author-style workflow; humanizer is a general English AI-writing cleanup rubric.
 
 ## Comparison
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| Existing skills in this leaf | ✅ | Prefer a more deeply reviewed in-index page when it already names your exact task and constraints. | This page is first-pass intake; existing pages may have sharper when-not guidance. |
-| Custom SKILL.md | 未收录 | Write a custom skill when the task is narrow, private, or tightly bound to one repository's conventions. | Custom skills fit local context better but lose upstream maintenance and community examples. |
+| [Humanizer-zh](humanizer-zh.md) | ✅ | Choose Humanizer-zh for Simplified Chinese text and Claude Code usage. | Humanizer-zh localizes this upstream skill but may lag upstream pattern changes. |
+| [shuorenhua](shuorenhua.md) | ✅ | Choose shuorenhua for Chinese engineering/product prose with protected spans. | shuorenhua is Chinese-native and scenario-oriented; humanizer is the English upstream baseline. |
+| [stop-slop](stop-slop.md) | ✅ | Choose stop-slop for a compact, hard-edged prose de-slop rubric. | stop-slop is stricter and easier to paste; humanizer has more patterns, false-positive handling, and plugin install paths. |
+| Custom voice guide | 未收录 | Choose a custom guide when one author or brand voice matters more than generic AI-tone cleanup. | Custom guides fit one voice; humanizer is reusable and broadly applicable. |
 
 
 ## Health & viability
 
-- **Maintenance snapshot (2026-07-16):** GitHub reports `archived=false` and `pushed_at=2026-06-29T20:43:06Z`.
-- **Adoption snapshot:** ~29,415 GitHub stars as of 2026-07; this is a noisy signal and low-star projects are still included when the repository is real and relevant.
-- **License snapshot:** `NOASSERTION` from GitHub metadata; manual license-file review remains required when license matters.
-- **Lindy / governance:** not fully reviewed in this intake pass. Check age, owner type, contributor concentration, releases, and issue response before long-term adoption.
-- **Risk flags:** first-pass page generated from the 2026-07-16 backlog; semantic comparison and dependency review are intentionally conservative.
+- **Maintenance snapshot (2026-07-16):** GitHub reports `archived=false` and `pushed_at=2026-06-29T20:43:06Z`; health scores maintenance as B.
+- **Adoption snapshot:** ~29,415 GitHub stars as of 2026-07, but this is a social attention signal, not evidence that every rewrite is good.
+- **License snapshot:** MIT verified from GitHub metadata, root `LICENSE`, README, and `SKILL.md` metadata in the read-only upstream check.
+- **Lindy / governance:** young project with strong attention; health reports a broader contributor distribution than many single-skill repos, but it is still under one year old.
+- **Risk flags:** upstream patterns cite Wikipedia-style AI-writing signals; exact alignment with current writing norms should be rechecked over time.
 
 ## Caveats (unverified)
 
-- [未验证] This page is generated from public GitHub metadata plus the user-provided intake list; upstream README, docs, examples, releases, and dependency manifests still need deeper review.
-- [未验证] License, install commands, supported harnesses, and runtime requirements may differ from GitHub metadata; verify them in the repository before use.
-- [推断] The comparison table starts from nearby atlas categories rather than a complete substitute survey; refine it after reading the full upstream project and adjacent alternatives.
+- [未验证] The project cites Wikipedia-style “signs of AI writing”; this pass did not verify that every upstream pattern matches the current Wikipedia page.
+- [未验证] Install commands were read from upstream docs but not executed locally.
+- [推断] Because Humanizer-zh appears to lag upstream pattern counts, this upstream page is the safer baseline for English text and current upstream rules.

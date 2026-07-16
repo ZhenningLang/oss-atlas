@@ -16,7 +16,7 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-16T08:06:38Z
+  computed_at: 2026-07-16T10:20:43Z
   overall: D
   overall_score: 1.25
   scored_axes: 4
@@ -29,7 +29,7 @@ health:
       raw:
         archived: false
         last_commit_age_days: 86
-        active_weeks_13: 1
+        active_weeks_13: null
         carve_out: null
     responsiveness:
       grade: "?"
@@ -70,36 +70,38 @@ health:
 
 ## 何时使用
 
-你正在评估 `writing` 方向的任务，需要把一个真实仓库纳入 oss-atlas 候选，而不是只在 backlog 里看到一个名字。当上游描述贴合任务、许可证和维护画像经核验后可接受，并且采用公共项目比自写一次性方案更合适时，可以把 huashu-skills 纳入候选。
+你需要面向中文创作者的 Claude Code skill collection，覆盖文章编辑、选题生成、调研、视频大纲、脚本、长文转社媒、配图、PDF 导出、演讲教练和 prompt 保存。目标是宽内容创作工具箱，而不是单一写作生产线时，选 huashu-skills。
 
-这是用户指定 backlog 的首版 intake 页面。用它来完成路由和邻近方案对比；在高风险场景依赖它之前，请重新阅读上游 README、许可证、示例和 release 历史。
+上游 README 描述了 21 个实战 skill，包括 slides、数据报告、抖音脚本、设计建议等端到端工作流，也包括写作审校、素材搜索、文章编辑、选题生成、视频检查、配图生成 / 上传、Markdown 转 PDF。安装方式是按单个 skill 路径运行 `/install-skill https://github.com/alchaincyf/huashu-skills/tree/master/{skill名}`。
 
 ## 何时不用
 
-- **你今天就需要深度审过的 atlas 页面。** 在本页完成完整语义复核前，优先选横向对比表里更早收录、约束更清楚的页面。
-- **许可证是硬约束。** GitHub 返回 `NOASSERTION`；商用、再分发或 vendoring 前必须检查仓库内许可证文件。
-- **维护风险不可接受。** 如果项目很年轻、单人维护、star 少、没有版本线或长期安静，请选同分类里更成熟的替代品。
-- **你的任务需要更窄的替代品。** 如果另一个页面的“何时不用”已经点名你的约束，优先用那个页面，而不是这个首版入口。
-- **你无法核验上游工作流。** 在检查 README、脚本、依赖和外部 API 要求前，不要安装、运行或 vendor 这个仓库。
+- **许可证必须清晰。** 本次 README 没看到 license 段，`LICENSE` 返回 404；复用时应保守处理。
+- **你需要一条严格端到端文章生产线。** [writing-agent](writing-agent.zh.md) 更流程化，也有 evidence gate。
+- **你需要英文 SaaS marketing 或 growth execution。** [marketingskills](marketingskills.zh.md) 更专门覆盖 CRO、SEO、analytics 和 sales enablement。
+- **你不能按子 skill 安装。** README 的安装模型是 per skill path，不是清晰版本化 package contract。
+- **你需要审计过的输出质量声明。** AI 检测率降低、图片管线或报告质量等声明仍需本地验证。
 
 ## 横向对比
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| 本叶子已收录技能 | ✅ | 如果已有更深审过的页面已经点名你的任务和约束，优先选它。 | 本页是首版 intake；已有页面的“何时不用”可能更锋利。 |
-| 自写 SKILL.md | 未收录 | 当任务很窄、私有或强绑定某个仓库约定时，自写 skill。 | 自写更贴本地上下文，但失去上游维护和社区示例。 |
+| [writing-agent](writing-agent.zh.md) | ✅ | 单篇文章必须走严格 staged production 和 fact-check workflow 时选 writing-agent。 | writing-agent 更深更重；huashu-skills 更宽、更模块化。 |
+| [Baoyu Skills](baoyu-skills.zh.md) | ✅ | 需要翻译、排版、抓取和媒体等宽 coding-agent 工具时选 Baoyu Skills。 | Baoyu 更偏通用工具；huashu-skills 面向中文创作者流程。 |
+| [marketingskills](marketingskills.zh.md) | ✅ | SaaS / growth marketing 选 marketingskills。 | marketingskills 更营销专门；huashu-skills 更 creator-content。 |
+| 自写 creator toolkit | 未收录 | 内容渠道、图床和编辑风格固定时自写。 | 更贴本地，但每个 skill 都要自己维护。 |
 
 
 ## 健康度与可持续性
 
-- **维护快照（2026-07-16）：** GitHub 返回 `archived=false`，`pushed_at=2026-04-21T05:28:31Z`。
-- **采用快照：** 2026-07 约 1,205 个 GitHub stars；这是有噪声的信号，低 star 项目只要是真实且相关，也会被纳入。
-- **许可证快照：** GitHub 元数据返回 `NOASSERTION`；许可证关键时仍需人工核验许可证文件。
-- **Lindy / 治理：** 本次 intake 未完整复核。长期采用前，请继续检查项目年龄、owner 类型、贡献者集中度、release 和 issue 响应。
-- **风险信号：** 本页来自 2026-07-16 backlog 的首版生成；语义对比和依赖复核刻意保守。
+- **维护快照（2026-07-16）：** GitHub 返回 `archived=false`，`pushed_at=2026-04-21T05:28:31Z`；health 将维护评为 C。
+- **采用快照：** 2026-07 约 1,205 个 GitHub stars；对 creator toolkit 是有用关注信号，但不证明每个子 skill 的质量。
+- **许可证快照：** `NOASSERTION`；本次根目录 `LICENSE` 返回 404，health 也把 repo 标为 source-available / no-license。
+- **Lindy / 治理：** 项目年轻，health 中 longevity 为 C；维护者集中，governance 为 D。
+- **风险信号：** surface area 很宽、许可证不清、per-skill install path，以及图床或模型 API 等渠道相关依赖。
 
 ## 存疑（未验证）
 
-- [未验证] 本页依据公开 GitHub 元数据和用户提供的 intake 清单生成；上游 README、文档、示例、release 和依赖清单仍需深度复核。
-- [未验证] 许可证、安装命令、支持的 harness 和运行时要求可能与 GitHub 元数据不同；使用前请在仓库中核验。
-- [推断] 横向对比表先从邻近 atlas 分类出发，并不是完整替代品综述；读完上游项目和相邻方案后应继续细化。
+- [未验证] 本次没有找到根目录 `LICENSE` 文件；不要假定可宽松复用。
+- [未验证] 没有本地执行各子 skill 行为和外部依赖。
+- [推断] 最适合中文内容创作者工作流辅助，不是单一审计过的写作 pipeline。

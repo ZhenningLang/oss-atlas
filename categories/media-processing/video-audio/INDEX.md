@@ -17,6 +17,14 @@
 | **MoviePy** | A Python library for programmatic video editing — cutting, concatenating, compositing, text overlays, and effects — that builds FFmpeg commands under the hood but presents a higher-level, friendlier API. | B (5/6) | [→](moviepy.md) |
 | **PyAV** | Pythonic bindings to FFmpeg's `libav*` libraries — in-process decode/encode with frame-by-frame access to NumPy arrays and Python bytes, no subprocess spawning. | A (6/6) | [→](pyav.md) |
 | **OpenAI Whisper** | OpenAI's general-purpose automatic speech recognition model that transcribes and translates audio to English across 99 languages, with multiple size/quality tradeoffs. | B (5/6) | [→](whisper.md) |
+| **claude-video** | Agent-facing `/watch` workflow that downloads videos, extracts frames, gets captions/transcripts, and hands visual/audio evidence to Claude or another skill host. | C (4/6) | [→](claude-video.md) |
+
+## Comparison matrix
+
+| Option | Indexed | Health | One-line tradeoff |
+| --- | --- | --- | --- |
+| [claude-video](claude-video.md) | ✅ | C (4/6) | Video-understanding helper for agents; choose FFmpeg/MoviePy for production editing or Whisper for transcription-only work. |
+
 
 ## What belongs here
 

@@ -16,7 +16,7 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-16T08:16:13Z
+  computed_at: 2026-07-16T10:14:43Z
   overall: D
   overall_score: 1.25
   scored_axes: 4
@@ -70,36 +70,38 @@ Let AI truly understand you. A Claude Code skill that extracts tacit knowledge t
 
 ## When to use
 
-You're evaluating a task in the `context-engineering` area and want a real repository in the oss-atlas shortlist rather than an untracked name from a backlog. Reach for tacit-mining when the upstream description matches the job, when its license and maintenance profile are acceptable after verification, and when adopting a public project is preferable to writing a local one-off.
+You want an agent to understand the user's tacit judgment rules through structured dialogue: writing taste, topic instinct, product judgment, aesthetics, and audience sense. Use tacit-mining when the target is **the current user's own implicit decision standards**, not a public persona or generic memory store.
 
-This is a first-pass intake page for a user-requested backlog item. Use it to route selection and compare nearby options, then reread the upstream README, license, examples, and release history before relying on it for high-stakes work.
+The upstream skill is based on Polanyi's tacit knowledge theory plus CDM, Laddering, and Repertory Grid methods. It asks about concrete events and choices, performs teachback, stores confirmed or fuzzy rules under `memory/tacit/`, and updates a tacit knowledge map.
 
 ## When NOT to use
 
-- **You need a deeply reviewed atlas page today.** Prefer an older in-index page from the comparison table until this entry has had a full semantic review.
-- **License is a hard constraint.** GitHub reported `NOASSERTION`; inspect the repository license files before commercial use, redistribution, or vendoring.
-- **Maintenance risk is unacceptable.** If the project is young, single-maintainer, low-star, unversioned, or quiet, choose a more established substitute in the same category.
-- **Your task needs a narrower substitute.** If another page's `When NOT to use` section names your exact constraint, prefer that page over this first-pass entry.
-- **You cannot verify the upstream workflow.** Do not install, run, or vendor this repo before checking its README, scripts, dependencies, and any external API requirements.
+- **License clarity matters.** The README says MIT, but the verified root tree has no `LICENSE` file; keep reuse conservative until the upstream adds one.
+- **You need a persona or expert imitation.** Use [nuwa-skill](nuwa-skill.md) or [soul.md](soul-md.md); tacit-mining is about extracting the user's own tacit rules.
+- **You cannot store personal memory files.** The workflow writes `memory/tacit/` fragments and updates maps; that is sensitive user preference data.
+- **You need quick prompt tuning.** Tacit mining is an interview loop, not a one-shot prompt optimizer.
+- **The user does not want introspective questioning.** The method depends on 5-8 rounds of concrete-event probing and correction.
 
 ## Comparison
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| Existing skills in this leaf | ✅ | Prefer a more deeply reviewed in-index page when it already names your exact task and constraints. | This page is first-pass intake; existing pages may have sharper when-not guidance. |
-| Custom SKILL.md | 未收录 | Write a custom skill when the task is narrow, private, or tightly bound to one repository's conventions. | Custom skills fit local context better but lose upstream maintenance and community examples. |
+| [nuwa-skill](nuwa-skill.md) | ✅ | Choose nuwa when you want to distill a public figure or theme into a reusable perspective skill. | nuwa targets public-source persona/thinking extraction; tacit-mining targets the current user's hidden criteria. |
+| [soul.md](soul-md.md) | ✅ | Choose soul.md when you already have identity/source files and want a persistent persona package. | soul.md packages identity; tacit-mining elicits user rules through dialogue. |
+| [NotebookLM Claude Code Skill](notebooklm-skill.md) | ✅ | Choose NotebookLM when the issue is source-grounded retrieval from uploaded documents. | NotebookLM retrieves; tacit-mining interviews and writes memory fragments. |
+| Manual interview notes | 未收录 | Use manual notes when data sensitivity blocks automated memory writes. | Safer and easier to review, but loses agent automation and map updates. |
 
 
 ## Health & viability
 
-- **Maintenance snapshot (2026-07-16):** GitHub reports `archived=false` and `pushed_at=2026-04-08T10:52:37Z`.
-- **Adoption snapshot:** ~68 GitHub stars as of 2026-07; this is a noisy signal and low-star projects are still included when the repository is real and relevant.
-- **License snapshot:** `NOASSERTION` from GitHub metadata; manual license-file review remains required when license matters.
-- **Lindy / governance:** not fully reviewed in this intake pass. Check age, owner type, contributor concentration, releases, and issue response before long-term adoption.
-- **Risk flags:** first-pass page generated from the 2026-07-16 backlog; semantic comparison and dependency review are intentionally conservative.
+- **Maintenance snapshot (2026-07-16):** GitHub reports `archived=false` and `pushed_at=2026-04-08T10:52:37Z`; health scores maintenance as C.
+- **Adoption snapshot:** ~68 GitHub stars as of 2026-07; low adoption is acceptable for inclusion but should be treated as a risk signal.
+- **License snapshot:** `NOASSERTION`; README says MIT, but the verified root tree contains only `README.md`, `SKILL.md`, and `banner.jpg`, with no root `LICENSE`.
+- **Lindy / governance:** health longevity is C and governance is D due to a young, single-maintainer repo.
+- **Risk flags:** stores sensitive user judgment data and can overfit from a small number of interview rounds.
 
 ## Caveats (unverified)
 
-- [未验证] This page is generated from public GitHub metadata plus the user-provided intake list; upstream README, docs, examples, releases, and dependency manifests still need deeper review.
-- [未验证] License, install commands, supported harnesses, and runtime requirements may differ from GitHub metadata; verify them in the repository before use.
-- [推断] The comparison table starts from nearby atlas categories rather than a complete substitute survey; refine it after reading the full upstream project and adjacent alternatives.
+- [未验证] README says MIT, but no root `LICENSE` file was found in the verified tree.
+- [未验证] The interview method was read from README/SKILL.md but not run with a user in this pass.
+- [推断] Best fit is preference/tacit-rule extraction for a consenting user, not persona cloning or general knowledge retrieval.

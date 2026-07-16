@@ -1,22 +1,22 @@
 ---
-name: skills
+name: mattpocock/skills
 slug: mattpocock-skills
 repo: https://github.com/mattpocock/skills
 category: engineering
-tags: [agent-skill, engineering, mattpocock-skills, skill-pack]
+tags: [agent-skill, engineering, tdd, code-review, skill-pack]
 language: Shell
-license: NOASSERTION
-maturity: active, ~172,981 stars (as of 2026-07)
+license: MIT
+maturity: active, ~173,369 stars (as of 2026-07)
 last_verified: 2026-07-16
 type: skill-pack
 upstream:
-  pushed_at: 2026-07-14T18:32:39Z
+  pushed_at: 2026-07-16T09:03:25Z
   default_branch: main
-  default_branch_sha: e9fcdf95b402d360f90f1db8d776d5dd450f9234
+  default_branch_sha: 9603c1cc8118d08bc1b3bf34cf714f62178dea3b
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-16T08:12:03Z
+  computed_at: 2026-07-16T11:04:03Z
   overall: B
   overall_score: 3.0
   scored_axes: 4
@@ -28,7 +28,7 @@ health:
       grade: A
       raw:
         archived: false
-        last_commit_age_days: 2
+        last_commit_age_days: 0
         active_weeks_13: 13
         carve_out: null
     responsiveness:
@@ -41,7 +41,7 @@ health:
       grade: C
       raw:
         repo_age_days: 163
-        last_commit_age_days: 2
+        last_commit_age_days: 0
         cohort: skill-pack
     governance:
       grade: C
@@ -62,44 +62,47 @@ health:
     responsiveness: { reason: type_na }
     adoption: { reason: no_package_structural }
 ---
-# skills
+# mattpocock/skills
 
-Skills for Real Engineers. Straight from my .claude directory.
+Matt Pocock 的工程 skill 包，面向 Claude Code 和 skills.sh，覆盖 grilling、domain docs、TDD、bug 诊断、架构、review、tickets 和实现流程。
 
 ![mattpocock-skills — 健康度雷达](../../../assets/health/mattpocock-skills.zh.svg)
 
 ## 何时使用
 
-你正在评估 `engineering` 方向的任务，需要把一个真实仓库纳入 oss-atlas 候选，而不是只在 backlog 里看到一个名字。当上游描述贴合任务、许可证和维护画像经核验后可接受，并且采用公共项目比自写一次性方案更合适时，可以把 skills 纳入候选。
+你在 Claude Code、Codex 或其他兼容 Agent Skills 的 coding agent 上开发真实应用，失败模式不是模型能力，而是流程薄弱：需求没问清、领域语言含糊、缺 TDD 循环、bug 诊断随意、diff 没审、架构持续劣化。此时可选 mattpocock/skills：它是一套紧凑工程 playbook，可通过 skills.sh 复制，也可作为 Claude Code plugin 安装，并通过 `/setup-matt-pocock-skills` 为每个 repo 配置。
 
-这是用户指定 backlog 的首版 intake 页面。用它来完成路由和邻近方案对比；在高风险场景依赖它之前，请重新阅读上游 README、许可证、示例和 release 历史。
+如果你明确要的是软件工程仪式，而不是内容生产或人设 prompt，它比宽泛个人合集更合适。它对 issue tracker、文档、tickets 和 review flow 有明显主张，因此最适合能吸收这些流程的仓库。
 
 ## 何时不用
 
-- **你今天就需要深度审过的 atlas 页面。** 在本页完成完整语义复核前，优先选横向对比表里更早收录、约束更清楚的页面。
-- **许可证是硬约束。** GitHub 返回 `NOASSERTION`；商用、再分发或 vendoring 前必须检查仓库内许可证文件。
-- **维护风险不可接受。** 如果项目很年轻、单人维护、star 少、没有版本线或长期安静，请选同分类里更成熟的替代品。
-- **你的任务需要更窄的替代品。** 如果另一个页面的“何时不用”已经点名你的约束，优先用那个页面，而不是这个首版入口。
-- **你无法核验上游工作流。** 在检查 README、脚本、依赖和外部 API 要求前，不要安装、运行或 vendor 这个仓库。
+- **你只想做 Web 质量审计。** 用 [web-quality-skills](addyosmani-web-quality.zh.md) 处理 Lighthouse、Core Web Vitals、无障碍、SEO 和性能清单；mattpocock/skills 是更宽的工程流程。
+- **你需要厂商部署 playbook。** React/Next.js/Vercel 特定部署和文档审计选 [Vercel Agent Skills](vercel-agent-skills.zh.md)；mattpocock/skills 是跨模型、跨平台的工程仪式。
+- **你不能增加流程产物。** 如果环境拒绝 tickets、domain docs、ADR 或 setup 问题，用 [Waza](waza.zh.md) 这类更小的单组 skill 或本地规则。
+- **你想要完整自治 SDLC 框架。** 如果刻意让流程接管编排，评估 BMAD、Spec Kit 或 GSD 类系统（未收录）；本包明确定位为更小、更可组合。
+- **你需要中性的组织级政策。** 如果企业 prompt 里不能接受外部个人约定、newsletter 链接或 Matt Pocock 的个人观点，请使用内部 skill set。
 
 ## 横向对比
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| 本叶子已收录技能 | ✅ | 如果已有更深审过的页面已经点名你的任务和约束，优先选它。 | 本页是首版 intake；已有页面的“何时不用”可能更锋利。 |
-| 自写 SKILL.md | 未收录 | 当任务很窄、私有或强绑定某个仓库约定时，自写 skill。 | 自写更贴本地上下文，但失去上游维护和社区示例。 |
+| [Waza](waza.zh.md) | ✅ | 如果只要八个轻量工程习惯，选 Waza；如果要更大的 repo setup、issue/ticket flow 和 TDD/review 循环，选 mattpocock/skills。 | Waza 更轻；mattpocock/skills 给出更多编排和设置表面。 |
+| [Agent Skills（addyosmani）](addyosmani-agent-skills.zh.md) | ✅ | 如果要生产质量、安全、性能、API、发布命令，选 addyosmani 包；如果要需求 grilling、domain modeling、TDD 和 code review 工作流，选 mattpocock/skills。 | addyosmani 更像生产 checklist；mattpocock 更偏流程与设计。 |
+| [Vercel Agent Skills](vercel-agent-skills.zh.md) | ✅ | Vercel/Next.js 部署指导选 Vercel 官方包；跨技术栈工程仪式选 mattpocock/skills。 | Vercel 有一方产品适配；mattpocock 跨栈迁移性更好。 |
+| [Spec Kit](../../agent-dev-methodology/spec-kit.zh.md) | ✅ | 如果你要完整的 spec-driven 开发工作流，评估 Spec Kit；如果要较小、可组合、可改的 skill，选 mattpocock/skills。 | Spec Kit 轨道更强；mattpocock/skills 更容易逐个 skill 覆盖。 |
+| BMAD / GSD | 未收录 | 如果你要完整 SDLC 框架接管流程，评估这些；如果只要较轻的工程仪式，选 mattpocock/skills。 | 框架可提供更多编排，但更难调试或覆盖。 |
 
 
 ## 健康度与可持续性
 
-- **维护快照（2026-07-16）：** GitHub 返回 `archived=false`，`pushed_at=2026-07-14T18:32:39Z`。
-- **采用快照：** 2026-07 约 172,981 个 GitHub stars；这是有噪声的信号，低 star 项目只要是真实且相关，也会被纳入。
-- **许可证快照：** GitHub 元数据返回 `NOASSERTION`；许可证关键时仍需人工核验许可证文件。
-- **Lindy / 治理：** 本次 intake 未完整复核。长期采用前，请继续检查项目年龄、owner 类型、贡献者集中度、release 和 issue 响应。
-- **风险信号：** 本页来自 2026-07-16 backlog 的首版生成；语义对比和依赖复核刻意保守。
+- **维护快照（2026-07-16）：** GitHub 返回 `archived=false`，`pushed_at=2026-07-16T09:03:25Z`；健康度评分器给 maintenance `A`。
+- **采用快照：** GitHub API 在 2026-07 返回约 173,369 个 star，README 也提到大规模 newsletter 受众；这代表强社会证明，不等于自动适配。
+- **许可证快照：** 根目录 `LICENSE` 为 MIT，GitHub 元数据也返回 MIT。
+- **Lindy / 治理：** 仓库仍年轻，longevity 为 `C`；评分器看到贡献者分布高度集中，因此 governance 为 `C`。
+- **风险信号：** 该包强主张且个人化；把它设为团队默认工作流前，先在测试 repo 运行 `/setup-matt-pocock-skills`。
 
 ## 存疑（未验证）
 
-- [未验证] 本页依据公开 GitHub 元数据和用户提供的 intake 清单生成；上游 README、文档、示例、release 和依赖清单仍需深度复核。
-- [未验证] 许可证、安装命令、支持的 harness 和运行时要求可能与 GitHub 元数据不同；使用前请在仓库中核验。
-- [推断] 横向对比表先从邻近 atlas 分类出发，并不是完整替代品综述；读完上游项目和相邻方案后应继续细化。
+- [未验证] oss-atlas 没有执行 setup 命令或安装 Claude Code plugin；请在自己的 harness 中验证行为。
+- [未验证] README 对这些工程实践效果的描述未在本页独立测量。
+- [推断] 高 star 和作者声誉降低发现风险，但仓库仍年轻，贡献者集中度仍是治理风险。

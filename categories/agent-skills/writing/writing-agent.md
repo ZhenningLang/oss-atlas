@@ -5,7 +5,7 @@ repo: https://github.com/dongbeixiaohuo/writing-agent
 category: writing
 tags: [agent-skill, writing, writing-agent, skill-pack]
 language: JavaScript
-license: NOASSERTION
+license: MIT
 maturity: active, ~319 stars (as of 2026-07)
 last_verified: 2026-07-16
 type: skill-pack
@@ -16,7 +16,7 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-16T08:07:21Z
+  computed_at: 2026-07-16T10:20:43Z
   overall: B
   overall_score: 2.5
   scored_axes: 4
@@ -70,36 +70,38 @@ health:
 
 ## When to use
 
-You're evaluating a task in the `writing` area and want a real repository in the oss-atlas shortlist rather than an untracked name from a backlog. Reach for writing-agent when the upstream description matches the job, when its license and maintenance profile are acceptable after verification, and when adopting a public project is preferable to writing a local one-off.
+You write Chinese long-form opinion pieces, WeChat posts, or content-marketing essays and want a staged production line instead of “generate the full article in one prompt”. Choose writing-agent when you need topic/positioning, evidence ledger, scar-tissue material mining, outline, opening tournament, drafting, editorial review, reader simulation, de-AI pass, fact-check gate, and final `_clean.txt` output.
 
-This is a first-pass intake page for a user-requested backlog item. Use it to route selection and compare nearby options, then reread the upstream README, license, examples, and release history before relying on it for high-stakes work.
+It fits users willing to run a full Claude Code project workflow, inspect intermediate artifacts, and use compatible model endpoints such as DeepSeek, GLM, or MiniMax. The repo also includes a Windows desktop preview, but the documented full workflow depends on project files, `.claude/`, workflows, agents, and scripts.
 
 ## When NOT to use
 
-- **You need a deeply reviewed atlas page today.** Prefer an older in-index page from the comparison table until this entry has had a full semantic review.
-- **License is a hard constraint.** GitHub reported `NOASSERTION`; inspect the repository license files before commercial use, redistribution, or vendoring.
-- **Maintenance risk is unacceptable.** If the project is young, single-maintainer, low-star, unversioned, or quiet, choose a more established substitute in the same category.
-- **Your task needs a narrower substitute.** If another page's `When NOT to use` section names your exact constraint, prefer that page over this first-pass entry.
-- **You cannot verify the upstream workflow.** Do not install, run, or vendor this repo before checking its README, scripts, dependencies, and any external API requirements.
+- **You want a short, one-shot draft.** This project is intentionally heavy; a simple prompt or smaller writing skill is cheaper.
+- **You cannot keep intermediate files or evidence ledgers.** The value comes from artifacts such as theme files, evidence ledger, drafts, reviews, fact-check reports, and final clean output.
+- **You do not use Claude Code or a compatible project workflow.** The full path depends on project runtime structure, agents, workflows, and scripts.
+- **You need English marketing/copy workflows.** [marketingskills](marketingskills.md) is broader for SaaS marketing, CRO, SEO, and lifecycle execution.
+- **You are unwilling to provide real material.** Upstream emphasizes true experiences/evidence and blocks unsupported facts; generic inputs weaken the pipeline.
 
 ## Comparison
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| Existing skills in this leaf | ✅ | Prefer a more deeply reviewed in-index page when it already names your exact task and constraints. | This page is first-pass intake; existing pages may have sharper when-not guidance. |
-| Custom SKILL.md | 未收录 | Write a custom skill when the task is narrow, private, or tightly bound to one repository's conventions. | Custom skills fit local context better but lose upstream maintenance and community examples. |
+| [huashu-skills](huashu-skills.md) | ✅ | Choose huashu-skills for a broader Chinese creator toolkit: topics, research, editing, video outlines, and images. | huashu-skills is a toolkit collection; writing-agent is a stricter end-to-end writing production line. |
+| [Baoyu Skills](baoyu-skills.md) | ✅ | Choose Baoyu Skills for general translation, formatting, transcript, webpage capture, and media utilities. | Broader utilities, less opinionated long-form writing pipeline. |
+| [marketingskills](marketingskills.md) | ✅ | Choose marketingskills for marketing/CRO/SEO/growth tasks. | Marketing execution versus Chinese long-form article production. |
+| Custom editorial workflow | 未收录 | Choose custom when your publication has fixed stages, reviewers, or compliance rules. | More exact to one org, but more maintenance work. |
 
 
 ## Health & viability
 
-- **Maintenance snapshot (2026-07-16):** GitHub reports `archived=false` and `pushed_at=2026-07-05T06:13:28Z`.
-- **Adoption snapshot:** ~319 GitHub stars as of 2026-07; this is a noisy signal and low-star projects are still included when the repository is real and relevant.
-- **License snapshot:** `NOASSERTION` from GitHub metadata; manual license-file review remains required when license matters.
-- **Lindy / governance:** not fully reviewed in this intake pass. Check age, owner type, contributor concentration, releases, and issue response before long-term adoption.
-- **Risk flags:** first-pass page generated from the 2026-07-16 backlog; semantic comparison and dependency review are intentionally conservative.
+- **Maintenance snapshot (2026-07-16):** GitHub reports `archived=false` and `pushed_at=2026-07-05T06:13:28Z`; health scores maintenance as B.
+- **Adoption snapshot:** ~319 GitHub stars as of 2026-07; niche but relevant for Chinese writing workflows.
+- **License snapshot:** MIT verified from upstream README badge and root `LICENSE` in the read-only upstream check.
+- **Lindy / governance:** health longevity is C and governance is D because the repo is young and single-maintainer concentrated.
+- **Risk flags:** pipeline complexity, model/provider setup, and user-supplied evidence quality decide whether outputs are actually publishable.
 
 ## Caveats (unverified)
 
-- [未验证] This page is generated from public GitHub metadata plus the user-provided intake list; upstream README, docs, examples, releases, and dependency manifests still need deeper review.
-- [未验证] License, install commands, supported harnesses, and runtime requirements may differ from GitHub metadata; verify them in the repository before use.
-- [推断] The comparison table starts from nearby atlas categories rather than a complete substitute survey; refine it after reading the full upstream project and adjacent alternatives.
+- [未验证] Demo quality and desktop preview were read from upstream docs but not executed locally.
+- [未验证] Model recommendations and pricing notes can change; verify current provider docs before adopting.
+- [推断] Best fit is disciplined Chinese long-form writing, not lightweight copyediting.

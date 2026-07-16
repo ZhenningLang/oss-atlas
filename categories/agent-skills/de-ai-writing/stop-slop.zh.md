@@ -4,8 +4,8 @@ slug: stop-slop
 repo: https://github.com/hardikpandya/stop-slop
 category: de-ai-writing
 tags: [agent-skill, de-ai-writing, stop-slop, skill-pack]
-language: Unknown
-license: NOASSERTION
+language: Markdown
+license: MIT
 maturity: active, ~13,905 stars (as of 2026-07)
 last_verified: 2026-07-16
 type: skill-pack
@@ -16,7 +16,7 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-16T08:08:29Z
+  computed_at: 2026-07-16T09:37:08Z
   overall: B
   overall_score: 2.5
   scored_axes: 4
@@ -70,36 +70,36 @@ A skill file for removing AI tells from prose
 
 ## 何时使用
 
-你正在评估 `de-ai-writing` 方向的任务，需要把一个真实仓库纳入 oss-atlas 候选，而不是只在 backlog 里看到一个名字。当上游描述贴合任务、许可证和维护画像经核验后可接受，并且采用公共项目比自写一次性方案更合适时，可以把 stop-slop 纳入候选。
+你需要一个短小、强硬的英文 prose 去机器腔规则，让 agent 从 `SKILL.md` 和 references 里加载，并且你更关心快速清掉常见 AI 痕迹，而不是保留所有正式文体习惯时，选 stop-slop。它适合把短规则塞进审稿流程，而不是做完整写作工作台。
 
-这是用户指定 backlog 的首版 intake 页面。用它来完成路由和邻近方案对比；在高风险场景依赖它之前，请重新阅读上游 README、许可证、示例和 release 历史。
+上游文档覆盖 Claude Code skill 文件夹、Claude Projects 上传、custom instructions 复制，以及 API / system prompt 中按需加载 `SKILL.md` 和 `references/` 的用法。
 
 ## 何时不用
 
-- **你今天就需要深度审过的 atlas 页面。** 在本页完成完整语义复核前，优先选横向对比表里更早收录、约束更清楚的页面。
-- **许可证是硬约束。** GitHub 返回 `NOASSERTION`；商用、再分发或 vendoring 前必须检查仓库内许可证文件。
-- **维护风险不可接受。** 如果项目很年轻、单人维护、star 少、没有版本线或长期安静，请选同分类里更成熟的替代品。
-- **你的任务需要更窄的替代品。** 如果另一个页面的“何时不用”已经点名你的约束，优先用那个页面，而不是这个首版入口。
-- **你无法核验上游工作流。** 在检查 README、脚本、依赖和外部 API 要求前，不要安装、运行或 vendor 这个仓库。
+- **你要清理中文文本。** 用 [Humanizer-zh](humanizer-zh.zh.md) 或 [shuorenhua](shuorenhua.zh.md)；stop-slop 主要面向英文 prose。
+- **你需要保留正式文体的细腻度。** “去掉所有副词”“必须主动语态”“不要 em dash”这类强规则可能误伤学术、法律、技术或文学写作。
+- **你需要 plugin 形式安装。** 本次只在上游文档中核验到手动 skill / API / custom-instruction 用法，没有找到 Claude plugin marketplace 命令。
+- **你想做 voice calibration，而不是强硬去味。** [humanizer](humanizer.zh.md) 的循环更宽、更温和；stop-slop 刻意短且硬。
 
 ## 横向对比
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| 本叶子已收录技能 | ✅ | 如果已有更深审过的页面已经点名你的任务和约束，优先选它。 | 本页是首版 intake；已有页面的“何时不用”可能更锋利。 |
-| 自写 SKILL.md | 未收录 | 当任务很窄、私有或强绑定某个仓库约定时，自写 skill。 | 自写更贴本地上下文，但失去上游维护和社区示例。 |
+| [humanizer](humanizer.zh.md) | ✅ | 需要更完整的英文上游 skill、false-positive 指南和安装路径时选 humanizer。 | humanizer 更宽、更温和；stop-slop 更短、更严格，也更容易复制进本地指令。 |
+| [Humanizer-zh](humanizer-zh.zh.md) | ✅ | 简体中文去 AI 味改写选 Humanizer-zh。 | Humanizer-zh 中文优先，并借鉴了部分 stop-slop 思路；stop-slop 是英文强规则基线。 |
+| [shuorenhua](shuorenhua.zh.md) | ✅ | 需要中文场景分流和 protected spans 时选 shuorenhua。 | shuorenhua 处理中文工程 / 产品语境；stop-slop 不覆盖。 |
+| 自写编辑清单 | 未收录 | 组织已有明确 style rules 时自写。 | 自写能避开 stop-slop 的泛化硬规则，但需要自己维护。 |
 
 
 ## 健康度与可持续性
 
-- **维护快照（2026-07-16）：** GitHub 返回 `archived=false`，`pushed_at=2026-03-17T18:50:39Z`。
-- **采用快照：** 2026-07 约 13,905 个 GitHub stars；这是有噪声的信号，低 star 项目只要是真实且相关，也会被纳入。
-- **许可证快照：** GitHub 元数据返回 `NOASSERTION`；许可证关键时仍需人工核验许可证文件。
-- **Lindy / 治理：** 本次 intake 未完整复核。长期采用前，请继续检查项目年龄、owner 类型、贡献者集中度、release 和 issue 响应。
-- **风险信号：** 本页来自 2026-07-16 backlog 的首版生成；语义对比和依赖复核刻意保守。
+- **维护快照（2026-07-16）：** GitHub 返回 `archived=false`，`pushed_at=2026-03-17T18:50:39Z`；health 将维护评为 C。
+- **采用快照：** 2026-07 约 13,905 个 GitHub stars；这是关注度，不代表硬规则适合每种文体。
+- **许可证快照：** 只读上游核验确认 GitHub metadata、根目录 `LICENSE`、README 和 `SKILL.md` 均为 MIT。
+- **Lindy / 治理：** 项目很年轻、维护者集合较小；适合作为短规则清单，但还不是长期标准。
+- **风险信号：** 强规则可能过宽，尤其在被动语态、副词或 em dash 本来合理的正式文体中。
 
 ## 存疑（未验证）
 
-- [未验证] 本页依据公开 GitHub 元数据和用户提供的 intake 清单生成；上游 README、文档、示例、release 和依赖清单仍需深度复核。
-- [未验证] 许可证、安装命令、支持的 harness 和运行时要求可能与 GitHub 元数据不同；使用前请在仓库中核验。
-- [推断] 横向对比表先从邻近 atlas 分类出发，并不是完整替代品综述；读完上游项目和相邻方案后应继续细化。
+- [未验证] 本次没有在上游文档中找到 plugin marketplace 安装，只核验到手动 skill / API / custom-instruction 用法。
+- [推断] 最强的规则是风格偏好，不是普适质量标准；在非口语英文 prose 中应预期 false positives。

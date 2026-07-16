@@ -1,12 +1,12 @@
 ---
-name: skills
+name: BrowserAct Skills
 slug: browser-act-skills
 repo: https://github.com/browser-act/skills
 category: engineering
-tags: [agent-skill, engineering, browser-act-skills, skill-pack]
+tags: [agent-skill, browser-automation, scraping, remote-assist, skill-pack]
 language: Python
-license: NOASSERTION
-maturity: active, ~4,440 stars (as of 2026-07)
+license: MIT
+maturity: active, ~4,449 stars (as of 2026-07)
 last_verified: 2026-07-16
 type: skill-pack
 upstream:
@@ -16,10 +16,10 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-16T08:12:16Z
+  computed_at: 2026-07-16T11:03:51Z
   overall: B
-  overall_score: 3.33
-  scored_axes: 3
+  overall_score: 2.75
+  scored_axes: 4
   capped: false
   cap_reason: null
   needs_human_review: false
@@ -44,8 +44,13 @@ health:
         last_commit_age_days: 2
         cohort: skill-pack
     governance:
-      grade: "?"
-      raw: {}
+      grade: D
+      raw:
+        active_maintainers_12mo: 5
+        top1_share: 0.889
+        top3_share: 0.971
+        window_source: stats_contributors
+        carve_out: null
     risk_license:
       grade: A
       raw:
@@ -56,46 +61,47 @@ health:
   unknowns:
     responsiveness: { reason: type_na }
     adoption: { reason: no_package_structural }
-    governance: { reason: empty_or_gated }
 ---
-# skills
+# BrowserAct Skills
 
-Browser automation CLI built for AI agents. Break through anti-bot walls, hand off to humans across platforms when stuck. Parallel multi-task execution, independent multi-session operation, isolated multi-account browsing.
+面向 BrowserAct 的 agent 浏览器自动化技能包：索引式浏览器控制、stealth/private session、远程人工接管，以及 Skill Forge 抓取工作流。
 
 ![browser-act-skills — 健康度雷达](../../../assets/health/browser-act-skills.zh.svg)
 
 ## 何时使用
 
-你正在评估 `engineering` 方向的任务，需要把一个真实仓库纳入 oss-atlas 候选，而不是只在 backlog 里看到一个名字。当上游描述贴合任务、许可证和维护画像经核验后可接受，并且采用公共项目比自写一次性方案更合适时，可以把 skills 纳入候选。
+你在构建或运行一个必须使用真实浏览器的 agent：要访问登录态页面、处理反自动化摩擦、多 session 浏览、远程人工接管，或把重复抓取流程打包成 skill。此时可选 BrowserAct Skills：它提供面向 LLM 的 CLI 和技能说明，`state` 返回索引化元素，动作按索引执行，并暴露浏览器模式、remote assist、stealth extract 和 Skill Forge。
 
-这是用户指定 backlog 的首版 intake 页面。用它来完成路由和邻近方案对比；在高风险场景依赖它之前，请重新阅读上游 README、许可证、示例和 release 历史。
+相对普通 Playwright 的关键取舍是：BrowserAct 优先服务 agent 操作和接管，而不是稳定的开发者手写测试套件。如果浏览器是 agent 工作流的一部分，选它；如果你是在写确定性测试或自动化代码，选 Playwright。
 
 ## 何时不用
 
-- **你今天就需要深度审过的 atlas 页面。** 在本页完成完整语义复核前，优先选横向对比表里更早收录、约束更清楚的页面。
-- **许可证是硬约束。** GitHub 返回 `NOASSERTION`；商用、再分发或 vendoring 前必须检查仓库内许可证文件。
-- **维护风险不可接受。** 如果项目很年轻、单人维护、star 少、没有版本线或长期安静，请选同分类里更成熟的替代品。
-- **你的任务需要更窄的替代品。** 如果另一个页面的“何时不用”已经点名你的约束，优先用那个页面，而不是这个首版入口。
-- **你无法核验上游工作流。** 在检查 README、脚本、依赖和外部 API 要求前，不要安装、运行或 vendor 这个仓库。
+- **你需要确定性的浏览器测试。** 用 [Playwright](../../web-automation/playwright.zh.md) 做 CI 测试、trace viewer、fixture 和 code-first 浏览器自动化；BrowserAct 更偏 agent session。
+- **你不能接受托管服务或付费功能耦合。** README 说核心自动化免费，但超过前 5 个 stealth browser 和 managed proxy 属于付费；如果这个边界不可接受，选 Playwright 或自托管浏览器栈。
+- **目标网站禁止抓取或自动化。** 使用官方 API 或先拿明确授权，而不是用 BrowserAct；反阻断能力不消除法律、合同或伦理约束。
+- **你不希望触碰用户浏览器状态。** 用 Playwright 隔离 profile 或一次性浏览器环境；BrowserAct 支持复用 Chrome 登录态和导入 profile，必须认真治理。
+- **你只要静态网页转 Markdown。** 用更窄的 URL-to-Markdown skill 或文档解析器；BrowserAct 的 stealth/session 栈对公开静态页面过重。
 
 ## 横向对比
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| 本叶子已收录技能 | ✅ | 如果已有更深审过的页面已经点名你的任务和约束，优先选它。 | 本页是首版 intake；已有页面的“何时不用”可能更锋利。 |
-| 自写 SKILL.md | 未收录 | 当任务很窄、私有或强绑定某个仓库约定时，自写 skill。 | 自写更贴本地上下文，但失去上游维护和社区示例。 |
+| [Playwright](../../web-automation/playwright.zh.md) | ✅ | 做测试套件和开发者手写自动化时选 Playwright；需要索引动作、handoff 和 stealth 模式的 agent session 时选 BrowserAct Skills。 | BrowserAct 增加 agent UX 和服务功能；Playwright 更标准，在 CI 中更容易推理。 |
+| [Puppeteer](../../web-automation/puppeteer.zh.md) | ✅ | 简单 Node.js 浏览器脚本用 Puppeteer 可能足够；需要 agent-readable state、session 命名或人工接管时选 BrowserAct。 | Puppeteer 更轻、更熟悉；BrowserAct 的工作流和外部功能边界更多。 |
+| Browserbase / hosted browser services | 未收录 | 如果要托管浏览器基础设施，评估 Browserbase 类服务；如果 BrowserAct 的 skill/CLI 工作流和免费本地模式更合适，选本页项目。 | 托管浏览器减少本地设置，但带来更强 vendor dependency。 |
+| 自定义站点抓取 skill | 未收录 | 目标站稳定且 API 已知时，自写定制 skill；想让 agent 探索并打包抓取流程时，选 BrowserAct Skill Forge。 | 定制抓取器更窄、更易审计；Skill Forge 更适合探索式抽取。 |
 
 
 ## 健康度与可持续性
 
-- **维护快照（2026-07-16）：** GitHub 返回 `archived=false`，`pushed_at=2026-07-14T09:53:38Z`。
-- **采用快照：** 2026-07 约 4,440 个 GitHub stars；这是有噪声的信号，低 star 项目只要是真实且相关，也会被纳入。
-- **许可证快照：** GitHub 元数据返回 `NOASSERTION`；许可证关键时仍需人工核验许可证文件。
-- **Lindy / 治理：** 本次 intake 未完整复核。长期采用前，请继续检查项目年龄、owner 类型、贡献者集中度、release 和 issue 响应。
-- **风险信号：** 本页来自 2026-07-16 backlog 的首版生成；语义对比和依赖复核刻意保守。
+- **维护快照（2026-07-16）：** GitHub 返回 `archived=false`，`pushed_at=2026-07-14T09:53:38Z`；健康度评分器给 maintenance `A`。
+- **采用快照：** GitHub API 在 2026-07 返回约 4,449 个 star，README 也展示公开文档和社区入口；adoption 轴仍为 `?`，因为这不是典型包下载项目。
+- **许可证快照：** 根目录 `LICENSE` 为 MIT，GitHub 元数据也返回 MIT。
+- **Lindy / 治理：** 仓库仍年轻，longevity 为 `C`；health block 中 governance 为 `D`，因为评分器看到贡献集中。
+- **风险信号：** anti-blocking、remote assist、profile import、proxy、cookie 和第三方站点都会带来运营与政策风险；实际使用必须先明确授权范围并按 secret 处理。
 
 ## 存疑（未验证）
 
-- [未验证] 本页依据公开 GitHub 元数据和用户提供的 intake 清单生成；上游 README、文档、示例、release 和依赖清单仍需深度复核。
-- [未验证] 许可证、安装命令、支持的 harness 和运行时要求可能与 GitHub 元数据不同；使用前请在仓库中核验。
-- [推断] 横向对比表先从邻近 atlas 分类出发，并不是完整替代品综述；读完上游项目和相邻方案后应继续细化。
+- [未验证] stealth 和 anti-bot 能力来自 README，oss-atlas 未针对具体目标网站独立测试。
+- [未验证] 价格和免费额度边界可能变化；依赖 managed proxy 或 stealth browser quota 前请核验 BrowserAct 当前服务条款。
+- [推断] BrowserAct 更适合被当作 agent browser workflow 层，而不是确定性浏览器测试框架的替代品。

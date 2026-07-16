@@ -9,9 +9,10 @@
 | --- | --- | --- | --- |
 | **Agent Skills for Context Engineering** | 一个 15 个 skill 的 Claude Code 插件包，灌输上下文工程纪律：基础原理、退化、压缩、多 agent 协同、记忆、工具设计、评估与 harness 工程。 | B（4/6） | [→](context-engineering-skills.zh.md) |
 | **NotebookLM Claude Code Skill** | 一个 Claude Code skill：用真实 Chrome 驱动查询你的 Google NotebookLM 笔记本，从你自己上传的文档取回有来源依据、带引用的答案，而非逐文件读取或凭空编造。 | C（4/6） | [→](notebooklm-skill.zh.md) |
-| **tacit-mining** | Let AI truly understand you. A Claude Code skill that extracts tacit knowledge through structured dialogue. 隐性知识挖掘技能。 | ?（0/6） | [→](tacit-mining.zh.md) |
-| **soul.md** | The best way to build a personality for your agent. Let Claude Code / OpenClaw ingest your data & build your AI soul. | ?（0/6） | [→](soul-md.zh.md) |
-| **nuwa-skill** | 把他人的思维方式、心智模型、决策启发式和表达 DNA 蒸馏成 agent skill。 | ?（0/6） | [→](nuwa-skill.zh.md) |
+| **tacit-mining** | 通过结构化对话提取当前用户隐性判断规则，并写入 `memory/tacit/` fragments 的 Claude Code skill。 | D（4/6） | [→](tacit-mining.zh.md) |
+| **soul.md** | 用文件层级包装 digital identity：worldview、style、memory、raw data 和好 / 坏输出示例。 | B（4/6） | [→](soul-md.zh.md) |
+| **nuwa-skill** | 把公开人物或主题研究 / 蒸馏成 perspective skill，包含心智模型和诚实边界。 | B（4/6） | [→](nuwa-skill.zh.md) |
+| **cangjie-skill** | 把书、长视频、播客、课程、访谈和转写稿蒸馏成可复用、可测试 agent skill pack 的方法论 skill。 | B（4/6） | [→](cangjie-skill.zh.md) |
 
 
 ## 对比矩阵
@@ -20,9 +21,10 @@
 | --- | --- | --- | --- |
 | [Agent Skills for Context Engineering](context-engineering-skills.zh.md) | ✅ | B（4/6） | 一个 15 个 skill 的 Claude Code 插件包，灌输上下文工程纪律：基础原理、退化、压缩、多 agent 协同、记忆、工具设计、评估与 harness 工程。 |
 | [NotebookLM Claude Code Skill](notebooklm-skill.zh.md) | ✅ | C（4/6） | 一个 Claude Code skill：用真实 Chrome 驱动查询你的 Google NotebookLM 笔记本，从你自己上传的文档取回有来源依据、带引用的答案，而非逐文件读取或凭空编造。 |
-| [tacit-mining](tacit-mining.zh.md) | ✅ | ?（0/6） | Let AI truly understand you. A Claude Code skill that extracts tacit knowledge through structured dialogue. 隐性知识挖掘技能。 |
-| [soul.md](soul-md.zh.md) | ✅ | ?（0/6） | The best way to build a personality for your agent. Let Claude Code / OpenClaw ingest your data & build your AI soul. |
-| [nuwa-skill](nuwa-skill.zh.md) | ✅ | ?（0/6） | 人格 / 上下文蒸馏 skill；使用前核验素材要求和隐私边界。 |
+| [tacit-mining](tacit-mining.zh.md) | ✅ | D（4/6） | 最适合同意参与的用户挖掘 tacit preferences；许可证清晰度或 memory 隐私是硬约束时慎用。 |
+| [soul.md](soul-md.zh.md) | ✅ | B（4/6） | 已有 identity / source 文件，需要打包成持久 persona folder 时最适合。 |
+| [nuwa-skill](nuwa-skill.zh.md) | ✅ | B（4/6） | 最适合公开人物 / 主题蒸馏；不适合私人克隆或需要引用依据的 retrieval。 |
+| [cangjie-skill](cangjie-skill.zh.md) | ✅ | B（4/6） | 最适合把长材料蒸馏成可复用 skill pack；如果更需要带来源问答，改用检索工具。 |
 
 
 ## 什么该放这里

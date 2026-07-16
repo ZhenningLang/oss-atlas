@@ -62,7 +62,7 @@
 | **video-production** | AI 编排的端到端视频制作——由编码助手内的 agent 驱动研究、脚本撰写、素材生成、合成与渲染。 | [→](categories/video-production/INDEX.zh.md) |
 | **investment-finance** | 量化金融、市场数据、交易研究与投资分析工具。 | [→](categories/investment-finance/INDEX.zh.md) |
 | **education-tutoring** | AI 辅导、学习助手与教育场景 agent 系统。 | [→](categories/education-tutoring/INDEX.zh.md) |
-| **governance** | AI agent 的治理、策略执行、身份、沙箱与可靠性控制。 | [→](categories/governance/INDEX.zh.md) |
+| **agent-governance** | AI agent 的治理、策略执行、身份、沙箱与可靠性控制。 | [→](categories/agent-governance/INDEX.zh.md) |
 
 
 

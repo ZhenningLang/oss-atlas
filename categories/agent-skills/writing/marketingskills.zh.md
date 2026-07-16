@@ -5,7 +5,7 @@ repo: https://github.com/coreyhaines31/marketingskills
 category: writing
 tags: [agent-skill, writing, marketingskills, skill-pack]
 language: JavaScript
-license: NOASSERTION
+license: MIT
 maturity: active, ~39,977 stars (as of 2026-07)
 last_verified: 2026-07-16
 type: skill-pack
@@ -16,7 +16,7 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-16T08:17:03Z
+  computed_at: 2026-07-16T10:20:43Z
   overall: B
   overall_score: 2.75
   scored_axes: 4
@@ -60,7 +60,7 @@ health:
         content_license: null
   unknowns:
     responsiveness: { reason: type_na }
-    adoption: { reason: no_package_structural }
+    adoption: { reason: registry_lookup_failed }
 ---
 # marketingskills
 
@@ -70,36 +70,38 @@ Marketing skills for Claude Code and AI agents. CRO, copywriting, SEO, analytics
 
 ## 何时使用
 
-你正在评估 `writing` 方向的任务，需要把一个真实仓库纳入 oss-atlas 候选，而不是只在 backlog 里看到一个名字。当上游描述贴合任务、许可证和维护画像经核验后可接受，并且采用公共项目比自写一次性方案更合适时，可以把 marketingskills 纳入候选。
+你希望 coding agent 处理 product marketing、CRO、copywriting、SEO、analytics、lifecycle email、paid ads、growth loops、sales enablement、launch strategy 等营销执行任务。需要的是一套宽 marketing operating system，而不是一个窄写作 prompt 时，选 marketingskills。
 
-这是用户指定 backlog 的首版 intake 页面。用它来完成路由和邻近方案对比；在高风险场景依赖它之前，请重新阅读上游 README、许可证、示例和 release 历史。
+上游围绕 `product-marketing` 作为共享上下文组织，很多专门 skill 会先读它。支持 `npx skills add coreyhaines31/marketingskills`、Claude Code plugin 安装、clone/copy 安装，以及 SkillKit 多 agent 安装。
 
 ## 何时不用
 
-- **你今天就需要深度审过的 atlas 页面。** 在本页完成完整语义复核前，优先选横向对比表里更早收录、约束更清楚的页面。
-- **许可证是硬约束。** GitHub 返回 `NOASSERTION`；商用、再分发或 vendoring 前必须检查仓库内许可证文件。
-- **维护风险不可接受。** 如果项目很年轻、单人维护、star 少、没有版本线或长期安静，请选同分类里更成熟的替代品。
-- **你的任务需要更窄的替代品。** 如果另一个页面的“何时不用”已经点名你的约束，优先用那个页面，而不是这个首版入口。
-- **你无法核验上游工作流。** 在检查 README、脚本、依赖和外部 API 要求前，不要安装、运行或 vendor 这个仓库。
+- **你只需要 prose style 或去 AI 味清理。** 用 [humanizer](../de-ai-writing/humanizer.zh.md)、[shuorenhua](../de-ai-writing/shuorenhua.zh.md) 或 voice guide；marketingskills 是营销策略 / 执行包。
+- **你需要长文编辑生产线。** [writing-agent](writing-agent.zh.md) 或 [Webnovel Writer](webnovel-writer.zh.md) 更偏写作流程。
+- **你没有 product positioning context。** 很多技能依赖 `product-marketing`；没有产品、受众和定位输入，输出会变泛。
+- **你只要确定性的 analytics 实装。** analytics skills 只能做指导；事件名、同意机制、隐私和生产埋点仍要在代码里验证。
+- **你想要一个小本地 prompt。** 这是大型多 skill marketing pack，有 cross-skill dependencies 和升级迁移成本。
 
 ## 横向对比
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| 本叶子已收录技能 | ✅ | 如果已有更深审过的页面已经点名你的任务和约束，优先选它。 | 本页是首版 intake；已有页面的“何时不用”可能更锋利。 |
-| 自写 SKILL.md | 未收录 | 当任务很窄、私有或强绑定某个仓库约定时，自写 skill。 | 自写更贴本地上下文，但失去上游维护和社区示例。 |
+| [Baoyu Skills](baoyu-skills.zh.md) | ✅ | 需要更宽的写作、排版、媒体和工具流程时选 Baoyu Skills。 | Baoyu 更通用；marketingskills 在营销类别上更深。 |
+| [writing-agent](writing-agent.zh.md) | ✅ | 中文长文生产、证据、审稿和发布输出选 writing-agent。 | writing-agent 是内容生产线；marketingskills 是营销策略 / 执行支持。 |
+| [huashu-skills](huashu-skills.zh.md) | ✅ | 中文创作者需要文章、视频大纲、配图、调研等工具时选 huashu-skills。 | huashu-skills 偏 creator-content；marketingskills 偏 SaaS / growth marketing。 |
+| 私有 marketing playbook | 未收录 | 公司定位、渠道和指标有硬约束时自写。 | 更贴一个业务，但不如公共 skill pack 可复用。 |
 
 
 ## 健康度与可持续性
 
-- **维护快照（2026-07-16）：** GitHub 返回 `archived=false`，`pushed_at=2026-07-16T05:42:22Z`。
-- **采用快照：** 2026-07 约 39,977 个 GitHub stars；这是有噪声的信号，低 star 项目只要是真实且相关，也会被纳入。
-- **许可证快照：** GitHub 元数据返回 `NOASSERTION`；许可证关键时仍需人工核验许可证文件。
-- **Lindy / 治理：** 本次 intake 未完整复核。长期采用前，请继续检查项目年龄、owner 类型、贡献者集中度、release 和 issue 响应。
-- **风险信号：** 本页来自 2026-07-16 backlog 的首版生成；语义对比和依赖复核刻意保守。
+- **维护快照（2026-07-16）：** GitHub 返回 `archived=false`，`pushed_at=2026-07-16T05:42:22Z`；health 将维护评为 A。
+- **采用快照：** 2026-07 约 39,977 个 GitHub stars；对年轻 pack 是强关注信号，但不证明每个营销 tactic 都适合每个业务。
+- **许可证快照：** 只读上游核验确认 README 和根目录 `LICENSE` 均为 MIT。
+- **Lindy / 治理：** health 中 longevity 为 C；虽然有可见贡献者，活动仍集中，governance 为 D。
+- **风险信号：** 营销建议依赖产品上下文、数据质量、渠道约束，以及 tracking / outreach 的法律和隐私审查。
 
 ## 存疑（未验证）
 
-- [未验证] 本页依据公开 GitHub 元数据和用户提供的 intake 清单生成；上游 README、文档、示例、release 和依赖清单仍需深度复核。
-- [未验证] 许可证、安装命令、支持的 harness 和运行时要求可能与 GitHub 元数据不同；使用前请在仓库中核验。
-- [推断] 横向对比表先从邻近 atlas 分类出发，并不是完整替代品综述；读完上游项目和相邻方案后应继续细化。
+- [未验证] 没有逐个审计完整 catalog 中每个 skill 的质量。
+- [未验证] Analytics、ads、SEO 和 outreach workflow 在生产使用前仍需业务 / 法务审查。
+- [推断] 最适合使用 coding agent 的 technical marketers 和 founders，尤其是 SaaS / software 场景。

@@ -5,7 +5,7 @@ repo: https://github.com/JCodesMore/ai-website-cloner-template
 category: design
 tags: [agent-skill, design, ai-website-cloner-template, skill-pack]
 language: TypeScript
-license: NOASSERTION
+license: MIT
 maturity: active, ~28,523 stars (as of 2026-07)
 last_verified: 2026-07-16
 type: skill-pack
@@ -16,7 +16,7 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-16T08:13:14Z
+  computed_at: 2026-07-16T10:33:32Z
   overall: B
   overall_score: 2.5
   scored_axes: 4
@@ -70,36 +70,38 @@ Clone any website with one command using AI coding agents
 
 ## When to use
 
-You're evaluating a task in the `design` area and want a real repository in the oss-atlas shortlist rather than an untracked name from a backlog. Reach for ai-website-cloner-template when the upstream description matches the job, when its license and maintenance profile are acceptable after verification, and when adopting a public project is preferable to writing a local one-off.
+You own or are authorized to rebuild a live website and want an AI coding agent to reverse-engineer it into a modern Next.js codebase. Choose ai-website-cloner-template when the desired workflow is screenshot/design-token reconnaissance, asset extraction, component specs, parallel builders, assembly, and visual QA against the original.
 
-This is a first-pass intake page for a user-requested backlog item. Use it to route selection and compare nearby options, then reread the upstream README, license, examples, and release history before relying on it for high-stakes work.
+The template targets Next.js 16, React 19, TypeScript strict, shadcn/ui, Tailwind CSS v4, and multi-agent coding workflows. It exposes `/clone-website <target-url...>` and keeps `AGENTS.md` as the source of truth for supported agents including Claude Code, Codex CLI, OpenCode, Copilot, Cursor, Windsurf, Gemini CLI, Cline, Roo Code, Continue, Amazon Q, Augment Code, and Aider.
 
 ## When NOT to use
 
-- **You need a deeply reviewed atlas page today.** Prefer an older in-index page from the comparison table until this entry has had a full semantic review.
-- **License is a hard constraint.** GitHub reported `NOASSERTION`; inspect the repository license files before commercial use, redistribution, or vendoring.
-- **Maintenance risk is unacceptable.** If the project is young, single-maintainer, low-star, unversioned, or quiet, choose a more established substitute in the same category.
-- **Your task needs a narrower substitute.** If another page's `When NOT to use` section names your exact constraint, prefer that page over this first-pass entry.
-- **You cannot verify the upstream workflow.** Do not install, run, or vendor this repo before checking its README, scripts, dependencies, and any external API requirements.
+- **You do not own or have permission to reproduce the target site.** The upstream README explicitly excludes phishing, impersonation, passing off someone else's design, and terms-of-service violations.
+- **You only need design inspiration.** Use [Hallmark](hallmark.md), [Taste-Skill](taste-skill.md), or a study workflow rather than cloning brand assets, copy, and layout.
+- **You need framework-neutral output.** This template is opinionated around Next.js, React, shadcn/ui, and Tailwind CSS.
+- **You cannot run a browser-backed agent workflow.** The reconstruction depends on screenshots, computed styles, interactions, assets, and visual comparison.
+- **You need pixel-perfect legal/compliance signoff.** Treat generated code as a starting point and review brand/IP rights, accessibility, security, and responsive behavior before launch.
 
 ## Comparison
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| Existing skills in this leaf | ✅ | Prefer a more deeply reviewed in-index page when it already names your exact task and constraints. | This page is first-pass intake; existing pages may have sharper when-not guidance. |
-| Custom SKILL.md | 未收录 | Write a custom skill when the task is narrow, private, or tightly bound to one repository's conventions. | Custom skills fit local context better but lose upstream maintenance and community examples. |
+| [Hallmark](hallmark.md) | ✅ | Choose Hallmark when you need anti-slop design direction, audit, redesign, or study without copying a live site. | Hallmark is safer for ideation; ai-website-cloner-template reconstructs concrete sites. |
+| [Stitch Skills](stitch-skills.md) | ✅ | Choose Stitch when you want UI screens or code/design handoff through Stitch MCP. | Stitch generates screens; this template migrates/rebuilds target websites into a Next.js project. |
+| [huashu-design](huashu-design.md) | ✅ | Choose huashu-design for HTML-native prototypes, slides, motion, and infographics. | huashu-design creates new artifacts; this template clones/migrates existing web pages. |
+| Manual rebuild | not indexed | Choose manual rebuild when IP, accessibility, or business logic needs exact human judgment. | Slower, but reduces legal and quality risk versus automated cloning. |
 
 
 ## Health & viability
 
-- **Maintenance snapshot (2026-07-16):** GitHub reports `archived=false` and `pushed_at=2026-07-04T06:49:18Z`.
-- **Adoption snapshot:** ~28,523 GitHub stars as of 2026-07; this is a noisy signal and low-star projects are still included when the repository is real and relevant.
-- **License snapshot:** `NOASSERTION` from GitHub metadata; manual license-file review remains required when license matters.
-- **Lindy / governance:** not fully reviewed in this intake pass. Check age, owner type, contributor concentration, releases, and issue response before long-term adoption.
-- **Risk flags:** first-pass page generated from the 2026-07-16 backlog; semantic comparison and dependency review are intentionally conservative.
+- **Maintenance snapshot (2026-07-16):** GitHub reports `archived=false` and `pushed_at=2026-07-04T06:49:18Z`; health scores maintenance as B.
+- **Adoption snapshot:** ~28,523 GitHub stars as of 2026-07; strong attention signal for a young template, not proof that every target site can be reconstructed safely.
+- **License snapshot:** MIT verified from upstream README badge, README license section, and root `LICENSE`.
+- **Lindy / governance:** health longevity is C and governance is D because the project is young and contribution is concentrated.
+- **Risk flags:** legal authorization, target-site terms, browser access, asset rights, and post-generation QA matter more than the template itself.
 
 ## Caveats (unverified)
 
-- [未验证] This page is generated from public GitHub metadata plus the user-provided intake list; upstream README, docs, examples, releases, and dependency manifests still need deeper review.
-- [未验证] License, install commands, supported harnesses, and runtime requirements may differ from GitHub metadata; verify them in the repository before use.
-- [推断] The comparison table starts from nearby atlas categories rather than a complete substitute survey; refine it after reading the full upstream project and adjacent alternatives.
+- [未验证] Demo quality was read from upstream README/demo assets, not reproduced locally.
+- [未验证] Different agents may vary in browser access, screenshot quality, and parallel worktree handling.
+- [推断] Best fit is authorized site migration/rebuild, not design plagiarism or phishing.

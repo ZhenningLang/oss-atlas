@@ -16,7 +16,7 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-16T08:06:38Z
+  computed_at: 2026-07-16T10:20:43Z
   overall: D
   overall_score: 1.25
   scored_axes: 4
@@ -29,7 +29,7 @@ health:
       raw:
         archived: false
         last_commit_age_days: 86
-        active_weeks_13: 1
+        active_weeks_13: null
         carve_out: null
     responsiveness:
       grade: "?"
@@ -70,36 +70,38 @@ health:
 
 ## When to use
 
-You're evaluating a task in the `writing` area and want a real repository in the oss-atlas shortlist rather than an untracked name from a backlog. Reach for huashu-skills when the upstream description matches the job, when its license and maintenance profile are acceptable after verification, and when adopting a public project is preferable to writing a local one-off.
+You want a Chinese creator-oriented Claude Code skill collection for article editing, topic generation, research, video outlines, scripts, social conversion, images, PDF export, speech coaching, and prompt saving. Choose huashu-skills when you want a broad content-creation toolbox rather than a single writing pipeline.
 
-This is a first-pass intake page for a user-requested backlog item. Use it to route selection and compare nearby options, then reread the upstream README, license, examples, and release history before relying on it for high-stakes work.
+The upstream README describes 21 practical skills, including end-to-end workflows such as slides, data reports, Douyin scripts, and design advice, plus writing/proofreading, material search, article editing, topic generation, video checks, image generation/upload, and Markdown-to-PDF. It installs individual skills via `/install-skill https://github.com/alchaincyf/huashu-skills/tree/master/{skill名}`.
 
 ## When NOT to use
 
-- **You need a deeply reviewed atlas page today.** Prefer an older in-index page from the comparison table until this entry has had a full semantic review.
-- **License is a hard constraint.** GitHub reported `NOASSERTION`; inspect the repository license files before commercial use, redistribution, or vendoring.
-- **Maintenance risk is unacceptable.** If the project is young, single-maintainer, low-star, unversioned, or quiet, choose a more established substitute in the same category.
-- **Your task needs a narrower substitute.** If another page's `When NOT to use` section names your exact constraint, prefer that page over this first-pass entry.
-- **You cannot verify the upstream workflow.** Do not install, run, or vendor this repo before checking its README, scripts, dependencies, and any external API requirements.
+- **License clarity is required.** The README did not expose a license section in this pass and `LICENSE` returned 404; keep reuse conservative.
+- **You need one strict end-to-end article production line.** [writing-agent](writing-agent.md) is more process-heavy and evidence-gated.
+- **You need English SaaS marketing or growth execution.** [marketingskills](marketingskills.md) is more specialized for CRO, SEO, analytics, and sales enablement.
+- **You cannot install individual subskills.** The README's installation model is per skill path, not one clearly versioned package contract.
+- **You require audited output quality claims.** Claims such as AI-detection reduction, image pipelines, or report quality still require local validation.
 
 ## Comparison
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| Existing skills in this leaf | ✅ | Prefer a more deeply reviewed in-index page when it already names your exact task and constraints. | This page is first-pass intake; existing pages may have sharper when-not guidance. |
-| Custom SKILL.md | 未收录 | Write a custom skill when the task is narrow, private, or tightly bound to one repository's conventions. | Custom skills fit local context better but lose upstream maintenance and community examples. |
+| [writing-agent](writing-agent.md) | ✅ | Choose writing-agent when one article must move through a strict staged production and fact-check workflow. | writing-agent is deeper and heavier; huashu-skills is broader and modular. |
+| [Baoyu Skills](baoyu-skills.md) | ✅ | Choose Baoyu Skills for broad coding-agent utilities across translation, formatting, capture, and media. | Baoyu is more utility-oriented; huashu-skills targets Chinese creator workflows. |
+| [marketingskills](marketingskills.md) | ✅ | Choose marketingskills for SaaS/growth marketing. | marketingskills is marketing-specialized; huashu-skills is creator-content oriented. |
+| Custom creator toolkit | 未收录 | Choose custom when your content channels, image hosts, and editorial style are fixed. | Better local fit, but you must maintain every skill yourself. |
 
 
 ## Health & viability
 
-- **Maintenance snapshot (2026-07-16):** GitHub reports `archived=false` and `pushed_at=2026-04-21T05:28:31Z`.
-- **Adoption snapshot:** ~1,205 GitHub stars as of 2026-07; this is a noisy signal and low-star projects are still included when the repository is real and relevant.
-- **License snapshot:** `NOASSERTION` from GitHub metadata; manual license-file review remains required when license matters.
-- **Lindy / governance:** not fully reviewed in this intake pass. Check age, owner type, contributor concentration, releases, and issue response before long-term adoption.
-- **Risk flags:** first-pass page generated from the 2026-07-16 backlog; semantic comparison and dependency review are intentionally conservative.
+- **Maintenance snapshot (2026-07-16):** GitHub reports `archived=false` and `pushed_at=2026-04-21T05:28:31Z`; health scores maintenance as C.
+- **Adoption snapshot:** ~1,205 GitHub stars as of 2026-07; useful attention signal for a creator toolkit but not a quality proof for every subskill.
+- **License snapshot:** `NOASSERTION`; root `LICENSE` returned 404 during this pass and health marks the repo as source-available/no-license.
+- **Lindy / governance:** health longevity is C and governance is D due to a young, single-maintainer-centered repo.
+- **Risk flags:** broad surface area, unclear license, per-skill install paths, and channel-specific dependencies such as image hosts or model APIs.
 
 ## Caveats (unverified)
 
-- [未验证] This page is generated from public GitHub metadata plus the user-provided intake list; upstream README, docs, examples, releases, and dependency manifests still need deeper review.
-- [未验证] License, install commands, supported harnesses, and runtime requirements may differ from GitHub metadata; verify them in the repository before use.
-- [推断] The comparison table starts from nearby atlas categories rather than a complete substitute survey; refine it after reading the full upstream project and adjacent alternatives.
+- [未验证] No root `LICENSE` file was found during this pass; do not assume permissive reuse.
+- [未验证] Individual subskill behavior and external dependencies were not executed locally.
+- [推断] Best fit is Chinese content-creator workflow support, not a single audited writing pipeline.

@@ -5,7 +5,7 @@ repo: https://github.com/coreyhaines31/marketingskills
 category: writing
 tags: [agent-skill, writing, marketingskills, skill-pack]
 language: JavaScript
-license: NOASSERTION
+license: MIT
 maturity: active, ~39,977 stars (as of 2026-07)
 last_verified: 2026-07-16
 type: skill-pack
@@ -16,7 +16,7 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-16T08:17:03Z
+  computed_at: 2026-07-16T10:20:43Z
   overall: B
   overall_score: 2.75
   scored_axes: 4
@@ -60,7 +60,7 @@ health:
         content_license: null
   unknowns:
     responsiveness: { reason: type_na }
-    adoption: { reason: no_package_structural }
+    adoption: { reason: registry_lookup_failed }
 ---
 # marketingskills
 
@@ -70,36 +70,38 @@ Marketing skills for Claude Code and AI agents. CRO, copywriting, SEO, analytics
 
 ## When to use
 
-You're evaluating a task in the `writing` area and want a real repository in the oss-atlas shortlist rather than an untracked name from a backlog. Reach for marketingskills when the upstream description matches the job, when its license and maintenance profile are acceptable after verification, and when adopting a public project is preferable to writing a local one-off.
+You want a coding agent to help with product marketing, CRO, copywriting, SEO, analytics, lifecycle email, paid ads, growth loops, sales enablement, launch strategy, and related marketing execution. Choose marketingskills when the agent needs a broad marketing operating system rather than one narrow writing prompt.
 
-This is a first-pass intake page for a user-requested backlog item. Use it to route selection and compare nearby options, then reread the upstream README, license, examples, and release history before relying on it for high-stakes work.
+The upstream pack is organized around `product-marketing` as shared context, with many specialized skills referencing it first. It supports `npx skills add coreyhaines31/marketingskills`, Claude Code plugin installation, clone/copy installs, and SkillKit multi-agent installation.
 
 ## When NOT to use
 
-- **You need a deeply reviewed atlas page today.** Prefer an older in-index page from the comparison table until this entry has had a full semantic review.
-- **License is a hard constraint.** GitHub reported `NOASSERTION`; inspect the repository license files before commercial use, redistribution, or vendoring.
-- **Maintenance risk is unacceptable.** If the project is young, single-maintainer, low-star, unversioned, or quiet, choose a more established substitute in the same category.
-- **Your task needs a narrower substitute.** If another page's `When NOT to use` section names your exact constraint, prefer that page over this first-pass entry.
-- **You cannot verify the upstream workflow.** Do not install, run, or vendor this repo before checking its README, scripts, dependencies, and any external API requirements.
+- **You only need prose style or de-AI cleanup.** Use [humanizer](../de-ai-writing/humanizer.md), [shuorenhua](../de-ai-writing/shuorenhua.md), or a voice guide; marketingskills is a marketing strategy/execution pack.
+- **You need long-form editorial production for articles.** [writing-agent](writing-agent.md) or [Webnovel Writer](webnovel-writer.md) are more writing-pipeline oriented.
+- **You do not have product positioning context.** Many skills depend on `product-marketing`; without product, audience, and positioning inputs, outputs become generic.
+- **You need deterministic analytics implementation only.** Treat analytics skills as guidance; still verify event names, consent, privacy, and production instrumentation in code.
+- **You want a small local prompt.** This is a large multi-skill marketing pack with cross-skill dependencies and upgrade/migration concerns.
 
 ## Comparison
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| Existing skills in this leaf | ✅ | Prefer a more deeply reviewed in-index page when it already names your exact task and constraints. | This page is first-pass intake; existing pages may have sharper when-not guidance. |
-| Custom SKILL.md | 未收录 | Write a custom skill when the task is narrow, private, or tightly bound to one repository's conventions. | Custom skills fit local context better but lose upstream maintenance and community examples. |
+| [Baoyu Skills](baoyu-skills.md) | ✅ | Choose Baoyu Skills for broader writing, formatting, media, and utility workflows. | Baoyu is general-purpose; marketingskills is much deeper on marketing categories. |
+| [writing-agent](writing-agent.md) | ✅ | Choose writing-agent for Chinese long-form article production with staged evidence, review, and publishing outputs. | writing-agent is a content production line; marketingskills is marketing strategy/execution support. |
+| [huashu-skills](huashu-skills.md) | ✅ | Choose huashu-skills for Chinese creator workflows across articles, video outlines, images, and research. | huashu-skills is creator-content oriented; marketingskills is SaaS/growth marketing oriented. |
+| Custom marketing playbook | 未收录 | Choose a private playbook when company-specific positioning, channels, and metrics are non-negotiable. | Better fit to one business; less reusable than the public skill pack. |
 
 
 ## Health & viability
 
-- **Maintenance snapshot (2026-07-16):** GitHub reports `archived=false` and `pushed_at=2026-07-16T05:42:22Z`.
-- **Adoption snapshot:** ~39,977 GitHub stars as of 2026-07; this is a noisy signal and low-star projects are still included when the repository is real and relevant.
-- **License snapshot:** `NOASSERTION` from GitHub metadata; manual license-file review remains required when license matters.
-- **Lindy / governance:** not fully reviewed in this intake pass. Check age, owner type, contributor concentration, releases, and issue response before long-term adoption.
-- **Risk flags:** first-pass page generated from the 2026-07-16 backlog; semantic comparison and dependency review are intentionally conservative.
+- **Maintenance snapshot (2026-07-16):** GitHub reports `archived=false` and `pushed_at=2026-07-16T05:42:22Z`; health scores maintenance as A.
+- **Adoption snapshot:** ~39,977 GitHub stars as of 2026-07, a strong attention signal for a young pack but not proof that every marketing tactic fits every business.
+- **License snapshot:** MIT verified from upstream README and root `LICENSE` in the read-only upstream check.
+- **Lindy / governance:** health longevity is C and governance is D because activity is still concentrated despite visible contributors.
+- **Risk flags:** marketing advice depends on product context, data quality, channel constraints, and legal/privacy review for tracking or outreach.
 
 ## Caveats (unverified)
 
-- [未验证] This page is generated from public GitHub metadata plus the user-provided intake list; upstream README, docs, examples, releases, and dependency manifests still need deeper review.
-- [未验证] License, install commands, supported harnesses, and runtime requirements may differ from GitHub metadata; verify them in the repository before use.
-- [推断] The comparison table starts from nearby atlas categories rather than a complete substitute survey; refine it after reading the full upstream project and adjacent alternatives.
+- [未验证] Individual skill quality across the full catalog was not audited one by one.
+- [未验证] Analytics, ads, SEO, and outreach workflows still need business/legal review before production use.
+- [推断] Best fit is technical marketers and founders using coding agents, especially SaaS/software contexts.

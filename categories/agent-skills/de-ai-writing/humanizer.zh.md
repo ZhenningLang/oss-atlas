@@ -4,8 +4,8 @@ slug: humanizer
 repo: https://github.com/blader/humanizer
 category: de-ai-writing
 tags: [agent-skill, de-ai-writing, humanizer, skill-pack]
-language: Unknown
-license: NOASSERTION
+language: Markdown
+license: MIT
 maturity: active, ~29,415 stars (as of 2026-07)
 last_verified: 2026-07-16
 type: skill-pack
@@ -16,7 +16,7 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-16T08:08:44Z
+  computed_at: 2026-07-16T09:37:08Z
   overall: B
   overall_score: 3.0
   scored_axes: 4
@@ -28,7 +28,7 @@ health:
       grade: B
       raw:
         archived: false
-        last_commit_age_days: 16
+        last_commit_age_days: 17
         active_weeks_13: 5
         carve_out: null
     responsiveness:
@@ -41,7 +41,7 @@ health:
       grade: C
       raw:
         repo_age_days: 179
-        last_commit_age_days: 16
+        last_commit_age_days: 17
         cohort: skill-pack
     governance:
       grade: B
@@ -70,36 +70,37 @@ Claude Code skill that removes signs of AI-generated writing from text
 
 ## 何时使用
 
-你正在评估 `de-ai-writing` 方向的任务，需要把一个真实仓库纳入 oss-atlas 候选，而不是只在 backlog 里看到一个名字。当上游描述贴合任务、许可证和维护画像经核验后可接受，并且采用公共项目比自写一次性方案更合适时，可以把 humanizer 纳入候选。
+你正在编辑英文文本，输出看起来像通用 AI 写作，并且想用一个可安装、可复用的 agent skill，而不是再写一条临时 prompt。目标语言是英文、你想使用 Humanizer-zh 背后的上游规则，并且 harness 能加载 skill-style Markdown 指令或 Claude Code plugin 时，选 humanizer。
 
-这是用户指定 backlog 的首版 intake 页面。用它来完成路由和邻近方案对比；在高风险场景依赖它之前，请重新阅读上游 README、许可证、示例和 release 历史。
+当你需要的不只是“去 AI 味”一句话，而是 `SKILL.md`、plugin metadata、`npx skills add blader/humanizer`、Claude Code plugin 安装文档、false-positive 指南和 draft→audit→final 改写循环时，它更合适。
 
 ## 何时不用
 
-- **你今天就需要深度审过的 atlas 页面。** 在本页完成完整语义复核前，优先选横向对比表里更早收录、约束更清楚的页面。
-- **许可证是硬约束。** GitHub 返回 `NOASSERTION`；商用、再分发或 vendoring 前必须检查仓库内许可证文件。
-- **维护风险不可接受。** 如果项目很年轻、单人维护、star 少、没有版本线或长期安静，请选同分类里更成熟的替代品。
-- **你的任务需要更窄的替代品。** 如果另一个页面的“何时不用”已经点名你的约束，优先用那个页面，而不是这个首版入口。
-- **你无法核验上游工作流。** 在检查 README、脚本、依赖和外部 API 要求前，不要安装、运行或 vendor 这个仓库。
+- **目标文本是中文。** 简体中文 checklist 用 [Humanizer-zh](humanizer-zh.zh.md)，中文工程 / 产品表达和 protected spans 用 [shuorenhua](shuorenhua.zh.md)。
+- **你想要非常短、非常硬的规则。** [stop-slop](stop-slop.zh.md) 更短也更强硬；humanizer 更宽、更谨慎。
+- **必须保留正式、学术、法律或技术语体。** humanizer 有 false-positive 指南，但去 AI 味 skill 仍可能过度编辑有用的正式结构。
+- **你要复刻品牌 voice。** 自写 voice guide 或作者风格工作流更合适；humanizer 是通用英文 AI 写作清理规则。
 
 ## 横向对比
 
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
-| 本叶子已收录技能 | ✅ | 如果已有更深审过的页面已经点名你的任务和约束，优先选它。 | 本页是首版 intake；已有页面的“何时不用”可能更锋利。 |
-| 自写 SKILL.md | 未收录 | 当任务很窄、私有或强绑定某个仓库约定时，自写 skill。 | 自写更贴本地上下文，但失去上游维护和社区示例。 |
+| [Humanizer-zh](humanizer-zh.zh.md) | ✅ | 简体中文文本和 Claude Code 中文场景选 Humanizer-zh。 | Humanizer-zh 是本上游 skill 的中文本地化，但可能落后于上游规则变化。 |
+| [shuorenhua](shuorenhua.zh.md) | ✅ | 中文工程 / 产品表达，并需要 protected spans 时选 shuorenhua。 | shuorenhua 更中文原生、场景化；humanizer 是英文上游基线。 |
+| [stop-slop](stop-slop.zh.md) | ✅ | 需要短小、强硬的 prose 去机器腔规则时选 stop-slop。 | stop-slop 更严格、更容易复制；humanizer 模式更多，有 false-positive 处理和 plugin 安装路径。 |
+| 自写 voice guide | 未收录 | 单个作者或品牌 voice 比通用去 AI 味更重要时自写。 | 自写更贴一个 voice；humanizer 更通用。 |
 
 
 ## 健康度与可持续性
 
-- **维护快照（2026-07-16）：** GitHub 返回 `archived=false`，`pushed_at=2026-06-29T20:43:06Z`。
-- **采用快照：** 2026-07 约 29,415 个 GitHub stars；这是有噪声的信号，低 star 项目只要是真实且相关，也会被纳入。
-- **许可证快照：** GitHub 元数据返回 `NOASSERTION`；许可证关键时仍需人工核验许可证文件。
-- **Lindy / 治理：** 本次 intake 未完整复核。长期采用前，请继续检查项目年龄、owner 类型、贡献者集中度、release 和 issue 响应。
-- **风险信号：** 本页来自 2026-07-16 backlog 的首版生成；语义对比和依赖复核刻意保守。
+- **维护快照（2026-07-16）：** GitHub 返回 `archived=false`，`pushed_at=2026-06-29T20:43:06Z`；health 将维护评为 B。
+- **采用快照：** 2026-07 约 29,415 个 GitHub stars，但这是社交关注度，不等于每次改写质量。
+- **许可证快照：** 只读上游核验确认 GitHub metadata、根目录 `LICENSE`、README 和 `SKILL.md` metadata 均为 MIT。
+- **Lindy / 治理：** 项目很年轻但关注度高；health 显示贡献者分布比许多单 skill 仓库更分散，不过仍不足一年。
+- **风险信号：** 上游规则引用 Wikipedia 风格 AI 写作迹象；这些模式是否仍符合当前写作规范，需要周期性复核。
 
 ## 存疑（未验证）
 
-- [未验证] 本页依据公开 GitHub 元数据和用户提供的 intake 清单生成；上游 README、文档、示例、release 和依赖清单仍需深度复核。
-- [未验证] 许可证、安装命令、支持的 harness 和运行时要求可能与 GitHub 元数据不同；使用前请在仓库中核验。
-- [推断] 横向对比表先从邻近 atlas 分类出发，并不是完整替代品综述；读完上游项目和相邻方案后应继续细化。
+- [未验证] 项目引用 Wikipedia 风格“AI 写作迹象”；本次没有核验每条上游规则是否仍与当前 Wikipedia 页面一致。
+- [未验证] 安装命令读自上游文档，但没有在本机逐个执行。
+- [推断] 因为 Humanizer-zh 的模式数量看起来可能落后，上游 humanizer 对英文和最新上游规则更适合作为基线。

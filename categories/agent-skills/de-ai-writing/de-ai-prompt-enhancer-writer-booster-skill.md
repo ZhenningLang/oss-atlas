@@ -16,7 +16,7 @@ upstream:
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-16T08:06:55Z
+  computed_at: 2026-07-16T09:42:05Z
   overall: C
   overall_score: 1.5
   scored_axes: 4
@@ -64,42 +64,43 @@ health:
 ---
 # De-AI-Prompt-Enhancer-Writer-Booster-SKILL
 
-去AI味提示词-作家增强-SKILL
+Chinese de-AI writing prompt suite packaged as two SKILL-format folders: `de-AI-writing/SKILL.md` for AI-tone cleanup and `good-writing/SKILL.md` for stronger author-style reconstruction.
 
 ![de-ai-prompt-enhancer-writer-booster-skill — health radar](../../../assets/health/de-ai-prompt-enhancer-writer-booster-skill.svg)
 
 ## When to use
 
-You're evaluating a task in the `de-ai-writing` area and want a real repository in the oss-atlas shortlist rather than an untracked name from a backlog. Reach for De-AI-Prompt-Enhancer-Writer-Booster-SKILL when the upstream description matches the job, when its license and maintenance profile are acceptable after verification, and when adopting a public project is preferable to writing a local one-off.
+You want a Chinese de-AI writing workflow that goes beyond generic “humanize this” prompts and deliberately models an author-like writing style. Choose this repo when you want two installable SKILL folders: `de-AI-writing` for cleanup and `good-writing` for a heavier writer-booster / style-reconstruction workflow.
 
-This is a first-pass intake page for a user-requested backlog item. Use it to route selection and compare nearby options, then reread the upstream README, license, examples, and release history before relying on it for high-stakes work.
+It is a better fit when your team accepts a strong, opinionated Chinese prose voice and wants auxiliary style-audit scripts (`scripts/style_audit.js`, `de-AI-writing/tools/style-lint.ps1`) rather than a neutral, lightweight humanizer.
 
 ## When NOT to use
 
-- **You need a deeply reviewed atlas page today.** Prefer an older in-index page from the comparison table until this entry has had a full semantic review.
-- **License is a hard constraint.** GitHub reported `NOASSERTION`; inspect the repository license files before commercial use, redistribution, or vendoring.
-- **Maintenance risk is unacceptable.** If the project is young, single-maintainer, low-star, unversioned, or quiet, choose a more established substitute in the same category.
-- **Your task needs a narrower substitute.** If another page's `When NOT to use` section names your exact constraint, prefer that page over this first-pass entry.
-- **You cannot verify the upstream workflow.** Do not install, run, or vendor this repo before checking its README, scripts, dependencies, and any external API requirements.
+- **License clarity matters.** No root `LICENSE` file was found in the upstream tree during the read-only check, and GitHub metadata reports no parsed license.
+- **You need neutral Chinese prose.** Use [shuorenhua](shuorenhua.md) or [Humanizer-zh](humanizer-zh.md); this repo's `good-writing` workflow is more author-style and voice-DNA oriented.
+- **You only need quick cleanup.** The `de-AI-writing` folder may be enough; adopting the whole writer-booster workflow is heavier than a single humanizer skill.
+- **You are editing someone else's private style samples.** Do not use style-reconstruction workflows unless you have rights and consent for the source material.
 
 ## Comparison
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| Existing skills in this leaf | ✅ | Prefer a more deeply reviewed in-index page when it already names your exact task and constraints. | This page is first-pass intake; existing pages may have sharper when-not guidance. |
-| Custom SKILL.md | 未收录 | Write a custom skill when the task is narrow, private, or tightly bound to one repository's conventions. | Custom skills fit local context better but lose upstream maintenance and community examples. |
+| [shuorenhua](shuorenhua.md) | ✅ | Choose shuorenhua for general Chinese fact-preserving rewrite across engineering/product scenarios. | shuorenhua is less tied to one author style; OUBIGFA is heavier and more voice-reconstruction oriented. |
+| [Humanizer-zh](humanizer-zh.md) | ✅ | Choose Humanizer-zh for a smaller Chinese localization of the upstream humanizer checklist. | Humanizer-zh is lighter; OUBIGFA adds writer-booster behavior and style-audit scripts. |
+| [humanizer](humanizer.md) | ✅ | Choose humanizer for English text and the upstream portable skill. | OUBIGFA is Chinese-first and more subjective. |
+| Private voice guide | 未收录 | Choose a private guide when the style source is internal or legally sensitive. | A private guide avoids public repo license/source ambiguity. |
 
 
 ## Health & viability
 
-- **Maintenance snapshot (2026-07-16):** GitHub reports `archived=false` and `pushed_at=2026-06-01T04:26:50Z`.
-- **Adoption snapshot:** ~538 GitHub stars as of 2026-07; this is a noisy signal and low-star projects are still included when the repository is real and relevant.
-- **License snapshot:** `NOASSERTION` from GitHub metadata; manual license-file review remains required when license matters.
-- **Lindy / governance:** not fully reviewed in this intake pass. Check age, owner type, contributor concentration, releases, and issue response before long-term adoption.
-- **Risk flags:** first-pass page generated from the 2026-07-16 backlog; semantic comparison and dependency review are intentionally conservative.
+- **Maintenance snapshot (2026-07-16):** GitHub reports `archived=false` and `pushed_at=2026-06-01T04:26:50Z`; health scores maintenance as B.
+- **Adoption snapshot:** ~538 GitHub stars as of 2026-07; still a young, single-maintainer skill pack.
+- **License snapshot:** `NOASSERTION`; the read-only upstream check did not find a root license file, so reuse/vendoring is blocked until license is clarified.
+- **Lindy / governance:** created in 2026, health scores longevity as C and governance as D due to maintainer concentration.
+- **Risk flags:** `good-writing` can impose a strong author-like style; this is a feature for voice reconstruction but a liability for neutral editorial cleanup.
 
 ## Caveats (unverified)
 
-- [未验证] This page is generated from public GitHub metadata plus the user-provided intake list; upstream README, docs, examples, releases, and dependency manifests still need deeper review.
-- [未验证] License, install commands, supported harnesses, and runtime requirements may differ from GitHub metadata; verify them in the repository before use.
-- [推断] The comparison table starts from nearby atlas categories rather than a complete substitute survey; refine it after reading the full upstream project and adjacent alternatives.
+- [未验证] Upstream README refers to style material under `.writer/`; the read-only tree check only confirmed related sample/reference files, not that exact directory.
+- [未验证] The style-audit scripts were identified from upstream docs/tree but not executed locally.
+- [推断] The writer-booster workflow may be too opinionated for neutral documentation, support replies, or regulated communications.

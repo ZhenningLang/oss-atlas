@@ -63,7 +63,7 @@
 | **video-production** | AI-orchestrated end-to-end video production — research, scripting, asset generation, composition, and rendering driven by an agent inside a coding assistant. | [→](categories/video-production/INDEX.md) |
 | **investment-finance** | Quant finance, market-data, trading research, and investment-analysis tooling. | [→](categories/investment-finance/INDEX.md) |
 | **education-tutoring** | AI tutoring, learning assistants, and education-focused agent systems. | [→](categories/education-tutoring/INDEX.md) |
-| **governance** | Governance, policy enforcement, identity, sandboxing, and reliability controls for AI agents. | [→](categories/governance/INDEX.md) |
+| **agent-governance** | Governance, policy enforcement, identity, sandboxing, and reliability controls for AI agents. | [→](categories/agent-governance/INDEX.md) |
 
 
 

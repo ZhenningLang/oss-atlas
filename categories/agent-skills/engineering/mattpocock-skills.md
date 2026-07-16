@@ -1,22 +1,22 @@
 ---
-name: skills
+name: mattpocock/skills
 slug: mattpocock-skills
 repo: https://github.com/mattpocock/skills
 category: engineering
-tags: [agent-skill, engineering, mattpocock-skills, skill-pack]
+tags: [agent-skill, engineering, tdd, code-review, skill-pack]
 language: Shell
-license: NOASSERTION
-maturity: active, ~172,981 stars (as of 2026-07)
+license: MIT
+maturity: active, ~173,369 stars (as of 2026-07)
 last_verified: 2026-07-16
 type: skill-pack
 upstream:
-  pushed_at: 2026-07-14T18:32:39Z
+  pushed_at: 2026-07-16T09:03:25Z
   default_branch: main
-  default_branch_sha: e9fcdf95b402d360f90f1db8d776d5dd450f9234
+  default_branch_sha: 9603c1cc8118d08bc1b3bf34cf714f62178dea3b
   archived: false
 health:
   schema: 1
-  computed_at: 2026-07-16T08:12:03Z
+  computed_at: 2026-07-16T11:04:03Z
   overall: B
   overall_score: 3.0
   scored_axes: 4
@@ -28,7 +28,7 @@ health:
       grade: A
       raw:
         archived: false
-        last_commit_age_days: 2
+        last_commit_age_days: 0
         active_weeks_13: 13
         carve_out: null
     responsiveness:
@@ -41,7 +41,7 @@ health:
       grade: C
       raw:
         repo_age_days: 163
-        last_commit_age_days: 2
+        last_commit_age_days: 0
         cohort: skill-pack
     governance:
       grade: C
@@ -62,44 +62,47 @@ health:
     responsiveness: { reason: type_na }
     adoption: { reason: no_package_structural }
 ---
-# skills
+# mattpocock/skills
 
-Skills for Real Engineers. Straight from my .claude directory.
+Matt Pocock's engineering skill pack for Claude Code and skills.sh: grilling, domain docs, TDD, bug diagnosis, architecture, review, tickets, and implementation flow.
 
 ![mattpocock-skills — health radar](../../../assets/health/mattpocock-skills.svg)
 
 ## When to use
 
-You're evaluating a task in the `engineering` area and want a real repository in the oss-atlas shortlist rather than an untracked name from a backlog. Reach for skills when the upstream description matches the job, when its license and maintenance profile are acceptable after verification, and when adopting a public project is preferable to writing a local one-off.
+You're using Claude Code, Codex, or another Agent-Skills-compatible coding agent on a real application, and the failure mode is not model capability but weak process: unclear requirements, vague domain language, missing TDD loops, sloppy bug diagnosis, unreviewed diffs, or architecture drift. Pick mattpocock/skills when you want a compact engineering playbook that can be copied via skills.sh or installed as a Claude Code plugin, then configured per repo with `/setup-matt-pocock-skills`.
 
-This is a first-pass intake page for a user-requested backlog item. Use it to route selection and compare nearby options, then reread the upstream README, license, examples, and release history before relying on it for high-stakes work.
+Choose it over a broad personal collection when you specifically want software-engineering rituals rather than content creation or persona prompts. It is opinionated around issue trackers, docs, tickets, and review flow, so it is strongest when your repo can absorb that process.
 
 ## When NOT to use
 
-- **You need a deeply reviewed atlas page today.** Prefer an older in-index page from the comparison table until this entry has had a full semantic review.
-- **License is a hard constraint.** GitHub reported `NOASSERTION`; inspect the repository license files before commercial use, redistribution, or vendoring.
-- **Maintenance risk is unacceptable.** If the project is young, single-maintainer, low-star, unversioned, or quiet, choose a more established substitute in the same category.
-- **Your task needs a narrower substitute.** If another page's `When NOT to use` section names your exact constraint, prefer that page over this first-pass entry.
-- **You cannot verify the upstream workflow.** Do not install, run, or vendor this repo before checking its README, scripts, dependencies, and any external API requirements.
+- **You only want web-quality audits.** Use [web-quality-skills](addyosmani-web-quality.md) for Lighthouse, Core Web Vitals, accessibility, SEO, and performance checklists; mattpocock/skills is broader engineering process.
+- **You need a vendor's deployment playbook.** Use [Vercel Agent Skills](vercel-agent-skills.md) for React/Next.js/Vercel-specific deployment and docs audit work; mattpocock/skills is model- and platform-agnostic.
+- **You cannot add process artifacts.** If your environment rejects tickets, domain docs, ADRs, or setup questions, use a smaller single skill such as [Waza](waza.md) or a local rule instead.
+- **You want a full autonomous SDLC framework.** Evaluate BMAD, Spec Kit, or GSD-style systems (not indexed) if you deliberately want the process to own orchestration; this pack is explicitly positioned as smaller and composable.
+- **You need neutral organization-owned policy.** Use an internal skill set when external personal conventions, newsletter links, or Matt Pocock's opinions are not acceptable in enterprise agent prompts.
 
 ## Comparison
 
 | Alternative | In index | Our verdict | Tradeoff |
 |---|---|---|---|
-| Existing skills in this leaf | ✅ | Prefer a more deeply reviewed in-index page when it already names your exact task and constraints. | This page is first-pass intake; existing pages may have sharper when-not guidance. |
-| Custom SKILL.md | 未收录 | Write a custom skill when the task is narrow, private, or tightly bound to one repository's conventions. | Custom skills fit local context better but lose upstream maintenance and community examples. |
+| [Waza](waza.md) | ✅ | When you want a small set of eight engineering habits, pick Waza; when you want a larger repo setup, issue/ticket flow, and TDD/review loop, pick mattpocock/skills. | Waza is lighter; mattpocock/skills gives more orchestration and setup surface. |
+| [Agent Skills (addyosmani)](addyosmani-agent-skills.md) | ✅ | For production quality/security/performance/API/ship commands, pick addyosmani's pack; for requirement grilling, domain modeling, TDD, and code review workflow, pick mattpocock/skills. | addyosmani is broader production checklisting; mattpocock is more process-and-design oriented. |
+| [Vercel Agent Skills](vercel-agent-skills.md) | ✅ | For Vercel/Next.js deployment guidance, pick Vercel's official pack; for model-agnostic engineering rituals across stacks, pick mattpocock/skills. | Vercel has first-party product fit; mattpocock travels better across stacks. |
+| [Spec Kit](../../agent-dev-methodology/spec-kit.md) | ✅ | If you want a full spec-driven development workflow, evaluate Spec Kit; pick mattpocock/skills when you want smaller composable skills you can adapt. | Spec Kit provides stronger rails; mattpocock/skills is easier to override skill by skill. |
+| BMAD / GSD | 未收录 | If you want a full SDLC framework to own the process, evaluate these; pick mattpocock/skills when you want lighter engineering rituals. | Frameworks can provide more orchestration but can be harder to debug or override. |
 
 
 ## Health & viability
 
-- **Maintenance snapshot (2026-07-16):** GitHub reports `archived=false` and `pushed_at=2026-07-14T18:32:39Z`.
-- **Adoption snapshot:** ~172,981 GitHub stars as of 2026-07; this is a noisy signal and low-star projects are still included when the repository is real and relevant.
-- **License snapshot:** `NOASSERTION` from GitHub metadata; manual license-file review remains required when license matters.
-- **Lindy / governance:** not fully reviewed in this intake pass. Check age, owner type, contributor concentration, releases, and issue response before long-term adoption.
-- **Risk flags:** first-pass page generated from the 2026-07-16 backlog; semantic comparison and dependency review are intentionally conservative.
+- **Maintenance snapshot (2026-07-16):** GitHub reports `archived=false` and `pushed_at=2026-07-16T09:03:25Z`; the health scorer grades maintenance `A`.
+- **Adoption snapshot:** GitHub API reports ~173,369 stars as of 2026-07, and the README also cites a large newsletter audience; treat this as strong social proof, not automatic fit.
+- **License snapshot:** root `LICENSE` is MIT and GitHub metadata reports MIT.
+- **Lindy / governance:** the repo is young, so longevity remains `C`; governance is `C` because the scorer sees a very concentrated contributor distribution.
+- **Risk flags:** the pack is highly opinionated and personal; run `/setup-matt-pocock-skills` in a test repo before making it the default team workflow.
 
 ## Caveats (unverified)
 
-- [未验证] This page is generated from public GitHub metadata plus the user-provided intake list; upstream README, docs, examples, releases, and dependency manifests still need deeper review.
-- [未验证] License, install commands, supported harnesses, and runtime requirements may differ from GitHub metadata; verify them in the repository before use.
-- [推断] The comparison table starts from nearby atlas categories rather than a complete substitute survey; refine it after reading the full upstream project and adjacent alternatives.
+- [未验证] oss-atlas did not execute the setup command or install the Claude Code plugin; verify behavior in your own harness.
+- [未验证] The README's claims about effectiveness of these engineering practices are not independently measured here.
+- [推断] The high star count and author reputation reduce discovery risk, but the repo is still young and contributor concentration remains a governance concern.
