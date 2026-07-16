@@ -10,7 +10,8 @@ Usage:
   python3 tools/harvest.py filter --input wave-new.json --min-stars 100 --output wave-filt.json
   python3 tools/harvest.py classify --input wave-filt.json --category-index categories/ --output wave-cls.json
   python3 tools/harvest.py report --input wave-cls.json --output wave-report.md
-  python3 tools/harvest.py wave --query "topic:llm-inference stars:>1000 pushed:>2026-01-01" --per-page 15
+  python3 tools/harvest.py wave --directions 5 --per-page 5 --output wave-report.md
+  python3 tools/harvest.py wave --query '"LLM inference" in:name,description' --per-page 15
 
 Requires: Python 3.9+ (stdlib only). GitHub auth via GITHUB_TOKEN or GH_TOKEN.
 """
@@ -20,12 +21,13 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import random
 import re
 import sys
 import urllib.error
 import urllib.parse
 import urllib.request
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 
@@ -79,6 +81,9 @@ QUERY_QUALIFIERS = {
     "is",
     "language",
     "license",
+    "name",
+    "description",
+    "readme",
     "mirror",
     "org",
     "pushed",
@@ -88,6 +93,86 @@ QUERY_QUALIFIERS = {
     "topic",
     "user",
 }
+
+CATEGORY_ROW_RE = re.compile(
+    r"^\|\s*\*\*([^*]+)\*\*\s*\|\s*(.*?)\s*\|\s*\[→\]\(([^)]+)\)\s*\|$"
+)
+
+
+def load_discovery_directions(index_path: Path) -> list[dict]:
+    """Read top-level category directions from the root route table."""
+    directions = []
+    for line in index_path.read_text(encoding="utf-8").splitlines():
+        match = CATEGORY_ROW_RE.match(line)
+        if not match:
+            continue
+        category, description, route = match.groups()
+        directions.append(
+            {
+                "category": category.strip(),
+                "description": description.strip(),
+                "route": route.strip(),
+            }
+        )
+    if not directions:
+        raise ValueError(f"no discovery directions found in {index_path}")
+    return directions
+
+
+def load_discovery_recipes(index_path: Path, recipes_path: Path) -> list[dict]:
+    """Load curated search recipes whose categories exist in the root route."""
+    route_directions = {
+        item["category"]: item for item in load_discovery_directions(index_path)
+    }
+    raw = json.loads(recipes_path.read_text(encoding="utf-8"))
+    if not isinstance(raw, list):
+        raise ValueError(f"discovery recipes must be a JSON list: {recipes_path}")
+    recipes = []
+    seen_categories = set()
+    for recipe in raw:
+        if not isinstance(recipe, dict):
+            raise ValueError("each discovery recipe must be an object")
+        category = str(recipe.get("category") or "").strip()
+        query = str(recipe.get("query") or "").strip()
+        if category not in route_directions:
+            raise ValueError(
+                f"discovery recipe category is not in root INDEX.md: {category}"
+            )
+        if category in seen_categories:
+            raise ValueError(f"duplicate discovery recipe category: {category}")
+        validate_discovery_query(query)
+        combined = dict(route_directions[category])
+        combined["query"] = query
+        recipes.append(combined)
+        seen_categories.add(category)
+    if not recipes:
+        raise ValueError(f"no discovery recipes found in {recipes_path}")
+    return recipes
+
+
+def select_discovery_directions(
+    index_path: Path,
+    recipes_path: Path,
+    count: int = 5,
+    seed: int | None = None,
+) -> list[dict]:
+    """Randomly select curated category recipes with a reproducible seed."""
+    directions = load_discovery_recipes(index_path, recipes_path)
+    if count < 1:
+        raise ValueError("direction count must be at least 1")
+    if count > len(directions):
+        raise ValueError(
+            f"direction count {count} exceeds available categories {len(directions)}"
+        )
+    return random.Random(seed).sample(directions, count)
+
+
+def build_direction_query(direction: dict, pushed_after: str) -> str:
+    """Build a domain-specific repository search query for one category."""
+    base_query = direction["query"].strip()
+    if re.search(r"\bpushed:", base_query, re.IGNORECASE):
+        return base_query
+    return f"{base_query} pushed:>{pushed_after}"
 
 
 def validate_discovery_query(query: str) -> None:
@@ -166,6 +251,7 @@ def dedupe_candidates(candidates: list[dict], index_root: Path) -> list[dict]:
 
 RESOURCE_COLLECTION_TOPICS = {
     "awesome",
+    "awesome-list",
     "books",
     "education",
     "interview",
@@ -178,18 +264,24 @@ RESOURCE_COLLECTION_TOPICS = {
     "resource",
     "resources",
     "tutorial",
+    "tutorial-code",
+    "tutorial-exercises",
     "tutorials",
 }
 RESOURCE_COLLECTION_RE = re.compile(
     r"\b(?:awesome|curated|collective|opinionated)\s+list\b|"
-    r"\blist\s+of\b|\bprogramming\s+books?\b|\bproject-based\s+tutorials?\b|"
-    r"\blearn\s+how\s+to\b",
+    r"\b(?:a\s+)?collection\s+of\b|\blist\s+of\b|\bprogramming\s+books?\b|"
+    r"\bproject-based\s+tutorials?\b|\blearn\s+how\s+to\b|"
+    r"\bmaster\s+programming\s+by\b",
     re.IGNORECASE,
 )
 
 
 def is_resource_collection(candidate: dict) -> bool:
     """Return true for lists, learning corpora, and reference collections."""
+    repo_name = str(candidate.get("repo") or "").split("/")[-1].lower()
+    if repo_name.startswith("awesome-") or repo_name.endswith("-awesome"):
+        return True
     description = candidate.get("description") or ""
     if RESOURCE_COLLECTION_RE.search(description):
         return True
@@ -286,8 +378,22 @@ def generate_classify_report(candidates: list[dict], index_root: Path) -> str:
             "examples": examples,
         }
 
+    seed = next(
+        (c.get("discovery_seed") for c in candidates if c.get("discovery_seed") is not None),
+        None,
+    )
+    source_directions = sorted(
+        {
+            direction
+            for candidate in candidates
+            for direction in candidate.get("discovery_directions") or []
+        }
+    )
     lines = [
         "# Classification Task — Agent Semantic Review",
+        "",
+        f"Discovery seed: {seed if seed is not None else 'explicit query'}",
+        f"Source directions: {', '.join(source_directions) or 'explicit query'}",
         "",
         "> This report is for a coding agent (LLM) to perform semantic classification.",
         "> Read each category definition, compare it to the candidate repos, and assign",
@@ -295,15 +401,18 @@ def generate_classify_report(candidates: list[dict], index_root: Path) -> str:
         "",
         "## Candidate Repositories",
         "",
-        "| # | Repo | Stars | Lang | Description | Topics |",
-        "|---|------|-------|------|-------------|--------|",
+        "| # | Repo | Directions | Stars | Lang | Description | Topics |",
+        "|---|------|------------|-------|------|-------------|--------|",
     ]
     for i, c in enumerate(candidates, 1):
         stars = f"{c['stars']:,}" if c.get("stars") else "0"
+        directions = ", ".join(c.get("discovery_directions") or []) or "explicit-query"
         lang = c.get("language", "")
         desc = (c.get("description") or "")[:120].replace("|", "\\|")
         topics = ", ".join(c.get("topics", []))[:80]
-        lines.append(f"| {i} | {c['repo']} | {stars} | {lang} | {desc} | {topics} |")
+        lines.append(
+            f"| {i} | {c['repo']} | {directions} | {stars} | {lang} | {desc} | {topics} |"
+        )
 
     lines += [
         "",
@@ -343,24 +452,42 @@ def generate_classify_report(candidates: list[dict], index_root: Path) -> str:
 
 def generate_report(candidates: list[dict]) -> str:
     """Produce a Markdown candidate report."""
+    seed = next(
+        (c.get("discovery_seed") for c in candidates if c.get("discovery_seed") is not None),
+        None,
+    )
+    source_directions = sorted(
+        {
+            direction
+            for candidate in candidates
+            for direction in candidate.get("discovery_directions") or []
+        }
+    )
     lines = [
         "# Harvest Wave Report",
         "",
         f"Generated: {datetime.now(timezone.utc).isoformat()}",
+        f"Discovery seed: {seed if seed is not None else 'explicit query'}",
+        f"Source directions: {', '.join(source_directions) or 'explicit query'}",
         f"Candidates: {len(candidates)}",
         "",
-        "| # | Repo | Stars | Lang | License | Suggested Category | Description |",
-        "|---|------|-------|------|---------|-------------------|-------------|",
+        "> Source direction records where a candidate was discovered; semantic classification may assign a different category.",
+        "",
+        "| # | Repo | Directions | Stars | Lang | License | Suggested Category | Description |",
+        "|---|------|------------|-------|------|---------|-------------------|-------------|",
     ]
     for i, c in enumerate(candidates, 1):
         stars = f"{c['stars']:,}" if c.get("stars") else "0"
+        directions = ", ".join(c.get("discovery_directions") or []) or "explicit-query"
         lang = c.get("language", "")
         lic = c.get("license", "")
         cat = c.get("suggested_category", "")
         if not cat:
             cat = "(awaiting agent review)"
         desc = (c.get("description") or "")[:60].replace("|", "\\|")
-        lines.append(f"| {i} | {c['repo']} | {stars} | {lang} | {lic} | {cat} | {desc} |")
+        lines.append(
+            f"| {i} | {c['repo']} | {directions} | {stars} | {lang} | {lic} | {cat} | {desc} |"
+        )
     lines += [
         "",
         "## Next Steps",
@@ -428,10 +555,63 @@ def _cmd_finalize(args):
 
 def _cmd_wave(args):
     """One-shot: search → dedupe → filter → classify (agent review) → report."""
-    validate_discovery_query(args.query)
     print("=== Step 1: Search ===")
-    results = search_repos(args.query, args.per_page)
-    print(f"  {len(results)} candidates")
+    if args.query:
+        validate_discovery_query(args.query)
+        discovery_seed = None
+        directions = [
+            {
+                "category": "explicit-query",
+                "description": args.query,
+                "route": "",
+                "query": args.query,
+            }
+        ]
+    else:
+        discovery_seed = (
+            args.seed
+            if args.seed is not None
+            else random.SystemRandom().randrange(0, 2**32)
+        )
+        pushed_after = args.pushed_after or (
+            datetime.now(timezone.utc).date() - timedelta(days=365)
+        ).isoformat()
+        directions = select_discovery_directions(
+            Path(args.route_index),
+            Path(args.directions_file),
+            count=args.directions,
+            seed=discovery_seed,
+        )
+        for direction in directions:
+            direction["query"] = build_direction_query(direction, pushed_after)
+        print(f"  seed={discovery_seed} directions={len(directions)}")
+
+    by_repo: dict[str, dict] = {}
+    for direction in directions:
+        query = direction["query"]
+        validate_discovery_query(query)
+        found = search_repos(query, args.per_page)
+        print(
+            f"  direction={direction['category']} results={len(found)} query={query}"
+        )
+        for candidate in found:
+            key = _repo_key(candidate.get("repo") or candidate.get("html_url"))
+            if not key:
+                continue
+            if key not in by_repo:
+                candidate["discovery_directions"] = [direction["category"]]
+                candidate["discovery_queries"] = [query]
+                if discovery_seed is not None:
+                    candidate["discovery_seed"] = discovery_seed
+                by_repo[key] = candidate
+                continue
+            existing = by_repo[key]
+            if direction["category"] not in existing["discovery_directions"]:
+                existing["discovery_directions"].append(direction["category"])
+            if query not in existing["discovery_queries"]:
+                existing["discovery_queries"].append(query)
+    results = list(by_repo.values())
+    print(f"  {len(results)} unique candidates across directions")
 
     print("=== Step 2: Deduplicate ===")
     new = dedupe_candidates(results, Path(args.index_root))
@@ -522,8 +702,13 @@ def main(argv=None):
 
     # wave (one-shot)
     wp = sub.add_parser("wave", help="Run full pipeline: search → dedupe → filter → agent classify → report")
-    wp.add_argument("--query", required=True)
-    wp.add_argument("--per-page", type=int, default=15)
+    wp.add_argument("--query", help="explicit domain-specific GitHub query; omit for automatic multi-direction discovery")
+    wp.add_argument("--per-page", type=int, default=5, help="results per direction")
+    wp.add_argument("--directions", type=int, default=5, help="top-level categories to sample when --query is omitted")
+    wp.add_argument("--seed", type=int, help="random seed for reproducible automatic direction sampling")
+    wp.add_argument("--route-index", default="INDEX.md", help="root category route used for automatic direction sampling")
+    wp.add_argument("--directions-file", default="tools/harvest-directions.json", help="curated category search recipes for automatic sampling")
+    wp.add_argument("--pushed-after", help="YYYY-MM-DD lower bound; defaults to one year ago")
     wp.add_argument("--index-root", default="categories")
     wp.add_argument("--min-stars", type=int, default=0)
     wp.add_argument("--require-license", action="store_true")

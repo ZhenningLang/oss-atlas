@@ -12,6 +12,60 @@ import harvest
 
 
 class HarvestTest(unittest.TestCase):
+    def test_select_discovery_directions_picks_five_unique_reproducibly(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            index = root / "INDEX.md"
+            directions_file = root / "directions.json"
+            rows = [
+                f"| **category-{i}** | Domain {i} tools. | [→](categories/category-{i}/INDEX.md) |"
+                for i in range(8)
+            ]
+            index.write_text(
+                "# route\n\n| Category | Use when | Route |\n|---|---|---|\n"
+                + "\n".join(rows)
+                + "\n",
+                encoding="utf-8",
+            )
+            directions_file.write_text(
+                "[\n"
+                + ",\n".join(
+                    f'  {{"category": "category-{i}", "query": "\\"domain {i}\\" in:name,description"}}'
+                    for i in range(8)
+                )
+                + "\n]\n",
+                encoding="utf-8",
+            )
+
+            first = harvest.select_discovery_directions(
+                index, directions_file, count=5, seed=42
+            )
+            second = harvest.select_discovery_directions(
+                index, directions_file, count=5, seed=42
+            )
+
+            self.assertEqual(first, second)
+            self.assertEqual(len(first), 5)
+            self.assertEqual(len({item["category"] for item in first}), 5)
+            self.assertTrue(
+                all(item["route"].endswith("/INDEX.md") for item in first)
+            )
+            self.assertTrue(all("in:name,description" in item["query"] for item in first))
+
+    def test_build_direction_query_contains_domain_signal(self) -> None:
+        query = harvest.build_direction_query(
+            {
+                "category": "agent-governance",
+                "description": "Agent policy tools.",
+                "query": '"agent governance" in:name,description',
+            },
+            pushed_after="2025-07-17",
+        )
+
+        self.assertIn("agent governance", query)
+        self.assertIn("pushed:>2025-07-17", query)
+        harvest.validate_discovery_query(query)
+
     def test_dedupe_normalizes_github_url_and_owner_repo(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
@@ -105,6 +159,39 @@ class HarvestTest(unittest.TestCase):
                 exclude_forks=True,
             ),
             [candidate],
+        )
+
+    def test_resource_filter_catches_awesome_collections_and_tutorial_corpora(self) -> None:
+        candidates = [
+            {
+                "repo": "example/awesome-mcp-servers",
+                "stars": 100,
+                "license": "MIT",
+                "description": "A collection of MCP servers.",
+                "topics": ["ai", "mcp"],
+                "archived": False,
+                "fork": False,
+            },
+            {
+                "repo": "example/build-your-own-x",
+                "stars": 100,
+                "license": "",
+                "description": "Master programming by recreating technologies from scratch.",
+                "topics": ["awesome-list", "tutorial-code", "tutorials"],
+                "archived": False,
+                "fork": False,
+            },
+        ]
+
+        self.assertEqual(
+            harvest.filter_candidates(
+                candidates,
+                min_stars=0,
+                require_license=False,
+                exclude_archived=True,
+                exclude_forks=True,
+            ),
+            [],
         )
 
     def test_generic_language_high_star_query_is_rejected(self) -> None:

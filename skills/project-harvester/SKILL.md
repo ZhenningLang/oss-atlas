@@ -1,6 +1,6 @@
 ---
 name: project-harvester
-version: 1.1.0
+version: 1.2.0
 category: oss-atlas-maintainer
 metadata:
   internal: true
@@ -41,17 +41,28 @@ collections by default, and surfacing candidates with enough metadata to decide 
 
 ## Wave Workflow (Search Mode — default)
 
-### Step 1: Lock the discovery scope
+### Step 1: Select discovery directions
 
-The user must specify a software domain, task, or category to expand. A language-only or generic
-high-star query is not a valid scope because it is dominated by awesome lists, learning material,
-and generic resources.
+When the user names a software domain, task, or category, run one explicit domain-specific query.
 
-If the user says only "run project-harvester", stop and ask for one discovery target. Offer 2-3
-repo-relevant options based on the current index, such as `agent-governance`, `web-automation`, or
-`document-parsing`. Do not silently choose a generic Python/JavaScript query.
+When the user says only "run project-harvester", **do not ask them to choose a domain**. Read the
+curated direction pool in `tools/harvest-directions.json`, randomly select 5 unique directions whose
+categories exist in root `INDEX.md`, and run them as one aggregate wave. Record the random seed and
+each candidate's source directions so the wave is reproducible and auditable.
 
-Build a domain-specific GitHub query:
+Do not derive GitHub queries directly from category slugs. Slugs such as `im-automation` and `ocr`
+are ambiguous in full-text search. The direction pool stores reviewed domain phrases such as
+`"WeChat bot"` and `"optical character recognition"` to reduce semantic drift.
+
+This automatic five-direction mode is the default because discovery is the harvester's job. Ask the
+user only when an irreversible boundary decision remains after the report, such as creating a new
+top-level category or adding selected repositories.
+
+`discovery_directions` records search provenance, not the final taxonomy decision. The semantic
+classification stage may place a candidate elsewhere when the search phrase matched a secondary
+capability rather than the project's primary job.
+
+For an explicit direction, build a domain-specific GitHub query:
 
 ```yaml
 query_template: "topic:{domain} pushed:>2026-01-01"
@@ -225,16 +236,19 @@ git commit -m "harvest: wave N — add K projects from {search_query}"
 
 ## One-Command Discovery Wave
 
-After the discovery scope is explicit:
+Default automatic mode, with five directions selected from the root route:
 
 ```bash
 cd {workspace}
 python3 tools/harvest.py wave \
-  --query "topic:agent-governance pushed:>2026-01-01" \
-  --per-page 15 \
+  --directions 5 \
+  --per-page 5 \
   --min-stars 0 \
-  --output /tmp/harvest-agent-governance.md
+  --output /tmp/harvest-auto-wave.md
 ```
+
+Use `--seed <n>` to reproduce a direction sample. Use `--query "..."` only when the user explicitly
+requests a specific domain.
 
 This stops after producing JSON, a classification task, and a preliminary report. Agent semantic
 classification and human approval remain required before `add-project` runs.
