@@ -12,6 +12,7 @@
 | **olmOCR** | 当你需要把带公式、表格、手写体和多栏版面的复杂 PDF 转成干净 Markdown 以用于 LLM 训练数据集时用它——需要 GPU。 | ?（0/6） | [→](olmocr.zh.md) |
 | **Marker** | Convert PDF to markdown + JSON quickly with high accuracy | ?（0/6） | [→](marker.zh.md) |
 | **unstructured** | Convert documents to structured data effortlessly. Unstructured is open-source ETL solution for transforming complex documents into clean, structured formats for language models.  Visit our website to learn more about our enterprise grade Platform product for production grade workflows, partitioning, enrichments, chunking and embedding. | ?（0/6） | [→](unstructured.zh.md) |
+| **any2html** | Use it when you need any2html in this category. | ?（0/6） | [→](any2html.zh.md) |
 
 
 ## 对比矩阵
@@ -23,6 +24,8 @@
 | [olmOCR](olmocr.zh.md) | ✅ | ?（0/6） | 基于 VLM 的 PDF 线性化，面向 LLM 数据集；支持公式、表格和手写体，但需要 GPU。 |
 | [PageIndex](../rag-retrieval/pageindex.zh.md) | ✅ | B（5/6） | 在长结构化文档上建检索索引——位于解析之后，本身不是解析器。 |
 | unstructured.io / LlamaParse / Marker / PyMuPDF | 未收录 | — | 各页对比里点到的其他文档解析/提取器。 |
+| [any2html](any2html.zh.md) | ✅ | ?（0/6） | Use it when you need any2html in this category. |
+
 
 ## 什么该放这里
 

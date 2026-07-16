@@ -8,6 +8,8 @@
 | Project | Use when | Health | Page |
 | --- | --- | --- | --- |
 | **OpenMontage** | Use it when you want an AI coding assistant to produce full videos — explainers, trailers, animations, or documentary montages — from a plain-language prompt through research, scripting, asset generation, and render. | C (6/6) | [→](open-montage.md) |
+| **claude-video** | Give Claude the ability to watch any video. /watch downloads, extracts frames, transcribes, hands it all to Claude. | ? (0/6) | [→](claude-video.md) |
+
 
 ## Comparison matrix
 
@@ -17,6 +19,8 @@
 | Remotion / HyperFrames (as standalone) | 未收录 | — | OpenMontage embeds both as render engines; use them directly if you only need programmatic composition without agent orchestration. |
 | Runway / Pika / HeyGen | 未收录 | — | Closed-source SaaS — faster one-click generation but no pipeline customization, no agent approval gates, no open-source extensibility. |
 | DaVinci Resolve / Premiere Pro | 未收录 | — | Professional NLEs — human editors, not agent-driven; the right tool when you need frame-level manual control and a traditional post-production team. |
+| [claude-video](claude-video.md) | ✅ | ? (0/6) | Give Claude the ability to watch any video. /watch downloads, extracts frames, transcribes, hands it all to Claude. |
+
 
 ## What belongs here
 

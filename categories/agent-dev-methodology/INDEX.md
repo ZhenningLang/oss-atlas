@@ -30,4 +30,4 @@
 
 ## What belongs here
 
-Opinionated **methodologies and meta-frameworks** for agent-driven development — how to structure specs, context, skills, and workflow. Not runtime agent frameworks (see `agent-frameworks`), not raw skill collections (see `agent-skill-collections`).
+Opinionated **methodologies and meta-frameworks** for agent-driven development — how to structure specs, context, skills, and workflow. Not runtime agent frameworks (see `agent-frameworks`), not raw skill collections (see `agent-skills`).

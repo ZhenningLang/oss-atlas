@@ -8,6 +8,8 @@
 | 项目 | 何时用 | 健康度 | 页面 |
 | --- | --- | --- | --- |
 | **OpenMontage** | 当你想让 AI 编程助手从一句自然语言描述出发，完成研究、脚本、素材生成、合成与渲染，产出完整视频（解说、预告片、动画、纪录片蒙太奇）时使用。 | C（6/6） | [→](open-montage.zh.md) |
+| **claude-video** | Give Claude the ability to watch any video. /watch downloads, extracts frames, transcribes, hands it all to Claude. | ?（0/6） | [→](claude-video.zh.md) |
+
 
 ## 对比矩阵
 
@@ -17,6 +19,8 @@
 | Remotion / HyperFrames（独立使用） | 未收录 | — | OpenMontage 将两者内嵌为渲染引擎；若只需要程序化合成而不需要 agent 编排，可直接使用它们。 |
 | Runway / Pika / HeyGen | 未收录 | — | 闭源 SaaS——一键生成更快，但无管线定制、无 agent 审批门、无开源扩展性。 |
 | DaVinci Resolve / Premiere Pro | 未收录 | — | 专业非线性剪辑软件——面向人工剪辑师，非 agent 驱动；需要帧级手动控制与传统后期团队时选它。 |
+| [claude-video](claude-video.zh.md) | ✅ | ?（0/6） | Give Claude the ability to watch any video. /watch downloads, extracts frames, transcribes, hands it all to Claude. |
+
 
 ## 什么该放这里
 

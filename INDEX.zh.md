@@ -28,7 +28,7 @@
 | **team-chat** | 可自托管的团队聊天 / 多 LLM 聊天机器人应用。 | [→](categories/team-chat/INDEX.zh.md) |
 | **captcha** | CAPTCHA / 机器人检测挑战（工作量证明、点击、行为式）。 | [→](categories/captcha/INDEX.zh.md) |
 | **ml-research** | 小而自洽的 ML 研究 demo 与参考实现。 | [→](categories/ml-research/INDEX.zh.md) |
-| **agent-skill-collections** | 成体系的 agent 技能、提示词、subagent 人设与 harness 配置合集——按用途领域拆分。 | [→](categories/agent-skill-collections/INDEX.zh.md) |
+| **agent-skills** | 成体系的 agent 技能、提示词、subagent 人设与 harness 配置合集——按用途领域拆分。 | [→](categories/agent-skills/INDEX.zh.md) |
 | **observability** | 在多数据源的指标/日志/追踪之上做看板、告警与可视化。 | [→](categories/observability/INDEX.zh.md) |
 | **data-visualization** | 在 SQL 数据仓库之上自托管的 BI / 数据探索看板。 | [→](categories/data-visualization/INDEX.zh.md) |
 | **ocr** | 光学字符识别引擎——图像/扫描件转文本。 | [→](categories/ocr/INDEX.zh.md) |
@@ -60,6 +60,11 @@
 | **speech** | 语音处理工具包（ASR、TTS、说话人任务）。 | [→](categories/speech/INDEX.zh.md) |
 | **terminal-ui** | 终端/CLI UI 库——着色、TUI、ASCII art、终端渲染。 | [→](categories/terminal-ui/INDEX.zh.md) |
 | **video-production** | AI 编排的端到端视频制作——由编码助手内的 agent 驱动研究、脚本撰写、素材生成、合成与渲染。 | [→](categories/video-production/INDEX.zh.md) |
+| **investment-finance** | 量化金融、市场数据、交易研究与投资分析工具。 | [→](categories/investment-finance/INDEX.zh.md) |
+| **education-tutoring** | AI 辅导、学习助手与教育场景 agent 系统。 | [→](categories/education-tutoring/INDEX.zh.md) |
+| **governance** | AI agent 的治理、策略执行、身份、沙箱与可靠性控制。 | [→](categories/governance/INDEX.zh.md) |
+
+
 
 ## 如何新增分类
 

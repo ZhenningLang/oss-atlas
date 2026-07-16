@@ -29,7 +29,7 @@
 | **team-chat** | Self-hostable team chat / multi-LLM chatbot applications. | [→](categories/team-chat/INDEX.md) |
 | **captcha** | CAPTCHA / bot-detection challenges (proof-of-work, click, behavioral). | [→](categories/captcha/INDEX.md) |
 | **ml-research** | Small, self-contained ML research demos and reference implementations. | [→](categories/ml-research/INDEX.md) |
-| **agent-skill-collections** | Curated collections of agent skills, prompts, subagent personas, and harness configs — split by domain. | [→](categories/agent-skill-collections/INDEX.md) |
+| **agent-skills** | Curated collections of agent skills, prompts, subagent personas, and harness configs — split by domain. | [→](categories/agent-skills/INDEX.md) |
 | **observability** | Dashboards, alerting, and visualization over metrics/logs/traces from many datasources. | [→](categories/observability/INDEX.md) |
 | **data-visualization** | Self-hosted BI / data-exploration dashboards over SQL warehouses. | [→](categories/data-visualization/INDEX.md) |
 | **ocr** | Optical character recognition engines — image/scan to text. | [→](categories/ocr/INDEX.md) |
@@ -61,6 +61,11 @@
 | **speech** | Speech processing toolkits (ASR, TTS, speaker tasks). | [→](categories/speech/INDEX.md) |
 | **terminal-ui** | Terminal/CLI UI libraries — colors, TUIs, ASCII art, terminal rendering. | [→](categories/terminal-ui/INDEX.md) |
 | **video-production** | AI-orchestrated end-to-end video production — research, scripting, asset generation, composition, and rendering driven by an agent inside a coding assistant. | [→](categories/video-production/INDEX.md) |
+| **investment-finance** | Quant finance, market-data, trading research, and investment-analysis tooling. | [→](categories/investment-finance/INDEX.md) |
+| **education-tutoring** | AI tutoring, learning assistants, and education-focused agent systems. | [→](categories/education-tutoring/INDEX.md) |
+| **governance** | Governance, policy enforcement, identity, sandboxing, and reliability controls for AI agents. | [→](categories/governance/INDEX.md) |
+
+
 
 ## How to add a category
 

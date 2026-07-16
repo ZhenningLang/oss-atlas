@@ -223,9 +223,9 @@ skill 从 `raw.githubusercontent.com/ZhenningLang/oss-atlas/main/` 拉取页面�
 | **HTML Anything** | 当你本机已登录某个 coding-agent CLI、想要零 API key、local-first 地把 Markdown 变成可交付 HTML 并一键导出微信/X/知乎时用它。 | Apache-2.0 | B（5/6） | [中](categories/ai-design-generation/html-anything.zh.md) · [EN](categories/ai-design-generation/html-anything.md) |
 | **Open Design** | 想要一个 local-first、BYOK 的桌面 studio，让编码 agent 产出 HTML 原型、deck、图像和 HTML→MP4 动效时用它。 | Apache-2.0 | B（4/6） | [中](categories/ai-design-generation/open-design.zh.md) · [EN](categories/ai-design-generation/open-design.md) |
 | **Impeccable** | 当你的 AI agent 总是产出同质化前端「AI 味」、需要确定性检测加设计 critique 时使用。 | Apache-2.0 | B（6/6） | [中](categories/ai-design-generation/impeccable.zh.md) · [EN](categories/ai-design-generation/impeccable.md) |
-| **ian-xiaohei-illustrations** | 当你要为中文文章批量生成风格一致、带小黑 IP 的手绘 16:9 正文配图时用它。 | MIT | C（4/6） | [中](categories/ai-design-generation/ian-illustrations.zh.md) · [EN](categories/ai-design-generation/ian-illustrations.md) |
-| **Guizang PPT Skill** | 当你想让 agent 把文章变成有设计感的单文件 HTML 翻页 PPT（杂志风或瑞士风）时用它。 | AGPL-3.0-only | C（4/6） | [中](categories/ai-design-generation/guizang-ppt.zh.md) · [EN](categories/ai-design-generation/guizang-ppt.md) |
-| **Guizang Social Card Skill** | 当你在 Claude Code/Codex 里想让 agent 用锁定的编辑风/瑞士风生成小红书图文或公众号封面对（单文件 HTML 渲染成 PNG）时使用。 | AGPL-3.0-only | D（3/6） | [中](categories/ai-design-generation/guizang-social-card.zh.md) · [EN](categories/ai-design-generation/guizang-social-card.md) |
+| **ian-xiaohei-illustrations** | 当你要为中文文章批量生成风格一致、带小黑 IP 的手绘 16:9 正文配图时用它。 | MIT | C（4/6） | [中](categories/agent-skills/visual-content/ian-illustrations.zh.md) · [EN](categories/agent-skills/visual-content/ian-illustrations.md) |
+| **Guizang PPT Skill** | 当你想让 agent 把文章变成有设计感的单文件 HTML 翻页 PPT（杂志风或瑞士风）时用它。 | AGPL-3.0-only | C（4/6） | [中](categories/agent-skills/slides-ppt/guizang-ppt.zh.md) · [EN](categories/agent-skills/slides-ppt/guizang-ppt.md) |
+| **Guizang Social Card Skill** | 当你在 Claude Code/Codex 里想让 agent 用锁定的编辑风/瑞士风生成小红书图文或公众号封面对（单文件 HTML 渲染成 PNG）时使用。 | AGPL-3.0-only | D（3/6） | [中](categories/agent-skills/visual-content/guizang-social-card.zh.md) · [EN](categories/agent-skills/visual-content/guizang-social-card.md) |
 | **SdPaint** | 当你已在跑 AUTOMATIC1111＋ControlNet、想要一个实时草图转图的绘画循环时用它——但它自 2024 年起停滞，且自身不带任何模型。 | MIT | D（3/6） | [中](categories/ai-design-generation/sdpaint.zh.md) · [EN](categories/ai-design-generation/sdpaint.md) |
 ### dev-utilities
 
@@ -301,88 +301,113 @@ skill 从 `raw.githubusercontent.com/ZhenningLang/oss-atlas/main/` 拉取页面�
 | **Senta (SKEP)** | 当身处 PaddlePaddle／ERNIE 生态、需要带论文方法的 SKEP 情感分析 checkpoint 时用它——它锁定 EOL 的 PaddlePaddle 1.6.3，环境复原难以避免。 | Apache-2.0 | D（3/6） | [中](categories/ml-research/senta.zh.md) · [EN](categories/ml-research/senta.md) |
 | **Depth Anything V2** | 当需要当下默认的单目深度基础模型从单张图估深度（PyTorch／Transformers）时用它——仅 Small 权重为 Apache-2.0，Base／Large／Giant 是 CC-BY-NC-4.0（非商用）。 | Apache-2.0 | B（4/6） | [中](categories/ml-research/depth-anything-v2.zh.md) · [EN](categories/ml-research/depth-anything-v2.md) |
 | **pymoo** | 当需要 Python 演化式多目标优化（NSGA-II/III、MOEA/D）求 Pareto 前沿时用它——若问题是凸／线性／单目标，LP 或梯度求解器要快得多。 | Apache-2.0 | C（6/6） | [中](categories/ml-research/pymoo.zh.md) · [EN](categories/ml-research/pymoo.md) |
-### agent-skill-collections
+### agent-skills
 
 | 项目 | 何时用 | 许可 | 健康度 | 页面 |
 | --- | --- | --- | --- | --- |
-| **book-to-skill** | 当你想把技术书籍 PDF（及其他文档格式）转成可安装的 agent 技能以用于 Claude Code、Copilot CLI 或 Amp 时用它。 | MIT | ?（0/6） | [中](categories/agent-skill-collections/book-to-skill.zh.md) · [EN](categories/agent-skill-collections/book-to-skill.md) |
+| **book-to-skill** | 当你想把技术书籍 PDF（及其他文档格式）转成可安装的 agent 技能以用于 Claude Code、Copilot CLI 或 Amp 时用它。 | MIT | ?（0/6） | [中](categories/agent-skills/book-to-skill.zh.md) · [EN](categories/agent-skills/book-to-skill.md) |
 
-#### agent-skill-collections / engineering
-
-| 项目 | 何时用 | 许可 | 健康度 | 页面 |
-| --- | --- | --- | --- | --- |
-| **Agent Skills (addyosmani)** | 约 24 个生产级工程技能包（质量/安全/web 性能/API/发布），装进 coding agent 并通过约 8 个 SDLC 斜杠命令路由。 | MIT | B（4/6） | [中](categories/agent-skill-collections/engineering/addyosmani-agent-skills.zh.md) · [EN](categories/agent-skill-collections/engineering/addyosmani-agent-skills.md) |
-| **web-quality-skills** | 含六个技能的 agent 技能包，把 Lighthouse / Core Web Vitals / WCAG / SEO 最佳实践编码成按需加载的指令集，让 coding agent 审计并修复 web 质量问题；属建议层，非测量工具。 | MIT | B（4/6） | [中](categories/agent-skill-collections/engineering/addyosmani-web-quality.zh.md) · [EN](categories/agent-skill-collections/engineering/addyosmani-web-quality.md) |
-| **Scientific Agent Skills** | 一个大型 skill 包（约 147 个 skill），把 coding agent 变成生物、化学、医学、药物发现领域的科研助手——每个 skill 用一份带文档的 SKILL.md 封装一个科学 Python 库或数据库，按需加载。 | MIT | B（4/6） | [中](categories/agent-skill-collections/engineering/scientific-agent-skills.zh.md) · [EN](categories/agent-skill-collections/engineering/scientific-agent-skills.md) |
-| **Vercel Agent Skills** | Vercel 官方 agent-skill 包——按需安装的 React/Next.js/Vercel 部署、Web 设计与文档审查指南，采用 agentskills.io/skills.sh 格式。 | MIT | B（4/6） | [中](categories/agent-skill-collections/engineering/vercel-agent-skills.zh.md) · [EN](categories/agent-skill-collections/engineering/vercel-agent-skills.md) |
-| **Waza** | 一套精简的八个「工程习惯」skill 集合（规划、设计、评审、调试、写作、调研、读取、审计），coding agent 可按需加载，覆盖 Claude Code、Codex、Cursor。 | MIT | B（4/6） | [中](categories/agent-skill-collections/engineering/waza.zh.md) · [EN](categories/agent-skill-collections/engineering/waza.md) |
-
-#### agent-skill-collections / design
+#### agent-skills / engineering
 
 | 项目 | 何时用 | 许可 | 健康度 | 页面 |
 | --- | --- | --- | --- | --- |
-| **Designer Skills** | 覆盖面很广的设计实践 skill pack——9 个 plugin 下共 97 个 skill、30 个 command（研究、设计系统、UX 策略、UI、交互、原型/测试、design ops、工具箱、视觉批评），适用于 Claude Code 和 Gemini CLI。 | MIT | B（4/6） | [中](categories/agent-skill-collections/design/designer-skills.zh.md) · [EN](categories/agent-skill-collections/design/designer-skills.md) |
-| **make-interfaces-feel-better** | 一个单一、聚焦的 agent skill，把约 16 条具体的 UI 打磨原则（同心圆角、可中断过渡、等宽数字、入场/出场动画）注入 coding agent，让界面「感觉」做完了，而不只是功能正确。 | MIT | D（4/6） | [中](categories/agent-skill-collections/design/make-interfaces-feel-better.zh.md) · [EN](categories/agent-skill-collections/design/make-interfaces-feel-better.md) |
-| **Stitch Skills** | 一套遵循 Agent Skills 开放标准的技能库，驱动 Google 的 Stitch MCP server 生成 UI 屏幕、在代码与设计间双向转换、抽取 DESIGN.md，并导出 React/React Native/shadcn 组件。 | Apache-2.0 | B（4/6） | [中](categories/agent-skill-collections/design/stitch-skills.zh.md) · [EN](categories/agent-skill-collections/design/stitch-skills.md) |
-| **Taste-Skill** | 一套可移植、与框架无关的 agent skill 包，给 coding agent 注入审美，阻止千篇一律的 AI-slop 前端，转而产出有意图的布局、排版、动效与留白。 | MIT | B（4/6） | [中](categories/agent-skill-collections/design/taste-skill.zh.md) · [EN](categories/agent-skill-collections/design/taste-skill.md) |
-| **UI UX Pro Max Skill** | 一个设计智能 skill pack，通过本地 CSV 检索引擎（风格/配色/字体/规则数据库）和交付前可访问性清单给 coding agent 注入 UI/UX 品味，可装入多种 agent harness。 | MIT | B（4/6） | [中](categories/agent-skill-collections/design/ui-ux-pro-max.zh.md) · [EN](categories/agent-skill-collections/design/ui-ux-pro-max.md) |
-| **Hallmark** | 当 Claude Code、Cursor、Codex agent 需要有主张的反 AI 味设计 brief、审计、重设计或研究流程时用它。 | MIT | ?（0/6） | [中](categories/agent-skill-collections/design/hallmark.zh.md) · [EN](categories/agent-skill-collections/design/hallmark.md) |
+| **Agent Skills (addyosmani)** | 约 24 个生产级工程技能包（质量/安全/web 性能/API/发布），装进 coding agent 并通过约 8 个 SDLC 斜杠命令路由。 | MIT | B（4/6） | [中](categories/agent-skills/engineering/addyosmani-agent-skills.zh.md) · [EN](categories/agent-skills/engineering/addyosmani-agent-skills.md) |
+| **web-quality-skills** | 含六个技能的 agent 技能包，把 Lighthouse / Core Web Vitals / WCAG / SEO 最佳实践编码成按需加载的指令集，让 coding agent 审计并修复 web 质量问题；属建议层，非测量工具。 | MIT | B（4/6） | [中](categories/agent-skills/engineering/addyosmani-web-quality.zh.md) · [EN](categories/agent-skills/engineering/addyosmani-web-quality.md) |
+| **Scientific Agent Skills** | 一个大型 skill 包（约 147 个 skill），把 coding agent 变成生物、化学、医学、药物发现领域的科研助手——每个 skill 用一份带文档的 SKILL.md 封装一个科学 Python 库或数据库，按需加载。 | MIT | B（4/6） | [中](categories/agent-skills/engineering/scientific-agent-skills.zh.md) · [EN](categories/agent-skills/engineering/scientific-agent-skills.md) |
+| **Vercel Agent Skills** | Vercel 官方 agent-skill 包——按需安装的 React/Next.js/Vercel 部署、Web 设计与文档审查指南，采用 agentskills.io/skills.sh 格式。 | MIT | B（4/6） | [中](categories/agent-skills/engineering/vercel-agent-skills.zh.md) · [EN](categories/agent-skills/engineering/vercel-agent-skills.md) |
+| **Waza** | 一套精简的八个「工程习惯」skill 集合（规划、设计、评审、调试、写作、调研、读取、审计），coding agent 可按需加载，覆盖 Claude Code、Codex、Cursor。 | MIT | B（4/6） | [中](categories/agent-skills/engineering/waza.zh.md) · [EN](categories/agent-skills/engineering/waza.md) |
 
-#### agent-skill-collections / writing
-
-| 项目 | 何时用 | 许可 | 健康度 | 页面 |
-| --- | --- | --- | --- | --- |
-| **Baoyu Skills** | 宝玉出品的 20+ 个 coding agent 技能合集（翻译、markdown/HTML 排版、字幕与网页抓取、图片/图表/幻灯片生成），可装入 Claude Code、Codex 等支持 skill 的 harness。 | MIT | B（4/6） | [中](categories/agent-skill-collections/writing/baoyu-skills.zh.md) · [EN](categories/agent-skill-collections/writing/baoyu-skills.md) |
-| **Humanizer-zh** | 一个简体中文 Claude Code 单技能，按约 24 条清单改写掉文本里的 AI 痕迹，是 blader/humanizer 的本地化版。 | MIT | C（4/6） | [中](categories/agent-skill-collections/writing/humanizer-zh.zh.md) · [EN](categories/agent-skill-collections/writing/humanizer-zh.md) |
-| **Webnovel Writer** | 当 Claude Code 连载小说需要让章节、事实、检索、审查和摘要在长期写作中保持一致时用它。 | GPL-3.0 | ?（0/6） | [中](categories/agent-skill-collections/writing/webnovel-writer.zh.md) · [EN](categories/agent-skill-collections/writing/webnovel-writer.md) |
-
-#### agent-skill-collections / security
+#### agent-skills / design
 
 | 项目 | 何时用 | 许可 | 健康度 | 页面 |
 | --- | --- | --- | --- | --- |
-| **Anthropic Cybersecurity Skills** | 一个大型网络安全技能包（约 817 个技能），由对齐 MITRE ATT&CK、NIST CSF、ATLAS、D3FEND、NIST AI RMF、MITRE F3 的 SKILL.md runbook 组成，按需加载进 coding agent。 | Apache-2.0 | B（4/6） | [中](categories/agent-skill-collections/security/anthropic-cybersecurity-skills.zh.md) · [EN](categories/agent-skill-collections/security/anthropic-cybersecurity-skills.md) |
+| **Designer Skills** | 覆盖面很广的设计实践 skill pack——9 个 plugin 下共 97 个 skill、30 个 command（研究、设计系统、UX 策略、UI、交互、原型/测试、design ops、工具箱、视觉批评），适用于 Claude Code 和 Gemini CLI。 | MIT | B（4/6） | [中](categories/agent-skills/design/designer-skills.zh.md) · [EN](categories/agent-skills/design/designer-skills.md) |
+| **make-interfaces-feel-better** | 一个单一、聚焦的 agent skill，把约 16 条具体的 UI 打磨原则（同心圆角、可中断过渡、等宽数字、入场/出场动画）注入 coding agent，让界面「感觉」做完了，而不只是功能正确。 | MIT | D（4/6） | [中](categories/agent-skills/design/make-interfaces-feel-better.zh.md) · [EN](categories/agent-skills/design/make-interfaces-feel-better.md) |
+| **Stitch Skills** | 一套遵循 Agent Skills 开放标准的技能库，驱动 Google 的 Stitch MCP server 生成 UI 屏幕、在代码与设计间双向转换、抽取 DESIGN.md，并导出 React/React Native/shadcn 组件。 | Apache-2.0 | B（4/6） | [中](categories/agent-skills/design/stitch-skills.zh.md) · [EN](categories/agent-skills/design/stitch-skills.md) |
+| **Taste-Skill** | 一套可移植、与框架无关的 agent skill 包，给 coding agent 注入审美，阻止千篇一律的 AI-slop 前端，转而产出有意图的布局、排版、动效与留白。 | MIT | B（4/6） | [中](categories/agent-skills/design/taste-skill.zh.md) · [EN](categories/agent-skills/design/taste-skill.md) |
+| **UI UX Pro Max Skill** | 一个设计智能 skill pack，通过本地 CSV 检索引擎（风格/配色/字体/规则数据库）和交付前可访问性清单给 coding agent 注入 UI/UX 品味，可装入多种 agent harness。 | MIT | B（4/6） | [中](categories/agent-skills/design/ui-ux-pro-max.zh.md) · [EN](categories/agent-skills/design/ui-ux-pro-max.md) |
+| **Hallmark** | 当 Claude Code、Cursor、Codex agent 需要有主张的反 AI 味设计 brief、审计、重设计或研究流程时用它。 | MIT | ?（0/6） | [中](categories/agent-skills/design/hallmark.zh.md) · [EN](categories/agent-skills/design/hallmark.md) |
 
-#### agent-skill-collections / context-engineering
-
-| 项目 | 何时用 | 许可 | 健康度 | 页面 |
-| --- | --- | --- | --- | --- |
-| **Agent Skills for Context Engineering** | 一个 15 个 skill 的 Claude Code 插件包，灌输上下文工程纪律：基础原理、退化、压缩、多 agent 协同、记忆、工具设计、评估与 harness 工程。 | MIT | B（4/6） | [中](categories/agent-skill-collections/context-engineering/context-engineering-skills.zh.md) · [EN](categories/agent-skill-collections/context-engineering/context-engineering-skills.md) |
-| **NotebookLM Claude Code Skill** | 一个 Claude Code skill：用真实 Chrome 驱动查询你的 Google NotebookLM 笔记本，从你自己上传的文档取回有来源依据、带引用的答案，而非逐文件读取或凭空编造。 | MIT | C（4/6） | [中](categories/agent-skill-collections/context-engineering/notebooklm-skill.zh.md) · [EN](categories/agent-skill-collections/context-engineering/notebooklm-skill.md) |
-
-#### agent-skill-collections / vendor-collections
+#### agent-skills / writing
 
 | 项目 | 何时用 | 许可 | 健康度 | 页面 |
 | --- | --- | --- | --- | --- |
-| **Anthropic Skills** | Anthropic 官方公开的 Agent Skills 合集——自包含的 SKILL.md 目录（文档编辑、设计、MCP 与 skill 编写、沟通），可装进 Claude Code、Claude.ai 或 Claude API。 | Apache-2.0 | B（4/6） | [中](categories/agent-skill-collections/vendor-collections/anthropic-skills.zh.md) · [EN](categories/agent-skill-collections/vendor-collections/anthropic-skills.md) |
-| **Agent Plugins for AWS** | AWS Labs 官方出品的九个 agent 插件集合（serverless、Amplify、SageMaker、迁移、数据库、部署/成本估算等），通过 marketplace 安装、触发短语驱动并接好 AWS MCP server，教 Claude Code / Cursor / Codex 在 AWS 上做架构、部署和运维。 | Apache-2.0 | A（4/6） | [中](categories/agent-skill-collections/vendor-collections/aws-agent-plugins.zh.md) · [EN](categories/agent-skill-collections/vendor-collections/aws-agent-plugins.md) |
-| **Claude Plugins (Official)** | Anthropic 官方的 Claude Code 插件市场：精选的可安装插件目录（命令、agent、skill、MCP server），通过原生 /plugin 系统按名安装。 | Apache-2.0 | B（4/6） | [中](categories/agent-skill-collections/vendor-collections/claude-plugins-official.zh.md) · [EN](categories/agent-skill-collections/vendor-collections/claude-plugins-official.md) |
-| **MiniMax Skills** | MiniMax 官方约 16 个 Agent Skill 成包（前端/移动端/shader 开发，外加 pdf/docx/xlsx/pptx、音乐与多模态生成），经插件市场装进 Claude Code 等编码 agent。 | MIT | B（4/6） | [中](categories/agent-skill-collections/vendor-collections/minimax-skills.zh.md) · [EN](categories/agent-skill-collections/vendor-collections/minimax-skills.md) |
-| **Anthropic Knowledge Work Plugins** | 当你想要 Anthropic 官方面向知识工作（文档、沟通、研究）的开源插件集（用于 Claude）时用它——非常年轻。 | Apache-2.0 | B（4/6） | [中](categories/agent-skill-collections/vendor-collections/knowledge-work-plugins.zh.md) · [EN](categories/agent-skill-collections/vendor-collections/knowledge-work-plugins.md) |
+| **Baoyu Skills** | 宝玉出品的 20+ 个 coding agent 技能合集（翻译、markdown/HTML 排版、字幕与网页抓取、图片/图表/幻灯片生成），可装入 Claude Code、Codex 等支持 skill 的 harness。 | MIT | B（4/6） | [中](categories/agent-skills/writing/baoyu-skills.zh.md) · [EN](categories/agent-skills/writing/baoyu-skills.md) |
+| **Humanizer-zh** | 一个简体中文 Claude Code 单技能，按约 24 条清单改写掉文本里的 AI 痕迹，是 blader/humanizer 的本地化版。 | MIT | C（4/6） | [中](categories/agent-skills/de-ai-writing/humanizer-zh.zh.md) · [EN](categories/agent-skills/de-ai-writing/humanizer-zh.md) |
+| **Webnovel Writer** | 当 Claude Code 连载小说需要让章节、事实、检索、审查和摘要在长期写作中保持一致时用它。 | GPL-3.0 | ?（0/6） | [中](categories/agent-skills/writing/webnovel-writer.zh.md) · [EN](categories/agent-skills/writing/webnovel-writer.md) |
 
-#### agent-skill-collections / subagent-collections
+#### agent-skills / security
 
 | 项目 | 何时用 | 许可 | 健康度 | 页面 |
 | --- | --- | --- | --- | --- |
-| **Agency-Agents** | 约 232 个专业 subagent 人格的精选集合（markdown），覆盖 16 个职能部门，附 install/convert 脚本，可部署到 Claude Code 及另外约 11 个 agent harness。 | MIT | B（4/6） | [中](categories/agent-skill-collections/subagent-collections/agency-agents.zh.md) · [EN](categories/agent-skill-collections/subagent-collections/agency-agents.md) |
-| **awesome-claude-code-subagents** | 一套精选的 100+ 个 Claude Code subagent 定义合集（每个角色一个 markdown persona），丢进 ~/.claude/agents/ 后 Claude Code 就能把活委派给对应领域专家。 | MIT | A（4/6） | [中](categories/agent-skill-collections/subagent-collections/awesome-claude-code-subagents.zh.md) · [EN](categories/agent-skill-collections/subagent-collections/awesome-claude-code-subagents.md) |
-| **wshobson/agents** | 单人维护的大型多 harness 插件市场（约 194 个 subagent、158 个 skill、106 个 command、16 个 orchestrator），用一份 Markdown 源生成各 harness 原生产物，覆盖 Claude Code、Codex CLI、Cursor、OpenCode、Gemini CLI 与 Copilot。 | MIT | B（4/6） | [中](categories/agent-skill-collections/subagent-collections/wshobson-agents.zh.md) · [EN](categories/agent-skill-collections/subagent-collections/wshobson-agents.md) |
+| **Anthropic Cybersecurity Skills** | 一个大型网络安全技能包（约 817 个技能），由对齐 MITRE ATT&CK、NIST CSF、ATLAS、D3FEND、NIST AI RMF、MITRE F3 的 SKILL.md runbook 组成，按需加载进 coding agent。 | Apache-2.0 | B（4/6） | [中](categories/agent-skills/security/anthropic-cybersecurity-skills.zh.md) · [EN](categories/agent-skills/security/anthropic-cybersecurity-skills.md) |
 
-#### agent-skill-collections / personal-collections
+#### agent-skills / context-engineering
 
 | 项目 | 何时用 | 许可 | 健康度 | 页面 |
 | --- | --- | --- | --- | --- |
-| **antfu/skills** | Anthony Fu 个人精选、面向 Vue/Vite/Nuxt 栈的 agent skill 集合（其 ESLint/pnpm/Vitest/UnoCSS 偏好 + 生成与 vendored 的框架 skill），通过 skills CLI 安装。 | MIT | B（4/6） | [中](categories/agent-skill-collections/personal-collections/antfu-skills.zh.md) · [EN](categories/agent-skill-collections/personal-collections/antfu-skills.md) |
-| **claude-code-harness** | 一套个人化的 Claude Code harness：以插件形式装入受治理的 plan → work → review → release 循环（spec 优先契约、TDD 门控执行、独立 review），并附带 Go 原生 doctor CLI 诊断插件缓存与 skill 漂移。 | MIT | B（4/6） | [中](categories/agent-skill-collections/personal-collections/claude-code-harness.zh.md) · [EN](categories/agent-skill-collections/personal-collections/claude-code-harness.md) |
-| **dbskill** | 一套个人精选的中文 agent 技能包（约 21 个 /dbs-* 命令），聚焦商业模式诊断、内容创作与个人决策，可安装进 Claude Code 等 harness。 | CC-BY-NC-4.0 | C（3/6） | [中](categories/agent-skill-collections/personal-collections/dbskill.zh.md) · [EN](categories/agent-skill-collections/personal-collections/dbskill.md) |
-| **Dimillian Skills** | 某开发者个人精选的 16 个自包含 Codex skill，重心压在 Apple 平台（SwiftUI/iOS/macOS），外加几个通用评审/重构 swarm。 | MIT | C（4/6） | [中](categories/agent-skill-collections/personal-collections/dimillian-skills.zh.md) · [EN](categories/agent-skill-collections/personal-collections/dimillian-skills.md) |
-| **gstack** | Garry Tan 的私人 Claude Code 配置：约 23 个带强烈主张的 slash-command 技能，扮演一支虚拟工程团队（CEO 复盘、设计师、工程经理、QA、安全官），驱动「规划→构建→评审→发布→复盘」闭环。 | MIT | B（4/6） | [中](categories/agent-skill-collections/personal-collections/gstack.zh.md) · [EN](categories/agent-skill-collections/personal-collections/gstack.md) |
-| **andrej-karpathy-skills** | 一个行为准则包——单个 CLAUDE.md（加 Cursor 变体和一层薄技能包装），把 Karpathy 关于 LLM 编码陷阱的四条原则（先想后写、简单优先、外科式改动、目标驱动执行）注入 Claude Code / Cursor。 | MIT | C（4/6） | [中](categories/agent-skill-collections/personal-collections/karpathy-skills.zh.md) · [EN](categories/agent-skill-collections/personal-collections/karpathy-skills.md) |
-| **Khazix Skills** | 数字生命卡兹克（Khazix）的个人精选合集，含五个 SKILL.md 标准格式、以中文为主的 Agent Skill：磁盘清理、AI 资讯查询、文档/记忆同步、长文研究报告、公众号风格写作。 | MIT | B（4/6） | [中](categories/agent-skill-collections/personal-collections/khazix-skills.zh.md) · [EN](categories/agent-skill-collections/personal-collections/khazix-skills.md) |
-| **ljg-skills** | 李继刚的个人 Claude Code 技能合集（20+ 个 skill），面向中文知识工作——读论文/拆书、概念分析、大白话改写、把内容渲染成 PNG 卡片，通过 skills CLI 安装。 | NOASSERTION | C（4/6） | [中](categories/agent-skill-collections/personal-collections/ljg-skills.zh.md) · [EN](categories/agent-skill-collections/personal-collections/ljg-skills.md) |
-| **PUA** | 一个高能动性人设 skill 包：把 coding agent 设定成「被放进 30 天 PIP 的 P8 工程师」，用职场 PUA/PIP 话术逼它穷尽排查手段而非早早放弃。 | MIT | C（4/6） | [中](categories/agent-skill-collections/personal-collections/pua.zh.md) · [EN](categories/agent-skill-collections/personal-collections/pua.md) |
-| **Qiushi-Skill** | 一套方法论 skill 包，用「实事求是」加九个唯物辩证法思维工具（矛盾分析、调查研究、实践认识论等）武装编程 agent，并通过 npx 安装器跨 Claude Code/Cursor/Codex/OpenCode 落地。 | MIT | B（4/6） | [中](categories/agent-skill-collections/personal-collections/qiushi-skill.zh.md) · [EN](categories/agent-skill-collections/personal-collections/qiushi-skill.md) |
-| **shaping-skills** | Ryan Singer 的个人 Claude Code 技能包，把 Shape Up 的「shaping」流程（框定问题、breadboarding、产出 framing/kickoff 文档）带进 coding agent，让 AI 在写代码前先帮你想清楚「要做什么」。 | NOASSERTION | D（4/6） | [中](categories/agent-skill-collections/personal-collections/shaping-skills.zh.md) · [EN](categories/agent-skill-collections/personal-collections/shaping-skills.md) |
-| **TÂCHES CC Resources** | TÂCHES（glittercowboy）的个人化 Claude Code 扩展合集：约 27 个 slash 命令、9 个 skill（多为生成新命令/skill/subagent/hook/MCP server 的元生成器）、3 个审计 subagent 及 hook，作为单个 marketplace 插件安装。 | MIT | C（4/6） | [中](categories/agent-skill-collections/personal-collections/taches-cc-resources.zh.md) · [EN](categories/agent-skill-collections/personal-collections/taches-cc-resources.md) |
+| **Agent Skills for Context Engineering** | 一个 15 个 skill 的 Claude Code 插件包，灌输上下文工程纪律：基础原理、退化、压缩、多 agent 协同、记忆、工具设计、评估与 harness 工程。 | MIT | B（4/6） | [中](categories/agent-skills/context-engineering/context-engineering-skills.zh.md) · [EN](categories/agent-skills/context-engineering/context-engineering-skills.md) |
+| **NotebookLM Claude Code Skill** | 一个 Claude Code skill：用真实 Chrome 驱动查询你的 Google NotebookLM 笔记本，从你自己上传的文档取回有来源依据、带引用的答案，而非逐文件读取或凭空编造。 | MIT | C（4/6） | [中](categories/agent-skills/context-engineering/notebooklm-skill.zh.md) · [EN](categories/agent-skills/context-engineering/notebooklm-skill.md) |
+
+#### agent-skills / vendor-collections
+
+| 项目 | 何时用 | 许可 | 健康度 | 页面 |
+| --- | --- | --- | --- | --- |
+| **Anthropic Skills** | Anthropic 官方公开的 Agent Skills 合集——自包含的 SKILL.md 目录（文档编辑、设计、MCP 与 skill 编写、沟通），可装进 Claude Code、Claude.ai 或 Claude API。 | Apache-2.0 | B（4/6） | [中](categories/agent-skills/vendor-collections/anthropic-skills.zh.md) · [EN](categories/agent-skills/vendor-collections/anthropic-skills.md) |
+| **Agent Plugins for AWS** | AWS Labs 官方出品的九个 agent 插件集合（serverless、Amplify、SageMaker、迁移、数据库、部署/成本估算等），通过 marketplace 安装、触发短语驱动并接好 AWS MCP server，教 Claude Code / Cursor / Codex 在 AWS 上做架构、部署和运维。 | Apache-2.0 | A（4/6） | [中](categories/agent-skills/vendor-collections/aws-agent-plugins.zh.md) · [EN](categories/agent-skills/vendor-collections/aws-agent-plugins.md) |
+| **Claude Plugins (Official)** | Anthropic 官方的 Claude Code 插件市场：精选的可安装插件目录（命令、agent、skill、MCP server），通过原生 /plugin 系统按名安装。 | Apache-2.0 | B（4/6） | [中](categories/agent-skills/vendor-collections/claude-plugins-official.zh.md) · [EN](categories/agent-skills/vendor-collections/claude-plugins-official.md) |
+| **MiniMax Skills** | MiniMax 官方约 16 个 Agent Skill 成包（前端/移动端/shader 开发，外加 pdf/docx/xlsx/pptx、音乐与多模态生成），经插件市场装进 Claude Code 等编码 agent。 | MIT | B（4/6） | [中](categories/agent-skills/vendor-collections/minimax-skills.zh.md) · [EN](categories/agent-skills/vendor-collections/minimax-skills.md) |
+| **Anthropic Knowledge Work Plugins** | 当你想要 Anthropic 官方面向知识工作（文档、沟通、研究）的开源插件集（用于 Claude）时用它——非常年轻。 | Apache-2.0 | B（4/6） | [中](categories/agent-skills/vendor-collections/knowledge-work-plugins.zh.md) · [EN](categories/agent-skills/vendor-collections/knowledge-work-plugins.md) |
+
+#### agent-skills / subagent-collections
+
+| 项目 | 何时用 | 许可 | 健康度 | 页面 |
+| --- | --- | --- | --- | --- |
+| **Agency-Agents** | 约 232 个专业 subagent 人格的精选集合（markdown），覆盖 16 个职能部门，附 install/convert 脚本，可部署到 Claude Code 及另外约 11 个 agent harness。 | MIT | B（4/6） | [中](categories/agent-skills/subagent-collections/agency-agents.zh.md) · [EN](categories/agent-skills/subagent-collections/agency-agents.md) |
+| **awesome-claude-code-subagents** | 一套精选的 100+ 个 Claude Code subagent 定义合集（每个角色一个 markdown persona），丢进 ~/.claude/agents/ 后 Claude Code 就能把活委派给对应领域专家。 | MIT | A（4/6） | [中](categories/agent-skills/subagent-collections/awesome-claude-code-subagents.zh.md) · [EN](categories/agent-skills/subagent-collections/awesome-claude-code-subagents.md) |
+| **wshobson/agents** | 单人维护的大型多 harness 插件市场（约 194 个 subagent、158 个 skill、106 个 command、16 个 orchestrator），用一份 Markdown 源生成各 harness 原生产物，覆盖 Claude Code、Codex CLI、Cursor、OpenCode、Gemini CLI 与 Copilot。 | MIT | B（4/6） | [中](categories/agent-skills/subagent-collections/wshobson-agents.zh.md) · [EN](categories/agent-skills/subagent-collections/wshobson-agents.md) |
+
+#### agent-skills / personal-collections
+
+| 项目 | 何时用 | 许可 | 健康度 | 页面 |
+| --- | --- | --- | --- | --- |
+| **antfu/skills** | Anthony Fu 个人精选、面向 Vue/Vite/Nuxt 栈的 agent skill 集合（其 ESLint/pnpm/Vitest/UnoCSS 偏好 + 生成与 vendored 的框架 skill），通过 skills CLI 安装。 | MIT | B（4/6） | [中](categories/agent-skills/personal-collections/antfu-skills.zh.md) · [EN](categories/agent-skills/personal-collections/antfu-skills.md) |
+| **claude-code-harness** | 一套个人化的 Claude Code harness：以插件形式装入受治理的 plan → work → review → release 循环（spec 优先契约、TDD 门控执行、独立 review），并附带 Go 原生 doctor CLI 诊断插件缓存与 skill 漂移。 | MIT | B（4/6） | [中](categories/agent-skills/personal-collections/claude-code-harness.zh.md) · [EN](categories/agent-skills/personal-collections/claude-code-harness.md) |
+| **dbskill** | 一套个人精选的中文 agent 技能包（约 21 个 /dbs-* 命令），聚焦商业模式诊断、内容创作与个人决策，可安装进 Claude Code 等 harness。 | CC-BY-NC-4.0 | C（3/6） | [中](categories/agent-skills/personal-collections/dbskill.zh.md) · [EN](categories/agent-skills/personal-collections/dbskill.md) |
+| **Dimillian Skills** | 某开发者个人精选的 16 个自包含 Codex skill，重心压在 Apple 平台（SwiftUI/iOS/macOS），外加几个通用评审/重构 swarm。 | MIT | C（4/6） | [中](categories/agent-skills/personal-collections/dimillian-skills.zh.md) · [EN](categories/agent-skills/personal-collections/dimillian-skills.md) |
+| **gstack** | Garry Tan 的私人 Claude Code 配置：约 23 个带强烈主张的 slash-command 技能，扮演一支虚拟工程团队（CEO 复盘、设计师、工程经理、QA、安全官），驱动「规划→构建→评审→发布→复盘」闭环。 | MIT | B（4/6） | [中](categories/agent-skills/personal-collections/gstack.zh.md) · [EN](categories/agent-skills/personal-collections/gstack.md) |
+| **andrej-karpathy-skills** | 一个行为准则包——单个 CLAUDE.md（加 Cursor 变体和一层薄技能包装），把 Karpathy 关于 LLM 编码陷阱的四条原则（先想后写、简单优先、外科式改动、目标驱动执行）注入 Claude Code / Cursor。 | MIT | C（4/6） | [中](categories/agent-skills/personal-collections/karpathy-skills.zh.md) · [EN](categories/agent-skills/personal-collections/karpathy-skills.md) |
+| **Khazix Skills** | 数字生命卡兹克（Khazix）的个人精选合集，含五个 SKILL.md 标准格式、以中文为主的 Agent Skill：磁盘清理、AI 资讯查询、文档/记忆同步、长文研究报告、公众号风格写作。 | MIT | B（4/6） | [中](categories/agent-skills/personal-collections/khazix-skills.zh.md) · [EN](categories/agent-skills/personal-collections/khazix-skills.md) |
+| **ljg-skills** | 李继刚的个人 Claude Code 技能合集（20+ 个 skill），面向中文知识工作——读论文/拆书、概念分析、大白话改写、把内容渲染成 PNG 卡片，通过 skills CLI 安装。 | NOASSERTION | C（4/6） | [中](categories/agent-skills/personal-collections/ljg-skills.zh.md) · [EN](categories/agent-skills/personal-collections/ljg-skills.md) |
+| **PUA** | 一个高能动性人设 skill 包：把 coding agent 设定成「被放进 30 天 PIP 的 P8 工程师」，用职场 PUA/PIP 话术逼它穷尽排查手段而非早早放弃。 | MIT | C（4/6） | [中](categories/agent-skills/personal-collections/pua.zh.md) · [EN](categories/agent-skills/personal-collections/pua.md) |
+| **Qiushi-Skill** | 一套方法论 skill 包，用「实事求是」加九个唯物辩证法思维工具（矛盾分析、调查研究、实践认识论等）武装编程 agent，并通过 npx 安装器跨 Claude Code/Cursor/Codex/OpenCode 落地。 | MIT | B（4/6） | [中](categories/agent-skills/personal-collections/qiushi-skill.zh.md) · [EN](categories/agent-skills/personal-collections/qiushi-skill.md) |
+| **shaping-skills** | Ryan Singer 的个人 Claude Code 技能包，把 Shape Up 的「shaping」流程（框定问题、breadboarding、产出 framing/kickoff 文档）带进 coding agent，让 AI 在写代码前先帮你想清楚「要做什么」。 | NOASSERTION | D（4/6） | [中](categories/agent-skills/personal-collections/shaping-skills.zh.md) · [EN](categories/agent-skills/personal-collections/shaping-skills.md) |
+| **TÂCHES CC Resources** | TÂCHES（glittercowboy）的个人化 Claude Code 扩展合集：约 27 个 slash 命令、9 个 skill（多为生成新命令/skill/subagent/hook/MCP server 的元生成器）、3 个审计 subagent 及 hook，作为单个 marketplace 插件安装。 | MIT | C（4/6） | [中](categories/agent-skills/personal-collections/taches-cc-resources.zh.md) · [EN](categories/agent-skills/personal-collections/taches-cc-resources.md) |
+| **skills** | Based on The Minimalist Entrepreneur by Sahil Lavingia | NOASSERTION | ?（0/6） | [中](categories/agent-skills/engineering/slavingia-skills.zh.md) · [EN](categories/agent-skills/engineering/slavingia-skills.md) |
+| **canghe-skills** | 苍何的技能skills仓库，搜集好用的 skills，辅助提效 | NOASSERTION | ?（0/6） | [中](categories/agent-skills/engineering/canghe-skills.zh.md) · [EN](categories/agent-skills/engineering/canghe-skills.md) |
+| **huashu-skills** | 花叔的内容创作 Skills 合集 - AI审校、选题生成、视频大纲、素材搜索等 11 个实用技能 | NOASSERTION | ?（0/6） | [中](categories/agent-skills/writing/huashu-skills.zh.md) · [EN](categories/agent-skills/writing/huashu-skills.md) |
+| **De-AI-Prompt-Enhancer-Writer-Booster-SKILL** | 去AI味提示词-作家增强-SKILL | NOASSERTION | ?（0/6） | [中](categories/agent-skills/de-ai-writing/de-ai-prompt-enhancer-writer-booster-skill.zh.md) · [EN](categories/agent-skills/de-ai-writing/de-ai-prompt-enhancer-writer-booster-skill.md) |
+| **chatgpt-comparison-detection** | Human ChatGPT Comparison Corpus (HC3), Detectors, and more! 🔥 | NOASSERTION | ?（0/6） | [中](categories/llm-eval/chatgpt-comparison-detection.zh.md) · [EN](categories/llm-eval/chatgpt-comparison-detection.md) |
+| **writing-agent** | 🚀 一个基于 Claude Code (Skills + Subagents) 的“去AI味”全栈写作系统。不仅防套路，更通过专属规则强制注入人类观点与细节，搭配读者测试评估与自动图文排版。全面支持 DeepSeek / 智谱GLM / MiniMax 等国产低成本大模型，提供从选题、风格建模到审稿发布的高维全自动写作工作流。 | NOASSERTION | ?（0/6） | [中](categories/agent-skills/writing/writing-agent.zh.md) · [EN](categories/agent-skills/writing/writing-agent.md) |
+| **nuwa-skill** | 你想蒸馏的下一个员工，何必是同事。蒸馏任何人的思维方式——心智模型、决策启发式、表达DNA。Distill how anyone thinks. | NOASSERTION | ?（0/6） | [中](categories/agent-skills/context-engineering/nuwa-skill.zh.md) · [EN](categories/agent-skills/context-engineering/nuwa-skill.md) |
+| **shuorenhua** | 说人话｜中文优先的去 AI 味改写 skill：保事实、分场景、改完可直接发。Chinese-first rewrite skill for Codex / Claude Code / Cursor / ChatGPT — removes AI tone, preserves facts. | NOASSERTION | ?（0/6） | [中](categories/agent-skills/de-ai-writing/shuorenhua.zh.md) · [EN](categories/agent-skills/de-ai-writing/shuorenhua.md) |
+| **ai-flavor-remover** | AI 味去除 - 仅在 Gemini 2.5 Pro 上测试通过 | NOASSERTION | ?（0/6） | [中](categories/agent-skills/de-ai-writing/ai-flavor-remover.zh.md) · [EN](categories/agent-skills/de-ai-writing/ai-flavor-remover.md) |
+| **stop-slop** | A skill file for removing AI tells from prose | NOASSERTION | ?（0/6） | [中](categories/agent-skills/de-ai-writing/stop-slop.zh.md) · [EN](categories/agent-skills/de-ai-writing/stop-slop.md) |
+| **humanizer** | Claude Code skill that removes signs of AI-generated writing from text | NOASSERTION | ?（0/6） | [中](categories/agent-skills/de-ai-writing/humanizer.zh.md) · [EN](categories/agent-skills/de-ai-writing/humanizer.md) |
+| **cangjie-skill** | 把书、长视频、播客等高价值内容蒸馏成可执行的 Agent Skills | NOASSERTION | ?（0/6） | [中](categories/agent-skills/engineering/cangjie-skill.zh.md) · [EN](categories/agent-skills/engineering/cangjie-skill.md) |
+| **archify** | Any agent Skill: generate beautiful architecture diagrams with dark/light theme toggle and PNG/JPEG/WebP/SVG export | NOASSERTION | ?（0/6） | [中](categories/agent-skills/design/archify.zh.md) · [EN](categories/agent-skills/design/archify.md) |
+| **skills** | Skills for Real Engineers. Straight from my .claude directory. | NOASSERTION | ?（0/6） | [中](categories/agent-skills/engineering/mattpocock-skills.zh.md) · [EN](categories/agent-skills/engineering/mattpocock-skills.md) |
+| **skills** | Browser automation CLI built for AI agents. Break through anti-bot walls, hand off to humans across platforms when stuck. Parallel multi-task execution, independent multi-session operation, isolated multi-account browsing. | NOASSERTION | ?（0/6） | [中](categories/agent-skills/engineering/browser-act-skills.zh.md) · [EN](categories/agent-skills/engineering/browser-act-skills.md) |
+| **caveman** | 🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman | NOASSERTION | ?（0/6） | [中](categories/agent-skills/engineering/caveman.zh.md) · [EN](categories/agent-skills/engineering/caveman.md) |
+| **open-seo** | Open source alternative to Semrush and Ahrefs | NOASSERTION | ?（0/6） | [中](categories/agent-skills/design/open-seo.zh.md) · [EN](categories/agent-skills/design/open-seo.md) |
+| **ai-website-cloner-template** | Clone any website with one command using AI coding agents | NOASSERTION | ?（0/6） | [中](categories/agent-skills/design/ai-website-cloner-template.zh.md) · [EN](categories/agent-skills/design/ai-website-cloner-template.md) |
+| **huashu-design** | Huashu Design · HTML-native design skill for Claude Code · Claude Code 里 HTML 原生的设计 skill · 高保真原型 / 幻灯片 / 动画 + 20 设计哲学 + 5 维评审 + MP4 导出 · Agent-agnostic | NOASSERTION | ?（0/6） | [中](categories/agent-skills/writing/huashu-design.zh.md) · [EN](categories/agent-skills/writing/huashu-design.md) |
+| **ppt-master** | AI generates a real, editable PowerPoint from any document — native shapes & animations, editable charts & tables you can change the data on, speaker notes voiced as audio narration, and the option to follow your own .pptx template, not slide images · by Hugo He | NOASSERTION | ?（0/6） | [中](categories/agent-skills/slides-ppt/ppt-master.zh.md) · [EN](categories/agent-skills/slides-ppt/ppt-master.md) |
+| **frontend-slides** | Create beautiful slides on the web using a coding agent's frontend skills | NOASSERTION | ?（0/6） | [中](categories/agent-skills/slides-ppt/frontend-slides.zh.md) · [EN](categories/agent-skills/slides-ppt/frontend-slides.md) |
+| **html-ppt-skill** | HTML PPT Studio — AgentSkill with 24 themes, 31 layouts, 20+ animations for building professional HTML presentations | NOASSERTION | ?（0/6） | [中](categories/agent-skills/slides-ppt/html-ppt-skill.zh.md) · [EN](categories/agent-skills/slides-ppt/html-ppt-skill.md) |
+| **tacit-mining** | Let AI truly understand you. A Claude Code skill that extracts tacit knowledge through structured dialogue. 隐性知识挖掘技能。 | NOASSERTION | ?（0/6） | [中](categories/agent-skills/context-engineering/tacit-mining.zh.md) · [EN](categories/agent-skills/context-engineering/tacit-mining.md) |
+| **soul.md** | The best way to build a personality for your agent. Let Claude Code / OpenClaw ingest your data & build your AI soul. | NOASSERTION | ?（0/6） | [中](categories/agent-skills/context-engineering/soul-md.zh.md) · [EN](categories/agent-skills/context-engineering/soul-md.md) |
+| **marketingskills** | Marketing skills for Claude Code and AI agents. CRO, copywriting, SEO, analytics, and growth engineering. | NOASSERTION | ?（0/6） | [中](categories/agent-skills/writing/marketingskills.zh.md) · [EN](categories/agent-skills/writing/marketingskills.md) |
 
 ### observability
 
@@ -418,6 +443,7 @@ skill 从 `raw.githubusercontent.com/ZhenningLang/oss-atlas/main/` 拉取页面�
 | **olmOCR** | 当你需要把带公式、表格、手写体和多栏版面的复杂 PDF 转成干净 Markdown 以用于 LLM 训练数据集时用它——需要 GPU。 | Apache-2.0 | ?（0/6） | [中](categories/document-parsing/olmocr.zh.md) · [EN](categories/document-parsing/olmocr.md) |
 | **Marker** | Convert PDF to markdown + JSON quickly with high accuracy | GPL-3.0 | ?（0/6） | [EN](categories/document-parsing/marker.md) · [中](categories/document-parsing/marker.zh.md) |
 | **unstructured** | Convert documents to structured data effortlessly. Unstructured is open-source ETL solution for transforming complex documents into clean, structured formats for language models.  Visit our website to learn more about our enterprise grade Platform product for production grade workflows, partitioning, enrichments, chunking and embedding. | Apache-2.0 | ?（0/6） | [EN](categories/document-parsing/unstructured.md) · [中](categories/document-parsing/unstructured.zh.md) |
+| **any2html** | Use it when you need any2html in the document-parsing area. | NOASSERTION | ?（0/6） | [中](categories/document-parsing/any2html.zh.md) · [EN](categories/document-parsing/any2html.md) |
 
 ### diagramming
 
@@ -464,6 +490,8 @@ skill 从 `raw.githubusercontent.com/ZhenningLang/oss-atlas/main/` 拉取页面�
 | 项目 | 何时用 | 许可 | 健康度 | 页面 |
 | --- | --- | --- | --- | --- |
 | **OpenMontage** | 当你想让 AI 编程助手从一句自然语言描述出发，完成研究、脚本、素材生成、合成与渲染，产出完整视频（解说、预告片、动画、纪录片蒙太奇）时使用。 | AGPL-3.0 | C（6/6） | [中](categories/video-production/open-montage.zh.md) · [EN](categories/video-production/open-montage.md) |
+| **claude-video** | Give Claude the ability to watch any video. /watch downloads, extracts frames, transcribes, hands it all to Claude. | NOASSERTION | ?（0/6） | [中](categories/video-production/claude-video.zh.md) · [EN](categories/video-production/claude-video.md) |
+
 ### llm-chat-ui
 
 | 项目 | 何时用 | 许可 | 健康度 | 页面 |
@@ -789,3 +817,26 @@ python3 tools/lint.py    # 唯一的门；没有单元测试（这是内容仓�
 - **内容**（`categories/` 下的散文、路由页、文档）：CC BY 4.0——见 [LICENSE-CONTENT](LICENSE-CONTENT)。
 
 各项目页描述的是第三方项目，其归属与许可证由各自作者决定；CC BY 4.0 仅覆盖这里的原创分析。
+
+### investment-finance
+
+| 项目 | 何时用 | 许可证 | 健康度 | 页面 |
+| --- | --- | --- | --- | --- |
+| **awesome-deep-trading** | List of awesome resources for machine learning-based algorithmic trading | NOASSERTION | ?（0/6） | [中](categories/investment-finance/awesome-deep-trading.zh.md) · [EN](categories/investment-finance/awesome-deep-trading.md) |
+| **OpenBB** | Open Data Platform for analysts, quants and AI agents. | NOASSERTION | ?（0/6） | [中](categories/investment-finance/openbb.zh.md) · [EN](categories/investment-finance/openbb.md) |
+| **FinRL** | FinRL®:  Financial Reinforcement Learning. 🔥 | NOASSERTION | ?（0/6） | [中](categories/investment-finance/finrl.zh.md) · [EN](categories/investment-finance/finrl.md) |
+| **qlib** | Qlib is an AI-oriented Quant investment platform that aims to use AI tech to empower Quant Research, from exploring ideas to implementing productions. Qlib supports diverse ML modeling paradigms, including supervised learning, market dynamics modeling, and RL, and is now equipped with https://github.com/microsoft/RD-Agent to automate R&D process. | NOASSERTION | ?（0/6） | [中](categories/investment-finance/qlib.zh.md) · [EN](categories/investment-finance/qlib.md) |
+| **backtrader** | Python Backtesting library for trading strategies | NOASSERTION | ?（0/6） | [中](categories/investment-finance/backtrader.zh.md) · [EN](categories/investment-finance/backtrader.md) |
+| **yfinance** | Download market data from Yahoo! Finance's API | NOASSERTION | ?（0/6） | [中](categories/investment-finance/yfinance.zh.md) · [EN](categories/investment-finance/yfinance.md) |
+
+### education-tutoring
+
+| 项目 | 何时用 | 许可证 | 健康度 | 页面 |
+| --- | --- | --- | --- | --- |
+| **DeepTutor** | DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/. | NOASSERTION | ?（0/6） | [中](categories/education-tutoring/deeptutor.zh.md) · [EN](categories/education-tutoring/deeptutor.md) |
+
+### governance
+
+| 项目 | 何时用 | 许可证 | 健康度 | 页面 |
+| --- | --- | --- | --- | --- |
+| **agent-governance-toolkit** | AI Agent Governance Toolkit — Policy enforcement, zero-trust identity, execution sandboxing, and reliability engineering for autonomous AI agents. Covers 10/10 OWASP Agentic Top 10. | NOASSERTION | ?（0/6） | [中](categories/governance/agent-governance-toolkit.zh.md) · [EN](categories/governance/agent-governance-toolkit.md) |

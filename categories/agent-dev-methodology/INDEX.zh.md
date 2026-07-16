@@ -30,4 +30,4 @@
 
 ## 什么该放这里
 
-面向 agent 驱动开发的**方法论与元框架**——如何组织 spec、上下文、技能与工作流。不含运行时 agent 框架（见 `agent-frameworks`），不含纯技能合集（见 `agent-skill-collections`）。
+面向 agent 驱动开发的**方法论与元框架**——如何组织 spec、上下文、技能与工作流。不含运行时 agent 框架（见 `agent-frameworks`），不含纯技能合集（见 `agent-skills`）。

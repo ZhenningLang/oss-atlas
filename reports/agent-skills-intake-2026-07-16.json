@@ -1,0 +1,1011 @@
+{
+  "generated_at": "2026-07-16",
+  "input_count": 43,
+  "duplicate_inputs": [
+    "https://github.com/op7418/guizang-ppt-skill"
+  ],
+  "items": [
+    {
+      "input_url": "https://github.com/slavingia/skills",
+      "repo": "slavingia/skills",
+      "subpath": null,
+      "status": "candidate",
+      "suggested_category": "engineering",
+      "github": {
+        "url": "https://github.com/slavingia/skills",
+        "description": "Based on The Minimalist Entrepreneur by Sahil Lavingia",
+        "stars": 9583,
+        "forks": 996,
+        "language": "",
+        "license": "NOASSERTION",
+        "archived": false,
+        "fork": false,
+        "created_at": "2026-03-23T19:16:00Z",
+        "pushed_at": "2026-04-14T00:53:57Z",
+        "topics": []
+      }
+    },
+    {
+      "input_url": "https://github.com/freestylefly/canghe-skills",
+      "repo": "freestylefly/canghe-skills",
+      "subpath": null,
+      "status": "candidate",
+      "suggested_category": "engineering",
+      "github": {
+        "url": "https://github.com/freestylefly/canghe-skills",
+        "description": "苍何的技能skills仓库，搜集好用的 skills，辅助提效",
+        "stars": 407,
+        "forks": 95,
+        "language": "TypeScript",
+        "license": "NOASSERTION",
+        "archived": false,
+        "fork": false,
+        "created_at": "2026-02-24T11:06:22Z",
+        "pushed_at": "2026-06-08T09:57:52Z",
+        "topics": []
+      }
+    },
+    {
+      "input_url": "https://github.com/op7418/guizang-ppt-skill",
+      "repo": "op7418/guizang-ppt-skill",
+      "subpath": null,
+      "status": "already_indexed",
+      "existing_page": "categories/agent-skills/slides-ppt/guizang-ppt.md"
+    },
+    {
+      "input_url": "https://github.com/alchaincyf/huashu-skills",
+      "repo": "alchaincyf/huashu-skills",
+      "subpath": null,
+      "status": "candidate",
+      "suggested_category": "writing",
+      "github": {
+        "url": "https://github.com/alchaincyf/huashu-skills",
+        "description": "花叔的内容创作 Skills 合集 - AI审校、选题生成、视频大纲、素材搜索等 11 个实用技能",
+        "stars": 1205,
+        "forks": 202,
+        "language": "Python",
+        "license": "NOASSERTION",
+        "archived": false,
+        "fork": false,
+        "created_at": "2026-01-24T01:11:07Z",
+        "pushed_at": "2026-04-21T05:28:31Z",
+        "topics": []
+      }
+    },
+    {
+      "input_url": "https://github.com/virgiliojr94/book-to-skill",
+      "repo": "virgiliojr94/book-to-skill",
+      "subpath": null,
+      "status": "already_indexed",
+      "existing_page": "categories/agent-skills/book-to-skill.md"
+    },
+    {
+      "input_url": "https://github.com/OUBIGFA/De-AI-Prompt-Enhancer-Writer-Booster-SKILL",
+      "repo": "OUBIGFA/De-AI-Prompt-Enhancer-Writer-Booster-SKILL",
+      "subpath": null,
+      "status": "candidate",
+      "suggested_category": "writing",
+      "github": {
+        "url": "https://github.com/OUBIGFA/De-AI-Prompt-Enhancer-Writer-Booster-SKILL",
+        "description": "去AI味提示词-作家增强-SKILL",
+        "stars": 538,
+        "forks": 71,
+        "language": "JavaScript",
+        "license": "NOASSERTION",
+        "archived": false,
+        "fork": false,
+        "created_at": "2026-01-21T04:14:06Z",
+        "pushed_at": "2026-06-01T04:26:50Z",
+        "topics": []
+      }
+    },
+    {
+      "input_url": "https://github.com/hello-simpleai/chatgpt-comparison-detection",
+      "repo": "hello-simpleai/chatgpt-comparison-detection",
+      "subpath": null,
+      "status": "candidate",
+      "suggested_category": "uncertain",
+      "github": {
+        "url": "https://github.com/Hello-SimpleAI/chatgpt-comparison-detection",
+        "description": "Human ChatGPT Comparison Corpus (HC3), Detectors, and more! 🔥",
+        "stars": 1413,
+        "forks": 127,
+        "language": "Python",
+        "license": "NOASSERTION",
+        "archived": false,
+        "fork": false,
+        "created_at": "2023-01-07T07:21:24Z",
+        "pushed_at": "2023-12-01T16:03:51Z",
+        "topics": [
+          "ai",
+          "chatbot",
+          "chatgpt",
+          "dataset",
+          "nlp",
+          "openai",
+          "text-classification",
+          "python",
+          "gpt2",
+          "gpt3",
+          "gpt-3",
+          "ml",
+          "machine-learning",
+          "deep-learning"
+        ]
+      }
+    },
+    {
+      "input_url": "https://github.com/dongbeixiaohuo/writing-agent",
+      "repo": "dongbeixiaohuo/writing-agent",
+      "subpath": null,
+      "status": "candidate",
+      "suggested_category": "writing",
+      "github": {
+        "url": "https://github.com/dongbeixiaohuo/writing-agent",
+        "description": "🚀 一个基于 Claude Code (Skills + Subagents) 的“去AI味”全栈写作系统。不仅防套路，更通过专属规则强制注入人类观点与细节，搭配读者测试评估与自动图文排版。全面支持 DeepSeek / 智谱GLM / MiniMax 等国产低成本大模型，提供从选题、风格建模到审稿发布的高维全自动写作工作流。",
+        "stars": 319,
+        "forks": 58,
+        "language": "JavaScript",
+        "license": "NOASSERTION",
+        "archived": false,
+        "fork": false,
+        "created_at": "2025-12-21T09:44:29Z",
+        "pushed_at": "2026-07-05T06:13:28Z",
+        "topics": [
+          "ai-writing",
+          "claude-code",
+          "content-generation",
+          "deepseek",
+          "style-modeling",
+          "writing-assistant",
+          "writing-agent",
+          "writing-workflow"
+        ]
+      }
+    },
+    {
+      "input_url": "https://github.com/alchaincyf/nuwa-skill",
+      "repo": "alchaincyf/nuwa-skill",
+      "subpath": null,
+      "status": "candidate",
+      "suggested_category": "uncertain",
+      "github": {
+        "url": "https://github.com/alchaincyf/nuwa-skill",
+        "description": "你想蒸馏的下一个员工，何必是同事。蒸馏任何人的思维方式——心智模型、决策启发式、表达DNA。Distill how anyone thinks.",
+        "stars": 28015,
+        "forks": 3962,
+        "language": "Python",
+        "license": "NOASSERTION",
+        "archived": false,
+        "fork": false,
+        "created_at": "2026-04-05T04:33:04Z",
+        "pushed_at": "2026-07-02T03:11:38Z",
+        "topics": []
+      }
+    },
+    {
+      "input_url": "https://github.com/MrGeDiao/shuorenhua",
+      "repo": "MrGeDiao/shuorenhua",
+      "subpath": null,
+      "status": "candidate",
+      "suggested_category": "writing",
+      "github": {
+        "url": "https://github.com/MrGeDiao/shuorenhua",
+        "description": "说人话｜中文优先的去 AI 味改写 skill：保事实、分场景、改完可直接发。Chinese-first rewrite skill for Codex / Claude Code / Cursor / ChatGPT — removes AI tone, preserves facts.",
+        "stars": 736,
+        "forks": 45,
+        "language": "Python",
+        "license": "NOASSERTION",
+        "archived": false,
+        "fork": false,
+        "created_at": "2026-03-22T17:22:11Z",
+        "pushed_at": "2026-07-16T01:30:25Z",
+        "topics": [
+          "ai-writing",
+          "anti-slop",
+          "chatgpt",
+          "chinese",
+          "claude-code",
+          "cursor",
+          "prompt",
+          "prompt-engineering",
+          "skill",
+          "writing",
+          "openclaw",
+          "agent-skill",
+          "codex",
+          "developer-tools",
+          "rewriting",
+          "text-quality"
+        ]
+      }
+    },
+    {
+      "input_url": "https://github.com/hylarucoder/ai-flavor-remover",
+      "repo": "hylarucoder/ai-flavor-remover",
+      "subpath": null,
+      "status": "candidate",
+      "suggested_category": "writing",
+      "github": {
+        "url": "https://github.com/hylarucoder/ai-flavor-remover",
+        "description": "AI 味去除 - 仅在 Gemini 2.5 Pro 上测试通过",
+        "stars": 1093,
+        "forks": 66,
+        "language": "",
+        "license": "NOASSERTION",
+        "archived": false,
+        "fork": false,
+        "created_at": "2025-04-02T14:13:15Z",
+        "pushed_at": "2025-04-02T14:35:03Z",
+        "topics": []
+      }
+    },
+    {
+      "input_url": "https://github.com/Leonxlnx/taste-skill",
+      "repo": "Leonxlnx/taste-skill",
+      "subpath": null,
+      "status": "already_indexed",
+      "existing_page": "categories/agent-skills/design/taste-skill.md"
+    },
+    {
+      "input_url": "https://github.com/hardikpandya/stop-slop",
+      "repo": "hardikpandya/stop-slop",
+      "subpath": null,
+      "status": "candidate",
+      "suggested_category": "uncertain",
+      "github": {
+        "url": "https://github.com/hardikpandya/stop-slop",
+        "description": "A skill file for removing AI tells from prose",
+        "stars": 13905,
+        "forks": 978,
+        "language": "",
+        "license": "NOASSERTION",
+        "archived": false,
+        "fork": false,
+        "created_at": "2026-01-11T12:00:59Z",
+        "pushed_at": "2026-03-17T18:50:39Z",
+        "topics": []
+      }
+    },
+    {
+      "input_url": "https://github.com/op7418/Humanizer-zh",
+      "repo": "op7418/Humanizer-zh",
+      "subpath": null,
+      "status": "already_indexed",
+      "existing_page": "categories/agent-skills/writing/humanizer-zh.md"
+    },
+    {
+      "input_url": "https://github.com/blader/humanizer",
+      "repo": "blader/humanizer",
+      "subpath": null,
+      "status": "candidate",
+      "suggested_category": "writing",
+      "github": {
+        "url": "https://github.com/blader/humanizer",
+        "description": "Claude Code skill that removes signs of AI-generated writing from text",
+        "stars": 29415,
+        "forks": 2713,
+        "language": "",
+        "license": "NOASSERTION",
+        "archived": false,
+        "fork": false,
+        "created_at": "2026-01-18T05:30:15Z",
+        "pushed_at": "2026-06-29T20:43:06Z",
+        "topics": []
+      }
+    },
+    {
+      "input_url": "https://github.com/cbailes/awesome-deep-trading",
+      "repo": "cbailes/awesome-deep-trading",
+      "subpath": null,
+      "status": "candidate",
+      "suggested_category": "investment-finance",
+      "github": {
+        "url": "https://github.com/cbailes/awesome-deep-trading",
+        "description": "List of awesome resources for machine learning-based algorithmic trading",
+        "stars": 2011,
+        "forks": 356,
+        "language": "",
+        "license": "NOASSERTION",
+        "archived": false,
+        "fork": false,
+        "created_at": "2018-11-26T03:23:04Z",
+        "pushed_at": "2023-08-08T19:55:49Z",
+        "topics": [
+          "deep-trading",
+          "deep-learning",
+          "trading-algorithms",
+          "trading-bot",
+          "quantitative-trading",
+          "fintech",
+          "stock-trading",
+          "trading-bots",
+          "machine-learning",
+          "frequency-trading",
+          "deep-reinforcement-learning",
+          "deep-neural-networks",
+          "cryptocurrency"
+        ]
+      }
+    },
+    {
+      "input_url": "https://github.com/OpenBB-finance/OpenBB",
+      "repo": "OpenBB-finance/OpenBB",
+      "subpath": null,
+      "status": "candidate",
+      "suggested_category": "investment-finance",
+      "github": {
+        "url": "https://github.com/OpenBB-finance/OpenBB",
+        "description": "Open Data Platform for analysts, quants and AI agents.",
+        "stars": 70644,
+        "forks": 7176,
+        "language": "Python",
+        "license": "NOASSERTION",
+        "archived": false,
+        "fork": false,
+        "created_at": "2020-12-20T10:46:38Z",
+        "pushed_at": "2026-07-16T03:54:27Z",
+        "topics": [
+          "python",
+          "machine-learning",
+          "finance",
+          "stocks",
+          "quantitative-finance",
+          "economics",
+          "crypto",
+          "openbb",
+          "ai",
+          "derivatives",
+          "equity",
+          "fixed-income",
+          "options"
+        ]
+      }
+    },
+    {
+      "input_url": "https://github.com/AI4Finance-Foundation/FinRL",
+      "repo": "AI4Finance-Foundation/FinRL",
+      "subpath": null,
+      "status": "candidate",
+      "suggested_category": "investment-finance",
+      "github": {
+        "url": "https://github.com/AI4Finance-Foundation/FinRL",
+        "description": "FinRL®:  Financial Reinforcement Learning. 🔥",
+        "stars": 15738,
+        "forks": 3432,
+        "language": "Jupyter Notebook",
+        "license": "NOASSERTION",
+        "archived": false,
+        "fork": false,
+        "created_at": "2020-07-26T13:18:16Z",
+        "pushed_at": "2026-07-13T23:02:18Z",
+        "topics": [
+          "deep-reinforcement-learning",
+          "drl-trading-agents",
+          "stock-trading",
+          "drl-algorithms",
+          "pythorch",
+          "tensorflow2",
+          "drl-framework",
+          "multi-agent-learning",
+          "finance",
+          "stock-markets",
+          "trading-tasks",
+          "openai-gym",
+          "fintech",
+          "algorithmic-trading"
+        ]
+      }
+    },
+    {
+      "input_url": "https://github.com/microsoft/qlib",
+      "repo": "microsoft/qlib",
+      "subpath": null,
+      "status": "candidate",
+      "suggested_category": "investment-finance",
+      "github": {
+        "url": "https://github.com/microsoft/qlib",
+        "description": "Qlib is an AI-oriented Quant investment platform that aims to use AI tech to empower Quant Research, from exploring ideas to implementing productions. Qlib supports diverse ML modeling paradigms, including supervised learning, market dynamics modeling, and RL, and is now equipped with https://github.com/microsoft/RD-Agent to automate R&D process.",
+        "stars": 46281,
+        "forks": 7372,
+        "language": "Python",
+        "license": "NOASSERTION",
+        "archived": false,
+        "fork": false,
+        "created_at": "2020-08-14T06:46:00Z",
+        "pushed_at": "2026-04-22T07:08:01Z",
+        "topics": [
+          "quantitative-finance",
+          "machine-learning",
+          "stock-data",
+          "platform",
+          "finance",
+          "algorithmic-trading",
+          "python",
+          "investment",
+          "quant",
+          "quantitative-trading",
+          "quant-dataset",
+          "quant-models",
+          "auto-quant",
+          "fintech",
+          "research-paper",
+          "paper",
+          "research",
+          "deep-learning"
+        ]
+      }
+    },
+    {
+      "input_url": "https://github.com/mementum/backtrader",
+      "repo": "mementum/backtrader",
+      "subpath": null,
+      "status": "candidate",
+      "suggested_category": "investment-finance",
+      "github": {
+        "url": "https://github.com/mementum/backtrader",
+        "description": "Python Backtesting library for trading strategies",
+        "stars": 22458,
+        "forks": 5203,
+        "language": "Python",
+        "license": "NOASSERTION",
+        "archived": false,
+        "fork": false,
+        "created_at": "2015-01-10T07:14:52Z",
+        "pushed_at": "2024-08-19T17:47:36Z",
+        "topics": [
+          "python",
+          "trading",
+          "backtesting",
+          "metaclass"
+        ]
+      }
+    },
+    {
+      "input_url": "https://github.com/ranaroussi/yfinance",
+      "repo": "ranaroussi/yfinance",
+      "subpath": null,
+      "status": "candidate",
+      "suggested_category": "investment-finance",
+      "github": {
+        "url": "https://github.com/ranaroussi/yfinance",
+        "description": "Download market data from Yahoo! Finance's API",
+        "stars": 24711,
+        "forks": 3371,
+        "language": "Python",
+        "license": "NOASSERTION",
+        "archived": false,
+        "fork": false,
+        "created_at": "2017-05-21T10:16:15Z",
+        "pushed_at": "2026-07-15T19:13:34Z",
+        "topics": [
+          "python",
+          "pandas",
+          "yahoo-finance-api",
+          "yahoo-finance",
+          "stock-data",
+          "market-data",
+          "financial-data",
+          "fix-yahoo-finance"
+        ]
+      }
+    },
+    {
+      "input_url": "https://github.com/kangarooking/cangjie-skill",
+      "repo": "kangarooking/cangjie-skill",
+      "subpath": null,
+      "status": "candidate",
+      "suggested_category": "engineering",
+      "github": {
+        "url": "https://github.com/kangarooking/cangjie-skill",
+        "description": "把书、长视频、播客等高价值内容蒸馏成可执行的 Agent Skills",
+        "stars": 3177,
+        "forks": 482,
+        "language": "Python",
+        "license": "NOASSERTION",
+        "archived": false,
+        "fork": false,
+        "created_at": "2026-04-16T05:54:32Z",
+        "pushed_at": "2026-07-16T03:00:58Z",
+        "topics": [
+          "agent-workflows",
+          "ai-skills",
+          "automation",
+          "book-to-skill",
+          "knowledge-distillation",
+          "prompt-engineering",
+          "skill-generator",
+          "templates"
+        ]
+      }
+    },
+    {
+      "input_url": "https://github.com/KKKKhazix/khazix-skills",
+      "repo": "KKKKhazix/khazix-skills",
+      "subpath": null,
+      "status": "already_indexed",
+      "existing_page": "categories/agent-skills/personal-collections/khazix-skills.md"
+    },
+    {
+      "input_url": "https://github.com/tt-a1i/archify",
+      "repo": "tt-a1i/archify",
+      "subpath": null,
+      "status": "candidate",
+      "suggested_category": "design",
+      "github": {
+        "url": "https://github.com/tt-a1i/archify",
+        "description": "Any agent Skill: generate beautiful architecture diagrams with dark/light theme toggle and PNG/JPEG/WebP/SVG export",
+        "stars": 5339,
+        "forks": 438,
+        "language": "JavaScript",
+        "license": "NOASSERTION",
+        "archived": false,
+        "fork": false,
+        "created_at": "2026-04-15T05:27:37Z",
+        "pushed_at": "2026-07-15T16:29:36Z",
+        "topics": [
+          "anthropic",
+          "architecture-diagram",
+          "claude-skill",
+          "dark-mode",
+          "developer-tools",
+          "diagram-as-code",
+          "mermaid-alternative",
+          "svg",
+          "system-design",
+          "html-diagram"
+        ]
+      }
+    },
+    {
+      "input_url": "https://github.com/mattpocock/skills",
+      "repo": "mattpocock/skills",
+      "subpath": null,
+      "status": "candidate",
+      "suggested_category": "engineering",
+      "github": {
+        "url": "https://github.com/mattpocock/skills",
+        "description": "Skills for Real Engineers. Straight from my .claude directory.",
+        "stars": 172981,
+        "forks": 14845,
+        "language": "Shell",
+        "license": "NOASSERTION",
+        "archived": false,
+        "fork": false,
+        "created_at": "2026-02-03T11:15:53Z",
+        "pushed_at": "2026-07-14T18:32:39Z",
+        "topics": []
+      }
+    },
+    {
+      "input_url": "https://github.com/browser-act/skills",
+      "repo": "browser-act/skills",
+      "subpath": null,
+      "status": "candidate",
+      "suggested_category": "engineering",
+      "github": {
+        "url": "https://github.com/browser-act/skills",
+        "description": "Browser automation CLI built for AI agents. Break through anti-bot walls, hand off to humans across platforms when stuck. Parallel multi-task execution, independent multi-session operation, isolated multi-account browsing.",
+        "stars": 4440,
+        "forks": 211,
+        "language": "Python",
+        "license": "NOASSERTION",
+        "archived": false,
+        "fork": false,
+        "created_at": "2026-02-06T10:35:35Z",
+        "pushed_at": "2026-07-14T09:53:38Z",
+        "topics": [
+          "ai-agents",
+          "automation",
+          "claude-code",
+          "claude-code-skills",
+          "cursor",
+          "no-code",
+          "openclaw",
+          "openclaw-skills",
+          "web-scraping",
+          "web-scraping-api",
+          "data-extraction",
+          "web-data-extraction",
+          "claude-cli",
+          "claude-skills",
+          "codex",
+          "codex-cli",
+          "codex-skill",
+          "openclaw-cli",
+          "openclaw-skill",
+          "agent-infrastructure"
+        ]
+      }
+    },
+    {
+      "input_url": "https://github.com/JuliusBrussee/caveman",
+      "repo": "JuliusBrussee/caveman",
+      "subpath": null,
+      "status": "candidate",
+      "suggested_category": "engineering",
+      "github": {
+        "url": "https://github.com/JuliusBrussee/caveman",
+        "description": "🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman",
+        "stars": 89979,
+        "forks": 5171,
+        "language": "JavaScript",
+        "license": "NOASSERTION",
+        "archived": false,
+        "fork": false,
+        "created_at": "2026-04-04T10:03:00Z",
+        "pushed_at": "2026-07-03T11:10:42Z",
+        "topics": [
+          "ai",
+          "anthropic",
+          "caveman",
+          "claude",
+          "claude-code",
+          "llm",
+          "meme",
+          "prompt-engineering",
+          "skill",
+          "tokens"
+        ]
+      }
+    },
+    {
+      "input_url": "https://github.com/every-app/open-seo",
+      "repo": "every-app/open-seo",
+      "subpath": null,
+      "status": "candidate",
+      "suggested_category": "design",
+      "github": {
+        "url": "https://github.com/every-app/open-seo",
+        "description": "Open source alternative to Semrush and Ahrefs",
+        "stars": 4337,
+        "forks": 504,
+        "language": "TypeScript",
+        "license": "NOASSERTION",
+        "archived": false,
+        "fork": false,
+        "created_at": "2026-02-27T18:57:41Z",
+        "pushed_at": "2026-07-15T17:12:05Z",
+        "topics": [
+          "backlink-analysis",
+          "keyword-research",
+          "mcp",
+          "seo",
+          "seo-tools",
+          "site-audit",
+          "google-search-console-mcp"
+        ]
+      }
+    },
+    {
+      "input_url": "https://github.com/JCodesMore/ai-website-cloner-template",
+      "repo": "JCodesMore/ai-website-cloner-template",
+      "subpath": null,
+      "status": "candidate",
+      "suggested_category": "design",
+      "github": {
+        "url": "https://github.com/JCodesMore/ai-website-cloner-template",
+        "description": "Clone any website with one command using AI coding agents",
+        "stars": 28523,
+        "forks": 4200,
+        "language": "TypeScript",
+        "license": "NOASSERTION",
+        "archived": false,
+        "fork": false,
+        "created_at": "2026-03-13T11:14:39Z",
+        "pushed_at": "2026-07-04T06:49:18Z",
+        "topics": [
+          "ai",
+          "ai-agents",
+          "ai-tools",
+          "automation",
+          "boilerplate",
+          "claude",
+          "claude-code",
+          "clone",
+          "developer-tools",
+          "nextjs",
+          "react",
+          "reverse-engineering",
+          "shadcn-ui",
+          "skills",
+          "tailwindcss",
+          "template",
+          "typescript",
+          "web-scraping",
+          "website-clone"
+        ]
+      }
+    },
+    {
+      "input_url": "https://github.com/alchaincyf/huashu-design",
+      "repo": "alchaincyf/huashu-design",
+      "subpath": null,
+      "status": "candidate",
+      "suggested_category": "writing",
+      "github": {
+        "url": "https://github.com/alchaincyf/huashu-design",
+        "description": "Huashu Design · HTML-native design skill for Claude Code · Claude Code 里 HTML 原生的设计 skill · 高保真原型 / 幻灯片 / 动画 + 20 设计哲学 + 5 维评审 + MP4 导出 · Agent-agnostic",
+        "stars": 21518,
+        "forks": 2550,
+        "language": "HTML",
+        "license": "NOASSERTION",
+        "archived": false,
+        "fork": false,
+        "created_at": "2026-04-19T14:42:06Z",
+        "pushed_at": "2026-07-02T03:49:28Z",
+        "topics": []
+      }
+    },
+    {
+      "input_url": "https://github.com/JimLiu/baoyu-skills/tree/main/skills/baoyu-slide-deck",
+      "repo": "JimLiu/baoyu-skills",
+      "subpath": "skills/baoyu-slide-deck",
+      "status": "already_indexed",
+      "existing_page": "categories/agent-skills/writing/baoyu-skills.md"
+    },
+    {
+      "input_url": "https://github.com/hugohe3/ppt-master",
+      "repo": "hugohe3/ppt-master",
+      "subpath": null,
+      "status": "candidate",
+      "suggested_category": "slides-ppt",
+      "github": {
+        "url": "https://github.com/hugohe3/ppt-master",
+        "description": "AI generates a real, editable PowerPoint from any document — native shapes & animations, editable charts & tables you can change the data on, speaker notes voiced as audio narration, and the option to follow your own .pptx template, not slide images · by Hugo He",
+        "stars": 39357,
+        "forks": 3256,
+        "language": "Python",
+        "license": "NOASSERTION",
+        "archived": false,
+        "fork": false,
+        "created_at": "2025-12-10T06:54:33Z",
+        "pushed_at": "2026-07-16T03:51:31Z",
+        "topics": [
+          "ai-agent",
+          "powerpoint",
+          "pptx",
+          "presentation",
+          "office",
+          "slides",
+          "powerpoint-generation",
+          "ppt",
+          "slide",
+          "aippt"
+        ]
+      }
+    },
+    {
+      "input_url": "https://github.com/zarazhangrui/frontend-slides",
+      "repo": "zarazhangrui/frontend-slides",
+      "subpath": null,
+      "status": "candidate",
+      "suggested_category": "slides-ppt",
+      "github": {
+        "url": "https://github.com/zarazhangrui/frontend-slides",
+        "description": "Create beautiful slides on the web using a coding agent's frontend skills",
+        "stars": 25713,
+        "forks": 2089,
+        "language": "JavaScript",
+        "license": "NOASSERTION",
+        "archived": false,
+        "fork": false,
+        "created_at": "2026-01-28T00:42:34Z",
+        "pushed_at": "2026-06-23T20:08:19Z",
+        "topics": [
+          "ai-slides",
+          "anthropic",
+          "claude",
+          "claude-code",
+          "claude-skill",
+          "generative-ui",
+          "html",
+          "presentation",
+          "slides",
+          "vibe-coding"
+        ]
+      }
+    },
+    {
+      "input_url": "https://github.com/lewislulu/html-ppt-skill",
+      "repo": "lewislulu/html-ppt-skill",
+      "subpath": null,
+      "status": "candidate",
+      "suggested_category": "slides-ppt",
+      "github": {
+        "url": "https://github.com/lewislulu/html-ppt-skill",
+        "description": "HTML PPT Studio — AgentSkill with 24 themes, 31 layouts, 20+ animations for building professional HTML presentations",
+        "stars": 7185,
+        "forks": 635,
+        "language": "HTML",
+        "license": "NOASSERTION",
+        "archived": false,
+        "fork": false,
+        "created_at": "2026-04-15T07:36:22Z",
+        "pushed_at": "2026-04-26T07:13:39Z",
+        "topics": []
+      }
+    },
+    {
+      "input_url": "https://github.com/bradautomates/claude-video",
+      "repo": "bradautomates/claude-video",
+      "subpath": null,
+      "status": "candidate",
+      "suggested_category": "video-production",
+      "github": {
+        "url": "https://github.com/bradautomates/claude-video",
+        "description": "Give Claude the ability to watch any video. /watch downloads, extracts frames, transcribes, hands it all to Claude.",
+        "stars": 8688,
+        "forks": 947,
+        "language": "Python",
+        "license": "NOASSERTION",
+        "archived": false,
+        "fork": false,
+        "created_at": "2026-04-24T04:40:43Z",
+        "pushed_at": "2026-07-01T01:26:49Z",
+        "topics": []
+      }
+    },
+    {
+      "input_url": "https://github.com/HKUDS/DeepTutor",
+      "repo": "HKUDS/DeepTutor",
+      "subpath": null,
+      "status": "candidate",
+      "suggested_category": "education-tutoring",
+      "github": {
+        "url": "https://github.com/HKUDS/DeepTutor",
+        "description": "DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/.",
+        "stars": 26528,
+        "forks": 3584,
+        "language": "Python",
+        "license": "NOASSERTION",
+        "archived": false,
+        "fork": false,
+        "created_at": "2025-12-28T15:35:54Z",
+        "pushed_at": "2026-07-09T15:24:10Z",
+        "topics": [
+          "ai-tutor",
+          "deepresearch",
+          "interactive-learning",
+          "large-language-models",
+          "multi-agent-systems",
+          "rag",
+          "ai-agents",
+          "clawdbot",
+          "cli-tool"
+        ]
+      }
+    },
+    {
+      "input_url": "https://github.com/blockpanda/any2html",
+      "repo": "blockpanda/any2html",
+      "subpath": null,
+      "status": "candidate",
+      "suggested_category": "document-parsing",
+      "github": {
+        "url": "https://github.com/blockpanda/any2html",
+        "description": "",
+        "stars": 30,
+        "forks": 6,
+        "language": "",
+        "license": "NOASSERTION",
+        "archived": false,
+        "fork": false,
+        "created_at": "2026-04-24T08:13:29Z",
+        "pushed_at": "2026-04-26T03:34:24Z",
+        "topics": []
+      }
+    },
+    {
+      "input_url": "https://github.com/xiaohuailabs/tacit-mining",
+      "repo": "xiaohuailabs/tacit-mining",
+      "subpath": null,
+      "status": "candidate",
+      "suggested_category": "context-engineering",
+      "github": {
+        "url": "https://github.com/xiaohuailabs/tacit-mining",
+        "description": "Let AI truly understand you. A Claude Code skill that extracts tacit knowledge through structured dialogue. 隐性知识挖掘技能。",
+        "stars": 68,
+        "forks": 8,
+        "language": "",
+        "license": "NOASSERTION",
+        "archived": false,
+        "fork": false,
+        "created_at": "2026-04-08T10:46:56Z",
+        "pushed_at": "2026-04-08T10:52:37Z",
+        "topics": []
+      }
+    },
+    {
+      "input_url": "https://github.com/aeonfun/soul.md",
+      "repo": "aeonfun/soul.md",
+      "subpath": null,
+      "status": "candidate",
+      "suggested_category": "context-engineering",
+      "github": {
+        "url": "https://github.com/aeonfun/soul.md",
+        "description": "The best way to build a personality for your agent. Let Claude Code / OpenClaw ingest your data & build your AI soul.",
+        "stars": 616,
+        "forks": 63,
+        "language": "JavaScript",
+        "license": "NOASSERTION",
+        "archived": false,
+        "fork": false,
+        "created_at": "2026-02-02T18:27:15Z",
+        "pushed_at": "2026-07-16T05:44:05Z",
+        "topics": [
+          "agents",
+          "openclaw",
+          "soul",
+          "claude-code",
+          "claude-code-skill",
+          "claude-skills"
+        ]
+      }
+    },
+    {
+      "input_url": "https://github.com/coreyhaines31/marketingskills",
+      "repo": "coreyhaines31/marketingskills",
+      "subpath": null,
+      "status": "candidate",
+      "suggested_category": "writing",
+      "github": {
+        "url": "https://github.com/coreyhaines31/marketingskills",
+        "description": "Marketing skills for Claude Code and AI agents. CRO, copywriting, SEO, analytics, and growth engineering.",
+        "stars": 39977,
+        "forks": 6330,
+        "language": "JavaScript",
+        "license": "NOASSERTION",
+        "archived": false,
+        "fork": false,
+        "created_at": "2026-01-15T19:45:23Z",
+        "pushed_at": "2026-07-16T05:42:22Z",
+        "topics": [
+          "claude",
+          "codex",
+          "marketing"
+        ]
+      }
+    },
+    {
+      "input_url": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering",
+      "repo": "muratcankoylan/Agent-Skills-for-Context-Engineering",
+      "subpath": null,
+      "status": "already_indexed",
+      "existing_page": "categories/agent-skills/context-engineering/context-engineering-skills.md"
+    },
+    {
+      "input_url": "https://github.com/microsoft/agent-governance-toolkit",
+      "repo": "microsoft/agent-governance-toolkit",
+      "subpath": null,
+      "status": "candidate",
+      "suggested_category": "governance",
+      "github": {
+        "url": "https://github.com/microsoft/agent-governance-toolkit",
+        "description": "AI Agent Governance Toolkit — Policy enforcement, zero-trust identity, execution sandboxing, and reliability engineering for autonomous AI agents. Covers 10/10 OWASP Agentic Top 10.",
+        "stars": 4889,
+        "forks": 861,
+        "language": "Python",
+        "license": "NOASSERTION",
+        "archived": false,
+        "fork": false,
+        "created_at": "2026-03-02T22:11:47Z",
+        "pushed_at": "2026-07-16T07:08:50Z",
+        "topics": [
+          "agent-framework",
+          "ai-agents",
+          "ai-safety",
+          "compliance",
+          "governance",
+          "microsoft",
+          "owasp",
+          "policy-engine",
+          "python",
+          "security",
+          "trust",
+          "zero-trust"
+        ]
+      }
+    }
+  ]
+}

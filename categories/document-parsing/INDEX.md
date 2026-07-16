@@ -12,6 +12,7 @@
 | **olmOCR** | Use it when you must convert complex PDFs with equations, tables, handwriting, and multi-column layouts into clean Markdown for LLM training datasets — requires a GPU. | ? (0/6) | [→](olmocr.md) |
 | **Marker** | Convert PDF to markdown + JSON quickly with high accuracy | ? (0/6) | [→](marker.md) |
 | **unstructured** | Convert documents to structured data effortlessly. Unstructured is open-source ETL solution for transforming complex documents into clean, structured formats for language models.  Visit our website to learn more about our enterprise grade Platform product for production grade workflows, partitioning, enrichments, chunking and embedding. | ? (0/6) | [→](unstructured.md) |
+| **any2html** | Use it when you need any2html in this category. | ? (0/6) | [→](any2html.md) |
 
 
 ## Comparison matrix
@@ -23,6 +24,8 @@
 | [olmOCR](olmocr.md) | ✅ | ? (0/6) | VLM-based PDF linearization for LLM datasets; handles equations, tables, and handwriting but requires GPU. |
 | [PageIndex](../rag-retrieval/pageindex.md) | ✅ | B (5/6) | Builds a retrieval index over long structured docs — downstream of parsing, not a parser. |
 | unstructured.io / LlamaParse / Marker / PyMuPDF | 未收录 | — | Other document parsers/extractors named across the pages. |
+| [any2html](any2html.md) | ✅ | ? (0/6) | Use it when you need any2html in this category. |
+
 
 ## What belongs here
 

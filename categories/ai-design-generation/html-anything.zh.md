@@ -92,8 +92,8 @@ health:
 | 替代品 | 是否收录 | 我们的评价 | 取舍 |
 |---|---|---|---|
 | [open-design](open-design.zh.md) | ✅ | 需要同团队更大的桌面应用时，选 open-design。 | 同团队更大的桌面应用——skill/设计系统多得多、原生桌面、支持 PPTX/MP4 导出。HTML Anything 是构建其上、聚焦 Web、只产 HTML 的子集。 |
-| [guizang-ppt-skill](guizang-ppt.zh.md) | ✅ | 需要可移植的精致 HTML deck agent skill 时，选 guizang-ppt-skill。 | 单个生成精致 HTML deck 的 agent skill（被 vendored 进 HTML Anything 成 `deck-guizang-editorial`）。它是丢进任意 agent 的 skill;HTML Anything 是外围的 app + 选择器 + 导出 + 75 个 skill。 |
-| [guizang-social-card-skill](guizang-social-card.zh.md) | ✅ | 需要小红书/公众号封面卡 skill 时，选 guizang-social-card-skill。 | 生成小红书/公众号封面卡的 skill。窄而可移植，对比 HTML Anything 这套多交付面的宽应用。 |
+| [guizang-ppt-skill](../agent-skills/slides-ppt/guizang-ppt.zh.md) | ✅ | 需要可移植的精致 HTML deck agent skill 时，选 guizang-ppt-skill。 | 单个生成精致 HTML deck 的 agent skill（被 vendored 进 HTML Anything 成 `deck-guizang-editorial`）。它是丢进任意 agent 的 skill;HTML Anything 是外围的 app + 选择器 + 导出 + 75 个 skill。 |
+| [guizang-social-card-skill](../agent-skills/visual-content/guizang-social-card.zh.md) | ✅ | 需要小红书/公众号封面卡 skill 时，选 guizang-social-card-skill。 | 生成小红书/公众号封面卡的 skill。窄而可移植，对比 HTML Anything 这套多交付面的宽应用。 |
 | [Impeccable](impeccable.zh.md) | ✅ | 需要设计语言或 harness 质量层时，选 Impeccable。 | 一套设计*语言* / 提升 harness 设计质量的层（让任意 agent 更会做设计），不是生成应用。互补，而非替代。 |
 | markdown-nice(mdnice) | 未收录 | 需要 Markdown→微信/知乎可粘贴样式的 Web 编辑器时，选 markdown-nice。 | Markdown→微信/知乎可粘贴样式的 Web 编辑器；成熟、无 agent、基于主题而非 prompt。HTML Anything 复用了它的 `juice` 内联思路，但加了 agent 生成 + 9 种交付面。 |
 | markdown-to-image(gcui-art) | 未收录 | 需要 Markdown→社交卡 PNG 生成器时，选 markdown-to-image。 | Markdown→社交卡 PNG 的生成器；输出更窄，同样没有本地 agent 模型。 |
