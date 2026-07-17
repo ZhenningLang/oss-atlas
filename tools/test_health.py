@@ -214,6 +214,56 @@ class HealthMechanismTest(unittest.TestCase):
         self.assertEqual(axis.reason, "registry_no_counts")
         self.assertNotIn("dependent_repos_count", axis.raw)
 
+    def test_risk_license_scores_gpl3_as_strong_copyleft(self) -> None:
+        repo = FakeRepo("tool")
+        license_result = health.GhResult(
+            200,
+            health.json.dumps({
+                "license": {"spdx_id": "GPL-3.0-only", "key": "gpl-3.0"},
+                "path": "LICENSE",
+            }),
+        )
+        conditions = {"conditions": ["disclose-source", "same-license", "state-changes"], "limitations": []}
+
+        with mock.patch("health.gh_api", return_value=license_result), \
+                mock.patch("health._license_conditions", return_value=conditions), \
+                mock.patch("health._detect_relicense", return_value=False):
+            axis = health.axis_risk_license(repo)
+
+        self.assertEqual(axis.grade, "D")
+        self.assertEqual(axis.raw["permissiveness"], "strong_network_copyleft")
+
+    def test_permissiveness_scores_lgpl_library_condition_as_weak_copyleft(self) -> None:
+        conditions = ["disclose-source", "same-license--library", "state-changes"]
+
+        self.assertEqual(health._classify_permissiveness(conditions), "weak_file_copyleft")
+
+    def test_permissiveness_scores_mpl_file_condition_as_weak_copyleft(self) -> None:
+        conditions = ["disclose-source", "same-license--file", "state-changes"]
+
+        self.assertEqual(health._classify_permissiveness(conditions), "weak_file_copyleft")
+
+    def test_declared_proprietary_license_scores_e_and_caps_non_skillpack(self) -> None:
+        repo = FakeRepo("framework")
+        repo.declared_license = "Proprietary"
+
+        with mock.patch("health.gh_api", side_effect=AssertionError("declared proprietary must not call GitHub license API")):
+            axis = health.axis_risk_license(repo)
+        axes = {
+            "maintenance": health.Axis("A", {}),
+            "responsiveness": health.Axis("A", {}),
+            "adoption": health.Axis("A", {}),
+            "longevity": health.Axis("A", {}),
+            "governance": health.Axis("A", {}),
+            "risk_license": axis,
+        }
+        aggregate = health.aggregate(health._with_meta_type(axes, "framework"))
+
+        self.assertEqual(axis.grade, "E")
+        self.assertEqual(axis.raw["permissiveness"], "source_available")
+        self.assertEqual(aggregate["overall"], "D")
+        self.assertTrue(aggregate["capped"])
+
 
 PAGE_WITH_BLOCK = """---
 name: Demo

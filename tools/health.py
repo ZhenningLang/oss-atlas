@@ -128,6 +128,8 @@ SOURCE_AVAILABLE_SPDX = {
     "SSPL-1.0", "Elastic-2.0", "BSL-1.1", "BUSL-1.1", "CC-BY-NC-4.0",
     "CC-BY-NC-SA-4.0", "CC-BY-NC-3.0", "Commons-Clause",
 }
+STRONG_COPYLEFT_SPDX_PREFIXES = ("GPL-", "AGPL-")
+DECLARED_PROPRIETARY_LICENSES = {"Proprietary", "Source-available"}
 # Content licenses tracked on a separate flag, never via the code-copyleft map (spec §2.6).
 CONTENT_LICENSE_RE = re.compile(r"^CC-BY", re.IGNORECASE)
 
@@ -417,11 +419,13 @@ class Axis:
 class RepoData:
     """Lazily-fetched, cached GitHub facts shared across axes (spec §4.1 shared calls)."""
 
-    def __init__(self, owner: str, name: str, ptype: str, now: dt.datetime):
+    def __init__(self, owner: str, name: str, ptype: str, now: dt.datetime,
+                 declared_license: str | None = None):
         self.owner = owner
         self.name = name
         self.full = f"{owner}/{name}"
         self.type = ptype
+        self.declared_license = declared_license
         self.now = now
         self._core: GhResult | None = None
         self._last_commit_date: str | None = None
@@ -1167,16 +1171,22 @@ def _classify_permissiveness(conditions: list[str]) -> str:
     if cond <= {"include-copyright", "document-changes"}:
         return "permissive"
     has_disclose = "disclose-source" in cond
-    has_same = "same-license" in cond
+    has_same = any(item == "same-license" or item.startswith("same-license--") for item in cond)
     has_network = "network-use-disclose" in cond
     if has_disclose and has_same and has_network:
         return "strong_network_copyleft"
-    if has_disclose and (has_same or True):  # disclose-source + same-license, no network
+    if has_disclose and has_same:  # disclose-source + same-license, no network
         return "weak_file_copyleft"
     return "permissive"
 
 
 def axis_risk_license(repo: RepoData) -> Axis:
+    if repo.declared_license in DECLARED_PROPRIETARY_LICENSES:
+        return Axis("E", {"spdx_id": repo.declared_license,
+                          "permissiveness": "source_available",
+                          "relicense_36mo": False, "content_license": None},
+                    evidence=f"declared {repo.declared_license} license -> E")
+
     res = gh_api(f"repos/{repo.full}/license")
     if res.status == 404:
         # 404 on the LICENSE endpoint = NONE (all-rights-reserved). Distinguish repo 404.
@@ -1210,6 +1220,13 @@ def axis_risk_license(repo: RepoData) -> Axis:
         raw = {"spdx_id": spdx, "permissiveness": perm,
                "relicense_36mo": relicense, "content_license": content_license}
         return Axis("E", raw, evidence=f"spdx {spdx} source-available/non-OSI -> E")
+
+    if spdx.startswith(STRONG_COPYLEFT_SPDX_PREFIXES):
+        relicense = _detect_relicense(repo, lic_path)
+        raw = {"spdx_id": spdx, "permissiveness": "strong_network_copyleft",
+               "relicense_36mo": relicense, "content_license": content_license}
+        tier = "E" if relicense else "D"
+        return Axis(tier, raw, evidence=f"spdx {spdx} strong copyleft relicense={relicense} -> {tier}")
 
     # Permissiveness from conditions/limitations.
     cond_info = _license_conditions(key) if key else None
@@ -1408,8 +1425,10 @@ def _blob_perm_class(repo: RepoData, path: str, sha: str | None) -> str | None:
         return "source_available"
     if "gnu affero" in text or "affero general public" in text:
         return "strong_network_copyleft"
-    if "gnu general public" in text or "gnu lesser general public" in text:
+    if "gnu lesser general public" in text:
         return "weak_file_copyleft"
+    if "gnu general public" in text:
+        return "strong_network_copyleft"
     if "mozilla public license" in text:
         return "weak_file_copyleft"
     if any(k in text for k in ("mit license", "apache license", "bsd ", "isc license",
@@ -1584,10 +1603,11 @@ def emit_health_yaml(agg: dict, axes: dict[str, Axis], computed_at: str,
 # Orchestration
 # ---------------------------------------------------------------------------
 
-def score_repo(owner: str, name: str, ptype: str) -> tuple[dict, dict[str, Axis], str, bool]:
+def score_repo(owner: str, name: str, ptype: str,
+               declared_license: str | None = None) -> tuple[dict, dict[str, Axis], str, bool]:
     now = now_utc()
     computed_at = now.strftime("%Y-%m-%dT%H:%M:%SZ")
-    repo = RepoData(owner, name, ptype, now)
+    repo = RepoData(owner, name, ptype, now, declared_license)
 
     # Serial axis computation (spec §4.2: serial + backoff for stats/*).
     axes: dict[str, Axis] = {}
@@ -1720,8 +1740,8 @@ def write_to_pages(en_page: Path, health_block: str) -> list[Path]:
 # CLI
 # ---------------------------------------------------------------------------
 
-def resolve_target(args) -> tuple[str, str, str, Path | None]:
-    """Return (owner, name, type, page_path_or_None)."""
+def resolve_target(args) -> tuple[str, str, str, str | None, Path | None]:
+    """Return (owner, name, type, declared_license, page_path_or_None)."""
     if args.page:
         page = Path(args.page).resolve()
         if not page.exists():
@@ -1731,18 +1751,19 @@ def resolve_target(args) -> tuple[str, str, str, Path | None]:
             sys.exit(f"page has no parseable frontmatter: {page}")
         repo_url = fm.get("repo", "")
         ptype = fm.get("type", "")
+        declared_license = fm.get("license")
         on = repo_url_to_owner_name(repo_url)
         if not on:
             sys.exit(f"could not parse owner/name from repo: {repo_url}")
         owner, name = on.split("/", 1)
-        return owner, name, ptype, page
+        return owner, name, ptype, declared_license, page
     if args.repo:
         if "/" not in args.repo:
             sys.exit("--repo must be owner/name")
         owner, name = args.repo.split("/", 1)
         if not args.type:
             sys.exit("--type is required with --repo")
-        return owner, name, args.type, None
+        return owner, name, args.type, None, None
     sys.exit("provide --repo owner/name --type <t>  OR  --page <path>.md")
 
 
@@ -1757,8 +1778,8 @@ def main() -> int:
                     help="also print a per-axis evidence note to stderr")
     args = ap.parse_args()
 
-    owner, name, ptype, page = resolve_target(args)
-    agg, axes, computed_at, needs_review = score_repo(owner, name, ptype)
+    owner, name, ptype, declared_license, page = resolve_target(args)
+    agg, axes, computed_at, needs_review = score_repo(owner, name, ptype, declared_license)
     block = emit_health_yaml(agg, axes, computed_at, needs_review)
 
     if args.write:
