@@ -63,6 +63,7 @@
 | **investment-finance** | 量化金融、市场数据、交易研究与投资分析工具。 | [→](categories/investment-finance/INDEX.zh.md) |
 | **education-tutoring** | AI 辅导、学习助手与教育场景 agent 系统。 | [→](categories/education-tutoring/INDEX.zh.md) |
 | **agent-governance** | AI agent 的治理、策略执行、身份、沙箱与可靠性控制。 | [→](categories/agent-governance/INDEX.zh.md) |
+| **blockchain-dev-infrastructure** | EVM 与区块链开发网络的 faucet、本地链及配套开发基础设施。 | [→](categories/blockchain-dev-infrastructure/INDEX.zh.md) |
 
 
 

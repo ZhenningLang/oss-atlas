@@ -90,6 +90,7 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **Selenium** | Use it when you need cross-browser WebDriver automation across a browser/language matrix — Playwright/Cypress are nicer for modern single-browser DX. | Apache-2.0 | B (6/6) | [EN](categories/web-automation/selenium.md) · [中](categories/web-automation/selenium.zh.md) |
 | **PhantomJS** | Avoid for new work — an archived, abandoned scriptable headless browser; use headless Chrome (Puppeteer/Playwright) or Selenium instead. | BSD-3-Clause | D (5/6) | [EN](categories/web-automation/phantomjs.md) · [中](categories/web-automation/phantomjs.zh.md) |
 | **Selenium Wire** | Use it when a legacy Selenium suite needs to read or modify the browser's background HTTP traffic — but it's archived, so new projects should use Selenium 4's native CDP/BiDi or Playwright. | MIT | D (5/6) | [EN](categories/web-automation/selenium-wire.md) · [中](categories/web-automation/selenium-wire.zh.md) |
+| **nodriver** | Use it when Python async code needs direct Chromium CDP control without WebDriver — Chromium-only, AGPL-3.0, and not a full test framework. | AGPL-3.0 | C (5/6) | [EN](categories/web-automation/nodriver.md) · [中](categories/web-automation/nodriver.zh.md) |
 | **browser-use** | 🌐 Make websites accessible for AI agents. Automate tasks online with ease. | MIT | ? (0/6) | [EN](categories/web-automation/browser-use.md) · [中](categories/web-automation/browser-use.zh.md) |
 | **Playwright** | Playwright is a framework for Web Testing and Automation. It allows testing Chromium, Firefox and WebKit with a single API. | Apache-2.0 | ? (0/6) | [EN](categories/web-automation/playwright.md) · [中](categories/web-automation/playwright.zh.md) |
 | **Puppeteer** | JavaScript API for Chrome and Firefox | Apache-2.0 | ? (0/6) | [EN](categories/web-automation/puppeteer.md) · [中](categories/web-automation/puppeteer.zh.md) |
@@ -226,6 +227,11 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **Compound Engineering** | Use it when you want a turnkey brainstorm→plan→work→review→compound loop that persists learnings across coding-agent sessions. | MIT | B (4/6) | [EN](categories/agent-dev-methodology/compound-engineering.md) · [中](categories/agent-dev-methodology/compound-engineering.zh.md) |
 | **ECC** | Use it when you want a maintained, batteries-included Claude Code harness of skills, agents, hooks, memory, and a security scanner. | MIT | B (6/6) | [EN](categories/agent-dev-methodology/ecc.md) · [中](categories/agent-dev-methodology/ecc.zh.md) |
 | **Spec Kit** | A spec-driven development methodology from GitHub for AI coding agents — but it is extremely young and tightly coupled to the GitHub ecosystem. | MIT | ? (0/6) | [EN](categories/agent-dev-methodology/spec-kit.md) · [中](categories/agent-dev-methodology/spec-kit.zh.md) |
+| **Spec-Anchored Agentic Development** | Use it when permanent capability specs must remain the code-conformance oracle — Claude Code-specific and only days old. | MIT | B (3/6) | [EN](categories/agent-dev-methodology/spec-anchored-agentic-development.md) · [中](categories/agent-dev-methodology/spec-anchored-agentic-development.zh.md) |
+| **USDAD** | Use it when you want a prose-first multi-agent spec and context method to adapt manually — it has no CLI or executable enforcement. | MIT | C (4/6) | [EN](categories/agent-dev-methodology/usdad.md) · [中](categories/agent-dev-methodology/usdad.zh.md) |
+| **QUAD Framework** | Use it only to study a docs-first four-Circles operating model and deployment blueprint — it is inactive, proprietary, and partly inaccessible. | Proprietary | D (3/6) | [EN](categories/agent-dev-methodology/quad.md) · [中](categories/agent-dev-methodology/quad.zh.md) |
+| **LTBL Experiment** | Use it only as an index to three agent-context experiment implementations — it has no runnable code, results, or license grant. | NOASSERTION | D (4/6) | [EN](categories/agent-dev-methodology/ltbl-experiment.md) · [中](categories/agent-dev-methodology/ltbl-experiment.zh.md) |
+| **PURE** | Use it when intent traceability needs Git-native schemas, registries, phase gates, and Shell checks — structured, but very young. | MIT | C (5/6) | [EN](categories/agent-dev-methodology/pure-agentic.md) · [中](categories/agent-dev-methodology/pure-agentic.zh.md) |
 
 ### ai-design-generation
 
@@ -277,6 +283,7 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | Project | Use when | License | Health | Page |
 | --- | --- | --- | --- | --- |
 | **Kong Gateway** | OpenResty/Nginx API gateway whose plugin layer makes one reverse-proxy a programmable edge for REST/microservice traffic and, since 3.x, LLM/MCP traffic. | Apache-2.0 | A (5/6) | [EN](categories/api-gateway/kong.md) · [中](categories/api-gateway/kong.zh.md) |
+| **Funtool** | Use it only for the exact Windows + Claude Code + NVIDIA proxy path — the current executable is opaque and cannot be rebuilt from the published source. | MIT | C (5/6) | [EN](categories/api-gateway/funtool.md) · [中](categories/api-gateway/funtool.zh.md) |
 
 ### geospatial
 
@@ -298,6 +305,14 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **Text_select_captcha** | Use it when automating Chinese click-to-select-text CAPTCHAs (YOLO + Siamese, CPU-only) — there's no LICENSE file, so all rights reserved and legality is the decisive filter. | NONE (no LICENSE file — all rights reserved) | D (5/6) | [EN](categories/captcha/text-select-captcha.md) · [中](categories/captcha/text-select-captcha.zh.md) |
 | **pytorch-captcha-recognition** | Use it as a readable teaching baseline for fixed-length text-in-image CAPTCHAs via a multi-head CNN — it's a frozen 2020 tutorial, expect to modernize the dated PyTorch APIs. | Apache-2.0 | D (4/6) | [EN](categories/captcha/pytorch-captcha-recognition.md) · [中](categories/captcha/pytorch-captcha-recognition.zh.md) |
 | **captcha (lepture)** | Use it when a Python web form needs a self-hosted image/audio CAPTCHA renderer with no third-party call — it's render-only and weak against modern OCR, treat it as a UX speed-bump, not security. | BSD-3-Clause | B (5/6) | [EN](categories/captcha/lepture-captcha.md) · [中](categories/captcha/lepture-captcha.zh.md) |
+| **NopeCHA** | Use it only for authorized unattended automation across several CAPTCHA families — the maintained implementation is closed and depends on a hosted API. | MIT | B (6/6) | [EN](categories/captcha/nopecha-extension.md) · [中](categories/captcha/nopecha-extension.zh.md) |
+| **Buster** | Use it for human-triggered reCAPTCHA audio accessibility or authorized testing — source-auditable and local-capable, but narrow and nondeterministic. | GPL-3.0-only | B (5/6) | [EN](categories/captcha/buster.md) · [中](categories/captcha/buster.zh.md) |
+
+### blockchain-dev-infrastructure
+
+| Project | Use when | License | Health | Page |
+| --- | --- | --- | --- | --- |
+| **PoWFaucet** | Use it when a public EVM testnet needs a faucet with modular anti-abuse controls — you still own hot-wallet custody, funding, and high service operations. | AGPL-3.0 | B (5/6) | [EN](categories/blockchain-dev-infrastructure/powfaucet.md) · [中](categories/blockchain-dev-infrastructure/powfaucet.zh.md) |
 ### ml-research
 
 | Project | Use when | License | Health | Page |
@@ -445,6 +460,7 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | --- | --- | --- | --- | --- |
 | **Tesseract** | Use it when you need offline, embeddable OCR over clean printed text in 100+ languages — not wild photos or handwriting. | Apache-2.0 | A (5/6) | [EN](categories/ocr/tesseract.md) · [中](categories/ocr/tesseract.zh.md) |
 | **LaTeX-OCR (pix2tex)** | Use it when you must convert images of math equations into LaTeX (pix2tex) — equations only, idle/coasting, and VLMs may beat it. | MIT | C (3/6) | [EN](categories/ocr/latex-ocr.md) · [中](categories/ocr/latex-ocr.zh.md) |
+| **Laravel OCR** | Use it when a Laravel app needs one wrapper for local and cloud OCR plus template field extraction — PDF/layout handling is shallow and the repo lacks a license file. | NOASSERTION | D (5/6) | [EN](categories/ocr/laravel-ocr.md) · [中](categories/ocr/laravel-ocr.zh.md) |
 
 ### document-parsing
 
@@ -456,6 +472,9 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **Marker** | Convert PDF to markdown + JSON quickly with high accuracy | GPL-3.0 | ? (0/6) | [EN](categories/document-parsing/marker.md) · [中](categories/document-parsing/marker.zh.md) |
 | **unstructured** | Convert documents to structured data effortlessly. Unstructured is open-source ETL solution for transforming complex documents into clean, structured formats for language models.  Visit our website to learn more about our enterprise grade Platform product for production grade workflows, partitioning, enrichments, chunking and embedding. | Apache-2.0 | ? (0/6) | [EN](categories/document-parsing/unstructured.md) · [中](categories/document-parsing/unstructured.zh.md) |
 | **any2html** | Use it when you need any2html in the document-parsing area. | NOASSERTION | ? (0/6) | [EN](categories/document-parsing/any2html.md) · [中](categories/document-parsing/any2html.zh.md) |
+| **Dedoc** | Use it when mixed PDF and Office archives must become logical trees with tables and attachments — broad local parsing, but with heavy Linux and system-package dependencies. | Apache-2.0 | A (5/6) | [EN](categories/document-parsing/dedoc.md) · [中](categories/document-parsing/dedoc.zh.md) |
+| **Bella Domify** | Use it when a Python RAG pipeline needs detailed PDF/Office DOM trees and optional vision OCR — license conflict and provider/infrastructure coupling raise adoption cost. | GPL-2.0-only | D (5/6) | [EN](categories/document-parsing/bella-domify.md) · [中](categories/document-parsing/bella-domify.zh.md) |
+| **MinerU Skill** | Use it when an agent needs one-command cloud document-to-Markdown with batch, resume, and delivery — files leave your environment and quality depends on MinerU. | MIT | C (5/6) | [EN](categories/document-parsing/mineru-skill.md) · [中](categories/document-parsing/mineru-skill.zh.md) |
 
 ### diagramming
 
@@ -496,6 +515,7 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **OpenAI Whisper** | Use it when you need general-purpose multilingual speech-to-text transcription or translation to English from audio/video files — but it's not real-time by default, large models are slow on CPU, and it hallucinates on non-speech content. | MIT | — | [EN](categories/media-processing/video-audio/whisper.md) · [中](categories/media-processing/video-audio/whisper.zh.md) |
 | **sharp** | High performance Node.js image processing, the fastest module to resize JPEG, PNG, WebP, AVIF and TIFF images. Uses the libvips library. | Apache-2.0 | ? (0/6) | [EN](categories/media-processing/image-processing/sharp.md) · [中](categories/media-processing/image-processing/sharp.zh.md) |
 | **ImageMagick** | ImageMagick is a free, open-source software suite for creating, editing, converting, and displaying images. It supports 200+ formats and offers powerful command-line tools and APIs for automation, scripting, and integration across platforms. | NOASSERTION | ? (0/6) | [EN](categories/media-processing/image-processing/imagemagick.md) · [中](categories/media-processing/image-processing/imagemagick.zh.md) |
+| **Screenshot Service** | Use it only as an isolated internal HTML-to-image worker — API authentication is disabled and Chromium runs without its sandbox or web security. | NOASSERTION | D (4/6) | [EN](categories/media-processing/image-processing/screenshot-service.md) · [中](categories/media-processing/image-processing/screenshot-service.zh.md) |
 
 ### video-production
 
@@ -537,6 +557,7 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **pdfplumber** | Plumb a PDF for detailed information about each char, rectangle, line, et cetera — and easily extract text and tables. | MIT | ? (0/6) | [EN](categories/pdf-tools/pdfplumber.md) · [中](categories/pdf-tools/pdfplumber.zh.md) |
 | **OCRmyPDF** | OCRmyPDF adds an OCR text layer to scanned PDF files, allowing them to be searched | MPL-2.0 | ? (0/6) | [EN](categories/pdf-tools/ocrmypdf.md) · [中](categories/pdf-tools/ocrmypdf.zh.md) |
 | **qpdf** | qpdf: A content-preserving PDF document transformer | Apache-2.0 | ? (0/6) | [EN](categories/pdf-tools/qpdf.md) · [中](categories/pdf-tools/qpdf.zh.md) |
+| **SAPP** | Use it when a PHP app must append PKCS#12 signatures without destroying existing PDF revisions — coverage is narrow and encrypted PDFs are unsupported. | LGPL-3.0-or-later | B (5/6) | [EN](categories/pdf-tools/sapp.md) · [中](categories/pdf-tools/sapp.zh.md) |
 
 ### workflow-orchestration
 
@@ -584,6 +605,10 @@ The complete index, grouped by category. Each project has an English page (`<slu
 | **wxpy** | Study it only as legacy WeChat-bot code — archived since 2019 and built on the now-defunct WeChat web protocol, so it mostly doesn't work. | MIT | D (5/6) | [EN](categories/im-automation/wxpy.md) · [中](categories/im-automation/wxpy.zh.md) |
 | **wxappUnpacker** | Use it when you must decompile a WeChat .wxapkg bundle you own back into readable source — but this exact repo is an empty tombstone, so grab a live fork instead. | GPL-3.0-or-later | E (4/6) | [EN](categories/im-automation/wxappunpacker.md) · [中](categories/im-automation/wxappunpacker.zh.md) |
 | **Douyin-Bot** | Use it only as a historical reference for ADB screen-coordinate phone automation — never deploy it, its 2018 coordinates and dead Tencent face API mean it no longer works. | MIT | D (3/6) | [EN](categories/im-automation/douyin-bot.md) · [中](categories/im-automation/douyin-bot.zh.md) |
+| **WeChat Bot** | Use it when one Node CLI must bridge WeChat, Lark, Telegram, and WhatsApp to several LLMs — personal WeChat remains unofficial and account-risky. | MIT | B (5/6) | [EN](categories/im-automation/wechat-bot.md) · [中](categories/im-automation/wechat-bot.zh.md) |
+| **ChatGPT-wechat-bot** | Use it only as compact 2022–2023 Wechaty and ChatGPT reference code — it is stale, tied to old defaults, and not a production base. | MIT | D (3/6) | [EN](categories/im-automation/chatgpt-wechat-bot.md) · [中](categories/im-automation/chatgpt-wechat-bot.zh.md) |
+| **OpeniLink Hub** | Use it when multiple iLink WeChat bots need self-hosted management, tracing, webhooks, and Apps — it is young, unofficial, and widens the auth and registry trust boundary. | MIT | B (5/6) | [EN](categories/im-automation/openilink-hub.md) · [中](categories/im-automation/openilink-hub.zh.md) |
+| **Dify Enterprise WeChat Bot** | Use it only to preserve a pinned Windows Enterprise WeChat-to-Dify desktop integration — it is stale, includes a closed helper, and leaves Workflow support unfinished. | NOASSERTION | C (3/6) | [EN](categories/im-automation/dify-enterprise-wechat-bot.md) · [中](categories/im-automation/dify-enterprise-wechat-bot.zh.md) |
 ### web-ui
 
 | Project | Use when | License | Health | Page |

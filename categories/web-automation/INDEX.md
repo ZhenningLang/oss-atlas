@@ -17,6 +17,7 @@
 | **browser-use** | 🌐 Make websites accessible for AI agents. Automate tasks online with ease. | ? (0/6) | [→](browser-use.md) |
 | **Playwright** | Playwright is a framework for Web Testing and Automation. It allows testing Chromium, Firefox and WebKit with a single API. | ? (0/6) | [→](playwright.md) |
 | **Puppeteer** | JavaScript API for Chrome and Firefox | ? (0/6) | [→](puppeteer.md) |
+| **nodriver** | Use it for Python-first async control of Chromium over direct CDP without WebDriver; it is Chromium-only, AGPL-3.0, and its anti-detection behavior is best-effort rather than a stable bypass. | C (5/6) | [→](nodriver.md) |
 
 
 ## Comparison matrix
@@ -30,7 +31,10 @@
 | [Selenium](selenium.md) | ✅ | B (6/6) | Use it when you need cross-browser WebDriver automation across a browser/language matrix — Playwright/Cypress are nicer for modern single-browser DX. |
 | [PhantomJS](phantomjs.md) | ✅ | D (5/6) | Avoid for new work — an archived, abandoned scriptable headless browser; use headless Chrome (Puppeteer/Playwright) or Selenium instead. |
 | [Selenium Wire](selenium-wire.md) | ✅ | D (5/6) | Use it when a legacy Selenium suite needs to read or modify the browser's background HTTP traffic — but it's archived, so new projects should use Selenium 4's native CDP/BiDi or Playwright. |
-| [Playwright](playwright.md) / Puppeteer | partly indexed | — | Lower-level browser automation libraries named across the pages. |
+| [Playwright](playwright.md) | ✅ | ? (0/6) | Cross-browser testing and automation with a full runner and tracing surface; its index entry still needs a selection-oriented boundary review. |
+| [Puppeteer](puppeteer.md) | ✅ | ? (0/6) | Chrome-first JavaScript automation; its index entry still needs a selection-oriented boundary review. |
+| [nodriver](nodriver.md) | ✅ | C (5/6) | Direct async Python CDP control without WebDriver, trading away cross-browser coverage and permissive licensing; anti-detection is best-effort. |
+| undetected-chromedriver / SeleniumBase | 未收录 | — | Selenium-compatible stealth tooling and a batteries-included Python browser-testing framework named on the nodriver page. |
 
 ## What belongs here
 

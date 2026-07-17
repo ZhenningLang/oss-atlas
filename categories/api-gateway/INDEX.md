@@ -8,13 +8,15 @@
 | Project | Use when | Health | Page |
 | --- | --- | --- | --- |
 | **Kong Gateway** | OpenResty/Nginx API gateway whose plugin layer makes one reverse-proxy a programmable edge for REST/microservice traffic and, since 3.x, LLM/MCP traffic. | A (5/6) | [→](kong.md) |
+| **Funtool** | Use it only for the exact Windows + Claude Code + NVIDIA proxy path when a prebuilt tool matters more than auditability; the current release is binary-only and cannot be rebuilt from published source. | C (5/6) | [→](funtool.md) |
 
 ## Comparison matrix
 
 | Option | Indexed | Health | One-line tradeoff |
 | --- | --- | --- | --- |
 | [Kong Gateway](kong.md) | ✅ | A (5/6) | OpenResty/Nginx API gateway whose plugin layer makes one reverse-proxy a programmable edge for REST/microservice traffic and, since 3.x, LLM/MCP traffic. |
-| Tyk / KrakenD / Envoy / APISIX | 未收录 | — | Other API gateways named on the page. |
+| [Funtool](funtool.md) | ✅ | C (5/6) | Narrow Windows proxy for Claude Code and NVIDIA models whose current implementation is distributed as an opaque binary rather than auditable source. |
+| Tyk / KrakenD / Envoy / APISIX / LiteLLM / claude-code-router / CLIProxyAPI / New API | 未收录 | — | General API gateways and source-available LLM or coding-agent routing alternatives named across the pages. |
 
 ## What belongs here
 

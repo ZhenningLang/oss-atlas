@@ -13,6 +13,9 @@
 | **Marker** | Convert PDF to markdown + JSON quickly with high accuracy | ? (0/6) | [→](marker.md) |
 | **unstructured** | Convert documents to structured data effortlessly. Unstructured is open-source ETL solution for transforming complex documents into clean, structured formats for language models.  Visit our website to learn more about our enterprise grade Platform product for production grade workflows, partitioning, enrichments, chunking and embedding. | ? (0/6) | [→](unstructured.md) |
 | **any2html** | Use it when you need any2html in this category. | ? (0/6) | [→](any2html.md) |
+| **Dedoc** | Use it when an on-premises Python pipeline needs multi-format documents recovered as logical trees with tables, annotations, and attachments; expect a heavy Linux/system-package stack and limits on difficult scans. | A (5/6) | [→](dedoc.md) |
+| **Bella Domify** | Use it when Chinese RAG ingestion needs detailed PDF/Office DOM trees plus FastAPI/Kafka/S3 service integration; license ambiguity, optional remote OCR, and heavy infrastructure are decisive constraints. | D (5/6) | [→](bella-domify.md) |
+| **MinerU Skill** | Use it when a coding agent needs one-command cloud document-to-Markdown through CLI/MCP, with batch, resume, or content-tool delivery; files cross a service boundary and remain subject to quotas and API changes. | C (5/6) | [→](mineru-skill.md) |
 
 
 ## Comparison matrix
@@ -23,8 +26,11 @@
 | [MarkItDown](markitdown.md) | ✅ | ? (0/6) | Lightweight Python library converting office documents and files to Markdown for LLM ingestion; simpler than Docling but less layout-aware. |
 | [olmOCR](olmocr.md) | ✅ | ? (0/6) | VLM-based PDF linearization for LLM datasets; handles equations, tables, and handwriting but requires GPU. |
 | [PageIndex](../rag-retrieval/pageindex.md) | ✅ | B (5/6) | Builds a retrieval index over long structured docs — downstream of parsing, not a parser. |
-| unstructured.io / LlamaParse / Marker / PyMuPDF | 未收录 | — | Other document parsers/extractors named across the pages. |
 | [any2html](any2html.md) | ✅ | ? (0/6) | Use it when you need any2html in this category. |
+| [Dedoc](dedoc.md) | ✅ | A (5/6) | Multi-format logical-tree parsing with tables, annotations, and attachments; deeper than lightweight Markdown conversion, but heavier on Linux dependencies and limited on difficult scans. |
+| [Bella Domify](bella-domify.md) | ✅ | D (5/6) | Detailed pdf2docx-derived DOM trees and service hooks; rich layout objects, but heavy infrastructure, optional outbound OCR, and an unresolved GPL v2/v3 declaration conflict. |
+| [MinerU Skill](mineru-skill.md) | ✅ | C (5/6) | Agent-facing CLI/MCP over MinerU's cloud API with batch, resume, and delivery; avoids local model deployment but adds upload, quota, and third-party API risk. |
+| LlamaParse / self-hosted MinerU | 未收录 | — | Cloud and self-hosted document-parsing routes named across the pages. |
 
 
 ## What belongs here

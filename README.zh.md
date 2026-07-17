@@ -87,6 +87,7 @@ skills 从 `raw.githubusercontent.com/ZhenningLang/oss-atlas/main/` 拉取页面
 | **Selenium** | 当你需要跨浏览器、跨语言的 WebDriver 自动化时用它——现代单浏览器体验 Playwright/Cypress 更顺手。 | Apache-2.0 | B（6/6） | [中](categories/web-automation/selenium.zh.md) · [EN](categories/web-automation/selenium.md) |
 | **PhantomJS** | 新项目别用——已归档、停更的可脚本化无头浏览器；改用 Puppeteer/Playwright 的无头 Chrome 或 Selenium。 | BSD-3-Clause | D（5/6） | [中](categories/web-automation/phantomjs.zh.md) · [EN](categories/web-automation/phantomjs.md) |
 | **Selenium Wire** | 当遗留的 Selenium 测试套件需要读取或改写浏览器后台 HTTP 流量时用它——但它已归档，新项目应改用 Selenium 4 原生 CDP/BiDi 或 Playwright。 | MIT | D（5/6） | [中](categories/web-automation/selenium-wire.zh.md) · [EN](categories/web-automation/selenium-wire.md) |
+| **nodriver** | 当 Python 异步代码需要绕过 WebDriver、直接控制 Chromium CDP 时用它——只支持 Chromium、采用 AGPL-3.0，且不是完整测试框架。 | AGPL-3.0 | C（5/6） | [中](categories/web-automation/nodriver.zh.md) · [EN](categories/web-automation/nodriver.md) |
 | **browser-use** | 🌐 Make websites accessible for AI agents. Automate tasks online with ease. | MIT | ?（0/6） | [EN](categories/web-automation/browser-use.md) · [中](categories/web-automation/browser-use.zh.md) |
 | **Playwright** | Playwright is a framework for Web Testing and Automation. It allows testing Chromium, Firefox and WebKit with a single API. | Apache-2.0 | ?（0/6） | [EN](categories/web-automation/playwright.md) · [中](categories/web-automation/playwright.zh.md) |
 | **Puppeteer** | JavaScript API for Chrome and Firefox | Apache-2.0 | ?（0/6） | [EN](categories/web-automation/puppeteer.md) · [中](categories/web-automation/puppeteer.zh.md) |
@@ -223,6 +224,11 @@ skills 从 `raw.githubusercontent.com/ZhenningLang/oss-atlas/main/` 拉取页面
 | **Compound Engineering** | 当你想要一套即插即用的 brainstorm→plan→work→review→compound 循环、并把经验跨会话沉淀复用时，就用它。 | MIT | B（4/6） | [中](categories/agent-dev-methodology/compound-engineering.zh.md) · [EN](categories/agent-dev-methodology/compound-engineering.md) |
 | **ECC** | 当你想要一套有人维护、开箱即全的 Claude Code 底座（skill、agent、hook、memory 加安全扫描）时用它。 | MIT | B（6/6） | [中](categories/agent-dev-methodology/ecc.zh.md) · [EN](categories/agent-dev-methodology/ecc.md) |
 | **Spec Kit** | GitHub 出品的面向 AI 编码智能体的 spec-driven 开发方法论——但它极其年轻，且与 GitHub 生态深度绑定。 | MIT | ?（0/6） | [中](categories/agent-dev-methodology/spec-kit.zh.md) · [EN](categories/agent-dev-methodology/spec-kit.md) |
+| **Spec-Anchored Agentic Development** | 当永久 capability spec 必须持续充当代码一致性判定器时用它——仅面向 Claude Code，而且问世只有数天。 | MIT | B（3/6） | [中](categories/agent-dev-methodology/spec-anchored-agentic-development.zh.md) · [EN](categories/agent-dev-methodology/spec-anchored-agentic-development.md) |
+| **USDAD** | 当你想手工改造一套文字优先的多 agent 规格与上下文方法时用它——没有 CLI 或可执行约束。 | MIT | C（4/6） | [中](categories/agent-dev-methodology/usdad.zh.md) · [EN](categories/agent-dev-methodology/usdad.md) |
+| **QUAD Framework** | 仅当你要研究文档优先的四 Circles 运营模型与部署蓝图时使用——项目已不活跃、采用专有许可，且部分组件不可访问。 | Proprietary | D（3/6） | [中](categories/agent-dev-methodology/quad.zh.md) · [EN](categories/agent-dev-methodology/quad.md) |
+| **LTBL Experiment** | 仅把它当作三个 agent 上下文实验实现的索引——自身没有可运行代码、实验结果或许可授权。 | NOASSERTION | D（4/6） | [中](categories/agent-dev-methodology/ltbl-experiment.zh.md) · [EN](categories/agent-dev-methodology/ltbl-experiment.md) |
+| **PURE** | 当 intent 追溯需要 Git 原生 schema、registry、phase gate 和 Shell 检查时用它——结构明确，但非常年轻。 | MIT | C（5/6） | [中](categories/agent-dev-methodology/pure-agentic.zh.md) · [EN](categories/agent-dev-methodology/pure-agentic.md) |
 
 ### ai-design-generation
 
@@ -274,6 +280,7 @@ skills 从 `raw.githubusercontent.com/ZhenningLang/oss-atlas/main/` 拉取页面
 | 项目 | 何时用 | 许可 | 健康度 | 页面 |
 | --- | --- | --- | --- | --- |
 | **Kong Gateway** | 基于 OpenResty/Nginx 的 API 网关，插件层把一个反向代理变成可编程边界：既管 REST/微服务，也从 3.x 起管 LLM/MCP 流量。 | Apache-2.0 | A（5/6） | [中](categories/api-gateway/kong.zh.md) · [EN](categories/api-gateway/kong.md) |
+| **Funtool** | 只有“Windows＋Claude Code＋NVIDIA”这条精确代理路径命中任务时才用它——当前可执行文件不透明，也无法从公开源码重建。 | MIT | C（5/6） | [中](categories/api-gateway/funtool.zh.md) · [EN](categories/api-gateway/funtool.md) |
 
 ### geospatial
 
@@ -295,6 +302,14 @@ skills 从 `raw.githubusercontent.com/ZhenningLang/oss-atlas/main/` 拉取页面
 | **Text_select_captcha** | 当要自动识别中文文字点选验证码（YOLO＋孪生网络，纯 CPU）时用它——仓库无 LICENSE 文件，默认保留所有权利，合法性是决定性门槛。 | NONE (no LICENSE file — all rights reserved) | D（5/6） | [中](categories/captcha/text-select-captcha.zh.md) · [EN](categories/captcha/text-select-captcha.md) |
 | **pytorch-captcha-recognition** | 当需要定长图片验证码（多头 CNN）的可读教学基线时用它——这是 2020 年冻结的教程，要预期改造过时的 PyTorch API。 | Apache-2.0 | D（4/6） | [中](categories/captcha/pytorch-captcha-recognition.zh.md) · [EN](categories/captcha/pytorch-captcha-recognition.md) |
 | **captcha (lepture)** | 当 Python 表单需要自托管、无第三方调用的图片／音频验证码渲染器时用它——它只渲染且抵不住现代 OCR，只能当 UX 减速带，而非安全控制。 | BSD-3-Clause | B（5/6） | [中](categories/captcha/lepture-captcha.zh.md) · [EN](categories/captcha/lepture-captcha.md) |
+| **NopeCHA** | 只用于已授权、需无人值守覆盖多类验证码的自动化——持续维护的实现闭源，并依赖托管 API。 | MIT | B（6/6） | [中](categories/captcha/nopecha-extension.zh.md) · [EN](categories/captcha/nopecha-extension.md) |
+| **Buster** | 用于真人触发的 reCAPTCHA 音频无障碍辅助或已授权测试——源码可审计、可走本地模型，但覆盖窄且结果不确定。 | GPL-3.0-only | B（5/6） | [中](categories/captcha/buster.zh.md) · [EN](categories/captcha/buster.md) |
+
+### blockchain-dev-infrastructure
+
+| 项目 | 何时用 | 许可 | 健康度 | 页面 |
+| --- | --- | --- | --- | --- |
+| **PoWFaucet** | 当公共 EVM 测试网需要带模块化防滥用控制的 faucet 时用它——热钱包托管、资金补充和高强度服务运维仍由你承担。 | AGPL-3.0 | B（5/6） | [中](categories/blockchain-dev-infrastructure/powfaucet.zh.md) · [EN](categories/blockchain-dev-infrastructure/powfaucet.md) |
 ### ml-research
 
 | 项目 | 何时用 | 许可 | 健康度 | 页面 |
@@ -442,6 +457,7 @@ skills 从 `raw.githubusercontent.com/ZhenningLang/oss-atlas/main/` 拉取页面
 | --- | --- | --- | --- | --- |
 | **Tesseract** | 当你需要离线、可嵌入、覆盖 100+ 语言、面向清晰印刷文本的 OCR 时用它——不适合野外照片或手写。 | Apache-2.0 | A（5/6） | [中](categories/ocr/tesseract.zh.md) · [EN](categories/ocr/tesseract.md) |
 | **LaTeX-OCR (pix2tex)** | 当你要把数学公式图片转成 LaTeX（pix2tex）时用它——只管公式、已放缓，VLM 可能更强。 | MIT | C（3/6） | [中](categories/ocr/latex-ocr.zh.md) · [EN](categories/ocr/latex-ocr.md) |
+| **Laravel OCR** | 当 Laravel 应用需要统一接入本地与云 OCR，并用模板抽取字段时用它——PDF／版面处理较浅，仓库也缺少许可证文件。 | NOASSERTION | D（5/6） | [中](categories/ocr/laravel-ocr.zh.md) · [EN](categories/ocr/laravel-ocr.md) |
 
 ### document-parsing
 
@@ -453,6 +469,9 @@ skills 从 `raw.githubusercontent.com/ZhenningLang/oss-atlas/main/` 拉取页面
 | **Marker** | Convert PDF to markdown + JSON quickly with high accuracy | GPL-3.0 | ?（0/6） | [EN](categories/document-parsing/marker.md) · [中](categories/document-parsing/marker.zh.md) |
 | **unstructured** | Convert documents to structured data effortlessly. Unstructured is open-source ETL solution for transforming complex documents into clean, structured formats for language models.  Visit our website to learn more about our enterprise grade Platform product for production grade workflows, partitioning, enrichments, chunking and embedding. | Apache-2.0 | ?（0/6） | [EN](categories/document-parsing/unstructured.md) · [中](categories/document-parsing/unstructured.zh.md) |
 | **any2html** | Use it when you need any2html in the document-parsing area. | NOASSERTION | ?（0/6） | [中](categories/document-parsing/any2html.zh.md) · [EN](categories/document-parsing/any2html.md) |
+| **Dedoc** | 当混合 PDF 与 Office 归档必须转成带表格和附件的逻辑树时用它——本地解析面广，但 Linux 与系统包依赖很重。 | Apache-2.0 | A（5/6） | [中](categories/document-parsing/dedoc.zh.md) · [EN](categories/document-parsing/dedoc.md) |
+| **Bella Domify** | 当 Python RAG 管线需要细粒度 PDF／Office DOM tree 和可选视觉 OCR 时用它——许可证冲突与 provider／基础设施耦合会抬高采用成本。 | GPL-2.0-only | D（5/6） | [中](categories/document-parsing/bella-domify.zh.md) · [EN](categories/document-parsing/bella-domify.md) |
+| **MinerU Skill** | 当 agent 需要一条命令完成云端文档转 Markdown、批处理、续跑和投递时用它——文件会离开本地，质量取决于 MinerU。 | MIT | C（5/6） | [中](categories/document-parsing/mineru-skill.zh.md) · [EN](categories/document-parsing/mineru-skill.md) |
 
 ### diagramming
 
@@ -493,6 +512,7 @@ skills 从 `raw.githubusercontent.com/ZhenningLang/oss-atlas/main/` 拉取页面
 | **OpenAI Whisper** | 当你需要通用的多语言语音转文字转写或从音视频英译时用它——但它默认不是实时系统，大模型在 CPU 上很慢，且对非语音内容会幻觉。 | MIT | — | [中](categories/media-processing/video-audio/whisper.zh.md) · [EN](categories/media-processing/video-audio/whisper.md) |
 | **sharp** | High performance Node.js image processing, the fastest module to resize JPEG, PNG, WebP, AVIF and TIFF images. Uses the libvips library. | Apache-2.0 | ?（0/6） | [EN](categories/media-processing/image-processing/sharp.md) · [中](categories/media-processing/image-processing/sharp.zh.md) |
 | **ImageMagick** | ImageMagick is a free, open-source software suite for creating, editing, converting, and displaying images. It supports 200+ formats and offers powerful command-line tools and APIs for automation, scripting, and integration across platforms. | NOASSERTION | ?（0/6） | [EN](categories/media-processing/image-processing/imagemagick.md) · [中](categories/media-processing/image-processing/imagemagick.zh.md) |
+| **Screenshot Service** | 仅适合作为隔离的内部 HTML 转图片 worker——API 鉴权已禁用，Chromium 还关闭了 sandbox 与 Web 安全。 | NOASSERTION | D（4/6） | [中](categories/media-processing/image-processing/screenshot-service.zh.md) · [EN](categories/media-processing/image-processing/screenshot-service.md) |
 
 ### video-production
 
@@ -534,6 +554,7 @@ skills 从 `raw.githubusercontent.com/ZhenningLang/oss-atlas/main/` 拉取页面
 | **pdfplumber** | Plumb a PDF for detailed information about each char, rectangle, line, et cetera — and easily extract text and tables. | MIT | ?（0/6） | [EN](categories/pdf-tools/pdfplumber.md) · [中](categories/pdf-tools/pdfplumber.zh.md) |
 | **OCRmyPDF** | OCRmyPDF adds an OCR text layer to scanned PDF files, allowing them to be searched | MPL-2.0 | ?（0/6） | [EN](categories/pdf-tools/ocrmypdf.md) · [中](categories/pdf-tools/ocrmypdf.zh.md) |
 | **qpdf** | qpdf: A content-preserving PDF document transformer | Apache-2.0 | ?（0/6） | [EN](categories/pdf-tools/qpdf.md) · [中](categories/pdf-tools/qpdf.zh.md) |
+| **SAPP** | 当 PHP 应用必须追加 PKCS#12 签名、又不能破坏已有 PDF 修订时用它——规范覆盖较窄，也不支持加密 PDF。 | LGPL-3.0-or-later | B（5/6） | [中](categories/pdf-tools/sapp.zh.md) · [EN](categories/pdf-tools/sapp.md) |
 
 ### workflow-orchestration
 
@@ -581,6 +602,10 @@ skills 从 `raw.githubusercontent.com/ZhenningLang/oss-atlas/main/` 拉取页面
 | **wxpy** | 仅作为旧版微信机器人代码学习——2019 年起已归档，且基于已失效的微信网页协议，基本不可用。 | MIT | D（5/6） | [中](categories/im-automation/wxpy.zh.md) · [EN](categories/im-automation/wxpy.md) |
 | **wxappUnpacker** | 当你需要把自有的微信小程序 .wxapkg 包反编译回可读源码时用它——但本仓库已被清空成墓碑，请改用仍存活的 fork。 | GPL-3.0-or-later | E（4/6） | [中](categories/im-automation/wxappunpacker.zh.md) · [EN](categories/im-automation/wxappunpacker.md) |
 | **Douyin-Bot** | 仅当你想要一份 ADB 屏幕坐标手机自动化的历史示例时用它——切勿部署，2018 年的硬编码坐标与失效的腾讯人脸 API 意味着它早已跑不通。 | MIT | D（3/6） | [中](categories/im-automation/douyin-bot.zh.md) · [EN](categories/im-automation/douyin-bot.md) |
+| **WeChat Bot** | 当一个 Node CLI 必须把微信、飞书、Telegram 与 WhatsApp 接到多个 LLM 时用它——个人微信仍走非官方通道，并伴随账号风险。 | MIT | B（5/6） | [中](categories/im-automation/wechat-bot.zh.md) · [EN](categories/im-automation/wechat-bot.md) |
+| **ChatGPT-wechat-bot** | 仅把它当作 2022 至 2023 年 Wechaty 与 ChatGPT 的小型参考代码——项目已停滞、默认配置过时，不适合作为生产底座。 | MIT | D（3/6） | [中](categories/im-automation/chatgpt-wechat-bot.zh.md) · [EN](categories/im-automation/chatgpt-wechat-bot.md) |
+| **OpeniLink Hub** | 当多个 iLink 微信 Bot 需要自托管管理、trace、Webhook 和 App 时用它——项目年轻且无官方关联，还扩大了认证与 Registry 信任边界。 | MIT | B（5/6） | [中](categories/im-automation/openilink-hub.zh.md) · [EN](categories/im-automation/openilink-hub.md) |
+| **Dify Enterprise WeChat Bot** | 仅用于维持固定 Windows 企业微信到 Dify 的桌面集成——项目已停滞、包含闭源 helper，Workflow 支持也未完成。 | NOASSERTION | C（3/6） | [中](categories/im-automation/dify-enterprise-wechat-bot.zh.md) · [EN](categories/im-automation/dify-enterprise-wechat-bot.md) |
 ### web-ui
 
 | 项目 | 何时用 | 许可 | 健康度 | 页面 |

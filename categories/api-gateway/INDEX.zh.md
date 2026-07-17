@@ -8,13 +8,15 @@
 | 项目 | 何时用 | 健康度 | 页面 |
 | --- | --- | --- | --- |
 | **Kong Gateway** | 基于 OpenResty/Nginx 的 API 网关，插件层把一个反向代理变成可编程边界：既管 REST/微服务，也从 3.x 起管 LLM/MCP 流量。 | A（5/6） | [→](kong.zh.md) |
+| **Funtool** | 只有精确命中“Windows + Claude Code + NVIDIA”代理路径，而且预打包工具比可审计性更重要时才用它；当前版本只提供二进制，无法从已发布源码重建。 | C（5/6） | [→](funtool.zh.md) |
 
 ## 对比矩阵
 
 | 选项 | 是否收录 | 健康度 | 一句话取舍 |
 | --- | --- | --- | --- |
 | [Kong Gateway](kong.zh.md) | ✅ | A（5/6） | 基于 OpenResty/Nginx 的 API 网关，插件层把一个反向代理变成可编程边界：既管 REST/微服务，也从 3.x 起管 LLM/MCP 流量。 |
-| Tyk / KrakenD / Envoy / APISIX | 未收录 | — | 页面里点到的其他 API 网关。 |
+| [Funtool](funtool.zh.md) | ✅ | C（5/6） | 面向 Claude Code 与 NVIDIA 模型的窄 Windows 代理，当前实现只分发不透明二进制，没有可审计源码。 |
+| Tyk / KrakenD / Envoy / APISIX / LiteLLM / claude-code-router / CLIProxyAPI / New API | 未收录 | — | 各页提到的通用 API 网关，以及源码可见的 LLM 或 coding-agent 路由替代方案。 |
 
 ## 什么该放这里
 

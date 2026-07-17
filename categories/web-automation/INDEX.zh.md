@@ -17,6 +17,7 @@
 | **browser-use** | 🌐 Make websites accessible for AI agents. Automate tasks online with ease. | ?（0/6） | [→](browser-use.zh.md) |
 | **Playwright** | Playwright is a framework for Web Testing and Automation. It allows testing Chromium, Firefox and WebKit with a single API. | ?（0/6） | [→](playwright.zh.md) |
 | **Puppeteer** | JavaScript API for Chrome and Firefox | ?（0/6） | [→](puppeteer.zh.md) |
+| **nodriver** | 当你需要 Python-first 的异步直接 CDP 控制、且不想依赖 WebDriver 时用它；它仅支持 Chromium、采用 AGPL-3.0，反检测也只是尽力而为，不是稳定绕过契约。 | C（5/6） | [→](nodriver.zh.md) |
 
 
 ## 对比矩阵
@@ -30,7 +31,10 @@
 | [Selenium](selenium.zh.md) | ✅ | B（6/6） | 当你需要跨浏览器、跨语言的 WebDriver 自动化时用它——现代单浏览器体验 Playwright/Cypress 更顺手。 |
 | [PhantomJS](phantomjs.zh.md) | ✅ | D（5/6） | 新项目别用——已归档、停更的可脚本化无头浏览器；改用 Puppeteer/Playwright 的无头 Chrome 或 Selenium。 |
 | [Selenium Wire](selenium-wire.zh.md) | ✅ | D（5/6） | 当遗留的 Selenium 测试套件需要读取或改写浏览器后台 HTTP 流量时用它——但它已归档，新项目应改用 Selenium 4 原生 CDP/BiDi 或 Playwright。 |
-| [Playwright](playwright.zh.md) / Puppeteer | 部分已收录 | — | 各页对比里点到的更底层浏览器自动化库。 |
+| [Playwright](playwright.zh.md) | ✅ | ?（0/6） | 带完整 runner 与 trace 能力的跨浏览器测试和自动化；当前索引条目仍需要补齐选型边界。 |
+| [Puppeteer](puppeteer.zh.md) | ✅ | ?（0/6） | Chrome-first 的 JavaScript 自动化；当前索引条目仍需要补齐选型边界。 |
+| [nodriver](nodriver.zh.md) | ✅ | C（5/6） | 不依赖 WebDriver 的 Python 异步直接 CDP 控制，代价是没有跨浏览器覆盖、许可不宽松，反检测也仅为尽力而为。 |
+| undetected-chromedriver / SeleniumBase | 未收录 | — | nodriver 页面提到的 Selenium 兼容 stealth 工具与开箱即用 Python 浏览器测试框架。 |
 
 ## 什么该放这里
 
