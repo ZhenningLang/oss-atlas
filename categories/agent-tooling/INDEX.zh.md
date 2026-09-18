@@ -17,6 +17,8 @@
 | **OpenSandbox** | 当你需要自托管隔离沙箱、在 K8s 规模上运行不可信的 agent 生成代码（带出口管控和凭证保险库）时用它——但仓库仅数月之龄（2025-12 创建），其 API 与 Lindy 长期记录尚未经检验。 | B（5/6） | [→](opensandbox.zh.md) |
 | **AgentsView** | 当你同时跑多个编码 agent、想要本地优先的跨 agent 会话搜索与 token／成本分析时用它——但它问世仅数月、尚未到 1.0，要预期频繁变动。 | B（6/6） | [→](agentsview.zh.md) |
 | **Agent Orchestrator** | 当你要监管多个跑在真实分支上的并行编码 agent、想要一个桌面控制面把每个隔离进 git worktree 并自动路由 CI/review/冲突反馈时用它——但它约 4.5 个月大、尚未到 1.0、单一 User 所有，且 daemon 是 loopback 无鉴权。 | B（5/6） | [→](agent-orchestrator.zh.md) |
+| **Hermes Workspace** | 当你跑的是 Nous 的 hermes-agent、想把它的状态当 Web 驾驶舱用——聊天、memory、skills、终端、tmux swarm 派发、手机经 PWA/Tailscale 可达——但它的增强面板锚定 Hermes gateway/dashboard API、且问世仅约 6 个月时用它。 | B（5/6） | [→](hermes-workspace.zh.md) |
+| **CloudCLI (Claude Code UI)** | 当你的大脑是 Claude Code / Codex / Cursor CLI、想要这些会话的浏览器/移动驾驶舱（文件、终端、git）时用它——但它是 AGPL-3.0-or-later、单人操作形态。 | C（5/6） | [→](claudecodeui.zh.md) |
 
 ## 对比矩阵
 
@@ -32,6 +34,8 @@
 | [OpenSandbox](opensandbox.zh.md) | ✅ | B（5/6） | 当你需要自托管隔离沙箱、在 K8s 规模上运行不可信的 agent 生成代码（带出口管控和凭证保险库）时用它——但仓库仅数月之龄（2025-12 创建），其 API 与 Lindy 长期记录尚未经检验。 |
 | [AgentsView](agentsview.zh.md) | ✅ | B（6/6） | 当你同时跑多个编码 agent、想要本地优先的跨 agent 会话搜索与 token／成本分析时用它——但它问世仅数月、尚未到 1.0，要预期频繁变动。 |
 | [Agent Orchestrator](agent-orchestrator.zh.md) | ✅ | B（5/6） | 当你要监管多个跑在真实分支上的并行编码 agent、想要一个桌面控制面把每个隔离进 git worktree 并自动路由 CI/review/冲突反馈时用它——但它约 4.5 个月大、尚未到 1.0、单一 User 所有，且 daemon 是 loopback 无鉴权。 |
+| [Hermes Workspace](hermes-workspace.zh.md) | ✅ | B（5/6） | 当你跑的是 Nous 的 hermes-agent、想把它的状态当 Web 驾驶舱用——聊天、memory、skills、终端、tmux swarm 派发、手机经 PWA/Tailscale 可达——但它的增强面板锚定 Hermes gateway/dashboard API、且问世仅约 6 个月时用它。 |
+| [CloudCLI (Claude Code UI)](claudecodeui.zh.md) | ✅ | C（5/6） | 当你的大脑是 Claude Code / Codex / Cursor CLI、想要这些会话的浏览器/移动驾驶舱（文件、终端、git）时用它——但它是 AGPL-3.0-or-later、单人操作形态。 |
 | Taskmaster / GitHub Issues + gh / Linear | 未收录 | — | 各页对比里点到的其他 agent 任务/工作追踪后端。 |
 
 ## 什么该放这里
